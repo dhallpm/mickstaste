@@ -1,242 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mick's Picks Premium</title>
-
 <style>
-body{
-  margin:0;
-  font-family:Arial,sans-serif;
-  background:#050505;
-  color:#fff;
-}
-.header{
-  padding:20px;
-  border-bottom:1px solid #333;
-  background:#0b0b0b;
-}
-.container{
-  max-width:1200px;
-  margin:auto;
-  padding:20px;
-}
-.card{
-  background:#111;
-  border:1px solid #333;
-  border-radius:18px;
-  padding:20px;
-  margin-top:20px;
-}
-.pick{
-  border-left:4px solid gold;
-  margin-top:20px;
-}
-h1,h2{
-  color:#ffe28a;
-}
-.meta{
-  margin-top:10px;
-  color:#ccc;
-  font-size:14px;
-}
-.loading{
-  padding:20px;
-}
+:root{--bg:#030303;--text:#fff6df;--muted:#bdb39b;--gold:#d4af37;--gold2:#ffe28a;--green:#36d47a;--red:#ff6464;--blue:#7bb7ff;--line:rgba(212,175,55,.22)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:radial-gradient(circle at 8% 0%,rgba(212,175,55,.20),transparent 32%),radial-gradient(circle at 92% 15%,rgba(54,212,122,.10),transparent 30%),linear-gradient(180deg,#050505,#020202)}
+a{text-decoration:none;color:inherit}.container{max-width:1220px;margin:0 auto;padding:0 22px}
+.header{position:sticky;top:0;z-index:50;background:rgba(3,3,3,.92);border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 0}
+.brand{display:flex;align-items:center;gap:14px}.logo{width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#111,#332500);border:3px solid var(--gold);box-shadow:0 0 25px rgba(212,175,55,.55);color:var(--gold2);font-weight:950;font-size:22px}
+.brand h1{font-size:25px;margin:0}.brand small{display:block;color:var(--gold2);font-size:11px;letter-spacing:2.2px;text-transform:uppercase;margin-top:3px}
+.links{display:flex;align-items:center;gap:14px;flex-wrap:wrap;color:#eadfbf;font-size:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 17px;border-radius:999px;border:1px solid var(--gold);background:linear-gradient(135deg,#a87710,#ffe28a 55%,#c79b26);color:#111;font-weight:900;box-shadow:0 12px 30px rgba(212,175,55,.18);transition:transform .2s ease,filter .2s ease}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}.btn.dark{background:#0b0b0b;color:var(--gold2)}
+.hero{padding:68px 0 42px}.kicker{color:var(--gold2);font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:900}
+.hero h2{font-size:clamp(44px,7vw,88px);line-height:.92;margin:12px 0 18px;letter-spacing:-2px}
+.hero p{font-size:18px;line-height:1.6;color:#d6cbb2;max-width:870px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.vipbar{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:28px}
+.vip,.card{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.018));border:1px solid var(--line);border-radius:24px;padding:20px;box-shadow:0 20px 60px rgba(0,0,0,.38)}
+.vip b{display:block;font-size:23px;color:#fff}.vip span{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
+.section{padding:42px 0}.section h2{font-size:36px;margin:0 0 8px}.sub{color:var(--muted);line-height:1.5}
+.grid{display:grid;gap:18px}.two{grid-template-columns:repeat(2,1fr)}
+.card h3{margin:0 0 9px;color:#fff}.card p,.card li{color:#cabfa5;line-height:1.56}
+.board-head{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:16px}
+.badge{display:inline-flex;border:1px solid rgba(212,175,55,.45);background:rgba(212,175,55,.09);color:var(--gold2);border-radius:999px;padding:7px 11px;font-size:12px;font-weight:900;letter-spacing:.6px;text-transform:uppercase}
+.badge.green{border-color:rgba(54,212,122,.45);color:var(--green);background:rgba(54,212,122,.08);box-shadow:0 0 18px rgba(54,212,122,.22)}
+.badge.blue{border-color:rgba(123,183,255,.45);color:var(--blue);background:rgba(123,183,255,.08)}
+.pick-card{border-left:5px solid var(--gold);margin:15px 0;position:relative;overflow:hidden;box-shadow:0 18px 55px rgba(0,0,0,.45),0 0 28px rgba(212,175,55,.08);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.pick-card:hover{transform:translateY(-3px);box-shadow:0 24px 70px rgba(0,0,0,.6),0 0 36px rgba(212,175,55,.18)}
+.pick-card::before{display:none}.pick-title{font-size:30px;font-weight:950;margin-top:8px;background:linear-gradient(90deg,#fff6df,#ffe28a);-webkit-background-clip:text;background-clip:text;color:transparent}
+.pick-top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.game{color:#f0dfb6;margin-top:5px;font-size:15px}
+.meta{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.meta span{background:linear-gradient(180deg,#111,#070707);border:1px solid rgba(212,175,55,.16);border-radius:999px;padding:7px 10px;font-size:12px;color:#eee0b8;box-shadow:inset 0 0 18px rgba(212,175,55,.06)}
+.analysis{background:#080808;border:1px solid rgba(212,175,55,.15);border-radius:18px;padding:16px;margin-top:12px;box-shadow:inset 0 0 22px rgba(212,175,55,.04)}
+.analysis h4{margin:0 0 8px;color:var(--gold2);font-size:15px;text-transform:uppercase;letter-spacing:1.2px}
+.writeup{white-space:pre-line;color:#f1e6c8;line-height:1.62;font-size:15px}.notes{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.note{background:#0b0b0b;border:1px solid rgba(212,175,55,.12);border-radius:15px;padding:12px;color:#c9bea2;font-size:13px;line-height:1.45}.note strong{color:var(--gold2)}
+.loading,.empty,.error{padding:20px;border:1px dashed rgba(212,175,55,.3);border-radius:18px;background:#090909;color:#c9bea2}.error{border-color:#7a3333;color:#ffbaba}
+.footer{border-top:1px solid var(--line);padding:32px 0;color:#a99f83;font-size:13px;margin-top:30px}
+@media(max-width:960px){.vipbar{grid-template-columns:repeat(2,1fr)}.two,.notes{grid-template-columns:1fr}.links{display:none}.logo{width:56px;height:56px}.brand h1{font-size:20px}.hero h2{letter-spacing:-1px}}
+@media(max-width:700px){.hero{padding:42px 0 28px}.hero h2{font-size:42px}.pick-title{font-size:23px}.card,.vip{border-radius:20px;padding:16px}.meta span{font-size:11px}}
 </style>
-
 <script>
-const PASSWORD = "micksvip";
-
-const entered = prompt("Enter Premium Password");
-
-if (entered !== PASSWORD) {
-  alert("Incorrect Password");
-  window.location.href = "./";
-}
+const PASSWORD="micksvip";
+const entered=prompt("Enter Premium Password");
+if(entered!==PASSWORD){alert("Incorrect Password");window.location.href="./";}
 </script>
-
 </head>
-
 <body>
-
-<div class="header">
-  <div class="container">
-    <h1>Mick's Picks Premium Vault</h1>
-  </div>
-</div>
-
-<div class="container">
-
-  <div class="card">
-    <h2>Premium Board</h2>
-    <p>Premium member picks powered by Micks Picks.</p>
-  </div>
-
-  <div id="premiumBoard">
-    <div class="loading">
-      Loading premium plays...
-    </div>
-  </div>
-
-</div>
-
+<header class="header"><div class="container nav"><a class="brand" href="./"><div class="logo">MP</div><div><h1>Mick's Picks</h1><small>Premium Vault</small></div></a><nav class="links"><a href="./">Home</a><a href="#premium">Premium Board</a><a class="btn dark" href="./">Back Home</a></nav></div></header>
+<main>
+<section class="hero container"><div class="kicker">Premium member area • Full Google Sheets writeups • Best-number discipline</div><h2>Premium Vault</h2><p>Member-only board pulled directly from Google Sheets. Rows marked <b>Access = Premium</b>, <b>VIP</b>, or <b>Paid</b> display here with the full writeup from your sheet.</p><div class="actions"><a class="btn" href="#premium">View Premium Board</a><a class="btn dark" href="./">Back Home</a></div><div class="vipbar"><div class="vip"><b id="premActive">—</b><span>Active Plays</span></div><div class="vip"><b id="premATier">—</b><span>A-Tier Plays</span></div><div class="vip"><b id="premWinRate">—</b><span>Win Rate</span></div><div class="vip"><b>EV</b><span>Premium Edge</span></div><div class="vip"><b>CLV</b><span>Line Watch</span></div><div class="vip"><b>VIP</b><span>Full Card</span></div></div></section>
+<section class="section container" id="premium"><div class="board-head"><div><span class="badge green">Premium Board</span><h2>Member Plays</h2><p class="sub">Full analysis, market notes, injury notes, best number, and no-bet cutoff pulled from your Google Sheet.</p></div></div><div id="premiumBoard"></div></section>
+<section class="section container"><div class="grid two"><div class="card"><h3>How To Use This Board</h3><p>Play only numbers that are still at or better than the Best Number. If the market moves past the No-Bet Cutoff, pass.</p></div><div class="card"><h3>Risk Note</h3><p>No play is guaranteed. Units are designed to control risk and protect the bankroll over time.</p></div></div></section>
+</main>
+<footer class="footer"><div class="container">Mick's Picks Premium is for entertainment and educational purposes only. Bet responsibly.</div></footer>
 <script>
-const DATA_URL = "https://docs.google.com/spreadsheets/d/15txBM8qsck7f0ZA_za7xYEykBxKpuq0no3x7yHcKNeE/export?format=csv&gid=0";
+const DATA_URL="https://docs.google.com/spreadsheets/d/15txBM8qsck7f0ZA_za7xYEykBxKpuq0no3x7yHcKNeE/export?format=csv&gid=0";
+function safe(s){return String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));}
+function clean(s){return String(s||"").trim();}
+function parseCSV(text){const rows=[];let row=[],cur="",q=false;for(let i=0;i<text.length;i++){const c=text[i],n=text[i+1];if(c==='"'&&q&&n==='"'){cur+='"';i++;}else if(c==='"'){q=!q;}else if(c===","&&!q){row.push(cur);cur="";}else if((c==="\n"||c==="\r")&&!q){if(cur!==""||row.length){row.push(cur);rows.push(row);row=[];cur="";}if(c==="\r"&&n==="\n")i++;}else{cur+=c;}}if(cur!==""||row.length){row.push(cur);rows.push(row);}return rows;}
+function makeObjects(rows){if(!rows.length)return[];const headers=rows[0].map(h=>clean(h));return rows.slice(1).filter(r=>r.some(x=>clean(x))).map(r=>{const o={};headers.forEach((h,i)=>o[h]=clean(r[i]));return o;});}
+function fullAnalysis(p){return p["Full Analysis"] || p["Writeup"] || p["Framework Writeup"] || "Full Micks Picks analysis will post here once the play is released.";}
+function isPremium(p){const a=clean(p["Access"]).toLowerCase();return a==="premium"||a==="vip"||a==="paid";}
+function isFree(p,hasAccess){const a=clean(p["Access"]).toLowerCase();if(!hasAccess)return true;return a===""||a==="free"||a==="public";}
+function card(p,premium=false){const grade=safe(p["Grade"]||"A");const conf=safe(p["Confidence"]||"—");const ev=safe(p["EV Edge"]||"—");return `<div class="card pick-card"><div class="pick-top"><div><span class="badge">${grade}-Tier • ${safe(p["Bet Type"]||"Play")}</span> <span class="badge green">EV ${ev}</span><div class="pick-title">${safe(p["Pick"]||"Pick Pending")}</div><div class="game">${safe(p["Game"]||"")}</div></div><div style="text-align:right"><span class="badge blue">${safe(p["Status"]||"Active")}</span><div class="sub" style="margin-top:8px">Confidence: ${conf}</div></div></div><div class="meta"><span>Odds: ${safe(p["Odds"]||"—")}</span><span>Book: ${safe(p["Sportsbook"]||"Best Available")}</span><span>Units: ${safe(p["Units"]||"—")}</span><span>Best Number: ${safe(p["Best Number"]||"—")}</span><span>No-Bet Cutoff: ${safe(p["No Bet Cutoff"]||"—")}</span><span>Implied: ${safe(p["Implied Probability"]||"—")}</span></div><div class="analysis"><h4>${premium?"Full Premium Writeup":"Public Summary"}</h4><div class="writeup">${safe(fullAnalysis(p))}</div></div><div class="notes"><div class="note"><strong>Market Notes</strong><br>${safe(p["Market Notes"]||"Market check pending.")}</div><div class="note"><strong>Injury Notes</strong><br>${safe(p["Injury Notes"]||"No major injury note posted.")}</div><div class="note"><strong>Source Check</strong><br>${safe(p["Source Verification"]||"Micks Picks framework.")}</div></div></div>`;}
+function updateStats(picks,prefix){const active=picks.filter(p=>["active","pending"].includes(clean(p["Status"]).toLowerCase())).length;const aTier=picks.filter(p=>clean(p["Grade"]).toLowerCase().startsWith("a")).length;const wins=picks.filter(p=>["win","won"].includes(clean(p["Result"]).toLowerCase())).length;const losses=picks.filter(p=>["loss","lost"].includes(clean(p["Result"]).toLowerCase())).length;const total=wins+losses;const winrate=total?Math.round((wins/total)*100)+"%":"—";[["Active",active||"—"],["ATier",aTier||"—"],["WinRate",winrate]].forEach(([id,val])=>{const el=document.getElementById(prefix+id);if(el)el.textContent=val;});}
+async function getPicks(){const res=await fetch(DATA_URL+"&cache="+Date.now(),{cache:"no-store"});if(!res.ok)throw new Error("Google Sheet did not respond.");const text=await res.text();if(text.toLowerCase().includes("<html"))throw new Error("Google Sheet returned HTML instead of CSV.");return makeObjects(parseCSV(text));}
+async function loadBoard(kind,targetId,prefix){const target=document.getElementById(targetId);if(!target)return;target.innerHTML='<div class="loading">Loading plays from the Gurus Lair...</div>';try{const all=await getPicks();const headers=Object.keys(all[0]||{}).map(h=>clean(h).toLowerCase());const hasAccess=headers.includes("access");const picks=kind==="Premium"?all.filter(isPremium):all.filter(p=>isFree(p,hasAccess));updateStats(picks,prefix||"");if(!picks.length){target.innerHTML='<div class="empty">No '+kind+' plays are posted yet.</div>';return;}target.innerHTML=picks.reverse().map(p=>card(p,kind==="Premium")).join("");}catch(err){target.innerHTML='<div class="error">Plays could not load.<br><br>'+safe(err.message)+'</div>';}}
+async function loadFeaturedPlay(){const box=document.getElementById("topPlayBox");if(!box)return;box.innerHTML='<div class="loading">Loading Play of the Day...</div>';try{const all=await getPicks();const featured=all.find(p=>clean(p["Featured"]).toLowerCase()==="yes");if(!featured){box.innerHTML='<div class="empty">No Play of the Day selected.</div>';return;}box.innerHTML=`<div class="card pick-card"><div class="pick-top"><div><span class="badge green">PLAY OF THE DAY</span><div class="pick-title">${safe(featured["Pick"]||"Today’s Best Edge")}</div><div class="game">${safe(featured["Game"]||featured["League"]||"")}</div></div><span class="badge">${safe(featured["Grade"]||"Premium Grade")}</span></div><div class="meta"><span>Odds: ${safe(featured["Odds"]||"—")}</span><span>Book: ${safe(featured["Sportsbook"]||"Best Available")}</span><span>Units: ${safe(featured["Units"]||"—")}</span><span>Best #: ${safe(featured["Best Number"]||"—")}</span><span>Cutoff: ${safe(featured["No Bet Cutoff"]||"—")}</span></div><div class="analysis"><h4>Why It Matters</h4><p class="writeup">${safe(fullAnalysis(featured))}</p></div></div>`;}catch(err){box.innerHTML='<div class="error">Could not load Play of the Day.<br><br>'+safe(err.message)+'</div>';}}
 
-function clean(s){
-  return String(s || "").trim();
-}
-
-function parseCSV(text){
-  const rows = [];
-  let row = [];
-  let cur = "";
-  let q = false;
-
-  for(let i=0;i<text.length;i++){
-
-    const c = text[i];
-    const n = text[i+1];
-
-    if(c === '"' && q && n === '"'){
-      cur += '"';
-      i++;
-    }
-    else if(c === '"'){
-      q = !q;
-    }
-    else if(c === "," && !q){
-      row.push(cur);
-      cur = "";
-    }
-    else if((c === "\n" || c === "\r") && !q){
-
-      if(cur !== "" || row.length){
-        row.push(cur);
-        rows.push(row);
-
-        row = [];
-        cur = "";
-      }
-
-      if(c === "\r" && n === "\n"){
-        i++;
-      }
-
-    }
-    else{
-      cur += c;
-    }
-
-  }
-
-  if(cur !== "" || row.length){
-    row.push(cur);
-    rows.push(row);
-  }
-
-  return rows;
-}
-
-function makeObjects(rows){
-
-  if(!rows.length) return [];
-
-  const headers = rows[0].map(h => clean(h));
-
-  return rows.slice(1)
-    .filter(r => r.some(x => clean(x)))
-    .map(r => {
-
-      const o = {};
-
-      headers.forEach((h,i)=>{
-        o[h] = clean(r[i]);
-      });
-
-      return o;
-
-    });
-
-}
-
-async function loadPremium(){
-
-  const board = document.getElementById("premiumBoard");
-
-  try{
-
-    const res = await fetch(DATA_URL + "&cache=" + Date.now());
-
-    const text = await res.text();
-
-    const rows = parseCSV(text);
-
-    const all = makeObjects(rows);
-
-    const premium = all.filter(p => {
-
-      const access = clean(p["Access"]).toLowerCase();
-
-      return access === "premium"
-        || access === "vip"
-        || access === "paid";
-
-    });
-
-    if(!premium.length){
-
-      board.innerHTML = `
-        <div class="card">
-          No premium plays found.
-        </div>
-      `;
-
-      return;
-
-    }
-
-    board.innerHTML = premium.reverse().map(p => `
-
-      <div class="card pick">
-
-        <h2>${p["Pick"] || "Premium Pick"}</h2>
-
-        <div>
-          ${p["Game"] || ""}
-        </div>
-
-        <div class="meta">
-          Odds: ${p["Odds"] || "-"} |
-          Units: ${p["Units"] || "-"} |
-          Grade: ${p["Grade"] || "-"}
-        </div>
-
-        <p style="margin-top:15px;">
-          ${p["Writeup"] || p["Full Analysis"] || ""}
-        </p>
-
-      </div>
-
-    `).join("");
-
-  }
-  catch(err){
-
-    board.innerHTML = `
-      <div class="card">
-        Failed to load premium plays.
-      </div>
-    `;
-
-  }
-
-}
-
-loadPremium();
+document.addEventListener("DOMContentLoaded",function(){loadBoard("Premium","premiumBoard","prem");});
 </script>
-
-</body>
-</html>
+</body></html>
