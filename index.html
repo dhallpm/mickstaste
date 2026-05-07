@@ -192,6 +192,41 @@ function loadFeaturedPlay(){
 }
 
 document.addEventListener("DOMContentLoaded", function(){
-  loadBoard("Free","freeBoard","pub");
+  function loadFeaturedPlay(){
+  fetch(DATA_URL + "&cache=" + Date.now(), { cache: "no-store" })
+    .then(res => res.text())
+    .then(text => {
+      const rows = parseCSV(text);
+      const all = makeObjects(rows);
+
+      const featured = all.find(
+        p => (p["Featured"] || "").trim().toLowerCase() === "yes"
+      );
+
+      const box = document.getElementById("top-play");
+
+      if (!box) return;
+
+      if (!featured) {
+        box.innerHTML = '<div class="empty">No Play of the Day selected.</div>';
+        return;
+      }
+
+      box.innerHTML = card(featured, false);
+    })
+    .catch(err => {
+      console.error(err);
+
+      const box = document.getElementById("top-play");
+
+      if (box) {
+        box.innerHTML =
+          '<div class="error">Could not load Play of the Day.</div>';
+      }
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  loadBoard("Free", "freeBoard", "pub");
   loadFeaturedPlay();
 });
