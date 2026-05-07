@@ -35,9 +35,13 @@ a{text-decoration:none;color:inherit}.container{max-width:1220px;margin:0 auto;p
 .badge.blue{border-color:rgba(123,183,255,.45);color:var(--blue);background:rgba(123,183,255,.08)}
 .pick-card{border-left:5px solid var(--gold);margin:15px 0;position:relative;overflow:hidden;box-shadow:0 18px 55px rgba(0,0,0,.45),0 0 28px rgba(212,175,55,.08);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
 .pick-card:hover{transform:translateY(-3px);box-shadow:0 24px 70px rgba(0,0,0,.6),0 0 36px rgba(212,175,55,.18)}
-.pick-card::before{content:"MICKS PICK";position:absolute;top:14px;right:-38px;transform:rotate(35deg);background:linear-gradient(135deg,var(--gold),var(--gold2));color:#111;font-size:10px;font-weight:900;letter-spacing:1px;padding:6px 42px;box-shadow:0 0 24px rgba(212,175,55,.25)}
+.pick-card::before{
+  display:none;
+}
 .top-play-card{border-left-color:var(--green);background:linear-gradient(180deg,rgba(54,212,122,.10),rgba(255,255,255,.025))}
-.top-play-card::before{content:"TOP PLAY";background:linear-gradient(135deg,var(--green),var(--gold2))}
+.top-play-card::before{
+  display:none;
+}
 .pick-title{font-size:30px;font-weight:950;margin-top:8px;background:linear-gradient(90deg,#fff6df,#ffe28a);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 0 22px rgba(212,175,55,.18)}
 .pick-top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.game{color:#f0dfb6;margin-top:5px;font-size:15px}
 .meta{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.meta span{background:linear-gradient(180deg,#111,#070707);border:1px solid rgba(212,175,55,.16);border-radius:999px;padding:7px 10px;font-size:12px;color:#eee0b8;box-shadow:inset 0 0 18px rgba(212,175,55,.06)}
