@@ -155,4 +155,41 @@ function card(p,premium){const grade=safe(p["Grade"]||"A");const conf=safe(p["Co
 function updateStats(picks,prefix){const active=picks.filter(p=>clean(p["Status"]).toLowerCase()==="active").length;const wins=picks.filter(p=>clean(p["Result"]).toLowerCase()==="win").length;const losses=picks.filter(p=>clean(p["Result"]).toLowerCase()==="loss").length;const total=wins+losses;const winrate=total?Math.round((wins/total)*100)+"%":"—";const aTier=picks.filter(p=>clean(p["Grade"]).toLowerCase()==="a").length;const set=(id,val)=>{const el=document.getElementById(prefix+id);if(el)el.textContent=val;};set("Active",active||"—");set("WinRate",winrate);set("ATier",aTier||"—");}
 async function loadBoard(kind,targetId,prefix){const target=document.getElementById(targetId);target.innerHTML='<div class="loading">Loading plays from the Gurus Lair...</div>';try{const res=await fetch(DATA_URL+"&cache="+Date.now(),{cache:"no-store"});if(!res.ok)throw new Error("Data source did not respond.");const text=await res.text();if(text.toLowerCase().includes("<html"))throw new Error("Data source returned a page instead of play data.");const rows=parseCSV(text);const headers=(rows[0]||[]).map(h=>clean(h).toLowerCase());const hasAccess=headers.includes("access");const all=makeObjects(rows);const picks=kind==="Premium"?all.filter(isPremium):all.filter(p=>isFree(p,hasAccess));updateStats(picks,prefix||"");if(!picks.length){target.innerHTML='<div class="empty">No '+kind+' plays are posted yet.</div>';return;}target.innerHTML=picks.reverse().map(p=>card(p,kind==="Premium")).join("");}catch(err){target.innerHTML='<div class="error">Plays could not load. Owner should check the private data source.<br><br>'+safe(err.message)+'</div>';}}
 
-document.addEventListener("DOMContentLoaded", function(){ loadBoard("Free","freeBoard","pub"); });</script></body></html>
+function loadFeaturedPlay(){
+  fetch(DATA_URL+"&cache="+Date.now(),{cache:"no-store"})
+    .then(res=>res.text())
+    .then(text=>{
+      const rows=parseCSV(text);
+      const picks=makeObjects(rows);
+      const featured=picks.find(p=>clean(p["Featured"]).toLowerCase()==="yes");
+      const box=document.getElementById("top-play");
+      if(!box || !featured) return;
+
+      box.innerHTML = `
+        <div class="card pick-card top-play-card">
+          <div class="pick-top">
+            <div>
+              <span class="badge green">PLAY OF THE DAY</span>
+              <div class="pick-title">${safe(featured["Pick"]||"Today’s Best Edge")}</div>
+              <div class="game">${safe(featured["Game"]||featured["League"]||"")}</div>
+            </div>
+            <span class="badge">${safe(featured["Grade"]||"Premium Grade")}</span>
+          </div>
+          <div class="meta">
+            <span>Odds: ${safe(featured["Odds"]||"—")}</span>
+            <span>Units: ${safe(featured["Units"]||"—")}</span>
+            <span>Best #: ${safe(featured["Best Number"]||"—")}</span>
+            <span>Cutoff: ${safe(featured["No Bet Cutoff"]||"—")}</span>
+          </div>
+          <div class="analysis">
+            <h4>Why It Matters</h4>
+            <p class="writeup">${safe(featured["Writeup"]||featured["Full Analysis"]||"Full Micks Picks analysis coming soon.")}</p>
+          </div>
+        </div>`;
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function(){
+  loadBoard("Free","freeBoard","pub");
+  loadFeaturedPlay();
+});
