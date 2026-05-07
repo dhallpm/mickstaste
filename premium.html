@@ -4,14 +4,48 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Mick's Picks Premium</title>
+
 <style>
-body{margin:0;font-family:Arial,sans-serif;background:#050505;color:#fff}
-.header{padding:20px;border-bottom:1px solid #333;background:#0b0b0b}
-.container{max-width:1200px;margin:auto;padding:20px}
-.card{background:#111;border:1px solid #333;border-radius:18px;padding:20px;margin-top:20px}
-h1,h2{color:#ffe28a}
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#050505;
+  color:#fff;
+}
+.header{
+  padding:20px;
+  border-bottom:1px solid #333;
+  background:#0b0b0b;
+}
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:20px;
+}
+.card{
+  background:#111;
+  border:1px solid #333;
+  border-radius:18px;
+  padding:20px;
+  margin-top:20px;
+}
+.pick{
+  border-left:4px solid gold;
+  margin-top:20px;
+}
+h1,h2{
+  color:#ffe28a;
+}
+.meta{
+  margin-top:10px;
+  color:#ccc;
+  font-size:14px;
+}
+.loading{
+  padding:20px;
+}
 </style>
-<!-- version 2 -->
+
 <script>
 const PASSWORD = "micksvip";
 
@@ -24,6 +58,7 @@ if (entered !== PASSWORD) {
 </script>
 
 </head>
+
 <body>
 
 <div class="header">
@@ -33,12 +68,175 @@ if (entered !== PASSWORD) {
 </div>
 
 <div class="container">
+
   <div class="card">
     <h2>Premium Board</h2>
-    <p>Your premium picks board is protected by password.</p>
-    <p>Only users with the correct password can access this page.</p>
+    <p>Premium member picks powered by Micks Picks.</p>
   </div>
+
+  <div id="premiumBoard">
+    <div class="loading">
+      Loading premium plays...
+    </div>
+  </div>
+
 </div>
+
+<script>
+const DATA_URL = "https://docs.google.com/spreadsheets/d/15txBM8qsck7f0ZA_za7xYEykBxKpuq0no3x7yHcKNeE/export?format=csv&gid=0";
+
+function clean(s){
+  return String(s || "").trim();
+}
+
+function parseCSV(text){
+  const rows = [];
+  let row = [];
+  let cur = "";
+  let q = false;
+
+  for(let i=0;i<text.length;i++){
+
+    const c = text[i];
+    const n = text[i+1];
+
+    if(c === '"' && q && n === '"'){
+      cur += '"';
+      i++;
+    }
+    else if(c === '"'){
+      q = !q;
+    }
+    else if(c === "," && !q){
+      row.push(cur);
+      cur = "";
+    }
+    else if((c === "\n" || c === "\r") && !q){
+
+      if(cur !== "" || row.length){
+        row.push(cur);
+        rows.push(row);
+
+        row = [];
+        cur = "";
+      }
+
+      if(c === "\r" && n === "\n"){
+        i++;
+      }
+
+    }
+    else{
+      cur += c;
+    }
+
+  }
+
+  if(cur !== "" || row.length){
+    row.push(cur);
+    rows.push(row);
+  }
+
+  return rows;
+}
+
+function makeObjects(rows){
+
+  if(!rows.length) return [];
+
+  const headers = rows[0].map(h => clean(h));
+
+  return rows.slice(1)
+    .filter(r => r.some(x => clean(x)))
+    .map(r => {
+
+      const o = {};
+
+      headers.forEach((h,i)=>{
+        o[h] = clean(r[i]);
+      });
+
+      return o;
+
+    });
+
+}
+
+async function loadPremium(){
+
+  const board = document.getElementById("premiumBoard");
+
+  try{
+
+    const res = await fetch(DATA_URL + "&cache=" + Date.now());
+
+    const text = await res.text();
+
+    const rows = parseCSV(text);
+
+    const all = makeObjects(rows);
+
+    const premium = all.filter(p => {
+
+      const access = clean(p["Access"]).toLowerCase();
+
+      return access === "premium"
+        || access === "vip"
+        || access === "paid";
+
+    });
+
+    if(!premium.length){
+
+      board.innerHTML = `
+        <div class="card">
+          No premium plays found.
+        </div>
+      `;
+
+      return;
+
+    }
+
+    board.innerHTML = premium.reverse().map(p => `
+
+      <div class="card pick">
+
+        <h2>${p["Pick"] || "Premium Pick"}</h2>
+
+        <div>
+          ${p["Game"] || ""}
+        </div>
+
+        <div class="meta">
+          Odds: ${p["Odds"] || "-"} |
+          Units: ${p["Units"] || "-"} |
+          Grade: ${p["Grade"] || "-"}
+        </div>
+
+        <p style="margin-top:15px;">
+          ${p["Writeup"] || p["Full Analysis"] || ""}
+        </p>
+
+      </div>
+
+    `).join("");
+
+  }
+  catch(err){
+
+    board.innerHTML = `
+      <div class="card">
+        Failed to load premium plays.
+      </div>
+    `;
+
+  }
+
+}
+
+loadPremium();
+</script>
 
 </body>
 </html>
