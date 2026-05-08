@@ -13,7 +13,106 @@
 .table{width:100%;border-collapse:separate;border-spacing:0 9px}.table th{text-align:left;color:var(--gold2);font-size:12px;text-transform:uppercase;letter-spacing:1px;padding:8px}.table td{background:#090909;border-top:1px solid rgba(212,175,55,.12);border-bottom:1px solid rgba(212,175,55,.12);padding:12px;color:#eadfbf;font-size:13px}.table td:first-child{border-left:1px solid rgba(212,175,55,.12);border-radius:14px 0 0 14px}.table td:last-child{border-right:1px solid rgba(212,175,55,.12);border-radius:0 14px 14px 0}
 .loading,.empty,.error{padding:20px;border:1px dashed rgba(212,175,55,.3);border-radius:18px;background:#090909;color:#c9bea2}.error{border-color:#7a3333;color:#ffbaba}.footer{border-top:1px solid var(--line);padding:32px 0;color:#a99f83;font-size:13px;margin-top:30px}
 @media(max-width:960px){.vipbar{grid-template-columns:repeat(2,1fr)}.two,.notes{grid-template-columns:1fr}.links{display:none}.table{display:block;overflow:auto}}@media(max-width:700px){.hero{padding:42px 0 28px}.hero h2{font-size:42px}.pick-title{font-size:23px}.card,.vip{border-radius:20px;padding:16px}.meta span{font-size:11px}}
-</style><script>const PASSWORD='micksvip';const entered=prompt('Enter Premium Password');if(entered!==PASSWORD){alert('Incorrect Password');window.location.href='./';}</script></head><body>
+
+/* Premium Login Upgrade */
+body.locked #premiumApp{
+  filter: blur(10px);
+  transform: scale(.995);
+  pointer-events:none;
+  user-select:none;
+}
+.vip-login{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+  background:
+    radial-gradient(circle at 20% 10%,rgba(212,175,55,.24),transparent 32%),
+    radial-gradient(circle at 80% 20%,rgba(54,212,122,.12),transparent 28%),
+    rgba(0,0,0,.86);
+  backdrop-filter:blur(14px);
+}
+.vip-login-card{
+  width:min(520px,100%);
+  border:1px solid rgba(212,175,55,.42);
+  border-radius:30px;
+  padding:30px;
+  background:linear-gradient(180deg,rgba(20,20,20,.98),rgba(6,6,6,.98));
+  box-shadow:0 35px 100px rgba(0,0,0,.7),0 0 45px rgba(212,175,55,.18);
+  text-align:center;
+}
+.vip-lock{
+  width:76px;
+  height:76px;
+  margin:0 auto 18px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#111;
+  font-weight:950;
+  font-size:28px;
+  background:linear-gradient(135deg,#a87710,#ffe28a 55%,#c79b26);
+  box-shadow:0 0 28px rgba(212,175,55,.38);
+}
+.vip-login-card h2{
+  margin:0 0 8px;
+  font-size:34px;
+  color:#fff6df;
+}
+.vip-login-card p{
+  margin:0 auto 20px;
+  max-width:390px;
+  color:#cfc3a7;
+  line-height:1.55;
+}
+.vip-input{
+  width:100%;
+  padding:16px 18px;
+  border-radius:16px;
+  border:1px solid rgba(212,175,55,.35);
+  background:#050505;
+  color:#fff6df;
+  outline:none;
+  font-size:17px;
+  text-align:center;
+  margin:8px 0 14px;
+  box-shadow:inset 0 0 18px rgba(212,175,55,.05);
+}
+.vip-input:focus{
+  border-color:#ffe28a;
+  box-shadow:0 0 0 4px rgba(212,175,55,.12),inset 0 0 18px rgba(212,175,55,.05);
+}
+.vip-error{
+  min-height:22px;
+  color:#ff8a8a;
+  font-size:13px;
+  margin-top:10px;
+}
+.vip-small{
+  font-size:12px;
+  color:#9e9379;
+  margin-top:16px;
+}
+
+</style></head><body class="locked">
+
+<div class="vip-login" id="vipLogin">
+  <div class="vip-login-card">
+    <div class="vip-lock">VIP</div>
+    <h2>Premium Vault</h2>
+    <p>Enter your member password to unlock full Micks Picks analysis, VIP plays, archive access, and premium betting breakdowns.</p>
+    <input class="vip-input" id="vipPassword" type="password" placeholder="Enter premium password" autocomplete="current-password" />
+    <button class="btn" id="vipUnlock" type="button">Unlock VIP Access</button>
+    <div class="vip-error" id="vipError"></div>
+    <div class="vip-small">Mick’s Picks • The Gurus Lair • Members Only</div>
+  </div>
+</div>
+
+<div id="premiumApp">
 <header class="header"><div class="container nav"><a class="brand" href="./"><div class="logo">MP</div><div><h1>Mick's Picks</h1><small>Premium Vault</small></div></a><nav class="links"><a href="./">Home</a><a href="#premium">Premium Board</a><a href="#viparchive">VIP Archive</a></nav></div></header>
 <div class="ticker"><div class="ticker-track"><span><b>PREMIUM</b> • Full Analysis</span><span><b>ACTIVE PICKS</b> • VIP Card</span><span><b>ARCHIVE</b> • VIP History</span><span><b>MICKS PICKS</b> • Positive EV Discipline</span><span><b>PREMIUM</b> • Full Analysis</span></div></div>
 <main>
@@ -44,4 +143,46 @@ function summarize(picks,prefix){const wins=picks.filter(p=>['win','won','w'].in
 function table(rows,targetId,limit=10){const t=document.getElementById(targetId);if(!t)return;if(!rows.length){t.innerHTML='<div class="empty">Nothing posted yet.</div>';return;}const show=rows.slice().reverse().slice(0,limit);t.innerHTML=`<table class="table"><thead><tr><th>Date</th><th>Pick</th><th>Grade</th><th>Result</th><th>P/L</th></tr></thead><tbody>${show.map(p=>`<tr><td>${safe(p['Date']||'')}</td><td>${safe(p['Pick']||'')}</td><td>${safe(p['Grade']||'')}</td><td>${safe(p['Result']||'Pending')}</td><td>${fmtPL(calcPL(p))}</td></tr>`).join('')}</tbody></table>`;}
 async function loadHome(){try{const active=await getRows(GIDS.active);const results=await getRows(GIDS.results).catch(()=>[]);summarize(active.concat(results),'pub');const featured=active.find(p=>clean(p['Featured']).toLowerCase()==='yes');document.getElementById('topPlayBox').innerHTML=featured?card(featured,false,true):'<div class="empty">No featured play selected.</div>';const free=active.filter(isFree);document.getElementById('freeBoard').innerHTML=free.length?free.slice().reverse().map(p=>card(p,false,false)).join(''):'<div class="empty">No free plays posted yet.</div>';table(results,'resultsTable',12);table(await getRows(GIDS.props).catch(()=>[]),'propsTable',8);table(await getRows(GIDS.parlays).catch(()=>[]),'parlayTable',8);}catch(err){document.getElementById('freeBoard').innerHTML='<div class="error">Could not load picks.<br><br>'+safe(err.message)+'</div>';}}
 async function loadPremium(){try{const active=await getRows(GIDS.active);const vip=await getRows(GIDS.vip).catch(()=>[]);const premiumActive=active.filter(isPremium);summarize(premiumActive.concat(vip),'prem');document.getElementById('premiumBoard').innerHTML=premiumActive.length?premiumActive.slice().reverse().map(p=>card(p,true,false)).join(''):'<div class="empty">No premium plays posted yet.</div>';table(vip,'vipArchiveTable',12);}catch(err){document.getElementById('premiumBoard').innerHTML='<div class="error">Could not load premium picks.<br><br>'+safe(err.message)+'</div>';}}
-document.addEventListener('DOMContentLoaded',loadPremium);</script></body></html>
+document.addEventListener('DOMContentLoaded',loadPremium);</script></div>
+
+<script>
+(function(){
+  const VIP_PASSWORD = "micksvip";
+  const sessionKey = "micksPremiumUnlocked";
+  const modal = document.getElementById("vipLogin");
+  const input = document.getElementById("vipPassword");
+  const button = document.getElementById("vipUnlock");
+  const error = document.getElementById("vipError");
+
+  function unlock(){
+    document.body.classList.remove("locked");
+    if(modal) modal.style.display = "none";
+    sessionStorage.setItem(sessionKey, "yes");
+  }
+
+  if(sessionStorage.getItem(sessionKey) === "yes"){
+    unlock();
+    return;
+  }
+
+  setTimeout(function(){ if(input) input.focus(); }, 300);
+
+  function checkPassword(){
+    if(!input) return;
+    if(input.value.trim() === VIP_PASSWORD){
+      unlock();
+    }else{
+      if(error) error.textContent = "Incorrect password. Please try again.";
+      input.value = "";
+      input.focus();
+    }
+  }
+
+  if(button) button.addEventListener("click", checkPassword);
+  if(input) input.addEventListener("keydown", function(e){
+    if(e.key === "Enter") checkPassword();
+  });
+})();
+</script>
+
+</body></html>
