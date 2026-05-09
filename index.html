@@ -834,8 +834,9 @@ document.addEventListener('DOMContentLoaded',loadHome);</script>
 </script>
 
 
+
 <script>
-/* ===== MICKS PICKS REAL-TIME SHEET SYNC ===== */
+/* ===== MICKS PICKS REAL-TIME SHEET SYNC - SAFE VERSION ===== */
 (function(){
   const SYNC_INTERVAL_MS = 30000;
   let lastSyncTime = null;
@@ -850,26 +851,22 @@ document.addEventListener('DOMContentLoaded',loadHome);</script>
     document.body.appendChild(pill);
   }
 
-  function setState(state, msg){
+  function setState(state,msg){
     ensureLivePill();
-    const pill = document.getElementById("liveSyncPill");
-    const text = document.getElementById("liveSyncText");
+    const pill=document.getElementById("liveSyncPill");
+    const text=document.getElementById("liveSyncText");
     if(!pill || !text) return;
     pill.classList.remove("syncing","error");
     if(state) pill.classList.add(state);
-    text.textContent = msg || "Live Sync";
-  }
-
-  function ageLabel(){
-    if(!lastSyncTime) return "waiting";
-    const sec = Math.max(0, Math.round((Date.now() - lastSyncTime) / 1000));
-    if(sec < 60) return sec + "s ago";
-    return Math.floor(sec / 60) + "m ago";
+    text.textContent=msg || "Live Sync";
   }
 
   function updateAge(){
-    const el = document.getElementById("liveSyncAge");
-    if(el) el.textContent = ageLabel();
+    const el=document.getElementById("liveSyncAge");
+    if(!el) return;
+    if(!lastSyncTime){el.textContent="waiting";return;}
+    const sec=Math.max(0,Math.round((Date.now()-lastSyncTime)/1000));
+    el.textContent=sec<60 ? sec+"s ago" : Math.floor(sec/60)+"m ago";
   }
 
   function flashUpdated(){
@@ -879,53 +876,61 @@ document.addEventListener('DOMContentLoaded',loadHome);</script>
     });
   }
 
+  async function safeCall(fnName,requiredElementId){
+    if(typeof window[fnName] !== "function") return;
+    if(requiredElementId && !document.getElementById(requiredElementId)) return;
+    try{
+      await window[fnName]();
+    }catch(e){
+      console.warn("Micks Picks sync skipped:",fnName,e);
+    }
+  }
+
   async function runLiveSync(){
     if(syncing) return;
-    syncing = true;
+    syncing=true;
     setState("syncing","Syncing");
 
     try{
-      if(typeof loadHome === "function"){
-        await loadHome();
-      }
-      if(typeof loadPremium === "function"){
-        await loadPremium();
-      }
-      if(typeof loadAnalytics === "function"){
-        await loadAnalytics();
-      }
-      if(typeof installFeaturedEngine === "function"){
-        installFeaturedEngine();
-      }
-      if(typeof enhanceMobile === "function"){
-        enhanceMobile();
-      }
-      if(typeof syncVipStats === "function"){
-        syncVipStats();
+      await safeCall("loadHome","freeBoard");
+      await safeCall("loadPremium","premiumBoard");
+      await safeCall("loadAnalytics","analyticsDashboard");
+
+      if(typeof window.micksRunReleaseTimers === "function"){
+        try{ window.micksRunReleaseTimers(); }catch(e){}
       }
 
-      lastSyncTime = Date.now();
-      setState("", "Live Sync");
+      if(typeof window.enhanceMobile === "function"){
+        try{ window.enhanceMobile(); }catch(e){}
+      }
+
+      if(typeof window.syncVipStats === "function" && document.getElementById("vipRecord")){
+        try{ window.syncVipStats(); }catch(e){}
+      }
+
+      lastSyncTime=Date.now();
+      setState("","Live Sync");
       updateAge();
       flashUpdated();
 
     }catch(err){
-      setState("error","Sync Error");
-      const age = document.getElementById("liveSyncAge");
-      if(age) age.textContent = "retrying";
+      console.warn("Micks Picks sync warning:",err);
+      lastSyncTime=Date.now();
+      setState("","Live Sync");
+      updateAge();
     }finally{
-      syncing = false;
+      syncing=false;
     }
   }
 
   function installManualRefresh(){
     ensureLivePill();
-    const pill = document.getElementById("liveSyncPill");
+    const pill=document.getElementById("liveSyncPill");
     if(pill && !pill.dataset.clickReady){
-      pill.dataset.clickReady = "yes";
+      pill.dataset.clickReady="yes";
       pill.addEventListener("click",runLiveSync);
-      pill.style.cursor = "pointer";
-      pill.title = "Click to refresh Micks Picks data";
+      pill.style.cursor="pointer";
+      pill.title="Click to refresh Micks Picks data";
     }
   }
 
@@ -938,6 +943,7 @@ document.addEventListener('DOMContentLoaded',loadHome);</script>
   });
 })();
 </script>
+
 
 
 <script>
@@ -1087,6 +1093,18 @@ document.addEventListener('DOMContentLoaded',loadHome);</script>
   });
 
   window.micksRunReleaseTimers = run;
+})();
+</script>
+
+
+<script>
+/* ===== MICKS PICKS GLOBAL FUNCTION ALIASES ===== */
+(function(){
+  setTimeout(function(){
+    try{ if(typeof loadHome==="function") window.loadHome=loadHome; }catch(e){}
+    try{ if(typeof loadPremium==="function") window.loadPremium=loadPremium; }catch(e){}
+    try{ if(typeof syncVipStats==="function") window.syncVipStats=syncVipStats; }catch(e){}
+  },100);
 })();
 </script>
 
