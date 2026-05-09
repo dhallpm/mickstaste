@@ -359,6 +359,71 @@
 @media(max-width:900px){.sport-widget-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:620px){.league-strip,.sport-tabs{gap:7px}.league-logo,.sport-logo{height:27px;min-width:42px;font-size:9.5px;padding:0 8px}.sport-tab{font-size:11px;padding:7px 10px 7px 7px}.sport-widget-grid{grid-template-columns:1fr 1fr}.sport-widget{padding:11px;border-radius:16px}.sport-widget strong{font-size:14px}}
 
+
+/* ===== DYNAMIC FEATURED PLAY ENGINE ===== */
+.pick-card.edge-strong{
+  border-left-color:#36d47a !important;
+  box-shadow:0 20px 65px rgba(0,0,0,.55),0 0 34px rgba(54,212,122,.18) !important;
+}
+.pick-card.edge-best{
+  border-left-color:#ffe28a !important;
+  box-shadow:0 20px 65px rgba(0,0,0,.55),0 0 38px rgba(255,226,138,.22) !important;
+}
+.pick-card.edge-risk{
+  border-left-color:#ff6464 !important;
+  box-shadow:0 20px 65px rgba(0,0,0,.55),0 0 32px rgba(255,100,100,.16) !important;
+}
+.dynamic-edge-label{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  margin-left:6px;
+  border-radius:999px;
+  padding:7px 11px;
+  font-size:11px;
+  font-weight:1000;
+  letter-spacing:.6px;
+  text-transform:uppercase;
+}
+.dynamic-edge-label.strong{background:rgba(54,212,122,.10);border:1px solid rgba(54,212,122,.42);color:#36d47a}
+.dynamic-edge-label.best{background:rgba(255,226,138,.10);border:1px solid rgba(255,226,138,.42);color:#ffe28a}
+.dynamic-edge-label.risk{background:rgba(255,100,100,.10);border:1px solid rgba(255,100,100,.42);color:#ff8a8a}
+.featured-engine-panel{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+  margin:14px 0 0;
+}
+.featured-engine-stat{
+  background:rgba(0,0,0,.32);
+  border:1px solid rgba(212,175,55,.16);
+  border-radius:16px;
+  padding:12px;
+}
+.featured-engine-stat strong{
+  display:block;
+  color:#fff6df;
+  font-size:17px;
+}
+.featured-engine-stat span{
+  display:block;
+  color:#bdb39b;
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:.8px;
+  margin-top:4px;
+}
+.featured-rotate-note{
+  color:#bdb39b;
+  font-size:13px;
+  line-height:1.5;
+  margin-top:10px;
+}
+@media(max-width:760px){
+  .featured-engine-panel{grid-template-columns:repeat(2,1fr)}
+  .dynamic-edge-label{margin-left:0;margin-top:6px}
+}
+
 </style></head><body>
 <header class="header"><div class="container nav"><a class="brand" href="./"><div class="logo">MP</div><div><h1>Mick's Picks</h1><small>The Gurus Lair</small></div></a><nav class="links"><a href="#top-play">Top Play</a><a href="#free">Free Board</a><a href="#analytics">Stats</a><a href="#trackers">Trackers</a><a class="btn dark" href="premium.html">Premium Login</a></nav></div></header>
 <div class="ticker"><div class="ticker-track"><span><b>LIVE CARD</b> • Active Picks</span><span><b>ARCHIVE</b> • Results Tracker</span><span><b>PROPS</b> • Prop Database</span><span><b>PARLAYS</b> • Parlay Tracker</span><span><b>MICKS PICKS</b> • Bet The Number, Not The Hype</span><span><b>LIVE CARD</b> • Active Picks</span></div></div>
@@ -519,6 +584,100 @@ document.addEventListener('DOMContentLoaded',loadHome);</script>
   function leagueClass(val){const s=String(val||"").toLowerCase();if(s.includes("nba"))return"logo-nba";if(s.includes("nhl"))return"logo-nhl";if(s.includes("ufc"))return"logo-ufc";if(s.includes("wnba"))return"logo-wnba";if(s.includes("nfl"))return"logo-nfl";if(s.includes("mlb"))return"logo-mlb";if(s.includes("prop"))return"logo-props";if(s.includes("parlay"))return"logo-parlay";return"logo-nba";}
   function enhanceCards(){document.querySelectorAll(".pick-card").forEach(function(card){if(card.dataset.leagueEnhanced==="yes")return;card.dataset.leagueEnhanced="yes";const text=card.textContent||"";let league="NBA";["NBA","NHL","UFC","WNBA","NFL","MLB"].forEach(function(x){if(text.includes(x))league=x;});const row=document.createElement("div");row.className="pick-league-row";row.innerHTML='<span class="sport-logo '+leagueClass(league)+'">'+league+'</span><span class="badge">MICKS PICKS EDGE</span>';const title=card.querySelector(".pick-title");if(title&&title.parentNode)title.parentNode.insertBefore(row,title);});}
   document.addEventListener("DOMContentLoaded",function(){enhanceCards();setTimeout(enhanceCards,900);setTimeout(enhanceCards,1800);setTimeout(enhanceCards,3000);});
+})();
+</script>
+
+
+<script>
+/* ===== MICKS PICKS DYNAMIC FEATURED ENGINE ===== */
+(function(){
+  function clean(s){return String(s||"").trim();}
+  function num(v){const n=parseFloat(String(v||"").replace(/[^0-9.+-]/g,""));return Number.isFinite(n)?n:0;}
+  function gradeScore(g){
+    g=clean(g).toUpperCase();
+    if(g.startsWith("A+")) return 5.0;
+    if(g.startsWith("A")) return 4.6;
+    if(g.startsWith("B+")) return 3.8;
+    if(g.startsWith("B")) return 3.3;
+    if(g.startsWith("C")) return 2.2;
+    return 1.0;
+  }
+  function confidenceScore(c){
+    c=clean(c).toLowerCase();
+    if(c.includes("high")) return 2.0;
+    if(c.includes("medium-high")) return 1.6;
+    if(c.includes("medium")) return 1.1;
+    if(c.includes("low")) return .4;
+    return .8;
+  }
+  function edgeClass(p){
+    const ev=num(p["EV Edge"]);
+    const grade=clean(p["Grade"]).toUpperCase();
+    const conf=clean(p["Confidence"]).toLowerCase();
+    if(grade.startsWith("A") && ev >= .05 && conf.includes("high")) return ["edge-best","best","BEST BET"];
+    if(grade.startsWith("A") || ev >= .045) return ["edge-strong","strong","STRONG VALUE"];
+    return ["edge-risk","risk","RISK / VALUE"];
+  }
+  function pickScore(p){
+    return gradeScore(p["Grade"]) + confidenceScore(p["Confidence"]) + (num(p["EV Edge"]) * 20) + (clean(p["Featured"]).toLowerCase()==="yes" ? .6 : 0);
+  }
+  function buildFeaturedCard(p){
+    const cls=edgeClass(p);
+    const pl = (typeof calcPL==="function") ? calcPL(p) : null;
+    const plText = (typeof fmtPL==="function") ? fmtPL(pl) : "Pending";
+    const safeFn = (typeof safe==="function") ? safe : function(x){return String(x??"").replace(/[&<>]/g,"");};
+    const analysis = p["Writeup"] || p["Full Analysis"] || "Featured Micks Picks edge.";
+    return `<div class="card pick-card featured-play ${cls[0]}">
+      <div class="pick-top">
+        <div>
+          <span class="badge">${safeFn(p["Grade"]||"A")} • ${safeFn(p["Bet Type"]||"Play")}</span>
+          <span class="dynamic-edge-label ${cls[1]}">${cls[2]}</span>
+          <div class="pick-title">${safeFn(p["Pick"]||"Featured Play")}</div>
+          <div class="game">${safeFn(p["Game"]||"")}</div>
+        </div>
+        <div class="pick-top-right">
+          <span class="badge blue">${safeFn(p["Status"]||"Active")}</span>
+          <div class="sub">Confidence: ${safeFn(p["Confidence"]||"—")}</div>
+        </div>
+      </div>
+      <div class="meta">
+        <span>Odds: ${safeFn(p["Odds"]||"—")}</span>
+        <span>Units: ${safeFn(p["Units"]||"—")}</span>
+        <span>Best #: ${safeFn(p["Best Number"]||"—")}</span>
+        <span>Cutoff: ${safeFn(p["No Bet Cutoff"]||"—")}</span>
+        <span>EV: ${safeFn(p["EV Edge"]||"—")}</span>
+        <span>P/L: ${safeFn(plText)}</span>
+      </div>
+      <div class="featured-engine-panel">
+        <div class="featured-engine-stat"><strong>${safeFn(p["Grade"]||"—")}</strong><span>Grade</span></div>
+        <div class="featured-engine-stat"><strong>${safeFn(p["EV Edge"]||"—")}</strong><span>EV Edge</span></div>
+        <div class="featured-engine-stat"><strong>${safeFn(p["Confidence"]||"—")}</strong><span>Confidence</span></div>
+        <div class="featured-engine-stat"><strong>${safeFn(p["Best Number"]||"—")}</strong><span>Best Number</span></div>
+      </div>
+      <div class="analysis">
+        <h4>Auto-Selected Featured Edge</h4>
+        <div class="writeup">${safeFn(analysis)}</div>
+      </div>
+      <div class="featured-rotate-note">Featured engine ranks live plays by grade, EV edge, confidence, and manual Featured tag. Glow color updates automatically by edge quality.</div>
+    </div>`;
+  }
+  function installFeaturedEngine(){
+    if(typeof getRows!=="function" || typeof GIDS==="undefined") return;
+    const box=document.getElementById("topPlayBox");
+    if(!box) return;
+    getRows(GIDS.active).then(function(rows){
+      const active=rows.filter(p=>["active","pending",""].includes(clean(p["Status"]).toLowerCase()));
+      const picks=active.length ? active : rows;
+      if(!picks.length) return;
+      picks.sort((a,b)=>pickScore(b)-pickScore(a));
+      box.innerHTML=buildFeaturedCard(picks[0]);
+      if(typeof enhanceMobile==="function") enhanceMobile();
+    }).catch(function(){});
+  }
+  document.addEventListener("DOMContentLoaded",function(){
+    setTimeout(installFeaturedEngine,300);
+    setTimeout(installFeaturedEngine,1400);
+  });
 })();
 </script>
 
