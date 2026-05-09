@@ -436,6 +436,70 @@
 .vip-home-teaser strong{color:#fff6df;font-size:22px;display:block}
 .vip-home-teaser p{color:#bdb39b;margin:8px 0 14px;line-height:1.5}
 
+
+/* ===== MICKS PICKS REAL-TIME SYNC ENGINE ===== */
+.live-sync-pill{
+  position:fixed;
+  right:16px;
+  bottom:86px;
+  z-index:9999;
+  display:flex;
+  align-items:center;
+  gap:9px;
+  border:1px solid rgba(54,212,122,.34);
+  background:rgba(5,5,5,.88);
+  backdrop-filter:blur(14px);
+  color:#dfffe9;
+  border-radius:999px;
+  padding:10px 13px;
+  font-size:12px;
+  font-weight:900;
+  box-shadow:0 16px 42px rgba(0,0,0,.45),0 0 24px rgba(54,212,122,.13);
+}
+.live-dot{
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  background:#36d47a;
+  box-shadow:0 0 12px #36d47a;
+  animation:livePulse 1.5s ease-in-out infinite;
+}
+.live-sync-pill.syncing .live-dot{
+  background:#ffe28a;
+  box-shadow:0 0 12px #ffe28a;
+}
+.live-sync-pill.error .live-dot{
+  background:#ff6464;
+  box-shadow:0 0 12px #ff6464;
+}
+.live-small{
+  color:#bdb39b;
+  font-size:10px;
+  font-weight:700;
+  margin-left:2px;
+}
+.sync-flash{
+  animation:syncFlash .55s ease;
+}
+@keyframes livePulse{
+  0%,100%{opacity:.55;transform:scale(.92)}
+  50%{opacity:1;transform:scale(1.18)}
+}
+@keyframes syncFlash{
+  0%{box-shadow:0 0 0 rgba(54,212,122,0)}
+  50%{box-shadow:0 0 42px rgba(54,212,122,.22)}
+  100%{box-shadow:0 0 0 rgba(54,212,122,0)}
+}
+@media(max-width:760px){
+  .live-sync-pill{
+    left:12px;
+    right:12px;
+    bottom:78px;
+    justify-content:center;
+    font-size:11px;
+  }
+}
+
 </style></head><body>
 <header class="header"><div class="container nav"><a class="brand" href="./"><div class="logo">MP</div><div><h1>Mick's Picks</h1><small>The Gurus Lair</small></div></a><nav class="links"><a href="#top-play">Top Play</a><a href="#free">Free Board</a><a href="#analytics">Stats</a><a href="#trackers">Trackers</a><a class="btn dark" href="premium.html">Premium Login</a></nav></div></header>
 <div class="ticker"><div class="ticker-track"><span><b>LIVE CARD</b> • Active Picks</span><span><b>ARCHIVE</b> • Results Tracker</span><span><b>PROPS</b> • Prop Database</span><span><b>PARLAYS</b> • Parlay Tracker</span><span><b>MICKS PICKS</b> • Bet The Number, Not The Hype</span><span><b>LIVE CARD</b> • Active Picks</span></div></div>
@@ -449,6 +513,8 @@
   <span class="league-logo logo-nfl">NFL</span>
   <span class="league-logo logo-mlb">MLB</span>
 </div>
+
+<div class="header-badge" style="margin-top:10px;display:inline-flex">● Real-Time Sheet Sync Active</div>
 <div class="actions"><a class="btn" href="#free">View Today’s Card</a><a class="btn dark" href="premium.html">Premium Vault</a></div><div class="vipbar"><div class="vip"><b id="pubActive">—</b><span>Active Plays</span></div><div class="vip"><b id="pubATier">—</b><span>A-Tier Plays</span></div><div class="vip"><b id="pubWinRate">—</b><span>Win Rate</span></div><div class="vip"><b id="pubProfit">—</b><span>Tracked Units</span></div><div class="vip"><b>EV</b><span>Value Discipline</span></div><div class="vip"><b>VIP</b><span>Full Analysis</span></div>
 <div class="sport-tabs">
   <a class="sport-tab" href="#free"><span class="league-logo logo-nba">NBA</span> NBA Picks</a>
@@ -695,6 +761,112 @@ document.addEventListener('DOMContentLoaded',loadHome);</script>
   document.addEventListener("DOMContentLoaded",function(){
     setTimeout(installFeaturedEngine,300);
     setTimeout(installFeaturedEngine,1400);
+  });
+})();
+</script>
+
+
+<script>
+/* ===== MICKS PICKS REAL-TIME SHEET SYNC ===== */
+(function(){
+  const SYNC_INTERVAL_MS = 30000;
+  let lastSyncTime = null;
+  let syncing = false;
+
+  function ensureLivePill(){
+    if(document.getElementById("liveSyncPill")) return;
+    const pill = document.createElement("div");
+    pill.className = "live-sync-pill";
+    pill.id = "liveSyncPill";
+    pill.innerHTML = '<span class="live-dot"></span><span id="liveSyncText">Live Sync</span><span class="live-small" id="liveSyncAge">starting...</span>';
+    document.body.appendChild(pill);
+  }
+
+  function setState(state, msg){
+    ensureLivePill();
+    const pill = document.getElementById("liveSyncPill");
+    const text = document.getElementById("liveSyncText");
+    if(!pill || !text) return;
+    pill.classList.remove("syncing","error");
+    if(state) pill.classList.add(state);
+    text.textContent = msg || "Live Sync";
+  }
+
+  function ageLabel(){
+    if(!lastSyncTime) return "waiting";
+    const sec = Math.max(0, Math.round((Date.now() - lastSyncTime) / 1000));
+    if(sec < 60) return sec + "s ago";
+    return Math.floor(sec / 60) + "m ago";
+  }
+
+  function updateAge(){
+    const el = document.getElementById("liveSyncAge");
+    if(el) el.textContent = ageLabel();
+  }
+
+  function flashUpdated(){
+    document.querySelectorAll(".pick-card,.analytics-card,.chart-card,.vip,.card").forEach(function(el){
+      el.classList.add("sync-flash");
+      setTimeout(function(){el.classList.remove("sync-flash");},650);
+    });
+  }
+
+  async function runLiveSync(){
+    if(syncing) return;
+    syncing = true;
+    setState("syncing","Syncing");
+
+    try{
+      if(typeof loadHome === "function"){
+        await loadHome();
+      }
+      if(typeof loadPremium === "function"){
+        await loadPremium();
+      }
+      if(typeof loadAnalytics === "function"){
+        await loadAnalytics();
+      }
+      if(typeof installFeaturedEngine === "function"){
+        installFeaturedEngine();
+      }
+      if(typeof enhanceMobile === "function"){
+        enhanceMobile();
+      }
+      if(typeof syncVipStats === "function"){
+        syncVipStats();
+      }
+
+      lastSyncTime = Date.now();
+      setState("", "Live Sync");
+      updateAge();
+      flashUpdated();
+
+    }catch(err){
+      setState("error","Sync Error");
+      const age = document.getElementById("liveSyncAge");
+      if(age) age.textContent = "retrying";
+    }finally{
+      syncing = false;
+    }
+  }
+
+  function installManualRefresh(){
+    ensureLivePill();
+    const pill = document.getElementById("liveSyncPill");
+    if(pill && !pill.dataset.clickReady){
+      pill.dataset.clickReady = "yes";
+      pill.addEventListener("click",runLiveSync);
+      pill.style.cursor = "pointer";
+      pill.title = "Click to refresh Micks Picks data";
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded",function(){
+    ensureLivePill();
+    installManualRefresh();
+    setTimeout(runLiveSync,1200);
+    setInterval(runLiveSync,SYNC_INTERVAL_MS);
+    setInterval(updateAge,5000);
   });
 })();
 </script>
