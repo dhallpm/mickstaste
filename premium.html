@@ -125,6 +125,55 @@ body.unlocking .vip-login{animation:vipFadeOut .6s ease forwards}
 @media(max-width:900px){.vip-stat-grid{grid-template-columns:repeat(2,1fr)}.vip-login-card{padding:24px}}
 @media(max-width:620px){.vip-login{align-items:flex-end;padding:14px}.vip-login-card{border-radius:26px;padding:22px}.vip-login-card h2{font-size:28px}.vip-stat-grid{grid-template-columns:1fr}.vip-chip{font-size:11px;padding:7px 10px}.pick-card:after{top:14px;right:14px;font-size:10px}}
 
+
+.pick-top{
+  display:flex !important;
+  justify-content:space-between !important;
+  align-items:flex-start !important;
+  gap:18px !important;
+  flex-wrap:wrap !important;
+}
+
+.pick-top-right{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  justify-content:flex-start;
+  gap:10px;
+  padding-right:95px;
+  min-width:220px;
+}
+
+.pick-card:after{
+  content:"VIP";
+  position:absolute;
+  top:18px;
+  right:18px;
+  padding:6px 12px;
+  border-radius:999px;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:1px;
+  background:linear-gradient(135deg,#a87710,#ffe28a 55%,#c79b26);
+  color:#111;
+  box-shadow:0 0 18px rgba(212,175,55,.28);
+  z-index:5;
+}
+
+@media(max-width:700px){
+  .pick-top-right{
+    width:100%;
+    align-items:flex-start;
+    padding-right:0;
+    margin-top:10px;
+  }
+
+  .pick-card:after{
+    top:14px;
+    right:14px;
+  }
+}
+
 </style></head><body class="locked">
 
 <div class="vip-login" id="vipLogin">
@@ -177,7 +226,7 @@ function makeObjects(rows){if(!rows.length)return[];const h=rows[0].map(x=>clean
 async function getRows(gid){const res=await fetch(csvUrl(gid),{cache:'no-store'});if(!res.ok)throw new Error('Sheet did not respond.');const text=await res.text();if(text.toLowerCase().includes('<html'))throw new Error('Sheet returned HTML instead of CSV.');return makeObjects(parseCSV(text));}
 function isPremium(p){const a=clean(p['Access']).toLowerCase();return a==='premium'||a==='vip'||a==='paid';}
 function isFree(p){const a=clean(p['Access']).toLowerCase();return a===''||a==='free'||a==='public'||a==='featured';}
-function card(p,premium=false,featured=false){const pl=calcPL(p);return `<div class="card pick-card ${featured?'featured':''}"><div class="pick-top"><div><span class="badge">${safe(p['Grade']||'A')}-Tier • ${safe(p['Bet Type']||'Play')}</span> <span class="badge green">EV ${safe(p['EV Edge']||'—')}</span> <span class="${plClass(pl)}">P/L ${fmtPL(pl)}</span>${featured?' <span class="badge green">Featured</span>':''}<div class="pick-title">${safe(p['Pick']||'Pick Pending')}</div><div class="game">${safe(p['Game']||'')}</div></div><div style="text-align:right"><span class="badge blue">${safe(p['Status']||'Active')}</span><div class="sub" style="margin-top:8px">Confidence: ${safe(p['Confidence']||'—')}</div></div></div><div class="meta"><span>Odds: ${safe(p['Odds']||'—')}</span><span>Book: ${safe(p['Sportsbook']||'Best Available')}</span><span>Units: ${safe(p['Units']||'—')}</span><span>Best #: ${safe(p['Best Number']||'—')}</span><span>Cutoff: ${safe(p['No Bet Cutoff']||'—')}</span><span>Result: ${safe(p['Result']||'Pending')}</span></div><div class="analysis"><h4>${premium?'Full Premium Analysis':'Public Writeup'}</h4><div class="writeup">${safe(premium?(p['Full Analysis']||p['Writeup']||'Premium analysis coming soon.'):(p['Writeup']||'Public writeup coming soon.'))}</div></div><div class="notes"><div class="note"><strong>Market Notes</strong><br>${safe(p['Market Notes']||'Market check pending.')}</div><div class="note"><strong>Injury Notes</strong><br>${safe(p['Injury Notes']||'No major injury note posted.')}</div><div class="note"><strong>Source Check</strong><br>${safe(p['Source Verification']||'Micks Picks framework.')}</div></div></div>`;}
+function card(p,premium=false,featured=false){const pl=calcPL(p);return `<div class="card pick-card ${featured?'featured':''}"><div class="pick-top"><div><span class="badge">${safe(p['Grade']||'A')}-Tier • ${safe(p['Bet Type']||'Play')}</span> <span class="badge green">EV ${safe(p['EV Edge']||'—')}</span> <span class="${plClass(pl)}">P/L ${fmtPL(pl)}</span>${featured?' <span class="badge green">Featured</span>':''}<div class="pick-title">${safe(p['Pick']||'Pick Pending')}</div><div class="game">${safe(p['Game']||'')}</div></div><div class="pick-top-right"><span class="badge blue">${safe(p['Status']||'Active')}</span><div class="sub" style="margin-top:8px">Confidence: ${safe(p['Confidence']||'—')}</div></div></div><div class="meta"><span>Odds: ${safe(p['Odds']||'—')}</span><span>Book: ${safe(p['Sportsbook']||'Best Available')}</span><span>Units: ${safe(p['Units']||'—')}</span><span>Best #: ${safe(p['Best Number']||'—')}</span><span>Cutoff: ${safe(p['No Bet Cutoff']||'—')}</span><span>Result: ${safe(p['Result']||'Pending')}</span></div><div class="analysis"><h4>${premium?'Full Premium Analysis':'Public Writeup'}</h4><div class="writeup">${safe(premium?(p['Full Analysis']||p['Writeup']||'Premium analysis coming soon.'):(p['Writeup']||'Public writeup coming soon.'))}</div></div><div class="notes"><div class="note"><strong>Market Notes</strong><br>${safe(p['Market Notes']||'Market check pending.')}</div><div class="note"><strong>Injury Notes</strong><br>${safe(p['Injury Notes']||'No major injury note posted.')}</div><div class="note"><strong>Source Check</strong><br>${safe(p['Source Verification']||'Micks Picks framework.')}</div></div></div>`;}
 function setText(id,val){const el=document.getElementById(id);if(el)el.textContent=val;}
 function summarize(picks,prefix){const wins=picks.filter(p=>['win','won','w'].includes(result(p))).length,losses=picks.filter(p=>['loss','lost','l'].includes(result(p))).length,total=wins+losses;const active=picks.filter(p=>['active','pending'].includes(clean(p['Status']).toLowerCase())).length;const atier=picks.filter(p=>clean(p['Grade']).toLowerCase().startsWith('a')).length;const profit=picks.reduce((s,p)=>{const v=calcPL(p);return s+(v===null?0:v);},0);setText(prefix+'Active',active||'—');setText(prefix+'ATier',atier||'—');setText(prefix+'WinRate',total?Math.round((wins/total)*100)+'%':'—');setText(prefix+'Profit',fmtPL(profit));}
 function table(rows,targetId,limit=10){const t=document.getElementById(targetId);if(!t)return;if(!rows.length){t.innerHTML='<div class="empty">Nothing posted yet.</div>';return;}const show=rows.slice().reverse().slice(0,limit);t.innerHTML=`<table class="table"><thead><tr><th>Date</th><th>Pick</th><th>Grade</th><th>Result</th><th>P/L</th></tr></thead><tbody>${show.map(p=>`<tr><td>${safe(p['Date']||'')}</td><td>${safe(p['Pick']||'')}</td><td>${safe(p['Grade']||'')}</td><td>${safe(p['Result']||'Pending')}</td><td>${fmtPL(calcPL(p))}</td></tr>`).join('')}</tbody></table>`;}
