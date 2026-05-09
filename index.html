@@ -566,6 +566,159 @@
   100%{box-shadow:0 0 0 rgba(54,212,122,0)}
 }
 
+
+/* =========================================================
+   MICKS PICKS MASTER PREMIUM REMAKE
+========================================================= */
+:root{
+  --mp-bg:#050505;--mp-panel:#0d0d0d;--mp-gold:#ffe28a;--mp-gold2:#c8a64c;
+  --mp-green:#36d47a;--mp-red:#ff6464;--mp-blue:#7bb7ff;
+  --mp-text:#fff6df;--mp-muted:#bdb39b;--mp-line:rgba(255,226,138,.14);
+}
+html{scroll-behavior:smooth}
+body{
+  background:
+    radial-gradient(circle at 12% 6%,rgba(255,226,138,.16),transparent 27%),
+    radial-gradient(circle at 92% 8%,rgba(54,212,122,.08),transparent 25%),
+    radial-gradient(circle at 50% 100%,rgba(123,183,255,.06),transparent 34%),
+    linear-gradient(180deg,#050505,#010101) !important;
+  color:var(--mp-text) !important;
+  -webkit-font-smoothing:antialiased;
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;
+  background-image:
+    linear-gradient(rgba(255,255,255,.022) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.022) 1px,transparent 1px);
+  background-size:42px 42px;
+  mask-image:linear-gradient(180deg,rgba(0,0,0,.84),transparent 78%);
+}
+.container,.section.container{max-width:1180px !important}
+.section{padding-top:58px !important;padding-bottom:58px !important}
+header,.nav,.topbar{
+  backdrop-filter:blur(18px);
+  background:rgba(0,0,0,.50) !important;
+  border-bottom:1px solid rgba(255,226,138,.10) !important;
+}
+.hero{position:relative;overflow:hidden;border-radius:0 0 42px 42px}
+.hero:after{
+  content:"";position:absolute;right:-130px;top:20px;width:360px;height:360px;
+  background:radial-gradient(circle,rgba(255,226,138,.14),transparent 68%);
+  filter:blur(18px);pointer-events:none;
+}
+.hero h1,.hero h2{
+  font-size:clamp(42px,7vw,84px) !important;
+  line-height:.90 !important;letter-spacing:-3.5px !important;
+  font-weight:1000 !important;max-width:980px;
+  text-shadow:0 0 34px rgba(255,226,138,.10);
+}
+.hero p,.sub,.writeup,.analysis p{color:var(--mp-muted) !important;line-height:1.65 !important}
+.badge,.vip-chip,.header-badge,.ai-pill{
+  border-radius:999px !important;border:1px solid rgba(255,226,138,.18) !important;
+  background:rgba(255,226,138,.075) !important;color:var(--mp-gold) !important;
+  letter-spacing:.8px;font-weight:1000 !important;box-shadow:0 10px 28px rgba(0,0,0,.24);
+}
+.btn,button,.upgrade-btn{
+  border-radius:999px !important;background:linear-gradient(135deg,#a87710,#ffe28a 55%,#c79b26) !important;
+  color:#111 !important;font-weight:1000 !important;border:0 !important;
+  box-shadow:0 18px 42px rgba(255,226,138,.14) !important;
+  transition:transform .22s ease, box-shadow .22s ease, filter .22s ease;
+}
+.btn:hover,button:hover,.upgrade-btn:hover{
+  transform:translateY(-2px);filter:saturate(1.08);
+  box-shadow:0 22px 55px rgba(255,226,138,.22) !important;
+}
+.card,.pick-card,.analytics-card,.chart-card,.vip-member-card,.locked-card,.drop-card,.release-card,.sport-widget{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(circle at 100% 0%,rgba(255,226,138,.10),transparent 32%),
+    linear-gradient(180deg,rgba(255,255,255,.065),rgba(255,255,255,.018)) !important;
+  border:1px solid rgba(255,226,138,.12) !important;border-radius:28px !important;
+  box-shadow:0 24px 70px rgba(0,0,0,.46),inset 0 0 0 1px rgba(255,255,255,.025) !important;
+  transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease, background .25s ease;
+}
+.card:hover,.pick-card:hover,.analytics-card:hover,.chart-card:hover,.drop-card:hover,.sport-widget:hover{
+  transform:translateY(-4px);border-color:rgba(255,226,138,.28) !important;
+  box-shadow:0 28px 90px rgba(0,0,0,.58),0 0 42px rgba(255,226,138,.09),inset 0 0 0 1px rgba(255,255,255,.035) !important;
+}
+.pick-card:before,.featured-play:before,.vip-member-card:before{
+  content:"";position:absolute;inset:-40%;background:linear-gradient(120deg,transparent,rgba(255,255,255,.06),transparent);
+  transform:translateX(-70%) rotate(8deg);transition:transform .8s ease;pointer-events:none;
+}
+.pick-card:hover:before,.featured-play:hover:before,.vip-member-card:hover:before{transform:translateX(70%) rotate(8deg)}
+.featured-play,.featured-hero{
+  border-radius:36px !important;padding:clamp(22px,4vw,40px) !important;
+  border-color:rgba(255,226,138,.28) !important;
+  background:
+    radial-gradient(circle at 85% 10%,rgba(255,226,138,.20),transparent 34%),
+    radial-gradient(circle at 10% 10%,rgba(54,212,122,.10),transparent 28%),
+    linear-gradient(180deg,#121212,#050505) !important;
+  box-shadow:0 38px 120px rgba(0,0,0,.68),0 0 65px rgba(255,226,138,.12) !important;
+}
+.pick-title,.featured-title{
+  font-size:clamp(25px,4.2vw,54px) !important;line-height:1 !important;
+  letter-spacing:-1.8px !important;font-weight:1000 !important;color:#fff8df !important;
+}
+.game{color:#d4c9aa !important;font-size:15px !important;margin-top:8px}
+.meta{display:flex !important;flex-wrap:wrap !important;gap:8px !important;margin-top:16px !important}
+.meta span{
+  border:1px solid rgba(255,226,138,.12) !important;background:rgba(0,0,0,.30) !important;
+  border-radius:999px !important;padding:8px 10px !important;color:#eadfbf !important;font-size:12px !important;
+}
+.analysis{
+  margin-top:18px !important;border-radius:22px !important;border:1px solid rgba(255,226,138,.10) !important;
+  background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.012)) !important;padding:18px !important;
+}
+.analysis h4,.chart-card h3,.board-head h2,.panel h2{
+  color:#fff6df !important;letter-spacing:-.8px;font-weight:1000 !important;
+}
+.analytics-grid{gap:14px !important}
+.analytics-card strong,.big-number{color:#fff8df !important;font-size:clamp(24px,3vw,44px) !important;letter-spacing:-1.5px !important}
+.analytics-card span{color:var(--mp-muted) !important}
+.performance-table td{background:rgba(0,0,0,.34) !important;border-color:rgba(255,226,138,.12) !important}
+.performance-table th{color:var(--mp-gold) !important}
+.live-sync-pill{
+  border-color:rgba(54,212,122,.38) !important;background:rgba(2,2,2,.88) !important;
+  box-shadow:0 18px 48px rgba(0,0,0,.45),0 0 30px rgba(54,212,122,.13) !important;
+}
+.locked-overlay{
+  background:radial-gradient(circle at 50% 0%,rgba(255,226,138,.15),transparent 35%),linear-gradient(180deg,rgba(3,3,3,.94),rgba(0,0,0,.98)) !important;
+  backdrop-filter:blur(16px) !important;
+}
+.locked-overlay h3{color:var(--mp-gold) !important;font-size:clamp(24px,4vw,38px) !important;letter-spacing:-1.4px !important}
+.release-timer{color:#fff8df !important;text-shadow:0 0 22px rgba(255,226,138,.20)}
+.league-logo,.sport-logo{box-shadow:0 12px 30px rgba(0,0,0,.28),inset 0 0 14px rgba(255,255,255,.06) !important}
+.mobile-nav{backdrop-filter:blur(18px) !important;background:rgba(0,0,0,.80) !important;border-top:1px solid rgba(255,226,138,.14) !important}
+
+@keyframes mpFadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.section > *,.card,.pick-card,.analytics-card,.chart-card{animation:mpFadeUp .55s ease both}
+
+.mp-platform-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px}
+.mp-platform-strip .mp-mini-card{border:1px solid rgba(255,226,138,.12);background:rgba(0,0,0,.28);border-radius:20px;padding:14px}
+.mp-mini-card strong{display:block;color:#fff8df;font-size:18px;letter-spacing:-.5px}
+.mp-mini-card span{display:block;color:var(--mp-muted);font-size:11px;text-transform:uppercase;letter-spacing:1px;margin-top:4px}
+
+.mp-live-ticker{
+  position:fixed;left:14px;right:14px;bottom:14px;z-index:9998;height:44px;display:flex;align-items:center;overflow:hidden;
+  border:1px solid rgba(255,226,138,.14);background:rgba(0,0,0,.82);backdrop-filter:blur(14px);
+  border-radius:999px;box-shadow:0 20px 55px rgba(0,0,0,.46);
+}
+.mp-live-track{display:flex;gap:36px;white-space:nowrap;animation:mpTicker 28s linear infinite;padding-left:18px;color:#eadfbf;font-size:12px;font-weight:800}
+.mp-live-track b{color:var(--mp-gold)}
+@keyframes mpTicker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+@media(max-width:900px){.mp-platform-strip{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){
+  .section{padding-top:36px !important;padding-bottom:36px !important}
+  .hero h1,.hero h2{font-size:42px !important;letter-spacing:-2px !important}
+  .card,.pick-card,.analytics-card,.chart-card,.vip-member-card,.locked-card{border-radius:22px !important}
+  .featured-play,.featured-hero{border-radius:26px !important}
+  .mp-platform-strip{grid-template-columns:1fr 1fr;gap:9px}
+  .mp-mini-card{padding:12px !important}
+  .mp-mini-card strong{font-size:15px}
+  .mp-live-ticker{bottom:72px;left:10px;right:10px;height:40px}
+}
+
 </style></head><body>
 <header class="header"><div class="container nav"><a class="brand" href="./"><div class="logo">MP</div><div><h1>Mick's Picks</h1><small>The Gurus Lair</small></div></a><nav class="links"><a href="#top-play">Top Play</a><a href="#free">Free Board</a><a href="#analytics">Stats</a><a href="#trackers">Trackers</a><a class="btn dark" href="premium.html">Premium Login</a></nav></div></header>
 <div class="ticker"><div class="ticker-track"><span><b>LIVE CARD</b> • Active Picks</span><span><b>ARCHIVE</b> • Results Tracker</span><span><b>PROPS</b> • Prop Database</span><span><b>PARLAYS</b> • Parlay Tracker</span><span><b>MICKS PICKS</b> • Bet The Number, Not The Hype</span><span><b>LIVE CARD</b> • Active Picks</span></div></div>
@@ -1105,6 +1258,81 @@ document.addEventListener('DOMContentLoaded',loadHome);</script>
     try{ if(typeof loadPremium==="function") window.loadPremium=loadPremium; }catch(e){}
     try{ if(typeof syncVipStats==="function") window.syncVipStats=syncVipStats; }catch(e){}
   },100);
+})();
+</script>
+
+
+<script>
+/* ===== MICKS PICKS PREMIUM REMAKE ENHANCEMENTS ===== */
+(function(){
+  function addPlatformStrip(){
+    if(document.querySelector(".mp-platform-strip")) return;
+    const hero = document.querySelector(".hero .container,.hero,main .hero");
+    if(!hero) return;
+    const strip=document.createElement("div");
+    strip.className="mp-platform-strip";
+    strip.innerHTML = `
+      <div class="mp-mini-card"><strong>Live Edge</strong><span>Real-time sync</span></div>
+      <div class="mp-mini-card"><strong>CLV Desk</strong><span>Closing line value</span></div>
+      <div class="mp-mini-card"><strong>VIP Drops</strong><span>Timed releases</span></div>
+      <div class="mp-mini-card"><strong>Micks AI</strong><span>Framework grading</span></div>
+    `;
+    const actions=hero.querySelector(".actions");
+    if(actions && actions.parentNode){ actions.parentNode.insertBefore(strip,actions.nextSibling); }
+    else hero.appendChild(strip);
+  }
+
+  function addLiveTicker(){
+    if(document.querySelector(".mp-live-ticker")) return;
+    const ticker=document.createElement("div");
+    ticker.className="mp-live-ticker";
+    ticker.innerHTML=`
+      <div class="mp-live-track">
+        <span><b>MICKS AI</b> • Edge grading active</span>
+        <span><b>CLV DESK</b> • Tracking market movement</span>
+        <span><b>VIP DROPS</b> • Scheduled releases live</span>
+        <span><b>RESULTS</b> • ROI + streaks auto-refresh</span>
+        <span><b>MICKS AI</b> • Edge grading active</span>
+        <span><b>CLV DESK</b> • Tracking market movement</span>
+        <span><b>VIP DROPS</b> • Scheduled releases live</span>
+        <span><b>RESULTS</b> • ROI + streaks auto-refresh</span>
+      </div>`;
+    document.body.appendChild(ticker);
+  }
+
+  function convertFeaturedToHero(){
+    const firstFeatured=document.querySelector(".featured-play");
+    if(firstFeatured && !firstFeatured.classList.contains("featured-hero")){
+      firstFeatured.classList.add("featured-hero");
+    }
+  }
+
+  function addAIPills(){
+    document.querySelectorAll(".pick-card").forEach(function(card){
+      if(card.querySelector(".ai-pill")) return;
+      const title=card.querySelector(".pick-title");
+      if(!title) return;
+      const pill=document.createElement("span");
+      pill.className="ai-pill";
+      pill.textContent="Micks AI Edge";
+      title.parentNode.insertBefore(pill,title);
+    });
+  }
+
+  function run(){
+    addPlatformStrip();
+    addLiveTicker();
+    convertFeaturedToHero();
+    addAIPills();
+  }
+
+  document.addEventListener("DOMContentLoaded",function(){
+    run();
+    setTimeout(run,900);
+    setTimeout(run,2200);
+  });
+
+  window.micksPremiumRemakeRun = run;
 })();
 </script>
 
