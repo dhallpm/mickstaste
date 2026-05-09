@@ -324,13 +324,58 @@
   }
 }
 
+
+.analytics-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:18px}
+.analytics-card{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid rgba(212,175,55,.2);border-radius:22px;padding:18px;box-shadow:0 16px 45px rgba(0,0,0,.34)}
+.analytics-card strong{display:block;font-size:26px;color:#fff6df;line-height:1}
+.analytics-card span{display:block;color:#bdb39b;font-size:11px;letter-spacing:1px;text-transform:uppercase;margin-top:7px}
+.chart-card{background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.018));border:1px solid rgba(212,175,55,.18);border-radius:24px;padding:18px;box-shadow:0 18px 55px rgba(0,0,0,.34)}
+.chart-bars{display:flex;align-items:flex-end;gap:10px;min-height:170px;padding:14px 6px 4px;border-bottom:1px solid rgba(212,175,55,.18)}
+.chart-bar-wrap{flex:1;min-width:34px;display:flex;flex-direction:column;align-items:center;gap:7px}
+.chart-bar{width:100%;max-width:42px;min-height:8px;border-radius:12px 12px 4px 4px;background:linear-gradient(180deg,#ffe28a,#a87710);box-shadow:0 0 18px rgba(255,226,138,.18)}
+.chart-bar.negative{background:linear-gradient(180deg,#ff8a8a,#9b2222);box-shadow:0 0 18px rgba(255,100,100,.14)}
+.chart-label{font-size:10px;color:#bdb39b;text-align:center}.chart-value{font-size:11px;color:#fff6df;text-align:center}
+.performance-table{width:100%;border-collapse:separate;border-spacing:0 9px}.performance-table th{color:#ffe28a;text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:1px;padding:8px}.performance-table td{background:#090909;border-top:1px solid rgba(212,175,55,.12);border-bottom:1px solid rgba(212,175,55,.12);padding:11px;color:#eadfbf;font-size:13px}.performance-table td:first-child{border-left:1px solid rgba(212,175,55,.12);border-radius:14px 0 0 14px}.performance-table td:last-child{border-right:1px solid rgba(212,175,55,.12);border-radius:0 14px 14px 0}
+@media(max-width:900px){.analytics-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.analytics-grid{grid-template-columns:1fr 1fr;gap:10px}.analytics-card{padding:14px;border-radius:18px}.analytics-card strong{font-size:20px}.analytics-card span{font-size:9.5px}.chart-bars{min-height:140px;gap:6px;overflow-x:auto}.chart-bar-wrap{min-width:38px}.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}.performance-table{min-width:680px}}
+
 </style></head><body>
-<header class="header"><div class="container nav"><a class="brand" href="./"><div class="logo">MP</div><div><h1>Mick's Picks</h1><small>The Gurus Lair</small></div></a><nav class="links"><a href="#top-play">Top Play</a><a href="#free">Free Board</a><a href="#results">Results</a><a href="#trackers">Trackers</a><a class="btn dark" href="premium.html">Premium Login</a></nav></div></header>
+<header class="header"><div class="container nav"><a class="brand" href="./"><div class="logo">MP</div><div><h1>Mick's Picks</h1><small>The Gurus Lair</small></div></a><nav class="links"><a href="#top-play">Top Play</a><a href="#free">Free Board</a><a href="#analytics">Stats</a><a href="#trackers">Trackers</a><a class="btn dark" href="premium.html">Premium Login</a></nav></div></header>
 <div class="ticker"><div class="ticker-track"><span><b>LIVE CARD</b> • Active Picks</span><span><b>ARCHIVE</b> • Results Tracker</span><span><b>PROPS</b> • Prop Database</span><span><b>PARLAYS</b> • Parlay Tracker</span><span><b>MICKS PICKS</b> • Bet The Number, Not The Hype</span><span><b>LIVE CARD</b> • Active Picks</span></div></div>
 <main>
 <section class="hero container"><div class="kicker">Sharp sports analysis • Tracked results • Premium framework</div><h2>Bet The Number.<br>Not The Hype.</h2><p>Mick's Picks now runs like a full betting desk: live plays, featured edge, results archive, prop tracker, parlay tracker, and premium analysis powered by the long-term Micks Picks database.</p><div class="actions"><a class="btn" href="#free">View Today’s Card</a><a class="btn dark" href="premium.html">Premium Vault</a></div><div class="vipbar"><div class="vip"><b id="pubActive">—</b><span>Active Plays</span></div><div class="vip"><b id="pubATier">—</b><span>A-Tier Plays</span></div><div class="vip"><b id="pubWinRate">—</b><span>Win Rate</span></div><div class="vip"><b id="pubProfit">—</b><span>Tracked Units</span></div><div class="vip"><b>EV</b><span>Value Discipline</span></div><div class="vip"><b>VIP</b><span>Full Analysis</span></div></div></section>
 <section class="section container" id="top-play"><div class="board-head"><div><span class="badge green">Play of the Day</span><h2>Featured Edge</h2><p class="sub">The Gurus Lair featured play of the day.</p></div></div><div id="topPlayBox"><div class="loading">Loading featured play...</div></div></section>
 <section class="section container" id="free"><div class="board-head"><div><h2>Free Picks Board</h2><p class="sub">Current public card pulled from Active Picks.</p></div><span class="badge">Public Plays</span></div><div id="freeBoard"></div></section>
+
+<section class="section container" id="analytics">
+  <div class="board-head">
+    <div>
+      <span class="badge green">Analytics Dashboard</span>
+      <h2>Performance Command Center</h2>
+      <p class="sub">Live analytics pulled from Dashboard: ROI, streaks, CLV, sport records, grade performance, and monthly profit tracking.</p>
+    </div>
+  </div>
+  <div id="analyticsDashboard">
+    <div class="analytics-grid">
+      <div class="analytics-card"><strong id="dashRecord">—</strong><span>Overall Record</span></div>
+      <div class="analytics-card"><strong id="dashWinRate">—</strong><span>Win Rate</span></div>
+      <div class="analytics-card"><strong id="dashUnits">—</strong><span>Total Units</span></div>
+      <div class="analytics-card"><strong id="dashROI">—</strong><span>ROI</span></div>
+      <div class="analytics-card"><strong id="dashBestBet">—</strong><span>Best Bet Record</span></div>
+      <div class="analytics-card"><strong id="dashBestBetRate">—</strong><span>Best Bet Win Rate</span></div>
+      <div class="analytics-card"><strong id="dashStreak">—</strong><span>Current Streak</span></div>
+      <div class="analytics-card"><strong id="dashCLV">—</strong><span>Positive CLV Rate</span></div>
+    </div>
+    <div class="grid two" style="margin-top:18px">
+      <div class="chart-card"><h3>Monthly Profit Graph</h3><p class="sub">Auto-generated from graded Results Archive unit performance.</p><div id="monthlyProfitChart"><div class="loading">Loading monthly profit...</div></div></div>
+      <div class="chart-card"><h3>CLV Dashboard</h3><p class="sub">Tracks whether Micks Picks is beating the closing number.</p><div class="analytics-grid" style="grid-template-columns:repeat(2,1fr)"><div class="analytics-card"><strong id="dashAvgCLV">—</strong><span>Average CLV</span></div><div class="analytics-card"><strong id="dashCLV">—</strong><span>Positive CLV Rate</span></div></div></div>
+    </div>
+    <div class="grid two" style="margin-top:18px">
+      <div class="chart-card"><h3>Sport Performance</h3><div id="sportPerformanceTable"><div class="loading">Loading sport records...</div></div></div>
+      <div class="chart-card"><h3>Grade Performance</h3><div id="gradePerformanceTable"><div class="loading">Loading grade records...</div></div></div>
+    </div>
+  </div>
+</section>
+
 <section class="section container" id="results"><div class="board-head"><div><h2>Results Archive</h2><p class="sub">Closed picks and tracked performance history.</p></div><span class="badge green">Transparent Tracking</span></div><div class="card" id="resultsTable"><div class="loading">Loading results...</div></div></section>
 <section class="section container" id="trackers"><div class="board-head"><div><h2>Betting Trackers</h2><p class="sub">Long-term prop and parlay tracking built into the site.</p></div></div><div class="grid two"><div class="card"><h3>Props Tracker</h3><div id="propsTable"><div class="loading">Loading props...</div></div></div><div class="card"><h3>Parlay Tracker</h3><div id="parlayTable"><div class="loading">Loading parlays...</div></div></div></div></section>
 </main><footer class="footer"><div class="container">Mick's Picks is for entertainment and educational purposes only. No bet is guaranteed. Bet responsibly.</div></footer>
@@ -401,6 +446,26 @@ document.addEventListener('DOMContentLoaded',loadHome);</script>
     setTimeout(enhanceMobile, 1800);
     setTimeout(enhanceMobile, 3000);
   });
+})();
+</script>
+
+
+<script>
+(function(){
+  const SHEET_ID="15txBM8qsck7f0ZA_za7xYEykBxKpuq0no3x7yHcKNeE";
+  const DASHBOARD_GID="1683630138";
+  function csvUrl(){return `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${DASHBOARD_GID}&cache=${Date.now()}`;}
+  function esc(s){return String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));}
+  function parseCSV(text){const rows=[];let row=[],cur="",q=false;for(let i=0;i<text.length;i++){const c=text[i],n=text[i+1];if(c=='"'&&q&&n=='"'){cur+='"';i++;}else if(c=='"'){q=!q;}else if(c==","&&!q){row.push(cur);cur="";}else if((c=="\n"||c=="\r")&&!q){if(cur!==""||row.length){row.push(cur);rows.push(row);row=[];cur="";}if(c=="\r"&&n=="\n")i++;}else cur+=c;}if(cur!==""||row.length){row.push(cur);rows.push(row);}return rows;}
+  function metric(rows,label){for(const r of rows){if(String(r[0]||"").trim().toLowerCase()===label.toLowerCase())return String(r[1]||"—").trim()||"—";}return"—";}
+  function pct(v){const n=Number(String(v).replace("%",""));if(!Number.isFinite(n))return v||"—";return n<=1?Math.round(n*100)+"%":Math.round(n)+"%";}
+  function units(v){const n=Number(v);if(!Number.isFinite(n))return v||"—";return(n>0?"+":"")+n.toFixed(2)+"u";}
+  function set(id,val){const el=document.getElementById(id);if(el)el.textContent=val;}
+  function renderSport(rows){const t=document.getElementById("sportPerformanceTable");if(!t)return;const start=rows.findIndex(r=>String(r[0]||"").trim()==="Sport-by-Sport Records");if(start<0){t.innerHTML='<div class="empty">Sport records not available yet.</div>';return;}const data=rows.slice(start+2,start+5).filter(r=>r[0]);t.innerHTML=`<div class="table-scroll"><table class="performance-table"><thead><tr><th>Sport</th><th>W</th><th>L</th><th>Win Rate</th><th>Units</th><th>ROI</th></tr></thead><tbody>${data.map(r=>`<tr><td>${esc(r[0])}</td><td>${esc(r[1])}</td><td>${esc(r[2])}</td><td>${esc(pct(r[3]))}</td><td>${esc(units(r[4]))}</td><td>${esc(pct(r[5]))}</td></tr>`).join("")}</tbody></table></div>`;}
+  function renderGrade(rows){const t=document.getElementById("gradePerformanceTable");if(!t)return;const start=rows.findIndex(r=>String(r[0]||"").trim()==="Grade Performance");if(start<0){t.innerHTML='<div class="empty">Grade data not available yet.</div>';return;}const data=rows.slice(start+2,start+5).filter(r=>r[0]);t.innerHTML=`<div class="table-scroll"><table class="performance-table"><thead><tr><th>Tier</th><th>W</th><th>L</th><th>Win Rate</th><th>Units</th></tr></thead><tbody>${data.map(r=>`<tr><td>${esc(r[0])}</td><td>${esc(r[1])}</td><td>${esc(r[2])}</td><td>${esc(pct(r[3]))}</td><td>${esc(units(r[4]))}</td></tr>`).join("")}</tbody></table></div>`;}
+  function renderChart(rows){const t=document.getElementById("monthlyProfitChart");if(!t)return;const start=rows.findIndex(r=>String(r[0]||"").trim()==="Monthly Profit Graph Data");if(start<0){t.innerHTML='<div class="empty">Monthly graph data not available yet.</div>';return;}const data=rows.slice(start+2).filter(r=>r[0]&&r[1]&&!String(r[0]).includes("CLV")).slice(0,12);if(!data.length){t.innerHTML='<div class="empty">No monthly profit data yet.</div>';return;}const nums=data.map(r=>Number(r[1])||0);const max=Math.max(...nums.map(Math.abs),1);t.innerHTML=`<div class="chart-bars">${data.map(r=>{const val=Number(r[1])||0;const h=Math.max(8,Math.round((Math.abs(val)/max)*145));return`<div class="chart-bar-wrap"><div class="chart-value">${esc(units(val))}</div><div class="chart-bar ${val<0?"negative":""}" style="height:${h}px"></div><div class="chart-label">${esc(String(r[0]).slice(2))}</div></div>`;}).join("")}</div>`;}
+  async function loadAnalytics(){const panel=document.getElementById("analyticsDashboard");if(!panel)return;try{const res=await fetch(csvUrl(),{cache:"no-store"});if(!res.ok)throw new Error("Dashboard did not respond.");const rows=parseCSV(await res.text());set("dashRecord",metric(rows,"Overall Record"));set("dashWinRate",pct(metric(rows,"Overall Win Rate")));set("dashUnits",units(metric(rows,"Total Units")));set("dashROI",pct(metric(rows,"ROI")));set("dashBestBet",metric(rows,"Best Bet Record"));set("dashBestBetRate",pct(metric(rows,"Best Bet Win Rate")));set("dashStreak",metric(rows,"Current Streak"));set("dashCLV",pct(metric(rows,"Positive CLV Rate")));set("dashAvgCLV",metric(rows,"Average CLV"));renderSport(rows);renderGrade(rows);renderChart(rows);}catch(err){panel.innerHTML='<div class="error">Analytics dashboard could not load.<br><br>'+esc(err.message)+'</div>';}}
+  document.addEventListener("DOMContentLoaded",function(){loadAnalytics();setTimeout(loadAnalytics,1200);});
 })();
 </script>
 
