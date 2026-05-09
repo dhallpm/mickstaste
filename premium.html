@@ -506,6 +506,243 @@ body.unlocking .vip-login{animation:vipFadeOut .6s ease forwards}
 @media(max-width:900px){.sport-widget-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:620px){.league-strip,.sport-tabs{gap:7px}.league-logo,.sport-logo{height:27px;min-width:42px;font-size:9.5px;padding:0 8px}.sport-tab{font-size:11px;padding:7px 10px 7px 7px}.sport-widget-grid{grid-template-columns:1fr 1fr}.sport-widget{padding:11px;border-radius:16px}.sport-widget strong{font-size:14px}}
 
+
+/* ===== VIP MEMBER EXPERIENCE UPGRADE ===== */
+.vip-command-center{
+  margin-top:24px;
+}
+.vip-member-card{
+  position:relative;
+  overflow:hidden;
+  border:1px solid rgba(255,226,138,.26);
+  border-radius:28px;
+  padding:22px;
+  background:
+    radial-gradient(circle at 100% 0%,rgba(255,226,138,.20),transparent 36%),
+    linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
+  box-shadow:0 24px 70px rgba(0,0,0,.48),0 0 40px rgba(255,226,138,.10);
+}
+.vip-member-card:before{
+  content:"";
+  position:absolute;
+  inset:-30%;
+  background:linear-gradient(120deg,transparent,rgba(255,226,138,.12),transparent);
+  animation:vipCardSweep 6s linear infinite;
+  pointer-events:none;
+}
+.vip-member-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.2fr .8fr;gap:18px;align-items:center}
+.member-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 14px;
+  border-radius:999px;
+  color:#111;
+  background:linear-gradient(135deg,#a87710,#ffe28a 55%,#c79b26);
+  font-weight:1000;
+  box-shadow:0 0 26px rgba(255,226,138,.24);
+}
+.vip-rank{
+  font-size:42px;
+  font-weight:1000;
+  line-height:.95;
+  margin:14px 0 8px;
+  color:#fff6df;
+  letter-spacing:-1.5px;
+}
+.vip-rank small{
+  display:block;
+  font-size:13px;
+  color:#bdb39b;
+  letter-spacing:1.4px;
+  text-transform:uppercase;
+  margin-top:8px;
+}
+.vip-rank-meter{
+  height:12px;
+  border-radius:999px;
+  background:rgba(255,255,255,.08);
+  overflow:hidden;
+  border:1px solid rgba(255,226,138,.18);
+  margin-top:14px;
+}
+.vip-rank-fill{
+  height:100%;
+  width:78%;
+  border-radius:999px;
+  background:linear-gradient(90deg,#36d47a,#ffe28a);
+  box-shadow:0 0 20px rgba(54,212,122,.22);
+}
+.release-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-top:18px;
+}
+.release-card{
+  border:1px solid rgba(212,175,55,.18);
+  border-radius:20px;
+  padding:15px;
+  background:rgba(0,0,0,.28);
+}
+.release-card strong{
+  display:block;
+  font-size:22px;
+  color:#fff6df;
+}
+.release-card span{
+  display:block;
+  margin-top:5px;
+  color:#bdb39b;
+  font-size:11px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+.timer-card{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+.countdown-box{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:8px;
+}
+.countdown-unit{
+  background:#050505;
+  border:1px solid rgba(255,226,138,.22);
+  border-radius:18px;
+  padding:12px 8px;
+  text-align:center;
+}
+.countdown-unit b{
+  display:block;
+  font-size:26px;
+  color:#ffe28a;
+}
+.countdown-unit span{
+  color:#bdb39b;
+  font-size:10px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+.drop-feed{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+  margin-top:16px;
+}
+.drop-card{
+  position:relative;
+  border:1px solid rgba(212,175,55,.18);
+  border-radius:22px;
+  padding:18px;
+  background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.015));
+  min-height:130px;
+}
+.drop-lock{
+  position:absolute;
+  top:13px;
+  right:13px;
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(255,226,138,.12);
+  border:1px solid rgba(255,226,138,.28);
+  color:#ffe28a;
+}
+.drop-card h3{
+  margin:0 36px 8px 0;
+  color:#fff6df;
+}
+.drop-card p{
+  color:#bdb39b;
+  line-height:1.45;
+  margin:0;
+  font-size:13px;
+}
+.drop-status{
+  margin-top:14px;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  border-radius:999px;
+  padding:7px 10px;
+  font-size:11px;
+  font-weight:1000;
+  letter-spacing:.5px;
+  text-transform:uppercase;
+  color:#36d47a;
+  background:rgba(54,212,122,.08);
+  border:1px solid rgba(54,212,122,.24);
+}
+.wins-carousel{
+  overflow:hidden;
+  border:1px solid rgba(212,175,55,.16);
+  border-radius:24px;
+  background:rgba(0,0,0,.24);
+  margin-top:16px;
+}
+.wins-track{
+  display:flex;
+  gap:12px;
+  padding:14px;
+  animation:winsScroll 28s linear infinite;
+  width:max-content;
+}
+.win-chip{
+  min-width:220px;
+  border:1px solid rgba(54,212,122,.24);
+  border-radius:18px;
+  padding:14px;
+  background:linear-gradient(180deg,rgba(54,212,122,.08),rgba(255,255,255,.015));
+}
+.win-chip strong{
+  display:block;
+  color:#fff6df;
+  font-size:16px;
+}
+.win-chip span{
+  color:#36d47a;
+  font-size:12px;
+  font-weight:900;
+}
+.premium-lock-icon{
+  display:inline-flex;
+  width:24px;
+  height:24px;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:rgba(255,226,138,.10);
+  border:1px solid rgba(255,226,138,.24);
+  color:#ffe28a;
+  margin-right:6px;
+}
+@keyframes vipCardSweep{
+  0%{transform:translateX(-100%) rotate(10deg)}
+  100%{transform:translateX(100%) rotate(10deg)}
+}
+@keyframes winsScroll{
+  from{transform:translateX(0)}
+  to{transform:translateX(-50%)}
+}
+@media(max-width:900px){
+  .vip-member-inner{grid-template-columns:1fr}
+  .release-grid,.drop-feed{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+  .vip-member-card{padding:17px;border-radius:22px}
+  .vip-rank{font-size:32px}
+  .release-grid{grid-template-columns:1fr}
+  .countdown-box{grid-template-columns:repeat(3,1fr)}
+  .countdown-unit b{font-size:20px}
+  .win-chip{min-width:190px}
+}
+
 </style></head><body class="locked">
 
 <div class="vip-login" id="vipLogin">
@@ -547,6 +784,58 @@ body.unlocking .vip-login{animation:vipFadeOut .6s ease forwards}
   <div class="vip-stat"><strong id="vipStatUnits">—</strong><span>Tracked Units</span></div>
 </div>
 <div class="vipbar"><div class="vip"><b id="premActive">—</b><span>Active VIP Plays</span></div><div class="vip"><b id="premATier">—</b><span>A-Tier VIP</span></div><div class="vip"><b id="premWinRate">—</b><span>VIP Win Rate</span></div><div class="vip"><b id="premProfit">—</b><span>VIP Units</span></div><div class="vip"><b>CLV</b><span>Line Value</span></div><div class="vip"><b>EDGE</b><span>Framework Grade</span></div></div></section>
+
+<section class="section container vip-command-center" id="vip-command-center">
+  <div class="board-head">
+    <div>
+      <span class="badge green"><span class="premium-lock-icon">🔒</span>VIP Command Center</span>
+      <h2>Member Vault</h2>
+      <p class="sub">Premium member status, release countdowns, play drops, and recent winning tickets.</p>
+    </div>
+  </div>
+
+  <div class="vip-member-card">
+    <div class="vip-member-inner">
+      <div>
+        <span class="member-badge">🏆 MICKS PICKS VIP MEMBER</span>
+        <div class="vip-rank">Gold Edge Member <small>Rank: Sharp Access</small></div>
+        <p class="sub">Your VIP board unlocks full analysis, market notes, CLV tracking, injury context, best-number discipline, and premium plays.</p>
+        <div class="vip-rank-meter"><div class="vip-rank-fill"></div></div>
+      </div>
+      <div class="timer-card">
+        <span class="badge">Next Play Drop</span>
+        <div class="countdown-box">
+          <div class="countdown-unit"><b id="vipHours">--</b><span>Hours</span></div>
+          <div class="countdown-unit"><b id="vipMinutes">--</b><span>Minutes</span></div>
+          <div class="countdown-unit"><b id="vipSeconds">--</b><span>Seconds</span></div>
+        </div>
+        <p class="sub">Countdown targets the next premium release window. Adjust release time later as your service schedule evolves.</p>
+      </div>
+    </div>
+
+    <div class="release-grid">
+      <div class="release-card"><strong>1 PM</strong><span>Main Card Drop</span></div>
+      <div class="release-card"><strong>5 PM</strong><span>Injury Update Window</span></div>
+      <div class="release-card"><strong>Live</strong><span>Late Market Alerts</span></div>
+    </div>
+  </div>
+
+  <div class="drop-feed">
+    <div class="drop-card"><div class="drop-lock">🔒</div><h3>Premium Play Drop</h3><p>Full writeup, best number, no-bet cutoff, injury notes, and market edge.</p><span class="drop-status">Members Only</span></div>
+    <div class="drop-card"><div class="drop-lock">⚡</div><h3>Steam Alert</h3><p>Line movement and CLV tracking when the market starts shifting.</p><span class="drop-status">Market Watch</span></div>
+    <div class="drop-card"><div class="drop-lock">📈</div><h3>Model Edge</h3><p>EV edge, confidence grade, and Micks Picks framework validation.</p><span class="drop-status">Analytics</span></div>
+  </div>
+
+  <div class="wins-carousel">
+    <div class="wins-track" id="recentWinsTrack">
+      <div class="win-chip"><strong>Loading Recent Wins</strong><span>Micks Picks Archive</span></div>
+      <div class="win-chip"><strong>Results Syncing</strong><span>VIP Tracking</span></div>
+      <div class="win-chip"><strong>CLV Engine Ready</strong><span>Market Edge</span></div>
+      <div class="win-chip"><strong>Loading Recent Wins</strong><span>Micks Picks Archive</span></div>
+    </div>
+  </div>
+</section>
+
 <section class="section container" id="premium"><div class="board-head"><div><span class="badge green">Premium Board</span><h2>Member Plays</h2><p class="sub">Current VIP plays pulled from Active Picks.</p></div></div><div id="premiumBoard"><div class="loading">Loading premium plays...</div></div></section>
 <section class="section container" id="viparchive"><div class="board-head"><div><h2>VIP Archive</h2><p class="sub">Premium history and closed member picks.</p></div><span class="badge">Member History</span></div><div class="card" id="vipArchiveTable"><div class="loading">Loading VIP archive...</div></div></section>
 </main><footer class="footer"><div class="container">Mick's Picks Premium is for entertainment and educational purposes only. Bet responsibly.</div></footer>
@@ -670,6 +959,53 @@ document.addEventListener('DOMContentLoaded',function(){loadPremium();setTimeout
   function leagueClass(val){const s=String(val||"").toLowerCase();if(s.includes("nba"))return"logo-nba";if(s.includes("nhl"))return"logo-nhl";if(s.includes("ufc"))return"logo-ufc";if(s.includes("wnba"))return"logo-wnba";if(s.includes("nfl"))return"logo-nfl";if(s.includes("mlb"))return"logo-mlb";if(s.includes("prop"))return"logo-props";if(s.includes("parlay"))return"logo-parlay";return"logo-nba";}
   function enhanceCards(){document.querySelectorAll(".pick-card").forEach(function(card){if(card.dataset.leagueEnhanced==="yes")return;card.dataset.leagueEnhanced="yes";const text=card.textContent||"";let league="NBA";["NBA","NHL","UFC","WNBA","NFL","MLB"].forEach(function(x){if(text.includes(x))league=x;});const row=document.createElement("div");row.className="pick-league-row";row.innerHTML='<span class="sport-logo '+leagueClass(league)+'">'+league+'</span><span class="badge">MICKS PICKS EDGE</span>';const title=card.querySelector(".pick-title");if(title&&title.parentNode)title.parentNode.insertBefore(row,title);});}
   document.addEventListener("DOMContentLoaded",function(){enhanceCards();setTimeout(enhanceCards,900);setTimeout(enhanceCards,1800);setTimeout(enhanceCards,3000);});
+})();
+</script>
+
+
+<script>
+/* ===== VIP TIMERS + RECENT WINS ===== */
+(function(){
+  function pad(n){return String(n).padStart(2,"0");}
+  function nextReleaseTime(){
+    const now = new Date();
+    const target = new Date(now);
+    target.setHours(13,0,0,0);
+    if(now > target) target.setDate(target.getDate()+1);
+    return target;
+  }
+  function updateCountdown(){
+    const target = nextReleaseTime();
+    const now = new Date();
+    let diff = Math.max(0, target - now);
+    const h = Math.floor(diff / 3600000); diff -= h*3600000;
+    const m = Math.floor(diff / 60000); diff -= m*60000;
+    const s = Math.floor(diff / 1000);
+    const H=document.getElementById("vipHours"), M=document.getElementById("vipMinutes"), S=document.getElementById("vipSeconds");
+    if(H) H.textContent=pad(h);
+    if(M) M.textContent=pad(m);
+    if(S) S.textContent=pad(s);
+  }
+  function recentWinsFromArchive(){
+    if(typeof getRows !== "function" || typeof GIDS === "undefined") return;
+    getRows(GIDS.results).then(function(rows){
+      const wins = rows.filter(p => String(p["Result"]||"").toLowerCase()==="win").slice(-8).reverse();
+      const track = document.getElementById("recentWinsTrack");
+      if(!track || !wins.length) return;
+      const html = wins.concat(wins).map(function(p){
+        const pick = (typeof safe === "function" ? safe(p["Pick"]||"Winning Pick") : p["Pick"]||"Winning Pick");
+        const units = (typeof calcPL === "function" && typeof fmtPL === "function") ? fmtPL(calcPL(p)) : "Win";
+        return `<div class="win-chip"><strong>${pick}</strong><span>${units} • ${p["Grade"]||"Micks Picks"}</span></div>`;
+      }).join("");
+      track.innerHTML = html;
+    }).catch(function(){});
+  }
+  document.addEventListener("DOMContentLoaded",function(){
+    updateCountdown();
+    setInterval(updateCountdown,1000);
+    setTimeout(recentWinsFromArchive,900);
+    setTimeout(recentWinsFromArchive,2000);
+  });
 })();
 </script>
 
