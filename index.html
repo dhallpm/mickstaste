@@ -13,6 +13,317 @@
 .table{width:100%;border-collapse:separate;border-spacing:0 9px}.table th{text-align:left;color:var(--gold2);font-size:12px;text-transform:uppercase;letter-spacing:1px;padding:8px}.table td{background:#090909;border-top:1px solid rgba(212,175,55,.12);border-bottom:1px solid rgba(212,175,55,.12);padding:12px;color:#eadfbf;font-size:13px}.table td:first-child{border-left:1px solid rgba(212,175,55,.12);border-radius:14px 0 0 14px}.table td:last-child{border-right:1px solid rgba(212,175,55,.12);border-radius:0 14px 14px 0}
 .loading,.empty,.error{padding:20px;border:1px dashed rgba(212,175,55,.3);border-radius:18px;background:#090909;color:#c9bea2}.error{border-color:#7a3333;color:#ffbaba}.footer{border-top:1px solid var(--line);padding:32px 0;color:#a99f83;font-size:13px;margin-top:30px}
 @media(max-width:960px){.vipbar{grid-template-columns:repeat(2,1fr)}.two,.notes{grid-template-columns:1fr}.links{display:none}.table{display:block;overflow:auto}}@media(max-width:700px){.hero{padding:42px 0 28px}.hero h2{font-size:42px}.pick-title{font-size:23px}.card,.vip{border-radius:20px;padding:16px}.meta span{font-size:11px}}
+
+/* Mobile Sportsbook Upgrade */
+.mobile-bottom-nav{
+  display:none;
+}
+
+.analysis-toggle{
+  display:none;
+  width:100%;
+  margin-top:10px;
+  border:1px solid rgba(212,175,55,.32);
+  border-radius:999px;
+  padding:10px 12px;
+  background:rgba(212,175,55,.08);
+  color:#ffe28a;
+  font-weight:900;
+  letter-spacing:.4px;
+}
+
+@media(max-width:760px){
+  body{
+    padding-bottom:82px;
+    overflow-x:hidden;
+  }
+
+  .container{
+    padding-left:14px;
+    padding-right:14px;
+  }
+
+  .header{
+    position:sticky;
+  }
+
+  .nav{
+    padding:10px 0;
+  }
+
+  .brand{
+    gap:10px;
+  }
+
+  .logo{
+    width:46px !important;
+    height:46px !important;
+    font-size:17px !important;
+  }
+
+  .brand h1{
+    font-size:18px !important;
+  }
+
+  .brand small{
+    font-size:9px !important;
+    letter-spacing:1.5px !important;
+  }
+
+  .links{
+    display:none !important;
+  }
+
+  .ticker{
+    font-size:11px;
+  }
+
+  .hero{
+    padding:28px 0 24px !important;
+  }
+
+  .kicker{
+    font-size:11px;
+    letter-spacing:1.4px;
+  }
+
+  .hero h2{
+    font-size:36px !important;
+    line-height:.98 !important;
+    margin:10px 0 12px !important;
+  }
+
+  .hero p{
+    font-size:15px !important;
+    line-height:1.48 !important;
+  }
+
+  .actions{
+    gap:8px;
+  }
+
+  .btn{
+    width:100%;
+    padding:12px 14px;
+    font-size:14px;
+  }
+
+  .vipbar,.vip-stat-grid{
+    grid-template-columns:repeat(2,1fr) !important;
+    gap:10px !important;
+    margin-top:18px !important;
+  }
+
+  .vip,.vip-stat{
+    padding:14px !important;
+    border-radius:18px !important;
+  }
+
+  .vip b,.vip-stat strong{
+    font-size:20px !important;
+  }
+
+  .vip span,.vip-stat span{
+    font-size:9.5px !important;
+  }
+
+  .section{
+    padding:26px 0 !important;
+  }
+
+  .section h2{
+    font-size:27px !important;
+  }
+
+  .board-head{
+    align-items:flex-start !important;
+  }
+
+  .card,.pick-card{
+    padding:15px !important;
+    border-radius:19px !important;
+    margin:12px 0 !important;
+  }
+
+  .pick-card{
+    border-left-width:4px !important;
+  }
+
+  .pick-title{
+    font-size:24px !important;
+    line-height:1.08 !important;
+    padding-right:54px;
+  }
+
+  .game{
+    font-size:13px !important;
+  }
+
+  .pick-top{
+    display:block !important;
+  }
+
+  .pick-top-right{
+    width:100% !important;
+    align-items:flex-start !important;
+    padding-right:0 !important;
+    margin-top:10px !important;
+  }
+
+  .pick-card:after{
+    top:15px !important;
+    right:14px !important;
+    font-size:9px !important;
+    padding:5px 8px !important;
+  }
+
+  .badge{
+    font-size:10px !important;
+    padding:6px 8px !important;
+    margin-bottom:5px;
+  }
+
+  .meta{
+    gap:6px !important;
+    margin:10px 0 !important;
+  }
+
+  .meta span{
+    font-size:10px !important;
+    padding:6px 8px !important;
+    max-width:100%;
+  }
+
+  .analysis{
+    padding:12px !important;
+    border-radius:15px !important;
+    max-height:220px;
+    overflow:hidden;
+    position:relative;
+  }
+
+  .analysis:after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    height:60px;
+    background:linear-gradient(transparent,#080808);
+    pointer-events:none;
+  }
+
+  .analysis.open{
+    max-height:none;
+  }
+
+  .analysis.open:after{
+    display:none;
+  }
+
+  .analysis-toggle{
+    display:block;
+  }
+
+  .analysis h4{
+    font-size:12px !important;
+  }
+
+  .writeup{
+    font-size:13px !important;
+    line-height:1.52 !important;
+  }
+
+  .notes{
+    grid-template-columns:1fr !important;
+    gap:8px !important;
+  }
+
+  .note{
+    padding:10px !important;
+    font-size:12px !important;
+    border-radius:13px !important;
+  }
+
+  .table{
+    min-width:640px;
+  }
+
+  .table-wrap{
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+  }
+
+  .mobile-bottom-nav{
+    position:fixed;
+    left:10px;
+    right:10px;
+    bottom:10px;
+    z-index:9998;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:6px;
+    padding:8px;
+    border:1px solid rgba(212,175,55,.28);
+    border-radius:22px;
+    background:rgba(5,5,5,.92);
+    backdrop-filter:blur(16px);
+    box-shadow:0 18px 45px rgba(0,0,0,.55),0 0 25px rgba(212,175,55,.11);
+  }
+
+  .mobile-bottom-nav a{
+    text-align:center;
+    font-size:11px;
+    color:#ffe28a;
+    padding:9px 5px;
+    border-radius:16px;
+    background:rgba(212,175,55,.07);
+    border:1px solid rgba(212,175,55,.10);
+    font-weight:900;
+  }
+
+  .vip-login{
+    padding:12px !important;
+    align-items:flex-end !important;
+  }
+
+  .vip-login-card{
+    border-radius:24px !important;
+    padding:22px !important;
+  }
+
+  .vip-login-card h2{
+    font-size:27px !important;
+  }
+
+  .vip-login-card p{
+    font-size:14px !important;
+  }
+
+  .vip-input{
+    font-size:16px !important;
+    padding:14px !important;
+  }
+}
+
+@media(max-width:420px){
+  .hero h2{
+    font-size:31px !important;
+  }
+
+  .vipbar,.vip-stat-grid{
+    grid-template-columns:1fr 1fr !important;
+  }
+
+  .pick-title{
+    font-size:21px !important;
+  }
+
+  .meta span{
+    font-size:9.5px !important;
+  }
+}
+
 </style></head><body>
 <header class="header"><div class="container nav"><a class="brand" href="./"><div class="logo">MP</div><div><h1>Mick's Picks</h1><small>The Gurus Lair</small></div></a><nav class="links"><a href="#top-play">Top Play</a><a href="#free">Free Board</a><a href="#results">Results</a><a href="#trackers">Trackers</a><a class="btn dark" href="premium.html">Premium Login</a></nav></div></header>
 <div class="ticker"><div class="ticker-track"><span><b>LIVE CARD</b> • Active Picks</span><span><b>ARCHIVE</b> • Results Tracker</span><span><b>PROPS</b> • Prop Database</span><span><b>PARLAYS</b> • Parlay Tracker</span><span><b>MICKS PICKS</b> • Bet The Number, Not The Hype</span><span><b>LIVE CARD</b> • Active Picks</span></div></div>
@@ -57,4 +368,40 @@ function table(rows,targetId,limit=10){
 }
 async function loadHome(){try{const active=await getRows(GIDS.active);const results=await getRows(GIDS.results).catch(()=>[]);summarize(active.concat(results),'pub');const featured=active.find(p=>clean(p['Featured']).toLowerCase()==='yes');document.getElementById('topPlayBox').innerHTML=featured?card(featured,false,true):'<div class="empty">No featured play selected.</div>';const free=active.filter(isFree);document.getElementById('freeBoard').innerHTML=free.length?free.slice().reverse().map(p=>card(p,false,false)).join(''):'<div class="empty">No free plays posted yet.</div>';table(results,'resultsTable',12);table(await getRows(GIDS.props).catch(()=>[]),'propsTable',8);table(await getRows(GIDS.parlays).catch(()=>[]),'parlayTable',8);}catch(err){document.getElementById('freeBoard').innerHTML='<div class="error">Could not load picks.<br><br>'+safe(err.message)+'</div>';}}
 async function loadPremium(){try{const active=await getRows(GIDS.active);const vip=await getRows(GIDS.vip).catch(()=>[]);const premiumActive=active.filter(isPremium);summarize(premiumActive.concat(vip),'prem');document.getElementById('premiumBoard').innerHTML=premiumActive.length?premiumActive.slice().reverse().map(p=>card(p,true,false)).join(''):'<div class="empty">No premium plays posted yet.</div>';table(vip,'vipArchiveTable',12);}catch(err){document.getElementById('premiumBoard').innerHTML='<div class="error">Could not load premium picks.<br><br>'+safe(err.message)+'</div>';}}
-document.addEventListener('DOMContentLoaded',loadHome);</script></body></html>
+document.addEventListener('DOMContentLoaded',loadHome);</script>
+<nav class="mobile-bottom-nav">
+  <a href="#top-play">Top</a>
+  <a href="#free">Picks</a>
+  <a href="#results">Results</a>
+  <a href="premium.html">VIP</a>
+</nav>
+
+
+<script>
+(function(){
+  function enhanceMobile(){
+    document.querySelectorAll(".analysis").forEach(function(box){
+      if(box.dataset.mobileEnhanced === "yes") return;
+      box.dataset.mobileEnhanced = "yes";
+      var btn = document.createElement("button");
+      btn.className = "analysis-toggle";
+      btn.type = "button";
+      btn.textContent = "Read Full Analysis";
+      box.insertAdjacentElement("afterend", btn);
+      btn.addEventListener("click", function(){
+        box.classList.toggle("open");
+        btn.textContent = box.classList.contains("open") ? "Collapse Analysis" : "Read Full Analysis";
+      });
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", function(){
+    enhanceMobile();
+    setTimeout(enhanceMobile, 900);
+    setTimeout(enhanceMobile, 1800);
+    setTimeout(enhanceMobile, 3000);
+  });
+})();
+</script>
+
+</body></html>
