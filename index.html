@@ -338,11 +338,48 @@
 .performance-table{width:100%;border-collapse:separate;border-spacing:0 9px}.performance-table th{color:#ffe28a;text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:1px;padding:8px}.performance-table td{background:#090909;border-top:1px solid rgba(212,175,55,.12);border-bottom:1px solid rgba(212,175,55,.12);padding:11px;color:#eadfbf;font-size:13px}.performance-table td:first-child{border-left:1px solid rgba(212,175,55,.12);border-radius:14px 0 0 14px}.performance-table td:last-child{border-right:1px solid rgba(212,175,55,.12);border-radius:0 14px 14px 0}
 @media(max-width:900px){.analytics-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.analytics-grid{grid-template-columns:1fr 1fr;gap:10px}.analytics-card{padding:14px;border-radius:18px}.analytics-card strong{font-size:20px}.analytics-card span{font-size:9.5px}.chart-bars{min-height:140px;gap:6px;overflow-x:auto}.chart-bar-wrap{min-width:38px}.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}.performance-table{min-width:680px}}
 
+
+/* ===== MICKS PICKS LEAGUE LOGO BRANDING ===== */
+.league-strip{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:18px}
+.league-logo,.sport-logo{display:inline-flex;align-items:center;justify-content:center;min-width:48px;height:30px;padding:0 10px;border-radius:999px;font-size:11px;font-weight:1000;letter-spacing:.9px;line-height:1;color:#fff;border:1px solid rgba(255,255,255,.14);box-shadow:0 8px 25px rgba(0,0,0,.28),inset 0 0 16px rgba(255,255,255,.05)}
+.logo-nba{background:linear-gradient(135deg,#17408B 0 48%,#fff 48% 52%,#C9082A 52%)}
+.logo-nhl{background:linear-gradient(135deg,#111,#444);border-color:rgba(255,255,255,.25)}
+.logo-ufc{background:linear-gradient(135deg,#111,#8b0000);border-color:rgba(255,80,80,.28)}
+.logo-wnba{background:linear-gradient(135deg,#ff6f00,#111);border-color:rgba(255,145,0,.35)}
+.logo-nfl{background:linear-gradient(135deg,#013369,#D50A0A);border-color:rgba(255,255,255,.22)}
+.logo-mlb{background:linear-gradient(135deg,#002D72 0 50%,#D50032 50%);border-color:rgba(255,255,255,.22)}
+.logo-props{background:linear-gradient(135deg,#5b2cff,#111);border-color:rgba(155,120,255,.35)}
+.logo-parlay{background:linear-gradient(135deg,#d4af37,#111);color:#111;border-color:rgba(255,226,138,.35)}
+.sport-tabs{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0 0}
+.sport-tab{display:flex;align-items:center;gap:8px;border:1px solid rgba(212,175,55,.18);background:rgba(255,255,255,.035);border-radius:999px;padding:8px 12px 8px 8px;color:#eadfbf;font-size:13px;font-weight:900;box-shadow:0 12px 30px rgba(0,0,0,.22)}
+.pick-league-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:9px}
+.sport-widget-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}
+.sport-widget{display:flex;align-items:center;gap:10px;border:1px solid rgba(212,175,55,.18);border-radius:20px;background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.015));padding:14px}
+.sport-widget strong{display:block;color:#fff6df;font-size:17px}.sport-widget span:last-child{display:block;color:#bdb39b;font-size:11px;text-transform:uppercase;letter-spacing:.8px;margin-top:3px}
+@media(max-width:900px){.sport-widget-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.league-strip,.sport-tabs{gap:7px}.league-logo,.sport-logo{height:27px;min-width:42px;font-size:9.5px;padding:0 8px}.sport-tab{font-size:11px;padding:7px 10px 7px 7px}.sport-widget-grid{grid-template-columns:1fr 1fr}.sport-widget{padding:11px;border-radius:16px}.sport-widget strong{font-size:14px}}
+
 </style></head><body>
 <header class="header"><div class="container nav"><a class="brand" href="./"><div class="logo">MP</div><div><h1>Mick's Picks</h1><small>The Gurus Lair</small></div></a><nav class="links"><a href="#top-play">Top Play</a><a href="#free">Free Board</a><a href="#analytics">Stats</a><a href="#trackers">Trackers</a><a class="btn dark" href="premium.html">Premium Login</a></nav></div></header>
 <div class="ticker"><div class="ticker-track"><span><b>LIVE CARD</b> • Active Picks</span><span><b>ARCHIVE</b> • Results Tracker</span><span><b>PROPS</b> • Prop Database</span><span><b>PARLAYS</b> • Parlay Tracker</span><span><b>MICKS PICKS</b> • Bet The Number, Not The Hype</span><span><b>LIVE CARD</b> • Active Picks</span></div></div>
 <main>
-<section class="hero container"><div class="kicker">Sharp sports analysis • Tracked results • Premium framework</div><h2>Bet The Number.<br>Not The Hype.</h2><p>Mick's Picks now runs like a full betting desk: live plays, featured edge, results archive, prop tracker, parlay tracker, and premium analysis powered by the long-term Micks Picks database.</p><div class="actions"><a class="btn" href="#free">View Today’s Card</a><a class="btn dark" href="premium.html">Premium Vault</a></div><div class="vipbar"><div class="vip"><b id="pubActive">—</b><span>Active Plays</span></div><div class="vip"><b id="pubATier">—</b><span>A-Tier Plays</span></div><div class="vip"><b id="pubWinRate">—</b><span>Win Rate</span></div><div class="vip"><b id="pubProfit">—</b><span>Tracked Units</span></div><div class="vip"><b>EV</b><span>Value Discipline</span></div><div class="vip"><b>VIP</b><span>Full Analysis</span></div></div></section>
+<section class="hero container"><div class="kicker">Sharp sports analysis • Tracked results • Premium framework</div><h2>Bet The Number.<br>Not The Hype.</h2><p>Mick's Picks now runs like a full betting desk: live plays, featured edge, results archive, prop tracker, parlay tracker, and premium analysis powered by the long-term Micks Picks database.</p>
+<div class="league-strip">
+  <span class="league-logo logo-nba">NBA</span>
+  <span class="league-logo logo-nhl">NHL</span>
+  <span class="league-logo logo-ufc">UFC</span>
+  <span class="league-logo logo-wnba">WNBA</span>
+  <span class="league-logo logo-nfl">NFL</span>
+  <span class="league-logo logo-mlb">MLB</span>
+</div>
+<div class="actions"><a class="btn" href="#free">View Today’s Card</a><a class="btn dark" href="premium.html">Premium Vault</a></div><div class="vipbar"><div class="vip"><b id="pubActive">—</b><span>Active Plays</span></div><div class="vip"><b id="pubATier">—</b><span>A-Tier Plays</span></div><div class="vip"><b id="pubWinRate">—</b><span>Win Rate</span></div><div class="vip"><b id="pubProfit">—</b><span>Tracked Units</span></div><div class="vip"><b>EV</b><span>Value Discipline</span></div><div class="vip"><b>VIP</b><span>Full Analysis</span></div>
+<div class="sport-tabs">
+  <a class="sport-tab" href="#free"><span class="league-logo logo-nba">NBA</span> NBA Picks</a>
+  <a class="sport-tab" href="#trackers"><span class="league-logo logo-props">PROP</span> Props</a>
+  <a class="sport-tab" href="#trackers"><span class="league-logo logo-parlay">SGP</span> Parlays</a>
+  <a class="sport-tab" href="#analytics"><span class="league-logo logo-nhl">NHL</span> Analytics</a>
+</div>
+</div></section>
 <section class="section container" id="top-play"><div class="board-head"><div><span class="badge green">Play of the Day</span><h2>Featured Edge</h2><p class="sub">The Gurus Lair featured play of the day.</p></div></div><div id="topPlayBox"><div class="loading">Loading featured play...</div></div></section>
 <section class="section container" id="free"><div class="board-head"><div><h2>Free Picks Board</h2><p class="sub">Current public card pulled from Active Picks.</p></div><span class="badge">Public Plays</span></div><div id="freeBoard"></div></section>
 
@@ -354,7 +391,14 @@
       <p class="sub">Live analytics pulled from Dashboard: ROI, streaks, CLV, sport records, grade performance, and monthly profit tracking.</p>
     </div>
   </div>
-  <div id="analyticsDashboard">
+  
+<div class="sport-widget-grid">
+  <div class="sport-widget"><span class="league-logo logo-nba">NBA</span><div><strong>NBA Model</strong><span>Playoff systems</span></div></div>
+  <div class="sport-widget"><span class="league-logo logo-nhl">NHL</span><div><strong>NHL Board</strong><span>Market edges</span></div></div>
+  <div class="sport-widget"><span class="league-logo logo-ufc">UFC</span><div><strong>UFC Angles</strong><span>Value tiers</span></div></div>
+  <div class="sport-widget"><span class="league-logo logo-wnba">WNBA</span><div><strong>WNBA Data</strong><span>Early reads</span></div></div>
+</div>
+<div id="analyticsDashboard">
     <div class="analytics-grid">
       <div class="analytics-card"><strong id="dashRecord">—</strong><span>Overall Record</span></div>
       <div class="analytics-card"><strong id="dashWinRate">—</strong><span>Win Rate</span></div>
@@ -466,6 +510,15 @@ document.addEventListener('DOMContentLoaded',loadHome);</script>
   function renderChart(rows){const t=document.getElementById("monthlyProfitChart");if(!t)return;const start=rows.findIndex(r=>String(r[0]||"").trim()==="Monthly Profit Graph Data");if(start<0){t.innerHTML='<div class="empty">Monthly graph data not available yet.</div>';return;}const data=rows.slice(start+2).filter(r=>r[0]&&r[1]&&!String(r[0]).includes("CLV")).slice(0,12);if(!data.length){t.innerHTML='<div class="empty">No monthly profit data yet.</div>';return;}const nums=data.map(r=>Number(r[1])||0);const max=Math.max(...nums.map(Math.abs),1);t.innerHTML=`<div class="chart-bars">${data.map(r=>{const val=Number(r[1])||0;const h=Math.max(8,Math.round((Math.abs(val)/max)*145));return`<div class="chart-bar-wrap"><div class="chart-value">${esc(units(val))}</div><div class="chart-bar ${val<0?"negative":""}" style="height:${h}px"></div><div class="chart-label">${esc(String(r[0]).slice(2))}</div></div>`;}).join("")}</div>`;}
   async function loadAnalytics(){const panel=document.getElementById("analyticsDashboard");if(!panel)return;try{const res=await fetch(csvUrl(),{cache:"no-store"});if(!res.ok)throw new Error("Dashboard did not respond.");const rows=parseCSV(await res.text());set("dashRecord",metric(rows,"Overall Record"));set("dashWinRate",pct(metric(rows,"Overall Win Rate")));set("dashUnits",units(metric(rows,"Total Units")));set("dashROI",pct(metric(rows,"ROI")));set("dashBestBet",metric(rows,"Best Bet Record"));set("dashBestBetRate",pct(metric(rows,"Best Bet Win Rate")));set("dashStreak",metric(rows,"Current Streak"));set("dashCLV",pct(metric(rows,"Positive CLV Rate")));set("dashAvgCLV",metric(rows,"Average CLV"));renderSport(rows);renderGrade(rows);renderChart(rows);}catch(err){panel.innerHTML='<div class="error">Analytics dashboard could not load.<br><br>'+esc(err.message)+'</div>';}}
   document.addEventListener("DOMContentLoaded",function(){loadAnalytics();setTimeout(loadAnalytics,1200);});
+})();
+</script>
+
+
+<script>
+(function(){
+  function leagueClass(val){const s=String(val||"").toLowerCase();if(s.includes("nba"))return"logo-nba";if(s.includes("nhl"))return"logo-nhl";if(s.includes("ufc"))return"logo-ufc";if(s.includes("wnba"))return"logo-wnba";if(s.includes("nfl"))return"logo-nfl";if(s.includes("mlb"))return"logo-mlb";if(s.includes("prop"))return"logo-props";if(s.includes("parlay"))return"logo-parlay";return"logo-nba";}
+  function enhanceCards(){document.querySelectorAll(".pick-card").forEach(function(card){if(card.dataset.leagueEnhanced==="yes")return;card.dataset.leagueEnhanced="yes";const text=card.textContent||"";let league="NBA";["NBA","NHL","UFC","WNBA","NFL","MLB"].forEach(function(x){if(text.includes(x))league=x;});const row=document.createElement("div");row.className="pick-league-row";row.innerHTML='<span class="sport-logo '+leagueClass(league)+'">'+league+'</span><span class="badge">MICKS PICKS EDGE</span>';const title=card.querySelector(".pick-title");if(title&&title.parentNode)title.parentNode.insertBefore(row,title);});}
+  document.addEventListener("DOMContentLoaded",function(){enhanceCards();setTimeout(enhanceCards,900);setTimeout(enhanceCards,1800);setTimeout(enhanceCards,3000);});
 })();
 </script>
 
