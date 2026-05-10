@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yahgi's Guru Picks | Micks Picks</title>
+  <meta name="description" content="Yahgi's Guru Picks — elite reads, sharp angles, and independent card releases inside the Micks Picks network." />
+
+  <style>
+    :root{
+      --bg:#030006;
+      --panel:#0b0611;
+      --panel2:#11071b;
+      --purple:#c244ff;
+      --purple2:#7b19ff;
+      --gold:#ffe28a;
+      --gold2:#c8912f;
+      --green:#69ff6a;
+      --red:#ff5f6d;
+      --text:#fff7ea;
+      --muted:#cdbfe0;
+      --line:rgba(194,68,255,.28);
+      --glass:rgba(255,255,255,.055);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 12% 5%,rgba(194,68,255,.24),transparent 28%),
+        radial-gradient(circle at 88% 8%,rgba(255,226,138,.20),transparent 30%),
+        radial-gradient(circle at 50% 100%,rgba(123,25,255,.18),transparent 42%),
+        linear-gradient(180deg,#050006,#020104 75%);
+      overflow-x:hidden;
+    }
+
+    body:before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      z-index:-4;
+      background-image:
+        linear-gradient(rgba(255,255,255,.024) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.024) 1px,transparent 1px);
+      background-size:46px 46px;
+      mask-image:linear-gradient(180deg,rgba(0,0,0,.92),transparent 85%);
+    }
+
+    body:after{
+      content:"";
+      position:fixed;
+      inset:-25%;
+      pointer-events:none;
+      z-index:-3;
+      background:
+        radial-gradient(circle at 24% 20%,rgba(194,68,255,.18),transparent 22%),
+        radial-gradient(circle at 78% 22%,rgba(255,226,138,.16),transparent 24%),
+        radial-gradient(circle at 54% 78%,rgba(123,25,255,.14),transparent 28%);
+      filter:blur(34px);
+      animation:ambient 14s ease-in-out infinite alternate;
+    }
+
+    @keyframes ambient{
+      from{transform:translate3d(-1%,0,0) scale(1);opacity:.78}
+      to{transform:translate3d(1.5%,-1%,0) scale(1.04);opacity:1}
+    }
+
+    .orb{
+      position:fixed;
+      pointer-events:none;
+      border-radius:999px;
+      filter:blur(38px);
+      z-index:-1;
+      mix-blend-mode:screen;
+      animation:float 11s ease-in-out infinite alternate;
+    }
+    .orb.purple{width:330px;height:330px;left:-120px;top:34%;background:radial-gradient(circle,rgba(194,68,255,.32),rgba(194,68,255,.05),transparent 70%)}
+    .orb.gold{width:390px;height:390px;right:-130px;top:80px;background:radial-gradient(circle,rgba(255,226,138,.26),rgba(255,226,138,.04),transparent 70%);animation-delay:-4s}
+    .orb.blue{width:300px;height:300px;right:18%;bottom:-120px;background:radial-gradient(circle,rgba(112,87,255,.17),rgba(112,87,255,.04),transparent 70%);animation-delay:-7s}
+
+    @keyframes float{
+      from{transform:translate3d(0,0,0) scale(1)}
+      to{transform:translate3d(24px,-20px,0) scale(1.06)}
+    }
+
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1160px,calc(100% - 36px));margin:0 auto}
+
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(0,0,0,.72);
+      border-bottom:1px solid rgba(194,68,255,.26);
+      backdrop-filter:blur(20px) saturate(1.25);
+      box-shadow:0 16px 46px rgba(0,0,0,.56),0 0 30px rgba(194,68,255,.12);
+    }
+
+    .nav{
+      height:78px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:1000;
+      letter-spacing:-1px;
+    }
+
+    .brand-mark{
+      width:44px;
+      height:44px;
+      border-radius:14px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg,var(--gold),var(--purple));
+      color:#09020d;
+      font-size:23px;
+      box-shadow:0 0 34px rgba(255,226,138,.18),0 0 24px rgba(194,68,255,.18);
+    }
+
+    .brand span{display:block;line-height:1}
+    .brand small{display:block;color:var(--muted);font-size:11px;letter-spacing:2.2px;margin-top:5px;text-transform:uppercase}
+
+    .links{display:flex;align-items:center;gap:24px;font-size:12px;text-transform:uppercase;letter-spacing:1px;font-weight:900;color:#efe2ff}
+    .links a{opacity:.78;transition:.22s ease}
+    .links a:hover,.links a.active{opacity:1;color:#f07cff;text-shadow:0 0 18px rgba(194,68,255,.45)}
+
+    .vip-btn{
+      padding:12px 18px;
+      border-radius:12px;
+      border:1px solid rgba(255,226,138,.38);
+      color:#12050d;
+      font-weight:1000;
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.9px;
+      background:linear-gradient(135deg,#8c5d0d,#ffe28a 55%,#b06d08);
+      box-shadow:0 18px 42px rgba(255,226,138,.16),0 0 28px rgba(194,68,255,.08);
+    }
+
+    .mobile-menu{display:none}
+
+    .hero{
+      min-height:690px;
+      position:relative;
+      overflow:hidden;
+      border-bottom:1px solid rgba(194,68,255,.18);
+      background:
+        radial-gradient(circle at 70% 35%,rgba(255,226,138,.18),transparent 31%),
+        radial-gradient(circle at 15% 34%,rgba(194,68,255,.19),transparent 33%);
+    }
+
+    .hero:before{
+      content:"";
+      position:absolute;
+      inset:-35%;
+      pointer-events:none;
+      background:conic-gradient(from 140deg,transparent,rgba(194,68,255,.16),transparent,rgba(255,226,138,.13),transparent);
+      filter:blur(38px);
+      animation:spin 28s linear infinite;
+    }
+
+    @keyframes spin{to{transform:rotate(360deg)}}
+
+    .hero-grid{
+      position:relative;
+      z-index:2;
+      display:grid;
+      grid-template-columns:1fr .98fr;
+      gap:30px;
+      align-items:center;
+      padding:80px 0 56px;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      color:#e57bff;
+      text-transform:uppercase;
+      letter-spacing:8px;
+      font-weight:1000;
+      font-size:16px;
+      margin-bottom:8px;
+    }
+    .eyebrow:before,.eyebrow:after{content:"";width:34px;height:2px;background:linear-gradient(90deg,transparent,#e57bff)}
+    .eyebrow:after{background:linear-gradient(90deg,#e57bff,transparent)}
+
+    .guru-title{
+      margin:0;
+      font-size:clamp(72px,12vw,154px);
+      line-height:.78;
+      letter-spacing:-7px;
+      font-weight:1000;
+      text-transform:uppercase;
+      color:#b336ff;
+      text-shadow:0 0 28px rgba(194,68,255,.42),0 0 92px rgba(194,68,255,.22);
+      transform:skew(-8deg);
+    }
+
+    .guru-subtitle{
+      margin:14px 0 0;
+      font-size:clamp(26px,4vw,42px);
+      letter-spacing:22px;
+      text-transform:uppercase;
+      color:#fff;
+      font-weight:900;
+    }
+
+    .hero-copy{
+      margin:30px 0 0;
+      color:#f5e9ff;
+      font-size:22px;
+      line-height:1.35;
+      text-transform:uppercase;
+      letter-spacing:2px;
+      max-width:560px;
+    }
+
+    .stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:30px 0 26px;max-width:560px}
+    .stat{
+      min-height:78px;
+      border:1px solid rgba(194,68,255,.28);
+      border-radius:10px;
+      background:rgba(8,0,14,.55);
+      display:grid;
+      place-items:center;
+      text-align:center;
+      box-shadow:inset 0 0 24px rgba(194,68,255,.06),0 0 18px rgba(194,68,255,.06);
+    }
+    .stat strong{display:block;color:#e35cff;font-size:28px;line-height:1;font-weight:1000;text-shadow:0 0 18px rgba(194,68,255,.42)}
+    .stat span{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:1.2px;margin-top:6px}
+
+    .hero-actions{display:flex;gap:18px;flex-wrap:wrap}
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      min-height:48px;
+      padding:0 28px;
+      border-radius:8px;
+      text-transform:uppercase;
+      letter-spacing:.8px;
+      font-weight:1000;
+      border:1px solid rgba(194,68,255,.55);
+      color:#fff;
+      background:linear-gradient(135deg,#5b0b7a,#c244ff 60%,#7b19ff);
+      box-shadow:0 18px 48px rgba(194,68,255,.22),inset 0 0 0 1px rgba(255,255,255,.08);
+      transition:.24s ease;
+    }
+    .btn:hover{transform:translateY(-3px);box-shadow:0 24px 62px rgba(194,68,255,.34)}
+    .btn.secondary{background:rgba(0,0,0,.38);color:#f6d8ff}
+
+    .guru-art{
+      position:relative;
+      min-height:560px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .guru-art:before{
+      content:"";
+      position:absolute;
+      width:620px;
+      height:620px;
+      border-radius:50%;
+      background:radial-gradient(circle,rgba(255,226,138,.38),rgba(255,226,138,.13) 30%,rgba(194,68,255,.09) 52%,transparent 72%);
+      filter:blur(8px);
+      animation:pulse 3.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes pulse{from{opacity:.7;transform:scale(.97)}to{opacity:1;transform:scale(1.03)}}
+
+    .guru-img-wrap{
+      position:relative;
+      width:min(540px,100%);
+      aspect-ratio:1/1.08;
+      border-radius:36px;
+      overflow:hidden;
+      border:1px solid rgba(255,226,138,.25);
+      background:#000;
+      box-shadow:0 44px 120px rgba(0,0,0,.78),0 0 80px rgba(255,226,138,.24),0 0 46px rgba(194,68,255,.18);
+    }
+
+    .guru-img-wrap img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center;
+      display:block;
+      filter:saturate(1.08) contrast(1.08);
+    }
+
+    .guru-img-wrap:after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(90deg,rgba(194,68,255,.22),transparent 34%,rgba(255,226,138,.20));
+      mix-blend-mode:screen;
+      pointer-events:none;
+    }
+
+    .section{padding:42px 0}
+    .grid{display:grid;gap:20px}
+    .grid-3{grid-template-columns:1fr .62fr .62fr}
+    .grid-2{grid-template-columns:1fr .48fr}
+
+    .card{
+      position:relative;
+      overflow:hidden;
+      border:1px solid rgba(194,68,255,.28);
+      border-radius:16px;
+      background:
+        radial-gradient(circle at 100% 0%,rgba(255,226,138,.10),transparent 34%),
+        radial-gradient(circle at 0% 100%,rgba(194,68,255,.14),transparent 36%),
+        linear-gradient(180deg,rgba(18,7,28,.82),rgba(3,2,7,.88));
+      box-shadow:0 28px 78px rgba(0,0,0,.58),0 0 34px rgba(194,68,255,.09),inset 0 0 0 1px rgba(255,255,255,.035);
+    }
+
+    .card:before{
+      content:"";
+      position:absolute;
+      inset:-70%;
+      pointer-events:none;
+      background:linear-gradient(115deg,transparent 42%,rgba(255,255,255,.10) 50%,transparent 58%);
+      transform:translateX(-62%) rotate(8deg);
+      transition:.9s ease;
+    }
+    .card:hover:before{transform:translateX(62%) rotate(8deg)}
+    .card:hover{border-color:rgba(194,68,255,.52);box-shadow:0 34px 94px rgba(0,0,0,.66),0 0 52px rgba(194,68,255,.18)}
+
+    .featured{
+      padding:28px;
+      display:grid;
+      grid-template-columns:1fr 320px;
+      gap:18px;
+      min-height:220px;
+      border-color:rgba(255,226,138,.25);
+      background:
+        radial-gradient(circle at 82% 35%,rgba(194,68,255,.28),transparent 34%),
+        radial-gradient(circle at 30% 45%,rgba(255,226,138,.16),transparent 38%),
+        linear-gradient(180deg,rgba(23,10,28,.84),rgba(5,3,7,.92));
+    }
+
+    .kicker{color:#dc52ff;text-transform:uppercase;letter-spacing:1px;font-weight:1000;font-size:16px;margin-bottom:18px}
+    .featured h2{margin:0;font-size:clamp(32px,5vw,52px);line-height:1;letter-spacing:-1.6px;text-transform:uppercase;color:#f8f4f0}
+    .featured .game{font-size:22px;color:#fff;letter-spacing:1px;margin-top:10px;text-transform:uppercase}
+    .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+    .pill{padding:8px 11px;border-radius:999px;border:1px solid rgba(255,226,138,.18);background:rgba(0,0,0,.35);font-size:12px;color:#e8d9ff;text-transform:uppercase;letter-spacing:.7px;font-weight:800}
+
+    .lock-box{
+      border:1px solid rgba(194,68,255,.38);
+      border-radius:12px;
+      display:grid;
+      place-items:center;
+      text-align:center;
+      background:radial-gradient(circle,rgba(194,68,255,.18),rgba(0,0,0,.18) 62%);
+      box-shadow:inset 0 0 34px rgba(194,68,255,.10),0 0 40px rgba(194,68,255,.10);
+    }
+    .lock-icon{font-size:72px;color:#f06fff;text-shadow:0 0 28px rgba(194,68,255,.70)}
+    .lock-box strong{display:block;color:#f18cff;font-size:30px;line-height:1.05;text-transform:uppercase;letter-spacing:1px;margin-top:8px}
+
+    .mini-card{padding:22px}
+    .mini-card h3,.table-card h3{margin:0 0 18px;color:#f070ff;text-transform:uppercase;letter-spacing:1px;font-size:18px}
+
+    .recent-list{display:grid;gap:13px}
+    .recent-item{display:grid;grid-template-columns:42px 1fr auto;gap:12px;align-items:center;border-bottom:1px solid rgba(194,68,255,.12);padding-bottom:12px}
+    .team-badge{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:#0b0611;border:1px solid rgba(255,255,255,.12);font-size:20px}
+    .recent-item strong{display:block;font-size:14px;text-transform:uppercase;letter-spacing:.6px}
+    .recent-item small{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;margin-top:2px}
+    .win{color:var(--green);font-weight:1000;text-shadow:0 0 14px rgba(105,255,106,.35)}
+    .loss{color:var(--red);font-weight:1000;text-shadow:0 0 14px rgba(255,95,109,.28)}
+    .pending{color:var(--gold);font-weight:1000;text-shadow:0 0 14px rgba(255,226,138,.25)}
+
+    .record-ring{width:170px;height:170px;margin:8px auto 22px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--purple) 0 58%,rgba(255,255,255,.08) 58% 100%);box-shadow:0 0 46px rgba(194,68,255,.20)}
+    .ring-inner{width:132px;height:132px;border-radius:50%;background:#08050c;display:grid;place-items:center;text-align:center;border:1px solid rgba(194,68,255,.20)}
+    .ring-inner strong{font-size:34px;line-height:1}
+    .ring-inner span{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:7px}
+    .split-stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;text-align:center}
+    .split-stats strong{display:block;color:#e35cff;font-size:25px}
+    .split-stats span{display:block;color:var(--muted);font-size:12px;text-transform:uppercase}
+
+    .streak-number{font-size:86px;line-height:.8;text-align:center;color:#ed75ff;font-weight:1000;text-shadow:0 0 34px rgba(194,68,255,.55),0 0 70px rgba(194,68,255,.22)}
+    .streak-label{text-align:center;font-size:18px;color:#fff;text-transform:uppercase;letter-spacing:1px;margin:10px 0 24px}
+    .flames{text-align:center;font-size:28px;letter-spacing:5px;filter:drop-shadow(0 0 14px rgba(194,68,255,.48))}
+    .quote{margin-top:28px;border-top:1px solid rgba(194,68,255,.18);padding-top:20px;text-align:center;color:#e9d8f5;font-size:16px;line-height:1.5}
+    .quote b{color:#e66cff;font-size:28px;vertical-align:middle}
+
+    .table-card{padding:24px}
+    table{width:100%;border-collapse:collapse;font-size:14px;overflow:hidden;border-radius:12px}
+    th,td{text-align:left;padding:14px 10px;border-bottom:1px solid rgba(194,68,255,.12)}
+    th{color:#e75fff;text-transform:uppercase;font-size:11px;letter-spacing:1px;background:rgba(194,68,255,.055)}
+    td{color:#f5edf8}
+
+    .follow{padding:26px}
+    .socials{display:flex;gap:13px;margin:22px 0 28px}
+    .socials a{width:56px;height:56px;border-radius:12px;border:1px solid rgba(194,68,255,.23);display:grid;place-items:center;font-size:26px;background:rgba(0,0,0,.28);transition:.22s ease}
+    .socials a:hover{transform:translateY(-3px);border-color:rgba(194,68,255,.56);box-shadow:0 0 30px rgba(194,68,255,.18)}
+
+    .footer{padding:36px 0 72px;color:var(--muted);text-align:center;border-top:1px solid rgba(194,68,255,.12);margin-top:40px}
+
+    .error{padding:18px;border:1px solid rgba(255,95,109,.35);border-radius:14px;color:#ffd7dc;background:rgba(255,95,109,.08)}
+
+    @media(max-width:960px){
+      .links{display:none}
+      .mobile-menu{display:block;color:#fff;font-size:26px}
+      .hero-grid,.grid-3,.grid-2,.featured{grid-template-columns:1fr}
+      .guru-art{min-height:auto}
+      .guru-img-wrap{max-width:460px}
+      .stat-row{grid-template-columns:repeat(2,1fr)}
+      .featured{padding:22px}
+      .lock-box{min-height:180px}
+    }
+
+    @media(max-width:580px){
+      .nav{height:70px}
+      .brand small{display:none}
+      .vip-btn{display:none}
+      .hero-grid{padding:50px 0 40px}
+      .eyebrow{letter-spacing:5px;font-size:13px}
+      .guru-title{font-size:76px;letter-spacing:-4px}
+      .guru-subtitle{font-size:24px;letter-spacing:14px}
+      .hero-copy{font-size:17px}
+      .stat-row{grid-template-columns:1fr 1fr}
+      .stat strong{font-size:24px}
+      table{font-size:12px}
+      th,td{padding:11px 8px}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="orb purple"></div>
+  <div class="orb gold"></div>
+  <div class="orb blue"></div>
+
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <div class="brand-mark">♛</div>
+        <div><span>MICKS PICKS</span><small>Guru Network</small></div>
+      </a>
+
+      <nav class="links">
+        <a href="index.html">Mick's Picks</a>
+        <a class="active" href="yahgi.html">Yahgi's Guru Picks</a>
+        <a href="premium.html">VIP Vault</a>
+        <a href="index.html#props">Props Lab</a>
+        <a href="index.html#results">Results Archive</a>
+        <a href="index.html#social">Social Studio</a>
+      </nav>
+
+      <a class="vip-btn" href="premium.html">♕ VIP Access</a>
+      <div class="mobile-menu">☰</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Yahgi's</div>
+          <h1 class="guru-title">Guru</h1>
+          <div class="guru-subtitle">Picks</div>
+          <p class="hero-copy">Elite reads. Sharp angles. Independent card releases.</p>
+
+          <div class="stat-row">
+            <div class="stat"><strong id="guruUnits">+0.0u</strong><span>Units</span></div>
+            <div class="stat"><strong id="guruWinRate">0%</strong><span>Win Rate</span></div>
+            <div class="stat"><strong id="guruRecord">0-0</strong><span>Record</span></div>
+            <div class="stat"><strong id="guruStreak">0</strong><span>Win Streak</span></div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#today" class="btn">Today's Picks ›</a>
+            <a href="#results" class="btn secondary">View Results</a>
+          </div>
+        </div>
+
+        <div class="guru-art">
+          <div class="guru-img-wrap">
+            <img src="yahgi-logo.jpg" alt="Yahgi's Guru Picks logo" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=&quot;display:grid;place-items:center;height:100%;padding:30px;text-align:center;color:#ffe28a;font-weight:1000;font-size:28px;line-height:1.1&quot;>Upload Yahgi logo as<br>yahgi-logo.jpg</div>'" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="today">
+      <div class="container">
+        <div class="card featured">
+          <div>
+            <div class="kicker">✩ Guru Featured Play</div>
+            <h2 id="featuredPick">Waiting on Yahgi's next release</h2>
+            <div class="game" id="featuredGame">Guru card loading from sheet</div>
+            <div class="meta">
+              <span class="pill" id="featuredSport">Sport</span>
+              <span class="pill" id="featuredTime">Release Time</span>
+              <span class="pill" id="featuredOdds">Odds</span>
+              <span class="pill" id="featuredUnits">Units</span>
+            </div>
+          </div>
+          <div class="lock-box">
+            <div class="lock-icon">♕</div>
+            <strong>Guru Lock<br>of the Day</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid grid-3">
+        <div class="card mini-card">
+          <h3>♜ Recent Wins</h3>
+          <div class="recent-list" id="recentWins">
+            <div class="recent-item"><div class="team-badge">♛</div><div><strong>No results yet</strong><small>Yahgi archive waiting</small></div><span class="pending">PENDING</span></div>
+          </div>
+          <a class="btn secondary" style="width:100%;margin-top:18px" href="#results">View All Results</a>
+        </div>
+
+        <div class="card mini-card">
+          <h3 style="text-align:center">Guru Record</h3>
+          <div class="record-ring"><div class="ring-inner"><div><strong id="ringRecord">0-0</strong><br><span>Record</span></div></div></div>
+          <div class="split-stats">
+            <div><strong id="ringRate">0%</strong><span>Win Rate</span></div>
+            <div><strong id="ringUnits">+0.0u</strong><span>Units</span></div>
+          </div>
+        </div>
+
+        <div class="card mini-card">
+          <h3 style="text-align:center">Current Win Streak</h3>
+          <div class="streak-number" id="streakBig">0</div>
+          <div class="streak-label" id="streakLabel">Straight Wins</div>
+          <div class="flames" id="flames">🔥🔥🔥</div>
+          <div class="quote"><b>“</b> The Guru sees what the public misses.<br><small>— Yahgi</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="results">
+      <div class="container grid grid-2">
+        <div class="card table-card">
+          <h3>♔ Latest Guru Picks</h3>
+          <div style="overflow:auto">
+            <table>
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Sport</th>
+                  <th>Pick</th>
+                  <th>Line</th>
+                  <th>Result</th>
+                  <th>Units</th>
+                </tr>
+              </thead>
+              <tbody id="guruTable">
+                <tr><td colspan="6">Loading Yahgi's Guru Picks...</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <a class="btn secondary" style="margin:20px auto 0;display:flex;width:min(300px,100%)" href="premium.html">View Premium Vault</a>
+        </div>
+
+        <div class="card follow">
+          <h3>♙ Follow Yahgi</h3>
+          <p style="color:var(--muted);line-height:1.6">Get all of Yahgi's plays, insights, and updates across the Guru Network.</p>
+          <div class="socials">
+            <a href="#" aria-label="X">𝕏</a>
+            <a href="#" aria-label="Instagram">◎</a>
+            <a href="#" aria-label="TikTok">♪</a>
+          </div>
+          <a class="btn" style="width:100%;min-height:72px;font-size:17px;text-align:center" href="premium.html">♕ Join VIP for Yahgi's Premium Picks</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© Micks Picks Guru Network — Yahgi's Guru Picks</div>
+  </footer>
+
+  <script>
+    /* =========================================================
+       YAHGI PAGE DATA SYNC
+       Works now as a standalone page.
+       When ready, add a "Capper" column to Results Archive and Active Picks.
+       Put "Yahgi" in that column for his plays.
+    ========================================================= */
+
+    const SHEET_ID = "15txBM8qsck7f0ZA_za7xYEykBxKpuq0no3x7yHcKNeE";
+    const ACTIVE_GID = "0";
+    const ARCHIVE_GID = "1579113575";
+
+    const demoPicks = [
+      {Date:"May 18, 2025", Sport:"NBA", Game:"Los Angeles Lakers vs Denver Nuggets", Pick:"Los Angeles Lakers -4.5", Odds:"-110", Result:"Pending", Units:"2.0", Capper:"Yahgi", Featured:"Yes"},
+      {Date:"May 17, 2025", Sport:"NBA", Game:"Dallas Mavericks", Pick:"Mavericks ML", Odds:"+105", Result:"Win", Units:"2.1", Capper:"Yahgi"},
+      {Date:"May 17, 2025", Sport:"NHL", Game:"HOU vs SEA", Pick:"Over 8.5", Odds:"-110", Result:"Win", Units:"2.0", Capper:"Yahgi"},
+      {Date:"May 16, 2025", Sport:"NBA", Game:"Miami Heat vs Philadelphia 76ers", Pick:"Miami Heat +3.5", Odds:"-110", Result:"Win", Units:"1.91", Capper:"Yahgi"},
+      {Date:"May 16, 2025", Sport:"MLB", Game:"NY Yankees vs BOS", Pick:"NY Yankees -1.5", Odds:"-115", Result:"Win", Units:"1.74", Capper:"Yahgi"}
+    ];
+
+    function csvUrl(gid){
+      return `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${gid}&cache=${Date.now()}`;
+    }
+
+    function parseCSV(text){
+      const rows=[]; let row=[],cur="",q=false;
+      for(let i=0;i<text.length;i++){
+        const c=text[i],n=text[i+1];
+        if(c==='"'&&q&&n==='"'){cur+='"';i++;}
+        else if(c==='"'){q=!q;}
+        else if(c===','&&!q){row.push(cur);cur="";}
+        else if((c==='\n'||c==='\r')&&!q){
+          if(cur!==""||row.length){row.push(cur);rows.push(row);row=[];cur="";}
+          if(c==='\r'&&n==='\n')i++;
+        } else cur+=c;
+      }
+      if(cur!==""||row.length){row.push(cur);rows.push(row);}
+      return rows;
+    }
+
+    function makeObjects(rows){
+      if(!rows.length) return [];
+      const headers=rows[0].map(h=>String(h||"").trim());
+      return rows.slice(1).map(r=>Object.fromEntries(headers.map((h,i)=>[h,String(r[i]||"").trim()])));
+    }
+
+    async function getRows(gid){
+      const res = await fetch(csvUrl(gid), {cache:"no-store"});
+      if(!res.ok) throw new Error("Sheet did not respond");
+      const text = await res.text();
+      if(text.toLowerCase().includes("<html")) throw new Error("Sheet returned HTML instead of CSV");
+      return makeObjects(parseCSV(text));
+    }
+
+    function isYahgi(row){
+      const capper = String(row.Capper || row.Handicapper || row.Access || "").toLowerCase();
+      const notes = JSON.stringify(row).toLowerCase();
+      return capper.includes("yahgi") || notes.includes("yahgi");
+    }
+
+    function num(v){
+      const n = parseFloat(String(v||"").replace(/[^0-9.+-]/g,""));
+      return Number.isFinite(n) ? n : 0;
+    }
+
+    function unitsText(v){
+      const n=num(v);
+      if(!n) return "0.0u";
+      return (n>0?"+":"") + n.toFixed(n%1?2:1).replace(/\.00$/,"") + "u";
+    }
+
+    function esc(s){
+      return String(s||"").replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[m]));
+    }
+
+    function resultClass(r){
+      r=String(r||"").toLowerCase();
+      if(r.includes("win")) return "win";
+      if(r.includes("loss")) return "loss";
+      return "pending";
+    }
+
+    function currentWinStreak(rows){
+      let streak=0;
+      const graded=rows.filter(r=>/win|loss/i.test(r.Result||""));
+      for(let i=graded.length-1;i>=0;i--){
+        if(/win/i.test(graded[i].Result||"")) streak++;
+        else break;
+      }
+      return streak;
+    }
+
+    function render(rows){
+      const graded = rows.filter(r=>/win|loss/i.test(r.Result||""));
+      const wins = graded.filter(r=>/win/i.test(r.Result||"")).length;
+      const losses = graded.filter(r=>/loss/i.test(r.Result||"")).length;
+      const units = graded.reduce((sum,r)=>sum+num(r["Profit/Loss"]||r.Units),0);
+      const winRate = wins+losses ? Math.round((wins/(wins+losses))*100) : 0;
+      const streak = currentWinStreak(rows);
+
+      document.getElementById("guruUnits").textContent = unitsText(units);
+      document.getElementById("guruWinRate").textContent = winRate + "%";
+      document.getElementById("guruRecord").textContent = wins + "-" + losses;
+      document.getElementById("guruStreak").textContent = streak;
+      document.getElementById("ringUnits").textContent = unitsText(units);
+      document.getElementById("ringRate").textContent = winRate + "%";
+      document.getElementById("ringRecord").textContent = wins + "-" + losses;
+      document.getElementById("streakBig").textContent = streak;
+      document.getElementById("flames").textContent = streak ? "🔥".repeat(Math.min(streak,8)) : "🔥🔥🔥";
+
+      const featured = rows.find(r=>/yes/i.test(r.Featured||"")) || rows.find(r=>/pending|pregame|active/i.test((r.Result||"")+(r.Status||""))) || rows[0];
+      if(featured){
+        document.getElementById("featuredPick").textContent = featured.Pick || "Yahgi Featured Play";
+        document.getElementById("featuredGame").textContent = featured.Game || "Independent Guru Release";
+        document.getElementById("featuredSport").textContent = featured.Sport || featured.League || "Sport";
+        document.getElementById("featuredTime").textContent = featured["Posted Time"] || featured.Date || "Release Time";
+        document.getElementById("featuredOdds").textContent = featured.Odds || featured.Line || "Odds";
+        document.getElementById("featuredUnits").textContent = (featured.Units || "1") + "u";
+      }
+
+      const recentWins = rows.filter(r=>/win/i.test(r.Result||"")).slice(-5).reverse();
+      document.getElementById("recentWins").innerHTML = recentWins.length ? recentWins.map(r=>`
+        <div class="recent-item">
+          <div class="team-badge">${r.Sport==='NBA'?'🏀':r.Sport==='MLB'?'⚾':r.Sport==='NHL'?'🏒':'♛'}</div>
+          <div><strong>${esc(r.Pick)}</strong><small>${esc(r.Game||r.Sport||"")}</small></div>
+          <span class="win">WIN</span>
+        </div>`).join("") : `<div class="recent-item"><div class="team-badge">♛</div><div><strong>No wins yet</strong><small>Waiting on Yahgi archive</small></div><span class="pending">PENDING</span></div>`;
+
+      const latest = rows.slice(-8).reverse();
+      document.getElementById("guruTable").innerHTML = latest.length ? latest.map(r=>`
+        <tr>
+          <td>${esc(r.Date)}</td>
+          <td>${esc(r.Sport||r.League)}</td>
+          <td>${esc(r.Pick)}</td>
+          <td>${esc(r.Odds||r.Line||r["Best Number"])}</td>
+          <td class="${resultClass(r.Result)}">${esc(r.Result||r.Status||"Pending")}</td>
+          <td class="${resultClass(r.Result)}">${esc(r["Profit/Loss"]||r.Units||"")}</td>
+        </tr>`).join("") : `<tr><td colspan="6">No Yahgi picks found yet. Add Capper = Yahgi in your sheet.</td></tr>`;
+    }
+
+    async function loadYahgi(){
+      try{
+        const [active, archive] = await Promise.all([getRows(ACTIVE_GID), getRows(ARCHIVE_GID)]);
+        let rows = [...archive, ...active].filter(isYahgi);
+        rows = rows.filter(r => (r.Pick || r.Game || r.Result));
+        render(rows.length ? rows : demoPicks);
+      }catch(err){
+        console.warn(err);
+        render(demoPicks);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", loadYahgi);
+    setInterval(loadYahgi, 30000);
+  </script>
+</body>
+</html>
