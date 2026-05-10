@@ -1,200 +1,1562 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yahgi's Guru Picks | Micks Picks</title>
-  <meta name="description" content="Yahgi's Guru Picks — elite reads, sharp angles, and independent card releases." />
-  <style>
-    :root{
-      --bg:#030006; --panel:#0b0611; --purple:#c244ff; --purple2:#7b19ff;
-      --gold:#ffe28a; --green:#69ff6a; --red:#ff5f6d; --text:#fff7ea; --muted:#cdbfe0;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);
-      background:radial-gradient(circle at 12% 5%,rgba(194,68,255,.24),transparent 28%),
-      radial-gradient(circle at 88% 8%,rgba(255,226,138,.20),transparent 30%),
-      linear-gradient(180deg,#050006,#020104 75%);overflow-x:hidden;
-    }
-    body:before{content:"";position:fixed;inset:0;z-index:-3;pointer-events:none;background-image:
-      linear-gradient(rgba(255,255,255,.024) 1px,transparent 1px),
-      linear-gradient(90deg,rgba(255,255,255,.024) 1px,transparent 1px);background-size:46px 46px;
-      mask-image:linear-gradient(180deg,rgba(0,0,0,.92),transparent 85%);
-    }
-    .orb{position:fixed;pointer-events:none;border-radius:999px;filter:blur(38px);z-index:-1;mix-blend-mode:screen;animation:float 11s ease-in-out infinite alternate}
-    .orb.purple{width:330px;height:330px;left:-120px;top:34%;background:radial-gradient(circle,rgba(194,68,255,.32),rgba(194,68,255,.05),transparent 70%)}
-    .orb.gold{width:390px;height:390px;right:-130px;top:80px;background:radial-gradient(circle,rgba(255,226,138,.26),rgba(255,226,138,.04),transparent 70%);animation-delay:-4s}
-    @keyframes float{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(24px,-20px,0) scale(1.06)}}
-    a{color:inherit;text-decoration:none}.container{width:min(1160px,calc(100% - 36px));margin:0 auto}
-    .topbar{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.72);border-bottom:1px solid rgba(194,68,255,.26);backdrop-filter:blur(20px);box-shadow:0 16px 46px rgba(0,0,0,.56)}
-    .nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-    .brand{display:flex;align-items:center;gap:12px;font-weight:1000;letter-spacing:-1px}
-    .brand-mark{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,var(--gold),var(--purple));color:#09020d;font-size:23px;box-shadow:0 0 34px rgba(255,226,138,.18)}
-    .brand small{display:block;color:var(--muted);font-size:11px;letter-spacing:2.2px;margin-top:5px;text-transform:uppercase}
-    .links{display:flex;align-items:center;gap:22px;font-size:12px;text-transform:uppercase;letter-spacing:1px;font-weight:900;color:#efe2ff}
-    .links a{opacity:.78;transition:.22s ease}.links a:hover,.links a.active{opacity:1;color:#f07cff;text-shadow:0 0 18px rgba(194,68,255,.45)}
-    .vip-btn{padding:12px 18px;border-radius:12px;color:#12050d;font-weight:1000;font-size:12px;text-transform:uppercase;letter-spacing:.9px;background:linear-gradient(135deg,#8c5d0d,#ffe28a 55%,#b06d08);box-shadow:0 18px 42px rgba(255,226,138,.16)}
-    .hero{min-height:650px;position:relative;overflow:hidden;border-bottom:1px solid rgba(194,68,255,.18)}
-    .hero:before{content:"";position:absolute;inset:-35%;pointer-events:none;background:conic-gradient(from 140deg,transparent,rgba(194,68,255,.16),transparent,rgba(255,226,138,.13),transparent);filter:blur(38px);animation:spin 28s linear infinite}
-    @keyframes spin{to{transform:rotate(360deg)}}
-    .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1fr .95fr;gap:30px;align-items:center;padding:80px 0 56px}
-    .eyebrow{display:inline-flex;align-items:center;gap:10px;color:#e57bff;text-transform:uppercase;letter-spacing:8px;font-weight:1000;font-size:16px;margin-bottom:8px}
-    .guru-title{margin:0;font-size:clamp(72px,12vw,154px);line-height:.78;letter-spacing:-7px;font-weight:1000;text-transform:uppercase;color:#b336ff;text-shadow:0 0 28px rgba(194,68,255,.42),0 0 92px rgba(194,68,255,.22);transform:skew(-8deg)}
-    .guru-subtitle{margin:14px 0 0;font-size:clamp(26px,4vw,42px);letter-spacing:22px;text-transform:uppercase;color:#fff;font-weight:900}
-    .hero-copy{margin:30px 0 0;color:#f5e9ff;font-size:22px;line-height:1.35;text-transform:uppercase;letter-spacing:2px;max-width:560px}
-    .stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:30px 0 26px;max-width:560px}
-    .stat{min-height:78px;border:1px solid rgba(194,68,255,.28);border-radius:10px;background:rgba(8,0,14,.55);display:grid;place-items:center;text-align:center}
-    .stat strong{display:block;color:#e35cff;font-size:28px;line-height:1;font-weight:1000;text-shadow:0 0 18px rgba(194,68,255,.42)}
-    .stat span{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:1.2px;margin-top:6px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 28px;border-radius:8px;text-transform:uppercase;letter-spacing:.8px;font-weight:1000;border:1px solid rgba(194,68,255,.55);color:#fff;background:linear-gradient(135deg,#5b0b7a,#c244ff 60%,#7b19ff);box-shadow:0 18px 48px rgba(194,68,255,.22)}
-    .btn.secondary{background:rgba(0,0,0,.38);color:#f6d8ff}.hero-actions{display:flex;gap:18px;flex-wrap:wrap}
-    .guru-art{position:relative;min-height:520px;display:flex;align-items:center;justify-content:center}
-    .guru-img-wrap{position:relative;width:min(520px,100%);aspect-ratio:1/1.05;border-radius:36px;overflow:hidden;border:1px solid rgba(255,226,138,.25);background:#000;box-shadow:0 44px 120px rgba(0,0,0,.78),0 0 80px rgba(255,226,138,.24),0 0 46px rgba(194,68,255,.18)}
-    .guru-img-wrap img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;filter:saturate(1.08) contrast(1.08)}
-    .fallback-logo{display:grid;place-items:center;height:100%;padding:30px;text-align:center;color:#ffe28a;font-weight:1000;font-size:28px;line-height:1.1}
-    .section{padding:42px 0}.grid{display:grid;gap:20px}.grid-3{grid-template-columns:1fr .62fr .62fr}.grid-2{grid-template-columns:1fr .48fr}
-    .card{position:relative;overflow:hidden;border:1px solid rgba(194,68,255,.28);border-radius:16px;background:radial-gradient(circle at 100% 0%,rgba(255,226,138,.10),transparent 34%),radial-gradient(circle at 0% 100%,rgba(194,68,255,.14),transparent 36%),linear-gradient(180deg,rgba(18,7,28,.82),rgba(3,2,7,.88));box-shadow:0 28px 78px rgba(0,0,0,.58),0 0 34px rgba(194,68,255,.09),inset 0 0 0 1px rgba(255,255,255,.035)}
-    .featured{padding:28px;display:grid;grid-template-columns:1fr 320px;gap:18px;min-height:220px;border-color:rgba(255,226,138,.25);background:radial-gradient(circle at 82% 35%,rgba(194,68,255,.28),transparent 34%),radial-gradient(circle at 30% 45%,rgba(255,226,138,.16),transparent 38%),linear-gradient(180deg,rgba(23,10,28,.84),rgba(5,3,7,.92))}
-    .kicker{color:#dc52ff;text-transform:uppercase;letter-spacing:1px;font-weight:1000;font-size:16px;margin-bottom:18px}
-    .featured h2{margin:0;font-size:clamp(32px,5vw,52px);line-height:1;letter-spacing:-1.6px;text-transform:uppercase;color:#f8f4f0}
-    .featured .game{font-size:22px;color:#fff;letter-spacing:1px;margin-top:10px;text-transform:uppercase}.meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
-    .pill{padding:8px 11px;border-radius:999px;border:1px solid rgba(255,226,138,.18);background:rgba(0,0,0,.35);font-size:12px;color:#e8d9ff;text-transform:uppercase;letter-spacing:.7px;font-weight:800}
-    .lock-box{border:1px solid rgba(194,68,255,.38);border-radius:12px;display:grid;place-items:center;text-align:center;background:radial-gradient(circle,rgba(194,68,255,.18),rgba(0,0,0,.18) 62%)}
-    .lock-icon{font-size:72px;color:#f06fff;text-shadow:0 0 28px rgba(194,68,255,.70)}.lock-box strong{display:block;color:#f18cff;font-size:30px;line-height:1.05;text-transform:uppercase;letter-spacing:1px;margin-top:8px}
-    .mini-card,.table-card,.follow{padding:24px}.mini-card h3,.table-card h3,.follow h3{margin:0 0 18px;color:#f070ff;text-transform:uppercase;letter-spacing:1px;font-size:18px}
-    .recent-list{display:grid;gap:13px}.recent-item{display:grid;grid-template-columns:42px 1fr auto;gap:12px;align-items:center;border-bottom:1px solid rgba(194,68,255,.12);padding-bottom:12px}
-    .team-badge{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:#0b0611;border:1px solid rgba(255,255,255,.12);font-size:20px}
-    .recent-item strong{display:block;font-size:14px;text-transform:uppercase;letter-spacing:.6px}.recent-item small{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;margin-top:2px}
-    .win{color:var(--green);font-weight:1000;text-shadow:0 0 14px rgba(105,255,106,.35)}.loss{color:var(--red);font-weight:1000}.pending{color:var(--gold);font-weight:1000}
-    .record-ring{width:170px;height:170px;margin:8px auto 22px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--purple) 0 58%,rgba(255,255,255,.08) 58% 100%)}
-    .ring-inner{width:132px;height:132px;border-radius:50%;background:#08050c;display:grid;place-items:center;text-align:center;border:1px solid rgba(194,68,255,.20)}
-    .ring-inner strong{font-size:34px;line-height:1}.ring-inner span{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:7px}
-    .split-stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;text-align:center}.split-stats strong{display:block;color:#e35cff;font-size:25px}.split-stats span{display:block;color:var(--muted);font-size:12px;text-transform:uppercase}
-    .streak-number{font-size:86px;line-height:.8;text-align:center;color:#ed75ff;font-weight:1000;text-shadow:0 0 34px rgba(194,68,255,.55),0 0 70px rgba(194,68,255,.22)}
-    .streak-label{text-align:center;font-size:18px;color:#fff;text-transform:uppercase;letter-spacing:1px;margin:10px 0 24px}.flames{text-align:center;font-size:28px;letter-spacing:5px}
-    table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:14px 10px;border-bottom:1px solid rgba(194,68,255,.12)}th{color:#e75fff;text-transform:uppercase;font-size:11px;letter-spacing:1px;background:rgba(194,68,255,.055)}td{color:#f5edf8}
-    .socials{display:flex;gap:13px;margin:22px 0 28px}.socials a{width:56px;height:56px;border-radius:12px;border:1px solid rgba(194,68,255,.23);display:grid;place-items:center;font-size:26px;background:rgba(0,0,0,.28)}
-    .footer{padding:36px 0 72px;color:var(--muted);text-align:center;border-top:1px solid rgba(194,68,255,.12);margin-top:40px}
-    @media(max-width:960px){.links{display:none}.hero-grid,.grid-3,.grid-2,.featured{grid-template-columns:1fr}.guru-art{min-height:auto}.stat-row{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:580px){.vip-btn{display:none}.guru-title{font-size:76px;letter-spacing:-4px}.guru-subtitle{font-size:24px;letter-spacing:14px}.hero-copy{font-size:17px}.stat strong{font-size:24px}}
-  </style>
-</head>
-<body>
-  <div class="orb purple"></div><div class="orb gold"></div>
-  <header class="topbar">
-    <div class="container nav">
-      <a class="brand" href="index.html"><div class="brand-mark">♛</div><div><span>MICKS PICKS</span><small>Guru Network</small></div></a>
-      <nav class="links">
-        <a href="index.html">Home</a>
-        <a class="active" href="yahgi.html">Yahgi's Guru Picks</a>
-        <a href="premium.html">VIP Vault</a>
-        <a href="index.html#props">Props Lab</a>
-        <a href="index.html#results">Results Archive</a>
-      </nav>
-      <a class="vip-btn" href="premium.html">♕ VIP Access</a>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mick's Picks</title><style>
+:root{--text:#fff6df;--muted:#bdb39b;--gold:#d4af37;--gold2:#ffe28a;--green:#36d47a;--red:#ff6464;--blue:#7bb7ff;--line:rgba(212,175,55,.22)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:radial-gradient(circle at 10% 0%,rgba(212,175,55,.20),transparent 30%),radial-gradient(circle at 95% 10%,rgba(54,212,122,.10),transparent 28%),linear-gradient(180deg,#050505,#010101 70%)}a{text-decoration:none;color:inherit}.container{max-width:1240px;margin:0 auto;padding:0 22px}
+.header{position:sticky;top:0;z-index:50;background:rgba(3,3,3,.92);border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}.nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 0}.brand{display:flex;align-items:center;gap:14px}.logo{width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#111,#332500);border:3px solid var(--gold);box-shadow:0 0 30px rgba(212,175,55,.55);color:var(--gold2);font-weight:950;font-size:22px}.brand h1{font-size:25px;margin:0}.brand small{display:block;color:var(--gold2);font-size:11px;letter-spacing:2.2px;text-transform:uppercase;margin-top:3px}
+.links{display:flex;align-items:center;gap:14px;flex-wrap:wrap;color:#eadfbf;font-size:14px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 17px;border-radius:999px;border:1px solid var(--gold);background:linear-gradient(135deg,#a87710,#ffe28a 55%,#c79b26);color:#111;font-weight:900;box-shadow:0 12px 30px rgba(212,175,55,.20)}.btn.dark{background:#0b0b0b;color:var(--gold2)}
+.ticker{overflow:hidden;border-bottom:1px solid rgba(212,175,55,.16);background:linear-gradient(90deg,#080808,#111,#080808);color:#e7d7a8;font-size:13px;white-space:nowrap}.ticker-track{display:inline-block;padding:9px 0;animation:scroll 30s linear infinite}.ticker span{margin-right:36px}.ticker b{color:var(--gold2)}@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.hero{padding:66px 0 40px}.kicker{color:var(--gold2);font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:900}.hero h2{font-size:clamp(44px,7vw,88px);line-height:.92;margin:12px 0 18px;letter-spacing:-2px}.hero p{font-size:18px;line-height:1.6;color:#d6cbb2;max-width:900px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.vipbar{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:28px}.vip,.card{background:linear-gradient(180deg,rgba(255,255,255,.065),rgba(255,255,255,.018));border:1px solid var(--line);border-radius:24px;padding:20px;box-shadow:0 20px 60px rgba(0,0,0,.38)}.vip b{display:block;font-size:23px;color:#fff}.vip span{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
+.section{padding:40px 0}.section h2{font-size:36px;margin:0 0 8px}.sub{color:var(--muted);line-height:1.5}.grid{display:grid;gap:18px}.two{grid-template-columns:repeat(2,1fr)}.board-head{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:16px}
+.badge{display:inline-flex;border:1px solid rgba(212,175,55,.45);background:rgba(212,175,55,.09);color:var(--gold2);border-radius:999px;padding:7px 11px;font-size:12px;font-weight:900;letter-spacing:.6px;text-transform:uppercase}.badge.green{border-color:rgba(54,212,122,.45);color:var(--green);background:rgba(54,212,122,.08);box-shadow:0 0 18px rgba(54,212,122,.22)}.badge.blue{border-color:rgba(123,183,255,.45);color:var(--blue);background:rgba(123,183,255,.08)}.badge.red{border-color:rgba(255,100,100,.45);color:var(--red);background:rgba(255,100,100,.08)}
+.pick-card{border-left:5px solid var(--gold);margin:15px 0;position:relative;overflow:hidden;box-shadow:0 18px 55px rgba(0,0,0,.45),0 0 28px rgba(212,175,55,.08)}.pick-card.featured{border-left-color:var(--green);background:linear-gradient(180deg,rgba(54,212,122,.10),rgba(255,255,255,.02))}.pick-card::before{display:none}.pick-title{font-size:30px;font-weight:950;margin-top:8px;background:linear-gradient(90deg,#fff6df,#ffe28a);-webkit-background-clip:text;background-clip:text;color:transparent}.pick-top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.game{color:#f0dfb6;margin-top:5px;font-size:15px}.meta{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.meta span{background:linear-gradient(180deg,#111,#070707);border:1px solid rgba(212,175,55,.16);border-radius:999px;padding:7px 10px;font-size:12px;color:#eee0b8}
+.analysis{background:#080808;border:1px solid rgba(212,175,55,.15);border-radius:18px;padding:16px;margin-top:12px}.analysis h4{margin:0 0 8px;color:var(--gold2);font-size:15px;text-transform:uppercase;letter-spacing:1.2px}.writeup{white-space:pre-line;color:#f1e6c8;line-height:1.62;font-size:15px}.notes{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}.note{background:#0b0b0b;border:1px solid rgba(212,175,55,.12);border-radius:15px;padding:12px;color:#c9bea2;font-size:13px;line-height:1.45}.note strong{color:var(--gold2)}
+.table{width:100%;border-collapse:separate;border-spacing:0 9px}.table th{text-align:left;color:var(--gold2);font-size:12px;text-transform:uppercase;letter-spacing:1px;padding:8px}.table td{background:#090909;border-top:1px solid rgba(212,175,55,.12);border-bottom:1px solid rgba(212,175,55,.12);padding:12px;color:#eadfbf;font-size:13px}.table td:first-child{border-left:1px solid rgba(212,175,55,.12);border-radius:14px 0 0 14px}.table td:last-child{border-right:1px solid rgba(212,175,55,.12);border-radius:0 14px 14px 0}
+.loading,.empty,.error{padding:20px;border:1px dashed rgba(212,175,55,.3);border-radius:18px;background:#090909;color:#c9bea2}.error{border-color:#7a3333;color:#ffbaba}.footer{border-top:1px solid var(--line);padding:32px 0;color:#a99f83;font-size:13px;margin-top:30px}
+@media(max-width:960px){.vipbar{grid-template-columns:repeat(2,1fr)}.two,.notes{grid-template-columns:1fr}.links{display:none}.table{display:block;overflow:auto}}@media(max-width:700px){.hero{padding:42px 0 28px}.hero h2{font-size:42px}.pick-title{font-size:23px}.card,.vip{border-radius:20px;padding:16px}.meta span{font-size:11px}}
+
+/* Mobile Sportsbook Upgrade */
+.mobile-bottom-nav{
+  display:none;
+}
+
+.analysis-toggle{
+  display:none;
+  width:100%;
+  margin-top:10px;
+  border:1px solid rgba(212,175,55,.32);
+  border-radius:999px;
+  padding:10px 12px;
+  background:rgba(212,175,55,.08);
+  color:#ffe28a;
+  font-weight:900;
+  letter-spacing:.4px;
+}
+
+@media(max-width:760px){
+  body{
+    padding-bottom:82px;
+    overflow-x:hidden;
+  }
+
+  .container{
+    padding-left:14px;
+    padding-right:14px;
+  }
+
+  .header{
+    position:sticky;
+  }
+
+  .nav{
+    padding:10px 0;
+  }
+
+  .brand{
+    gap:10px;
+  }
+
+  .logo{
+    width:46px !important;
+    height:46px !important;
+    font-size:17px !important;
+  }
+
+  .brand h1{
+    font-size:18px !important;
+  }
+
+  .brand small{
+    font-size:9px !important;
+    letter-spacing:1.5px !important;
+  }
+
+  .links{
+    display:none !important;
+  }
+
+  .ticker{
+    font-size:11px;
+  }
+
+  .hero{
+    padding:28px 0 24px !important;
+  }
+
+  .kicker{
+    font-size:11px;
+    letter-spacing:1.4px;
+  }
+
+  .hero h2{
+    font-size:36px !important;
+    line-height:.98 !important;
+    margin:10px 0 12px !important;
+  }
+
+  .hero p{
+    font-size:15px !important;
+    line-height:1.48 !important;
+  }
+
+  .actions{
+    gap:8px;
+  }
+
+  .btn{
+    width:100%;
+    padding:12px 14px;
+    font-size:14px;
+  }
+
+  .vipbar,.vip-stat-grid{
+    grid-template-columns:repeat(2,1fr) !important;
+    gap:10px !important;
+    margin-top:18px !important;
+  }
+
+  .vip,.vip-stat{
+    padding:14px !important;
+    border-radius:18px !important;
+  }
+
+  .vip b,.vip-stat strong{
+    font-size:20px !important;
+  }
+
+  .vip span,.vip-stat span{
+    font-size:9.5px !important;
+  }
+
+  .section{
+    padding:26px 0 !important;
+  }
+
+  .section h2{
+    font-size:27px !important;
+  }
+
+  .board-head{
+    align-items:flex-start !important;
+  }
+
+  .card,.pick-card{
+    padding:15px !important;
+    border-radius:19px !important;
+    margin:12px 0 !important;
+  }
+
+  .pick-card{
+    border-left-width:4px !important;
+  }
+
+  .pick-title{
+    font-size:24px !important;
+    line-height:1.08 !important;
+    padding-right:54px;
+  }
+
+  .game{
+    font-size:13px !important;
+  }
+
+  .pick-top{
+    display:block !important;
+  }
+
+  .pick-top-right{
+    width:100% !important;
+    align-items:flex-start !important;
+    padding-right:0 !important;
+    margin-top:10px !important;
+  }
+
+  .pick-card:after{
+    top:15px !important;
+    right:14px !important;
+    font-size:9px !important;
+    padding:5px 8px !important;
+  }
+
+  .badge{
+    font-size:10px !important;
+    padding:6px 8px !important;
+    margin-bottom:5px;
+  }
+
+  .meta{
+    gap:6px !important;
+    margin:10px 0 !important;
+  }
+
+  .meta span{
+    font-size:10px !important;
+    padding:6px 8px !important;
+    max-width:100%;
+  }
+
+  .analysis{
+    padding:12px !important;
+    border-radius:15px !important;
+    max-height:220px;
+    overflow:hidden;
+    position:relative;
+  }
+
+  .analysis:after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    height:60px;
+    background:linear-gradient(transparent,#080808);
+    pointer-events:none;
+  }
+
+  .analysis.open{
+    max-height:none;
+  }
+
+  .analysis.open:after{
+    display:none;
+  }
+
+  .analysis-toggle{
+    display:block;
+  }
+
+  .analysis h4{
+    font-size:12px !important;
+  }
+
+  .writeup{
+    font-size:13px !important;
+    line-height:1.52 !important;
+  }
+
+  .notes{
+    grid-template-columns:1fr !important;
+    gap:8px !important;
+  }
+
+  .note{
+    padding:10px !important;
+    font-size:12px !important;
+    border-radius:13px !important;
+  }
+
+  .table{
+    min-width:640px;
+  }
+
+  .table-wrap{
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+  }
+
+  .mobile-bottom-nav{
+    position:fixed;
+    left:10px;
+    right:10px;
+    bottom:10px;
+    z-index:9998;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:6px;
+    padding:8px;
+    border:1px solid rgba(212,175,55,.28);
+    border-radius:22px;
+    background:rgba(5,5,5,.92);
+    backdrop-filter:blur(16px);
+    box-shadow:0 18px 45px rgba(0,0,0,.55),0 0 25px rgba(212,175,55,.11);
+  }
+
+  .mobile-bottom-nav a{
+    text-align:center;
+    font-size:11px;
+    color:#ffe28a;
+    padding:9px 5px;
+    border-radius:16px;
+    background:rgba(212,175,55,.07);
+    border:1px solid rgba(212,175,55,.10);
+    font-weight:900;
+  }
+
+  .vip-login{
+    padding:12px !important;
+    align-items:flex-end !important;
+  }
+
+  .vip-login-card{
+    border-radius:24px !important;
+    padding:22px !important;
+  }
+
+  .vip-login-card h2{
+    font-size:27px !important;
+  }
+
+  .vip-login-card p{
+    font-size:14px !important;
+  }
+
+  .vip-input{
+    font-size:16px !important;
+    padding:14px !important;
+  }
+}
+
+@media(max-width:420px){
+  .hero h2{
+    font-size:31px !important;
+  }
+
+  .vipbar,.vip-stat-grid{
+    grid-template-columns:1fr 1fr !important;
+  }
+
+  .pick-title{
+    font-size:21px !important;
+  }
+
+  .meta span{
+    font-size:9.5px !important;
+  }
+}
+
+
+.analytics-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:18px}
+.analytics-card{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid rgba(212,175,55,.2);border-radius:22px;padding:18px;box-shadow:0 16px 45px rgba(0,0,0,.34)}
+.analytics-card strong{display:block;font-size:26px;color:#fff6df;line-height:1}
+.analytics-card span{display:block;color:#bdb39b;font-size:11px;letter-spacing:1px;text-transform:uppercase;margin-top:7px}
+.chart-card{background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.018));border:1px solid rgba(212,175,55,.18);border-radius:24px;padding:18px;box-shadow:0 18px 55px rgba(0,0,0,.34)}
+.chart-bars{display:flex;align-items:flex-end;gap:10px;min-height:170px;padding:14px 6px 4px;border-bottom:1px solid rgba(212,175,55,.18)}
+.chart-bar-wrap{flex:1;min-width:34px;display:flex;flex-direction:column;align-items:center;gap:7px}
+.chart-bar{width:100%;max-width:42px;min-height:8px;border-radius:12px 12px 4px 4px;background:linear-gradient(180deg,#ffe28a,#a87710);box-shadow:0 0 18px rgba(255,226,138,.18)}
+.chart-bar.negative{background:linear-gradient(180deg,#ff8a8a,#9b2222);box-shadow:0 0 18px rgba(255,100,100,.14)}
+.chart-label{font-size:10px;color:#bdb39b;text-align:center}.chart-value{font-size:11px;color:#fff6df;text-align:center}
+.performance-table{width:100%;border-collapse:separate;border-spacing:0 9px}.performance-table th{color:#ffe28a;text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:1px;padding:8px}.performance-table td{background:#090909;border-top:1px solid rgba(212,175,55,.12);border-bottom:1px solid rgba(212,175,55,.12);padding:11px;color:#eadfbf;font-size:13px}.performance-table td:first-child{border-left:1px solid rgba(212,175,55,.12);border-radius:14px 0 0 14px}.performance-table td:last-child{border-right:1px solid rgba(212,175,55,.12);border-radius:0 14px 14px 0}
+@media(max-width:900px){.analytics-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.analytics-grid{grid-template-columns:1fr 1fr;gap:10px}.analytics-card{padding:14px;border-radius:18px}.analytics-card strong{font-size:20px}.analytics-card span{font-size:9.5px}.chart-bars{min-height:140px;gap:6px;overflow-x:auto}.chart-bar-wrap{min-width:38px}.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}.performance-table{min-width:680px}}
+
+
+/* ===== MICKS PICKS LEAGUE LOGO BRANDING ===== */
+.league-strip{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:18px}
+.league-logo,.sport-logo{display:inline-flex;align-items:center;justify-content:center;min-width:48px;height:30px;padding:0 10px;border-radius:999px;font-size:11px;font-weight:1000;letter-spacing:.9px;line-height:1;color:#fff;border:1px solid rgba(255,255,255,.14);box-shadow:0 8px 25px rgba(0,0,0,.28),inset 0 0 16px rgba(255,255,255,.05)}
+.logo-nba{background:linear-gradient(135deg,#17408B 0 48%,#fff 48% 52%,#C9082A 52%)}
+.logo-nhl{background:linear-gradient(135deg,#111,#444);border-color:rgba(255,255,255,.25)}
+.logo-ufc{background:linear-gradient(135deg,#111,#8b0000);border-color:rgba(255,80,80,.28)}
+.logo-wnba{background:linear-gradient(135deg,#ff6f00,#111);border-color:rgba(255,145,0,.35)}
+.logo-nfl{background:linear-gradient(135deg,#013369,#D50A0A);border-color:rgba(255,255,255,.22)}
+.logo-mlb{background:linear-gradient(135deg,#002D72 0 50%,#D50032 50%);border-color:rgba(255,255,255,.22)}
+.logo-props{background:linear-gradient(135deg,#5b2cff,#111);border-color:rgba(155,120,255,.35)}
+.logo-parlay{background:linear-gradient(135deg,#d4af37,#111);color:#111;border-color:rgba(255,226,138,.35)}
+.sport-tabs{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0 0}
+.sport-tab{display:flex;align-items:center;gap:8px;border:1px solid rgba(212,175,55,.18);background:rgba(255,255,255,.035);border-radius:999px;padding:8px 12px 8px 8px;color:#eadfbf;font-size:13px;font-weight:900;box-shadow:0 12px 30px rgba(0,0,0,.22)}
+.pick-league-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:9px}
+.sport-widget-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}
+.sport-widget{display:flex;align-items:center;gap:10px;border:1px solid rgba(212,175,55,.18);border-radius:20px;background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.015));padding:14px}
+.sport-widget strong{display:block;color:#fff6df;font-size:17px}.sport-widget span:last-child{display:block;color:#bdb39b;font-size:11px;text-transform:uppercase;letter-spacing:.8px;margin-top:3px}
+@media(max-width:900px){.sport-widget-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.league-strip,.sport-tabs{gap:7px}.league-logo,.sport-logo{height:27px;min-width:42px;font-size:9.5px;padding:0 8px}.sport-tab{font-size:11px;padding:7px 10px 7px 7px}.sport-widget-grid{grid-template-columns:1fr 1fr}.sport-widget{padding:11px;border-radius:16px}.sport-widget strong{font-size:14px}}
+
+
+/* ===== DYNAMIC FEATURED PLAY ENGINE ===== */
+.pick-card.edge-strong{
+  border-left-color:#36d47a !important;
+  box-shadow:0 20px 65px rgba(0,0,0,.55),0 0 34px rgba(54,212,122,.18) !important;
+}
+.pick-card.edge-best{
+  border-left-color:#ffe28a !important;
+  box-shadow:0 20px 65px rgba(0,0,0,.55),0 0 38px rgba(255,226,138,.22) !important;
+}
+.pick-card.edge-risk{
+  border-left-color:#ff6464 !important;
+  box-shadow:0 20px 65px rgba(0,0,0,.55),0 0 32px rgba(255,100,100,.16) !important;
+}
+.dynamic-edge-label{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  margin-left:6px;
+  border-radius:999px;
+  padding:7px 11px;
+  font-size:11px;
+  font-weight:1000;
+  letter-spacing:.6px;
+  text-transform:uppercase;
+}
+.dynamic-edge-label.strong{background:rgba(54,212,122,.10);border:1px solid rgba(54,212,122,.42);color:#36d47a}
+.dynamic-edge-label.best{background:rgba(255,226,138,.10);border:1px solid rgba(255,226,138,.42);color:#ffe28a}
+.dynamic-edge-label.risk{background:rgba(255,100,100,.10);border:1px solid rgba(255,100,100,.42);color:#ff8a8a}
+.featured-engine-panel{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+  margin:14px 0 0;
+}
+.featured-engine-stat{
+  background:rgba(0,0,0,.32);
+  border:1px solid rgba(212,175,55,.16);
+  border-radius:16px;
+  padding:12px;
+}
+.featured-engine-stat strong{
+  display:block;
+  color:#fff6df;
+  font-size:17px;
+}
+.featured-engine-stat span{
+  display:block;
+  color:#bdb39b;
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:.8px;
+  margin-top:4px;
+}
+.featured-rotate-note{
+  color:#bdb39b;
+  font-size:13px;
+  line-height:1.5;
+  margin-top:10px;
+}
+@media(max-width:760px){
+  .featured-engine-panel{grid-template-columns:repeat(2,1fr)}
+  .dynamic-edge-label{margin-left:0;margin-top:6px}
+}
+
+
+.vip-home-teaser{
+  border:1px solid rgba(255,226,138,.22);
+  border-radius:24px;
+  padding:18px;
+  background:linear-gradient(180deg,rgba(255,226,138,.08),rgba(255,255,255,.015));
+  margin-top:20px;
+  box-shadow:0 18px 50px rgba(0,0,0,.32);
+}
+.vip-home-teaser strong{color:#fff6df;font-size:22px;display:block}
+.vip-home-teaser p{color:#bdb39b;margin:8px 0 14px;line-height:1.5}
+
+
+/* ===== MICKS PICKS REAL-TIME SYNC ENGINE ===== */
+.live-sync-pill{
+  position:fixed;
+  right:16px;
+  bottom:86px;
+  z-index:9999;
+  display:flex;
+  align-items:center;
+  gap:9px;
+  border:1px solid rgba(54,212,122,.34);
+  background:rgba(5,5,5,.88);
+  backdrop-filter:blur(14px);
+  color:#dfffe9;
+  border-radius:999px;
+  padding:10px 13px;
+  font-size:12px;
+  font-weight:900;
+  box-shadow:0 16px 42px rgba(0,0,0,.45),0 0 24px rgba(54,212,122,.13);
+}
+.live-dot{
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  background:#36d47a;
+  box-shadow:0 0 12px #36d47a;
+  animation:livePulse 1.5s ease-in-out infinite;
+}
+.live-sync-pill.syncing .live-dot{
+  background:#ffe28a;
+  box-shadow:0 0 12px #ffe28a;
+}
+.live-sync-pill.error .live-dot{
+  background:#ff6464;
+  box-shadow:0 0 12px #ff6464;
+}
+.live-small{
+  color:#bdb39b;
+  font-size:10px;
+  font-weight:700;
+  margin-left:2px;
+}
+.sync-flash{
+  animation:syncFlash .55s ease;
+}
+@keyframes livePulse{
+  0%,100%{opacity:.55;transform:scale(.92)}
+  50%{opacity:1;transform:scale(1.18)}
+}
+@keyframes syncFlash{
+  0%{box-shadow:0 0 0 rgba(54,212,122,0)}
+  50%{box-shadow:0 0 42px rgba(54,212,122,.22)}
+  100%{box-shadow:0 0 0 rgba(54,212,122,0)}
+}
+@media(max-width:760px){
+  .live-sync-pill{
+    left:12px;
+    right:12px;
+    bottom:78px;
+    justify-content:center;
+    font-size:11px;
+  }
+}
+
+
+/* ===== MICKS PICKS SCHEDULED PLAY DROP FRONTEND ===== */
+.locked-card{
+  position:relative !important;
+  overflow:hidden !important;
+}
+.locked-card .locked-content{
+  filter:blur(6px);
+  opacity:.45;
+  pointer-events:none;
+  user-select:none;
+}
+.locked-overlay{
+  position:absolute;
+  inset:0;
+  z-index:40;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background:linear-gradient(180deg,rgba(3,3,3,.90),rgba(0,0,0,.97));
+  backdrop-filter:blur(12px);
+  border:1px solid rgba(255,226,138,.15);
+  padding:22px;
+}
+.locked-overlay h3{
+  margin:0;
+  font-size:28px;
+  color:#ffe28a;
+  letter-spacing:-1px;
+}
+.locked-overlay p{
+  margin:10px 0 0;
+  color:#bdb39b;
+  max-width:340px;
+  line-height:1.5;
+}
+.release-timer{
+  margin-top:18px;
+  font-size:32px;
+  font-weight:1000;
+  color:#fff6df;
+  letter-spacing:-1px;
+}
+.release-pill{
+  margin-top:18px;
+  border-radius:999px;
+  padding:10px 14px;
+  border:1px solid rgba(255,226,138,.24);
+  background:rgba(255,226,138,.08);
+  color:#ffe28a;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+.unlock-flash{
+  animation:unlockFlash .7s ease;
+}
+@keyframes unlockFlash{
+  0%{box-shadow:0 0 0 rgba(54,212,122,0)}
+  50%{box-shadow:0 0 55px rgba(54,212,122,.25)}
+  100%{box-shadow:0 0 0 rgba(54,212,122,0)}
+}
+
+
+/* =========================================================
+   MICKS PICKS MASTER PREMIUM REMAKE
+========================================================= */
+:root{
+  --mp-bg:#050505;--mp-panel:#0d0d0d;--mp-gold:#ffe28a;--mp-gold2:#c8a64c;
+  --mp-green:#36d47a;--mp-red:#ff6464;--mp-blue:#7bb7ff;
+  --mp-text:#fff6df;--mp-muted:#bdb39b;--mp-line:rgba(255,226,138,.14);
+}
+html{scroll-behavior:smooth}
+body{
+  background:
+    radial-gradient(circle at 12% 6%,rgba(255,226,138,.16),transparent 27%),
+    radial-gradient(circle at 92% 8%,rgba(54,212,122,.08),transparent 25%),
+    radial-gradient(circle at 50% 100%,rgba(123,183,255,.06),transparent 34%),
+    linear-gradient(180deg,#050505,#010101) !important;
+  color:var(--mp-text) !important;
+  -webkit-font-smoothing:antialiased;
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;
+  background-image:
+    linear-gradient(rgba(255,255,255,.022) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.022) 1px,transparent 1px);
+  background-size:42px 42px;
+  mask-image:linear-gradient(180deg,rgba(0,0,0,.84),transparent 78%);
+}
+.container,.section.container{max-width:1180px !important}
+.section{padding-top:58px !important;padding-bottom:58px !important}
+header,.nav,.topbar{
+  backdrop-filter:blur(18px);
+  background:rgba(0,0,0,.50) !important;
+  border-bottom:1px solid rgba(255,226,138,.10) !important;
+}
+.hero{position:relative;overflow:hidden;border-radius:0 0 42px 42px}
+.hero:after{
+  content:"";position:absolute;right:-130px;top:20px;width:360px;height:360px;
+  background:radial-gradient(circle,rgba(255,226,138,.14),transparent 68%);
+  filter:blur(18px);pointer-events:none;
+}
+.hero h1,.hero h2{
+  font-size:clamp(42px,7vw,84px) !important;
+  line-height:.90 !important;letter-spacing:-3.5px !important;
+  font-weight:1000 !important;max-width:980px;
+  text-shadow:0 0 34px rgba(255,226,138,.10);
+}
+.hero p,.sub,.writeup,.analysis p{color:var(--mp-muted) !important;line-height:1.65 !important}
+.badge,.vip-chip,.header-badge,.ai-pill{
+  border-radius:999px !important;border:1px solid rgba(255,226,138,.18) !important;
+  background:rgba(255,226,138,.075) !important;color:var(--mp-gold) !important;
+  letter-spacing:.8px;font-weight:1000 !important;box-shadow:0 10px 28px rgba(0,0,0,.24);
+}
+.btn,button,.upgrade-btn{
+  border-radius:999px !important;background:linear-gradient(135deg,#a87710,#ffe28a 55%,#c79b26) !important;
+  color:#111 !important;font-weight:1000 !important;border:0 !important;
+  box-shadow:0 18px 42px rgba(255,226,138,.14) !important;
+  transition:transform .22s ease, box-shadow .22s ease, filter .22s ease;
+}
+.btn:hover,button:hover,.upgrade-btn:hover{
+  transform:translateY(-2px);filter:saturate(1.08);
+  box-shadow:0 22px 55px rgba(255,226,138,.22) !important;
+}
+.card,.pick-card,.analytics-card,.chart-card,.vip-member-card,.locked-card,.drop-card,.release-card,.sport-widget{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(circle at 100% 0%,rgba(255,226,138,.10),transparent 32%),
+    linear-gradient(180deg,rgba(255,255,255,.065),rgba(255,255,255,.018)) !important;
+  border:1px solid rgba(255,226,138,.12) !important;border-radius:28px !important;
+  box-shadow:0 24px 70px rgba(0,0,0,.46),inset 0 0 0 1px rgba(255,255,255,.025) !important;
+  transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease, background .25s ease;
+}
+.card:hover,.pick-card:hover,.analytics-card:hover,.chart-card:hover,.drop-card:hover,.sport-widget:hover{
+  transform:translateY(-4px);border-color:rgba(255,226,138,.28) !important;
+  box-shadow:0 28px 90px rgba(0,0,0,.58),0 0 42px rgba(255,226,138,.09),inset 0 0 0 1px rgba(255,255,255,.035) !important;
+}
+.pick-card:before,.featured-play:before,.vip-member-card:before{
+  content:"";position:absolute;inset:-40%;background:linear-gradient(120deg,transparent,rgba(255,255,255,.06),transparent);
+  transform:translateX(-70%) rotate(8deg);transition:transform .8s ease;pointer-events:none;
+}
+.pick-card:hover:before,.featured-play:hover:before,.vip-member-card:hover:before{transform:translateX(70%) rotate(8deg)}
+.featured-play,.featured-hero{
+  border-radius:36px !important;padding:clamp(22px,4vw,40px) !important;
+  border-color:rgba(255,226,138,.28) !important;
+  background:
+    radial-gradient(circle at 85% 10%,rgba(255,226,138,.20),transparent 34%),
+    radial-gradient(circle at 10% 10%,rgba(54,212,122,.10),transparent 28%),
+    linear-gradient(180deg,#121212,#050505) !important;
+  box-shadow:0 38px 120px rgba(0,0,0,.68),0 0 65px rgba(255,226,138,.12) !important;
+}
+.pick-title,.featured-title{
+  font-size:clamp(25px,4.2vw,54px) !important;line-height:1 !important;
+  letter-spacing:-1.8px !important;font-weight:1000 !important;color:#fff8df !important;
+}
+.game{color:#d4c9aa !important;font-size:15px !important;margin-top:8px}
+.meta{display:flex !important;flex-wrap:wrap !important;gap:8px !important;margin-top:16px !important}
+.meta span{
+  border:1px solid rgba(255,226,138,.12) !important;background:rgba(0,0,0,.30) !important;
+  border-radius:999px !important;padding:8px 10px !important;color:#eadfbf !important;font-size:12px !important;
+}
+.analysis{
+  margin-top:18px !important;border-radius:22px !important;border:1px solid rgba(255,226,138,.10) !important;
+  background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.012)) !important;padding:18px !important;
+}
+.analysis h4,.chart-card h3,.board-head h2,.panel h2{
+  color:#fff6df !important;letter-spacing:-.8px;font-weight:1000 !important;
+}
+.analytics-grid{gap:14px !important}
+.analytics-card strong,.big-number{color:#fff8df !important;font-size:clamp(24px,3vw,44px) !important;letter-spacing:-1.5px !important}
+.analytics-card span{color:var(--mp-muted) !important}
+.performance-table td{background:rgba(0,0,0,.34) !important;border-color:rgba(255,226,138,.12) !important}
+.performance-table th{color:var(--mp-gold) !important}
+.live-sync-pill{
+  border-color:rgba(54,212,122,.38) !important;background:rgba(2,2,2,.88) !important;
+  box-shadow:0 18px 48px rgba(0,0,0,.45),0 0 30px rgba(54,212,122,.13) !important;
+}
+.locked-overlay{
+  background:radial-gradient(circle at 50% 0%,rgba(255,226,138,.15),transparent 35%),linear-gradient(180deg,rgba(3,3,3,.94),rgba(0,0,0,.98)) !important;
+  backdrop-filter:blur(16px) !important;
+}
+.locked-overlay h3{color:var(--mp-gold) !important;font-size:clamp(24px,4vw,38px) !important;letter-spacing:-1.4px !important}
+.release-timer{color:#fff8df !important;text-shadow:0 0 22px rgba(255,226,138,.20)}
+.league-logo,.sport-logo{box-shadow:0 12px 30px rgba(0,0,0,.28),inset 0 0 14px rgba(255,255,255,.06) !important}
+.mobile-nav{backdrop-filter:blur(18px) !important;background:rgba(0,0,0,.80) !important;border-top:1px solid rgba(255,226,138,.14) !important}
+
+@keyframes mpFadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.section > *,.card,.pick-card,.analytics-card,.chart-card{animation:mpFadeUp .55s ease both}
+
+.mp-platform-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px}
+.mp-platform-strip .mp-mini-card{border:1px solid rgba(255,226,138,.12);background:rgba(0,0,0,.28);border-radius:20px;padding:14px}
+.mp-mini-card strong{display:block;color:#fff8df;font-size:18px;letter-spacing:-.5px}
+.mp-mini-card span{display:block;color:var(--mp-muted);font-size:11px;text-transform:uppercase;letter-spacing:1px;margin-top:4px}
+
+.mp-live-ticker{
+  position:fixed;left:14px;right:14px;bottom:14px;z-index:9998;height:44px;display:flex;align-items:center;overflow:hidden;
+  border:1px solid rgba(255,226,138,.14);background:rgba(0,0,0,.82);backdrop-filter:blur(14px);
+  border-radius:999px;box-shadow:0 20px 55px rgba(0,0,0,.46);
+}
+.mp-live-track{display:flex;gap:36px;white-space:nowrap;animation:mpTicker 28s linear infinite;padding-left:18px;color:#eadfbf;font-size:12px;font-weight:800}
+.mp-live-track b{color:var(--mp-gold)}
+@keyframes mpTicker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+@media(max-width:900px){.mp-platform-strip{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){
+  .section{padding-top:36px !important;padding-bottom:36px !important}
+  .hero h1,.hero h2{font-size:42px !important;letter-spacing:-2px !important}
+  .card,.pick-card,.analytics-card,.chart-card,.vip-member-card,.locked-card{border-radius:22px !important}
+  .featured-play,.featured-hero{border-radius:26px !important}
+  .mp-platform-strip{grid-template-columns:1fr 1fr;gap:9px}
+  .mp-mini-card{padding:12px !important}
+  .mp-mini-card strong{font-size:15px}
+  .mp-live-ticker{bottom:72px;left:10px;right:10px;height:40px}
+}
+
+
+
+/* =========================================================
+   SAFE GLOW RESTORE — DOES NOT TOUCH PREMIUM ACCESS LOGIC
+========================================================= */
+:root{
+  --safe-gold:#ffe28a;
+  --safe-green:#35e58c;
+  --safe-blue:#6db7ff;
+  --safe-bg:#030303;
+  --safe-text:#fff7dc;
+  --safe-muted:#d1c29a;
+}
+
+html,body{
+  background:
+    radial-gradient(circle at 8% -10%,rgba(255,226,138,.25),transparent 30%),
+    radial-gradient(circle at 88% 0%,rgba(53,229,140,.13),transparent 28%),
+    radial-gradient(circle at 50% 110%,rgba(109,183,255,.12),transparent 38%),
+    linear-gradient(180deg,#050505,#010101) !important;
+  color:var(--safe-text) !important;
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-3;
+  pointer-events:none;
+  background-image:
+    linear-gradient(rgba(255,255,255,.022) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.022) 1px,transparent 1px);
+  background-size:44px 44px;
+  mask-image:linear-gradient(180deg,rgba(0,0,0,.85),transparent 82%);
+}
+
+.safe-glow-orb{
+  position:fixed;
+  pointer-events:none;
+  z-index:-1;
+  border-radius:999px;
+  filter:blur(36px);
+  opacity:.85;
+  mix-blend-mode:screen;
+  animation:safeOrbFloat 12s ease-in-out infinite alternate;
+}
+.safe-orb-gold{
+  width:320px;
+  height:320px;
+  top:80px;
+  right:-120px;
+  background:radial-gradient(circle,rgba(255,226,138,.26),rgba(255,226,138,.04),transparent 70%);
+}
+.safe-orb-green{
+  width:260px;
+  height:260px;
+  top:45%;
+  left:-110px;
+  background:radial-gradient(circle,rgba(53,229,140,.16),rgba(53,229,140,.04),transparent 70%);
+  animation-delay:-4s;
+}
+.safe-orb-blue{
+  width:280px;
+  height:280px;
+  bottom:-90px;
+  right:12%;
+  background:radial-gradient(circle,rgba(109,183,255,.13),rgba(109,183,255,.04),transparent 70%);
+  animation-delay:-7s;
+}
+@keyframes safeOrbFloat{
+  from{transform:translate3d(0,0,0) scale(1)}
+  to{transform:translate3d(20px,-18px,0) scale(1.06)}
+}
+
+header,.nav,.topbar,.site-header{
+  background:rgba(0,0,0,.68) !important;
+  backdrop-filter:blur(20px) saturate(1.2) !important;
+  border-bottom:1px solid rgba(255,226,138,.18) !important;
+  box-shadow:0 14px 48px rgba(0,0,0,.55),0 0 32px rgba(255,226,138,.08) !important;
+}
+
+.hero{
+  position:relative !important;
+  overflow:hidden !important;
+  background:
+    radial-gradient(circle at 80% 18%,rgba(255,226,138,.18),transparent 32%),
+    radial-gradient(circle at 18% 0%,rgba(53,229,140,.09),transparent 28%),
+    linear-gradient(180deg,rgba(10,10,10,.96),rgba(2,2,2,.88)) !important;
+  border-bottom:1px solid rgba(255,226,138,.14) !important;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:-35%;
+  pointer-events:none;
+  background:conic-gradient(from 180deg,transparent,rgba(255,226,138,.10),transparent,rgba(53,229,140,.07),transparent);
+  filter:blur(36px);
+  animation:safeHeroSpin 24s linear infinite;
+  z-index:0;
+}
+.hero > *{
+  position:relative;
+  z-index:1;
+}
+@keyframes safeHeroSpin{
+  to{transform:rotate(360deg)}
+}
+
+.hero h1,.hero h2,.headline,.main-title{
+  color:#fff7dc !important;
+  text-shadow:0 0 26px rgba(255,226,138,.18),0 0 70px rgba(255,226,138,.10) !important;
+}
+
+.card,.pick-card,.analytics-card,.chart-card,.vip-member-card,.locked-card,.drop-card,.release-card,.sport-widget,.panel{
+  position:relative !important;
+  overflow:hidden !important;
+  background:
+    radial-gradient(circle at 100% 0%,rgba(255,226,138,.13),transparent 34%),
+    radial-gradient(circle at 0% 100%,rgba(53,229,140,.055),transparent 32%),
+    linear-gradient(180deg,rgba(18,18,18,.95),rgba(4,4,4,.92)) !important;
+  border:1px solid rgba(255,226,138,.18) !important;
+  color:#fff7dc !important;
+  box-shadow:
+    0 24px 76px rgba(0,0,0,.62),
+    0 0 34px rgba(255,226,138,.055),
+    inset 0 0 0 1px rgba(255,255,255,.035) !important;
+  transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease !important;
+}
+
+.card:hover,.pick-card:hover,.analytics-card:hover,.chart-card:hover,.vip-member-card:hover,.locked-card:hover,.drop-card:hover,.release-card:hover,.sport-widget:hover,.panel:hover{
+  transform:translateY(-5px) !important;
+  border-color:rgba(255,226,138,.38) !important;
+  box-shadow:
+    0 34px 100px rgba(0,0,0,.72),
+    0 0 45px rgba(255,226,138,.16),
+    0 0 24px rgba(53,229,140,.05),
+    inset 0 0 0 1px rgba(255,255,255,.06) !important;
+}
+
+.featured-play,.featured-hero,.featured-card,.hero-pick{
+  background:
+    radial-gradient(circle at 78% 12%,rgba(255,226,138,.32),transparent 38%),
+    radial-gradient(circle at 10% 10%,rgba(53,229,140,.14),transparent 32%),
+    linear-gradient(180deg,#15120a,#050505 72%) !important;
+  border:1px solid rgba(255,226,138,.36) !important;
+  box-shadow:
+    0 44px 130px rgba(0,0,0,.78),
+    0 0 82px rgba(255,226,138,.20),
+    0 0 30px rgba(53,229,140,.08) !important;
+}
+
+.badge,.vip-chip,.header-badge,.ai-pill,.pill,.tag,.meta span{
+  background:rgba(255,226,138,.095) !important;
+  border:1px solid rgba(255,226,138,.22) !important;
+  color:#ffe28a !important;
+  box-shadow:0 10px 28px rgba(0,0,0,.34),0 0 16px rgba(255,226,138,.06) !important;
+}
+
+.btn,button,.upgrade-btn,a.btn{
+  background:linear-gradient(135deg,#8f650f 0%,#ffe28a 48%,#c89b3c 100%) !important;
+  color:#080808 !important;
+  border:0 !important;
+  box-shadow:0 18px 44px rgba(255,226,138,.20),0 0 20px rgba(255,226,138,.08) !important;
+}
+
+.live-sync-pill,.mp-live-ticker,.ticker,.odds-ticker{
+  background:rgba(0,0,0,.84) !important;
+  border:1px solid rgba(53,229,140,.34) !important;
+  box-shadow:0 18px 50px rgba(0,0,0,.55),0 0 28px rgba(53,229,140,.16) !important;
+  backdrop-filter:blur(16px) !important;
+}
+
+.game,.meta,.muted,.secondary,.writeup,.analysis,.analysis p,.sub,.subtitle{
+  color:#d1c29a !important;
+}
+
+.analytics-card strong,.big-number,.metric-value{
+  color:#fff8e1 !important;
+  text-shadow:0 0 24px rgba(255,226,138,.12) !important;
+}
+
+@media(max-width:760px){
+  .safe-orb-gold{width:230px;height:230px;right:-100px}
+  .safe-orb-green{width:210px;height:210px}
+  .safe-orb-blue{display:none}
+}
+
+</style></head><body>
+<header class="header"><div class="container nav"><a class="brand" href="./"><div class="logo">MP</div><div><h1>Mick's Picks</h1><small>The Gurus Lair</small></div></a><nav class="links"><a href="#top-play">Top Play</a><a href="#free">Free Board</a><a href="#analytics">Stats</a><a href="#trackers">Trackers</a><a class="btn dark" href="premium.html">Premium Login</a></nav></div></header>
+<div class="ticker"><div class="ticker-track"><span><b>LIVE CARD</b> • Active Picks</span><span><b>ARCHIVE</b> • Results Tracker</span><span><b>PROPS</b> • Prop Database</span><span><b>PARLAYS</b> • Parlay Tracker</span><span><b>MICKS PICKS</b> • Bet The Number, Not The Hype</span><span><b>LIVE CARD</b> • Active Picks</span></div></div>
+<main>
+<section class="hero container"><div class="kicker">Sharp sports analysis • Tracked results • Premium framework</div><h2>Bet The Number.<br>Not The Hype.</h2><p>Mick's Picks now runs like a full betting desk: live plays, featured edge, results archive, prop tracker, parlay tracker, and premium analysis powered by the long-term Micks Picks database.</p>
+<div class="league-strip">
+  <span class="league-logo logo-nba">NBA</span>
+  <span class="league-logo logo-nhl">NHL</span>
+  <span class="league-logo logo-ufc">UFC</span>
+  <span class="league-logo logo-wnba">WNBA</span>
+  <span class="league-logo logo-nfl">NFL</span>
+  <span class="league-logo logo-mlb">MLB</span>
+</div>
+
+<div class="header-badge" style="margin-top:10px;display:inline-flex">● Real-Time Sheet Sync Active</div>
+<div class="actions"><a class="btn" href="#free">View Today’s Card</a><a class="btn dark" href="premium.html">Premium Vault</a></div><div class="vipbar"><div class="vip"><b id="pubActive">—</b><span>Active Plays</span></div><div class="vip"><b id="pubATier">—</b><span>A-Tier Plays</span></div><div class="vip"><b id="pubWinRate">—</b><span>Win Rate</span></div><div class="vip"><b id="pubProfit">—</b><span>Tracked Units</span></div><div class="vip"><b>EV</b><span>Value Discipline</span></div><div class="vip"><b>VIP</b><span>Full Analysis</span></div>
+<div class="sport-tabs">
+  <a class="sport-tab" href="#free"><span class="league-logo logo-nba">NBA</span> NBA Picks</a>
+  <a class="sport-tab" href="#trackers"><span class="league-logo logo-props">PROP</span> Props</a>
+  <a class="sport-tab" href="#trackers"><span class="league-logo logo-parlay">SGP</span> Parlays</a>
+  <a class="sport-tab" href="#analytics"><span class="league-logo logo-nhl">NHL</span> Analytics</a>
+</div>
+
+<div class="vip-home-teaser">
+  <strong>🔒 VIP Play Drops Now Live</strong>
+  <p>Premium members get full analysis, release timers, recent wins, CLV tracking, and locked market edge breakdowns.</p>
+  <a class="btn" href="premium.html">Enter Premium Vault</a>
+</div>
+</div></section>
+<section class="section container" id="top-play"><div class="board-head"><div><span class="badge green">Play of the Day</span><h2>Featured Edge</h2><p class="sub">The Gurus Lair featured play of the day.</p></div></div><div id="topPlayBox"><div class="loading">Loading featured play...</div></div></section>
+<section class="section container" id="free"><div class="board-head"><div><h2>Free Picks Board</h2><p class="sub">Current public card pulled from Active Picks.</p></div><span class="badge">Public Plays</span></div><div id="freeBoard"></div></section>
+
+<section class="section container" id="analytics">
+  <div class="board-head">
+    <div>
+      <span class="badge green">Analytics Dashboard</span>
+      <h2>Performance Command Center</h2>
+      <p class="sub">Live analytics pulled from Dashboard: ROI, streaks, CLV, sport records, grade performance, and monthly profit tracking.</p>
     </div>
-  </header>
+  </div>
+  
+<div class="sport-widget-grid">
+  <div class="sport-widget"><span class="league-logo logo-nba">NBA</span><div><strong>NBA Model</strong><span>Playoff systems</span></div></div>
+  <div class="sport-widget"><span class="league-logo logo-nhl">NHL</span><div><strong>NHL Board</strong><span>Market edges</span></div></div>
+  <div class="sport-widget"><span class="league-logo logo-ufc">UFC</span><div><strong>UFC Angles</strong><span>Value tiers</span></div></div>
+  <div class="sport-widget"><span class="league-logo logo-wnba">WNBA</span><div><strong>WNBA Data</strong><span>Early reads</span></div></div>
+</div>
+<div id="analyticsDashboard">
+    <div class="analytics-grid">
+      <div class="analytics-card"><strong id="dashRecord">—</strong><span>Overall Record</span></div>
+      <div class="analytics-card"><strong id="dashWinRate">—</strong><span>Win Rate</span></div>
+      <div class="analytics-card"><strong id="dashUnits">—</strong><span>Total Units</span></div>
+      <div class="analytics-card"><strong id="dashROI">—</strong><span>ROI</span></div>
+      <div class="analytics-card"><strong id="dashBestBet">—</strong><span>Best Bet Record</span></div>
+      <div class="analytics-card"><strong id="dashBestBetRate">—</strong><span>Best Bet Win Rate</span></div>
+      <div class="analytics-card"><strong id="dashStreak">—</strong><span>Current Streak</span></div>
+      <div class="analytics-card"><strong id="dashCLV">—</strong><span>Positive CLV Rate</span></div>
+    </div>
+    <div class="grid two" style="margin-top:18px">
+      <div class="chart-card"><h3>Monthly Profit Graph</h3><p class="sub">Auto-generated from graded Results Archive unit performance.</p><div id="monthlyProfitChart"><div class="loading">Loading monthly profit...</div></div></div>
+      <div class="chart-card"><h3>CLV Dashboard</h3><p class="sub">Tracks whether Micks Picks is beating the closing number.</p><div class="analytics-grid" style="grid-template-columns:repeat(2,1fr)"><div class="analytics-card"><strong id="dashAvgCLV">—</strong><span>Average CLV</span></div><div class="analytics-card"><strong id="dashCLV">—</strong><span>Positive CLV Rate</span></div></div></div>
+    </div>
+    <div class="grid two" style="margin-top:18px">
+      <div class="chart-card"><h3>Sport Performance</h3><div id="sportPerformanceTable"><div class="loading">Loading sport records...</div></div></div>
+      <div class="chart-card"><h3>Grade Performance</h3><div id="gradePerformanceTable"><div class="loading">Loading grade records...</div></div></div>
+    </div>
+  </div>
+</section>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
+<section class="section container" id="results"><div class="board-head"><div><h2>Results Archive</h2><p class="sub">Closed picks and tracked performance history.</p></div><span class="badge green">Transparent Tracking</span></div><div class="card" id="resultsTable"><div class="loading">Loading results...</div></div></section>
+<section class="section container" id="trackers"><div class="board-head"><div><h2>Betting Trackers</h2><p class="sub">Long-term prop and parlay tracking built into the site.</p></div></div><div class="grid two"><div class="card"><h3>Props Tracker</h3><div id="propsTable"><div class="loading">Loading props...</div></div></div><div class="card"><h3>Parlay Tracker</h3><div id="parlayTable"><div class="loading">Loading parlays...</div></div></div></div></section>
+</main><footer class="footer"><div class="container">Mick's Picks is for entertainment and educational purposes only. No bet is guaranteed. Bet responsibly.</div></footer>
+<script>
+const SHEET_ID='15txBM8qsck7f0ZA_za7xYEykBxKpuq0no3x7yHcKNeE';
+const GIDS={'active': '0', 'results': '1579113575', 'vip': '210503117', 'props': '627878674', 'parlays': '1849675860'};
+function csvUrl(gid){return `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${gid}&cache=${Date.now()}`;}
+function safe(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));}
+function clean(s){return String(s||'').trim();}
+function num(v){const n=parseFloat(String(v||'').replace(/[^0-9.+-]/g,''));return Number.isFinite(n)?n:0;}
+function odds(v){const n=parseInt(String(v||'').replace(/[^0-9+-]/g,''),10);return Number.isFinite(n)?n:0;}
+function result(p){return clean(p['Result']).toLowerCase();}
+function calcPL(p){const r=result(p),u=num(p['Units'])||1,o=odds(p['Odds']);if(['push','void','cancel','cancelled'].includes(r))return 0;if(['loss','lost','l'].includes(r))return -u;if(['win','won','w'].includes(r)){if(o>0)return u*(o/100);if(o<0)return u*(100/Math.abs(o));return u;}return null;}
+function fmtPL(v){if(v===null)return'Pending';let x=Math.round(v*100)/100;if(x>0)return'+'+x.toFixed(2)+'u';if(x<0)return x.toFixed(2)+'u';return'0.00u';}
+function plClass(v){if(v===null)return'badge blue';if(v>0)return'badge green';if(v<0)return'badge red';return'badge';}
+function parseCSV(text){const rows=[];let row=[],cur='',q=false;for(let i=0;i<text.length;i++){const c=text[i],n=text[i+1];if(c=='"'&&q&&n=='"'){cur+='"';i++;}else if(c=='"'){q=!q;}else if(c===','&&!q){row.push(cur);cur='';}else if((c==='\n'||c==='\r')&&!q){if(cur!==''||row.length){row.push(cur);rows.push(row);row=[];cur='';}if(c==='\r'&&n==='\n')i++;}else cur+=c;}if(cur!==''||row.length){row.push(cur);rows.push(row);}return rows;}
+function makeObjects(rows){if(!rows.length)return[];const h=rows[0].map(x=>clean(x));return rows.slice(1).filter(r=>r.some(x=>clean(x))).map(r=>{const o={};h.forEach((k,i)=>o[k]=clean(r[i]));return o;});}
+async function getRows(gid){const res=await fetch(csvUrl(gid),{cache:'no-store'});if(!res.ok)throw new Error('Sheet did not respond.');const text=await res.text();if(text.toLowerCase().includes('<html'))throw new Error('Sheet returned HTML instead of CSV.');return makeObjects(parseCSV(text));}
+function isPremium(p){const a=clean(p['Access']).toLowerCase();return a==='premium'||a==='vip'||a==='paid';}
+function isFree(p){const a=clean(p['Access']).toLowerCase();return a===''||a==='free'||a==='public'||a==='featured';}
+function card(p,premium=false,featured=false){const pl=calcPL(p);const releaseTime=safe(p['Release Time']||'');const releaseStatus=safe(p['Release Status']||'');return `<div class="card pick-card ${featured?'featured':''}" data-release-time="${releaseTime}" data-release-status="${releaseStatus}"><div class="pick-top"><div><span class="badge">${safe(p['Grade']||'A')}-Tier • ${safe(p['Bet Type']||'Play')}</span> <span class="badge green">EV ${safe(p['EV Edge']||'—')}</span> <span class="${plClass(pl)}">P/L ${fmtPL(pl)}</span>${featured?' <span class="badge green">Featured</span>':''}<div class="pick-title">${safe(p['Pick']||'Pick Pending')}</div><div class="game">${safe(p['Game']||'')}</div></div><div style="text-align:right"><span class="badge blue">${safe(p['Status']||'Active')}</span><div class="sub" style="margin-top:8px">Confidence: ${safe(p['Confidence']||'—')}</div></div></div><div class="meta"><span>Odds: ${safe(p['Odds']||'—')}</span><span>Book: ${safe(p['Sportsbook']||'Best Available')}</span><span>Units: ${safe(p['Units']||'—')}</span><span>Best #: ${safe(p['Best Number']||'—')}</span><span>Cutoff: ${safe(p['No Bet Cutoff']||'—')}</span><span>Result: ${safe(p['Result']||'Pending')}</span></div><div class="analysis"><h4>${premium?'Full Premium Analysis':'Public Writeup'}</h4><div class="writeup">${safe(premium?(p['Full Analysis']||p['Writeup']||'Premium analysis coming soon.'):(p['Writeup']||'Public writeup coming soon.'))}</div></div><div class="notes"><div class="note"><strong>Market Notes</strong><br>${safe(p['Market Notes']||'Market check pending.')}</div><div class="note"><strong>Injury Notes</strong><br>${safe(p['Injury Notes']||'No major injury note posted.')}</div><div class="note"><strong>Source Check</strong><br>${safe(p['Source Verification']||'Micks Picks framework.')}</div></div></div>`;}
+function setText(id,val){const el=document.getElementById(id);if(el)el.textContent=val;}
+function summarize(picks,prefix){const wins=picks.filter(p=>['win','won','w'].includes(result(p))).length,losses=picks.filter(p=>['loss','lost','l'].includes(result(p))).length,total=wins+losses;const active=picks.filter(p=>['active','pending'].includes(clean(p['Status']).toLowerCase())).length;const atier=picks.filter(p=>clean(p['Grade']).toLowerCase().startsWith('a')).length;const profit=picks.reduce((s,p)=>{const v=calcPL(p);return s+(v===null?0:v);},0);setText(prefix+'Active',active||'—');setText(prefix+'ATier',atier||'—');setText(prefix+'WinRate',total?Math.round((wins/total)*100)+'%':'—');setText(prefix+'Profit',fmtPL(profit));}
+function table(rows,targetId,limit=10){
+  const t=document.getElementById(targetId);
+  if(!t)return;
+  if(!rows.length){t.innerHTML='<div class="empty">Nothing posted yet.</div>';return;}
+  const show=rows.slice().reverse().slice(0,limit);
+  t.innerHTML=`<table class="table"><thead><tr><th>Date</th><th>Pick / Player</th><th>Type / Grade</th><th>Result</th><th>P/L</th></tr></thead><tbody>${show.map(p=>{
+    const pick = p['Pick'] || p['Player'] || p['Parlay Name'] || p['Legs'] || '';
+    const grade = p['Grade'] || p['Prop Type'] || p['Bet Type'] || '';
+    const pl = p['Profit/Loss'] && p['Profit/Loss'] !== 'Pending' ? p['Profit/Loss'] : fmtPL(calcPL(p));
+    return `<tr><td>${safe(p['Date']||'')}</td><td>${safe(pick)}</td><td>${safe(grade)}</td><td>${safe(p['Result']||'Pending')}</td><td>${safe(pl)}</td></tr>`;
+  }).join('')}</tbody></table>`;
+}
+async function loadHome(){try{const active=await getRows(GIDS.active);const results=await getRows(GIDS.results).catch(()=>[]);summarize(active.concat(results),'pub');const featured=active.find(p=>clean(p['Featured']).toLowerCase()==='yes');document.getElementById('topPlayBox').innerHTML=featured?card(featured,false,true):'<div class="empty">No featured play selected.</div>';const free=active.filter(isFree);document.getElementById('freeBoard').innerHTML=free.length?free.slice().reverse().map(p=>card(p,false,false)).join(''):'<div class="empty">No free plays posted yet.</div>';table(results,'resultsTable',12);table(await getRows(GIDS.props).catch(()=>[]),'propsTable',8);table(await getRows(GIDS.parlays).catch(()=>[]),'parlayTable',8);}catch(err){document.getElementById('freeBoard').innerHTML='<div class="error">Could not load picks.<br><br>'+safe(err.message)+'</div>';}}
+async function loadPremium(){try{const active=await getRows(GIDS.active);const vip=await getRows(GIDS.vip).catch(()=>[]);const premiumActive=active.filter(isPremium);summarize(premiumActive.concat(vip),'prem');document.getElementById('premiumBoard').innerHTML=premiumActive.length?premiumActive.slice().reverse().map(p=>card(p,true,false)).join(''):'<div class="empty">No premium plays posted yet.</div>';table(vip,'vipArchiveTable',12);}catch(err){document.getElementById('premiumBoard').innerHTML='<div class="error">Could not load premium picks.<br><br>'+safe(err.message)+'</div>';}}
+document.addEventListener('DOMContentLoaded',loadHome);</script>
+<nav class="mobile-bottom-nav">
+  <a href="#top-play">Top</a>
+  <a href="#free">Picks</a>
+  <a href="#results">Results</a>
+  <a href="premium.html">VIP</a>
+</nav>
+
+
+<script>
+(function(){
+  function enhanceMobile(){
+    document.querySelectorAll(".analysis").forEach(function(box){
+      if(box.dataset.mobileEnhanced === "yes") return;
+      box.dataset.mobileEnhanced = "yes";
+      var btn = document.createElement("button");
+      btn.className = "analysis-toggle";
+      btn.type = "button";
+      btn.textContent = "Read Full Analysis";
+      box.insertAdjacentElement("afterend", btn);
+      btn.addEventListener("click", function(){
+        box.classList.toggle("open");
+        btn.textContent = box.classList.contains("open") ? "Collapse Analysis" : "Read Full Analysis";
+      });
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", function(){
+    enhanceMobile();
+    setTimeout(enhanceMobile, 900);
+    setTimeout(enhanceMobile, 1800);
+    setTimeout(enhanceMobile, 3000);
+  });
+})();
+</script>
+
+
+<script>
+(function(){
+  const SHEET_ID="15txBM8qsck7f0ZA_za7xYEykBxKpuq0no3x7yHcKNeE";
+  const DASHBOARD_GID="1683630138";
+  function csvUrl(){return `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${DASHBOARD_GID}&cache=${Date.now()}`;}
+  function esc(s){return String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));}
+  function parseCSV(text){const rows=[];let row=[],cur="",q=false;for(let i=0;i<text.length;i++){const c=text[i],n=text[i+1];if(c=='"'&&q&&n=='"'){cur+='"';i++;}else if(c=='"'){q=!q;}else if(c==","&&!q){row.push(cur);cur="";}else if((c=="\n"||c=="\r")&&!q){if(cur!==""||row.length){row.push(cur);rows.push(row);row=[];cur="";}if(c=="\r"&&n=="\n")i++;}else cur+=c;}if(cur!==""||row.length){row.push(cur);rows.push(row);}return rows;}
+  function metric(rows,label){for(const r of rows){if(String(r[0]||"").trim().toLowerCase()===label.toLowerCase())return String(r[1]||"—").trim()||"—";}return"—";}
+  function pct(v){const n=Number(String(v).replace("%",""));if(!Number.isFinite(n))return v||"—";return n<=1?Math.round(n*100)+"%":Math.round(n)+"%";}
+  function units(v){const n=Number(v);if(!Number.isFinite(n))return v||"—";return(n>0?"+":"")+n.toFixed(2)+"u";}
+  function set(id,val){const el=document.getElementById(id);if(el)el.textContent=val;}
+  function renderSport(rows){const t=document.getElementById("sportPerformanceTable");if(!t)return;const start=rows.findIndex(r=>String(r[0]||"").trim()==="Sport-by-Sport Records");if(start<0){t.innerHTML='<div class="empty">Sport records not available yet.</div>';return;}const data=rows.slice(start+2,start+5).filter(r=>r[0]);t.innerHTML=`<div class="table-scroll"><table class="performance-table"><thead><tr><th>Sport</th><th>W</th><th>L</th><th>Win Rate</th><th>Units</th><th>ROI</th></tr></thead><tbody>${data.map(r=>`<tr><td>${esc(r[0])}</td><td>${esc(r[1])}</td><td>${esc(r[2])}</td><td>${esc(pct(r[3]))}</td><td>${esc(units(r[4]))}</td><td>${esc(pct(r[5]))}</td></tr>`).join("")}</tbody></table></div>`;}
+  function renderGrade(rows){const t=document.getElementById("gradePerformanceTable");if(!t)return;const start=rows.findIndex(r=>String(r[0]||"").trim()==="Grade Performance");if(start<0){t.innerHTML='<div class="empty">Grade data not available yet.</div>';return;}const data=rows.slice(start+2,start+5).filter(r=>r[0]);t.innerHTML=`<div class="table-scroll"><table class="performance-table"><thead><tr><th>Tier</th><th>W</th><th>L</th><th>Win Rate</th><th>Units</th></tr></thead><tbody>${data.map(r=>`<tr><td>${esc(r[0])}</td><td>${esc(r[1])}</td><td>${esc(r[2])}</td><td>${esc(pct(r[3]))}</td><td>${esc(units(r[4]))}</td></tr>`).join("")}</tbody></table></div>`;}
+  function renderChart(rows){const t=document.getElementById("monthlyProfitChart");if(!t)return;const start=rows.findIndex(r=>String(r[0]||"").trim()==="Monthly Profit Graph Data");if(start<0){t.innerHTML='<div class="empty">Monthly graph data not available yet.</div>';return;}const data=rows.slice(start+2).filter(r=>r[0]&&r[1]&&!String(r[0]).includes("CLV")).slice(0,12);if(!data.length){t.innerHTML='<div class="empty">No monthly profit data yet.</div>';return;}const nums=data.map(r=>Number(r[1])||0);const max=Math.max(...nums.map(Math.abs),1);t.innerHTML=`<div class="chart-bars">${data.map(r=>{const val=Number(r[1])||0;const h=Math.max(8,Math.round((Math.abs(val)/max)*145));return`<div class="chart-bar-wrap"><div class="chart-value">${esc(units(val))}</div><div class="chart-bar ${val<0?"negative":""}" style="height:${h}px"></div><div class="chart-label">${esc(String(r[0]).slice(2))}</div></div>`;}).join("")}</div>`;}
+  async function loadAnalytics(){const panel=document.getElementById("analyticsDashboard");if(!panel)return;try{const res=await fetch(csvUrl(),{cache:"no-store"});if(!res.ok)throw new Error("Dashboard did not respond.");const rows=parseCSV(await res.text());set("dashRecord",metric(rows,"Overall Record"));set("dashWinRate",pct(metric(rows,"Overall Win Rate")));set("dashUnits",units(metric(rows,"Total Units")));set("dashROI",pct(metric(rows,"ROI")));set("dashBestBet",metric(rows,"Best Bet Record"));set("dashBestBetRate",pct(metric(rows,"Best Bet Win Rate")));set("dashStreak",metric(rows,"Current Streak"));set("dashCLV",pct(metric(rows,"Positive CLV Rate")));set("dashAvgCLV",metric(rows,"Average CLV"));renderSport(rows);renderGrade(rows);renderChart(rows);}catch(err){panel.innerHTML='<div class="error">Analytics dashboard could not load.<br><br>'+esc(err.message)+'</div>';}}
+  document.addEventListener("DOMContentLoaded",function(){loadAnalytics();setTimeout(loadAnalytics,1200);});
+})();
+</script>
+
+
+<script>
+(function(){
+  function leagueClass(val){const s=String(val||"").toLowerCase();if(s.includes("nba"))return"logo-nba";if(s.includes("nhl"))return"logo-nhl";if(s.includes("ufc"))return"logo-ufc";if(s.includes("wnba"))return"logo-wnba";if(s.includes("nfl"))return"logo-nfl";if(s.includes("mlb"))return"logo-mlb";if(s.includes("prop"))return"logo-props";if(s.includes("parlay"))return"logo-parlay";return"logo-nba";}
+  function enhanceCards(){document.querySelectorAll(".pick-card").forEach(function(card){if(card.dataset.leagueEnhanced==="yes")return;card.dataset.leagueEnhanced="yes";const text=card.textContent||"";let league="NBA";["NBA","NHL","UFC","WNBA","NFL","MLB"].forEach(function(x){if(text.includes(x))league=x;});const row=document.createElement("div");row.className="pick-league-row";row.innerHTML='<span class="sport-logo '+leagueClass(league)+'">'+league+'</span><span class="badge">MICKS PICKS EDGE</span>';const title=card.querySelector(".pick-title");if(title&&title.parentNode)title.parentNode.insertBefore(row,title);});}
+  document.addEventListener("DOMContentLoaded",function(){enhanceCards();setTimeout(enhanceCards,900);setTimeout(enhanceCards,1800);setTimeout(enhanceCards,3000);});
+})();
+</script>
+
+
+<script>
+/* ===== MICKS PICKS DYNAMIC FEATURED ENGINE ===== */
+(function(){
+  function clean(s){return String(s||"").trim();}
+  function num(v){const n=parseFloat(String(v||"").replace(/[^0-9.+-]/g,""));return Number.isFinite(n)?n:0;}
+  function gradeScore(g){
+    g=clean(g).toUpperCase();
+    if(g.startsWith("A+")) return 5.0;
+    if(g.startsWith("A")) return 4.6;
+    if(g.startsWith("B+")) return 3.8;
+    if(g.startsWith("B")) return 3.3;
+    if(g.startsWith("C")) return 2.2;
+    return 1.0;
+  }
+  function confidenceScore(c){
+    c=clean(c).toLowerCase();
+    if(c.includes("high")) return 2.0;
+    if(c.includes("medium-high")) return 1.6;
+    if(c.includes("medium")) return 1.1;
+    if(c.includes("low")) return .4;
+    return .8;
+  }
+  function edgeClass(p){
+    const ev=num(p["EV Edge"]);
+    const grade=clean(p["Grade"]).toUpperCase();
+    const conf=clean(p["Confidence"]).toLowerCase();
+    if(grade.startsWith("A") && ev >= .05 && conf.includes("high")) return ["edge-best","best","BEST BET"];
+    if(grade.startsWith("A") || ev >= .045) return ["edge-strong","strong","STRONG VALUE"];
+    return ["edge-risk","risk","RISK / VALUE"];
+  }
+  function pickScore(p){
+    return gradeScore(p["Grade"]) + confidenceScore(p["Confidence"]) + (num(p["EV Edge"]) * 20) + (clean(p["Featured"]).toLowerCase()==="yes" ? .6 : 0);
+  }
+  function buildFeaturedCard(p){
+    const cls=edgeClass(p);
+    const pl = (typeof calcPL==="function") ? calcPL(p) : null;
+    const plText = (typeof fmtPL==="function") ? fmtPL(pl) : "Pending";
+    const safeFn = (typeof safe==="function") ? safe : function(x){return String(x??"").replace(/[&<>]/g,"");};
+    const analysis = p["Writeup"] || p["Full Analysis"] || "Featured Micks Picks edge.";
+    const releaseTime = safeFn(p["Release Time"] || "");
+    const releaseStatus = safeFn(p["Release Status"] || "");
+    return `<div class="card pick-card featured-play ${cls[0]}" data-release-time="${releaseTime}" data-release-status="${releaseStatus}">
+      <div class="pick-top">
         <div>
-          <div class="eyebrow">Yahgi's</div>
-          <h1 class="guru-title">Guru</h1>
-          <div class="guru-subtitle">Picks</div>
-          <p class="hero-copy">Elite reads. Sharp angles. Independent card releases.</p>
-          <div class="stat-row">
-            <div class="stat"><strong id="guruUnits">+0.0u</strong><span>Units</span></div>
-            <div class="stat"><strong id="guruWinRate">0%</strong><span>Win Rate</span></div>
-            <div class="stat"><strong id="guruRecord">0-0</strong><span>Record</span></div>
-            <div class="stat"><strong id="guruStreak">0</strong><span>Win Streak</span></div>
-          </div>
-          <div class="hero-actions"><a href="#today" class="btn">Today's Picks ›</a><a href="#results" class="btn secondary">View Results</a></div>
+          <span class="badge">${safeFn(p["Grade"]||"A")} • ${safeFn(p["Bet Type"]||"Play")}</span>
+          <span class="dynamic-edge-label ${cls[1]}">${cls[2]}</span>
+          <div class="pick-title">${safeFn(p["Pick"]||"Featured Play")}</div>
+          <div class="game">${safeFn(p["Game"]||"")}</div>
         </div>
-        <div class="guru-art"><div class="guru-img-wrap"><img src="yahgi-logo.jpg" alt="Yahgi's Guru Picks logo" onerror="this.remove();this.parentElement.innerHTML='<div class=&quot;fallback-logo&quot;>Upload Yahgi logo as<br>yahgi-logo.jpg</div>'"></div></div>
-      </div>
-    </section>
-
-    <section class="section" id="today">
-      <div class="container">
-        <div class="card featured">
-          <div>
-            <div class="kicker">✩ Guru Featured Play</div>
-            <h2 id="featuredPick">Waiting on Yahgi's next release</h2>
-            <div class="game" id="featuredGame">Guru card loading from sheet</div>
-            <div class="meta"><span class="pill" id="featuredSport">Sport</span><span class="pill" id="featuredTime">Release Time</span><span class="pill" id="featuredOdds">Odds</span><span class="pill" id="featuredUnits">Units</span></div>
-          </div>
-          <div class="lock-box"><div class="lock-icon">♕</div><strong>Guru Lock<br>of the Day</strong></div>
+        <div class="pick-top-right">
+          <span class="badge blue">${safeFn(p["Status"]||"Active")}</span>
+          <div class="sub">Confidence: ${safeFn(p["Confidence"]||"—")}</div>
         </div>
       </div>
-    </section>
-
-    <section class="section">
-      <div class="container grid grid-3">
-        <div class="card mini-card">
-          <h3>♜ Recent Wins</h3><div class="recent-list" id="recentWins"></div>
-        </div>
-        <div class="card mini-card">
-          <h3 style="text-align:center">Guru Record</h3>
-          <div class="record-ring"><div class="ring-inner"><div><strong id="ringRecord">0-0</strong><br><span>Record</span></div></div></div>
-          <div class="split-stats"><div><strong id="ringRate">0%</strong><span>Win Rate</span></div><div><strong id="ringUnits">+0.0u</strong><span>Units</span></div></div>
-        </div>
-        <div class="card mini-card">
-          <h3 style="text-align:center">Current Win Streak</h3>
-          <div class="streak-number" id="streakBig">0</div><div class="streak-label">Straight Wins</div><div class="flames" id="flames">🔥🔥🔥</div>
-        </div>
+      <div class="meta">
+        <span>Odds: ${safeFn(p["Odds"]||"—")}</span>
+        <span>Units: ${safeFn(p["Units"]||"—")}</span>
+        <span>Best #: ${safeFn(p["Best Number"]||"—")}</span>
+        <span>Cutoff: ${safeFn(p["No Bet Cutoff"]||"—")}</span>
+        <span>EV: ${safeFn(p["EV Edge"]||"—")}</span>
+        <span>P/L: ${safeFn(plText)}</span>
       </div>
-    </section>
-
-    <section class="section" id="results">
-      <div class="container grid grid-2">
-        <div class="card table-card">
-          <h3>♔ Latest Guru Picks</h3>
-          <div style="overflow:auto"><table><thead><tr><th>Date</th><th>Sport</th><th>Pick</th><th>Line</th><th>Result</th><th>Units</th></tr></thead><tbody id="guruTable"><tr><td colspan="6">Loading Yahgi's Guru Picks...</td></tr></tbody></table></div>
-        </div>
-        <div class="card follow">
-          <h3>♙ Follow Yahgi</h3><p style="color:var(--muted);line-height:1.6">Get all of Yahgi's plays, insights, and updates across the Guru Network.</p>
-          <div class="socials"><a href="#">𝕏</a><a href="#">◎</a><a href="#">♪</a></div>
-          <a class="btn" style="width:100%;min-height:72px;font-size:17px;text-align:center" href="premium.html">♕ Join VIP for Yahgi's Premium Picks</a>
-        </div>
+      <div class="featured-engine-panel">
+        <div class="featured-engine-stat"><strong>${safeFn(p["Grade"]||"—")}</strong><span>Grade</span></div>
+        <div class="featured-engine-stat"><strong>${safeFn(p["EV Edge"]||"—")}</strong><span>EV Edge</span></div>
+        <div class="featured-engine-stat"><strong>${safeFn(p["Confidence"]||"—")}</strong><span>Confidence</span></div>
+        <div class="featured-engine-stat"><strong>${safeFn(p["Best Number"]||"—")}</strong><span>Best Number</span></div>
       </div>
-    </section>
-  </main>
-  <footer class="footer"><div class="container">© Micks Picks Guru Network — Yahgi's Guru Picks</div></footer>
+      <div class="analysis">
+        <h4>Auto-Selected Featured Edge</h4>
+        <div class="writeup">${safeFn(analysis)}</div>
+      </div>
+      <div class="featured-rotate-note">Featured engine ranks live plays by grade, EV edge, confidence, and manual Featured tag. Glow color updates automatically by edge quality.</div>
+    </div>`;
+  }
+  function installFeaturedEngine(){
+    if(typeof getRows!=="function" || typeof GIDS==="undefined") return;
+    const box=document.getElementById("topPlayBox");
+    if(!box) return;
+    getRows(GIDS.active).then(function(rows){
+      const active=rows.filter(p=>["active","pending",""].includes(clean(p["Status"]).toLowerCase()));
+      const picks=active.length ? active : rows;
+      if(!picks.length) return;
+      picks.sort((a,b)=>pickScore(b)-pickScore(a));
+      box.innerHTML=buildFeaturedCard(picks[0]);
+      if(typeof enhanceMobile==="function") enhanceMobile();
+    }).catch(function(){});
+  }
+  document.addEventListener("DOMContentLoaded",function(){
+    setTimeout(installFeaturedEngine,300);
+    setTimeout(installFeaturedEngine,1400);
+  });
+})();
+</script>
 
-  <script>
-    const SHEET_ID="15txBM8qsck7f0ZA_za7xYEykBxKpuq0no3x7yHcKNeE", ACTIVE_GID="0", ARCHIVE_GID="1579113575";
-    const demoPicks=[
-      {Date:"May 18, 2026",Sport:"NBA",Game:"Lakers vs Nuggets",Pick:"Lakers -4.5",Odds:"-110",Result:"Pending",Units:"2.0",Capper:"Yahgi",Featured:"Yes"},
-      {Date:"May 17, 2026",Sport:"NBA",Game:"Mavericks",Pick:"Mavericks ML",Odds:"+105",Result:"Win",Units:"2.1",Capper:"Yahgi"},
-      {Date:"May 16, 2026",Sport:"MLB",Game:"Yankees vs Red Sox",Pick:"Yankees -1.5",Odds:"-115",Result:"Win",Units:"1.74",Capper:"Yahgi"}
-    ];
-    function csvUrl(gid){return `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${gid}&cache=${Date.now()}`}
-    function parseCSV(text){const rows=[];let row=[],cur="",q=false;for(let i=0;i<text.length;i++){const c=text[i],n=text[i+1];if(c=='"'&&q&&n=='"'){cur+='"';i++}else if(c=='"'){q=!q}else if(c==','&&!q){row.push(cur);cur=""}else if((c=="\n"||c=="\r")&&!q){if(cur!==""||row.length){row.push(cur);rows.push(row);row=[];cur=""}if(c=="\r"&&n=="\n")i++}else cur+=c}if(cur!==""||row.length){row.push(cur);rows.push(row)}return rows}
-    function makeObjects(rows){if(!rows.length)return[];const h=rows[0].map(x=>String(x||"").trim());return rows.slice(1).map(r=>Object.fromEntries(h.map((k,i)=>[k,String(r[i]||"").trim()])))}
-    async function getRows(gid){const res=await fetch(csvUrl(gid),{cache:"no-store"});if(!res.ok)throw new Error("Sheet error");const text=await res.text();if(text.toLowerCase().includes("<html"))throw new Error("CSV unavailable");return makeObjects(parseCSV(text))}
-    function isYahgi(r){const all=JSON.stringify(r).toLowerCase();return all.includes("yahgi")}
-    function num(v){const n=parseFloat(String(v||"").replace(/[^0-9.+-]/g,""));return Number.isFinite(n)?n:0}
-    function unitsText(v){const n=num(v);return(n>0?"+":"")+n.toFixed(n%1?2:1).replace(/\.00$/,"")+"u"}
-    function esc(s){return String(s||"").replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]))}
-    function rClass(r){r=String(r||"").toLowerCase();if(r.includes("win"))return"win";if(r.includes("loss"))return"loss";return"pending"}
-    function streak(rows){let s=0;const g=rows.filter(r=>/win|loss/i.test(r.Result||""));for(let i=g.length-1;i>=0;i--){if(/win/i.test(g[i].Result||""))s++;else break}return s}
-    function render(rows){
-      const graded=rows.filter(r=>/win|loss/i.test(r.Result||"")), wins=graded.filter(r=>/win/i.test(r.Result||"")).length, losses=graded.filter(r=>/loss/i.test(r.Result||"")).length;
-      const units=graded.reduce((sum,r)=>sum+num(r["Profit/Loss"]||r.Units),0), rate=wins+losses?Math.round(wins/(wins+losses)*100):0, st=streak(rows);
-      ["guruUnits","ringUnits"].forEach(id=>document.getElementById(id).textContent=unitsText(units));
-      document.getElementById("guruWinRate").textContent=rate+"%";document.getElementById("ringRate").textContent=rate+"%";
-      document.getElementById("guruRecord").textContent=wins+"-"+losses;document.getElementById("ringRecord").textContent=wins+"-"+losses;
-      document.getElementById("guruStreak").textContent=st;document.getElementById("streakBig").textContent=st;document.getElementById("flames").textContent=st?"🔥".repeat(Math.min(st,8)):"🔥🔥🔥";
-      const f=rows.find(r=>/yes/i.test(r.Featured||""))||rows.find(r=>/pending|pregame|active/i.test((r.Result||"")+(r.Status||"")))||rows[0];
-      if(f){document.getElementById("featuredPick").textContent=f.Pick||"Yahgi Featured Play";document.getElementById("featuredGame").textContent=f.Game||"Independent Guru Release";document.getElementById("featuredSport").textContent=f.Sport||f.League||"Sport";document.getElementById("featuredTime").textContent=f["Posted Time"]||f.Date||"Release Time";document.getElementById("featuredOdds").textContent=f.Odds||f.Line||"Odds";document.getElementById("featuredUnits").textContent=(f.Units||"1")+"u"}
-      const recent=rows.filter(r=>/win/i.test(r.Result||"")).slice(-5).reverse();
-      document.getElementById("recentWins").innerHTML=recent.length?recent.map(r=>`<div class="recent-item"><div class="team-badge">♛</div><div><strong>${esc(r.Pick)}</strong><small>${esc(r.Game||r.Sport||"")}</small></div><span class="win">WIN</span></div>`).join(""):`<div class="recent-item"><div class="team-badge">♛</div><div><strong>No wins yet</strong><small>Waiting on Yahgi archive</small></div><span class="pending">PENDING</span></div>`;
-      document.getElementById("guruTable").innerHTML=rows.slice(-8).reverse().map(r=>`<tr><td>${esc(r.Date)}</td><td>${esc(r.Sport||r.League)}</td><td>${esc(r.Pick)}</td><td>${esc(r.Odds||r.Line||r["Best Number"])}</td><td class="${rClass(r.Result)}">${esc(r.Result||r.Status||"Pending")}</td><td class="${rClass(r.Result)}">${esc(r["Profit/Loss"]||r.Units||"")}</td></tr>`).join("");
+
+
+<script>
+/* ===== MICKS PICKS REAL-TIME SHEET SYNC - SAFE VERSION ===== */
+(function(){
+  const SYNC_INTERVAL_MS = 30000;
+  let lastSyncTime = null;
+  let syncing = false;
+
+  function ensureLivePill(){
+    if(document.getElementById("liveSyncPill")) return;
+    const pill = document.createElement("div");
+    pill.className = "live-sync-pill";
+    pill.id = "liveSyncPill";
+    pill.innerHTML = '<span class="live-dot"></span><span id="liveSyncText">Live Sync</span><span class="live-small" id="liveSyncAge">starting...</span>';
+    document.body.appendChild(pill);
+  }
+
+  function setState(state,msg){
+    ensureLivePill();
+    const pill=document.getElementById("liveSyncPill");
+    const text=document.getElementById("liveSyncText");
+    if(!pill || !text) return;
+    pill.classList.remove("syncing","error");
+    if(state) pill.classList.add(state);
+    text.textContent=msg || "Live Sync";
+  }
+
+  function updateAge(){
+    const el=document.getElementById("liveSyncAge");
+    if(!el) return;
+    if(!lastSyncTime){el.textContent="waiting";return;}
+    const sec=Math.max(0,Math.round((Date.now()-lastSyncTime)/1000));
+    el.textContent=sec<60 ? sec+"s ago" : Math.floor(sec/60)+"m ago";
+  }
+
+  function flashUpdated(){
+    document.querySelectorAll(".pick-card,.analytics-card,.chart-card,.vip,.card").forEach(function(el){
+      el.classList.add("sync-flash");
+      setTimeout(function(){el.classList.remove("sync-flash");},650);
+    });
+  }
+
+  async function safeCall(fnName,requiredElementId){
+    if(typeof window[fnName] !== "function") return;
+    if(requiredElementId && !document.getElementById(requiredElementId)) return;
+    try{
+      await window[fnName]();
+    }catch(e){
+      console.warn("Micks Picks sync skipped:",fnName,e);
     }
-    async function load(){try{const [a,b]=await Promise.all([getRows(ACTIVE_GID),getRows(ARCHIVE_GID)]);const rows=[...b,...a].filter(isYahgi).filter(r=>r.Pick||r.Game||r.Result);render(rows.length?rows:demoPicks)}catch(e){render(demoPicks)}}
-    document.addEventListener("DOMContentLoaded",load);setInterval(load,30000);
-  </script>
-</body>
-</html>
+  }
+
+  async function runLiveSync(){
+    if(syncing) return;
+    syncing=true;
+    setState("syncing","Syncing");
+
+    try{
+      await safeCall("loadHome","freeBoard");
+      await safeCall("loadPremium","premiumBoard");
+      await safeCall("loadAnalytics","analyticsDashboard");
+
+      if(typeof window.micksRunReleaseTimers === "function"){
+        try{ window.micksRunReleaseTimers(); }catch(e){}
+      }
+
+      if(typeof window.enhanceMobile === "function"){
+        try{ window.enhanceMobile(); }catch(e){}
+      }
+
+      if(typeof window.syncVipStats === "function" && document.getElementById("vipRecord")){
+        try{ window.syncVipStats(); }catch(e){}
+      }
+
+      lastSyncTime=Date.now();
+      setState("","Live Sync");
+      updateAge();
+      flashUpdated();
+
+    }catch(err){
+      console.warn("Micks Picks sync warning:",err);
+      lastSyncTime=Date.now();
+      setState("","Live Sync");
+      updateAge();
+    }finally{
+      syncing=false;
+    }
+  }
+
+  function installManualRefresh(){
+    ensureLivePill();
+    const pill=document.getElementById("liveSyncPill");
+    if(pill && !pill.dataset.clickReady){
+      pill.dataset.clickReady="yes";
+      pill.addEventListener("click",runLiveSync);
+      pill.style.cursor="pointer";
+      pill.title="Click to refresh Micks Picks data";
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded",function(){
+    ensureLivePill();
+    installManualRefresh();
+    setTimeout(runLiveSync,1200);
+    setInterval(runLiveSync,SYNC_INTERVAL_MS);
+    setInterval(updateAge,5000);
+  });
+})();
+</script>
+
+
+
+<script>
+/* ===== MICKS PICKS SCHEDULED PLAY DROP ENGINE ===== */
+(function(){
+  function parseReleaseTime(value){
+    if(!value) return null;
+    const raw = String(value).trim();
+    if(!raw) return null;
+
+    // Works with ISO and Google Sheets style yyyy-mm-dd hh:mm:ss
+    const normalized = raw.replace(" ", "T");
+    const d = new Date(normalized);
+    if(!isNaN(d.getTime())) return d;
+
+    const d2 = new Date(raw);
+    if(!isNaN(d2.getTime())) return d2;
+
+    return null;
+  }
+
+  function formatRemaining(diff){
+    const total = Math.max(0, diff);
+    const days = Math.floor(total / 86400000);
+    const hours = Math.floor((total % 86400000) / 3600000);
+    const minutes = Math.floor((total % 3600000) / 60000);
+    const seconds = Math.floor((total % 60000) / 1000);
+
+    if(days > 0){
+      return days + "d " + hours + "h " + minutes + "m";
+    }
+
+    return hours + "h " + minutes + "m " + seconds + "s";
+  }
+
+  function unlockCard(card){
+    const overlay = card.querySelector(".locked-overlay");
+    if(overlay) overlay.remove();
+
+    const content = card.querySelector(".locked-content");
+    if(content){
+      content.classList.remove("locked-content");
+    }
+
+    card.classList.remove("locked-card");
+    card.classList.add("unlock-flash");
+
+    setTimeout(function(){
+      card.classList.remove("unlock-flash");
+    },800);
+  }
+
+  function lockCard(card, releaseDate){
+    if(card.classList.contains("locked-card")) return;
+
+    const original = document.createElement("div");
+    original.className = "locked-content";
+
+    while(card.firstChild){
+      original.appendChild(card.firstChild);
+    }
+
+    card.appendChild(original);
+    card.classList.add("locked-card");
+
+    const overlay = document.createElement("div");
+    overlay.className = "locked-overlay";
+    overlay.innerHTML =
+      '<div class="release-pill">VIP Play Drop Locked</div>' +
+      '<h3>Pick Drops Soon</h3>' +
+      '<p>This play is loaded in the vault and will unlock automatically when the countdown hits zero.</p>' +
+      '<div class="release-timer">--</div>' +
+      '<div class="release-pill">Micks Picks Scheduled Release</div>';
+
+    card.appendChild(overlay);
+  }
+
+  function updateCard(card){
+    const releaseValue = card.getAttribute("data-release-time");
+    const status = String(card.getAttribute("data-release-status") || "").toLowerCase();
+    const releaseDate = parseReleaseTime(releaseValue);
+
+    if(!releaseDate) return;
+
+    const now = new Date();
+    const diff = releaseDate - now;
+
+    if(status === "live" || diff <= 0){
+      unlockCard(card);
+      return;
+    }
+
+    lockCard(card, releaseDate);
+
+    const timer = card.querySelector(".release-timer");
+    if(timer){
+      timer.textContent = formatRemaining(diff);
+    }
+  }
+
+  function initializeReleaseTimers(){
+    document.querySelectorAll("[data-release-time]").forEach(updateCard);
+  }
+
+  function enhancePickCardsWithReleaseData(){
+    /*
+      This works with Google Sheets columns:
+      AD = Release Time
+      AE = Release Status
+
+      If your existing site renderer exposes row fields as data attributes later,
+      this engine will use them automatically.
+
+      For current static cards, it also checks visible text for hidden markers:
+      Release Time: 2026-05-10 19:00:00
+      Release Status: Locked
+    */
+    document.querySelectorAll(".pick-card,.card").forEach(function(card){
+      if(card.hasAttribute("data-release-enhanced")) return;
+      card.setAttribute("data-release-enhanced","yes");
+
+      const text = card.textContent || "";
+
+      const timeMatch = text.match(/Release Time:\s*([0-9]{4}-[0-9]{2}-[0-9]{2}[ T][0-9]{1,2}:[0-9]{2}(?::[0-9]{2})?)/i);
+      const statusMatch = text.match(/Release Status:\s*(Locked|Live)/i);
+
+      if(timeMatch && !card.getAttribute("data-release-time")){
+        card.setAttribute("data-release-time", timeMatch[1]);
+      }
+
+      if(statusMatch && !card.getAttribute("data-release-status")){
+        card.setAttribute("data-release-status", statusMatch[1]);
+      }
+    });
+  }
+
+  function run(){
+    enhancePickCardsWithReleaseData();
+    initializeReleaseTimers();
+  }
+
+  document.addEventListener("DOMContentLoaded",function(){
+    run();
+    setInterval(run,1000);
+    setTimeout(run,1200);
+    setTimeout(run,2500);
+  });
+
+  window.micksRunReleaseTimers = run;
+})();
+</script>
+
+
+<script>
+/* ===== MICKS PICKS GLOBAL FUNCTION ALIASES ===== */
+(function(){
+  setTimeout(function(){
+    try{ if(typeof loadHome==="function") window.loadHome=loadHome; }catch(e){}
+    try{ if(typeof loadPremium==="function") window.loadPremium=loadPremium; }catch(e){}
+    try{ if(typeof syncVipStats==="function") window.syncVipStats=syncVipStats; }catch(e){}
+  },100);
+})();
+</script>
+
+
+<script>
+/* ===== MICKS PICKS PREMIUM REMAKE ENHANCEMENTS ===== */
+(function(){
+  function addPlatformStrip(){
+    if(document.querySelector(".mp-platform-strip")) return;
+    const hero = document.querySelector(".hero .container,.hero,main .hero");
+    if(!hero) return;
+    const strip=document.createElement("div");
+    strip.className="mp-platform-strip";
+    strip.innerHTML = `
+      <div class="mp-mini-card"><strong>Live Edge</strong><span>Real-time sync</span></div>
+      <div class="mp-mini-card"><strong>CLV Desk</strong><span>Closing line value</span></div>
+      <div class="mp-mini-card"><strong>VIP Drops</strong><span>Timed releases</span></div>
+      <div class="mp-mini-card"><strong>Micks AI</strong><span>Framework grading</span></div>
+    `;
+    const actions=hero.querySelector(".actions");
+    if(actions && actions.parentNode){ actions.parentNode.insertBefore(strip,actions.nextSibling); }
+    else hero.appendChild(strip);
+  }
+
+  function addLiveTicker(){
+    if(document.querySelector(".mp-live-ticker")) return;
+    const ticker=document.createElement("div");
+    ticker.className="mp-live-ticker";
+    ticker.innerHTML=`
+      <div class="mp-live-track">
+        <span><b>MICKS AI</b> • Edge grading active</span>
+        <span><b>CLV DESK</b> • Tracking market movement</span>
+        <span><b>VIP DROPS</b> • Scheduled releases live</span>
+        <span><b>RESULTS</b> • ROI + streaks auto-refresh</span>
+        <span><b>MICKS AI</b> • Edge grading active</span>
+        <span><b>CLV DESK</b> • Tracking market movement</span>
+        <span><b>VIP DROPS</b> • Scheduled releases live</span>
+        <span><b>RESULTS</b> • ROI + streaks auto-refresh</span>
+      </div>`;
+    document.body.appendChild(ticker);
+  }
+
+  function convertFeaturedToHero(){
+    const firstFeatured=document.querySelector(".featured-play");
+    if(firstFeatured && !firstFeatured.classList.contains("featured-hero")){
+      firstFeatured.classList.add("featured-hero");
+    }
+  }
+
+  function addAIPills(){
+    document.querySelectorAll(".pick-card").forEach(function(card){
+      if(card.querySelector(".ai-pill")) return;
+      const title=card.querySelector(".pick-title");
+      if(!title) return;
+      const pill=document.createElement("span");
+      pill.className="ai-pill";
+      pill.textContent="Micks AI Edge";
+      title.parentNode.insertBefore(pill,title);
+    });
+  }
+
+  function run(){
+    addPlatformStrip();
+    addLiveTicker();
+    convertFeaturedToHero();
+    addAIPills();
+  }
+
+  document.addEventListener("DOMContentLoaded",function(){
+    run();
+    setTimeout(run,900);
+    setTimeout(run,2200);
+  });
+
+  window.micksPremiumRemakeRun = run;
+})();
+</script>
+
+
+
+
+
+
+
+
+<script>
+/* ===== SAFE GLOW RESTORE JS — NO ROUTE/ACCESS CHANGES ===== */
+(function(){
+  function addSafeGlowOrbs(){
+    if(document.querySelector(".safe-glow-orb")) return;
+    ["gold","green","blue"].forEach(function(color){
+      var orb=document.createElement("div");
+      orb.className="safe-glow-orb safe-orb-"+color;
+      document.body.appendChild(orb);
+    });
+  }
+
+  function enhanceSafeGlow(){
+    addSafeGlowOrbs();
+    var featured=document.querySelector(".featured-play,.featured-card,.hero-pick");
+    if(featured) featured.classList.add("featured-hero");
+  }
+
+  document.addEventListener("DOMContentLoaded",function(){
+    enhanceSafeGlow();
+    setTimeout(enhanceSafeGlow,800);
+    setTimeout(enhanceSafeGlow,2400);
+  });
+
+  window.micksSafeGlowRestore = enhanceSafeGlow;
+})();
+</script>
+
+</body></html>
