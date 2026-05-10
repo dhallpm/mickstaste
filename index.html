@@ -907,8 +907,244 @@ header,.nav,.topbar,.site-header{
   .safe-orb-blue{display:none}
 }
 
+
+/* =========================================================
+   YAHGI GURU PICKS — INDEX INTEGRATION
+========================================================= */
+
+.guru-link{
+  color:#d86cff !important;
+  text-shadow:0 0 18px rgba(194,68,255,.45);
+  position:relative;
+  font-weight:1000 !important;
+}
+
+.guru-link:hover{
+  color:#ffe28a !important;
+  text-shadow:
+    0 0 22px rgba(255,226,138,.45),
+    0 0 40px rgba(194,68,255,.25);
+}
+
+.guru-link::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  width:100%;
+  height:2px;
+  background:linear-gradient(90deg,#c244ff,#ffe28a,#7b19ff);
+  box-shadow:0 0 18px rgba(194,68,255,.45);
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform .25s ease;
+}
+
+.guru-link:hover::after{
+  transform:scaleX(1);
+}
+
+.guru-network-section{
+  padding:56px 0;
+  position:relative;
+}
+
+.guru-network-section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 82% 50%,rgba(194,68,255,.14),transparent 30%),
+    radial-gradient(circle at 15% 80%,rgba(255,226,138,.08),transparent 32%);
+  z-index:-1;
+}
+
+.guru-network-card{
+  position:relative;
+  overflow:hidden;
+  border-radius:30px;
+  padding:46px;
+  border:1px solid rgba(194,68,255,.32);
+  background:
+    radial-gradient(circle at 84% 22%,rgba(194,68,255,.34),transparent 33%),
+    radial-gradient(circle at 18% 100%,rgba(255,226,138,.15),transparent 36%),
+    linear-gradient(180deg,rgba(18,8,24,.96),rgba(4,3,7,.97));
+  box-shadow:
+    0 36px 110px rgba(0,0,0,.68),
+    0 0 58px rgba(194,68,255,.14),
+    inset 0 0 0 1px rgba(255,255,255,.045);
+}
+
+.guru-network-card::before{
+  content:"";
+  position:absolute;
+  inset:-70%;
+  background:linear-gradient(
+    115deg,
+    transparent 42%,
+    rgba(255,255,255,.11) 50%,
+    transparent 58%
+  );
+  transform:translateX(-62%) rotate(8deg);
+  transition:transform .9s ease;
+  pointer-events:none;
+}
+
+.guru-network-card:hover::before{
+  transform:translateX(62%) rotate(8deg);
+}
+
+.guru-network-card::after{
+  content:"♛";
+  position:absolute;
+  right:42px;
+  top:30px;
+  font-size:170px;
+  line-height:1;
+  color:rgba(255,226,138,.06);
+  text-shadow:0 0 52px rgba(194,68,255,.18);
+  pointer-events:none;
+}
+
+.guru-network-content{
+  position:relative;
+  z-index:2;
+  max-width:760px;
+}
+
+.guru-network-eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  color:#d86cff;
+  text-transform:uppercase;
+  letter-spacing:4px;
+  font-size:12px;
+  font-weight:1000;
+  margin-bottom:14px;
+}
+
+.guru-network-eyebrow::before{
+  content:"";
+  width:34px;
+  height:2px;
+  background:linear-gradient(90deg,#c244ff,#ffe28a);
+  box-shadow:0 0 16px rgba(194,68,255,.42);
+}
+
+.guru-network-card h2{
+  margin:0;
+  font-size:clamp(36px,6vw,64px);
+  line-height:.95;
+  color:#fff7dc;
+  letter-spacing:-2.6px;
+  text-shadow:
+    0 0 30px rgba(194,68,255,.34),
+    0 0 58px rgba(255,226,138,.10);
+}
+
+.guru-network-card p{
+  margin:18px 0 28px;
+  max-width:650px;
+  color:#d9c7ec;
+  font-size:18px;
+  line-height:1.65;
+}
+
+.guru-network-stats{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-bottom:30px;
+}
+
+.guru-network-stats div{
+  min-width:132px;
+  padding:16px 18px;
+  border-radius:18px;
+  border:1px solid rgba(194,68,255,.22);
+  background:rgba(0,0,0,.30);
+  box-shadow:inset 0 0 22px rgba(194,68,255,.05);
+}
+
+.guru-network-stats strong{
+  display:block;
+  font-size:30px;
+  color:#f06cff;
+  font-weight:1000;
+  line-height:1;
+  text-shadow:0 0 18px rgba(194,68,255,.32);
+}
+
+.guru-network-stats span{
+  display:block;
+  margin-top:7px;
+  color:#c8b7db;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  font-weight:800;
+}
+
+.guru-network-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:54px;
+  padding:0 32px;
+  border-radius:16px;
+  font-weight:1000;
+  letter-spacing:.8px;
+  text-transform:uppercase;
+  color:#12050d !important;
+  background:linear-gradient(135deg,#7b19ff,#d86cff 45%,#ffe28a);
+  box-shadow:
+    0 20px 48px rgba(194,68,255,.26),
+    0 0 24px rgba(255,226,138,.12);
+  transition:transform .24s ease, box-shadow .24s ease;
+}
+
+.guru-network-btn:hover{
+  transform:translateY(-3px);
+  box-shadow:
+    0 28px 68px rgba(194,68,255,.36),
+    0 0 36px rgba(255,226,138,.20);
+}
+
+@media(max-width:760px){
+  .guru-network-section{
+    padding:34px 0;
+  }
+
+  .guru-network-card{
+    padding:28px;
+    border-radius:24px;
+  }
+
+  .guru-network-card::after{
+    font-size:100px;
+    right:18px;
+    top:20px;
+  }
+
+  .guru-network-stats{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+  }
+
+  .guru-network-stats div{
+    min-width:0;
+  }
+
+  .guru-network-btn{
+    width:100%;
+  }
+}
+
 </style></head><body>
-<header class="header"><div class="container nav"><a class="brand" href="./"><div class="logo">MP</div><div><h1>Mick's Picks</h1><small>The Gurus Lair</small></div></a><nav class="links"><a href="#top-play">Top Play</a><a href="#free">Free Board</a><a href="#analytics">Stats</a><a href="#trackers">Trackers</a><a class="btn dark" href="premium.html">Premium Login</a></nav></div></header>
+<header class="header"><div class="container nav"><a class="brand" href="./"><div class="logo">MP</div><div><h1>Mick's Picks</h1><small>The Gurus Lair</small></div></a><nav class="links"><a href="#top-play">Top Play</a><a href="#free">Free Board</a><a href="#analytics">Stats</a><a href="#trackers">Trackers</a><a class="btn dark" href="premium.html">Premium Login</a>
+        <a href="yahgi.html" class="guru-link">♛ Yahgi\'s Guru Picks</a></nav></div></header>
 <div class="ticker"><div class="ticker-track"><span><b>LIVE CARD</b> • Active Picks</span><span><b>ARCHIVE</b> • Results Tracker</span><span><b>PROPS</b> • Prop Database</span><span><b>PARLAYS</b> • Parlay Tracker</span><span><b>MICKS PICKS</b> • Bet The Number, Not The Hype</span><span><b>LIVE CARD</b> • Active Picks</span></div></div>
 <main>
 <section class="hero container"><div class="kicker">Sharp sports analysis • Tracked results • Premium framework</div><h2>Bet The Number.<br>Not The Hype.</h2><p>Mick's Picks now runs like a full betting desk: live plays, featured edge, results archive, prop tracker, parlay tracker, and premium analysis powered by the long-term Micks Picks database.</p>
@@ -936,6 +1172,45 @@ header,.nav,.topbar,.site-header{
   <a class="btn" href="premium.html">Enter Premium Vault</a>
 </div>
 </div></section>
+
+
+<section class="guru-network-section" id="yahgi-guru-picks">
+  <div class="container">
+    <div class="guru-network-card">
+      <div class="guru-network-content">
+        <span class="guru-network-eyebrow">Guru Network</span>
+
+        <h2>♛ Yahgi's Guru Picks</h2>
+
+        <p>
+          Elite reads. Sharp angles. Independent card releases from another handicapper inside the Micks Picks network.
+        </p>
+
+        <div class="guru-network-stats">
+          <div>
+            <strong>Guru</strong>
+            <span>Independent Card</span>
+          </div>
+
+          <div>
+            <strong>VIP</strong>
+            <span>Premium Angles</span>
+          </div>
+
+          <div>
+            <strong>Live</strong>
+            <span>Sheet Sync</span>
+          </div>
+        </div>
+
+        <a href="yahgi.html" class="guru-network-btn">
+          Enter Yahgi's Guru Picks →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section container" id="top-play"><div class="board-head"><div><span class="badge green">Play of the Day</span><h2>Featured Edge</h2><p class="sub">The Gurus Lair featured play of the day.</p></div></div><div id="topPlayBox"><div class="loading">Loading featured play...</div></div></section>
 <section class="section container" id="free"><div class="board-head"><div><h2>Free Picks Board</h2><p class="sub">Current public card pulled from Active Picks.</p></div><span class="badge">Public Plays</span></div><div id="freeBoard"></div></section>
 
@@ -1556,6 +1831,28 @@ document.addEventListener('DOMContentLoaded',loadHome);</script>
   });
 
   window.micksSafeGlowRestore = enhanceSafeGlow;
+})();
+</script>
+
+
+<script>
+/* ===== YAHGI INDEX NAV SAFETY ===== */
+(function(){
+  function ensureYahgiNav(){
+    if(document.querySelector('a[href="yahgi.html"]')) return;
+    var nav = document.querySelector('nav.links,.links,nav');
+    if(!nav) return;
+    var a = document.createElement('a');
+    a.href = 'yahgi.html';
+    a.className = 'guru-link';
+    a.textContent = "♛ Yahgi's Guru Picks";
+    nav.appendChild(a);
+  }
+  document.addEventListener('DOMContentLoaded', function(){
+    ensureYahgiNav();
+    setTimeout(ensureYahgiNav, 1000);
+    setTimeout(ensureYahgiNav, 2500);
+  });
 })();
 </script>
 
