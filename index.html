@@ -720,37 +720,26 @@ header,.nav,.topbar{
 }
 
 
-/* =========================================================
-   MICKS PICKS GLOW RESTORATION — FULL PREMIUM VISUAL SYSTEM
-   Restores luxury glow, moving light, depth, animated cards,
-   VIP atmosphere, sportsbook-terminal energy
-========================================================= */
 
+/* =========================================================
+   SAFE GLOW RESTORE — DOES NOT TOUCH PREMIUM ACCESS LOGIC
+========================================================= */
 :root{
-  --glow-bg:#030303;
-  --glow-panel:#090909;
-  --glow-gold:#ffe28a;
-  --glow-gold2:#c89b3c;
-  --glow-green:#34e58b;
-  --glow-red:#ff5f68;
-  --glow-blue:#6ab7ff;
-  --glow-text:#fff8e1;
-  --glow-muted:#c8b98e;
-  --glow-line:rgba(255,226,138,.18);
+  --safe-gold:#ffe28a;
+  --safe-green:#35e58c;
+  --safe-blue:#6db7ff;
+  --safe-bg:#030303;
+  --safe-text:#fff7dc;
+  --safe-muted:#d1c29a;
 }
 
 html,body{
   background:
-    radial-gradient(circle at 8% -10%,rgba(255,226,138,.28),transparent 30%),
-    radial-gradient(circle at 85% 0%,rgba(52,229,139,.16),transparent 28%),
-    radial-gradient(circle at 50% 110%,rgba(106,183,255,.14),transparent 38%),
-    linear-gradient(180deg,#050505 0%,#010101 100%) !important;
-  color:var(--glow-text) !important;
-}
-
-body{
-  position:relative;
-  overflow-x:hidden;
+    radial-gradient(circle at 8% -10%,rgba(255,226,138,.25),transparent 30%),
+    radial-gradient(circle at 88% 0%,rgba(53,229,140,.13),transparent 28%),
+    radial-gradient(circle at 50% 110%,rgba(109,183,255,.12),transparent 38%),
+    linear-gradient(180deg,#050505,#010101) !important;
+  color:var(--safe-text) !important;
 }
 
 body::before{
@@ -759,223 +748,136 @@ body::before{
   inset:0;
   z-index:-3;
   pointer-events:none;
-  background:
-    linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+  background-image:
+    linear-gradient(rgba(255,255,255,.022) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.022) 1px,transparent 1px);
   background-size:44px 44px;
-  mask-image:linear-gradient(180deg,rgba(0,0,0,.92),transparent 82%);
+  mask-image:linear-gradient(180deg,rgba(0,0,0,.85),transparent 82%);
 }
 
-body::after{
-  content:"";
-  position:fixed;
-  inset:-20%;
-  z-index:-2;
-  pointer-events:none;
-  background:
-    radial-gradient(circle at 20% 20%,rgba(255,226,138,.12),transparent 22%),
-    radial-gradient(circle at 80% 18%,rgba(52,229,139,.09),transparent 20%),
-    radial-gradient(circle at 50% 80%,rgba(106,183,255,.07),transparent 25%);
-  filter:blur(34px);
-  animation:micksAmbientGlow 14s ease-in-out infinite alternate;
-}
-
-@keyframes micksAmbientGlow{
-  0%{transform:translate3d(-1.5%,0,0) scale(1);opacity:.75}
-  50%{transform:translate3d(1.5%,-1%,0) scale(1.03);opacity:1}
-  100%{transform:translate3d(0,1%,0) scale(1.01);opacity:.82}
-}
-
-/* Floating light orbs injected by JS */
-.micks-glow-orb{
+.safe-glow-orb{
   position:fixed;
   pointer-events:none;
   z-index:-1;
   border-radius:999px;
-  filter:blur(34px);
+  filter:blur(36px);
   opacity:.85;
   mix-blend-mode:screen;
-  animation:micksOrbFloat 10s ease-in-out infinite alternate;
+  animation:safeOrbFloat 12s ease-in-out infinite alternate;
 }
-
-.micks-orb-gold{
-  width:340px;
-  height:340px;
+.safe-orb-gold{
+  width:320px;
+  height:320px;
   top:80px;
   right:-120px;
   background:radial-gradient(circle,rgba(255,226,138,.26),rgba(255,226,138,.04),transparent 70%);
 }
-
-.micks-orb-green{
+.safe-orb-green{
+  width:260px;
+  height:260px;
+  top:45%;
+  left:-110px;
+  background:radial-gradient(circle,rgba(53,229,140,.16),rgba(53,229,140,.04),transparent 70%);
+  animation-delay:-4s;
+}
+.safe-orb-blue{
   width:280px;
   height:280px;
-  top:42%;
-  left:-110px;
-  background:radial-gradient(circle,rgba(52,229,139,.18),rgba(52,229,139,.04),transparent 70%);
-  animation-delay:-3s;
-}
-
-.micks-orb-blue{
-  width:300px;
-  height:300px;
   bottom:-90px;
   right:12%;
-  background:radial-gradient(circle,rgba(106,183,255,.14),rgba(106,183,255,.04),transparent 70%);
-  animation-delay:-6s;
+  background:radial-gradient(circle,rgba(109,183,255,.13),rgba(109,183,255,.04),transparent 70%);
+  animation-delay:-7s;
 }
-
-@keyframes micksOrbFloat{
+@keyframes safeOrbFloat{
   from{transform:translate3d(0,0,0) scale(1)}
-  to{transform:translate3d(22px,-18px,0) scale(1.06)}
+  to{transform:translate3d(20px,-18px,0) scale(1.06)}
 }
 
-/* Header / nav glass glow */
 header,.nav,.topbar,.site-header{
   background:rgba(0,0,0,.68) !important;
-  backdrop-filter:blur(22px) saturate(1.2) !important;
+  backdrop-filter:blur(20px) saturate(1.2) !important;
   border-bottom:1px solid rgba(255,226,138,.18) !important;
-  box-shadow:0 14px 50px rgba(0,0,0,.55),0 0 34px rgba(255,226,138,.08) !important;
+  box-shadow:0 14px 48px rgba(0,0,0,.55),0 0 32px rgba(255,226,138,.08) !important;
 }
 
-/* Hero lighting */
 .hero{
   position:relative !important;
   overflow:hidden !important;
-  isolation:isolate;
   background:
-    radial-gradient(circle at 80% 18%,rgba(255,226,138,.20),transparent 32%),
-    radial-gradient(circle at 20% 0%,rgba(52,229,139,.10),transparent 28%),
-    linear-gradient(180deg,rgba(8,8,8,.96),rgba(2,2,2,.88)) !important;
+    radial-gradient(circle at 80% 18%,rgba(255,226,138,.18),transparent 32%),
+    radial-gradient(circle at 18% 0%,rgba(53,229,140,.09),transparent 28%),
+    linear-gradient(180deg,rgba(10,10,10,.96),rgba(2,2,2,.88)) !important;
   border-bottom:1px solid rgba(255,226,138,.14) !important;
-  box-shadow:0 40px 100px rgba(0,0,0,.55), inset 0 -1px 0 rgba(255,226,138,.08) !important;
 }
 
-.hero::before{
+.hero::after{
   content:"";
   position:absolute;
-  inset:-30%;
-  background:
-    conic-gradient(from 180deg at 50% 50%,
-      transparent 0deg,
-      rgba(255,226,138,.12) 70deg,
-      transparent 130deg,
-      rgba(52,229,139,.08) 220deg,
-      transparent 300deg);
-  filter:blur(34px);
-  opacity:.8;
-  z-index:-1;
-  animation:micksHeroSpin 22s linear infinite;
+  inset:-35%;
+  pointer-events:none;
+  background:conic-gradient(from 180deg,transparent,rgba(255,226,138,.10),transparent,rgba(53,229,140,.07),transparent);
+  filter:blur(36px);
+  animation:safeHeroSpin 24s linear infinite;
+  z-index:0;
 }
-
-@keyframes micksHeroSpin{
+.hero > *{
+  position:relative;
+  z-index:1;
+}
+@keyframes safeHeroSpin{
   to{transform:rotate(360deg)}
 }
 
 .hero h1,.hero h2,.headline,.main-title{
   color:#fff7dc !important;
-  text-shadow:
-    0 0 22px rgba(255,226,138,.18),
-    0 0 60px rgba(255,226,138,.10) !important;
+  text-shadow:0 0 26px rgba(255,226,138,.18),0 0 70px rgba(255,226,138,.10) !important;
 }
 
-.hero p,.sub,.subtitle{
-  color:#d8cba3 !important;
-}
-
-/* Cards: stronger luxury glass and glow */
 .card,.pick-card,.analytics-card,.chart-card,.vip-member-card,.locked-card,.drop-card,.release-card,.sport-widget,.panel{
   position:relative !important;
   overflow:hidden !important;
   background:
-    radial-gradient(circle at 100% 0%,rgba(255,226,138,.14),transparent 34%),
-    radial-gradient(circle at 0% 100%,rgba(52,229,139,.055),transparent 32%),
-    linear-gradient(180deg,rgba(18,18,18,.94),rgba(4,4,4,.92)) !important;
+    radial-gradient(circle at 100% 0%,rgba(255,226,138,.13),transparent 34%),
+    radial-gradient(circle at 0% 100%,rgba(53,229,140,.055),transparent 32%),
+    linear-gradient(180deg,rgba(18,18,18,.95),rgba(4,4,4,.92)) !important;
   border:1px solid rgba(255,226,138,.18) !important;
+  color:#fff7dc !important;
   box-shadow:
     0 24px 76px rgba(0,0,0,.62),
     0 0 34px rgba(255,226,138,.055),
     inset 0 0 0 1px rgba(255,255,255,.035) !important;
-  color:#fff8e1 !important;
-  transition:
-    transform .28s ease,
-    border-color .28s ease,
-    box-shadow .28s ease,
-    background .28s ease !important;
-}
-
-.card::before,.pick-card::before,.analytics-card::before,.chart-card::before,.vip-member-card::before,.locked-card::before,.drop-card::before,.release-card::before{
-  content:"";
-  position:absolute;
-  inset:-70%;
-  background:linear-gradient(115deg,transparent 42%,rgba(255,255,255,.105) 50%,transparent 58%);
-  transform:translateX(-55%) rotate(8deg);
-  transition:transform .9s ease;
-  pointer-events:none;
-}
-
-.card:hover::before,.pick-card:hover::before,.analytics-card:hover::before,.chart-card:hover::before,.vip-member-card:hover::before,.locked-card:hover::before,.drop-card:hover::before,.release-card:hover::before{
-  transform:translateX(55%) rotate(8deg);
+  transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease !important;
 }
 
 .card:hover,.pick-card:hover,.analytics-card:hover,.chart-card:hover,.vip-member-card:hover,.locked-card:hover,.drop-card:hover,.release-card:hover,.sport-widget:hover,.panel:hover{
-  transform:translateY(-5px) scale(1.006) !important;
+  transform:translateY(-5px) !important;
   border-color:rgba(255,226,138,.38) !important;
   box-shadow:
     0 34px 100px rgba(0,0,0,.72),
     0 0 45px rgba(255,226,138,.16),
-    0 0 24px rgba(52,229,139,.05),
+    0 0 24px rgba(53,229,140,.05),
     inset 0 0 0 1px rgba(255,255,255,.06) !important;
 }
 
-/* Featured play gets centerpiece glow */
 .featured-play,.featured-hero,.featured-card,.hero-pick{
-  position:relative !important;
-  border-radius:34px !important;
   background:
-    radial-gradient(circle at 78% 12%,rgba(255,226,138,.34),transparent 38%),
-    radial-gradient(circle at 10% 10%,rgba(52,229,139,.15),transparent 32%),
-    radial-gradient(circle at 55% 100%,rgba(106,183,255,.10),transparent 40%),
+    radial-gradient(circle at 78% 12%,rgba(255,226,138,.32),transparent 38%),
+    radial-gradient(circle at 10% 10%,rgba(53,229,140,.14),transparent 32%),
     linear-gradient(180deg,#15120a,#050505 72%) !important;
-  border:1px solid rgba(255,226,138,.38) !important;
+  border:1px solid rgba(255,226,138,.36) !important;
   box-shadow:
     0 44px 130px rgba(0,0,0,.78),
     0 0 82px rgba(255,226,138,.20),
-    0 0 30px rgba(52,229,139,.08),
-    inset 0 0 0 1px rgba(255,255,255,.065) !important;
+    0 0 30px rgba(53,229,140,.08) !important;
 }
 
-.featured-play::after,.featured-hero::after,.featured-card::after,.hero-pick::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  pointer-events:none;
-  background:
-    radial-gradient(circle at 82% 18%,rgba(255,255,255,.13),transparent 16%),
-    linear-gradient(120deg,transparent 20%,rgba(255,226,138,.07),transparent 58%);
-  animation:micksFeaturePulse 3.6s ease-in-out infinite alternate;
-}
-
-@keyframes micksFeaturePulse{
-  from{opacity:.45}
-  to{opacity:1}
-}
-
-.pick-title,.featured-title,.card-title,h1,h2,h3{
-  color:#fff7dc !important;
-}
-
-.game,.meta,.muted,.secondary,.writeup,.analysis,.analysis p{
-  color:#d1c29a !important;
-}
-
-.meta span,.badge,.vip-chip,.header-badge,.ai-pill,.pill,.tag{
+.badge,.vip-chip,.header-badge,.ai-pill,.pill,.tag,.meta span{
   background:rgba(255,226,138,.095) !important;
   border:1px solid rgba(255,226,138,.22) !important;
   color:#ffe28a !important;
   box-shadow:0 10px 28px rgba(0,0,0,.34),0 0 16px rgba(255,226,138,.06) !important;
 }
 
-/* Buttons */
 .btn,button,.upgrade-btn,a.btn{
   background:linear-gradient(135deg,#8f650f 0%,#ffe28a 48%,#c89b3c 100%) !important;
   color:#080808 !important;
@@ -983,72 +885,26 @@ header,.nav,.topbar,.site-header{
   box-shadow:0 18px 44px rgba(255,226,138,.20),0 0 20px rgba(255,226,138,.08) !important;
 }
 
-.btn:hover,button:hover,.upgrade-btn:hover,a.btn:hover{
-  box-shadow:0 24px 62px rgba(255,226,138,.30),0 0 30px rgba(255,226,138,.16) !important;
-}
-
-/* VIP / locked premium */
-.locked-overlay,.premium-lock,.blurred-premium{
-  background:
-    radial-gradient(circle at 50% 0%,rgba(255,226,138,.20),transparent 36%),
-    linear-gradient(180deg,rgba(0,0,0,.92),rgba(0,0,0,.985)) !important;
-  backdrop-filter:blur(18px) saturate(1.15) !important;
-  border:1px solid rgba(255,226,138,.20) !important;
-  box-shadow:inset 0 0 40px rgba(255,226,138,.05) !important;
-}
-
-.locked-overlay h3,.premium-lock h3{
-  color:#ffe28a !important;
-  text-shadow:0 0 26px rgba(255,226,138,.28) !important;
-}
-
-/* Live sync / ticker glow */
 .live-sync-pill,.mp-live-ticker,.ticker,.odds-ticker{
   background:rgba(0,0,0,.84) !important;
-  border:1px solid rgba(52,229,139,.34) !important;
-  box-shadow:
-    0 18px 50px rgba(0,0,0,.55),
-    0 0 28px rgba(52,229,139,.16) !important;
+  border:1px solid rgba(53,229,140,.34) !important;
+  box-shadow:0 18px 50px rgba(0,0,0,.55),0 0 28px rgba(53,229,140,.16) !important;
   backdrop-filter:blur(16px) !important;
 }
 
-.live-dot{
-  box-shadow:0 0 16px rgba(52,229,139,.8) !important;
+.game,.meta,.muted,.secondary,.writeup,.analysis,.analysis p,.sub,.subtitle{
+  color:#d1c29a !important;
 }
 
-/* Result colors */
-.win,.result-win,[data-result="Win"]{
-  color:#34e58b !important;
-  text-shadow:0 0 16px rgba(52,229,139,.28) !important;
-}
-
-.loss,.result-loss,[data-result="Loss"]{
-  color:#ff6b73 !important;
-  text-shadow:0 0 16px rgba(255,95,104,.24) !important;
-}
-
-.pending,.result-pending,[data-result="Pending"]{
-  color:#ffe28a !important;
-}
-
-/* Analytics numbers */
 .analytics-card strong,.big-number,.metric-value{
   color:#fff8e1 !important;
   text-shadow:0 0 24px rgba(255,226,138,.12) !important;
 }
 
-/* Prevent bright white cards from later overrides */
-.card *,.pick-card *,.analytics-card *,.chart-card *,.featured-play *,.featured-hero *,.panel *{
-  border-color:rgba(255,226,138,.13);
-}
-
-/* Mobile: keep glow, but not too heavy */
 @media(max-width:760px){
-  .micks-orb-gold{width:230px;height:230px;right:-100px}
-  .micks-orb-green{width:210px;height:210px}
-  .micks-orb-blue{display:none}
-  .hero h1,.hero h2{font-size:clamp(38px,12vw,54px) !important}
-  .featured-play,.featured-hero{border-radius:26px !important}
+  .safe-orb-gold{width:230px;height:230px;right:-100px}
+  .safe-orb-green{width:210px;height:210px}
+  .safe-orb-blue{display:none}
 }
 
 </style></head><body>
@@ -1669,69 +1525,37 @@ document.addEventListener('DOMContentLoaded',loadHome);</script>
 </script>
 
 
+
+
+
+
+
+
 <script>
-/* ===== MICKS PICKS GLOW RESTORATION JS ===== */
+/* ===== SAFE GLOW RESTORE JS — NO ROUTE/ACCESS CHANGES ===== */
 (function(){
-  function addOrbs(){
-    if(document.querySelector(".micks-glow-orb")) return;
-    const gold=document.createElement("div");
-    gold.className="micks-glow-orb micks-orb-gold";
-    const green=document.createElement("div");
-    green.className="micks-glow-orb micks-orb-green";
-    const blue=document.createElement("div");
-    blue.className="micks-glow-orb micks-orb-blue";
-    document.body.appendChild(gold);
-    document.body.appendChild(green);
-    document.body.appendChild(blue);
+  function addSafeGlowOrbs(){
+    if(document.querySelector(".safe-glow-orb")) return;
+    ["gold","green","blue"].forEach(function(color){
+      var orb=document.createElement("div");
+      orb.className="safe-glow-orb safe-orb-"+color;
+      document.body.appendChild(orb);
+    });
   }
 
-  function upgradeCards(){
-    document.querySelectorAll(".pick-card").forEach(function(card){
-      if(!card.dataset.glowReady){
-        card.dataset.glowReady="yes";
-        const res=(card.textContent||"").toLowerCase();
-        if(res.includes("win")) card.classList.add("result-win-card");
-        if(res.includes("loss")) card.classList.add("result-loss-card");
-      }
-    });
-
-    const featured=document.querySelector(".featured-play,.featured-card,.hero-pick");
+  function enhanceSafeGlow(){
+    addSafeGlowOrbs();
+    var featured=document.querySelector(".featured-play,.featured-card,.hero-pick");
     if(featured) featured.classList.add("featured-hero");
   }
 
-  function run(){
-    addOrbs();
-    upgradeCards();
-  }
-
   document.addEventListener("DOMContentLoaded",function(){
-    run();
-    setTimeout(run,500);
-    setTimeout(run,1600);
-    setTimeout(run,3200);
+    enhanceSafeGlow();
+    setTimeout(enhanceSafeGlow,800);
+    setTimeout(enhanceSafeGlow,2400);
   });
 
-  window.micksGlowRestore = run;
-})();
-</script>
-
-
-<script>
-/* ===== MICKS PICKS GHOST ROW GUARD ===== */
-(function(){
-  function removeGhostCards(){
-    document.querySelectorAll(".pick-card,.result-card,.archive-card,.card").forEach(function(card){
-      const txt=(card.textContent||"").replace(/\s+/g," ").trim().toLowerCase();
-      const hasMeaningfulPick = /nba|ufc|knicks|spurs|thunder|lakers|pistons|cavaliers|76ers|cunningham|gilgeous|moneyline|spread|total|prop|over|under/.test(txt);
-      if(txt === "pending" || (txt.length < 30 && txt.includes("pending") && !hasMeaningfulPick)){
-        card.style.display="none";
-      }
-    });
-  }
-  document.addEventListener("DOMContentLoaded",function(){
-    removeGhostCards();
-    setInterval(removeGhostCards,2000);
-  });
+  window.micksSafeGlowRestore = enhanceSafeGlow;
 })();
 </script>
 
