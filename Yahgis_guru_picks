@@ -454,6 +454,7 @@
       </a>
 
       <nav class="links">
+        <a href="index.html">Home</a>
         <a href="index.html">Mick's Picks</a>
         <a class="active" href="yahgi.html">Yahgi's Guru Picks</a>
         <a href="premium.html">VIP Vault</a>
