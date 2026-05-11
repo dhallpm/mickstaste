@@ -348,6 +348,42 @@
     .win{color:var(--green);font-weight:1000}
     .loss{color:var(--red);font-weight:1000}
     .pending{color:var(--gold);font-weight:1000}
+    .grade-badge{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      padding:10px 14px;
+      border-radius:14px;
+      font-weight:1000;
+      min-width:120px;
+      text-align:center;
+      border:1px solid rgba(255,255,255,.12);
+      line-height:1.15;
+    }
+    .grade-a{
+      background:rgba(53,229,140,.12);
+      border-color:rgba(53,229,140,.35);
+      color:#7dffb6;
+    }
+    .grade-b{
+      background:rgba(255,226,138,.10);
+      border-color:rgba(255,226,138,.28);
+      color:#ffe28a;
+    }
+    .grade-c{
+      background:rgba(255,255,255,.06);
+      border-color:rgba(255,255,255,.12);
+      color:#d6d6d6;
+    }
+    .grade-sub{
+      font-size:10px;
+      text-transform:uppercase;
+      letter-spacing:1px;
+      margin-top:4px;
+      opacity:.85;
+    }
+
 
 
 
@@ -681,7 +717,31 @@
           </div>
         </div>
       </div>
-    </section>
+    
+<div class="card" style="margin-top:20px">
+  <h3>Grade System</h3>
+  <p style="margin-bottom:18px;color:var(--muted)">
+    Micks Picks confidence grading system used across all active plays.
+  </p>
+
+  <div style="display:flex;gap:14px;flex-wrap:wrap">
+    <div class="grade-badge grade-a">
+      <span>Grade A</span>
+      <span class="grade-sub">Elite Edge</span>
+    </div>
+
+    <div class="grade-badge grade-b">
+      <span>Grade B</span>
+      <span class="grade-sub">Strong Value</span>
+    </div>
+
+    <div class="grade-badge grade-c">
+      <span>Grade C</span>
+      <span class="grade-sub">Lean Only</span>
+    </div>
+  </div>
+</div>
+
 
     <section class="section" id="results">
       <div class="container">
@@ -775,6 +835,30 @@
       if(r.includes("win")) return "win";
       if(r.includes("loss")) return "loss";
       return "pending";
+    }
+
+    
+    function gradeBadge(g){
+      const raw = String(g || "").trim();
+      const base = raw.charAt(0).toUpperCase();
+
+      let cls = "grade-c";
+      let sub = "Lean Only";
+
+      if(base === "A"){
+        cls = "grade-a";
+        sub = "Elite Edge";
+      } else if(base === "B"){
+        cls = "grade-b";
+        sub = "Strong Value";
+      }
+
+      return `
+        <div class="grade-badge ${cls}">
+          <span>Grade ${raw}</span>
+          <span class="grade-sub">${sub}</span>
+        </div>
+      `;
     }
 
     function esc(s){
