@@ -3,1829 +3,596 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mick's Picks | The Guru's Lair</title>
-  <meta name="description" content="Mick's Picks delivers structured sports betting analysis with best number discipline, transparent results, EV notes, no-bet cutoffs, and VIP full-card breakdowns." />
+  <title>Micks Picks | Premium Betting Network</title>
+  <meta name="description" content="Micks Picks premium sports betting analysis, VIP picks, props, archives, and results." />
+
   <style>
-    :root {
-      --bg: #050505;
-      --bg2: #0d0b08;
-      --panel: rgba(18, 17, 14, 0.86);
-      --panel2: rgba(255, 255, 255, 0.045);
-      --gold: #f5c451;
-      --gold2: #ffd978;
-      --gold3: #9b7427;
-      --text: #f8f2e7;
-      --muted: #b5a995;
-      --line: rgba(245, 196, 81, 0.22);
-      --danger: #ff6b6b;
-      --good: #74e39a;
-      --shadow: 0 22px 80px rgba(0,0,0,.45);
-      --radius: 24px;
-      --max: 1180px;
+    :root{
+      --bg:#030303;
+      --panel:#090909;
+      --gold:#ffe28a;
+      --gold2:#c89b3c;
+      --green:#35e58c;
+      --red:#ff5f68;
+      --purple:#c244ff;
+      --text:#fff7dc;
+      --muted:#c9bb90;
+      --line:rgba(255,226,138,.18);
     }
 
-    * { box-sizing: border-box; }
-
-    html {
-      scroll-behavior: smooth;
-      background: var(--bg);
-    }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      color: var(--text);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--text);
       background:
-        radial-gradient(circle at 18% 10%, rgba(245, 196, 81, 0.18), transparent 26%),
-        radial-gradient(circle at 84% 3%, rgba(255, 217, 120, 0.11), transparent 22%),
-        linear-gradient(140deg, #050505 0%, #090806 45%, #12100a 100%);
-      overflow-x: hidden;
+        radial-gradient(circle at 10% -10%,rgba(255,226,138,.22),transparent 28%),
+        radial-gradient(circle at 88% 0%,rgba(53,229,140,.13),transparent 30%),
+        radial-gradient(circle at 50% 110%,rgba(194,68,255,.12),transparent 38%),
+        linear-gradient(180deg,#050505,#010101);
+      overflow-x:hidden;
     }
 
-    body:before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      z-index:-3;
+      pointer-events:none;
       background-image:
-        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
-      background-size: 42px 42px;
-      mask-image: linear-gradient(to bottom, rgba(0,0,0,.75), transparent 72%);
-      z-index: 0;
+        linear-gradient(rgba(255,255,255,.024) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.024) 1px,transparent 1px);
+      background-size:44px 44px;
+      mask-image:linear-gradient(180deg,rgba(0,0,0,.9),transparent 84%);
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1180px,calc(100% - 36px));margin:0 auto}
+
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(0,0,0,.74);
+      border-bottom:1px solid rgba(255,226,138,.18);
+      backdrop-filter:blur(22px) saturate(1.2);
+      box-shadow:0 16px 48px rgba(0,0,0,.58),0 0 30px rgba(255,226,138,.08);
     }
 
-    .page {
-      position: relative;
-      z-index: 1;
+    .nav{
+      height:78px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
     }
 
-    .container {
-      max-width: var(--max);
-      width: calc(100% - 36px);
-      margin: 0 auto;
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:1000;
+      letter-spacing:-.7px;
     }
 
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      backdrop-filter: blur(18px);
-      background: rgba(5,5,5,.78);
-      border-bottom: 1px solid rgba(245, 196, 81, .14);
+    .brand-mark{
+      width:44px;
+      height:44px;
+      border-radius:14px;
+      display:grid;
+      place-items:center;
+      color:#080808;
+      background:linear-gradient(135deg,#8f650f,#ffe28a 55%,#c89b3c);
+      font-size:22px;
+      box-shadow:0 0 34px rgba(255,226,138,.20);
     }
 
-    .nav {
-      height: 74px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 22px;
+    .brand small{
+      display:block;
+      margin-top:4px;
+      color:var(--muted);
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:2px;
     }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      min-width: max-content;
+    .links{
+      display:flex;
+      align-items:center;
+      gap:22px;
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:1px;
+      font-weight:900;
+      color:#f3e6bd;
     }
 
-    .brand-mark {
-      width: 46px;
-      height: 46px;
-      display: grid;
-      place-items: center;
-      border-radius: 15px;
-      color: #050505;
-      font-weight: 1000;
+    .links a{opacity:.82;transition:.22s ease}
+    .links a:hover{opacity:1;color:var(--gold);text-shadow:0 0 18px rgba(255,226,138,.42)}
+
+    .guru-link{
+      color:#d86cff!important;
+      text-shadow:0 0 18px rgba(194,68,255,.45);
+    }
+
+    .vip-btn{
+      padding:12px 18px;
+      border-radius:12px;
+      color:#090909;
+      font-weight:1000;
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.9px;
+      background:linear-gradient(135deg,#8f650f,#ffe28a 52%,#c89b3c);
+      box-shadow:0 18px 42px rgba(255,226,138,.18);
+    }
+
+    .hero{
+      position:relative;
+      overflow:hidden;
+      min-height:680px;
+      border-bottom:1px solid rgba(255,226,138,.12);
       background:
-        radial-gradient(circle at 30% 20%, #fff3b9, transparent 32%),
-        linear-gradient(135deg, var(--gold2), var(--gold3));
-      box-shadow: 0 12px 30px rgba(245,196,81,.25);
-      letter-spacing: -1px;
+        radial-gradient(circle at 74% 20%,rgba(255,226,138,.18),transparent 35%),
+        radial-gradient(circle at 18% 10%,rgba(53,229,140,.09),transparent 32%);
     }
 
-    .brand strong {
-      display: block;
-      font-size: 1.02rem;
-      letter-spacing: .02em;
-      line-height: 1.05;
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:-35%;
+      pointer-events:none;
+      background:conic-gradient(from 160deg,transparent,rgba(255,226,138,.12),transparent,rgba(53,229,140,.08),transparent);
+      filter:blur(38px);
+      animation:spin 28s linear infinite;
     }
 
-    .brand span {
-      display: block;
-      color: var(--muted);
-      font-size: .73rem;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-      margin-top: 3px;
+    @keyframes spin{to{transform:rotate(360deg)}}
+
+    .hero-grid{
+      position:relative;
+      z-index:2;
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:36px;
+      align-items:center;
+      padding:88px 0 64px;
     }
 
-    .nav-links {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      gap: 9px;
-      flex-wrap: wrap;
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      color:var(--gold);
+      text-transform:uppercase;
+      letter-spacing:5px;
+      font-size:13px;
+      font-weight:1000;
+      margin-bottom:18px;
     }
 
-    .nav-links a, .small-btn {
-      border: 1px solid rgba(245, 196, 81, .14);
-      background: rgba(255,255,255,.035);
-      color: #efe5d0;
-      font-weight: 800;
-      font-size: .78rem;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      padding: 10px 13px;
-      border-radius: 999px;
-      transition: transform .2s ease, background .2s ease, border-color .2s ease;
-      cursor: pointer;
+    .eyebrow::before{
+      content:"";
+      width:38px;
+      height:2px;
+      background:linear-gradient(90deg,var(--gold),transparent);
+      box-shadow:0 0 16px rgba(255,226,138,.45);
     }
 
-    .nav-links a:hover, .small-btn:hover {
-      transform: translateY(-1px);
-      border-color: rgba(245, 196, 81, .45);
-      background: rgba(245,196,81,.08);
+    h1{
+      margin:0;
+      font-size:clamp(58px,10vw,132px);
+      line-height:.86;
+      letter-spacing:-6px;
+      text-transform:uppercase;
+      color:#fff7dc;
+      text-shadow:0 0 28px rgba(255,226,138,.18),0 0 90px rgba(255,226,138,.12);
     }
 
-    .vip-pill {
-      color: #080705 !important;
-      background: linear-gradient(135deg, var(--gold2), var(--gold3)) !important;
-      border-color: transparent !important;
-      box-shadow: 0 12px 28px rgba(245,196,81,.18);
+    .hero p{
+      max-width:650px;
+      margin:28px 0 0;
+      color:#d8cba3;
+      font-size:21px;
+      line-height:1.48;
     }
 
-    .ticker {
-      overflow: hidden;
-      border-bottom: 1px solid rgba(245, 196, 81, .12);
-      background: rgba(245, 196, 81, .045);
+    .hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-top:34px}
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:52px;
+      padding:0 28px;
+      border-radius:14px;
+      font-weight:1000;
+      text-transform:uppercase;
+      letter-spacing:.8px;
+      color:#090909;
+      background:linear-gradient(135deg,#8f650f,#ffe28a 55%,#c89b3c);
+      box-shadow:0 22px 52px rgba(255,226,138,.20),0 0 22px rgba(255,226,138,.08);
     }
 
-    .ticker-track {
-      white-space: nowrap;
-      display: flex;
-      width: max-content;
-      animation: marquee 28s linear infinite;
-      color: #ead7a6;
-      font-size: .78rem;
-      font-weight: 900;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      padding: 10px 0;
+    .btn.secondary{
+      color:#fff7dc;
+      background:rgba(0,0,0,.35);
+      border:1px solid rgba(255,226,138,.22);
     }
 
-    .ticker-track span { padding: 0 24px; }
-
-    @keyframes marquee {
-      from { transform: translateX(0); }
-      to { transform: translateX(-50%); }
-    }
-
-    .hero {
-      padding: 78px 0 38px;
-      position: relative;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.18fr .82fr;
-      gap: 34px;
-      align-items: center;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      color: var(--gold2);
-      border: 1px solid rgba(245,196,81,.22);
-      background: rgba(245,196,81,.07);
-      padding: 10px 14px;
-      border-radius: 999px;
-      font-size: .78rem;
-      text-transform: uppercase;
-      letter-spacing: .14em;
-      font-weight: 900;
-      margin-bottom: 18px;
-    }
-
-    .pulse {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: var(--good);
-      box-shadow: 0 0 0 8px rgba(116,227,154,.12);
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(3.1rem, 7vw, 6.8rem);
-      line-height: .9;
-      letter-spacing: -.075em;
-      font-weight: 1000;
-    }
-
-    h1 span {
-      display: block;
-      background: linear-gradient(135deg, #fff8e9 0%, #ffd978 42%, #b98624 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      text-shadow: 0 28px 90px rgba(245,196,81,.15);
-    }
-
-    .hero-lead {
-      color: #d9ccb5;
-      max-width: 670px;
-      margin: 22px 0 0;
-      font-size: clamp(1.04rem, 1.6vw, 1.28rem);
-      line-height: 1.65;
-    }
-
-    .hero-lead strong { color: #fff1c2; }
-
-    .cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 28px;
-    }
-
-    .btn {
-      appearance: none;
-      border: 0;
-      cursor: pointer;
-      border-radius: 999px;
-      padding: 15px 20px;
-      min-height: 48px;
-      font-weight: 950;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      font-size: .83rem;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 9px;
-      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
-    }
-
-    .btn-primary {
-      color: #070604;
-      background: linear-gradient(135deg, #fff0a6, #f5c451 48%, #a87621);
-      box-shadow: 0 18px 40px rgba(245,196,81,.24);
-    }
-
-    .btn-secondary {
-      color: #f8edda;
-      background: rgba(255,255,255,.055);
-      border: 1px solid rgba(245,196,81,.22);
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
-    .hero-card {
-      position: relative;
-      border: 1px solid rgba(245, 196, 81, .20);
+    .hero-card{
+      border-radius:32px;
+      padding:30px;
+      border:1px solid rgba(255,226,138,.24);
       background:
-        linear-gradient(165deg, rgba(255,255,255,.09), rgba(255,255,255,.025)),
-        rgba(12, 11, 9, .84);
-      box-shadow: var(--shadow);
-      border-radius: 30px;
-      overflow: hidden;
-      padding: 26px;
+        radial-gradient(circle at 100% 0%,rgba(255,226,138,.16),transparent 34%),
+        radial-gradient(circle at 0% 100%,rgba(53,229,140,.08),transparent 32%),
+        linear-gradient(180deg,rgba(18,18,18,.94),rgba(4,4,4,.92));
+      box-shadow:0 40px 110px rgba(0,0,0,.72),0 0 60px rgba(255,226,138,.12);
     }
 
-    .hero-card:before {
-      content: "";
-      position: absolute;
-      inset: -2px;
+    .hero-card h2{margin:0 0 14px;font-size:28px;text-transform:uppercase;color:var(--gold)}
+    .metric-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:20px}
+    .metric{
+      padding:18px;
+      border-radius:18px;
+      border:1px solid rgba(255,226,138,.14);
+      background:rgba(0,0,0,.34);
+    }
+    .metric strong{display:block;font-size:32px;color:#fff;text-shadow:0 0 18px rgba(255,226,138,.16)}
+    .metric span{display:block;margin-top:6px;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:1px}
+
+    .section{padding:56px 0}
+    .section-title{font-size:36px;margin:0 0 20px;text-transform:uppercase;letter-spacing:-1px}
+    .grid{display:grid;gap:20px}
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+    .grid-2{grid-template-columns:1fr 1fr}
+
+    .card{
+      position:relative;
+      overflow:hidden;
+      border-radius:24px;
+      padding:26px;
+      border:1px solid rgba(255,226,138,.18);
       background:
-        radial-gradient(circle at 50% 0%, rgba(245,196,81,.18), transparent 38%),
-        linear-gradient(135deg, rgba(245,196,81,.1), transparent 50%);
-      pointer-events: none;
+        radial-gradient(circle at 100% 0%,rgba(255,226,138,.13),transparent 34%),
+        linear-gradient(180deg,rgba(18,18,18,.94),rgba(5,5,5,.94));
+      box-shadow:0 28px 82px rgba(0,0,0,.62),0 0 34px rgba(255,226,138,.06);
     }
 
-    .hero-card > * { position: relative; }
+    .card h3{margin:0 0 12px;color:var(--gold);text-transform:uppercase}
+    .card p{color:var(--muted);line-height:1.6;margin:0}
 
-    .desk-title {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 18px;
-    }
-
-    .desk-title strong {
-      display: block;
-      font-size: 1.1rem;
-    }
-
-    .desk-title span {
-      color: var(--muted);
-      font-size: .83rem;
-      display: block;
-      margin-top: 4px;
-    }
-
-    .status-dot {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      border-radius: 999px;
-      padding: 7px 10px;
-      color: #072010;
-      background: linear-gradient(135deg, #9ff2b9, #62d585);
-      font-size: .7rem;
-      font-weight: 1000;
-      letter-spacing: .09em;
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
-
-    .mini-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-    }
-
-    .mini-card {
-      border: 1px solid rgba(245,196,81,.12);
-      background: rgba(0,0,0,.22);
-      border-radius: 18px;
-      padding: 16px;
-      min-height: 104px;
-    }
-
-    .mini-card b {
-      display: block;
-      color: #fff6dc;
-      font-size: 1.75rem;
-      line-height: 1;
-      letter-spacing: -.03em;
-    }
-
-    .mini-card span {
-      display: block;
-      margin-top: 8px;
-      color: var(--muted);
-      font-size: .78rem;
-      line-height: 1.35;
-      text-transform: uppercase;
-      letter-spacing: .09em;
-      font-weight: 850;
-    }
-
-    .trust-strip {
-      padding: 22px 0 34px;
-    }
-
-    .trust-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 12px;
-    }
-
-    .trust-item {
-      border: 1px solid rgba(245,196,81,.15);
-      background: rgba(255,255,255,.04);
-      border-radius: 18px;
-      padding: 16px 14px;
-      min-height: 100px;
-    }
-
-    .trust-item strong {
-      display: block;
-      color: #fff0bf;
-      margin-bottom: 8px;
-      font-size: .92rem;
-    }
-
-    .trust-item span {
-      display: block;
-      color: var(--muted);
-      font-size: .84rem;
-      line-height: 1.45;
-    }
-
-    .section {
-      padding: 42px 0;
-    }
-
-    .section-head {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 18px;
-      margin-bottom: 22px;
-    }
-
-    .section-title {
-      margin: 0;
-      font-size: clamp(2rem, 4vw, 3.25rem);
-      line-height: .98;
-      letter-spacing: -.055em;
-      font-weight: 1000;
-    }
-
-    .section-kicker {
-      color: var(--gold2);
-      font-size: .78rem;
-      text-transform: uppercase;
-      letter-spacing: .16em;
-      font-weight: 950;
-      margin-bottom: 9px;
-    }
-
-    .section-copy {
-      color: var(--muted);
-      margin: 0;
-      max-width: 620px;
-      line-height: 1.6;
-      font-size: 1rem;
-    }
-
-    .feature-card, .panel {
-      border: 1px solid var(--line);
+    .guru-network-card{
+      position:relative;
+      overflow:hidden;
+      border-radius:30px;
+      padding:46px;
+      border:1px solid rgba(194,68,255,.32);
       background:
-        linear-gradient(165deg, rgba(255,255,255,.075), rgba(255,255,255,.024)),
-        rgba(10, 9, 7, .9);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      overflow: hidden;
+        radial-gradient(circle at 84% 22%,rgba(194,68,255,.34),transparent 33%),
+        radial-gradient(circle at 18% 100%,rgba(255,226,138,.15),transparent 36%),
+        linear-gradient(180deg,rgba(18,8,24,.96),rgba(4,3,7,.97));
+      box-shadow:0 36px 110px rgba(0,0,0,.68),0 0 58px rgba(194,68,255,.14);
+    }
+
+    .guru-network-card::after{
+      content:"♛";
+      position:absolute;
+      right:42px;
+      top:30px;
+      font-size:170px;
+      line-height:1;
+      color:rgba(255,226,138,.06);
+      pointer-events:none;
+    }
+
+    .guru-network-eyebrow{
+      display:inline-block;
+      color:#d86cff;
+      text-transform:uppercase;
+      letter-spacing:4px;
+      font-size:12px;
+      font-weight:1000;
+      margin-bottom:14px;
+    }
+
+    .guru-network-card h2{
+      position:relative;
+      z-index:2;
+      margin:0;
+      font-size:clamp(36px,6vw,64px);
+      line-height:.95;
+      color:#fff7dc;
+      letter-spacing:-2.6px;
+      text-shadow:0 0 30px rgba(194,68,255,.34);
+    }
+
+    .guru-network-card p{
+      position:relative;
+      z-index:2;
+      max-width:650px;
+      margin:18px 0 28px;
+      color:#d9c7ec;
+      font-size:18px;
+      line-height:1.65;
+    }
+
+    .guru-network-btn{
+      position:relative;
+      z-index:2;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:54px;
+      padding:0 32px;
+      border-radius:16px;
+      font-weight:1000;
+      text-transform:uppercase;
+      color:#12050d;
+      background:linear-gradient(135deg,#7b19ff,#d86cff 45%,#ffe28a);
+      box-shadow:0 20px 48px rgba(194,68,255,.26);
+    }
+
+    .results-table{
+      width:100%;
+      border-collapse:collapse;
+      font-size:14px;
+      overflow:hidden;
+      border-radius:16px;
+    }
+    th,td{padding:14px 10px;border-bottom:1px solid rgba(255,226,138,.10);text-align:left}
+    th{color:var(--gold);font-size:11px;text-transform:uppercase;letter-spacing:1px;background:rgba(255,226,138,.055)}
+    td{color:#f5edd3}
+    .win{color:var(--green);font-weight:1000}
+    .loss{color:var(--red);font-weight:1000}
+    .pending{color:var(--gold);font-weight:1000}
+
+    .footer{
+      padding:38px 0 70px;
+      color:var(--muted);
+      text-align:center;
+      border-top:1px solid rgba(255,226,138,.12);
+    }
+
+    @media(max-width:900px){
+      .links{display:none}
+      .hero-grid,.grid-3,.grid-2{grid-template-columns:1fr}
+      .hero{min-height:auto}
+      .metric-grid{grid-template-columns:1fr 1fr}
+    }
+
+    @media(max-width:560px){
+      .vip-btn{display:none}
+      h1{letter-spacing:-3px}
+      .hero p{font-size:17px}
+      .metric-grid{grid-template-columns:1fr}
+      .guru-network-card{padding:28px}
+      .guru-network-card::after{font-size:100px;right:18px}
     }
-
-    .feature-card {
-      display: grid;
-      grid-template-columns: .92fr 1.08fr;
-      min-height: 420px;
-    }
-
-    .ticket-side {
-      position: relative;
-      padding: 28px;
-      background:
-        radial-gradient(circle at 10% 0%, rgba(245,196,81,.23), transparent 40%),
-        linear-gradient(145deg, rgba(245,196,81,.11), rgba(255,255,255,.035));
-      border-right: 1px dashed rgba(245,196,81,.26);
-    }
-
-    .ticket-side:after {
-      content: "";
-      position: absolute;
-      right: -13px;
-      top: 50%;
-      width: 26px;
-      height: 26px;
-      transform: translateY(-50%);
-      border-radius: 999px;
-      background: #070604;
-      border-left: 1px dashed rgba(245,196,81,.26);
-    }
-
-    .label {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      color: #090704;
-      background: linear-gradient(135deg, var(--gold2), var(--gold3));
-      border-radius: 999px;
-      padding: 8px 11px;
-      font-size: .72rem;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      font-weight: 1000;
-      margin-bottom: 18px;
-    }
-
-    .ticket-game {
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: .1em;
-      font-weight: 900;
-      font-size: .78rem;
-      line-height: 1.3;
-    }
-
-    .ticket-pick {
-      margin: 14px 0;
-      font-size: clamp(2rem, 4.4vw, 4.1rem);
-      line-height: .93;
-      font-weight: 1000;
-      letter-spacing: -.055em;
-      color: #fff8e7;
-    }
-
-    .ticket-meta {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0,1fr));
-      gap: 10px;
-      margin-top: 22px;
-    }
-
-    .meta-box {
-      border: 1px solid rgba(245,196,81,.13);
-      border-radius: 14px;
-      padding: 12px;
-      background: rgba(0,0,0,.22);
-    }
-
-    .meta-box span {
-      display: block;
-      color: var(--muted);
-      font-size: .7rem;
-      text-transform: uppercase;
-      letter-spacing: .11em;
-      font-weight: 900;
-      margin-bottom: 6px;
-    }
-
-    .meta-box b {
-      color: #fff1c2;
-      font-size: 1rem;
-    }
-
-    .analysis-side {
-      padding: 30px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 24px;
-    }
-
-    .analysis-side h3 {
-      margin: 0 0 10px;
-      color: #fff0bf;
-      font-size: 1.3rem;
-    }
-
-    .analysis-side p {
-      margin: 0;
-      color: #d3c5ac;
-      line-height: 1.65;
-    }
-
-    .check-list {
-      list-style: none;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-      padding: 0;
-      margin: 20px 0 0;
-    }
-
-    .check-list li {
-      color: #d8c8aa;
-      border: 1px solid rgba(245,196,81,.12);
-      background: rgba(255,255,255,.035);
-      border-radius: 14px;
-      padding: 11px 12px;
-      font-size: .88rem;
-      line-height: 1.35;
-    }
-
-    .check-list li:before {
-      content: "✓ ";
-      color: var(--gold2);
-      font-weight: 1000;
-    }
-
-    .board-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-
-    .pick-card {
-      border: 1px solid rgba(245,196,81,.16);
-      background:
-        linear-gradient(160deg, rgba(255,255,255,.06), rgba(255,255,255,.023)),
-        rgba(11,10,8,.88);
-      border-radius: 22px;
-      padding: 18px;
-      min-height: 285px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 18px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .pick-card:before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at 100% 0%, rgba(245,196,81,.12), transparent 38%);
-      pointer-events: none;
-    }
-
-    .pick-card > * { position: relative; }
-
-    .pick-top {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 12px;
-      margin-bottom: 12px;
-    }
-
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      border-radius: 999px;
-      padding: 6px 9px;
-      font-size: .68rem;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      font-weight: 1000;
-      color: #070604;
-      background: linear-gradient(135deg, #ffec9a, #bb8629);
-      white-space: nowrap;
-    }
-
-    .pill.ghost {
-      color: #eadbb5;
-      background: rgba(255,255,255,.055);
-      border: 1px solid rgba(245,196,81,.18);
-    }
-
-    .pick-card h3 {
-      margin: 0 0 8px;
-      color: #fff3c9;
-      font-size: 1.35rem;
-      line-height: 1.05;
-      letter-spacing: -.025em;
-    }
-
-    .pick-card .game {
-      color: var(--muted);
-      font-size: .82rem;
-      line-height: 1.35;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      font-weight: 850;
-    }
-
-    .pick-card p {
-      color: #d4c7af;
-      line-height: 1.55;
-      margin: 12px 0 0;
-      font-size: .94rem;
-    }
-
-    .pick-stats {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 8px;
-    }
-
-    .pick-stats div {
-      border-radius: 13px;
-      border: 1px solid rgba(245,196,81,.11);
-      background: rgba(0,0,0,.23);
-      padding: 10px;
-    }
-
-    .pick-stats span {
-      display: block;
-      color: var(--muted);
-      font-size: .66rem;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      font-weight: 900;
-      margin-bottom: 4px;
-    }
-
-    .pick-stats b {
-      font-size: .93rem;
-      color: #fff2ca;
-    }
-
-    .empty {
-      border: 1px dashed rgba(245,196,81,.28);
-      background: rgba(245,196,81,.045);
-      border-radius: 22px;
-      padding: 28px;
-      color: #d8c9aa;
-      line-height: 1.6;
-      text-align: center;
-    }
-
-    .empty strong {
-      color: #fff0bf;
-      display: block;
-      font-size: 1.25rem;
-      margin-bottom: 6px;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-
-    .service-card {
-      border: 1px solid rgba(245,196,81,.15);
-      background: rgba(255,255,255,.04);
-      border-radius: 22px;
-      padding: 22px;
-      min-height: 210px;
-    }
-
-    .service-card.highlight {
-      border-color: rgba(245,196,81,.34);
-      background:
-        radial-gradient(circle at 100% 0%, rgba(245,196,81,.18), transparent 45%),
-        rgba(255,255,255,.055);
-    }
-
-    .service-icon {
-      width: 42px;
-      height: 42px;
-      display: grid;
-      place-items: center;
-      border-radius: 14px;
-      color: #060504;
-      background: linear-gradient(135deg, var(--gold2), var(--gold3));
-      font-weight: 1000;
-      margin-bottom: 16px;
-    }
-
-    .service-card h3 {
-      margin: 0 0 10px;
-      color: #fff0bf;
-      font-size: 1.13rem;
-    }
-
-    .service-card p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.58;
-      font-size: .95rem;
-    }
-
-    .results-layout {
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap: 16px;
-    }
-
-    .results-metrics {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-    }
-
-    .result-box {
-      border: 1px solid rgba(245,196,81,.14);
-      background: rgba(255,255,255,.04);
-      border-radius: 18px;
-      padding: 18px;
-    }
-
-    .result-box b {
-      display: block;
-      font-size: 1.85rem;
-      letter-spacing: -.04em;
-      color: #fff4cf;
-    }
-
-    .result-box span {
-      display: block;
-      color: var(--muted);
-      margin-top: 6px;
-      font-size: .78rem;
-      text-transform: uppercase;
-      letter-spacing: .1em;
-      font-weight: 900;
-    }
-
-    .table-wrap {
-      border-radius: 20px;
-      border: 1px solid rgba(245,196,81,.14);
-      overflow: auto;
-      background: rgba(0,0,0,.18);
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      min-width: 680px;
-    }
-
-    th, td {
-      padding: 14px 14px;
-      border-bottom: 1px solid rgba(245,196,81,.09);
-      text-align: left;
-      font-size: .88rem;
-      vertical-align: top;
-    }
-
-    th {
-      color: var(--gold2);
-      text-transform: uppercase;
-      letter-spacing: .12em;
-      font-size: .68rem;
-      background: rgba(245,196,81,.06);
-    }
-
-    td {
-      color: #dfd0b4;
-    }
-
-    .positive { color: var(--good) !important; }
-    .negative { color: var(--danger) !important; }
-
-    .education-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-    }
-
-    .education-card {
-      border: 1px solid rgba(245,196,81,.14);
-      background: rgba(255,255,255,.035);
-      border-radius: 20px;
-      padding: 18px;
-    }
-
-    .education-card h3 {
-      margin: 0 0 9px;
-      color: #fff0bf;
-      font-size: 1.02rem;
-    }
-
-    .education-card p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.55;
-      font-size: .92rem;
-    }
-
-    .vip-section {
-      border: 1px solid rgba(245,196,81,.23);
-      background:
-        radial-gradient(circle at 0% 0%, rgba(245,196,81,.2), transparent 33%),
-        linear-gradient(160deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
-      border-radius: 30px;
-      padding: 28px;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .vip-section:after {
-      content: "VIP";
-      position: absolute;
-      right: -30px;
-      top: 10px;
-      font-size: 9rem;
-      font-weight: 1000;
-      letter-spacing: -.08em;
-      color: rgba(245,196,81,.045);
-      pointer-events: none;
-    }
-
-    .vip-content {
-      position: relative;
-      z-index: 1;
-    }
-
-    .vip-lock {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
-      flex-wrap: wrap;
-      margin-bottom: 22px;
-    }
-
-    .vip-lock h2 {
-      margin: 0;
-      font-size: clamp(1.9rem, 4vw, 3.25rem);
-      letter-spacing: -.055em;
-      line-height: 1;
-    }
-
-    .vip-lock p {
-      color: var(--muted);
-      margin: 8px 0 0;
-      max-width: 600px;
-      line-height: 1.55;
-    }
-
-    .vip-login-box {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .vip-login-box input {
-      min-height: 46px;
-      border-radius: 999px;
-      border: 1px solid rgba(245,196,81,.24);
-      background: rgba(0,0,0,.25);
-      color: #fff4d2;
-      padding: 0 16px;
-      outline: none;
-      min-width: 210px;
-    }
-
-    .vip-login-box input::placeholder {
-      color: rgba(220,205,170,.72);
-    }
-
-    .vip-message {
-      color: var(--muted);
-      font-size: .9rem;
-      margin-top: 10px;
-    }
-
-    .blurred .vip-analysis {
-      filter: blur(6px);
-      user-select: none;
-      pointer-events: none;
-      max-height: 94px;
-      overflow: hidden;
-    }
-
-    .footer {
-      padding: 42px 0 110px;
-      color: #a8997b;
-      border-top: 1px solid rgba(245,196,81,.12);
-      margin-top: 34px;
-      font-size: .88rem;
-      line-height: 1.6;
-    }
-
-    .footer strong {
-      color: #fff0bf;
-    }
-
-    .bottom-nav {
-      display: none;
-      position: fixed;
-      bottom: 12px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 30;
-      width: calc(100% - 24px);
-      max-width: 520px;
-      border: 1px solid rgba(245,196,81,.22);
-      background: rgba(5,5,5,.88);
-      backdrop-filter: blur(18px);
-      border-radius: 999px;
-      box-shadow: 0 16px 44px rgba(0,0,0,.48);
-      padding: 8px;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 6px;
-    }
-
-    .bottom-nav a {
-      text-align: center;
-      color: #e8d6ac;
-      font-size: .68rem;
-      font-weight: 1000;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      padding: 10px 5px;
-      border-radius: 999px;
-    }
-
-    .bottom-nav a:nth-child(3) {
-      color: #070604;
-      background: linear-gradient(135deg, var(--gold2), var(--gold3));
-    }
-
-    @media (max-width: 980px) {
-      .hero-grid,
-      .feature-card,
-      .results-layout {
-        grid-template-columns: 1fr;
-      }
-
-      .ticket-side {
-        border-right: none;
-        border-bottom: 1px dashed rgba(245,196,81,.26);
-      }
-
-      .ticket-side:after { display: none; }
-
-      .trust-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .board-grid,
-      .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .education-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .nav-links {
-        display: none;
-      }
-
-      .bottom-nav {
-        display: grid;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .container {
-        width: calc(100% - 24px);
-      }
-
-      .hero {
-        padding-top: 52px;
-      }
-
-      .nav {
-        height: 66px;
-      }
-
-      .brand-mark {
-        width: 40px;
-        height: 40px;
-        border-radius: 13px;
-      }
-
-      .brand strong {
-        font-size: .95rem;
-      }
-
-      .mini-grid,
-      .trust-grid,
-      .board-grid,
-      .services-grid,
-      .education-grid,
-      .results-metrics,
-      .check-list {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-card,
-      .feature-card,
-      .panel,
-      .vip-section {
-        border-radius: 22px;
-      }
-
-      .ticket-side,
-      .analysis-side,
-      .vip-section {
-        padding: 21px;
-      }
-
-      .section-head {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .cta-row .btn {
-        width: 100%;
-      }
-
-      .vip-login-box input,
-      .vip-login-box .btn {
-        width: 100%;
-      }
-    }
-  
-    /* V2 cleanup: premium-style icon marks instead of letter badges */
-    .brand-mark {
-      color: transparent !important;
-      font-size: 0 !important;
-      position: relative;
-    }
-    .brand-mark::after {
-      content: "";
-      width: 22px;
-      height: 22px;
-      border: 2px solid rgba(7,6,4,.62);
-      border-top-color: transparent;
-      border-right-color: rgba(7,6,4,.25);
-      border-radius: 50%;
-      transform: rotate(-28deg);
-      display: block;
-    }
-    .service-icon {
-      color: transparent !important;
-      font-size: 0 !important;
-      position: relative;
-      overflow: hidden;
-    }
-    .service-icon::before {
-      content: "";
-      position: absolute;
-      inset: 10px;
-      border: 2px solid rgba(7,6,4,.55);
-      border-left-color: transparent;
-      border-radius: 999px;
-      transform: rotate(-30deg);
-    }
-    .service-icon::after {
-      content: "";
-      position: absolute;
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: rgba(7,6,4,.58);
-      right: 12px;
-      top: 12px;
-    }
-    .vip-section::after {
-      content: "" !important;
-    }
-
   </style>
 </head>
+
 <body>
-  <div class="page">
-    <header class="topbar">
-      <div class="container nav">
-        <a href="#" class="brand" aria-label="Mick's Picks Home">
-          <div class="brand-mark" aria-hidden="true"></div>
-          <div>
-            <strong>Mick's Picks</strong>
-            <span>The Guru's Lair</span>
-          </div>
-        </a>
-        <nav class="nav-links" aria-label="Primary navigation">
-          <a href="#free-board">Free Board</a>
-          <a href="#services">Services</a>
-          <a href="#results">Results</a>
-          <a href="#education">Education</a>
-          <a href="premium.html" class="vip-pill">VIP Login</a>
-        </nav>
-      </div>
-    </header>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <div class="brand-mark">MP</div>
+        <div>
+          <span>Micks Picks</span>
+          <small>Premium Betting Network</small>
+        </div>
+      </a>
 
-    <div class="ticker" aria-hidden="true">
-      <div class="ticker-track">
-        <span>THE GURU'S LAIR • Best Number Discipline</span>
-        <span>LIVE CARD • Free + VIP Boards</span>
-        <span>PROPS • Usage, Minutes, Matchups</span>
-        <span>MARKET WATCH • Steam, Cutoffs, EV</span>
-        <span>THE GURU'S LAIR • Best Number Discipline</span>
-        <span>LIVE CARD • Free + VIP Boards</span>
-        <span>PROPS • Usage, Minutes, Matchups</span>
-        <span>MARKET WATCH • Steam, Cutoffs, EV</span>
-      </div>
+      <nav class="links">
+        <a href="index.html">Home</a>
+        <a href="premium.html">VIP Vault</a>
+        <a href="./yahgi.html" class="guru-link">♛ Yahgi's Guru Picks</a>
+        <a href="#results">Results Archive</a>
+        <a href="#props">Props Lab</a>
+        <a href="#social">Social Studio</a>
+      </nav>
+
+      <a class="vip-btn" href="premium.html">VIP Access</a>
     </div>
+  </header>
 
-    <main>
-      <section class="hero">
-        <div class="container hero-grid">
-          <div>
-            <div class="eyebrow"><span class="pulse"></span> Live Daily Board • Tracked Results</div>
-            <h1>
-              Bet The Number.
-              <span>Not The Hype.</span>
-            </h1>
-            <p class="hero-lead">
-              <strong>Today's board. Real cutoffs. Tracked results. No hype.</strong>
-              Mick's Picks turns the Guru's Lair framework into customer-ready plays with grades, units,
-              best numbers, no-bet cutoffs, EV notes, injury context, and full-card reasoning.
-            </p>
-            <div class="cta-row">
-              <a class="btn btn-primary" href="#free-board">View Free Board</a>
-              <a class="btn btn-secondary" href="premium.html">Enter VIP Vault</a>
-            </div>
-          </div>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Micks Picks</div>
+          <h1>Sharp Plays.<br>Clean Edges.</h1>
+          <p>
+            Premium sports betting analysis built around value, market discipline, matchup edges, injury context, and real results tracking.
+          </p>
 
-          <aside class="hero-card" aria-label="Mick's Picks dashboard">
-            <div class="desk-title">
-              <div>
-                <strong>Sharp Card Dashboard</strong>
-                <span>Live sheet-driven board</span>
-              </div>
-              <span class="status-dot">Live</span>
-            </div>
-            <div class="mini-grid">
-              <div class="mini-card">
-                <b id="stat-active">0</b>
-                <span>Active Plays</span>
-              </div>
-              <div class="mini-card">
-                <b id="stat-a-tier">No Card Yet</b>
-                <span>A-Tier Plays</span>
-              </div>
-              <div class="mini-card">
-                <b id="stat-winrate">Tracking</b>
-                <span>Win Rate</span>
-              </div>
-              <div class="mini-card">
-                <b id="stat-units">Tracking</b>
-                <span>Units</span>
-              </div>
-            </div>
-          </aside>
-        </div>
-      </section>
-
-      <section class="trust-strip">
-        <div class="container trust-grid">
-          <div class="trust-item">
-            <strong>Tracked Results</strong>
-            <span>Wins, losses, profit/loss, CLV notes, and archive history stay visible.</span>
-          </div>
-          <div class="trust-item">
-            <strong>Best Number Discipline</strong>
-            <span>Every play is judged by the number, not just the team or player.</span>
-          </div>
-          <div class="trust-item">
-            <strong>No-Bet Cutoffs</strong>
-            <span>Clear pass points help protect the edge when markets move.</span>
-          </div>
-          <div class="trust-item">
-            <strong>EV-Based Grades</strong>
-            <span>A, B, and C grades separate true edges from low-value leans.</span>
-          </div>
-          <div class="trust-item">
-            <strong>VIP Full Analysis</strong>
-            <span>Premium members get market notes, injury notes, and full reasoning.</span>
+          <div class="hero-actions">
+            <a href="premium.html" class="btn">Enter VIP Vault</a>
+            <a href="#results" class="btn secondary">View Results</a>
           </div>
         </div>
-      </section>
 
-      <section class="section" id="play-of-day">
-        <div class="container">
-          <div class="section-head">
-            <div>
-              <div class="section-kicker">Play of the Day</div>
-              <h2 class="section-title">Today's Best Edge</h2>
-            </div>
-            <p class="section-copy">Selected from the strongest combination of matchup edge, market value, injury context, line discipline, and confidence grade.</p>
-          </div>
+        <div class="hero-card">
+          <h2>Live Betting Board</h2>
+          <p style="color:var(--muted);line-height:1.6">
+            Active picks, props, VIP releases, closing-line tracking, and archived performance all sync from the Micks Picks sheet.
+          </p>
 
-          <div id="featured-play" class="feature-card">
-            <div class="ticket-side">
-              <div class="label">Play of the Day</div>
-              <div class="ticket-game">No featured play posted yet</div>
-              <div class="ticket-pick">Check back for today's card.</div>
-              <div class="ticket-meta">
-                <div class="meta-box"><span>Grade</span><b>—</b></div>
-                <div class="meta-box"><span>Units</span><b>—</b></div>
-                <div class="meta-box"><span>Best Number</span><b>—</b></div>
-                <div class="meta-box"><span>No-Bet Cutoff</span><b>—</b></div>
-              </div>
-            </div>
-            <div class="analysis-side">
-              <div>
-                <h3>No card posted yet.</h3>
-                <p>When a pick is marked Featured = Yes in the Active Picks sheet, it will display here as the main homepage play.</p>
-                <ul class="check-list">
-                  <li>Best number discipline</li>
-                  <li>EV and confidence grade</li>
-                  <li>Market notes</li>
-                  <li>Injury context</li>
-                </ul>
-              </div>
-              <a class="btn btn-primary" href="#free-board">View Board</a>
-            </div>
+          <div class="metric-grid">
+            <div class="metric"><strong id="overallRecord">--</strong><span>Overall Record</span></div>
+            <div class="metric"><strong id="winRate">--</strong><span>Win Rate</span></div>
+            <div class="metric"><strong id="totalUnits">--</strong><span>Total Units</span></div>
+            <div class="metric"><strong id="currentStreak">--</strong><span>Current Streak</span></div>
           </div>
         </div>
-      </section>
-
-      <section class="section" id="free-board">
-        <div class="container">
-          <div class="section-head">
-            <div>
-              <div class="section-kicker">Free Picks Board</div>
-              <h2 class="section-title">Public Plays</h2>
-            </div>
-            <p class="section-copy">Free users see the public writeup, grade, units, best number, and no-bet cutoff. Full analysis stays inside the VIP Vault.</p>
-          </div>
-          <div id="free-picks" class="board-grid">
-            <div class="empty" style="grid-column:1/-1;">
-              <strong>No public card posted yet.</strong>
-              Add active rows to the Active Picks sheet with Access = Free or leave Access blank to show them here.
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section" id="services">
-        <div class="container">
-          <div class="section-head">
-            <div>
-              <div class="section-kicker">What Members Get</div>
-              <h2 class="section-title">Structure, Not Noise.</h2>
-            </div>
-            <p class="section-copy">A cleaner betting experience built around value, timing, transparency, and discipline.</p>
-          </div>
-
-          <div class="services-grid">
-            <article class="service-card highlight">
-              <div class="service-icon" aria-hidden="true"></div>
-              <h3>VIP Picks Vault</h3>
-              <p>Full analysis, best number, no-bet cutoff, market notes, injury notes, source verification, and customer-ready reasoning.</p>
-            </article>
-            <article class="service-card">
-              <div class="service-icon" aria-hidden="true"></div>
-              <h3>Market Watch</h3>
-              <p>Opening vs current number, steam direction, best-number timing, and pass points when the edge disappears.</p>
-            </article>
-            <article class="service-card">
-              <div class="service-icon" aria-hidden="true"></div>
-              <h3>Prop Lab</h3>
-              <p>Usage, minutes security, potential assists, rebound environment, turnover pressure, and matchup-created volume.</p>
-            </article>
-            <article class="service-card">
-              <div class="service-icon" aria-hidden="true"></div>
-              <h3>Live Betting Center</h3>
-              <p>Pace checks, halftime adjustments, line movement warnings, foul trouble reads, and market overreaction spots.</p>
-            </article>
-            <article class="service-card">
-              <div class="service-icon" aria-hidden="true"></div>
-              <h3>Results Desk</h3>
-              <p>Win/loss/push tracking, units, A-tier performance, and transparent grading from the archive sheet.</p>
-            </article>
-            <article class="service-card">
-              <div class="service-icon" aria-hidden="true"></div>
-              <h3>Education Center</h3>
-              <p>Simple explanations for EV, units, implied probability, cutoffs, props, parlays, and bankroll discipline.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="results">
-        <div class="container">
-          <div class="section-head">
-            <div>
-              <div class="section-kicker">Results Snapshot</div>
-              <h2 class="section-title">Transparent Tracking</h2>
-            </div>
-            <p class="section-copy">A cleaner results dashboard showing record, units, A-tier performance, and recent decisions from the Results Archive.</p>
-          </div>
-
-          <div class="results-layout">
-            <div class="panel" style="padding:18px;">
-              <div class="results-metrics">
-                <div class="result-box"><b id="result-record">0-0</b><span>Overall Record</span></div>
-                <div class="result-box"><b id="result-a-record">0-0</b><span>A-Tier Record</span></div>
-                <div class="result-box"><b id="result-units">0.00</b><span>Units Won/Lost</span></div>
-                <div class="result-box"><b id="result-market">Tracking</b><span>Best Market</span></div>
-              </div>
-            </div>
-
-            <div class="table-wrap">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Date</th>
-                    <th>Pick</th>
-                    <th>Grade</th>
-                    <th>Result</th>
-                    <th>Profit/Loss</th>
-                  </tr>
-                </thead>
-                <tbody id="recent-results">
-                  <tr>
-                    <td colspan="5">Results will appear here after the archive loads.</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="education">
-        <div class="container">
-          <div class="section-head">
-            <div>
-              <div class="section-kicker">Education Center</div>
-              <h2 class="section-title">Know The Edge.</h2>
-            </div>
-            <p class="section-copy">Customer-friendly explanations that make the framework feel sharp, disciplined, and trustworthy.</p>
-          </div>
-
-          <div class="education-grid">
-            <article class="education-card">
-              <h3>What is a No-Bet Cutoff?</h3>
-              <p>The line where value disappears. If the market moves past it, discipline says pass.</p>
-            </article>
-            <article class="education-card">
-              <h3>What Does A-Tier Mean?</h3>
-              <p>Matchup edge, statistical edge, market edge, positive EV, and controlled variance align.</p>
-            </article>
-            <article class="education-card">
-              <h3>Why Units Matter</h3>
-              <p>Units control bet size and keep bankroll exposure from swinging wildly.</p>
-            </article>
-            <article class="education-card">
-              <h3>No Locks, Just Edges</h3>
-              <p>No play is guaranteed. The goal is long-term value, price discipline, and clean execution.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="container">
-        <strong>Mick's Picks</strong> is for entertainment and educational purposes only. No bet is guaranteed. Bet responsibly.
-        This site displays structured analysis, line discipline, and tracked results to help users understand value-based decision-making.
       </div>
-    </footer>
-  </div>
+    </section>
 
-  <nav class="bottom-nav" aria-label="Mobile navigation">
-    <a href="#free-board">Free</a>
-    <a href="#results">Results</a>
-    <a href="premium.html">VIP</a>
-    <a href="#education">Learn</a>
-  </nav>
+    <section class="section" id="yahgi-guru-picks">
+      <div class="container">
+        <div class="guru-network-card">
+          <span class="guru-network-eyebrow">Guru Network</span>
+          <h2>♛ Yahgi's Guru Picks</h2>
+          <p>
+            Elite reads. Sharp angles. Independent card releases from another handicapper inside the Micks Picks network.
+          </p>
+          <a href="./yahgi.html" class="guru-network-btn">Enter Yahgi's Guru Picks →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="props">
+      <div class="container">
+        <h2 class="section-title">Props Lab</h2>
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>NBA Props</h3>
+            <p>Usage spikes, minutes security, potential assists, rebound chances, and matchup-created shot volume.</p>
+          </div>
+          <div class="card">
+            <h3>UFC Angles</h3>
+            <p>Style matchups, grappling control, cardio, durability, line value, and method props.</p>
+          </div>
+          <div class="card">
+            <h3>NHL Systems</h3>
+            <p>Goalie edges, rest spots, shot volume, special teams, totals environments, and market value.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="results">
+      <div class="container">
+        <h2 class="section-title">Results Archive</h2>
+        <div class="card" style="padding:0;overflow:auto">
+          <table class="results-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Sport</th>
+                <th>Game</th>
+                <th>Pick</th>
+                <th>Result</th>
+                <th>Units</th>
+              </tr>
+            </thead>
+            <tbody id="resultsBody">
+              <tr><td colspan="6">Loading results...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="social">
+      <div class="container">
+        <h2 class="section-title">Social Studio</h2>
+        <div class="grid grid-2">
+          <div class="card">
+            <h3>Auto Recaps</h3>
+            <p>Turn wins, streaks, and daily cards into recap-style content for your audience.</p>
+          </div>
+          <div class="card">
+            <h3>VIP Presentation</h3>
+            <p>Premium cards, countdowns, locked picks, release timers, and sharp-looking public summaries.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© Micks Picks — Premium Betting Network</div>
+  </footer>
 
   <script>
-    // ===== MICKS PICKS SITE CONFIG =====
-    // This keeps your site connected to the Micks Picks Data Google Sheet.
     const SHEET_ID = "15txBM8qsck7f0ZA_za7xYEykBxKpuq0no3x7yHcKNeE";
+    const ARCHIVE_GID = "1579113575";
 
-    // Basic client-side VIP gate. For real paid-member security, keep Netlify/hosting password protection enabled.
-    const VIP_PASSWORD = "mickspicks";
-
-    const CLOSED_STATUSES = new Set(["closed", "win", "loss", "push", "void", "cancelled", "canceled"]);
-
-    function clean(value) {
-      return (value ?? "").toString().trim();
+    function csvUrl(gid){
+      return `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${gid}&cache=${Date.now()}`;
     }
 
-    function lower(value) {
-      return clean(value).toLowerCase();
-    }
-
-    function isFilled(row) {
-      return clean(row.Pick) || clean(row.Game) || clean(row.Status);
-    }
-
-    function csvToRows(csvText) {
-      const rows = [];
-      let row = [];
-      let field = "";
-      let inQuotes = false;
-
-      for (let i = 0; i < csvText.length; i++) {
-        const char = csvText[i];
-        const next = csvText[i + 1];
-
-        if (char === '"' && inQuotes && next === '"') {
-          field += '"';
-          i++;
-        } else if (char === '"') {
-          inQuotes = !inQuotes;
-        } else if (char === "," && !inQuotes) {
-          row.push(field);
-          field = "";
-        } else if ((char === "\n" || char === "\r") && !inQuotes) {
-          if (char === "\r" && next === "\n") i++;
-          row.push(field);
-          rows.push(row);
-          row = [];
-          field = "";
-        } else {
-          field += char;
-        }
+    function parseCSV(text){
+      const rows=[]; let row=[],cur="",q=false;
+      for(let i=0;i<text.length;i++){
+        const c=text[i],n=text[i+1];
+        if(c=='"'&&q&&n=='"'){cur+='"';i++}
+        else if(c=='"'){q=!q}
+        else if(c==','&&!q){row.push(cur);cur=""}
+        else if((c=="\n"||c=="\r")&&!q){
+          if(cur!==""||row.length){row.push(cur);rows.push(row);row=[];cur=""}
+          if(c=="\r"&&n=="\n")i++;
+        } else cur+=c;
       }
-
-      if (field.length || row.length) {
-        row.push(field);
-        rows.push(row);
-      }
-
-      return rows.filter(r => r.some(c => clean(c)));
+      if(cur!==""||row.length){row.push(cur);rows.push(row)}
+      return rows;
     }
 
-    function rowsToObjects(rows) {
-      if (!rows.length) return [];
-      const headers = rows[0].map(h => clean(h));
-      return rows.slice(1).map(cells => {
-        const obj = {};
-        headers.forEach((h, i) => obj[h] = clean(cells[i]));
-        return obj;
-      }).filter(isFilled);
+    function makeObjects(rows){
+      if(!rows.length) return [];
+      const h=rows[0].map(x=>String(x||"").trim());
+      return rows.slice(1).map(r=>Object.fromEntries(h.map((k,i)=>[k,String(r[i]||"").trim()])));
     }
 
-    async function fetchSheet(sheetName) {
-      const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent(sheetName)}&cache=${Date.now()}`;
-      const response = await fetch(url);
-      if (!response.ok) throw new Error(`Could not load ${sheetName}`);
-      const text = await response.text();
-      return rowsToObjects(csvToRows(text));
+    async function getRows(){
+      const res = await fetch(csvUrl(ARCHIVE_GID), {cache:"no-store"});
+      const text = await res.text();
+      if(text.toLowerCase().includes("<html")) throw new Error("CSV unavailable");
+      return makeObjects(parseCSV(text));
     }
 
-    function isActive(row) {
-      const status = lower(row.Status);
-      const result = lower(row.Result);
-      return isFilled(row) && !CLOSED_STATUSES.has(status) && !CLOSED_STATUSES.has(result);
+    function num(v){
+      const n=parseFloat(String(v||"").replace(/[^0-9.+-]/g,""));
+      return Number.isFinite(n)?n:0;
     }
 
-    function isVip(row) {
-      return lower(row.Access) === "vip" || lower(row.Access) === "premium";
+    function cls(r){
+      r=String(r||"").toLowerCase();
+      if(r.includes("win")) return "win";
+      if(r.includes("loss")) return "loss";
+      return "pending";
     }
 
-    function isFeatured(row) {
-      return lower(row.Featured) === "yes" || lower(row.Featured) === "true";
+    function esc(s){
+      return String(s||"").replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
     }
 
-    function gradeScore(grade) {
-      const g = clean(grade).toUpperCase();
-      if (g === "A+" || g === "A") return 100;
-      if (g === "A-") return 94;
-      if (g === "B+") return 88;
-      if (g === "B") return 84;
-      if (g === "B-") return 80;
-      if (g === "C+") return 74;
-      if (g === "C") return 70;
-      return 50;
-    }
+    function render(rows){
+      rows = rows.filter(r => r.Date && r.Pick && r.Game && /win|loss|push/i.test(r.Result || ""));
 
-    function numeric(value) {
-      const n = parseFloat(clean(value).replace(/[%+$,]/g, ""));
-      return Number.isFinite(n) ? n : 0;
-    }
+      const wins = rows.filter(r=>/win/i.test(r.Result||"")).length;
+      const losses = rows.filter(r=>/loss/i.test(r.Result||"")).length;
+      const units = rows.reduce((s,r)=>s+num(r["Profit/Loss"]),0);
+      const rate = wins+losses ? Math.round((wins/(wins+losses))*100) : 0;
+      const last = rows.length ? rows[rows.length-1].Result : "--";
 
-    function fmt(value, fallback = "—") {
-      return clean(value) || fallback;
-    }
+      document.getElementById("overallRecord").textContent = `${wins}-${losses}`;
+      document.getElementById("winRate").textContent = `${rate}%`;
+      document.getElementById("totalUnits").textContent = `${units>=0?"+":""}${units.toFixed(2)}u`;
+      document.getElementById("currentStreak").textContent = last && last !== "--" ? `${last}` : "--";
 
-    function moneyClass(value) {
-      const n = numeric(value);
-      if (n > 0) return "positive";
-      if (n < 0) return "negative";
-      return "";
-    }
-
-    function renderPickCard(row, options = {}) {
-      const full = !!options.full;
-      const locked = !!options.locked;
-      const analysisText = full ? fmt(row["Full Analysis"], fmt(row.Writeup, "Full breakdown will appear here once posted.")) : fmt(row.Writeup, "Writeup will appear here once posted.");
-
-      return `
-        <article class="pick-card ${locked ? "locked-card" : ""}">
-          <div>
-            <div class="pick-top">
-              <span class="pill">${fmt(row.Grade, "Grade")}</span>
-              <span class="pill ghost">${isVip(row) ? "VIP" : "Free"}</span>
-            </div>
-            <div class="game">${fmt(row.Game)}</div>
-            <h3>${fmt(row.Pick)}</h3>
-            <p class="${full ? "vip-analysis" : ""}">${analysisText}</p>
-          </div>
-          <div class="pick-stats">
-            <div><span>Odds</span><b>${fmt(row.Odds)}</b></div>
-            <div><span>Units</span><b>${fmt(row.Units)}</b></div>
-            <div><span>Best Number</span><b>${fmt(row["Best Number"])}</b></div>
-            <div><span>No-Bet Cutoff</span><b>${fmt(row["No Bet Cutoff"])}</b></div>
-          </div>
-        </article>
-      `;
-    }
-
-    function renderFeatured(row) {
-      const target = document.getElementById("featured-play");
-
-      if (!row) {
-        target.innerHTML = `
-          <div class="ticket-side">
-            <div class="label">Play of the Day</div>
-            <div class="ticket-game">No featured play posted yet</div>
-            <div class="ticket-pick">Check back for today's card.</div>
-            <div class="ticket-meta">
-              <div class="meta-box"><span>Grade</span><b>—</b></div>
-              <div class="meta-box"><span>Units</span><b>—</b></div>
-              <div class="meta-box"><span>Best Number</span><b>—</b></div>
-              <div class="meta-box"><span>No-Bet Cutoff</span><b>—</b></div>
-            </div>
-          </div>
-          <div class="analysis-side">
-            <div>
-              <h3>No card posted yet.</h3>
-              <p>When a pick is marked Featured = Yes in the Active Picks sheet, it will display here as the main homepage play.</p>
-              <ul class="check-list">
-                <li>Best number discipline</li>
-                <li>EV and confidence grade</li>
-                <li>Market notes</li>
-                <li>Injury context</li>
-              </ul>
-            </div>
-            <a class="btn btn-primary" href="#free-board">View Board</a>
-          </div>`;
-        return;
-      }
-
-      target.innerHTML = `
-        <div class="ticket-side">
-          <div class="label">Play of the Day</div>
-          <div class="ticket-game">${fmt(row.Game)}</div>
-          <div class="ticket-pick">${fmt(row.Pick)}</div>
-          <div class="ticket-meta">
-            <div class="meta-box"><span>Grade</span><b>${fmt(row.Grade)}</b></div>
-            <div class="meta-box"><span>Units</span><b>${fmt(row.Units)}</b></div>
-            <div class="meta-box"><span>Best Number</span><b>${fmt(row["Best Number"])}</b></div>
-            <div class="meta-box"><span>No-Bet Cutoff</span><b>${fmt(row["No Bet Cutoff"])}</b></div>
-          </div>
-        </div>
-        <div class="analysis-side">
-          <div>
-            <h3>Why It Matters</h3>
-            <p>${fmt(row.Writeup, "Writeup will appear here once posted.")}</p>
-            <ul class="check-list">
-              <li>Odds: ${fmt(row.Odds)}</li>
-              <li>Book: ${fmt(row.Sportsbook)}</li>
-              <li>Confidence: ${fmt(row.Confidence)}</li>
-              <li>EV Edge: ${fmt(row["EV Edge"])}</li>
-            </ul>
-          </div>
-          <a class="btn btn-primary" href="premium.html">Unlock Full Breakdown</a>
-        </div>
-      `;
-    }
-
-    function renderBoards(activeRows) {
-      const freeTarget = document.getElementById("free-picks");
-      const vipTarget = document.getElementById("vip-picks");
-
-      const freeRows = activeRows.filter(row => !isVip(row));
-      const vipRows = activeRows.filter(row => isVip(row));
-
-      if (freeRows.length) {
-        freeTarget.innerHTML = freeRows.map(row => renderPickCard(row)).join("");
-      } else {
-        freeTarget.innerHTML = `
-          <div class="empty" style="grid-column:1/-1;">
-            <strong>No public card posted yet.</strong>
-            Add active rows to the Active Picks sheet with Access = Free or leave Access blank to show them here.
-          </div>
-        `;
-      }
-
-      if (vipRows.length) {
-        const unlocked = localStorage.getItem("micksVipUnlocked") === "yes";
-        vipTarget.classList.toggle("blurred", !unlocked);
-        vipTarget.innerHTML = vipRows.map(row => renderPickCard(row, { full: true, locked: !unlocked })).join("");
-      } else {
-        vipTarget.classList.remove("blurred");
-        vipTarget.innerHTML = `
-          <div class="empty" style="grid-column:1/-1;">
-            <strong>No VIP card posted yet.</strong>
-            Add active rows to the Active Picks sheet with Access = VIP to show locked premium plays here.
-          </div>
-        `;
-      }
-    }
-
-    function updateHeroStats(activeRows, resultRows) {
-      const activeCount = activeRows.length;
-      const aTier = activeRows.filter(r => clean(r.Grade).toUpperCase().startsWith("A")).length;
-
-      document.getElementById("stat-active").textContent = activeCount;
-      document.getElementById("stat-a-tier").textContent = activeCount ? aTier : "No Card Yet";
-
-      const graded = resultRows.filter(r => ["win","loss"].includes(lower(r.Result)));
-      const wins = graded.filter(r => lower(r.Result) === "win").length;
-      const losses = graded.filter(r => lower(r.Result) === "loss").length;
-      const total = wins + losses;
-      const units = resultRows.reduce((sum, r) => sum + numeric(r["Profit/Loss"]), 0);
-
-      document.getElementById("stat-winrate").textContent = total ? `${Math.round((wins / total) * 100)}%` : "Tracking";
-      document.getElementById("stat-units").textContent = resultRows.length ? `${units >= 0 ? "+" : ""}${units.toFixed(2)}` : "Tracking";
-    }
-
-    function updateResults(resultRows) {
-      const graded = resultRows.filter(r => ["win","loss"].includes(lower(r.Result)));
-      const wins = graded.filter(r => lower(r.Result) === "win").length;
-      const losses = graded.filter(r => lower(r.Result) === "loss").length;
-      const units = resultRows.reduce((sum, r) => sum + numeric(r["Profit/Loss"]), 0);
-
-      const aRows = graded.filter(r => clean(r.Grade).toUpperCase().startsWith("A"));
-      const aWins = aRows.filter(r => lower(r.Result) === "win").length;
-      const aLosses = aRows.filter(r => lower(r.Result) === "loss").length;
-
-      document.getElementById("result-record").textContent = `${wins}-${losses}`;
-      document.getElementById("result-a-record").textContent = `${aWins}-${aLosses}`;
-      document.getElementById("result-units").textContent = `${units >= 0 ? "+" : ""}${units.toFixed(2)}`;
-
-      const byMarket = {};
-      graded.forEach(row => {
-        const key = fmt(row["Bet Type"], "Market");
-        if (!byMarket[key]) byMarket[key] = { wins: 0, losses: 0 };
-        if (lower(row.Result) === "win") byMarket[key].wins++;
-        if (lower(row.Result) === "loss") byMarket[key].losses++;
-      });
-
-      let bestMarket = "Tracking";
-      let bestRate = -1;
-      Object.entries(byMarket).forEach(([market, data]) => {
-        const games = data.wins + data.losses;
-        const rate = games ? data.wins / games : 0;
-        if (games >= 2 && rate > bestRate) {
-          bestRate = rate;
-          bestMarket = market;
-        }
-      });
-      document.getElementById("result-market").textContent = bestMarket;
-
-      const recent = resultRows
-        .filter(r => clean(r.Pick))
-        .slice(-8)
-        .reverse();
-
-      const tbody = document.getElementById("recent-results");
-      if (!recent.length) {
-        tbody.innerHTML = `<tr><td colspan="5">No archived results posted yet.</td></tr>`;
-        return;
-      }
-
-      tbody.innerHTML = recent.map(row => `
+      document.getElementById("resultsBody").innerHTML = rows.slice(-10).reverse().map(r=>`
         <tr>
-          <td>${fmt(row.Date)}</td>
-          <td><strong style="color:#fff0bf;">${fmt(row.Pick)}</strong><br><span style="color:#a99b82;">${fmt(row.Game)}</span></td>
-          <td>${fmt(row.Grade)}</td>
-          <td class="${lower(row.Result) === "win" ? "positive" : lower(row.Result) === "loss" ? "negative" : ""}">${fmt(row.Result)}</td>
-          <td class="${moneyClass(row["Profit/Loss"])}">${fmt(row["Profit/Loss"], "0")}</td>
+          <td>${esc(r.Date)}</td>
+          <td>${esc(r.League || r.Sport)}</td>
+          <td>${esc(r.Game)}</td>
+          <td>${esc(r.Pick)}</td>
+          <td class="${cls(r.Result)}">${esc(r.Result)}</td>
+          <td class="${cls(r.Result)}">${esc(r["Profit/Loss"])}</td>
         </tr>
-      `).join("");
+      `).join("") || `<tr><td colspan="6">No completed picks yet.</td></tr>`;
     }
 
-    function setupVipLogin() {
-      const button = document.getElementById("vip-unlock");
-      const input = document.getElementById("vip-password");
-      const message = document.getElementById("vip-message");
-
-      function unlock() {
-        if (input.value.trim() === VIP_PASSWORD) {
-          localStorage.setItem("micksVipUnlocked", "yes");
-          message.textContent = "VIP Vault unlocked on this device.";
-          message.style.color = "#74e39a";
-          document.getElementById("vip-picks").classList.remove("blurred");
-        } else {
-          message.textContent = "Incorrect VIP password.";
-          message.style.color = "#ffb0b0";
-        }
-      }
-
-      button.addEventListener("click", unlock);
-      input.addEventListener("keydown", (event) => {
-        if (event.key === "Enter") unlock();
-      });
-
-      if (localStorage.getItem("micksVipUnlocked") === "yes") {
-        message.textContent = "VIP Vault unlocked on this device.";
-        message.style.color = "#74e39a";
-        document.getElementById("vip-picks").classList.remove("blurred");
-      }
+    async function load(){
+      try{ render(await getRows()); }
+      catch(e){ document.getElementById("resultsBody").innerHTML = `<tr><td colspan="6">Results sync unavailable. Check sheet sharing.</td></tr>`; }
     }
 
-    async function init() {
-      setupVipLogin();
-
-      try {
-        const [activeRaw, resultsRaw] = await Promise.all([
-          fetchSheet("Active Picks"),
-          fetchSheet("Results Archive")
-        ]);
-
-        const activeRows = activeRaw.filter(isActive);
-        const resultsRows = resultsRaw.filter(isFilled);
-
-        const featured = activeRows.find(isFeatured) ||
-          activeRows.slice().sort((a, b) => gradeScore(b.Grade) - gradeScore(a.Grade) || numeric(b["EV Edge"]) - numeric(a["EV Edge"]))[0];
-
-        renderFeatured(featured);
-        renderBoards(activeRows);
-        updateHeroStats(activeRows, resultsRows);
-        updateResults(resultsRows);
-
-      } catch (error) {
-        console.error(error);
-        renderFeatured(null);
-        document.getElementById("free-picks").innerHTML = `
-          <div class="empty" style="grid-column:1/-1;">
-            <strong>Board could not load.</strong>
-            Check that the Google Sheet is published or shared publicly for the site to read.
-          </div>
-        `;
-        document.getElementById("recent-results").innerHTML = `
-          <tr><td colspan="5">Results could not load from the sheet.</td></tr>
-        `;
-      }
-    }
-
-    init();
+    document.addEventListener("DOMContentLoaded", load);
+    setInterval(load, 30000);
   </script>
 </body>
 </html>
