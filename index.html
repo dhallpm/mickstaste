@@ -444,7 +444,18 @@
     }
     .access-pill.vip{color:#090909;background:linear-gradient(135deg,#8f650f,#ffe28a 55%,#c89b3c)}
     .access-pill.free{color:#dfffea;border-color:rgba(53,229,140,.28);background:rgba(53,229,140,.08)}
-    .grade-pill{color:var(--green);border-color:rgba(53,229,140,.26)}
+    .grade-pill{
+      min-width:46px;
+      justify-content:center;
+      border:0;
+      color:#080808;
+      background:linear-gradient(135deg,#35e58c,#bfffdc);
+      box-shadow:0 0 20px rgba(53,229,140,.13);
+    }
+    .grade-pill.grade-a{background:linear-gradient(135deg,#0dbf72,#35e58c 45%,#c9ffdf);color:#04130b}
+    .grade-pill.grade-b{background:linear-gradient(135deg,#8f650f,#ffe28a 55%,#c89b3c);color:#090909}
+    .grade-pill.grade-c{background:linear-gradient(135deg,#252525,#b8b8b8);color:#090909}
+    .grade-pill.grade-pass{background:rgba(255,255,255,.10);color:#d8cba3;border:1px solid rgba(255,255,255,.12)}
     .pick-game{
       color:var(--muted);
       font-size:13px;
@@ -495,6 +506,41 @@
       font-weight:900;
       font-size:13px;
     }
+
+    .vip-lock-card{
+      grid-column:1/-1;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      padding:24px;
+      border-radius:26px;
+      border:1px solid rgba(255,226,138,.28);
+      background:
+        radial-gradient(circle at 92% 8%,rgba(255,226,138,.18),transparent 38%),
+        radial-gradient(circle at 8% 100%,rgba(194,68,255,.16),transparent 34%),
+        linear-gradient(180deg,rgba(17,13,6,.96),rgba(5,5,5,.96));
+      box-shadow:0 26px 76px rgba(0,0,0,.58),0 0 34px rgba(255,226,138,.08);
+    }
+    .vip-lock-card h3{margin:0 0 8px;color:var(--gold);text-transform:uppercase;letter-spacing:-.4px}
+    .vip-lock-card p{margin:0;color:var(--muted);line-height:1.5}
+    .vip-lock-badge{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-width:92px;
+      min-height:38px;
+      padding:0 14px;
+      border-radius:999px;
+      color:#090909;
+      font-size:12px;
+      font-weight:1000;
+      letter-spacing:1px;
+      text-transform:uppercase;
+      background:linear-gradient(135deg,#8f650f,#ffe28a 55%,#c89b3c);
+      box-shadow:0 18px 42px rgba(255,226,138,.16);
+      white-space:nowrap;
+    }
     .empty-state{
       grid-column:1/-1;
       padding:30px;
@@ -543,7 +589,7 @@
 
       <nav class="links">
         <a href="index.html">Home</a>
-        <a href="#active-picks">Active Picks</a>
+        <a href="#active-picks">Free Picks</a>
         <a href="premium.html">VIP Vault</a>
         <a href="./yahgi.html" class="guru-link">♛ Yahgi's Guru Picks</a>
         <a href="#results">Results Archive</a>
@@ -567,14 +613,14 @@
 
           <div class="hero-actions">
             <a href="premium.html" class="btn">Enter VIP Vault</a>
-            <a href="#results" class="btn secondary">View Results</a>
+            <a href="#active-picks" class="btn secondary">View Free Picks</a>
           </div>
         </div>
 
         <div class="hero-card">
           <h2>Live Betting Board</h2>
           <p style="color:var(--muted);line-height:1.6">
-            Active picks, props, VIP releases, closing-line tracking, and archived performance all sync from the Micks Picks sheet.
+            Free active picks, VIP releases, closing-line tracking, and archived performance all sync from the Micks Picks sheet. VIP plays stay inside the VIP Vault.
           </p>
 
           <div class="metric-grid">
@@ -593,8 +639,8 @@
       <div class="container">
         <div class="active-board-head">
           <div>
-            <h2 class="section-title" style="margin-bottom:0">Active Picks Board</h2>
-            <p>Live releases from the Active Picks sheet. VIP cards show full analysis. Free cards show the public writeup.</p>
+            <h2 class="section-title" style="margin-bottom:0">Free Active Picks</h2>
+            <p>Public releases from the Active Picks sheet. VIP plays stay locked inside the VIP Vault and do not display here.</p>
           </div>
           <div class="sync-pill"><span class="sync-dot"></span><span id="activeSync">Syncing Sheet</span></div>
         </div>
@@ -765,16 +811,36 @@
       return s.length > max ? s.slice(0,max).trim() + "..." : s;
     }
 
+    function gradeClass(g){
+      g = String(g || "").trim().toUpperCase();
+      if(g.startsWith("A")) return "grade-a";
+      if(g.startsWith("B")) return "grade-b";
+      if(g.startsWith("C")) return "grade-c";
+      return "grade-pass";
+    }
+
     function renderActive(rows){
       const grid = document.getElementById("activePicksGrid");
       const sync = document.getElementById("activeSync");
       if(!grid) return;
 
-      rows = rows.filter(isActivePick);
-      if(sync) sync.textContent = `${rows.length} Active`;
+      const activeRows = rows.filter(isActivePick);
+      const vipCount = activeRows.filter(r => /vip/i.test(r.Access || "")).length;
+      rows = activeRows.filter(r => !/vip/i.test(r.Access || ""));
+      if(sync) sync.textContent = `${rows.length} Free${vipCount ? ` • ${vipCount} VIP Locked` : ""}`;
+
+      const vipLock = vipCount ? `
+        <div class="vip-lock-card">
+          <div>
+            <h3>${vipCount} VIP Pick${vipCount === 1 ? "" : "s"} Locked</h3>
+            <p>Premium releases are available inside the VIP Vault only. Public visitors see free picks and results here.</p>
+          </div>
+          <a href="premium.html" class="vip-lock-badge">VIP Vault</a>
+        </div>
+      ` : "";
 
       if(!rows.length){
-        grid.innerHTML = `<div class="empty-state">No active picks are currently released. Check that Active Picks has Status = Pregame or Release Status = Released.</div>`;
+        grid.innerHTML = vipLock || `<div class="empty-state">No free active picks are currently released. VIP releases stay inside the VIP Vault.</div>`;
         return;
       }
 
@@ -784,19 +850,17 @@
         return bf - af;
       });
 
-      grid.innerHTML = rows.map(r=>{
+      grid.innerHTML = vipLock + rows.map(r=>{
         const isVip = /vip/i.test(r.Access || "");
         const isFeatured = /yes/i.test(r.Featured || "");
-        const analysis = isVip
-          ? `<div class="pick-analysis"><strong>Full Analysis:</strong> ${esc(shortText(r["Full Analysis"], 780))}</div>`
-          : `<div class="locked-analysis">VIP full analysis locked. Public summary: ${esc(shortText(r.Writeup, 280))}</div>`;
+        const analysis = `<div class="pick-analysis"><strong>Public Summary:</strong> ${esc(shortText(r.Writeup || r["Full Analysis"], 420))}</div>`;
         return `
           <article class="pick-card ${isFeatured ? "featured" : ""}">
             <div class="pick-top">
               <div style="display:flex;gap:8px;flex-wrap:wrap">
                 <span class="league-pill">${esc(r.League || r.Sport)}</span>
                 <span class="access-pill ${isVip ? "vip" : "free"}">${esc(r.Access || "Free")}</span>
-                <span class="grade-pill">${esc(r.Grade || "-")}</span>
+                <span class="grade-pill ${gradeClass(r.Grade)}">${esc(r.Grade || "-")}</span>
               </div>
             </div>
             <div class="pick-game">${esc(fmtDate(r.Date))} • ${esc(r.Game)}</div>
