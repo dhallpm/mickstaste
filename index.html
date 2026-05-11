@@ -1102,6 +1102,53 @@
         width: 100%;
       }
     }
+  
+    /* V2 cleanup: premium-style icon marks instead of letter badges */
+    .brand-mark {
+      color: transparent !important;
+      font-size: 0 !important;
+      position: relative;
+    }
+    .brand-mark::after {
+      content: "";
+      width: 22px;
+      height: 22px;
+      border: 2px solid rgba(7,6,4,.62);
+      border-top-color: transparent;
+      border-right-color: rgba(7,6,4,.25);
+      border-radius: 50%;
+      transform: rotate(-28deg);
+      display: block;
+    }
+    .service-icon {
+      color: transparent !important;
+      font-size: 0 !important;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-icon::before {
+      content: "";
+      position: absolute;
+      inset: 10px;
+      border: 2px solid rgba(7,6,4,.55);
+      border-left-color: transparent;
+      border-radius: 999px;
+      transform: rotate(-30deg);
+    }
+    .service-icon::after {
+      content: "";
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: rgba(7,6,4,.58);
+      right: 12px;
+      top: 12px;
+    }
+    .vip-section::after {
+      content: "" !important;
+    }
+
   </style>
 </head>
 <body>
@@ -1109,7 +1156,7 @@
     <header class="topbar">
       <div class="container nav">
         <a href="#" class="brand" aria-label="Mick's Picks Home">
-          <div class="brand-mark">MP</div>
+          <div class="brand-mark" aria-hidden="true"></div>
           <div>
             <strong>Mick's Picks</strong>
             <span>The Guru's Lair</span>
@@ -1120,7 +1167,7 @@
           <a href="#services">Services</a>
           <a href="#results">Results</a>
           <a href="#education">Education</a>
-          <a href="#vip-vault" class="vip-pill">VIP Login</a>
+          <a href="premium.html" class="vip-pill">VIP Login</a>
         </nav>
       </div>
     </header>
@@ -1154,7 +1201,7 @@
             </p>
             <div class="cta-row">
               <a class="btn btn-primary" href="#free-board">View Free Board</a>
-              <a class="btn btn-secondary" href="#vip-vault">Enter VIP Vault</a>
+              <a class="btn btn-secondary" href="premium.html">Enter VIP Vault</a>
             </div>
           </div>
 
@@ -1269,35 +1316,6 @@
           </div>
         </div>
       </section>
-
-      <section class="section" id="vip-vault">
-        <div class="container vip-section">
-          <div class="vip-content">
-            <div class="vip-lock">
-              <div>
-                <div class="section-kicker">VIP Vault</div>
-                <h2>Unlock Full Card Breakdown</h2>
-                <p>VIP members get full analysis, market notes, injury notes, confidence, cutoffs, source verification, and the deeper Micks Picks reasoning behind every premium play.</p>
-              </div>
-              <div>
-                <div class="vip-login-box">
-                  <input id="vip-password" type="password" placeholder="VIP password" aria-label="VIP password">
-                  <button class="btn btn-primary" id="vip-unlock" type="button">Unlock</button>
-                </div>
-                <div id="vip-message" class="vip-message">VIP content is locked until access is entered.</div>
-              </div>
-            </div>
-
-            <div id="vip-picks" class="board-grid blurred">
-              <div class="empty" style="grid-column:1/-1;">
-                <strong>No VIP card posted yet.</strong>
-                Add active rows to the Active Picks sheet with Access = VIP to show locked premium plays here.
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section class="section" id="services">
         <div class="container">
           <div class="section-head">
@@ -1310,32 +1328,32 @@
 
           <div class="services-grid">
             <article class="service-card highlight">
-              <div class="service-icon">VIP</div>
+              <div class="service-icon" aria-hidden="true"></div>
               <h3>VIP Picks Vault</h3>
               <p>Full analysis, best number, no-bet cutoff, market notes, injury notes, source verification, and customer-ready reasoning.</p>
             </article>
             <article class="service-card">
-              <div class="service-icon">EV</div>
+              <div class="service-icon" aria-hidden="true"></div>
               <h3>Market Watch</h3>
               <p>Opening vs current number, steam direction, best-number timing, and pass points when the edge disappears.</p>
             </article>
             <article class="service-card">
-              <div class="service-icon">P</div>
+              <div class="service-icon" aria-hidden="true"></div>
               <h3>Prop Lab</h3>
               <p>Usage, minutes security, potential assists, rebound environment, turnover pressure, and matchup-created volume.</p>
             </article>
             <article class="service-card">
-              <div class="service-icon">L</div>
+              <div class="service-icon" aria-hidden="true"></div>
               <h3>Live Betting Center</h3>
               <p>Pace checks, halftime adjustments, line movement warnings, foul trouble reads, and market overreaction spots.</p>
             </article>
             <article class="service-card">
-              <div class="service-icon">R</div>
+              <div class="service-icon" aria-hidden="true"></div>
               <h3>Results Desk</h3>
               <p>Win/loss/push tracking, units, A-tier performance, and transparent grading from the archive sheet.</p>
             </article>
             <article class="service-card">
-              <div class="service-icon">101</div>
+              <div class="service-icon" aria-hidden="true"></div>
               <h3>Education Center</h3>
               <p>Simple explanations for EV, units, implied probability, cutoffs, props, parlays, and bankroll discipline.</p>
             </article>
@@ -1428,7 +1446,7 @@
   <nav class="bottom-nav" aria-label="Mobile navigation">
     <a href="#free-board">Free</a>
     <a href="#results">Results</a>
-    <a href="#vip-vault">VIP</a>
+    <a href="premium.html">VIP</a>
     <a href="#education">Learn</a>
   </nav>
 
@@ -1632,7 +1650,7 @@
               <li>EV Edge: ${fmt(row["EV Edge"])}</li>
             </ul>
           </div>
-          <a class="btn btn-primary" href="#vip-vault">Unlock Full Breakdown</a>
+          <a class="btn btn-primary" href="premium.html">Unlock Full Breakdown</a>
         </div>
       `;
     }
