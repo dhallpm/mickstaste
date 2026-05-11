@@ -1,1863 +1,211 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mick's Picks Premium</title><style>
-:root{--text:#fff6df;--muted:#bdb39b;--gold:#d4af37;--gold2:#ffe28a;--green:#36d47a;--red:#ff6464;--blue:#7bb7ff;--line:rgba(212,175,55,.22)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:radial-gradient(circle at 10% 0%,rgba(212,175,55,.20),transparent 30%),radial-gradient(circle at 95% 10%,rgba(54,212,122,.10),transparent 28%),linear-gradient(180deg,#050505,#010101 70%)}a{text-decoration:none;color:inherit}.container{max-width:1240px;margin:0 auto;padding:0 22px}
-.header{position:sticky;top:0;z-index:50;background:rgba(3,3,3,.92);border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}.nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 0}.brand{display:flex;align-items:center;gap:14px}.logo{width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#111,#332500);border:3px solid var(--gold);box-shadow:0 0 30px rgba(212,175,55,.55);color:var(--gold2);font-weight:950;font-size:22px}.brand h1{font-size:25px;margin:0}.brand small{display:block;color:var(--gold2);font-size:11px;letter-spacing:2.2px;text-transform:uppercase;margin-top:3px}
-.links{display:flex;align-items:center;gap:14px;flex-wrap:wrap;color:#eadfbf;font-size:14px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 17px;border-radius:999px;border:1px solid var(--gold);background:linear-gradient(135deg,#a87710,#ffe28a 55%,#c79b26);color:#111;font-weight:900;box-shadow:0 12px 30px rgba(212,175,55,.20)}.btn.dark{background:#0b0b0b;color:var(--gold2)}
-.ticker{overflow:hidden;border-bottom:1px solid rgba(212,175,55,.16);background:linear-gradient(90deg,#080808,#111,#080808);color:#e7d7a8;font-size:13px;white-space:nowrap}.ticker-track{display:inline-block;padding:9px 0;animation:scroll 30s linear infinite}.ticker span{margin-right:36px}.ticker b{color:var(--gold2)}@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.hero{padding:66px 0 40px}.kicker{color:var(--gold2);font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:900}.hero h2{font-size:clamp(44px,7vw,88px);line-height:.92;margin:12px 0 18px;letter-spacing:-2px}.hero p{font-size:18px;line-height:1.6;color:#d6cbb2;max-width:900px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
-.vipbar{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:28px}.vip,.card{background:linear-gradient(180deg,rgba(255,255,255,.065),rgba(255,255,255,.018));border:1px solid var(--line);border-radius:24px;padding:20px;box-shadow:0 20px 60px rgba(0,0,0,.38)}.vip b{display:block;font-size:23px;color:#fff}.vip span{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
-.section{padding:40px 0}.section h2{font-size:36px;margin:0 0 8px}.sub{color:var(--muted);line-height:1.5}.grid{display:grid;gap:18px}.two{grid-template-columns:repeat(2,1fr)}.board-head{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:16px}
-.badge{display:inline-flex;border:1px solid rgba(212,175,55,.45);background:rgba(212,175,55,.09);color:var(--gold2);border-radius:999px;padding:7px 11px;font-size:12px;font-weight:900;letter-spacing:.6px;text-transform:uppercase}.badge.green{border-color:rgba(54,212,122,.45);color:var(--green);background:rgba(54,212,122,.08);box-shadow:0 0 18px rgba(54,212,122,.22)}.badge.blue{border-color:rgba(123,183,255,.45);color:var(--blue);background:rgba(123,183,255,.08)}.badge.red{border-color:rgba(255,100,100,.45);color:var(--red);background:rgba(255,100,100,.08)}
-.pick-card{border-left:5px solid var(--gold);margin:15px 0;position:relative;overflow:hidden;box-shadow:0 18px 55px rgba(0,0,0,.45),0 0 28px rgba(212,175,55,.08)}.pick-card.featured{border-left-color:var(--green);background:linear-gradient(180deg,rgba(54,212,122,.10),rgba(255,255,255,.02))}.pick-card::before{display:none}.pick-title{font-size:30px;font-weight:950;margin-top:8px;background:linear-gradient(90deg,#fff6df,#ffe28a);-webkit-background-clip:text;background-clip:text;color:transparent}.pick-top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.game{color:#f0dfb6;margin-top:5px;font-size:15px}.meta{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.meta span{background:linear-gradient(180deg,#111,#070707);border:1px solid rgba(212,175,55,.16);border-radius:999px;padding:7px 10px;font-size:12px;color:#eee0b8}
-.analysis{background:#080808;border:1px solid rgba(212,175,55,.15);border-radius:18px;padding:16px;margin-top:12px}.analysis h4{margin:0 0 8px;color:var(--gold2);font-size:15px;text-transform:uppercase;letter-spacing:1.2px}.writeup{white-space:pre-line;color:#f1e6c8;line-height:1.62;font-size:15px}.notes{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}.note{background:#0b0b0b;border:1px solid rgba(212,175,55,.12);border-radius:15px;padding:12px;color:#c9bea2;font-size:13px;line-height:1.45}.note strong{color:var(--gold2)}
-.table{width:100%;border-collapse:separate;border-spacing:0 9px}.table th{text-align:left;color:var(--gold2);font-size:12px;text-transform:uppercase;letter-spacing:1px;padding:8px}.table td{background:#090909;border-top:1px solid rgba(212,175,55,.12);border-bottom:1px solid rgba(212,175,55,.12);padding:12px;color:#eadfbf;font-size:13px}.table td:first-child{border-left:1px solid rgba(212,175,55,.12);border-radius:14px 0 0 14px}.table td:last-child{border-right:1px solid rgba(212,175,55,.12);border-radius:0 14px 14px 0}
-.loading,.empty,.error{padding:20px;border:1px dashed rgba(212,175,55,.3);border-radius:18px;background:#090909;color:#c9bea2}.error{border-color:#7a3333;color:#ffbaba}.footer{border-top:1px solid var(--line);padding:32px 0;color:#a99f83;font-size:13px;margin-top:30px}
-@media(max-width:960px){.vipbar{grid-template-columns:repeat(2,1fr)}.two,.notes{grid-template-columns:1fr}.links{display:none}.table{display:block;overflow:auto}}@media(max-width:700px){.hero{padding:42px 0 28px}.hero h2{font-size:42px}.pick-title{font-size:23px}.card,.vip{border-radius:20px;padding:16px}.meta span{font-size:11px}}
-
-/* Premium Login Upgrade */
-body.locked #premiumApp{
-  filter: blur(10px);
-  transform: scale(.995);
-  pointer-events:none;
-  user-select:none;
-}
-.vip-login{
-  position:fixed;
-  inset:0;
-  z-index:9999;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:24px;
-  background:
-    radial-gradient(circle at 20% 10%,rgba(212,175,55,.24),transparent 32%),
-    radial-gradient(circle at 80% 20%,rgba(54,212,122,.12),transparent 28%),
-    rgba(0,0,0,.86);
-  backdrop-filter:blur(14px);
-}
-.vip-login-card{
-  width:min(520px,100%);
-  border:1px solid rgba(212,175,55,.42);
-  border-radius:30px;
-  padding:30px;
-  background:linear-gradient(180deg,rgba(20,20,20,.98),rgba(6,6,6,.98));
-  box-shadow:0 35px 100px rgba(0,0,0,.7),0 0 45px rgba(212,175,55,.18);
-  text-align:center;
-}
-.vip-lock{
-  width:76px;
-  height:76px;
-  margin:0 auto 18px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#111;
-  font-weight:950;
-  font-size:28px;
-  background:linear-gradient(135deg,#a87710,#ffe28a 55%,#c79b26);
-  box-shadow:0 0 28px rgba(212,175,55,.38);
-}
-.vip-login-card h2{
-  margin:0 0 8px;
-  font-size:34px;
-  color:#fff6df;
-}
-.vip-login-card p{
-  margin:0 auto 20px;
-  max-width:390px;
-  color:#cfc3a7;
-  line-height:1.55;
-}
-.vip-input{
-  width:100%;
-  padding:16px 18px;
-  border-radius:16px;
-  border:1px solid rgba(212,175,55,.35);
-  background:#050505;
-  color:#fff6df;
-  outline:none;
-  font-size:17px;
-  text-align:center;
-  margin:8px 0 14px;
-  box-shadow:inset 0 0 18px rgba(212,175,55,.05);
-}
-.vip-input:focus{
-  border-color:#ffe28a;
-  box-shadow:0 0 0 4px rgba(212,175,55,.12),inset 0 0 18px rgba(212,175,55,.05);
-}
-.vip-error{
-  min-height:22px;
-  color:#ff8a8a;
-  font-size:13px;
-  margin-top:10px;
-}
-.vip-small{
-  font-size:12px;
-  color:#9e9379;
-  margin-top:16px;
-}
-
-
-/* VIP Premium Experience Upgrade */
-.vip-login{animation:vipFadeIn .35s ease both}
-.vip-login-card{position:relative;overflow:hidden;animation:vipPop .45s cubic-bezier(.2,.9,.2,1) both}
-.vip-login-card:before{content:"";position:absolute;inset:-2px;background:linear-gradient(120deg,transparent,rgba(255,226,138,.18),transparent);transform:translateX(-120%);animation:vipSweep 3.2s ease-in-out infinite}
-.vip-login-card>*{position:relative;z-index:1}
-.vip-lock{animation:vipPulse 2.4s ease-in-out infinite}
-body.unlocking #premiumApp{animation:vipUnlockContent .7s ease both}
-body.unlocking .vip-login{animation:vipFadeOut .6s ease forwards}
-.vip-stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:24px 0 0}
-.vip-stat{border:1px solid rgba(212,175,55,.25);border-radius:22px;padding:18px;background:radial-gradient(circle at 100% 0%,rgba(212,175,55,.16),transparent 45%),linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.015));box-shadow:0 18px 50px rgba(0,0,0,.32),inset 0 0 20px rgba(212,175,55,.04)}
-.vip-stat strong{display:block;font-size:26px;color:#fff6df}
-.vip-stat span{display:block;margin-top:4px;color:#bdb39b;font-size:11px;letter-spacing:1px;text-transform:uppercase}
-.vip-badge-row{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 0}
-.vip-chip{display:inline-flex;align-items:center;gap:7px;border:1px solid rgba(212,175,55,.35);color:#ffe28a;background:rgba(212,175,55,.08);border-radius:999px;padding:8px 12px;font-size:12px;font-weight:900;letter-spacing:.5px;text-transform:uppercase;box-shadow:0 0 18px rgba(212,175,55,.08)}
-.vip-chip.green{color:#36d47a;border-color:rgba(54,212,122,.35);background:rgba(54,212,122,.08)}
-.pick-card{position:relative}
-.pick-card:after{content:"VIP";position:absolute;top:18px;right:18px;font-size:11px;letter-spacing:1.4px;font-weight:950;color:#111;background:linear-gradient(135deg,#a87710,#ffe28a 55%,#c79b26);border-radius:999px;padding:6px 9px;box-shadow:0 0 18px rgba(212,175,55,.28)}
-@keyframes vipFadeIn{from{opacity:0}to{opacity:1}}
-@keyframes vipFadeOut{to{opacity:0;visibility:hidden}}
-@keyframes vipPop{from{opacity:0;transform:translateY(18px) scale(.96)}to{opacity:1;transform:translateY(0) scale(1)}}
-@keyframes vipSweep{0%,45%{transform:translateX(-120%)}75%,100%{transform:translateX(120%)}}
-@keyframes vipPulse{0%,100%{box-shadow:0 0 28px rgba(212,175,55,.38);transform:scale(1)}50%{box-shadow:0 0 46px rgba(212,175,55,.62);transform:scale(1.04)}}
-@keyframes vipUnlockContent{0%{filter:blur(10px);transform:scale(.995);opacity:.72}100%{filter:blur(0);transform:scale(1);opacity:1}}
-@media(max-width:900px){.vip-stat-grid{grid-template-columns:repeat(2,1fr)}.vip-login-card{padding:24px}}
-@media(max-width:620px){.vip-login{align-items:flex-end;padding:14px}.vip-login-card{border-radius:26px;padding:22px}.vip-login-card h2{font-size:28px}.vip-stat-grid{grid-template-columns:1fr}.vip-chip{font-size:11px;padding:7px 10px}.pick-card:after{top:14px;right:14px;font-size:10px}}
-
-
-.pick-top{
-  display:flex !important;
-  justify-content:space-between !important;
-  align-items:flex-start !important;
-  gap:18px !important;
-  flex-wrap:wrap !important;
-}
-
-.pick-top-right{
-  display:flex;
-  flex-direction:column;
-  align-items:flex-end;
-  justify-content:flex-start;
-  gap:10px;
-  padding-right:95px;
-  min-width:220px;
-}
-
-.pick-card:after{
-  content:"VIP";
-  position:absolute;
-  top:18px;
-  right:18px;
-  padding:6px 12px;
-  border-radius:999px;
-  font-size:11px;
-  font-weight:900;
-  letter-spacing:1px;
-  background:linear-gradient(135deg,#a87710,#ffe28a 55%,#c79b26);
-  color:#111;
-  box-shadow:0 0 18px rgba(212,175,55,.28);
-  z-index:5;
-}
-
-@media(max-width:700px){
-  .pick-top-right{
-    width:100%;
-    align-items:flex-start;
-    padding-right:0;
-    margin-top:10px;
-  }
-
-  .pick-card:after{
-    top:14px;
-    right:14px;
-  }
-}
-
-
-/* Mobile Sportsbook Upgrade */
-.mobile-bottom-nav{
-  display:none;
-}
-
-.analysis-toggle{
-  display:none;
-  width:100%;
-  margin-top:10px;
-  border:1px solid rgba(212,175,55,.32);
-  border-radius:999px;
-  padding:10px 12px;
-  background:rgba(212,175,55,.08);
-  color:#ffe28a;
-  font-weight:900;
-  letter-spacing:.4px;
-}
-
-@media(max-width:760px){
-  body{
-    padding-bottom:82px;
-    overflow-x:hidden;
-  }
-
-  .container{
-    padding-left:14px;
-    padding-right:14px;
-  }
-
-  .header{
-    position:sticky;
-  }
-
-  .nav{
-    padding:10px 0;
-  }
-
-  .brand{
-    gap:10px;
-  }
-
-  .logo{
-    width:46px !important;
-    height:46px !important;
-    font-size:17px !important;
-  }
-
-  .brand h1{
-    font-size:18px !important;
-  }
-
-  .brand small{
-    font-size:9px !important;
-    letter-spacing:1.5px !important;
-  }
-
-  .links{
-    display:none !important;
-  }
-
-  .ticker{
-    font-size:11px;
-  }
-
-  .hero{
-    padding:28px 0 24px !important;
-  }
-
-  .kicker{
-    font-size:11px;
-    letter-spacing:1.4px;
-  }
-
-  .hero h2{
-    font-size:36px !important;
-    line-height:.98 !important;
-    margin:10px 0 12px !important;
-  }
-
-  .hero p{
-    font-size:15px !important;
-    line-height:1.48 !important;
-  }
-
-  .actions{
-    gap:8px;
-  }
-
-  .btn{
-    width:100%;
-    padding:12px 14px;
-    font-size:14px;
-  }
-
-  .vipbar,.vip-stat-grid{
-    grid-template-columns:repeat(2,1fr) !important;
-    gap:10px !important;
-    margin-top:18px !important;
-  }
-
-  .vip,.vip-stat{
-    padding:14px !important;
-    border-radius:18px !important;
-  }
-
-  .vip b,.vip-stat strong{
-    font-size:20px !important;
-  }
-
-  .vip span,.vip-stat span{
-    font-size:9.5px !important;
-  }
-
-  .section{
-    padding:26px 0 !important;
-  }
-
-  .section h2{
-    font-size:27px !important;
-  }
-
-  .board-head{
-    align-items:flex-start !important;
-  }
-
-  .card,.pick-card{
-    padding:15px !important;
-    border-radius:19px !important;
-    margin:12px 0 !important;
-  }
-
-  .pick-card{
-    border-left-width:4px !important;
-  }
-
-  .pick-title{
-    font-size:24px !important;
-    line-height:1.08 !important;
-    padding-right:54px;
-  }
-
-  .game{
-    font-size:13px !important;
-  }
-
-  .pick-top{
-    display:block !important;
-  }
-
-  .pick-top-right{
-    width:100% !important;
-    align-items:flex-start !important;
-    padding-right:0 !important;
-    margin-top:10px !important;
-  }
-
-  .pick-card:after{
-    top:15px !important;
-    right:14px !important;
-    font-size:9px !important;
-    padding:5px 8px !important;
-  }
-
-  .badge{
-    font-size:10px !important;
-    padding:6px 8px !important;
-    margin-bottom:5px;
-  }
-
-  .meta{
-    gap:6px !important;
-    margin:10px 0 !important;
-  }
-
-  .meta span{
-    font-size:10px !important;
-    padding:6px 8px !important;
-    max-width:100%;
-  }
-
-  .analysis{
-    padding:12px !important;
-    border-radius:15px !important;
-    max-height:220px;
-    overflow:hidden;
-    position:relative;
-  }
-
-  .analysis:after{
-    content:"";
-    position:absolute;
-    left:0;
-    right:0;
-    bottom:0;
-    height:60px;
-    background:linear-gradient(transparent,#080808);
-    pointer-events:none;
-  }
-
-  .analysis.open{
-    max-height:none;
-  }
-
-  .analysis.open:after{
-    display:none;
-  }
-
-  .analysis-toggle{
-    display:block;
-  }
-
-  .analysis h4{
-    font-size:12px !important;
-  }
-
-  .writeup{
-    font-size:13px !important;
-    line-height:1.52 !important;
-  }
-
-  .notes{
-    grid-template-columns:1fr !important;
-    gap:8px !important;
-  }
-
-  .note{
-    padding:10px !important;
-    font-size:12px !important;
-    border-radius:13px !important;
-  }
-
-  .table{
-    min-width:640px;
-  }
-
-  .table-wrap{
-    overflow-x:auto;
-    -webkit-overflow-scrolling:touch;
-  }
-
-  .mobile-bottom-nav{
-    position:fixed;
-    left:10px;
-    right:10px;
-    bottom:10px;
-    z-index:9998;
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:6px;
-    padding:8px;
-    border:1px solid rgba(212,175,55,.28);
-    border-radius:22px;
-    background:rgba(5,5,5,.92);
-    backdrop-filter:blur(16px);
-    box-shadow:0 18px 45px rgba(0,0,0,.55),0 0 25px rgba(212,175,55,.11);
-  }
-
-  .mobile-bottom-nav a{
-    text-align:center;
-    font-size:11px;
-    color:#ffe28a;
-    padding:9px 5px;
-    border-radius:16px;
-    background:rgba(212,175,55,.07);
-    border:1px solid rgba(212,175,55,.10);
-    font-weight:900;
-  }
-
-  .vip-login{
-    padding:12px !important;
-    align-items:flex-end !important;
-  }
-
-  .vip-login-card{
-    border-radius:24px !important;
-    padding:22px !important;
-  }
-
-  .vip-login-card h2{
-    font-size:27px !important;
-  }
-
-  .vip-login-card p{
-    font-size:14px !important;
-  }
-
-  .vip-input{
-    font-size:16px !important;
-    padding:14px !important;
-  }
-}
-
-@media(max-width:420px){
-  .hero h2{
-    font-size:31px !important;
-  }
-
-  .vipbar,.vip-stat-grid{
-    grid-template-columns:1fr 1fr !important;
-  }
-
-  .pick-title{
-    font-size:21px !important;
-  }
-
-  .meta span{
-    font-size:9.5px !important;
-  }
-}
-
-
-/* ===== MICKS PICKS LEAGUE LOGO BRANDING ===== */
-.league-strip{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:18px}
-.league-logo,.sport-logo{display:inline-flex;align-items:center;justify-content:center;min-width:48px;height:30px;padding:0 10px;border-radius:999px;font-size:11px;font-weight:1000;letter-spacing:.9px;line-height:1;color:#fff;border:1px solid rgba(255,255,255,.14);box-shadow:0 8px 25px rgba(0,0,0,.28),inset 0 0 16px rgba(255,255,255,.05)}
-.logo-nba{background:linear-gradient(135deg,#17408B 0 48%,#fff 48% 52%,#C9082A 52%)}
-.logo-nhl{background:linear-gradient(135deg,#111,#444);border-color:rgba(255,255,255,.25)}
-.logo-ufc{background:linear-gradient(135deg,#111,#8b0000);border-color:rgba(255,80,80,.28)}
-.logo-wnba{background:linear-gradient(135deg,#ff6f00,#111);border-color:rgba(255,145,0,.35)}
-.logo-nfl{background:linear-gradient(135deg,#013369,#D50A0A);border-color:rgba(255,255,255,.22)}
-.logo-mlb{background:linear-gradient(135deg,#002D72 0 50%,#D50032 50%);border-color:rgba(255,255,255,.22)}
-.logo-props{background:linear-gradient(135deg,#5b2cff,#111);border-color:rgba(155,120,255,.35)}
-.logo-parlay{background:linear-gradient(135deg,#d4af37,#111);color:#111;border-color:rgba(255,226,138,.35)}
-.sport-tabs{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0 0}
-.sport-tab{display:flex;align-items:center;gap:8px;border:1px solid rgba(212,175,55,.18);background:rgba(255,255,255,.035);border-radius:999px;padding:8px 12px 8px 8px;color:#eadfbf;font-size:13px;font-weight:900;box-shadow:0 12px 30px rgba(0,0,0,.22)}
-.pick-league-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:9px}
-.sport-widget-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px}
-.sport-widget{display:flex;align-items:center;gap:10px;border:1px solid rgba(212,175,55,.18);border-radius:20px;background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.015));padding:14px}
-.sport-widget strong{display:block;color:#fff6df;font-size:17px}.sport-widget span:last-child{display:block;color:#bdb39b;font-size:11px;text-transform:uppercase;letter-spacing:.8px;margin-top:3px}
-@media(max-width:900px){.sport-widget-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:620px){.league-strip,.sport-tabs{gap:7px}.league-logo,.sport-logo{height:27px;min-width:42px;font-size:9.5px;padding:0 8px}.sport-tab{font-size:11px;padding:7px 10px 7px 7px}.sport-widget-grid{grid-template-columns:1fr 1fr}.sport-widget{padding:11px;border-radius:16px}.sport-widget strong{font-size:14px}}
-
-
-/* ===== VIP MEMBER EXPERIENCE UPGRADE ===== */
-.vip-command-center{
-  margin-top:24px;
-}
-.vip-member-card{
-  position:relative;
-  overflow:hidden;
-  border:1px solid rgba(255,226,138,.26);
-  border-radius:28px;
-  padding:22px;
-  background:
-    radial-gradient(circle at 100% 0%,rgba(255,226,138,.20),transparent 36%),
-    linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
-  box-shadow:0 24px 70px rgba(0,0,0,.48),0 0 40px rgba(255,226,138,.10);
-}
-.vip-member-card:before{
-  content:"";
-  position:absolute;
-  inset:-30%;
-  background:linear-gradient(120deg,transparent,rgba(255,226,138,.12),transparent);
-  animation:vipCardSweep 6s linear infinite;
-  pointer-events:none;
-}
-.vip-member-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.2fr .8fr;gap:18px;align-items:center}
-.member-badge{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  padding:10px 14px;
-  border-radius:999px;
-  color:#111;
-  background:linear-gradient(135deg,#a87710,#ffe28a 55%,#c79b26);
-  font-weight:1000;
-  box-shadow:0 0 26px rgba(255,226,138,.24);
-}
-.vip-rank{
-  font-size:42px;
-  font-weight:1000;
-  line-height:.95;
-  margin:14px 0 8px;
-  color:#fff6df;
-  letter-spacing:-1.5px;
-}
-.vip-rank small{
-  display:block;
-  font-size:13px;
-  color:#bdb39b;
-  letter-spacing:1.4px;
-  text-transform:uppercase;
-  margin-top:8px;
-}
-.vip-rank-meter{
-  height:12px;
-  border-radius:999px;
-  background:rgba(255,255,255,.08);
-  overflow:hidden;
-  border:1px solid rgba(255,226,138,.18);
-  margin-top:14px;
-}
-.vip-rank-fill{
-  height:100%;
-  width:78%;
-  border-radius:999px;
-  background:linear-gradient(90deg,#36d47a,#ffe28a);
-  box-shadow:0 0 20px rgba(54,212,122,.22);
-}
-.release-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:12px;
-  margin-top:18px;
-}
-.release-card{
-  border:1px solid rgba(212,175,55,.18);
-  border-radius:20px;
-  padding:15px;
-  background:rgba(0,0,0,.28);
-}
-.release-card strong{
-  display:block;
-  font-size:22px;
-  color:#fff6df;
-}
-.release-card span{
-  display:block;
-  margin-top:5px;
-  color:#bdb39b;
-  font-size:11px;
-  letter-spacing:1px;
-  text-transform:uppercase;
-}
-.timer-card{
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-}
-.countdown-box{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:8px;
-}
-.countdown-unit{
-  background:#050505;
-  border:1px solid rgba(255,226,138,.22);
-  border-radius:18px;
-  padding:12px 8px;
-  text-align:center;
-}
-.countdown-unit b{
-  display:block;
-  font-size:26px;
-  color:#ffe28a;
-}
-.countdown-unit span{
-  color:#bdb39b;
-  font-size:10px;
-  letter-spacing:1px;
-  text-transform:uppercase;
-}
-.drop-feed{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:14px;
-  margin-top:16px;
-}
-.drop-card{
-  position:relative;
-  border:1px solid rgba(212,175,55,.18);
-  border-radius:22px;
-  padding:18px;
-  background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.015));
-  min-height:130px;
-}
-.drop-lock{
-  position:absolute;
-  top:13px;
-  right:13px;
-  width:30px;
-  height:30px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:rgba(255,226,138,.12);
-  border:1px solid rgba(255,226,138,.28);
-  color:#ffe28a;
-}
-.drop-card h3{
-  margin:0 36px 8px 0;
-  color:#fff6df;
-}
-.drop-card p{
-  color:#bdb39b;
-  line-height:1.45;
-  margin:0;
-  font-size:13px;
-}
-.drop-status{
-  margin-top:14px;
-  display:inline-flex;
-  align-items:center;
-  gap:6px;
-  border-radius:999px;
-  padding:7px 10px;
-  font-size:11px;
-  font-weight:1000;
-  letter-spacing:.5px;
-  text-transform:uppercase;
-  color:#36d47a;
-  background:rgba(54,212,122,.08);
-  border:1px solid rgba(54,212,122,.24);
-}
-.wins-carousel{
-  overflow:hidden;
-  border:1px solid rgba(212,175,55,.16);
-  border-radius:24px;
-  background:rgba(0,0,0,.24);
-  margin-top:16px;
-}
-.wins-track{
-  display:flex;
-  gap:12px;
-  padding:14px;
-  animation:winsScroll 28s linear infinite;
-  width:max-content;
-}
-.win-chip{
-  min-width:220px;
-  border:1px solid rgba(54,212,122,.24);
-  border-radius:18px;
-  padding:14px;
-  background:linear-gradient(180deg,rgba(54,212,122,.08),rgba(255,255,255,.015));
-}
-.win-chip strong{
-  display:block;
-  color:#fff6df;
-  font-size:16px;
-}
-.win-chip span{
-  color:#36d47a;
-  font-size:12px;
-  font-weight:900;
-}
-.premium-lock-icon{
-  display:inline-flex;
-  width:24px;
-  height:24px;
-  align-items:center;
-  justify-content:center;
-  border-radius:50%;
-  background:rgba(255,226,138,.10);
-  border:1px solid rgba(255,226,138,.24);
-  color:#ffe28a;
-  margin-right:6px;
-}
-@keyframes vipCardSweep{
-  0%{transform:translateX(-100%) rotate(10deg)}
-  100%{transform:translateX(100%) rotate(10deg)}
-}
-@keyframes winsScroll{
-  from{transform:translateX(0)}
-  to{transform:translateX(-50%)}
-}
-@media(max-width:900px){
-  .vip-member-inner{grid-template-columns:1fr}
-  .release-grid,.drop-feed{grid-template-columns:1fr}
-}
-@media(max-width:620px){
-  .vip-member-card{padding:17px;border-radius:22px}
-  .vip-rank{font-size:32px}
-  .release-grid{grid-template-columns:1fr}
-  .countdown-box{grid-template-columns:repeat(3,1fr)}
-  .countdown-unit b{font-size:20px}
-  .win-chip{min-width:190px}
-}
-
-
-/* ===== MICKS PICKS REAL-TIME SYNC ENGINE ===== */
-.live-sync-pill{
-  position:fixed;
-  right:16px;
-  bottom:86px;
-  z-index:9999;
-  display:flex;
-  align-items:center;
-  gap:9px;
-  border:1px solid rgba(54,212,122,.34);
-  background:rgba(5,5,5,.88);
-  backdrop-filter:blur(14px);
-  color:#dfffe9;
-  border-radius:999px;
-  padding:10px 13px;
-  font-size:12px;
-  font-weight:900;
-  box-shadow:0 16px 42px rgba(0,0,0,.45),0 0 24px rgba(54,212,122,.13);
-}
-.live-dot{
-  width:9px;
-  height:9px;
-  border-radius:50%;
-  background:#36d47a;
-  box-shadow:0 0 12px #36d47a;
-  animation:livePulse 1.5s ease-in-out infinite;
-}
-.live-sync-pill.syncing .live-dot{
-  background:#ffe28a;
-  box-shadow:0 0 12px #ffe28a;
-}
-.live-sync-pill.error .live-dot{
-  background:#ff6464;
-  box-shadow:0 0 12px #ff6464;
-}
-.live-small{
-  color:#bdb39b;
-  font-size:10px;
-  font-weight:700;
-  margin-left:2px;
-}
-.sync-flash{
-  animation:syncFlash .55s ease;
-}
-@keyframes livePulse{
-  0%,100%{opacity:.55;transform:scale(.92)}
-  50%{opacity:1;transform:scale(1.18)}
-}
-@keyframes syncFlash{
-  0%{box-shadow:0 0 0 rgba(54,212,122,0)}
-  50%{box-shadow:0 0 42px rgba(54,212,122,.22)}
-  100%{box-shadow:0 0 0 rgba(54,212,122,0)}
-}
-@media(max-width:760px){
-  .live-sync-pill{
-    left:12px;
-    right:12px;
-    bottom:78px;
-    justify-content:center;
-    font-size:11px;
-  }
-}
-
-
-/* ===== MICKS PICKS SCHEDULED PLAY DROP FRONTEND ===== */
-.locked-card{
-  position:relative !important;
-  overflow:hidden !important;
-}
-.locked-card .locked-content{
-  filter:blur(6px);
-  opacity:.45;
-  pointer-events:none;
-  user-select:none;
-}
-.locked-overlay{
-  position:absolute;
-  inset:0;
-  z-index:40;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  background:linear-gradient(180deg,rgba(3,3,3,.90),rgba(0,0,0,.97));
-  backdrop-filter:blur(12px);
-  border:1px solid rgba(255,226,138,.15);
-  padding:22px;
-}
-.locked-overlay h3{
-  margin:0;
-  font-size:28px;
-  color:#ffe28a;
-  letter-spacing:-1px;
-}
-.locked-overlay p{
-  margin:10px 0 0;
-  color:#bdb39b;
-  max-width:340px;
-  line-height:1.5;
-}
-.release-timer{
-  margin-top:18px;
-  font-size:32px;
-  font-weight:1000;
-  color:#fff6df;
-  letter-spacing:-1px;
-}
-.release-pill{
-  margin-top:18px;
-  border-radius:999px;
-  padding:10px 14px;
-  border:1px solid rgba(255,226,138,.24);
-  background:rgba(255,226,138,.08);
-  color:#ffe28a;
-  font-size:11px;
-  font-weight:900;
-  letter-spacing:1px;
-  text-transform:uppercase;
-}
-.unlock-flash{
-  animation:unlockFlash .7s ease;
-}
-@keyframes unlockFlash{
-  0%{box-shadow:0 0 0 rgba(54,212,122,0)}
-  50%{box-shadow:0 0 55px rgba(54,212,122,.25)}
-  100%{box-shadow:0 0 0 rgba(54,212,122,0)}
-}
-
-
-/* =========================================================
-   MICKS PICKS MASTER PREMIUM REMAKE
-========================================================= */
-:root{
-  --mp-bg:#050505;--mp-panel:#0d0d0d;--mp-gold:#ffe28a;--mp-gold2:#c8a64c;
-  --mp-green:#36d47a;--mp-red:#ff6464;--mp-blue:#7bb7ff;
-  --mp-text:#fff6df;--mp-muted:#bdb39b;--mp-line:rgba(255,226,138,.14);
-}
-html{scroll-behavior:smooth}
-body{
-  background:
-    radial-gradient(circle at 12% 6%,rgba(255,226,138,.16),transparent 27%),
-    radial-gradient(circle at 92% 8%,rgba(54,212,122,.08),transparent 25%),
-    radial-gradient(circle at 50% 100%,rgba(123,183,255,.06),transparent 34%),
-    linear-gradient(180deg,#050505,#010101) !important;
-  color:var(--mp-text) !important;
-  -webkit-font-smoothing:antialiased;
-}
-body:before{
-  content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;
-  background-image:
-    linear-gradient(rgba(255,255,255,.022) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(255,255,255,.022) 1px,transparent 1px);
-  background-size:42px 42px;
-  mask-image:linear-gradient(180deg,rgba(0,0,0,.84),transparent 78%);
-}
-.container,.section.container{max-width:1180px !important}
-.section{padding-top:58px !important;padding-bottom:58px !important}
-header,.nav,.topbar{
-  backdrop-filter:blur(18px);
-  background:rgba(0,0,0,.50) !important;
-  border-bottom:1px solid rgba(255,226,138,.10) !important;
-}
-.hero{position:relative;overflow:hidden;border-radius:0 0 42px 42px}
-.hero:after{
-  content:"";position:absolute;right:-130px;top:20px;width:360px;height:360px;
-  background:radial-gradient(circle,rgba(255,226,138,.14),transparent 68%);
-  filter:blur(18px);pointer-events:none;
-}
-.hero h1,.hero h2{
-  font-size:clamp(42px,7vw,84px) !important;
-  line-height:.90 !important;letter-spacing:-3.5px !important;
-  font-weight:1000 !important;max-width:980px;
-  text-shadow:0 0 34px rgba(255,226,138,.10);
-}
-.hero p,.sub,.writeup,.analysis p{color:var(--mp-muted) !important;line-height:1.65 !important}
-.badge,.vip-chip,.header-badge,.ai-pill{
-  border-radius:999px !important;border:1px solid rgba(255,226,138,.18) !important;
-  background:rgba(255,226,138,.075) !important;color:var(--mp-gold) !important;
-  letter-spacing:.8px;font-weight:1000 !important;box-shadow:0 10px 28px rgba(0,0,0,.24);
-}
-.btn,button,.upgrade-btn{
-  border-radius:999px !important;background:linear-gradient(135deg,#a87710,#ffe28a 55%,#c79b26) !important;
-  color:#111 !important;font-weight:1000 !important;border:0 !important;
-  box-shadow:0 18px 42px rgba(255,226,138,.14) !important;
-  transition:transform .22s ease, box-shadow .22s ease, filter .22s ease;
-}
-.btn:hover,button:hover,.upgrade-btn:hover{
-  transform:translateY(-2px);filter:saturate(1.08);
-  box-shadow:0 22px 55px rgba(255,226,138,.22) !important;
-}
-.card,.pick-card,.analytics-card,.chart-card,.vip-member-card,.locked-card,.drop-card,.release-card,.sport-widget{
-  position:relative;overflow:hidden;
-  background:
-    radial-gradient(circle at 100% 0%,rgba(255,226,138,.10),transparent 32%),
-    linear-gradient(180deg,rgba(255,255,255,.065),rgba(255,255,255,.018)) !important;
-  border:1px solid rgba(255,226,138,.12) !important;border-radius:28px !important;
-  box-shadow:0 24px 70px rgba(0,0,0,.46),inset 0 0 0 1px rgba(255,255,255,.025) !important;
-  transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease, background .25s ease;
-}
-.card:hover,.pick-card:hover,.analytics-card:hover,.chart-card:hover,.drop-card:hover,.sport-widget:hover{
-  transform:translateY(-4px);border-color:rgba(255,226,138,.28) !important;
-  box-shadow:0 28px 90px rgba(0,0,0,.58),0 0 42px rgba(255,226,138,.09),inset 0 0 0 1px rgba(255,255,255,.035) !important;
-}
-.pick-card:before,.featured-play:before,.vip-member-card:before{
-  content:"";position:absolute;inset:-40%;background:linear-gradient(120deg,transparent,rgba(255,255,255,.06),transparent);
-  transform:translateX(-70%) rotate(8deg);transition:transform .8s ease;pointer-events:none;
-}
-.pick-card:hover:before,.featured-play:hover:before,.vip-member-card:hover:before{transform:translateX(70%) rotate(8deg)}
-.featured-play,.featured-hero{
-  border-radius:36px !important;padding:clamp(22px,4vw,40px) !important;
-  border-color:rgba(255,226,138,.28) !important;
-  background:
-    radial-gradient(circle at 85% 10%,rgba(255,226,138,.20),transparent 34%),
-    radial-gradient(circle at 10% 10%,rgba(54,212,122,.10),transparent 28%),
-    linear-gradient(180deg,#121212,#050505) !important;
-  box-shadow:0 38px 120px rgba(0,0,0,.68),0 0 65px rgba(255,226,138,.12) !important;
-}
-.pick-title,.featured-title{
-  font-size:clamp(25px,4.2vw,54px) !important;line-height:1 !important;
-  letter-spacing:-1.8px !important;font-weight:1000 !important;color:#fff8df !important;
-}
-.game{color:#d4c9aa !important;font-size:15px !important;margin-top:8px}
-.meta{display:flex !important;flex-wrap:wrap !important;gap:8px !important;margin-top:16px !important}
-.meta span{
-  border:1px solid rgba(255,226,138,.12) !important;background:rgba(0,0,0,.30) !important;
-  border-radius:999px !important;padding:8px 10px !important;color:#eadfbf !important;font-size:12px !important;
-}
-.analysis{
-  margin-top:18px !important;border-radius:22px !important;border:1px solid rgba(255,226,138,.10) !important;
-  background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.012)) !important;padding:18px !important;
-}
-.analysis h4,.chart-card h3,.board-head h2,.panel h2{
-  color:#fff6df !important;letter-spacing:-.8px;font-weight:1000 !important;
-}
-.analytics-grid{gap:14px !important}
-.analytics-card strong,.big-number{color:#fff8df !important;font-size:clamp(24px,3vw,44px) !important;letter-spacing:-1.5px !important}
-.analytics-card span{color:var(--mp-muted) !important}
-.performance-table td{background:rgba(0,0,0,.34) !important;border-color:rgba(255,226,138,.12) !important}
-.performance-table th{color:var(--mp-gold) !important}
-.live-sync-pill{
-  border-color:rgba(54,212,122,.38) !important;background:rgba(2,2,2,.88) !important;
-  box-shadow:0 18px 48px rgba(0,0,0,.45),0 0 30px rgba(54,212,122,.13) !important;
-}
-.locked-overlay{
-  background:radial-gradient(circle at 50% 0%,rgba(255,226,138,.15),transparent 35%),linear-gradient(180deg,rgba(3,3,3,.94),rgba(0,0,0,.98)) !important;
-  backdrop-filter:blur(16px) !important;
-}
-.locked-overlay h3{color:var(--mp-gold) !important;font-size:clamp(24px,4vw,38px) !important;letter-spacing:-1.4px !important}
-.release-timer{color:#fff8df !important;text-shadow:0 0 22px rgba(255,226,138,.20)}
-.league-logo,.sport-logo{box-shadow:0 12px 30px rgba(0,0,0,.28),inset 0 0 14px rgba(255,255,255,.06) !important}
-.mobile-nav{backdrop-filter:blur(18px) !important;background:rgba(0,0,0,.80) !important;border-top:1px solid rgba(255,226,138,.14) !important}
-
-@keyframes mpFadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
-.section > *,.card,.pick-card,.analytics-card,.chart-card{animation:mpFadeUp .55s ease both}
-
-.mp-platform-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px}
-.mp-platform-strip .mp-mini-card{border:1px solid rgba(255,226,138,.12);background:rgba(0,0,0,.28);border-radius:20px;padding:14px}
-.mp-mini-card strong{display:block;color:#fff8df;font-size:18px;letter-spacing:-.5px}
-.mp-mini-card span{display:block;color:var(--mp-muted);font-size:11px;text-transform:uppercase;letter-spacing:1px;margin-top:4px}
-
-.mp-live-ticker{
-  position:fixed;left:14px;right:14px;bottom:14px;z-index:9998;height:44px;display:flex;align-items:center;overflow:hidden;
-  border:1px solid rgba(255,226,138,.14);background:rgba(0,0,0,.82);backdrop-filter:blur(14px);
-  border-radius:999px;box-shadow:0 20px 55px rgba(0,0,0,.46);
-}
-.mp-live-track{display:flex;gap:36px;white-space:nowrap;animation:mpTicker 28s linear infinite;padding-left:18px;color:#eadfbf;font-size:12px;font-weight:800}
-.mp-live-track b{color:var(--mp-gold)}
-@keyframes mpTicker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-
-@media(max-width:900px){.mp-platform-strip{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:760px){
-  .section{padding-top:36px !important;padding-bottom:36px !important}
-  .hero h1,.hero h2{font-size:42px !important;letter-spacing:-2px !important}
-  .card,.pick-card,.analytics-card,.chart-card,.vip-member-card,.locked-card{border-radius:22px !important}
-  .featured-play,.featured-hero{border-radius:26px !important}
-  .mp-platform-strip{grid-template-columns:1fr 1fr;gap:9px}
-  .mp-mini-card{padding:12px !important}
-  .mp-mini-card strong{font-size:15px}
-  .mp-live-ticker{bottom:72px;left:10px;right:10px;height:40px}
-}
-
-
-/* =========================================================
-   SAFE GLOW RESTORE — DOES NOT TOUCH PREMIUM ACCESS LOGIC
-========================================================= */
-:root{
-  --safe-gold:#ffe28a;
-  --safe-green:#35e58c;
-  --safe-blue:#6db7ff;
-  --safe-bg:#030303;
-  --safe-text:#fff7dc;
-  --safe-muted:#d1c29a;
-}
-
-html,body{
-  background:
-    radial-gradient(circle at 8% -10%,rgba(255,226,138,.25),transparent 30%),
-    radial-gradient(circle at 88% 0%,rgba(53,229,140,.13),transparent 28%),
-    radial-gradient(circle at 50% 110%,rgba(109,183,255,.12),transparent 38%),
-    linear-gradient(180deg,#050505,#010101) !important;
-  color:var(--safe-text) !important;
-}
-
-body::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  z-index:-3;
-  pointer-events:none;
-  background-image:
-    linear-gradient(rgba(255,255,255,.022) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(255,255,255,.022) 1px,transparent 1px);
-  background-size:44px 44px;
-  mask-image:linear-gradient(180deg,rgba(0,0,0,.85),transparent 82%);
-}
-
-.safe-glow-orb{
-  position:fixed;
-  pointer-events:none;
-  z-index:-1;
-  border-radius:999px;
-  filter:blur(36px);
-  opacity:.85;
-  mix-blend-mode:screen;
-  animation:safeOrbFloat 12s ease-in-out infinite alternate;
-}
-.safe-orb-gold{
-  width:320px;
-  height:320px;
-  top:80px;
-  right:-120px;
-  background:radial-gradient(circle,rgba(255,226,138,.26),rgba(255,226,138,.04),transparent 70%);
-}
-.safe-orb-green{
-  width:260px;
-  height:260px;
-  top:45%;
-  left:-110px;
-  background:radial-gradient(circle,rgba(53,229,140,.16),rgba(53,229,140,.04),transparent 70%);
-  animation-delay:-4s;
-}
-.safe-orb-blue{
-  width:280px;
-  height:280px;
-  bottom:-90px;
-  right:12%;
-  background:radial-gradient(circle,rgba(109,183,255,.13),rgba(109,183,255,.04),transparent 70%);
-  animation-delay:-7s;
-}
-@keyframes safeOrbFloat{
-  from{transform:translate3d(0,0,0) scale(1)}
-  to{transform:translate3d(20px,-18px,0) scale(1.06)}
-}
-
-header,.nav,.topbar,.site-header{
-  background:rgba(0,0,0,.68) !important;
-  backdrop-filter:blur(20px) saturate(1.2) !important;
-  border-bottom:1px solid rgba(255,226,138,.18) !important;
-  box-shadow:0 14px 48px rgba(0,0,0,.55),0 0 32px rgba(255,226,138,.08) !important;
-}
-
-.hero{
-  position:relative !important;
-  overflow:hidden !important;
-  background:
-    radial-gradient(circle at 80% 18%,rgba(255,226,138,.18),transparent 32%),
-    radial-gradient(circle at 18% 0%,rgba(53,229,140,.09),transparent 28%),
-    linear-gradient(180deg,rgba(10,10,10,.96),rgba(2,2,2,.88)) !important;
-  border-bottom:1px solid rgba(255,226,138,.14) !important;
-}
-
-.hero::after{
-  content:"";
-  position:absolute;
-  inset:-35%;
-  pointer-events:none;
-  background:conic-gradient(from 180deg,transparent,rgba(255,226,138,.10),transparent,rgba(53,229,140,.07),transparent);
-  filter:blur(36px);
-  animation:safeHeroSpin 24s linear infinite;
-  z-index:0;
-}
-.hero > *{
-  position:relative;
-  z-index:1;
-}
-@keyframes safeHeroSpin{
-  to{transform:rotate(360deg)}
-}
-
-.hero h1,.hero h2,.headline,.main-title{
-  color:#fff7dc !important;
-  text-shadow:0 0 26px rgba(255,226,138,.18),0 0 70px rgba(255,226,138,.10) !important;
-}
-
-.card,.pick-card,.analytics-card,.chart-card,.vip-member-card,.locked-card,.drop-card,.release-card,.sport-widget,.panel{
-  position:relative !important;
-  overflow:hidden !important;
-  background:
-    radial-gradient(circle at 100% 0%,rgba(255,226,138,.13),transparent 34%),
-    radial-gradient(circle at 0% 100%,rgba(53,229,140,.055),transparent 32%),
-    linear-gradient(180deg,rgba(18,18,18,.95),rgba(4,4,4,.92)) !important;
-  border:1px solid rgba(255,226,138,.18) !important;
-  color:#fff7dc !important;
-  box-shadow:
-    0 24px 76px rgba(0,0,0,.62),
-    0 0 34px rgba(255,226,138,.055),
-    inset 0 0 0 1px rgba(255,255,255,.035) !important;
-  transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease !important;
-}
-
-.card:hover,.pick-card:hover,.analytics-card:hover,.chart-card:hover,.vip-member-card:hover,.locked-card:hover,.drop-card:hover,.release-card:hover,.sport-widget:hover,.panel:hover{
-  transform:translateY(-5px) !important;
-  border-color:rgba(255,226,138,.38) !important;
-  box-shadow:
-    0 34px 100px rgba(0,0,0,.72),
-    0 0 45px rgba(255,226,138,.16),
-    0 0 24px rgba(53,229,140,.05),
-    inset 0 0 0 1px rgba(255,255,255,.06) !important;
-}
-
-.featured-play,.featured-hero,.featured-card,.hero-pick{
-  background:
-    radial-gradient(circle at 78% 12%,rgba(255,226,138,.32),transparent 38%),
-    radial-gradient(circle at 10% 10%,rgba(53,229,140,.14),transparent 32%),
-    linear-gradient(180deg,#15120a,#050505 72%) !important;
-  border:1px solid rgba(255,226,138,.36) !important;
-  box-shadow:
-    0 44px 130px rgba(0,0,0,.78),
-    0 0 82px rgba(255,226,138,.20),
-    0 0 30px rgba(53,229,140,.08) !important;
-}
-
-.badge,.vip-chip,.header-badge,.ai-pill,.pill,.tag,.meta span{
-  background:rgba(255,226,138,.095) !important;
-  border:1px solid rgba(255,226,138,.22) !important;
-  color:#ffe28a !important;
-  box-shadow:0 10px 28px rgba(0,0,0,.34),0 0 16px rgba(255,226,138,.06) !important;
-}
-
-.btn,button,.upgrade-btn,a.btn{
-  background:linear-gradient(135deg,#8f650f 0%,#ffe28a 48%,#c89b3c 100%) !important;
-  color:#080808 !important;
-  border:0 !important;
-  box-shadow:0 18px 44px rgba(255,226,138,.20),0 0 20px rgba(255,226,138,.08) !important;
-}
-
-.live-sync-pill,.mp-live-ticker,.ticker,.odds-ticker{
-  background:rgba(0,0,0,.84) !important;
-  border:1px solid rgba(53,229,140,.34) !important;
-  box-shadow:0 18px 50px rgba(0,0,0,.55),0 0 28px rgba(53,229,140,.16) !important;
-  backdrop-filter:blur(16px) !important;
-}
-
-.game,.meta,.muted,.secondary,.writeup,.analysis,.analysis p,.sub,.subtitle{
-  color:#d1c29a !important;
-}
-
-.analytics-card strong,.big-number,.metric-value{
-  color:#fff8e1 !important;
-  text-shadow:0 0 24px rgba(255,226,138,.12) !important;
-}
-
-@media(max-width:760px){
-  .safe-orb-gold{width:230px;height:230px;right:-100px}
-  .safe-orb-green{width:210px;height:210px}
-  .safe-orb-blue{display:none}
-}
-
-</style></head><body class="locked">
-
-<div class="vip-login" id="vipLogin">
-  <div class="vip-login-card">
-    <div class="vip-lock">VIP</div>
-    <h2>Premium Vault</h2>
-    <p>Enter your member password to unlock full Micks Picks analysis, VIP plays, archive access, and premium betting breakdowns.</p>
-    <input class="vip-input" id="vipPassword" type="password" placeholder="Enter premium password" autocomplete="current-password" />
-    <button class="btn" id="vipUnlock" type="button">Unlock VIP Access</button>
-    <div class="vip-error" id="vipError"></div>
-    <div class="vip-small">Mick’s Picks • The Gurus Lair • Members Only</div>
-  </div>
-</div>
-
-<div id="premiumApp">
-<header class="header"><div class="container nav"><a class="brand" href="./"><div class="logo">MP</div><div><h1>Mick's Picks</h1><small>Premium Vault</small></div></a><nav class="links"><a href="./">Home</a><a href="#premium">Premium Board</a><a href="#viparchive">VIP Archive</a></nav></div></header>
-<div class="ticker"><div class="ticker-track"><span><b>PREMIUM</b> • Full Analysis</span><span><b>ACTIVE PICKS</b> • VIP Card</span><span><b>ARCHIVE</b> • VIP History</span><span><b>MICKS PICKS</b> • Positive EV Discipline</span><span><b>PREMIUM</b> • Full Analysis</span></div></div>
-<main>
-<section class="hero container"><div class="kicker">Premium member area • Full framework writeups • VIP archive</div><h2>Premium Vault</h2><p>Member plays with deep Full Analysis, injury impact, market notes, true probability, best number, and Micks Picks framework reasoning.</p>
-<div class="league-strip">
-  <span class="league-logo logo-nba">NBA</span>
-  <span class="league-logo logo-nhl">NHL</span>
-  <span class="league-logo logo-ufc">UFC</span>
-  <span class="league-logo logo-wnba">WNBA</span>
-  <span class="league-logo logo-nfl">NFL</span>
-  <span class="league-logo logo-mlb">MLB</span>
-</div>
-
-<div class="header-badge" style="margin-top:10px;display:inline-flex">● Real-Time Sheet Sync Active</div>
-<div class="actions"><a class="btn" href="#premium">View Premium Plays</a><a class="btn dark" href="./">Back Home</a></div>
-<div class="vip-badge-row">
-  <span class="vip-chip">🏆 VIP Vault</span>
-  <span class="vip-chip green">📈 Positive EV</span>
-  <span class="vip-chip">🔒 Members Only</span>
-  <span class="vip-chip">⚡ Best Number Discipline</span>
-</div>
-<div class="vip-stat-grid">
-  <div class="vip-stat"><strong id="vipStatActive">—</strong><span>VIP Plays Live</span></div>
-  <div class="vip-stat"><strong id="vipStatATier">—</strong><span>A-Tier Edges</span></div>
-  <div class="vip-stat"><strong id="vipStatWinRate">—</strong><span>VIP Win Rate</span></div>
-  <div class="vip-stat"><strong id="vipStatUnits">—</strong><span>Tracked Units</span></div>
-</div>
-<div class="vipbar"><div class="vip"><b id="premActive">—</b><span>Active VIP Plays</span></div><div class="vip"><b id="premATier">—</b><span>A-Tier VIP</span></div><div class="vip"><b id="premWinRate">—</b><span>VIP Win Rate</span></div><div class="vip"><b id="premProfit">—</b><span>VIP Units</span></div><div class="vip"><b>CLV</b><span>Line Value</span></div><div class="vip"><b>EDGE</b><span>Framework Grade</span></div></div></section>
-
-<section class="section container vip-command-center" id="vip-command-center">
-  <div class="board-head">
-    <div>
-      <span class="badge green"><span class="premium-lock-icon">🔒</span>VIP Command Center</span>
-      <h2>Member Vault</h2>
-      <p class="sub">Premium member status, release countdowns, play drops, and recent winning tickets.</p>
-    </div>
-  </div>
-
-  <div class="vip-member-card">
-    <div class="vip-member-inner">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mick's Picks VIP Access</title>
+  <meta name="description" content="Mick's Picks VIP member access portal." />
+  <meta name="robots" content="noindex,nofollow" />
+  <style>
+    :root{
+      --bg:#050505;
+      --panel:rgba(18,17,14,.88);
+      --gold:#f5c451;
+      --gold2:#ffd978;
+      --gold3:#9b7427;
+      --text:#f8f2e7;
+      --muted:#b5a995;
+      --line:rgba(245,196,81,.22);
+      --good:#74e39a;
+      --danger:#ff6b6b;
+    }
+    *{box-sizing:border-box}
+    html{min-height:100%;background:var(--bg)}
+    body{
+      margin:0;
+      min-height:100vh;
+      color:var(--text);
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+      background:
+        radial-gradient(circle at 18% 10%,rgba(245,196,81,.18),transparent 26%),
+        radial-gradient(circle at 84% 3%,rgba(255,217,120,.11),transparent 22%),
+        linear-gradient(140deg,#050505 0%,#090806 45%,#12100a 100%);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:28px;
+    }
+    .card{
+      width:min(780px,100%);
+      border:1px solid var(--line);
+      border-radius:30px;
+      background:linear-gradient(165deg,rgba(255,255,255,.09),rgba(255,255,255,.025)),var(--panel);
+      box-shadow:0 22px 80px rgba(0,0,0,.45);
+      padding:34px;
+      position:relative;
+      overflow:hidden;
+    }
+    .card:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:radial-gradient(circle at 50% 0%,rgba(245,196,81,.18),transparent 38%);
+      pointer-events:none;
+    }
+    .card>*{position:relative}
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:13px;
+      margin-bottom:24px;
+    }
+    .mark{
+      width:52px;
+      height:52px;
+      border-radius:17px;
+      display:grid;
+      place-items:center;
+      color:#050505;
+      font-weight:1000;
+      letter-spacing:-1px;
+      background:radial-gradient(circle at 30% 20%,#fff3b9,transparent 32%),linear-gradient(135deg,var(--gold2),var(--gold3));
+      box-shadow:0 12px 30px rgba(245,196,81,.25);
+    }
+    .brand strong{display:block;font-size:1.05rem}
+    .brand span{display:block;color:var(--muted);font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;margin-top:4px}
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      color:var(--gold2);
+      border:1px solid rgba(245,196,81,.24);
+      background:rgba(245,196,81,.07);
+      padding:10px 14px;
+      border-radius:999px;
+      font-size:.78rem;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      font-weight:900;
+      margin-bottom:16px;
+    }
+    .dot{
+      width:8px;
+      height:8px;
+      border-radius:999px;
+      background:var(--good);
+      box-shadow:0 0 0 8px rgba(116,227,154,.12);
+    }
+    h1{
+      font-size:clamp(2.45rem,7vw,4.8rem);
+      line-height:.92;
+      letter-spacing:-.06em;
+      margin:0;
+      max-width:640px;
+    }
+    h1 span{
+      display:block;
+      background:linear-gradient(135deg,#fff8e9 0%,#ffd978 45%,#b98624 100%);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+    p{
+      color:#d9ccb5;
+      font-size:1.05rem;
+      line-height:1.65;
+      margin:18px 0 0;
+      max-width:660px;
+    }
+    .notice{
+      border:1px solid rgba(116,227,154,.24);
+      background:rgba(116,227,154,.07);
+      color:#dfffe8;
+      border-radius:20px;
+      padding:15px 16px;
+      margin-top:22px;
+      line-height:1.55;
+    }
+    .actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:26px;
+    }
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+    .btn{
+      border-radius:999px;
+      padding:15px 20px;
+      min-height:48px;
+      font-weight:950;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-size:.83rem;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:9px;
+      transition:transform .2s ease,box-shadow .2s ease,background .2s ease;
+    }
+    .btn:hover{transform:translateY(-2px)}
+    .primary{
+      color:#070604;
+      background:linear-gradient(135deg,#fff0a6,#f5c451 48%,#a87621);
+      box-shadow:0 18px 40px rgba(245,196,81,.24);
+    }
+    .secondary{
+      color:#f8edda;
+      background:rgba(255,255,255,.055);
+      border:1px solid rgba(245,196,81,.22);
+    }
+    .small{
+      color:var(--muted);
+      font-size:.82rem;
+      margin-top:22px;
+    }
+    @media(max-width:640px){
+      body{padding:18px}
+      .card{padding:24px;border-radius:24px}
+      .actions{display:grid}
+      .btn{width:100%}
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="brand">
+      <div class="mark">MP</div>
       <div>
-        <span class="member-badge">🏆 MICKS PICKS VIP MEMBER</span>
-        <div class="vip-rank">Gold Edge Member <small>Rank: Sharp Access</small></div>
-        <p class="sub">Your VIP board unlocks full analysis, market notes, CLV tracking, injury context, best-number discipline, and premium plays.</p>
-        <div class="vip-rank-meter"><div class="vip-rank-fill"></div></div>
-      </div>
-      <div class="timer-card">
-        <span class="badge">Next Play Drop</span>
-        <div class="countdown-box">
-          <div class="countdown-unit"><b id="vipHours">--</b><span>Hours</span></div>
-          <div class="countdown-unit"><b id="vipMinutes">--</b><span>Minutes</span></div>
-          <div class="countdown-unit"><b id="vipSeconds">--</b><span>Seconds</span></div>
-        </div>
-        <p class="sub">Countdown targets the next premium release window. Adjust release time later as your service schedule evolves.</p>
+        <strong>Mick's Picks</strong>
+        <span>The Guru's Lair</span>
       </div>
     </div>
 
-    <div class="release-grid">
-      <div class="release-card"><strong>1 PM</strong><span>Main Card Drop</span></div>
-      <div class="release-card"><strong>5 PM</strong><span>Injury Update Window</span></div>
-      <div class="release-card"><strong>Live</strong><span>Late Market Alerts</span></div>
+    <div class="pill"><span class="dot"></span> Secure VIP Portal</div>
+
+    <h1>VIP Vault moved to <span>protected access.</span></h1>
+
+    <p>
+      The public GitHub Pages version no longer stores VIP passwords, full analysis,
+      or member-only breakdowns inside visible website code.
+    </p>
+
+    <div class="notice">
+      VIP members should use the secure member portal. Access is controlled by
+      Cloudflare Access, approved email, or one-time login code — not by a password
+      hidden inside HTML or JavaScript.
     </div>
-  </div>
 
-  <div class="drop-feed">
-    <div class="drop-card"><div class="drop-lock">🔒</div><h3>Premium Play Drop</h3><p>Full writeup, best number, no-bet cutoff, injury notes, and market edge.</p><span class="drop-status">Members Only</span></div>
-    <div class="drop-card"><div class="drop-lock">⚡</div><h3>Steam Alert</h3><p>Line movement and CLV tracking when the market starts shifting.</p><span class="drop-status">Market Watch</span></div>
-    <div class="drop-card"><div class="drop-lock">📈</div><h3>Model Edge</h3><p>EV edge, confidence grade, and Micks Picks framework validation.</p><span class="drop-status">Analytics</span></div>
-  </div>
-
-  <div class="wins-carousel">
-    <div class="wins-track" id="recentWinsTrack">
-      <div class="win-chip"><strong>Loading Recent Wins</strong><span>Micks Picks Archive</span></div>
-      <div class="win-chip"><strong>Results Syncing</strong><span>VIP Tracking</span></div>
-      <div class="win-chip"><strong>CLV Engine Ready</strong><span>Market Edge</span></div>
-      <div class="win-chip"><strong>Loading Recent Wins</strong><span>Micks Picks Archive</span></div>
+    <div class="actions">
+      <a class="btn primary" href="https://vip.mickspicks.us">Enter VIP Portal</a>
+      <a class="btn secondary" href="./">Back to Public Site</a>
     </div>
-  </div>
-</section>
 
-<section class="section container" id="premium"><div class="board-head"><div><span class="badge green">Premium Board</span><h2>Member Plays</h2><p class="sub">Current VIP plays pulled from Active Picks.</p></div></div><div id="premiumBoard"><div class="loading">Loading premium plays...</div></div></section>
-<section class="section container" id="viparchive"><div class="board-head"><div><h2>VIP Archive</h2><p class="sub">Premium history and closed member picks.</p></div><span class="badge">Member History</span></div><div class="card" id="vipArchiveTable"><div class="loading">Loading VIP archive...</div></div></section>
-</main><footer class="footer"><div class="container">Mick's Picks Premium is for entertainment and educational purposes only. Bet responsibly.</div></footer>
-<script>
-const SHEET_ID='15txBM8qsck7f0ZA_za7xYEykBxKpuq0no3x7yHcKNeE';
-const GIDS={'active': '0', 'results': '1579113575', 'vip': '210503117', 'props': '627878674', 'parlays': '1849675860'};
-function csvUrl(gid){return `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${gid}&cache=${Date.now()}`;}
-function safe(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));}
-function clean(s){return String(s||'').trim();}
-function num(v){const n=parseFloat(String(v||'').replace(/[^0-9.+-]/g,''));return Number.isFinite(n)?n:0;}
-function odds(v){const n=parseInt(String(v||'').replace(/[^0-9+-]/g,''),10);return Number.isFinite(n)?n:0;}
-function result(p){return clean(p['Result']).toLowerCase();}
-function calcPL(p){const r=result(p),u=num(p['Units'])||1,o=odds(p['Odds']);if(['push','void','cancel','cancelled'].includes(r))return 0;if(['loss','lost','l'].includes(r))return -u;if(['win','won','w'].includes(r)){if(o>0)return u*(o/100);if(o<0)return u*(100/Math.abs(o));return u;}return null;}
-function fmtPL(v){if(v===null)return'Pending';let x=Math.round(v*100)/100;if(x>0)return'+'+x.toFixed(2)+'u';if(x<0)return x.toFixed(2)+'u';return'0.00u';}
-function plClass(v){if(v===null)return'badge blue';if(v>0)return'badge green';if(v<0)return'badge red';return'badge';}
-function parseCSV(text){const rows=[];let row=[],cur='',q=false;for(let i=0;i<text.length;i++){const c=text[i],n=text[i+1];if(c=='"'&&q&&n=='"'){cur+='"';i++;}else if(c=='"'){q=!q;}else if(c===','&&!q){row.push(cur);cur='';}else if((c==='\n'||c==='\r')&&!q){if(cur!==''||row.length){row.push(cur);rows.push(row);row=[];cur='';}if(c==='\r'&&n==='\n')i++;}else cur+=c;}if(cur!==''||row.length){row.push(cur);rows.push(row);}return rows;}
-function makeObjects(rows){if(!rows.length)return[];const h=rows[0].map(x=>clean(x));return rows.slice(1).filter(r=>r.some(x=>clean(x))).map(r=>{const o={};h.forEach((k,i)=>o[k]=clean(r[i]));return o;});}
-async function getRows(gid){const res=await fetch(csvUrl(gid),{cache:'no-store'});if(!res.ok)throw new Error('Sheet did not respond.');const text=await res.text();if(text.toLowerCase().includes('<html'))throw new Error('Sheet returned HTML instead of CSV.');return makeObjects(parseCSV(text));}
-function isPremium(p){const a=clean(p['Access']).toLowerCase();return a==='premium'||a==='vip'||a==='paid';}
-function isFree(p){const a=clean(p['Access']).toLowerCase();return a===''||a==='free'||a==='public'||a==='featured';}
-function card(p,premium=false,featured=false){const pl=calcPL(p);const releaseTime=safe(p['Release Time']||'');const releaseStatus=safe(p['Release Status']||'');return `<div class="card pick-card ${featured?'featured':''}" data-release-time="${releaseTime}" data-release-status="${releaseStatus}"><div class="pick-top"><div><span class="badge">${safe(p['Grade']||'A')}-Tier • ${safe(p['Bet Type']||'Play')}</span> <span class="badge green">EV ${safe(p['EV Edge']||'—')}</span> <span class="${plClass(pl)}">P/L ${fmtPL(pl)}</span>${featured?' <span class="badge green">Featured</span>':''}<div class="pick-title">${safe(p['Pick']||'Pick Pending')}</div><div class="game">${safe(p['Game']||'')}</div></div><div class="pick-top-right"><span class="badge blue">${safe(p['Status']||'Active')}</span><div class="sub" style="margin-top:8px">Confidence: ${safe(p['Confidence']||'—')}</div></div></div><div class="meta"><span>Odds: ${safe(p['Odds']||'—')}</span><span>Book: ${safe(p['Sportsbook']||'Best Available')}</span><span>Units: ${safe(p['Units']||'—')}</span><span>Best #: ${safe(p['Best Number']||'—')}</span><span>Cutoff: ${safe(p['No Bet Cutoff']||'—')}</span><span>Result: ${safe(p['Result']||'Pending')}</span></div><div class="analysis"><h4>${premium?'Full Premium Analysis':'Public Writeup'}</h4><div class="writeup">${safe(premium?(p['Full Analysis']||p['Writeup']||'Premium analysis coming soon.'):(p['Writeup']||'Public writeup coming soon.'))}</div></div><div class="notes"><div class="note"><strong>Market Notes</strong><br>${safe(p['Market Notes']||'Market check pending.')}</div><div class="note"><strong>Injury Notes</strong><br>${safe(p['Injury Notes']||'No major injury note posted.')}</div><div class="note"><strong>Source Check</strong><br>${safe(p['Source Verification']||'Micks Picks framework.')}</div></div></div>`;}
-function setText(id,val){const el=document.getElementById(id);if(el)el.textContent=val;}
-function summarize(picks,prefix){const wins=picks.filter(p=>['win','won','w'].includes(result(p))).length,losses=picks.filter(p=>['loss','lost','l'].includes(result(p))).length,total=wins+losses;const active=picks.filter(p=>['active','pending'].includes(clean(p['Status']).toLowerCase())).length;const atier=picks.filter(p=>clean(p['Grade']).toLowerCase().startsWith('a')).length;const profit=picks.reduce((s,p)=>{const v=calcPL(p);return s+(v===null?0:v);},0);setText(prefix+'Active',active||'—');setText(prefix+'ATier',atier||'—');setText(prefix+'WinRate',total?Math.round((wins/total)*100)+'%':'—');setText(prefix+'Profit',fmtPL(profit));}
-function table(rows,targetId,limit=10){const t=document.getElementById(targetId);if(!t)return;if(!rows.length){t.innerHTML='<div class="empty">Nothing posted yet.</div>';return;}const show=rows.slice().reverse().slice(0,limit);t.innerHTML=`<table class="table"><thead><tr><th>Date</th><th>Pick</th><th>Grade</th><th>Result</th><th>P/L</th></tr></thead><tbody>${show.map(p=>`<tr><td>${safe(p['Date']||'')}</td><td>${safe(p['Pick']||'')}</td><td>${safe(p['Grade']||'')}</td><td>${safe(p['Result']||'Pending')}</td><td>${fmtPL(calcPL(p))}</td></tr>`).join('')}</tbody></table>`;}
-async function loadHome(){try{const active=await getRows(GIDS.active);const results=await getRows(GIDS.results).catch(()=>[]);summarize(active.concat(results),'pub');const featured=active.find(p=>clean(p['Featured']).toLowerCase()==='yes');document.getElementById('topPlayBox').innerHTML=featured?card(featured,false,true):'<div class="empty">No featured play selected.</div>';const free=active.filter(isFree);document.getElementById('freeBoard').innerHTML=free.length?free.slice().reverse().map(p=>card(p,false,false)).join(''):'<div class="empty">No free plays posted yet.</div>';table(results,'resultsTable',12);table(await getRows(GIDS.props).catch(()=>[]),'propsTable',8);table(await getRows(GIDS.parlays).catch(()=>[]),'parlayTable',8);}catch(err){document.getElementById('freeBoard').innerHTML='<div class="error">Could not load picks.<br><br>'+safe(err.message)+'</div>';}}
-
-function syncVipStats(){
-  [["premActive","vipStatActive"],["premATier","vipStatATier"],["premWinRate","vipStatWinRate"],["premProfit","vipStatUnits"]].forEach(function(pair){
-    var a=document.getElementById(pair[0]), b=document.getElementById(pair[1]);
-    if(a&&b){b.textContent=a.textContent||"—";}
-  });
-}
-
-async function loadPremium(){try{const active=await getRows(GIDS.active);const vip=await getRows(GIDS.vip).catch(()=>[]);const premiumActive=active.filter(isPremium);summarize(premiumActive.concat(vip),'prem');document.getElementById('premiumBoard').innerHTML=premiumActive.length?premiumActive.slice().reverse().map(p=>card(p,true,false)).join(''):'<div class="empty">No premium plays posted yet.</div>';table(vip,'vipArchiveTable',12);}catch(err){document.getElementById('premiumBoard').innerHTML='<div class="error">Could not load premium picks.<br><br>'+safe(err.message)+'</div>';}}
-document.addEventListener('DOMContentLoaded',function(){loadPremium();setTimeout(syncVipStats,900);setTimeout(syncVipStats,1800);});</script></div>
-
-<script>
-(function(){
-  const VIP_PASSWORD = "micksvip";
-  const sessionKey = "micksPremiumUnlocked";
-  const modal = document.getElementById("vipLogin");
-  const input = document.getElementById("vipPassword");
-  const button = document.getElementById("vipUnlock");
-  const error = document.getElementById("vipError");
-
-  function unlock(){
-    document.body.classList.add("unlocking");
-    sessionStorage.setItem(sessionKey, "yes");
-    setTimeout(function(){
-      document.body.classList.remove("locked");
-      document.body.classList.remove("unlocking");
-      if(modal) modal.style.display = "none";
-      if(typeof syncVipStats === "function") syncVipStats();
-    }, 520);
-  }
-
-  if(sessionStorage.getItem(sessionKey) === "yes"){
-    unlock();
-    return;
-  }
-
-  setTimeout(function(){ if(input) input.focus(); }, 300);
-
-  function checkPassword(){
-    if(!input) return;
-    if(input.value.trim() === VIP_PASSWORD){
-      unlock();
-    }else{
-      if(error) error.textContent = "Incorrect password. Please try again.";
-      input.value = "";
-      input.focus();
-    }
-  }
-
-  if(button) button.addEventListener("click", checkPassword);
-  if(input) input.addEventListener("keydown", function(e){
-    if(e.key === "Enter") checkPassword();
-  });
-})();
-</script>
-
-
-<nav class="mobile-bottom-nav">
-  <a href="./">Home</a>
-  <a href="#premium">VIP</a>
-  <a href="#viparchive">Archive</a>
-  <a href="#top">Top</a>
-</nav>
-
-
-<script>
-(function(){
-  function enhanceMobile(){
-    document.querySelectorAll(".analysis").forEach(function(box){
-      if(box.dataset.mobileEnhanced === "yes") return;
-      box.dataset.mobileEnhanced = "yes";
-      var btn = document.createElement("button");
-      btn.className = "analysis-toggle";
-      btn.type = "button";
-      btn.textContent = "Read Full Analysis";
-      box.insertAdjacentElement("afterend", btn);
-      btn.addEventListener("click", function(){
-        box.classList.toggle("open");
-        btn.textContent = box.classList.contains("open") ? "Collapse Analysis" : "Read Full Analysis";
-      });
-    });
-  }
-
-  document.addEventListener("DOMContentLoaded", function(){
-    enhanceMobile();
-    setTimeout(enhanceMobile, 900);
-    setTimeout(enhanceMobile, 1800);
-    setTimeout(enhanceMobile, 3000);
-  });
-})();
-</script>
-
-
-<script>
-(function(){
-  function leagueClass(val){const s=String(val||"").toLowerCase();if(s.includes("nba"))return"logo-nba";if(s.includes("nhl"))return"logo-nhl";if(s.includes("ufc"))return"logo-ufc";if(s.includes("wnba"))return"logo-wnba";if(s.includes("nfl"))return"logo-nfl";if(s.includes("mlb"))return"logo-mlb";if(s.includes("prop"))return"logo-props";if(s.includes("parlay"))return"logo-parlay";return"logo-nba";}
-  function enhanceCards(){document.querySelectorAll(".pick-card").forEach(function(card){if(card.dataset.leagueEnhanced==="yes")return;card.dataset.leagueEnhanced="yes";const text=card.textContent||"";let league="NBA";["NBA","NHL","UFC","WNBA","NFL","MLB"].forEach(function(x){if(text.includes(x))league=x;});const row=document.createElement("div");row.className="pick-league-row";row.innerHTML='<span class="sport-logo '+leagueClass(league)+'">'+league+'</span><span class="badge">MICKS PICKS EDGE</span>';const title=card.querySelector(".pick-title");if(title&&title.parentNode)title.parentNode.insertBefore(row,title);});}
-  document.addEventListener("DOMContentLoaded",function(){enhanceCards();setTimeout(enhanceCards,900);setTimeout(enhanceCards,1800);setTimeout(enhanceCards,3000);});
-})();
-</script>
-
-
-<script>
-/* ===== VIP TIMERS + RECENT WINS ===== */
-(function(){
-  function pad(n){return String(n).padStart(2,"0");}
-  function nextReleaseTime(){
-    const now = new Date();
-    const target = new Date(now);
-    target.setHours(13,0,0,0);
-    if(now > target) target.setDate(target.getDate()+1);
-    return target;
-  }
-  function updateCountdown(){
-    const target = nextReleaseTime();
-    const now = new Date();
-    let diff = Math.max(0, target - now);
-    const h = Math.floor(diff / 3600000); diff -= h*3600000;
-    const m = Math.floor(diff / 60000); diff -= m*60000;
-    const s = Math.floor(diff / 1000);
-    const H=document.getElementById("vipHours"), M=document.getElementById("vipMinutes"), S=document.getElementById("vipSeconds");
-    if(H) H.textContent=pad(h);
-    if(M) M.textContent=pad(m);
-    if(S) S.textContent=pad(s);
-  }
-  function recentWinsFromArchive(){
-    if(typeof getRows !== "function" || typeof GIDS === "undefined") return;
-    getRows(GIDS.results).then(function(rows){
-      const wins = rows.filter(p => String(p["Result"]||"").toLowerCase()==="win").slice(-8).reverse();
-      const track = document.getElementById("recentWinsTrack");
-      if(!track || !wins.length) return;
-      const html = wins.concat(wins).map(function(p){
-        const pick = (typeof safe === "function" ? safe(p["Pick"]||"Winning Pick") : p["Pick"]||"Winning Pick");
-        const units = (typeof calcPL === "function" && typeof fmtPL === "function") ? fmtPL(calcPL(p)) : "Win";
-        return `<div class="win-chip"><strong>${pick}</strong><span>${units} • ${p["Grade"]||"Micks Picks"}</span></div>`;
-      }).join("");
-      track.innerHTML = html;
-    }).catch(function(){});
-  }
-  document.addEventListener("DOMContentLoaded",function(){
-    updateCountdown();
-    setInterval(updateCountdown,1000);
-    setTimeout(recentWinsFromArchive,900);
-    setTimeout(recentWinsFromArchive,2000);
-  });
-})();
-</script>
-
-
-
-<script>
-/* ===== MICKS PICKS REAL-TIME SHEET SYNC - SAFE VERSION ===== */
-(function(){
-  const SYNC_INTERVAL_MS = 30000;
-  let lastSyncTime = null;
-  let syncing = false;
-
-  function ensureLivePill(){
-    if(document.getElementById("liveSyncPill")) return;
-    const pill = document.createElement("div");
-    pill.className = "live-sync-pill";
-    pill.id = "liveSyncPill";
-    pill.innerHTML = '<span class="live-dot"></span><span id="liveSyncText">Live Sync</span><span class="live-small" id="liveSyncAge">starting...</span>';
-    document.body.appendChild(pill);
-  }
-
-  function setState(state,msg){
-    ensureLivePill();
-    const pill=document.getElementById("liveSyncPill");
-    const text=document.getElementById("liveSyncText");
-    if(!pill || !text) return;
-    pill.classList.remove("syncing","error");
-    if(state) pill.classList.add(state);
-    text.textContent=msg || "Live Sync";
-  }
-
-  function updateAge(){
-    const el=document.getElementById("liveSyncAge");
-    if(!el) return;
-    if(!lastSyncTime){el.textContent="waiting";return;}
-    const sec=Math.max(0,Math.round((Date.now()-lastSyncTime)/1000));
-    el.textContent=sec<60 ? sec+"s ago" : Math.floor(sec/60)+"m ago";
-  }
-
-  function flashUpdated(){
-    document.querySelectorAll(".pick-card,.analytics-card,.chart-card,.vip,.card").forEach(function(el){
-      el.classList.add("sync-flash");
-      setTimeout(function(){el.classList.remove("sync-flash");},650);
-    });
-  }
-
-  async function safeCall(fnName,requiredElementId){
-    if(typeof window[fnName] !== "function") return;
-    if(requiredElementId && !document.getElementById(requiredElementId)) return;
-    try{
-      await window[fnName]();
-    }catch(e){
-      console.warn("Micks Picks sync skipped:",fnName,e);
-    }
-  }
-
-  async function runLiveSync(){
-    if(syncing) return;
-    syncing=true;
-    setState("syncing","Syncing");
-
-    try{
-      await safeCall("loadHome","freeBoard");
-      await safeCall("loadPremium","premiumBoard");
-      await safeCall("loadAnalytics","analyticsDashboard");
-
-      if(typeof window.micksRunReleaseTimers === "function"){
-        try{ window.micksRunReleaseTimers(); }catch(e){}
-      }
-
-      if(typeof window.enhanceMobile === "function"){
-        try{ window.enhanceMobile(); }catch(e){}
-      }
-
-      if(typeof window.syncVipStats === "function" && document.getElementById("vipRecord")){
-        try{ window.syncVipStats(); }catch(e){}
-      }
-
-      lastSyncTime=Date.now();
-      setState("","Live Sync");
-      updateAge();
-      flashUpdated();
-
-    }catch(err){
-      console.warn("Micks Picks sync warning:",err);
-      lastSyncTime=Date.now();
-      setState("","Live Sync");
-      updateAge();
-    }finally{
-      syncing=false;
-    }
-  }
-
-  function installManualRefresh(){
-    ensureLivePill();
-    const pill=document.getElementById("liveSyncPill");
-    if(pill && !pill.dataset.clickReady){
-      pill.dataset.clickReady="yes";
-      pill.addEventListener("click",runLiveSync);
-      pill.style.cursor="pointer";
-      pill.title="Click to refresh Micks Picks data";
-    }
-  }
-
-  document.addEventListener("DOMContentLoaded",function(){
-    ensureLivePill();
-    installManualRefresh();
-    setTimeout(runLiveSync,1200);
-    setInterval(runLiveSync,SYNC_INTERVAL_MS);
-    setInterval(updateAge,5000);
-  });
-})();
-</script>
-
-
-
-<script>
-/* ===== MICKS PICKS SCHEDULED PLAY DROP ENGINE ===== */
-(function(){
-  function parseReleaseTime(value){
-    if(!value) return null;
-    const raw = String(value).trim();
-    if(!raw) return null;
-
-    // Works with ISO and Google Sheets style yyyy-mm-dd hh:mm:ss
-    const normalized = raw.replace(" ", "T");
-    const d = new Date(normalized);
-    if(!isNaN(d.getTime())) return d;
-
-    const d2 = new Date(raw);
-    if(!isNaN(d2.getTime())) return d2;
-
-    return null;
-  }
-
-  function formatRemaining(diff){
-    const total = Math.max(0, diff);
-    const days = Math.floor(total / 86400000);
-    const hours = Math.floor((total % 86400000) / 3600000);
-    const minutes = Math.floor((total % 3600000) / 60000);
-    const seconds = Math.floor((total % 60000) / 1000);
-
-    if(days > 0){
-      return days + "d " + hours + "h " + minutes + "m";
-    }
-
-    return hours + "h " + minutes + "m " + seconds + "s";
-  }
-
-  function unlockCard(card){
-    const overlay = card.querySelector(".locked-overlay");
-    if(overlay) overlay.remove();
-
-    const content = card.querySelector(".locked-content");
-    if(content){
-      content.classList.remove("locked-content");
-    }
-
-    card.classList.remove("locked-card");
-    card.classList.add("unlock-flash");
-
-    setTimeout(function(){
-      card.classList.remove("unlock-flash");
-    },800);
-  }
-
-  function lockCard(card, releaseDate){
-    if(card.classList.contains("locked-card")) return;
-
-    const original = document.createElement("div");
-    original.className = "locked-content";
-
-    while(card.firstChild){
-      original.appendChild(card.firstChild);
-    }
-
-    card.appendChild(original);
-    card.classList.add("locked-card");
-
-    const overlay = document.createElement("div");
-    overlay.className = "locked-overlay";
-    overlay.innerHTML =
-      '<div class="release-pill">VIP Play Drop Locked</div>' +
-      '<h3>Pick Drops Soon</h3>' +
-      '<p>This play is loaded in the vault and will unlock automatically when the countdown hits zero.</p>' +
-      '<div class="release-timer">--</div>' +
-      '<div class="release-pill">Micks Picks Scheduled Release</div>';
-
-    card.appendChild(overlay);
-  }
-
-  function updateCard(card){
-    const releaseValue = card.getAttribute("data-release-time");
-    const status = String(card.getAttribute("data-release-status") || "").toLowerCase();
-    const releaseDate = parseReleaseTime(releaseValue);
-
-    if(!releaseDate) return;
-
-    const now = new Date();
-    const diff = releaseDate - now;
-
-    if(status === "live" || diff <= 0){
-      unlockCard(card);
-      return;
-    }
-
-    lockCard(card, releaseDate);
-
-    const timer = card.querySelector(".release-timer");
-    if(timer){
-      timer.textContent = formatRemaining(diff);
-    }
-  }
-
-  function initializeReleaseTimers(){
-    document.querySelectorAll("[data-release-time]").forEach(updateCard);
-  }
-
-  function enhancePickCardsWithReleaseData(){
-    /*
-      This works with Google Sheets columns:
-      AD = Release Time
-      AE = Release Status
-
-      If your existing site renderer exposes row fields as data attributes later,
-      this engine will use them automatically.
-
-      For current static cards, it also checks visible text for hidden markers:
-      Release Time: 2026-05-10 19:00:00
-      Release Status: Locked
-    */
-    document.querySelectorAll(".pick-card,.card").forEach(function(card){
-      if(card.hasAttribute("data-release-enhanced")) return;
-      card.setAttribute("data-release-enhanced","yes");
-
-      const text = card.textContent || "";
-
-      const timeMatch = text.match(/Release Time:\s*([0-9]{4}-[0-9]{2}-[0-9]{2}[ T][0-9]{1,2}:[0-9]{2}(?::[0-9]{2})?)/i);
-      const statusMatch = text.match(/Release Status:\s*(Locked|Live)/i);
-
-      if(timeMatch && !card.getAttribute("data-release-time")){
-        card.setAttribute("data-release-time", timeMatch[1]);
-      }
-
-      if(statusMatch && !card.getAttribute("data-release-status")){
-        card.setAttribute("data-release-status", statusMatch[1]);
-      }
-    });
-  }
-
-  function run(){
-    enhancePickCardsWithReleaseData();
-    initializeReleaseTimers();
-  }
-
-  document.addEventListener("DOMContentLoaded",function(){
-    run();
-    setInterval(run,1000);
-    setTimeout(run,1200);
-    setTimeout(run,2500);
-  });
-
-  window.micksRunReleaseTimers = run;
-})();
-</script>
-
-
-<script>
-/* ===== MICKS PICKS GLOBAL FUNCTION ALIASES ===== */
-(function(){
-  setTimeout(function(){
-    try{ if(typeof loadHome==="function") window.loadHome=loadHome; }catch(e){}
-    try{ if(typeof loadPremium==="function") window.loadPremium=loadPremium; }catch(e){}
-    try{ if(typeof syncVipStats==="function") window.syncVipStats=syncVipStats; }catch(e){}
-  },100);
-})();
-</script>
-
-
-<script>
-/* ===== MICKS PICKS PREMIUM REMAKE ENHANCEMENTS ===== */
-(function(){
-  function addPlatformStrip(){
-    if(document.querySelector(".mp-platform-strip")) return;
-    const hero = document.querySelector(".hero .container,.hero,main .hero");
-    if(!hero) return;
-    const strip=document.createElement("div");
-    strip.className="mp-platform-strip";
-    strip.innerHTML = `
-      <div class="mp-mini-card"><strong>Live Edge</strong><span>Real-time sync</span></div>
-      <div class="mp-mini-card"><strong>CLV Desk</strong><span>Closing line value</span></div>
-      <div class="mp-mini-card"><strong>VIP Drops</strong><span>Timed releases</span></div>
-      <div class="mp-mini-card"><strong>Micks AI</strong><span>Framework grading</span></div>
-    `;
-    const actions=hero.querySelector(".actions");
-    if(actions && actions.parentNode){ actions.parentNode.insertBefore(strip,actions.nextSibling); }
-    else hero.appendChild(strip);
-  }
-
-  function addLiveTicker(){
-    if(document.querySelector(".mp-live-ticker")) return;
-    const ticker=document.createElement("div");
-    ticker.className="mp-live-ticker";
-    ticker.innerHTML=`
-      <div class="mp-live-track">
-        <span><b>MICKS AI</b> • Edge grading active</span>
-        <span><b>CLV DESK</b> • Tracking market movement</span>
-        <span><b>VIP DROPS</b> • Scheduled releases live</span>
-        <span><b>RESULTS</b> • ROI + streaks auto-refresh</span>
-        <span><b>MICKS AI</b> • Edge grading active</span>
-        <span><b>CLV DESK</b> • Tracking market movement</span>
-        <span><b>VIP DROPS</b> • Scheduled releases live</span>
-        <span><b>RESULTS</b> • ROI + streaks auto-refresh</span>
-      </div>`;
-    document.body.appendChild(ticker);
-  }
-
-  function convertFeaturedToHero(){
-    const firstFeatured=document.querySelector(".featured-play");
-    if(firstFeatured && !firstFeatured.classList.contains("featured-hero")){
-      firstFeatured.classList.add("featured-hero");
-    }
-  }
-
-  function addAIPills(){
-    document.querySelectorAll(".pick-card").forEach(function(card){
-      if(card.querySelector(".ai-pill")) return;
-      const title=card.querySelector(".pick-title");
-      if(!title) return;
-      const pill=document.createElement("span");
-      pill.className="ai-pill";
-      pill.textContent="Micks AI Edge";
-      title.parentNode.insertBefore(pill,title);
-    });
-  }
-
-  function run(){
-    addPlatformStrip();
-    addLiveTicker();
-    convertFeaturedToHero();
-    addAIPills();
-  }
-
-  document.addEventListener("DOMContentLoaded",function(){
-    run();
-    setTimeout(run,900);
-    setTimeout(run,2200);
-  });
-
-  window.micksPremiumRemakeRun = run;
-})();
-</script>
-
-
-<script>
-/* ===== SAFE GLOW RESTORE JS — NO ROUTE/ACCESS CHANGES ===== */
-(function(){
-  function addSafeGlowOrbs(){
-    if(document.querySelector(".safe-glow-orb")) return;
-    ["gold","green","blue"].forEach(function(color){
-      var orb=document.createElement("div");
-      orb.className="safe-glow-orb safe-orb-"+color;
-      document.body.appendChild(orb);
-    });
-  }
-
-  function enhanceSafeGlow(){
-    addSafeGlowOrbs();
-    var featured=document.querySelector(".featured-play,.featured-card,.hero-pick");
-    if(featured) featured.classList.add("featured-hero");
-  }
-
-  document.addEventListener("DOMContentLoaded",function(){
-    enhanceSafeGlow();
-    setTimeout(enhanceSafeGlow,800);
-    setTimeout(enhanceSafeGlow,2400);
-  });
-
-  window.micksSafeGlowRestore = enhanceSafeGlow;
-})();
-</script>
-
-</body></html>
+    <div class="small">
+      Mick's Picks is for entertainment and educational purposes only. Bet responsibly.
+    </div>
+  </main>
+</body>
+</html>
