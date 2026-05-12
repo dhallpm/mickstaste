@@ -647,51 +647,6 @@
       }
     }
 
-  
-    /* ===== PUBLIC VISIT COUNTER DESIGN ===== */
-    .public-visit-counter{
-      grid-column:1/-1;
-      position:relative;
-      overflow:hidden;
-      border-color:rgba(53,229,140,.25) !important;
-      background:
-        radial-gradient(circle at 100% 0%,rgba(53,229,140,.15),transparent 42%),
-        radial-gradient(circle at 0% 100%,rgba(255,226,138,.10),transparent 38%),
-        rgba(0,0,0,.34) !important;
-    }
-    .public-visit-counter::after{
-      content:"";
-      position:absolute;
-      inset:-40%;
-      background:linear-gradient(120deg,transparent,rgba(255,226,138,.11),transparent);
-      transform:translateX(-80%) rotate(10deg);
-      animation:visitCounterSweep 6s ease-in-out infinite;
-      pointer-events:none;
-    }
-    .public-visit-counter strong,
-    .public-visit-counter span,
-    .public-visit-counter small{
-      position:relative;
-      z-index:1;
-    }
-    .public-visit-counter strong{
-      font-variant-numeric:tabular-nums;
-      color:#fff !important;
-    }
-    .public-visit-counter small{
-      display:block;
-      margin-top:6px;
-      color:#95ffc1;
-      font-size:10px;
-      font-weight:900;
-      letter-spacing:1px;
-      text-transform:uppercase;
-    }
-    @keyframes visitCounterSweep{
-      0%,45%{transform:translateX(-80%) rotate(10deg)}
-      75%,100%{transform:translateX(80%) rotate(10deg)}
-    }
-
   </style>
 </head>
 
@@ -748,11 +703,6 @@
             <div class="metric"><strong id="winRate">--</strong><span>Win Rate</span></div>
             <div class="metric"><strong id="totalUnits">--</strong><span>Total Units</span></div>
             <div class="metric"><strong id="currentStreak">--</strong><span>Current Streak</span></div>
-            <div class="metric public-visit-counter">
-              <strong id="publicVisitCount">Tracking</strong>
-              <span>Site Visits</span>
-              <small id="publicVisitStatus">Public count syncing</small>
-            </div>
           </div>
         </div>
       </div>
@@ -805,9 +755,9 @@
             <p>Goalie edges, rest spots, shot volume, special teams, totals environments, and market value.</p>
           </div>
         </div>
-
-        <div class="card" style="margin-top:20px">
-
+      </div>
+    
+<div class="card" style="margin-top:20px">
   <h3>Grade System</h3>
   <p style="margin-bottom:18px;color:var(--muted)">
     Micks Picks confidence grading system used across all active plays.
@@ -829,10 +779,8 @@
       <span class="grade-sub">Lean Only</span>
     </div>
   </div>
+</div>
 
-        </div>
-      </div>
-    </section>
 
     <section class="section" id="results">
       <div class="container">
@@ -882,50 +830,6 @@
     const SHEET_ID = "15txBM8qsck7f0ZA_za7xYEykBxKpuq0no3x7yHcKNeE";
     const ACTIVE_GID = "0";
     const ARCHIVE_GID = "1579113575";
-
-    /* ===== MICKS PICKS PUBLIC GOATCOUNTER TEXT COUNT ===== */
-    const GOATCOUNTER_CODE = "mickspicks";
-
-    function setupPublicVisitCounter(){
-      const el = document.getElementById("publicVisitCount");
-      const status = document.getElementById("publicVisitStatus");
-      if(!el) return;
-
-      function setDisplay(count, label){
-        el.textContent = count || "Tracking";
-        if(status) status.textContent = label || "Live site visits";
-      }
-
-      function addTrackingScript(){
-        if(document.querySelector("script[data-goatcounter]")) return;
-        const script = document.createElement("script");
-        script.async = true;
-        script.src = "https://gc.zgo.at/count.js";
-        script.setAttribute("data-goatcounter", `https://${GOATCOUNTER_CODE}.goatcounter.com/count`);
-        document.body.appendChild(script);
-      }
-
-      function loadPublicCount(){
-        const totalUrl = `https://${GOATCOUNTER_CODE}.goatcounter.com/counter/TOTAL.json`;
-
-        fetch(totalUrl, { cache:"no-store" })
-          .then(res => {
-            if(!res.ok) throw new Error("Counter total unavailable");
-            return res.json();
-          })
-          .then(data => {
-            setDisplay(data.count || data.count_unique || "0", "Public visit count");
-          })
-          .catch(() => {
-            setDisplay("Tracking", "Public count syncing");
-          });
-      }
-
-      addTrackingScript();
-      loadPublicCount();
-      setInterval(loadPublicCount, 1800000);
-    }
-
 
     function csvUrl(gid){
       return `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${gid}&cache=${Date.now()}`;
@@ -1136,10 +1040,7 @@
       }
     }
 
-    document.addEventListener("DOMContentLoaded", function(){
-      load();
-      setupPublicVisitCounter();
-    });
+    document.addEventListener("DOMContentLoaded", load);
     setInterval(load, 30000);
   </script>
 </body>
