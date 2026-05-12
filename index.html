@@ -610,44 +610,55 @@
       .guru-network-card::after{font-size:100px;right:18px}
     }
   
-    /* ===== CLEAN PREMIUM SLOGAN BADGE ===== */
-    .brand-slogan{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      margin:22px 0 0;
-      padding:10px 14px;
-      border-radius:999px;
-      border:1px solid rgba(255,226,138,.22);
-      background:rgba(255,226,138,.065);
-      color:#ffe28a;
-      font-size:13px;
-      font-weight:1000;
-      letter-spacing:1.4px;
+    .release-timer-card{
+      border:1px solid rgba(245,196,81,.24);
+      background:
+        radial-gradient(circle at 100% 0%, rgba(245,196,81,.14), transparent 32%),
+        rgba(18,17,14,.88);
+      border-radius:22px;
+      padding:18px;
+      margin-top:16px;
+      box-shadow:0 18px 46px rgba(0,0,0,.32);
+    }
+    .release-timer-label{
+      color:var(--gold2, var(--gold));
+      font-size:.72rem;
+      letter-spacing:.14em;
       text-transform:uppercase;
-      box-shadow:0 14px 38px rgba(0,0,0,.26),0 0 22px rgba(255,226,138,.06);
-      width:max-content;
-      max-width:100%;
+      font-weight:1000;
+      margin-bottom:8px;
     }
-    .brand-slogan::before{
-      content:"";
-      width:8px;
-      height:8px;
-      min-width:8px;
-      border-radius:50%;
-      background:#35e58c;
-      box-shadow:0 0 14px rgba(53,229,140,.62);
+    .release-countdown{
+      font-size:1.45rem;
+      font-weight:1000;
+      color:#fff8e9;
+      letter-spacing:-.02em;
     }
-    @media(max-width:560px){
-      .brand-slogan{
-        font-size:10.5px;
-        letter-spacing:.85px;
-        padding:9px 11px;
-        line-height:1.25;
-      }
+    .locked-pick{
+      filter:blur(0px);
+      opacity:.96;
+    }
+    .locked-details{
+      margin-top:14px;
+      padding:14px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(0,0,0,.28);
+      color:var(--muted);
+      line-height:1.5;
+    }
+    .locked-title{
+      color:var(--gold2, var(--gold));
+      font-weight:1000;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      font-size:.78rem;
+      margin-bottom:8px;
     }
 
   </style>
+  <!-- Micks Picks auto-date-filter build: 2026-05-12 14:57:23 -->
+  <!-- Picks release timer enabled: 2026-05-12 15:16:15 -->
 </head>
 
 <body>
@@ -681,7 +692,6 @@
         <div>
           <div class="eyebrow">Micks Picks</div>
           <h1>Sharp Plays.<br>Clean Edges.</h1>
-          <div class="brand-slogan">Bet the Number. Not the Hype.</div>
           <p>
             Premium sports betting analysis built around value, market discipline, matchup edges, injury context, and real results tracking.
           </p>
@@ -900,6 +910,43 @@
       `;
     }
 
+    
+    function toISODate(v){
+      const s = String(v || "").trim();
+      if(!s) return "";
+      if(/^\d{4}-\d{2}-\d{2}/.test(s)) return s.slice(0,10);
+
+      const d = new Date(s);
+      if(Number.isNaN(d.getTime())) return s.slice(0,10);
+
+      const yyyy = d.getFullYear();
+      const mm = String(d.getMonth() + 1).padStart(2, "0");
+      const dd = String(d.getDate()).padStart(2, "0");
+      return `${yyyy}-${mm}-${dd}`;
+    }
+
+    function todayISO(){
+      const d = new Date();
+      const yyyy = d.getFullYear();
+      const mm = String(d.getMonth() + 1).padStart(2, "0");
+      const dd = String(d.getDate()).padStart(2, "0");
+      return `${yyyy}-${mm}-${dd}`;
+    }
+
+    function isTodayPick(r){
+      return toISODate(r.Date) === todayISO();
+    }
+
+    function isUnsettled(r){
+      return !/win|loss|push|void|closed|graded/i.test(String(r.Result || ""));
+    }
+
+    function isPlayableStatus(r){
+      const status = String(r.Status || "").trim().toLowerCase();
+      const releaseStatus = String(r["Release Status"] || "").trim().toLowerCase();
+      return status === "pregame" || status === "active" || releaseStatus === "released" || releaseStatus === "live";
+    }
+
     function esc(s){
       return String(s||"").replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
     }
@@ -940,6 +987,76 @@
       if(g.startsWith("B")) return "grade-b";
       if(g.startsWith("C")) return "grade-c";
       return "grade-pass";
+    }
+
+
+    function parseReleaseDateTime(v){
+      const s = String(v || "").trim();
+      if(!s) return null;
+      let d = new Date(s);
+      if(!Number.isNaN(d.getTime())) return d;
+
+      // Handles values like 2026-05-12 1:30 PM in Safari/iPhone by replacing first space.
+      d = new Date(s.replace(" ", "T"));
+      if(!Number.isNaN(d.getTime())) return d;
+
+      return null;
+    }
+
+    function isReleasedByTimer(r){
+      const releaseStatus = String(r["Release Status"] || "").trim().toLowerCase();
+      if(releaseStatus === "released" || releaseStatus === "live") return true;
+
+      const releaseTime = parseReleaseDateTime(r["Release Time"] || r["Posted Time"]);
+      if(!releaseTime) return true;
+
+      return Date.now() >= releaseTime.getTime();
+    }
+
+    function countdownText(target){
+      if(!target) return "Release time pending";
+      const diff = target.getTime() - Date.now();
+      if(diff <= 0) return "Released now";
+
+      const totalSeconds = Math.floor(diff / 1000);
+      const days = Math.floor(totalSeconds / 86400);
+      const hours = Math.floor((totalSeconds % 86400) / 3600);
+      const minutes = Math.floor((totalSeconds % 3600) / 60);
+      const seconds = totalSeconds % 60;
+
+      if(days > 0) return `${days}d ${hours}h ${minutes}m`;
+      if(hours > 0) return `${hours}h ${minutes}m ${seconds}s`;
+      return `${minutes}m ${seconds}s`;
+    }
+
+    function releaseTimerHTML(r){
+      const releaseTime = parseReleaseDateTime(r["Release Time"] || r["Posted Time"]);
+      return `
+        <div class="release-timer-card">
+          <div class="release-timer-label">Pick Release Timer</div>
+          <div class="release-countdown" data-release-time="${esc(r["Release Time"] || r["Posted Time"] || "")}">
+            ${countdownText(releaseTime)}
+          </div>
+        </div>
+      `;
+    }
+
+    function refreshCountdowns(){
+      document.querySelectorAll("[data-release-time]").forEach(el => {
+        const d = parseReleaseDateTime(el.getAttribute("data-release-time"));
+        el.textContent = countdownText(d);
+      });
+    }
+
+    function isFreeActive(r){
+      const access = String(r.Access || "").trim().toLowerCase();
+      const hasPick = r.Pick && r.Game;
+
+      return hasPick &&
+        access === "free" &&
+        isTodayPick(r) &&
+        isUnsettled(r) &&
+        isPlayableStatus(r);
     }
 
     function renderActive(rows){
@@ -1027,6 +1144,21 @@
       `).join("") || `<tr><td colspan="6">No completed picks yet.</td></tr>`;
     }
 
+
+    function publicLockedCard(r){
+      return `
+        <div class="card locked-pick">
+          <h3>Pick Scheduled</h3>
+          <p>${esc(r.Game || "Game pending")}</p>
+          ${releaseTimerHTML(r)}
+          <div class="locked-details">
+            <div class="locked-title">Release Pending</div>
+            This public pick will reveal automatically when the release timer ends.
+          </div>
+        </div>
+      `;
+    }
+
     async function load(){
       try{
         const [activeRows, archiveRows] = await Promise.all([getRows(ACTIVE_GID), getRows(ARCHIVE_GID)]);
@@ -1042,6 +1174,7 @@
 
     document.addEventListener("DOMContentLoaded", load);
     setInterval(load, 30000);
+    setInterval(refreshCountdowns, 1000);
   </script>
 </body>
 </html>
