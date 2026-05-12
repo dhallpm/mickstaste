@@ -728,65 +728,6 @@
       .vip-lock-list{grid-template-columns:1fr}
     }
 
-
-
-    /* ===== BETRIVERS DELAWARE ODDS LAYER ===== */
-    .section-sub{color:var(--muted);margin:6px 0 24px;line-height:1.55;max-width:760px}
-    .odds-shell{
-      border:1px solid rgba(255,226,138,.22);
-      border-radius:28px;
-      padding:24px;
-      background:
-        radial-gradient(circle at 92% 0%,rgba(53,229,140,.12),transparent 32%),
-        radial-gradient(circle at 8% 100%,rgba(255,226,138,.10),transparent 34%),
-        linear-gradient(180deg,rgba(18,18,18,.94),rgba(5,5,5,.94));
-      box-shadow:0 28px 82px rgba(0,0,0,.60),0 0 34px rgba(255,226,138,.07);
-    }
-    .odds-board-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:18px}
-    .odds-board-head p{margin:6px 0 0;color:var(--muted);line-height:1.5}
-    .odds-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-    .odds-card,.odds-mini{
-      position:relative;
-      z-index:2;
-      border:1px solid rgba(255,226,138,.16);
-      border-radius:22px;
-      background:rgba(0,0,0,.30);
-      overflow:hidden;
-    }
-    .odds-card{padding:18px}
-    .odds-mini{padding:14px;margin:14px 0;background:rgba(0,0,0,.25)}
-    .odds-card::before,.odds-mini::before{
-      content:"";
-      position:absolute;
-      inset:0 0 auto 0;
-      height:3px;
-      background:linear-gradient(90deg,var(--green),var(--gold),transparent);
-      opacity:.8;
-    }
-    .odds-title-row{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:12px}
-    .odds-title-row h3,.odds-title-row h4{margin:0;color:#fff7dc;line-height:1.12;letter-spacing:-.35px}
-    .odds-title-row h3{font-size:20px}.odds-title-row h4{font-size:14px;text-transform:uppercase;letter-spacing:.7px;color:var(--gold)}
-    .odds-game{color:var(--muted);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.65px;margin-top:5px}
-    .odds-provider-pill,.confirm-pill{
-      display:inline-flex;align-items:center;justify-content:center;
-      min-height:28px;padding:0 10px;border-radius:999px;
-      font-size:10px;font-weight:1000;text-transform:uppercase;letter-spacing:.7px;
-      border:1px solid rgba(255,226,138,.18);white-space:nowrap;
-      background:rgba(0,0,0,.35);color:#f5e9c8;
-    }
-    .odds-provider-pill{color:#090909;background:linear-gradient(135deg,#8f650f,#ffe28a 55%,#c89b3c)}
-    .confirm-pill.confirmed{border-color:rgba(53,229,140,.35);background:rgba(53,229,140,.12);color:#bfffdc}
-    .confirm-pill.moved,.confirm-pill.no-bet{border-color:rgba(255,95,104,.35);background:rgba(255,95,104,.12);color:#ffb6bb}
-    .confirm-pill.pending{border-color:rgba(255,226,138,.28);background:rgba(255,226,138,.10);color:#ffe28a}
-    .odds-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
-    .odds-stat{border:1px solid rgba(255,226,138,.10);border-radius:14px;background:rgba(0,0,0,.30);padding:11px 10px}
-    .odds-stat strong{display:block;color:#fff;font-size:14px;word-break:break-word}.odds-stat span{display:block;margin-top:4px;color:var(--muted);font-size:9px;text-transform:uppercase;letter-spacing:.75px;font-weight:900}
-    .odds-note{margin-top:12px;color:var(--muted);font-size:12px;line-height:1.45}
-    .odds-rule{margin-top:14px;border:1px solid rgba(255,226,138,.18);border-radius:16px;padding:13px;background:rgba(255,226,138,.055);color:#f0dca6;font-size:12px;font-weight:900;letter-spacing:.25px;line-height:1.45}
-    .odds-empty{grid-column:1/-1;padding:24px;border-radius:20px;border:1px solid rgba(255,226,138,.16);background:rgba(0,0,0,.30);color:var(--muted);text-align:center}
-    @media(max-width:900px){.odds-grid{grid-template-columns:1fr}.odds-board-head{align-items:flex-start;flex-direction:column}.odds-stats{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:560px){.odds-stats{grid-template-columns:1fr}}
-
   </style>
 </head>
 
@@ -804,7 +745,6 @@
       <nav class="links">
         <a href="index.html">Home</a>
         <a href="#active-picks">Free Picks</a>
-        <a href="#odds-board">Odds Board</a>
         <a href="premium.html">VIP Vault</a>
         <a href="./yahgi.html" class="guru-link">♛ Yahgi's Guru Picks</a>
         <a href="#results">Results Archive</a>
@@ -849,23 +789,6 @@
       </div>
     </section>
 
-    <section class="section" id="odds-board">
-      <div class="container">
-        <div class="odds-shell">
-          <div class="odds-board-head">
-            <div>
-              <h2 class="section-title" style="margin-bottom:0">BetRivers Delaware Odds Layer</h2>
-              <p>Local-book confirmation for Micks Picks. OpticOdds is the primary feed, SharpAPI-style feeds are backup, and every playable number still requires a manual BetRivers Delaware app check.</p>
-            </div>
-            <div class="sync-pill"><span class="sync-dot"></span><span id="oddsSync">Syncing Odds</span></div>
-          </div>
-          <div class="odds-grid" id="oddsGrid">
-            <div class="odds-empty">Loading BetRivers Delaware odds layer...</div>
-          </div>
-          <div class="odds-rule">Betting rule: do not place from the website number alone. Confirm the final price inside the BetRivers Delaware app before betting. If the line moved past the no-bet cutoff, mark it No Bet.</div>
-        </div>
-      </div>
-    </section>
 
 
     <section class="section" id="active-picks">
@@ -913,30 +836,29 @@
             <p>Goalie edges, rest spots, shot volume, special teams, totals environments, and market value.</p>
           </div>
         </div>
-      </div>
-    
-<div class="card" style="margin-top:20px">
+      
+        <div class="card" style="margin-top:20px">
   <h3>Grade System</h3>
-          <p style="margin-bottom:18px;color:var(--muted)">
-            Micks Picks confidence grading system used across all active plays.
-          </p>
+  <p style="margin-bottom:18px;color:var(--muted)">
+    Micks Picks confidence grading system used across all active plays.
+  </p>
 
-          <div style="display:flex;gap:14px;flex-wrap:wrap">
-            <div class="grade-badge grade-a">
-              <span>Grade A</span>
-              <span class="grade-sub">Elite Edge</span>
-            </div>
+  <div style="display:flex;gap:14px;flex-wrap:wrap">
+    <div class="grade-badge grade-a">
+      <span>Grade A</span>
+      <span class="grade-sub">Elite Edge</span>
+    </div>
 
-            <div class="grade-badge grade-b">
-              <span>Grade B</span>
-              <span class="grade-sub">Strong Value</span>
-            </div>
+    <div class="grade-badge grade-b">
+      <span>Grade B</span>
+      <span class="grade-sub">Strong Value</span>
+    </div>
 
-            <div class="grade-badge grade-c">
-              <span>Grade C</span>
-              <span class="grade-sub">Lean Only</span>
-            </div>
-          </div>
+    <div class="grade-badge grade-c">
+      <span>Grade C</span>
+      <span class="grade-sub">Lean Only</span>
+    </div>
+  </div>
         </div>
       </div>
     </section>
@@ -1245,100 +1167,6 @@
     }
 
 
-
-    const ODDS_PRIMARY_SOURCE = "OpticOdds";
-    const ODDS_BACKUP_SOURCE = "SharpAPI Backup";
-
-    function firstField(row, names, fallback="—"){
-      for(const name of names){
-        if(row && Object.prototype.hasOwnProperty.call(row, name)){
-          const value = String(row[name] || "").trim();
-          if(value) return value;
-        }
-      }
-      return fallback;
-    }
-
-    function oddsConfirmation(row){
-      const raw = firstField(row, ["Confirmation Status", "Manual App Check", "BetRivers Confirmation", "Confirmed", "Confirmation"], "Unconfirmed");
-      const value = String(raw || "").trim();
-      const lower = value.toLowerCase();
-      let cls = "pending";
-      if(lower.includes("checked") || lower.includes("confirmed") || lower === "yes") cls = "confirmed";
-      if(lower.includes("moved")) cls = "moved";
-      if(lower.includes("no bet") || lower.includes("cutoff") || lower.includes("pass")) cls = "no-bet";
-      return {label:value || "Unconfirmed", cls};
-    }
-
-    function oddsProvider(row){
-      const listed = firstField(row, ["Odds Source", "Source Verification", "Feed Source", "Provider"], "");
-      return listed && listed !== "—" ? listed : `${ODDS_PRIMARY_SOURCE} / ${ODDS_BACKUP_SOURCE}`;
-    }
-
-    function oddsMiniHTML(r){
-      const c = oddsConfirmation(r);
-      const betRivers = firstField(r, ["BetRivers Price", "BetRivers", "BetRivers Delaware", "Local Book Price", "BR Price"], "Pending");
-      const best = firstField(r, ["Best Market Price", "Best Market", "Best Price", "Market Best"], r.Odds || "Pending");
-      const movement = firstField(r, ["Line Movement", "Movement", "Move"], "Pending");
-      const timestamp = firstField(r, ["Timestamp", "Last Updated", "Odds Timestamp", "Updated"], "Pending");
-      return `
-        <div class="odds-mini">
-          <div class="odds-title-row">
-            <h4>BetRivers Odds Check</h4>
-            <span class="confirm-pill ${c.cls}">${esc(c.label)}</span>
-          </div>
-          <div class="odds-stats">
-            <div class="odds-stat"><strong>${esc(betRivers)}</strong><span>BetRivers DE</span></div>
-            <div class="odds-stat"><strong>${esc(best)}</strong><span>Best Market</span></div>
-            <div class="odds-stat"><strong>${esc(movement)}</strong><span>Line Move</span></div>
-            <div class="odds-stat"><strong>${esc(timestamp)}</strong><span>Timestamp</span></div>
-            <div class="odds-stat"><strong>${esc(firstField(r, ["No Bet Cutoff"], "—"))}</strong><span>No Bet Cutoff</span></div>
-            <div class="odds-stat"><strong>${esc(oddsProvider(r))}</strong><span>Source</span></div>
-          </div>
-          <div class="odds-note">Manual rule: verify the final price inside BetRivers Delaware before placing.</div>
-        </div>
-      `;
-    }
-
-    function renderOddsBoard(allRows){
-      const grid = document.getElementById("oddsGrid");
-      const sync = document.getElementById("oddsSync");
-      if(!grid) return;
-      const activeRows = allRows.filter(isActivePick);
-      const publicRows = activeRows.filter(r => !/vip/i.test(r.Access || ""));
-      const lockedVip = activeRows.length - publicRows.length;
-      const confirmed = publicRows.filter(r => oddsConfirmation(r).cls === "confirmed").length;
-      if(sync) sync.textContent = `${publicRows.length} Public Markets • ${confirmed} Confirmed${lockedVip ? ` • ${lockedVip} VIP Hidden` : ""}`;
-      if(!publicRows.length){
-        grid.innerHTML = `<div class="odds-empty">No public active picks to price yet. Add rows to the Active Picks sheet with BetRivers Price, Best Market Price, Line Movement, Timestamp, and Confirmation Status.</div>`;
-        return;
-      }
-      grid.innerHTML = publicRows.map(r => {
-        const c = oddsConfirmation(r);
-        return `
-          <article class="odds-card">
-            <div class="odds-title-row">
-              <div>
-                <span class="odds-provider-pill">${esc(oddsProvider(r))}</span>
-                <h3 style="margin-top:10px">${esc(r.Pick || "Micks Pick")}</h3>
-                <div class="odds-game">${esc(r.Game || "")} • ${esc(r.League || r.Sport || "")}</div>
-              </div>
-              <span class="confirm-pill ${c.cls}">${esc(c.label)}</span>
-            </div>
-            <div class="odds-stats">
-              <div class="odds-stat"><strong>${esc(firstField(r, ["BetRivers Price", "BetRivers", "BetRivers Delaware", "Local Book Price", "BR Price"], "Pending"))}</strong><span>BetRivers DE</span></div>
-              <div class="odds-stat"><strong>${esc(firstField(r, ["Best Market Price", "Best Market", "Best Price", "Market Best"], r.Odds || "Pending"))}</strong><span>Best Market</span></div>
-              <div class="odds-stat"><strong>${esc(firstField(r, ["Line Movement", "Movement", "Move"], "Pending"))}</strong><span>Line Movement</span></div>
-              <div class="odds-stat"><strong>${esc(firstField(r, ["Timestamp", "Last Updated", "Odds Timestamp", "Updated"], "Pending"))}</strong><span>Timestamp</span></div>
-              <div class="odds-stat"><strong>${esc(firstField(r, ["No Bet Cutoff"], "—"))}</strong><span>No Bet Cutoff</span></div>
-              <div class="odds-stat"><strong>${esc(firstField(r, ["Sportsbook"], "BetRivers"))}</strong><span>Book Layer</span></div>
-            </div>
-            <div class="odds-note">${esc(firstField(r, ["Market Notes"], "Feed-ready. Confirm in the BetRivers app before betting."))}</div>
-          </article>
-        `;
-      }).join("");
-    }
-
     function isActivePick(r){
       const status = String(r.Status || "").toLowerCase();
       const release = String(r["Release Status"] || "").toLowerCase();
@@ -1348,7 +1176,6 @@
 
       if(!hasRequired || !notGraded) return false;
 
-      const isVip = access.includes("vip");
       const isPublicLive =
         status.includes("pregame") ||
         status.includes("active") ||
@@ -1361,10 +1188,10 @@
         release.includes("scheduled") ||
         String(r["Release Time"] || "").trim();
 
-      return isVip ? (isPublicLive || isScheduled) : (isPublicLive || isScheduled);
+      return access.includes("vip") ? (isPublicLive || isScheduled) : (isPublicLive || isScheduled);
     }
 
-    function fmtDate(s){
+    function fmtDate    function fmtDate(s){
       s = String(s || "").trim();
       if(!s) return "";
       const d = new Date(s);
@@ -1466,7 +1293,6 @@
               <div class="pick-stat"><strong>${esc(r["Best Number"] || "-")}</strong><span>Best #</span></div>
               <div class="pick-stat"><strong>${esc(r.Confidence || "-")}</strong><span>Confidence</span></div>
             </div>
-            ${oddsMiniHTML(r)}
             <p class="pick-writeup">${esc(r.Writeup || "Micks Picks release pending writeup.")}</p>
             ${analysis}
             ${releaseTimerHTML(r, {
@@ -1479,7 +1305,7 @@
       startReleaseTimers();
     }
 
-    function render(rows){
+    function render(rows)    function render(rows){
       rows = rows.filter(r => r.Date && r.Pick && r.Game && /win|loss|push/i.test(r.Result || ""));
 
       const wins = rows.filter(r=>/win/i.test(r.Result||"")).length;
@@ -1509,15 +1335,12 @@
       try{
         const [activeRows, archiveRows] = await Promise.all([getRows(ACTIVE_GID), getRows(ARCHIVE_GID)]);
         renderActive(activeRows);
-        renderOddsBoard(activeRows);
         render(archiveRows);
       }
       catch(e){
         const activeGrid = document.getElementById("activePicksGrid");
         if(activeGrid) activeGrid.innerHTML = `<div class="empty-state">Active picks sync unavailable. Make sure the Google Sheet is published/shared correctly.</div>`;
-        const oddsGrid = document.getElementById("oddsGrid");
-        if(oddsGrid) oddsGrid.innerHTML = `<div class="odds-empty">Odds layer unavailable. Check sheet sharing or odds feed import.</div>`;
-        document.getElementById("resultsBody").innerHTML = `<tr><td colspan="6">Results sync unavailable. Check sheet sharing.</td></tr>`;
+        document.getElementById("resultsBody").innerHTML = `<tr><td colspan="6">Results sync unavailable. Check Results Archive sharing.</td></tr>`;
       }
     }
 
