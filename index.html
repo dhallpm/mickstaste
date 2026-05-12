@@ -609,6 +609,35 @@
       .guru-network-card{padding:28px}
       .guru-network-card::after{font-size:100px;right:18px}
     }
+  
+    /* ===== MICKS PICKS VISIT COUNTER ===== */
+    .visit-counter-metric{
+      grid-column:1/-1;
+      position:relative;
+      overflow:hidden;
+    }
+    .visit-counter-metric::after{
+      content:"";
+      position:absolute;
+      inset:-40%;
+      background:linear-gradient(120deg,transparent,rgba(255,226,138,.10),transparent);
+      transform:translateX(-80%) rotate(10deg);
+      animation:visitCounterSweep 6s ease-in-out infinite;
+      pointer-events:none;
+    }
+    .visit-counter-metric strong,
+    .visit-counter-metric span{
+      position:relative;
+      z-index:1;
+    }
+    .visit-counter-metric strong{
+      font-variant-numeric:tabular-nums;
+    }
+    @keyframes visitCounterSweep{
+      0%,45%{transform:translateX(-80%) rotate(10deg)}
+      75%,100%{transform:translateX(80%) rotate(10deg)}
+    }
+
   </style>
 </head>
 
@@ -664,6 +693,7 @@
             <div class="metric"><strong id="winRate">--</strong><span>Win Rate</span></div>
             <div class="metric"><strong id="totalUnits">--</strong><span>Total Units</span></div>
             <div class="metric"><strong id="currentStreak">--</strong><span>Current Streak</span></div>
+            <div class="metric visit-counter-metric"><strong id="visitCounter">--</strong><span>Page Visits</span></div>
           </div>
         </div>
       </div>
@@ -791,6 +821,67 @@
     const SHEET_ID = "15txBM8qsck7f0ZA_za7xYEykBxKpuq0no3x7yHcKNeE";
     const ACTIVE_GID = "0";
     const ARCHIVE_GID = "1579113575";
+
+    /* ===== MICKS PICKS VISIT COUNTER =====
+       Replace YOUR_GOATCOUNTER_CODE with your GoatCounter site code for real public tracking.
+       Until then, this shows a local preview counter on your own device. */
+    const GOATCOUNTER_CODE = "YOUR_GOATCOUNTER_CODE";
+
+    function setupVisitCounter(){
+      const el = document.getElementById("visitCounter");
+      if(!el) return;
+
+      function localPreviewCounter(){
+        const pageKey = "micks_picks_preview_visits:" + location.pathname;
+        const sessionKey = pageKey + ":seen";
+        let count = parseInt(localStorage.getItem(pageKey) || "0", 10);
+
+        if(!sessionStorage.getItem(sessionKey)){
+          count += 1;
+          localStorage.setItem(pageKey, String(count));
+          sessionStorage.setItem(sessionKey, "1");
+        }
+
+        el.textContent = count.toLocaleString();
+      }
+
+      if(!GOATCOUNTER_CODE || GOATCOUNTER_CODE === "YOUR_GOATCOUNTER_CODE"){
+        localPreviewCounter();
+        return;
+      }
+
+      window.goatcounter = window.goatcounter || {};
+
+      function showVisitCount(){
+        let tries = 0;
+        const timer = setInterval(() => {
+          tries += 1;
+
+          if(window.goatcounter && typeof window.goatcounter.visit_count === "function"){
+            clearInterval(timer);
+            el.innerHTML = "";
+            window.goatcounter.visit_count({ append: "#visitCounter" });
+          }
+
+          if(tries > 60){
+            clearInterval(timer);
+            localPreviewCounter();
+          }
+        }, 100);
+      }
+
+      if(!document.querySelector("script[data-goatcounter]")){
+        const script = document.createElement("script");
+        script.async = true;
+        script.src = "https://gc.zgo.at/count.js";
+        script.setAttribute("data-goatcounter", `https://${GOATCOUNTER_CODE}.goatcounter.com/count`);
+        script.onload = showVisitCount;
+        document.body.appendChild(script);
+      } else {
+        showVisitCount();
+      }
+    }
+
 
     function csvUrl(gid){
       return `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${gid}&cache=${Date.now()}`;
@@ -1001,7 +1092,10 @@
       }
     }
 
-    document.addEventListener("DOMContentLoaded", load);
+    document.addEventListener("DOMContentLoaded", function(){
+      load();
+      setupVisitCounter();
+    });
     setInterval(load, 30000);
   </script>
 </body>
