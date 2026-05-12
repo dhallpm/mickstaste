@@ -440,58 +440,26 @@
       h1{letter-spacing:-.045em}
     }
   
+    /* ===== PREMIUM PERFORMANCE METRICS ===== */
+    @media(min-width:901px){
+      .summary-grid{
+        grid-template-columns:repeat(3,1fr);
+      }
+    }
+
+  
     /* ===== VIP ARCHIVE SECTION ===== */
-    .archive-wrap{
-      border:1px solid var(--line);
-      border-radius:28px;
-      overflow:auto;
-      background:
-        radial-gradient(circle at 100% 0%, rgba(245,196,81,.10), transparent 35%),
-        rgba(18,17,14,.76);
-      box-shadow:0 24px 72px rgba(0,0,0,.36);
-    }
-    .archive-table{
-      width:100%;
-      border-collapse:collapse;
-      min-width:860px;
-    }
-    .archive-table th,
-    .archive-table td{
-      padding:14px 13px;
-      border-bottom:1px solid rgba(245,196,81,.12);
-      text-align:left;
-      vertical-align:top;
-      font-size:.88rem;
-    }
-    .archive-table th{
-      color:var(--gold2);
-      background:rgba(245,196,81,.06);
-      text-transform:uppercase;
-      letter-spacing:.10em;
-      font-size:.68rem;
-      font-weight:1000;
-    }
+    .archive-wrap{border:1px solid var(--line);border-radius:28px;overflow:auto;background:rgba(18,17,14,.76);box-shadow:0 24px 72px rgba(0,0,0,.36)}
+    .archive-table{width:100%;border-collapse:collapse;min-width:860px}
+    .archive-table th,.archive-table td{padding:14px 13px;border-bottom:1px solid rgba(245,196,81,.12);text-align:left;vertical-align:top;font-size:.88rem}
+    .archive-table th{color:var(--gold2);background:rgba(245,196,81,.06);text-transform:uppercase;letter-spacing:.10em;font-size:.68rem;font-weight:1000}
     .archive-table td{color:#eadfc9}
-    .archive-table .pick-name{
-      color:#fff4cf;
-      font-weight:1000;
-      display:block;
-      margin-bottom:4px;
-    }
-    .archive-table .game-name{
-      color:var(--muted);
-      font-size:.78rem;
-      line-height:1.35;
-    }
+    .archive-table .pick-name{color:#fff4cf;font-weight:1000;display:block;margin-bottom:4px}
+    .archive-table .game-name{color:var(--muted);font-size:.78rem;line-height:1.35}
     .result-win{color:var(--green)!important;font-weight:1000}
     .result-loss{color:var(--red)!important;font-weight:1000}
     .result-push{color:var(--gold2)!important;font-weight:1000}
-    .archive-note{
-      margin-top:14px;
-      color:var(--muted);
-      font-size:.88rem;
-      line-height:1.55;
-    }
+    .archive-note{margin-top:14px;color:var(--muted);font-size:.88rem;line-height:1.55}
 
   </style>
 </head>
@@ -539,9 +507,11 @@
         </div>
 
         <div class="summary-grid">
+          <div class="metric"><strong id="vipRecord">--</strong><span>VIP Record</span></div>
+          <div class="metric"><strong id="vipWinRate">--</strong><span>VIP Win Rate</span></div>
+          <div class="metric"><strong id="vipTotalUnits">--</strong><span>VIP Total Units</span></div>
           <div class="metric"><strong id="vipCount">--</strong><span>VIP Active Picks</span></div>
           <div class="metric"><strong id="featuredCount">--</strong><span>Featured Plays</span></div>
-          <div class="metric"><strong id="avgGrade">--</strong><span>Top Grade</span></div>
           <div class="metric"><strong id="lastSync">--</strong><span>Last Sync</span></div>
         </div>
       </div>
@@ -551,7 +521,7 @@
       <div class="container">
         <h2 class="section-title">VIP Active Picks</h2>
         <p class="section-sub">
-          Only plays marked <strong>VIP</strong> in the Active Picks sheet display here. Closed VIP picks appear below in the VIP Archive.
+          Only plays marked <strong>VIP</strong> in the Active Picks sheet display here. Free picks stay on the public page.
         </p>
 
         <div id="vipPicks" class="picks-grid">
@@ -564,9 +534,8 @@
       <div class="container">
         <h2 class="section-title">VIP Archive</h2>
         <p class="section-sub">
-          Closed premium member picks pulled from the VIP Archive sheet. This keeps your VIP history separate from the public results board.
+          Closed premium member picks pulled from the VIP Archive sheet.
         </p>
-
         <div class="archive-wrap">
           <table class="archive-table">
             <thead>
@@ -635,6 +604,35 @@
       return makeObjects(parseCSV(text));
     }
 
+
+    function vipNum(value){
+      const n = parseFloat(String(value || "").replace(/[^0-9.+-]/g,""));
+      return Number.isFinite(n) ? n : 0;
+    }
+
+    function updateVIPPerformance(rows){
+      const graded = rows
+        .filter(r => r.Pick && r.Game)
+        .filter(r => /win|loss/i.test(r.Result || ""));
+
+      const wins = graded.filter(r => /win/i.test(r.Result || "")).length;
+      const losses = graded.filter(r => /loss/i.test(r.Result || "")).length;
+      const total = wins + losses;
+      const units = rows
+        .filter(r => r.Pick && r.Game)
+        .reduce((sum, r) => sum + vipNum(r["Profit/Loss"]), 0);
+      const rate = total ? Math.round((wins / total) * 100) : 0;
+
+      const recordEl = document.getElementById("vipRecord");
+      const rateEl = document.getElementById("vipWinRate");
+      const unitsEl = document.getElementById("vipTotalUnits");
+
+      if(recordEl) recordEl.textContent = `${wins}-${losses}`;
+      if(rateEl) rateEl.textContent = total ? `${rate}%` : "--";
+      if(unitsEl) unitsEl.textContent = `${units >= 0 ? "+" : ""}${units.toFixed(2)}u`;
+    }
+
+
     function esc(s){
       return String(s||"").replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
     }
@@ -683,10 +681,12 @@
       const picks = rows.filter(isVipActive);
       const featured = picks.filter(r => /^yes$/i.test(r.Featured || ""));
 
-      document.getElementById("vipCount").textContent = picks.length;
-      document.getElementById("featuredCount").textContent = featured.length;
-      document.getElementById("avgGrade").textContent = picks[0]?.Grade || "--";
-      document.getElementById("lastSync").textContent = new Date().toLocaleTimeString([], {hour:"numeric", minute:"2-digit"});
+      const vipCountEl = document.getElementById("vipCount");
+      const featuredCountEl = document.getElementById("featuredCount");
+      const lastSyncEl = document.getElementById("lastSync");
+      if(vipCountEl) vipCountEl.textContent = picks.length;
+      if(featuredCountEl) featuredCountEl.textContent = featured.length;
+      if(lastSyncEl) lastSyncEl.textContent = new Date().toLocaleTimeString([], {hour:"numeric", minute:"2-digit"});
 
       const box = document.getElementById("vipPicks");
 
@@ -762,16 +762,12 @@
 
       const archive = rows
         .filter(r => r.Pick && r.Game)
-        .filter(r => {
-          const access = String(r.Access || "").trim().toLowerCase();
-          return !access || access === "vip" || access === "premium";
-        })
         .filter(r => /win|loss|push|void|closed/i.test(`${r.Result || ""} ${r.Status || ""}`))
         .slice()
         .reverse();
 
       if(!archive.length){
-        body.innerHTML = `<tr><td colspan="7">No VIP archive results found yet. Add closed VIP picks to the VIP Archive tab.</td></tr>`;
+        body.innerHTML = `<tr><td colspan="7">No VIP archive results found yet.</td></tr>`;
         return;
       }
 
@@ -779,10 +775,7 @@
         <tr>
           <td>${esc(archiveDate(r.Date))}</td>
           <td>${esc(r.League || r.Sport || "—")}</td>
-          <td>
-            <span class="pick-name">${esc(r.Pick || "—")}</span>
-            <span class="game-name">${esc(r.Game || "—")}</span>
-          </td>
+          <td><span class="pick-name">${esc(r.Pick || "—")}</span><span class="game-name">${esc(r.Game || "—")}</span></td>
           <td>${gradeBadge(r.Grade || "B")}</td>
           <td class="${resultClass(r.Result)}">${esc(r.Result || r.Status || "—")}</td>
           <td class="${resultClass(r.Result)}">${esc(r["Profit/Loss"] || "—")}</td>
@@ -800,6 +793,7 @@
         ]);
         renderVIP(activeRows);
         renderVIPArchive(vipArchiveRows);
+        updateVIPPerformance(vipArchiveRows);
       } catch(e) {
         document.getElementById("vipPicks").innerHTML = `<div class="empty">VIP sync unavailable. Check Google Sheet sharing and CSV export permissions.</div>`;
         const archiveBody = document.getElementById("vipArchiveBody");
