@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Micks Picks | Premium Betting Network</title>
-  <meta name="description" content="Micks Picks sports betting analysis built around one rule: Bet The Number Not The Hype." />
+  <meta name="description" content="Micks Picks premium sports betting analysis, VIP picks, props, archives, and results." />
 
   <style>
     :root{
@@ -609,41 +609,227 @@
       .guru-network-card{padding:28px}
       .guru-network-card::after{font-size:100px;right:18px}
     }
-        el.textContent = count.toLocaleString();
-      }
-
-      window.goatcounter = window.goatcounter || {};
-
-      function showVisitCount(){
-        let tries = 0;
-        const timer = setInterval(() => {
-          tries += 1;
-
-          if(window.goatcounter && typeof window.goatcounter.visit_count === "function"){
-            clearInterval(timer);
-            el.innerHTML = "";
-            window.goatcounter.visit_count({ append: "#visitCounter" });
-          }
-
-          if(tries > 60){
-            clearInterval(timer);
-            localFallbackCounter();
-          }
-        }, 100);
-      }
-
-      if(!document.querySelector("script[data-goatcounter]")){
-        const script = document.createElement("script");
-        script.async = true;
-        script.src = "https://gc.zgo.at/count.js";
-        script.setAttribute("data-goatcounter", `https://${GOATCOUNTER_CODE}.goatcounter.com/count`);
-        script.onload = showVisitCount;
-        document.body.appendChild(script);
-      } else {
-        showVisitCount();
+  
+    /* ===== CLEAN PREMIUM SLOGAN BADGE ===== */
+    .brand-slogan{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      margin:22px 0 0;
+      padding:10px 14px;
+      border-radius:999px;
+      border:1px solid rgba(255,226,138,.22);
+      background:rgba(255,226,138,.065);
+      color:#ffe28a;
+      font-size:13px;
+      font-weight:1000;
+      letter-spacing:1.4px;
+      text-transform:uppercase;
+      box-shadow:0 14px 38px rgba(0,0,0,.26),0 0 22px rgba(255,226,138,.06);
+      width:max-content;
+      max-width:100%;
+    }
+    .brand-slogan::before{
+      content:"";
+      width:8px;
+      height:8px;
+      min-width:8px;
+      border-radius:50%;
+      background:#35e58c;
+      box-shadow:0 0 14px rgba(53,229,140,.62);
+    }
+    @media(max-width:560px){
+      .brand-slogan{
+        font-size:10.5px;
+        letter-spacing:.85px;
+        padding:9px 11px;
+        line-height:1.25;
       }
     }
 
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <div class="brand-mark">MP</div>
+        <div>
+          <span>Micks Picks</span>
+          <small>Premium Betting Network</small>
+        </div>
+      </a>
+
+      <nav class="links">
+        <a href="index.html">Home</a>
+        <a href="#active-picks">Free Picks</a>
+        <a href="premium.html">VIP Vault</a>
+        <a href="./yahgi.html" class="guru-link">♛ Yahgi's Guru Picks</a>
+        <a href="#results">Results Archive</a>
+        <a href="#props">Props Lab</a>
+        <a href="#social">Social Studio</a>
+      </nav>
+
+      <a class="vip-btn" href="premium.html">VIP Access</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Micks Picks</div>
+          <h1>Sharp Plays.<br>Clean Edges.</h1>
+          <div class="brand-slogan">Bet the Number. Not the Hype.</div>
+          <p>
+            Premium sports betting analysis built around value, market discipline, matchup edges, injury context, and real results tracking.
+          </p>
+
+          <div class="hero-actions">
+            <a href="premium.html" class="btn">Enter VIP Vault</a>
+            <a href="#active-picks" class="btn secondary">View Free Picks</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <h2>Live Betting Board</h2>
+          <p style="color:var(--muted);line-height:1.6">
+            Free active picks, VIP releases, closing-line tracking, and archived performance all sync from the Micks Picks sheet. VIP plays stay inside the VIP Vault.
+          </p>
+
+          <div class="metric-grid">
+            <div class="metric"><strong id="overallRecord">--</strong><span>Overall Record</span></div>
+            <div class="metric"><strong id="winRate">--</strong><span>Win Rate</span></div>
+            <div class="metric"><strong id="totalUnits">--</strong><span>Total Units</span></div>
+            <div class="metric"><strong id="currentStreak">--</strong><span>Current Streak</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="section" id="active-picks">
+      <div class="container">
+        <div class="active-board-head">
+          <div>
+            <h2 class="section-title" style="margin-bottom:0">Free Active Picks</h2>
+            <p>Public releases from the Active Picks sheet. VIP plays stay locked inside the VIP Vault and do not display here.</p>
+          </div>
+          <div class="sync-pill"><span class="sync-dot"></span><span id="activeSync">Syncing Sheet</span></div>
+        </div>
+        <div class="active-picks-grid" id="activePicksGrid">
+          <div class="empty-state">Loading active picks...</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="yahgi-guru-picks">
+      <div class="container">
+        <div class="guru-network-card">
+          <span class="guru-network-eyebrow">Guru Network</span>
+          <h2>♛ Yahgi's Guru Picks</h2>
+          <p>
+            Elite reads. Sharp angles. Independent card releases from another handicapper inside the Micks Picks network.
+          </p>
+          <a href="./yahgi.html" class="guru-network-btn">Enter Yahgi's Guru Picks →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="props">
+      <div class="container">
+        <h2 class="section-title">Props Lab</h2>
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>NBA Props</h3>
+            <p>Usage spikes, minutes security, potential assists, rebound chances, and matchup-created shot volume.</p>
+          </div>
+          <div class="card">
+            <h3>UFC Angles</h3>
+            <p>Style matchups, grappling control, cardio, durability, line value, and method props.</p>
+          </div>
+          <div class="card">
+            <h3>NHL Systems</h3>
+            <p>Goalie edges, rest spots, shot volume, special teams, totals environments, and market value.</p>
+          </div>
+        </div>
+      </div>
+    
+<div class="card" style="margin-top:20px">
+  <h3>Grade System</h3>
+  <p style="margin-bottom:18px;color:var(--muted)">
+    Micks Picks confidence grading system used across all active plays.
+  </p>
+
+  <div style="display:flex;gap:14px;flex-wrap:wrap">
+    <div class="grade-badge grade-a">
+      <span>Grade A</span>
+      <span class="grade-sub">Elite Edge</span>
+    </div>
+
+    <div class="grade-badge grade-b">
+      <span>Grade B</span>
+      <span class="grade-sub">Strong Value</span>
+    </div>
+
+    <div class="grade-badge grade-c">
+      <span>Grade C</span>
+      <span class="grade-sub">Lean Only</span>
+    </div>
+  </div>
+</div>
+
+
+    <section class="section" id="results">
+      <div class="container">
+        <h2 class="section-title">Results Archive</h2>
+        <div class="card" style="padding:0;overflow:auto">
+          <table class="results-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Sport</th>
+                <th>Game</th>
+                <th>Pick</th>
+                <th>Result</th>
+                <th>Units</th>
+              </tr>
+            </thead>
+            <tbody id="resultsBody">
+              <tr><td colspan="6">Loading results...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="social">
+      <div class="container">
+        <h2 class="section-title">Social Studio</h2>
+        <div class="grid grid-2">
+          <div class="card">
+            <h3>Auto Recaps</h3>
+            <p>Turn wins, streaks, and daily cards into recap-style content for your audience.</p>
+          </div>
+          <div class="card">
+            <h3>VIP Presentation</h3>
+            <p>Premium cards, countdowns, locked picks, release timers, and sharp-looking public summaries.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© Micks Picks — Premium Betting Network</div>
+  </footer>
+
+  <script>
+    const SHEET_ID = "15txBM8qsck7f0ZA_za7xYEykBxKpuq0no3x7yHcKNeE";
+    const ACTIVE_GID = "0";
+    const ARCHIVE_GID = "1579113575";
 
     function csvUrl(gid){
       return `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${gid}&cache=${Date.now()}`;
@@ -854,10 +1040,7 @@
       }
     }
 
-    document.addEventListener("DOMContentLoaded", function(){
-      load();
-      setupVisitCounter();
-    });
+    document.addEventListener("DOMContentLoaded", load);
     setInterval(load, 30000);
   </script>
 </body>
