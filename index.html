@@ -610,55 +610,125 @@
       .guru-network-card::after{font-size:100px;right:18px}
     }
   
-    .release-timer-card{
-      border:1px solid rgba(245,196,81,.24);
-      background:
-        radial-gradient(circle at 100% 0%, rgba(245,196,81,.14), transparent 32%),
-        rgba(18,17,14,.88);
-      border-radius:22px;
-      padding:18px;
+    /* ===== CLEAN PREMIUM SLOGAN BADGE ===== */
+    .brand-slogan{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      margin:22px 0 0;
+      padding:10px 14px;
+      border-radius:999px;
+      border:1px solid rgba(255,226,138,.22);
+      background:rgba(255,226,138,.065);
+      color:#ffe28a;
+      font-size:13px;
+      font-weight:1000;
+      letter-spacing:1.4px;
+      text-transform:uppercase;
+      box-shadow:0 14px 38px rgba(0,0,0,.26),0 0 22px rgba(255,226,138,.06);
+      width:max-content;
+      max-width:100%;
+    }
+    .brand-slogan::before{
+      content:"";
+      width:8px;
+      height:8px;
+      min-width:8px;
+      border-radius:50%;
+      background:#35e58c;
+      box-shadow:0 0 14px rgba(53,229,140,.62);
+    }
+    @media(max-width:560px){
+      .brand-slogan{
+        font-size:10.5px;
+        letter-spacing:.85px;
+        padding:9px 11px;
+        line-height:1.25;
+      }
+    }
+
+  
+    /* ===== RELEASE TIMER SYSTEM ===== */
+    .release-timer-card{position:relative}
+    .release-locked{
+      border-color:rgba(255,226,138,.48)!important;
+      box-shadow:0 32px 92px rgba(0,0,0,.68),0 0 48px rgba(255,226,138,.16)!important;
+    }
+    .release-locked .pick-analysis,
+    .release-locked .analysis.locked-content{
+      filter:blur(7px);
+      user-select:none;
+      pointer-events:none;
+      max-height:96px;
+      overflow:hidden;
+    }
+    .release-timer-box{
       margin-top:16px;
-      box-shadow:0 18px 46px rgba(0,0,0,.32);
+      border:1px solid rgba(255,226,138,.30);
+      background:
+        radial-gradient(circle at 100% 0%,rgba(255,226,138,.18),transparent 38%),
+        radial-gradient(circle at 0% 100%,rgba(53,229,140,.08),transparent 34%),
+        rgba(0,0,0,.38);
+      border-radius:18px;
+      padding:14px;
+      position:relative;
+      z-index:2;
     }
     .release-timer-label{
-      color:var(--gold2, var(--gold));
-      font-size:.72rem;
-      letter-spacing:.14em;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      color:#ffe28a;
+      font-size:11px;
+      font-weight:1000;
       text-transform:uppercase;
-      font-weight:1000;
-      margin-bottom:8px;
+      letter-spacing:1px;
+      margin-bottom:10px;
     }
-    .release-countdown{
-      font-size:1.45rem;
-      font-weight:1000;
-      color:#fff8e9;
-      letter-spacing:-.02em;
+    .release-timer-live{color:#95ffc1}
+    .release-timer-count{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+    .release-unit{
+      border:1px solid rgba(255,226,138,.12);
+      background:rgba(0,0,0,.34);
+      border-radius:12px;
+      padding:10px 8px;
+      text-align:center;
     }
-    .locked-pick{
-      filter:blur(0px);
-      opacity:.96;
+    .release-unit strong{
+      display:block;
+      color:#fff7dc;
+      font-size:22px;
+      line-height:1;
+      font-variant-numeric:tabular-nums;
+      text-shadow:0 0 18px rgba(255,226,138,.18);
     }
-    .locked-details{
-      margin-top:14px;
-      padding:14px;
-      border-radius:16px;
-      border:1px solid rgba(255,255,255,.10);
-      background:rgba(0,0,0,.28);
+    .release-unit span{
+      display:block;
+      margin-top:5px;
       color:var(--muted);
-      line-height:1.5;
-    }
-    .locked-title{
-      color:var(--gold2, var(--gold));
-      font-weight:1000;
+      font-size:9px;
+      font-weight:900;
+      letter-spacing:.8px;
       text-transform:uppercase;
-      letter-spacing:.08em;
-      font-size:.78rem;
-      margin-bottom:8px;
+    }
+    .release-note{margin-top:10px;color:var(--muted);font-size:12px;line-height:1.45}
+    .release-lock-overlay{margin-top:12px;color:#ffe28a;font-size:12px;font-weight:900;letter-spacing:.7px;text-transform:uppercase}
+    .vip-lock-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:14px}
+    .vip-lock-mini{
+      border:1px solid rgba(255,226,138,.20);
+      border-radius:20px;
+      padding:16px;
+      background:rgba(0,0,0,.30);
+    }
+    .vip-lock-mini h4{margin:0 0 6px;color:#fff7dc;font-size:1rem}
+    .vip-lock-mini p{margin:0;color:var(--muted);font-size:.86rem;line-height:1.45}
+    @media(max-width:560px){
+      .release-timer-count{grid-template-columns:repeat(2,1fr)}
+      .vip-lock-list{grid-template-columns:1fr}
     }
 
   </style>
-  <!-- Micks Picks auto-date-filter build: 2026-05-12 14:57:23 -->
-  <!-- Picks release timer enabled: 2026-05-12 15:16:15 -->
 </head>
 
 <body>
@@ -692,6 +762,7 @@
         <div>
           <div class="eyebrow">Micks Picks</div>
           <h1>Sharp Plays.<br>Clean Edges.</h1>
+          <div class="brand-slogan">Bet the Number. Not the Hype.</div>
           <p>
             Premium sports betting analysis built around value, market discipline, matchup edges, injury context, and real results tracking.
           </p>
@@ -769,27 +840,29 @@
     
 <div class="card" style="margin-top:20px">
   <h3>Grade System</h3>
-  <p style="margin-bottom:18px;color:var(--muted)">
-    Micks Picks confidence grading system used across all active plays.
-  </p>
+          <p style="margin-bottom:18px;color:var(--muted)">
+            Micks Picks confidence grading system used across all active plays.
+          </p>
 
-  <div style="display:flex;gap:14px;flex-wrap:wrap">
-    <div class="grade-badge grade-a">
-      <span>Grade A</span>
-      <span class="grade-sub">Elite Edge</span>
-    </div>
+          <div style="display:flex;gap:14px;flex-wrap:wrap">
+            <div class="grade-badge grade-a">
+              <span>Grade A</span>
+              <span class="grade-sub">Elite Edge</span>
+            </div>
 
-    <div class="grade-badge grade-b">
-      <span>Grade B</span>
-      <span class="grade-sub">Strong Value</span>
-    </div>
+            <div class="grade-badge grade-b">
+              <span>Grade B</span>
+              <span class="grade-sub">Strong Value</span>
+            </div>
 
-    <div class="grade-badge grade-c">
-      <span>Grade C</span>
-      <span class="grade-sub">Lean Only</span>
-    </div>
-  </div>
-</div>
+            <div class="grade-badge grade-c">
+              <span>Grade C</span>
+              <span class="grade-sub">Lean Only</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
     <section class="section" id="results">
@@ -910,60 +983,214 @@
       `;
     }
 
-    
-    function toISODate(v){
-      const s = String(v || "").trim();
-      if(!s) return "";
-      if(/^\d{4}-\d{2}-\d{2}/.test(s)) return s.slice(0,10);
-
-      const d = new Date(s);
-      if(Number.isNaN(d.getTime())) return s.slice(0,10);
-
-      const yyyy = d.getFullYear();
-      const mm = String(d.getMonth() + 1).padStart(2, "0");
-      const dd = String(d.getDate()).padStart(2, "0");
-      return `${yyyy}-${mm}-${dd}`;
-    }
-
-    function todayISO(){
-      const d = new Date();
-      const yyyy = d.getFullYear();
-      const mm = String(d.getMonth() + 1).padStart(2, "0");
-      const dd = String(d.getDate()).padStart(2, "0");
-      return `${yyyy}-${mm}-${dd}`;
-    }
-
-    function isTodayPick(r){
-      return toISODate(r.Date) === todayISO();
-    }
-
-    function isUnsettled(r){
-      return !/win|loss|push|void|closed|graded/i.test(String(r.Result || ""));
-    }
-
-    function isPlayableStatus(r){
-      const status = String(r.Status || "").trim().toLowerCase();
-      const releaseStatus = String(r["Release Status"] || "").trim().toLowerCase();
-      return status === "pregame" || status === "active" || releaseStatus === "released" || releaseStatus === "live";
-    }
-
     function esc(s){
       return String(s||"").replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
     }
 
 
 
+
+    function easternOffsetForDate(year, monthIndex, day){
+      function nthSunday(month, nth){
+        const d = new Date(Date.UTC(year, month, 1));
+        const firstSunday = 1 + ((7 - d.getUTCDay()) % 7);
+        return firstSunday + (nth - 1) * 7;
+      }
+      const secondSundayMarch = nthSunday(2, 2);
+      const firstSundayNovember = nthSunday(10, 1);
+      if(monthIndex < 2 || monthIndex > 10) return "-05:00";
+      if(monthIndex > 2 && monthIndex < 10) return "-04:00";
+      if(monthIndex === 2) return day >= secondSundayMarch ? "-04:00" : "-05:00";
+      if(monthIndex === 10) return day < firstSundayNovember ? "-04:00" : "-05:00";
+      return "-05:00";
+    }
+
+    function parseReleaseTime(value){
+      const raw = String(value || "").trim();
+      if(!raw) return null;
+
+      const hasEt = /\b(ET|EST|EDT)\b/i.test(raw);
+      let normalized = raw.replace(/\b(ET|EST|EDT)\b/gi, "").trim();
+
+      let parsed = new Date(normalized);
+      if(!Number.isNaN(parsed.getTime()) && /[zZ]|[+-]\d{2}:?\d{2}$/.test(normalized)) return parsed;
+
+      let m = normalized.match(/^(\d{4})-(\d{1,2})-(\d{1,2})[ T](\d{1,2}):(\d{2})(?::(\d{2}))?\s*([AP]M)?$/i);
+      if(m){
+        let year = +m[1], month = +m[2], day = +m[3], hour = +m[4], minute = +m[5], second = +(m[6] || 0);
+        const ampm = (m[7] || "").toUpperCase();
+        if(ampm === "PM" && hour < 12) hour += 12;
+        if(ampm === "AM" && hour === 12) hour = 0;
+        const offset = hasEt ? easternOffsetForDate(year, month - 1, day) : "";
+        return new Date(`${String(year).padStart(4,"0")}-${String(month).padStart(2,"0")}-${String(day).padStart(2,"0")}T${String(hour).padStart(2,"0")}:${String(minute).padStart(2,"0")}:${String(second).padStart(2,"0")}${offset}`);
+      }
+
+      m = normalized.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})\s+(\d{1,2}):(\d{2})(?::(\d{2}))?\s*([AP]M)?$/i);
+      if(m){
+        let month = +m[1], day = +m[2], year = +m[3], hour = +m[4], minute = +m[5], second = +(m[6] || 0);
+        const ampm = (m[7] || "").toUpperCase();
+        if(ampm === "PM" && hour < 12) hour += 12;
+        if(ampm === "AM" && hour === 12) hour = 0;
+        const offset = hasEt ? easternOffsetForDate(year, month - 1, day) : "";
+        return new Date(`${String(year).padStart(4,"0")}-${String(month).padStart(2,"0")}-${String(day).padStart(2,"0")}T${String(hour).padStart(2,"0")}:${String(minute).padStart(2,"0")}:${String(second).padStart(2,"0")}${offset}`);
+      }
+
+      parsed = new Date(normalized.replace(" ", "T"));
+      if(!Number.isNaN(parsed.getTime())) return parsed;
+
+      return null;
+    }
+
+    function parseReleaseTimeWithDate(row){
+      const releaseRaw = String(row["Release Time"] || "").trim();
+      if(!releaseRaw) return null;
+
+      const looksClockOnly = /^\d{1,2}:\d{2}(\s*[AP]M)?(\s*(ET|EST|EDT))?$/i.test(releaseRaw);
+      if(looksClockOnly && row.Date){
+        return parseReleaseTime(`${row.Date} ${releaseRaw}`);
+      }
+
+      return parseReleaseTime(releaseRaw);
+    }
+
+    function releaseState(row){
+      const status = String(row["Release Status"] || "").trim().toLowerCase();
+      const releaseAt = parseReleaseTimeWithDate(row);
+      const explicitlyLive = status === "live" || status === "released";
+      const explicitlyLocked = status === "locked" || status === "pending" || status === "scheduled";
+      const futureRelease = releaseAt && releaseAt.getTime() > Date.now();
+
+      return {
+        status,
+        releaseAt,
+        locked: !explicitlyLive && (futureRelease || (explicitlyLocked && !releaseAt))
+      };
+    }
+
+    function releaseRemainingParts(ms){
+      const total = Math.max(0, Math.floor(ms / 1000));
+      const days = Math.floor(total / 86400);
+      const hours = Math.floor((total % 86400) / 3600);
+      const minutes = Math.floor((total % 3600) / 60);
+      const seconds = total % 60;
+      return {days,hours,minutes,seconds};
+    }
+
+    function shouldLockRelease(row){
+      return releaseState(row).locked;
+    }
+
+    function releaseTimerHTML(row, options = {}){
+      const state = releaseState(row);
+      const releaseAt = state.releaseAt;
+      const note = esc(row["Release Notes"] || "Full details unlock automatically when the release timer reaches zero.");
+      const releaseStatus = esc(row["Release Status"] || (state.locked ? "Locked" : "Live"));
+
+      if(!releaseAt){
+        return `
+          <div class="release-timer-box" data-release-status="${releaseStatus}">
+            <div class="release-timer-label">
+              <span>${state.locked ? "Locked Release" : "Release Status"}</span>
+              <span>${releaseStatus}</span>
+            </div>
+            <div class="release-note"><strong>Release Time:</strong> ${esc(row["Release Time"] || row["Posted Time"] || "Pending")}</div>
+            <div class="release-note">${note}</div>
+          </div>
+        `;
+      }
+
+      const ms = releaseAt.getTime() - Date.now();
+      const p = releaseRemainingParts(ms);
+      const locked = state.locked;
+
+      return `
+        <div class="release-timer-box" data-release-time="${esc(releaseAt.toISOString())}" data-release-status="${releaseStatus}">
+          <div class="release-timer-label ${locked ? "" : "release-timer-live"}">
+            <span>${locked ? "Locked Release Timer" : "Released / Live"}</span>
+            <span>${releaseAt.toLocaleString([], {month:"short",day:"numeric",hour:"numeric",minute:"2-digit"})}</span>
+          </div>
+          ${locked ? `
+            <div class="release-timer-count">
+              <div class="release-unit"><strong data-release-days>${p.days}</strong><span>Days</span></div>
+              <div class="release-unit"><strong data-release-hours>${String(p.hours).padStart(2,"0")}</strong><span>Hours</span></div>
+              <div class="release-unit"><strong data-release-minutes>${String(p.minutes).padStart(2,"0")}</strong><span>Minutes</span></div>
+              <div class="release-unit"><strong data-release-seconds>${String(p.seconds).padStart(2,"0")}</strong><span>Seconds</span></div>
+            </div>
+            <div class="release-lock-overlay">${esc(options.lockText || "Full breakdown unlocks when countdown expires.")}</div>
+          ` : `
+            <div class="release-note">${esc(options.liveText || "This release is live.")}</div>
+          `}
+          <div class="release-note">${note}</div>
+        </div>
+      `;
+    }
+
+    function startReleaseTimers(){
+      if(window.__micksReleaseTimer) clearInterval(window.__micksReleaseTimer);
+
+      function tick(){
+        document.querySelectorAll(".release-timer-box[data-release-time]").forEach(box => {
+          const releaseAt = new Date(box.getAttribute("data-release-time"));
+          if(Number.isNaN(releaseAt.getTime())) return;
+
+          const ms = releaseAt.getTime() - Date.now();
+          const card = box.closest(".pick-card,.vip-lock-mini,.card");
+
+          if(ms <= 0){
+            box.querySelector(".release-timer-label")?.classList.add("release-timer-live");
+            const label = box.querySelector(".release-timer-label span:first-child");
+            if(label) label.textContent = "Released / Live";
+            const count = box.querySelector(".release-timer-count");
+            if(count) count.innerHTML = `<div class="release-note">This release is live.</div>`;
+            box.querySelector(".release-lock-overlay")?.remove();
+            if(card) card.classList.remove("release-locked");
+            card?.querySelectorAll(".analysis.locked-content,.pick-analysis").forEach(el => {
+              el.classList.remove("locked-content");
+              el.style.filter = "";
+            });
+            return;
+          }
+
+          const p = releaseRemainingParts(ms);
+          const d = box.querySelector("[data-release-days]");
+          const h = box.querySelector("[data-release-hours]");
+          const m = box.querySelector("[data-release-minutes]");
+          const s = box.querySelector("[data-release-seconds]");
+          if(d) d.textContent = p.days;
+          if(h) h.textContent = String(p.hours).padStart(2,"0");
+          if(m) m.textContent = String(p.minutes).padStart(2,"0");
+          if(s) s.textContent = String(p.seconds).padStart(2,"0");
+        });
+      }
+
+      tick();
+      window.__micksReleaseTimer = setInterval(tick, 1000);
+    }
+
+
     function isActivePick(r){
       const status = String(r.Status || "").toLowerCase();
       const release = String(r["Release Status"] || "").toLowerCase();
+      const access = String(r.Access || "").toLowerCase();
       const hasRequired = r.Date && r.Pick && r.Game;
-      const notGraded = !/win|loss|push|void|closed/i.test(r.Result || "");
-      return hasRequired && notGraded && (
+      const notGraded = !/win|loss|push|void|closed|graded/i.test(r.Result || "");
+
+      if(!hasRequired || !notGraded) return false;
+
+      const isVip = access.includes("vip");
+      const isPublicLive =
         status.includes("pregame") ||
         status.includes("active") ||
         release.includes("released") ||
-        release.includes("live")
-      );
+        release.includes("live");
+
+      const isScheduled =
+        release.includes("locked") ||
+        release.includes("pending") ||
+        release.includes("scheduled") ||
+        String(r["Release Time"] || "").trim();
+
+      return isVip ? (isPublicLive || isScheduled) : (isPublicLive || isScheduled);
     }
 
     function fmtDate(s){
@@ -989,74 +1216,36 @@
       return "grade-pass";
     }
 
+    function renderVIPLockPreview(vipRows){
+      if(!vipRows.length) return "";
 
-    function parseReleaseDateTime(v){
-      const s = String(v || "").trim();
-      if(!s) return null;
-      let d = new Date(s);
-      if(!Number.isNaN(d.getTime())) return d;
+      const rows = vipRows.slice().sort((a,b) => {
+        const ar = parseReleaseTimeWithDate(a);
+        const br = parseReleaseTimeWithDate(b);
+        return (ar?.getTime() || 0) - (br?.getTime() || 0);
+      });
 
-      // Handles values like 2026-05-12 1:30 PM in Safari/iPhone by replacing first space.
-      d = new Date(s.replace(" ", "T"));
-      if(!Number.isNaN(d.getTime())) return d;
-
-      return null;
-    }
-
-    function isReleasedByTimer(r){
-      const releaseStatus = String(r["Release Status"] || "").trim().toLowerCase();
-      if(releaseStatus === "released" || releaseStatus === "live") return true;
-
-      const releaseTime = parseReleaseDateTime(r["Release Time"] || r["Posted Time"]);
-      if(!releaseTime) return true;
-
-      return Date.now() >= releaseTime.getTime();
-    }
-
-    function countdownText(target){
-      if(!target) return "Release time pending";
-      const diff = target.getTime() - Date.now();
-      if(diff <= 0) return "Released now";
-
-      const totalSeconds = Math.floor(diff / 1000);
-      const days = Math.floor(totalSeconds / 86400);
-      const hours = Math.floor((totalSeconds % 86400) / 3600);
-      const minutes = Math.floor((totalSeconds % 3600) / 60);
-      const seconds = totalSeconds % 60;
-
-      if(days > 0) return `${days}d ${hours}h ${minutes}m`;
-      if(hours > 0) return `${hours}h ${minutes}m ${seconds}s`;
-      return `${minutes}m ${seconds}s`;
-    }
-
-    function releaseTimerHTML(r){
-      const releaseTime = parseReleaseDateTime(r["Release Time"] || r["Posted Time"]);
       return `
-        <div class="release-timer-card">
-          <div class="release-timer-label">Pick Release Timer</div>
-          <div class="release-countdown" data-release-time="${esc(r["Release Time"] || r["Posted Time"] || "")}">
-            ${countdownText(releaseTime)}
+        <div class="vip-lock-card release-timer-card">
+          <div>
+            <h3>${rows.length} VIP Pick${rows.length === 1 ? "" : "s"} Locked</h3>
+            <p>Premium releases are available inside the VIP Vault. Public visitors can see the release countdown, but full breakdowns stay inside VIP.</p>
+            <div class="vip-lock-list">
+              ${rows.map(r => `
+                <div class="vip-lock-mini ${shouldLockRelease(r) ? "release-locked" : ""}">
+                  <h4>${esc(r.Pick || "VIP Pick")}</h4>
+                  <p>${esc(r.Game || "")}</p>
+                  ${releaseTimerHTML(r, {
+                    lockText: "VIP breakdown unlocks in the vault when this timer expires.",
+                    liveText: "This VIP release is live in the vault."
+                  })}
+                </div>
+              `).join("")}
+            </div>
           </div>
+          <a href="premium.html" class="vip-lock-badge">VIP Vault</a>
         </div>
       `;
-    }
-
-    function refreshCountdowns(){
-      document.querySelectorAll("[data-release-time]").forEach(el => {
-        const d = parseReleaseDateTime(el.getAttribute("data-release-time"));
-        el.textContent = countdownText(d);
-      });
-    }
-
-    function isFreeActive(r){
-      const access = String(r.Access || "").trim().toLowerCase();
-      const hasPick = r.Pick && r.Game;
-
-      return hasPick &&
-        access === "free" &&
-        isTodayPick(r) &&
-        isUnsettled(r) &&
-        isPlayableStatus(r);
     }
 
     function renderActive(rows){
@@ -1065,22 +1254,15 @@
       if(!grid) return;
 
       const activeRows = rows.filter(isActivePick);
-      const vipCount = activeRows.filter(r => /vip/i.test(r.Access || "")).length;
+      const vipRows = activeRows.filter(r => /vip/i.test(r.Access || ""));
       rows = activeRows.filter(r => !/vip/i.test(r.Access || ""));
-      if(sync) sync.textContent = `${rows.length} Free${vipCount ? ` • ${vipCount} VIP Locked` : ""}`;
+      if(sync) sync.textContent = `${rows.length} Free${vipRows.length ? ` • ${vipRows.length} VIP Locked` : ""}`;
 
-      const vipLock = vipCount ? `
-        <div class="vip-lock-card">
-          <div>
-            <h3>${vipCount} VIP Pick${vipCount === 1 ? "" : "s"} Locked</h3>
-            <p>Premium releases are available inside the VIP Vault only. Public visitors see free picks and results here.</p>
-          </div>
-          <a href="premium.html" class="vip-lock-badge">VIP Vault</a>
-        </div>
-      ` : "";
+      const vipLock = renderVIPLockPreview(vipRows);
 
       if(!rows.length){
         grid.innerHTML = vipLock || `<div class="empty-state">No free active picks are currently released. VIP releases stay inside the VIP Vault.</div>`;
+        startReleaseTimers();
         return;
       }
 
@@ -1093,14 +1275,16 @@
       grid.innerHTML = vipLock + rows.map(r=>{
         const isVip = /vip/i.test(r.Access || "");
         const isFeatured = /yes/i.test(r.Featured || "");
+        const lockedRelease = shouldLockRelease(r);
         const analysis = `<div class="pick-analysis"><strong>Public Summary:</strong> ${esc(shortText(r.Writeup || r["Full Analysis"], 420))}</div>`;
         return `
-          <article class="pick-card ${isFeatured ? "featured" : ""}">
+          <article class="pick-card release-timer-card ${isFeatured ? "featured" : ""} ${lockedRelease ? "release-locked" : ""}">
             <div class="pick-top">
               <div style="display:flex;gap:8px;flex-wrap:wrap">
                 <span class="league-pill">${esc(r.League || r.Sport)}</span>
                 <span class="access-pill ${isVip ? "vip" : "free"}">${esc(r.Access || "Free")}</span>
                 <span class="grade-pill ${gradeClass(r.Grade)}">${esc(r.Grade || "-")}</span>
+                ${lockedRelease ? `<span class="league-pill">Locked</span>` : ""}
               </div>
             </div>
             <div class="pick-game">${esc(fmtDate(r.Date))} • ${esc(r.Game)}</div>
@@ -1113,9 +1297,14 @@
             </div>
             <p class="pick-writeup">${esc(r.Writeup || "Micks Picks release pending writeup.")}</p>
             ${analysis}
+            ${releaseTimerHTML(r, {
+              lockText: "Public writeup unlocks when countdown expires.",
+              liveText: "This public release is live."
+            })}
           </article>
         `;
       }).join("");
+      startReleaseTimers();
     }
 
     function render(rows){
@@ -1144,21 +1333,6 @@
       `).join("") || `<tr><td colspan="6">No completed picks yet.</td></tr>`;
     }
 
-
-    function publicLockedCard(r){
-      return `
-        <div class="card locked-pick">
-          <h3>Pick Scheduled</h3>
-          <p>${esc(r.Game || "Game pending")}</p>
-          ${releaseTimerHTML(r)}
-          <div class="locked-details">
-            <div class="locked-title">Release Pending</div>
-            This public pick will reveal automatically when the release timer ends.
-          </div>
-        </div>
-      `;
-    }
-
     async function load(){
       try{
         const [activeRows, archiveRows] = await Promise.all([getRows(ACTIVE_GID), getRows(ARCHIVE_GID)]);
@@ -1174,7 +1348,6 @@
 
     document.addEventListener("DOMContentLoaded", load);
     setInterval(load, 30000);
-    setInterval(refreshCountdowns, 1000);
   </script>
 </body>
 </html>
