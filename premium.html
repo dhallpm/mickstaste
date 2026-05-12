@@ -542,6 +542,65 @@
       .vip-lock-list{grid-template-columns:1fr}
     }
 
+
+
+    /* ===== BETRIVERS DELAWARE ODDS LAYER ===== */
+    .section-sub{color:var(--muted);margin:6px 0 24px;line-height:1.55;max-width:760px}
+    .odds-shell{
+      border:1px solid rgba(255,226,138,.22);
+      border-radius:28px;
+      padding:24px;
+      background:
+        radial-gradient(circle at 92% 0%,rgba(53,229,140,.12),transparent 32%),
+        radial-gradient(circle at 8% 100%,rgba(255,226,138,.10),transparent 34%),
+        linear-gradient(180deg,rgba(18,18,18,.94),rgba(5,5,5,.94));
+      box-shadow:0 28px 82px rgba(0,0,0,.60),0 0 34px rgba(255,226,138,.07);
+    }
+    .odds-board-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:18px}
+    .odds-board-head p{margin:6px 0 0;color:var(--muted);line-height:1.5}
+    .odds-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .odds-card,.odds-mini{
+      position:relative;
+      z-index:2;
+      border:1px solid rgba(255,226,138,.16);
+      border-radius:22px;
+      background:rgba(0,0,0,.30);
+      overflow:hidden;
+    }
+    .odds-card{padding:18px}
+    .odds-mini{padding:14px;margin:14px 0;background:rgba(0,0,0,.25)}
+    .odds-card::before,.odds-mini::before{
+      content:"";
+      position:absolute;
+      inset:0 0 auto 0;
+      height:3px;
+      background:linear-gradient(90deg,var(--green),var(--gold2),transparent);
+      opacity:.8;
+    }
+    .odds-title-row{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:12px}
+    .odds-title-row h3,.odds-title-row h4{margin:0;color:#fff7dc;line-height:1.12;letter-spacing:-.35px}
+    .odds-title-row h3{font-size:20px}.odds-title-row h4{font-size:14px;text-transform:uppercase;letter-spacing:.7px;color:var(--gold2)}
+    .odds-game{color:var(--muted);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.65px;margin-top:5px}
+    .odds-provider-pill,.confirm-pill{
+      display:inline-flex;align-items:center;justify-content:center;
+      min-height:28px;padding:0 10px;border-radius:999px;
+      font-size:10px;font-weight:1000;text-transform:uppercase;letter-spacing:.7px;
+      border:1px solid rgba(255,226,138,.18);white-space:nowrap;
+      background:rgba(0,0,0,.35);color:#f5e9c8;
+    }
+    .odds-provider-pill{color:#090909;background:linear-gradient(135deg,#8f650f,#ffe28a 55%,#c89b3c)}
+    .confirm-pill.confirmed{border-color:rgba(53,229,140,.35);background:rgba(53,229,140,.12);color:#bfffdc}
+    .confirm-pill.moved,.confirm-pill.no-bet{border-color:rgba(255,95,104,.35);background:rgba(255,95,104,.12);color:#ffb6bb}
+    .confirm-pill.pending{border-color:rgba(255,226,138,.28);background:rgba(255,226,138,.10);color:#ffe28a}
+    .odds-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+    .odds-stat{border:1px solid rgba(255,226,138,.10);border-radius:14px;background:rgba(0,0,0,.30);padding:11px 10px}
+    .odds-stat strong{display:block;color:#fff;font-size:14px;word-break:break-word}.odds-stat span{display:block;margin-top:4px;color:var(--muted);font-size:9px;text-transform:uppercase;letter-spacing:.75px;font-weight:900}
+    .odds-note{margin-top:12px;color:var(--muted);font-size:12px;line-height:1.45}
+    .odds-rule{margin-top:14px;border:1px solid rgba(255,226,138,.18);border-radius:16px;padding:13px;background:rgba(255,226,138,.055);color:#f0dca6;font-size:12px;font-weight:900;letter-spacing:.25px;line-height:1.45}
+    .odds-empty{grid-column:1/-1;padding:24px;border-radius:20px;border:1px solid rgba(255,226,138,.16);background:rgba(0,0,0,.30);color:var(--muted);text-align:center}
+    @media(max-width:900px){.odds-grid{grid-template-columns:1fr}.odds-board-head{align-items:flex-start;flex-direction:column}.odds-stats{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:560px){.odds-stats{grid-template-columns:1fr}}
+
   </style>
 </head>
 
@@ -559,6 +618,7 @@
       <nav class="nav-links">
         <a href="index.html">Public Site</a>
         <a href="#vip-picks">VIP Picks</a>
+        <a href="#vip-odds-board">Odds Board</a>
         <a href="#vip-archive">VIP Archive</a>
         <a href="https://vip.mickspicks.us">Secure Portal</a>
       </nav>
@@ -602,7 +662,7 @@
       <div class="container">
         <h2 class="section-title">VIP Active Picks</h2>
         <p class="section-sub">
-          Only plays marked <strong>VIP</strong> in the Active Picks sheet display here. VIP record, win rate, total units, and the archive below pull from the VIP Archive sheet only.
+          Only plays marked <strong>VIP</strong> in the Active Picks sheet display here. Free picks stay on the public page.
         </p>
 
         <div id="vipPicks" class="picks-grid">
@@ -611,11 +671,32 @@
       </div>
     </section>
 
+
+
+    <section class="section" id="vip-odds-board">
+      <div class="container">
+        <div class="odds-shell">
+          <div class="odds-board-head">
+            <div>
+              <h2 class="section-title" style="margin-bottom:0">VIP Odds Command Center</h2>
+              <p class="section-sub">VIP picks with BetRivers Delaware local-book pricing, best market price, line movement, timestamps, and manual app confirmation status.</p>
+            </div>
+            <div class="pill" style="margin-bottom:0"><span class="dot"></span><span id="vipOddsSync">Syncing Odds</span></div>
+          </div>
+          <div class="odds-grid" id="vipOddsGrid">
+            <div class="odds-empty">Loading VIP odds layer...</div>
+          </div>
+          <div class="odds-rule">VIP betting rule: OpticOdds/backup feed finds value, but the final play is not confirmed until the number is checked inside the BetRivers Delaware app.</div>
+        </div>
+      </div>
+    </section>
+
+
     <section class="section" id="vip-archive">
       <div class="container">
         <h2 class="section-title">VIP Archive</h2>
         <p class="section-sub">
-          Closed premium member picks pulled from the VIP Archive sheet only.
+          Closed premium member picks pulled from the VIP Archive sheet.
         </p>
         <div class="archive-wrap">
           <table class="archive-table">
@@ -648,12 +729,6 @@
   </footer>
 
   <script>
-    /* MICKS PICKS PREMIUM SHEET MAP:
-       Active VIP Picks = Active Picks gid 0
-       VIP Record / VIP Win Rate / VIP Total Units = VIP Archive gid 210503117
-       VIP Archive table = VIP Archive gid 210503117
-       This premium page does NOT use Results Archive gid 1579113575.
-    */
     const SHEET_ID = "15txBM8qsck7f0ZA_za7xYEykBxKpuq0no3x7yHcKNeE";
     const ACTIVE_GID = "0";
     const VIP_ARCHIVE_GID = "210503117";
@@ -926,6 +1001,98 @@
     }
 
 
+
+    const ODDS_PRIMARY_SOURCE = "OpticOdds";
+    const ODDS_BACKUP_SOURCE = "SharpAPI Backup";
+
+    function firstField(row, names, fallback="—"){
+      for(const name of names){
+        if(row && Object.prototype.hasOwnProperty.call(row, name)){
+          const value = String(row[name] || "").trim();
+          if(value) return value;
+        }
+      }
+      return fallback;
+    }
+
+    function oddsConfirmation(row){
+      const raw = firstField(row, ["Confirmation Status", "Manual App Check", "BetRivers Confirmation", "Confirmed", "Confirmation"], "Unconfirmed");
+      const value = String(raw || "").trim();
+      const lower = value.toLowerCase();
+      let cls = "pending";
+      if(lower.includes("checked") || lower.includes("confirmed") || lower === "yes") cls = "confirmed";
+      if(lower.includes("moved")) cls = "moved";
+      if(lower.includes("no bet") || lower.includes("cutoff") || lower.includes("pass")) cls = "no-bet";
+      return {label:value || "Unconfirmed", cls};
+    }
+
+    function oddsProvider(row){
+      const listed = firstField(row, ["Odds Source", "Source Verification", "Feed Source", "Provider"], "");
+      return listed && listed !== "—" ? listed : `${ODDS_PRIMARY_SOURCE} / ${ODDS_BACKUP_SOURCE}`;
+    }
+
+    function oddsMiniHTML(r){
+      const c = oddsConfirmation(r);
+      const betRivers = firstField(r, ["BetRivers Price", "BetRivers", "BetRivers Delaware", "Local Book Price", "BR Price"], "Pending");
+      const best = firstField(r, ["Best Market Price", "Best Market", "Best Price", "Market Best"], r.Odds || "Pending");
+      const movement = firstField(r, ["Line Movement", "Movement", "Move"], "Pending");
+      const timestamp = firstField(r, ["Timestamp", "Last Updated", "Odds Timestamp", "Updated"], "Pending");
+      return `
+        <div class="odds-mini">
+          <div class="odds-title-row">
+            <h4>BetRivers Odds Check</h4>
+            <span class="confirm-pill ${c.cls}">${esc(c.label)}</span>
+          </div>
+          <div class="odds-stats">
+            <div class="odds-stat"><strong>${esc(betRivers)}</strong><span>BetRivers DE</span></div>
+            <div class="odds-stat"><strong>${esc(best)}</strong><span>Best Market</span></div>
+            <div class="odds-stat"><strong>${esc(movement)}</strong><span>Line Move</span></div>
+            <div class="odds-stat"><strong>${esc(timestamp)}</strong><span>Timestamp</span></div>
+            <div class="odds-stat"><strong>${esc(firstField(r, ["No Bet Cutoff"], "—"))}</strong><span>No Bet Cutoff</span></div>
+            <div class="odds-stat"><strong>${esc(oddsProvider(r))}</strong><span>Source</span></div>
+          </div>
+          <div class="odds-note">Manual rule: verify the final price inside BetRivers Delaware before placing.</div>
+        </div>
+      `;
+    }
+
+    function renderVIPOdds(allRows){
+      const grid = document.getElementById("vipOddsGrid");
+      const sync = document.getElementById("vipOddsSync");
+      if(!grid) return;
+      const vipRows = allRows.filter(isVipActive);
+      const confirmed = vipRows.filter(r => oddsConfirmation(r).cls === "confirmed").length;
+      if(sync) sync.textContent = `${vipRows.length} VIP Markets • ${confirmed} Confirmed`;
+      if(!vipRows.length){
+        grid.innerHTML = `<div class="odds-empty">No VIP active picks to price yet. Add rows to the Active Picks sheet with Access = VIP and odds columns.</div>`;
+        return;
+      }
+      grid.innerHTML = vipRows.map(r => {
+        const c = oddsConfirmation(r);
+        return `
+          <article class="odds-card">
+            <div class="odds-title-row">
+              <div>
+                <span class="odds-provider-pill">${esc(oddsProvider(r))}</span>
+                <h3 style="margin-top:10px">${esc(r.Pick || "Micks Pick")}</h3>
+                <div class="odds-game">${esc(r.Game || "")} • ${esc(r.League || r.Sport || "")}</div>
+              </div>
+              <span class="confirm-pill ${c.cls}">${esc(c.label)}</span>
+            </div>
+            <div class="odds-stats">
+              <div class="odds-stat"><strong>${esc(firstField(r, ["BetRivers Price", "BetRivers", "BetRivers Delaware", "Local Book Price", "BR Price"], "Pending"))}</strong><span>BetRivers DE</span></div>
+              <div class="odds-stat"><strong>${esc(firstField(r, ["Best Market Price", "Best Market", "Best Price", "Market Best"], r.Odds || "Pending"))}</strong><span>Best Market</span></div>
+              <div class="odds-stat"><strong>${esc(firstField(r, ["Line Movement", "Movement", "Move"], "Pending"))}</strong><span>Line Movement</span></div>
+              <div class="odds-stat"><strong>${esc(firstField(r, ["Timestamp", "Last Updated", "Odds Timestamp", "Updated"], "Pending"))}</strong><span>Timestamp</span></div>
+              <div class="odds-stat"><strong>${esc(firstField(r, ["No Bet Cutoff"], "—"))}</strong><span>No Bet Cutoff</span></div>
+              <div class="odds-stat"><strong>${esc(firstField(r, ["Sportsbook"], "BetRivers"))}</strong><span>Book Layer</span></div>
+            </div>
+            <div class="odds-note">${esc(firstField(r, ["Market Notes"], "Feed-ready. Confirm in the BetRivers app before betting."))}</div>
+          </article>
+        `;
+      }).join("");
+    }
+
     function isVipActive(r){
       const access = String(r.Access || "").trim().toLowerCase();
       const status = String(r.Status || "").trim().toLowerCase();
@@ -947,7 +1114,7 @@
         );
     }
 
-    function renderVIP    function renderVIP(rows){
+    function renderVIP(rows){
       const picks = rows.filter(isVipActive);
       const featured = picks.filter(r => /^yes$/i.test(r.Featured || ""));
 
@@ -961,7 +1128,7 @@
       const box = document.getElementById("vipPicks");
 
       if(!picks.length){
-        box.innerHTML = `<div class="empty">No VIP active picks are currently released. Check Active Picks for Access = VIP and Status/Release Status.</div>`;
+        box.innerHTML = `<div class="empty">No VIP active picks are currently released. Check the Active Picks sheet for Access = VIP and Status/Release Status.</div>`;
         return;
       }
 
@@ -990,6 +1157,8 @@
               <div class="detail"><span>No Bet Cutoff</span><strong>${esc(r["No Bet Cutoff"])}</strong></div>
             </div>
 
+            ${oddsMiniHTML(r)}
+
             <div class="analysis ${lockedRelease ? "locked-content" : ""}">
               <h4>Full VIP Analysis</h4>
               <p>${esc(r["Full Analysis"] || r.Writeup || "Full analysis pending.")}</p>
@@ -1010,7 +1179,8 @@
       }).join("");
     }
 
-    function resultClass    function resultClass(value){
+
+    function resultClass(value){
       const r = String(value || "").trim().toLowerCase();
       if(r.includes("win")) return "result-win";
       if(r.includes("loss")) return "result-loss";
@@ -1064,13 +1234,16 @@
           getRows(VIP_ARCHIVE_GID)
         ]);
         renderVIP(activeRows);
+        renderVIPOdds(activeRows);
         startReleaseTimers();
         renderVIPArchive(vipArchiveRows);
         updateVIPPerformance(vipArchiveRows);
       } catch(e) {
-        document.getElementById("vipPicks").innerHTML = `<div class="empty">VIP sync unavailable. Check Active Picks and VIP Archive sharing/CSV export permissions.</div>`;
+        document.getElementById("vipPicks").innerHTML = `<div class="empty">VIP sync unavailable. Check Google Sheet sharing and CSV export permissions.</div>`;
+        const vipOddsGrid = document.getElementById("vipOddsGrid");
+        if(vipOddsGrid) vipOddsGrid.innerHTML = `<div class="odds-empty">VIP odds layer unavailable. Check sheet sharing or odds feed import.</div>`;
         const archiveBody = document.getElementById("vipArchiveBody");
-        if(archiveBody) archiveBody.innerHTML = `<tr><td colspan="7">VIP Archive sync unavailable. Confirm premium.html uses VIP_ARCHIVE_GID ${VIP_ARCHIVE_GID}.</td></tr>`;
+        if(archiveBody) archiveBody.innerHTML = `<tr><td colspan="7">VIP archive sync unavailable. Check VIP Archive sheet sharing.</td></tr>`;
       }
     }
 
