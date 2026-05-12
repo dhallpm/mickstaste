@@ -440,55 +440,109 @@
       h1{letter-spacing:-.045em}
     }
   
-    .release-timer-card{
-      border:1px solid rgba(245,196,81,.24);
-      background:
-        radial-gradient(circle at 100% 0%, rgba(245,196,81,.14), transparent 32%),
-        rgba(18,17,14,.88);
-      border-radius:22px;
-      padding:18px;
+    /* ===== PREMIUM PERFORMANCE METRICS ===== */
+    @media(min-width:901px){
+      .summary-grid{
+        grid-template-columns:repeat(3,1fr);
+      }
+    }
+
+  
+    /* ===== VIP ARCHIVE SECTION ===== */
+    .archive-wrap{border:1px solid var(--line);border-radius:28px;overflow:auto;background:rgba(18,17,14,.76);box-shadow:0 24px 72px rgba(0,0,0,.36)}
+    .archive-table{width:100%;border-collapse:collapse;min-width:860px}
+    .archive-table th,.archive-table td{padding:14px 13px;border-bottom:1px solid rgba(245,196,81,.12);text-align:left;vertical-align:top;font-size:.88rem}
+    .archive-table th{color:var(--gold2);background:rgba(245,196,81,.06);text-transform:uppercase;letter-spacing:.10em;font-size:.68rem;font-weight:1000}
+    .archive-table td{color:#eadfc9}
+    .archive-table .pick-name{color:#fff4cf;font-weight:1000;display:block;margin-bottom:4px}
+    .archive-table .game-name{color:var(--muted);font-size:.78rem;line-height:1.35}
+    .result-win{color:var(--green)!important;font-weight:1000}
+    .result-loss{color:var(--red)!important;font-weight:1000}
+    .result-push{color:var(--gold2)!important;font-weight:1000}
+    .archive-note{margin-top:14px;color:var(--muted);font-size:.88rem;line-height:1.55}
+
+  
+    /* ===== RELEASE TIMER SYSTEM ===== */
+    .release-timer-card{position:relative}
+    .release-locked{
+      border-color:rgba(255,226,138,.48)!important;
+      box-shadow:0 32px 92px rgba(0,0,0,.68),0 0 48px rgba(255,226,138,.16)!important;
+    }
+    .release-locked .pick-analysis,
+    .release-locked .analysis.locked-content{
+      filter:blur(7px);
+      user-select:none;
+      pointer-events:none;
+      max-height:96px;
+      overflow:hidden;
+    }
+    .release-timer-box{
       margin-top:16px;
-      box-shadow:0 18px 46px rgba(0,0,0,.32);
+      border:1px solid rgba(255,226,138,.30);
+      background:
+        radial-gradient(circle at 100% 0%,rgba(255,226,138,.18),transparent 38%),
+        radial-gradient(circle at 0% 100%,rgba(53,229,140,.08),transparent 34%),
+        rgba(0,0,0,.38);
+      border-radius:18px;
+      padding:14px;
+      position:relative;
+      z-index:2;
     }
     .release-timer-label{
-      color:var(--gold2, var(--gold));
-      font-size:.72rem;
-      letter-spacing:.14em;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      color:#ffe28a;
+      font-size:11px;
+      font-weight:1000;
       text-transform:uppercase;
-      font-weight:1000;
-      margin-bottom:8px;
+      letter-spacing:1px;
+      margin-bottom:10px;
     }
-    .release-countdown{
-      font-size:1.45rem;
-      font-weight:1000;
-      color:#fff8e9;
-      letter-spacing:-.02em;
+    .release-timer-live{color:#95ffc1}
+    .release-timer-count{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+    .release-unit{
+      border:1px solid rgba(255,226,138,.12);
+      background:rgba(0,0,0,.34);
+      border-radius:12px;
+      padding:10px 8px;
+      text-align:center;
     }
-    .locked-pick{
-      filter:blur(0px);
-      opacity:.96;
+    .release-unit strong{
+      display:block;
+      color:#fff7dc;
+      font-size:22px;
+      line-height:1;
+      font-variant-numeric:tabular-nums;
+      text-shadow:0 0 18px rgba(255,226,138,.18);
     }
-    .locked-details{
-      margin-top:14px;
-      padding:14px;
-      border-radius:16px;
-      border:1px solid rgba(255,255,255,.10);
-      background:rgba(0,0,0,.28);
+    .release-unit span{
+      display:block;
+      margin-top:5px;
       color:var(--muted);
-      line-height:1.5;
-    }
-    .locked-title{
-      color:var(--gold2, var(--gold));
-      font-weight:1000;
+      font-size:9px;
+      font-weight:900;
+      letter-spacing:.8px;
       text-transform:uppercase;
-      letter-spacing:.08em;
-      font-size:.78rem;
-      margin-bottom:8px;
+    }
+    .release-note{margin-top:10px;color:var(--muted);font-size:12px;line-height:1.45}
+    .release-lock-overlay{margin-top:12px;color:#ffe28a;font-size:12px;font-weight:900;letter-spacing:.7px;text-transform:uppercase}
+    .vip-lock-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:14px}
+    .vip-lock-mini{
+      border:1px solid rgba(255,226,138,.20);
+      border-radius:20px;
+      padding:16px;
+      background:rgba(0,0,0,.30);
+    }
+    .vip-lock-mini h4{margin:0 0 6px;color:#fff7dc;font-size:1rem}
+    .vip-lock-mini p{margin:0;color:var(--muted);font-size:.86rem;line-height:1.45}
+    @media(max-width:560px){
+      .release-timer-count{grid-template-columns:repeat(2,1fr)}
+      .vip-lock-list{grid-template-columns:1fr}
     }
 
   </style>
-  <!-- Micks Picks auto-date-filter build: 2026-05-12 14:57:23 -->
-  <!-- Picks release timer enabled: 2026-05-12 15:16:15 -->
 </head>
 
 <body>
@@ -505,6 +559,7 @@
       <nav class="nav-links">
         <a href="index.html">Public Site</a>
         <a href="#vip-picks">VIP Picks</a>
+        <a href="#vip-archive">VIP Archive</a>
         <a href="https://vip.mickspicks.us">Secure Portal</a>
       </nav>
     </div>
@@ -533,9 +588,11 @@
         </div>
 
         <div class="summary-grid">
+          <div class="metric"><strong id="vipRecord">--</strong><span>VIP Record</span></div>
+          <div class="metric"><strong id="vipWinRate">--</strong><span>VIP Win Rate</span></div>
+          <div class="metric"><strong id="vipTotalUnits">--</strong><span>VIP Total Units</span></div>
           <div class="metric"><strong id="vipCount">--</strong><span>VIP Active Picks</span></div>
           <div class="metric"><strong id="featuredCount">--</strong><span>Featured Plays</span></div>
-          <div class="metric"><strong id="avgGrade">--</strong><span>Top Grade</span></div>
           <div class="metric"><strong id="lastSync">--</strong><span>Last Sync</span></div>
         </div>
       </div>
@@ -553,6 +610,35 @@
         </div>
       </div>
     </section>
+
+    <section class="section" id="vip-archive">
+      <div class="container">
+        <h2 class="section-title">VIP Archive</h2>
+        <p class="section-sub">
+          Closed premium member picks pulled from the VIP Archive sheet.
+        </p>
+        <div class="archive-wrap">
+          <table class="archive-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>League</th>
+                <th>Pick</th>
+                <th>Grade</th>
+                <th>Result</th>
+                <th>Profit/Loss</th>
+                <th>Closing #</th>
+              </tr>
+            </thead>
+            <tbody id="vipArchiveBody">
+              <tr><td colspan="7">Loading VIP archive...</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="archive-note">VIP Archive refreshes from the VIP Archive tab every 30 seconds.</div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="footer">
@@ -564,6 +650,7 @@
   <script>
     const SHEET_ID = "15txBM8qsck7f0ZA_za7xYEykBxKpuq0no3x7yHcKNeE";
     const ACTIVE_GID = "0";
+    const VIP_ARCHIVE_GID = "210503117";
 
     function csvUrl(gid){
       return `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${gid}&cache=${Date.now()}`;
@@ -599,41 +686,33 @@
     }
 
 
-    function toISODate(v){
-      const s = String(v || "").trim();
-      if(!s) return "";
-      if(/^\d{4}-\d{2}-\d{2}/.test(s)) return s.slice(0,10);
-
-      const d = new Date(s);
-      if(Number.isNaN(d.getTime())) return s.slice(0,10);
-
-      const yyyy = d.getFullYear();
-      const mm = String(d.getMonth() + 1).padStart(2, "0");
-      const dd = String(d.getDate()).padStart(2, "0");
-      return `${yyyy}-${mm}-${dd}`;
+    function vipNum(value){
+      const n = parseFloat(String(value || "").replace(/[^0-9.+-]/g,""));
+      return Number.isFinite(n) ? n : 0;
     }
 
-    function todayISO(){
-      const d = new Date();
-      const yyyy = d.getFullYear();
-      const mm = String(d.getMonth() + 1).padStart(2, "0");
-      const dd = String(d.getDate()).padStart(2, "0");
-      return `${yyyy}-${mm}-${dd}`;
+    function updateVIPPerformance(rows){
+      const graded = rows
+        .filter(r => r.Pick && r.Game)
+        .filter(r => /win|loss/i.test(r.Result || ""));
+
+      const wins = graded.filter(r => /win/i.test(r.Result || "")).length;
+      const losses = graded.filter(r => /loss/i.test(r.Result || "")).length;
+      const total = wins + losses;
+      const units = rows
+        .filter(r => r.Pick && r.Game)
+        .reduce((sum, r) => sum + vipNum(r["Profit/Loss"]), 0);
+      const rate = total ? Math.round((wins / total) * 100) : 0;
+
+      const recordEl = document.getElementById("vipRecord");
+      const rateEl = document.getElementById("vipWinRate");
+      const unitsEl = document.getElementById("vipTotalUnits");
+
+      if(recordEl) recordEl.textContent = `${wins}-${losses}`;
+      if(rateEl) rateEl.textContent = total ? `${rate}%` : "--";
+      if(unitsEl) unitsEl.textContent = `${units >= 0 ? "+" : ""}${units.toFixed(2)}u`;
     }
 
-    function isTodayPick(r){
-      return toISODate(r.Date) === todayISO();
-    }
-
-    function isUnsettled(r){
-      return !/win|loss|push|void|closed|graded/i.test(String(r.Result || ""));
-    }
-
-    function isPlayableStatus(r){
-      const status = String(r.Status || "").trim().toLowerCase();
-      const releaseStatus = String(r["Release Status"] || "").trim().toLowerCase();
-      return status === "pregame" || status === "active" || releaseStatus === "released" || releaseStatus === "live";
-    }
 
     function esc(s){
       return String(s||"").replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
@@ -663,171 +742,335 @@
     }
 
 
-    function parseReleaseDateTime(v){
-      const s = String(v || "").trim();
-      if(!s) return null;
-      let d = new Date(s);
-      if(!Number.isNaN(d.getTime())) return d;
+    function easternOffsetForDate(year, monthIndex, day){
+      function nthSunday(month, nth){
+        const d = new Date(Date.UTC(year, month, 1));
+        const firstSunday = 1 + ((7 - d.getUTCDay()) % 7);
+        return firstSunday + (nth - 1) * 7;
+      }
+      const secondSundayMarch = nthSunday(2, 2);
+      const firstSundayNovember = nthSunday(10, 1);
+      if(monthIndex < 2 || monthIndex > 10) return "-05:00";
+      if(monthIndex > 2 && monthIndex < 10) return "-04:00";
+      if(monthIndex === 2) return day >= secondSundayMarch ? "-04:00" : "-05:00";
+      if(monthIndex === 10) return day < firstSundayNovember ? "-04:00" : "-05:00";
+      return "-05:00";
+    }
 
-      // Handles values like 2026-05-12 1:30 PM in Safari/iPhone by replacing first space.
-      d = new Date(s.replace(" ", "T"));
-      if(!Number.isNaN(d.getTime())) return d;
+    function parseReleaseTime(value){
+      const raw = String(value || "").trim();
+      if(!raw) return null;
+
+      const hasEt = /\b(ET|EST|EDT)\b/i.test(raw);
+      let normalized = raw.replace(/\b(ET|EST|EDT)\b/gi, "").trim();
+
+      let parsed = new Date(normalized);
+      if(!Number.isNaN(parsed.getTime()) && /[zZ]|[+-]\d{2}:?\d{2}$/.test(normalized)) return parsed;
+
+      let m = normalized.match(/^(\d{4})-(\d{1,2})-(\d{1,2})[ T](\d{1,2}):(\d{2})(?::(\d{2}))?\s*([AP]M)?$/i);
+      if(m){
+        let year = +m[1], month = +m[2], day = +m[3], hour = +m[4], minute = +m[5], second = +(m[6] || 0);
+        const ampm = (m[7] || "").toUpperCase();
+        if(ampm === "PM" && hour < 12) hour += 12;
+        if(ampm === "AM" && hour === 12) hour = 0;
+        const offset = hasEt ? easternOffsetForDate(year, month - 1, day) : "";
+        return new Date(`${String(year).padStart(4,"0")}-${String(month).padStart(2,"0")}-${String(day).padStart(2,"0")}T${String(hour).padStart(2,"0")}:${String(minute).padStart(2,"0")}:${String(second).padStart(2,"0")}${offset}`);
+      }
+
+      m = normalized.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})\s+(\d{1,2}):(\d{2})(?::(\d{2}))?\s*([AP]M)?$/i);
+      if(m){
+        let month = +m[1], day = +m[2], year = +m[3], hour = +m[4], minute = +m[5], second = +(m[6] || 0);
+        const ampm = (m[7] || "").toUpperCase();
+        if(ampm === "PM" && hour < 12) hour += 12;
+        if(ampm === "AM" && hour === 12) hour = 0;
+        const offset = hasEt ? easternOffsetForDate(year, month - 1, day) : "";
+        return new Date(`${String(year).padStart(4,"0")}-${String(month).padStart(2,"0")}-${String(day).padStart(2,"0")}T${String(hour).padStart(2,"0")}:${String(minute).padStart(2,"0")}:${String(second).padStart(2,"0")}${offset}`);
+      }
+
+      parsed = new Date(normalized.replace(" ", "T"));
+      if(!Number.isNaN(parsed.getTime())) return parsed;
 
       return null;
     }
 
-    function isReleasedByTimer(r){
-      const releaseStatus = String(r["Release Status"] || "").trim().toLowerCase();
-      if(releaseStatus === "released" || releaseStatus === "live") return true;
+    function parseReleaseTimeWithDate(row){
+      const releaseRaw = String(row["Release Time"] || "").trim();
+      if(!releaseRaw) return null;
 
-      const releaseTime = parseReleaseDateTime(r["Release Time"] || r["Posted Time"]);
-      if(!releaseTime) return true;
+      const looksClockOnly = /^\d{1,2}:\d{2}(\s*[AP]M)?(\s*(ET|EST|EDT))?$/i.test(releaseRaw);
+      if(looksClockOnly && row.Date){
+        return parseReleaseTime(`${row.Date} ${releaseRaw}`);
+      }
 
-      return Date.now() >= releaseTime.getTime();
+      return parseReleaseTime(releaseRaw);
     }
 
-    function countdownText(target){
-      if(!target) return "Release time pending";
-      const diff = target.getTime() - Date.now();
-      if(diff <= 0) return "Released now";
+    function releaseState(row){
+      const status = String(row["Release Status"] || "").trim().toLowerCase();
+      const releaseAt = parseReleaseTimeWithDate(row);
+      const explicitlyLive = status === "live" || status === "released";
+      const explicitlyLocked = status === "locked" || status === "pending" || status === "scheduled";
+      const futureRelease = releaseAt && releaseAt.getTime() > Date.now();
 
-      const totalSeconds = Math.floor(diff / 1000);
-      const days = Math.floor(totalSeconds / 86400);
-      const hours = Math.floor((totalSeconds % 86400) / 3600);
-      const minutes = Math.floor((totalSeconds % 3600) / 60);
-      const seconds = totalSeconds % 60;
-
-      if(days > 0) return `${days}d ${hours}h ${minutes}m`;
-      if(hours > 0) return `${hours}h ${minutes}m ${seconds}s`;
-      return `${minutes}m ${seconds}s`;
+      return {
+        status,
+        releaseAt,
+        locked: !explicitlyLive && (futureRelease || (explicitlyLocked && !releaseAt))
+      };
     }
 
-    function releaseTimerHTML(r){
-      const releaseTime = parseReleaseDateTime(r["Release Time"] || r["Posted Time"]);
-      return `
-        <div class="release-timer-card">
-          <div class="release-timer-label">Pick Release Timer</div>
-          <div class="release-countdown" data-release-time="${esc(r["Release Time"] || r["Posted Time"] || "")}">
-            ${countdownText(releaseTime)}
+    function releaseRemainingParts(ms){
+      const total = Math.max(0, Math.floor(ms / 1000));
+      const days = Math.floor(total / 86400);
+      const hours = Math.floor((total % 86400) / 3600);
+      const minutes = Math.floor((total % 3600) / 60);
+      const seconds = total % 60;
+      return {days,hours,minutes,seconds};
+    }
+
+    function shouldLockRelease(row){
+      return releaseState(row).locked;
+    }
+
+    function releaseTimerHTML(row, options = {}){
+      const state = releaseState(row);
+      const releaseAt = state.releaseAt;
+      const note = esc(row["Release Notes"] || "Full details unlock automatically when the release timer reaches zero.");
+      const releaseStatus = esc(row["Release Status"] || (state.locked ? "Locked" : "Live"));
+
+      if(!releaseAt){
+        return `
+          <div class="release-timer-box" data-release-status="${releaseStatus}">
+            <div class="release-timer-label">
+              <span>${state.locked ? "Locked Release" : "Release Status"}</span>
+              <span>${releaseStatus}</span>
+            </div>
+            <div class="release-note"><strong>Release Time:</strong> ${esc(row["Release Time"] || row["Posted Time"] || "Pending")}</div>
+            <div class="release-note">${note}</div>
           </div>
+        `;
+      }
+
+      const ms = releaseAt.getTime() - Date.now();
+      const p = releaseRemainingParts(ms);
+      const locked = state.locked;
+
+      return `
+        <div class="release-timer-box" data-release-time="${esc(releaseAt.toISOString())}" data-release-status="${releaseStatus}">
+          <div class="release-timer-label ${locked ? "" : "release-timer-live"}">
+            <span>${locked ? "Locked Release Timer" : "Released / Live"}</span>
+            <span>${releaseAt.toLocaleString([], {month:"short",day:"numeric",hour:"numeric",minute:"2-digit"})}</span>
+          </div>
+          ${locked ? `
+            <div class="release-timer-count">
+              <div class="release-unit"><strong data-release-days>${p.days}</strong><span>Days</span></div>
+              <div class="release-unit"><strong data-release-hours>${String(p.hours).padStart(2,"0")}</strong><span>Hours</span></div>
+              <div class="release-unit"><strong data-release-minutes>${String(p.minutes).padStart(2,"0")}</strong><span>Minutes</span></div>
+              <div class="release-unit"><strong data-release-seconds>${String(p.seconds).padStart(2,"0")}</strong><span>Seconds</span></div>
+            </div>
+            <div class="release-lock-overlay">${esc(options.lockText || "Full breakdown unlocks when countdown expires.")}</div>
+          ` : `
+            <div class="release-note">${esc(options.liveText || "This release is live.")}</div>
+          `}
+          <div class="release-note">${note}</div>
         </div>
       `;
     }
 
-    function refreshCountdowns(){
-      document.querySelectorAll("[data-release-time]").forEach(el => {
-        const d = parseReleaseDateTime(el.getAttribute("data-release-time"));
-        el.textContent = countdownText(d);
-      });
+    function startReleaseTimers(){
+      if(window.__micksReleaseTimer) clearInterval(window.__micksReleaseTimer);
+
+      function tick(){
+        document.querySelectorAll(".release-timer-box[data-release-time]").forEach(box => {
+          const releaseAt = new Date(box.getAttribute("data-release-time"));
+          if(Number.isNaN(releaseAt.getTime())) return;
+
+          const ms = releaseAt.getTime() - Date.now();
+          const card = box.closest(".pick-card,.vip-lock-mini,.card");
+
+          if(ms <= 0){
+            box.querySelector(".release-timer-label")?.classList.add("release-timer-live");
+            const label = box.querySelector(".release-timer-label span:first-child");
+            if(label) label.textContent = "Released / Live";
+            const count = box.querySelector(".release-timer-count");
+            if(count) count.innerHTML = `<div class="release-note">This release is live.</div>`;
+            box.querySelector(".release-lock-overlay")?.remove();
+            if(card) card.classList.remove("release-locked");
+            card?.querySelectorAll(".analysis.locked-content,.pick-analysis").forEach(el => {
+              el.classList.remove("locked-content");
+              el.style.filter = "";
+            });
+            return;
+          }
+
+          const p = releaseRemainingParts(ms);
+          const d = box.querySelector("[data-release-days]");
+          const h = box.querySelector("[data-release-hours]");
+          const m = box.querySelector("[data-release-minutes]");
+          const s = box.querySelector("[data-release-seconds]");
+          if(d) d.textContent = p.days;
+          if(h) h.textContent = String(p.hours).padStart(2,"0");
+          if(m) m.textContent = String(p.minutes).padStart(2,"0");
+          if(s) s.textContent = String(p.seconds).padStart(2,"0");
+        });
+      }
+
+      tick();
+      window.__micksReleaseTimer = setInterval(tick, 1000);
     }
+
 
     function isVipActive(r){
       const access = String(r.Access || "").trim().toLowerCase();
+      const status = String(r.Status || "").trim().toLowerCase();
+      const releaseStatus = String(r["Release Status"] || "").trim().toLowerCase();
       const hasPick = r.Pick && r.Game;
 
       return hasPick &&
         access === "vip" &&
-        isTodayPick(r) &&
-        isUnsettled(r) &&
-        isPlayableStatus(r);
+        !/win|loss|push|void|closed|graded/i.test(r.Result || "") &&
+        (
+          status === "pregame" ||
+          status === "active" ||
+          releaseStatus === "locked" ||
+          releaseStatus === "pending" ||
+          releaseStatus === "scheduled" ||
+          releaseStatus === "released" ||
+          releaseStatus === "live" ||
+          String(r["Release Time"] || "").trim()
+        );
     }
 
     function renderVIP(rows){
       const picks = rows.filter(isVipActive);
       const featured = picks.filter(r => /^yes$/i.test(r.Featured || ""));
 
-      document.getElementById("vipCount").textContent = picks.length;
-      document.getElementById("featuredCount").textContent = featured.length;
-      document.getElementById("avgGrade").textContent = picks[0]?.Grade || "--";
-      document.getElementById("lastSync").textContent = new Date().toLocaleTimeString([], {hour:"numeric", minute:"2-digit"});
+      const vipCountEl = document.getElementById("vipCount");
+      const featuredCountEl = document.getElementById("featuredCount");
+      const lastSyncEl = document.getElementById("lastSync");
+      if(vipCountEl) vipCountEl.textContent = picks.length;
+      if(featuredCountEl) featuredCountEl.textContent = featured.length;
+      if(lastSyncEl) lastSyncEl.textContent = new Date().toLocaleTimeString([], {hour:"numeric", minute:"2-digit"});
 
       const box = document.getElementById("vipPicks");
 
       if(!picks.length){
-        box.innerHTML = `<div class="empty">No VIP active picks are currently released for today. Check Active Picks for today’s date, Access = VIP, and Status = Pregame.</div>`;
+        box.innerHTML = `<div class="empty">No VIP active picks are currently released. Check the Active Picks sheet for Access = VIP and Status/Release Status.</div>`;
         return;
       }
 
       box.innerHTML = picks.map(r => {
-        if(!isReleasedByTimer(r)){
-          return `
-            <article class="pick-card locked-pick">
-              <div class="top-row">
-                <div>
-                  <span class="tag">${esc(r.League || r.Sport)}</span>
-                  ${/^yes$/i.test(r.Featured || "") ? `<span class="tag featured-tag">Featured VIP</span>` : ""}
-                </div>
-                ${gradeBadge(r.Grade)}
-              </div>
-
-              <h3 class="pick-title">VIP Pick Locked</h3>
-              <div class="game">${esc(r.Game || "Game pending")}</div>
-
-              ${releaseTimerHTML(r)}
-
-              <div class="locked-details">
-                <div class="locked-title">Scheduled Release</div>
-                This VIP pick is scheduled and will reveal automatically at release time. Full pick, odds, units, and analysis remain locked until then.
-              </div>
-            </article>
-          `;
-        }
-
+        const lockedRelease = shouldLockRelease(r);
         return `
-        <article class="pick-card ${/^yes$/i.test(r.Featured || "") ? "featured" : ""}">
-          <div class="top-row">
-            <div>
-              <span class="tag">${esc(r.League || r.Sport)}</span>
-              ${/^yes$/i.test(r.Featured || "") ? `<span class="tag featured-tag">Featured VIP</span>` : ""}
+          <article class="pick-card release-timer-card ${/^yes$/i.test(r.Featured || "") ? "featured" : ""} ${lockedRelease ? "release-locked" : ""}">
+            <div class="top-row">
+              <div>
+                <span class="tag">${esc(r.League || r.Sport)}</span>
+                ${/^yes$/i.test(r.Featured || "") ? `<span class="tag featured-tag">Featured VIP</span>` : ""}
+                ${lockedRelease ? `<span class="tag">Locked</span>` : ""}
+              </div>
+              ${gradeBadge(r.Grade)}
             </div>
-            ${gradeBadge(r.Grade)}
-          </div>
 
-          <h3 class="pick-title">${esc(r.Pick)}</h3>
-          <div class="game">${esc(r.Game)}</div>
+            <h3 class="pick-title">${esc(r.Pick)}</h3>
+            <div class="game">${esc(r.Game)}</div>
 
-          <div class="details">
-            <div class="detail"><span>Odds</span><strong>${esc(r.Odds)}</strong></div>
-            <div class="detail"><span>Units</span><strong>${esc(r.Units)}u</strong></div>
-            <div class="detail"><span>Sportsbook</span><strong>${esc(r.Sportsbook)}</strong></div>
-            <div class="detail"><span>Bet Type</span><strong>${esc(r["Bet Type"])}</strong></div>
-            <div class="detail"><span>Best Number</span><strong>${esc(r["Best Number"])}</strong></div>
-            <div class="detail"><span>No Bet Cutoff</span><strong>${esc(r["No Bet Cutoff"])}</strong></div>
-          </div>
+            <div class="details">
+              <div class="detail"><span>Odds</span><strong>${esc(r.Odds)}</strong></div>
+              <div class="detail"><span>Units</span><strong>${esc(r.Units)}u</strong></div>
+              <div class="detail"><span>Sportsbook</span><strong>${esc(r.Sportsbook)}</strong></div>
+              <div class="detail"><span>Bet Type</span><strong>${esc(r["Bet Type"])}</strong></div>
+              <div class="detail"><span>Best Number</span><strong>${esc(r["Best Number"])}</strong></div>
+              <div class="detail"><span>No Bet Cutoff</span><strong>${esc(r["No Bet Cutoff"])}</strong></div>
+            </div>
 
-          <div class="analysis">
-            <h4>Full VIP Analysis</h4>
-            <p>${esc(r["Full Analysis"] || r.Writeup || "Full analysis pending.")}</p>
-          </div>
+            <div class="analysis ${lockedRelease ? "locked-content" : ""}">
+              <h4>Full VIP Analysis</h4>
+              <p>${esc(r["Full Analysis"] || r.Writeup || "Full analysis pending.")}</p>
+            </div>
 
-          <div class="analysis">
-            <h4>Market / Injury Notes</h4>
-            <p><strong>Market:</strong> ${esc(r["Market Notes"] || "No market note listed.")}<br>
-            <strong>Injury:</strong> ${esc(r["Injury Notes"] || "No injury note listed.")}</p>
-          </div>
+            <div class="analysis ${lockedRelease ? "locked-content" : ""}">
+              <h4>Market / Injury Notes</h4>
+              <p><strong>Market:</strong> ${esc(r["Market Notes"] || "No market note listed.")}<br>
+              <strong>Injury:</strong> ${esc(r["Injury Notes"] || "No injury note listed.")}</p>
+            </div>
 
-          <div class="release">
-            <strong>Release Time:</strong> ${esc(r["Release Time"] || r["Posted Time"] || "Pending")}<br>
-            <strong>Release Status:</strong> ${esc(r["Release Status"] || r.Status || "Released")}<br>
-            <strong>Release Notes:</strong> ${esc(r["Release Notes"] || "No release note listed.")}
-          </div>
-        </article>
-      `;
+            ${releaseTimerHTML(r, {
+              lockText: "Full VIP breakdown unlocks when countdown expires.",
+              liveText: "This VIP release is live. Full analysis is available now."
+            })}
+          </article>
+        `;
       }).join("");
     }
 
+
+    function resultClass(value){
+      const r = String(value || "").trim().toLowerCase();
+      if(r.includes("win")) return "result-win";
+      if(r.includes("loss")) return "result-loss";
+      if(r.includes("push") || r.includes("void")) return "result-push";
+      return "";
+    }
+
+    function archiveDate(value){
+      const raw = String(value || "").trim();
+      if(!raw) return "—";
+      const d = new Date(raw);
+      if(!Number.isNaN(d.getTime())){
+        return d.toLocaleDateString(undefined,{month:"short",day:"numeric",year:"numeric"});
+      }
+      return raw;
+    }
+
+    function renderVIPArchive(rows){
+      const body = document.getElementById("vipArchiveBody");
+      if(!body) return;
+
+      const archive = rows
+        .filter(r => r.Pick && r.Game)
+        .filter(r => /win|loss|push|void|closed/i.test(`${r.Result || ""} ${r.Status || ""}`))
+        .slice()
+        .reverse();
+
+      if(!archive.length){
+        body.innerHTML = `<tr><td colspan="7">No VIP archive results found yet.</td></tr>`;
+        return;
+      }
+
+      body.innerHTML = archive.map(r => `
+        <tr>
+          <td>${esc(archiveDate(r.Date))}</td>
+          <td>${esc(r.League || r.Sport || "—")}</td>
+          <td><span class="pick-name">${esc(r.Pick || "—")}</span><span class="game-name">${esc(r.Game || "—")}</span></td>
+          <td>${gradeBadge(r.Grade || "B")}</td>
+          <td class="${resultClass(r.Result)}">${esc(r.Result || r.Status || "—")}</td>
+          <td class="${resultClass(r.Result)}">${esc(r["Profit/Loss"] || "—")}</td>
+          <td>${esc(r["Closing Number"] || r.CLV || "—")}</td>
+        </tr>
+      `).join("");
+    }
+
+
     async function load(){
       try {
-        const rows = await getRows(ACTIVE_GID);
-        renderVIP(rows);
+        const [activeRows, vipArchiveRows] = await Promise.all([
+          getRows(ACTIVE_GID),
+          getRows(VIP_ARCHIVE_GID)
+        ]);
+        renderVIP(activeRows);
+        startReleaseTimers();
+        renderVIPArchive(vipArchiveRows);
+        updateVIPPerformance(vipArchiveRows);
       } catch(e) {
         document.getElementById("vipPicks").innerHTML = `<div class="empty">VIP sync unavailable. Check Google Sheet sharing and CSV export permissions.</div>`;
+        const archiveBody = document.getElementById("vipArchiveBody");
+        if(archiveBody) archiveBody.innerHTML = `<tr><td colspan="7">VIP archive sync unavailable. Check VIP Archive sheet sharing.</td></tr>`;
       }
     }
 
     document.addEventListener("DOMContentLoaded", load);
     setInterval(load, 30000);
-    setInterval(refreshCountdowns, 1000);
   </script>
 </body>
 </html>
