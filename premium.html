@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Micks Picks VIP Vault | Bet The Number Not The Hype</title>
+  <title>Micks Picks VIP Vault</title>
   <meta name="description" content="Micks Picks VIP active picks and full betting analysis built around one rule: Bet The Number Not The Hype." />
   <meta name="robots" content="noindex,nofollow" />
 
@@ -439,131 +439,6 @@
       .details{grid-template-columns:1fr}
       h1{letter-spacing:-.045em}
     }
-  
-    /* ===== MICKS PICKS VISIT COUNTER ===== */
-    .visit-counter-metric{
-      grid-column:1/-1;
-      position:relative;
-      overflow:hidden;
-    }
-    .visit-counter-metric::after{
-      content:"";
-      position:absolute;
-      inset:-40%;
-      background:linear-gradient(120deg,transparent,rgba(255,226,138,.10),transparent);
-      transform:translateX(-80%) rotate(10deg);
-      animation:visitCounterSweep 6s ease-in-out infinite;
-      pointer-events:none;
-    }
-    .visit-counter-metric strong,
-    .visit-counter-metric span{
-      position:relative;
-      z-index:1;
-    }
-    .visit-counter-metric strong{
-      font-variant-numeric:tabular-nums;
-    }
-    @keyframes visitCounterSweep{
-      0%,45%{transform:translateX(-80%) rotate(10deg)}
-      75%,100%{transform:translateX(80%) rotate(10deg)}
-    }
-
-  </style>
-</head>
-
-<body>
-  <header class="topbar">
-    <div class="container nav">
-      <a class="brand" href="index.html">
-        <div class="mark">MP</div>
-        <div>
-          <strong>Micks Picks</strong>
-          <span>VIP Vault</span>
-        </div>
-      </a>
-
-      <nav class="nav-links">
-        <a href="index.html">Public Site</a>
-        <a href="#vip-picks">VIP Picks</a>
-        <a href="https://vip.mickspicks.us">Secure Portal</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="container">
-        <div class="pill">
-          <span class="dot"></span>
-          Secure VIP Access
-        </div>
-
-        <h1>
-          Bet The Number
-          <span>Not The Hype</span>
-        </h1>
-
-        <p class="lead">
-          Bet The Number Not The Hype. Premium Micks Picks releases with full writeups, units, grades, market notes, release notes, and Featured VIP plays pulled from the Active Picks sheet.
-        </p>
-
-        <div class="actions">
-          <a class="btn primary" href="#vip-picks">View VIP Picks</a>
-          <a class="btn secondary" href="https://www.mickspicks.us">Back to Public Site</a>
-        </div>
-
-        <div class="summary-grid">
-          <div class="metric"><strong id="vipCount">--</strong><span>VIP Active Picks</span></div>
-          <div class="metric"><strong id="featuredCount">--</strong><span>Featured Plays</span></div>
-          <div class="metric"><strong id="avgGrade">--</strong><span>Top Grade</span></div>
-          <div class="metric"><strong id="lastSync">--</strong><span>Last Sync</span></div>
-          <div class="metric visit-counter-metric"><strong id="visitCounter">--</strong><span>Vault Visits</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="vip-picks">
-      <div class="container">
-        <h2 class="section-title">VIP Active Picks</h2>
-        <p class="section-sub">
-          Only plays marked <strong>VIP</strong> in the Active Picks sheet display here. Free picks stay on the public page.
-        </p>
-
-        <div id="vipPicks" class="picks-grid">
-          <div class="empty">Loading VIP picks...</div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      Micks Picks is for entertainment and educational purposes only. Bet responsibly.
-    </div>
-  </footer>
-
-  <script>
-    const SHEET_ID = "15txBM8qsck7f0ZA_za7xYEykBxKpuq0no3x7yHcKNeE";
-    const ACTIVE_GID = "0";
-
-    /* ===== MICKS PICKS REAL VISIT COUNTER ===== */
-    const GOATCOUNTER_CODE = "mickspicks";
-
-    function setupVisitCounter(){
-      const el = document.getElementById("visitCounter");
-      if(!el) return;
-
-      function localFallbackCounter(){
-        const pageKey = "micks_picks_preview_visits:" + location.pathname;
-        const sessionKey = pageKey + ":seen";
-        let count = parseInt(localStorage.getItem(pageKey) || "0", 10);
-
-        if(!sessionStorage.getItem(sessionKey)){
-          count += 1;
-          localStorage.setItem(pageKey, String(count));
-          sessionStorage.setItem(sessionKey, "1");
-        }
-
         el.textContent = count.toLocaleString();
       }
 
