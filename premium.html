@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Micks Picks VIP Vault</title>
-  <meta name="description" content="Micks Picks VIP active picks, premium betting analysis, full writeups, release notes, and results." />
+  <title>Micks Picks VIP Vault | Bet The Number Not The Hype</title>
+  <meta name="description" content="Micks Picks VIP active picks and full betting analysis built around one rule: Bet The Number Not The Hype." />
   <meta name="robots" content="noindex,nofollow" />
 
   <style>
@@ -499,12 +499,12 @@
         </div>
 
         <h1>
-          VIP Vault.
-          <span>Full Analysis.</span>
+          Bet The Number
+          <span>Not The Hype</span>
         </h1>
 
         <p class="lead">
-          Premium Micks Picks releases with full writeups, units, grades, market notes, release notes, and Featured VIP plays pulled from the Active Picks sheet.
+          Bet The Number Not The Hype. Premium Micks Picks releases with full writeups, units, grades, market notes, release notes, and Featured VIP plays pulled from the Active Picks sheet.
         </p>
 
         <div class="actions">
@@ -546,16 +546,14 @@
     const SHEET_ID = "15txBM8qsck7f0ZA_za7xYEykBxKpuq0no3x7yHcKNeE";
     const ACTIVE_GID = "0";
 
-    /* ===== MICKS PICKS VISIT COUNTER =====
-       Replace YOUR_GOATCOUNTER_CODE with your GoatCounter site code for real public tracking.
-       Until then, this shows a local preview counter on your own device. */
-    const GOATCOUNTER_CODE = "YOUR_GOATCOUNTER_CODE";
+    /* ===== MICKS PICKS REAL VISIT COUNTER ===== */
+    const GOATCOUNTER_CODE = "mickspicks";
 
     function setupVisitCounter(){
       const el = document.getElementById("visitCounter");
       if(!el) return;
 
-      function localPreviewCounter(){
+      function localFallbackCounter(){
         const pageKey = "micks_picks_preview_visits:" + location.pathname;
         const sessionKey = pageKey + ":seen";
         let count = parseInt(localStorage.getItem(pageKey) || "0", 10);
@@ -567,11 +565,6 @@
         }
 
         el.textContent = count.toLocaleString();
-      }
-
-      if(!GOATCOUNTER_CODE || GOATCOUNTER_CODE === "YOUR_GOATCOUNTER_CODE"){
-        localPreviewCounter();
-        return;
       }
 
       window.goatcounter = window.goatcounter || {};
@@ -589,7 +582,7 @@
 
           if(tries > 60){
             clearInterval(timer);
-            localPreviewCounter();
+            localFallbackCounter();
           }
         }, 100);
       }
