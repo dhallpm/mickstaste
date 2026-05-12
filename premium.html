@@ -440,86 +440,57 @@
       h1{letter-spacing:-.045em}
     }
   
-    /* ===== CLEAN PREMIUM SLOGAN BADGE ===== */
-    .brand-slogan{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      margin:22px 0 0;
-      padding:10px 14px;
-      border-radius:999px;
-      border:1px solid rgba(255,226,138,.22);
-      background:rgba(255,226,138,.065);
-      color:#ffe28a;
-      font-size:13px;
-      font-weight:1000;
-      letter-spacing:1.4px;
-      text-transform:uppercase;
-      box-shadow:0 14px 38px rgba(0,0,0,.26),0 0 22px rgba(255,226,138,.06);
-      width:max-content;
-      max-width:100%;
-    }
-    .brand-slogan::before{
-      content:"";
-      width:8px;
-      height:8px;
-      min-width:8px;
-      border-radius:50%;
-      background:#35e58c;
-      box-shadow:0 0 14px rgba(53,229,140,.62);
-    }
-    @media(max-width:560px){
-      .brand-slogan{
-        font-size:10.5px;
-        letter-spacing:.85px;
-        padding:9px 11px;
-        line-height:1.25;
-      }
-    }
-
-  
-    /* ===== PUBLIC VISIT COUNTER DESIGN ===== */
-    .public-visit-counter{
-      grid-column:1/-1;
-      position:relative;
-      overflow:hidden;
-      border-color:rgba(53,229,140,.25) !important;
+    /* ===== VIP ARCHIVE SECTION ===== */
+    .archive-wrap{
+      border:1px solid var(--line);
+      border-radius:28px;
+      overflow:auto;
       background:
-        radial-gradient(circle at 100% 0%,rgba(53,229,140,.15),transparent 42%),
-        radial-gradient(circle at 0% 100%,rgba(255,226,138,.10),transparent 38%),
-        rgba(0,0,0,.34) !important;
+        radial-gradient(circle at 100% 0%, rgba(245,196,81,.10), transparent 35%),
+        rgba(18,17,14,.76);
+      box-shadow:0 24px 72px rgba(0,0,0,.36);
     }
-    .public-visit-counter::after{
-      content:"";
-      position:absolute;
-      inset:-40%;
-      background:linear-gradient(120deg,transparent,rgba(255,226,138,.11),transparent);
-      transform:translateX(-80%) rotate(10deg);
-      animation:visitCounterSweep 6s ease-in-out infinite;
-      pointer-events:none;
+    .archive-table{
+      width:100%;
+      border-collapse:collapse;
+      min-width:860px;
     }
-    .public-visit-counter strong,
-    .public-visit-counter span,
-    .public-visit-counter small{
-      position:relative;
-      z-index:1;
+    .archive-table th,
+    .archive-table td{
+      padding:14px 13px;
+      border-bottom:1px solid rgba(245,196,81,.12);
+      text-align:left;
+      vertical-align:top;
+      font-size:.88rem;
     }
-    .public-visit-counter strong{
-      font-variant-numeric:tabular-nums;
-      color:#fff !important;
-    }
-    .public-visit-counter small{
-      display:block;
-      margin-top:6px;
-      color:#95ffc1;
-      font-size:10px;
-      font-weight:900;
-      letter-spacing:1px;
+    .archive-table th{
+      color:var(--gold2);
+      background:rgba(245,196,81,.06);
       text-transform:uppercase;
+      letter-spacing:.10em;
+      font-size:.68rem;
+      font-weight:1000;
     }
-    @keyframes visitCounterSweep{
-      0%,45%{transform:translateX(-80%) rotate(10deg)}
-      75%,100%{transform:translateX(80%) rotate(10deg)}
+    .archive-table td{color:#eadfc9}
+    .archive-table .pick-name{
+      color:#fff4cf;
+      font-weight:1000;
+      display:block;
+      margin-bottom:4px;
+    }
+    .archive-table .game-name{
+      color:var(--muted);
+      font-size:.78rem;
+      line-height:1.35;
+    }
+    .result-win{color:var(--green)!important;font-weight:1000}
+    .result-loss{color:var(--red)!important;font-weight:1000}
+    .result-push{color:var(--gold2)!important;font-weight:1000}
+    .archive-note{
+      margin-top:14px;
+      color:var(--muted);
+      font-size:.88rem;
+      line-height:1.55;
     }
 
   </style>
@@ -539,6 +510,7 @@
       <nav class="nav-links">
         <a href="index.html">Public Site</a>
         <a href="#vip-picks">VIP Picks</a>
+        <a href="#vip-archive">VIP Archive</a>
         <a href="https://vip.mickspicks.us">Secure Portal</a>
       </nav>
     </div>
@@ -556,7 +528,8 @@
           VIP Vault.
           <span>Full Analysis.</span>
         </h1>
-        <div class="brand-slogan">Bet the Number. Not the Hype.</div><p class="lead">
+
+        <p class="lead">
           Premium Micks Picks releases with full writeups, units, grades, market notes, release notes, and Featured VIP plays pulled from the Active Picks sheet.
         </p>
 
@@ -570,11 +543,6 @@
           <div class="metric"><strong id="featuredCount">--</strong><span>Featured Plays</span></div>
           <div class="metric"><strong id="avgGrade">--</strong><span>Top Grade</span></div>
           <div class="metric"><strong id="lastSync">--</strong><span>Last Sync</span></div>
-          <div class="metric public-visit-counter">
-            <strong id="publicVisitCount">Tracking</strong>
-            <span>Vault Visits</span>
-            <small id="publicVisitStatus">Public count syncing</small>
-          </div>
         </div>
       </div>
     </section>
@@ -583,7 +551,7 @@
       <div class="container">
         <h2 class="section-title">VIP Active Picks</h2>
         <p class="section-sub">
-          Only plays marked <strong>VIP</strong> in the Active Picks sheet display here. Free picks stay on the public page.
+          Only plays marked <strong>VIP</strong> in the Active Picks sheet display here. Closed VIP picks appear below in the VIP Archive.
         </p>
 
         <div id="vipPicks" class="picks-grid">
@@ -591,6 +559,36 @@
         </div>
       </div>
     </section>
+
+    <section class="section" id="vip-archive">
+      <div class="container">
+        <h2 class="section-title">VIP Archive</h2>
+        <p class="section-sub">
+          Closed premium member picks pulled from the VIP Archive sheet. This keeps your VIP history separate from the public results board.
+        </p>
+
+        <div class="archive-wrap">
+          <table class="archive-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>League</th>
+                <th>Pick</th>
+                <th>Grade</th>
+                <th>Result</th>
+                <th>Profit/Loss</th>
+                <th>Closing #</th>
+              </tr>
+            </thead>
+            <tbody id="vipArchiveBody">
+              <tr><td colspan="7">Loading VIP archive...</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="archive-note">VIP Archive refreshes from the VIP Archive tab every 30 seconds.</div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="footer">
@@ -602,50 +600,7 @@
   <script>
     const SHEET_ID = "15txBM8qsck7f0ZA_za7xYEykBxKpuq0no3x7yHcKNeE";
     const ACTIVE_GID = "0";
-
-    /* ===== MICKS PICKS PUBLIC GOATCOUNTER TEXT COUNT ===== */
-    const GOATCOUNTER_CODE = "mickspicks";
-
-    function setupPublicVisitCounter(){
-      const el = document.getElementById("publicVisitCount");
-      const status = document.getElementById("publicVisitStatus");
-      if(!el) return;
-
-      function setDisplay(count, label){
-        el.textContent = count || "Tracking";
-        if(status) status.textContent = label || "Live site visits";
-      }
-
-      function addTrackingScript(){
-        if(document.querySelector("script[data-goatcounter]")) return;
-        const script = document.createElement("script");
-        script.async = true;
-        script.src = "https://gc.zgo.at/count.js";
-        script.setAttribute("data-goatcounter", `https://${GOATCOUNTER_CODE}.goatcounter.com/count`);
-        document.body.appendChild(script);
-      }
-
-      function loadPublicCount(){
-        const totalUrl = `https://${GOATCOUNTER_CODE}.goatcounter.com/counter/TOTAL.json`;
-
-        fetch(totalUrl, { cache:"no-store" })
-          .then(res => {
-            if(!res.ok) throw new Error("Counter total unavailable");
-            return res.json();
-          })
-          .then(data => {
-            setDisplay(data.count || data.count_unique || "0", "Public visit count");
-          })
-          .catch(() => {
-            setDisplay("Tracking", "Public count syncing");
-          });
-      }
-
-      addTrackingScript();
-      loadPublicCount();
-      setInterval(loadPublicCount, 1800000);
-    }
-
+    const VIP_ARCHIVE_GID = "210503117";
 
     function csvUrl(gid){
       return `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${gid}&cache=${Date.now()}`;
@@ -782,19 +737,77 @@
       `).join("");
     }
 
+
+    function resultClass(value){
+      const r = String(value || "").trim().toLowerCase();
+      if(r.includes("win")) return "result-win";
+      if(r.includes("loss")) return "result-loss";
+      if(r.includes("push") || r.includes("void")) return "result-push";
+      return "";
+    }
+
+    function archiveDate(value){
+      const raw = String(value || "").trim();
+      if(!raw) return "—";
+      const d = new Date(raw);
+      if(!Number.isNaN(d.getTime())){
+        return d.toLocaleDateString(undefined,{month:"short",day:"numeric",year:"numeric"});
+      }
+      return raw;
+    }
+
+    function renderVIPArchive(rows){
+      const body = document.getElementById("vipArchiveBody");
+      if(!body) return;
+
+      const archive = rows
+        .filter(r => r.Pick && r.Game)
+        .filter(r => {
+          const access = String(r.Access || "").trim().toLowerCase();
+          return !access || access === "vip" || access === "premium";
+        })
+        .filter(r => /win|loss|push|void|closed/i.test(`${r.Result || ""} ${r.Status || ""}`))
+        .slice()
+        .reverse();
+
+      if(!archive.length){
+        body.innerHTML = `<tr><td colspan="7">No VIP archive results found yet. Add closed VIP picks to the VIP Archive tab.</td></tr>`;
+        return;
+      }
+
+      body.innerHTML = archive.map(r => `
+        <tr>
+          <td>${esc(archiveDate(r.Date))}</td>
+          <td>${esc(r.League || r.Sport || "—")}</td>
+          <td>
+            <span class="pick-name">${esc(r.Pick || "—")}</span>
+            <span class="game-name">${esc(r.Game || "—")}</span>
+          </td>
+          <td>${gradeBadge(r.Grade || "B")}</td>
+          <td class="${resultClass(r.Result)}">${esc(r.Result || r.Status || "—")}</td>
+          <td class="${resultClass(r.Result)}">${esc(r["Profit/Loss"] || "—")}</td>
+          <td>${esc(r["Closing Number"] || r.CLV || "—")}</td>
+        </tr>
+      `).join("");
+    }
+
+
     async function load(){
       try {
-        const rows = await getRows(ACTIVE_GID);
-        renderVIP(rows);
+        const [activeRows, vipArchiveRows] = await Promise.all([
+          getRows(ACTIVE_GID),
+          getRows(VIP_ARCHIVE_GID)
+        ]);
+        renderVIP(activeRows);
+        renderVIPArchive(vipArchiveRows);
       } catch(e) {
         document.getElementById("vipPicks").innerHTML = `<div class="empty">VIP sync unavailable. Check Google Sheet sharing and CSV export permissions.</div>`;
+        const archiveBody = document.getElementById("vipArchiveBody");
+        if(archiveBody) archiveBody.innerHTML = `<tr><td colspan="7">VIP archive sync unavailable. Check VIP Archive sheet sharing.</td></tr>`;
       }
     }
 
-    document.addEventListener("DOMContentLoaded", function(){
-      load();
-      setupPublicVisitCounter();
-    });
+    document.addEventListener("DOMContentLoaded", load);
     setInterval(load, 30000);
   </script>
 </body>
