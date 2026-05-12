@@ -3,363 +3,351 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Micks Picks VIP Vault</title>
-  <meta name="description" content="Micks Picks VIP active picks, premium betting analysis, full writeups, release notes, and results." />
-  <meta name="robots" content="noindex,nofollow" />
+  <title>Micks Picks | Premium Betting Network</title>
+  <meta name="description" content="Micks Picks premium sports betting analysis, VIP picks, props, archives, and results." />
 
   <style>
-    :root {
-      --bg: #050505;
-      --panel: rgba(18, 17, 14, 0.92);
-      --gold: #f5c451;
-      --gold2: #ffd978;
-      --gold3: #9b7427;
-      --text: #f8f2e7;
-      --muted: #b5a995;
-      --line: rgba(245, 196, 81, 0.24);
-      --green: #74e39a;
-      --red: #ff6d75;
-      --purple: #c244ff;
+    :root{
+      --bg:#030303;
+      --panel:#090909;
+      --gold:#ffe28a;
+      --gold2:#c89b3c;
+      --green:#35e58c;
+      --red:#ff5f68;
+      --purple:#c244ff;
+      --text:#fff7dc;
+      --muted:#c9bb90;
+      --line:rgba(255,226,138,.18);
     }
 
-    * { box-sizing: border-box; }
-
-    html { min-height: 100%; background: var(--bg); scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      color: var(--text);
-      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--text);
       background:
-        radial-gradient(circle at 18% 10%, rgba(245, 196, 81, 0.18), transparent 26%),
-        radial-gradient(circle at 84% 3%, rgba(194, 68, 255, 0.14), transparent 24%),
-        linear-gradient(140deg, #050505 0%, #090806 45%, #12100a 100%);
+        radial-gradient(circle at 10% -10%,rgba(255,226,138,.22),transparent 28%),
+        radial-gradient(circle at 88% 0%,rgba(53,229,140,.13),transparent 30%),
+        radial-gradient(circle at 50% 110%,rgba(194,68,255,.12),transparent 38%),
+        linear-gradient(180deg,#050505,#010101);
+      overflow-x:hidden;
     }
 
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      z-index:-3;
+      pointer-events:none;
       background-image:
-        linear-gradient(rgba(255, 255, 255, 0.024) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.024) 1px, transparent 1px);
-      background-size: 44px 44px;
-      opacity: 0.55;
+        linear-gradient(rgba(255,255,255,.024) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.024) 1px,transparent 1px);
+      background-size:44px 44px;
+      mask-image:linear-gradient(180deg,rgba(0,0,0,.9),transparent 84%);
     }
 
-    a { color: inherit; text-decoration: none; }
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1180px,calc(100% - 36px));margin:0 auto}
 
-    .container {
-      width: min(1180px, calc(100% - 36px));
-      margin: 0 auto;
-      position: relative;
-      z-index: 2;
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(0,0,0,.74);
+      border-bottom:1px solid rgba(255,226,138,.18);
+      backdrop-filter:blur(22px) saturate(1.2);
+      box-shadow:0 16px 48px rgba(0,0,0,.58),0 0 30px rgba(255,226,138,.08);
     }
 
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: rgba(0,0,0,.78);
-      border-bottom: 1px solid rgba(245,196,81,.18);
-      backdrop-filter: blur(20px);
+    .nav{
+      height:78px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
     }
 
-    .nav {
-      height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 18px;
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:1000;
+      letter-spacing:-.7px;
     }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 13px;
-      font-weight: 1000;
+    .brand-mark{
+      width:44px;
+      height:44px;
+      border-radius:14px;
+      display:grid;
+      place-items:center;
+      color:#080808;
+      background:linear-gradient(135deg,#8f650f,#ffe28a 55%,#c89b3c);
+      font-size:22px;
+      box-shadow:0 0 34px rgba(255,226,138,.20);
     }
 
-    .mark {
-      width: 50px;
-      height: 50px;
-      border-radius: 17px;
-      display: grid;
-      place-items: center;
-      color: #050505;
-      font-weight: 1000;
-      letter-spacing: -1px;
-      background:
-        radial-gradient(circle at 30% 20%, #fff3b9, transparent 32%),
-        linear-gradient(135deg, var(--gold2), var(--gold3));
-      box-shadow: 0 12px 30px rgba(245, 196, 81, 0.25);
-    }
-
-    .brand strong { display: block; font-size: 1.05rem; }
-    .brand span {
-      display: block;
-      color: var(--muted);
-      font-size: 0.72rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      margin-top: 4px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 16px;
-      align-items: center;
-      color: #e8dcc2;
-      font-size: .8rem;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-    }
-
-    .hero {
-      padding: 72px 0 34px;
-    }
-
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--gold2);
-      border: 1px solid rgba(245, 196, 81, 0.24);
-      background: rgba(245, 196, 81, 0.07);
-      padding: 10px 14px;
-      border-radius: 999px;
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      font-weight: 900;
-      margin-bottom: 18px;
-    }
-
-    .dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: var(--green);
-      box-shadow: 0 0 0 8px rgba(116, 227, 154, 0.12);
-    }
-
-    h1 {
-      font-size: clamp(2.7rem, 7vw, 5.6rem);
-      line-height: 0.9;
-      letter-spacing: -0.065em;
-      margin: 0;
-      max-width: 850px;
-    }
-
-    h1 span {
-      display: block;
-      background: linear-gradient(135deg, #fff8e9 0%, #ffd978 45%, #b98624 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .lead {
-      color: #d9ccb5;
-      font-size: 1.08rem;
-      line-height: 1.65;
-      margin: 20px 0 0;
-      max-width: 760px;
-    }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 28px;
-    }
-
-    .btn {
-      border-radius: 999px;
-      padding: 15px 22px;
-      min-height: 50px;
-      font-weight: 950;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-size: 0.83rem;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 9px;
-    }
-
-    .primary {
-      color: #070604;
-      background: linear-gradient(135deg, #fff0a6, #f5c451 48%, #a87621);
-      box-shadow: 0 18px 40px rgba(245, 196, 81, 0.24);
-    }
-
-    .secondary {
-      color: #f8edda;
-      background: rgba(255, 255, 255, 0.055);
-      border: 1px solid rgba(245, 196, 81, 0.22);
-    }
-
-    .summary-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-      margin-top: 32px;
-    }
-
-    .metric {
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      padding: 20px;
-      background:
-        radial-gradient(circle at 100% 0%, rgba(245,196,81,.13), transparent 36%),
-        rgba(18,17,14,.78);
-      box-shadow: 0 20px 60px rgba(0,0,0,.35);
-    }
-
-    .metric strong { display:block; font-size: 2rem; color: #fff; }
-    .metric span {
+    .brand small{
       display:block;
-      margin-top: 7px;
-      color: var(--muted);
-      font-size: .72rem;
-      text-transform: uppercase;
-      letter-spacing: .12em;
-      font-weight: 900;
+      margin-top:4px;
+      color:var(--muted);
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:2px;
     }
 
-    .section {
-      padding: 36px 0 58px;
+    .links{
+      display:flex;
+      align-items:center;
+      gap:22px;
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:1px;
+      font-weight:900;
+      color:#f3e6bd;
     }
 
-    .section-title {
-      font-size: clamp(1.8rem, 4vw, 3rem);
-      margin: 0 0 10px;
-      letter-spacing: -0.05em;
-      text-transform: uppercase;
+    .links a{opacity:.82;transition:.22s ease}
+    .links a:hover{opacity:1;color:var(--gold);text-shadow:0 0 18px rgba(255,226,138,.42)}
+
+    .guru-link{
+      color:#d86cff!important;
+      text-shadow:0 0 18px rgba(194,68,255,.45);
     }
 
-    .section-sub {
-      color: var(--muted);
-      margin: 0 0 24px;
-      line-height: 1.55;
+    .vip-btn{
+      padding:12px 18px;
+      border-radius:12px;
+      color:#090909;
+      font-weight:1000;
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.9px;
+      background:linear-gradient(135deg,#8f650f,#ffe28a 52%,#c89b3c);
+      box-shadow:0 18px 42px rgba(255,226,138,.18);
     }
 
-    .picks-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 22px;
-    }
-
-    .pick-card {
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      padding: 24px;
+    .hero{
+      position:relative;
+      overflow:hidden;
+      min-height:680px;
+      border-bottom:1px solid rgba(255,226,138,.12);
       background:
-        radial-gradient(circle at 82% 0%, rgba(245,196,81,.14), transparent 34%),
-        linear-gradient(165deg, rgba(255,255,255,.08), rgba(255,255,255,.025)),
-        rgba(18,17,14,.9);
-      box-shadow: 0 28px 90px rgba(0, 0, 0, 0.50);
-      overflow: hidden;
-      position: relative;
+        radial-gradient(circle at 74% 20%,rgba(255,226,138,.18),transparent 35%),
+        radial-gradient(circle at 18% 10%,rgba(53,229,140,.09),transparent 32%);
     }
 
-    .pick-card.featured {
-      border-color: rgba(116,227,154,.42);
-      box-shadow: 0 28px 90px rgba(0,0,0,.55), 0 0 48px rgba(116,227,154,.12);
-    }
-
-    .pick-card::after {
-      content: "VIP";
+    .hero::before{
+      content:"";
       position:absolute;
-      right:-10px;
-      bottom:-22px;
-      font-size: 104px;
-      font-weight: 1000;
-      letter-spacing:-8px;
-      color: rgba(245,196,81,.04);
+      inset:-35%;
+      pointer-events:none;
+      background:conic-gradient(from 160deg,transparent,rgba(255,226,138,.12),transparent,rgba(53,229,140,.08),transparent);
+      filter:blur(38px);
+      animation:spin 28s linear infinite;
+    }
+
+    @keyframes spin{to{transform:rotate(360deg)}}
+
+    .hero-grid{
+      position:relative;
+      z-index:2;
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:36px;
+      align-items:center;
+      padding:88px 0 64px;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      color:var(--gold);
+      text-transform:uppercase;
+      letter-spacing:5px;
+      font-size:13px;
+      font-weight:1000;
+      margin-bottom:18px;
+    }
+
+    .eyebrow::before{
+      content:"";
+      width:38px;
+      height:2px;
+      background:linear-gradient(90deg,var(--gold),transparent);
+      box-shadow:0 0 16px rgba(255,226,138,.45);
+    }
+
+    h1{
+      margin:0;
+      font-size:clamp(58px,10vw,132px);
+      line-height:.86;
+      letter-spacing:-6px;
+      text-transform:uppercase;
+      color:#fff7dc;
+      text-shadow:0 0 28px rgba(255,226,138,.18),0 0 90px rgba(255,226,138,.12);
+    }
+
+    .hero p{
+      max-width:650px;
+      margin:28px 0 0;
+      color:#d8cba3;
+      font-size:21px;
+      line-height:1.48;
+    }
+
+    .hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-top:34px}
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:52px;
+      padding:0 28px;
+      border-radius:14px;
+      font-weight:1000;
+      text-transform:uppercase;
+      letter-spacing:.8px;
+      color:#090909;
+      background:linear-gradient(135deg,#8f650f,#ffe28a 55%,#c89b3c);
+      box-shadow:0 22px 52px rgba(255,226,138,.20),0 0 22px rgba(255,226,138,.08);
+    }
+
+    .btn.secondary{
+      color:#fff7dc;
+      background:rgba(0,0,0,.35);
+      border:1px solid rgba(255,226,138,.22);
+    }
+
+    .hero-card{
+      border-radius:32px;
+      padding:30px;
+      border:1px solid rgba(255,226,138,.24);
+      background:
+        radial-gradient(circle at 100% 0%,rgba(255,226,138,.16),transparent 34%),
+        radial-gradient(circle at 0% 100%,rgba(53,229,140,.08),transparent 32%),
+        linear-gradient(180deg,rgba(18,18,18,.94),rgba(4,4,4,.92));
+      box-shadow:0 40px 110px rgba(0,0,0,.72),0 0 60px rgba(255,226,138,.12);
+    }
+
+    .hero-card h2{margin:0 0 14px;font-size:28px;text-transform:uppercase;color:var(--gold)}
+    .metric-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:20px}
+    .metric{
+      padding:18px;
+      border-radius:18px;
+      border:1px solid rgba(255,226,138,.14);
+      background:rgba(0,0,0,.34);
+    }
+    .metric strong{display:block;font-size:32px;color:#fff;text-shadow:0 0 18px rgba(255,226,138,.16)}
+    .metric span{display:block;margin-top:6px;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:1px}
+
+    .section{padding:56px 0}
+    .section-title{font-size:36px;margin:0 0 20px;text-transform:uppercase;letter-spacing:-1px}
+    .grid{display:grid;gap:20px}
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+    .grid-2{grid-template-columns:1fr 1fr}
+
+    .card{
+      position:relative;
+      overflow:hidden;
+      border-radius:24px;
+      padding:26px;
+      border:1px solid rgba(255,226,138,.18);
+      background:
+        radial-gradient(circle at 100% 0%,rgba(255,226,138,.13),transparent 34%),
+        linear-gradient(180deg,rgba(18,18,18,.94),rgba(5,5,5,.94));
+      box-shadow:0 28px 82px rgba(0,0,0,.62),0 0 34px rgba(255,226,138,.06);
+    }
+
+    .card h3{margin:0 0 12px;color:var(--gold);text-transform:uppercase}
+    .card p{color:var(--muted);line-height:1.6;margin:0}
+
+    .guru-network-card{
+      position:relative;
+      overflow:hidden;
+      border-radius:30px;
+      padding:46px;
+      border:1px solid rgba(194,68,255,.32);
+      background:
+        radial-gradient(circle at 84% 22%,rgba(194,68,255,.34),transparent 33%),
+        radial-gradient(circle at 18% 100%,rgba(255,226,138,.15),transparent 36%),
+        linear-gradient(180deg,rgba(18,8,24,.96),rgba(4,3,7,.97));
+      box-shadow:0 36px 110px rgba(0,0,0,.68),0 0 58px rgba(194,68,255,.14);
+    }
+
+    .guru-network-card::after{
+      content:"♛";
+      position:absolute;
+      right:42px;
+      top:30px;
+      font-size:170px;
+      line-height:1;
+      color:rgba(255,226,138,.06);
       pointer-events:none;
     }
 
-    .top-row {
-      display:flex;
-      justify-content:space-between;
-      align-items:flex-start;
-      gap:14px;
+    .guru-network-eyebrow{
+      display:inline-block;
+      color:#d86cff;
+      text-transform:uppercase;
+      letter-spacing:4px;
+      font-size:12px;
+      font-weight:1000;
       margin-bottom:14px;
-      position:relative;
-      z-index:2;
     }
 
-    .tag {
+    .guru-network-card h2{
+      position:relative;
+      z-index:2;
+      margin:0;
+      font-size:clamp(36px,6vw,64px);
+      line-height:.95;
+      color:#fff7dc;
+      letter-spacing:-2.6px;
+      text-shadow:0 0 30px rgba(194,68,255,.34);
+    }
+
+    .guru-network-card p{
+      position:relative;
+      z-index:2;
+      max-width:650px;
+      margin:18px 0 28px;
+      color:#d9c7ec;
+      font-size:18px;
+      line-height:1.65;
+    }
+
+    .guru-network-btn{
+      position:relative;
+      z-index:2;
       display:inline-flex;
       align-items:center;
-      border:1px solid rgba(245,196,81,.22);
-      background: rgba(245,196,81,.07);
-      color: var(--gold2);
-      padding: 8px 11px;
-      border-radius: 999px;
-      font-size: .72rem;
-      font-weight: 1000;
-      text-transform: uppercase;
-      letter-spacing: .1em;
-    }
-
-    .featured-tag {
-      border-color: rgba(116,227,154,.28);
-      color: #dfffe8;
-      background: rgba(116,227,154,.09);
-    }
-
-    .pick-title {
-      margin: 10px 0 7px;
-      font-size: 1.65rem;
-      letter-spacing: -.04em;
-      line-height: 1.08;
-      position:relative;
-      z-index:2;
-    }
-
-    .game {
-      color: var(--muted);
-      font-size: .92rem;
-      margin-bottom: 18px;
-      position:relative;
-      z-index:2;
-    }
-
-    .details {
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin: 18px 0;
-      position:relative;
-      z-index:2;
-    }
-
-    .detail {
-      padding: 13px;
-      border-radius: 16px;
-      background: rgba(0,0,0,.30);
-      border: 1px solid rgba(245,196,81,.13);
-    }
-
-    .detail span {
-      display:block;
-      color: var(--muted);
-      font-size:.64rem;
+      justify-content:center;
+      min-height:54px;
+      padding:0 32px;
+      border-radius:16px;
+      font-weight:1000;
       text-transform:uppercase;
-      letter-spacing:.11em;
-      font-weight:900;
-      margin-bottom:6px;
+      color:#12050d;
+      background:linear-gradient(135deg,#7b19ff,#d86cff 45%,#ffe28a);
+      box-shadow:0 20px 48px rgba(194,68,255,.26);
     }
 
-    .detail strong { font-size:.95rem; }
-
+    .results-table{
+      width:100%;
+      border-collapse:collapse;
+      font-size:14px;
+      overflow:hidden;
+      border-radius:16px;
+    }
+    th,td{padding:14px 10px;border-bottom:1px solid rgba(255,226,138,.10);text-align:left}
+    th{color:var(--gold);font-size:11px;text-transform:uppercase;letter-spacing:1px;background:rgba(255,226,138,.055)}
+    td{color:#f5edd3}
+    .win{color:var(--green);font-weight:1000}
+    .loss{color:var(--red);font-weight:1000}
+    .pending{color:var(--gold);font-weight:1000}
     .grade-badge{
       display:inline-flex;
       flex-direction:column;
@@ -368,98 +356,296 @@
       padding:10px 14px;
       border-radius:14px;
       font-weight:1000;
-      min-width:122px;
+      min-width:120px;
       text-align:center;
       border:1px solid rgba(255,255,255,.12);
       line-height:1.15;
     }
-
-    .grade-a{background:rgba(116,227,154,.12);border-color:rgba(116,227,154,.35);color:#a9ffc5}
-    .grade-b{background:rgba(245,196,81,.10);border-color:rgba(245,196,81,.28);color:#ffd978}
-    .grade-c{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12);color:#d6d6d6}
-    .grade-sub{font-size:10px;text-transform:uppercase;letter-spacing:1px;margin-top:4px;opacity:.85}
-
-    .analysis {
-      margin-top: 18px;
-      padding: 18px;
-      border-radius: 18px;
-      background: rgba(0,0,0,.32);
-      border:1px solid rgba(245,196,81,.13);
-      position:relative;
-      z-index:2;
+    .grade-a{
+      background:rgba(53,229,140,.12);
+      border-color:rgba(53,229,140,.35);
+      color:#7dffb6;
+    }
+    .grade-b{
+      background:rgba(255,226,138,.10);
+      border-color:rgba(255,226,138,.28);
+      color:#ffe28a;
+    }
+    .grade-c{
+      background:rgba(255,255,255,.06);
+      border-color:rgba(255,255,255,.12);
+      color:#d6d6d6;
+    }
+    .grade-sub{
+      font-size:10px;
+      text-transform:uppercase;
+      letter-spacing:1px;
+      margin-top:4px;
+      opacity:.85;
     }
 
-    .analysis h4 {
-      margin:0 0 10px;
-      color: var(--gold2);
-      text-transform: uppercase;
-      letter-spacing:.08em;
-      font-size:.8rem;
-    }
 
-    .analysis p {
-      margin:0;
-      color:#e7ddc8;
-      line-height:1.62;
-      font-size:.95rem;
-    }
 
-    .release {
-      margin-top: 14px;
-      color: var(--muted);
-      font-size:.85rem;
-      line-height:1.5;
-      position:relative;
-      z-index:2;
-    }
 
-    .empty {
-      border:1px solid var(--line);
-      border-radius:24px;
-      padding:28px;
+    .active-board-head{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:18px;
+      margin-bottom:20px;
+    }
+    .active-board-head p{
+      margin:6px 0 0;
       color:var(--muted);
-      background:rgba(18,17,14,.74);
+      line-height:1.5;
+    }
+    .sync-pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 14px;
+      border-radius:999px;
+      border:1px solid rgba(53,229,140,.28);
+      color:#bfffdc;
+      background:rgba(53,229,140,.08);
+      font-size:12px;
+      font-weight:1000;
+      text-transform:uppercase;
+      letter-spacing:.8px;
+      white-space:nowrap;
+    }
+    .sync-dot{
+      width:8px;
+      height:8px;
+      border-radius:50%;
+      background:var(--green);
+      box-shadow:0 0 16px rgba(53,229,140,.7);
+    }
+    .active-picks-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:18px;
+    }
+    .pick-card{
+      position:relative;
+      overflow:hidden;
+      border-radius:26px;
+      padding:22px;
+      border:1px solid rgba(255,226,138,.18);
+      background:
+        radial-gradient(circle at 100% 0%,rgba(255,226,138,.13),transparent 34%),
+        radial-gradient(circle at 0% 100%,rgba(53,229,140,.07),transparent 32%),
+        linear-gradient(180deg,rgba(18,18,18,.96),rgba(5,5,5,.96));
+      box-shadow:0 26px 76px rgba(0,0,0,.58),0 0 34px rgba(255,226,138,.06);
+    }
+    .pick-card.featured{
+      border-color:rgba(255,226,138,.42);
+      box-shadow:0 32px 92px rgba(0,0,0,.68),0 0 48px rgba(255,226,138,.13);
+    }
+    .pick-card.featured::before{
+      content:"FEATURED";
+      position:absolute;
+      right:-42px;
+      top:22px;
+      transform:rotate(35deg);
+      width:160px;
+      text-align:center;
+      padding:7px 0;
+      color:#080808;
+      background:linear-gradient(135deg,#8f650f,#ffe28a 55%,#c89b3c);
+      font-size:10px;
+      font-weight:1000;
+      letter-spacing:1px;
+    }
+    .pick-top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:14px;
+    }
+    .league-pill,.access-pill,.grade-pill{
+      display:inline-flex;
+      align-items:center;
+      min-height:28px;
+      padding:0 10px;
+      border-radius:999px;
+      font-size:11px;
+      font-weight:1000;
+      text-transform:uppercase;
+      letter-spacing:.75px;
+      border:1px solid rgba(255,226,138,.18);
+      background:rgba(0,0,0,.32);
+      color:#f5e9c8;
+    }
+    .access-pill.vip{color:#090909;background:linear-gradient(135deg,#8f650f,#ffe28a 55%,#c89b3c)}
+    .access-pill.free{color:#dfffea;border-color:rgba(53,229,140,.28);background:rgba(53,229,140,.08)}
+    .grade-pill{
+      min-width:46px;
+      justify-content:center;
+      border:0;
+      color:#080808;
+      background:linear-gradient(135deg,#35e58c,#bfffdc);
+      box-shadow:0 0 20px rgba(53,229,140,.13);
+    }
+    .grade-pill.grade-a{background:linear-gradient(135deg,#0dbf72,#35e58c 45%,#c9ffdf);color:#04130b}
+    .grade-pill.grade-b{background:linear-gradient(135deg,#8f650f,#ffe28a 55%,#c89b3c);color:#090909}
+    .grade-pill.grade-c{background:linear-gradient(135deg,#252525,#b8b8b8);color:#090909}
+    .grade-pill.grade-pass{background:rgba(255,255,255,.10);color:#d8cba3;border:1px solid rgba(255,255,255,.12)}
+    .pick-game{
+      color:var(--muted);
+      font-size:13px;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:.7px;
+      margin-bottom:7px;
+    }
+    .pick-title{
+      font-size:25px;
+      line-height:1.1;
+      font-weight:1000;
+      color:#fff7dc;
+      letter-spacing:-.8px;
+      margin:0 0 12px;
+    }
+    .pick-meta{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:10px;
+      margin:16px 0;
+    }
+    .pick-stat{
+      padding:12px 10px;
+      border-radius:14px;
+      background:rgba(0,0,0,.34);
+      border:1px solid rgba(255,226,138,.10);
+    }
+    .pick-stat strong{display:block;color:#fff;font-size:15px}
+    .pick-stat span{display:block;margin-top:3px;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.8px}
+    .pick-writeup{
+      color:#d8cba3;
+      line-height:1.55;
+      font-size:14px;
+      margin:0 0 14px;
+    }
+    .pick-analysis{
+      border-top:1px solid rgba(255,226,138,.13);
+      padding-top:14px;
+      color:#c9bb90;
+      line-height:1.58;
+      font-size:13px;
+    }
+    .locked-analysis{
+      border-top:1px solid rgba(255,226,138,.13);
+      padding-top:14px;
+      color:#f0dca6;
+      font-weight:900;
+      font-size:13px;
     }
 
-    .footer {
-      padding: 30px 0 52px;
-      border-top:1px solid rgba(245,196,81,.14);
+    .vip-lock-card{
+      grid-column:1/-1;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      padding:24px;
+      border-radius:26px;
+      border:1px solid rgba(255,226,138,.28);
+      background:
+        radial-gradient(circle at 92% 8%,rgba(255,226,138,.18),transparent 38%),
+        radial-gradient(circle at 8% 100%,rgba(194,68,255,.16),transparent 34%),
+        linear-gradient(180deg,rgba(17,13,6,.96),rgba(5,5,5,.96));
+      box-shadow:0 26px 76px rgba(0,0,0,.58),0 0 34px rgba(255,226,138,.08);
+    }
+    .vip-lock-card h3{margin:0 0 8px;color:var(--gold);text-transform:uppercase;letter-spacing:-.4px}
+    .vip-lock-card p{margin:0;color:var(--muted);line-height:1.5}
+    .vip-lock-badge{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-width:92px;
+      min-height:38px;
+      padding:0 14px;
+      border-radius:999px;
+      color:#090909;
+      font-size:12px;
+      font-weight:1000;
+      letter-spacing:1px;
+      text-transform:uppercase;
+      background:linear-gradient(135deg,#8f650f,#ffe28a 55%,#c89b3c);
+      box-shadow:0 18px 42px rgba(255,226,138,.16);
+      white-space:nowrap;
+    }
+    .empty-state{
+      grid-column:1/-1;
+      padding:30px;
+      border-radius:24px;
+      border:1px solid rgba(255,226,138,.18);
+      background:rgba(0,0,0,.35);
       color:var(--muted);
       text-align:center;
-      font-size:.86rem;
+    }
+
+    .footer{
+      padding:38px 0 70px;
+      color:var(--muted);
+      text-align:center;
+      border-top:1px solid rgba(255,226,138,.12);
     }
 
     @media(max-width:900px){
-      .summary-grid,.picks-grid{grid-template-columns:1fr}
-      .nav-links{display:none}
+      .links{display:none}
+      .hero-grid,.grid-3,.grid-2,.active-picks-grid{grid-template-columns:1fr}
+      .hero{min-height:auto}
+      .metric-grid{grid-template-columns:1fr 1fr}
     }
 
-    @media(max-width:600px){
-      .container{width:min(100% - 24px,1180px)}
-      .details{grid-template-columns:1fr}
-      h1{letter-spacing:-.045em}
+    @media(max-width:560px){
+      .vip-btn{display:none}
+      h1{letter-spacing:-3px}
+      .hero p{font-size:17px}
+      .metric-grid,.pick-meta{grid-template-columns:1fr 1fr}
+      .guru-network-card{padding:28px}
+      .guru-network-card::after{font-size:100px;right:18px}
     }
   
-    /* ===== PREMIUM PERFORMANCE METRICS ===== */
-    @media(min-width:901px){
-      .summary-grid{
-        grid-template-columns:repeat(3,1fr);
+    /* ===== CLEAN PREMIUM SLOGAN BADGE ===== */
+    .brand-slogan{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      margin:22px 0 0;
+      padding:10px 14px;
+      border-radius:999px;
+      border:1px solid rgba(255,226,138,.22);
+      background:rgba(255,226,138,.065);
+      color:#ffe28a;
+      font-size:13px;
+      font-weight:1000;
+      letter-spacing:1.4px;
+      text-transform:uppercase;
+      box-shadow:0 14px 38px rgba(0,0,0,.26),0 0 22px rgba(255,226,138,.06);
+      width:max-content;
+      max-width:100%;
+    }
+    .brand-slogan::before{
+      content:"";
+      width:8px;
+      height:8px;
+      min-width:8px;
+      border-radius:50%;
+      background:#35e58c;
+      box-shadow:0 0 14px rgba(53,229,140,.62);
+    }
+    @media(max-width:560px){
+      .brand-slogan{
+        font-size:10.5px;
+        letter-spacing:.85px;
+        padding:9px 11px;
+        line-height:1.25;
       }
     }
-
-  
-    /* ===== VIP ARCHIVE SECTION ===== */
-    .archive-wrap{border:1px solid var(--line);border-radius:28px;overflow:auto;background:rgba(18,17,14,.76);box-shadow:0 24px 72px rgba(0,0,0,.36)}
-    .archive-table{width:100%;border-collapse:collapse;min-width:860px}
-    .archive-table th,.archive-table td{padding:14px 13px;border-bottom:1px solid rgba(245,196,81,.12);text-align:left;vertical-align:top;font-size:.88rem}
-    .archive-table th{color:var(--gold2);background:rgba(245,196,81,.06);text-transform:uppercase;letter-spacing:.10em;font-size:.68rem;font-weight:1000}
-    .archive-table td{color:#eadfc9}
-    .archive-table .pick-name{color:#fff4cf;font-weight:1000;display:block;margin-bottom:4px}
-    .archive-table .game-name{color:var(--muted);font-size:.78rem;line-height:1.35}
-    .result-win{color:var(--green)!important;font-weight:1000}
-    .result-loss{color:var(--red)!important;font-weight:1000}
-    .result-push{color:var(--gold2)!important;font-weight:1000}
-    .archive-note{margin-top:14px;color:var(--muted);font-size:.88rem;line-height:1.55}
 
   </style>
 </head>
@@ -468,108 +654,182 @@
   <header class="topbar">
     <div class="container nav">
       <a class="brand" href="index.html">
-        <div class="mark">MP</div>
+        <div class="brand-mark">MP</div>
         <div>
-          <strong>Micks Picks</strong>
-          <span>VIP Vault</span>
+          <span>Micks Picks</span>
+          <small>Premium Betting Network</small>
         </div>
       </a>
 
-      <nav class="nav-links">
-        <a href="index.html">Public Site</a>
-        <a href="#vip-picks">VIP Picks</a>
-        <a href="#vip-archive">VIP Archive</a>
-        <a href="https://vip.mickspicks.us">Secure Portal</a>
+      <nav class="links">
+        <a href="index.html">Home</a>
+        <a href="#active-picks">Free Picks</a>
+        <a href="premium.html">VIP Vault</a>
+        <a href="./yahgi.html" class="guru-link">♛ Yahgi's Guru Picks</a>
+        <a href="#results">Results Archive</a>
+        <a href="#props">Props Lab</a>
+        <a href="#social">Social Studio</a>
       </nav>
+
+      <a class="vip-btn" href="premium.html">VIP Access</a>
     </div>
   </header>
 
   <main>
     <section class="hero">
-      <div class="container">
-        <div class="pill">
-          <span class="dot"></span>
-          Secure VIP Access
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Micks Picks</div>
+          <h1>Sharp Plays.<br>Clean Edges.</h1>
+          <div class="brand-slogan">Bet the Number. Not the Hype.</div>
+          <p>
+            Premium sports betting analysis built around value, market discipline, matchup edges, injury context, and real results tracking.
+          </p>
+
+          <div class="hero-actions">
+            <a href="premium.html" class="btn">Enter VIP Vault</a>
+            <a href="#active-picks" class="btn secondary">View Free Picks</a>
+          </div>
         </div>
 
-        <h1>
-          VIP Vault.
-          <span>Full Analysis.</span>
-        </h1>
+        <div class="hero-card">
+          <h2>Live Betting Board</h2>
+          <p style="color:var(--muted);line-height:1.6">
+            Free active picks, VIP releases, closing-line tracking, and archived performance all sync from the Micks Picks sheet. VIP plays stay inside the VIP Vault.
+          </p>
 
-        <p class="lead">
-          Premium Micks Picks releases with full writeups, units, grades, market notes, release notes, and Featured VIP plays pulled from the Active Picks sheet.
-        </p>
-
-        <div class="actions">
-          <a class="btn primary" href="#vip-picks">View VIP Picks</a>
-          <a class="btn secondary" href="https://www.mickspicks.us">Back to Public Site</a>
-        </div>
-
-        <div class="summary-grid">
-          <div class="metric"><strong id="vipRecord">--</strong><span>VIP Record</span></div>
-          <div class="metric"><strong id="vipWinRate">--</strong><span>VIP Win Rate</span></div>
-          <div class="metric"><strong id="vipTotalUnits">--</strong><span>VIP Total Units</span></div>
-          <div class="metric"><strong id="vipCount">--</strong><span>VIP Active Picks</span></div>
-          <div class="metric"><strong id="featuredCount">--</strong><span>Featured Plays</span></div>
-          <div class="metric"><strong id="lastSync">--</strong><span>Last Sync</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="vip-picks">
-      <div class="container">
-        <h2 class="section-title">VIP Active Picks</h2>
-        <p class="section-sub">
-          Only plays marked <strong>VIP</strong> in the Active Picks sheet display here. Free picks stay on the public page.
-        </p>
-
-        <div id="vipPicks" class="picks-grid">
-          <div class="empty">Loading VIP picks...</div>
+          <div class="metric-grid">
+            <div class="metric"><strong id="overallRecord">--</strong><span>Overall Record</span></div>
+            <div class="metric"><strong id="winRate">--</strong><span>Win Rate</span></div>
+            <div class="metric"><strong id="totalUnits">--</strong><span>Total Units</span></div>
+            <div class="metric"><strong id="currentStreak">--</strong><span>Current Streak</span></div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="vip-archive">
+
+
+    <section class="section" id="active-picks">
       <div class="container">
-        <h2 class="section-title">VIP Archive</h2>
-        <p class="section-sub">
-          Closed premium member picks pulled from the VIP Archive sheet.
-        </p>
-        <div class="archive-wrap">
-          <table class="archive-table">
+        <div class="active-board-head">
+          <div>
+            <h2 class="section-title" style="margin-bottom:0">Free Active Picks</h2>
+            <p>Public releases from the Active Picks sheet. VIP plays stay locked inside the VIP Vault and do not display here.</p>
+          </div>
+          <div class="sync-pill"><span class="sync-dot"></span><span id="activeSync">Syncing Sheet</span></div>
+        </div>
+        <div class="active-picks-grid" id="activePicksGrid">
+          <div class="empty-state">Loading active picks...</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="yahgi-guru-picks">
+      <div class="container">
+        <div class="guru-network-card">
+          <span class="guru-network-eyebrow">Guru Network</span>
+          <h2>♛ Yahgi's Guru Picks</h2>
+          <p>
+            Elite reads. Sharp angles. Independent card releases from another handicapper inside the Micks Picks network.
+          </p>
+          <a href="./yahgi.html" class="guru-network-btn">Enter Yahgi's Guru Picks →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="props">
+      <div class="container">
+        <h2 class="section-title">Props Lab</h2>
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>NBA Props</h3>
+            <p>Usage spikes, minutes security, potential assists, rebound chances, and matchup-created shot volume.</p>
+          </div>
+          <div class="card">
+            <h3>UFC Angles</h3>
+            <p>Style matchups, grappling control, cardio, durability, line value, and method props.</p>
+          </div>
+          <div class="card">
+            <h3>NHL Systems</h3>
+            <p>Goalie edges, rest spots, shot volume, special teams, totals environments, and market value.</p>
+          </div>
+        </div>
+      </div>
+    
+<div class="card" style="margin-top:20px">
+  <h3>Grade System</h3>
+  <p style="margin-bottom:18px;color:var(--muted)">
+    Micks Picks confidence grading system used across all active plays.
+  </p>
+
+  <div style="display:flex;gap:14px;flex-wrap:wrap">
+    <div class="grade-badge grade-a">
+      <span>Grade A</span>
+      <span class="grade-sub">Elite Edge</span>
+    </div>
+
+    <div class="grade-badge grade-b">
+      <span>Grade B</span>
+      <span class="grade-sub">Strong Value</span>
+    </div>
+
+    <div class="grade-badge grade-c">
+      <span>Grade C</span>
+      <span class="grade-sub">Lean Only</span>
+    </div>
+  </div>
+</div>
+
+
+    <section class="section" id="results">
+      <div class="container">
+        <h2 class="section-title">Results Archive</h2>
+        <div class="card" style="padding:0;overflow:auto">
+          <table class="results-table">
             <thead>
               <tr>
                 <th>Date</th>
-                <th>League</th>
+                <th>Sport</th>
+                <th>Game</th>
                 <th>Pick</th>
-                <th>Grade</th>
                 <th>Result</th>
-                <th>Profit/Loss</th>
-                <th>Closing #</th>
+                <th>Units</th>
               </tr>
             </thead>
-            <tbody id="vipArchiveBody">
-              <tr><td colspan="7">Loading VIP archive...</td></tr>
+            <tbody id="resultsBody">
+              <tr><td colspan="6">Loading results...</td></tr>
             </tbody>
           </table>
         </div>
-        <div class="archive-note">VIP Archive refreshes from the VIP Archive tab every 30 seconds.</div>
       </div>
     </section>
 
+    <section class="section" id="social">
+      <div class="container">
+        <h2 class="section-title">Social Studio</h2>
+        <div class="grid grid-2">
+          <div class="card">
+            <h3>Auto Recaps</h3>
+            <p>Turn wins, streaks, and daily cards into recap-style content for your audience.</p>
+          </div>
+          <div class="card">
+            <h3>VIP Presentation</h3>
+            <p>Premium cards, countdowns, locked picks, release timers, and sharp-looking public summaries.</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
-    <div class="container">
-      Micks Picks is for entertainment and educational purposes only. Bet responsibly.
-    </div>
+    <div class="container">© Micks Picks — Premium Betting Network</div>
   </footer>
 
   <script>
     const SHEET_ID = "15txBM8qsck7f0ZA_za7xYEykBxKpuq0no3x7yHcKNeE";
     const ACTIVE_GID = "0";
-    const VIP_ARCHIVE_GID = "210503117";
+    const ARCHIVE_GID = "1579113575";
 
     function csvUrl(gid){
       return `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${gid}&cache=${Date.now()}`;
@@ -593,52 +853,32 @@
 
     function makeObjects(rows){
       if(!rows.length) return [];
-      const headers = rows[0].map(x => String(x || "").trim());
-      return rows.slice(1).map(r => Object.fromEntries(headers.map((k,i)=>[k,String(r[i]||"").trim()])));
+      const h=rows[0].map(x=>String(x||"").trim());
+      return rows.slice(1).map(r=>Object.fromEntries(h.map((k,i)=>[k,String(r[i]||"").trim()])));
     }
 
     async function getRows(gid){
-      const res = await fetch(csvUrl(gid), { cache:"no-store" });
+      const res = await fetch(csvUrl(gid), {cache:"no-store"});
       const text = await res.text();
       if(text.toLowerCase().includes("<html")) throw new Error("CSV unavailable");
       return makeObjects(parseCSV(text));
     }
 
-
-    function vipNum(value){
-      const n = parseFloat(String(value || "").replace(/[^0-9.+-]/g,""));
-      return Number.isFinite(n) ? n : 0;
+    function num(v){
+      const n=parseFloat(String(v||"").replace(/[^0-9.+-]/g,""));
+      return Number.isFinite(n)?n:0;
     }
 
-    function updateVIPPerformance(rows){
-      const graded = rows
-        .filter(r => r.Pick && r.Game)
-        .filter(r => /win|loss/i.test(r.Result || ""));
-
-      const wins = graded.filter(r => /win/i.test(r.Result || "")).length;
-      const losses = graded.filter(r => /loss/i.test(r.Result || "")).length;
-      const total = wins + losses;
-      const units = rows
-        .filter(r => r.Pick && r.Game)
-        .reduce((sum, r) => sum + vipNum(r["Profit/Loss"]), 0);
-      const rate = total ? Math.round((wins / total) * 100) : 0;
-
-      const recordEl = document.getElementById("vipRecord");
-      const rateEl = document.getElementById("vipWinRate");
-      const unitsEl = document.getElementById("vipTotalUnits");
-
-      if(recordEl) recordEl.textContent = `${wins}-${losses}`;
-      if(rateEl) rateEl.textContent = total ? `${rate}%` : "--";
-      if(unitsEl) unitsEl.textContent = `${units >= 0 ? "+" : ""}${units.toFixed(2)}u`;
+    function cls(r){
+      r=String(r||"").toLowerCase();
+      if(r.includes("win")) return "win";
+      if(r.includes("loss")) return "loss";
+      return "pending";
     }
 
-
-    function esc(s){
-      return String(s||"").replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
-    }
-
+    
     function gradeBadge(g){
-      const raw = String(g || "").trim() || "B";
+      const raw = String(g || "").trim();
       const base = raw.charAt(0).toUpperCase();
 
       let cls = "grade-c";
@@ -654,150 +894,149 @@
 
       return `
         <div class="grade-badge ${cls}">
-          <span>Grade ${esc(raw)}</span>
+          <span>Grade ${raw}</span>
           <span class="grade-sub">${sub}</span>
         </div>
       `;
     }
 
-    function isVipActive(r){
-      const access = String(r.Access || "").trim().toLowerCase();
-      const status = String(r.Status || "").trim().toLowerCase();
-      const releaseStatus = String(r["Release Status"] || "").trim().toLowerCase();
-      const hasPick = r.Pick && r.Game;
-
-      return hasPick &&
-        access === "vip" &&
-        !/win|loss|push|void|closed|graded/i.test(r.Result || "") &&
-        (
-          status === "pregame" ||
-          status === "active" ||
-          releaseStatus === "released" ||
-          releaseStatus === "live"
-        );
-    }
-
-    function renderVIP(rows){
-      const picks = rows.filter(isVipActive);
-      const featured = picks.filter(r => /^yes$/i.test(r.Featured || ""));
-
-      const vipCountEl = document.getElementById("vipCount");
-      const featuredCountEl = document.getElementById("featuredCount");
-      const lastSyncEl = document.getElementById("lastSync");
-      if(vipCountEl) vipCountEl.textContent = picks.length;
-      if(featuredCountEl) featuredCountEl.textContent = featured.length;
-      if(lastSyncEl) lastSyncEl.textContent = new Date().toLocaleTimeString([], {hour:"numeric", minute:"2-digit"});
-
-      const box = document.getElementById("vipPicks");
-
-      if(!picks.length){
-        box.innerHTML = `<div class="empty">No VIP active picks are currently released. Check the Active Picks sheet for Access = VIP and Status = Pregame.</div>`;
-        return;
-      }
-
-      box.innerHTML = picks.map(r => `
-        <article class="pick-card ${/^yes$/i.test(r.Featured || "") ? "featured" : ""}">
-          <div class="top-row">
-            <div>
-              <span class="tag">${esc(r.League || r.Sport)}</span>
-              ${/^yes$/i.test(r.Featured || "") ? `<span class="tag featured-tag">Featured VIP</span>` : ""}
-            </div>
-            ${gradeBadge(r.Grade)}
-          </div>
-
-          <h3 class="pick-title">${esc(r.Pick)}</h3>
-          <div class="game">${esc(r.Game)}</div>
-
-          <div class="details">
-            <div class="detail"><span>Odds</span><strong>${esc(r.Odds)}</strong></div>
-            <div class="detail"><span>Units</span><strong>${esc(r.Units)}u</strong></div>
-            <div class="detail"><span>Sportsbook</span><strong>${esc(r.Sportsbook)}</strong></div>
-            <div class="detail"><span>Bet Type</span><strong>${esc(r["Bet Type"])}</strong></div>
-            <div class="detail"><span>Best Number</span><strong>${esc(r["Best Number"])}</strong></div>
-            <div class="detail"><span>No Bet Cutoff</span><strong>${esc(r["No Bet Cutoff"])}</strong></div>
-          </div>
-
-          <div class="analysis">
-            <h4>Full VIP Analysis</h4>
-            <p>${esc(r["Full Analysis"] || r.Writeup || "Full analysis pending.")}</p>
-          </div>
-
-          <div class="analysis">
-            <h4>Market / Injury Notes</h4>
-            <p><strong>Market:</strong> ${esc(r["Market Notes"] || "No market note listed.")}<br>
-            <strong>Injury:</strong> ${esc(r["Injury Notes"] || "No injury note listed.")}</p>
-          </div>
-
-          <div class="release">
-            <strong>Release Time:</strong> ${esc(r["Release Time"] || r["Posted Time"] || "Pending")}<br>
-            <strong>Release Status:</strong> ${esc(r["Release Status"] || r.Status || "Released")}<br>
-            <strong>Release Notes:</strong> ${esc(r["Release Notes"] || "No release note listed.")}
-          </div>
-        </article>
-      `).join("");
+    function esc(s){
+      return String(s||"").replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
     }
 
 
-    function resultClass(value){
-      const r = String(value || "").trim().toLowerCase();
-      if(r.includes("win")) return "result-win";
-      if(r.includes("loss")) return "result-loss";
-      if(r.includes("push") || r.includes("void")) return "result-push";
-      return "";
+
+    function isActivePick(r){
+      const status = String(r.Status || "").toLowerCase();
+      const release = String(r["Release Status"] || "").toLowerCase();
+      const hasRequired = r.Date && r.Pick && r.Game;
+      const notGraded = !/win|loss|push|void|closed/i.test(r.Result || "");
+      return hasRequired && notGraded && (
+        status.includes("pregame") ||
+        status.includes("active") ||
+        release.includes("released") ||
+        release.includes("live")
+      );
     }
 
-    function archiveDate(value){
-      const raw = String(value || "").trim();
-      if(!raw) return "—";
-      const d = new Date(raw);
+    function fmtDate(s){
+      s = String(s || "").trim();
+      if(!s) return "";
+      const d = new Date(s);
       if(!Number.isNaN(d.getTime())){
         return d.toLocaleDateString(undefined,{month:"short",day:"numeric",year:"numeric"});
       }
-      return raw;
+      return s.split(" ")[0];
     }
 
-    function renderVIPArchive(rows){
-      const body = document.getElementById("vipArchiveBody");
-      if(!body) return;
+    function shortText(s, max=360){
+      s = String(s || "").trim();
+      return s.length > max ? s.slice(0,max).trim() + "..." : s;
+    }
 
-      const archive = rows
-        .filter(r => r.Pick && r.Game)
-        .filter(r => /win|loss|push|void|closed/i.test(`${r.Result || ""} ${r.Status || ""}`))
-        .slice()
-        .reverse();
+    function gradeClass(g){
+      g = String(g || "").trim().toUpperCase();
+      if(g.startsWith("A")) return "grade-a";
+      if(g.startsWith("B")) return "grade-b";
+      if(g.startsWith("C")) return "grade-c";
+      return "grade-pass";
+    }
 
-      if(!archive.length){
-        body.innerHTML = `<tr><td colspan="7">No VIP archive results found yet.</td></tr>`;
+    function renderActive(rows){
+      const grid = document.getElementById("activePicksGrid");
+      const sync = document.getElementById("activeSync");
+      if(!grid) return;
+
+      const activeRows = rows.filter(isActivePick);
+      const vipCount = activeRows.filter(r => /vip/i.test(r.Access || "")).length;
+      rows = activeRows.filter(r => !/vip/i.test(r.Access || ""));
+      if(sync) sync.textContent = `${rows.length} Free${vipCount ? ` • ${vipCount} VIP Locked` : ""}`;
+
+      const vipLock = vipCount ? `
+        <div class="vip-lock-card">
+          <div>
+            <h3>${vipCount} VIP Pick${vipCount === 1 ? "" : "s"} Locked</h3>
+            <p>Premium releases are available inside the VIP Vault only. Public visitors see free picks and results here.</p>
+          </div>
+          <a href="premium.html" class="vip-lock-badge">VIP Vault</a>
+        </div>
+      ` : "";
+
+      if(!rows.length){
+        grid.innerHTML = vipLock || `<div class="empty-state">No free active picks are currently released. VIP releases stay inside the VIP Vault.</div>`;
         return;
       }
 
-      body.innerHTML = archive.map(r => `
-        <tr>
-          <td>${esc(archiveDate(r.Date))}</td>
-          <td>${esc(r.League || r.Sport || "—")}</td>
-          <td><span class="pick-name">${esc(r.Pick || "—")}</span><span class="game-name">${esc(r.Game || "—")}</span></td>
-          <td>${gradeBadge(r.Grade || "B")}</td>
-          <td class="${resultClass(r.Result)}">${esc(r.Result || r.Status || "—")}</td>
-          <td class="${resultClass(r.Result)}">${esc(r["Profit/Loss"] || "—")}</td>
-          <td>${esc(r["Closing Number"] || r.CLV || "—")}</td>
-        </tr>
-      `).join("");
+      rows.sort((a,b)=>{
+        const af = /yes/i.test(a.Featured||"") ? 1 : 0;
+        const bf = /yes/i.test(b.Featured||"") ? 1 : 0;
+        return bf - af;
+      });
+
+      grid.innerHTML = vipLock + rows.map(r=>{
+        const isVip = /vip/i.test(r.Access || "");
+        const isFeatured = /yes/i.test(r.Featured || "");
+        const analysis = `<div class="pick-analysis"><strong>Public Summary:</strong> ${esc(shortText(r.Writeup || r["Full Analysis"], 420))}</div>`;
+        return `
+          <article class="pick-card ${isFeatured ? "featured" : ""}">
+            <div class="pick-top">
+              <div style="display:flex;gap:8px;flex-wrap:wrap">
+                <span class="league-pill">${esc(r.League || r.Sport)}</span>
+                <span class="access-pill ${isVip ? "vip" : "free"}">${esc(r.Access || "Free")}</span>
+                <span class="grade-pill ${gradeClass(r.Grade)}">${esc(r.Grade || "-")}</span>
+              </div>
+            </div>
+            <div class="pick-game">${esc(fmtDate(r.Date))} • ${esc(r.Game)}</div>
+            <h3 class="pick-title">${esc(r.Pick)}</h3>
+            <div class="pick-meta">
+              <div class="pick-stat"><strong>${esc(r.Odds || "-")}</strong><span>Odds</span></div>
+              <div class="pick-stat"><strong>${esc(r.Units || "-")}u</strong><span>Units</span></div>
+              <div class="pick-stat"><strong>${esc(r["Best Number"] || "-")}</strong><span>Best #</span></div>
+              <div class="pick-stat"><strong>${esc(r.Confidence || "-")}</strong><span>Confidence</span></div>
+            </div>
+            <p class="pick-writeup">${esc(r.Writeup || "Micks Picks release pending writeup.")}</p>
+            ${analysis}
+          </article>
+        `;
+      }).join("");
     }
 
+    function render(rows){
+      rows = rows.filter(r => r.Date && r.Pick && r.Game && /win|loss|push/i.test(r.Result || ""));
+
+      const wins = rows.filter(r=>/win/i.test(r.Result||"")).length;
+      const losses = rows.filter(r=>/loss/i.test(r.Result||"")).length;
+      const units = rows.reduce((s,r)=>s+num(r["Profit/Loss"]),0);
+      const rate = wins+losses ? Math.round((wins/(wins+losses))*100) : 0;
+      const last = rows.length ? rows[rows.length-1].Result : "--";
+
+      document.getElementById("overallRecord").textContent = `${wins}-${losses}`;
+      document.getElementById("winRate").textContent = `${rate}%`;
+      document.getElementById("totalUnits").textContent = `${units>=0?"+":""}${units.toFixed(2)}u`;
+      document.getElementById("currentStreak").textContent = last && last !== "--" ? `${last}` : "--";
+
+      document.getElementById("resultsBody").innerHTML = rows.slice(-10).reverse().map(r=>`
+        <tr>
+          <td>${esc(r.Date)}</td>
+          <td>${esc(r.League || r.Sport)}</td>
+          <td>${esc(r.Game)}</td>
+          <td>${esc(r.Pick)}</td>
+          <td class="${cls(r.Result)}">${esc(r.Result)}</td>
+          <td class="${cls(r.Result)}">${esc(r["Profit/Loss"])}</td>
+        </tr>
+      `).join("") || `<tr><td colspan="6">No completed picks yet.</td></tr>`;
+    }
 
     async function load(){
-      try {
-        const [activeRows, vipArchiveRows] = await Promise.all([
-          getRows(ACTIVE_GID),
-          getRows(VIP_ARCHIVE_GID)
-        ]);
-        renderVIP(activeRows);
-        renderVIPArchive(vipArchiveRows);
-        updateVIPPerformance(vipArchiveRows);
-      } catch(e) {
-        document.getElementById("vipPicks").innerHTML = `<div class="empty">VIP sync unavailable. Check Google Sheet sharing and CSV export permissions.</div>`;
-        const archiveBody = document.getElementById("vipArchiveBody");
-        if(archiveBody) archiveBody.innerHTML = `<tr><td colspan="7">VIP archive sync unavailable. Check VIP Archive sheet sharing.</td></tr>`;
+      try{
+        const [activeRows, archiveRows] = await Promise.all([getRows(ACTIVE_GID), getRows(ARCHIVE_GID)]);
+        renderActive(activeRows);
+        render(archiveRows);
+      }
+      catch(e){
+        const activeGrid = document.getElementById("activePicksGrid");
+        if(activeGrid) activeGrid.innerHTML = `<div class="empty-state">Active picks sync unavailable. Make sure the Google Sheet is published/shared correctly.</div>`;
+        document.getElementById("resultsBody").innerHTML = `<tr><td colspan="6">Results sync unavailable. Check sheet sharing.</td></tr>`;
       }
     }
 
