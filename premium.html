@@ -731,6 +731,9 @@
   </footer>
 
   <script>
+    /* MICKS PICKS DATE DISPLAY FIX:
+       Date-only sheet values are displayed manually to avoid previous-day timezone shifts.
+    */
     /* MICKS PICKS TODAY FILTER:
        VIP Active Picks only displays Active Picks rows where Date equals today's Eastern date.
        Older VIP rows stay hidden from Active Picks and should display in VIP Archive after grading.
@@ -1339,14 +1342,44 @@
       return "";
     }
 
-    function archiveDate(value){
+
+    function displayPickDate(value){
       const raw = String(value || "").trim();
-      if(!raw) return "—";
+      if(!raw) return "";
+
+      // Important: never pass YYYY-MM-DD directly into new Date() for display.
+      // JavaScript treats date-only strings as UTC, which can show the previous day in Eastern time.
+      let m = raw.match(/^(\d{4})-(\d{1,2})-(\d{1,2})/);
+      if(m){
+        const y = m[1];
+        const mo = Number(m[2]);
+        const d = Number(m[3]);
+        const monthName = new Intl.DateTimeFormat(undefined, {month:"short"}).format(new Date(Number(y), mo - 1, 1));
+        return `${monthName} ${d}, ${y}`;
+      }
+
+      m = raw.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})/);
+      if(m){
+        const mo = Number(m[1]);
+        const d = Number(m[2]);
+        const y = m[3];
+        const monthName = new Intl.DateTimeFormat(undefined, {month:"short"}).format(new Date(Number(y), mo - 1, 1));
+        return `${monthName} ${d}, ${y}`;
+      }
+
       const d = new Date(raw);
       if(!Number.isNaN(d.getTime())){
         return d.toLocaleDateString(undefined,{month:"short",day:"numeric",year:"numeric"});
       }
-      return raw;
+
+      return raw.split(" ")[0];
+    }
+
+
+    function archiveDate(value){
+      const raw = String(value || "").trim();
+      if(!raw) return "—";
+      return displayPickDate(raw);
     }
 
     function renderVIPArchive(rows){
