@@ -731,6 +731,10 @@
   </footer>
 
   <script>
+    /* MICKS PICKS TODAY FILTER:
+       VIP Active Picks only displays Active Picks rows where Date equals today's Eastern date.
+       Older VIP rows stay hidden from Active Picks and should display in VIP Archive after grading.
+    */
     /* ODDS-API.IO SETUP NOTE:
        Provider selected = Odds-API.io.
        Do NOT paste the API key into this HTML.
@@ -767,6 +771,56 @@
       const headers = rows[0].map(x => String(x || "").trim());
       return rows.slice(1).map(r => Object.fromEntries(headers.map((k,i)=>[k,String(r[i]||"").trim()])));
     }
+
+
+    function easternTodayKey(){
+      const parts = new Intl.DateTimeFormat("en-US", {
+        timeZone: "America/New_York",
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit"
+      }).formatToParts(new Date()).reduce((acc, p) => {
+        acc[p.type] = p.value;
+        return acc;
+      }, {});
+      return `${parts.year}-${parts.month}-${parts.day}`;
+    }
+
+    function normalizePickDateKey(value){
+      const raw = String(value || "").trim();
+      if(!raw) return "";
+
+      let m = raw.match(/^(\d{4})-(\d{1,2})-(\d{1,2})/);
+      if(m){
+        return `${m[1]}-${String(m[2]).padStart(2,"0")}-${String(m[3]).padStart(2,"0")}`;
+      }
+
+      m = raw.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})/);
+      if(m){
+        return `${m[3]}-${String(m[1]).padStart(2,"0")}-${String(m[2]).padStart(2,"0")}`;
+      }
+
+      const d = new Date(raw);
+      if(!Number.isNaN(d.getTime())){
+        const parts = new Intl.DateTimeFormat("en-US", {
+          timeZone: "America/New_York",
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit"
+        }).formatToParts(d).reduce((acc, p) => {
+          acc[p.type] = p.value;
+          return acc;
+        }, {});
+        return `${parts.year}-${parts.month}-${parts.day}`;
+      }
+
+      return "";
+    }
+
+    function isTodayPick(row){
+      return normalizePickDateKey(row.Date) === easternTodayKey();
+    }
+
 
     async function getRows(gid){
       const res = await fetch(csvUrl(gid), { cache:"no-store" });
@@ -1015,7 +1069,13 @@
     const ODDS_BACKUP_SOURCE = "Manual BetRivers App Check";
 
     const ODDS_PROVIDER = "odds-api-io";
-    const ODDS_PROXY_URL = ""; 
+    
+    /* LIVE ODDS PROXY CONFIGURED:
+       Worker endpoint = https://micks-picks-odds-api.dhallpm.workers.dev/odds
+       API key remains hidden inside Cloudflare Worker secret ODDS_API_IO_KEY.
+    */
+
+    const ODDS_PROXY_URL = "https://micks-picks-odds-api.dhallpm.workers.dev/odds"; 
     // After you deploy the included Cloudflare Worker, paste its URL here.
     // Example: const ODDS_PROXY_URL = "https://micks-picks-odds-api.yourname.workers.dev/odds";
     // Keep this blank until the worker is live; the board will keep using sheet/manual odds safely.
@@ -1191,8 +1251,13 @@
       const releaseStatus = String(r["Release Status"] || "").trim().toLowerCase();
       const hasPick = r.Pick && r.Game;
 
-      return hasPick &&
-        access === "vip" &&
+      if(!hasPick) return false;
+
+      // HARD RULE: VIP Active Picks only displays rows dated today in Eastern Time.
+      // Older VIP rows belong in VIP Archive after grading, not in the active board.
+      if(!isTodayPick(r)) return false;
+
+      return access === "vip" &&
         !/win|loss|push|void|closed|graded/i.test(r.Result || "") &&
         (
           status === "pregame" ||
@@ -1220,7 +1285,7 @@
       const box = document.getElementById("vipPicks");
 
       if(!picks.length){
-        box.innerHTML = `<div class="empty">No VIP active picks are currently released. Check the Active Picks sheet for Access = VIP and Status/Release Status.</div>`;
+        box.innerHTML = `<div class="empty">No VIP active picks are currently released for today. Check Active Picks for today's Date, Access = VIP, and Status/Release Status.</div>`;
         return;
       }
 
