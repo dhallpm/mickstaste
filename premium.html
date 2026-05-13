@@ -731,6 +731,11 @@
   </footer>
 
   <script>
+    /* MICKS PICKS V6 ODDS PROXY ACTIVE:
+       ODDS_PROXY_URL is set to https://micks-picks-odds-api.dhallpm.workers.dev/odds
+       API Pull means Odds-API.io returned a BetRivers price.
+       App Confirmed only means you manually verified the number in the BetRivers Delaware app.
+    */
     /* MICKS PICKS DATE DISPLAY FIX:
        Date-only sheet values are displayed manually to avoid previous-day timezone shifts.
     */
@@ -1072,7 +1077,7 @@
     const ODDS_BACKUP_SOURCE = "Manual BetRivers App Check";
 
     const ODDS_PROVIDER = "odds-api-io";
-    const ODDS_PROXY_URL = ""; 
+    const ODDS_PROXY_URL = "https://micks-picks-odds-api.dhallpm.workers.dev/odds"; 
     // After you deploy the included Cloudflare Worker, paste its URL here.
     // Example: const ODDS_PROXY_URL = "https://micks-picks-odds-api.yourname.workers.dev/odds";
     // Keep this blank until the worker is live; the board will keep using sheet/manual odds safely.
@@ -1127,14 +1132,19 @@
     function applyOddsApiDataToRow(row, api){
       if(!api || !api.ok) return row;
 
+      const apiPulled = Boolean(api.betRiversPrice || api.bestMarketPrice);
       return {
         ...row,
         "BetRivers Price": api.betRiversPrice || row["BetRivers Price"] || row.BetRivers || "",
-        "Best Market Price": api.bestMarketPrice || row["Best Market Price"] || "",
+        "Best Market Price": api.bestMarketPrice || row["Best Market Price"] || row.Odds || "",
         "Line Movement": api.lineMovement || row["Line Movement"] || "",
-        "Timestamp": api.timestamp || row.Timestamp || "",
+        "Timestamp": api.updatedAt || api.timestamp || row.Timestamp || "",
         "Odds Source": "Odds-API.io",
-        "Confirmation Status": api.confirmationStatus || row["Confirmation Status"] || "API Pull / App Confirm Needed"
+        "API Status": apiPulled ? "API Pulled" : (api.confirmationStatus || "Event Found / Odds Parse Needed"),
+        "Line Found": api.lineFound ?? "",
+        "Market Found": api.marketFound || "",
+        "Side Found": api.sideFound || "",
+        "Confirmation Status": row["Confirmation Status"] || row["Manual App Check"] || row["BetRivers Confirmation"] || (apiPulled ? "API Pull / App Confirm Needed" : "Unconfirmed")
       };
     }
 
@@ -1154,7 +1164,8 @@
       const value = String(raw || "").trim();
       const lower = value.toLowerCase();
       let cls = "pending";
-      if(lower.includes("checked") || lower.includes("confirmed") || lower === "yes") cls = "confirmed";
+      if(lower.includes("api pull")) cls = "pending";
+      if(lower.includes("app confirmed") || lower.includes("manually confirmed") || lower.includes("checked in app") || lower === "yes" || lower === "confirmed") cls = "confirmed";
       if(lower.includes("moved")) cls = "moved";
       if(lower.includes("no bet") || lower.includes("cutoff") || lower.includes("pass")) cls = "no-bet";
       return {label:value || "Unconfirmed", cls};
@@ -1195,9 +1206,8 @@
       const sync = document.getElementById("vipOddsSync");
       if(!grid) return;
       let vipRows = allRows.filter(isVipActive);
-      const confirmed = vipRows.filter(r => oddsConfirmation(r).cls === "confirmed").length;
-      if(sync) sync.textContent = `${vipRows.length} VIP Markets • ${confirmed} Confirmed`;
       if(!vipRows.length){
+        if(sync) sync.textContent = `0 VIP Markets`;
         grid.innerHTML = `<div class="odds-empty">No VIP active picks to price yet. Add rows to the Active Picks sheet with Access = VIP and odds columns.</div>`;
         return;
       }
@@ -1215,6 +1225,10 @@
           vipRows = enriched;
         } catch(err){}
       }
+
+      const apiPulled = vipRows.filter(r => firstField(r, ["API Status"], "").toLowerCase().includes("api pulled") || firstField(r, ["BetRivers Price", "BetRivers", "BetRivers Delaware", "Local Book Price", "BR Price"], "") !== "").length;
+      const appConfirmed = vipRows.filter(r => oddsConfirmation(r).cls === "confirmed").length;
+      if(sync) sync.textContent = `${vipRows.length} VIP Markets • ${apiPulled} API Pulled • ${appConfirmed} App Confirmed`;
 
       grid.innerHTML = vipRows.map(r => {
         const c = oddsConfirmation(r);
@@ -1235,6 +1249,9 @@
               <div class="odds-stat"><strong>${esc(firstField(r, ["Timestamp", "Last Updated", "Odds Timestamp", "Updated"], "Pending"))}</strong><span>Timestamp</span></div>
               <div class="odds-stat"><strong>${esc(firstField(r, ["No Bet Cutoff"], "—"))}</strong><span>No Bet Cutoff</span></div>
               <div class="odds-stat"><strong>${esc(firstField(r, ["Sportsbook"], "BetRivers"))}</strong><span>Book Layer</span></div>
+              <div class="odds-stat"><strong>${esc(firstField(r, ["API Status"], "Manual / Pending"))}</strong><span>API Status</span></div>
+              <div class="odds-stat"><strong>${esc(firstField(r, ["Line Found"], "—"))}</strong><span>API Line</span></div>
+              <div class="odds-stat"><strong>${esc(firstField(r, ["Market Found"], "—"))}</strong><span>API Market</span></div>
             </div>
             <div class="odds-note">${esc(firstField(r, ["Market Notes"], "Odds-API.io-ready. Confirm final BetRivers Delaware price in the BetRivers app before betting."))}</div>
           </article>
