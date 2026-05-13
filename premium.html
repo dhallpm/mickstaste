@@ -609,7 +609,7 @@
   <!-- MICKS PICKS ROUTING FIX: Public Site / Back to Public Site links route to same-repo index.html -->
   <header class="topbar">
     <div class="container nav">
-      <a class="brand" href="index.html">
+      <a class="brand" href="./index.html" data-public-home>
         <div class="mark">MP</div>
         <div>
           <strong>Micks Picks</strong>
@@ -618,7 +618,7 @@
       </a>
 
       <nav class="nav-links">
-        <a href="index.html">Public Site</a>
+        <a href="./index.html" data-public-home>Public Site</a>
         <a href="#vip-picks">VIP Picks</a>
         <a href="#vip-odds-board">Odds Board</a>
         <a href="#vip-archive">VIP Archive</a>
@@ -646,7 +646,7 @@
 
         <div class="actions">
           <a class="btn primary" href="#vip-picks">View VIP Picks</a>
-          <a class="btn secondary" href="index.html">Back to Public Site</a>
+          <a class="btn secondary" href="./index.html" data-public-home>Back to Public Site</a>
         </div>
 
         <div class="summary-grid">
@@ -1253,5 +1253,18 @@
     setInterval(load, 30000);
   </script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"18072e2e93224cbf92121332d2e48422","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+
+  <script>
+    // MICKS PICKS ROUTING FIX:
+    // Forces Public Site / Back to Public Site to open index.html
+    // in the same repo folder as premium.html.
+    document.addEventListener("click", function(e){
+      const link = e.target.closest("[data-public-home]");
+      if(!link) return;
+      e.preventDefault();
+      window.location.assign(new URL("./index.html", window.location.href).href);
+    });
+  </script>
+
 </body>
 </html>
