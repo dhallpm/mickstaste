@@ -900,6 +900,10 @@
   </footer>
 
   <script>
+    /* MICKS PICKS TODAY FILTER:
+       Public Picks Today only displays Active Picks rows where Date equals today's Eastern date.
+       Yesterday rows stay hidden even if Status is Pregame, Active, Live, Scheduled, or Released.
+    */
     /* ODDS-API.IO SETUP NOTE:
        Odds provider selected for Micks Picks = Odds-API.io.
        Public page remains safe and does not expose any API key.
@@ -934,6 +938,56 @@
       const h=rows[0].map(x=>String(x||"").trim());
       return rows.slice(1).map(r=>Object.fromEntries(h.map((k,i)=>[k,String(r[i]||"").trim()])));
     }
+
+
+    function easternTodayKey(){
+      const parts = new Intl.DateTimeFormat("en-US", {
+        timeZone: "America/New_York",
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit"
+      }).formatToParts(new Date()).reduce((acc, p) => {
+        acc[p.type] = p.value;
+        return acc;
+      }, {});
+      return `${parts.year}-${parts.month}-${parts.day}`;
+    }
+
+    function normalizePickDateKey(value){
+      const raw = String(value || "").trim();
+      if(!raw) return "";
+
+      let m = raw.match(/^(\d{4})-(\d{1,2})-(\d{1,2})/);
+      if(m){
+        return `${m[1]}-${String(m[2]).padStart(2,"0")}-${String(m[3]).padStart(2,"0")}`;
+      }
+
+      m = raw.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})/);
+      if(m){
+        return `${m[3]}-${String(m[1]).padStart(2,"0")}-${String(m[2]).padStart(2,"0")}`;
+      }
+
+      const d = new Date(raw);
+      if(!Number.isNaN(d.getTime())){
+        const parts = new Intl.DateTimeFormat("en-US", {
+          timeZone: "America/New_York",
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit"
+        }).formatToParts(d).reduce((acc, p) => {
+          acc[p.type] = p.value;
+          return acc;
+        }, {});
+        return `${parts.year}-${parts.month}-${parts.day}`;
+      }
+
+      return "";
+    }
+
+    function isTodayPick(row){
+      return normalizePickDateKey(row.Date) === easternTodayKey();
+    }
+
 
     async function getRows(gid){
       const res = await fetch(csvUrl(gid), {cache:"no-store"});
@@ -1058,14 +1112,29 @@
     function isActivePick(r){
       const status = String(r.Status || "").toLowerCase();
       const release = String(r["Release Status"] || "").toLowerCase();
+      const access = String(r.Access || "").toLowerCase();
       const hasRequired = r.Date && r.Pick && r.Game;
-      const notGraded = !/win|loss|push|void|closed/i.test(r.Result || "");
-      return hasRequired && notGraded && (
+      const notGraded = !/win|loss|push|void|closed|graded/i.test(r.Result || "");
+
+      if(!hasRequired || !notGraded) return false;
+
+      // HARD RULE: Picks Today only displays rows dated today in Eastern Time.
+      // Yesterday or older rows stay hidden even if Status is Pregame, Active, Live, Scheduled, or Released.
+      if(!isTodayPick(r)) return false;
+
+      const isPublicLive =
         status.includes("pregame") ||
         status.includes("active") ||
         release.includes("released") ||
-        release.includes("live")
-      );
+        release.includes("live");
+
+      const isScheduled =
+        release.includes("locked") ||
+        release.includes("pending") ||
+        release.includes("scheduled") ||
+        String(r["Release Time"] || "").trim();
+
+      return access.includes("vip") ? (isPublicLive || isScheduled) : (isPublicLive || isScheduled);
     }
 
     function fmtDate(s){
@@ -1112,7 +1181,7 @@
       ` : "";
 
       if(!rows.length){
-        grid.innerHTML = vipLock || `<div class="empty-state">No free active picks are currently released. VIP releases stay inside the VIP Vault.</div>`;
+        grid.innerHTML = vipLock || `<div class="empty-state">No free picks are currently released for today. VIP releases stay inside the VIP Vault.</div>`;
         return;
       }
 
