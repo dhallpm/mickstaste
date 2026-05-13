@@ -1069,13 +1069,7 @@
     const ODDS_BACKUP_SOURCE = "Manual BetRivers App Check";
 
     const ODDS_PROVIDER = "odds-api-io";
-    
-    /* LIVE ODDS PROXY CONFIGURED:
-       Worker endpoint = https://micks-picks-odds-api.dhallpm.workers.dev/odds
-       API key remains hidden inside Cloudflare Worker secret ODDS_API_IO_KEY.
-    */
-
-    const ODDS_PROXY_URL = "https://micks-picks-odds-api.dhallpm.workers.dev/odds"; 
+    const ODDS_PROXY_URL = ""; 
     // After you deploy the included Cloudflare Worker, paste its URL here.
     // Example: const ODDS_PROXY_URL = "https://micks-picks-odds-api.yourname.workers.dev/odds";
     // Keep this blank until the worker is live; the board will keep using sheet/manual odds safely.
