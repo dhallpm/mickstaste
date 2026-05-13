@@ -900,6 +900,10 @@
   </footer>
 
   <script>
+    /* MICKS PICKS DATE DISPLAY FIX:
+       Date-only sheet values like 2026-05-13 are displayed manually.
+       This prevents JavaScript from converting midnight UTC to May 12 in Eastern time.
+    */
     /* MICKS PICKS TODAY FILTER:
        Public Picks Today only displays Active Picks rows where Date equals today's Eastern date.
        Yesterday rows stay hidden even if Status is Pregame, Active, Live, Scheduled, or Released.
@@ -1137,14 +1141,42 @@
       return access.includes("vip") ? (isPublicLive || isScheduled) : (isPublicLive || isScheduled);
     }
 
-    function fmtDate(s){
-      s = String(s || "").trim();
-      if(!s) return "";
-      const d = new Date(s);
+
+    function displayPickDate(value){
+      const raw = String(value || "").trim();
+      if(!raw) return "";
+
+      // Important: never pass YYYY-MM-DD directly into new Date() for display.
+      // JavaScript treats date-only strings as UTC, which can show the previous day in Eastern time.
+      let m = raw.match(/^(\d{4})-(\d{1,2})-(\d{1,2})/);
+      if(m){
+        const y = m[1];
+        const mo = Number(m[2]);
+        const d = Number(m[3]);
+        const monthName = new Intl.DateTimeFormat(undefined, {month:"short"}).format(new Date(Number(y), mo - 1, 1));
+        return `${monthName} ${d}, ${y}`;
+      }
+
+      m = raw.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})/);
+      if(m){
+        const mo = Number(m[1]);
+        const d = Number(m[2]);
+        const y = m[3];
+        const monthName = new Intl.DateTimeFormat(undefined, {month:"short"}).format(new Date(Number(y), mo - 1, 1));
+        return `${monthName} ${d}, ${y}`;
+      }
+
+      const d = new Date(raw);
       if(!Number.isNaN(d.getTime())){
         return d.toLocaleDateString(undefined,{month:"short",day:"numeric",year:"numeric"});
       }
-      return s.split(" ")[0];
+
+      return raw.split(" ")[0];
+    }
+
+
+    function fmtDate(s){
+      return displayPickDate(s);
     }
 
     function shortText(s, max=360){
