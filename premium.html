@@ -602,64 +602,6 @@
     @media(max-width:900px){.odds-grid{grid-template-columns:1fr}.odds-board-head{align-items:flex-start;flex-direction:column}.odds-stats{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:560px){.odds-stats{grid-template-columns:1fr}}
 
-  
-    /* ===== SPORT RECORD BREAKDOWN ===== */
-    .sport-record-grid{
-      display:grid;
-      grid-template-columns:repeat(4,minmax(0,1fr));
-      gap:14px;
-      margin-top:18px;
-    }
-    .sport-record-card{
-      border:1px solid rgba(245,196,81,.20);
-      border-radius:22px;
-      padding:18px;
-      background:
-        radial-gradient(circle at 100% 0%,rgba(245,196,81,.12),transparent 36%),
-        rgba(0,0,0,.30);
-      box-shadow:0 18px 54px rgba(0,0,0,.32);
-    }
-    .sport-record-card h3{
-      margin:0 0 12px;
-      color:#fff7dc;
-      font-size:1.03rem;
-      letter-spacing:-.025em;
-    }
-    .sport-record-line{
-      display:flex;
-      align-items:baseline;
-      justify-content:space-between;
-      gap:12px;
-      margin:7px 0;
-    }
-    .sport-record-line strong{
-      color:#fff;
-      font-size:1.55rem;
-      line-height:1;
-      font-variant-numeric:tabular-nums;
-    }
-    .sport-record-line span{
-      color:var(--muted);
-      font-size:.68rem;
-      text-transform:uppercase;
-      letter-spacing:.11em;
-      font-weight:900;
-    }
-    .sport-units-positive{color:var(--green)!important}
-    .sport-units-negative{color:var(--red)!important}
-    .sport-record-note{
-      margin-top:16px;
-      color:var(--muted);
-      font-size:.86rem;
-      line-height:1.5;
-    }
-    @media(max-width:1050px){
-      .sport-record-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-    }
-    @media(max-width:560px){
-      .sport-record-grid{grid-template-columns:1fr}
-    }
-
   </style>
 </head>
 
@@ -679,7 +621,6 @@
         <a href="index.html">Public Site</a>
         <a href="#vip-picks">VIP Picks</a>
         <a href="#vip-odds-board">Odds Board</a>
-        <a href="#vip-sport-records">Sport Records</a>
         <a href="#vip-archive">VIP Archive</a>
         <a href="https://vip.mickspicks.us">Secure Portal</a>
       </nav>
@@ -747,23 +688,8 @@
           <div class="odds-grid" id="vipOddsGrid">
             <div class="odds-empty">Loading VIP odds layer...</div>
           </div>
-          <div class="odds-rule">VIP betting rule: OpticOdds/backup feed finds value, but the final play is not confirmed until the number is checked inside the BetRivers Delaware app.</div>
+          <div class="odds-rule">VIP betting rule: Odds-API.io is the selected odds provider. Final play is not confirmed until the number is checked inside the BetRivers Delaware app.</div>
         </div>
-      </div>
-    </section>
-
-
-
-    <section class="section" id="vip-sport-records">
-      <div class="container">
-        <h2 class="section-title">VIP Records By Sport</h2>
-        <p class="section-sub">
-          VIP performance split by sport from the VIP Archive sheet only.
-        </p>
-        <div id="vipSportRecords" class="sport-record-grid">
-          <div class="empty">Loading VIP sport records...</div>
-        </div>
-        <div class="sport-record-note">Sport records calculate wins, losses, win rate, and units from graded VIP Archive rows.</div>
       </div>
     </section>
 
@@ -805,6 +731,13 @@
   </footer>
 
   <script>
+    /* ODDS-API.IO SETUP NOTE:
+       Provider selected = Odds-API.io.
+       Do NOT paste the API key into this HTML.
+       Deploy the included Cloudflare Worker, set ODDS_API_IO_KEY as a Worker secret,
+       then paste the Worker /odds URL into ODDS_PROXY_URL below.
+       Until ODDS_PROXY_URL is filled in, the site falls back to manual Google Sheet odds fields.
+    */
     const SHEET_ID = "15txBM8qsck7f0ZA_za7xYEykBxKpuq0no3x7yHcKNeE";
     const ACTIVE_GID = "0";
     const VIP_ARCHIVE_GID = "210503117";
@@ -874,77 +807,6 @@
     function esc(s){
       return String(s||"").replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
     }
-
-
-    function sportKey(row){
-      const raw = String(row.Sport || row.League || "Other").trim();
-      if(!raw) return "Other";
-      const upper = raw.toUpperCase();
-
-      if(upper.includes("WNBA")) return "WNBA";
-      if(upper.includes("NBA") || upper.includes("BASKETBALL")) return "NBA";
-      if(upper.includes("MLB") || upper.includes("BASEBALL")) return "MLB";
-      if(upper.includes("NHL") || upper.includes("HOCKEY")) return "NHL";
-      if(upper.includes("UFC") || upper.includes("MMA")) return "UFC";
-      if(upper.includes("NFL") || upper.includes("FOOTBALL")) return "NFL";
-      return raw;
-    }
-
-    function pickUnits(row){
-      const n = parseFloat(String(row["Profit/Loss"] || "0").replace(/[^0-9.+-]/g,""));
-      return Number.isFinite(n) ? n : 0;
-    }
-
-    function buildSportRecords(rows){
-      const map = {};
-
-      rows
-        .filter(r => r.Pick && r.Game)
-        .filter(r => /win|loss/i.test(r.Result || ""))
-        .forEach(r => {
-          const sport = sportKey(r);
-          if(!map[sport]) map[sport] = {sport, wins:0, losses:0, units:0};
-
-          if(/win/i.test(r.Result || "")) map[sport].wins += 1;
-          if(/loss/i.test(r.Result || "")) map[sport].losses += 1;
-          map[sport].units += pickUnits(r);
-        });
-
-      return Object.values(map).sort((a,b) => {
-        const order = ["NBA","WNBA","MLB","NHL","UFC","NFL"];
-        const ai = order.indexOf(a.sport);
-        const bi = order.indexOf(b.sport);
-        if(ai !== -1 || bi !== -1) return (ai === -1 ? 99 : ai) - (bi === -1 ? 99 : bi);
-        return a.sport.localeCompare(b.sport);
-      });
-    }
-
-    function renderSportRecords(rows, targetId){
-      const box = document.getElementById(targetId);
-      if(!box) return;
-
-      const records = buildSportRecords(rows);
-
-      if(!records.length){
-        box.innerHTML = `<div class="empty">No graded sport records yet.</div>`;
-        return;
-      }
-
-      box.innerHTML = records.map(r => {
-        const total = r.wins + r.losses;
-        const rate = total ? Math.round((r.wins / total) * 100) : 0;
-        const unitsClass = r.units >= 0 ? "sport-units-positive" : "sport-units-negative";
-        return `
-          <article class="sport-record-card">
-            <h3>${esc(r.sport)}</h3>
-            <div class="sport-record-line"><strong>${r.wins}-${r.losses}</strong><span>Record</span></div>
-            <div class="sport-record-line"><strong>${rate}%</strong><span>Win Rate</span></div>
-            <div class="sport-record-line"><strong class="${unitsClass}">${r.units >= 0 ? "+" : ""}${r.units.toFixed(2)}u</strong><span>Units</span></div>
-          </article>
-        `;
-      }).join("");
-    }
-
 
     function gradeBadge(g){
       const raw = String(g || "").trim() || "B";
@@ -1149,8 +1011,76 @@
 
 
 
-    const ODDS_PRIMARY_SOURCE = "OpticOdds";
-    const ODDS_BACKUP_SOURCE = "SharpAPI Backup";
+    const ODDS_PRIMARY_SOURCE = "Odds-API.io";
+    const ODDS_BACKUP_SOURCE = "Manual BetRivers App Check";
+
+    const ODDS_PROVIDER = "odds-api-io";
+    const ODDS_PROXY_URL = ""; 
+    // After you deploy the included Cloudflare Worker, paste its URL here.
+    // Example: const ODDS_PROXY_URL = "https://micks-picks-odds-api.yourname.workers.dev/odds";
+    // Keep this blank until the worker is live; the board will keep using sheet/manual odds safely.
+
+
+
+    function oddsApiConfigured(){
+      return Boolean(ODDS_PROXY_URL && !ODDS_PROXY_URL.includes("YOUR") && ODDS_PROXY_URL.startsWith("http"));
+    }
+
+    function normalizeOddsSport(row){
+      const raw = String(row.League || row.Sport || "").toLowerCase();
+      if(raw.includes("nba") || raw.includes("basketball")) return "basketball";
+      if(raw.includes("wnba")) return "basketball";
+      if(raw.includes("nfl") || raw.includes("football")) return "football";
+      if(raw.includes("mlb") || raw.includes("baseball")) return "baseball";
+      if(raw.includes("nhl") || raw.includes("hockey")) return "hockey";
+      if(raw.includes("ufc") || raw.includes("mma")) return "mma";
+      return raw || "basketball";
+    }
+
+    function parseGameTeams(game){
+      const raw = String(game || "");
+      const parts = raw.split(/\s+@\s+|\s+vs\.?\s+/i).map(x => x.trim()).filter(Boolean);
+      return {
+        away: parts[0] || "",
+        home: parts[1] || "",
+        query: raw
+      };
+    }
+
+    async function fetchOddsApiIoForPick(row){
+      if(!oddsApiConfigured()) return null;
+
+      const teams = parseGameTeams(row.Game);
+      const params = new URLSearchParams({
+        sport: normalizeOddsSport(row),
+        league: row.League || row.Sport || "",
+        game: row.Game || "",
+        pick: row.Pick || "",
+        market: row["Bet Type"] || "",
+        sportsbook: "BetRivers",
+        away: teams.away,
+        home: teams.home
+      });
+
+      const res = await fetch(`${ODDS_PROXY_URL}?${params.toString()}`, { cache:"no-store" });
+      if(!res.ok) throw new Error("Odds proxy unavailable");
+      return await res.json();
+    }
+
+    function applyOddsApiDataToRow(row, api){
+      if(!api || !api.ok) return row;
+
+      return {
+        ...row,
+        "BetRivers Price": api.betRiversPrice || row["BetRivers Price"] || row.BetRivers || "",
+        "Best Market Price": api.bestMarketPrice || row["Best Market Price"] || "",
+        "Line Movement": api.lineMovement || row["Line Movement"] || "",
+        "Timestamp": api.timestamp || row.Timestamp || "",
+        "Odds Source": "Odds-API.io",
+        "Confirmation Status": api.confirmationStatus || row["Confirmation Status"] || "API Pull / App Confirm Needed"
+      };
+    }
+
 
     function firstField(row, names, fallback="—"){
       for(const name of names){
@@ -1203,17 +1133,32 @@
       `;
     }
 
-    function renderVIPOdds(allRows){
+    async function renderVIPOdds(allRows){
       const grid = document.getElementById("vipOddsGrid");
       const sync = document.getElementById("vipOddsSync");
       if(!grid) return;
-      const vipRows = allRows.filter(isVipActive);
+      let vipRows = allRows.filter(isVipActive);
       const confirmed = vipRows.filter(r => oddsConfirmation(r).cls === "confirmed").length;
       if(sync) sync.textContent = `${vipRows.length} VIP Markets • ${confirmed} Confirmed`;
       if(!vipRows.length){
         grid.innerHTML = `<div class="odds-empty">No VIP active picks to price yet. Add rows to the Active Picks sheet with Access = VIP and odds columns.</div>`;
         return;
       }
+
+      if(oddsApiConfigured()){
+        try{
+          const enriched = await Promise.all(vipRows.map(async r => {
+            try{
+              const api = await fetchOddsApiIoForPick(r);
+              return applyOddsApiDataToRow(r, api);
+            } catch(err){
+              return r;
+            }
+          }));
+          vipRows = enriched;
+        } catch(err){}
+      }
+
       grid.innerHTML = vipRows.map(r => {
         const c = oddsConfirmation(r);
         return `
@@ -1234,7 +1179,7 @@
               <div class="odds-stat"><strong>${esc(firstField(r, ["No Bet Cutoff"], "—"))}</strong><span>No Bet Cutoff</span></div>
               <div class="odds-stat"><strong>${esc(firstField(r, ["Sportsbook"], "BetRivers"))}</strong><span>Book Layer</span></div>
             </div>
-            <div class="odds-note">${esc(firstField(r, ["Market Notes"], "Feed-ready. Confirm in the BetRivers app before betting."))}</div>
+            <div class="odds-note">${esc(firstField(r, ["Market Notes"], "Odds-API.io-ready. Confirm final BetRivers Delaware price in the BetRivers app before betting."))}</div>
           </article>
         `;
       }).join("");
@@ -1381,11 +1326,10 @@
           getRows(VIP_ARCHIVE_GID)
         ]);
         renderVIP(activeRows);
-        renderVIPOdds(activeRows);
+        await renderVIPOdds(activeRows);
         startReleaseTimers();
         renderVIPArchive(vipArchiveRows);
         updateVIPPerformance(vipArchiveRows);
-        renderSportRecords(vipArchiveRows, "vipSportRecords");
       } catch(e) {
         document.getElementById("vipPicks").innerHTML = `<div class="empty">VIP sync unavailable. Check Google Sheet sharing and CSV export permissions.</div>`;
         const vipOddsGrid = document.getElementById("vipOddsGrid");
