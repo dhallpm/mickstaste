@@ -1,14 +1,13 @@
 
 /*
-  STEP 7 REAL SHEET LOGIC
-  Actual sheet tabs found:
-  - Active Picks: headers only right now, used only for active cards
+  STEP 8 PAGE-SPECIFIC LOGIC
+  Actual sheet tabs:
+  - Active Picks: active card only
   - Results Archive: mixed Free + VIP results
   - VIP Archive: VIP-only results
 */
 
 const SHEET_ID = "15txBM8qsck7f0ZA_za7xYEykBxKpuq0no3x7yHcKNeE";
-
 const ACTIVE_GID = "0";
 const RESULTS_ARCHIVE_GID = "1579113575";
 const VIP_ARCHIVE_GID = "210503117";
@@ -46,6 +45,11 @@ const HEADER_ALIASES = {
   lineMovement: ["Line Movement", "Movement"],
   confirmationStatus: ["Confirmation Status", "Confirmed", "Confirmation"]
 };
+
+function currentPage(){
+  const p = location.pathname.split("/").pop() || "index.html";
+  return p === "" ? "index.html" : p;
+}
 
 function csvUrl(gid){
   return `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${gid}&cache=${Date.now()}`;
@@ -136,8 +140,7 @@ function isFree(row){
 
 function isClosed(row){
   const result = String(row.result || "").toLowerCase();
-  const status = String(row.status || "").toLowerCase();
-  return ["win","loss","push"].some(x => result.includes(x) || status.includes("closed"));
+  return ["win","loss","push"].some(x => result.includes(x));
 }
 
 function isActive(row){
@@ -169,6 +172,12 @@ function dedupeRows(rows){
     out.push(row);
   }
   return out;
+}
+
+function byDateDesc(a,b){
+  const da = Date.parse(a.date || a.postedTime || "") || 0;
+  const db = Date.parse(b.date || b.postedTime || "") || 0;
+  return db - da;
 }
 
 function setText(id, value){
@@ -254,11 +263,11 @@ function renderGrid(id, rows, locked=false){
     : `<div class="empty">No active picks loaded right now. Active Picks tab currently has no pick rows.</div>`;
 }
 
-function renderTable(id, rows){
+function renderTable(id, rows, limit = 100){
   const el = document.getElementById(id);
   if(!el) return;
 
-  const usable = rows.filter(r => hasText(r.pick)).slice(0, 100);
+  const usable = rows.filter(r => hasText(r.pick)).sort(byDateDesc).slice(0, limit);
 
   if(!usable.length){
     el.innerHTML = '<tr><td colspan="7">No results loaded.</td></tr>';
@@ -302,6 +311,8 @@ function renderOddsLayer(rows){
 
 async function boot(){
   try{
+    const page = currentPage();
+
     const activeRows = await getRows(ACTIVE_GID, "Active Picks");
     const resultsRows = await getRows(RESULTS_ARCHIVE_GID, "Results Archive");
     const vipArchiveRows = await getRows(VIP_ARCHIVE_GID, "VIP Archive").catch(() => []);
@@ -313,18 +324,33 @@ async function boot(){
     const freeActiveRows = activeRows.filter(isFree);
     const vipActiveRows = activeRows.filter(isVIP);
 
-    updateStats(allResults, "overall", allResults);
-    updateStats(vipResults, "vip", vipResults.concat(vipActiveRows));
-    updateStats(freeResults, "free", freeResults.concat(freeActiveRows));
-
-    renderGrid("freePicksGrid", freeActiveRows, true);
-    renderGrid("vipPicksGrid", vipActiveRows, false);
-
-    renderTable("resultsBody", allResults);
-    renderTable("vipArchiveBody", vipResults);
-    renderTable("freeArchiveBody", freeResults);
-
-    renderOddsLayer(activeRows.length ? activeRows : resultsRows);
+    // Page-specific metrics only.
+    if(page === "premium.html"){
+      updateStats(vipResults, "vip", vipResults.concat(vipActiveRows));
+      renderGrid("vipPicksGrid", vipActiveRows, false);
+      renderTable("vipArchiveBody", vipResults);
+    } else if(page === "free-look.html"){
+      updateStats(freeResults, "free", freeResults.concat(freeActiveRows));
+      renderGrid("freePicksGrid", freeActiveRows, true);
+      renderTable("freeArchiveBody", freeResults);
+    } else if(page === "results.html"){
+      updateStats(allResults, "overall", allResults);
+      renderTable("resultsBody", allResults);
+    } else if(page === "market-heat.html"){
+      updateStats(allResults, "overall", allResults);
+      renderOddsLayer(activeRows.length ? activeRows : resultsRows);
+    } else if(page === "sharp-card.html"){
+      updateStats(vipResults, "vip", vipResults.concat(vipActiveRows));
+      renderGrid("vipPicksGrid", vipActiveRows, false);
+    } else if(page === "index.html" || page === ""){
+      updateStats(allResults, "overall", allResults);
+      updateStats(vipResults, "vip", vipResults);
+      updateStats(freeResults, "free", freeResults);
+      renderTable("dashboardResultsBody", allResults, 12);
+    } else {
+      // Props, Yahgi, Social: keep metrics overall but do not dump global results table.
+      updateStats(allResults, "overall", allResults);
+    }
 
     document.querySelectorAll(".sync-time").forEach(el => {
       el.textContent = new Date().toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
