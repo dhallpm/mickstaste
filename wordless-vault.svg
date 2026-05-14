@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1000" viewBox="0 0 1800 1000">
+<defs>
+<radialGradient id="g1" cx="48%" cy="18%" r="70%">
+<stop offset="0%" stop-color="#f6c34a" stop-opacity=".28"/>
+<stop offset="44%" stop-color="#0b0f16" stop-opacity=".65"/>
+<stop offset="100%" stop-color="#020203" stop-opacity="1"/>
+</radialGradient>
+<linearGradient id="gold" x1="0" x2="1">
+<stop offset="0" stop-color="#6b4810"/><stop offset=".5" stop-color="#f6c34a"/><stop offset="1" stop-color="#6b4810"/>
+</linearGradient>
+<filter id="blur"><feGaussianBlur stdDeviation="9"/></filter>
+</defs>
+<rect width="1800" height="1000" fill="url(#g1)"/>
+<g opacity=".17">
+<path d="M0 780 C380 640 640 760 940 610 C1230 466 1450 570 1800 410" fill="none" stroke="#f6c34a" stroke-width="2"/>
+<path d="M0 820 C380 680 640 800 940 650 C1230 506 1450 610 1800 450" fill="none" stroke="#22e6ff" stroke-width="1"/>
+</g>
+<g opacity=".18">
+<path d="M250 110 h900 v460 h-900z" fill="none" stroke="#f6c34a" stroke-width="2"/>
+<path d="M305 160 h790 M305 215 h790 M305 270 h790 M305 325 h790 M305 380 h790 M305 435 h790 M305 490 h790" stroke="#f6c34a" stroke-width="1"/>
+<path d="M410 125 v430 M545 125 v430 M680 125 v430 M815 125 v430 M950 125 v430" stroke="#f6c34a" stroke-width="1"/>
+</g>
+<g opacity=".22" filter="url(#blur)">
+<circle cx="1320" cy="210" r="125" fill="#f6c34a"/>
+<circle cx="1460" cy="370" r="90" fill="#22e6ff"/>
+<circle cx="1180" cy="580" r="80" fill="#c56cff"/>
+</g>
+<g opacity=".22">
+<circle cx="1380" cy="515" r="170" fill="none" stroke="#f6c34a" stroke-width="5"/>
+<circle cx="1380" cy="515" r="122" fill="none" stroke="#f6c34a" stroke-width="2"/>
+<path d="M1380 345 v340 M1210 515 h340" stroke="#f6c34a" stroke-width="2"/>
+</g>
+<g opacity=".3">
+<path d="M1510 110 l70 0 l35 60 l-35 60 l-70 0 l-35-60z" fill="none" stroke="#f6c34a" stroke-width="3"/>
+<path d="M1545 135 l35 35 l-35 35 l-35-35z" fill="none" stroke="#f6c34a" stroke-width="2"/>
+</g>
+<rect x="0" y="0" width="1800" height="1000" fill="url(#gold)" opacity=".025"/>
+</svg>
