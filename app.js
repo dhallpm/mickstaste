@@ -257,6 +257,7 @@ function vipAnalysis(row){
 }
 
 
+
 function compactText(value){
   return clean(value).replace(/[^a-z0-9]/g, "");
 }
@@ -297,14 +298,38 @@ function findOddsForPick(row){
   return null;
 }
 
+function originalOddsLabel(row){
+  const book = row.sportsbook || row._raw?.Sportsbook || row._raw?.Book || "Listed Book";
+  const odds = row.odds || row._raw?.Odds || "";
+  if(book && odds) return `${book} ${odds}`;
+  if(odds) return odds;
+  if(book) return book;
+  return "Not listed";
+}
+
+function sourceLabel(odds){
+  if(!odds) return "No feed match";
+  const primary = odds.oddsSource || odds.source || "Sheet Odds Tracker";
+  const backup = odds.backupSource ? ` / ${odds.backupSource}` : "";
+  return `${primary}${backup}`;
+}
+
 function renderOddsBadge(row){
   const odds = findOddsForPick(row);
+  const original = originalOddsLabel(row);
 
   if(!odds){
     return `
-      <div class="odds-mini-panel odds-muted">
-        <div><strong>Odds Feed</strong><span>No matching odds row yet</span></div>
-        <div><strong>Action</strong><span>Run/refresh BetRivers Odds Tracker</span></div>
+      <div class="odds-card-grid">
+        <div class="odds-chip"><span>Picked At</span><strong>${esc(original)}</strong></div>
+        <div class="odds-chip"><span>Current BetRivers</span><strong>--</strong></div>
+        <div class="odds-chip"><span>Best Market</span><strong>--</strong></div>
+        <div class="odds-chip"><span>Oddsmaker</span><strong>${esc(row.sportsbook || "--")}</strong></div>
+        <div class="odds-chip"><span>Move</span><strong>--</strong></div>
+        <div class="odds-chip"><span>Confirm</span><strong class="status-pending">No Feed Match</strong></div>
+      </div>
+      <div class="odds-note">
+        Original chosen odds are shown from the pick row. No matching BetRivers Odds Tracker row has populated yet for this Game + Pick.
       </div>
     `;
   }
@@ -314,17 +339,41 @@ function renderOddsBadge(row){
 
   return `
     <div class="odds-card-grid">
-      <div class="odds-chip"><span>BetRivers</span><strong>${esc(odds.betRiversPrice || odds.odds || "--")}</strong></div>
+      <div class="odds-chip"><span>Picked At</span><strong>${esc(original)}</strong></div>
+      <div class="odds-chip"><span>Current BetRivers</span><strong>${esc(odds.betRiversPrice || odds.odds || "--")}</strong></div>
       <div class="odds-chip"><span>Best Market</span><strong>${esc(odds.bestMarketPrice || odds.bestNumber || "--")}</strong></div>
-      <div class="odds-chip"><span>Best Book</span><strong>${esc(odds.bestBook || odds.sportsbook || "--")}</strong></div>
+      <div class="odds-chip"><span>Oddsmaker</span><strong>${esc(odds.bestBook || row.sportsbook || "--")}</strong></div>
       <div class="odds-chip"><span>Move</span><strong>${esc(odds.lineMovement || "--")}</strong></div>
-      <div class="odds-chip"><span>Cutoff</span><strong>${esc(odds.noBetCutoff || row.noBetCutoff || "--")}</strong></div>
       <div class="odds-chip"><span>Confirm</span><strong class="${cls}">${esc(confirm)}</strong></div>
     </div>
     <div class="odds-note">
+      <strong>Odds Source:</strong> ${esc(sourceLabel(odds))}<br>
       ${esc(odds.notes || "Final number must be confirmed inside the BetRivers Delaware app before placing.")}
       ${odds.timestamp ? `<br><span>Updated: ${esc(odds.timestamp)}</span>` : ""}
-      ${odds.oddsSource ? `<br><span>Source: ${esc(odds.oddsSource)}${odds.backupSource ? " / " + esc(odds.backupSource) : ""}</span>` : ""}
+      ${odds.manualAppCheck ? `<br><span>Manual App Check: ${esc(odds.manualAppCheck)}</span>` : ""}
+      ${odds.noBetCutoff || row.noBetCutoff ? `<br><span>No-Bet Cutoff: ${esc(odds.noBetCutoff || row.noBetCutoff)}</span>` : ""}
+    </div>
+  `;
+}
+
+function tableOddsSummary(row){
+  const odds = findOddsForPick(row);
+  const original = originalOddsLabel(row);
+
+  if(!odds){
+    return `
+      <div class="table-odds-line">
+        <span>Picked at: ${esc(original)}</span><br>
+        <span>BetRivers feed: No match yet</span>
+      </div>
+    `;
+  }
+
+  return `
+    <div class="table-odds-line">
+      <span>Picked at: ${esc(original)}</span><br>
+      <span>BetRivers: ${esc(odds.betRiversPrice || "--")} | Best: ${esc(odds.bestMarketPrice || "--")} ${odds.bestBook ? "@" + esc(odds.bestBook) : ""}</span><br>
+      <span>Source: ${esc(sourceLabel(odds))}</span>
     </div>
   `;
 }
@@ -349,14 +398,14 @@ function pickCard(row, locked=false){
       </div>
 
       <div class="metric-grid">
-        <div class="metric"><strong>${esc(row.odds || row.betRiversPrice || "--")}</strong><span>Listed Odds</span></div>
-        <div class="metric"><strong>${esc(row.units || "--")}</strong><span>Units</span></div>
+        <div class="metric"><strong>${esc(row.odds || "--")}</strong><span>Chosen Odds</span></div>
+        <div class="metric"><strong>${esc(row.sportsbook || "--")}</strong><span>Picked From</span></div>
         <div class="metric"><strong>${esc(row.bestNumber || row.bestMarketPrice || "--")}</strong><span>Best Number</span></div>
         <div class="metric"><strong class="${cls}">${esc(row.status || row.result || "Pending")}</strong><span>Status</span></div>
       </div>
 
       <div class="odds-section">
-        <div class="odds-title">Sportsbook / Odds Feed</div>
+        <div class="odds-title">Original Odds + BetRivers Feed</div>
         ${renderOddsBadge(row)}
       </div>
 
@@ -392,7 +441,7 @@ function renderTable(id, rows, limit = 100){
       <tr>
         <td>${esc(row.date || "")}</td>
         <td>${esc(row.league || row.sport || "")}</td>
-        <td><strong>${esc(row.pick || "")}</strong><br><span style="color:var(--muted)">${esc(row.game || "")}</span></td>
+        <td><strong>${esc(row.pick || "")}</strong><br><span style="color:var(--muted)">${esc(row.game || "")}</span>${tableOddsSummary(row)}</td>
         <td>${esc(row.grade || "")}</td>
         <td class="${cls}">${esc(row.result || row.status || "Pending")}</td>
         <td>${esc(row.profitLoss || "")}</td>
