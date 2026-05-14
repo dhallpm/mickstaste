@@ -1,1 +1,266 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Micks Picks | Command Center</title><link rel="stylesheet" href="./styles.css"></head><body><header class="topbar"><div class="container nav"><a class="brand" href="./index.html"><div class="brand-mark">MP</div><div><div class="brand-title">Micks Picks</div><small>Premium Betting Network</small></div></a><nav class="links"><a href="./index.html" class="active">Home</a><a href="./free-look.html" class="">Free Look</a><a href="./premium.html" class="">VIP Vault</a><a href="./sharp-card.html" class="">Sharp Card</a><a href="./market-heat.html" class="">Market Heat</a><a href="./props-lab.html" class="">Props Lab</a><a href="./results.html" class="">Results</a><a href="./social-studio.html" class="">Social</a><a href="./yahgi.html" class="guru ">♛ Yahgi</a></nav><a class="vip-btn" href="./premium.html">VIP Access</a></div></header><main class="container"><div class="command"><div><section class="hero-row"><div class="hero-card"><div class="hero-content"><div class="kicker">Micks Picks</div><h1>Sharp Plays.<span class="brush">Clean Edges.</span></h1><p class="lead">Premium sports betting analysis built around value, market discipline, matchup edges, injury context, and real results tracking.</p><div class="actions"><a class="btn primary" href="./premium.html">Enter VIP Vault</a><a class="btn" href="./free-look.html">View Free Picks</a><a class="btn cyan" href="./yahgi.html">Yahgi's Guru Picks</a></div></div><div class="badges"><div class="badge">Real Results</div><div class="badge">No Hype</div><div class="badge">Best Number</div><div class="badge">Market Discipline</div></div><div class="floating-board"><div class="float-card"><small>Market Pulse</small><strong class="green">Live</strong><div class="float-chart"></div></div><div class="float-card"><small>Vault Status</small><strong class="gold">Open</strong></div></div></div><div class="live-card"><div class="live-head"><h2>Live Betting Board</h2><div class="live-dot">● LIVE</div></div><p class="copy">Real records, units, and picks load from the connected Micks Picks sheet.</p><div class="metrics"><div class="metric"><strong id="overallRecord">--</strong><span>Overall Record</span></div><div class="metric"><strong id="overallWinRate">--</strong><span>Win Rate</span></div><div class="metric"><strong id="overallTotalUnits">--</strong><span>Total Units</span></div><div class="metric"><strong class="sync-time">--</strong><span>Last Sync</span></div></div><div class="mini-panels"><div class="mini-panel"><small>Access</small><strong class="gold">Public/VIP</strong></div><div class="mini-panel"><small>System</small><strong class="cyan">Synced</strong></div></div></div></section><section class="tiles"><a class="tile free" href="./free-look.html"><h3>Free Look</h3><p>Public picks and quick writeups.</p><ul><li>Basic writeups</li><li>Top plays</li><li>Quick breakdowns</li></ul><span class="mini">View Free Picks</span></a><a class="tile vault" href="./premium.html"><h3>VIP Vault</h3><p>Full analysis, edge %, injury notes, best number, no-bet cutoff.</p><span class="mini">Enter VIP</span></a><a class="tile sharp" href="./sharp-card.html"><h3>Sharp Card</h3><p>Strongest plays and card priority.</p><span class="mini">View Sharp Card</span></a><a class="tile market" href="./market-heat.html"><h3>Market Heat</h3><p>Line movement and value alerts.</p><span class="mini">View Market</span></a><a class="tile props" href="./props-lab.html"><h3>Props Lab</h3><p>Player props, usage, pace, and matchup edges.</p><span class="mini">Open Lab</span></a></section></div><aside class="side-stack"><div class="side-card market-bg"><h3>Live Odds</h3><table class="odds"><thead><tr><th>Game</th><th>Spread</th><th>Total</th><th>ML</th></tr></thead><tbody><tr><td>Sheet</td><td>--</td><td>--</td><td>--</td></tr><tr><td>API</td><td>--</td><td>--</td><td>--</td></tr><tr><td>Manual</td><td>Confirm</td><td>Before</td><td>Betting</td></tr></tbody></table><a class="btn" style="width:100%;margin-top:12px" href="./market-heat.html">Market Heat</a></div><div class="side-card"><h3>CLV Tracker</h3><p class="copy">Connect odds feed for live CLV.</p><div class="chart"></div></div></aside></div><section class="lower"><div class="data-card"><h3>Recent Results</h3><div class="table-wrap"><table class="real"><thead><tr><th>Date</th><th>League</th><th>Pick</th><th>Grade</th><th>Result</th><th>P/L</th><th>Closing #</th></tr></thead><tbody id="resultsBody"><tr><td colspan="7">Loading...</td></tr></tbody></table></div></div><div class="data-card"><h3>Performance</h3><div class="metrics"><div class="metric"><strong id="vipRecord">--</strong><span>VIP Record</span></div><div class="metric"><strong id="freeRecord">--</strong><span>Free Record</span></div><div class="metric"><strong id="vipTotalUnits">--</strong><span>VIP Units</span></div><div class="metric"><strong id="freeTotalUnits">--</strong><span>Free Units</span></div></div></div><div class="data-card"><h3>Sport Performance</h3><div class="bars"><div class="bar"><span>NBA</span><span style="--w:82%"></span><b>--</b></div><div class="bar"><span>MLB</span><span style="--w:62%"></span><b>--</b></div><div class="bar"><span>NHL</span><span style="--w:54%"></span><b>--</b></div><div class="bar"><span>UFC</span><span style="--w:70%"></span><b>--</b></div></div></div></section><section class="tickets"><div class="ticket"><small class="cyan">Free</small><strong>Public Card</strong><span>Open</span></div><div class="ticket"><small class="gold">VIP</small><strong>Vault</strong><span>Premium</span></div><div class="ticket"><small class="purple">Guru</small><strong>Yahgi</strong><span>Network</span></div><div class="ticket"><small class="red">Market</small><strong>Heat</strong><span>Tracker</span></div><div class="ticket"><small class="purple">Props</small><strong>Lab</strong><span>Model</span></div><div class="ticket"><small class="gold">Results</small><strong>Archive</strong><span>Verified</span></div></section></main><footer class="footer"><div class="container">Micks Picks is for entertainment and educational purposes only. Bet responsibly.</div></footer><script src="./app.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Micks Picks Ultra Visual</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+body{font-family:Inter,sans-serif;background:#020305;overflow-x:hidden}
+.glow-gold{box-shadow:0 0 40px rgba(255,215,0,.35)}
+.glow-cyan{box-shadow:0 0 40px rgba(0,255,255,.2)}
+.grid-bg{
+background-image:
+linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+background-size:40px 40px;
+}
+.ticker-track{
+display:flex;
+width:max-content;
+animation:ticker 22s linear infinite;
+}
+@keyframes ticker{
+from{transform:translateX(0)}
+to{transform:translateX(-50%)}
+}
+</style>
+</head>
+<body class="text-white">
+
+<div class="fixed inset-0 z-0 overflow-hidden">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,196,0,0.18),transparent_28%),radial-gradient(circle_at_top_right,rgba(0,229,255,0.14),transparent_25%),radial-gradient(circle_at_bottom,rgba(165,0,255,0.14),transparent_35%)]"></div>
+<div class="absolute inset-0 grid-bg opacity-30"></div>
+<div class="absolute -top-40 left-1/3 w-[700px] h-[700px] bg-yellow-400/20 blur-[160px] rounded-full"></div>
+<div class="absolute top-[30%] right-[-200px] w-[500px] h-[500px] bg-cyan-400/20 blur-[140px] rounded-full"></div>
+<div class="absolute bottom-[-250px] left-[15%] w-[700px] h-[700px] bg-fuchsia-500/20 blur-[180px] rounded-full"></div>
+</div>
+
+<header class="sticky top-0 z-50 border-b border-yellow-400/20 bg-black/60 backdrop-blur-2xl">
+<div class="max-w-[1700px] mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-yellow-300 via-yellow-500 to-amber-700 flex items-center justify-center text-black font-black text-xl glow-gold">
+MP
+</div>
+<div>
+<div class="text-2xl font-black tracking-tight">Micks Picks</div>
+<div class="text-xs uppercase tracking-[0.35em] text-yellow-300/70">Premium Betting Intelligence</div>
+</div>
+</div>
+
+<nav class="hidden xl:flex items-center gap-8 text-sm uppercase tracking-[0.2em] font-bold text-zinc-300">
+<a class="hover:text-yellow-300 transition">Dashboard</a>
+<a class="hover:text-cyan-300 transition">VIP Vault</a>
+<a class="hover:text-fuchsia-300 transition">Market Heat</a>
+<a class="hover:text-yellow-300 transition">Sharp Card</a>
+<a class="hover:text-cyan-300 transition">Props Lab</a>
+<a class="hover:text-fuchsia-300 transition">Yahgi</a>
+</nav>
+
+<button class="px-6 h-12 rounded-xl bg-gradient-to-r from-yellow-300 via-yellow-500 to-amber-700 text-black font-black uppercase tracking-[0.15em] glow-gold hover:scale-105 transition">
+Enter VIP
+</button>
+</div>
+</header>
+
+<section class="relative z-10 max-w-[1700px] mx-auto px-6 lg:px-10 pt-10 lg:pt-14">
+<div class="grid lg:grid-cols-[1.2fr_0.8fr] gap-8">
+
+<div class="relative overflow-hidden rounded-[36px] border border-yellow-400/20 bg-gradient-to-br from-zinc-950/90 to-zinc-900/70 p-8 lg:p-12 min-h-[760px]">
+
+<div class="absolute top-8 right-8 w-[260px] rounded-3xl border border-cyan-400/20 bg-black/50 backdrop-blur-2xl p-5 glow-cyan">
+<div class="text-xs uppercase tracking-[0.25em] text-cyan-300 font-bold">Live Market Pulse</div>
+
+<div class="mt-4 flex items-end gap-2 h-24">
+<div class="flex-1 rounded-t-xl bg-cyan-300 h-[45%]"></div>
+<div class="flex-1 rounded-t-xl bg-cyan-300 h-[75%]"></div>
+<div class="flex-1 rounded-t-xl bg-cyan-300 h-[55%]"></div>
+<div class="flex-1 rounded-t-xl bg-cyan-300 h-[95%]"></div>
+<div class="flex-1 rounded-t-xl bg-cyan-300 h-[65%]"></div>
+</div>
+
+<div class="mt-5 flex items-center justify-between text-sm">
+<span class="text-zinc-400">Signal Strength</span>
+<span class="text-cyan-300 font-black">HIGH</span>
+</div>
+</div>
+
+<div class="relative z-10 max-w-[780px] pt-12">
+<div class="inline-flex items-center gap-4 px-5 h-12 rounded-full border border-yellow-400/20 bg-black/40 backdrop-blur-xl text-sm uppercase tracking-[0.35em] text-yellow-300 font-black">
+<div class="w-2 h-2 rounded-full bg-yellow-300 animate-pulse"></div>
+Premium Sportsbook Intelligence
+</div>
+
+<h1 class="mt-10 text-[5rem] lg:text-[8rem] leading-[0.85] font-black tracking-[-0.08em] uppercase">
+Sports<br>
+Betting<br>
+<span class="bg-gradient-to-r from-yellow-200 via-yellow-400 to-amber-700 text-transparent bg-clip-text italic">
+Command Center
+</span>
+</h1>
+
+<p class="mt-10 text-xl leading-relaxed text-zinc-300 max-w-[700px]">
+A cinematic AI-powered betting dashboard experience built with layered sportsbook visuals, market heat overlays, floating data systems, sharp-money aesthetics, premium VIP energy, and next-generation analytics presentation.
+</p>
+
+<div class="mt-10 flex flex-wrap gap-5">
+<button class="h-16 px-9 rounded-2xl bg-gradient-to-r from-yellow-300 via-yellow-500 to-amber-700 text-black font-black uppercase tracking-[0.18em] glow-gold hover:scale-105 transition">
+Enter VIP Vault
+</button>
+
+<button class="h-16 px-9 rounded-2xl border border-cyan-400/30 bg-cyan-400/10 backdrop-blur-xl text-cyan-300 font-black uppercase tracking-[0.18em] hover:bg-cyan-400/20 transition">
+View Market Heat
+</button>
+</div>
+
+<div class="mt-14 grid grid-cols-2 lg:grid-cols-4 gap-5">
+<div class="rounded-3xl border border-white/10 bg-black/40 backdrop-blur-2xl p-5">
+<div class="text-4xl font-black">92%</div>
+<div class="mt-2 text-xs uppercase tracking-[0.3em] text-zinc-400 font-bold">Market Signal</div>
+</div>
+
+<div class="rounded-3xl border border-white/10 bg-black/40 backdrop-blur-2xl p-5">
+<div class="text-4xl font-black">+48u</div>
+<div class="mt-2 text-xs uppercase tracking-[0.3em] text-zinc-400 font-bold">Monthly Units</div>
+</div>
+
+<div class="rounded-3xl border border-white/10 bg-black/40 backdrop-blur-2xl p-5">
+<div class="text-4xl font-black">LIVE</div>
+<div class="mt-2 text-xs uppercase tracking-[0.3em] text-zinc-400 font-bold">Steam Detection</div>
+</div>
+
+<div class="rounded-3xl border border-white/10 bg-black/40 backdrop-blur-2xl p-5">
+<div class="text-4xl font-black">24/7</div>
+<div class="mt-2 text-xs uppercase tracking-[0.3em] text-zinc-400 font-bold">Sharp Tracking</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="grid gap-6">
+
+<div class="rounded-[32px] border border-cyan-400/20 bg-gradient-to-br from-zinc-950/95 to-cyan-950/30 p-7">
+<div class="flex items-center justify-between">
+<div>
+<div class="text-xs uppercase tracking-[0.35em] text-cyan-300 font-black">Live Board</div>
+<div class="mt-2 text-3xl font-black uppercase tracking-tight">Market Pulse</div>
+</div>
+
+<div class="flex items-center gap-3 rounded-full px-4 h-12 bg-cyan-400/10 border border-cyan-400/20 text-cyan-300 font-black uppercase tracking-[0.2em] text-xs">
+<div class="w-2 h-2 rounded-full bg-cyan-300 animate-pulse"></div>
+Live
+</div>
+</div>
+
+<div class="mt-8 space-y-4">
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-zinc-300 uppercase tracking-[0.15em] font-bold text-sm">Sharp Money</span>
+<span class="font-black">92%</span>
+</div>
+<div class="h-4 rounded-full bg-white/5 overflow-hidden">
+<div class="h-full rounded-full bg-cyan-400 w-[92%]"></div>
+</div>
+</div>
+
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-zinc-300 uppercase tracking-[0.15em] font-bold text-sm">Public Heat</span>
+<span class="font-black">68%</span>
+</div>
+<div class="h-4 rounded-full bg-white/5 overflow-hidden">
+<div class="h-full rounded-full bg-yellow-400 w-[68%]"></div>
+</div>
+</div>
+
+<div>
+<div class="flex justify-between mb-2">
+<span class="text-zinc-300 uppercase tracking-[0.15em] font-bold text-sm">Steam Activity</span>
+<span class="font-black">84%</span>
+</div>
+<div class="h-4 rounded-full bg-white/5 overflow-hidden">
+<div class="h-full rounded-full bg-fuchsia-400 w-[84%]"></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="grid grid-cols-2 gap-5">
+<div class="rounded-[28px] border border-white/10 bg-gradient-to-br from-yellow-400/20 to-yellow-900/10 p-6">
+<div class="text-xs uppercase tracking-[0.35em] font-black text-yellow-300">Module</div>
+<div class="mt-5 text-3xl font-black uppercase tracking-tight">VIP Vault</div>
+<p class="mt-4 text-zinc-300 text-sm leading-relaxed">Gold-tier releases</p>
+</div>
+
+<div class="rounded-[28px] border border-white/10 bg-gradient-to-br from-cyan-400/20 to-cyan-900/10 p-6">
+<div class="text-xs uppercase tracking-[0.35em] font-black text-cyan-300">Module</div>
+<div class="mt-5 text-3xl font-black uppercase tracking-tight">Market Heat</div>
+<p class="mt-4 text-zinc-300 text-sm leading-relaxed">Steam + movement</p>
+</div>
+</div>
+
+<div class="rounded-[32px] border border-yellow-400/20 bg-gradient-to-br from-zinc-950/95 to-yellow-950/20 p-7">
+<div class="flex items-center justify-between">
+<div>
+<div class="text-xs uppercase tracking-[0.35em] text-yellow-300 font-black">Tracking</div>
+<div class="mt-2 text-3xl font-black uppercase tracking-tight">Odds Matrix</div>
+</div>
+
+<div class="text-yellow-300 text-5xl font-black opacity-20">24</div>
+</div>
+
+<div class="mt-8 space-y-4">
+<div class="flex items-center justify-between rounded-2xl border border-white/5 bg-black/40 px-5 py-4">
+<div>
+<div class="text-xl font-black uppercase">NBA</div>
+<div class="text-xs uppercase tracking-[0.25em] text-zinc-500 font-bold mt-1">LIVE</div>
+</div>
+
+<div class="text-2xl font-black text-green-400">+7.2%</div>
+</div>
+
+<div class="flex items-center justify-between rounded-2xl border border-white/5 bg-black/40 px-5 py-4">
+<div>
+<div class="text-xl font-black uppercase">UFC</div>
+<div class="text-xs uppercase tracking-[0.25em] text-zinc-500 font-bold mt-1">EDGE</div>
+</div>
+
+<div class="text-2xl font-black text-green-400">+11.4%</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="relative z-10 mt-10 pb-20 overflow-hidden">
+<div class="ticker border-y border-yellow-400/20 bg-black/40 backdrop-blur-xl">
+<div class="ticker-track py-5 text-sm uppercase tracking-[0.25em] font-black text-yellow-100">
+<div class="flex gap-16 pr-16">
+<span>VIP VAULT</span>
+<span>MARKET HEAT</span>
+<span>SHARP CARD</span>
+<span>PROPS LAB</span>
+<span>YAHGI</span>
+<span>STEAM DETECTION</span>
+<span>LIVE BOARD</span>
+<span>ODDS MATRIX</span>
+</div>
+
+<div class="flex gap-16 pr-16">
+<span>VIP VAULT</span>
+<span>MARKET HEAT</span>
+<span>SHARP CARD</span>
+<span>PROPS LAB</span>
+<span>YAHGI</span>
+<span>STEAM DETECTION</span>
+<span>LIVE BOARD</span>
+<span>ODDS MATRIX</span>
+</div>
+</div>
+</div>
+</section>
+
+</body>
+</html>
