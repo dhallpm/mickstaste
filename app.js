@@ -324,13 +324,35 @@ function renderTable(id, rows, limit = 100){
   }).join("");
 }
 
+
 function renderOddsLayer(rows){
   const el = document.getElementById("oddsRows");
+  const status = document.getElementById("oddsFeedStatus");
+  if(!el && !status) return;
+
+  const usable = dedupeRows(rows).filter(r => hasText(r.game) || hasText(r.pick));
+
+  const onlyExample = usable.length === 1 && clean(usable[0].date).includes("example");
+  const empty = usable.length === 0;
+
+  if(status){
+    if(empty){
+      status.innerHTML = `<div class="empty"><strong>Odds tracker connected, but no rows are populated.</strong><br>The Google Sheet exists, but the BetRivers Odds Tracker tab has no live rows yet. Run the Apps Script odds trigger after adding the real API key.</div>`;
+    } else if(onlyExample){
+      status.innerHTML = `<div class="empty"><strong>Odds tracker connected, but live API feed has not populated yet.</strong><br>Your BetRivers Odds Tracker currently contains only the example row. In Google Sheets, run <strong>setupMicksPicksOddsTrigger()</strong> after storing the API key as <strong>OPTICODDS_API_KEY</strong> in Apps Script Properties.</div>`;
+    } else {
+      status.innerHTML = `<div class="notice"><strong>Odds tracker live:</strong> ${usable.length} row(s) loaded from BetRivers Odds Tracker.</div>`;
+    }
+  }
+
   if(!el) return;
 
-  const usable = dedupeRows(rows).filter(r => hasText(r.game) || hasText(r.pick)).sort(byDateDesc).slice(0, 30);
+  if(empty){
+    el.innerHTML = '<tr><td colspan="8">No odds rows loaded from BetRivers Odds Tracker.</td></tr>';
+    return;
+  }
 
-  el.innerHTML = usable.length ? usable.map(row => {
+  el.innerHTML = usable.sort(byDateDesc).slice(0, 30).map(row => {
     const confirm = row.confirmationStatus || row.action || "Manual Confirm";
     const cls = resultClass(confirm);
     return `
@@ -339,13 +361,13 @@ function renderOddsLayer(rows){
         <td>${esc(row.league || row.sport || "")}</td>
         <td>${esc(row.game || "")}</td>
         <td><strong>${esc(row.pick || "")}</strong><br><span style="color:var(--muted)">${esc(row.market || row.betType || "")}</span></td>
-        <td>${esc(row.betRiversPrice || "--")}</td>
-        <td>${esc(row.bestMarketPrice || "--")}<br><span style="color:var(--muted)">${esc(row.bestBook || "")}</span></td>
+        <td>${esc(row.betRiversPrice || row.odds || "--")}</td>
+        <td>${esc(row.bestMarketPrice || row.bestNumber || "--")}<br><span style="color:var(--muted)">${esc(row.bestBook || "")}</span></td>
         <td>${esc(row.lineMovement || "--")}</td>
         <td class="${cls}">${esc(confirm)}</td>
       </tr>
     `;
-  }).join("") : '<tr><td colspan="8">No odds rows loaded. Check BetRivers Odds Tracker sheet.</td></tr>';
+  }).join("");
 }
 
 async function boot(){
