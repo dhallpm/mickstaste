@@ -1,15 +1,17 @@
 
 /*
-  STEP 9 ACTUAL SHEET METRICS FIX
-  Real sheet setup:
-  Active Picks = active card only
-  Results Archive = mixed Free + VIP results
-  VIP Archive = VIP-only results
+  STEP 10 NO DOUBLED PICKS
+  Actual sheet structure:
+  - Active Picks: active/current card only
+  - Results Archive: overall site history
+  - VIP Archive: VIP-only history
 
-  Fixes:
-  - Dedupes by league/game/pick instead of date because date formats differ between tabs.
-  - Counts Win/Won and Loss/Lost correctly.
-  - Forces visible page metrics to correct tier even if old HTML IDs remain.
+  Display rules:
+  - Dashboard = Results Archive only
+  - Results page = Results Archive only
+  - VIP Vault = VIP Archive only
+  - Free Look = Free/Public rows from Results Archive only
+  - No frontend merging of Results Archive + VIP Archive, preventing doubled picks
 */
 
 const SHEET_ID = "15txBM8qsck7f0ZA_za7xYEykBxKpuq0no3x7yHcKNeE";
@@ -149,12 +151,12 @@ function isFree(row){
 
 function isWin(row){
   const r = clean(row.result);
-  return r === "win" || r === "won" || r.includes(" win") || r.includes("won");
+  return r === "win" || r === "won" || r.includes("win") || r.includes("won");
 }
 
 function isLoss(row){
   const r = clean(row.result);
-  return r === "loss" || r === "lost" || r.includes(" loss") || r.includes("lost");
+  return r === "loss" || r === "lost" || r.includes("loss") || r.includes("lost");
 }
 
 function isPush(row){
@@ -174,7 +176,6 @@ function isActive(row){
   return true;
 }
 
-// Critical fix: do NOT include date. Results Archive and VIP Archive use different date formats.
 function rowKey(row){
   return [
     row.league || row.sport || "",
@@ -237,7 +238,6 @@ function writeStats(prefix, stats){
   setText(prefix + "Count", stats.count);
 }
 
-// Critical fix: pages that still have old overall IDs will still display correct tier.
 function writeVisibleStatsForPage(page, overallStats, vipStats, freeStats){
   if(page === "premium.html" || page === "sharp-card.html"){
     writeStats("vip", vipStats);
@@ -319,7 +319,7 @@ function renderTable(id, rows, limit = 100){
   const el = document.getElementById(id);
   if(!el) return;
 
-  const usable = rows.filter(r => hasText(r.pick)).sort(byDateDesc).slice(0, limit);
+  const usable = dedupeRows(rows).filter(r => hasText(r.pick)).sort(byDateDesc).slice(0, limit);
 
   if(!usable.length){
     el.innerHTML = '<tr><td colspan="7">No results loaded.</td></tr>';
@@ -346,7 +346,7 @@ function renderOddsLayer(rows){
   const el = document.getElementById("oddsRows");
   if(!el) return;
 
-  const usable = rows.filter(r => hasText(r.pick)).slice(0, 12);
+  const usable = dedupeRows(rows).filter(r => hasText(r.pick)).slice(0, 12);
 
   el.innerHTML = usable.length ? usable.map(row => `
     <tr>
@@ -366,17 +366,18 @@ async function boot(){
     const page = currentPage();
 
     const activeRows = await getRows(ACTIVE_GID, "Active Picks");
-    const resultsRows = await getRows(RESULTS_ARCHIVE_GID, "Results Archive");
-    const vipArchiveRows = await getRows(VIP_ARCHIVE_GID, "VIP Archive").catch(() => []);
+    const resultsRows = dedupeRows(await getRows(RESULTS_ARCHIVE_GID, "Results Archive"));
+    const vipArchiveRows = dedupeRows(await getRows(VIP_ARCHIVE_GID, "VIP Archive").catch(() => []));
 
-    const allResults = dedupeRows(resultsRows.concat(vipArchiveRows));
+    // Critical rule: no combining result tabs for display or metrics.
+    const overallResults = resultsRows;
+    const vipResults = vipArchiveRows;
     const freeResults = dedupeRows(resultsRows.filter(isFree));
-    const vipResults = dedupeRows(vipArchiveRows.concat(resultsRows.filter(isVIP)));
 
     const freeActiveRows = activeRows.filter(isFree);
     const vipActiveRows = activeRows.filter(isVIP);
 
-    const overallStats = calcStats(allResults, allResults);
+    const overallStats = calcStats(overallResults, overallResults);
     const vipStats = calcStats(vipResults, vipResults.concat(vipActiveRows));
     const freeStats = calcStats(freeResults, freeResults.concat(freeActiveRows));
 
@@ -389,20 +390,20 @@ async function boot(){
       renderGrid("freePicksGrid", freeActiveRows, true);
       renderTable("freeArchiveBody", freeResults);
     } else if(page === "results.html"){
-      renderTable("resultsBody", allResults);
+      renderTable("resultsBody", overallResults);
     } else if(page === "market-heat.html"){
       renderOddsLayer(activeRows.length ? activeRows : resultsRows);
     } else if(page === "sharp-card.html"){
       renderGrid("vipPicksGrid", vipActiveRows, false);
     } else if(page === "index.html" || page === ""){
-      renderTable("dashboardResultsBody", allResults, 12);
+      renderTable("dashboardResultsBody", overallResults, 12);
     }
 
     document.querySelectorAll(".sync-time").forEach(el => {
       el.textContent = new Date().toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
     });
 
-    console.log("Micks Picks stats:", { overallStats, vipStats, freeStats });
+    console.log("Micks Picks no-duplicate stats:", { overallStats, vipStats, freeStats });
   }catch(e){
     document.querySelectorAll(".sheet-area").forEach(el => {
       el.innerHTML = '<div class="empty">Sheet data could not load. Make sure the Google Sheet is shared as Viewer or published to web.</div>';
