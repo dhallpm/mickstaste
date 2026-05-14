@@ -1,6 +1,6 @@
 
 window.MICKS_PICKS_CONFIG = {
-  GOATCOUNTER_URL: "https://REPLACE-WITH-YOUR-GOATCOUNTER-SITE.goatcounter.com/count",
+  GOATCOUNTER_URL: "https://mickspicks.goatcounter.com/count",
   ODDS_TRACKER_GID: "728496321",
   ODDS_FEED_INSTALL_GID: "786241903",
   API_CONFIG_GID: "209681583"
