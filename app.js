@@ -121,13 +121,40 @@ function hasText(value){
   return String(value || "").trim().length > 0;
 }
 
+function tierText(row){
+  return `${row.access || ""} ${row.featured || ""}`.toLowerCase().trim();
+}
+
 function isVIP(row){
-  const access = `${row.access || ""} ${row.featured || ""}`.toLowerCase();
-  return access.includes("vip") || access.includes("featured") || access.includes("yes") || access.includes("premium");
+  const t = tierText(row);
+  return (
+    t.includes("vip") ||
+    t.includes("premium") ||
+    t.includes("member") ||
+    t.includes("featured") ||
+    row.featured.toLowerCase() === "yes"
+  );
 }
 
 function isFree(row){
-  return !isVIP(row);
+  const t = tierText(row);
+
+  // Explicit free/public rows are always free.
+  if(t.includes("free") || t.includes("public")) return true;
+
+  // Rows explicitly marked VIP/premium/featured are never free.
+  if(isVIP(row)) return false;
+
+  // Blank Access rows default to Free so public picks still show.
+  return true;
+}
+
+function filterClosed(rows){
+  return rows.filter(r => hasText(r.pick) && (isClosed(r) || hasText(r.result)));
+}
+
+function filterActive(rows){
+  return rows.filter(isActive);
 }
 
 function isClosed(row){
@@ -291,18 +318,37 @@ async function boot(){
     const archiveRows = await getRows(VIP_ARCHIVE_GID).catch(() => []);
 
     const allRows = activeRows.concat(archiveRows);
-    const freeRows = activeRows.filter(isFree);
-    const vipRows = activeRows.filter(isVIP);
-    const closedRows = allRows.filter(r => isClosed(r) || hasText(r.result));
 
-    updateStats(allRows, "overall");
-    updateStats(vipRows.concat(archiveRows.filter(isVIP)), "vip");
-    updateStats(freeRows, "free");
+    // True separation by tier.
+    const freeActiveRows = activeRows.filter(isFree);
+    const vipActiveRows = activeRows.filter(isVIP);
 
-    renderGrid("freePicksGrid", freeRows, true);
-    renderGrid("vipPicksGrid", vipRows, false);
-    renderTable("resultsBody", closedRows.length ? closedRows : allRows);
-    renderTable("vipArchiveBody", archiveRows.length ? archiveRows : vipRows);
+    const freeArchiveRows = archiveRows.filter(isFree);
+    const vipArchiveRows = archiveRows.filter(isVIP);
+
+    const freeAllRows = freeActiveRows.concat(freeArchiveRows);
+    const vipAllRows = vipActiveRows.concat(vipArchiveRows);
+
+    const overallClosedRows = filterClosed(allRows);
+    const freeClosedRows = filterClosed(freeAllRows);
+    const vipClosedRows = filterClosed(vipAllRows);
+
+    updateStats(overallClosedRows.length ? overallClosedRows : allRows, "overall");
+    updateStats(vipClosedRows.length ? vipClosedRows : vipAllRows, "vip");
+    updateStats(freeClosedRows.length ? freeClosedRows : freeAllRows, "free");
+
+    renderGrid("freePicksGrid", freeActiveRows, true);
+    renderGrid("vipPicksGrid", vipActiveRows, false);
+
+    // Overall Results page shows everything closed.
+    renderTable("resultsBody", overallClosedRows.length ? overallClosedRows : allRows);
+
+    // VIP Archive page/section shows VIP only.
+    renderTable("vipArchiveBody", vipClosedRows.length ? vipClosedRows : vipAllRows);
+
+    // Free results table if a page adds it later.
+    renderTable("freeArchiveBody", freeClosedRows.length ? freeClosedRows : freeAllRows);
+
     renderOddsLayer(activeRows);
 
     document.querySelectorAll(".sync-time").forEach(el => {
