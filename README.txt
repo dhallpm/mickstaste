@@ -1,8 +1,15 @@
-UPLOAD INSTRUCTIONS
+MICKS PICKS ULTRA ASSET VERSION
 
-1. Extract zip
-2. Upload ALL files to GitHub repo root
-3. Wait 1-2 minutes
-4. Hard refresh browser
+This page uses your existing GitHub /assets images:
+- micks-full-dashboard.png
+- micks-hero-lounge.png
+- ultra-dashboard.png
+- micks-vip-vault.png
+- micks-market-heat.png
+- micks-props-lab.png
+- micks-free-look.png
+- micks-results-archive.png
+- premium-lounge.png
 
-This is a standalone ultra-visual landing page.
+Upload index.html to the repo root.
+Keep the /assets folder exactly where it is.
