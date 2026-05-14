@@ -1,19 +1,16 @@
 
 /*
-  MICKS PICKS SHEET MAPPING FIX
-  Expected saved headers:
-  Date, Sport, League, Game, Pick, Bet Type, Odds, Sportsbook, Grade, Units,
-  Best Number, No Bet Cutoff, Implied Probability, EV Edge, Confidence, Status,
-  Result, Profit/Loss, Writeup, Market Notes, Injury Notes, Source Verification,
-  Posted Time, Access, Full Analysis
-
-  Also supports:
-  Featured, Closing #, Closing Number, BetRivers Price, Best Market Price,
-  Line Movement, Confirmation Status, Release Time
+  STEP 7 REAL SHEET LOGIC
+  Actual sheet tabs found:
+  - Active Picks: headers only right now, used only for active cards
+  - Results Archive: mixed Free + VIP results
+  - VIP Archive: VIP-only results
 */
 
 const SHEET_ID = "15txBM8qsck7f0ZA_za7xYEykBxKpuq0no3x7yHcKNeE";
+
 const ACTIVE_GID = "0";
+const RESULTS_ARCHIVE_GID = "1579113575";
 const VIP_ARCHIVE_GID = "210503117";
 
 const HEADER_ALIASES = {
@@ -47,8 +44,7 @@ const HEADER_ALIASES = {
   betRiversPrice: ["BetRivers Price", "BetRivers", "Local Price"],
   bestMarketPrice: ["Best Market Price", "Best Market"],
   lineMovement: ["Line Movement", "Movement"],
-  confirmationStatus: ["Confirmation Status", "Confirmed", "Confirmation"],
-  releaseTime: ["Release Time", "Unlock Time"]
+  confirmationStatus: ["Confirmation Status", "Confirmed", "Confirmation"]
 };
 
 function csvUrl(gid){
@@ -72,14 +68,10 @@ function parseCSV(text){
 }
 
 function normalizeHeader(h){
-  return String(h || "")
-    .trim()
-    .toLowerCase()
-    .replace(/\s+/g, " ")
-    .replace(/[^\w#/% ]/g, "");
+  return String(h || "").trim().toLowerCase().replace(/\s+/g, " ").replace(/[^\w#/% ]/g, "");
 }
 
-function makeObjects(rows){
+function makeObjects(rows, sourceTab){
   if(!rows.length) return [];
   const headers = rows[0].map(h => String(h || "").trim());
 
@@ -87,7 +79,7 @@ function makeObjects(rows){
     const raw = {};
     headers.forEach((h,i) => raw[h] = String(r[i] || "").trim());
 
-    const normalized = { _raw: raw };
+    const normalized = { _raw: raw, _sourceTab: sourceTab };
     for(const [key, aliases] of Object.entries(HEADER_ALIASES)){
       const realHeader = headers.find(h => aliases.some(alias => normalizeHeader(alias) === normalizeHeader(h)));
       normalized[key] = realHeader ? String(raw[realHeader] || "").trim() : "";
@@ -96,19 +88,16 @@ function makeObjects(rows){
   }).filter(r => Object.values(r._raw || {}).some(v => String(v || "").trim() !== ""));
 }
 
-async function getRows(gid){
+async function getRows(gid, sourceTab){
   const res = await fetch(csvUrl(gid), { cache:"no-store" });
   const text = await res.text();
   if(text.toLowerCase().includes("<html")) throw new Error("CSV unavailable");
-  return makeObjects(parseCSV(text));
+  return makeObjects(parseCSV(text), sourceTab);
 }
 
 function esc(s){
   return String(s || "").replace(/[&<>"]/g, m => ({
-    "&":"&amp;",
-    "<":"&lt;",
-    ">":"&gt;",
-    '"':"&quot;"
+    "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;"
   }[m]));
 }
 
@@ -126,50 +115,60 @@ function tierText(row){
 }
 
 function isVIP(row){
+  if(row._sourceTab === "VIP Archive") return true;
   const t = tierText(row);
   return (
     t.includes("vip") ||
     t.includes("premium") ||
     t.includes("member") ||
     t.includes("featured") ||
-    row.featured.toLowerCase() === "yes"
+    String(row.featured || "").toLowerCase() === "yes"
   );
 }
 
 function isFree(row){
+  if(row._sourceTab === "VIP Archive") return false;
   const t = tierText(row);
-
-  // Explicit free/public rows are always free.
   if(t.includes("free") || t.includes("public")) return true;
-
-  // Rows explicitly marked VIP/premium/featured are never free.
   if(isVIP(row)) return false;
-
-  // Blank Access rows default to Free so public picks still show.
   return true;
-}
-
-function filterClosed(rows){
-  return rows.filter(r => hasText(r.pick) && (isClosed(r) || hasText(r.result)));
-}
-
-function filterActive(rows){
-  return rows.filter(isActive);
 }
 
 function isClosed(row){
   const result = String(row.result || "").toLowerCase();
-  return ["win","loss","push"].some(x => result.includes(x));
+  const status = String(row.status || "").toLowerCase();
+  return ["win","loss","push"].some(x => result.includes(x) || status.includes("closed"));
 }
 
 function isActive(row){
   const status = String(row.status || "").toLowerCase();
   const result = String(row.result || "").toLowerCase();
-
+  if(!hasText(row.pick)) return false;
   if(["void","cancelled","canceled","delete","removed"].some(x => status.includes(x))) return false;
   if(["win","loss","push"].some(x => result.includes(x))) return false;
+  if(status.includes("closed")) return false;
+  return true;
+}
 
-  return hasText(row.pick);
+function rowKey(row){
+  return [
+    row.date || "",
+    row.league || row.sport || "",
+    row.game || "",
+    row.pick || ""
+  ].map(x => String(x).trim().toLowerCase()).join("|");
+}
+
+function dedupeRows(rows){
+  const seen = new Set();
+  const out = [];
+  for(const row of rows){
+    const key = rowKey(row);
+    if(!key || seen.has(key)) continue;
+    seen.add(key);
+    out.push(row);
+  }
+  return out;
 }
 
 function setText(id, value){
@@ -184,19 +183,18 @@ function resultClass(value){
   return "status-pending";
 }
 
-function updateStats(rows, prefix){
+function updateStats(rows, prefix, countRows = rows){
   const graded = rows.filter(r => hasText(r.pick) && /win|loss/i.test(r.result || ""));
   const wins = graded.filter(r => /win/i.test(r.result || "")).length;
   const losses = graded.filter(r => /loss/i.test(r.result || "")).length;
   const total = wins + losses;
-  const units = rows
-    .filter(r => hasText(r.pick))
-    .reduce((sum, r) => sum + toNumber(r.profitLoss), 0);
+  const units = graded.reduce((sum, r) => sum + toNumber(r.profitLoss), 0);
+  const count = countRows.filter(r => hasText(r.pick)).length;
 
   setText(prefix + "Record", total ? `${wins}-${losses}` : "--");
   setText(prefix + "WinRate", total ? `${Math.round((wins / total) * 100)}%` : "--");
-  setText(prefix + "TotalUnits", units ? `${units > 0 ? "+" : ""}${units.toFixed(2)}u` : "--");
-  setText(prefix + "Count", rows.filter(r => hasText(r.pick)).length || "--");
+  setText(prefix + "TotalUnits", total || units ? `${units > 0 ? "+" : ""}${units.toFixed(2)}u` : "--");
+  setText(prefix + "Count", count || "--");
 }
 
 function publicWriteup(row){
@@ -242,13 +240,6 @@ function pickCard(row, locked=false){
       </div>
 
       <p style="color:#e7dcc4;line-height:1.55;margin-top:14px">${esc(write)}</p>
-
-      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;color:var(--muted);font-size:11px;text-transform:uppercase;font-weight:900">
-        ${row.sportsbook ? `<span>Book: ${esc(row.sportsbook)}</span>` : ""}
-        ${row.evEdge ? `<span>EV: ${esc(row.evEdge)}</span>` : ""}
-        ${row.confidence ? `<span>Confidence: ${esc(row.confidence)}</span>` : ""}
-        ${row.postedTime ? `<span>Posted: ${esc(row.postedTime)}</span>` : ""}
-      </div>
     </div>
   `;
 }
@@ -260,14 +251,14 @@ function renderGrid(id, rows, locked=false){
   const activeRows = rows.filter(isActive).slice(0, 12);
   el.innerHTML = activeRows.length
     ? activeRows.map(row => pickCard(row, locked)).join("")
-    : `<div class="empty">No active picks loaded right now. Check the sheet Access, Status, and Result columns.</div>`;
+    : `<div class="empty">No active picks loaded right now. Active Picks tab currently has no pick rows.</div>`;
 }
 
 function renderTable(id, rows){
   const el = document.getElementById(id);
   if(!el) return;
 
-  const usable = rows.filter(r => hasText(r.pick)).slice(0, 80);
+  const usable = rows.filter(r => hasText(r.pick)).slice(0, 100);
 
   if(!usable.length){
     el.innerHTML = '<tr><td colspan="7">No results loaded.</td></tr>';
@@ -280,10 +271,7 @@ function renderTable(id, rows){
       <tr>
         <td>${esc(row.date || "")}</td>
         <td>${esc(row.league || row.sport || "")}</td>
-        <td>
-          <strong>${esc(row.pick || "")}</strong><br>
-          <span style="color:var(--muted)">${esc(row.game || "")}</span>
-        </td>
+        <td><strong>${esc(row.pick || "")}</strong><br><span style="color:var(--muted)">${esc(row.game || "")}</span></td>
         <td>${esc(row.grade || "")}</td>
         <td class="${cls}">${esc(row.result || row.status || "Pending")}</td>
         <td>${esc(row.profitLoss || "")}</td>
@@ -314,42 +302,29 @@ function renderOddsLayer(rows){
 
 async function boot(){
   try{
-    const activeRows = await getRows(ACTIVE_GID);
-    const archiveRows = await getRows(VIP_ARCHIVE_GID).catch(() => []);
+    const activeRows = await getRows(ACTIVE_GID, "Active Picks");
+    const resultsRows = await getRows(RESULTS_ARCHIVE_GID, "Results Archive");
+    const vipArchiveRows = await getRows(VIP_ARCHIVE_GID, "VIP Archive").catch(() => []);
 
-    const allRows = activeRows.concat(archiveRows);
+    const allResults = dedupeRows(resultsRows.concat(vipArchiveRows));
+    const freeResults = dedupeRows(resultsRows.filter(isFree));
+    const vipResults = dedupeRows(vipArchiveRows.concat(resultsRows.filter(isVIP)));
 
-    // True separation by tier.
     const freeActiveRows = activeRows.filter(isFree);
     const vipActiveRows = activeRows.filter(isVIP);
 
-    const freeArchiveRows = archiveRows.filter(isFree);
-    const vipArchiveRows = archiveRows.filter(isVIP);
-
-    const freeAllRows = freeActiveRows.concat(freeArchiveRows);
-    const vipAllRows = vipActiveRows.concat(vipArchiveRows);
-
-    const overallClosedRows = filterClosed(allRows);
-    const freeClosedRows = filterClosed(freeAllRows);
-    const vipClosedRows = filterClosed(vipAllRows);
-
-    updateStats(overallClosedRows.length ? overallClosedRows : allRows, "overall");
-    updateStats(vipClosedRows.length ? vipClosedRows : vipAllRows, "vip");
-    updateStats(freeClosedRows.length ? freeClosedRows : freeAllRows, "free");
+    updateStats(allResults, "overall", allResults);
+    updateStats(vipResults, "vip", vipResults.concat(vipActiveRows));
+    updateStats(freeResults, "free", freeResults.concat(freeActiveRows));
 
     renderGrid("freePicksGrid", freeActiveRows, true);
     renderGrid("vipPicksGrid", vipActiveRows, false);
 
-    // Overall Results page shows everything closed.
-    renderTable("resultsBody", overallClosedRows.length ? overallClosedRows : allRows);
+    renderTable("resultsBody", allResults);
+    renderTable("vipArchiveBody", vipResults);
+    renderTable("freeArchiveBody", freeResults);
 
-    // VIP Archive page/section shows VIP only.
-    renderTable("vipArchiveBody", vipClosedRows.length ? vipClosedRows : vipAllRows);
-
-    // Free results table if a page adds it later.
-    renderTable("freeArchiveBody", freeClosedRows.length ? freeClosedRows : freeAllRows);
-
-    renderOddsLayer(activeRows);
+    renderOddsLayer(activeRows.length ? activeRows : resultsRows);
 
     document.querySelectorAll(".sync-time").forEach(el => {
       el.textContent = new Date().toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
