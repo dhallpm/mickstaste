@@ -1006,3 +1006,112 @@ tbody tr:hover{
 .yahgi-clean-page .yahgi-card{
   display:block !important;
 }
+
+
+/* STEP 21 — PAGE BACKDROPS WIRED
+   Each HTML page gets its own cinematic branded background.
+   Upload all PNG files with the HTML/CSS files to GitHub root.
+*/
+
+body[class*="page-bg-"]{
+  background-color:#07080d !important;
+  background-size:cover !important;
+  background-position:center top !important;
+  background-attachment:fixed !important;
+  background-repeat:no-repeat !important;
+}
+
+body[class*="page-bg-"]::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:-2;
+  background:
+    linear-gradient(90deg,rgba(5,6,10,.92),rgba(5,6,10,.70) 42%,rgba(5,6,10,.86)),
+    linear-gradient(180deg,rgba(5,6,10,.42),rgba(5,6,10,.95) 82%);
+}
+
+body[class*="page-bg-"]::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:-1;
+  background:
+    radial-gradient(circle at 18% 18%,rgba(246,195,74,.18),transparent 30%),
+    radial-gradient(circle at 86% 22%,rgba(34,230,255,.12),transparent 28%),
+    linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.018) 1px, transparent 1px);
+  background-size:auto,auto,46px 46px,46px 46px;
+  mix-blend-mode:screen;
+}
+
+.hero-card,
+.panel,
+.data-card,
+.pick-card,
+.feature-card,
+.card,
+.mp-visual-band{
+  background:
+    linear-gradient(145deg,rgba(8,10,16,.84),rgba(12,15,23,.67)),
+    radial-gradient(circle at top right,rgba(246,195,74,.12),transparent 38%) !important;
+  backdrop-filter:blur(16px) saturate(1.15);
+}
+
+.hero-card{
+  box-shadow:0 28px 90px rgba(0,0,0,.68), inset 0 1px 0 rgba(255,255,255,.11) !important;
+}
+
+.table-wrap,
+table{
+  background:rgba(5,7,12,.82) !important;
+}
+
+.mp-live-strip{
+  background:rgba(5,7,12,.68) !important;
+  backdrop-filter:blur(16px);
+}
+
+/* Specific page assignments */
+.page-bg-index{background-image:url('./home-page-backdrop.png') !important;}
+.page-bg-odds_api{background-image:url('./odds-tracker-backdrop.png') !important;}
+.page-bg-market_heat{background-image:url('./odds-tracker-backdrop.png') !important;}
+.page-bg-props_lab{background-image:url('./framework-backdrop.png') !important;}
+.page-bg-sharp_card{background-image:url('./auto-confirm-backdrop.png') !important;}
+.page-bg-results{background-image:url('./results-profit-backdrop.png') !important;}
+.page-bg-premium{background-image:url('./vip-vault-backdrop.png') !important;}
+.page-bg-vip{background-image:url('./vip-vault-backdrop.png') !important;}
+.page-bg-leaderboard{background-image:url('./leaderboard-backdrop.png') !important;}
+.page-bg-social{background-image:url('./news-insights-backdrop.png') !important;}
+.page-bg-free_look{background-image:url('./home-page-backdrop.png') !important;}
+.page-bg-yahgi{background-image:url('./settings-backdrop.png') !important;}
+.page-bg-injury_reports{background-image:url('./injury-reports-backdrop.png') !important;}
+.page-bg-framework{background-image:url('./framework-backdrop.png') !important;}
+.page-bg-auto_confirm{background-image:url('./auto-confirm-backdrop.png') !important;}
+.page-bg-settings{background-image:url('./settings-backdrop.png') !important;}
+
+.page-bg-default{background-image:url('./home-page-backdrop.png') !important;}
+
+/* YAHGI stays clean with no stats, but now uses its own matching backdrop. */
+.page-bg-yahgi .yahgi-clean-page::before{
+  background:
+    linear-gradient(135deg,rgba(5,6,10,.78),rgba(5,6,10,.64)),
+    radial-gradient(circle at 70% 18%,rgba(181,108,255,.22),transparent 33%),
+    radial-gradient(circle at 18% 70%,rgba(246,195,74,.16),transparent 35%),
+    url('./settings-backdrop.png') !important;
+  background-size:cover !important;
+  background-position:center !important;
+  background-attachment:fixed !important;
+}
+
+/* Mobile performance: fixed backgrounds can be jumpy on phones. */
+@media(max-width:760px){
+  body[class*="page-bg-"]{
+    background-attachment:scroll !important;
+    background-position:center top !important;
+  }
+}
+
+/* END STEP 21 */
