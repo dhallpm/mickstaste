@@ -256,6 +256,79 @@ function vipAnalysis(row){
   return parts.join(" ") || row.writeup || "VIP analysis loading from the Micks Picks sheet.";
 }
 
+
+function compactText(value){
+  return clean(value).replace(/[^a-z0-9]/g, "");
+}
+
+function makeOddsKey(row){
+  return `${compactText(row.game)}|${compactText(row.pick)}`;
+}
+
+function makeGameKey(row){
+  return compactText(row.game);
+}
+
+let ODDS_BY_PICK = new Map();
+let ODDS_BY_GAME = new Map();
+
+function buildOddsMaps(rows){
+  ODDS_BY_PICK = new Map();
+  ODDS_BY_GAME = new Map();
+
+  rows.forEach(row => {
+    if(!hasText(row.game)) return;
+
+    const gameKey = makeGameKey(row);
+    if(gameKey && !ODDS_BY_GAME.has(gameKey)) ODDS_BY_GAME.set(gameKey, row);
+
+    const pickKey = makeOddsKey(row);
+    if(pickKey && pickKey !== "|") ODDS_BY_PICK.set(pickKey, row);
+  });
+}
+
+function findOddsForPick(row){
+  const exact = ODDS_BY_PICK.get(makeOddsKey(row));
+  if(exact) return exact;
+
+  const gameMatch = ODDS_BY_GAME.get(makeGameKey(row));
+  if(gameMatch) return gameMatch;
+
+  return null;
+}
+
+function renderOddsBadge(row){
+  const odds = findOddsForPick(row);
+
+  if(!odds){
+    return `
+      <div class="odds-mini-panel odds-muted">
+        <div><strong>Odds Feed</strong><span>No matching odds row yet</span></div>
+        <div><strong>Action</strong><span>Run/refresh BetRivers Odds Tracker</span></div>
+      </div>
+    `;
+  }
+
+  const confirm = odds.confirmationStatus || odds.action || "Manual Confirm";
+  const cls = resultClass(confirm);
+
+  return `
+    <div class="odds-card-grid">
+      <div class="odds-chip"><span>BetRivers</span><strong>${esc(odds.betRiversPrice || odds.odds || "--")}</strong></div>
+      <div class="odds-chip"><span>Best Market</span><strong>${esc(odds.bestMarketPrice || odds.bestNumber || "--")}</strong></div>
+      <div class="odds-chip"><span>Best Book</span><strong>${esc(odds.bestBook || odds.sportsbook || "--")}</strong></div>
+      <div class="odds-chip"><span>Move</span><strong>${esc(odds.lineMovement || "--")}</strong></div>
+      <div class="odds-chip"><span>Cutoff</span><strong>${esc(odds.noBetCutoff || row.noBetCutoff || "--")}</strong></div>
+      <div class="odds-chip"><span>Confirm</span><strong class="${cls}">${esc(confirm)}</strong></div>
+    </div>
+    <div class="odds-note">
+      ${esc(odds.notes || "Final number must be confirmed inside the BetRivers Delaware app before placing.")}
+      ${odds.timestamp ? `<br><span>Updated: ${esc(odds.timestamp)}</span>` : ""}
+      ${odds.oddsSource ? `<br><span>Source: ${esc(odds.oddsSource)}${odds.backupSource ? " / " + esc(odds.backupSource) : ""}</span>` : ""}
+    </div>
+  `;
+}
+
 function pickCard(row, locked=false){
   const league = row.league || row.sport || "Sports";
   const cls = resultClass(row.result || row.status);
@@ -276,10 +349,15 @@ function pickCard(row, locked=false){
       </div>
 
       <div class="metric-grid">
-        <div class="metric"><strong>${esc(row.odds || row.betRiversPrice || "--")}</strong><span>Odds</span></div>
+        <div class="metric"><strong>${esc(row.odds || row.betRiversPrice || "--")}</strong><span>Listed Odds</span></div>
         <div class="metric"><strong>${esc(row.units || "--")}</strong><span>Units</span></div>
         <div class="metric"><strong>${esc(row.bestNumber || row.bestMarketPrice || "--")}</strong><span>Best Number</span></div>
         <div class="metric"><strong class="${cls}">${esc(row.status || row.result || "Pending")}</strong><span>Status</span></div>
+      </div>
+
+      <div class="odds-section">
+        <div class="odds-title">Sportsbook / Odds Feed</div>
+        ${renderOddsBadge(row)}
       </div>
 
       <p style="color:#e7dcc4;line-height:1.55;margin-top:14px">${esc(write)}</p>
@@ -379,6 +457,8 @@ async function boot(){
     const vipArchiveRows = dedupeRows(await getRows(VIP_ARCHIVE_GID, "VIP Archive").catch(() => []));
     const oddsRows = dedupeRows(await getRows(BETRIVERS_ODDS_GID, "BetRivers Odds Tracker").catch(() => []));
 
+    buildOddsMaps(oddsRows);
+
     const overallResults = resultsRows;
     const vipResults = vipArchiveRows;
     const freeResults = dedupeRows(resultsRows.filter(isFree));
@@ -400,7 +480,7 @@ async function boot(){
       renderTable("freeArchiveBody", freeResults);
     } else if(page === "results.html"){
       renderTable("resultsBody", overallResults);
-    } else if(page === "market-heat.html" || page === "odds-api.html"){
+    } else if(page === "market-heat.html" || page === "odds-api.html" || page === "odds-api.html"){
       renderOddsLayer(oddsRows);
     } else if(page === "sharp-card.html"){
       renderGrid("vipPicksGrid", vipActiveRows, false);
