@@ -18,6 +18,7 @@ const SHEET_ID = "15txBM8qsck7f0ZA_za7xYEykBxKpuq0no3x7yHcKNeE";
 const ACTIVE_GID = "0";
 const RESULTS_ARCHIVE_GID = "1579113575";
 const VIP_ARCHIVE_GID = "210503117";
+const ODDS_TRACKER_GID = (window.MICKS_PICKS_CONFIG && window.MICKS_PICKS_CONFIG.ODDS_TRACKER_GID) || "728496321";
 
 const HEADER_ALIASES = {
   date: ["Date", "Posted Date", "Pick Date"],
@@ -50,7 +51,11 @@ const HEADER_ALIASES = {
   betRiversPrice: ["BetRivers Price", "BetRivers", "Local Price"],
   bestMarketPrice: ["Best Market Price", "Best Market"],
   lineMovement: ["Line Movement", "Movement"],
-  confirmationStatus: ["Confirmation Status", "Confirmed", "Confirmation"]
+  confirmationStatus: ["Confirmation Status", "Confirmed", "Confirmation"],
+  market: ["Market", "Bet Type", "Odds Market"],
+  localBook: ["Local Book", "Sportsbook", "Book"],
+  timestamp: ["Timestamp", "Last Updated", "Updated", "Time"],
+  source: ["Source", "Provider", "Odds Source"]
 };
 
 function currentPage(){
@@ -342,23 +347,43 @@ function renderTable(id, rows, limit = 100){
   }).join("");
 }
 
+
+function confirmClass(value){
+  const v = clean(value);
+  if(v.includes("confirmed") || v.includes("checked")) return "status-win";
+  if(v.includes("moved") || v.includes("no bet") || v.includes("past cutoff")) return "status-loss";
+  return "status-pending";
+}
+
 function renderOddsLayer(rows){
   const el = document.getElementById("oddsRows");
   if(!el) return;
 
-  const usable = dedupeRows(rows).filter(r => hasText(r.pick)).slice(0, 12);
+  const usable = dedupeRows(rows).filter(r => hasText(r.pick) || hasText(r.game)).slice(0, 20);
 
-  el.innerHTML = usable.length ? usable.map(row => `
-    <tr>
-      <td>${esc(row.league || row.sport || "")}</td>
-      <td>${esc(row.game || "")}</td>
-      <td>${esc(row.pick || "")}</td>
-      <td>${esc(row.betRiversPrice || row.odds || "--")}</td>
-      <td>${esc(row.bestMarketPrice || row.bestNumber || "--")}</td>
-      <td>${esc(row.lineMovement || "--")}</td>
-      <td>${esc(row.confirmationStatus || "Manual Confirm")}</td>
-    </tr>
-  `).join("") : '<tr><td colspan="7">No odds rows loaded.</td></tr>';
+  el.innerHTML = usable.length ? usable.map(row => {
+    const league = row.league || row.sport || "";
+    const game = row.game || "";
+    const market = row.market || row.betType || "";
+    const pick = row.pick || market || "";
+    const betRivers = row.betRiversPrice || row.odds || "--";
+    const bestMarket = row.bestMarketPrice || row.bestNumber || "--";
+    const move = row.lineMovement || "--";
+    const confirm = row.confirmationStatus || "Manual Confirm";
+    const cls = confirmClass(confirm);
+
+    return `
+      <tr>
+        <td>${esc(league)}</td>
+        <td>${esc(game)}</td>
+        <td><strong>${esc(pick)}</strong><br><span style="color:var(--muted)">${esc(market)}</span></td>
+        <td>${esc(betRivers)}</td>
+        <td>${esc(bestMarket)}</td>
+        <td>${esc(move)}</td>
+        <td class="${cls}">${esc(confirm)}</td>
+      </tr>
+    `;
+  }).join("") : '<tr><td colspan="7">No odds rows loaded. Check BetRivers Odds Tracker sheet or odds worker.</td></tr>';
 }
 
 async function boot(){
@@ -368,6 +393,7 @@ async function boot(){
     const activeRows = await getRows(ACTIVE_GID, "Active Picks");
     const resultsRows = dedupeRows(await getRows(RESULTS_ARCHIVE_GID, "Results Archive"));
     const vipArchiveRows = dedupeRows(await getRows(VIP_ARCHIVE_GID, "VIP Archive").catch(() => []));
+    const oddsTrackerRows = await getRows(ODDS_TRACKER_GID, "BetRivers Odds Tracker").catch(() => []);
 
     // Critical rule: no combining result tabs for display or metrics.
     const overallResults = resultsRows;
@@ -392,7 +418,7 @@ async function boot(){
     } else if(page === "results.html"){
       renderTable("resultsBody", overallResults);
     } else if(page === "market-heat.html"){
-      renderOddsLayer(activeRows.length ? activeRows : resultsRows);
+      renderOddsLayer(oddsTrackerRows.length ? oddsTrackerRows : (activeRows.length ? activeRows : resultsRows));
     } else if(page === "sharp-card.html"){
       renderGrid("vipPicksGrid", vipActiveRows, false);
     } else if(page === "index.html" || page === ""){
