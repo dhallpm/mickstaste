@@ -1,24 +1,9 @@
 
-/*
-  STEP 10 NO DOUBLED PICKS
-  Actual sheet structure:
-  - Active Picks: active/current card only
-  - Results Archive: overall site history
-  - VIP Archive: VIP-only history
-
-  Display rules:
-  - Dashboard = Results Archive only
-  - Results page = Results Archive only
-  - VIP Vault = VIP Archive only
-  - Free Look = Free/Public rows from Results Archive only
-  - No frontend merging of Results Archive + VIP Archive, preventing doubled picks
-*/
-
 const SHEET_ID = "15txBM8qsck7f0ZA_za7xYEykBxKpuq0no3x7yHcKNeE";
 const ACTIVE_GID = "0";
 const RESULTS_ARCHIVE_GID = "1579113575";
 const VIP_ARCHIVE_GID = "210503117";
-const ODDS_TRACKER_GID = (window.MICKS_PICKS_CONFIG && window.MICKS_PICKS_CONFIG.ODDS_TRACKER_GID) || "728496321";
+const BETRIVERS_ODDS_GID = "728496321";
 
 const HEADER_ALIASES = {
   date: ["Date", "Posted Date", "Pick Date"],
@@ -26,6 +11,7 @@ const HEADER_ALIASES = {
   league: ["League", "Sport League"],
   game: ["Game", "Matchup", "Event"],
   pick: ["Pick", "Play", "Selection"],
+  market: ["Market", "Bet Type", "Odds Market"],
   betType: ["Bet Type", "Market", "Type"],
   odds: ["Odds", "Price"],
   sportsbook: ["Sportsbook", "Book", "Bookmaker"],
@@ -50,12 +36,15 @@ const HEADER_ALIASES = {
   closingNumber: ["Closing #", "Closing Number", "Closing Line"],
   betRiversPrice: ["BetRivers Price", "BetRivers", "Local Price"],
   bestMarketPrice: ["Best Market Price", "Best Market"],
+  bestBook: ["Best Book", "Best Sportsbook"],
   lineMovement: ["Line Movement", "Movement"],
-  confirmationStatus: ["Confirmation Status", "Confirmed", "Confirmation"],
-  market: ["Market", "Bet Type", "Odds Market"],
-  localBook: ["Local Book", "Sportsbook", "Book"],
   timestamp: ["Timestamp", "Last Updated", "Updated", "Time"],
-  source: ["Source", "Provider", "Odds Source"]
+  confirmationStatus: ["Confirmation Status", "Confirmed", "Confirmation"],
+  manualAppCheck: ["Manual App Check"],
+  oddsSource: ["Odds Source", "Source", "Provider"],
+  backupSource: ["Backup Source"],
+  notes: ["Notes"],
+  action: ["Action"]
 };
 
 function currentPage(){
@@ -137,13 +126,7 @@ function tierText(row){
 function isVIP(row){
   if(row._sourceTab === "VIP Archive") return true;
   const t = tierText(row);
-  return (
-    t.includes("vip") ||
-    t.includes("premium") ||
-    t.includes("member") ||
-    t.includes("featured") ||
-    clean(row.featured) === "yes"
-  );
+  return t.includes("vip") || t.includes("premium") || t.includes("member") || t.includes("featured") || clean(row.featured) === "yes";
 }
 
 function isFree(row){
@@ -182,18 +165,14 @@ function isActive(row){
 }
 
 function rowKey(row){
-  return [
-    row.league || row.sport || "",
-    row.game || "",
-    row.pick || ""
-  ].map(clean).join("|");
+  return [row.league || row.sport || "", row.game || "", row.pick || ""].map(clean).join("|");
 }
 
 function dedupeRows(rows){
   const seen = new Set();
   const out = [];
   for(const row of rows){
-    if(!hasText(row.pick)) continue;
+    if(!hasText(row.pick) && !hasText(row.game)) continue;
     const key = rowKey(row);
     if(!key || seen.has(key)) continue;
     seen.add(key);
@@ -203,8 +182,8 @@ function dedupeRows(rows){
 }
 
 function byDateDesc(a,b){
-  const da = Date.parse(a.date || a.postedTime || "") || 0;
-  const db = Date.parse(b.date || b.postedTime || "") || 0;
+  const da = Date.parse(a.date || a.timestamp || a.postedTime || "") || 0;
+  const db = Date.parse(b.date || b.timestamp || b.postedTime || "") || 0;
   return db - da;
 }
 
@@ -215,8 +194,8 @@ function setText(id, value){
 
 function resultClass(value){
   const r = clean(value);
-  if(r.includes("win") || r.includes("won")) return "status-win";
-  if(r.includes("loss") || r.includes("lost")) return "status-loss";
+  if(r.includes("win") || r.includes("won") || r.includes("confirmed") || r.includes("checked")) return "status-win";
+  if(r.includes("loss") || r.includes("lost") || r.includes("moved") || r.includes("no bet") || r.includes("past cutoff")) return "status-loss";
   return "status-pending";
 }
 
@@ -249,13 +228,11 @@ function writeVisibleStatsForPage(page, overallStats, vipStats, freeStats){
     setText("overallRecord", vipStats.record);
     setText("overallWinRate", vipStats.winRate);
     setText("overallTotalUnits", vipStats.units);
-    setText("overallCount", vipStats.count);
   } else if(page === "free-look.html"){
     writeStats("free", freeStats);
     setText("overallRecord", freeStats.record);
     setText("overallWinRate", freeStats.winRate);
     setText("overallTotalUnits", freeStats.units);
-    setText("overallCount", freeStats.count);
   } else {
     writeStats("overall", overallStats);
     writeStats("vip", vipStats);
@@ -289,7 +266,7 @@ function pickCard(row, locked=false){
     <div class="pick-card">
       <div style="display:flex;justify-content:space-between;gap:12px;align-items:flex-start">
         <div>
-          <div style="color:var(--muted);font-size:11px;text-transform:uppercase;font-weight:1000;letter-spacing:.9px">${esc(league)} • ${esc(row.betType || "Pick")}</div>
+          <div style="color:var(--muted);font-size:11px;text-transform:uppercase;font-weight:1000;letter-spacing:.9px">${esc(league)} • ${esc(row.betType || row.market || "Pick")}</div>
           <div class="pick-title">${esc(row.pick || "Pick Pending")}</div>
           <p style="color:var(--muted);line-height:1.5">${esc(row.game || "Game details loading")}</p>
         </div>
@@ -299,9 +276,9 @@ function pickCard(row, locked=false){
       </div>
 
       <div class="metric-grid">
-        <div class="metric"><strong>${esc(row.odds || "--")}</strong><span>Odds</span></div>
+        <div class="metric"><strong>${esc(row.odds || row.betRiversPrice || "--")}</strong><span>Odds</span></div>
         <div class="metric"><strong>${esc(row.units || "--")}</strong><span>Units</span></div>
-        <div class="metric"><strong>${esc(row.bestNumber || "--")}</strong><span>Best Number</span></div>
+        <div class="metric"><strong>${esc(row.bestNumber || row.bestMarketPrice || "--")}</strong><span>Best Number</span></div>
         <div class="metric"><strong class="${cls}">${esc(row.status || row.result || "Pending")}</strong><span>Status</span></div>
       </div>
 
@@ -347,43 +324,28 @@ function renderTable(id, rows, limit = 100){
   }).join("");
 }
 
-
-function confirmClass(value){
-  const v = clean(value);
-  if(v.includes("confirmed") || v.includes("checked")) return "status-win";
-  if(v.includes("moved") || v.includes("no bet") || v.includes("past cutoff")) return "status-loss";
-  return "status-pending";
-}
-
 function renderOddsLayer(rows){
   const el = document.getElementById("oddsRows");
   if(!el) return;
 
-  const usable = dedupeRows(rows).filter(r => hasText(r.pick) || hasText(r.game)).slice(0, 20);
+  const usable = dedupeRows(rows).filter(r => hasText(r.game) || hasText(r.pick)).sort(byDateDesc).slice(0, 30);
 
   el.innerHTML = usable.length ? usable.map(row => {
-    const league = row.league || row.sport || "";
-    const game = row.game || "";
-    const market = row.market || row.betType || "";
-    const pick = row.pick || market || "";
-    const betRivers = row.betRiversPrice || row.odds || "--";
-    const bestMarket = row.bestMarketPrice || row.bestNumber || "--";
-    const move = row.lineMovement || "--";
-    const confirm = row.confirmationStatus || "Manual Confirm";
-    const cls = confirmClass(confirm);
-
+    const confirm = row.confirmationStatus || row.action || "Manual Confirm";
+    const cls = resultClass(confirm);
     return `
       <tr>
-        <td>${esc(league)}</td>
-        <td>${esc(game)}</td>
-        <td><strong>${esc(pick)}</strong><br><span style="color:var(--muted)">${esc(market)}</span></td>
-        <td>${esc(betRivers)}</td>
-        <td>${esc(bestMarket)}</td>
-        <td>${esc(move)}</td>
+        <td>${esc(row.date || "")}</td>
+        <td>${esc(row.league || row.sport || "")}</td>
+        <td>${esc(row.game || "")}</td>
+        <td><strong>${esc(row.pick || "")}</strong><br><span style="color:var(--muted)">${esc(row.market || row.betType || "")}</span></td>
+        <td>${esc(row.betRiversPrice || "--")}</td>
+        <td>${esc(row.bestMarketPrice || "--")}<br><span style="color:var(--muted)">${esc(row.bestBook || "")}</span></td>
+        <td>${esc(row.lineMovement || "--")}</td>
         <td class="${cls}">${esc(confirm)}</td>
       </tr>
     `;
-  }).join("") : '<tr><td colspan="7">No odds rows loaded. Check BetRivers Odds Tracker sheet or odds worker.</td></tr>';
+  }).join("") : '<tr><td colspan="8">No odds rows loaded. Check BetRivers Odds Tracker sheet.</td></tr>';
 }
 
 async function boot(){
@@ -393,9 +355,8 @@ async function boot(){
     const activeRows = await getRows(ACTIVE_GID, "Active Picks");
     const resultsRows = dedupeRows(await getRows(RESULTS_ARCHIVE_GID, "Results Archive"));
     const vipArchiveRows = dedupeRows(await getRows(VIP_ARCHIVE_GID, "VIP Archive").catch(() => []));
-    const oddsTrackerRows = await getRows(ODDS_TRACKER_GID, "BetRivers Odds Tracker").catch(() => []);
+    const oddsRows = dedupeRows(await getRows(BETRIVERS_ODDS_GID, "BetRivers Odds Tracker").catch(() => []));
 
-    // Critical rule: no combining result tabs for display or metrics.
     const overallResults = resultsRows;
     const vipResults = vipArchiveRows;
     const freeResults = dedupeRows(resultsRows.filter(isFree));
@@ -417,8 +378,8 @@ async function boot(){
       renderTable("freeArchiveBody", freeResults);
     } else if(page === "results.html"){
       renderTable("resultsBody", overallResults);
-    } else if(page === "market-heat.html"){
-      renderOddsLayer(oddsTrackerRows.length ? oddsTrackerRows : (activeRows.length ? activeRows : resultsRows));
+    } else if(page === "market-heat.html" || page === "odds-api.html"){
+      renderOddsLayer(oddsRows);
     } else if(page === "sharp-card.html"){
       renderGrid("vipPicksGrid", vipActiveRows, false);
     } else if(page === "index.html" || page === ""){
@@ -428,8 +389,6 @@ async function boot(){
     document.querySelectorAll(".sync-time").forEach(el => {
       el.textContent = new Date().toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
     });
-
-    console.log("Micks Picks no-duplicate stats:", { overallStats, vipStats, freeStats });
   }catch(e){
     document.querySelectorAll(".sheet-area").forEach(el => {
       el.innerHTML = '<div class="empty">Sheet data could not load. Make sure the Google Sheet is shared as Viewer or published to web.</div>';
