@@ -415,3 +415,21 @@ tr:hover td{background:rgba(255,255,255,.025)}
 @media(max-width:760px){
   .odds-card-grid{grid-template-columns:1fr}
 }
+
+
+/* Step 18 VIP privacy lock */
+.locked-card{
+  position:relative;
+  overflow:hidden;
+}
+.locked-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(135deg,rgba(246,195,74,.05),transparent 45%,rgba(197,108,255,.08));
+}
+.locked-card .actions{
+  position:relative;
+  z-index:2;
+}

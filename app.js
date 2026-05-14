@@ -223,11 +223,16 @@ function writeStats(prefix, stats){
 }
 
 function writeVisibleStatsForPage(page, overallStats, vipStats, freeStats){
-  if(page === "premium.html" || page === "sharp-card.html"){
+  if(page === "premium.html"){
     writeStats("vip", vipStats);
     setText("overallRecord", vipStats.record);
     setText("overallWinRate", vipStats.winRate);
     setText("overallTotalUnits", vipStats.units);
+  } else if(page === "sharp-card.html"){
+    setText("overallRecord", "Locked");
+    setText("overallWinRate", "VIP");
+    setText("overallTotalUnits", "Private");
+    setText("overallCount", "--");
   } else if(page === "free-look.html"){
     writeStats("free", freeStats);
     setText("overallRecord", freeStats.record);
@@ -414,6 +419,53 @@ function pickCard(row, locked=false){
   `;
 }
 
+
+function pickScore(row){
+  const grade = clean(row.grade);
+  const confidence = clean(row.confidence);
+  let score = 0;
+
+  if(grade === "a+") score += 100;
+  else if(grade === "a") score += 95;
+  else if(grade === "a-") score += 90;
+  else if(grade === "b+") score += 82;
+  else if(grade === "b") score += 75;
+  else score += 50;
+
+  if(confidence.includes("high")) score += 8;
+  if(String(row.featured || "").toLowerCase() === "yes") score += 12;
+  if(isFree(row)) score += 3;
+
+  return score;
+}
+
+function renderPickOfDay(id, rows){
+  const el = document.getElementById(id);
+  if(!el) return;
+
+  const activeRows = rows.filter(isActive);
+  if(!activeRows.length){
+    el.innerHTML = `<div class="empty">No Pick of the Day loaded right now. Add at least one Active Pick row.</div>`;
+    return;
+  }
+
+  const freeRows = activeRows.filter(isFree);
+  const pool = freeRows.length ? freeRows : activeRows;
+  const top = pool.sort((a,b) => pickScore(b) - pickScore(a))[0];
+
+  el.innerHTML = pickCard(top, isFree(top));
+}
+
+function renderCompactPicks(id, rows, locked=false){
+  const el = document.getElementById(id);
+  if(!el) return;
+
+  const activeRows = rows.filter(isActive).slice(0, 8);
+  el.innerHTML = activeRows.length
+    ? activeRows.map(row => pickCard(row, locked)).join("")
+    : `<div class="empty">No active picks loaded right now.</div>`;
+}
+
 function renderGrid(id, rows, locked=false){
   const el = document.getElementById(id);
   if(!el) return;
@@ -497,6 +549,32 @@ function renderOddsLayer(rows){
   }).join("");
 }
 
+
+function renderSharpCardTeaser(){
+  const el = document.getElementById("sharpTeaserGrid");
+  if(!el) return;
+
+  el.innerHTML = `
+    <div class="pick-card locked-card">
+      <div class="kicker">Sharp Card Locked</div>
+      <div class="pick-title">VIP Plays Hidden</div>
+      <p style="color:var(--muted);line-height:1.6">
+        Sharp Card previews are public, but VIP picks, full analysis, units, odds, and results are only shown inside the VIP Vault.
+      </p>
+      <div class="metric-grid">
+        <div class="metric"><strong>Locked</strong><span>VIP Picks</span></div>
+        <div class="metric"><strong>Hidden</strong><span>Full Analysis</span></div>
+        <div class="metric"><strong>Private</strong><span>Results</span></div>
+        <div class="metric"><strong>VIP</strong><span>Access</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="./premium.html">Enter VIP Vault</a>
+        <a class="btn" href="./free-look.html">View Free Picks</a>
+      </div>
+    </div>
+  `;
+}
+
 async function boot(){
   try{
     const page = currentPage();
@@ -525,6 +603,7 @@ async function boot(){
       renderGrid("vipPicksGrid", vipActiveRows, false);
       renderTable("vipArchiveBody", vipResults);
     } else if(page === "free-look.html"){
+      renderPickOfDay("freePickOfDayGrid", freeActiveRows);
       renderGrid("freePicksGrid", freeActiveRows, true);
       renderTable("freeArchiveBody", freeResults);
     } else if(page === "results.html"){
@@ -532,8 +611,10 @@ async function boot(){
     } else if(page === "market-heat.html" || page === "odds-api.html" || page === "odds-api.html"){
       renderOddsLayer(oddsRows);
     } else if(page === "sharp-card.html"){
-      renderGrid("vipPicksGrid", vipActiveRows, false);
+      renderSharpCardTeaser();
     } else if(page === "index.html" || page === ""){
+      renderPickOfDay("pickOfDayGrid", activeRows);
+      renderCompactPicks("homeFreePicksGrid", freeActiveRows, true);
       renderTable("dashboardResultsBody", overallResults, 12);
     }
 
