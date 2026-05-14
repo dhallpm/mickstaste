@@ -926,3 +926,83 @@ tbody tr:hover{
     padding:8px 10px !important;
   }
 }
+
+
+/* STEP 20 — YAHGI clean under-development page */
+.yahgi-clean-page{
+  position:relative;
+}
+
+.yahgi-clean-page::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-4;
+  background:
+    linear-gradient(135deg,rgba(5,6,10,.78),rgba(5,6,10,.64)),
+    radial-gradient(circle at 70% 18%,rgba(181,108,255,.22),transparent 33%),
+    radial-gradient(circle at 18% 70%,rgba(246,195,74,.16),transparent 35%),
+    url('./settings-backdrop.png');
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+  filter:saturate(1.15);
+}
+
+.yahgi-hero{
+  min-height:72vh;
+  display:flex;
+  align-items:center;
+}
+
+.yahgi-card{
+  min-height:420px;
+}
+
+.yahgi-card h1{
+  max-width:760px;
+}
+
+.yahgi-status-panel{
+  border-color:rgba(181,108,255,.24) !important;
+  background:
+    linear-gradient(145deg,rgba(181,108,255,.12),rgba(255,255,255,.035)),
+    radial-gradient(circle at 90% 20%,rgba(246,195,74,.10),transparent 35%) !important;
+}
+
+.yahgi-phase-grid .metric{
+  min-height:100px;
+  display:grid;
+  place-items:center;
+  text-align:center;
+}
+
+.yahgi-roadmap{
+  margin-bottom:48px;
+}
+
+/* Hard privacy cleanup for Yahgi: no stats/records/results blocks should appear */
+.yahgi-clean-page [id*="record" i],
+.yahgi-clean-page [id*="winrate" i],
+.yahgi-clean-page [id*="units" i],
+.yahgi-clean-page [id*="result" i],
+.yahgi-clean-page [id*="archive" i],
+.yahgi-clean-page [id*="odds" i],
+.yahgi-clean-page [class*="stats" i],
+.yahgi-clean-page [class*="record" i],
+.yahgi-clean-page [class*="leaderboard" i]{
+  display:none !important;
+}
+
+.yahgi-clean-page .yahgi-phase-grid,
+.yahgi-clean-page .yahgi-phase-grid .metric,
+.yahgi-clean-page .yahgi-roadmap,
+.yahgi-clean-page .yahgi-roadmap .pick-grid,
+.yahgi-clean-page .yahgi-roadmap .pick-card{
+  display:grid !important;
+}
+
+.yahgi-clean-page .yahgi-status-panel,
+.yahgi-clean-page .yahgi-card{
+  display:block !important;
+}
