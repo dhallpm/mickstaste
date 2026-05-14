@@ -1,10 +1,15 @@
 
 /*
-  STEP 8 PAGE-SPECIFIC LOGIC
-  Actual sheet tabs:
-  - Active Picks: active card only
-  - Results Archive: mixed Free + VIP results
-  - VIP Archive: VIP-only results
+  STEP 9 ACTUAL SHEET METRICS FIX
+  Real sheet setup:
+  Active Picks = active card only
+  Results Archive = mixed Free + VIP results
+  VIP Archive = VIP-only results
+
+  Fixes:
+  - Dedupes by league/game/pick instead of date because date formats differ between tabs.
+  - Counts Win/Won and Loss/Lost correctly.
+  - Forces visible page metrics to correct tier even if old HTML IDs remain.
 */
 
 const SHEET_ID = "15txBM8qsck7f0ZA_za7xYEykBxKpuq0no3x7yHcKNeE";
@@ -114,6 +119,10 @@ function hasText(value){
   return String(value || "").trim().length > 0;
 }
 
+function clean(s){
+  return String(s || "").trim().toLowerCase().replace(/\s+/g, " ");
+}
+
 function tierText(row){
   return `${row.access || ""} ${row.featured || ""}`.toLowerCase().trim();
 }
@@ -126,7 +135,7 @@ function isVIP(row){
     t.includes("premium") ||
     t.includes("member") ||
     t.includes("featured") ||
-    String(row.featured || "").toLowerCase() === "yes"
+    clean(row.featured) === "yes"
   );
 }
 
@@ -138,34 +147,47 @@ function isFree(row){
   return true;
 }
 
+function isWin(row){
+  const r = clean(row.result);
+  return r === "win" || r === "won" || r.includes(" win") || r.includes("won");
+}
+
+function isLoss(row){
+  const r = clean(row.result);
+  return r === "loss" || r === "lost" || r.includes(" loss") || r.includes("lost");
+}
+
+function isPush(row){
+  const r = clean(row.result);
+  return r === "push" || r === "void";
+}
+
 function isClosed(row){
-  const result = String(row.result || "").toLowerCase();
-  return ["win","loss","push"].some(x => result.includes(x));
+  return isWin(row) || isLoss(row) || isPush(row) || clean(row.status).includes("closed");
 }
 
 function isActive(row){
-  const status = String(row.status || "").toLowerCase();
-  const result = String(row.result || "").toLowerCase();
+  const status = clean(row.status);
   if(!hasText(row.pick)) return false;
   if(["void","cancelled","canceled","delete","removed"].some(x => status.includes(x))) return false;
-  if(["win","loss","push"].some(x => result.includes(x))) return false;
-  if(status.includes("closed")) return false;
+  if(isClosed(row)) return false;
   return true;
 }
 
+// Critical fix: do NOT include date. Results Archive and VIP Archive use different date formats.
 function rowKey(row){
   return [
-    row.date || "",
     row.league || row.sport || "",
     row.game || "",
     row.pick || ""
-  ].map(x => String(x).trim().toLowerCase()).join("|");
+  ].map(clean).join("|");
 }
 
 function dedupeRows(rows){
   const seen = new Set();
   const out = [];
   for(const row of rows){
+    if(!hasText(row.pick)) continue;
     const key = rowKey(row);
     if(!key || seen.has(key)) continue;
     seen.add(key);
@@ -186,24 +208,54 @@ function setText(id, value){
 }
 
 function resultClass(value){
-  const r = String(value || "").toLowerCase();
-  if(r.includes("win")) return "status-win";
-  if(r.includes("loss")) return "status-loss";
+  const r = clean(value);
+  if(r.includes("win") || r.includes("won")) return "status-win";
+  if(r.includes("loss") || r.includes("lost")) return "status-loss";
   return "status-pending";
 }
 
-function updateStats(rows, prefix, countRows = rows){
-  const graded = rows.filter(r => hasText(r.pick) && /win|loss/i.test(r.result || ""));
-  const wins = graded.filter(r => /win/i.test(r.result || "")).length;
-  const losses = graded.filter(r => /loss/i.test(r.result || "")).length;
+function calcStats(rows, countRows = rows){
+  const graded = rows.filter(r => hasText(r.pick) && (isWin(r) || isLoss(r)));
+  const wins = graded.filter(isWin).length;
+  const losses = graded.filter(isLoss).length;
   const total = wins + losses;
   const units = graded.reduce((sum, r) => sum + toNumber(r.profitLoss), 0);
   const count = countRows.filter(r => hasText(r.pick)).length;
 
-  setText(prefix + "Record", total ? `${wins}-${losses}` : "--");
-  setText(prefix + "WinRate", total ? `${Math.round((wins / total) * 100)}%` : "--");
-  setText(prefix + "TotalUnits", total || units ? `${units > 0 ? "+" : ""}${units.toFixed(2)}u` : "--");
-  setText(prefix + "Count", count || "--");
+  return {
+    record: total ? `${wins}-${losses}` : "--",
+    winRate: total ? `${Math.round((wins / total) * 100)}%` : "--",
+    units: total || units ? `${units > 0 ? "+" : ""}${units.toFixed(2)}u` : "--",
+    count: count || "--"
+  };
+}
+
+function writeStats(prefix, stats){
+  setText(prefix + "Record", stats.record);
+  setText(prefix + "WinRate", stats.winRate);
+  setText(prefix + "TotalUnits", stats.units);
+  setText(prefix + "Count", stats.count);
+}
+
+// Critical fix: pages that still have old overall IDs will still display correct tier.
+function writeVisibleStatsForPage(page, overallStats, vipStats, freeStats){
+  if(page === "premium.html" || page === "sharp-card.html"){
+    writeStats("vip", vipStats);
+    setText("overallRecord", vipStats.record);
+    setText("overallWinRate", vipStats.winRate);
+    setText("overallTotalUnits", vipStats.units);
+    setText("overallCount", vipStats.count);
+  } else if(page === "free-look.html"){
+    writeStats("free", freeStats);
+    setText("overallRecord", freeStats.record);
+    setText("overallWinRate", freeStats.winRate);
+    setText("overallTotalUnits", freeStats.units);
+    setText("overallCount", freeStats.count);
+  } else {
+    writeStats("overall", overallStats);
+    writeStats("vip", vipStats);
+    writeStats("free", freeStats);
+  }
 }
 
 function publicWriteup(row){
@@ -324,37 +376,33 @@ async function boot(){
     const freeActiveRows = activeRows.filter(isFree);
     const vipActiveRows = activeRows.filter(isVIP);
 
-    // Page-specific metrics only.
+    const overallStats = calcStats(allResults, allResults);
+    const vipStats = calcStats(vipResults, vipResults.concat(vipActiveRows));
+    const freeStats = calcStats(freeResults, freeResults.concat(freeActiveRows));
+
+    writeVisibleStatsForPage(page, overallStats, vipStats, freeStats);
+
     if(page === "premium.html"){
-      updateStats(vipResults, "vip", vipResults.concat(vipActiveRows));
       renderGrid("vipPicksGrid", vipActiveRows, false);
       renderTable("vipArchiveBody", vipResults);
     } else if(page === "free-look.html"){
-      updateStats(freeResults, "free", freeResults.concat(freeActiveRows));
       renderGrid("freePicksGrid", freeActiveRows, true);
       renderTable("freeArchiveBody", freeResults);
     } else if(page === "results.html"){
-      updateStats(allResults, "overall", allResults);
       renderTable("resultsBody", allResults);
     } else if(page === "market-heat.html"){
-      updateStats(allResults, "overall", allResults);
       renderOddsLayer(activeRows.length ? activeRows : resultsRows);
     } else if(page === "sharp-card.html"){
-      updateStats(vipResults, "vip", vipResults.concat(vipActiveRows));
       renderGrid("vipPicksGrid", vipActiveRows, false);
     } else if(page === "index.html" || page === ""){
-      updateStats(allResults, "overall", allResults);
-      updateStats(vipResults, "vip", vipResults);
-      updateStats(freeResults, "free", freeResults);
       renderTable("dashboardResultsBody", allResults, 12);
-    } else {
-      // Props, Yahgi, Social: keep metrics overall but do not dump global results table.
-      updateStats(allResults, "overall", allResults);
     }
 
     document.querySelectorAll(".sync-time").forEach(el => {
       el.textContent = new Date().toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
     });
+
+    console.log("Micks Picks stats:", { overallStats, vipStats, freeStats });
   }catch(e){
     document.querySelectorAll(".sheet-area").forEach(el => {
       el.innerHTML = '<div class="empty">Sheet data could not load. Make sure the Google Sheet is shared as Viewer or published to web.</div>';
