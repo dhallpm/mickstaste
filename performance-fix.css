@@ -1,0 +1,89 @@
+/* Dashboard Performance Panel Crop Fix
+   Keeps the performance section fully visible and balanced beside Recent Results.
+*/
+
+.data-grid{
+  align-items:stretch;
+}
+
+.data-grid > .performance-panel{
+  min-height:100%;
+  height:auto;
+  overflow:visible;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+}
+
+.performance-panel{
+  padding:24px !important;
+  margin-bottom:18px;
+}
+
+.performance-header{
+  margin-bottom:18px !important;
+}
+
+.performance-header h2{
+  font-size:clamp(30px,3.1vw,42px) !important;
+  line-height:1.05;
+  white-space:normal;
+}
+
+.performance-grid{
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  gap:14px !important;
+  margin-bottom:18px !important;
+}
+
+.perf-card{
+  min-width:0;
+  padding:18px 12px !important;
+  overflow:visible;
+}
+
+.perf-value{
+  font-size:clamp(22px,2.2vw,32px) !important;
+  line-height:1.05;
+  white-space:normal;
+  overflow-wrap:anywhere;
+}
+
+.perf-label{
+  font-size:10px !important;
+  line-height:1.2;
+}
+
+.performance-bottom{
+  overflow:visible;
+}
+
+.performance-meta{
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  gap:10px !important;
+}
+
+.performance-meta div{
+  min-width:0;
+  padding:12px 8px !important;
+}
+
+.performance-meta strong{
+  font-size:clamp(14px,1.4vw,18px) !important;
+  line-height:1.1;
+  overflow-wrap:anywhere;
+}
+
+@media(max-width:1160px){
+  .data-grid > .performance-panel{min-height:auto;}
+}
+
+@media(max-width:760px){
+  .performance-grid,
+  .performance-meta{
+    grid-template-columns:1fr !important;
+  }
+  .performance-panel{
+    padding:20px !important;
+  }
+}
