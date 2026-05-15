@@ -9,353 +9,62 @@ const VIP_ARCHIVE_GID = "210503117";
 const BETRIVERS_ODDS_GID = "728496321";
 
 const HEADER_ALIASES = {
-  date: ["Date", "Posted Date", "Pick Date"],
-  sport: ["Sport"],
-  league: ["League", "Sport League"],
-  game: ["Game", "Matchup", "Event"],
-  pick: ["Pick", "Play", "Selection"],
-  market: ["Market", "Bet Type", "Odds Market"],
-  betType: ["Bet Type", "Market", "Type"],
-  odds: ["Odds", "Price"],
-  sportsbook: ["Sportsbook", "Book", "Bookmaker"],
-  grade: ["Grade", "Rating"],
-  units: ["Units", "Unit", "Stake"],
-  bestNumber: ["Best Number", "Best #", "Best Line"],
-  noBetCutoff: ["No Bet Cutoff", "No-Bet Cutoff", "Cutoff"],
-  impliedProbability: ["Implied Probability", "Implied Prob"],
-  evEdge: ["EV Edge", "Edge", "EV"],
-  confidence: ["Confidence"],
-  status: ["Status"],
-  result: ["Result", "Outcome"],
-  profitLoss: ["Profit/Loss", "Profit Loss", "P/L", "PL"],
-  writeup: ["Writeup", "Write Up", "Public Writeup", "Summary"],
-  marketNotes: ["Market Notes", "Market Note"],
-  injuryNotes: ["Injury Notes", "Injury Note"],
-  sourceVerification: ["Source Verification", "Sources", "Verification"],
-  postedTime: ["Posted Time", "Time Posted"],
-  access: ["Access", "Tier"],
-  fullAnalysis: ["Full Analysis", "Analysis", "VIP Analysis"],
-  featured: ["Featured", "Feature", "Featured?"],
-  closingNumber: ["Closing #", "Closing Number", "Closing Line"],
-  betRiversPrice: ["BetRivers Price", "BetRivers", "Local Price"],
-  bestMarketPrice: ["Best Market Price", "Best Market"],
-  bestBook: ["Best Book", "Best Sportsbook"],
-  lineMovement: ["Line Movement", "Movement"],
-  timestamp: ["Timestamp", "Last Updated", "Updated", "Time"],
-  confirmationStatus: ["Confirmation Status", "Confirmed", "Confirmation"],
-  manualAppCheck: ["Manual App Check"],
-  oddsSource: ["Odds Source", "Source", "Provider"],
-  backupSource: ["Backup Source"],
-  notes: ["Notes"],
-  action: ["Action"]
+  date: ["Date", "Posted Date", "Pick Date"], sport: ["Sport"], league: ["League", "Sport League"], game: ["Game", "Matchup", "Event"], pick: ["Pick", "Play", "Selection"], market: ["Market", "Bet Type", "Odds Market"], betType: ["Bet Type", "Market", "Type"], odds: ["Odds", "Price"], sportsbook: ["Sportsbook", "Book", "Bookmaker"], grade: ["Grade", "Rating"], units: ["Units", "Unit", "Stake"], bestNumber: ["Best Number", "Best #", "Best Line"], noBetCutoff: ["No Bet Cutoff", "No-Bet Cutoff", "Cutoff"], impliedProbability: ["Implied Probability", "Implied Prob"], evEdge: ["EV Edge", "Edge", "EV"], confidence: ["Confidence"], status: ["Status"], result: ["Result", "Outcome"], profitLoss: ["Profit/Loss", "Profit Loss", "P/L", "PL"], writeup: ["Writeup", "Write Up", "Public Writeup", "Summary"], marketNotes: ["Market Notes", "Market Note"], injuryNotes: ["Injury Notes", "Injury Note"], sourceVerification: ["Source Verification", "Sources", "Verification"], postedTime: ["Posted Time", "Time Posted"], access: ["Access", "Tier"], fullAnalysis: ["Full Analysis", "Analysis", "VIP Analysis"], featured: ["Featured", "Feature", "Featured?"], closingNumber: ["Closing #", "Closing Number", "Closing Line"], betRiversPrice: ["BetRivers Price", "BetRivers", "Local Price"], bestMarketPrice: ["Best Market Price", "Best Market"], bestBook: ["Best Book", "Best Sportsbook"], lineMovement: ["Line Movement", "Movement"], timestamp: ["Timestamp", "Last Updated", "Updated", "Time"], confirmationStatus: ["Confirmation Status", "Confirmed", "Confirmation"], manualAppCheck: ["Manual App Check"], oddsSource: ["Odds Source", "Source", "Provider"], backupSource: ["Backup Source"], notes: ["Notes"], action: ["Action"]
 };
 
 let STATE = { active: [], results: [], vipArchive: [], odds: [], oddsByPick: new Map(), oddsByGame: new Map() };
-
 function pageName(){ return (location.pathname.split('/').pop() || 'index.html').toLowerCase(); }
 function isPremiumPage(){ return ['premium.html','vip.html','vip-vault.html'].includes(pageName()); }
 function isSharpPage(){ return pageName() === 'sharp-card.html'; }
 function isPublicOnlyPage(){ return !isPremiumPage(); }
-
 function csvUrl(gid){ return `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${gid}&cache=${Date.now()}`; }
-
-function parseCSV(text){
-  const rows=[]; let row=[], cur='', q=false;
-  for(let i=0;i<text.length;i++){
-    const c=text[i], n=text[i+1];
-    if(c === '"' && q && n === '"'){ cur += '"'; i++; }
-    else if(c === '"'){ q = !q; }
-    else if(c === ',' && !q){ row.push(cur); cur=''; }
-    else if((c === '\n' || c === '\r') && !q){
-      if(cur !== '' || row.length){ row.push(cur); rows.push(row); row=[]; cur=''; }
-      if(c === '\r' && n === '\n') i++;
-    } else cur += c;
-  }
-  if(cur !== '' || row.length){ row.push(cur); rows.push(row); }
-  return rows;
-}
-
-function normHeader(h){ return String(h || '').trim().toLowerCase().replace(/\s+/g,' ').replace(/[^\w#/% ]/g,''); }
+function parseCSV(text){ const rows=[]; let row=[], cur='', q=false; for(let i=0;i<text.length;i++){ const c=text[i], n=text[i+1]; if(c==='"'&&q&&n==='"'){cur+='"';i++;} else if(c==='"'){q=!q;} else if(c===','&&!q){row.push(cur);cur='';} else if((c==='\n'||c==='\r')&&!q){ if(cur!==''||row.length){row.push(cur);rows.push(row);row=[];cur='';} if(c==='\r'&&n==='\n')i++; } else cur+=c;} if(cur!==''||row.length){row.push(cur);rows.push(row);} return rows; }
+function normHeader(h){ return String(h||'').trim().toLowerCase().replace(/\s+/g,' ').replace(/[^\w#/% ]/g,''); }
 function getAlias(headers, aliases){ return headers.find(h => aliases.some(a => normHeader(a) === normHeader(h))); }
-function makeObjects(rows, sourceTab){
-  if(!rows.length) return [];
-  const headers = rows[0].map(h => String(h || '').trim());
-  return rows.slice(1).map(r => {
-    const raw = {};
-    headers.forEach((h,i) => raw[h] = String(r[i] || '').trim());
-    const obj = { _raw: raw, _sourceTab: sourceTab };
-    Object.entries(HEADER_ALIASES).forEach(([key, aliases]) => {
-      const real = getAlias(headers, aliases);
-      obj[key] = real ? String(raw[real] || '').trim() : '';
-    });
-    return obj;
-  }).filter(r => Object.values(r._raw || {}).some(v => String(v || '').trim() !== ''));
-}
-async function getRows(gid, sourceTab){
-  const res = await fetch(csvUrl(gid), { cache:'no-store' });
-  const text = await res.text();
-  if(text.toLowerCase().includes('<html')) throw new Error(sourceTab + ' CSV unavailable');
-  return makeObjects(parseCSV(text), sourceTab);
-}
-
-function esc(s){ return String(s || '').replace(/[&<>"]/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m])); }
-function clean(s){ return String(s || '').trim().toLowerCase().replace(/\s+/g,' '); }
+function makeObjects(rows, sourceTab){ if(!rows.length)return[]; const headers=rows[0].map(h=>String(h||'').trim()); return rows.slice(1).map(r=>{ const raw={}; headers.forEach((h,i)=>raw[h]=String(r[i]||'').trim()); const obj={_raw:raw,_sourceTab:sourceTab}; Object.entries(HEADER_ALIASES).forEach(([key,aliases])=>{ const real=getAlias(headers,aliases); obj[key]=real?String(raw[real]||'').trim():'';}); return obj;}).filter(r=>Object.values(r._raw||{}).some(v=>String(v||'').trim()!=='')); }
+async function getRows(gid, sourceTab){ const res=await fetch(csvUrl(gid),{cache:'no-store'}); const text=await res.text(); if(text.toLowerCase().includes('<html')) throw new Error(sourceTab+' CSV unavailable'); return makeObjects(parseCSV(text),sourceTab); }
+function esc(s){ return String(s||'').replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m])); }
+function clean(s){ return String(s||'').trim().toLowerCase().replace(/\s+/g,' '); }
 function compact(s){ return clean(s).replace(/[^a-z0-9]/g,''); }
-function hasText(v){ return String(v || '').trim().length > 0; }
-function toNumber(v){ const n = parseFloat(String(v || '').replace(/[^0-9.+-]/g,'')); return Number.isFinite(n) ? n : 0; }
-function byDateDesc(a,b){ return (Date.parse(b.date || b.timestamp || b.postedTime || '') || 0) - (Date.parse(a.date || a.timestamp || a.postedTime || '') || 0); }
-function rowKey(row){ return [row.league || row.sport || '', row.game || '', row.pick || ''].map(compact).join('|'); }
-function dedupeRows(rows){ const seen = new Set(); return rows.filter(r => { const k=rowKey(r); if(!k || seen.has(k)) return false; seen.add(k); return true; }); }
-
-function tierText(row){ return `${row.access || ''} ${row.featured || ''}`.toLowerCase(); }
-function isVIP(row){
-  if(row._sourceTab === 'VIP Archive') return true;
-  const t = tierText(row);
-  return t.includes('vip') || t.includes('premium') || t.includes('member') || t.includes('featured') || clean(row.featured) === 'yes';
-}
-function isFree(row){
-  if(row._sourceTab === 'VIP Archive') return false;
-  const t = tierText(row);
-  if(t.includes('free') || t.includes('public')) return true;
-  return !isVIP(row);
-}
-function isWin(row){ const r=clean(row.result); return r === 'win' || r === 'won' || r.includes('win') || r.includes('won'); }
-function isLoss(row){ const r=clean(row.result); return r === 'loss' || r === 'lost' || r.includes('loss') || r.includes('lost'); }
-function isPush(row){ const r=clean(row.result); return r === 'push' || r === 'void'; }
-function isClosed(row){ return isWin(row) || isLoss(row) || isPush(row) || clean(row.status).includes('graded') || clean(row.status).includes('closed'); }
-function isActive(row){
-  const status = clean(row.status);
-  if(!hasText(row.pick)) return false;
-  if(['void','cancelled','canceled','delete','removed'].some(x => status.includes(x))) return false;
-  return !isClosed(row);
-}
+function hasText(v){ return String(v||'').trim().length>0; }
+function toNumber(v){ const n=parseFloat(String(v||'').replace(/[^0-9.+-]/g,'')); return Number.isFinite(n)?n:0; }
+function dateVal(v){ const s=String(v||'').trim(); if(!s)return 0; let m=s.match(/^(\d{4})-(\d{1,2})-(\d{1,2})/); if(m)return new Date(+m[1],+m[2]-1,+m[3]).getTime(); m=s.match(/^(\d{1,2})\/(\d{1,2})\/(\d{2,4})/); if(m){let y=+m[3]; if(y<100)y+=2000; return new Date(y,+m[1]-1,+m[2]).getTime();} const d=new Date(s); return Number.isNaN(d.getTime())?0:d.getTime(); }
+function byDateDesc(a,b){ return (dateVal(b.date||b.timestamp||b.postedTime)||0)-(dateVal(a.date||a.timestamp||a.postedTime)||0); }
+function rowKey(row){ return [row.league||row.sport||'',row.game||'',row.pick||''].map(compact).join('|'); }
+function dedupeRows(rows){ const seen=new Set(); return rows.filter(r=>{const k=rowKey(r); if(!k||seen.has(k))return false; seen.add(k); return true;}); }
+function tierText(row){ return `${row.access||''} ${row.featured||''}`.toLowerCase(); }
+function isVIP(row){ if(row._sourceTab==='VIP Archive')return true; const t=tierText(row); return t.includes('vip')||t.includes('premium')||t.includes('member')||t.includes('featured')||clean(row.featured)==='yes'; }
+function isFree(row){ if(row._sourceTab==='VIP Archive')return false; const t=tierText(row); if(t.includes('free')||t.includes('public'))return true; return !isVIP(row); }
+function isWin(row){ const r=clean(row.result); return r==='win'||r==='won'||r.includes('win')||r.includes('won'); }
+function isLoss(row){ const r=clean(row.result); return r==='loss'||r==='lost'||r.includes('loss')||r.includes('lost'); }
+function isPush(row){ const r=clean(row.result); return r==='push'||r==='void'; }
+function isClosed(row){ return isWin(row)||isLoss(row)||isPush(row)||clean(row.status).includes('graded')||clean(row.status).includes('closed'); }
+function isNoBet(row){ const t=clean(`${row.grade} ${row.status} ${row.confirmationStatus} ${row.releaseStatus} ${row.result}`); return t.includes('pass')||t.includes('no bet')||t.includes('price moved')||t.includes('past cutoff')||toNumber(row.units)===0; }
+function isActive(row){ const status=clean(row.status); if(!hasText(row.pick))return false; if(['void','cancelled','canceled','delete','removed'].some(x=>status.includes(x)))return false; return !isClosed(row); }
 function publicRows(rows){ return rows.filter(isFree); }
 function vipRows(rows){ return rows.filter(isVIP); }
-
-function resultClass(value){
-  const r = clean(value);
-  if(r.includes('win') || r.includes('won') || r.includes('confirmed') || r.includes('matched') || r.includes('checked')) return 'status-win';
-  if(r.includes('loss') || r.includes('lost') || r.includes('moved') || r.includes('no bet') || r.includes('past cutoff')) return 'status-loss';
-  return 'status-pending';
-}
-
-function calcStats(rows, countRows = rows){
-  const graded = rows.filter(r => hasText(r.pick) && (isWin(r) || isLoss(r)));
-  const wins = graded.filter(isWin).length;
-  const losses = graded.filter(isLoss).length;
-  const total = wins + losses;
-  const units = graded.reduce((sum, r) => sum + toNumber(r.profitLoss), 0);
-  const count = countRows.filter(r => hasText(r.pick)).length;
-  return {
-    record: total ? `${wins}-${losses}` : '--',
-    winRate: total ? `${Math.round((wins / total) * 100)}%` : '--',
-    units: total || units ? `${units > 0 ? '+' : ''}${units.toFixed(2)}u` : '--',
-    count: count || '--'
-  };
-}
-function setText(id, value){ const el = document.getElementById(id); if(el) el.textContent = value; }
-function writeStats(prefix, stats){ setText(prefix+'Record', stats.record); setText(prefix+'WinRate', stats.winRate); setText(prefix+'TotalUnits', stats.units); setText(prefix+'Count', stats.count); }
-
+function resultClass(value){ const r=clean(value); if(r.includes('win')||r.includes('won')||r.includes('confirmed')||r.includes('matched')||r.includes('checked'))return 'status-win'; if(r.includes('loss')||r.includes('lost')||r.includes('moved')||r.includes('no bet')||r.includes('past cutoff'))return 'status-loss'; return 'status-pending'; }
+function calcStats(rows,countRows=rows){ const graded=rows.filter(r=>hasText(r.pick)&&(isWin(r)||isLoss(r))); const wins=graded.filter(isWin).length; const losses=graded.filter(isLoss).length; const total=wins+losses; const units=graded.reduce((sum,r)=>sum+toNumber(r.profitLoss),0); const count=countRows.filter(r=>hasText(r.pick)).length; return {record:total?`${wins}-${losses}`:'--',winRate:total?`${Math.round((wins/total)*100)}%`:'--',units:total||units?`${units>0?'+':''}${units.toFixed(2)}u`:'--',count:count||'--'}; }
+function setText(id,value){ const el=document.getElementById(id); if(el)el.textContent=value; }
+function writeStats(prefix,stats){ setText(prefix+'Record',stats.record); setText(prefix+'WinRate',stats.winRate); setText(prefix+'TotalUnits',stats.units); setText(prefix+'Count',stats.count); }
 function makeOddsKey(row){ return `${compact(row.game)}|${compact(row.pick)}`; }
 function makeGameKey(row){ return compact(row.game); }
-function buildOddsMaps(rows){
-  STATE.oddsByPick = new Map(); STATE.oddsByGame = new Map();
-  rows.forEach(row => {
-    if(!hasText(row.game)) return;
-    const g = makeGameKey(row), p = makeOddsKey(row);
-    if(g && !STATE.oddsByGame.has(g)) STATE.oddsByGame.set(g, row);
-    if(p && p !== '|') STATE.oddsByPick.set(p, row);
-  });
-}
-function findOddsForPick(row){ return STATE.oddsByPick.get(makeOddsKey(row)) || STATE.oddsByGame.get(makeGameKey(row)) || null; }
-function originalOddsLabel(row){
-  const book = row.sportsbook || row._raw?.Sportsbook || row._raw?.Book || 'Listed Book';
-  const odds = row.odds || row._raw?.Odds || '';
-  if(book && odds) return `${book} ${odds}`;
-  return odds || book || 'Not listed';
-}
-function sourceLabel(odds){
-  if(!odds) return 'No feed match';
-  const primary = odds.oddsSource || odds.source || 'Sheet Odds Tracker';
-  return primary + (odds.backupSource ? ` / ${odds.backupSource}` : '');
-}
-
-function publicWriteup(row){ return row.writeup || 'Public writeup loading from the Micks Picks sheet.'; }
-function vipAnalysis(row){
-  const pieces = [
-    row.fullAnalysis,
-    row.marketNotes ? `Market Notes: ${row.marketNotes}` : '',
-    row.injuryNotes ? `Injury Notes: ${row.injuryNotes}` : '',
-    row.noBetCutoff ? `No-Bet Cutoff: ${row.noBetCutoff}` : '',
-    row.sourceVerification ? `Source Verification: ${row.sourceVerification}` : ''
-  ].filter(Boolean);
-  return pieces.join(' ') || row.writeup || 'VIP analysis loading from the Micks Picks sheet.';
-}
-function safeAnalysis(row, locked){ return locked ? publicWriteup(row) : vipAnalysis(row); }
-
-function renderOddsBadge(row){
-  const odds = findOddsForPick(row);
-  const original = originalOddsLabel(row);
-  if(!odds){
-    return `
-      <div class="odds-card-grid">
-        <div class="odds-chip"><span>Picked At</span><strong>${esc(original)}</strong></div>
-        <div class="odds-chip"><span>Current BetRivers</span><strong>--</strong></div>
-        <div class="odds-chip"><span>Best Market</span><strong>--</strong></div>
-        <div class="odds-chip"><span>Confirm</span><strong class="status-pending">Sheet Odds Pending</strong></div>
-      </div>
-      <div class="odds-note">No paid odds API is being used. Enter/confirm odds in Active Picks or BetRivers Odds Tracker.</div>`;
-  }
-  const confirm = odds.confirmationStatus || odds.action || 'Sheet Confirm';
-  return `
-    <div class="odds-card-grid">
-      <div class="odds-chip"><span>Picked At</span><strong>${esc(original)}</strong></div>
-      <div class="odds-chip"><span>Current BetRivers</span><strong>${esc(odds.betRiversPrice || odds.odds || '--')}</strong></div>
-      <div class="odds-chip"><span>Best Market</span><strong>${esc(odds.bestMarketPrice || odds.bestNumber || '--')}</strong></div>
-      <div class="odds-chip"><span>Best Book</span><strong>${esc(odds.bestBook || row.sportsbook || '--')}</strong></div>
-      <div class="odds-chip"><span>Move</span><strong>${esc(odds.lineMovement || 'Sheet Mode')}</strong></div>
-      <div class="odds-chip"><span>Confirm</span><strong class="${resultClass(confirm)}">${esc(confirm)}</strong></div>
-    </div>
-    <div class="odds-note"><strong>Odds Source:</strong> ${esc(sourceLabel(odds))}<br>${esc(odds.notes || 'Final number should still be checked inside the BetRivers Delaware app before placing.')} ${odds.timestamp ? `<br><span>Updated: ${esc(odds.timestamp)}</span>` : ''}</div>`;
-}
-function tableOddsSummary(row){
-  const odds = findOddsForPick(row);
-  if(!odds) return `<div class="table-odds-line"><span>Picked at: ${esc(originalOddsLabel(row))}</span><br><span>Sheet odds: Pending</span></div>`;
-  return `<div class="table-odds-line"><span>Picked at: ${esc(originalOddsLabel(row))}</span><br><span>BetRivers: ${esc(odds.betRiversPrice || '--')} | Best: ${esc(odds.bestMarketPrice || '--')} ${odds.bestBook ? '@' + esc(odds.bestBook) : ''}</span></div>`;
-}
-
-function pickScore(row){
-  const grade = clean(row.grade); let score = 50;
-  if(grade === 'a+') score = 100; else if(grade === 'a') score = 95; else if(grade === 'a-') score = 90; else if(grade === 'b+') score = 82; else if(grade === 'b') score = 75;
-  if(clean(row.confidence).includes('high')) score += 8;
-  if(clean(row.featured) === 'yes') score += 12;
-  if(isFree(row)) score += 3;
-  return score;
-}
-
-function pickCard(row, locked=false){
-  const league = row.league || row.sport || 'Sports';
-  const cls = resultClass(row.result || row.status);
-  const privateBadge = isVIP(row) && locked ? '<div class="odds-note"><strong>VIP Lock:</strong> Full analysis, market notes, injury notes, units, and EV edge are hidden on public pages.</div>' : '';
-  return `
-    <div class="pick-card ${isVIP(row) && locked ? 'locked-card' : ''}">
-      <div style="display:flex;justify-content:space-between;gap:12px;align-items:flex-start">
-        <div>
-          <div style="color:var(--muted);font-size:11px;text-transform:uppercase;font-weight:1000;letter-spacing:.9px">${esc(league)} • ${esc(row.betType || row.market || 'Pick')}</div>
-          <div class="pick-title">${esc(row.pick || 'Pick Pending')}</div>
-          <p style="color:var(--muted);line-height:1.5">${esc(row.game || 'Game details loading')}</p>
-        </div>
-        <div style="background:linear-gradient(135deg,#9b6d15,#ffe28a 54%,#b98821);color:#090909;padding:9px 11px;border-radius:10px;font-weight:1000">${esc(row.grade || (isVIP(row) ? 'VIP' : 'FREE'))}</div>
-      </div>
-      <div class="metric-grid">
-        <div class="metric"><strong>${esc(row.odds || '--')}</strong><span>Chosen Odds</span></div>
-        <div class="metric"><strong>${esc(row.sportsbook || '--')}</strong><span>Picked From</span></div>
-        <div class="metric"><strong>${esc(row.bestNumber || row.bestMarketPrice || '--')}</strong><span>Best Number</span></div>
-        <div class="metric"><strong class="${cls}">${esc(row.status || row.result || 'Pending')}</strong><span>Status</span></div>
-      </div>
-      <div class="odds-section"><div class="odds-title">Original Odds + Sheet Odds Engine</div>${renderOddsBadge(row)}</div>
-      <p style="color:#e7dcc4;line-height:1.55;margin-top:14px">${esc(safeAnalysis(row, locked))}</p>
-      ${privateBadge}
-    </div>`;
-}
-
-function renderPickOfDay(id, rows){
-  const el = document.getElementById(id); if(!el) return;
-  const active = rows.filter(isActive);
-  if(!active.length){ el.innerHTML = `<div class="empty">No Pick of the Day loaded right now.</div>`; return; }
-  const pool = publicRows(active).length ? publicRows(active) : active;
-  const top = pool.sort((a,b) => pickScore(b) - pickScore(a))[0];
-  el.innerHTML = pickCard(top, !isPremiumPage());
-}
-function renderGrid(id, rows, locked=false, limit=12){
-  const el = document.getElementById(id); if(!el) return;
-  const active = rows.filter(isActive).slice(0, limit);
-  el.innerHTML = active.length ? active.map(r => pickCard(r, locked)).join('') : `<div class="empty">No active picks loaded right now.</div>`;
-}
-function renderTable(id, rows, limit=100){
-  const el = document.getElementById(id); if(!el) return;
-  const usable = dedupeRows(rows).filter(r => hasText(r.pick)).sort(byDateDesc).slice(0, limit);
-  if(!usable.length){ el.innerHTML = '<tr><td colspan="7">No results loaded.</td></tr>'; return; }
-  el.innerHTML = usable.map(row => `<tr>
-    <td>${esc(row.date || '')}</td>
-    <td>${esc(row.league || row.sport || '')}</td>
-    <td><strong>${esc(row.pick || '')}</strong><br><span style="color:var(--muted)">${esc(row.game || '')}</span>${tableOddsSummary(row)}</td>
-    <td>${esc(row.grade || '')}</td>
-    <td class="${resultClass(row.result || row.status)}">${esc(row.result || row.status || 'Pending')}</td>
-    <td>${esc(row.profitLoss || '')}</td>
-    <td>${esc(row.closingNumber || row.bestNumber || '')}</td>
-  </tr>`).join('');
-}
-function renderOddsLayer(rows){
-  const el = document.getElementById('oddsRows');
-  const status = document.getElementById('oddsFeedStatus');
-  const usable = dedupeRows(rows).filter(r => hasText(r.game) || hasText(r.pick));
-  if(status){ status.innerHTML = usable.length ? `<div class="notice"><strong>No-API odds mode:</strong> ${usable.length} row(s) loaded from BetRivers Odds Tracker / sheet odds.</div>` : `<div class="empty"><strong>No-API odds mode active.</strong><br>Enter odds in Active Picks or BetRivers Odds Tracker. No paid API credits are used.</div>`; }
-  if(!el) return;
-  if(!usable.length){ el.innerHTML = '<tr><td colspan="8">No odds rows loaded.</td></tr>'; return; }
-  el.innerHTML = usable.sort(byDateDesc).slice(0, 50).map(row => {
-    const confirm = row.confirmationStatus || row.action || 'Sheet Confirm';
-    return `<tr><td>${esc(row.date || '')}</td><td>${esc(row.league || row.sport || '')}</td><td>${esc(row.game || '')}</td><td><strong>${esc(row.pick || '')}</strong><br><span style="color:var(--muted)">${esc(row.market || row.betType || '')}</span></td><td>${esc(row.betRiversPrice || row.odds || '--')}</td><td>${esc(row.bestMarketPrice || row.bestNumber || '--')}<br><span style="color:var(--muted)">${esc(row.bestBook || '')}</span></td><td>${esc(row.lineMovement || 'Sheet Mode')}</td><td class="${resultClass(confirm)}">${esc(confirm)}</td></tr>`;
-  }).join('');
-}
-function renderSharpCardTeaser(){
-  const el = document.getElementById('sharpTeaserGrid'); if(!el) return;
-  el.innerHTML = `<div class="pick-card locked-card"><div class="kicker">Sharp Card Locked</div><div class="pick-title">VIP Plays Hidden</div><p style="color:var(--muted);line-height:1.6">Sharp Card previews are public, but VIP picks, full analysis, units, odds, and results are only shown inside the VIP Vault.</p><div class="metric-grid"><div class="metric"><strong>Locked</strong><span>VIP Picks</span></div><div class="metric"><strong>Hidden</strong><span>Full Analysis</span></div><div class="metric"><strong>Private</strong><span>Results</span></div><div class="metric"><strong>VIP</strong><span>Access</span></div></div><div class="actions"><a class="btn primary" href="./premium.html">Enter VIP Vault</a><a class="btn" href="./free-look.html">View Free Picks</a></div></div>`;
-}
-
-function hardPublicVipGuard(){
-  if(!isPublicOnlyPage()) return;
-  document.querySelectorAll('[data-vip-only], .vip-only, .full-analysis, .market-notes-private, .injury-notes-private').forEach(el => {
-    el.innerHTML = '<div class="empty">VIP analysis locked. Join the VIP Vault to view full breakdown.</div>';
-  });
-}
-
-async function boot(){
-  try{
-    const [active, results, vipArchive, odds] = await Promise.all([
-      getRows(ACTIVE_GID, 'Active Picks'),
-      getRows(RESULTS_ARCHIVE_GID, 'Results Archive').catch(() => []),
-      getRows(VIP_ARCHIVE_GID, 'VIP Archive').catch(() => []),
-      getRows(BETRIVERS_ODDS_GID, 'BetRivers Odds Tracker').catch(() => [])
-    ]);
-    STATE = { active, results: dedupeRows(results), vipArchive: dedupeRows(vipArchive), odds: dedupeRows(odds), oddsByPick: new Map(), oddsByGame: new Map() };
-    buildOddsMaps(STATE.odds);
-
-    const freeActive = publicRows(STATE.active);
-    const vipActive = vipRows(STATE.active);
-    const freeResults = publicRows(STATE.results);
-    const vipResults = STATE.vipArchive;
-    const overallStats = calcStats(STATE.results, STATE.results);
-    const freeStats = calcStats(freeResults, freeResults.concat(freeActive));
-    const vipStats = calcStats(vipResults, vipResults.concat(vipActive));
-
-    if(isPremiumPage()){
-      writeStats('overall', vipStats); writeStats('vip', vipStats); writeStats('free', freeStats);
-    } else if(isSharpPage()){
-      setText('overallRecord','Locked'); setText('overallWinRate','VIP'); setText('overallTotalUnits','Private'); setText('overallCount','--');
-    } else {
-      writeStats('overall', overallStats); writeStats('vip', vipStats); writeStats('free', freeStats);
-    }
-
-    renderPickOfDay('pickOfDayGrid', STATE.active);
-    renderPickOfDay('freePickOfDayGrid', freeActive);
-    renderGrid('homeFreePicksGrid', freeActive, true, 8);
-    renderGrid('freePicksGrid', freeActive, true, 12);
-    renderGrid('vipPicksGrid', vipActive, false, 12);
-    renderTable('dashboardResultsBody', STATE.results, 12);
-    renderTable('resultsBody', STATE.results, 100);
-    renderTable('freeArchiveBody', freeResults, 100);
-    renderTable('vipArchiveBody', vipResults, 100);
-    renderOddsLayer(STATE.odds);
-    renderSharpCardTeaser();
-    hardPublicVipGuard();
-
-    document.querySelectorAll('.sync-time').forEach(el => { el.textContent = new Date().toLocaleTimeString([], { hour:'numeric', minute:'2-digit' }); });
-  }catch(e){
-    document.querySelectorAll('.sheet-area').forEach(el => { el.innerHTML = '<div class="empty">Sheet data could not load. Make sure the Google Sheet is shared as Viewer or published to web.</div>'; });
-    console.error('Micks Picks dynamic feed error:', e);
-  }
-}
-
-boot();
-setInterval(boot, 30000);
+function buildOddsMaps(rows){ STATE.oddsByPick=new Map(); STATE.oddsByGame=new Map(); rows.forEach(row=>{ if(!hasText(row.game))return; const g=makeGameKey(row),p=makeOddsKey(row); if(g&&!STATE.oddsByGame.has(g))STATE.oddsByGame.set(g,row); if(p&&p!=='|')STATE.oddsByPick.set(p,row); }); }
+function findOddsForPick(row){ return STATE.oddsByPick.get(makeOddsKey(row))||STATE.oddsByGame.get(makeGameKey(row))||null; }
+function originalOddsLabel(row){ const book=row.sportsbook||row._raw?.Sportsbook||row._raw?.Book||'Listed Book'; const odds=row.odds||row._raw?.Odds||''; if(book&&odds)return `${book} ${odds}`; return odds||book||'Not listed'; }
+function sourceLabel(odds){ if(!odds)return 'No feed match'; const primary=odds.oddsSource||odds.source||'Sheet Odds Tracker'; return primary+(odds.backupSource?` / ${odds.backupSource}`:''); }
+function publicWriteup(row){ return row.writeup||'Public writeup loading from the Micks Picks sheet.'; }
+function vipAnalysis(row){ const pieces=[row.fullAnalysis,row.marketNotes?`Market Notes: ${row.marketNotes}`:'',row.injuryNotes?`Injury Notes: ${row.injuryNotes}`:'',row.noBetCutoff?`No-Bet Cutoff: ${row.noBetCutoff}`:'',row.sourceVerification?`Source Verification: ${row.sourceVerification}`:''].filter(Boolean); return pieces.join(' ')||row.writeup||'VIP analysis loading from the Micks Picks sheet.'; }
+function safeAnalysis(row,locked){ return locked?publicWriteup(row):vipAnalysis(row); }
+function renderOddsBadge(row){ const odds=findOddsForPick(row); const original=originalOddsLabel(row); if(!odds){ return `<div class="odds-card-grid"><div class="odds-chip"><span>Picked At</span><strong>${esc(original)}</strong></div><div class="odds-chip"><span>Current BetRivers</span><strong>--</strong></div><div class="odds-chip"><span>Best Market</span><strong>--</strong></div><div class="odds-chip"><span>Confirm</span><strong class="status-pending">Sheet Odds Pending</strong></div></div><div class="odds-note">No paid odds API is being used. Enter/confirm odds in Active Picks or BetRivers Odds Tracker.</div>`;} const confirm=odds.confirmationStatus||odds.action||'Sheet Confirm'; return `<div class="odds-card-grid"><div class="odds-chip"><span>Picked At</span><strong>${esc(original)}</strong></div><div class="odds-chip"><span>Current BetRivers</span><strong>${esc(odds.betRiversPrice||odds.odds||'--')}</strong></div><div class="odds-chip"><span>Best Market</span><strong>${esc(odds.bestMarketPrice||odds.bestNumber||'--')}</strong></div><div class="odds-chip"><span>Best Book</span><strong>${esc(odds.bestBook||row.sportsbook||'--')}</strong></div><div class="odds-chip"><span>Move</span><strong>${esc(odds.lineMovement||'Sheet Mode')}</strong></div><div class="odds-chip"><span>Confirm</span><strong class="${resultClass(confirm)}">${esc(confirm)}</strong></div></div><div class="odds-note"><strong>Odds Source:</strong> ${esc(sourceLabel(odds))}<br>${esc(odds.notes||'Final number should still be checked inside the BetRivers Delaware app before placing.')} ${odds.timestamp?`<br><span>Updated: ${esc(odds.timestamp)}</span>`:''}</div>`; }
+function tableOddsSummary(row){ const odds=findOddsForPick(row); if(!odds)return `<div class="table-odds-line"><span>Picked at: ${esc(originalOddsLabel(row))}</span><br><span>Sheet odds: Pending</span></div>`; return `<div class="table-odds-line"><span>Picked at: ${esc(originalOddsLabel(row))}</span><br><span>BetRivers: ${esc(odds.betRiversPrice||'--')} | Best: ${esc(odds.bestMarketPrice||'--')} ${odds.bestBook?'@'+esc(odds.bestBook):''}</span></div>`; }
+function pickScore(row){ const grade=clean(row.grade); let score=50; if(grade==='a+')score=100; else if(grade==='a')score=95; else if(grade==='a-')score=90; else if(grade==='b+')score=82; else if(grade==='b')score=75; if(clean(row.confidence).includes('very high'))score+=12; else if(clean(row.confidence).includes('high'))score+=8; if(clean(row.featured)==='yes')score+=1000; if(isVIP(row))score+=10; if(isNoBet(row))score-=10000; score += Math.min(dateVal(row.date)/1000000000000,2); return score; }
+function pickCard(row,locked=false){ const league=row.league||row.sport||'Sports'; const cls=resultClass(row.result||row.status); const privateBadge=isVIP(row)&&locked?'<div class="odds-note"><strong>VIP Lock:</strong> Full analysis, market notes, injury notes, units, and EV edge are hidden on public pages.</div>':''; return `<div class="pick-card ${isVIP(row)&&locked?'locked-card':''}"><div style="display:flex;justify-content:space-between;gap:12px;align-items:flex-start"><div><div style="color:var(--muted);font-size:11px;text-transform:uppercase;font-weight:1000;letter-spacing:.9px">${esc(league)} • ${esc(row.betType||row.market||'Pick')}</div><div class="pick-title">${esc(row.pick||'Pick Pending')}</div><p style="color:var(--muted);line-height:1.5">${esc(row.game||'Game details loading')}</p></div><div style="background:linear-gradient(135deg,#9b6d15,#ffe28a 54%,#b98821);color:#090909;padding:9px 11px;border-radius:10px;font-weight:1000">${esc(row.grade||(isVIP(row)?'VIP':'FREE'))}</div></div><div class="metric-grid"><div class="metric"><strong>${esc(row.odds||'--')}</strong><span>Chosen Odds</span></div><div class="metric"><strong>${esc(row.sportsbook||'--')}</strong><span>Picked From</span></div><div class="metric"><strong>${esc(row.bestNumber||row.bestMarketPrice||'--')}</strong><span>Best Number</span></div><div class="metric"><strong class="${cls}">${esc(row.status||row.result||'Pending')}</strong><span>Status</span></div></div><div class="odds-section"><div class="odds-title">Original Odds + Sheet Odds Engine</div>${renderOddsBadge(row)}</div><p style="color:#e7dcc4;line-height:1.55;margin-top:14px">${esc(safeAnalysis(row,locked))}</p>${privateBadge}</div>`; }
+function renderPickOfDay(id,rows){ const el=document.getElementById(id); if(!el)return; const active=rows.filter(r=>isActive(r)&&!isNoBet(r)); if(!active.length){el.innerHTML=`<div class="empty">No Pick of the Day loaded right now.</div>`;return;} const featured=active.filter(r=>clean(r.featured)==='yes'); const pool=featured.length?featured:active; const top=pool.sort((a,b)=>pickScore(b)-pickScore(a))[0]; el.innerHTML=pickCard(top,!isPremiumPage()); }
+function renderGrid(id,rows,locked=false,limit=12){ const el=document.getElementById(id); if(!el)return; const active=rows.filter(r=>isActive(r)&&!isNoBet(r)).slice(0,limit); el.innerHTML=active.length?active.map(r=>pickCard(r,locked)).join(''):`<div class="empty">No active picks loaded right now.</div>`; }
+function renderTable(id,rows,limit=100){ const el=document.getElementById(id); if(!el)return; const usable=dedupeRows(rows).filter(r=>hasText(r.pick)).sort(byDateDesc).slice(0,limit); if(!usable.length){el.innerHTML='<tr><td colspan="7">No results loaded.</td></tr>';return;} el.innerHTML=usable.map(row=>`<tr><td>${esc(row.date||'')}</td><td>${esc(row.league||row.sport||'')}</td><td><strong>${esc(row.pick||'')}</strong><br><span style="color:var(--muted)">${esc(row.game||'')}</span>${tableOddsSummary(row)}</td><td>${esc(row.grade||'')}</td><td class="${resultClass(row.result||row.status)}">${esc(row.result||row.status||'Pending')}</td><td>${esc(row.profitLoss||'')}</td><td>${esc(row.closingNumber||row.bestNumber||'')}</td></tr>`).join(''); }
+function renderOddsLayer(rows){ const el=document.getElementById('oddsRows'); const status=document.getElementById('oddsFeedStatus'); const usable=dedupeRows(rows).filter(r=>hasText(r.game)||hasText(r.pick)); if(status){status.innerHTML=usable.length?`<div class="notice"><strong>No-API odds mode:</strong> ${usable.length} row(s) loaded from BetRivers Odds Tracker / sheet odds.</div>`:`<div class="empty"><strong>No-API odds mode active.</strong><br>Enter odds in Active Picks or BetRivers Odds Tracker. No paid API credits are used.</div>`;} if(!el)return; if(!usable.length){el.innerHTML='<tr><td colspan="8">No odds rows loaded.</td></tr>';return;} el.innerHTML=usable.sort(byDateDesc).slice(0,50).map(row=>{ const confirm=row.confirmationStatus||row.action||'Sheet Confirm'; return `<tr><td>${esc(row.date||'')}</td><td>${esc(row.league||row.sport||'')}</td><td>${esc(row.game||'')}</td><td><strong>${esc(row.pick||'')}</strong><br><span style="color:var(--muted)">${esc(row.market||row.betType||'')}</span></td><td>${esc(row.betRiversPrice||row.odds||'--')}</td><td>${esc(row.bestMarketPrice||row.bestNumber||'--')}<br><span style="color:var(--muted)">${esc(row.bestBook||'')}</span></td><td>${esc(row.lineMovement||'Sheet Mode')}</td><td class="${resultClass(confirm)}">${esc(confirm)}</td></tr>`;}).join(''); }
+function renderSharpCardTeaser(){ const el=document.getElementById('sharpTeaserGrid'); if(!el)return; el.innerHTML=`<div class="pick-card locked-card"><div class="kicker">Sharp Card Locked</div><div class="pick-title">VIP Plays Hidden</div><p style="color:var(--muted);line-height:1.6">Sharp Card previews are public, but VIP picks, full analysis, units, odds, and results are only shown inside the VIP Vault.</p><div class="metric-grid"><div class="metric"><strong>Locked</strong><span>VIP Picks</span></div><div class="metric"><strong>Hidden</strong><span>Full Analysis</span></div><div class="metric"><strong>Private</strong><span>Results</span></div><div class="metric"><strong>VIP</strong><span>Access</span></div></div><div class="actions"><a class="btn primary" href="./premium.html">Enter VIP Vault</a><a class="btn" href="./free-look.html">View Free Picks</a></div></div>`; }
+function hardPublicVipGuard(){ if(!isPublicOnlyPage())return; document.querySelectorAll('[data-vip-only], .vip-only, .full-analysis, .market-notes-private, .injury-notes-private').forEach(el=>{el.innerHTML='<div class="empty">VIP analysis locked. Join the VIP Vault to view full breakdown.</div>';}); }
+async function boot(){ try{ const [active,results,vipArchive,odds]=await Promise.all([getRows(ACTIVE_GID,'Active Picks'),getRows(RESULTS_ARCHIVE_GID,'Results Archive').catch(()=>[]),getRows(VIP_ARCHIVE_GID,'VIP Archive').catch(()=>[]),getRows(BETRIVERS_ODDS_GID,'BetRivers Odds Tracker').catch(()=>[])]); STATE={active,results:dedupeRows(results),vipArchive:dedupeRows(vipArchive),odds:dedupeRows(odds),oddsByPick:new Map(),oddsByGame:new Map()}; buildOddsMaps(STATE.odds); const freeActive=publicRows(STATE.active); const vipActive=vipRows(STATE.active); const freeResults=publicRows(STATE.results); const vipResults=STATE.vipArchive; const overallStats=calcStats(STATE.results,STATE.results); const freeStats=calcStats(freeResults,freeResults.concat(freeActive)); const vipStats=calcStats(vipResults,vipResults.concat(vipActive)); if(isPremiumPage()){writeStats('overall',vipStats);writeStats('vip',vipStats);writeStats('free',freeStats);} else if(isSharpPage()){setText('overallRecord','Locked');setText('overallWinRate','VIP');setText('overallTotalUnits','Private');setText('overallCount','--');} else {writeStats('overall',overallStats);writeStats('vip',vipStats);writeStats('free',freeStats);} renderPickOfDay('pickOfDayGrid',STATE.active); renderPickOfDay('freePickOfDayGrid',freeActive); renderGrid('homeFreePicksGrid',freeActive,true,8); renderGrid('freePicksGrid',freeActive,true,12); renderGrid('vipPicksGrid',vipActive,false,12); renderTable('dashboardResultsBody',STATE.results,12); renderTable('resultsBody',STATE.results,100); renderTable('freeArchiveBody',freeResults,100); renderTable('vipArchiveBody',vipResults,100); renderOddsLayer(STATE.odds); renderSharpCardTeaser(); hardPublicVipGuard(); document.querySelectorAll('.sync-time').forEach(el=>{el.textContent=new Date().toLocaleTimeString([],{hour:'numeric',minute:'2-digit'});}); }catch(e){ document.querySelectorAll('.sheet-area').forEach(el=>{el.innerHTML='<div class="empty">Sheet data could not load. Make sure the Google Sheet is shared as Viewer or published to web.</div>';}); console.error('Micks Picks dynamic feed error:',e);} }
+boot(); setInterval(boot,30000);
