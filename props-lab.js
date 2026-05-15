@@ -1,6 +1,6 @@
 /* MICKS PICKS — PROPS LAB ONLY ENGINE
    Pulls prop results from Results Archive + VIP Archive + Props Results.
-   Fixes missing VIP-only props and normalizes dates.
+   Fixes missing VIP-only props, duplicate-date issues, and bad result labels.
 */
 
 const PROP_SHEET_ID = "15txBM8qsck7f0ZA_za7xYEykBxKpuq0no3x7yHcKNeE";
@@ -20,8 +20,10 @@ function propCompact(s){ return propClean(s).replace(/[^a-z0-9]/g,''); }
 function propHasText(v){ return String(v || '').trim().length > 0; }
 function propNumber(v){ const n = parseFloat(String(v || '').replace(/[^0-9.+-]/g,'')); return Number.isFinite(n) ? n : 0; }
 function propSet(id, value){ const el = document.getElementById(id); if(el) el.textContent = value; }
+function propIsVip(row){ return propClean(`${row.access || ''} ${row.featured || ''} ${row._sourceTab || ''}`).includes('vip'); }
 
 function propDateValue(v){ const s=String(v||'').trim(); if(!s) return 0; let m=s.match(/^(\d{4})-(\d{1,2})-(\d{1,2})/); if(m) return new Date(Number(m[1]),Number(m[2])-1,Number(m[3])).getTime(); m=s.match(/^(\d{1,2})\/(\d{1,2})\/(\d{2,4})/); if(m){let y=Number(m[3]); if(y<100)y+=2000; return new Date(y,Number(m[1])-1,Number(m[2])).getTime();} const d=new Date(s); return Number.isNaN(d.getTime())?0:d.getTime(); }
+function propDateKey(v){ const t=propDateValue(v); if(!t) return propCompact(v); const d=new Date(t); return `${d.getFullYear()}${String(d.getMonth()+1).padStart(2,'0')}${String(d.getDate()).padStart(2,'0')}`; }
 function propFormatDate(v){ const t=propDateValue(v); if(!t) return propEsc(v||''); const d=new Date(t); return `${String(d.getMonth()+1).padStart(2,'0')}/${String(d.getDate()).padStart(2,'0')}/${d.getFullYear()}`; }
 function propDateDesc(a,b){ return propDateValue(b.date)-propDateValue(a.date); }
 
@@ -31,16 +33,17 @@ function propAlias(headers, aliases){ return headers.find(h=>aliases.some(a=>pro
 function propMakeObjects(rows, sourceTab){ if(!rows.length) return []; const headers=rows[0].map(h=>String(h||'').trim()); return rows.slice(1).map(r=>{ const raw={}; headers.forEach((h,i)=>raw[h]=String(r[i]||'').trim()); const obj={_raw:raw,_sourceTab:sourceTab}; Object.entries(PROP_HEADER_ALIASES).forEach(([key,aliases])=>{ const real=propAlias(headers,aliases); obj[key]=real?String(raw[real]||'').trim():''; }); return obj; }).filter(r=>Object.values(r._raw||{}).some(v=>String(v||'').trim()!=='')); }
 async function propRows(gid, sourceTab){ const res=await fetch(propCsvUrl(gid),{cache:'no-store'}); const text=await res.text(); if(text.toLowerCase().includes('<html')) throw new Error(sourceTab+' unavailable'); return propMakeObjects(propParseCSV(text),sourceTab); }
 
-function propKey(row){ return [row.league||row.sport||'',row.game||'',row.pick||''].map(propCompact).join('|'); }
-function propDedupe(rows){ const best=new Map(); rows.forEach(r=>{ const k=propKey(r); if(!k) return; const existing=best.get(k); if(!existing){best.set(k,r); return;} const rScore=(r._sourceTab==='Props Results'?4:0)+(r._sourceTab==='VIP Archive'?3:0)+(propHasText(r.fullAnalysis)?2:0)+(propHasText(r.profitLoss)?1:0); const eScore=(existing._sourceTab==='Props Results'?4:0)+(existing._sourceTab==='VIP Archive'?3:0)+(propHasText(existing.fullAnalysis)?2:0)+(propHasText(existing.profitLoss)?1:0); if(rScore>eScore) best.set(k,r); }); return Array.from(best.values()); }
 function propResultText(row){ return propClean(`${row.result||''} ${row.status||''}`); }
-function propIsWin(row){ const r=propResultText(row); return r.includes('win')||r.includes('won')||r==='w'||r.includes('cash')||r.includes('cashed')||r.includes('✅'); }
-function propIsLoss(row){ const r=propResultText(row); return r.includes('loss')||r.includes('lost')||r==='l'||r.includes('lose')||r.includes('failed'); }
-function propIsPush(row){ const r=propResultText(row); return r.includes('push')||r.includes('void')||r.includes('cancel'); }
+function propIsWin(row){ const pl=propNumber(row.profitLoss); if(pl>0) return true; const r=propResultText(row); return r.includes('win')||r.includes('won')||r==='w'||r.includes('cash')||r.includes('cashed')||r.includes('✅'); }
+function propIsLoss(row){ const pl=propNumber(row.profitLoss); if(pl<0) return true; const r=propResultText(row); return r.includes('loss')||r.includes('lost')||r==='l'||r.includes('lose')||r.includes('failed'); }
+function propIsPush(row){ const plText=String(row.profitLoss||'').trim(); const r=propResultText(row); return r.includes('push')||r.includes('void')||r.includes('cancel')||(plText!==''&&propNumber(plText)===0&&!propIsWin(row)&&!propIsLoss(row)); }
 function propIsClosed(row){ return propIsWin(row)||propIsLoss(row)||propIsPush(row)||propClean(row.status).includes('graded')||propClean(row.status).includes('closed'); }
 function propIsActive(row){ const status=propClean(row.status); if(!propHasText(row.pick)) return false; if(['void','cancelled','canceled','delete','removed'].some(x=>status.includes(x))) return false; return !propIsClosed(row); }
-function propResultClass(value){ const r=propClean(value); if(r.includes('win')||r.includes('won')||r.includes('cash')) return 'status-win'; if(r.includes('loss')||r.includes('lost')||r.includes('failed')) return 'status-loss'; return 'status-pending'; }
 function propDisplayResult(row){ if(propIsWin(row)) return 'Win'; if(propIsLoss(row)) return 'Loss'; if(propIsPush(row)) return 'Push/Void'; return row.result||row.status||'Pending'; }
+function propResultClass(value){ const r=propClean(value); if(r.includes('win')||r.includes('won')||r.includes('cash')) return 'status-win'; if(r.includes('loss')||r.includes('lost')||r.includes('failed')) return 'status-loss'; return 'status-pending'; }
+
+function propKey(row){ return [propDateKey(row.date), row.league||row.sport||'', row.game||'', row.pick||'', propDisplayResult(row), propIsVip(row)?'vip':'public'].map(propCompact).join('|'); }
+function propDedupe(rows){ const best=new Map(); rows.forEach(r=>{ const k=propKey(r); if(!k) return; const existing=best.get(k); if(!existing){best.set(k,r); return;} const rScore=(propIsWin(r)?10:0)+(propIsVip(r)?6:0)+(r._sourceTab==='Props Results'?5:0)+(r._sourceTab==='VIP Archive'?4:0)+(propHasText(r.fullAnalysis)?2:0)+(propHasText(r.profitLoss)?1:0)+Math.min(propDateValue(r.date)/1000000000000,2); const eScore=(propIsWin(existing)?10:0)+(propIsVip(existing)?6:0)+(existing._sourceTab==='Props Results'?5:0)+(existing._sourceTab==='VIP Archive'?4:0)+(propHasText(existing.fullAnalysis)?2:0)+(propHasText(existing.profitLoss)?1:0)+Math.min(propDateValue(existing.date)/1000000000000,2); if(rScore>eScore) best.set(k,r); }); return Array.from(best.values()); }
 
 function isPropBet(row){
   const betType=propClean(row.betType||row.market||''); const pick=propClean(row.pick||''); const text=propClean(`${row.betType} ${row.market} ${row.pick}`);
@@ -52,20 +55,14 @@ function isPropBet(row){
 }
 
 function propStats(rows, activeRows){ const graded=rows.filter(r=>propHasText(r.pick)&&(propIsWin(r)||propIsLoss(r))); const wins=graded.filter(propIsWin).length; const losses=graded.filter(propIsLoss).length; const total=wins+losses; const units=graded.reduce((sum,r)=>sum+propNumber(r.profitLoss),0); return {record:total?`${wins}-${losses}`:'--',winRate:total?`${Math.round((wins/total)*100)}%`:'--',units:total||units?`${units>0?'+':''}${units.toFixed(2)}u`:'--',active:activeRows.length||'--',graded:total||'--'}; }
-
-function propCard(row){ const cls=propResultClass(propDisplayResult(row)); return `<div class="pick-card"><div class="kicker">Prop Bet</div><div style="display:flex;justify-content:space-between;gap:12px;align-items:flex-start"><div><div style="color:var(--muted);font-size:11px;text-transform:uppercase;font-weight:1000;letter-spacing:.9px">${propEsc(row.league||row.sport||'Sports')} • ${propEsc(row.betType||row.market||'Player Prop')}</div><div class="pick-title">${propEsc(row.pick||'Prop Pending')}</div><p style="color:var(--muted);line-height:1.5">${propEsc(row.game||'Game details loading')}</p></div><div style="background:linear-gradient(135deg,#6a3cff,#22e6ff);color:#fff;padding:9px 11px;border-radius:10px;font-weight:1000">${propEsc(row.grade||'PROP')}</div></div><div class="metric-grid"><div class="metric"><strong>${propEsc(row.odds||'--')}</strong><span>Odds</span></div><div class="metric"><strong>${propEsc(row.sportsbook||'--')}</strong><span>Book</span></div><div class="metric"><strong>${propEsc(row.bestNumber||'--')}</strong><span>Best Line</span></div><div class="metric"><strong class="${cls}">${propEsc(propDisplayResult(row))}</strong><span>Status</span></div></div><p style="color:#e7dcc4;line-height:1.55;margin-top:14px">${propEsc(row.writeup||row.fullAnalysis||'Prop angle loading from the Micks Picks sheet.')}</p></div>`; }
+function propCard(row){ const cls=propResultClass(propDisplayResult(row)); return `<div class="pick-card"><div class="kicker">${propIsVip(row)?'VIP Prop Bet':'Prop Bet'}</div><div style="display:flex;justify-content:space-between;gap:12px;align-items:flex-start"><div><div style="color:var(--muted);font-size:11px;text-transform:uppercase;font-weight:1000;letter-spacing:.9px">${propEsc(row.league||row.sport||'Sports')} • ${propEsc(row.betType||row.market||'Player Prop')}</div><div class="pick-title">${propEsc(row.pick||'Prop Pending')}</div><p style="color:var(--muted);line-height:1.5">${propEsc(row.game||'Game details loading')}</p></div><div style="background:linear-gradient(135deg,#6a3cff,#22e6ff);color:#fff;padding:9px 11px;border-radius:10px;font-weight:1000">${propEsc(row.grade||'PROP')}</div></div><div class="metric-grid"><div class="metric"><strong>${propEsc(row.odds||'--')}</strong><span>Odds</span></div><div class="metric"><strong>${propEsc(row.sportsbook||'--')}</strong><span>Book</span></div><div class="metric"><strong>${propEsc(row.bestNumber||'--')}</strong><span>Best Line</span></div><div class="metric"><strong class="${cls}">${propEsc(propDisplayResult(row))}</strong><span>Status</span></div></div><p style="color:#e7dcc4;line-height:1.55;margin-top:14px">${propEsc(row.writeup||row.fullAnalysis||'Prop angle loading from the Micks Picks sheet.')}</p></div>`; }
 function renderPropGrid(id, rows, limit=12){ const el=document.getElementById(id); if(!el) return; const usable=rows.filter(propIsActive).sort(propDateDesc).slice(0,limit); el.innerHTML=usable.length?usable.map(propCard).join(''):'<div class="empty">No active prop bets loaded right now.</div>'; }
-function renderPropResults(id, rows, limit=100){ const el=document.getElementById(id); if(!el) return; const usable=propDedupe(rows).filter(r=>propHasText(r.pick)&&propIsClosed(r)).sort(propDateDesc).slice(0,limit); if(!usable.length){el.innerHTML='<tr><td colspan="8">No prop results loaded.</td></tr>';return;} el.innerHTML=usable.map(row=>`<tr><td>${propFormatDate(row.date)}</td><td>${propEsc(row.league||row.sport||'')}</td><td><strong>${propEsc(row.pick||'')}</strong><br><span style="color:var(--muted)">${propEsc(row.game||'')}</span></td><td>${propEsc(row.grade||'')}</td><td class="${propResultClass(propDisplayResult(row))}">${propEsc(propDisplayResult(row))}</td><td>${propEsc(row.profitLoss||'')}</td><td>${propEsc(row.closingNumber||row.bestNumber||'')}</td><td>${propEsc(row._sourceTab||'')}</td></tr>`).join(''); }
+function renderPropResults(id, rows, limit=100){ const el=document.getElementById(id); if(!el) return; const usable=propDedupe(rows).filter(r=>propHasText(r.pick)&&propIsClosed(r)).sort(propDateDesc).slice(0,limit); if(!usable.length){el.innerHTML='<tr><td colspan="8">No prop results loaded.</td></tr>';return;} el.innerHTML=usable.map(row=>`<tr><td>${propFormatDate(row.date)}</td><td>${propEsc(row.league||row.sport||'')}</td><td><strong>${propEsc(row.pick||'')}</strong><br><span style="color:var(--muted)">${propEsc(row.game||'')}</span></td><td>${propEsc(row.grade||'')}</td><td class="${propResultClass(propDisplayResult(row))}">${propEsc(propDisplayResult(row))}</td><td>${propEsc(row.profitLoss||'')}</td><td>${propEsc(row.closingNumber||row.bestNumber||'')}</td><td>${propEsc(row._sourceTab||'')}${propIsVip(row)?' / VIP':''}</td></tr>`).join(''); }
 
 async function bootPropsLab(){
   if(!document.body.classList.contains('page-bg-props_lab')) return;
   try{
-    const [active, results, vipArchive, propsResults] = await Promise.all([
-      propRows(PROP_ACTIVE_GID,'Active Picks'),
-      propRows(PROP_RESULTS_GID,'Results Archive').catch(()=>[]),
-      propRows(PROP_VIP_ARCHIVE_GID,'VIP Archive').catch(()=>[]),
-      propRows(PROP_RESULTS_ONLY_GID,'Props Results').catch(()=>[])
-    ]);
+    const [active, results, vipArchive, propsResults] = await Promise.all([propRows(PROP_ACTIVE_GID,'Active Picks'), propRows(PROP_RESULTS_GID,'Results Archive').catch(()=>[]), propRows(PROP_VIP_ARCHIVE_GID,'VIP Archive').catch(()=>[]), propRows(PROP_RESULTS_ONLY_GID,'Props Results').catch(()=>[])]);
     const propActive=propDedupe(active).filter(isPropBet);
     const propResults=propDedupe(propsResults.concat(vipArchive,results)).filter(isPropBet);
     const activeOpen=propActive.filter(propIsActive);
