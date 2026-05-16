@@ -1,6 +1,6 @@
 /* Micks Picks Slate Validation Module
  * Paste into the existing odds-api.io Apps Script project.
- * Depends on existing pullOddsAPI() when available.
+ * Depends on pullOddsAPI() from apps-script/odds-api.gs when available.
  */
 
 const MP_VALIDATION = {
@@ -61,6 +61,18 @@ function getNormalizedOddsRows_() {
   return values.map((row, i) => ({ rowNumber: i + 2, row, headers }));
 }
 
+function inferLiveStatus_(row, headers) {
+  const explicit = String(getCellByAlias_(row, headers, ['Status', 'Game Status', 'Event Status', 'State']) || '').toLowerCase();
+  if (explicit) return explicit;
+  const start = getCellByAlias_(row, headers, ['Start Time', 'Commence Time', 'Event Date', 'Date']);
+  const t = new Date(start).getTime();
+  if (!isFinite(t)) return 'scheduled';
+  const diffMinutes = (t - Date.now()) / 60000;
+  if (diffMinutes > 0) return 'scheduled';
+  if (diffMinutes > -360) return 'live';
+  return 'completed';
+}
+
 function buildLiveSlateIndex_() {
   const index = {};
   getNormalizedOddsRows_().forEach(item => {
@@ -69,8 +81,8 @@ function buildLiveSlateIndex_() {
     index[normalizeKey_(game)] = {
       game: game,
       league: getCellByAlias_(item.row, item.headers, ['League', 'Sport League', 'Sport']),
-      status: String(getCellByAlias_(item.row, item.headers, ['Status', 'Game Status', 'Event Status', 'State']) || '').toLowerCase(),
-      updated: getCellByAlias_(item.row, item.headers, ['Updated', 'Last Updated', 'Timestamp', 'Pulled At', 'Sync Time']),
+      status: inferLiveStatus_(item.row, item.headers),
+      updated: getCellByAlias_(item.row, item.headers, ['Updated', 'Last Updated', 'Timestamp', 'Pulled At', 'Sync Time', 'Book Updated At']),
       rowNumber: item.rowNumber
     };
   });
@@ -106,7 +118,8 @@ function validateActiveSlate(game, league, date, market) {
 function validateAndPullOddsAPI() {
   ensureSlateValidationRuntime();
   try {
-    if (typeof pullOddsAPI === 'function') pullOddsAPI();
+    if (typeof pullOddsAPI !== 'function') throw new Error('pullOddsAPI is missing. Paste/deploy apps-script/odds-api.gs.');
+    pullOddsAPI();
     logSlateValidation_('INFO', 'pullOddsAPI', MP_VALIDATION.rawSheet, '', '', '', 'OK', 'Odds pull completed');
     validateActivePicksAgainstLiveSlate();
   } catch (err) {
