@@ -1,105 +1,65 @@
-/* Micks Picks odds-api.io runtime
- * Paste/deploy in the Apps Script project attached to the Micks Picks Data sheet.
- * Stores secrets only in Script Properties. Preferred property name: ODDS_API_IO_KEY.
- * Fallbacks are accepted for compatibility: ODDS_API_KEY, THE_ODDS_API_KEY, THE_ODDS_API_KEY_V4.
+/* Micks Picks odds runtime
+ * Primary provider: odds-api.io.
+ * Fallback provider: The Odds API v4.
+ * Store secrets only in Apps Script Properties.
+ * Preferred keys: ODDS_API_IO_KEY and THE_ODDS_API_KEY.
  */
 
 const MP_ODDS = {
-  providerName: 'odds-api.io',
-  baseUrl: 'https://api.odds-api.io/v3',
+  primary: {
+    providerName: 'odds-api.io',
+    baseUrl: 'https://api.odds-api.io/v3',
+    sports: ['basketball', 'baseball', 'football', 'hockey', 'mma'],
+    bookmakers: 'BetRivers,DraftKings,FanDuel,BetMGM,Caesars,ESPN BET',
+    eventLimit: 100,
+    propertyNames: ['ODDS_API_IO_KEY', 'ODDS_API_KEY']
+  },
+  fallback: {
+    providerName: 'The Odds API',
+    baseUrl: 'https://api.the-odds-api.com/v4',
+    sports: ['basketball_nba', 'basketball_wnba', 'baseball_mlb', 'americanfootball_nfl', 'icehockey_nhl', 'mma_mixed_martial_arts'],
+    markets: 'h2h,spreads,totals',
+    regions: 'us,us2',
+    oddsFormat: 'american',
+    dateFormat: 'iso',
+    propertyNames: ['THE_ODDS_API_KEY', 'THE_ODDS_API_KEY_V4', 'ODDS_API_FALLBACK_KEY']
+  },
   rawSheet: 'Raw Odds API Response',
   normalizedSheet: 'Normalized Odds API Rows',
-  logSheet: 'Odds Sync Log',
-  sports: ['basketball', 'baseball', 'football', 'hockey', 'mma'],
-  bookmakers: 'BetRivers,DraftKings,FanDuel,BetMGM,Caesars,ESPN BET',
-  eventLimit: 100,
-  propertyNames: ['ODDS_API_IO_KEY', 'ODDS_API_KEY', 'THE_ODDS_API_KEY', 'THE_ODDS_API_KEY_V4']
+  logSheet: 'Odds Sync Log'
 };
 
 function pullOddsAPI() {
   ensureOddsRuntime_();
-  const keyInfo = getOddsApiKeyInfo_();
-  const apiKey = keyInfo.value;
-  logOddsSync_('INFO', 'CONFIG', 'odds-api.io key loaded', keyInfo.publicSummary);
-
   const rawRows = [['Pulled At', 'Provider', 'Sport', 'HTTP Code', 'Raw Response Preview']];
-  const normalizedRows = [[
-    'Pulled At', 'Sport', 'League', 'Game', 'Home Team', 'Away Team', 'Start Time', 'Status',
-    'Bookmaker', 'Market', 'Outcome', 'Price', 'Point', 'Event ID', 'Book Updated At', 'Odds Source'
-  ]];
-  let written = 0;
-  let eventCount = 0;
+  const normalizedRows = normalizedHeader_();
 
-  MP_ODDS.sports.forEach(sport => {
-    try {
-      const eventsResult = fetchOddsApiIoEvents_(sport, apiKey);
-      rawRows.push([new Date(), MP_ODDS.providerName, sport, eventsResult.code, eventsResult.body.slice(0, 45000)]);
-      if (eventsResult.code < 200 || eventsResult.code >= 300) {
-        logOddsSync_('ERROR', sport, 'events HTTP ' + eventsResult.code, eventsResult.body.slice(0, 240));
-        return;
-      }
+  const primary = pullOddsApiIo_(rawRows, normalizedRows);
+  if (primary.rowsWritten > 1) {
+    writeSheet_(MP_ODDS.rawSheet, rawRows);
+    writeSheet_(MP_ODDS.normalizedSheet, normalizedRows);
+    logOddsSync_('COMPLETE', 'ALL', 'odds-api.io primary pull finished', `${primary.events} events, ${primary.rowsWritten - 1} data rows written`);
+    return { provider: MP_ODDS.primary.providerName, events: primary.events, rowsWritten: primary.rowsWritten - 1 };
+  }
 
-      const events = asArray_(JSON.parse(eventsResult.body || '[]'));
-      eventCount += events.length;
-      events.forEach(event => {
-        const eventId = event.id || event.eventId || '';
-        const base = normalizedBaseFromEvent_(event, sport);
-        normalizedRows.push(base.concat(['', 'event', 'listed', '', '', eventId, '', MP_ODDS.providerName]));
-        written += 1;
-
-        if (!eventId) return;
-        const oddsResult = fetchOddsApiIoOdds_(eventId, apiKey);
-        if (oddsResult.code < 200 || oddsResult.code >= 300) {
-          logOddsSync_('WARN', sport, 'odds HTTP ' + oddsResult.code + ' event=' + eventId, oddsResult.body.slice(0, 240));
-          return;
-        }
-        const oddsPayload = JSON.parse(oddsResult.body || '{}');
-        const flattened = flattenOddsApiIoOdds_(oddsPayload);
-        flattened.forEach(odd => {
-          normalizedRows.push(base.concat([
-            odd.bookmaker,
-            odd.market,
-            odd.outcome,
-            odd.price,
-            odd.point,
-            eventId,
-            odd.updated,
-            MP_ODDS.providerName
-          ]));
-          written += 1;
-        });
-      });
-      logOddsSync_('INFO', sport, 'OK', `${events.length} events processed`);
-    } catch (err) {
-      rawRows.push([new Date(), MP_ODDS.providerName, sport, 'ERROR', err.message]);
-      logOddsSync_('ERROR', sport, 'FAILED', err.message);
-    }
-  });
-
+  logOddsSync_('WARN', 'FALLBACK', 'Primary odds-api.io produced no rows', primary.reason || 'Trying The Odds API fallback');
+  const fallback = pullTheOddsApiFallback_(rawRows, normalizedRows);
   writeSheet_(MP_ODDS.rawSheet, rawRows);
   writeSheet_(MP_ODDS.normalizedSheet, normalizedRows);
-  logOddsSync_('COMPLETE', 'ALL', 'odds-api.io pull finished', `${eventCount} events, ${written} rows written`);
-  return { provider: MP_ODDS.providerName, events: eventCount, rowsWritten: written };
+  logOddsSync_('COMPLETE', 'ALL', 'odds pull finished', `${fallback.provider} fallback: ${fallback.events} events, ${fallback.rowsWritten - 1} data rows written`);
+  return { provider: fallback.provider, events: fallback.events, rowsWritten: fallback.rowsWritten - 1 };
 }
 
 function diagnoseOddsApiRuntime() {
   ensureOddsRuntime_();
-  const summaries = MP_ODDS.propertyNames.map(name => {
-    const raw = PropertiesService.getScriptProperties().getProperty(name);
-    const value = String(raw || '').trim();
-    return `${name}: ${value ? 'present length=' + value.length + ' mask=' + maskKey_(value) : 'missing'}`;
-  });
-  logOddsSync_('INFO', 'DIAGNOSTIC', 'Script property scan', summaries.join(' | '));
-  try {
-    const info = getOddsApiKeyInfo_();
-    const url = `${MP_ODDS.baseUrl}/events?apiKey=${encodeURIComponent(info.value)}&sport=basketball&limit=1`;
-    const res = UrlFetchApp.fetch(url, { method: 'get', muteHttpExceptions: true });
-    logOddsSync_('INFO', 'DIAGNOSTIC', 'odds-api.io events test HTTP ' + res.getResponseCode(), info.publicSummary + ' | body=' + res.getContentText().slice(0, 240));
-    return { ok: res.getResponseCode() >= 200 && res.getResponseCode() < 300, status: res.getResponseCode(), key: info.publicSummary };
-  } catch (err) {
-    logOddsSync_('ERROR', 'DIAGNOSTIC', 'Runtime diagnostic failed', err.message);
-    return { ok: false, error: err.message };
-  }
+  const primarySummary = propertyScan_(MP_ODDS.primary.propertyNames);
+  const fallbackSummary = propertyScan_(MP_ODDS.fallback.propertyNames);
+  logOddsSync_('INFO', 'DIAGNOSTIC', 'Primary odds-api.io property scan', primarySummary);
+  logOddsSync_('INFO', 'DIAGNOSTIC', 'Fallback The Odds API property scan', fallbackSummary);
+  const results = [];
+  results.push(testProviderKey_('PRIMARY', MP_ODDS.primary, url => url + '/events'));
+  results.push(testProviderKey_('FALLBACK', MP_ODDS.fallback, url => url + '/sports'));
+  return results;
 }
 
 function setupMicksPicksOddsTrigger() {
@@ -110,59 +70,143 @@ function setupMicksPicksOddsTrigger() {
   return pullOddsAPI();
 }
 
-function getOddsApiKey_() {
-  return getOddsApiKeyInfo_().value;
+function pullOddsApiIo_(rawRows, normalizedRows) {
+  let keyInfo;
+  try {
+    keyInfo = getProviderKeyInfo_(MP_ODDS.primary);
+    logOddsSync_('INFO', 'CONFIG', 'odds-api.io key loaded', keyInfo.publicSummary);
+  } catch (err) {
+    logOddsSync_('ERROR', 'CONFIG', 'odds-api.io key missing', err.message);
+    return { events: 0, rowsWritten: normalizedRows.length, reason: err.message };
+  }
+
+  let eventCount = 0;
+  MP_ODDS.primary.sports.forEach(sport => {
+    try {
+      const eventsResult = fetchOddsApiIoEvents_(sport, keyInfo.value);
+      rawRows.push([new Date(), MP_ODDS.primary.providerName, sport, eventsResult.code, eventsResult.body.slice(0, 45000)]);
+      if (eventsResult.code < 200 || eventsResult.code >= 300) {
+        logOddsSync_('ERROR', sport, 'odds-api.io events HTTP ' + eventsResult.code, eventsResult.body.slice(0, 240));
+        return;
+      }
+
+      const events = asArray_(JSON.parse(eventsResult.body || '[]'));
+      eventCount += events.length;
+      events.forEach(event => {
+        const eventId = event.id || event.eventId || '';
+        const base = normalizedBaseFromOddsApiIoEvent_(event, sport);
+        normalizedRows.push(base.concat(['', 'event', 'listed', '', '', eventId, '', MP_ODDS.primary.providerName]));
+
+        if (!eventId) return;
+        const oddsResult = fetchOddsApiIoOdds_(eventId, keyInfo.value);
+        if (oddsResult.code < 200 || oddsResult.code >= 300) {
+          logOddsSync_('WARN', sport, 'odds-api.io odds HTTP ' + oddsResult.code + ' event=' + eventId, oddsResult.body.slice(0, 240));
+          return;
+        }
+        flattenOddsApiIoOdds_(JSON.parse(oddsResult.body || '{}')).forEach(odd => {
+          normalizedRows.push(base.concat([odd.bookmaker, odd.market, odd.outcome, odd.price, odd.point, eventId, odd.updated, MP_ODDS.primary.providerName]));
+        });
+      });
+      logOddsSync_('INFO', sport, 'odds-api.io OK', `${events.length} events processed`);
+    } catch (err) {
+      rawRows.push([new Date(), MP_ODDS.primary.providerName, sport, 'ERROR', err.message]);
+      logOddsSync_('ERROR', sport, 'odds-api.io FAILED', err.message);
+    }
+  });
+  return { provider: MP_ODDS.primary.providerName, events: eventCount, rowsWritten: normalizedRows.length };
 }
 
-function getOddsApiKeyInfo_() {
-  const props = PropertiesService.getScriptProperties();
-  for (let i = 0; i < MP_ODDS.propertyNames.length; i++) {
-    const name = MP_ODDS.propertyNames[i];
-    const value = String(props.getProperty(name) || '').trim();
-    if (value && !/^your[_-]?api[_-]?key$/i.test(value)) {
-      return { name, value, publicSummary: `${name} present length=${value.length} mask=${maskKey_(value)}` };
-    }
+function pullTheOddsApiFallback_(rawRows, normalizedRows) {
+  let keyInfo;
+  try {
+    keyInfo = getProviderKeyInfo_(MP_ODDS.fallback);
+    logOddsSync_('INFO', 'CONFIG', 'The Odds API fallback key loaded', keyInfo.publicSummary);
+  } catch (err) {
+    logOddsSync_('ERROR', 'CONFIG', 'The Odds API fallback key missing', err.message);
+    return { provider: MP_ODDS.fallback.providerName, events: 0, rowsWritten: normalizedRows.length };
   }
-  throw new Error('Missing odds-api.io key. Add ODDS_API_IO_KEY in Apps Script Project Settings > Script Properties.');
+
+  let eventCount = 0;
+  MP_ODDS.fallback.sports.forEach(sport => {
+    try {
+      const result = fetchTheOddsApiSport_(sport, keyInfo.value);
+      rawRows.push([new Date(), MP_ODDS.fallback.providerName, sport, result.code, result.body.slice(0, 45000)]);
+      if (result.code < 200 || result.code >= 300) {
+        logOddsSync_('ERROR', sport, 'The Odds API HTTP ' + result.code, result.body.slice(0, 240));
+        return;
+      }
+      const events = asArray_(JSON.parse(result.body || '[]'));
+      eventCount += events.length;
+      events.forEach(event => {
+        const base = normalizedBaseFromTheOddsApiEvent_(event, sport);
+        (event.bookmakers || []).forEach(book => {
+          (book.markets || []).forEach(market => {
+            (market.outcomes || []).forEach(outcome => {
+              normalizedRows.push(base.concat([
+                book.title || book.key || '',
+                market.key || '',
+                marketOutcomeName_(market, outcome),
+                outcome.price || '',
+                outcome.point || '',
+                event.id || '',
+                book.last_update || market.last_update || '',
+                MP_ODDS.fallback.providerName
+              ]));
+            });
+          });
+        });
+      });
+      logOddsSync_('INFO', sport, 'The Odds API fallback OK', `${events.length} events normalized`);
+    } catch (err) {
+      rawRows.push([new Date(), MP_ODDS.fallback.providerName, sport, 'ERROR', err.message]);
+      logOddsSync_('ERROR', sport, 'The Odds API fallback FAILED', err.message);
+    }
+  });
+  return { provider: MP_ODDS.fallback.providerName, events: eventCount, rowsWritten: normalizedRows.length };
+}
+
+function normalizedHeader_() {
+  return [[
+    'Pulled At', 'Sport', 'League', 'Game', 'Home Team', 'Away Team', 'Start Time', 'Status',
+    'Bookmaker', 'Market', 'Outcome', 'Price', 'Point', 'Event ID', 'Book Updated At', 'Odds Source'
+  ]];
 }
 
 function fetchOddsApiIoEvents_(sport, apiKey) {
   const now = new Date();
   const to = new Date(now.getTime() + 36 * 60 * 60 * 1000);
-  const params = {
-    apiKey,
-    sport,
-    status: 'pending,live',
-    from: now.toISOString(),
-    to: to.toISOString(),
-    limit: MP_ODDS.eventLimit
-  };
-  const res = UrlFetchApp.fetch(MP_ODDS.baseUrl + '/events?' + queryString_(params), { method: 'get', muteHttpExceptions: true });
+  const params = { apiKey, sport, status: 'pending,live', from: now.toISOString(), to: to.toISOString(), limit: MP_ODDS.primary.eventLimit };
+  const res = UrlFetchApp.fetch(MP_ODDS.primary.baseUrl + '/events?' + queryString_(params), { method: 'get', muteHttpExceptions: true });
   return { code: res.getResponseCode(), body: res.getContentText() };
 }
 
 function fetchOddsApiIoOdds_(eventId, apiKey) {
-  const params = { apiKey, eventId, bookmakers: MP_ODDS.bookmakers };
-  const res = UrlFetchApp.fetch(MP_ODDS.baseUrl + '/odds?' + queryString_(params), { method: 'get', muteHttpExceptions: true });
+  const params = { apiKey, eventId, bookmakers: MP_ODDS.primary.bookmakers };
+  const res = UrlFetchApp.fetch(MP_ODDS.primary.baseUrl + '/odds?' + queryString_(params), { method: 'get', muteHttpExceptions: true });
   return { code: res.getResponseCode(), body: res.getContentText() };
 }
 
-function normalizedBaseFromEvent_(event, fallbackSport) {
+function fetchTheOddsApiSport_(sport, apiKey) {
+  const params = { apiKey, regions: MP_ODDS.fallback.regions, markets: MP_ODDS.fallback.markets, oddsFormat: MP_ODDS.fallback.oddsFormat, dateFormat: MP_ODDS.fallback.dateFormat };
+  const url = `${MP_ODDS.fallback.baseUrl}/sports/${encodeURIComponent(sport)}/odds/?${queryString_(params)}`;
+  const res = UrlFetchApp.fetch(url, { method: 'get', muteHttpExceptions: true });
+  return { code: res.getResponseCode(), body: res.getContentText() };
+}
+
+function normalizedBaseFromOddsApiIoEvent_(event, fallbackSport) {
   const sport = objectText_(event.sport, 'slug') || objectText_(event.sport, 'name') || fallbackSport;
   const league = objectText_(event.league, 'slug') || objectText_(event.league, 'name') || '';
   const home = event.home || event.homeTeam || event.home_team || '';
   const away = event.away || event.awayTeam || event.away_team || '';
   const game = `${away} vs ${home}`.trim();
-  return [
-    new Date(),
-    sport,
-    league,
-    game,
-    home,
-    away,
-    event.date || event.startTime || event.commence_time || '',
-    normalizeOddsApiIoStatus_(event.status)
-  ];
+  return [new Date(), sport, league, game, home, away, event.date || event.startTime || event.commence_time || '', normalizeOddsApiIoStatus_(event.status)];
+}
+
+function normalizedBaseFromTheOddsApiEvent_(event, fallbackSport) {
+  const home = event.home_team || '';
+  const away = event.away_team || '';
+  const game = `${away} vs ${home}`.trim();
+  return [new Date(), event.sport_key || fallbackSport, event.sport_title || fallbackSport, game, home, away, event.commence_time || '', eventStatusFromStart_(event.commence_time)];
 }
 
 function flattenOddsApiIoOdds_(payload) {
@@ -189,6 +233,39 @@ function flattenOddsApiIoOdds_(payload) {
   return rows;
 }
 
+function getProviderKeyInfo_(provider) {
+  const props = PropertiesService.getScriptProperties();
+  for (let i = 0; i < provider.propertyNames.length; i++) {
+    const name = provider.propertyNames[i];
+    const value = String(props.getProperty(name) || '').trim();
+    if (value && !/^your[_-]?api[_-]?key$/i.test(value)) {
+      return { name, value, publicSummary: `${name} present length=${value.length} mask=${maskKey_(value)}` };
+    }
+  }
+  throw new Error(`Missing ${provider.providerName} key. Checked: ${provider.propertyNames.join(', ')}`);
+}
+
+function propertyScan_(names) {
+  return names.map(name => {
+    const raw = PropertiesService.getScriptProperties().getProperty(name);
+    const value = String(raw || '').trim();
+    return `${name}: ${value ? 'present length=' + value.length + ' mask=' + maskKey_(value) : 'missing'}`;
+  }).join(' | ');
+}
+
+function testProviderKey_(label, provider, endpointBuilder) {
+  try {
+    const info = getProviderKeyInfo_(provider);
+    const url = endpointBuilder(provider.baseUrl) + '?' + queryString_({ apiKey: info.value, sport: provider.sports[0], limit: 1 });
+    const res = UrlFetchApp.fetch(url, { method: 'get', muteHttpExceptions: true });
+    logOddsSync_('INFO', 'DIAGNOSTIC', `${label} ${provider.providerName} test HTTP ${res.getResponseCode()}`, info.publicSummary + ' | body=' + res.getContentText().slice(0, 240));
+    return { provider: provider.providerName, ok: res.getResponseCode() >= 200 && res.getResponseCode() < 300, status: res.getResponseCode() };
+  } catch (err) {
+    logOddsSync_('ERROR', 'DIAGNOSTIC', `${label} ${provider.providerName} diagnostic failed`, err.message);
+    return { provider: provider.providerName, ok: false, error: err.message };
+  }
+}
+
 function normalizeOddsApiIoStatus_(status) {
   const s = String(status || '').toLowerCase();
   if (s === 'pending' || s === 'scheduled' || s === 'pre') return 'scheduled';
@@ -196,6 +273,23 @@ function normalizeOddsApiIoStatus_(status) {
   if (s === 'settled' || s === 'final' || s === 'completed' || s === 'finished') return 'completed';
   if (s === 'cancelled' || s === 'canceled' || s === 'postponed') return s;
   return s || 'scheduled';
+}
+
+function eventStatusFromStart_(start) {
+  const t = new Date(start).getTime();
+  if (!isFinite(t)) return 'scheduled';
+  const diffMinutes = (t - Date.now()) / 60000;
+  if (diffMinutes > 0) return 'scheduled';
+  if (diffMinutes > -360) return 'live';
+  return 'completed';
+}
+
+function marketOutcomeName_(market, outcome) {
+  const name = String(outcome.name || '');
+  if (outcome.point === '' || outcome.point == null) return name;
+  if (market.key === 'spreads') return `${name} ${outcome.point}`;
+  if (market.key === 'totals') return `${name} ${outcome.point}`;
+  return name;
 }
 
 function queryString_(params) {
