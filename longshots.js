@@ -19,10 +19,17 @@ function lsIsVip(row){ return lsClean(`${row.access} ${row.featured} ${row.riskT
 function lsIsParlay(row){ return lsClean(`${row.type} ${row.pick}`).includes('parlay') || Number(row.legCount) > 1; }
 function lsSort(a,b){ return Date.parse(b.date || b.timestamp || 0) - Date.parse(a.date || a.timestamp || 0); }
 function lsRowsFor(type){ const rows = LONGSHOTS_STATE.filter(lsIsReleased).sort(lsSort); if(type === 'parlay') return rows.filter(lsIsParlay); if(type === 'lotto') return rows.filter(row => !lsIsParlay(row)); return rows; }
+function lsLegItems(legs){
+  return String(legs || '').split('|').map(leg => leg.trim()).filter(Boolean).map((leg,index) => {
+    const cleaned = leg.replace(/^\d+\.\s*/, '').trim();
+    return `<li><span>${index + 1}</span><strong>${lsEscape(cleaned)}</strong></li>`;
+  }).join('');
+}
 function lsCard(row){
   const vip = lsIsVip(row);
   const legText = row.legCount ? `${row.legCount} leg${Number(row.legCount) === 1 ? '' : 's'}` : (lsIsParlay(row) ? 'Parlay' : 'Lotto');
-  const legs = row.legs ? `<div class="longshot-note"><strong>Legs:</strong><br>${lsEscape(row.legs).replace(/\s*\|\s*/g,'<br>')}</div>` : '';
+  const legItems = lsLegItems(row.legs);
+  const legs = legItems ? `<div class="longshot-leg-card"><div class="longshot-leg-title">Ticket Legs</div><ol>${legItems}</ol></div>` : '';
   const validation = row.validationNotes || row.removedLegs ? `<div class="longshot-note"><strong>Validation:</strong> ${lsEscape(row.validationNotes || 'Pending')} ${row.removedLegs ? `<br><strong>Removed:</strong> ${lsEscape(row.removedLegs)}` : ''}</div>` : '';
   return `<article class="longshot-card ${vip ? 'is-vip' : ''}">
     <div class="longshot-ticket-edge"></div>
@@ -30,8 +37,8 @@ function lsCard(row){
     <h3>${lsEscape(row.pick || 'LongShot Pending')}</h3>
     <p class="longshot-game">${lsEscape(row.game || row.type || 'Card pending')}</p>
     <div class="longshot-chip-row"><span>${lsEscape(row.type || 'Lotto')}</span><span>${lsEscape(legText)}</span><span>${lsEscape(row.riskTier || 'High Variance')}</span></div>
-    <div class="longshot-metrics"><div><strong>${lsEscape(row.odds || '--')}</strong><span>Odds</span></div><div><strong>${lsEscape(row.units || '--')}</strong><span>Units</span></div><div><strong>${lsEscape(row.bestNumber || '--')}</strong><span>Best #</span></div><div><strong>${lsEscape(row.cutoff || '--')}</strong><span>Cutoff</span></div></div>
     ${legs}
+    <div class="longshot-metrics"><div><strong>${lsEscape(row.odds || '--')}</strong><span>Odds</span></div><div><strong>${lsEscape(row.units || '--')}</strong><span>Units</span></div><div><strong>${lsEscape(row.bestNumber || '--')}</strong><span>Best #</span></div><div><strong>${lsEscape(row.cutoff || '--')}</strong><span>Cutoff</span></div></div>
     <p class="longshot-writeup">${lsEscape(row.writeup || 'Longshot notes loading from the sheet.')}</p>
     <div class="longshot-note"><strong>Market:</strong> ${lsEscape(row.marketNotes || 'Confirm price before betting.')} ${row.payoutTarget ? `<br><strong>Target:</strong> ${lsEscape(row.payoutTarget)}` : ''}</div>
     ${validation}
