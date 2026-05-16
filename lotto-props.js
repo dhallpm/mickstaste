@@ -27,15 +27,25 @@ function lClosed(row){return lWin(row)||lLoss(row)||lPush(row)||lClean(row.statu
 function lDisplay(row){if(lWin(row))return'Win';if(lLoss(row))return'Loss';if(lPush(row))return'Push/Void';return row.result||row.status||'Pending'}
 function lClass(v){const r=lClean(v); if(r.includes('win'))return'status-win'; if(r.includes('loss'))return'status-loss'; return'status-pending'}
 function isLottoProp(row){
- const t=lClean(`${row.betType} ${row.market} ${row.pick} ${row.writeup} ${row.fullAnalysis}`);
+ const pick=lClean(row.pick||'');
+ const betType=lClean(row.betType||row.market||'');
+ const market=lClean(row.market||'');
+ const t=lClean(`${row.betType||''} ${row.market||''} ${row.pick||''} ${row.writeup||''} ${row.fullAnalysis||''} ${row.bestNumber||''} ${row.closingNumber||''}`);
+ const hardBlock=['moneyline','money line',' ml',' ml ','spread','run line','puck line','game total','full game total','team total','period total','quarter total','half total','f5','first 5','first five','series','future'];
+ const playerMarkers=['points','pts','rebounds','rebs','assists','asts','pra','p+r+a','3pm','threes','total bases','tb','hits','rbi','home run','hr','strikeouts','sog','shots on goal','saves','steals','blocks','turnovers','passing yards','rushing yards','receiving yards','touchdowns','double double','triple double','itd','inside the distance'];
+ if(hardBlock.some(w=>` ${betType} `.includes(w)||` ${market} `.includes(w)||` ${pick} `.includes(w)))return false;
+ if(/^[a-z .'-]+\s+ml$/i.test(row.pick||''))return false;
+ if(/^[a-z .'-]+\s+moneyline$/i.test(row.pick||''))return false;
+ const hasPlayerMarker=playerMarkers.some(w=>t.includes(w));
+ if(/\b(over|under)\s+\d+(\.\d+)?\b/.test(pick)&&!hasPlayerMarker)return false;
  const must=['lotto','ladder','longshot','long shot','sprinkle','moonshot','high risk','high-risk','hr ladder','home run ladder','sog ladder','alt pra','alt points','alt rebounds','alt assists','same game prop','sgp prop','prop parlay','plus-money prop','plus money prop','2+ total bases','3+ total bases','4+ total bases','2+ hits','3+ hits','home run sprinkle','hr sprinkle','alt tb','alt total bases'];
- if(must.some(w=>t.includes(w)))return true;
+ if(must.some(w=>t.includes(w))&&hasPlayerMarker)return true;
  if(t.includes('home run')&&t.includes('over'))return true;
  if(t.includes('anytime touchdown')||t.includes('first touchdown'))return true;
  const odds=lNum(row.odds);
  const upsideWords=['home run','2+ total bases','3+ total bases','4+ total bases','2+ hits','3+ hits','2+ sog','3+ sog','4+ sog','30+ points','35+ points','40+ points','double double','triple double','itd','inside the distance'];
  if(upsideWords.some(w=>t.includes(w))&&odds>=150)return true;
- if((lVip(row)||lClean(row.featured)==='yes')&&odds>=175)return true;
+ if((lVip(row)||lClean(row.featured)==='yes')&&odds>=175&&hasPlayerMarker)return true;
  return false;
 }
 function lActive(row){const s=lClean(row.status);return lHas(row.pick)&&!lClosed(row)&&!['void','cancelled','canceled','delete','removed'].some(x=>s.includes(x))}
