@@ -20,12 +20,15 @@ const MP_ODDS = {
   markets: 'h2h,spreads,totals',
   regions: 'us,us2',
   oddsFormat: 'american',
-  dateFormat: 'iso'
+  dateFormat: 'iso',
+  propertyNames: ['ODDS_API_KEY', 'THE_ODDS_API_KEY', 'THE_ODDS_API_KEY_V4', 'OPTICODDS_API_KEY']
 };
 
 function pullOddsAPI() {
   ensureOddsRuntime_();
-  const apiKey = getOddsApiKey_();
+  const keyInfo = getOddsApiKeyInfo_();
+  const apiKey = keyInfo.value;
+  logOddsSync_('INFO', 'CONFIG', 'API key loaded', keyInfo.publicSummary);
   const rawRows = [['Pulled At', 'Sport', 'HTTP Code', 'Raw Response Preview']];
   const normalizedRows = [[
     'Pulled At', 'Sport', 'League', 'Game', 'Home Team', 'Away Team', 'Start Time', 'Status',
@@ -84,6 +87,26 @@ function pullOddsAPI() {
   return { rowsWritten: written };
 }
 
+function diagnoseOddsApiRuntime() {
+  ensureOddsRuntime_();
+  const summaries = MP_ODDS.propertyNames.map(name => {
+    const raw = PropertiesService.getScriptProperties().getProperty(name);
+    const value = String(raw || '').trim();
+    return `${name}: ${value ? 'present length=' + value.length + ' mask=' + maskKey_(value) : 'missing'}`;
+  });
+  logOddsSync_('INFO', 'DIAGNOSTIC', 'Script property scan', summaries.join(' | '));
+  try {
+    const info = getOddsApiKeyInfo_();
+    const url = `${MP_ODDS.baseUrl}/sports/?apiKey=${encodeURIComponent(info.value)}`;
+    const res = UrlFetchApp.fetch(url, { method: 'get', muteHttpExceptions: true });
+    logOddsSync_('INFO', 'DIAGNOSTIC', 'Sports endpoint test HTTP ' + res.getResponseCode(), info.publicSummary + ' | body=' + res.getContentText().slice(0, 240));
+    return { ok: res.getResponseCode() >= 200 && res.getResponseCode() < 300, status: res.getResponseCode(), key: info.publicSummary };
+  } catch (err) {
+    logOddsSync_('ERROR', 'DIAGNOSTIC', 'Runtime diagnostic failed', err.message);
+    return { ok: false, error: err.message };
+  }
+}
+
 function setupMicksPicksOddsTrigger() {
   ScriptApp.getProjectTriggers().forEach(trigger => {
     if (trigger.getHandlerFunction && trigger.getHandlerFunction() === 'pullOddsAPI') ScriptApp.deleteTrigger(trigger);
@@ -93,13 +116,25 @@ function setupMicksPicksOddsTrigger() {
 }
 
 function getOddsApiKey_() {
+  return getOddsApiKeyInfo_().value;
+}
+
+function getOddsApiKeyInfo_() {
   const props = PropertiesService.getScriptProperties();
-  const names = ['ODDS_API_KEY', 'THE_ODDS_API_KEY', 'THE_ODDS_API_KEY_V4', 'OPTICODDS_API_KEY'];
-  for (let i = 0; i < names.length; i++) {
-    const value = String(props.getProperty(names[i]) || '').trim();
-    if (value && !/^your[_-]?api[_-]?key$/i.test(value)) return value;
+  for (let i = 0; i < MP_ODDS.propertyNames.length; i++) {
+    const name = MP_ODDS.propertyNames[i];
+    const value = String(props.getProperty(name) || '').trim();
+    if (value && !/^your[_-]?api[_-]?key$/i.test(value)) {
+      return { name, value, publicSummary: `${name} present length=${value.length} mask=${maskKey_(value)}` };
+    }
   }
   throw new Error('Missing The Odds API key. Add ODDS_API_KEY in Apps Script Project Settings > Script Properties.');
+}
+
+function maskKey_(value) {
+  const v = String(value || '');
+  if (v.length <= 8) return '***';
+  return v.slice(0, 4) + '...' + v.slice(-4);
 }
 
 function fetchOddsSport_(sport, apiKey) {
