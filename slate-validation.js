@@ -41,7 +41,12 @@
     }catch(e){ state.loaded=true; state.available=false; state.error=e.message||String(e); }
     return state;
   }
-  function validateActiveSlate(row){
+  function normalizeSlateInput(gameOrRow, league, date, market){
+    if(gameOrRow && typeof gameOrRow === 'object') return gameOrRow;
+    return { game:gameOrRow, league, date, market };
+  }
+  function validateActiveSlate(gameOrRow, league, date, market){
+    const row=normalizeSlateInput(gameOrRow, league, date, market);
     if(!state.available)return { ok:false, code:'VALIDATION_UNAVAILABLE', message:'Slate validation unavailable' };
     const game=row.game||row.matchup||row.event||'';
     const key=eventKey(game);
