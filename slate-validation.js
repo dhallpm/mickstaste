@@ -19,14 +19,25 @@
   function rowObjects(rows){ if(!rows.length)return[]; const headers=rows[0].map(h=>String(h||'').trim()); return rows.slice(1).map(r=>{ const obj={}; headers.forEach((h,i)=>obj[h]=String(r[i]||'').trim()); return obj; }).filter(r=>Object.values(r).some(Boolean)); }
   function eventKey(v){ return compact(v); }
   function rowGame(row){ return alias(row,['game','matchup','event','event name','name','home away','teams']); }
-  function rowStatus(row){ return clean(alias(row,['status','game status','event status','state'])); }
-  function rowUpdated(row){ return alias(row,['updated','last updated','timestamp','pulled at','sync time','commence time','start time']); }
+  function rawRowStatus(row){ return clean(alias(row,['status','game status','event status','state'])); }
+  function rowUpdated(row){ return alias(row,['updated','last updated','timestamp','pulled at','sync time','book updated at']); }
+  function rowStart(row){ return alias(row,['start time','commence time','event date','date']); }
   function rowLeague(row){ return alias(row,['league','sport league','sport']); }
   function rowDate(row){ return alias(row,['date','commence time','start time','event date']); }
   function asTime(v){ const t=Date.parse(String(v||'')); return Number.isFinite(t)?t:0; }
   function isStaleApiRow(row){ const t=asTime(rowUpdated(row)); if(!t)return false; return Date.now()-t > MAX_CACHE_MINUTES*60*1000; }
+  function inferStatus(row){
+    const explicit=rawRowStatus(row);
+    if(explicit)return explicit;
+    const start=asTime(rowStart(row));
+    if(!start)return 'scheduled';
+    const diffMinutes=(start-Date.now())/60000;
+    if(diffMinutes>0)return 'scheduled';
+    if(diffMinutes>-360)return 'live';
+    return 'completed';
+  }
   function isValidStatus(status){ return VALID_STATUSES.some(s=>status.includes(s)) && !INVALID_STATUSES.some(s=>status.includes(s)); }
-  function indexRows(rows){ const idx=new Map(); rows.forEach(row=>{ const game=rowGame(row); if(!game)return; const item={ game, league:rowLeague(row), date:rowDate(row), status:rowStatus(row), updated:rowUpdated(row), raw:row }; idx.set(eventKey(game), item); }); return idx; }
+  function indexRows(rows){ const idx=new Map(); rows.forEach(row=>{ const game=rowGame(row); if(!game)return; const item={ game, league:rowLeague(row), date:rowDate(row), status:inferStatus(row), updated:rowUpdated(row), raw:row }; idx.set(eventKey(game), item); }); return idx; }
   async function load(){
     if(state.loaded && state.available)return state;
     try{
