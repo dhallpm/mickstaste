@@ -1,5 +1,6 @@
 /* Micks Picks live slate validation gate.
-   Reads Normalized Odds API Rows and suppresses stale/invalid active releases. */
+   Reads Normalized Odds API Rows and suppresses stale/invalid active releases.
+*/
 (function(){
   const SHEET_ID = '15txBM8qsck7f0ZA_za7xYEykBxKpuq0no3x7yHcKNeE';
   const NORMALIZED_SHEET = 'Normalized Odds API Rows';
@@ -9,6 +10,7 @@
   const VALID_STATUSES = ['scheduled','live','in progress'];
   const INVALID_STATUSES = ['final','completed','unnecessary','canceled','cancelled','postponed'];
   const ACTIVE_CONTAINERS = ['pickOfDayGrid','freePickOfDayGrid','homeFreePicksGrid','freePicksGrid','vipPicksGrid','propBetsGrid','lottoPropsGrid'];
+  const MANUAL_OVERRIDE_MARKERS = ['manual posted', 'manual approved', 'not slate validated', 'not live slate validated', 'manualapproved', 'notvalidated'];
   const state = { loaded:false, available:false, rows:[], index:new Map(), error:'' };
 
   function clean(v){ return String(v||'').trim().toLowerCase().replace(/\s+/g,' '); }
@@ -69,13 +71,27 @@
   }
   function isPropMarket(row){ const text=clean(`${row.betType||''} ${row.market||''} ${row.pick||''}`); if(BLOCKED_MARKETS.some(w=>` ${text} `.includes(w)))return false; return PROP_MARKERS.some(w=>text.includes(w)); }
   function extractCardRow(card){ const title=card.querySelector('.pick-title')?.textContent||''; const meta=card.querySelector('p')?.textContent||''; const league=card.textContent||''; return { pick:title, game:meta, league }; }
+  function hasManualOverrideCard(card){
+    const text=clean(card?.textContent||'');
+    const compactText=compact(text);
+    return MANUAL_OVERRIDE_MARKERS.some(marker => text.includes(marker) || compactText.includes(compact(marker)));
+  }
+  function hasManualOverrideContainer(el){ return Array.from(el.querySelectorAll('.pick-card')).some(hasManualOverrideCard); }
   function blockContainer(id,message){ const el=document.getElementById(id); if(el)el.innerHTML=`<div class="empty">${message}</div>`; }
   function gateRenderedCards(){
     ACTIVE_CONTAINERS.forEach(id=>{
       const el=document.getElementById(id); if(!el)return;
-      if(!state.available){ blockContainer(id,'Slate validation unavailable'); return; }
       const cards=Array.from(el.querySelectorAll('.pick-card'));
-      cards.forEach(card=>{ const result=validateActiveSlate(extractCardRow(card)); if(!result.ok)card.remove(); });
+      if(!state.available){
+        if(cards.length && hasManualOverrideContainer(el)) return;
+        blockContainer(id,'Slate validation unavailable');
+        return;
+      }
+      cards.forEach(card=>{
+        if(hasManualOverrideCard(card)) return;
+        const result=validateActiveSlate(extractCardRow(card));
+        if(!result.ok)card.remove();
+      });
       if(cards.length && !el.querySelector('.pick-card')) blockContainer(id,'No live-validated picks are available.');
     });
   }
