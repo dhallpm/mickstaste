@@ -2,7 +2,7 @@
  * Primary provider: odds-api.io.
  * Fallback provider: The Odds API v4.
  * Store secrets only in Apps Script Properties.
- * Preferred keys: ODDS_API_IO_KEY and THE_ODDS_API_KEY.
+ * Preferred keys: ODDS_API_IO_KEY for primary and THE_ODDS_API_KEY/ODDS_API_KEY for fallback.
  */
 
 const MP_ODDS = {
@@ -14,7 +14,7 @@ const MP_ODDS = {
     eventLimit: 100,
     pullEventOdds: false,
     maxOddsEventsPerSport: 0,
-    propertyNames: ['ODDS_API_IO_KEY', 'ODDS_API_KEY']
+    propertyNames: ['ODDS_API_IO_KEY']
   },
   fallback: {
     providerName: 'The Odds API',
@@ -24,7 +24,7 @@ const MP_ODDS = {
     regions: 'us,us2',
     oddsFormat: 'american',
     dateFormat: 'iso',
-    propertyNames: ['THE_ODDS_API_KEY', 'THE_ODDS_API_KEY_V4', 'ODDS_API_FALLBACK_KEY']
+    propertyNames: ['THE_ODDS_API_KEY', 'THE_ODDS_API_KEY_V4', 'ODDS_API_FALLBACK_KEY', 'ODDS_API_KEY']
   },
   rawSheet: 'Raw Odds API Response',
   normalizedSheet: 'Normalized Odds API Rows',
