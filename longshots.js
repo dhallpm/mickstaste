@@ -2,7 +2,7 @@
 const LONGSHOTS_SHEET_ID = '15txBM8qsck7f0ZA_za7xYEykBxKpuq0no3x7yHcKNeE';
 const LONGSHOTS_GID = '2026051601';
 const LONGSHOTS_COLUMNS = {
-  date:['Date'], sport:['Sport'], league:['League'], game:['Game','Matchup'], pick:['Pick','Play'], type:['LongShot Type','Type','Bet Type'], odds:['Odds'], sportsbook:['Sportsbook','Book'], grade:['Grade'], units:['Units'], bestNumber:['Best Number'], cutoff:['No Bet Cutoff','Cutoff'], legCount:['Leg Count','Legs'], payoutTarget:['Payout Target'], riskTier:['Risk Tier','Risk'], status:['Status'], releaseStatus:['Release Status'], access:['Access'], featured:['Featured'], writeup:['Writeup'], fullAnalysis:['Full Analysis'], marketNotes:['Market Notes'], sourceVerification:['Source Verification'], timestamp:['Timestamp','Posted Time']
+  date:['Date'], sport:['Sport'], league:['League'], game:['Game','Matchup'], pick:['Pick','Play'], type:['LongShot Type','Type','Bet Type'], odds:['Odds'], sportsbook:['Sportsbook','Book'], grade:['Grade'], units:['Units'], bestNumber:['Best Number'], cutoff:['No Bet Cutoff','Cutoff'], legCount:['Leg Count','Legs'], payoutTarget:['Payout Target'], riskTier:['Risk Tier','Risk'], status:['Status'], releaseStatus:['Release Status'], access:['Access'], featured:['Featured'], writeup:['Writeup'], fullAnalysis:['Full Analysis'], marketNotes:['Market Notes'], sourceVerification:['Source Verification'], timestamp:['Timestamp','Posted Time'], manualApproved:['Manual Approved'], overrideMode:['Override Mode'], legs:['Legs'], removedLegs:['Removed Legs'], validationNotes:['Validation Notes','Validation Note']
 };
 
 let LONGSHOTS_STATE = [];
@@ -14,7 +14,7 @@ function lsParseCSV(text){ const rows=[]; let row=[], cur='', quoted=false; for(
 function lsNormHeader(value){ return String(value||'').trim().toLowerCase().replace(/\s+/g,' ').replace(/[^\w#/% ]/g,''); }
 function lsAlias(headers, aliases){ return headers.find(header => aliases.some(alias => lsNormHeader(alias) === lsNormHeader(header))); }
 function lsObjects(rows){ if(!rows.length) return []; const headers=rows[0].map(h=>String(h||'').trim()); return rows.slice(1).map(row=>{ const raw={}; headers.forEach((header,index)=>raw[header]=String(row[index]||'').trim()); const out={_raw:raw}; Object.entries(LONGSHOTS_COLUMNS).forEach(([key,aliases])=>{ const real=lsAlias(headers,aliases); out[key]=real ? String(raw[real]||'').trim() : ''; }); return out; }).filter(row => Object.values(row._raw).some(Boolean)); }
-function lsIsReleased(row){ const status=lsClean(`${row.releaseStatus} ${row.status}`); return status.includes('released') || status.includes('manual posted') || status.includes('pregame'); }
+function lsIsReleased(row){ const status=lsClean(`${row.releaseStatus} ${row.status}`); return status.includes('released') || status.includes('manual posted') || status.includes('pregame') || status.includes('pending live market validation'); }
 function lsIsVip(row){ return lsClean(`${row.access} ${row.featured} ${row.riskTier}`).includes('vip') || lsClean(row.featured)==='yes'; }
 function lsIsParlay(row){ return lsClean(`${row.type} ${row.pick}`).includes('parlay') || Number(row.legCount) > 1; }
 function lsSort(a,b){ return Date.parse(b.date || b.timestamp || 0) - Date.parse(a.date || a.timestamp || 0); }
@@ -22,6 +22,8 @@ function lsRowsFor(type){ const rows = LONGSHOTS_STATE.filter(lsIsReleased).sort
 function lsCard(row){
   const vip = lsIsVip(row);
   const legText = row.legCount ? `${row.legCount} leg${Number(row.legCount) === 1 ? '' : 's'}` : (lsIsParlay(row) ? 'Parlay' : 'Lotto');
+  const legs = row.legs ? `<div class="longshot-note"><strong>Legs:</strong><br>${lsEscape(row.legs).replace(/\s*\|\s*/g,'<br>')}</div>` : '';
+  const validation = row.validationNotes || row.removedLegs ? `<div class="longshot-note"><strong>Validation:</strong> ${lsEscape(row.validationNotes || 'Pending')} ${row.removedLegs ? `<br><strong>Removed:</strong> ${lsEscape(row.removedLegs)}` : ''}</div>` : '';
   return `<article class="longshot-card ${vip ? 'is-vip' : ''}">
     <div class="longshot-ticket-edge"></div>
     <div class="longshot-card-top"><span>${lsEscape(row.league || row.sport || 'LongShot')}</span><strong>${lsEscape(row.grade || 'Lotto')}</strong></div>
@@ -29,8 +31,10 @@ function lsCard(row){
     <p class="longshot-game">${lsEscape(row.game || row.type || 'Card pending')}</p>
     <div class="longshot-chip-row"><span>${lsEscape(row.type || 'Lotto')}</span><span>${lsEscape(legText)}</span><span>${lsEscape(row.riskTier || 'High Variance')}</span></div>
     <div class="longshot-metrics"><div><strong>${lsEscape(row.odds || '--')}</strong><span>Odds</span></div><div><strong>${lsEscape(row.units || '--')}</strong><span>Units</span></div><div><strong>${lsEscape(row.bestNumber || '--')}</strong><span>Best #</span></div><div><strong>${lsEscape(row.cutoff || '--')}</strong><span>Cutoff</span></div></div>
+    ${legs}
     <p class="longshot-writeup">${lsEscape(row.writeup || 'Longshot notes loading from the sheet.')}</p>
     <div class="longshot-note"><strong>Market:</strong> ${lsEscape(row.marketNotes || 'Confirm price before betting.')} ${row.payoutTarget ? `<br><strong>Target:</strong> ${lsEscape(row.payoutTarget)}` : ''}</div>
+    ${validation}
     <div class="longshot-status">${lsEscape(row.status || row.releaseStatus || 'Pending')}</div>
   </article>`;
 }
