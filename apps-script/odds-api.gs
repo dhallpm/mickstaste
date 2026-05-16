@@ -10,8 +10,10 @@ const MP_ODDS = {
     providerName: 'odds-api.io',
     baseUrl: 'https://api.odds-api.io/v3',
     sports: ['basketball', 'baseball', 'football', 'hockey', 'mma'],
-    bookmakers: 'BetRivers,DraftKings,FanDuel,BetMGM,Caesars,ESPN BET',
+    bookmakers: 'BetRivers,DraftKings,FanDuel,BetMGM,Caesars',
     eventLimit: 100,
+    pullEventOdds: false,
+    maxOddsEventsPerSport: 0,
     propertyNames: ['ODDS_API_IO_KEY', 'ODDS_API_KEY']
   },
   fallback: {
@@ -35,14 +37,14 @@ function pullOddsAPI() {
   const normalizedRows = normalizedHeader_();
 
   const primary = pullOddsApiIo_(rawRows, normalizedRows);
-  if (primary.rowsWritten > 1) {
+  if (primary.events > 0) {
     writeSheet_(MP_ODDS.rawSheet, rawRows);
     writeSheet_(MP_ODDS.normalizedSheet, normalizedRows);
-    logOddsSync_('COMPLETE', 'ALL', 'odds-api.io primary pull finished', `${primary.events} events, ${primary.rowsWritten - 1} data rows written`);
-    return { provider: MP_ODDS.primary.providerName, events: primary.events, rowsWritten: primary.rowsWritten - 1 };
+    logOddsSync_('COMPLETE', 'ALL', 'odds-api.io primary slate validation pull finished', `${primary.events} events, ${primary.rowsWritten - 1} rows written, ${primary.oddsCalls} odds calls`);
+    return { provider: MP_ODDS.primary.providerName, events: primary.events, rowsWritten: primary.rowsWritten - 1, oddsCalls: primary.oddsCalls };
   }
 
-  logOddsSync_('WARN', 'FALLBACK', 'Primary odds-api.io produced no rows', primary.reason || 'Trying The Odds API fallback');
+  logOddsSync_('WARN', 'FALLBACK', 'Primary odds-api.io produced no live slate rows', primary.reason || 'Trying The Odds API fallback');
   const fallback = pullTheOddsApiFallback_(rawRows, normalizedRows);
   writeSheet_(MP_ODDS.rawSheet, rawRows);
   writeSheet_(MP_ODDS.normalizedSheet, normalizedRows);
@@ -77,10 +79,11 @@ function pullOddsApiIo_(rawRows, normalizedRows) {
     logOddsSync_('INFO', 'CONFIG', 'odds-api.io key loaded', keyInfo.publicSummary);
   } catch (err) {
     logOddsSync_('ERROR', 'CONFIG', 'odds-api.io key missing', err.message);
-    return { events: 0, rowsWritten: normalizedRows.length, reason: err.message };
+    return { events: 0, rowsWritten: normalizedRows.length, oddsCalls: 0, reason: err.message };
   }
 
   let eventCount = 0;
+  let oddsCalls = 0;
   MP_ODDS.primary.sports.forEach(sport => {
     try {
       const eventsResult = fetchOddsApiIoEvents_(sport, keyInfo.value);
@@ -92,13 +95,17 @@ function pullOddsApiIo_(rawRows, normalizedRows) {
 
       const events = asArray_(JSON.parse(eventsResult.body || '[]'));
       eventCount += events.length;
+      let sportOddsCalls = 0;
       events.forEach(event => {
         const eventId = event.id || event.eventId || '';
         const base = normalizedBaseFromOddsApiIoEvent_(event, sport);
         normalizedRows.push(base.concat(['', 'event', 'listed', '', '', eventId, '', MP_ODDS.primary.providerName]));
 
-        if (!eventId) return;
+        if (!shouldPullOddsForEvent_(eventId, sportOddsCalls)) return;
+        sportOddsCalls++;
+        oddsCalls++;
         const oddsResult = fetchOddsApiIoOdds_(eventId, keyInfo.value);
+        rawRows.push([new Date(), MP_ODDS.primary.providerName, sport + ' odds ' + eventId, oddsResult.code, oddsResult.body.slice(0, 45000)]);
         if (oddsResult.code < 200 || oddsResult.code >= 300) {
           logOddsSync_('WARN', sport, 'odds-api.io odds HTTP ' + oddsResult.code + ' event=' + eventId, oddsResult.body.slice(0, 240));
           return;
@@ -107,13 +114,18 @@ function pullOddsApiIo_(rawRows, normalizedRows) {
           normalizedRows.push(base.concat([odd.bookmaker, odd.market, odd.outcome, odd.price, odd.point, eventId, odd.updated, MP_ODDS.primary.providerName]));
         });
       });
-      logOddsSync_('INFO', sport, 'odds-api.io OK', `${events.length} events processed`);
+      logOddsSync_('INFO', sport, 'odds-api.io OK', `${events.length} events listed, ${sportOddsCalls} odds calls`);
     } catch (err) {
       rawRows.push([new Date(), MP_ODDS.primary.providerName, sport, 'ERROR', err.message]);
       logOddsSync_('ERROR', sport, 'odds-api.io FAILED', err.message);
     }
   });
-  return { provider: MP_ODDS.primary.providerName, events: eventCount, rowsWritten: normalizedRows.length };
+  return { provider: MP_ODDS.primary.providerName, events: eventCount, rowsWritten: normalizedRows.length, oddsCalls };
+}
+
+function shouldPullOddsForEvent_(eventId, sportOddsCalls) {
+  if (!eventId || !MP_ODDS.primary.pullEventOdds) return false;
+  return sportOddsCalls < MP_ODDS.primary.maxOddsEventsPerSport;
 }
 
 function pullTheOddsApiFallback_(rawRows, normalizedRows) {
