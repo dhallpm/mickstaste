@@ -1,13 +1,363 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Micks Picks | Dashboard</title><link rel="stylesheet" href="./styles.css?v=20260516-sportsbook1"><link rel="stylesheet" href="./performance-fix.css?v=20260516-sportsbook1"><link rel="stylesheet" href="./brand-upgrade.css?v=20260516-media1">
-<!-- GoatCounter analytics active: https://mickspicks.goatcounter.com/count -->
-<script data-goatcounter="https://mickspicks.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
-</head><body class="page-bg-index">
-<noscript><img src="https://mickspicks.goatcounter.com/count?p=/noscript" alt="" style="position:absolute;left:-9999px;width:1px;height:1px"></noscript>
-<header class="topbar"><div class="container nav"><a class="brand" href="./index.html"><div class="brand-mark">MP</div><div><div class="brand-title">Micks Picks</div><small>Daily Card</small></div></a><nav class="links"><a href="./index.html" class="active">Dashboard</a><a href="./premium.html">VIP Vault</a><a href="./micks-longshots.html">LongShots</a><a href="./odds-api.html">Odds API</a><a href="./market-heat.html">Market Heat</a><a href="./props-lab.html">Props Lab</a><a href="./leaderboard.html">Leaderboard</a><a href="./results.html">Results</a><a href="./yahgi.html" class="guru">Yahgi</a><a href="./free-look.html">Free Look</a><a href="./sharp-card.html">Sharp Card</a><a href="./social-studio.html">Social</a></nav><a class="vip-btn" href="./premium.html">Enter VIP</a></div></header>
-<div class="mp-live-strip"><div class="mp-live-strip-track"><span>NBA</span><span>WNBA</span><span>UFC</span><span>MLB</span><span>Spread Watch</span><span>Totals Board</span><span>Market Steam</span><span>Injury Watch</span><span>Best Number</span><span>CLV Tracker</span><span>VIP Card</span><span>NBA</span><span>WNBA</span><span>UFC</span><span>MLB</span><span>Spread Watch</span><span>Totals Board</span><span>Market Steam</span><span>Injury Watch</span><span>Best Number</span><span>CLV Tracker</span><span>VIP Card</span></div></div>
-<main><section class="hero"><div class="container hero-grid"><div class="hero-card home-hero-card"><div class="hero-content"><div class="kicker">Professional Picks Service</div><h1>MICKS PICKS</h1><p class="lead">Daily Cards. Market Angles. VIP Edges.</p><div class="actions"><a class="btn primary" href="./premium.html">Enter VIP Vault</a><a class="btn" href="./market-heat.html">View Market Heat</a><a class="btn cyan" href="./micks-longshots.html">Micks LongShots</a></div><div class="sports-note-grid"><div class="sports-note">Posted Pick</div><div class="sports-note">Best Number</div><div class="sports-note">CLV Watch</div></div><div class="home-sports-graphics" aria-hidden="true"><div class="sport-graphic field-graphic"><span>Field Position</span></div><div class="sport-graphic court-graphic"><span>Matchup Map</span></div><div class="sport-graphic board-graphic"><span>Odds Board</span></div></div></div><div class="badge-row"><div class="badge">Spread</div><div class="badge">Total</div><div class="badge">Moneyline</div><div class="badge">Props</div></div></div><div class="featured-pick-panel"><div class="kicker">Featured Daily Card</div><div class="pick-grid sheet-area" id="pickOfDayGrid"><div class="empty">Loading Pick of the Day...</div></div></div></div></section>
-<section class="section"><div class="container"><div class="panel"><h2>Live Board</h2><p>Records, units, and active card counts load from your connected Micks Picks sheet.</p><div class="metric-grid"><div class="metric"><strong id="overallRecord">--</strong><span>Overall Record</span></div><div class="metric"><strong id="overallWinRate">--</strong><span>Win Rate</span></div><div class="metric"><strong id="overallTotalUnits">--</strong><span>Total Units</span></div><div class="metric"><strong id="overallCount">--</strong><span>Active Picks</span></div></div></div></div></section>
-<section class="section"><div class="container"><div class="section-head"><div><h2 class="section-title">Today’s Free Picks</h2><p class="section-sub">Pulled from Active Picks where Access is Free/Public. Public cards stay writeup-first and VIP analysis remains locked.</p></div><a class="btn" href="./free-look.html">View Free Picks</a></div><div class="pick-grid sheet-area" id="homeFreePicksGrid"><div class="empty">Loading Free Picks...</div></div></div></section>
-<section class="section"><div class="container feature-grid"><a class="feature vault" href="./premium.html"><h3>VIP Card</h3><p>Full breakdowns, market notes, injury context, best-number discipline, and no-bet cutoffs.</p><span class="mini-btn">Enter VIP</span></a><a class="feature market" href="./market-heat.html"><h3>Market Screen</h3><p>Line movement, sharp/public splits, steam alerts, and local BetRivers confirmation rules.</p><span class="mini-btn">View Market</span></a><a class="feature props" href="./props-lab.html"><h3>Props Board</h3><p>Usage, role, pace, ladders, SOG, and matchup edges tracked away from straight bets.</p><span class="mini-btn">Open Lab</span></a><a class="feature results" href="./results.html"><h3>Betting Ledger</h3><p>Wins, losses, units, closing numbers, and picked-at odds in a clean results archive.</p><span class="mini-btn">View Results</span></a><a class="feature guruCard" href="./yahgi.html"><h3>Yahgi</h3><p>Creator spotlight and private intelligence modules styled with the same picks-service language.</p><span class="mini-btn">Open Yahgi</span></a></div></section>
-<section class="section"><div class="container data-grid"><div class="data-card"><h2 class="section-title">Recent Results</h2><p class="section-sub">Sportsbook-style ledger pulled from Results Archive.</p><div class="table-wrap"><table><thead><tr><th>Date</th><th>League</th><th>Pick</th><th>Grade</th><th>Result</th><th>P/L</th><th>Closing #</th></tr></thead><tbody id="dashboardResultsBody"><tr><td colspan="7">Loading sheet...</td></tr></tbody></table></div></div><div class="performance-panel"><div class="performance-header"><h2>Record Card</h2><span class="live-dot"></span></div><div class="performance-grid"><div class="perf-card vip"><div class="perf-value" id="vipRecord">--</div><div class="perf-label">VIP Record</div></div><div class="perf-card free"><div class="perf-value" id="freeRecord">--</div><div class="perf-label">Free Record</div></div><div class="perf-card negative"><div class="perf-value" id="vipTotalUnits">--</div><div class="perf-label">VIP Units</div></div><div class="perf-card positive"><div class="perf-value" id="freeTotalUnits">--</div><div class="perf-label">Free Units</div></div></div><div class="performance-bottom"><div class="performance-meter"><div class="meter-label">VIP Win Rate <span id="vipWinRate">--</span></div><div class="meter-bar"><div class="meter-fill" style="width:56%"></div></div></div><div class="performance-meter"><div class="meter-label">Free Win Rate <span id="freeWinRate">--</span></div><div class="meter-bar"><div class="meter-fill" style="width:56%"></div></div></div><div class="performance-meta"><div><span class="meta-title">VIP Picks</span><strong id="vipCount">--</strong></div><div><span class="meta-title">Free Picks</span><strong id="freeCount">--</strong></div><div><span class="meta-title">Updated</span><strong class="sync-time">Live</strong></div><div><span class="meta-title">Board</span><strong>Open</strong></div></div></div></div></div></section></main>
-<footer class="footer"><div class="container">Micks Picks is for entertainment and educational purposes only. Bet responsibly.</div></footer><script src="./slate-validation.js?v=20260516-manual2"></script><script src="./app.js?v=20260516-websitefeed2"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Micks Picks | Premium Sports Betting Card</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <style>
+    :root{
+      --bg:#04070d;--panel:#08111d;--panel2:#0d1726;--ink:#fff7df;--muted:#cbbf9d;
+      --gold:#f7c948;--gold2:#ffe391;--ember:#ff7438;--teal:#2de6d4;--blue:#35a7ff;
+      --red:#ff4d4d;--green:#39e991;--purple:#9a6cff;--line:rgba(255,227,145,.18);
+      --glass:rgba(9,18,31,.72);--shadow:0 26px 80px rgba(0,0,0,.52);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;background:var(--bg)}
+    body{
+      margin:0;color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+      background:
+        radial-gradient(circle at 15% 4%,rgba(255,116,56,.20),transparent 31%),
+        radial-gradient(circle at 82% 10%,rgba(53,167,255,.17),transparent 30%),
+        linear-gradient(180deg,rgba(2,4,8,.25),#04070d 42%,#02040a);
+      text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+    }
+    body:before{
+      content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;
+      background:
+        linear-gradient(90deg,transparent 0 10%,rgba(255,255,255,.05) 10.15% 10.35%,transparent 10.5% 22%,rgba(255,255,255,.04) 22.15% 22.35%,transparent 22.5% 34%,rgba(247,201,72,.07) 34.15% 34.55%,transparent 34.8%),
+        repeating-linear-gradient(0deg,rgba(255,255,255,.025) 0 1px,transparent 1px 42px),
+        repeating-linear-gradient(90deg,rgba(255,255,255,.02) 0 1px,transparent 1px 78px);
+      opacity:.72;
+    }
+    body:after{
+      content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;
+      background:radial-gradient(ellipse at 50% -8%,rgba(255,255,255,.22),transparent 18%),
+      radial-gradient(ellipse at 20% 0,rgba(247,201,72,.20),transparent 12%),
+      radial-gradient(ellipse at 82% 0,rgba(53,167,255,.16),transparent 12%);
+      mix-blend-mode:screen;opacity:.55;
+    }
+    .shell{width:min(1220px,calc(100% - 32px));margin-inline:auto}
+    .glass{background:linear-gradient(145deg,rgba(9,18,31,.88),rgba(7,10,17,.70));border:1px solid rgba(255,255,255,.11);box-shadow:var(--shadow),inset 0 1px 0 rgba(255,255,255,.09);backdrop-filter:blur(18px)}
+    .gold-text{background:linear-gradient(135deg,#fff1b4,#f7c948 45%,#a86e1c);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:46px;padding:.78rem 1rem;border-radius:12px;border:1px solid rgba(255,227,145,.26);font-weight:950;text-transform:uppercase;letter-spacing:.055em;font-size:.78rem;transition:.18s ease;background:rgba(255,255,255,.055);color:#fff}
+    .btn:hover{transform:translateY(-2px);border-color:rgba(255,227,145,.6);box-shadow:0 16px 40px rgba(0,0,0,.35)}
+    .btn-primary{background:linear-gradient(135deg,#966118,#ffe391 52%,#bf7b21);color:#06080e;border:0}
+    .btn-blue{border-color:rgba(45,230,212,.38);color:#a5fff5}
+    .pill{display:inline-flex;align-items:center;gap:.38rem;padding:.42rem .62rem;border-radius:999px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.065);font-size:.68rem;font-weight:950;text-transform:uppercase;letter-spacing:.07em;color:#f9e3ae;white-space:nowrap}
+    .topbar{position:sticky;top:0;z-index:50;background:rgba(3,6,12,.86);border-bottom:1px solid var(--line);backdrop-filter:blur(20px)}
+    .brand-mark{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;color:#05070c;background:linear-gradient(135deg,#996219,#ffe391 55%,#bd7d20);font-weight:1000;box-shadow:0 0 34px rgba(247,201,72,.24),inset 0 1px 0 rgba(255,255,255,.55)}
+    .nav-link{display:flex;align-items:center;gap:.45rem;padding:.72rem .65rem;border-radius:10px;color:#d5ccb3;font-size:.72rem;font-weight:900;text-transform:uppercase;letter-spacing:.045em;border:1px solid transparent;white-space:nowrap}
+    .nav-link:hover,.nav-link.active{color:#fff1b4;background:rgba(247,201,72,.10);border-color:rgba(247,201,72,.22)}
+    .mobile-panel{display:none}
+    .ticker{overflow:hidden;border-block:1px solid rgba(255,227,145,.18);background:linear-gradient(90deg,rgba(255,116,56,.10),rgba(53,167,255,.08),rgba(247,201,72,.08))}
+    .ticker-track{display:flex;width:max-content;animation:ticker 28s linear infinite}
+    .ticker span{padding:.65rem 1.25rem;border-right:1px solid rgba(255,255,255,.09);font-size:.76rem;font-weight:950;text-transform:uppercase;letter-spacing:.075em;color:#eadfca}
+    .ticker span:before{content:"";display:inline-block;width:7px;height:7px;border-radius:999px;background:var(--gold);box-shadow:0 0 14px var(--gold);margin-right:.62rem}
+    @keyframes ticker{to{transform:translateX(-50%)}}
+    .hero{position:relative;min-height:620px;display:grid;align-items:center;padding:3.4rem 0 2rem}
+    .hero-card{position:relative;overflow:hidden;border-radius:28px;min-height:540px;padding:clamp(1.4rem,4vw,3.5rem)}
+    .hero-card:before{content:"";position:absolute;inset:0;background:
+      linear-gradient(100deg,rgba(0,0,0,.24),rgba(0,0,0,.80) 58%,rgba(0,0,0,.36)),
+      radial-gradient(circle at 78% 28%,rgba(255,116,56,.28),transparent 27%),
+      radial-gradient(circle at 28% 6%,rgba(247,201,72,.24),transparent 22%),
+      linear-gradient(135deg,transparent 0 64%,rgba(53,167,255,.16) 64.4% 71%,transparent 71.4%);
+      pointer-events:none}
+    .hero-card:after{content:"MICKS PICKS";position:absolute;right:1.3rem;bottom:.4rem;font-size:clamp(3.2rem,10vw,8.5rem);font-weight:1000;letter-spacing:.06em;color:rgba(255,255,255,.045);line-height:.8}
+    .field-lines{position:absolute;inset:0;opacity:.42;pointer-events:none;background:repeating-linear-gradient(90deg,transparent 0 8%,rgba(255,255,255,.08) 8.1% 8.25%,transparent 8.35% 16%),radial-gradient(ellipse at 50% 60%,transparent 0 36%,rgba(255,255,255,.09) 36.2% 36.7%,transparent 37%)}
+    .title{font-size:clamp(3.8rem,10vw,9rem);line-height:.78;font-weight:1000;text-transform:uppercase;letter-spacing:.035em;text-wrap:balance}
+    .section-title{font-size:clamp(2rem,5vw,4.2rem);line-height:.92;font-weight:1000;text-transform:uppercase;letter-spacing:.025em}
+    .card{border-radius:22px;padding:1.1rem;position:relative;overflow:hidden}
+    .card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(180deg,var(--gold),var(--ember),var(--teal))}
+    .pick-card{min-height:100%;padding:1.2rem 1.2rem 1.2rem 1.45rem}
+    .pick-title{font-size:1.45rem;line-height:1.05;font-weight:1000;color:#fff;letter-spacing:.01em}
+    .grade{display:grid;place-items:center;min-width:52px;height:42px;border-radius:12px;color:#06080e;font-weight:1000;background:linear-gradient(135deg,#f7c948,#fff1b4 55%,#c48322)}
+    .locked:after{content:"LOCKED";position:absolute;right:-38px;top:22px;transform:rotate(38deg);background:linear-gradient(135deg,#f7c948,#fff1b4);color:#06080e;font-size:.65rem;font-weight:1000;letter-spacing:.1em;padding:.42rem 2.8rem}
+    .stat{border-radius:18px;padding:1rem;background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.025));border:1px solid rgba(255,255,255,.10)}
+    .stat b{display:block;font-size:1.85rem;color:white}
+    .stat span{display:block;margin-top:.25rem;color:#f6d98d;font-size:.7rem;font-weight:950;text-transform:uppercase;letter-spacing:.08em}
+    .odds-board{overflow:auto;border-radius:20px;border:1px solid rgba(255,227,145,.18)}
+    table{width:100%;min-width:760px;border-collapse:collapse;background:linear-gradient(180deg,rgba(6,13,23,.92),rgba(4,7,13,.96))}
+    th,td{padding:.9rem .85rem;border-bottom:1px solid rgba(255,255,255,.08);text-align:left;vertical-align:top}
+    th{color:#ffe391;background:rgba(247,201,72,.09);font-size:.72rem;text-transform:uppercase;letter-spacing:.08em}
+    td{color:#f2ead9;font-size:.9rem}
+    tbody tr:hover{background:rgba(247,201,72,.055)}
+    .sport-panel{display:none}
+    .sport-panel.active{display:block}
+    .tab-page{display:none}
+    .tab-page.active{display:block}
+    .sport-tab.active,.mini-tab.active{background:linear-gradient(135deg,rgba(247,201,72,.22),rgba(45,230,212,.10));border-color:rgba(255,227,145,.4);color:white}
+    .theme-nba{--theme:#f49b2f;--theme2:#f7c948}.theme-wnba{--theme:#ff8d35;--theme2:#9a6cff}.theme-ufc{--theme:#ff4d4d;--theme2:#ff9d43}.theme-nfl{--theme:#39e991;--theme2:#35a7ff}.theme-mlb{--theme:#fff1b4;--theme2:#244f86}.theme-nhl{--theme:#90d8ff;--theme2:#ffffff}
+    .sport-visual{background:
+      linear-gradient(135deg,color-mix(in srgb,var(--theme) 22%,transparent),rgba(255,255,255,.025)),
+      repeating-linear-gradient(90deg,rgba(255,255,255,.06) 0 1px,transparent 1px 52px);
+      border-color:color-mix(in srgb,var(--theme) 36%,rgba(255,255,255,.08))}
+    .ev-box input{background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.13);border-radius:12px;padding:.82rem;color:#fff;outline:none;width:100%}
+    .ev-box input:focus{border-color:rgba(45,230,212,.65);box-shadow:0 0 0 3px rgba(45,230,212,.08)}
+    .glow{box-shadow:0 0 40px rgba(247,201,72,.14)}
+    @media(max-width:1024px){.desktop-nav{display:none}.mobile-panel.open{display:grid}.hero-card{min-height:auto}.title{font-size:clamp(3.2rem,16vw,5.8rem)}}
+    @media(max-width:640px){.shell{width:min(100% - 22px,1220px)}.btn{width:100%}.hero{padding:1.2rem 0}.hero-card{border-radius:20px;padding:1.1rem}.hero-card:after{display:none}.card{border-radius:18px}.nav-link{justify-content:flex-start}.ticker span{padding:.55rem .9rem}.stat b{font-size:1.45rem}th,td{font-size:.8rem;padding:.7rem}.pick-title{font-size:1.22rem}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="shell flex items-center justify-between gap-4 py-3">
+      <button class="lg:hidden btn !w-auto !min-h-0 !px-3" id="menuBtn" aria-label="Open navigation"><i data-lucide="menu"></i></button>
+      <a href="#home" data-tab-target="home" class="flex items-center gap-3">
+        <div class="brand-mark">MP</div>
+        <div>
+          <div class="font-black uppercase tracking-[.08em] text-lg">Micks Picks</div>
+          <div class="text-[10px] uppercase tracking-[.2em] text-[#cbbf9d]">Daily Card</div>
+        </div>
+      </a>
+      <nav class="desktop-nav flex items-center gap-1 overflow-x-auto">
+        <a class="nav-link active" href="#home" data-tab-target="home"><i data-lucide="home"></i>Home</a>
+        <a class="nav-link" href="#free" data-tab-target="free"><i data-lucide="ticket"></i>Free</a>
+        <a class="nav-link" href="#vip" data-tab-target="vip"><i data-lucide="crown"></i>VIP</a>
+        <a class="nav-link" href="#odds" data-tab-target="odds"><i data-lucide="activity"></i>Odds</a>
+        <a class="nav-link" href="#sports" data-tab-target="sports"><i data-lucide="circle-dot"></i>Sports</a>
+        <a class="nav-link" href="#props" data-tab-target="props"><i data-lucide="zap"></i>Props</a>
+        <a class="nav-link" href="#results" data-tab-target="results"><i data-lucide="trophy"></i>Results</a>
+        <a class="nav-link" href="#yahgi" data-tab-target="yahgi"><i data-lucide="shield"></i>Yahgi</a>
+        <a class="nav-link" href="#about" data-tab-target="about"><i data-lucide="info"></i>About</a>
+      </nav>
+      <a href="#vip" data-tab-target="vip" class="btn btn-primary !w-auto hidden sm:inline-flex"><i data-lucide="lock"></i>Enter VIP</a>
+    </div>
+    <nav id="mobileNav" class="mobile-panel shell gap-2 pb-4">
+      <a class="nav-link active" href="#home" data-tab-target="home"><i data-lucide="home"></i>Home</a>
+      <a class="nav-link" href="#free" data-tab-target="free"><i data-lucide="ticket"></i>Free Picks</a>
+      <a class="nav-link" href="#vip" data-tab-target="vip"><i data-lucide="crown"></i>VIP Vault</a>
+      <a class="nav-link" href="#odds" data-tab-target="odds"><i data-lucide="activity"></i>Live Odds</a>
+      <a class="nav-link" href="#sports" data-tab-target="sports"><i data-lucide="circle-dot"></i>Sports</a>
+      <a class="nav-link" href="#props" data-tab-target="props"><i data-lucide="zap"></i>Props Lab</a>
+      <a class="nav-link" href="#results" data-tab-target="results"><i data-lucide="trophy"></i>Results</a>
+      <a class="nav-link" href="#yahgi" data-tab-target="yahgi"><i data-lucide="shield"></i>Yahgi</a>
+      <a class="nav-link" href="#about" data-tab-target="about"><i data-lucide="info"></i>About</a>
+    </nav>
+  </header>
+
+  <div class="ticker">
+    <div class="ticker-track">
+      <span>NBA market watch</span><span>WNBA arena card</span><span>UFC cage angles</span><span>NFL turf report</span><span>MLB diamond board</span><span>NHL ice tracker</span><span>Best number</span><span>EV Edge</span><span>Injury check</span><span>VIP Vault</span>
+      <span>NBA market watch</span><span>WNBA arena card</span><span>UFC cage angles</span><span>NFL turf report</span><span>MLB diamond board</span><span>NHL ice tracker</span><span>Best number</span><span>EV Edge</span><span>Injury check</span><span>VIP Vault</span>
+    </div>
+  </div>
+
+  <main>
+    <section id="home" class="tab-page active">
+      <div class="shell hero">
+        <div class="hero-card glass">
+          <div class="field-lines"></div>
+          <div class="relative z-10 grid lg:grid-cols-[1.05fr_.75fr] gap-7 items-end min-h-[430px]">
+            <div>
+              <div class="pill mb-5"><i data-lucide="flame"></i>Premium Sports Betting Media</div>
+              <h1 class="title">MICKS <span class="gold-text">PICKS</span></h1>
+              <p class="mt-5 max-w-2xl text-lg leading-8 text-[#eadfca] font-semibold">Daily cards. Market angles. VIP edges. A cinematic sportsbook-style command center for public picks, premium analysis, odds movement, props, and sport-specific sharp notes.</p>
+              <div class="mt-7 flex flex-wrap gap-3">
+                <a class="btn btn-primary" href="#free" data-tab-target="free"><i data-lucide="ticket"></i>View Free Picks</a>
+                <a class="btn btn-blue" href="#odds" data-tab-target="odds"><i data-lucide="activity"></i>Live Odds Board</a>
+                <a class="btn" href="#vip" data-tab-target="vip"><i data-lucide="crown"></i>VIP Vault</a>
+              </div>
+              <div class="mt-7 grid sm:grid-cols-3 gap-3 max-w-2xl">
+                <div class="stat"><b id="homeRecord">--</b><span>Overall Record</span></div>
+                <div class="stat"><b id="homeUnits">--</b><span>Total Units</span></div>
+                <div class="stat"><b id="homeActive">--</b><span>Active Card</span></div>
+              </div>
+            </div>
+            <div class="glass rounded-[24px] p-4 glow">
+              <div class="flex items-center justify-between gap-3 mb-4">
+                <div>
+                  <div class="pill"><i data-lucide="clock"></i>Featured Card</div>
+                  <h2 class="mt-3 text-2xl font-black uppercase">Pick of the Day</h2>
+                </div>
+                <div class="grade">A</div>
+              </div>
+              <article class="card pick-card glass">
+                <div class="flex items-start justify-between gap-3">
+                  <div>
+                    <div class="text-xs uppercase tracking-[.16em] text-[#ffe391] font-black">MLB | Moneyline</div>
+                    <h3 class="pick-title mt-2">Live pick loads from your feed</h3>
+                    <p class="mt-2 text-[#cbbf9d]">This card is a design-safe placeholder. Connect your sheet feed or paste the current active pick data.</p>
+                  </div>
+                  <span class="pill">Featured</span>
+                </div>
+                <div class="grid grid-cols-2 gap-2 mt-5">
+                  <span class="pill">Best Number</span><span class="pill">EV Edge</span><span class="pill">Confidence</span><span class="pill">Injury Check</span>
+                </div>
+                <p class="mt-5 leading-7 text-[#f4ead4]">Public writeup summary appears here. VIP-only full analysis remains locked outside the VIP Vault.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="shell py-8">
+        <div class="grid lg:grid-cols-4 gap-4">
+          <button class="card glass text-left" data-tab-target="free"><div class="pill"><i data-lucide="ticket"></i>Free</div><h3 class="mt-4 text-2xl font-black uppercase">Public Card</h3><p class="mt-2 text-[#cbbf9d]">Clean summaries, no premium leakage.</p></button>
+          <button class="card glass text-left" data-tab-target="vip"><div class="pill"><i data-lucide="crown"></i>VIP</div><h3 class="mt-4 text-2xl font-black uppercase">Vault Room</h3><p class="mt-2 text-[#cbbf9d]">Full analysis, market notes, cutoffs.</p></button>
+          <button class="card glass text-left" data-tab-target="odds"><div class="pill"><i data-lucide="bar-chart-3"></i>Odds</div><h3 class="mt-4 text-2xl font-black uppercase">Market Heat</h3><p class="mt-2 text-[#cbbf9d]">Sportsbook board styling and line movement.</p></button>
+          <button class="card glass text-left" data-tab-target="results"><div class="pill"><i data-lucide="trophy"></i>Results</div><h3 class="mt-4 text-2xl font-black uppercase">Ledger</h3><p class="mt-2 text-[#cbbf9d]">Trophy-style settlement table.</p></button>
+        </div>
+      </section>
+    </section>
+
+    <section id="free" class="tab-page shell py-10">
+      <Header class="mb-6">
+        <div class="pill"><i data-lucide="ticket"></i>Free Picks</div>
+        <h2 class="section-title mt-4">Public Daily Card</h2>
+        <p class="mt-3 text-[#cbbf9d] max-w-3xl">Free picks show only the public writeup and summary. Full analysis, market notes, source verification, units detail, and VIP-only edges stay hidden.</p>
+      </Header>
+      <div class="grid lg:grid-cols-3 gap-4" id="freeCards"></div>
+    </section>
+
+    <section id="vip" class="tab-page shell py-10">
+      <div class="glass rounded-[28px] p-6 md:p-9 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-30 pointer-events-none" style="background:radial-gradient(circle at 85% 8%,rgba(247,201,72,.35),transparent 26%),linear-gradient(135deg,transparent 0 64%,rgba(247,201,72,.14) 64.4% 70%,transparent 70.4%)"></div>
+        <div class="relative z-10">
+          <div class="pill"><i data-lucide="crown"></i>VIP Vault</div>
+          <h2 class="section-title mt-4 gold-text">Members Only Market Room</h2>
+          <p class="mt-3 text-[#eadfca] max-w-3xl">Luxury black and gold card room for full breakdowns, best-number discipline, market notes, injury checks, and no-bet cutoffs.</p>
+          <div class="grid md:grid-cols-3 gap-4 mt-7" id="vipCards"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="odds" class="tab-page shell py-10">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-5">
+        <div><div class="pill"><i data-lucide="activity"></i>Live Odds / Odds Tracker</div><h2 class="section-title mt-4">Sportsbook Board</h2><p class="mt-2 text-[#cbbf9d]">Picked At, current book price, best market, movement, confirmation status, and manual app check.</p></div>
+        <span class="pill"><i data-lucide="clock"></i>Manual BetRivers App Check Required</span>
+      </div>
+      <div class="odds-board">
+        <table>
+          <thead><tr><th>League</th><th>Game</th><th>Pick</th><th>Picked At</th><th>Book Price</th><th>Best Market</th><th>Move</th><th>Status</th></tr></thead>
+          <tbody id="oddsRows"></tbody>
+        </table>
+      </div>
+      <div class="grid lg:grid-cols-2 gap-4 mt-5">
+        <div class="card glass ev-box">
+          <div class="pill"><i data-lucide="calculator"></i>EV Calculator</div>
+          <div class="grid sm:grid-cols-3 gap-3 mt-4">
+            <label class="text-sm text-[#cbbf9d]">Win Probability %<input id="evProb" type="number" value="55" /></label>
+            <label class="text-sm text-[#cbbf9d]">American Odds<input id="evOdds" type="number" value="-110" /></label>
+            <label class="text-sm text-[#cbbf9d]">Stake Units<input id="evStake" type="number" value="1" step=".25" /></label>
+          </div>
+          <div class="mt-4 stat"><b id="evResult">--</b><span>Expected Value</span></div>
+        </div>
+        <div class="card glass">
+          <div class="pill"><i data-lucide="zap"></i>Market Notes</div>
+          <p class="mt-4 text-[#eadfca] leading-7">This board is styled like a sportsbook screen, but final placement still requires live sportsbook confirmation. Placeholder odds are clearly marked until connected to real rows.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="sports" class="tab-page shell py-10">
+      <div class="mb-6"><div class="pill"><i data-lucide="circle-dot"></i>Sport Tabs</div><h2 class="section-title mt-4">Themed Sport Rooms</h2></div>
+      <div class="flex gap-2 overflow-x-auto pb-3" id="sportTabs"></div>
+      <div id="sportPanels"></div>
+    </section>
+
+    <section id="props" class="tab-page shell py-10">
+      <div class="grid lg:grid-cols-[.85fr_1.15fr] gap-5 items-start">
+        <div class="card glass">
+          <div class="pill"><i data-lucide="zap"></i>Props Lab</div>
+          <h2 class="section-title mt-4">Player Props, Ladders, Usage</h2>
+          <p class="mt-3 text-[#cbbf9d] leading-7">Props are kept separate from moneylines, spreads, totals, longshots, and lotto routing. HR sprinkles route to Lotto Props, parlays route to Longshots.</p>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4" id="propsCards"></div>
+      </div>
+    </section>
+
+    <section id="results" class="tab-page shell py-10">
+      <div class="mb-5"><div class="pill"><i data-lucide="trophy"></i>Results</div><h2 class="section-title mt-4">Trophy Ledger</h2><p class="mt-2 text-[#cbbf9d]">Placeholder rows are labeled. Connect Results Archive for live records and settlement.</p></div>
+      <div class="grid sm:grid-cols-4 gap-4 mb-5">
+        <div class="stat"><b>--</b><span>Overall Record</span></div><div class="stat"><b>--</b><span>Win Rate</span></div><div class="stat"><b>--</b><span>Units</span></div><div class="stat"><b>Placeholder</b><span>Data Status</span></div>
+      </div>
+      <div class="odds-board"><table><thead><tr><th>Date</th><th>League</th><th>Pick</th><th>Grade</th><th>Result</th><th>P/L</th><th>Closing #</th></tr></thead><tbody id="resultsRows"></tbody></table></div>
+    </section>
+
+    <section id="yahgi" class="tab-page shell py-10">
+      <div class="glass rounded-[28px] p-6 md:p-9 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-30 pointer-events-none" style="background:radial-gradient(circle at 18% 18%,rgba(154,108,255,.36),transparent 28%),radial-gradient(circle at 84% 10%,rgba(45,230,212,.22),transparent 28%)"></div>
+        <div class="relative z-10 grid lg:grid-cols-[.85fr_1.15fr] gap-6">
+          <div><div class="pill"><i data-lucide="shield"></i>Yahgi</div><h2 class="section-title mt-4">Community Intelligence Room</h2><p class="mt-3 text-[#eadfca] leading-7">A premium creator/community spotlight styled to match the brand without borrowing unrelated visuals.</p></div>
+          <div class="grid sm:grid-cols-2 gap-4"><div class="card glass"><h3 class="text-2xl font-black uppercase">Creator Spotlight</h3><p class="mt-2 text-[#cbbf9d]">Media, notes, and community signal cards.</p></div><div class="card glass"><h3 class="text-2xl font-black uppercase">Private Intel</h3><p class="mt-2 text-[#cbbf9d]">Clean premium cards and photo/media sections.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="tab-page shell py-10">
+      <div class="card glass">
+        <div class="pill"><i data-lucide="info"></i>About</div>
+        <h2 class="section-title mt-4">Sports Media Meets Betting Analysis</h2>
+        <p class="mt-4 text-[#eadfca] leading-8 max-w-4xl">Micks Picks is designed as a premium picks-service experience: cinematic sports presentation, clean betting cards, transparent labels, locked VIP analysis, public writeups, sport-specific tabs, odds-board structure, EV tools, and readable mobile-first layouts. All records and stats should connect to live sheet data or remain clearly marked as placeholders.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="shell py-10 text-center text-[#cbbf9d] border-t border-white/10 mt-8">
+    Micks Picks is for entertainment and educational purposes only. Bet responsibly.
+  </footer>
+
+  <script>
+    const picks = [
+      {tier:'FREE',league:'MLB',game:'Yankees vs Mets',pick:'Public pick placeholder',type:'Moneyline',grade:'B+',odds:'Pending',book:'Best Available',writeup:'Public summary only. Full analysis remains hidden on free cards.',vip:false},
+      {tier:'VIP',league:'UFC',game:'Main Event',pick:'VIP market angle placeholder',type:'Fight Prop',grade:'A',odds:'Locked',book:'VIP Vault',writeup:'Locked premium card preview. Full notes appear only inside VIP.',vip:true},
+      {tier:'FEATURED',league:'NBA',game:'Market screen',pick:'Featured card placeholder',type:'Total',grade:'A-',odds:'Pending',book:'Best Available',writeup:'Featured card area supports grade, confidence, EV edge, and best number.',vip:false}
+    ];
+    const props = [
+      ['Player Usage','Minutes, touches, role stability, matchup context.','activity'],
+      ['HR Lotto','High-variance HR sprinkles stay out of core props.','flame'],
+      ['PRA / SOG / Saves','True player props route to Props Lab.','bar-chart-3'],
+      ['No ML Routing','Moneylines, spreads, and totals never enter Props Results.','shield']
+    ];
+    const odds = [
+      ['MLB','Yankees vs Mets','Public pick placeholder','Pending','Manual Check','Best Available','Sheet Mode','Manual App Check Required'],
+      ['UFC','Fight Card','VIP prop placeholder','Locked','VIP','Best Available','Steam Watch','Locked'],
+      ['NBA','Totals Board','Market placeholder','Pending','--','--','Watch','Placeholder']
+    ];
+    const results = [
+      ['--','MLB','Placeholder result row','--','Placeholder','--','--'],
+      ['--','UFC','Connect Results Archive','--','Placeholder','--','--'],
+      ['--','LongShots','Connect Longshots History','--','Placeholder','--','--']
+    ];
+    const sports = [
+      ['nba','NBA','circle-dot','Hardwood/court energy with orange and gold accents.'],
+      ['wnba','WNBA','circle-dot','Modern arena styling with orange, purple, and teal accents.'],
+      ['ufc','UFC','swords','Octagon/cage energy with red and ember accents.'],
+      ['nfl','NFL','football','Turf/stadium atmosphere with green and blue accents.'],
+      ['mlb','MLB','circle-dot','Ballpark/diamond styling with cream and navy accents.'],
+      ['nhl','NHL','snowflake','Ice rink feel with blue and white accents.']
+    ];
+    function card(p,locked=false){
+      return `<article class="card pick-card glass ${locked?'locked':''}">
+        <div class="flex items-start justify-between gap-3"><div><div class="text-xs uppercase tracking-[.16em] text-[#ffe391] font-black">${p.league} | ${p.type}</div><h3 class="pick-title mt-2">${p.pick}</h3><p class="mt-2 text-[#cbbf9d]">${p.game}</p></div><div class="grade">${p.grade}</div></div>
+        <div class="flex flex-wrap gap-2 mt-4"><span class="pill">${p.tier}</span><span class="pill">Best Number</span><span class="pill">EV Edge</span><span class="pill">Confidence</span><span class="pill">Injury Check</span></div>
+        <div class="grid grid-cols-2 gap-2 mt-4"><div class="stat"><b class="!text-lg">${p.odds}</b><span>Odds</span></div><div class="stat"><b class="!text-lg">${p.book}</b><span>Sportsbook</span></div></div>
+        <p class="mt-4 leading-7 text-[#f4ead4]">${locked?'VIP locked preview. Public users see summary only; full analysis stays private.':p.writeup}</p>
+      </article>`;
+    }
+    function setTab(id){
+      document.querySelectorAll('.tab-page').forEach(x=>x.classList.toggle('active',x.id===id));
+      document.querySelectorAll('[data-tab-target]').forEach(x=>x.classList.toggle('active',x.dataset.tabTarget===id));
+      document.getElementById('mobileNav').classList.remove('open');
+      history.replaceState(null,'','#'+id);
+      window.scrollTo({top:0,behavior:'smooth'});
+    }
+    document.querySelectorAll('[data-tab-target]').forEach(el=>el.addEventListener('click',e=>{e.preventDefault();setTab(el.dataset.tabTarget)}));
+    document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('mobileNav').classList.toggle('open'));
+    document.getElementById('freeCards').innerHTML = picks.filter(p=>!p.vip).map(p=>card(p,false)).join('');
+    document.getElementById('vipCards').innerHTML = picks.map(p=>card({...p,tier:p.vip?'VIP':'LOCKED'},!p.vip)).join('');
+    document.getElementById('propsCards').innerHTML = props.map(([t,d,i])=>`<div class="card glass"><div class="pill"><i data-lucide="${i}"></i>${t}</div><p class="mt-4 text-[#cbbf9d] leading-7">${d}</p></div>`).join('');
+    document.getElementById('oddsRows').innerHTML = odds.map(r=>`<tr>${r.map((c,i)=>`<td>${i===7?'<span class="pill">'+c+'</span>':c}</td>`).join('')}</tr>`).join('');
+    document.getElementById('resultsRows').innerHTML = results.map(r=>`<tr>${r.map((c,i)=>`<td>${i===4?'<span class="pill">'+c+'</span>':c}</td>`).join('')}</tr>`).join('');
+    document.getElementById('sportTabs').innerHTML = sports.map((s,i)=>`<button class="btn sport-tab ${i===0?'active':''}" data-sport="${s[0]}"><i data-lucide="${s[2]}"></i>${s[1]}</button>`).join('');
+    document.getElementById('sportPanels').innerHTML = sports.map((s,i)=>`<section class="sport-panel ${i===0?'active':''} theme-${s[0]}"><div class="card glass sport-visual mt-4"><div class="pill"><i data-lucide="${s[2]}"></i>${s[1]}</div><h3 class="section-title mt-4">${s[1]} Card Room</h3><p class="mt-3 text-[#eadfca] leading-7">${s[3]} Add sport-specific picks, odds, injuries, and market notes here.</p><div class="grid md:grid-cols-3 gap-3 mt-5"><div class="stat"><b>Spread</b><span>Board</span></div><div class="stat"><b>Total</b><span>Watch</span></div><div class="stat"><b>Props</b><span>Lab</span></div></div></div></section>`).join('');
+    document.querySelectorAll('.sport-tab').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.sport-tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('.sport-panel').forEach(p=>p.classList.toggle('active',p.classList.contains('theme-'+btn.dataset.sport)));}));
+    function americanProfit(stake,odds){return odds>0?stake*odds/100:stake*100/Math.abs(odds)}
+    function calcEV(){const p=Number(evProb.value)/100,o=Number(evOdds.value),s=Number(evStake.value);if(!p||!o||!s){evResult.textContent='--';return}const profit=americanProfit(s,o);const ev=p*profit-(1-p)*s;evResult.textContent=(ev>=0?'+':'')+ev.toFixed(2)+'u'}
+    ['evProb','evOdds','evStake'].forEach(id=>document.getElementById(id).addEventListener('input',calcEV));calcEV();
+    if(location.hash){const id=location.hash.replace('#','');if(document.getElementById(id))setTab(id)}
+    lucide.createIcons();
+  </script>
+</body>
+</html>
