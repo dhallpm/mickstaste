@@ -7,6 +7,7 @@ const MP_GRADING = {
   tz: 'America/New_York',
   finalResultsSheet: 'Final Results Feed',
   manualResultsSheet: 'Manual Grading Results',
+  longshotsGradingSheet: 'Longshots Grading',
   gradingLogSheet: 'Grading Log',
   automationLogSheet: 'Micks Picks Automation Log',
   websiteFeedSheet: 'Website Feed',
@@ -32,7 +33,7 @@ function runMicksPicksAutoGrading() {
   try {
     mpEnsureGradingRuntime_();
     const finals = mpPullFinalResults_();
-    const manual = mpReadTable_(mpEnsureSheet_(MP_GRADING.manualResultsSheet, mpManualHeaders_())).rows;
+    const manual = mpManualGradeRows_();
     const gradedKeys = mpExistingGradedKeys_();
     const summary = { checked: 0, graded: 0, archived: 0, removed: 0, skipped: 0, errors: 0 };
 
@@ -375,6 +376,7 @@ function mpSelectedTeam_(pick, final) {
 function mpEnsureGradingRuntime_() {
   mpEnsureSheet_(MP_GRADING.finalResultsSheet, mpFinalHeaders_());
   mpEnsureSheet_(MP_GRADING.manualResultsSheet, mpManualHeaders_());
+  mpEnsureSheet_(MP_GRADING.longshotsGradingSheet, mpLongshotsManualHeaders_());
   mpEnsureSheet_(MP_GRADING.gradingLogSheet, ['Timestamp','Level','Action','Sheet','Pick','Details']);
   mpEnsureSheet_(MP_GRADING.automationLogSheet, ['Timestamp','Level','Message']);
   mpEnsureSheet_('Longshots History', ['Date','Sport','League','Game','Pick','LongShot Type','Odds','Sportsbook','Grade','Units','Best Number','No Bet Cutoff','Leg Count','Payout Target','Risk Tier','Status','Release Status','Access','Featured','Writeup','Full Analysis','Market Notes','Source Verification','Timestamp','Manual Approved','Override Mode','Legs','Removed Legs','Validation Notes','Category','Result','Profit/Loss','Settlement Notes','Settled At','Closing Number','Graded Timestamp']);
@@ -387,6 +389,16 @@ function mpFinalHeaders_() {
 
 function mpManualHeaders_() {
   return ['Date','League','Game','Pick','Result','Closing Number','Profit/Loss','Settlement Notes','Source'];
+}
+
+function mpLongshotsManualHeaders_() {
+  return ['Date','League','Game','Pick','Result','Closing Number','Profit/Loss','Settlement Notes','Source','Longshot Name','Leg #','Grading Notes'];
+}
+
+function mpManualGradeRows_() {
+  const manual = mpReadTable_(mpEnsureSheet_(MP_GRADING.manualResultsSheet, mpManualHeaders_())).rows;
+  const longshots = mpReadTable_(mpEnsureSheet_(MP_GRADING.longshotsGradingSheet, mpLongshotsManualHeaders_())).rows;
+  return manual.concat(longshots);
 }
 
 function mpEnsureSheet_(name, headers) {
