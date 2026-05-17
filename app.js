@@ -31,7 +31,7 @@ function hasText(v){ return String(v||'').trim().length>0; }
 function toNumber(v){ const n=parseFloat(String(v||'').replace(/[^0-9.+-]/g,'')); return Number.isFinite(n)?n:0; }
 function dateVal(v){ const s=String(v||'').trim(); if(!s)return 0; let m=s.match(/^(\d{4})-(\d{1,2})-(\d{1,2})/); if(m)return new Date(+m[1],+m[2]-1,+m[3]).getTime(); m=s.match(/^(\d{1,2})\/(\d{1,2})\/(\d{2,4})/); if(m){let y=+m[3]; if(y<100)y+=2000; return new Date(y,+m[1]-1,+m[2]).getTime();} const d=new Date(s); return Number.isNaN(d.getTime())?0:d.getTime(); }
 function byDateDesc(a,b){ return (dateVal(b.date||b.timestamp||b.postedTime)||0)-(dateVal(a.date||a.timestamp||a.postedTime)||0); }
-function rowKey(row){ return [row.league||row.sport||'',row.game||'',row.pick||''].map(compact).join('|'); }
+function rowKey(row){ return [row.date||'',row.league||row.sport||'',row.game||'',row.pick||'',row.betType||row.market||''].map(compact).join('|'); }
 function dedupeRows(rows){ const seen=new Set(); return rows.filter(r=>{ const k=rowKey(r); if(!k||seen.has(k))return false; seen.add(k); return true; }); }
 function tierText(row){ return `${row.access||''} ${row.featured||''}`.toLowerCase(); }
 function isVIP(row){ if(row._sourceTab==='VIP Archive')return true; const t=tierText(row); return t.includes('vip')||t.includes('premium')||t.includes('member')||t.includes('featured')||clean(row.featured)==='yes'; }
@@ -40,12 +40,13 @@ function isWin(row){ const r=clean(row.result); return r==='win'||r==='won'||r.i
 function isLoss(row){ const r=clean(row.result); return r==='loss'||r==='lost'||r.includes('loss')||r.includes('lost'); }
 function isPush(row){ const r=clean(row.result); return r==='push'||r==='void'; }
 function isClosed(row){ return isWin(row)||isLoss(row)||isPush(row)||clean(row.status).includes('graded')||clean(row.status).includes('closed'); }
-function isNoBet(row){ const t=clean(`${row.grade} ${row.status} ${row.confirmationStatus} ${row.releaseStatus} ${row.result}`); return t.includes('pass')||t.includes('no bet')||t.includes('price moved')||t.includes('past cutoff')||toNumber(row.units)===0; }
+function isNoBet(row){ const t=clean(`${row.grade} ${row.status} ${row.confirmationStatus} ${row.releaseStatus} ${row.result} ${row.marketNotes} ${row.writeup}`); return t.includes('pass')||t.includes('no bet')||t.includes('price moved')||t.includes('past cutoff')||toNumber(row.units)===0; }
+function isTrackableBet(row){ return hasText(row.pick)&&!isNoBet(row)&&toNumber(row.units)>0; }
 function isActive(row){ const status=clean(row.status); if(!hasText(row.pick))return false; if(['void','cancelled','canceled','delete','removed'].some(x=>status.includes(x)))return false; return !isClosed(row); }
 function publicRows(rows){ return rows.filter(isFree); }
 function vipRows(rows){ return rows.filter(isVIP); }
 function resultClass(value){ const r=clean(value); if(r.includes('win')||r.includes('won')||r.includes('confirmed')||r.includes('matched')||r.includes('checked'))return 'status-win'; if(r.includes('loss')||r.includes('lost')||r.includes('moved')||r.includes('no bet')||r.includes('past cutoff')||r.includes('stale'))return 'status-loss'; return 'status-pending'; }
-function calcStats(rows,countRows=rows){ const graded=rows.filter(r=>hasText(r.pick)&&(isWin(r)||isLoss(r))); const wins=graded.filter(isWin).length; const losses=graded.filter(isLoss).length; const total=wins+losses; const units=graded.reduce((sum,r)=>sum+toNumber(r.profitLoss),0); const count=countRows.filter(r=>hasText(r.pick)).length; return {record:total?`${wins}-${losses}`:'--',winRate:total?`${Math.round((wins/total)*100)}%`:'--',units:total||units?`${units>0?'+':''}${units.toFixed(2)}u`:'--',count:count||'--'}; }
+function calcStats(rows,countRows=rows){ const trackable=rows.filter(isTrackableBet); const graded=trackable.filter(r=>isWin(r)||isLoss(r)); const wins=graded.filter(isWin).length; const losses=graded.filter(isLoss).length; const total=wins+losses; const units=graded.reduce((sum,r)=>sum+toNumber(r.profitLoss),0); const count=countRows.filter(isTrackableBet).length; return {record:total?`${wins}-${losses}`:'--',winRate:total?`${Math.round((wins/total)*100)}%`:'--',units:total||units?`${units>0?'+':''}${units.toFixed(2)}u`:'--',count:count||'--'}; }
 function setText(id,value){ const el=document.getElementById(id); if(el)el.textContent=value; }
 function writeStats(prefix,stats){ setText(prefix+'Record',stats.record); setText(prefix+'WinRate',stats.winRate); setText(prefix+'TotalUnits',stats.units); setText(prefix+'Count',stats.count); }
 function makeOddsKey(row){ return `${compact(row.game)}|${compact(row.pick)}`; }
