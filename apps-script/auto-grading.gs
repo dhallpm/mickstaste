@@ -201,10 +201,11 @@ function mpGradeParlay_(row, finals, manual) {
     if (/\bml\b|moneyline/i.test(leg)) return mpGradeMoneyline_(leg, final);
     return 'Pending';
   });
-  if (outcomes.some(x => x === 'Loss')) return mpPayload_(row, 'Loss', '', 'Parlay graded: at least one leg lost');
+  const parlayOdds = mpParlayOdds_(row, manual);
+  if (outcomes.some(x => x === 'Loss')) return mpParlayPayload_(row, 'Loss', parlayOdds, 'Parlay graded: at least one leg lost');
   if (outcomes.every(x => x === 'Win' || x === 'Push' || x === 'Void')) {
-    if (outcomes.every(x => x === 'Push' || x === 'Void')) return mpPayload_(row, 'Void', '', 'Parlay graded: all legs pushed/voided');
-    return mpPayload_(row, 'Win', '', 'Parlay graded: all resolved legs won or pushed');
+    if (outcomes.every(x => x === 'Push' || x === 'Void')) return mpParlayPayload_(row, 'Void', parlayOdds, 'Parlay graded: all legs pushed/voided');
+    return mpParlayPayload_(row, 'Win', parlayOdds, 'Parlay graded: all resolved legs won or pushed');
   }
   return mpPending_('Parlay has unresolved legs: ' + outcomes.join(', '));
 }
@@ -274,16 +275,68 @@ function mpPayload_(row, result, closingNumber, note) {
   };
 }
 
+function mpParlayPayload_(row, result, odds, note) {
+  return {
+    result,
+    status: 'Graded - ' + result,
+    profitLoss: mpProfitLossWithOdds_(row, result, odds),
+    closingNumber: isFinite(odds) ? mpFormatAmericanOdds_(odds) : (mpCell_(row, 'Closing Number') || mpCell_(row, 'Odds') || mpCell_(row, 'Best Number') || ''),
+    note: note || ''
+  };
+}
+
 function mpProfitLoss_(row, result) {
+  return mpProfitLossWithOdds_(row, result, mpFirstAmericanOdds_([
+    mpCell_(row, 'Odds'),
+    mpCell_(row, 'Closing Number'),
+    mpCell_(row, 'Best Market Price'),
+    mpCell_(row, 'Best Number')
+  ]));
+}
+
+function mpProfitLossWithOdds_(row, result, odds) {
   const units = mpNumber_(mpCell_(row, 'Units'));
   if (!units) return '';
   if (result === 'Loss') return (-units).toFixed(2) + 'u';
   if (result === 'Push' || result === 'Void') return '0.00u';
   if (result !== 'Win') return '';
-  const odds = mpAmericanOdds_(mpCell_(row, 'Odds'));
   if (!isFinite(odds)) return units.toFixed(2) + 'u';
   const profit = odds > 0 ? units * odds / 100 : units * 100 / Math.abs(odds);
   return profit.toFixed(2) + 'u';
+}
+
+function mpParlayOdds_(row, manualRows) {
+  const candidates = [
+    mpCell_(row, 'Final Parlay Odds'),
+    mpCell_(row, 'Closing Number'),
+    mpCell_(row, 'Odds'),
+    mpCell_(row, 'Best Number')
+  ];
+  const longshotName = mpCompact_(mpCell_(row, 'Pick'));
+  manualRows.forEach(manual => {
+    if (mpCompact_(mpCell_(manual, 'Longshot Name')) !== longshotName) return;
+    candidates.push(mpCell_(manual, 'Final Parlay Odds'));
+    candidates.push(mpCell_(manual, 'Parlay Odds'));
+    candidates.push(mpCell_(manual, 'Closing Number'));
+  });
+  for (let i = 0; i < candidates.length; i++) {
+    const odds = mpFirstAmericanOdds_([candidates[i]]);
+    if (isFinite(odds)) return odds;
+  }
+  return NaN;
+}
+
+function mpFirstAmericanOdds_(values) {
+  for (let i = 0; i < values.length; i++) {
+    const odds = mpAmericanOdds_(values[i]);
+    if (isFinite(odds)) return odds;
+  }
+  return NaN;
+}
+
+function mpFormatAmericanOdds_(odds) {
+  if (!isFinite(odds)) return '';
+  return odds > 0 ? '+' + Math.round(odds) : String(Math.round(odds));
 }
 
 function mpExistingGradedKeys_() {
@@ -392,7 +445,7 @@ function mpManualHeaders_() {
 }
 
 function mpLongshotsManualHeaders_() {
-  return ['Date','League','Game','Pick','Result','Closing Number','Profit/Loss','Settlement Notes','Source','Longshot Name','Leg #','Grading Notes'];
+  return ['Date','League','Game','Pick','Result','Closing Number','Profit/Loss','Settlement Notes','Source','Longshot Name','Leg #','Grading Notes','Final Parlay Odds'];
 }
 
 function mpManualGradeRows_() {
