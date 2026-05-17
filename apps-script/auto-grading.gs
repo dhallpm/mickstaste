@@ -49,7 +49,13 @@ function runMicksPicksAutoGrading() {
       table.rows.forEach(row => {
         summary.checked++;
         try {
-          if (!mpHasPick_(row) || mpAlreadyGraded_(row)) {
+          if (!mpHasPick_(row)) {
+            keep.push(row._values);
+            summary.skipped++;
+            return;
+          }
+
+          if (mpIsArchivedSourceRow_(row)) {
             keep.push(row._values);
             summary.skipped++;
             return;
@@ -63,7 +69,7 @@ function runMicksPicksAutoGrading() {
             return;
           }
 
-          const grade = mpGradeRow_(row, finals, manual, config);
+          const grade = mpExistingResultGrade_(row) || mpGradeRow_(row, finals, manual, config);
           if (!grade || grade.result === 'Pending') {
             keep.push(row._values);
             summary.skipped++;
@@ -102,15 +108,19 @@ function runMicksPicksAutoGrading() {
 }
 
 function setupMicksPicksAutomationTriggers() {
-  const handlers = ['pullOddsAPI', 'runMicksPicksAutoConfirm', 'runMicksPicksAutoGrading'];
+  const handlers = ['pullOddsAPI', 'runMicksPicksAutoConfirm', 'runMicksPicksAutoConfirmAutomation', 'runMicksPicksAutoGrading'];
   ScriptApp.getProjectTriggers().forEach(trigger => {
     if (trigger.getHandlerFunction && handlers.indexOf(trigger.getHandlerFunction()) >= 0) ScriptApp.deleteTrigger(trigger);
   });
-  ScriptApp.newTrigger('pullOddsAPI').timeBased().everyMinutes(5).create();
-  ScriptApp.newTrigger('runMicksPicksAutoConfirm').timeBased().everyMinutes(10).create();
+  ScriptApp.newTrigger('pullOddsAPI').timeBased().everyMinutes(30).create();
+  ScriptApp.newTrigger('runMicksPicksAutoConfirmAutomation').timeBased().everyMinutes(10).create();
   ScriptApp.newTrigger('runMicksPicksAutoGrading').timeBased().everyMinutes(15).create();
-  mpLogAutomation_('Automation Triggers', 'Installed', 'pullOddsAPI every 5 min; auto-confirm every 10 min; auto-grading every 15 min');
+  mpLogAutomation_('Automation Triggers', 'Installed', 'pullOddsAPI every 30 min; auto-confirm every 10 min; auto-grading every 15 min');
   return { ok: true, triggers: handlers };
+}
+
+function runMicksPicksAutoConfirmAutomation() {
+  return runMicksPicksAutoConfirm();
 }
 
 function runMicksPicksAutoConfirm() {
@@ -238,6 +248,18 @@ function mpGradeManual_(row, manual) {
     profitLoss: mpCell_(manual, 'Profit/Loss') || mpProfitLoss_(row, result),
     closingNumber: mpCell_(manual, 'Closing Number') || mpCell_(manual, 'Closing Line') || mpCell_(row, 'Closing Number') || '',
     note: mpCell_(manual, 'Settlement Notes') || mpCell_(manual, 'Source') || 'Manual Grading Results override'
+  };
+}
+
+function mpExistingResultGrade_(row) {
+  const result = mpNormalizeResult_(mpCell_(row, 'Result'));
+  if (result === 'Pending') return null;
+  return {
+    result,
+    status: 'Graded - ' + result,
+    profitLoss: mpCell_(row, 'Profit/Loss') || mpProfitLoss_(row, result),
+    closingNumber: mpCell_(row, 'Closing Number') || mpCell_(row, 'Best Market Price') || mpCell_(row, 'Best Number') || '',
+    note: 'Archived from existing Result column'
   };
 }
 
@@ -467,6 +489,10 @@ function mpSetCell_(row, headers, header, value) {
 }
 
 function mpHasPick_(row) { return Boolean(mpCell_(row, 'Pick') || mpCell_(row, 'Play')); }
+
+function mpIsArchivedSourceRow_(row) {
+  return Boolean(mpCell_(row, 'Graded Timestamp'));
+}
 
 function mpAlreadyGraded_(row) {
   const status = mpClean_(mpCell_(row, 'Status'));
