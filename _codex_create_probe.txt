@@ -1,1 +1,1 @@
-probe
+Temporary Codex probe file. Safe to delete.
