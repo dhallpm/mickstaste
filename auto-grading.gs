@@ -59,7 +59,7 @@ function runMicksPicksAutoGrading() {
 
           if (mpIsArchivedSourceRow_(row)) {
             mpLogGrading_('INFO', 'SKIPPED', config.name, mpCell_(row, 'Pick'), 'Already marked archived/graded in source row');
-            keep.push(row._values);
+            if (!config.remove) keep.push(row._values);
             summary.skipped++;
             return;
           }
@@ -138,16 +138,26 @@ function setupMicksPicksAutomationTriggers() {
   ScriptApp.newTrigger('pullOddsAPI').timeBased().everyMinutes(30).create();
   ScriptApp.newTrigger('runMicksPicksAutoConfirmAutomation').timeBased().everyMinutes(10).create();
   ScriptApp.newTrigger('runMicksPicksAutoGrading').timeBased().everyMinutes(15).create();
-  mpLogAutomation_('Automation Triggers', 'Installed', 'pullOddsAPI every 30 min; auto-confirm every 10 min; auto-grading every 15 min');
-  return { ok: true, triggers: handlers };
+  mpLogAutomation_('Trigger Setup', 'Updated', 'pullOddsAPI=30min; autoConfirm=10min; autoGrading=15min; duplicate triggers removed');
+  return validateMicksPicksAutomationTriggers();
+}
+
+function validateMicksPicksAutomationTriggers() {
+  const rows = [['Timestamp','Handler','Source','Event Type','Schedule']];
+  const counts = {};
+  ScriptApp.getProjectTriggers().forEach(trigger => {
+    const handler = trigger.getHandlerFunction ? trigger.getHandlerFunction() : '';
+    if (!handler) return;
+    counts[handler] = (counts[handler] || 0) + 1;
+    rows.push([new Date(), handler, trigger.getTriggerSource ? String(trigger.getTriggerSource()) : '', trigger.getEventType ? String(trigger.getEventType()) : '', handler === 'pullOddsAPI' ? 'Every 30 minutes' : handler === 'runMicksPicksAutoConfirmAutomation' ? 'Every 10 minutes' : handler === 'runMicksPicksAutoGrading' ? 'Every 15 minutes' : 'Other']);
+  });
+  mpWriteRows_('Command Center', rows);
+  mpLogAutomation_('Trigger Validation', 'Completed', JSON.stringify(counts));
+  return counts;
 }
 
 function runMicksPicksAutoConfirmAutomation() {
-  return runMicksPicksAutoConfirm();
-}
-
-function runMicksPicksAutoConfirm() {
-  if (typeof autoConfirmActivePicks === 'function') return autoConfirmActivePicks();
+  if (typeof runMicksPicksAutoConfirm === 'function') return runMicksPicksAutoConfirm();
   if (typeof runAutoConfirmEngine === 'function') return runAutoConfirmEngine();
   if (typeof runMicksPicksAutoConfirmation === 'function') return runMicksPicksAutoConfirmation();
   mpLogAutomation_('Auto Confirm', 'Skipped', 'No auto-confirm implementation found in this Apps Script project');
@@ -318,34 +328,12 @@ function mpProfitLoss_(row, result) {
 
 function mpProfitLossWithOdds_(row, result, odds) {
   const units = mpNumber_(mpCell_(row, 'Units'));
-  if (!units) return '';
-  if (result === 'Loss') return (-units).toFixed(2) + 'u';
-  if (result === 'Push' || result === 'Void') return '0.00u';
+  if (result === 'Push' || result === 'Void') return '0.00';
+  if (result === 'Loss') return '-' + units.toFixed(2);
   if (result !== 'Win') return '';
-  if (!isFinite(odds)) return units.toFixed(2) + 'u';
+  if (!isFinite(odds)) return units.toFixed(2);
   const profit = odds > 0 ? units * odds / 100 : units * 100 / Math.abs(odds);
-  return profit.toFixed(2) + 'u';
-}
-
-function mpParlayOdds_(row, manualRows) {
-  const candidates = [
-    mpCell_(row, 'Final Parlay Odds'),
-    mpCell_(row, 'Closing Number'),
-    mpCell_(row, 'Odds'),
-    mpCell_(row, 'Best Number')
-  ];
-  const longshotName = mpCompact_(mpCell_(row, 'Pick'));
-  manualRows.forEach(manual => {
-    if (mpCompact_(mpCell_(manual, 'Longshot Name')) !== longshotName) return;
-    candidates.push(mpCell_(manual, 'Final Parlay Odds'));
-    candidates.push(mpCell_(manual, 'Parlay Odds'));
-    candidates.push(mpCell_(manual, 'Closing Number'));
-  });
-  for (let i = 0; i < candidates.length; i++) {
-    const odds = mpFirstAmericanOdds_([candidates[i]]);
-    if (isFinite(odds)) return odds;
-  }
-  return NaN;
+  return '+' + profit.toFixed(2);
 }
 
 function mpFirstAmericanOdds_(values) {
@@ -356,8 +344,13 @@ function mpFirstAmericanOdds_(values) {
   return NaN;
 }
 
+function mpParlayOdds_(row, manual) {
+  const manualOdds = mpFirstAmericanOdds_(manual.filter(m => mpCell_(m, 'Longshot Name') === mpCell_(row, 'Pick')).map(m => mpCell_(m, 'Final Parlay Odds')));
+  if (isFinite(manualOdds)) return manualOdds;
+  return mpFirstAmericanOdds_([mpCell_(row, 'Final Parlay Odds'), mpCell_(row, 'Closing Number'), mpCell_(row, 'Odds'), mpCell_(row, 'Payout Target')]);
+}
+
 function mpFormatAmericanOdds_(odds) {
-  if (!isFinite(odds)) return '';
   return odds > 0 ? '+' + Math.round(odds) : String(Math.round(odds));
 }
 
@@ -441,31 +434,18 @@ function mpRefreshWebsiteFeed_() {
     mpReadTable_(active).rows.forEach(row => {
       const release = mpClean_(mpCell_(row, 'Release Status'));
       if (!mpHasPick_(row) || mpAlreadyGraded_(row) || (release && !release.includes('released'))) return;
-      rows.push(headers.map(header => mpCell_(row, header)));
+      rows.push(headers.map(h => mpCell_(row, h)));
     });
   }
   mpWriteRows_(MP_GRADING.websiteFeedSheet, rows);
 }
 
-function mpApplyGrade_(row, headers, grade) {
-  mpSetCell_(row, headers, 'Status', grade.status || ('Graded - ' + grade.result));
-  mpSetCell_(row, headers, 'Result', grade.result);
-  mpSetCell_(row, headers, 'Profit/Loss', grade.profitLoss || '');
-  mpSetCell_(row, headers, 'Closing Number', grade.closingNumber || '');
-  mpSetCell_(row, headers, 'Graded Timestamp', new Date());
-}
-
-function mpRewriteRows_(sheet, headers, rows) {
-  const dataRows = Math.max(sheet.getLastRow() - 1, 0);
-  if (dataRows > 0) sheet.getRange(2, 1, dataRows, sheet.getMaxColumns()).clearContent();
-  if (!rows.length) return;
-  const width = Math.max(headers.length, sheet.getLastColumn());
-  const padded = rows.map(row => {
-    const out = row.slice();
-    while (out.length < width) out.push('');
-    return out.slice(0, width);
-  });
-  sheet.getRange(2, 1, padded.length, width).setValues(padded);
+function mpManualGradeRows_() {
+  const manual = mpSheet_(MP_GRADING.manualResultsSheet, true);
+  const rows = manual ? mpReadTable_(manual).rows : [];
+  const longshots = mpSheet_(MP_GRADING.longshotsGradingSheet, true);
+  if (longshots) rows.push.apply(rows, mpReadTable_(longshots).rows);
+  return rows.filter(row => mpNormalizeResult_(mpCell_(row, 'Result')) !== 'Pending');
 }
 
 function mpFindManual_(row, manualRows) {
@@ -478,146 +458,110 @@ function mpFindManual_(row, manualRows) {
 }
 
 function mpFindFinal_(row, finals) {
-  const dateKey = mpDateKey_(mpCell_(row, 'Date'));
-  const game = mpCell_(row, 'Game');
+  const date = mpDateKey_(mpCell_(row, 'Date'));
   return finals.find(final => {
-    const resultDate = mpDateKey_(mpCell_(final, 'Start Time'));
-    return (!dateKey || !resultDate || dateKey === resultDate) && mpSimilar_(game, mpCell_(final, 'Game'));
-  }) || finals.find(final => mpTeamsInText_(game).some(team => mpContainsTeam_(mpCell_(final, 'Game'), team)));
+    const gameOk = mpSimilar_(mpCell_(row, 'Game'), mpCell_(final, 'Game')) || mpTeamsInText_(mpCell_(row, 'Game')).some(team => mpContainsTeam_(mpCell_(final, 'Game'), team));
+    return gameOk && (!date || !mpCell_(final, 'Commence Time') || mpDateKey_(mpCell_(final, 'Commence Time')) === date);
+  });
 }
 
-function mpSelectedTeam_(pick, final) {
-  const text = mpTeamKey_(pick);
-  const home = mpCell_(final, 'Home Team');
-  const away = mpCell_(final, 'Away Team');
-  if (text.includes(mpTeamKey_(home))) return home;
-  if (text.includes(mpTeamKey_(away))) return away;
-  const teams = mpTeamsInText_(pick);
-  return teams.find(team => mpContainsTeam_(home, team) || mpContainsTeam_(away, team)) || '';
+function mpApplyGrade_(row, headers, grade) {
+  mpSetRowCell_(row, headers, 'Status', grade.status || ('Graded - ' + grade.result));
+  mpSetRowCell_(row, headers, 'Result', grade.result);
+  mpSetRowCell_(row, headers, 'Profit/Loss', grade.profitLoss);
+  mpSetRowCell_(row, headers, 'Closing Number', grade.closingNumber || '');
+  mpSetRowCell_(row, headers, 'Graded Timestamp', new Date());
 }
 
 function mpEnsureGradingRuntime_() {
   mpEnsureSheet_(MP_GRADING.finalResultsSheet, mpFinalHeaders_());
-  mpEnsureSheet_(MP_GRADING.manualResultsSheet, mpManualHeaders_());
+  mpEnsureSheet_(MP_GRADING.manualResultsSheet, ['Date','League','Game','Pick','Bet Type','Result','Closing Number','Profit/Loss','Settlement Notes','Source']);
   mpEnsureSheet_(MP_GRADING.longshotsGradingSheet, mpLongshotsManualHeaders_());
   mpEnsureSheet_(MP_GRADING.gradingLogSheet, ['Timestamp','Level','Action','Sheet','Pick','Details']);
   mpEnsureSheet_(MP_GRADING.automationLogSheet, ['Timestamp','Level','Message']);
+  mpEnsureSheet_(MP_GRADING.websiteFeedSheet, ['Date','Sport','League','Game','Pick','Bet Type','Odds','Sportsbook','Grade','Units','Writeup','Access','Featured','Status','Release Status','Posted Time','Framework Tags','Edge Durability','Market Notes','Timestamp']);
   mpEnsureSheet_('Longshots History', ['Date','Sport','League','Game','Pick','LongShot Type','Odds','Sportsbook','Grade','Units','Best Number','No Bet Cutoff','Leg Count','Payout Target','Risk Tier','Status','Release Status','Access','Featured','Writeup','Full Analysis','Market Notes','Source Verification','Timestamp','Manual Approved','Override Mode','Legs','Removed Legs','Validation Notes','Category','Result','Profit/Loss','Settlement Notes','Settled At','Closing Number','Graded Timestamp']);
-  mpEnsureSheet_('Props Lab', ['Date','Sport','League','Game','Pick','Bet Type','Odds','Sportsbook','Grade','Units','Best Number','No Bet Cutoff','Status','Result','Profit/Loss','Writeup','Full Analysis','Access','Featured','Closing Number','Graded Timestamp']);
+  mpEnsureSheet_('Lotto Props', ['Date','Sport','League','Game','Pick','Bet Type','Odds','Sportsbook','Grade','Units','Best Number','No Bet Cutoff','Implied Probability','EV Edge','Confidence','Status','Result','Profit/Loss','Writeup','Market Notes','Injury Notes','Source Verification','Posted Time','Access','Full Analysis','Featured','Closing Number','Graded Timestamp']);
+  mpEnsureColumns_(mpEnsureSheet_('Props Results', ['Date','Sport','League','Game','Pick','Bet Type','Odds','Sportsbook','Grade','Units','Best Number','No Bet Cutoff','Implied Probability','EV Edge','Confidence','Status','Result','Profit/Loss','Writeup','Market Notes','Injury Notes','Source Verification','Posted Time','Access','Full Analysis','Closing Number','Graded Timestamp']), ['Status Notes','Automation Notes','Last Updated']);
 }
 
 function mpFinalHeaders_() {
-  return ['Pulled At','Sport','League','Game','Home Team','Away Team','Start Time','Completed','Home Score','Away Score','Winner','Event ID','Source','Raw Status'];
-}
-
-function mpManualHeaders_() {
-  return ['Date','League','Game','Pick','Result','Closing Number','Profit/Loss','Settlement Notes','Source'];
+  return ['Pulled At','Sport Key','Sport Title','Game','Home Team','Away Team','Commence Time','Completed','Home Score','Away Score','Winner','Event ID','Source','Raw Completed'];
 }
 
 function mpLongshotsManualHeaders_() {
   return ['Date','League','Game','Pick','Result','Closing Number','Profit/Loss','Settlement Notes','Source','Longshot Name','Leg #','Grading Notes','Final Parlay Odds'];
 }
 
-function mpManualGradeRows_() {
-  const manual = mpReadTable_(mpEnsureSheet_(MP_GRADING.manualResultsSheet, mpManualHeaders_())).rows;
-  const longshots = mpReadTable_(mpEnsureSheet_(MP_GRADING.longshotsGradingSheet, mpLongshotsManualHeaders_())).rows;
-  return manual.concat(longshots);
+function mpSheet_(name, optional) {
+  const ss = SpreadsheetApp.getActive();
+  const sheet = ss.getSheetByName(name);
+  if (!sheet && !optional) throw new Error('Missing required sheet: ' + name);
+  return sheet;
 }
 
 function mpEnsureSheet_(name, headers) {
-  const sheet = mpSheet_(name, false);
+  const ss = SpreadsheetApp.getActive();
+  let sheet = ss.getSheetByName(name);
+  if (!sheet) sheet = ss.insertSheet(name);
   if (sheet.getLastRow() === 0) sheet.appendRow(headers);
   else mpEnsureColumns_(sheet, headers);
   return sheet;
 }
 
-function mpSheet_(name, optional) {
-  const ss = SpreadsheetApp.getActive();
-  const sheet = ss.getSheetByName(name);
-  if (!sheet && optional) return null;
-  return sheet || ss.insertSheet(name);
-}
-
-function mpEnsureColumns_(sheet, columns) {
-  const headers = mpReadHeaders_(sheet);
-  if (!headers.length) {
-    sheet.appendRow(columns);
-    return;
-  }
-  const norms = headers.map(mpNorm_);
-  const missing = columns.filter(col => norms.indexOf(mpNorm_(col)) < 0);
-  if (missing.length) sheet.getRange(1, headers.length + 1, 1, missing.length).setValues([missing]);
-}
-
-function mpReadTable_(sheet) {
-  const values = sheet.getDataRange().getValues();
-  if (!values.length) return { headers: [], rows: [] };
-  const headers = values[0].map(v => String(v || '').trim());
-  const rows = values.slice(1).map(v => mpRow_(headers, v)).filter(r => r._values.some(v => String(v || '').trim() !== ''));
-  return { headers, rows };
-}
-
-function mpRowsToObjects_(rows) {
-  const headers = rows[0] || [];
-  return rows.slice(1).map(row => mpRow_(headers, row));
-}
-
-function mpRow_(headers, values) {
-  const row = { _headers: headers, _values: values.slice() };
-  headers.forEach((h, i) => row[mpNorm_(h)] = values[i]);
-  return row;
+function mpEnsureColumns_(sheet, headers) {
+  const existing = mpReadHeaders_(sheet);
+  const normalized = existing.map(mpNorm_);
+  const missing = headers.filter(h => normalized.indexOf(mpNorm_(h)) < 0);
+  if (missing.length) sheet.getRange(1, existing.length + 1, 1, missing.length).setValues([missing]);
 }
 
 function mpReadHeaders_(sheet) {
-  if (sheet.getLastRow() === 0) return [];
-  return sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0].map(v => String(v || '').trim());
+  const lastCol = Math.max(sheet.getLastColumn(), 1);
+  return sheet.getRange(1, 1, 1, lastCol).getValues()[0].map(String);
+}
+
+function mpReadTable_(sheet) {
+  const headers = mpReadHeaders_(sheet);
+  const lastRow = sheet.getLastRow();
+  if (lastRow < 2) return { headers, rows: [] };
+  const values = sheet.getRange(2, 1, lastRow - 1, headers.length).getValues();
+  return { headers, rows: values.map(row => mpRowObject_(headers, row)) };
+}
+
+function mpRowObject_(headers, values) {
+  const row = { _headers: headers, _values: values.slice() };
+  headers.forEach((header, i) => { row[mpNorm_(header)] = values[i]; });
+  return row;
 }
 
 function mpHeaderMap_(headers) {
   const map = {};
-  headers.forEach((h, i) => map[mpNorm_(h)] = i);
+  headers.forEach((header, i) => { map[mpNorm_(header)] = i; });
   return map;
 }
 
-function mpWriteRows_(name, rows) {
-  const sheet = mpSheet_(name, false);
-  sheet.clearContents();
-  if (rows.length) sheet.getRange(1, 1, rows.length, rows[0].length).setValues(rows);
-}
-
-function mpFetchRetry_(url) {
-  let last = { code: 'ERROR', body: 'Unknown fetch error' };
-  for (let i = 0; i <= MP_GRADING.retryAttempts; i++) {
-    try {
-      const res = UrlFetchApp.fetch(url, { method: 'get', muteHttpExceptions: true });
-      last = { code: res.getResponseCode(), body: res.getContentText() };
-      if (last.code < 500 && last.code !== 429) return last;
-    } catch (err) {
-      last = { code: 'ERROR', body: err.message };
-    }
-    Utilities.sleep(MP_GRADING.retrySleepMs * (i + 1));
-  }
-  return last;
-}
-
-function mpFallbackKey_() {
-  const names = (typeof MP_ODDS !== 'undefined' && MP_ODDS.fallback && MP_ODDS.fallback.propertyNames) || ['THE_ODDS_API_KEY', 'THE_ODDS_API_KEY_V4', 'ODDS_API_FALLBACK_KEY', 'ODDS_API_KEY'];
-  const props = PropertiesService.getScriptProperties();
-  for (let i = 0; i < names.length; i++) {
-    const value = String(props.getProperty(names[i]) || '').trim();
-    if (value) return { name: names[i], value };
-  }
-  return null;
-}
-
 function mpCell_(row, header) {
-  const value = row[mpNorm_(header)];
-  return value == null ? '' : String(value).trim();
+  const aliases = {
+    'Bet Type': ['Bet Type', 'Market', 'Prop Type', 'LongShot Type'],
+    'Closing Number': ['Closing Number', 'Closing #', 'Closing Line'],
+    'Profit/Loss': ['Profit/Loss', 'P/L', 'PL', 'Profit Loss'],
+    'Access': ['Access', 'Tier']
+  };
+  const names = aliases[header] || [header];
+  for (let i = 0; i < names.length; i++) {
+    const v = row[mpNorm_(names[i])];
+    if (v !== undefined && v !== null && String(v).trim() !== '') return v;
+  }
+  return '';
 }
 
-function mpSetCell_(row, headers, header, value) {
-  const idx = mpHeaderMap_(headers)[mpNorm_(header)];
-  if (idx == null) return;
+function mpSetRowCell_(row, headers, header, value) {
+  let idx = headers.map(mpNorm_).indexOf(mpNorm_(header));
+  if (idx < 0) {
+    headers.push(header);
+    idx = headers.length - 1;
+  }
   while (row._values.length <= idx) row._values.push('');
   row._values[idx] = value;
   row[mpNorm_(header)] = value;
@@ -698,6 +642,11 @@ function mpScoreMap_(scores) {
   return map;
 }
 
+function mpSelectedTeam_(pick, final) {
+  const teams = [mpCell_(final, 'Home Team'), mpCell_(final, 'Away Team')];
+  return teams.find(team => mpContainsTeam_(pick, team)) || '';
+}
+
 function mpNormalizeResult_(v) {
   const text = mpClean_(v);
   if (text.includes('win') || text === 'w' || text.includes('cash')) return 'Win';
@@ -710,3 +659,42 @@ function mpNormalizeResult_(v) {
 function mpPending_(note) { return { result: 'Pending', status: 'Pending', note: note || '' }; }
 function mpLogGrading_(level, action, sheet, pick, details) { const sh = mpEnsureSheet_(MP_GRADING.gradingLogSheet, ['Timestamp','Level','Action','Sheet','Pick','Details']); sh.appendRow([new Date(), level || '', action || '', sheet || '', pick || '', details || '']); }
 function mpLogAutomation_(level, message, details) { const sh = mpEnsureSheet_(MP_GRADING.automationLogSheet, ['Timestamp','Level','Message']); sh.appendRow([new Date(), level || '', message || '', details || '']); }
+function mpWriteRows_(name, rows) { const sh = mpEnsureSheet_(name, rows[0] || ['Value']); mpRewriteRows_(sh, rows[0] || ['Value'], rows.slice(1)); }
+function mpRewriteRows_(sheet, headers, rows) {
+  sheet.clearContents();
+  const values = [headers].concat(rows);
+  if (values.length) sheet.getRange(1, 1, values.length, headers.length).setValues(values.map(row => {
+    const out = row.slice(0, headers.length);
+    while (out.length < headers.length) out.push('');
+    return out;
+  }));
+}
+function mpRowsToObjects_(rows) { const headers = rows[0] || []; return rows.slice(1).map(row => mpRowObject_(headers, row)); }
+
+function mpFetchRetry_(url) {
+  let last;
+  for (let i = 0; i <= MP_GRADING.retryAttempts; i++) {
+    try {
+      const response = UrlFetchApp.fetch(url, { muteHttpExceptions: true });
+      return { code: response.getResponseCode(), body: response.getContentText() };
+    } catch (err) {
+      last = err;
+      Utilities.sleep(MP_GRADING.retrySleepMs * (i + 1));
+    }
+  }
+  throw last;
+}
+
+function mpFallbackKey_() {
+  const props = PropertiesService.getScriptProperties();
+  const keys = ['THE_ODDS_API_KEY', 'ODDS_API_KEY', 'FALLBACK_ODDS_API_KEY'];
+  for (let i = 0; i < keys.length; i++) {
+    const value = props.getProperty(keys[i]);
+    if (value) return { name: keys[i], value };
+  }
+  return null;
+}
+
+function queryString_(params) {
+  return Object.keys(params).map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`).join('&');
+}
