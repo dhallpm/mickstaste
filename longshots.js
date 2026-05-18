@@ -19,7 +19,8 @@ function lsObjects(rows){ if(!rows.length) return []; const headers=rows[0].map(
 function lsIsReleased(row){ const status=lsClean(`${row.releaseStatus} ${row.status}`); return status.includes('released') || status.includes('manual posted') || status.includes('pregame') || status.includes('pending live market validation') || status.includes('rejected'); }
 function lsIsVip(row){ return lsClean(`${row.access} ${row.featured} ${row.riskTier}`).includes('vip') || lsClean(row.featured)==='yes'; }
 function lsIsParlay(row){ return lsClean(`${row.type} ${row.pick}`).includes('parlay') || Number(row.legCount) > 1; }
-function lsSort(a,b){ return Date.parse(b.date || b.timestamp || 0) - Date.parse(a.date || a.timestamp || 0); }
+function lsDateRank(row){ const parsed = Date.parse(row.date || row.settledAt || row.timestamp || 0); return Number.isFinite(parsed) ? parsed : 0; }
+function lsSort(a,b){ return lsDateRank(b) - lsDateRank(a); }
 function lsRowsFor(type){ const rows = LONGSHOTS_STATE.filter(lsIsReleased).sort(lsSort); if(type === 'parlay') return rows.filter(lsIsParlay); if(type === 'lotto') return rows.filter(row => !lsIsParlay(row)); return rows; }
 function lsHistoryRows(){ return LONGSHOTS_HISTORY_STATE.filter(lsHasSettlement).sort(lsSort); }
 function lsResultText(row){ return row.result || (lsClean(`${row.status} ${row.releaseStatus}`).includes('rejected') ? 'Rejected' : 'Pending'); }
@@ -63,7 +64,7 @@ function lsRenderGrid(id, rows){ const el=document.getElementById(id); if(!el) r
 function lsRenderResults(){
   const el=document.getElementById('longshotsResultsBody');
   if(!el) return;
-  const rows = lsHistoryRows().concat(lsRowsFor('all').filter(lsHasSettlement));
+  const rows = lsHistoryRows().concat(lsRowsFor('all').filter(lsHasSettlement)).sort(lsSort);
   el.innerHTML = rows.length ? rows.map(row => `<tr>
     <td>${lsEscape(row.date || '--')}</td>
     <td>${lsEscape(row.type || row.category || 'LongShot')}</td>
