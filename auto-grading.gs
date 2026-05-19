@@ -180,42 +180,105 @@ function mpPullFinalResults_() {
   const rows = [mpFinalHeaders_()];
   const key = mpFallbackKey_();
   if (!key) {
-    mpLogGrading_('ERROR', 'API_KEY_MISSING', '', '', 'Missing The Odds API key for final scores');
-    mpWriteRows_(MP_GRADING.finalResultsSheet, rows);
-    return [];
+    mpLogGrading_('WARN', 'API_KEY_MISSING', '', '', 'Missing The Odds API key for final scores; using ESPN scoreboard fallback');
+  } else {
+    MP_GRADING.finalSports.forEach(sport => {
+      try {
+        const url = `${MP_ODDS.fallback.baseUrl}/sports/${encodeURIComponent(sport)}/scores/?${queryString_({ apiKey: key.value, daysFrom: MP_GRADING.scoreDaysFrom, dateFormat: 'iso' })}`;
+        const res = mpFetchRetry_(url);
+        if (res.code < 200 || res.code >= 300) {
+          mpLogGrading_('ERROR', 'SCORES_HTTP_' + res.code, sport, '', String(res.body || '').slice(0, 300));
+          return;
+        }
+        JSON.parse(res.body || '[]').forEach(event => {
+          const home = event.home_team || '';
+          const away = event.away_team || '';
+          const scores = mpScoreMap_(event.scores || []);
+          const hs = scores[mpTeamKey_(home)];
+          const as = scores[mpTeamKey_(away)];
+          const completed = event.completed === true || String(event.completed).toLowerCase() === 'true';
+          const winner = completed && isFinite(hs) && isFinite(as) ? (hs > as ? home : as > hs ? away : 'Push') : '';
+          mpPushFinalRow_(rows, [new Date(), event.sport_key || sport, event.sport_title || sport, `${away} vs ${home}`, home, away, event.commence_time || '', completed ? 'TRUE' : 'FALSE', hs == null ? '' : hs, as == null ? '' : as, winner, event.id || '', 'The Odds API scores', event.completed || '']);
+        });
+      } catch (err) {
+        mpLogGrading_('ERROR', 'SCORES_FETCH_FAILED', sport, '', err.message);
+      }
+    });
   }
 
-  MP_GRADING.finalSports.forEach(sport => {
-    try {
-      const url = `${MP_ODDS.fallback.baseUrl}/sports/${encodeURIComponent(sport)}/scores/?${queryString_({ apiKey: key.value, daysFrom: MP_GRADING.scoreDaysFrom, dateFormat: 'iso' })}`;
-      const res = mpFetchRetry_(url);
-      if (res.code < 200 || res.code >= 300) {
-        mpLogGrading_('ERROR', 'SCORES_HTTP_' + res.code, sport, '', String(res.body || '').slice(0, 300));
-        return;
-      }
-      JSON.parse(res.body || '[]').forEach(event => {
-        const home = event.home_team || '';
-        const away = event.away_team || '';
-        const scores = mpScoreMap_(event.scores || []);
-        const hs = scores[mpTeamKey_(home)];
-        const as = scores[mpTeamKey_(away)];
-        const completed = event.completed === true || String(event.completed).toLowerCase() === 'true';
-        const winner = completed && isFinite(hs) && isFinite(as) ? (hs > as ? home : as > hs ? away : 'Push') : '';
-        rows.push([new Date(), event.sport_key || sport, event.sport_title || sport, `${away} vs ${home}`, home, away, event.commence_time || '', completed ? 'TRUE' : 'FALSE', hs == null ? '' : hs, as == null ? '' : as, winner, event.id || '', 'The Odds API scores', event.completed || '']);
-      });
-    } catch (err) {
-      mpLogGrading_('ERROR', 'SCORES_FETCH_FAILED', sport, '', err.message);
-    }
-  });
+  mpPullEspnFinalResults_(rows);
 
   mpWriteRows_(MP_GRADING.finalResultsSheet, rows);
   return mpRowsToObjects_(rows).filter(row => mpCell_(row, 'Completed') === 'TRUE');
 }
 
+function mpPullEspnFinalResults_(rows) {
+  const sports = [
+    { sport: 'basketball_nba', league: 'NBA', url: 'https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard' },
+    { sport: 'basketball_wnba', league: 'WNBA', url: 'https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/scoreboard' },
+    { sport: 'baseball_mlb', league: 'MLB', url: 'https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard' },
+    { sport: 'americanfootball_nfl', league: 'NFL', url: 'https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard' },
+    { sport: 'icehockey_nhl', league: 'NHL', url: 'https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard' }
+  ];
+  const dates = mpRecentEspnDates_();
+  sports.forEach(sport => {
+    dates.forEach(dateKey => {
+      try {
+        const res = mpFetchRetry_(sport.url + '?' + queryString_({ dates: dateKey }));
+        if (res.code < 200 || res.code >= 300) {
+          mpLogGrading_('ERROR', 'ESPN_SCORES_HTTP_' + res.code, sport.league, '', String(res.body || '').slice(0, 300));
+          return;
+        }
+        const payload = JSON.parse(res.body || '{}');
+        (payload.events || []).forEach(event => mpPushEspnEvent_(rows, sport, event));
+      } catch (err) {
+        mpLogGrading_('ERROR', 'ESPN_SCORES_FETCH_FAILED', sport.league, '', err.message);
+      }
+    });
+  });
+}
+
+function mpRecentEspnDates_() {
+  const dates = [];
+  const now = new Date();
+  for (let i = 0; i <= MP_GRADING.scoreDaysFrom; i++) {
+    const d = new Date(now.getTime() - i * 24 * 60 * 60 * 1000);
+    dates.push(Utilities.formatDate(d, MP_GRADING.tz, 'yyyyMMdd'));
+  }
+  return dates;
+}
+
+function mpPushEspnEvent_(rows, sport, event) {
+  const competition = (event.competitions || [])[0] || {};
+  const status = event.status && event.status.type ? event.status.type : {};
+  const competitors = competition.competitors || [];
+  const home = competitors.find(c => c.homeAway === 'home') || {};
+  const away = competitors.find(c => c.homeAway === 'away') || {};
+  const homeTeam = mpEspnTeamName_(home);
+  const awayTeam = mpEspnTeamName_(away);
+  if (!homeTeam || !awayTeam) return;
+  const hs = Number(home.score);
+  const as = Number(away.score);
+  const completed = status.completed === true || String(status.state || '').toLowerCase() === 'post';
+  const winner = completed && isFinite(hs) && isFinite(as) ? (hs > as ? homeTeam : as > hs ? awayTeam : 'Push') : '';
+  mpPushFinalRow_(rows, [new Date(), sport.sport, sport.league, `${awayTeam} vs ${homeTeam}`, homeTeam, awayTeam, event.date || '', completed ? 'TRUE' : 'FALSE', isFinite(hs) ? hs : '', isFinite(as) ? as : '', winner, event.id || competition.id || '', 'ESPN scoreboard', status.description || status.name || '']);
+}
+
+function mpEspnTeamName_(competitor) {
+  const team = competitor.team || {};
+  return team.displayName || team.shortDisplayName || team.name || competitor.displayName || '';
+}
+
+function mpPushFinalRow_(rows, row) {
+  const key = [mpDateKey_(row[6]), mpTeamKey_(row[4]), mpTeamKey_(row[5])].join('|');
+  const exists = rows.slice(1).some(existing => [mpDateKey_(existing[6]), mpTeamKey_(existing[4]), mpTeamKey_(existing[5])].join('|') === key);
+  if (!exists) rows.push(row);
+}
+
 function mpGradeRow_(row, finals, manual, config) {
   const override = mpFindManual_(row, manual);
   if (override) return mpGradeManual_(row, override);
-  if (config.kind === 'longshots' || mpIsParlay_(row)) return mpGradeParlay_(row, finals, manual);
+  if (config.kind === 'longshots' || config.kind === 'lotto' || mpIsParlay_(row)) return mpGradeParlay_(row, finals, manual);
   if (mpIsProp_(row)) return mpPending_('Player, HR, and UFC props require Manual Grading Results or a dedicated player/fight stat feed');
 
   const final = mpFindFinal_(row, finals);
@@ -232,7 +295,7 @@ function mpGradeRow_(row, finals, manual, config) {
 }
 
 function mpGradeParlay_(row, finals, manual) {
-  const legs = mpLegs_(mpCell_(row, 'Legs'));
+  const legs = mpLegs_(mpCell_(row, 'Legs') || mpCell_(row, 'Pick'));
   if (!legs.length) return mpPending_('No parlay legs found');
   const outcomes = legs.map(leg => {
     const legRow = mpCloneWithPick_(row, leg);
@@ -634,7 +697,7 @@ function mpIsVipAccess_(row) {
 
 function mpIsParlay_(row) {
   const text = mpClean_(`${mpCell_(row, 'LongShot Type')} ${mpCell_(row, 'Bet Type')} ${mpCell_(row, 'Pick')}`);
-  return text.includes('parlay') || mpNumber_(mpCell_(row, 'Leg Count')) > 1 || Boolean(mpCell_(row, 'Legs'));
+  return text.includes('parlay') || text.includes('lotto') || mpNumber_(mpCell_(row, 'Leg Count')) > 1 || Boolean(mpCell_(row, 'Legs')) || String(mpCell_(row, 'Pick')).indexOf('|') >= 0;
 }
 
 function mpLegs_(legs) { return String(legs || '').split('|').map(x => x.replace(/^\s*\d+\.\s*/, '').trim()).filter(Boolean); }
