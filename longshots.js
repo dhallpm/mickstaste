@@ -1,4 +1,4 @@
-/* Micks LongShots - parlay and lotto release board */
+﻿/* Micks LongShots - parlay and lotto release board */
 const LONGSHOTS_SHEET_ID = '15txBM8qsck7f0ZA_za7xYEykBxKpuq0no3x7yHcKNeE';
 const LONGSHOTS_GID = '2026051601';
 const LONGSHOTS_HISTORY_GID = '43571320';
@@ -52,7 +52,7 @@ function lsCard(row){
     <p class="longshot-game">${lsEscape(row.game || row.type || 'Card pending')}</p>
     <div class="longshot-chip-row"><span>${lsEscape(row.type || 'Lotto')}</span><span>${lsEscape(legText)}</span><span>${lsEscape(row.riskTier || 'High Variance')}</span></div>
     ${legs}
-    <div class="longshot-metrics"><div><strong>${lsEscape(row.odds || '--')}</strong><span>Odds</span></div><div><strong>${lsEscape(row.units || '--')}</strong><span>Units</span></div><div><strong>${lsEscape(row.bestNumber || '--')}</strong><span>Best #</span></div><div><strong>${lsEscape(row.cutoff || '--')}</strong><span>Cutoff</span></div></div>
+    <div class="longshot-metrics"><div><strong>${lsEscape(row.odds || '--')}</strong><span>Odds</span></div><div><strong>${lsEscape(row.units || '--')}</strong><span>Units to Commit</span></div><div><strong>${lsEscape(row.bestNumber || '--')}</strong><span>Best #</span></div><div><strong>${lsEscape(row.cutoff || '--')}</strong><span>Cutoff</span></div></div>
     ${lsSettlementStrip(row)}
     <p class="longshot-writeup">${lsEscape(row.writeup || 'Longshot notes loading from the sheet.')}</p>
     <div class="longshot-note"><strong>Market:</strong> ${lsEscape(row.marketNotes || 'Confirm price before betting.')} ${row.payoutTarget ? `<br><strong>Target:</strong> ${lsEscape(row.payoutTarget)}` : ''}</div>
@@ -112,3 +112,5 @@ async function loadLongShots(){
 
 loadLongShots();
 setInterval(loadLongShots, 30000);
+
+
