@@ -3,13 +3,14 @@
  * Desired schedules:
  * - pullOddsAPI: every 30 minutes
  * - runMicksPicksAutoConfirmAutomation: every 10 minutes
- * - runMicksPicksAutoGrading: every 15 minutes
+ * - runMicksPicksAutoGrading: daily near 2:00 AM America/New_York
  */
 
+const MP_AUTOMATION_TZ = 'America/New_York';
 const MP_AUTOMATION_SCHEDULE = [
-  { handler: 'pullOddsAPI', minutes: 30, label: 'Odds API pull' },
-  { handler: 'runMicksPicksAutoConfirmAutomation', minutes: 10, label: 'Auto-confirm' },
-  { handler: 'runMicksPicksAutoGrading', minutes: 15, label: 'Auto-grading' }
+  { handler: 'pullOddsAPI', type: 'minutes', minutes: 30, label: 'Odds API pull' },
+  { handler: 'runMicksPicksAutoConfirmAutomation', type: 'minutes', minutes: 10, label: 'Auto-confirm' },
+  { handler: 'runMicksPicksAutoGrading', type: 'daily', hour: 2, nearMinute: 0, timezone: MP_AUTOMATION_TZ, label: 'Auto-grading' }
 ];
 
 function updateMicksPicksAutomationSchedule() {
@@ -29,17 +30,17 @@ function updateMicksPicksAutomationSchedule() {
       const matches = before.filter(trigger => trigger.getHandlerFunction && trigger.getHandlerFunction() === rule.handler);
       matches.forEach(trigger => {
         ScriptApp.deleteTrigger(trigger);
-        removed.push(mpTriggerSummary_(trigger, `Removed existing ${rule.handler} trigger before reinstalling exact ${rule.minutes}-minute schedule`));
+        removed.push(mpTriggerSummary_(trigger, `Removed existing ${rule.handler} trigger before reinstalling ${mpScheduleDescription_(rule)}`));
       });
 
-      const createdTrigger = ScriptApp.newTrigger(rule.handler).timeBased().everyMinutes(rule.minutes).create();
-      created.push(mpTriggerSummary_(createdTrigger, `Created ${rule.handler} every ${rule.minutes} minutes`));
+      const createdTrigger = mpCreateScheduleTrigger_(rule);
+      created.push(mpTriggerSummary_(createdTrigger, `Created ${rule.handler} ${mpScheduleDescription_(rule)}`));
     });
 
     const after = ScriptApp.getProjectTriggers();
     const finalSchedules = MP_AUTOMATION_SCHEDULE.map(rule => {
       const active = after.filter(trigger => trigger.getHandlerFunction && trigger.getHandlerFunction() === rule.handler);
-      return `${rule.handler} -> every ${rule.minutes} minutes (${active.length} active trigger${active.length === 1 ? '' : 's'})`;
+      return `${rule.handler} -> ${mpScheduleDescription_(rule)} (${active.length} active trigger${active.length === 1 ? '' : 's'})`;
     });
 
     const duplicates = finalSchedules.filter(line => !line.includes('(1 active trigger)'));
@@ -65,6 +66,17 @@ function setupMicksPicksAutomationTriggersV2() {
   return updateMicksPicksAutomationSchedule();
 }
 
+function setupMicksPicksDailyAutoGradingAndRunNow() {
+  const schedule = updateMicksPicksAutomationSchedule();
+  const run = runMicksPicksAutoGrading();
+  mpScheduleLog_('INFO', `Daily auto-grading installed and run now: ${JSON.stringify({ schedule, run })}`);
+  return { ok: schedule.ok !== false && run.ok !== false, schedule, run };
+}
+
+function runMicksPicksAutoGradingNow() {
+  return runMicksPicksAutoGrading();
+}
+
 function runMicksPicksAutoConfirmAutomation() {
   if (typeof autoConfirmActivePicks === 'function') return autoConfirmActivePicks();
   if (typeof runAutoConfirmEngine === 'function') return runAutoConfirmEngine();
@@ -72,6 +84,24 @@ function runMicksPicksAutoConfirmAutomation() {
   if (typeof runMicksPicksAutoConfirm === 'function') return runMicksPicksAutoConfirm();
   mpScheduleLog_('WARN', 'Auto-confirm skipped: no auto-confirm implementation found');
   return { ok: false, skipped: true, reason: 'No auto-confirm implementation found' };
+}
+
+function mpCreateScheduleTrigger_(rule) {
+  const builder = ScriptApp.newTrigger(rule.handler).timeBased();
+  if (rule.type === 'daily') {
+    return builder
+      .atHour(rule.hour)
+      .nearMinute(rule.nearMinute || 0)
+      .everyDays(1)
+      .inTimezone(rule.timezone || MP_AUTOMATION_TZ)
+      .create();
+  }
+  return builder.everyMinutes(rule.minutes).create();
+}
+
+function mpScheduleDescription_(rule) {
+  if (rule.type === 'daily') return `daily near ${rule.hour}:00 AM ${rule.timezone || MP_AUTOMATION_TZ}`;
+  return `every ${rule.minutes} minutes`;
 }
 
 function mpTriggerSummary_(trigger, note) {
@@ -97,7 +127,7 @@ function mpScheduleCommandCenter_(removed, created, finalSchedules, duplicates) 
   const rows = [
     ['Automation Schedule', 'pullOddsAPI', 'Active', 'Every 30 minutes; old 5-minute triggers removed'],
     ['Automation Schedule', 'runMicksPicksAutoConfirmAutomation', 'Active', 'Every 10 minutes'],
-    ['Automation Schedule', 'runMicksPicksAutoGrading', 'Active', 'Every 15 minutes'],
+    ['Automation Schedule', 'runMicksPicksAutoGrading', 'Active', 'Daily near 2:00 AM America/New_York'],
     ['Trigger Validation', 'Removed Trigger IDs', removed.length ? removed.map(item => item.id).join(', ') : 'None', 'Duplicate cleanup completed'],
     ['Trigger Validation', 'Created Trigger IDs', created.length ? created.map(item => item.id).join(', ') : 'None', 'New desired schedule installed'],
     ['Trigger Validation', 'Final Active Schedules', finalSchedules.join(' | '), duplicates.length ? 'Duplicate validation failed' : 'Duplicate validation passed']

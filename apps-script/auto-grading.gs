@@ -14,6 +14,8 @@ const MP_GRADING = {
   scoreDaysFrom: 3,
   retryAttempts: 2,
   retrySleepMs: 800,
+  dailyGradingHour: 2,
+  dailyGradingNearMinute: 0,
   finalSports: ['basketball_nba', 'basketball_wnba', 'baseball_mlb', 'americanfootball_nfl', 'icehockey_nhl', 'mma_mixed_martial_arts'],
   sourceTabs: [
     { name: 'Active Picks', archive: 'Results Archive', kind: 'core', remove: true },
@@ -115,9 +117,19 @@ function setupMicksPicksAutomationTriggers() {
   });
   ScriptApp.newTrigger('pullOddsAPI').timeBased().everyMinutes(30).create();
   ScriptApp.newTrigger('runMicksPicksAutoConfirmAutomation').timeBased().everyMinutes(10).create();
-  ScriptApp.newTrigger('runMicksPicksAutoGrading').timeBased().everyMinutes(15).create();
-  mpLogAutomation_('Automation Triggers', 'Installed', 'pullOddsAPI every 30 min; auto-confirm every 10 min; auto-grading every 15 min');
+  ScriptApp.newTrigger('runMicksPicksAutoGrading')
+    .timeBased()
+    .atHour(MP_GRADING.dailyGradingHour)
+    .nearMinute(MP_GRADING.dailyGradingNearMinute)
+    .everyDays(1)
+    .inTimezone(MP_GRADING.tz)
+    .create();
+  mpLogAutomation_('Automation Triggers', 'Installed', `pullOddsAPI every 30 min; auto-confirm every 10 min; auto-grading ${mpDailyGradingScheduleText_()}`);
   return { ok: true, triggers: handlers };
+}
+
+function mpDailyGradingScheduleText_() {
+  return `daily near ${MP_GRADING.dailyGradingHour}:00 AM ${MP_GRADING.tz}`;
 }
 
 function runMicksPicksAutoConfirmAutomation() {

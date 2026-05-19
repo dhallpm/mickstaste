@@ -14,6 +14,8 @@ const MP_GRADING = {
   scoreDaysFrom: 3,
   retryAttempts: 2,
   retrySleepMs: 800,
+  dailyGradingHour: 2,
+  dailyGradingNearMinute: 0,
   finalSports: ['basketball_nba', 'basketball_wnba', 'baseball_mlb', 'americanfootball_nfl', 'icehockey_nhl', 'mma_mixed_martial_arts'],
   sourceTabs: [
     { name: 'Active Picks', archive: 'Results Archive', kind: 'core', remove: true },
@@ -137,8 +139,14 @@ function setupMicksPicksAutomationTriggers() {
   });
   ScriptApp.newTrigger('pullOddsAPI').timeBased().everyMinutes(30).create();
   ScriptApp.newTrigger('runMicksPicksAutoConfirmAutomation').timeBased().everyMinutes(10).create();
-  ScriptApp.newTrigger('runMicksPicksAutoGrading').timeBased().everyMinutes(15).create();
-  mpLogAutomation_('Trigger Setup', 'Updated', 'pullOddsAPI=30min; autoConfirm=10min; autoGrading=15min; duplicate triggers removed');
+  ScriptApp.newTrigger('runMicksPicksAutoGrading')
+    .timeBased()
+    .atHour(MP_GRADING.dailyGradingHour)
+    .nearMinute(MP_GRADING.dailyGradingNearMinute)
+    .everyDays(1)
+    .inTimezone(MP_GRADING.tz)
+    .create();
+  mpLogAutomation_('Trigger Setup', 'Updated', `pullOddsAPI=30min; autoConfirm=10min; autoGrading=${mpDailyGradingScheduleText_()}; duplicate triggers removed`);
   return validateMicksPicksAutomationTriggers();
 }
 
@@ -149,11 +157,15 @@ function validateMicksPicksAutomationTriggers() {
     const handler = trigger.getHandlerFunction ? trigger.getHandlerFunction() : '';
     if (!handler) return;
     counts[handler] = (counts[handler] || 0) + 1;
-    rows.push([new Date(), handler, trigger.getTriggerSource ? String(trigger.getTriggerSource()) : '', trigger.getEventType ? String(trigger.getEventType()) : '', handler === 'pullOddsAPI' ? 'Every 30 minutes' : handler === 'runMicksPicksAutoConfirmAutomation' ? 'Every 10 minutes' : handler === 'runMicksPicksAutoGrading' ? 'Every 15 minutes' : 'Other']);
+    rows.push([new Date(), handler, trigger.getTriggerSource ? String(trigger.getTriggerSource()) : '', trigger.getEventType ? String(trigger.getEventType()) : '', handler === 'pullOddsAPI' ? 'Every 30 minutes' : handler === 'runMicksPicksAutoConfirmAutomation' ? 'Every 10 minutes' : handler === 'runMicksPicksAutoGrading' ? mpDailyGradingScheduleText_() : 'Other']);
   });
   mpWriteRows_('Command Center', rows);
   mpLogAutomation_('Trigger Validation', 'Completed', JSON.stringify(counts));
   return counts;
+}
+
+function mpDailyGradingScheduleText_() {
+  return `Daily near ${MP_GRADING.dailyGradingHour}:00 AM ${MP_GRADING.tz}`;
 }
 
 function runMicksPicksAutoConfirmAutomation() {
