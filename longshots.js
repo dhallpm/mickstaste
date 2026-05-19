@@ -20,12 +20,13 @@ function lsIsReleased(row){ const status=lsClean(`${row.releaseStatus} ${row.sta
 function lsIsVip(row){ return lsClean(`${row.access} ${row.featured} ${row.riskTier}`).includes('vip') || lsClean(row.featured)==='yes'; }
 function lsIsParlay(row){ return lsClean(`${row.type} ${row.pick}`).includes('parlay') || Number(row.legCount) > 1; }
 function lsDateRank(row){ const parsed = Date.parse(row.date || row.settledAt || row.timestamp || 0); return Number.isFinite(parsed) ? parsed : 0; }
+function lsFormatDate(value){ const parsed = Date.parse(value || ''); if(!Number.isFinite(parsed)) return value || '--'; const d = new Date(parsed); return `${String(d.getMonth()+1).padStart(2,'0')}/${String(d.getDate()).padStart(2,'0')}/${d.getFullYear()}`; }
 function lsSort(a,b){ return lsDateRank(b) - lsDateRank(a); }
-function lsRowsFor(type){ const rows = LONGSHOTS_STATE.filter(lsIsReleased).sort(lsSort); if(type === 'parlay') return rows.filter(lsIsParlay); if(type === 'lotto') return rows.filter(row => !lsIsParlay(row)); return rows; }
+function lsRowsFor(type){ const rows = LONGSHOTS_STATE.filter(lsIsReleased).filter(row => !lsHasSettlement(row)).sort(lsSort); if(type === 'parlay') return rows.filter(lsIsParlay); if(type === 'lotto') return rows.filter(row => !lsIsParlay(row)); return rows; }
 function lsHistoryRows(){ return LONGSHOTS_HISTORY_STATE.filter(lsHasSettlement).sort(lsSort); }
-function lsResultText(row){ return row.result || (lsClean(`${row.status} ${row.releaseStatus}`).includes('rejected') ? 'Rejected' : 'Pending'); }
+function lsResultText(row){ return row.result || (lsClean(`${row.status} ${row.releaseStatus}`).includes('win') ? 'Win' : lsClean(`${row.status} ${row.releaseStatus}`).includes('loss') ? 'Loss' : lsClean(`${row.status} ${row.releaseStatus}`).includes('rejected') ? 'Rejected' : 'Pending'); }
 function lsResultClass(row){ const result = lsClean(lsResultText(row)); if(result.includes('win') || result.includes('cash')) return 'longshot-result-win'; if(result.includes('loss') || result.includes('lose')) return 'longshot-result-loss'; if(result.includes('push') || result.includes('void')) return 'longshot-result-push'; if(result.includes('reject') || result.includes('stale')) return 'longshot-result-rejected'; return 'longshot-result-pending'; }
-function lsHasSettlement(row){ return Boolean(row.result || row.profitLoss || row.settlementNotes || row.settledAt || lsClean(`${row.status} ${row.releaseStatus}`).includes('rejected')); }
+function lsHasSettlement(row){ return Boolean(row.result || row.profitLoss || row.settlementNotes || row.settledAt || /graded|settled|win|loss|push|void|rejected/.test(lsClean(`${row.status} ${row.releaseStatus}`))); }
 function lsLegItems(legs){
   return String(legs || '').split('|').map(leg => leg.trim()).filter(Boolean).map((leg,index) => {
     const cleaned = leg.replace(/^\d+\.\s*/, '').trim();
@@ -66,7 +67,7 @@ function lsRenderResults(){
   if(!el) return;
   const rows = lsHistoryRows().concat(lsRowsFor('all').filter(lsHasSettlement)).sort(lsSort);
   el.innerHTML = rows.length ? rows.map(row => `<tr>
-    <td>${lsEscape(row.date || '--')}</td>
+    <td>${lsEscape(lsFormatDate(row.date))}</td>
     <td>${lsEscape(row.type || row.category || 'LongShot')}</td>
     <td><strong>${lsEscape(row.pick || '--')}</strong><small>${lsEscape(row.game || '')}</small></td>
     <td>${lsEscape(row.riskTier || '--')}</td>
