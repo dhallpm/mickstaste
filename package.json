@@ -1,0 +1,16 @@
+{
+  "name": "mickstaste",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "fetch:closing-odds": "node scripts/fetch-closing-odds.js",
+    "test:closing-odds": "node scripts/fetch-closing-odds.js --dry-run"
+  },
+  "dependencies": {
+    "googleapis": "^144.0.0"
+  },
+  "engines": {
+    "node": "24.x"
+  }
+}
