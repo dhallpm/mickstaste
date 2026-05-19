@@ -1,0 +1,13 @@
+{
+  "name": "mickstaste",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static Micks Picks site plus closing odds fallback worker.",
+  "scripts": {
+    "fetch:closing-odds": "node scripts/fetch-closing-odds.js",
+    "check": "node --check lib/closingOddsWorker.js && node --check api/fetch-closing-odds.js && node --check scripts/fetch-closing-odds.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
