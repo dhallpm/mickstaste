@@ -4,9 +4,13 @@
   const TZ = 'America/New_York';
   const FINAL_RE = /\b(win|won|loss|lost|push|void|cancelled|canceled|settled|graded|closed|final|complete|completed|archived|removed|invalid)\b/i;
   const OPEN_RE = /\b(active|posted|released|open|pending|pregame|manual approved|api pending)\b/i;
-  const PLAYER_PROP_RE = /\b(player prop|prop|points?|pts|rebounds?|rebs|assists?|asts|pra|p\+r\+a|\bpa\b|\bra\b|strikeouts?|total bases|\btb\b|home runs?|\bhr\b|hits?|rbi|shots on goal|\bsog\b|saves?|receiving yards|rushing yards|passing yards|steals?|blocks?|threes|3pm|touchdowns?)\b/i;
-  const NON_PROP_RE = /\b(parlay|lotto|5-leg|6-leg|7-leg|8-leg|sgp|same game|moneyline|money line|\bml\b|spread|run line|puck line|game total|full game total|team total|period total|quarter total|half total|\bf5\b|first 5|first five|future|futures|vip pick|free pick)\b/i;
-  const LONGSHOT_RE = /\b(longshot|long shot|lotto|ladder|sprinkle|moonshot|parlay|5-leg|6-leg|7-leg|8-leg|sgp|same game|safe lotto|high variance|plus-money|plus money)\b/i;
+  const PLAYER_PROP_RE = /\b(player prop|prop|points?|pts|rebounds?|rebs|assists?|asts|pra|p\+r\+a|\bpa\b|\bra\b|strikeouts?|total bases|\btb\b|home runs?|\bhr\b|hits?|rbi|shots on goal|\bsog\b|saves|round|distance)\b/i;
+  const NON_PROP_RE = /\b(parlay|lotto|5-leg|6-leg|7-leg|8-leg|sgp|same game|moneyline|money line|\bml\b|spread|run line|puck line|game total|full game total|team total|period total|quarter total|half|1h|2h)\b/i;
+  
+  // STRICT PARLAY FILTER: Must have multiple legs, NOT a single pick
+  const PARLAY_ONLY_RE = /\b(parlay|5-leg|6-leg|7-leg|8-leg|sgp|same game|ladder|sprinkle)\b/i;
+  const LOTTO_ONLY_RE = /\b(lotto|lotto prop|hr lotto|home run lotto|safe lotto|moonshot)\b/i;
+  
   const ALIASES = {
     date: ['Date', 'Posted Date', 'Pick Date'],
     timestamp: ['Timestamp', 'Posted Time', 'Graded Timestamp', 'Settled At'],
@@ -15,6 +19,7 @@
     pick: ['Pick', 'Selection', 'Play', 'Name'],
     type: ['Bet Type', 'Market', 'LongShot Type', 'Prop Type', 'Type'],
     category: ['Category'],
+    legs: ['Legs', 'Leg Count', 'Leg #'],
     odds: ['Card Odds', 'Odds', 'Price'],
     units: ['Units to Commit', 'Units', 'Unit', 'Stake'],
     status: ['Display Status', 'Status'],
@@ -102,13 +107,41 @@
     return PLAYER_PROP_RE.test(market);
   }
 
-  function isLottoOrLongshot(row) {
-    return LONGSHOT_RE.test(marketText(row));
-  }
-
   function parseNumber(value) {
     const match = text(value).replace(/,/g, '').match(/[-+]?\d*\.?\d+/);
     return match ? Number(match[0]) : NaN;
+  }
+
+  /**
+   * STRICT: Longshots are ONLY parlays and lotto props with 2+ legs.
+   * Rejects single picks, moneyline, spreads, totals.
+   */
+  function isStrictParlay(row) {
+    const market = marketText(row);
+    const legText = getValue(row, 'legs');
+    const legCount = parseNumber(legText);
+    
+    // Must match parlay/lotto regex explicitly
+    const hasParlay = PARLAY_ONLY_RE.test(market);
+    const hasLotto = LOTTO_ONLY_RE.test(market);
+    
+    if (!hasParlay && !hasLotto) {
+      return false;
+    }
+    
+    // Reject if it's clearly a single pick (moneyline without parlay marker)
+    if (/moneyline|money line|\bml\b/i.test(market) && !hasParlay) {
+      return false;
+    }
+    
+    // Reject if it's a true prop (player stat)
+    if (isTruePlayerProp(row)) {
+      return false;
+    }
+    
+    // Must have multiple legs OR match lotto explicitly
+    const hasMultipleLegs = legCount > 1 || (legText && legText.includes('|'));
+    return hasMultipleLegs || hasLotto;
   }
 
   function resultOf(row) {
@@ -149,11 +182,12 @@
   };
   window.isPropMarket = isTruePlayerProp;
   window.isHrLotto = function (row) {
-    return isLottoOrLongshot(row) && !isTruePlayerProp(row);
+    return isStrictParlay(row) && !isTruePlayerProp(row);
   };
+  window.isStrictParlay = isStrictParlay;
   window.resultOf = resultOf;
   window.calculateProfitLossUnits = calculateProfitLossUnits;
-  window.isMicksLongshotOrLottoParlay = isLottoOrLongshot;
+  window.isMicksLongshotOrLottoParlay = isStrictParlay;
 
   if (typeof window.renderLedger === 'function') {
     const originalRenderLedger = window.renderLedger;
