@@ -9,6 +9,7 @@ export default async function handler(req, res) {
       success: true,
       sourceOfTruth: 'Airtable',
       date: result.date,
+      warnings: result.warnings,
       free: result.free,
       vip: result.vip,
       props: result.props,
