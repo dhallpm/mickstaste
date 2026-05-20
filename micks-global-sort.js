@@ -1,5 +1,6 @@
 // Micks Picks global DOM repair layer
 // Runs after Google Sheets CSV render and cleans placeholder cards, stale active rows, props routing, units, and result tables.
+// Core Micks Picks archive rule: if Result exists, it belongs in archive/results and must not render as an active card.
 (function () {
   const TZ = 'America/New_York';
   const TODAY = new Date().toLocaleDateString('en-CA', { timeZone: TZ });
@@ -22,6 +23,8 @@
     '#longshotsCards',
     '#sportPanels'
   ];
+
+  const ACTIVE_CARD_CONTAINERS = ['#freeCards', '#vipCards', '#activePropsCards', '#longshotsCards'];
 
   function text(el) {
     return String((el && el.textContent) || '').trim();
@@ -73,7 +76,16 @@
   }
 
   function isSettledString(value) {
-    return /\b(win|won|loss|lost|push|void|settled|graded|closed|final)\b/i.test(String(value || ''));
+    return /\b(win|won|loss|lost|push|void|settled|graded|closed|final|removed|invalid)\b/i.test(String(value || ''));
+  }
+
+  function hasResultSignal(value) {
+    const s = String(value || '');
+    // Exact Micks Picks rule: if a real Result exists, it is no longer active.
+    return /\b(result|outcome)\s*[:\-]?\s*(win|won|loss|lost|push|void|cancelled|canceled|removed|invalid)\b/i.test(s)
+      || /\bgraded\s*[-:]?\s*(win|loss|push|void)\b/i.test(s)
+      || /\bclosed\b/i.test(s)
+      || /\bsettled\b/i.test(s);
   }
 
   function isOpenString(value) {
@@ -156,7 +168,24 @@
     });
   }
 
+  function hideCardsWithResult() {
+    ACTIVE_CARD_CONTAINERS.forEach(sel => {
+      const container = document.querySelector(sel);
+      if (!container) return;
+      Array.from(container.children || []).forEach(card => {
+        const s = text(card);
+        if (!looksLikeActiveCard(card)) return;
+        if (hasResultSignal(s) || isSettledString(s)) {
+          card.dataset.micksArchivedByResult = 'true';
+          card.style.display = 'none';
+        }
+      });
+    });
+  }
+
   function hideWrongCards() {
+    hideCardsWithResult();
+
     const propsContainer = document.querySelector('#activePropsCards');
     if (propsContainer) {
       Array.from(propsContainer.children || []).forEach(card => {
@@ -195,7 +224,7 @@
           const s = text(row);
           const cells = Array.from(row.children || []);
           const resultCell = cells.find(td => /\b(win|loss|push|void)\b/i.test(text(td)));
-          if (resultCell) {
+          if (resultCell || hasResultSignal(s)) {
             row.dataset.micksSettled = 'true';
             row.classList.add('micks-settled-row');
           }
