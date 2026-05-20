@@ -121,6 +121,20 @@ function runMicksPicksAutoGrading() {
     });
 
     mpRefreshWebsiteFeed_();
+    
+    // NEW: Calculate profit/loss units for all closed bets
+    calculateProfitLossUnits_();
+    
+    // NEW: Archive closed bets
+    archiveClosedBets_();
+    
+    // NEW: Dedupe all archive sheets
+    dedupeArchiveRows_('Results Archive');
+    dedupeArchiveRows_('VIP Archive');
+    dedupeArchiveRows_('Props Results');
+    dedupeArchiveRows_('Lotto Props');
+    dedupeArchiveRows_('Longshots History');
+    
     mpLogAutomation_('Auto Grading', 'Completed', `Checked=${summary.checked}; Graded=${summary.graded}; Archived=${summary.archived}; Removed=${summary.removed}; Errors=${summary.errors}`);
     return { ok: true, finalResults: finals.length, summary };
   } catch (err) {
@@ -129,6 +143,119 @@ function runMicksPicksAutoGrading() {
     throw err;
   } finally {
     lock.releaseLock();
+  }
+}
+
+/**
+ * Calculate/overwrite Profit/Loss units for all closed bets (Win/Loss/Push/Void/Graded)
+ * on all source tabs (Active Picks, Props Lab, Longshots, etc.)
+ */
+function calculateProfitLossUnits_() {
+  const sheets = [
+    'Active Picks', 'Props Lab', 'Micks LongShots', 'Lotto Props'
+  ];
+  let totalUpdated = 0;
+  sheets.forEach(name => {
+    const sheet = mpSheet_(name, true);
+    if (!sheet) return;
+    const table = mpReadTable_(sheet);
+    let changed = false;
+    table.rows.forEach(row => {
+      const result = mpNormalizeResult_(mpCell_(row, 'Result'));
+      if (['Win', 'Loss', 'Push', 'Void'].includes(result)) {
+        const pl = mpProfitLoss_(row, result);
+        mpSetRowCell_(row, table.headers, 'Profit/Loss', pl);
+        changed = true;
+        totalUpdated++;
+      }
+    });
+    if (changed) mpRewriteRows_(sheet, table.headers, table.rows.map(r => r._values));
+  });
+  mpLogGrading_('INFO', 'PROFIT_LOSS_CALC', 'Multi-Sheet', '', `Calculated profit/loss for ${totalUpdated} closed bets`);
+}
+
+/**
+ * Archive closed bets (graded) from all source tabs to the proper archive.
+ * Handles routing and deduplication.
+ */
+function archiveClosedBets_() {
+  let totalArchived = 0;
+  MP_GRADING.sourceTabs.forEach(config => {
+    const sheet = mpSheet_(config.name, config.optional);
+    if (!sheet) return;
+    const table = mpReadTable_(sheet);
+    const keep = [];
+    const gradedKeys = mpExistingGradedKeys_();
+    table.rows.forEach(row => {
+      if (!mpHasPick_(row)) {
+        keep.push(row._values);
+        return;
+      }
+      if (mpIsArchivedSourceRow_(row)) {
+        keep.push(row._values);
+        return;
+      }
+      const result = mpNormalizeResult_(mpCell_(row, 'Result'));
+      if (!['Win', 'Loss', 'Push', 'Void'].includes(result)) {
+        keep.push(row._values);
+        return;
+      }
+      // Archive routing logic (VIP, Longshots, Lotto, Props, Standard)
+      const archive = routeBetToArchive_(row, config);
+      if (!archive) {
+        keep.push(row._values);
+        return;
+      }
+      const k = mpPickKey_(row);
+      if (!mpArchiveHasKey_(archive, k) && !gradedKeys.has(k)) {
+        mpAppendArchive_(archive, table.headers, row._values);
+        gradedKeys.add(k);
+        totalArchived++;
+      }
+      // Remove from source; don't push to "keep"
+    });
+    // REMOVE from source if config.remove true, REWRITE with left-overs
+    if (config.remove || config.inPlace) mpRewriteRows_(sheet, table.headers, keep);
+  });
+  mpLogGrading_('INFO', 'ARCHIVE_CLOSED', 'Multi-Sheet', '', `Archived ${totalArchived} closed bets`);
+}
+
+/**
+ * Route a row (bet) to the correct archive tab name.
+ * Returns archive sheet name, or null if not archivable.
+ */
+function routeBetToArchive_(row, config) {
+  if (mpIsLottoPick_(row)) return 'Lotto Props';
+  if (config && config.kind === 'longshots' || mpIsParlay_(row)) return 'Longshots History';
+  if (mpIsProp_(row) || (config && config.kind === 'props')) return 'Props Results';
+  if (mpIsVipAccess_(row)) return 'VIP Archive';
+  return 'Results Archive';
+}
+
+/**
+ * Dedupe archive by pick key. Modifies the archive sheet in place.
+ * @param {string} archiveSheetName
+ */
+function dedupeArchiveRows_(archiveSheetName) {
+  const sheet = mpSheet_(archiveSheetName, true);
+  if (!sheet) return;
+  const table = mpReadTable_(sheet);
+  const keys = {};
+  const deduped = [];
+  let removed = 0;
+  table.rows.forEach(row => {
+    const k = mpPickKey_(row);
+    if (!k) return;
+    if (keys[k]) {
+      removed++;
+    } else {
+      keys[k] = true;
+      deduped.push(row._values);
+    }
+  });
+  if (removed > 0) {
+    mpRewriteRows_(sheet, table.headers, deduped);
+    mpLogGrading_('INFO', 'DEDUPE_ARCHIVE', archiveSheetName, '', `Removed ${removed} duplicate rows`);
   }
 }
 
@@ -157,7 +284,7 @@ function validateMicksPicksAutomationTriggers() {
     const handler = trigger.getHandlerFunction ? trigger.getHandlerFunction() : '';
     if (!handler) return;
     counts[handler] = (counts[handler] || 0) + 1;
-    rows.push([new Date(), handler, trigger.getTriggerSource ? String(trigger.getTriggerSource()) : '', trigger.getEventType ? String(trigger.getEventType()) : '', handler === 'pullOddsAPI' ? 'Every 30 minutes' : handler === 'runMicksPicksAutoConfirmAutomation' ? 'Every 10 minutes' : handler === 'runMicksPicksAutoGrading' ? mpDailyGradingScheduleText_() : 'Other']);
+    rows.push([new Date(), handler, trigger.getTriggerSource ? String(trigger.getTriggerSource()) : '', trigger.getEventType ? String(trigger.getEventType()) : '', handler === 'pullOddsAPI' ? 'Every 30 minutes' : handler === 'runMicksPicksAutoConfirmAutomation' ? 'Every 10 minutes' : handler === 'runMicksPicksAutoGrading' ? mpDailyGradingScheduleText_() : 'Unknown']);
   });
   mpWriteRows_('Command Center', rows);
   mpLogAutomation_('Trigger Validation', 'Completed', JSON.stringify(counts));
@@ -198,7 +325,7 @@ function mpPullFinalResults_() {
           const as = scores[mpTeamKey_(away)];
           const completed = event.completed === true || String(event.completed).toLowerCase() === 'true';
           const winner = completed && isFinite(hs) && isFinite(as) ? (hs > as ? home : as > hs ? away : 'Push') : '';
-          mpPushFinalRow_(rows, [new Date(), event.sport_key || sport, event.sport_title || sport, `${away} vs ${home}`, home, away, event.commence_time || '', completed ? 'TRUE' : 'FALSE', hs == null ? '' : hs, as == null ? '' : as, winner, event.id || '', 'The Odds API scores', event.completed || '']);
+          mpPushFinalRow_(rows, [new Date(), event.sport_key || sport, event.sport_title || sport, `${away} vs ${home}`, home, away, event.commence_time || '', completed ? 'TRUE' : 'FALSE', isFinite(hs) ? hs : '', isFinite(as) ? as : '', winner, event.id || '', 'Odds API', event.completed]);
         });
       } catch (err) {
         mpLogGrading_('ERROR', 'SCORES_FETCH_FAILED', sport, '', err.message);
@@ -261,7 +388,7 @@ function mpPushEspnEvent_(rows, sport, event) {
   const as = Number(away.score);
   const completed = status.completed === true || String(status.state || '').toLowerCase() === 'post';
   const winner = completed && isFinite(hs) && isFinite(as) ? (hs > as ? homeTeam : as > hs ? awayTeam : 'Push') : '';
-  mpPushFinalRow_(rows, [new Date(), sport.sport, sport.league, `${awayTeam} vs ${homeTeam}`, homeTeam, awayTeam, event.date || '', completed ? 'TRUE' : 'FALSE', isFinite(hs) ? hs : '', isFinite(as) ? as : '', winner, event.id || competition.id || '', 'ESPN scoreboard', status.description || status.name || '']);
+  mpPushFinalRow_(rows, [new Date(), sport.sport, sport.league, `${awayTeam} vs ${homeTeam}`, homeTeam, awayTeam, event.date || '', completed ? 'TRUE' : 'FALSE', isFinite(hs) ? hs : '', isFinite(as) ? as : '', winner, event.id || '', 'ESPN', completed]);
 }
 
 function mpEspnTeamName_(competitor) {
@@ -503,7 +630,7 @@ function mpAppendArchive_(archiveName, sourceHeaders, values) {
 
 function mpRefreshWebsiteFeed_() {
   const active = mpSheet_('Active Picks', true);
-  const headers = ['Date','Sport','League','Game','Pick','Bet Type','Odds','Sportsbook','Grade','Units','Writeup','Access','Featured','Status','Release Status','Posted Time','Framework Tags','Edge Durability','Market Notes','Timestamp'];
+  const headers = ['Date','Sport','League','Game','Pick','Bet Type','Odds','Sportsbook','Grade','Units','Writeup','Access','Featured','Status','Release Status','Posted Time','Framework Tags','Edge Analysis','Confidence'];
   const rows = [headers];
   if (active) {
     mpReadTable_(active).rows.forEach(row => {
@@ -554,10 +681,10 @@ function mpEnsureGradingRuntime_() {
   mpEnsureSheet_(MP_GRADING.longshotsGradingSheet, mpLongshotsManualHeaders_());
   mpEnsureSheet_(MP_GRADING.gradingLogSheet, ['Timestamp','Level','Action','Sheet','Pick','Details']);
   mpEnsureSheet_(MP_GRADING.automationLogSheet, ['Timestamp','Level','Message']);
-  mpEnsureSheet_(MP_GRADING.websiteFeedSheet, ['Date','Sport','League','Game','Pick','Bet Type','Odds','Sportsbook','Grade','Units','Writeup','Access','Featured','Status','Release Status','Posted Time','Framework Tags','Edge Durability','Market Notes','Timestamp']);
-  mpEnsureSheet_('Longshots History', ['Date','Sport','League','Game','Pick','LongShot Type','Odds','Sportsbook','Grade','Units','Best Number','No Bet Cutoff','Leg Count','Payout Target','Risk Tier','Status','Release Status','Access','Featured','Writeup','Full Analysis','Market Notes','Source Verification','Timestamp','Manual Approved','Override Mode','Legs','Removed Legs','Validation Notes','Category','Result','Profit/Loss','Settlement Notes','Settled At','Closing Number','Graded Timestamp']);
-  mpEnsureSheet_('Lotto Props', ['Date','Sport','League','Game','Pick','Bet Type','Odds','Sportsbook','Grade','Units','Best Number','No Bet Cutoff','Implied Probability','EV Edge','Confidence','Status','Result','Profit/Loss','Writeup','Market Notes','Injury Notes','Source Verification','Posted Time','Access','Full Analysis','Featured','Closing Number','Graded Timestamp']);
-  mpEnsureColumns_(mpEnsureSheet_('Props Results', ['Date','Sport','League','Game','Pick','Bet Type','Odds','Sportsbook','Grade','Units','Best Number','No Bet Cutoff','Implied Probability','EV Edge','Confidence','Status','Result','Profit/Loss','Writeup','Market Notes','Injury Notes','Source Verification','Posted Time','Access','Full Analysis','Closing Number','Graded Timestamp']), ['Status Notes','Automation Notes','Last Updated']);
+  mpEnsureSheet_(MP_GRADING.websiteFeedSheet, ['Date','Sport','League','Game','Pick','Bet Type','Odds','Sportsbook','Grade','Units','Writeup','Access','Featured','Status','Release Status','Posted Time','Framework Tags','Edge Analysis','Confidence']);
+  mpEnsureSheet_('Longshots History', ['Date','Sport','League','Game','Pick','LongShot Type','Odds','Sportsbook','Grade','Units','Best Number','No Bet Cutoff','Leg Count','Payout Target','Risk Tier','Result','Profit/Loss','Closing Number','Graded Timestamp']);
+  mpEnsureSheet_('Lotto Props', ['Date','Sport','League','Game','Pick','Bet Type','Odds','Sportsbook','Grade','Units','Best Number','No Bet Cutoff','Implied Probability','EV Edge','Confidence','Status','Result','Profit/Loss','Closing Number','Graded Timestamp']);
+  mpEnsureColumns_(mpEnsureSheet_('Props Results', ['Date','Sport','League','Game','Pick','Bet Type','Odds','Sportsbook','Grade','Units','Best Number','No Bet Cutoff','Implied Probability','EV Edge','Confidence','Status','Result','Profit/Loss','Closing Number','Graded Timestamp']), ['Status', 'Result', 'Profit/Loss', 'Closing Number', 'Graded Timestamp']);
 }
 
 function mpFinalHeaders_() {
