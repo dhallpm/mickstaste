@@ -1,1 +1,3 @@
 Temporary Codex probe file. Safe to delete.
+
+Deployment trigger: Airtable-first automation, 2026-05-20T09:31:00Z
