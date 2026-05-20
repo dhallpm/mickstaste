@@ -1,0 +1,72 @@
+import { runAirtableDiagnostics } from '../lib/airtableDiagnostics.js'
+import { setupAirtableBase } from '../lib/airtableSetup.js'
+import { runAirtableTokenTest } from '../lib/airtableTokenTest.js'
+import { archiveClosedBets } from '../lib/archiveClosedBets.js'
+import { runClosingOddsWorker } from '../lib/closingOddsWorker.js'
+import {
+  runMicksSync,
+  syncAirtableOperatorToSheets,
+  syncSheetsToAirtable
+} from '../lib/micksSyncAutomation.js'
+import { assertSyncAuthorized, sendError } from '../lib/syncAuth.js'
+
+function param(req, name) {
+  return req.query?.[name] ?? req.body?.[name]
+}
+
+function boolParam(req, name) {
+  const value = param(req, name)
+  return value === true || ['1', 'true', 'yes'].includes(String(value || '').toLowerCase())
+}
+
+const ACTIONS = {
+  'run-sync': req => runMicksSync({
+    dryRun: boolParam(req, 'dryRun'),
+    backfill: boolParam(req, 'backfill')
+  }),
+  'sync-sheets-to-airtable': req => syncSheetsToAirtable({
+    dryRun: boolParam(req, 'dryRun'),
+    backfill: boolParam(req, 'backfill')
+  }),
+  'sync-airtable-to-sheets': req => syncAirtableOperatorToSheets({
+    dryRun: boolParam(req, 'dryRun')
+  }),
+  'airtable-diagnostics': () => runAirtableDiagnostics(),
+  'airtable-token-test': () => runAirtableTokenTest(),
+  'setup-airtable-base': req => setupAirtableBase({
+    dryRun: boolParam(req, 'dryRun')
+  }),
+  'archive-closed-bets': req => archiveClosedBets({
+    dryRun: boolParam(req, 'dryRun')
+  }),
+  'closing-odds-worker': req => runClosingOddsWorker({
+    dryRun: boolParam(req, 'dryRun')
+  })
+}
+
+export default async function handler(req, res) {
+  try {
+    assertSyncAuthorized(req)
+    const action = String(param(req, 'action') || '').trim()
+    const runAction = ACTIONS[action]
+
+    if (!runAction) {
+      res.status(400).json({
+        success: false,
+        error: 'Unknown admin action',
+        actions: Object.keys(ACTIONS)
+      })
+      return
+    }
+
+    const result = await runAction(req)
+    res.status(200).json({
+      success: result?.success !== false,
+      action,
+      ...result
+    })
+  } catch (error) {
+    console.error(error)
+    sendError(res, error)
+  }
+}

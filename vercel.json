@@ -1,12 +1,8 @@
 {
   "crons": [
     {
-      "path": "/api/micks-picks-cron",
-      "schedule": "0 16 * * *"
-    },
-    {
-      "path": "/api/run-micks-sync",
-      "schedule": "0 12 * * *"
+      "path": "/api/micks-admin?action=run-sync",
+      "schedule": "0 0 * * *"
     }
   ]
 }
