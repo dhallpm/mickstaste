@@ -1,6 +1,5 @@
 import { runClosingOddsWorker } from '../lib/closingOddsWorker.js'
-import { syncAirtableToSheets } from '../lib/syncAirtableToSheets.js'
-import { archiveClosedBets } from '../lib/archiveClosedBets.js'
+import { runMicksSync } from '../lib/micksSyncAutomation.js'
 import { assertSyncAuthorized, sendError } from '../lib/syncAuth.js'
 
 export default async function handler(req, res) {
@@ -9,9 +8,8 @@ export default async function handler(req, res) {
     const now = new Date()
     const closingOddsDue = now.getUTCHours() % 6 === 0
 
-    const [airtableSync, archiveResult, closingOdds] = await Promise.all([
-      syncAirtableToSheets({ dryRun: req.query?.dryRun === '1' }),
-      archiveClosedBets({ dryRun: req.query?.dryRun === '1' }),
+    const [syncResult, closingOdds] = await Promise.all([
+      runMicksSync({ dryRun: req.query?.dryRun === '1' }),
       closingOddsDue
         ? runClosingOddsWorker({ dryRun: req.query?.dryRun === '1' })
         : Promise.resolve({ skipped: true, reason: 'Closing odds worker runs every 6 UTC hours' })
@@ -19,9 +17,8 @@ export default async function handler(req, res) {
 
     res.status(200).json({
       success: true,
-      sourceOfTruth: 'Airtable',
-      airtableSync,
-      archiveResult,
+      sourceOfTruth: 'airtable_operator_google_sheets_backend',
+      syncResult,
       closingOdds
     })
   } catch (error) {
