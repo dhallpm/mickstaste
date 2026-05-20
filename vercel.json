@@ -1,7 +1,7 @@
 {
   "crons": [
     {
-      "path": "/api/micks-admin?action=run-sync",
+      "path": "/api/micks-admin",
       "schedule": "0 0 * * *"
     }
   ]

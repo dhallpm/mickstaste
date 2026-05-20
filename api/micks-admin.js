@@ -47,7 +47,9 @@ const ACTIONS = {
 export default async function handler(req, res) {
   try {
     assertSyncAuthorized(req)
-    const action = String(param(req, 'action') || '').trim()
+    const isCron = req.headers?.['x-vercel-cron'] ||
+      String(req.headers?.['user-agent'] || '').toLowerCase().includes('vercel-cron')
+    const action = String(param(req, 'action') || (isCron ? 'run-sync' : '')).trim()
     const runAction = ACTIONS[action]
 
     if (!runAction) {
