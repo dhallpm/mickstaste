@@ -6,7 +6,6 @@ export default async function handler(req, res) {
     const result = await buildWebsiteFeed({ date: req.query?.date })
     res.status(200).json({
       success: true,
-      sourceOfTruth: 'Airtable',
       ...result,
       count: result.rows.length
     })

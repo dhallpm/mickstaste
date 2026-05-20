@@ -7,7 +7,8 @@ export default async function handler(req, res) {
 
     res.status(200).json({
       success: true,
-      sourceOfTruth: 'Airtable',
+      source: result.source,
+      sourceOfTruth: result.sourceOfTruth,
       date: result.date,
       warnings: result.warnings,
       free: result.free,
