@@ -3,6 +3,14 @@
     {
       "path": "/api/fetch-closing-odds",
       "schedule": "0 */6 * * *"
+    },
+    {
+      "path": "/api/sync-airtable",
+      "schedule": "*/30 * * * *"
+    },
+    {
+      "path": "/api/archive-closed-bets",
+      "schedule": "15 * * * *"
     }
   ]
 }
