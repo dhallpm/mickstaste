@@ -132,6 +132,41 @@ function runMicksPicksAutoGrading() {
   }
 }
 
+function archiveClosedBets() {
+  return runMicksPicksAutoGrading();
+}
+
+function routeBetToArchive(row) {
+  const config = {
+    kind: mpIsLottoPick_(row) ? 'lotto' : mpIsParlay_(row) ? 'longshots' : mpIsProp_(row) ? 'props' : 'core'
+  };
+  return mpArchiveDecision_(row, config, { result: mpNormalizeResult_(mpCell_(row, 'Result')) }).destination;
+}
+
+function dedupeArchiveRows() {
+  const summary = {};
+  ['Results Archive', 'VIP Archive', 'Props Results', 'Lotto Props', 'Longshots History'].forEach(name => {
+    const sheet = mpSheet_(name, true);
+    if (!sheet) return;
+    const table = mpReadTable_(sheet);
+    const seen = {};
+    const kept = [];
+    let removed = 0;
+    table.rows.forEach(row => {
+      const key = mpPickKey_(row);
+      if (seen[key]) {
+        removed++;
+        return;
+      }
+      seen[key] = true;
+      kept.push(row._values);
+    });
+    if (removed) mpRewriteRows_(sheet, table.headers, kept);
+    summary[name] = { kept: kept.length, removed };
+  });
+  return summary;
+}
+
 function setupMicksPicksAutomationTriggers() {
   const handlers = ['pullOddsAPI', 'runMicksPicksAutoConfirm', 'runMicksPicksAutoConfirmAutomation', 'runMicksPicksAutoGrading'];
   ScriptApp.getProjectTriggers().forEach(trigger => {
@@ -393,22 +428,28 @@ function mpParlayPayload_(row, result, odds, note) {
 }
 
 function mpProfitLoss_(row, result) {
-  return mpProfitLossWithOdds_(row, result, mpFirstAmericanOdds_([
-    mpCell_(row, 'Odds'),
-    mpCell_(row, 'Closing Number'),
-    mpCell_(row, 'Best Market Price'),
-    mpCell_(row, 'Best Number')
-  ]));
+  return calculateProfitLossUnits(row, result);
 }
 
 function mpProfitLossWithOdds_(row, result, odds) {
-  const units = mpNumber_(mpCell_(row, 'Units'));
-  if (result === 'Push' || result === 'Void') return '0.00';
-  if (result === 'Loss') return '-' + units.toFixed(2);
+  const units = mpStakeUnits_(row);
+  if (result === 'Push' || result === 'Void') return '0.00u';
+  if (result === 'Loss') return '-' + units.toFixed(2) + 'u';
   if (result !== 'Win') return '';
-  if (!isFinite(odds)) return units.toFixed(2);
+  if (!isFinite(odds)) return '';
   const profit = odds > 0 ? units * odds / 100 : units * 100 / Math.abs(odds);
-  return '+' + profit.toFixed(2);
+  return '+' + profit.toFixed(2) + 'u';
+}
+
+function calculateProfitLossUnits(row, resultOverride) {
+  const result = resultOverride || mpNormalizeResult_(mpCell_(row, 'Result'));
+  const odds = mpFirstAmericanOdds_([mpCell_(row, 'Odds')]);
+  return mpProfitLossWithOdds_(row, result, odds);
+}
+
+function mpStakeUnits_(row) {
+  const units = mpNumber_(mpCell_(row, 'Units') || mpCell_(row, 'Units to Commit') || mpCell_(row, 'Stake'));
+  return isFinite(units) ? units : 0;
 }
 
 function mpFirstAmericanOdds_(values) {
@@ -444,8 +485,9 @@ function mpExistingGradedKeys_() {
 function mpArchiveDecision_(row, config, grade) {
   const baseSkip = mpOfficialSkipReason_(row, config);
   if (baseSkip) return { skip: true, reason: baseSkip };
-  if (config.kind === 'longshots' || mpIsParlay_(row)) return { skip: false, destination: 'Longshots History' };
+  if (config.kind === 'longshots') return { skip: false, destination: 'Longshots History' };
   if (mpIsLottoPick_(row)) return { skip: false, destination: 'Lotto Props' };
+  if (mpIsParlay_(row)) return { skip: false, destination: 'Longshots History' };
   if (mpIsProp_(row) || config.kind === 'props') return { skip: false, destination: 'Props Results' };
   if (mpIsVipAccess_(row)) {
     const vipSkip = mpVipArchiveSkipReason_(row);
@@ -655,7 +697,15 @@ function mpAlreadyGraded_(row) {
 }
 
 function mpPickKey_(row) {
-  return [mpDateKey_(mpCell_(row, 'Date')), mpCell_(row, 'League') || mpCell_(row, 'Sport'), mpCell_(row, 'Game'), mpCell_(row, 'Pick'), mpCell_(row, 'Bet Type') || mpCell_(row, 'Prop Type') || mpCell_(row, 'LongShot Type')].map(mpCompact_).join('|');
+  return [
+    mpDateKey_(mpCell_(row, 'Date')),
+    mpCell_(row, 'League') || mpCell_(row, 'Sport'),
+    mpCell_(row, 'Game'),
+    mpCell_(row, 'Pick'),
+    mpCell_(row, 'Bet Type') || mpCell_(row, 'Prop Type') || mpCell_(row, 'LongShot Type'),
+    mpCell_(row, 'Odds'),
+    mpCell_(row, 'Units') || mpCell_(row, 'Units to Commit')
+  ].map(mpCompact_).join('|');
 }
 
 function mpDateKey_(value) {
@@ -682,12 +732,13 @@ function mpHasTotal_(t) { return /\b(over|under|o|u)\s*\d/i.test(String(t || '')
 
 function mpIsProp_(row) {
   const text = mpClean_(`${mpCell_(row, 'Bet Type')} ${mpCell_(row, 'Prop Type')} ${mpCell_(row, 'LongShot Type')} ${mpCell_(row, 'Pick')}`);
-  return ['prop','total bases','strikeouts','home run','hr','points','rebounds','assists','sog','saves','round','distance'].some(x => text.includes(x));
+  if (/\b(parlay|lotto|5-leg|6-leg|7-leg|8-leg|sgp|same game|moneyline|money line|ml|spread|run line|puck line|game total|team total|future|futures)\b/.test(text)) return false;
+  return ['prop','total bases','strikeouts','points','rebounds','assists','pra','p+r+a','sog','shots on goal','saves','receiving yards','rushing yards','passing yards','steals','blocks','threes','3pm'].some(x => text.includes(x));
 }
 
 function mpIsLottoPick_(row) {
   const text = mpClean_(`${mpCell_(row, 'Category')} ${mpCell_(row, 'Bet Type')} ${mpCell_(row, 'Prop Type')} ${mpCell_(row, 'LongShot Type')} ${mpCell_(row, 'Pick')} ${mpCell_(row, 'Framework Tags')}`);
-  return text.includes('lotto') || text.includes('hr prop') || text.includes('home run prop') || text.includes('hr sprinkle');
+  return text.includes('lotto') || text.includes('ladder') || text.includes('sprinkle') || text.includes('prop parlay') || text.includes('hr prop') || text.includes('home run prop') || text.includes('hr sprinkle');
 }
 
 function mpIsVipAccess_(row) {
