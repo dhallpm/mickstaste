@@ -4,6 +4,7 @@ import { runAirtableTokenTest } from '../lib/airtableTokenTest.js'
 import { archiveClosedBets } from '../lib/archiveClosedBets.js'
 import { runClosingOddsWorker } from '../lib/closingOddsWorker.js'
 import {
+  ingestPicksToAirtable,
   runMicksSync,
   syncAirtableOperatorToSheets,
   syncSheetsToAirtable
@@ -21,12 +22,18 @@ function boolParam(req, name) {
 
 const ACTIONS = {
   'run-sync': req => runMicksSync({
-    dryRun: boolParam(req, 'dryRun'),
-    backfill: boolParam(req, 'backfill')
+    dryRun: boolParam(req, 'dryRun')
+  }),
+  'ingest-picks': req => ingestPicksToAirtable(req.body || {}, {
+    dryRun: boolParam(req, 'dryRun')
   }),
   'sync-sheets-to-airtable': req => syncSheetsToAirtable({
     dryRun: boolParam(req, 'dryRun'),
     backfill: boolParam(req, 'backfill')
+  }),
+  'import-sheets-backfill': req => syncSheetsToAirtable({
+    dryRun: boolParam(req, 'dryRun'),
+    backfill: true
   }),
   'sync-airtable-to-sheets': req => syncAirtableOperatorToSheets({
     dryRun: boolParam(req, 'dryRun')
