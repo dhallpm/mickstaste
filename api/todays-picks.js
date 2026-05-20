@@ -1,26 +1,22 @@
-import { listTodayAirtablePicks, logSyncAction } from '../lib/airtableClient.js'
+import { buildWebsiteFeed } from '../lib/buildWebsiteFeed.js'
+import { sendError } from '../lib/syncAuth.js'
 
 export default async function handler(req, res) {
   try {
-    const date = req.query?.date ? new Date(req.query.date) : new Date()
-    const picks = await listTodayAirtablePicks(date)
-
-    await logSyncAction('Read todays picks', {
-      source: 'Airtable',
-      destination: 'API /api/todays-picks',
-      count: picks.length,
-      message: 'Returned today Airtable picks'
-    })
+    const result = await buildWebsiteFeed({ date: req.query?.date })
 
     res.status(200).json({
       success: true,
       sourceOfTruth: 'Airtable',
-      date: date.toISOString().slice(0, 10),
-      count: picks.length,
-      picks
+      date: result.date,
+      free: result.free,
+      vip: result.vip,
+      props: result.props,
+      lottoParlays: result.lottoParlays,
+      longshots: result.longshots
     })
   } catch (error) {
     console.error(error)
-    res.status(500).json({ success: false, error: error?.message || 'Unknown error' })
+    sendError(res, error)
   }
 }

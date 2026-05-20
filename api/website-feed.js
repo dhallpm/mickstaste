@@ -1,8 +1,9 @@
-import { generateWebsiteFeed } from '../lib/websiteFeedGenerator.js'
+import { buildWebsiteFeed } from '../lib/buildWebsiteFeed.js'
+import { sendError } from '../lib/syncAuth.js'
 
 export default async function handler(req, res) {
   try {
-    const result = await generateWebsiteFeed({ date: req.query?.date })
+    const result = await buildWebsiteFeed({ date: req.query?.date })
     res.status(200).json({
       success: true,
       sourceOfTruth: 'Airtable',
@@ -11,6 +12,6 @@ export default async function handler(req, res) {
     })
   } catch (error) {
     console.error(error)
-    res.status(500).json({ success: false, error: error?.message || 'Unknown error' })
+    sendError(res, error)
   }
 }

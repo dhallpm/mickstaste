@@ -1,20 +1,18 @@
-import { syncAirtableToSheets } from '../lib/syncAirtableToSheets.js'
 import { syncSheetsToAirtableFallback } from '../lib/syncSheetsToAirtableFallback.js'
 import { assertSyncAuthorized, sendError } from '../lib/syncAuth.js'
 
 export default async function handler(req, res) {
   try {
     assertSyncAuthorized(req)
-    const dryRun = req.query?.dryRun === '1'
-    const enableFallback = req.query?.fallback === '1' || req.body?.enableFallback === true
-    const airtableToSheets = await syncAirtableToSheets({ dryRun })
-    const sheetsFallback = await syncSheetsToAirtableFallback({ dryRun, enableFallback })
+    const result = await syncSheetsToAirtableFallback({
+      dryRun: req.query?.dryRun === '1',
+      enableFallback: true
+    })
 
     res.status(200).json({
       success: true,
       sourceOfTruth: 'Airtable',
-      airtableToSheets,
-      sheetsFallback
+      result
     })
   } catch (error) {
     console.error(error)
