@@ -167,6 +167,24 @@
       color: var(--warn);
     }
 
+    .generator-result {
+      margin-top: 14px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .generated-card {
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #111821;
+    }
+
+    .generated-card strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
     @media (max-width: 820px) {
       header {
         align-items: stretch;
@@ -200,6 +218,45 @@
     </header>
 
     <form id="pickForm">
+      <section class="section">
+        <h2>Generate Micks Picks</h2>
+        <div class="grid">
+          <label class="span-3">Date
+            <input id="generateDate" name="generateDate" type="date">
+          </label>
+          <label class="span-3">Sport
+            <input id="generateSport" name="generateSport" autocomplete="off" placeholder="NBA">
+          </label>
+          <label class="span-3">League
+            <input id="generateLeague" name="generateLeague" autocomplete="off" placeholder="NBA">
+          </label>
+          <label class="span-3">Mode
+            <select id="generateMode" name="generateMode">
+              <option value="review">Review</option>
+              <option value="draft">Draft</option>
+              <option value="publish">Publish</option>
+            </select>
+          </label>
+          <label class="span-3">Max Picks
+            <input id="generateMaxPicks" name="generateMaxPicks" inputmode="numeric" value="3">
+          </label>
+          <label class="span-3">Access
+            <select id="generateAccess" name="generateAccess">
+              <option value="auto">Auto</option>
+              <option>Free</option>
+              <option>VIP</option>
+              <option>Premium</option>
+            </select>
+          </label>
+          <div class="span-6 actions">
+            <button type="button" class="primary" id="generatePicks">Generate</button>
+            <button type="button" id="generateDryRun">Review Dry Run</button>
+            <a href="/api/todays-picks" target="_blank" rel="noreferrer">Open Today&apos;s Feed</a>
+          </div>
+          <output class="span-12 generator-result" id="generateResult" aria-live="polite"></output>
+        </div>
+      </section>
+
       <section class="section">
         <h2>Pick Card</h2>
         <div class="grid">
@@ -304,6 +361,9 @@
     const message = document.getElementById('message')
     const submitPick = document.getElementById('submitPick')
     const dryRunSync = document.getElementById('dryRunSync')
+    const generatePicks = document.getElementById('generatePicks')
+    const generateDryRun = document.getElementById('generateDryRun')
+    const generateResult = document.getElementById('generateResult')
     const requiredFields = ['date', 'game', 'pick', 'betType', 'odds', 'access']
 
     function todayKey() {
@@ -331,6 +391,16 @@
     function show(text, good) {
       message.textContent = text
       message.className = good ? 'good' : 'bad'
+    }
+
+    function esc(value) {
+      return String(value ?? '').replace(/[&<>"']/g, char => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#39;'
+      })[char])
     }
 
     function validate(data) {
@@ -378,7 +448,7 @@
         body: JSON.stringify(body || {})
       })
       const result = await response.json().catch(() => ({ success: false, error: response.statusText }))
-      if (!response.ok || result.success === false) {
+      if (!response.ok || (result.success === false && !result.needsDataProvider)) {
         throw new Error(result.error || `Request failed with ${response.status}`)
       }
       return result
@@ -392,6 +462,39 @@
         ? `\nErrors:\n- ${result.errors.map(item => item.message || item.error || String(item)).join('\n- ')}`
         : ''
       return `Success\nCreated: ${result.created || 0}\nUpdated: ${result.updated || 0}\nSkipped: ${result.skipped || 0}${warnings}${errors}\n\nToday: /api/todays-picks\nBackup dry run: /api/micks-admin?action=run-sync&dryRun=1`
+    }
+
+    function generatorPayload(data, dryRun) {
+      return {
+        date: data.generateDate || todayKey(),
+        sport: data.generateSport,
+        league: data.generateLeague,
+        mode: data.generateMode || 'review',
+        maxPicks: numberValue(data.generateMaxPicks, 3),
+        access: data.generateAccess || 'auto',
+        dryRun
+      }
+    }
+
+    function renderGenerated(result) {
+      if (result.needsDataProvider) {
+        generateResult.innerHTML = `<div class="generated-card"><strong>Missing provider</strong>${esc(result.message || 'No data provider configured.')}</div>`
+        return
+      }
+      const cards = Array.isArray(result.cards) ? result.cards : []
+      const header = `Generated: ${result.generated || cards.length || 0} | Created: ${result.created || 0} | Updated: ${result.updated || 0} | Mode: ${result.mode || 'review'}`
+      const warnings = Array.isArray(result.warnings) && result.warnings.length
+        ? `<div class="generated-card"><strong>Warnings</strong>${result.warnings.map(esc).join('<br>')}</div>`
+        : ''
+      const cardHtml = cards.map(card => `
+        <div class="generated-card">
+          <strong>${esc(card.pick || 'Pick pending')} ${card.odds ? `(${esc(card.odds)})` : ''}</strong>
+          ${esc(card.game || '')}<br>
+          ${esc(card.betType || '')} | ${esc(card.access || '')} | ${esc(card.status || '')} / ${esc(card.releaseStatus || '')}<br>
+          ${esc(card.writeup || '')}
+        </div>
+      `).join('')
+      generateResult.innerHTML = `<div class="generated-card"><strong>${esc(header)}</strong><a href="/api/todays-picks" target="_blank" rel="noreferrer">Open Today&apos;s Feed</a></div>${warnings}${cardHtml}`
     }
 
     form.addEventListener('submit', async event => {
@@ -427,9 +530,32 @@
       }
     })
 
+    async function runGenerator(dryRun) {
+      const data = formData()
+      const button = dryRun ? generateDryRun : generatePicks
+      button.disabled = true
+      try {
+        const result = await postAdmin('generate-micks-picks', data, generatorPayload(data, dryRun))
+        renderGenerated(result)
+        show(result.success === false ? (result.message || result.error || 'Generation needs attention.') : resultText(result), result.success !== false)
+      } catch (error) {
+        generateResult.innerHTML = ''
+        show(error.message, false)
+      } finally {
+        button.disabled = false
+      }
+    }
+
+    generatePicks.addEventListener('click', () => runGenerator(false))
+    generateDryRun.addEventListener('click', () => runGenerator(true))
+
     form.addEventListener('reset', () => {
       setTimeout(() => {
         form.elements.date.value = todayKey()
+        form.elements.generateDate.value = todayKey()
+        form.elements.generateMode.value = 'review'
+        form.elements.generateAccess.value = 'auto'
+        form.elements.generateMaxPicks.value = '3'
         form.elements.access.value = 'Free'
         form.elements.units.value = '1'
         form.elements.status.value = 'Active'
@@ -440,6 +566,10 @@
     })
 
     form.elements.date.value = todayKey()
+    form.elements.generateDate.value = todayKey()
+    form.elements.generateMode.value = 'review'
+    form.elements.generateAccess.value = 'auto'
+    form.elements.generateMaxPicks.value = '3'
     form.elements.access.value = 'Free'
     form.elements.units.value = '1'
     form.elements.status.value = 'Active'

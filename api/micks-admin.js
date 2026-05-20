@@ -3,6 +3,7 @@ import { setupAirtableBase } from '../lib/airtableSetup.js'
 import { runAirtableTokenTest } from '../lib/airtableTokenTest.js'
 import { archiveClosedBets } from '../lib/archiveClosedBets.js'
 import { runClosingOddsWorker } from '../lib/closingOddsWorker.js'
+import { generateMicksPicks } from '../lib/micksPicksGenerator.js'
 import {
   ingestPicksToAirtable,
   runMicksSync,
@@ -61,6 +62,19 @@ function quickTestPickPayload(req) {
   }
 }
 
+function generateMicksPicksOptions(req) {
+  return {
+    ...(req.body || {}),
+    date: param(req, 'date'),
+    sport: param(req, 'sport'),
+    league: param(req, 'league'),
+    mode: param(req, 'mode') || 'review',
+    access: param(req, 'access') || 'auto',
+    maxPicks: param(req, 'maxPicks') || 3,
+    dryRun: boolParam(req, 'dryRun')
+  }
+}
+
 const ACTIONS = {
   'run-sync': req => runMicksSync({
     dryRun: boolParam(req, 'dryRun')
@@ -71,6 +85,7 @@ const ACTIONS = {
   'quick-test-pick': req => ingestPicksToAirtable(quickTestPickPayload(req), {
     dryRun: boolParam(req, 'dryRun')
   }),
+  'generate-micks-picks': req => generateMicksPicks(generateMicksPicksOptions(req)),
   'sync-sheets-to-airtable': req => syncSheetsToAirtable({
     dryRun: boolParam(req, 'dryRun'),
     backfill: boolParam(req, 'backfill')
