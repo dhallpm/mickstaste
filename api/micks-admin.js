@@ -83,6 +83,7 @@ function generateMicksPicksOptions(req) {
     includeLottoProps: param(req, 'includeLottoProps'),
     includeLongLotto: param(req, 'includeLongLotto'),
     includeLongshots: param(req, 'includeLongshots'),
+    allowReviewLotto: param(req, 'allowReviewLotto'),
     allowSample: boolParam(req, 'allowSample'),
     dryRun: boolParam(req, 'dryRun')
   }
