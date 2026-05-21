@@ -84,6 +84,8 @@ function generateMicksPicksOptions(req) {
     includeLongLotto: param(req, 'includeLongLotto'),
     includeLongshots: param(req, 'includeLongshots'),
     allowReviewLotto: param(req, 'allowReviewLotto'),
+    deepMode: param(req, 'deepMode'),
+    forceRefresh: param(req, 'forceRefresh'),
     allowSample: boolParam(req, 'allowSample'),
     dryRun: boolParam(req, 'dryRun')
   }
