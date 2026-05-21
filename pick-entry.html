@@ -478,17 +478,27 @@
     }
 
     function renderGenerated(result) {
-      if (result.needsDataProvider) {
-        generateResult.innerHTML = `<div class="generated-card"><strong>Missing provider</strong>${esc(result.message || 'No data provider configured.')}</div>`
+      if (result.needsOpenAI || result.needsDataProvider) {
+        generateResult.innerHTML = `<div class="generated-card"><strong>Missing engine config</strong>${esc(result.message || 'OPENAI_API_KEY is required for Run Micks Picks.')}</div>`
         return
       }
       const cards = Array.isArray(result.cards) ? result.cards : []
       const header = `Generated: ${result.generated || cards.length || 0} | Created: ${result.created || 0} | Updated: ${result.updated || 0} | Mode: ${result.mode || 'review'}`
       const provider = result.providerStatus
-        ? `<div class="generated-card"><strong>Provider</strong>${result.providerStatus.configured ? `Configured: ${esc(result.providerStatus.source || result.providerStatus.type || 'provider')}` : 'Missing provider'}</div>`
+        ? `<div class="generated-card"><strong>Engine</strong>${result.providerStatus.configured ? `Manual context: ${esc(result.providerStatus.source || result.providerStatus.type || 'provider')}` : 'OpenAI web search primary'}</div>`
         : ''
       const framework = Array.isArray(result.frameworkLoaded)
         ? `<div class="generated-card"><strong>Framework</strong>${result.frameworkLoaded.map(esc).join('<br>')}</div>`
+        : ''
+      const search = result.searchesRun !== undefined
+        ? `<div class="generated-card"><strong>Search</strong>Searches: ${esc(result.searchesRun)}${result.model ? `<br>Model: ${esc(result.model)}` : ''}</div>`
+        : ''
+      const sources = Array.isArray(result.sourcesUsed) && result.sourcesUsed.length
+        ? `<div class="generated-card"><strong>Sources</strong>${result.sourcesUsed.map(source => {
+          const title = esc(source.title || source.url || 'Source')
+          const url = esc(source.url || '')
+          return url ? `<a href="${url}" target="_blank" rel="noreferrer">${title}</a>` : title
+        }).join('<br>')}</div>`
         : ''
       const backup = result.backup
         ? `<div class="generated-card"><strong>Google Sheets Backup</strong>${esc(result.backup.skipped ? (result.backup.reason || 'Skipped') : `Updated ${result.backup.updated || result.backup.totalRows || 0}`)}</div>`
@@ -498,13 +508,13 @@
         : ''
       const cardHtml = cards.map(card => `
         <div class="generated-card">
-          <strong>${esc(card.pick || 'Pick pending')} ${card.odds ? `(${esc(card.odds)})` : ''}</strong>
-          ${esc(card.game || '')}<br>
-          ${esc(card.betType || '')} | ${esc(card.access || '')} | ${esc(card.status || '')} / ${esc(card.releaseStatus || '')}<br>
-          ${esc(card.writeup || '')}
+          <strong>${esc(card.Pick || card.pick || 'Pick pending')} ${card.Odds || card.odds ? `(${esc(card.Odds || card.odds)})` : ''}</strong>
+          ${esc(card.Game || card.game || '')}<br>
+          ${esc(card['Bet Type'] || card.betType || '')} | ${esc(card.Access || card.access || '')} | ${esc(card.Status || card.status || '')} / ${esc(card['Release Status'] || card.releaseStatus || '')}<br>
+          ${esc(card.Writeup || card.writeup || '')}
         </div>
       `).join('')
-      generateResult.innerHTML = `<div class="generated-card"><strong>${esc(header)}</strong><a href="/api/todays-picks" target="_blank" rel="noreferrer">Open Today&apos;s Feed</a></div>${provider}${framework}${backup}${warnings}${cardHtml}`
+      generateResult.innerHTML = `<div class="generated-card"><strong>${esc(header)}</strong><a href="/api/todays-picks" target="_blank" rel="noreferrer">Open Today&apos;s Feed</a></div>${provider}${search}${sources}${framework}${backup}${warnings}${cardHtml}`
     }
 
     form.addEventListener('submit', async event => {
