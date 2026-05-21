@@ -86,6 +86,7 @@ function generateMicksPicksOptions(req) {
     allowReviewLotto: param(req, 'allowReviewLotto'),
     deepMode: param(req, 'deepMode'),
     forceRefresh: param(req, 'forceRefresh'),
+    overrideRateGuard: param(req, 'overrideRateGuard'),
     allowSample: boolParam(req, 'allowSample'),
     dryRun: boolParam(req, 'dryRun')
   }
