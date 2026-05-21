@@ -219,7 +219,7 @@
 
     <form id="pickForm">
       <section class="section">
-        <h2>Generate Micks Picks</h2>
+        <h2>Run Micks Picks</h2>
         <div class="grid">
           <label class="span-3">Date
             <input id="generateDate" name="generateDate" type="date">
@@ -249,7 +249,7 @@
             </select>
           </label>
           <div class="span-6 actions">
-            <button type="button" class="primary" id="generatePicks">Generate</button>
+            <button type="button" class="primary" id="generatePicks">Run Micks Picks</button>
             <button type="button" id="generateDryRun">Review Dry Run</button>
             <a href="/api/todays-picks" target="_blank" rel="noreferrer">Open Today&apos;s Feed</a>
           </div>
@@ -472,6 +472,7 @@
         mode: data.generateMode || 'review',
         maxPicks: numberValue(data.generateMaxPicks, 3),
         access: data.generateAccess || 'auto',
+        allowSample: false,
         dryRun
       }
     }
@@ -483,6 +484,15 @@
       }
       const cards = Array.isArray(result.cards) ? result.cards : []
       const header = `Generated: ${result.generated || cards.length || 0} | Created: ${result.created || 0} | Updated: ${result.updated || 0} | Mode: ${result.mode || 'review'}`
+      const provider = result.providerStatus
+        ? `<div class="generated-card"><strong>Provider</strong>${result.providerStatus.configured ? `Configured: ${esc(result.providerStatus.source || result.providerStatus.type || 'provider')}` : 'Missing provider'}</div>`
+        : ''
+      const framework = Array.isArray(result.frameworkLoaded)
+        ? `<div class="generated-card"><strong>Framework</strong>${result.frameworkLoaded.map(esc).join('<br>')}</div>`
+        : ''
+      const backup = result.backup
+        ? `<div class="generated-card"><strong>Google Sheets Backup</strong>${esc(result.backup.skipped ? (result.backup.reason || 'Skipped') : `Updated ${result.backup.updated || result.backup.totalRows || 0}`)}</div>`
+        : ''
       const warnings = Array.isArray(result.warnings) && result.warnings.length
         ? `<div class="generated-card"><strong>Warnings</strong>${result.warnings.map(esc).join('<br>')}</div>`
         : ''
@@ -494,7 +504,7 @@
           ${esc(card.writeup || '')}
         </div>
       `).join('')
-      generateResult.innerHTML = `<div class="generated-card"><strong>${esc(header)}</strong><a href="/api/todays-picks" target="_blank" rel="noreferrer">Open Today&apos;s Feed</a></div>${warnings}${cardHtml}`
+      generateResult.innerHTML = `<div class="generated-card"><strong>${esc(header)}</strong><a href="/api/todays-picks" target="_blank" rel="noreferrer">Open Today&apos;s Feed</a></div>${provider}${framework}${backup}${warnings}${cardHtml}`
     }
 
     form.addEventListener('submit', async event => {
@@ -535,7 +545,7 @@
       const button = dryRun ? generateDryRun : generatePicks
       button.disabled = true
       try {
-        const result = await postAdmin('generate-micks-picks', data, generatorPayload(data, dryRun))
+        const result = await postAdmin('run-micks-picks', data, generatorPayload(data, dryRun))
         renderGenerated(result)
         show(result.success === false ? (result.message || result.error || 'Generation needs attention.') : resultText(result), result.success !== false)
       } catch (error) {

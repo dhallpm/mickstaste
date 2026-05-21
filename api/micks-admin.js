@@ -71,7 +71,16 @@ function generateMicksPicksOptions(req) {
     mode: param(req, 'mode') || 'review',
     access: param(req, 'access') || 'auto',
     maxPicks: param(req, 'maxPicks') || 3,
+    allowSample: boolParam(req, 'allowSample'),
     dryRun: boolParam(req, 'dryRun')
+  }
+}
+
+function runMicksPicksOptions(req) {
+  return {
+    ...generateMicksPicksOptions(req),
+    command: 'run-micks-picks',
+    mode: param(req, 'mode') || (['1', 'true', 'yes'].includes(String(process.env.MICKS_PICKS_AUTO_PUBLISH || '').toLowerCase()) ? 'publish' : 'review')
   }
 }
 
@@ -86,6 +95,7 @@ const ACTIONS = {
     dryRun: boolParam(req, 'dryRun')
   }),
   'generate-micks-picks': req => generateMicksPicks(generateMicksPicksOptions(req)),
+  'run-micks-picks': req => generateMicksPicks(runMicksPicksOptions(req)),
   'sync-sheets-to-airtable': req => syncSheetsToAirtable({
     dryRun: boolParam(req, 'dryRun'),
     backfill: boolParam(req, 'backfill')
