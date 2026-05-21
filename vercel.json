@@ -1,4 +1,9 @@
 {
+  "functions": {
+    "api/micks-admin.js": {
+      "maxDuration": 60
+    }
+  },
   "crons": [
     {
       "path": "/api/micks-admin",

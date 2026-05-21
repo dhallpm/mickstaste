@@ -32,6 +32,92 @@ function numberParam(req, name, fallback) {
   return Number.isFinite(number) ? number : fallback
 }
 
+function envNumber(name, fallback) {
+  const value = Number(process.env[name])
+  return Number.isFinite(value) ? value : fallback
+}
+
+function runMicksPicksFailure(req, error, stage = 'sourceAcquisition') {
+  const includeProps = boolParam(req, 'includeProps')
+  const includeLotto = boolParam(req, 'includeLotto')
+  const includeLottoProps = boolParam(req, 'includeLottoProps')
+  const overrideUsed = boolParam(req, 'overrideRateGuard')
+  const windowHours = envNumber('MICKS_PICKS_RATE_WINDOW_HOURS', 5)
+  const message = error?.message || 'Run Micks Picks failed before a safe result was returned.'
+  return {
+    success: false,
+    action: 'run-micks-picks',
+    stage,
+    mode: String(param(req, 'mode') || 'review'),
+    errors: [{ message }],
+    warnings: ['Run Micks Picks returned a safe JSON error instead of a platform error.'],
+    tokenBudget: {
+      openAiRuns: 0,
+      propsSecondPass: false,
+      candidatePoolTarget: numberParam(req, 'maxCandidates', 12),
+      maxRuns: overrideUsed
+        ? envNumber('MICKS_PICKS_MAX_OPENAI_CALLS_PER_RUN', 1)
+        : envNumber('MICKS_PICKS_MAX_OPENAI_CALLS_PER_RUN', 1),
+      deepMode: boolParam(req, 'deepMode'),
+      perRunBudget: envNumber('MICKS_PICKS_PER_RUN_TOKEN_BUDGET', 7000),
+      maxOutputTokens: envNumber('MICKS_PICKS_MAX_OUTPUT_TOKENS', 1200)
+    },
+    rateBudget: {
+      windowHours,
+      runsUsed: 0,
+      runsRemaining: 0,
+      cachedResultUsed: false,
+      overrideUsed,
+      nextAllowedRunAt: new Date(Date.now() + windowHours * 60 * 60 * 1000).toISOString()
+    },
+    sourceAcquisition: {
+      boardOddsPass: 'skipped',
+      injuryPass: 'skipped',
+      propsPass: includeProps ? 'skipped' : 'skipped',
+      skippedReasons: [message],
+      sourceConfidence: { high: 0, medium: 0, low: 0 }
+    },
+    routeOutputs: {
+      vipReview: [],
+      freeReview: [],
+      propsReview: [],
+      lottoReview: [],
+      lottoPropsReview: [],
+      longshotsReview: []
+    },
+    propsStatus: {
+      requested: includeProps,
+      status: includeProps ? 'incomplete' : 'not_requested',
+      rawFound: 0,
+      verified: 0,
+      missing: includeProps ? ['source acquisition failed'] : [],
+      reason: message
+    },
+    lottoStatus: {
+      requested: includeLotto,
+      created: 0,
+      reason: includeLotto ? message : ''
+    },
+    lottoPropsStatus: {
+      requested: includeLottoProps,
+      created: 0,
+      reason: includeLottoProps ? message : ''
+    },
+    cards: [],
+    rawCandidatePool: [],
+    candidatePool: [],
+    eligibleCandidatePool: [],
+    rawCandidatesFound: 0,
+    candidatePoolCount: 0,
+    eligibleCandidatePoolCount: 0,
+    publishEligibleCount: 0,
+    reviewEligibleCount: 0,
+    watchlistCount: 0,
+    passCount: 0,
+    backup: { skipped: true, reason: 'Run Micks Picks failed before Airtable write.' }
+  }
+}
+
 function quickTestPickPayload(req) {
   const date = String(param(req, 'date') || todayKey())
   return {
@@ -137,11 +223,12 @@ const ACTIONS = {
 }
 
 export default async function handler(req, res) {
+  let action = ''
   try {
     assertSyncAuthorized(req)
     const isCron = req.headers?.['x-vercel-cron'] ||
       String(req.headers?.['user-agent'] || '').toLowerCase().includes('vercel-cron')
-    const action = String(param(req, 'action') || (isCron ? 'run-sync' : '')).trim()
+    action = String(param(req, 'action') || (isCron ? 'run-sync' : '')).trim()
     const runAction = ACTIONS[action]
 
     if (!runAction) {
@@ -161,6 +248,10 @@ export default async function handler(req, res) {
     })
   } catch (error) {
     console.error(error)
+    if (error?.statusCode !== 401 && (action === 'run-micks-picks' || String(param(req, 'action') || '') === 'run-micks-picks')) {
+      res.status(200).json(runMicksPicksFailure(req, error))
+      return
+    }
     sendError(res, error)
   }
 }
