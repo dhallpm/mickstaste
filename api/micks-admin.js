@@ -71,6 +71,18 @@ function generateMicksPicksOptions(req) {
     mode: param(req, 'mode') || 'review',
     access: param(req, 'access') || 'auto',
     maxPicks: param(req, 'maxPicks') || 3,
+    maxCandidates: param(req, 'maxCandidates'),
+    maxVipPicks: param(req, 'maxVipPicks'),
+    maxFreePicks: param(req, 'maxFreePicks'),
+    maxProps: param(req, 'maxProps'),
+    maxLottoCards: param(req, 'maxLottoCards'),
+    maxLottoProps: param(req, 'maxLottoProps'),
+    maxLongshots: param(req, 'maxLongshots'),
+    includeProps: param(req, 'includeProps'),
+    includeLotto: param(req, 'includeLotto'),
+    includeLottoProps: param(req, 'includeLottoProps'),
+    includeLongLotto: param(req, 'includeLongLotto'),
+    includeLongshots: param(req, 'includeLongshots'),
     allowSample: boolParam(req, 'allowSample'),
     dryRun: boolParam(req, 'dryRun')
   }
