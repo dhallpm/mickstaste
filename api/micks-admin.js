@@ -249,7 +249,7 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error(error)
     if (error?.statusCode !== 401 && (action === 'run-micks-picks' || String(param(req, 'action') || '') === 'run-micks-picks')) {
-      res.status(200).json(runMicksPicksFailure(req, error))
+      res.status(200).json(runMicksPicksFailure(req, error, error.stage || 'sourceAcquisition'))
       return
     }
     sendError(res, error)
