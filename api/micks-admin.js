@@ -247,10 +247,20 @@ export default async function handler(req, res) {
       ...result
     })
   } catch (error) {
-    console.error(error)
-    if (error?.statusCode !== 401 && (action === 'run-micks-picks' || String(param(req, 'action') || '') === 'run-micks-picks')) {
-      res.status(200).json(runMicksPicksFailure(req, error, error.stage || 'sourceAcquisition'))
-      return
+    const isRunMicksPicks = action === 'run-micks-picks' || String(param(req, 'action') || '') === 'run-micks-picks'
+    if (isRunMicksPicks) {
+      const stage = error?.stage || 'sourceAcquisition'
+      console.error('run-micks-picks failed', {
+        stage,
+        message: error?.message || String(error || 'unknown error'),
+        stack: error?.stack || ''
+      })
+      if (error?.statusCode !== 401) {
+        res.status(200).json(runMicksPicksFailure(req, error, stage))
+        return
+      }
+    } else {
+      console.error(error)
     }
     sendError(res, error)
   }
