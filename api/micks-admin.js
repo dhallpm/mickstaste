@@ -7,6 +7,7 @@ import { generateMicksPicks } from '../lib/micksPicksGenerator.js'
 import {
   ingestPicksToAirtable,
   runMicksSync,
+  submitManualPicks,
   syncAirtableOperatorToSheets,
   syncSheetsToAirtable
 } from '../lib/micksSyncAutomation.js'
@@ -80,10 +81,18 @@ function runMicksPicksFailure(req, error, stage = 'sourceAcquisition') {
     routeOutputs: {
       vipReview: [],
       freeReview: [],
+      manualReview: [],
       propsReview: [],
       lottoReview: [],
       lottoPropsReview: [],
       longshotsReview: []
+    },
+    manualReviewPool: [],
+    manualReviewStatus: {
+      requested: true,
+      created: 0,
+      pending: 0,
+      reason: message
     },
     propsStatus: {
       requested: includeProps,
@@ -194,6 +203,9 @@ const ACTIONS = {
     dryRun: boolParam(req, 'dryRun')
   }),
   'quick-test-pick': req => ingestPicksToAirtable(quickTestPickPayload(req), {
+    dryRun: boolParam(req, 'dryRun')
+  }),
+  'submit-manual-picks': req => submitManualPicks({
     dryRun: boolParam(req, 'dryRun')
   }),
   'generate-micks-picks': req => generateMicksPicks(generateMicksPicksOptions(req)),
