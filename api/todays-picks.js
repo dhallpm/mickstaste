@@ -3,7 +3,10 @@ import { sendError } from '../lib/syncAuth.js'
 
 export default async function handler(req, res) {
   try {
-    const result = await buildWebsiteFeed({ date: req.query?.date })
+    const result = await buildWebsiteFeed({
+      date: req.query?.date,
+      league: req.query?.league
+    })
 
     res.status(200).json({
       success: true,
