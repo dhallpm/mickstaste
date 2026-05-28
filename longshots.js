@@ -1,6 +1,5 @@
 ﻿/* Micks LongShots - parlay and lotto release board */
 const LONGSHOTS_SHEET_ID = '15txBM8qsck7f0ZA_za7xYEykBxKpuq0no3x7yHcKNeE';
-const LONGSHOTS_GID = '2026051601';
 const LONGSHOTS_HISTORY_GID = '43571320';
 const LONGSHOTS_COLUMNS = {
   date:['Date'], sport:['Sport'], league:['League'], game:['Game','Matchup'], pick:['Pick','Play'], type:['LongShot Type','Type','Bet Type'], odds:['Odds'], sportsbook:['Sportsbook','Book'], grade:['Grade'], units:['Units'], bestNumber:['Best Number'], cutoff:['No Bet Cutoff','Cutoff'], legCount:['Leg Count','Legs'], payoutTarget:['Payout Target'], riskTier:['Risk Tier','Risk'], status:['Status'], releaseStatus:['Release Status'], access:['Access'], featured:['Featured'], writeup:['Writeup'], fullAnalysis:['Full Analysis'], marketNotes:['Market Notes'], sourceVerification:['Source Verification'], timestamp:['Timestamp','Posted Time'], manualApproved:['Manual Approved'], overrideMode:['Override Mode'], legs:['Legs'], removedLegs:['Removed Legs'], validationNotes:['Validation Notes','Validation Note'], category:['Category'], result:['Result'], profitLoss:['Profit/Loss','Profit Loss','P/L'], settlementNotes:['Settlement Notes','Settlement Note'], settledAt:['Settled At','Settlement Time']
@@ -9,13 +8,14 @@ const LONGSHOTS_COLUMNS = {
 let LONGSHOTS_STATE = [];
 let LONGSHOTS_HISTORY_STATE = [];
 
-function lsCsvUrl(gid=LONGSHOTS_GID){ return `https://docs.google.com/spreadsheets/d/${LONGSHOTS_SHEET_ID}/export?format=csv&gid=${gid}&cache=${Date.now()}`; }
+function lsCsvUrl(gid){ return `https://docs.google.com/spreadsheets/d/${LONGSHOTS_SHEET_ID}/export?format=csv&gid=${gid}&cache=${Date.now()}`; }
 function lsClean(value){ return String(value || '').trim().toLowerCase().replace(/\s+/g,' '); }
 function lsEscape(value){ return String(value || '').replace(/[&<>"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch])); }
 function lsParseCSV(text){ const rows=[]; let row=[], cur='', quoted=false; for(let i=0;i<text.length;i++){ const c=text[i], n=text[i+1]; if(c==='"' && quoted && n==='"'){ cur+='"'; i++; } else if(c==='"'){ quoted=!quoted; } else if(c===',' && !quoted){ row.push(cur); cur=''; } else if((c==='\n'||c==='\r') && !quoted){ if(cur!==''||row.length){ row.push(cur); rows.push(row); row=[]; cur=''; } if(c==='\r'&&n==='\n') i++; } else cur+=c; } if(cur!==''||row.length){ row.push(cur); rows.push(row); } return rows; }
 function lsNormHeader(value){ return String(value||'').trim().toLowerCase().replace(/\s+/g,' ').replace(/[^\w#/% ]/g,''); }
 function lsAlias(headers, aliases){ return headers.find(header => aliases.some(alias => lsNormHeader(alias) === lsNormHeader(header))); }
 function lsObjects(rows){ if(!rows.length) return []; const headers=rows[0].map(h=>String(h||'').trim()); return rows.slice(1).map(row=>{ const raw={}; headers.forEach((header,index)=>raw[header]=String(row[index]||'').trim()); const out={_raw:raw}; Object.entries(LONGSHOTS_COLUMNS).forEach(([key,aliases])=>{ const real=lsAlias(headers,aliases); out[key]=real ? String(raw[real]||'').trim() : ''; }); return out; }).filter(row => Object.values(row._raw).some(Boolean)); }
+async function lsTodayRows(){ try{ const res=await fetch('/api/todays-picks',{cache:'no-store'}); if(!res.ok) throw new Error('Today picks feed '+res.status); const data=await res.json(); if(data.success===false) throw new Error(data.error||'Today picks feed unavailable'); return (Array.isArray(data.longshots)?data.longshots:[]).map(r=>({...r,_raw:r,_sourceTab:'Today Picks API',section:'longshots'})); }catch(error){ console.warn('Today picks feed failed closed:', error); return []; } }
 function lsIsReleased(row){ const status=lsClean(`${row.releaseStatus} ${row.status}`); return status.includes('released') || status.includes('manual posted') || status.includes('pregame') || status.includes('pending live market validation') || status.includes('rejected'); }
 function lsIsVip(row){ return lsClean(`${row.access} ${row.featured} ${row.riskTier}`).includes('vip') || lsClean(row.featured)==='yes'; }
 function lsIsParlay(row){ return lsClean(`${row.type} ${row.pick}`).includes('parlay') || Number(row.legCount) > 1; }
@@ -60,13 +60,13 @@ function lsCard(row){
     ${legs}
     <div class="longshot-metrics"><div><strong>${lsEscape(row.odds || '--')}</strong><span>Odds</span></div><div><strong>${lsEscape(row.units || '--')}</strong><span>Units to Commit</span></div><div><strong>${lsEscape(row.bestNumber || '--')}</strong><span>Best #</span></div><div><strong>${lsEscape(row.cutoff || '--')}</strong><span>Cutoff</span></div></div>
     ${lsSettlementStrip(row)}
-    <p class="longshot-writeup">${lsEscape(row.writeup || 'Longshot notes loading from the sheet.')}</p>
+    <p class="longshot-writeup">${lsEscape(row.writeup || 'Longshot notes loading from /api/todays-picks.')}</p>
     <div class="longshot-note"><strong>Market:</strong> ${lsEscape(row.marketNotes || 'Confirm price before betting.')} ${row.payoutTarget ? `<br><strong>Target:</strong> ${lsEscape(row.payoutTarget)}` : ''}</div>
     ${validation}
     <div class="longshot-status">${lsEscape(row.status || row.releaseStatus || 'Pending')}</div>
   </article>`;
 }
-function lsRenderGrid(id, rows){ const el=document.getElementById(id); if(!el) return; el.innerHTML = rows.length ? rows.map(lsCard).join('') : '<div class="empty longshot-empty">No released longshots loaded yet.</div>'; }
+function lsRenderGrid(id, rows){ const el=document.getElementById(id); if(!el) return; el.innerHTML = rows.length ? rows.map(lsCard).join('') : '<div class="empty longshot-empty">No picks released yet.</div>'; }
 function lsRenderResults(){
   const el=document.getElementById('longshotsResultsBody');
   if(!el) return;
@@ -92,26 +92,27 @@ function lsRenderMetrics(){
 }
 async function loadLongShots(){
   try{
-    const [activeRes, historyRes]=await Promise.all([
-      fetch(lsCsvUrl(LONGSHOTS_GID),{cache:'no-store'}),
+    const [activeRows, historyRes]=await Promise.all([
+      lsTodayRows(),
       fetch(lsCsvUrl(LONGSHOTS_HISTORY_GID),{cache:'no-store'}).catch(()=>null)
     ]);
-    const activeText=await activeRes.text();
-    if(!activeRes.ok || activeText.toLowerCase().includes('<html')) throw new Error('Micks LongShots sheet unavailable');
-    LONGSHOTS_STATE = lsObjects(lsParseCSV(activeText));
+    LONGSHOTS_STATE = activeRows;
     if(historyRes && historyRes.ok){
       const historyText=await historyRes.text();
       LONGSHOTS_HISTORY_STATE = historyText.toLowerCase().includes('<html') ? [] : lsObjects(lsParseCSV(historyText));
     } else {
       LONGSHOTS_HISTORY_STATE = [];
     }
+    const source='/api/todays-picks',totalCards=lsRowsFor('all').length;
+    console.log('picksSource', source);
+    console.log('pickCount', totalCards);
     lsRenderMetrics();
     lsRenderGrid('longshotsFeaturedGrid', lsRowsFor('all').slice(0,3));
     lsRenderGrid('longshotsParlayGrid', lsRowsFor('parlay'));
     lsRenderGrid('longshotsLottoGrid', lsRowsFor('lotto'));
     lsRenderResults();
   }catch(error){
-    document.querySelectorAll('.longshots-sheet-area').forEach(el=>{ el.innerHTML='<div class="empty longshot-empty">Micks LongShots feed could not load.</div>'; });
+    document.querySelectorAll('.longshots-sheet-area').forEach(el=>{ el.innerHTML='<div class="empty longshot-empty">No picks released yet.</div>'; });
     console.error('Micks LongShots error:', error);
   }
 }
