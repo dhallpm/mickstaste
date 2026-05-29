@@ -84,8 +84,9 @@ function pickCard(row,locked=false){
   const league=row.league||row.sport||'Sports';
   const cls=resultClass(row.result||row.status);
   const lockedVip=isVIP(row)&&locked;
-  const grade=esc(row.grade||(isVIP(row)?'VIP':'FREE'));
-  const header=`<div style="display:flex;justify-content:space-between;gap:12px;align-items:flex-start"><div><div style="color:var(--muted);font-size:11px;text-transform:uppercase;font-weight:1000;letter-spacing:.9px">${esc(league)} | ${esc(row.betType||row.market||'Pick')}</div><div class="pick-title">${esc(row.pick||'Pick Pending')}</div><p style="color:var(--muted);line-height:1.5">${esc(row.game||'Game details loading')}</p></div><div style="background:linear-gradient(135deg,#9b6d15,#ffe28a 54%,#b98821);color:#090909;padding:9px 11px;border-radius:10px;font-weight:1000">${grade}</div></div>`;
+  const grade=String(row.grade||'').trim();
+  const gradeBadge=grade?`<div class="grade-badge">${esc(grade)}</div>`:'';
+  const header=`<div style="display:flex;justify-content:space-between;gap:12px;align-items:flex-start"><div><div style="color:var(--muted);font-size:11px;text-transform:uppercase;font-weight:1000;letter-spacing:.9px">${esc(league)} | ${esc(row.betType||row.market||'Pick')}</div><div class="pick-title">${esc(row.pick||'Pick Pending')}</div><p style="color:var(--muted);line-height:1.5">${esc(row.game||'Game details loading')}</p></div>${gradeBadge}</div>`;
   const writeup=`<p style="color:#e7dcc4;line-height:1.55;margin-top:14px">${esc(safeAnalysis(row,locked))}</p>`;
   if(lockedVip){
     return `<div class="pick-card locked-card">${header}${writeup}<div class="odds-note"><strong>VIP Lock:</strong> Public pages show only the writeup. Full analysis, market notes, injury notes, source verification, units, EV edge, odds detail, and no-bet cutoffs stay private.</div></div>`;
