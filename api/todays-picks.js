@@ -19,6 +19,7 @@ export default async function handler(req, res) {
       warnings: [],
       free: result.free,
       vip: result.vip,
+      vipVault: result.vipVault,
       props: result.props,
       lottoParlays: result.lottoParlays,
       longshots: result.longshots
