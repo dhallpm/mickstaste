@@ -7,13 +7,16 @@ export default async function handler(req, res) {
       date: req.query?.date,
       league: req.query?.league
     })
+    if (result.warnings?.length) {
+      console.warn('Today picks Airtable diagnostics:', result.warnings)
+    }
 
     res.status(200).json({
       success: true,
       source: result.source,
       sourceOfTruth: result.sourceOfTruth,
       date: result.date,
-      warnings: result.warnings,
+      warnings: [],
       free: result.free,
       vip: result.vip,
       props: result.props,
