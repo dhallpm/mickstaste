@@ -7,9 +7,13 @@ export default async function handler(req, res) {
       date: req.query?.date,
       league: req.query?.league
     })
+    if (result.warnings?.length) {
+      console.warn('Website feed Airtable diagnostics:', result.warnings)
+    }
     res.status(200).json({
       success: true,
       ...result,
+      warnings: [],
       count: result.rows.length
     })
   } catch (error) {
