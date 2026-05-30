@@ -175,7 +175,10 @@
       Array.from(container.children || []).forEach(card => {
         const s = text(card);
         if (!looksLikeActiveCard(card)) return;
-        if (hasResultSignal(s) || isSettledString(s)) {
+        const statusText = Array.from(card.querySelectorAll('.pill, .status-win, .status-loss, .status-push'))
+          .map(text)
+          .join(' ');
+        if (hasResultSignal(s) || isSettledString(statusText)) {
           card.dataset.micksArchivedByResult = 'true';
           card.style.display = 'none';
         }
