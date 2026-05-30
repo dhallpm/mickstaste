@@ -81,7 +81,7 @@ function pickCard(r,locked=false){
     best=val(r,'best')||line||'--',
     type=val(r,'type')||val(r,'category')||'Pick';
   const gradeBadge=grade?`<div class="grade">${esc(grade)}</div>`:'';
-  const full=safeCustomerText(val(r,'full'));
+  const full=clean(val(r,'full'));
   const market=safeCustomerText(val(r,'market'));
   const injury=safeCustomerText(val(r,'injury'));
   const analysis=!locked&&(vipContext||isVipAccess(r))?`<div class="analysis-box"><h4>Full VIP Analysis</h4><div class="mt-3 space-y-3">${renderTextBlock(full||'Full analysis pending.')}</div>${market?`<p><b class="text-[#f6d98d]">Market Notes:</b> ${esc(market)}</p>`:''}${injury?`<p><b class="text-[#f6d98d]">Injury Check:</b> ${esc(injury)}</p>`:''}</div>`:'';
