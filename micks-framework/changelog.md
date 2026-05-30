@@ -20,6 +20,17 @@
 - Added Airtable source-of-truth and Google Sheets backup/archive-only data-integrity rules.
 - Updated generator behavior to load every Markdown file in `micks-framework`.
 
+## 2026-05-30
+- Added MLB series-level trend filters.
+- Added elite road team upgrade rules.
+- Added home/road split mismatch weighting.
+- Added interleague performance filter.
+- Added divisional performance filter.
+- Added handedness split filter (LHP/RHP).
+- Increased bullpen edge weighting above simple batting-average and recent-win metrics.
+- Added hot/cold team validation rules requiring support from run differential, bullpen quality, and offense.
+- Added MLB series projection formula combining bullpen, home/road, handedness, interleague, form, command, and market price.
+
 ---
 
 ## Future Update Rule
