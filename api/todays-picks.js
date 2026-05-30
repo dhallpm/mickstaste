@@ -16,7 +16,7 @@ export default async function handler(req, res) {
       source: result.source,
       sourceOfTruth: result.sourceOfTruth,
       date: result.date,
-      warnings: [],
+      warnings: result.warnings || [],
       free: result.free,
       vip: result.vip,
       vipVault: result.vipVault,
