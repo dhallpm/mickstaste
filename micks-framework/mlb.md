@@ -13,6 +13,7 @@ MLB cards must separate starting pitcher edge, bullpen edge, lineup edge, umpire
 - Weather, wind, park factor, and roof status when relevant.
 - Umpire profile when available.
 - Market movement and public inflation context.
+- Series-level team trend context when available.
 
 ## Starting Pitcher Command Stability Layer
 Weight more than raw ERA:
@@ -46,6 +47,7 @@ Rules:
 - Use First 5 when the starter edge is strong but bullpen risk is high.
 - Use full game when both starter and bullpen edges align.
 - Avoid full-game moneylines when the bullpen edge contradicts the starter handicap.
+- Bullpen edge is weighted higher than team batting average, recent wins, or public perception when deciding full-game exposure.
 
 ## Regression Alert Engine
 Flag pitchers or teams when:
@@ -78,6 +80,51 @@ Increase weighting for:
 - Wind direction.
 - Temperature and humidity.
 - Roof status.
+
+## Series-Level Team Trend Filters
+Use weekend/series trend reports as supporting evidence, not as standalone picks. These filters upgrade or downgrade MLB plays only when they align with odds value, probable pitchers, bullpen edge, lineup context, and market price.
+
+### Elite Road Team Filter
+Upgrade road teams when:
+- Road record is at least 8 games over .500.
+- Road profit is +5 units or better.
+- Road offense scores 5+ runs per game.
+
+Rule: elite road teams become more valuable when facing teams with losing home records, especially if the market still prices mostly from overall record.
+
+### Home/Road Split Mismatch
+Upgrade ML, series, and alt run-line exposure when:
+- The road team has a strong road profile.
+- The home team has a losing or materially weaker home profile.
+- The home/road gap is 8+ games or creates a clear unit-profit mismatch.
+
+### Hot/Cold Team Form Filter
+Do not upgrade a team from win streak alone. Only upgrade recent form when:
+- Run differential is improving.
+- Bullpen stability is improving.
+- Offensive production supports the streak.
+- Starting pitching quality is stable or improving.
+
+Downgrade cold teams when losses are supported by cold bats, bullpen collapse, injuries, and poor command metrics rather than bad luck only.
+
+### Interleague Filter
+When interleague win-rate gap exceeds about 10 percentage points and sample size is meaningful, upgrade the stronger interleague profile by 0.25 grade if price still offers value.
+
+### Divisional Performance Filter
+When divisional record differs by 8+ games and sample is at least 15 games, upgrade the stronger divisional team if the matchup also supports it through pitching, bullpen, and lineup layers.
+
+### Lefty/Righty Split Filter
+Handedness splits are A-tier supporting evidence when:
+- Sample is greater than 10 games.
+- Run production differs by 1+ run per game versus handedness.
+- The projected starter handedness matches the split.
+
+Use lefty/righty team splits for sides, team totals, props, and series-level angles.
+
+### Series Betting Formula
+Bullpen Edge + Road/Home Split + Handedness Split + Interleague/Division Strength + Current Form + Command Stability + Market Price = Series Projection.
+
+Series bets should still include exact price, best number, no-bet cutoff, grade, and units.
 
 ## Umpire Scorecards Layer
 Use Umpire Scorecards as an MLB-specific edge layer when plate umpire data is available.
@@ -130,7 +177,7 @@ VegasInsider is supporting context for:
 VegasInsider does not override live odds/API validation.
 
 ## MLB Formula
-Starting Pitcher Quality + Command Stability + Bullpen Stability + Lineup Pressure + Weather/Wind/Park + Umpire Profile + Market Inflation = MLB Projection.
+Starting Pitcher Quality + Command Stability + Bullpen Stability + Lineup Pressure + Weather/Wind/Park + Umpire Profile + Series-Level Trend Filters + Market Inflation = MLB Projection.
 
 ## Routing
 - MLB sides/totals/team totals route to Master Picks or website feed.
