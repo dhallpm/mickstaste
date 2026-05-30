@@ -6,7 +6,8 @@ import {
 } from '../lib/airtableClient.js'
 import {
   cleanWebsiteRow,
-  categorizeWebsiteRows
+  categorizeWebsiteRows,
+  buildWebsiteFeed
 } from '../lib/buildWebsiteFeed.js'
 import {
   normalizePickCategory,
@@ -41,6 +42,20 @@ const safeFiveLegRecord = {
     'Release Status': 'Released'
   }
 }
+const dateLessLottoRecord = {
+  id: 'rec-dateless-lotto',
+  fields: {
+    'Card Title': 'Ultra Safe 6-Leg Parlay',
+    'Parlay Type': 'Lotto Parlay',
+    'Leg Count': 6,
+    Legs: 'Leg 1 | Leg 2 | Leg 3 | Leg 4 | Leg 5 | Leg 6',
+    Odds: '+650',
+    Sportsbook: 'BetRivers',
+    Status: 'Active',
+    'Release Status': 'Released',
+    Access: 'VIP'
+  }
+}
 
 assert.equal(isBlankAirtableRecord(emptyFirstRecord), true)
 assert.equal(isBlankAirtableRecord({ id: 'rec-checkbox-only', fields: { Featured: false } }), true)
@@ -67,9 +82,23 @@ assert.equal(card.betType, 'Parlay')
 assert.equal(card.legCount, 5)
 assert.equal(card.legs, 'Leg 1 | Leg 2 | Leg 3 | Leg 4 | Leg 5')
 
-const feed = categorizeWebsiteRows([card])
-assert.equal(feed.lottoParlays.length, 1)
+const dateLessCard = cleanWebsiteRow({
+  id: dateLessLottoRecord.id,
+  airtableRecordId: dateLessLottoRecord.id,
+  __table: 'Lotto Parlay',
+  ...dateLessLottoRecord.fields
+})
+assert.equal(dateLessCard.section, 'lotto')
+assert.equal(dateLessCard.pick, 'Ultra Safe 6-Leg Parlay')
+assert.equal(dateLessCard.date, '')
+
+const feed = categorizeWebsiteRows([card, { ...dateLessCard, date: '2026-05-30' }])
+assert.equal(feed.lottoParlays.length, 2)
 assert.equal(feed.free.length, 0)
 assert.equal(feed.vip.length, 0)
+
+process.env.AIRTABLE_API_KEY = 'test-key'
+const websiteFeed = await buildWebsiteFeed({ date: '2026-05-30' })
+assert.equal(Array.isArray(websiteFeed.lottoParlays), true)
 
 console.log('Lotto Parlays Airtable feed regression test passed.')
