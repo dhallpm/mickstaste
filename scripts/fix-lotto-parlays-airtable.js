@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict'
+import { fileURLToPath } from 'node:url'
 
 import {
   AIRTABLE_TABLE_RESOLVERS,
@@ -83,33 +84,43 @@ function haystack(row = {}) {
     .join(' ')
 }
 
-const result = await listAirtableRecordsFromResolvedTable(AIRTABLE_TABLE_RESOLVERS.lottoParlays)
-console.log(`Resolved Lotto Parlays table: ${result.tableName}`)
-console.log(`Resolved Airtable base: ${String(result.baseId).slice(0, 6)}...`)
+export async function fixLottoParlaysAirtable() {
+  const result = await listAirtableRecordsFromResolvedTable(AIRTABLE_TABLE_RESOLVERS.lottoParlays)
+  console.log(`Resolved Lotto Parlays table: ${result.tableName}`)
+  console.log(`Resolved Airtable base: ${String(result.baseId).slice(0, 6)}...`)
 
-const updates = []
-const usedRecordIds = new Set()
+  const updates = []
+  const usedRecordIds = new Set()
 
-for (const repair of REPAIRS) {
-  const row = result.rows.find(candidate => {
-    if (usedRecordIds.has(candidate.id)) return false
-    return repair.match.test(haystack(candidate))
+  for (const repair of REPAIRS) {
+    const row = result.rows.find(candidate => {
+      if (usedRecordIds.has(candidate.id)) return false
+      return repair.match.test(haystack(candidate))
+    })
+
+    assert(row, `Could not find Lotto Parlay row for ${repair.label}`)
+    usedRecordIds.add(row.id)
+    updates.push({ id: row.id, fields: repair.fields })
+  }
+
+  const updated = await updateAirtableRecords(result.tableName, updates, {
+    baseId: result.baseId,
+    typecast: true
   })
 
-  assert(row, `Could not find Lotto Parlay row for ${repair.label}`)
-  usedRecordIds.add(row.id)
-  updates.push({ id: row.id, fields: repair.fields })
+  console.log(`Updated ${updated.length} Lotto Parlay rows.`)
+  for (const record of updated) {
+    console.log(`- ${record.id}: ${record.fields?.Pick || record.fields?.['Card Title'] || 'updated'}`)
+  }
+
+  assert.equal(updated.length, REPAIRS.length, 'Not all Lotto Parlay rows were updated')
+  console.log('Airtable Lotto Parlays repair complete.')
+  return {
+    updated: updated.length,
+    picks: updated.map(record => record.fields?.Pick || record.fields?.['Card Title'] || 'updated')
+  }
 }
 
-const updated = await updateAirtableRecords(result.tableName, updates, {
-  baseId: result.baseId,
-  typecast: true
-})
-
-console.log(`Updated ${updated.length} Lotto Parlay rows.`)
-for (const record of updated) {
-  console.log(`- ${record.id}: ${record.fields?.Pick || record.fields?.['Card Title'] || 'updated'}`)
+if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
+  await fixLottoParlaysAirtable()
 }
-
-assert.equal(updated.length, REPAIRS.length, 'Not all Lotto Parlay rows were updated')
-console.log('Airtable Lotto Parlays repair complete.')
