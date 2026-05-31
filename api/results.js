@@ -38,8 +38,8 @@ function parseNumber(value) {
   return match ? Number(match[0]) : NaN
 }
 
-function shouldTrustExistingProfitLoss(row = {}) {
-  const existing = text(row['Profit/Loss'], row['P/L'], row.PL, row['Profit Loss'])
+function shouldTrustUnitProfitLoss(value = '') {
+  const existing = text(value)
   if (!existing) return false
   if (/^[-+]?\d+(?:\.\d+)?u$/i.test(existing)) return true
   if (/^[-+]?\d+(?:\.\d+)?\s*units?$/i.test(existing)) return true
@@ -54,9 +54,16 @@ function formatUnits(value) {
 function calculateProfitLoss(row = {}) {
   const result = resultOf(row)
   if (!result) return ''
-  const existing = text(row['Profit/Loss'], row['P/L'], row.PL, row['Profit Loss'])
-  if (shouldTrustExistingProfitLoss(row)) {
-    const n = parseNumber(existing)
+
+  const automatedUnits = text(row['Profit/Loss Units'], row['P/L Units'], row['Unit Profit/Loss'])
+  if (shouldTrustUnitProfitLoss(automatedUnits)) {
+    const n = parseNumber(automatedUnits)
+    if (Number.isFinite(n)) return formatUnits(n)
+  }
+
+  const legacyProfitLoss = text(row['Profit/Loss'], row['P/L'], row.PL, row['Profit Loss'])
+  if (shouldTrustUnitProfitLoss(legacyProfitLoss)) {
+    const n = parseNumber(legacyProfitLoss)
     if (Number.isFinite(n)) return formatUnits(n)
   }
 
@@ -92,6 +99,7 @@ function normalizeRow(row = {}, sourceTable = '') {
     Result: result,
     Outcome: result,
     'Profit/Loss': pl,
+    'Profit/Loss Units': pl,
     'P/L': pl,
     PL: pl,
     Status: 'Closed',
