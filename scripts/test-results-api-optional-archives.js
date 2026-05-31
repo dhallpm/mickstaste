@@ -25,12 +25,13 @@ assert.equal(wemby.Pick, 'Victor Wembanyama Over 9.5 Rebounds')
 assert.equal(wemby.__section, 'props')
 assert.equal(wemby.Access, 'VIP')
 assert.equal(wemby['Profit/Loss'], '-0.75u')
-assert.equal(wemby.Grade, '--')
+assert.equal(wemby.Grade, 'A-')
 assert.equal(wemby['Closing Number'], 'Over 9.5')
 assert.equal(sga.Pick, 'Shai Gilgeous-Alexander Over 29.5 Points')
 assert.equal(sga.__section, 'props')
 assert.equal(sga.Access, 'VIP')
 assert.equal(sga['Profit/Loss'], '+0.45u')
+assert.equal(sga.Grade, 'B+')
 
 const parlay = normalizeRow({
   'Record Key': '2026-05-30|mixed|safe 5-leg|safe 5-leg parlay|lotto parlay|vip|450',
@@ -40,5 +41,7 @@ const parlay = normalizeRow({
 }, 'Results Archive')
 
 assert.match(parlay.Notes, /Loss leg: not recorded in Airtable/)
+assert.equal(parlay.Grade, 'A-')
+assert.match(parlay.Legs, /Yankees Team Total Over 5\.0/)
 
 console.log('Results API optional archive fallback regression test passed.')
