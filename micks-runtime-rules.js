@@ -1,42 +1,42 @@
 // Micks Picks live routing and settlement rules.
-// Loaded after index.html's inline engine so the live site uses one definition for active cards and P/L.
+// Loaded after index.html's inline engine so the live site uses one definition for active cards, props, results, and P/L.
 (function () {
   const TZ = 'America/New_York';
   const FINAL_RE = /\b(win|won|loss|lost|push|void|cancelled|canceled|settled|graded|closed|final|complete|completed|archived|removed|invalid)\b/i;
   const OPEN_RE = /\b(active|posted|released|open|pending|pregame|manual approved|api pending)\b/i;
   const PLAYER_PROP_RE = /\b(player prop|prop|points?|pts|rebounds?|rebs|assists?|asts|pra|p\+r\+a|\bpa\b|\bra\b|strikeouts?|total bases|\btb\b|home runs?|\bhr\b|hits?|rbi|shots on goal|\bsog\b|saves|round|distance)\b/i;
   const NON_PROP_RE = /\b(parlay|lotto|5-leg|6-leg|7-leg|8-leg|sgp|same game|moneyline|money line|\bml\b|spread|run line|puck line|game total|full game total|team total|period total|quarter total|half|1h|2h)\b/i;
-  
-  // STRICT PARLAY FILTER: Must have multiple legs, NOT a single pick
   const PARLAY_ONLY_RE = /\b(parlay|5-leg|6-leg|7-leg|8-leg|sgp|same game|ladder|sprinkle)\b/i;
   const LOTTO_ONLY_RE = /\b(lotto|lotto prop|hr lotto|home run lotto|safe lotto|moonshot)\b/i;
-  
+
   const ALIASES = {
     date: ['Date', 'Posted Date', 'Pick Date'],
     timestamp: ['Timestamp', 'Posted Time', 'Graded Timestamp', 'Settled At'],
     league: ['League', 'Sport'],
     game: ['Game', 'Matchup', 'Event'],
-    pick: ['Pick', 'Selection', 'Play', 'Name'],
+    pick: ['Pick', 'Selection', 'Play', 'Name', 'Card Title'],
     type: ['Bet Type', 'Market', 'LongShot Type', 'Prop Type', 'Type'],
     category: ['Category'],
-    legs: ['Legs', 'Leg Count', 'Leg #'],
-    odds: ['Card Odds', 'Odds', 'Price'],
-    units: ['Units to Commit', 'Units', 'Unit', 'Stake'],
+    legs: ['Legs', 'Leg Count', 'Leg #', 'Parlay Type'],
+    odds: ['Card Odds', 'Odds', 'Price', 'Final Odds'],
+    units: ['Units to Commit', 'Units', 'Unit', 'Stake', 'Risk'],
     status: ['Display Status', 'Status'],
     release: ['Display Release Status', 'Release Status', 'Release'],
     result: ['Result', 'Outcome'],
     pl: ['Profit/Loss', 'P/L', 'PL', 'Profit Loss'],
     writeup: ['Card Description', 'Writeup', 'Public Writeup', 'Summary'],
     full: ['Full Analysis', 'Analysis', 'VIP Analysis'],
-    confirm: ['Confirmation Status', 'Confirmed']
+    confirm: ['Confirmation Status', 'Confirmed'],
+    access: ['Access', 'Tier'],
+    grade: ['Card Grade', 'Grade'],
+    closing: ['Closing Number', 'Closing #', 'Closing Line']
   };
 
-  function text(value) {
-    return String(value == null ? '' : value).trim();
-  }
-
-  function lower(value) {
-    return text(value).toLowerCase();
+  function text(value) { return String(value == null ? '' : value).trim(); }
+  function lower(value) { return text(value).toLowerCase(); }
+  function esc(value) {
+    if (typeof window.esc === 'function') return window.esc(value);
+    return String(value ?? '').replace(/[&<>"']/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m]));
   }
 
   function getValue(row, key) {
@@ -61,28 +61,21 @@
     return Number.isFinite(parsed) ? new Date(parsed).toLocaleDateString('en-CA', { timeZone: TZ }) : '';
   }
 
-  function todayKey() {
-    return new Date().toLocaleDateString('en-CA', { timeZone: TZ });
+  function displayDate(value) {
+    if (typeof window.displayDate === 'function') return window.displayDate(value);
+    const key = dateKey(value);
+    const m = key.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+    return m ? `${m[2]}/${m[3]}/${m[1]}` : esc(value || '--');
   }
 
+  function todayKey() { return new Date().toLocaleDateString('en-CA', { timeZone: TZ }); }
+
   function statusText(row) {
-    return [
-      getValue(row, 'status'),
-      getValue(row, 'release'),
-      getValue(row, 'result'),
-      getValue(row, 'confirm')
-    ].join(' ');
+    return [getValue(row, 'status'), getValue(row, 'release'), getValue(row, 'result'), getValue(row, 'confirm')].join(' ');
   }
 
   function marketText(row) {
-    return [
-      getValue(row, 'type'),
-      getValue(row, 'category'),
-      getValue(row, 'pick'),
-      getValue(row, 'game'),
-      getValue(row, 'writeup'),
-      getValue(row, 'full')
-    ].join(' ');
+    return [getValue(row, 'type'), getValue(row, 'category'), getValue(row, 'pick'), getValue(row, 'game'), getValue(row, 'legs'), getValue(row, 'writeup'), getValue(row, 'full'), row?.__source, row?.__table].join(' ');
   }
 
   function isCurrentActive(row) {
@@ -102,7 +95,9 @@
   }
 
   function isTruePlayerProp(row) {
+    const source = `${row?.__source || ''} ${row?.__table || ''}`;
     const market = marketText(row);
+    if (/Props Lab|Props Results/i.test(source)) return !NON_PROP_RE.test(market);
     if (NON_PROP_RE.test(market)) return false;
     return PLAYER_PROP_RE.test(market);
   }
@@ -112,34 +107,15 @@
     return match ? Number(match[0]) : NaN;
   }
 
-  /**
-   * STRICT: Longshots are ONLY parlays and lotto props with 2+ legs.
-   * Rejects single picks, moneyline, spreads, totals.
-   */
   function isStrictParlay(row) {
     const market = marketText(row);
     const legText = getValue(row, 'legs');
     const legCount = parseNumber(legText);
-    
-    // Must match parlay/lotto regex explicitly
     const hasParlay = PARLAY_ONLY_RE.test(market);
     const hasLotto = LOTTO_ONLY_RE.test(market);
-    
-    if (!hasParlay && !hasLotto) {
-      return false;
-    }
-    
-    // Reject if it's clearly a single pick (moneyline without parlay marker)
-    if (/moneyline|money line|\bml\b/i.test(market) && !hasParlay) {
-      return false;
-    }
-    
-    // Reject if it's a true prop (player stat)
-    if (isTruePlayerProp(row)) {
-      return false;
-    }
-    
-    // Must have multiple legs OR match lotto explicitly
+    if (!hasParlay && !hasLotto) return false;
+    if (/moneyline|money line|\bml\b/i.test(market) && !hasParlay) return false;
+    if (isTruePlayerProp(row)) return false;
     const hasMultipleLegs = legCount > 1 || (legText && legText.includes('|'));
     return hasMultipleLegs || hasLotto;
   }
@@ -150,7 +126,7 @@
     if (/\b(loss|lost|lose|failed)\b/i.test(source)) return 'Loss';
     if (/\bpush\b/i.test(source)) return 'Push';
     if (/\b(void|cancelled|canceled)\b/i.test(source)) return 'Void';
-    return getValue(row, 'result') || getValue(row, 'status') || 'Pending';
+    return getValue(row, 'result') || 'Pending';
   }
 
   function calculateProfitLossUnits(row) {
@@ -168,22 +144,54 @@
 
   function cleanDisplayProfitLoss(row) {
     const existing = getValue(row, 'pl');
-    if (/^[-+]?0?\.?0+u?$/i.test(existing) && ['Push', 'Void'].includes(resultOf(row))) return '0.00u';
     if (/^[-+]?\d+(\.\d+)?u$/i.test(existing)) return existing.replace(/^([^+-])/, '+$1');
-    if (/^[-+]?\d+(\.\d+)?$/i.test(existing)) {
-      const n = parseNumber(existing);
-      return `${n > 0 ? '+' : ''}${n.toFixed(2)}u`;
-    }
     return calculateProfitLossUnits(row) || '';
+  }
+
+  function normalizeForDisplay(row) {
+    const pl = cleanDisplayProfitLoss(row);
+    return Object.assign({}, row, pl ? { 'Profit/Loss': pl, 'P/L': pl, PL: pl } : {}, { Result: resultOf(row), Outcome: resultOf(row) });
+  }
+
+  function tableRows(rows, cells, empty) {
+    if (typeof window.tableRows === 'function') return window.tableRows(rows, cells, empty);
+    if (!rows.length) return `<tr><td colspan="${cells.length}">${esc(empty)}</td></tr>`;
+    return rows.map(r => `<tr>${cells.map(fn => `<td>${fn(r)}</td>`).join('')}</tr>`).join('');
+  }
+
+  function statusCell(row) {
+    const res = resultOf(row);
+    const cls = res === 'Win' ? 'status-win' : res === 'Loss' ? 'status-loss' : res === 'Push' || res === 'Void' ? 'status-push' : 'status-pending';
+    return `<span class="${cls}">${esc(res)}</span>`;
+  }
+
+  function renderLedgerRows(id, rows, empty) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const normalized = (rows || []).map(normalizeForDisplay).sort((a, b) => String(dateKey(getValue(b, 'date') || getValue(b, 'timestamp'))).localeCompare(String(dateKey(getValue(a, 'date') || getValue(a, 'timestamp')))));
+    el.innerHTML = tableRows(normalized.slice(0, 120), [
+      r => displayDate(getValue(r, 'date') || getValue(r, 'timestamp')),
+      r => esc(getValue(r, 'league') || getValue(r, 'category') || r.__source || '--'),
+      r => esc(getValue(r, 'game') || '--'),
+      r => esc(getValue(r, 'pick') || getValue(r, 'legs') || '--'),
+      r => esc(getValue(r, 'grade')),
+      r => statusCell(r),
+      r => esc(getValue(r, 'pl') || '--'),
+      r => esc(getValue(r, 'closing') || getValue(r, 'timestamp') || '--')
+    ], empty || 'No result rows loaded yet.');
+  }
+
+  function writeStats(prefix, rows) {
+    if (typeof window.calcStats === 'function' && typeof window.writeStats === 'function') {
+      window.writeStats(prefix, window.calcStats((rows || []).map(normalizeForDisplay), []));
+    }
   }
 
   window.isActive = function (row) {
     return !!(window.hasPick ? window.hasPick(row) : getValue(row, 'pick')) && isCurrentActive(row) && isOpenOrPending(row);
   };
   window.isPropMarket = isTruePlayerProp;
-  window.isHrLotto = function (row) {
-    return isStrictParlay(row) && !isTruePlayerProp(row);
-  };
+  window.isHrLotto = function (row) { return isStrictParlay(row) && !isTruePlayerProp(row); };
   window.isStrictParlay = isStrictParlay;
   window.resultOf = resultOf;
   window.calculateProfitLossUnits = calculateProfitLossUnits;
@@ -192,24 +200,55 @@
   if (typeof window.renderLedger === 'function') {
     const originalRenderLedger = window.renderLedger;
     window.renderLedger = function (id, rows, empty) {
-      const normalized = (rows || []).map(row => {
-        const pl = cleanDisplayProfitLoss(row);
-        return pl ? Object.assign({}, row, { 'Profit/Loss': pl, 'P/L': pl, PL: pl }) : row;
-      }).sort((a, b) => Date.parse(dateKey(getValue(b, 'date') || getValue(b, 'timestamp')) || 0) - Date.parse(dateKey(getValue(a, 'date') || getValue(a, 'timestamp')) || 0));
-      return originalRenderLedger(id, normalized, empty);
+      let nextRows = rows || [];
+      if (id === 'propsResultsRows') nextRows = nextRows.filter(isTruePlayerProp);
+      nextRows = nextRows.map(normalizeForDisplay);
+      return originalRenderLedger(id, nextRows, empty);
     };
   }
 
   if (typeof window.calcStats === 'function') {
     const originalCalcStats = window.calcStats;
     window.calcStats = function (rows, activeRows) {
-      const normalized = (rows || []).map(row => {
-        const pl = cleanDisplayProfitLoss(row);
-        return pl ? Object.assign({}, row, { 'Profit/Loss': pl, 'P/L': pl, PL: pl }) : row;
-      });
-      return originalCalcStats(normalized, activeRows || []);
+      return originalCalcStats((rows || []).map(normalizeForDisplay), activeRows || []);
     };
   }
+
+  async function hydrateResultsFromAirtable() {
+    try {
+      const response = await fetch('/api/results?days=180', { cache: 'no-store' });
+      if (!response.ok) throw new Error(`Results API ${response.status}`);
+      const data = await response.json();
+      if (data.success === false) throw new Error(data.error || 'Results API unavailable');
+      const rows = Array.isArray(data.rows) ? data.rows : [];
+      const free = Array.isArray(data.free) ? data.free : [];
+      const vip = Array.isArray(data.vip) ? data.vip : [];
+      const props = (Array.isArray(data.props) ? data.props : []).filter(isTruePlayerProp);
+      const cards = [...(Array.isArray(data.lotto) ? data.lotto : []), ...(Array.isArray(data.longshots) ? data.longshots : [])];
+      renderLedgerRows('freeResultsRows', free, 'No free results archive rows loaded yet.');
+      renderLedgerRows('vipResultsRows', vip, 'No VIP archive rows loaded yet.');
+      renderLedgerRows('propsResultsRows', props, 'No Props Results rows loaded yet.');
+      renderLedgerRows('resultsRows', rows, 'No result rows loaded yet.');
+      renderLedgerRows('allArchiveRows', rows, 'No archive rows loaded yet.');
+      renderLedgerRows('longshotsRows', cards, 'No Longshots History rows loaded yet.');
+      writeStats('overall', rows);
+      writeStats('free', free);
+      writeStats('vip', vip);
+      writeStats('props', props);
+      writeStats('longshots', cards);
+      const homeRecord = document.getElementById('overallRecord')?.textContent;
+      const homeUnits = document.getElementById('overallUnits')?.textContent;
+      if (homeRecord) document.getElementById('homeRecord').textContent = homeRecord;
+      if (homeUnits) document.getElementById('homeUnits').textContent = homeUnits;
+      console.log('Airtable results hydrated', rows.length);
+    } catch (error) {
+      console.warn('Airtable results hydrate failed:', error);
+    }
+  }
+
+  window.addEventListener('load', function () {
+    setTimeout(hydrateResultsFromAirtable, 900);
+  });
 
   if (typeof window.boot === 'function') {
     window.setTimeout(() => window.boot(), 0);
