@@ -4,7 +4,7 @@ import {
   listAirtableRecords,
   listAirtableRecordsFromResolvedTable
 } from '../lib/airtableClient.js'
-import { routePickCategory, rowDateKey, todayEasternKey } from '../lib/routePickCategory.js'
+import { routePickCategory, rowDateKey } from '../lib/routePickCategory.js'
 import { sendError } from '../lib/syncAuth.js'
 
 const ARCHIVE_TABLES = [
@@ -26,7 +26,7 @@ function resultOf(row = {}) {
   if (/\b(loss|lost|lose|failed)\b/i.test(source)) return 'Loss'
   if (/\bpush\b/i.test(source)) return 'Push'
   if (/\b(void|cancelled|canceled)\b/i.test(source)) return 'Void'
-  return text(row.Result, row.Outcome, row.Status, row['Display Status'], 'Pending')
+  return ''
 }
 
 function hasPick(row = {}) {
@@ -53,6 +53,7 @@ function formatUnits(value) {
 
 function calculateProfitLoss(row = {}) {
   const result = resultOf(row)
+  if (!result) return ''
   const existing = text(row['Profit/Loss'], row['P/L'], row.PL, row['Profit Loss'])
   if (shouldTrustExistingProfitLoss(row)) {
     const n = parseNumber(existing)
@@ -93,7 +94,9 @@ function normalizeRow(row = {}, sourceTable = '') {
     'Profit/Loss': pl,
     'P/L': pl,
     PL: pl,
-    Status: result === 'Pending' ? text(row.Status, row['Display Status'], 'Pending') : result,
+    Status: 'Closed',
+    'Display Status': 'Closed',
+    'Pick Status': 'Closed',
     Access: text(row.Access, row.Tier, row['Access Tier'], 'Free'),
     Category: text(row.Category, row.Type, row['Parlay Type']),
     Legs: text(row.Legs, row['Legs / Details'], row['Parlay Type']),
@@ -109,15 +112,10 @@ function isFinalResult(row = {}) {
 function isWithinDays(row = {}, days = 120) {
   const key = rowDateKey(row) || String(row.Date || '').slice(0, 10)
   if (!/^\d{4}-\d{2}-\d{2}$/.test(key)) return true
-  const now = new Date(`${todayEasternKey()}T12:00:00Z`)
+  const now = new Date()
   const date = new Date(`${key}T12:00:00Z`)
   const diff = (now - date) / 86400000
   return diff >= 0 && diff <= days
-}
-
-function isPastOrFinal(row = {}) {
-  const key = rowDateKey(row) || String(row.Date || '').slice(0, 10)
-  return isFinalResult(row) || (key && key < todayEasternKey())
 }
 
 function isVip(row = {}) {
@@ -127,7 +125,7 @@ function isVip(row = {}) {
 function isProps(row = {}) {
   if (row.__section === 'props') return true
   const textValue = [row.__table, row.Category, row.Type, row.Market, row['Bet Type'], row['Prop Type'], row.Player, row.Athlete, row.Pick, row.Game].join(' ')
-  return /Props Lab|Props Results|\b(player prop|prop|points|rebounds|assists|pra|strikeouts|total bases|home run|sog)\b/i.test(textValue) && !/lotto|parlay|longshot|long shot/i.test(textValue)
+  return /Props Lab|Props Results|\b(player prop|prop|points|rebounds|assists|pra|strikeouts|total bases|home run|sog)\b/i.test(textValue) && !/lotto|parlay|longshot|long shot|moneyline|spread|team total|game total/i.test(textValue)
 }
 
 function isLotto(row = {}) {
@@ -180,7 +178,7 @@ async function getRows(days) {
   const normalized = rows
     .filter(hasPick)
     .filter(row => isWithinDays(row, days))
-    .filter(isPastOrFinal)
+    .filter(isFinalResult)
     .map(row => normalizeRow(row, row.__table))
 
   const deduped = Array.from(new Map(normalized.map(row => [
