@@ -10,6 +10,7 @@
     "test:lotto-parlays": "node scripts/test-lotto-parlays-feed.js",
     "test:results-frontend": "node scripts/test-results-frontend-wiring.js",
     "test:results-api": "node scripts/test-results-api-optional-archives.js",
+    "test:repair-may30": "node scripts/test-repair-may30-airtable.js",
     "test:archive-closed-bets": "node scripts/test-archive-closed-bets.js"
   },
   "dependencies": {

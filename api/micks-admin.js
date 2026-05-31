@@ -5,6 +5,7 @@ import { archiveClosedBets } from '../lib/archiveClosedBets.js'
 import { findAirtablePicks } from '../lib/airtablePickLocator.js'
 import { runClosingOddsWorker } from '../lib/closingOddsWorker.js'
 import { generateMicksPicks } from '../lib/micksPicksGenerator.js'
+import { repairMay30Airtable } from '../lib/repairMay30Airtable.js'
 import {
   ingestPicksToAirtable,
   runMicksSync,
@@ -231,6 +232,9 @@ const ACTIONS = {
     dryRun: boolParam(req, 'dryRun')
   }),
   'archive-closed-bets': req => archiveClosedBets({
+    dryRun: boolParam(req, 'dryRun')
+  }),
+  'repair-may30-airtable': req => repairMay30Airtable({
     dryRun: boolParam(req, 'dryRun')
   }),
   'find-airtable-picks': req => findAirtablePicks({
