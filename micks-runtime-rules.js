@@ -169,7 +169,7 @@
     const el = document.getElementById(id);
     if (!el) return;
     const normalized = (rows || []).map(normalizeForDisplay).sort((a, b) => String(dateKey(getValue(b, 'date') || getValue(b, 'timestamp'))).localeCompare(String(dateKey(getValue(a, 'date') || getValue(a, 'timestamp')))));
-    el.innerHTML = tableRows(normalized.slice(0, 120), [
+    const cells = [
       r => displayDate(getValue(r, 'date') || getValue(r, 'timestamp')),
       r => esc(getValue(r, 'league') || getValue(r, 'category') || r.__source || '--'),
       r => esc(getValue(r, 'game') || '--'),
@@ -178,7 +178,9 @@
       r => statusCell(r),
       r => esc(getValue(r, 'pl') || '--'),
       r => esc(getValue(r, 'closing') || getValue(r, 'timestamp') || '--')
-    ], empty || 'No result rows loaded yet.');
+    ];
+    if (id === 'resultsRows') cells.splice(2, 1);
+    el.innerHTML = tableRows(normalized.slice(0, 120), cells, empty || 'No result rows loaded yet.');
   }
 
   function writeStats(prefix, rows) {
