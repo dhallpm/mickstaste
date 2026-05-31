@@ -24,6 +24,7 @@
     release: ['Display Release Status', 'Release Status', 'Release'],
     result: ['Result', 'Outcome'],
     pl: ['Profit/Loss', 'P/L', 'PL', 'Profit Loss'],
+    notes: ['Notes', 'Result Notes', 'Settlement Notes', 'Losing Leg', 'Leg Results'],
     writeup: ['Card Description', 'Writeup', 'Public Writeup', 'Summary'],
     full: ['Full Analysis', 'Analysis', 'VIP Analysis'],
     confirm: ['Confirmation Status', 'Confirmed'],
@@ -174,13 +175,29 @@
       r => esc(getValue(r, 'league') || getValue(r, 'category') || r.__source || '--'),
       r => esc(getValue(r, 'game') || '--'),
       r => esc(getValue(r, 'pick') || getValue(r, 'legs') || '--'),
-      r => esc(getValue(r, 'grade')),
+      r => esc(getValue(r, 'grade') || '--'),
       r => statusCell(r),
       r => esc(getValue(r, 'pl') || '--'),
       r => esc(getValue(r, 'closing') || getValue(r, 'timestamp') || '--')
     ];
     if (id === 'resultsRows') cells.splice(2, 1);
     el.innerHTML = tableRows(normalized.slice(0, 120), cells, empty || 'No result rows loaded yet.');
+  }
+
+  function renderLongshotsRows(rows) {
+    const el = document.getElementById('longshotsRows');
+    if (!el) return;
+    const normalized = (rows || []).map(normalizeForDisplay).sort((a, b) => String(dateKey(getValue(b, 'date') || getValue(b, 'timestamp'))).localeCompare(String(dateKey(getValue(a, 'date') || getValue(a, 'timestamp')))));
+    el.innerHTML = tableRows(normalized.slice(0, 120), [
+      r => displayDate(getValue(r, 'date') || getValue(r, 'timestamp')),
+      r => esc(getValue(r, 'category') || 'Longshots'),
+      r => esc(getValue(r, 'pick') || getValue(r, 'game') || 'Parlay'),
+      r => esc(getValue(r, 'legs') || '--'),
+      r => esc(getValue(r, 'grade') || '--'),
+      r => statusCell(r),
+      r => esc(getValue(r, 'pl') || '--'),
+      r => esc(getValue(r, 'notes') || 'No additional notes recorded.')
+    ], 'No Longshots History rows loaded yet.');
   }
 
   function writeStats(prefix, rows) {
@@ -231,7 +248,7 @@
       renderLedgerRows('vipResultsRows', vip, 'No VIP archive rows loaded yet.');
       renderLedgerRows('propsResultsRows', props, 'No Props Results rows loaded yet.');
       renderLedgerRows('resultsRows', rows, 'No result rows loaded yet.');
-      renderLedgerRows('longshotsRows', cards, 'No Longshots History rows loaded yet.');
+      renderLongshotsRows(cards);
       writeStats('overall', rows);
       writeStats('free', free);
       writeStats('vip', vip);
