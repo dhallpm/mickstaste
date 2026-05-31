@@ -8,7 +8,8 @@
     "fetch:closing-odds": "node scripts/fetch-closing-odds.js",
     "test:closing-odds": "node scripts/fetch-closing-odds.js --dry-run",
     "test:lotto-parlays": "node scripts/test-lotto-parlays-feed.js",
-    "test:results-frontend": "node scripts/test-results-frontend-wiring.js"
+    "test:results-frontend": "node scripts/test-results-frontend-wiring.js",
+    "test:results-api": "node scripts/test-results-api-optional-archives.js"
   },
   "dependencies": {
     "googleapis": "^144.0.0"
