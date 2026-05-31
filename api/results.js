@@ -140,15 +140,21 @@ function legNotes(row = {}) {
   )
 }
 
-function displayLegs(row = {}, result = '') {
-  const legs = text(row.Legs, row['Legs / Details'], row['Parlay Type'])
+function displayNotes(row = {}, result = '') {
   const notes = legNotes(row)
-  if (notes) return [legs, `Loss/settlement notes: ${notes}`].filter(Boolean).join('\n\n')
+  if (notes) return `Loss/settlement notes: ${notes}`
   const source = text(row['Original Table'], row.__table, row.__source, row.Category, row['Bet Type'], row['Parlay Type'])
   if (result === 'Loss' && /lotto|parlay|longshot/i.test(source)) {
-    return [legs, 'Loss leg: not recorded in Airtable. Add Losing Leg or Leg Results to show exactly which leg killed the ticket.'].filter(Boolean).join('\n\n')
+    return 'Loss leg: not recorded in Airtable. Add Losing Leg or Leg Results to show exactly which leg killed the ticket.'
   }
-  return legs
+  return text(row.Notes, row['Result Notes'], row['Settlement Notes'])
+}
+
+function recommendedNumber(row = {}) {
+  const explicit = text(row['Closing Number'], row['Closing #'], row['Closing Line'], row['Recommended Number'], row['Recommended #'], row['Best Number'], row['Best #'], row['Best Line'], row.Line, row.Number)
+  if (explicit) return explicit
+  const match = displayPick(row).match(/\b(over|under)\s+([+-]?\d+(?:\.\d+)?)\b/i)
+  return match ? `${titleCase(match[1])} ${match[2]}` : ''
 }
 
 export function normalizeRow(row = {}, sourceTable = '') {
@@ -159,7 +165,7 @@ export function normalizeRow(row = {}, sourceTable = '') {
   const route = sourceSection(row)
   const pick = displayPick(row)
   const originalTable = text(row['Original Table'], row.__table)
-  const closing = text(row['Closing Number'], row['Closing #'], row['Closing Line'], row['Recommended Number'], row['Recommended #'], row['Best Number'], row['Best #'], row['Best Line'], row.Line, row.Number)
+  const closing = recommendedNumber(row)
   const grade = text(row['Card Grade'], row.Grade, row.grade, '--')
   return {
     ...row,
@@ -188,7 +194,8 @@ export function normalizeRow(row = {}, sourceTable = '') {
     'Pick Status': 'Closed',
     Access: normalizeAccess(text(row.Access, row.Tier, row['Access Tier'], recordKey.access, 'Free')),
     Category: text(row.Category, row.Type, row['Parlay Type'], row.Player ? 'Player Prop' : ''),
-    Legs: displayLegs(row, result),
+    Legs: text(row.Legs, row['Legs / Details'], row['Parlay Type']),
+    Notes: displayNotes(row, result),
     'Original Table': originalTable,
     Timestamp: text(row['Settled At'], row['Graded Timestamp'], row.Timestamp, row['Posted Time'], ''),
     'Closing Number': closing
