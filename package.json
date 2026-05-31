@@ -7,7 +7,8 @@
     "check:serverless": "node --check api/micks-admin.js && node --check lib/micksPicksGenerator.js && node --input-type=module -e \"await import('./api/micks-admin.js'); await import('./lib/micksPicksGenerator.js')\"",
     "fetch:closing-odds": "node scripts/fetch-closing-odds.js",
     "test:closing-odds": "node scripts/fetch-closing-odds.js --dry-run",
-    "test:lotto-parlays": "node scripts/test-lotto-parlays-feed.js"
+    "test:lotto-parlays": "node scripts/test-lotto-parlays-feed.js",
+    "test:results-frontend": "node scripts/test-results-frontend-wiring.js"
   },
   "dependencies": {
     "googleapis": "^144.0.0"
