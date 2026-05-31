@@ -157,6 +157,28 @@ function recommendedNumber(row = {}) {
   return match ? `${titleCase(match[1])} ${match[2]}` : ''
 }
 
+const KNOWN_MAY30_ARCHIVE_DETAILS = new Map([
+  ['safe 5-leg parlay', {
+    grade: 'A-',
+    legs: `1. Yankees Team Total Over 5.0
+2. Spurs +3.5
+3. Victor Wembanyama Over 9.5 Rebounds
+4. Fever ML
+5. Amanda Serrano ML`
+  }],
+  ['ultra safe 6-leg parlay', {
+    grade: 'B+',
+    legs: `1. Yankees ML
+2. Braves ML
+3. Spurs +3.5
+4. Victor Wembanyama 8+ Rebounds alt
+5. Fever ML
+6. Dmitry Bivol ML`
+  }],
+  ['shai gilgeous-alexander over 29.5 points', { grade: 'B+' }],
+  ['victor wembanyama over 9.5 rebounds', { grade: 'A-' }]
+])
+
 export function normalizeRow(row = {}, sourceTable = '') {
   const recordKey = recordKeyParts(row)
   const result = resultOf(row)
@@ -164,9 +186,10 @@ export function normalizeRow(row = {}, sourceTable = '') {
   const pl = calculateProfitLoss({ ...row, Odds: odds })
   const route = sourceSection(row)
   const pick = displayPick(row)
+  const knownArchiveDetails = KNOWN_MAY30_ARCHIVE_DETAILS.get(pick.toLowerCase()) || {}
   const originalTable = text(row['Original Table'], row.__table)
   const closing = recommendedNumber(row)
-  const grade = text(row['Card Grade'], row.Grade, row.grade, '--')
+  const grade = text(row['Card Grade'], row.Grade, row.grade, knownArchiveDetails.grade, '--')
   return {
     ...row,
     __source: sourceTable || row.__table || 'Airtable Results API',
@@ -194,7 +217,7 @@ export function normalizeRow(row = {}, sourceTable = '') {
     'Pick Status': 'Closed',
     Access: normalizeAccess(text(row.Access, row.Tier, row['Access Tier'], recordKey.access, 'Free')),
     Category: text(row.Category, row.Type, row['Parlay Type'], row.Player ? 'Player Prop' : ''),
-    Legs: text(row.Legs, row['Legs / Details'], row['Parlay Type']),
+    Legs: text(row.Legs, row['Legs / Details'], row['Parlay Type'], knownArchiveDetails.legs),
     Notes: displayNotes(row, result),
     'Original Table': originalTable,
     Timestamp: text(row['Settled At'], row['Graded Timestamp'], row.Timestamp, row['Posted Time'], ''),

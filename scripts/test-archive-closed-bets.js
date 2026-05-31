@@ -19,4 +19,19 @@ assert.equal(fields['Profit/Loss Units'], '-0.25u')
 assert.equal(fields['P/L'], '-0.25u')
 assert.equal(fields['Profit/Loss'], undefined)
 
+const teamTotal = archiveFields({
+  Date: '2026-05-30',
+  League: 'MLB',
+  Game: 'Yankees @ Athletics',
+  Pick: 'Yankees Team Total Over 5.0',
+  'Bet Type': 'Team Total',
+  Access: 'Free',
+  Odds: '-110',
+  Units: 1,
+  Result: 'Loss'
+})
+
+assert.equal(teamTotal['Bet Type'], undefined)
+assert.match(teamTotal['Record Key'], /\|team total\|free\|-110$/)
+
 console.log('Archive closed bets Lotto mixed-select regression test passed.')
