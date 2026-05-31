@@ -124,8 +124,8 @@ async function safeListArchive(tableName, warnings = []) {
     const records = await listAirtableRecords(tableName)
     return records.map(record => flattenRecord(record, tableName))
   } catch (error) {
-    if (error.statusCode === 404 || error.code === 'AIRTABLE_TABLE_NOT_FOUND') {
-      warnings.push(`Optional results table not found: ${tableName}`)
+    if ([403, 404].includes(error.statusCode) || error.code === 'AIRTABLE_TABLE_NOT_FOUND') {
+      warnings.push(`Optional results table unavailable: ${tableName}`)
       return []
     }
     throw error
