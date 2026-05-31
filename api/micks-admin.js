@@ -6,6 +6,7 @@ import { findAirtablePicks } from '../lib/airtablePickLocator.js'
 import { runClosingOddsWorker } from '../lib/closingOddsWorker.js'
 import { generateMicksPicks } from '../lib/micksPicksGenerator.js'
 import { repairMay30Airtable } from '../lib/repairMay30Airtable.js'
+import { repairPropsUnits } from '../lib/repairPropsUnits.js'
 import {
   ingestPicksToAirtable,
   runMicksSync,
@@ -235,6 +236,10 @@ const ACTIONS = {
     dryRun: boolParam(req, 'dryRun')
   }),
   'repair-may30-airtable': req => repairMay30Airtable({
+    dryRun: boolParam(req, 'dryRun')
+  }),
+  'repair-props-units': req => repairPropsUnits({
+    date: param(req, 'date') || '',
     dryRun: boolParam(req, 'dryRun')
   }),
   'find-airtable-picks': req => findAirtablePicks({
