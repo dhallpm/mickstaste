@@ -4,6 +4,7 @@ import { runAirtableTokenTest } from '../lib/airtableTokenTest.js'
 import { archiveClosedBets } from '../lib/archiveClosedBets.js'
 import { runClosingOddsWorker } from '../lib/closingOddsWorker.js'
 import { generateMicksPicks } from '../lib/micksPicksGenerator.js'
+import { fixLottoParlaysAirtable } from '../scripts/fix-lotto-parlays-airtable.js'
 import {
   ingestPicksToAirtable,
   runMicksSync,
@@ -234,7 +235,8 @@ const ACTIONS = {
   }),
   'closing-odds-worker': req => runClosingOddsWorker({
     dryRun: boolParam(req, 'dryRun')
-  })
+  }),
+  'fix-lotto-parlays-airtable': () => fixLottoParlaysAirtable()
 }
 
 export default async function handler(req, res) {
