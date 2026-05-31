@@ -7,6 +7,19 @@ import {
   updateAirtableRecords
 } from '../lib/airtableClient.js'
 
+const SAFE_5_LEGS = `1. Yankees Team Total Over 5.0
+2. Spurs +3.5
+3. Victor Wembanyama Over 9.5 Rebounds
+4. Fever ML
+5. Amanda Serrano ML`
+
+const ULTRA_6_LEGS = `1. Yankees ML
+2. Braves ML
+3. Spurs +3.5
+4. Victor Wembanyama 8+ Rebounds alt
+5. Fever ML
+6. Dmitry Bivol ML`
+
 const SAFE_5_WRITEUP = `This parlay is designed as a small-exposure lotto version of the strongest May 30 Micks Picks angles. It combines the Yankees team total run environment, Spurs key-number spread protection, Wembanyama rebound volume, Fever roster-quality ML edge, and Serrano’s safer ML profile.
 
 The construction avoids the weakest straight-bet risk where possible. It does not ask Spurs to win outright, does not force Serrano KO method, and keeps Yankees exposure tied to offense rather than full-game win condition.
@@ -38,6 +51,7 @@ const REPAIRS = [
       Category: 'Lotto Parlay',
       'Parlay Type': 'Safe 5-Leg Parlay',
       'Leg Count': 5,
+      Legs: SAFE_5_LEGS,
       Sportsbook: 'Circa',
       Grade: 'A-',
       Units: 0.25,
@@ -64,6 +78,7 @@ const REPAIRS = [
       Category: 'Lotto Parlay',
       'Parlay Type': 'Ultra Safe 6-Leg Parlay',
       'Leg Count': 6,
+      Legs: ULTRA_6_LEGS,
       Sportsbook: 'Circa',
       Grade: 'B+',
       Units: 0.15,
