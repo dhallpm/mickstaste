@@ -127,14 +127,40 @@ function sourceSection(row = {}) {
   return routePickCategory(row).websiteSection
 }
 
+function legNotes(row = {}) {
+  return text(
+    row['Losing Leg'],
+    row['Lost Leg'],
+    row['Failed Leg'],
+    row['Leg That Lost'],
+    row['Loss Reason'],
+    row['Leg Results'],
+    row['Result Notes'],
+    row['Settlement Notes']
+  )
+}
+
+function displayLegs(row = {}, result = '') {
+  const legs = text(row.Legs, row['Legs / Details'], row['Parlay Type'])
+  const notes = legNotes(row)
+  if (notes) return [legs, `Loss/settlement notes: ${notes}`].filter(Boolean).join('\n\n')
+  const source = text(row['Original Table'], row.__table, row.__source, row.Category, row['Bet Type'], row['Parlay Type'])
+  if (result === 'Loss' && /lotto|parlay|longshot/i.test(source)) {
+    return [legs, 'Loss leg: not recorded in Airtable. Add Losing Leg or Leg Results to show exactly which leg killed the ticket.'].filter(Boolean).join('\n\n')
+  }
+  return legs
+}
+
 export function normalizeRow(row = {}, sourceTable = '') {
   const recordKey = recordKeyParts(row)
   const result = resultOf(row)
-  const odds = text(row.Odds, row.Price, row['Card Odds'], recordKey.odds)
+  const odds = text(row.Odds, row.Price, row['Card Odds'], row['Final Odds'], recordKey.odds)
   const pl = calculateProfitLoss({ ...row, Odds: odds })
   const route = sourceSection(row)
   const pick = displayPick(row)
   const originalTable = text(row['Original Table'], row.__table)
+  const closing = text(row['Closing Number'], row['Closing #'], row['Closing Line'], row['Recommended Number'], row['Recommended #'], row['Best Number'], row['Best #'], row['Best Line'], row.Line, row.Number)
+  const grade = text(row['Card Grade'], row.Grade, row.grade, '--')
   return {
     ...row,
     __source: sourceTable || row.__table || 'Airtable Results API',
@@ -149,7 +175,7 @@ export function normalizeRow(row = {}, sourceTable = '') {
     Line: text(row.Line, row.Number, row['Best Number']),
     'Bet Type': text(row['Bet Type'], row.Market, row.Type, row['Prop Type'], row.Player ? 'Prop' : '', titleCase(recordKey.betType)),
     Odds: odds,
-    Grade: text(row['Card Grade'], row.Grade, row.grade),
+    Grade: grade,
     Units: text(row.Units, row['Units to Commit'], row.Stake),
     Result: result,
     Outcome: result,
@@ -162,10 +188,10 @@ export function normalizeRow(row = {}, sourceTable = '') {
     'Pick Status': 'Closed',
     Access: normalizeAccess(text(row.Access, row.Tier, row['Access Tier'], recordKey.access, 'Free')),
     Category: text(row.Category, row.Type, row['Parlay Type'], row.Player ? 'Player Prop' : ''),
-    Legs: text(row.Legs, row['Legs / Details'], row['Parlay Type']),
+    Legs: displayLegs(row, result),
     'Original Table': originalTable,
-    Timestamp: text(row['Settled At'], row['Graded Timestamp'], row.Timestamp, row['Posted Time']),
-    'Closing Number': text(row['Closing Number'], row['Closing #'], row['Closing Line'])
+    Timestamp: text(row['Settled At'], row['Graded Timestamp'], row.Timestamp, row['Posted Time'], ''),
+    'Closing Number': closing
   }
 }
 
