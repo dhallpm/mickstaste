@@ -20,6 +20,24 @@ function text(...values) {
   return values.map(value => String(value ?? '').trim()).find(Boolean) || ''
 }
 
+function recordKeyParts(row = {}) {
+  const [date = '', league = '', game = '', pick = '', betType = '', access = '', odds = ''] =
+    String(row['Record Key'] || '').split('|').map(value => value.trim())
+  return { date, league, game, pick, betType, access, odds }
+}
+
+function titleCase(value = '') {
+  return String(value)
+    .replace(/\b[a-z]/g, letter => letter.toUpperCase())
+    .replace(/\bMl\b/g, 'ML')
+}
+
+function normalizeAccess(value = '') {
+  if (/^vip$/i.test(value)) return 'VIP'
+  if (/^free$/i.test(value)) return 'Free'
+  return value
+}
+
 function resultOf(row = {}) {
   const source = [row.Result, row.Outcome, row.Status, row['Display Status'], row['Pick Status']].join(' ')
   if (/\b(win|won|cash|cashed)\b/i.test(source)) return 'Win'
@@ -36,7 +54,7 @@ function inferSide(row = {}) {
   return ''
 }
 
-function displayPick(row = {}) {
+export function displayPick(row = {}) {
   const existing = text(row.Pick, row.Selection, row.Play, row.Name, row['Card Title'])
   if (existing && existing !== '--') return existing
 
@@ -46,6 +64,8 @@ function displayPick(row = {}) {
   const side = inferSide(row) || (player && propType && line ? 'Over' : '')
   if (player && propType && line) return [player, side, line, propType].filter(Boolean).join(' ')
   if (player && propType) return [player, propType].join(' ')
+  const recordKeyPick = recordKeyParts(row).pick
+  if (recordKeyPick) return titleCase(recordKeyPick)
   return text(row.Game, row.Matchup, row.Event, row.Legs, row['Parlay Type'])
 }
 
@@ -99,25 +119,35 @@ function calculateProfitLoss(row = {}) {
   return formatUnits(profit)
 }
 
-function normalizeRow(row = {}, sourceTable = '') {
+function sourceSection(row = {}) {
+  const source = text(row['Original Table'], row.__table, row.__source)
+  if (/Props Lab|Props Results/i.test(source)) return 'props'
+  if (/Lotto/i.test(source)) return 'lotto'
+  if (/Longshot/i.test(source)) return 'longshots'
+  return routePickCategory(row).websiteSection
+}
+
+export function normalizeRow(row = {}, sourceTable = '') {
+  const recordKey = recordKeyParts(row)
   const result = resultOf(row)
-  const pl = calculateProfitLoss(row)
-  const route = routePickCategory(row).websiteSection
+  const odds = text(row.Odds, row.Price, row['Card Odds'], recordKey.odds)
+  const pl = calculateProfitLoss({ ...row, Odds: odds })
+  const route = sourceSection(row)
   const pick = displayPick(row)
   return {
     ...row,
     __source: sourceTable || row.__table || 'Airtable Results API',
     __section: row.__section || route,
-    Date: rowDateKey(row) || text(row.Date, row.date, row['Game Date'], row.Timestamp),
-    League: text(row.League, row.Sport, row.league),
-    Sport: text(row.Sport, row.League),
-    Game: text(row.Game, row.Matchup, row.Event, row.game),
+    Date: rowDateKey(row) || text(row.Date, row.date, row['Game Date'], row.Timestamp, recordKey.date),
+    League: text(row.League, row.Sport, row.league, recordKey.league.toUpperCase()),
+    Sport: text(row.Sport, row.League, recordKey.league.toUpperCase()),
+    Game: text(row.Game, row.Matchup, row.Event, row.game, titleCase(recordKey.game)),
     Pick: pick,
     Player: text(row.Player, row.Athlete, row['Player Name']),
     'Prop Type': text(row['Prop Type'], row.Market, row.Type),
     Line: text(row.Line, row.Number, row['Best Number']),
-    'Bet Type': text(row['Bet Type'], row.Market, row.Type, row['Prop Type'], row.Player ? 'Prop' : ''),
-    Odds: text(row.Odds, row.Price, row['Card Odds']),
+    'Bet Type': text(row['Bet Type'], row.Market, row.Type, row['Prop Type'], row.Player ? 'Prop' : '', titleCase(recordKey.betType)),
+    Odds: odds,
     Grade: text(row['Card Grade'], row.Grade, row.grade),
     Units: text(row.Units, row['Units to Commit'], row.Stake),
     Result: result,
@@ -129,7 +159,7 @@ function normalizeRow(row = {}, sourceTable = '') {
     Status: 'Closed',
     'Display Status': 'Closed',
     'Pick Status': 'Closed',
-    Access: text(row.Access, row.Tier, row['Access Tier'], 'Free'),
+    Access: normalizeAccess(text(row.Access, row.Tier, row['Access Tier'], recordKey.access, 'Free')),
     Category: text(row.Category, row.Type, row['Parlay Type'], row.Player ? 'Player Prop' : ''),
     Legs: text(row.Legs, row['Legs / Details'], row['Parlay Type']),
     Timestamp: text(row['Settled At'], row['Graded Timestamp'], row.Timestamp, row['Posted Time']),
