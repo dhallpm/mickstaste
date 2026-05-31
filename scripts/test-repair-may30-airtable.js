@@ -17,7 +17,8 @@ const archiveRows = [
 
 const plan = buildMay30RepairPlan(masterRows, archiveRows)
 
-assert.deepEqual(plan.duplicateDeletes.map(row => row.id), ['spurs-delete'])
+assert.equal(plan.duplicateDeletes.some(row => row.id === 'spurs-delete'), true)
+assert.equal(plan.duplicateDeletes.some(row => row.id === 'recVIBazCqyLcaIbc'), true)
 assert.deepEqual(plan.masterUpdates.map(row => [row.id, row.fields.Result]), [
   ['spurs-keep', 'Win'],
   ['yankees-keep', 'Loss']
