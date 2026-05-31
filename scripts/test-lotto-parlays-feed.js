@@ -56,6 +56,19 @@ const dateLessLottoRecord = {
     Access: 'VIP'
   }
 }
+const activeNumericOddsLottoRecord = {
+  id: 'rec-active-numeric-odds-lotto',
+  fields: {
+    Date: '2026-05-30',
+    Pick: 'Safe 5-Leg Parlay',
+    'Parlay Type': 'Safe 5-Leg Parlay',
+    'Leg Count': 5,
+    Legs: 'Leg 1 | Leg 2 | Leg 3 | Leg 4 | Leg 5',
+    Odds: 450,
+    Sportsbook: 'Circa',
+    Status: 'Active'
+  }
+}
 
 assert.equal(isBlankAirtableRecord(emptyFirstRecord), true)
 assert.equal(isBlankAirtableRecord({ id: 'rec-checkbox-only', fields: { Featured: false } }), true)
@@ -77,7 +90,7 @@ const card = cleanWebsiteRow({
 })
 assert.equal(card.section, 'lotto')
 assert.equal(card.pick, 'Lottery Parlay')
-assert.equal(card.game, '  Lottery   Parlay  ')
+assert.equal(card.game, 'Lottery   Parlay')
 assert.equal(card.betType, 'Parlay')
 assert.equal(card.legCount, 5)
 assert.equal(card.legs, 'Leg 1 | Leg 2 | Leg 3 | Leg 4 | Leg 5')
@@ -91,6 +104,15 @@ const dateLessCard = cleanWebsiteRow({
 assert.equal(dateLessCard.section, 'lotto')
 assert.equal(dateLessCard.pick, 'Ultra Safe 6-Leg Parlay')
 assert.equal(dateLessCard.date, '')
+
+const activeNumericOddsCard = cleanWebsiteRow({
+  id: activeNumericOddsLottoRecord.id,
+  airtableRecordId: activeNumericOddsLottoRecord.id,
+  __table: 'Lotto Parlays',
+  ...activeNumericOddsLottoRecord.fields
+})
+assert.equal(activeNumericOddsCard.odds, '+450')
+assert.equal(activeNumericOddsCard.releaseStatus, 'Released')
 
 const feed = categorizeWebsiteRows([card, { ...dateLessCard, date: '2026-05-30' }])
 assert.equal(feed.lottoParlays.length, 2)
