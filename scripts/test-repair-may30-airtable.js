@@ -3,7 +3,7 @@ import { buildMay30RepairPlan } from '../lib/repairMay30Airtable.js'
 
 const masterRows = [
   { id: 'spurs-keep', Date: '2026-05-30', Pick: 'Spurs +3.5', 'Record Key': 'spurs', 'Archive Status': 'Active' },
-  { id: 'spurs-delete', Date: '2026-05-30', Pick: 'Spurs +3.5', 'Record Key': 'spurs', 'Archive Status': 'False' },
+  { id: 'spurs-delete', Date: '2026-05-30', Pick: 'Spurs\u200B +3.5', 'Record Key': 'spurs', 'Archive Status': 'False' },
   { id: 'aces-keep', Date: '2026-05-30', Pick: 'Aces ML', 'Record Key': 'aces', 'Archive Status': 'Active' },
   { id: 'yankees-keep', Date: '2026-05-30', Pick: 'Yankees ML', 'Record Key': 'yankees', 'Archive Status': 'Active' }
 ]
