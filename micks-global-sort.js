@@ -7,7 +7,6 @@
 
   const TABLE_SELECTORS = [
     'tbody#resultsRows',
-    'tbody#allArchiveRows',
     'tbody#freeResultsRows',
     'tbody#vipResultsRows',
     'tbody#propsResultsRows',
