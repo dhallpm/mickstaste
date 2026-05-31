@@ -231,7 +231,6 @@
       renderLedgerRows('vipResultsRows', vip, 'No VIP archive rows loaded yet.');
       renderLedgerRows('propsResultsRows', props, 'No Props Results rows loaded yet.');
       renderLedgerRows('resultsRows', rows, 'No result rows loaded yet.');
-      renderLedgerRows('allArchiveRows', rows, 'No archive rows loaded yet.');
       renderLedgerRows('longshotsRows', cards, 'No Longshots History rows loaded yet.');
       writeStats('overall', rows);
       writeStats('free', free);

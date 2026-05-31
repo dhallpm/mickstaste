@@ -14,5 +14,7 @@ assert.match(html, /longshotRows=airtableResults\?dedupe\(airtableResults\.lotto
 assert.match(html, /overallRows=airtableResults\?dedupe\(airtableResults\.rows\):sheetOverallRows/)
 assert.match(html, /renderResultsSummary\('resultsRows',overallRows\)/)
 assert.match(runtimeRules, /if \(id === 'resultsRows'\) cells\.splice\(2, 1\)/)
+assert.doesNotMatch(html, /allArchiveRows/)
+assert.doesNotMatch(runtimeRules, /allArchiveRows/)
 
 console.log('Airtable results frontend wiring regression test passed.')
