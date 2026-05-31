@@ -134,6 +134,7 @@ export function normalizeRow(row = {}, sourceTable = '') {
   const pl = calculateProfitLoss({ ...row, Odds: odds })
   const route = sourceSection(row)
   const pick = displayPick(row)
+  const originalTable = text(row['Original Table'], row.__table)
   return {
     ...row,
     __source: sourceTable || row.__table || 'Airtable Results API',
@@ -162,6 +163,7 @@ export function normalizeRow(row = {}, sourceTable = '') {
     Access: normalizeAccess(text(row.Access, row.Tier, row['Access Tier'], recordKey.access, 'Free')),
     Category: text(row.Category, row.Type, row['Parlay Type'], row.Player ? 'Player Prop' : ''),
     Legs: text(row.Legs, row['Legs / Details'], row['Parlay Type']),
+    'Original Table': originalTable,
     Timestamp: text(row['Settled At'], row['Graded Timestamp'], row.Timestamp, row['Posted Time']),
     'Closing Number': text(row['Closing Number'], row['Closing #'], row['Closing Line'])
   }
@@ -181,24 +183,25 @@ function isWithinDays(row = {}, days = 120) {
 }
 
 function isVip(row = {}) {
-  return /\b(vip|premium|member)\b/i.test(text(row.Access, row.Tier, row['Access Tier'])) || /VIP Archive/i.test(row.__table || row.__source || '')
+  const source = [row.__table, row.__source, row['Original Table'], row.Access, row.Tier, row['Access Tier']].join(' ')
+  return /\b(vip|premium|member|members only)\b/i.test(source)
 }
 
 function isProps(row = {}) {
   if (row.__section === 'props') return true
-  const textValue = [row.__table, row.__source, row.Category, row.Type, row.Market, row['Bet Type'], row['Prop Type'], row.Player, row.Athlete, row.Pick, row.Game].join(' ')
+  const textValue = [row.__table, row.__source, row['Original Table'], row.Category, row.Type, row.Market, row['Bet Type'], row['Prop Type'], row.Player, row.Athlete, row.Pick, row.Game].join(' ')
   return /Props Lab|Props Results|\b(player prop|prop|points|rebounds|assists|pra|strikeouts|total bases|home run|sog)\b/i.test(textValue) && !/lotto|parlay|longshot|long shot|moneyline|spread|team total|game total/i.test(textValue)
 }
 
 function isLotto(row = {}) {
   if (row.__section === 'lotto') return true
-  const textValue = [row.__table, row.Category, row.Type, row.Market, row['Bet Type'], row.Pick, row.Game, row.Legs].join(' ')
+  const textValue = [row.__table, row.__source, row['Original Table'], row.Category, row.Type, row.Market, row['Bet Type'], row.Pick, row.Game, row.Legs].join(' ')
   return /lotto|parlay|5-leg|6-leg|7-leg|8-leg|same game|sgp|round robin/i.test(textValue)
 }
 
 function isLongshot(row = {}) {
   if (row.__section === 'longshots') return true
-  const textValue = [row.__table, row.Category, row.Type, row.Market, row['Bet Type'], row.Pick, row.Game].join(' ')
+  const textValue = [row.__table, row.__source, row['Original Table'], row.Category, row.Type, row.Market, row['Bet Type'], row.Pick, row.Game].join(' ')
   return /longshot|long shot|Longshots History/i.test(textValue)
 }
 
@@ -261,7 +264,7 @@ export default async function handler(req, res) {
     const props = rows.filter(isProps)
     const lotto = rows.filter(row => isLotto(row) && !isLongshot(row))
     const longshots = rows.filter(isLongshot)
-    const vip = rows.filter(isVip)
+    const vip = rows.filter(row => isVip(row) && !isProps(row) && !isLotto(row) && !isLongshot(row))
     const free = rows.filter(row => !isVip(row) && !isProps(row) && !isLotto(row) && !isLongshot(row))
 
     res.status(200).json({
