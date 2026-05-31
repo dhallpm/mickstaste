@@ -11,5 +11,6 @@ assert.match(html, /vipResults=airtableResults\?dedupe\(airtableResults\.vip\):s
 assert.match(html, /propsRows=airtableResults\?dedupe\(airtableResults\.props\):sheetPropsRows/)
 assert.match(html, /longshotRows=airtableResults\?dedupe\(airtableResults\.lotto\.concat\(airtableResults\.longshots\)\):sheetLongshotRows/)
 assert.match(html, /overallRows=airtableResults\?dedupe\(airtableResults\.rows\):sheetOverallRows/)
+assert.match(html, /renderResultsSummary\('resultsRows',overallRows\)/)
 
 console.log('Airtable results frontend wiring regression test passed.')
