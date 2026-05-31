@@ -2,6 +2,7 @@ import { runAirtableDiagnostics } from '../lib/airtableDiagnostics.js'
 import { setupAirtableBase } from '../lib/airtableSetup.js'
 import { runAirtableTokenTest } from '../lib/airtableTokenTest.js'
 import { archiveClosedBets } from '../lib/archiveClosedBets.js'
+import { findAirtablePicks } from '../lib/airtablePickLocator.js'
 import { runClosingOddsWorker } from '../lib/closingOddsWorker.js'
 import { generateMicksPicks } from '../lib/micksPicksGenerator.js'
 import {
@@ -231,6 +232,9 @@ const ACTIONS = {
   }),
   'archive-closed-bets': req => archiveClosedBets({
     dryRun: boolParam(req, 'dryRun')
+  }),
+  'find-airtable-picks': req => findAirtablePicks({
+    date: param(req, 'date') || '2026-05-30'
   }),
   'closing-odds-worker': req => runClosingOddsWorker({
     dryRun: boolParam(req, 'dryRun')
