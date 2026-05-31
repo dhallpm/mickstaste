@@ -1,6 +1,5 @@
 import {
   ACTIVE_AIRTABLE_TABLE_CONFIG,
-  AIRTABLE_TABLE_RESOLVERS,
   flattenRecord,
   listAirtableRecords,
   listAirtableRecordsFromResolvedTable
@@ -22,7 +21,7 @@ function text(...values) {
 }
 
 function resultOf(row = {}) {
-  const source = [row.Result, row.Outcome, row.Status, row['Display Status']].join(' ')
+  const source = [row.Result, row.Outcome, row.Status, row['Display Status'], row['Pick Status']].join(' ')
   if (/\b(win|won|cash|cashed)\b/i.test(source)) return 'Win'
   if (/\b(loss|lost|lose|failed)\b/i.test(source)) return 'Loss'
   if (/\bpush\b/i.test(source)) return 'Push'
@@ -39,41 +38,62 @@ function parseNumber(value) {
   return match ? Number(match[0]) : NaN
 }
 
-function calculateProfitLoss(row = {}) {
+function shouldTrustExistingProfitLoss(row = {}) {
   const existing = text(row['Profit/Loss'], row['P/L'], row.PL, row['Profit Loss'])
-  if (existing) return existing
+  if (!existing) return false
+  if (/^[-+]?\d+(?:\.\d+)?u$/i.test(existing)) return true
+  if (/^[-+]?\d+(?:\.\d+)?\s*units?$/i.test(existing)) return true
+  return false
+}
+
+function formatUnits(value) {
+  if (!Number.isFinite(value)) return ''
+  return `${value > 0 ? '+' : ''}${value.toFixed(2)}u`
+}
+
+function calculateProfitLoss(row = {}) {
   const result = resultOf(row)
-  const units = parseNumber(text(row.Units, row['Units to Commit'], row.Stake))
+  const existing = text(row['Profit/Loss'], row['P/L'], row.PL, row['Profit Loss'])
+  if (shouldTrustExistingProfitLoss(row)) {
+    const n = parseNumber(existing)
+    if (Number.isFinite(n)) return formatUnits(n)
+  }
+
+  const units = parseNumber(text(row.Units, row['Units to Commit'], row.Stake, row.Risk))
   if (!Number.isFinite(units) || units <= 0) return ''
   if (result === 'Push' || result === 'Void') return '0.00u'
   if (result === 'Loss') return `-${units.toFixed(2)}u`
   if (result !== 'Win') return ''
-  const odds = parseNumber(text(row.Odds, row.Price, row['Card Odds']))
+
+  const odds = parseNumber(text(row.Odds, row.Price, row['Card Odds'], row['Final Odds']))
   if (!Number.isFinite(odds) || odds === 0) return ''
   const profit = odds > 0 ? units * odds / 100 : units * 100 / Math.abs(odds)
-  return `+${profit.toFixed(2)}u`
+  return formatUnits(profit)
 }
 
 function normalizeRow(row = {}, sourceTable = '') {
   const result = resultOf(row)
   const pl = calculateProfitLoss(row)
+  const route = routePickCategory(row).websiteSection
   return {
     ...row,
     __source: sourceTable || row.__table || 'Airtable Results API',
+    __section: row.__section || route,
     Date: rowDateKey(row) || text(row.Date, row.date, row['Game Date'], row.Timestamp),
     League: text(row.League, row.Sport, row.league),
     Sport: text(row.Sport, row.League),
     Game: text(row.Game, row.Matchup, row.Event, row.game),
     Pick: text(row.Pick, row.Selection, row.Play, row.Name, row['Card Title']),
-    'Bet Type': text(row['Bet Type'], row.Market, row.Type),
+    'Bet Type': text(row['Bet Type'], row.Market, row.Type, row['Prop Type']),
     Odds: text(row.Odds, row.Price, row['Card Odds']),
     Grade: text(row['Card Grade'], row.Grade, row.grade),
     Units: text(row.Units, row['Units to Commit'], row.Stake),
     Result: result,
+    Outcome: result,
     'Profit/Loss': pl,
     'P/L': pl,
     PL: pl,
-    Status: text(row.Status, row['Display Status'], result),
+    Status: result === 'Pending' ? text(row.Status, row['Display Status'], 'Pending') : result,
     Access: text(row.Access, row.Tier, row['Access Tier'], 'Free'),
     Category: text(row.Category, row.Type, row['Parlay Type']),
     Legs: text(row.Legs, row['Legs / Details'], row['Parlay Type']),
@@ -105,17 +125,20 @@ function isVip(row = {}) {
 }
 
 function isProps(row = {}) {
-  const textValue = [row.Category, row.Type, row.Market, row['Bet Type'], row.Pick, row.Game, row.__table].join(' ')
-  return /Props Results|\b(player prop|prop|points|rebounds|assists|pra|strikeouts|total bases|home run|sog)\b/i.test(textValue) && !/lotto|parlay|longshot|long shot/i.test(textValue)
+  if (row.__section === 'props') return true
+  const textValue = [row.__table, row.Category, row.Type, row.Market, row['Bet Type'], row['Prop Type'], row.Player, row.Athlete, row.Pick, row.Game].join(' ')
+  return /Props Lab|Props Results|\b(player prop|prop|points|rebounds|assists|pra|strikeouts|total bases|home run|sog)\b/i.test(textValue) && !/lotto|parlay|longshot|long shot/i.test(textValue)
 }
 
 function isLotto(row = {}) {
-  const textValue = [row.Category, row.Type, row.Market, row['Bet Type'], row.Pick, row.Game, row.Legs, row.__table].join(' ')
+  if (row.__section === 'lotto') return true
+  const textValue = [row.__table, row.Category, row.Type, row.Market, row['Bet Type'], row.Pick, row.Game, row.Legs].join(' ')
   return /lotto|parlay|5-leg|6-leg|7-leg|8-leg|same game|sgp|round robin/i.test(textValue)
 }
 
 function isLongshot(row = {}) {
-  const textValue = [row.Category, row.Type, row.Market, row['Bet Type'], row.Pick, row.Game, row.__table].join(' ')
+  if (row.__section === 'longshots') return true
+  const textValue = [row.__table, row.Category, row.Type, row.Market, row['Bet Type'], row.Pick, row.Game].join(' ')
   return /longshot|long shot|Longshots History/i.test(textValue)
 }
 
