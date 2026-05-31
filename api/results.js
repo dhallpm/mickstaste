@@ -29,8 +29,28 @@ function resultOf(row = {}) {
   return ''
 }
 
+function inferSide(row = {}) {
+  const source = [row.Pick, row.Selection, row.Play, row.Market, row['Bet Type'], row.Type, row['Prop Type'], row['Full Analysis'], row.Writeup].join(' ')
+  if (/\bover\b/i.test(source)) return 'Over'
+  if (/\bunder\b/i.test(source)) return 'Under'
+  return ''
+}
+
+function displayPick(row = {}) {
+  const existing = text(row.Pick, row.Selection, row.Play, row.Name, row['Card Title'])
+  if (existing && existing !== '--') return existing
+
+  const player = text(row.Player, row.Athlete, row['Player Name'])
+  const propType = text(row['Prop Type'], row.Market, row.Type, row.Category)
+  const line = text(row.Line, row.Number, row['Best Number'])
+  const side = inferSide(row) || (player && propType && line ? 'Over' : '')
+  if (player && propType && line) return [player, side, line, propType].filter(Boolean).join(' ')
+  if (player && propType) return [player, propType].join(' ')
+  return text(row.Game, row.Matchup, row.Event, row.Legs, row['Parlay Type'])
+}
+
 function hasPick(row = {}) {
-  return Boolean(text(row.Pick, row.Selection, row.Play, row.Name, row.Game, row.Matchup, row.Legs, row['Card Title']))
+  return Boolean(displayPick(row))
 }
 
 function parseNumber(value) {
@@ -83,6 +103,7 @@ function normalizeRow(row = {}, sourceTable = '') {
   const result = resultOf(row)
   const pl = calculateProfitLoss(row)
   const route = routePickCategory(row).websiteSection
+  const pick = displayPick(row)
   return {
     ...row,
     __source: sourceTable || row.__table || 'Airtable Results API',
@@ -91,8 +112,11 @@ function normalizeRow(row = {}, sourceTable = '') {
     League: text(row.League, row.Sport, row.league),
     Sport: text(row.Sport, row.League),
     Game: text(row.Game, row.Matchup, row.Event, row.game),
-    Pick: text(row.Pick, row.Selection, row.Play, row.Name, row['Card Title']),
-    'Bet Type': text(row['Bet Type'], row.Market, row.Type, row['Prop Type']),
+    Pick: pick,
+    Player: text(row.Player, row.Athlete, row['Player Name']),
+    'Prop Type': text(row['Prop Type'], row.Market, row.Type),
+    Line: text(row.Line, row.Number, row['Best Number']),
+    'Bet Type': text(row['Bet Type'], row.Market, row.Type, row['Prop Type'], row.Player ? 'Prop' : ''),
     Odds: text(row.Odds, row.Price, row['Card Odds']),
     Grade: text(row['Card Grade'], row.Grade, row.grade),
     Units: text(row.Units, row['Units to Commit'], row.Stake),
@@ -106,7 +130,7 @@ function normalizeRow(row = {}, sourceTable = '') {
     'Display Status': 'Closed',
     'Pick Status': 'Closed',
     Access: text(row.Access, row.Tier, row['Access Tier'], 'Free'),
-    Category: text(row.Category, row.Type, row['Parlay Type']),
+    Category: text(row.Category, row.Type, row['Parlay Type'], row.Player ? 'Player Prop' : ''),
     Legs: text(row.Legs, row['Legs / Details'], row['Parlay Type']),
     Timestamp: text(row['Settled At'], row['Graded Timestamp'], row.Timestamp, row['Posted Time']),
     'Closing Number': text(row['Closing Number'], row['Closing #'], row['Closing Line'])
@@ -132,7 +156,7 @@ function isVip(row = {}) {
 
 function isProps(row = {}) {
   if (row.__section === 'props') return true
-  const textValue = [row.__table, row.Category, row.Type, row.Market, row['Bet Type'], row['Prop Type'], row.Player, row.Athlete, row.Pick, row.Game].join(' ')
+  const textValue = [row.__table, row.__source, row.Category, row.Type, row.Market, row['Bet Type'], row['Prop Type'], row.Player, row.Athlete, row.Pick, row.Game].join(' ')
   return /Props Lab|Props Results|\b(player prop|prop|points|rebounds|assists|pra|strikeouts|total bases|home run|sog)\b/i.test(textValue) && !/lotto|parlay|longshot|long shot|moneyline|spread|team total|game total/i.test(textValue)
 }
 
