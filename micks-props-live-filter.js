@@ -1,6 +1,6 @@
 // Micks Picks props/lotto live display guard
 // Keeps #props focused on player props, keeps lotto/parlay/longshot cards visible,
-// and repairs page placeholders from the live /api/todays-picks Airtable feed.
+// repairs page placeholders from /api/todays-picks, and hydrates Odds from /api/odds-feed.
 (function () {
   const TZ = 'America/New_York';
   const PROP_ROOT_SELECTORS = ['#props', '#propsCards', '#activePropsCards', '#propsResultsRows'];
@@ -102,6 +102,17 @@
     });
   }
 
+  function normalizeUnits(value) {
+    const raw = clean(value);
+    const number = Number(raw.replace(/[^\d.+-]/g, ''));
+    if (!Number.isFinite(number)) return raw || '--';
+    if (!raw.includes('.') && /^\d+$/.test(raw.replace(/[^\d]/g, '')) && number >= 10 && number <= 100) {
+      const units = number / 100;
+      return `${units.toFixed(units % 1 === 0 ? 0 : 2)}u`;
+    }
+    return `${number.toFixed(number % 1 === 0 ? 0 : 2)}u`;
+  }
+
   function activeVisible(row) {
     const s = lower([row.status, row.releaseStatus, row.result].join(' '));
     if (/\b(win|won|loss|lost|push|void|settled|graded|closed|archived|pass)\b/.test(s)) return false;
@@ -123,7 +134,7 @@
       </div>
       <div class="line-box"><span>Line / Number</span><b>${esc(line)}</b><span>${esc(type)} | Best: ${esc(best)}</span></div>
       <div class="flex flex-wrap gap-2 mt-4"><span class="pill">${esc(row.access || label || 'VIP')}</span><span class="pill">${esc(best)}</span><span class="pill">${esc(row.noBetCutoff || 'No Bet Cutoff')}</span><span class="pill">${esc(status)}</span></div>
-      <div class="grid grid-cols-2 gap-2 mt-4"><div class="stat"><b class="!text-lg">${esc(row.odds || '--')}</b><span>Odds</span></div><div class="stat"><b class="!text-lg">${esc(row.sportsbook || 'Manual Commit')}</b><span>Sportsbook</span></div><div class="stat"><b class="!text-lg">${esc(row.units || '--')}</b><span>Units to Commit</span></div></div>
+      <div class="grid grid-cols-2 gap-2 mt-4"><div class="stat"><b class="!text-lg">${esc(row.odds || '--')}</b><span>Odds</span></div><div class="stat"><b class="!text-lg">${esc(row.sportsbook || 'Manual Commit')}</b><span>Sportsbook</span></div><div class="stat"><b class="!text-lg">${esc(normalizeUnits(row.units))}</b><span>Units to Commit</span></div></div>
       <div class="mt-4 leading-7 text-[#f4ead4] space-y-3"><p>${esc(writeup)}</p></div>
     </article>`;
   }
@@ -135,6 +146,31 @@
     el.innerHTML = usable.length ? usable.map(row => card(row, label)).join('') : `<div class="empty-picks glass"><h3 class="pick-title">${esc(empty || 'No picks released yet.')}</h3><p class="mt-3 text-[#cbbf9d]">No picks released yet.</p></div>`;
   }
 
+  async function hydrateOddsFeed() {
+    const table = document.getElementById('oddsRows');
+    if (!table) return;
+    try {
+      const res = await fetch('/api/odds-feed?cache=' + Date.now(), { cache: 'no-store' });
+      if (!res.ok) return;
+      const data = await res.json();
+      const rows = Array.isArray(data.rows) ? data.rows : [];
+      if (!rows.length) return;
+      table.innerHTML = rows.slice(0, 80).map(row => `<tr>${[
+        row.league,
+        row.game,
+        row.pick,
+        row.odds,
+        row.sportsbook,
+        row.bestMarket,
+        row.movement,
+        row.confirmation
+      ].map(value => `<td>${esc(value || '--')}</td>`).join('')}</tr>`).join('');
+      console.log('Odds feed hydrated from /api/odds-feed', rows.length);
+    } catch (error) {
+      console.warn('Odds feed hydrate failed', error);
+    }
+  }
+
   async function forceRenderFromTodayFeed() {
     try {
       const res = await fetch('/api/todays-picks?cache=' + Date.now(), { cache: 'no-store' });
@@ -143,13 +179,9 @@
       const props = Array.isArray(data.props) ? data.props : [];
       const lotto = Array.isArray(data.lottoParlays) ? data.lottoParlays : [];
       const longshots = Array.isArray(data.longshots) ? data.longshots : [];
-      if (props.length) {
-        renderCardsInto('propsCards', props, 'Props Lab', 'No Props Lab picks released yet.');
-        renderCardsInto('activePropsCards', props, 'Props Lab', 'No active props released yet.');
-      }
-      if (lotto.length || longshots.length) {
-        renderCardsInto('longshotsCards', [...lotto, ...longshots], 'Lotto / Longshots', 'No lotto parlays or longshots released yet.');
-      }
+      renderCardsInto('propsCards', props, 'Props Lab', 'No Props Lab picks released yet.');
+      renderCardsInto('activePropsCards', props, 'Props Lab', 'No active props released yet.');
+      renderCardsInto('longshotsCards', [...lotto, ...longshots], 'Lotto / Longshots', 'No lotto parlays or longshots released yet.');
       setTimeout(guardPropsPage, 50);
       if (window.lucide && window.lucide.createIcons) window.lucide.createIcons();
     } catch (error) {
@@ -163,6 +195,7 @@
       window.__micksPropsGuardTimer = setTimeout(() => {
         guardPropsPage();
         forceRenderFromTodayFeed();
+        hydrateOddsFeed();
       }, 250);
     });
     observer.observe(document.body, { childList: true, subtree: true });
@@ -170,10 +203,12 @@
 
   window.guardMicksPropsPage = guardPropsPage;
   window.forceRenderMicksLiveSections = forceRenderFromTodayFeed;
+  window.hydrateMicksOddsFeed = hydrateOddsFeed;
 
   function start() {
     guardPropsPage();
     forceRenderFromTodayFeed();
+    hydrateOddsFeed();
     installObserver();
   }
 
@@ -182,7 +217,7 @@
   } else {
     start();
   }
-  window.addEventListener('hashchange', () => { guardPropsPage(); forceRenderFromTodayFeed(); });
-  window.addEventListener('load', () => { guardPropsPage(); forceRenderFromTodayFeed(); });
-  window.setInterval(() => { guardPropsPage(); forceRenderFromTodayFeed(); }, 30000);
+  window.addEventListener('hashchange', () => { guardPropsPage(); forceRenderFromTodayFeed(); hydrateOddsFeed(); });
+  window.addEventListener('load', () => { guardPropsPage(); forceRenderFromTodayFeed(); hydrateOddsFeed(); });
+  window.setInterval(() => { guardPropsPage(); forceRenderFromTodayFeed(); hydrateOddsFeed(); }, 30000);
 })();
