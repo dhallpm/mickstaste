@@ -11,6 +11,7 @@
     p { color:#cbbf9d; line-height:1.5; }
     textarea { width:100%; min-height:360px; background:#111827; color:#fff; border:1px solid #31405c; border-radius:14px; padding:14px; font-family: Consolas, monospace; font-size:14px; box-sizing:border-box; }
     button { background:#f2c14e; color:#111; border:0; border-radius:999px; padding:13px 20px; font-weight:800; cursor:pointer; margin-top:14px; margin-right:10px; }
+    button.secondary { background:#25324a; color:#f8f0d8; border:1px solid #536583; }
     button:disabled { opacity:.55; cursor:not-allowed; }
     pre { white-space:pre-wrap; background:#111827; border:1px solid #31405c; border-radius:14px; padding:14px; color:#d7f9e9; overflow:auto; }
     .warn { background:#231b0a; border:1px solid #66521e; padding:12px 14px; border-radius:14px; color:#ffe391; }
@@ -21,11 +22,12 @@
 <body>
   <div class="wrap">
     <h1>Micks Picks Airtable Import Helper</h1>
-    <p class="warn">Paste the JSON payload from ChatGPT below and click Import. This skips CSV import and strips Result, Outcome, and Profit/Loss automatically.</p>
-    <textarea id="payload" placeholder='Paste JSON here, for example { "batches": [...] }'></textarea>
+    <p class="warn">Click Load June 1 Payload, then Import to Airtable. Do not paste PowerShell or CSV text here.</p>
+    <textarea id="payload" placeholder='Click Load June 1 Payload or paste JSON that begins with { "batches": [...] }'></textarea>
     <div class="row">
+      <button id="loadJune1Btn" class="secondary" type="button">Load June 1 Payload</button>
       <button id="importBtn">Import to Airtable</button>
-      <button id="checkBtn" type="button">Check Today's Picks</button>
+      <button id="checkBtn" class="secondary" type="button">Check Today's Picks</button>
     </div>
     <p id="status">Ready.</p>
     <pre id="output"></pre>
@@ -35,18 +37,42 @@
     const status = document.getElementById('status');
     const importBtn = document.getElementById('importBtn');
     const checkBtn = document.getElementById('checkBtn');
+    const loadJune1Btn = document.getElementById('loadJune1Btn');
     const payloadBox = document.getElementById('payload');
 
     function show(value) {
       output.textContent = typeof value === 'string' ? value : JSON.stringify(value, null, 2);
     }
 
+    async function loadPayload(path) {
+      status.textContent = 'Loading payload...';
+      const response = await fetch(path + '?cache=' + Date.now(), { cache: 'no-store' });
+      if (!response.ok) throw new Error('Could not load payload file: ' + response.status);
+      const data = await response.json();
+      payloadBox.value = JSON.stringify(data, null, 2);
+      status.textContent = 'Payload loaded. Now click Import to Airtable.';
+      show({ loaded: true, batches: data.batches?.length || 0, records: (data.batches || []).reduce((sum, batch) => sum + (batch.records?.length || 0), 0) });
+    }
+
+    loadJune1Btn.addEventListener('click', async () => {
+      try {
+        loadJune1Btn.disabled = true;
+        await loadPayload('/data/micks-picks-2026-06-01.json');
+      } catch (error) {
+        status.textContent = 'Payload load failed.';
+        show(error.message || String(error));
+      } finally {
+        loadJune1Btn.disabled = false;
+      }
+    });
+
     importBtn.addEventListener('click', async () => {
       try {
         importBtn.disabled = true;
         status.textContent = 'Importing to Airtable...';
         const raw = payloadBox.value.trim();
-        if (!raw) throw new Error('Paste the JSON payload first.');
+        if (!raw) throw new Error('Click Load June 1 Payload first, or paste JSON that starts with { not #.');
+        if (raw.startsWith('#')) throw new Error('You pasted a PowerShell script. Click Load June 1 Payload instead.');
         const parsed = JSON.parse(raw);
         const response = await fetch('/api/import-airtable-records', {
           method: 'POST',
