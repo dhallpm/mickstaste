@@ -41,22 +41,27 @@ function reclassifyBelowAMasterPicks(result = {}) {
   const free = Array.isArray(result.free) ? result.free : []
   const vipVault = Array.isArray(result.vipVault) ? result.vipVault : []
 
-  const moveToFree = vip.filter(row => isMasterPick(row) && !isAOrBetter(row))
-  if (!moveToFree.length) return result
-
+  const belowAMasterFromVip = vip.filter(row => isMasterPick(row) && !isAOrBetter(row))
+  const belowAMasterFromVault = vipVault.filter(row => isMasterPick(row) && !isAOrBetter(row))
+  const moveToFree = dedupe([...belowAMasterFromVip, ...belowAMasterFromVault])
   const movedKeys = new Set(moveToFree.map(keyOf))
+
   const keptVip = vip.filter(row => !movedKeys.has(keyOf(row)))
   const keptVault = vipVault.filter(row => !movedKeys.has(keyOf(row)))
+
+  if (!moveToFree.length && keptVault.length === vipVault.length && keptVip.length === vip.length) return result
+
+  const warnings = [...(result.warnings || [])]
+  if (moveToFree.length) {
+    warnings.push(`Reclassified/removed ${moveToFree.length} Master Picks below A grade from VIP/Vault and kept them Free only.`)
+  }
 
   return {
     ...result,
     free: dedupe([...free, ...moveToFree.map(makePublicCard)]),
     vip: keptVip,
     vipVault: keptVault,
-    warnings: [
-      ...(result.warnings || []),
-      `Reclassified ${moveToFree.length} Master Picks below A grade as Free despite VIP/Premium Access tags.`
-    ]
+    warnings
   }
 }
 
