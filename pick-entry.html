@@ -1,208 +1,62 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex,nofollow">
-  <title>Micks Picks Entry</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Micks Picks Entry | Airtable</title>
+  <link rel="stylesheet" href="/sportsbook-theme.css?v=20260602" />
   <style>
     :root {
       color-scheme: dark;
-      --bg: #101319;
-      --panel: #171b22;
-      --field: #0f141b;
-      --line: #2c3440;
-      --text: #f4f7fb;
-      --muted: #a8b2bf;
-      --accent: #28d17c;
-      --warn: #ffcd5c;
-      --bad: #ff7676;
+      --bg: #050914;
+      --panel: rgba(10,18,32,.86);
+      --field: rgba(4,10,18,.92);
+      --line: #31405c;
+      --text: #f8f0d8;
+      --muted: #cbbf9d;
+      --gold: #f2c14e;
+      --gold2: #ffe391;
+      --green: #39e991;
+      --red: #ff7676;
+      --blue: #35a7ff;
     }
-
     * { box-sizing: border-box; }
-
     body {
       margin: 0;
       min-height: 100vh;
-      background: var(--bg);
+      background:
+        linear-gradient(135deg, rgba(2,4,10,.54), rgba(2,4,10,.34), rgba(0,0,0,.70)),
+        radial-gradient(circle at 16% 10%, rgba(242,193,78,.23), transparent 34%),
+        radial-gradient(circle at 84% 12%, rgba(53,167,255,.18), transparent 36%),
+        var(--bg);
       color: var(--text);
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
-
-    main {
-      width: min(1180px, calc(100% - 32px));
-      margin: 0 auto;
-      padding: 32px 0 48px;
-    }
-
-    header {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: 20px;
-      padding-bottom: 18px;
-      border-bottom: 1px solid var(--line);
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(1.8rem, 4vw, 3rem);
-      letter-spacing: 0;
-    }
-
-    .toolbar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: flex-end;
-    }
-
-    a, button {
-      color: var(--text);
-      border: 1px solid var(--line);
-      background: #202731;
-      border-radius: 6px;
-      min-height: 42px;
-      padding: 0 14px;
-      font: inherit;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-    }
-
-    button.primary {
-      background: var(--accent);
-      border-color: var(--accent);
-      color: #07120c;
-      font-weight: 800;
-    }
-
-    button:disabled {
-      opacity: .55;
-      cursor: wait;
-    }
-
-    form {
-      display: grid;
-      gap: 22px;
-      margin-top: 24px;
-    }
-
-    .section {
-      padding: 20px;
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 8px;
-    }
-
-    .section h2 {
-      margin: 0 0 16px;
-      font-size: 1rem;
-      letter-spacing: 0;
-      color: var(--muted);
-      text-transform: uppercase;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 14px;
-    }
-
-    label {
-      display: grid;
-      gap: 7px;
-      color: var(--muted);
-      font-size: .9rem;
-    }
-
-    input, select, textarea {
-      width: 100%;
-      min-height: 42px;
-      border-radius: 6px;
-      border: 1px solid var(--line);
-      background: var(--field);
-      color: var(--text);
-      font: inherit;
-      padding: 10px 11px;
-    }
-
-    textarea {
-      min-height: 104px;
-      resize: vertical;
-      line-height: 1.45;
-    }
-
-    .span-2 { grid-column: span 2; }
-    .span-3 { grid-column: span 3; }
-    .span-4 { grid-column: span 4; }
-    .span-6 { grid-column: span 6; }
-    .span-8 { grid-column: span 8; }
-    .span-12 { grid-column: span 12; }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      align-items: center;
-    }
-
-    #message {
-      margin-top: 20px;
-      padding: 16px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: #121820;
-      white-space: pre-wrap;
-      line-height: 1.45;
-    }
-
-    #message.good { border-color: rgba(40, 209, 124, .7); }
-    #message.bad { border-color: rgba(255, 118, 118, .75); }
-    #message:empty { display: none; }
-
-    .required {
-      color: var(--warn);
-    }
-
-    .generator-result {
-      margin-top: 14px;
-      display: grid;
-      gap: 10px;
-    }
-
-    .generated-card {
-      padding: 12px;
-      border: 1px solid var(--line);
-      border-radius: 6px;
-      background: #111821;
-    }
-
-    .generated-card strong {
-      display: block;
-      margin-bottom: 6px;
-    }
-
-    @media (max-width: 820px) {
-      header {
-        align-items: stretch;
-        flex-direction: column;
-      }
-
-      .toolbar {
-        justify-content: flex-start;
-      }
-
-      .grid {
-        grid-template-columns: 1fr;
-      }
-
-      .span-2, .span-3, .span-4, .span-6, .span-8, .span-12 {
-        grid-column: 1;
-      }
-    }
+    main { width: min(1180px, calc(100% - 30px)); margin: 0 auto; padding: 26px 0 50px; }
+    header { display:flex; justify-content:space-between; gap:18px; align-items:flex-end; padding-bottom:18px; border-bottom:1px solid var(--line); }
+    h1 { margin:0; font-size:clamp(1.8rem,4vw,3rem); letter-spacing:-.04em; }
+    p { color:var(--muted); line-height:1.5; }
+    .toolbar, .actions { display:flex; flex-wrap:wrap; gap:10px; align-items:center; }
+    a, button { color:var(--text); border:1px solid var(--line); background:#202b3f; border-radius:999px; min-height:42px; padding:0 15px; font:inherit; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; cursor:pointer; }
+    button.primary, a.primary { background:var(--gold); border-color:var(--gold); color:#111; font-weight:900; }
+    button:disabled { opacity:.55; cursor:wait; }
+    form { display:grid; gap:18px; margin-top:22px; }
+    .section { padding:18px; background:var(--panel); border:1px solid var(--line); border-radius:18px; box-shadow:0 24px 70px rgba(0,0,0,.44), inset 0 1px 0 rgba(255,255,255,.08); backdrop-filter:blur(14px) saturate(125%); }
+    .section h2 { margin:0 0 14px; font-size:.95rem; letter-spacing:.14em; color:var(--gold2); text-transform:uppercase; }
+    .grid { display:grid; grid-template-columns:repeat(12,1fr); gap:13px; }
+    label { display:grid; gap:7px; color:var(--muted); font-size:.9rem; }
+    input, select, textarea { width:100%; min-height:42px; border-radius:10px; border:1px solid var(--line); background:var(--field); color:var(--text); font:inherit; padding:10px 11px; outline:none; }
+    textarea { min-height:92px; resize:vertical; line-height:1.45; }
+    input:focus, select:focus, textarea:focus { border-color:var(--gold); box-shadow:0 0 0 3px rgba(242,193,78,.13); }
+    .span-2 { grid-column:span 2; } .span-3 { grid-column:span 3; } .span-4 { grid-column:span 4; } .span-6 { grid-column:span 6; } .span-8 { grid-column:span 8; } .span-12 { grid-column:span 12; }
+    .pill { display:inline-flex; border:1px solid var(--line); border-radius:999px; padding:6px 10px; color:var(--gold2); background:rgba(255,255,255,.04); margin:2px 4px 2px 0; font-size:.86rem; }
+    .help { background:rgba(35,27,10,.72); border-color:#66521e; color:var(--gold2); }
+    #message, pre { margin-top:14px; padding:14px; border:1px solid var(--line); border-radius:14px; background:rgba(5,12,22,.88); white-space:pre-wrap; line-height:1.45; color:#d7f9e9; overflow:auto; }
+    #message.good { border-color:rgba(57,233,145,.75); } #message.bad { border-color:rgba(255,118,118,.75); color:#ffd2d2; } #message:empty { display:none; }
+    .hidden { display:none !important; }
+    .required { color:var(--gold2); }
+    @media(max-width:820px){ header{align-items:stretch; flex-direction:column}.grid{grid-template-columns:1fr}.span-2,.span-3,.span-4,.span-6,.span-8,.span-12{grid-column:1} }
   </style>
 </head>
 <body>
@@ -210,109 +64,117 @@
     <header>
       <div>
         <h1>Micks Picks Entry</h1>
+        <p>Production-safe Airtable entry for <b>mickspicks.us</b>. Uses the same importer as the JSON helper.</p>
       </div>
       <nav class="toolbar" aria-label="Admin links">
-        <a href="/api/todays-picks" target="_blank" rel="noreferrer">Today&apos;s Picks</a>
-        <button type="button" id="dryRunSync">Run Backup Dry Run</button>
+        <a href="/" rel="noreferrer">Dashboard</a>
+        <a href="/import-airtable.html" rel="noreferrer">JSON Import Helper</a>
+        <a href="/api/todays-picks" target="_blank" rel="noreferrer">Today’s Feed</a>
       </nav>
     </header>
 
+    <section class="section help" style="margin-top:18px">
+      <b>Safe production rule:</b> this page does not send <span class="pill">Result</span> or <span class="pill">Profit/Loss</span>. Future P/L is calculated from Result + Units + Odds after settlement.
+    </section>
+
     <form id="pickForm">
       <section class="section">
-        <h2>Run Micks Picks</h2>
+        <h2>Destination Table</h2>
         <div class="grid">
-          <label class="span-3">Date
-            <input id="generateDate" name="generateDate" type="date">
-          </label>
-          <label class="span-3">Sport
-            <input id="generateSport" name="generateSport" autocomplete="off" placeholder="NBA">
-          </label>
-          <label class="span-3">League
-            <input id="generateLeague" name="generateLeague" autocomplete="off" placeholder="NBA">
-          </label>
-          <label class="span-3">Mode
-            <select id="generateMode" name="generateMode">
-              <option value="review">Review</option>
-              <option value="draft">Draft</option>
-              <option value="publish">Publish</option>
+          <label class="span-4">Airtable Section <span class="required">required</span>
+            <select name="table" id="table" required>
+              <option value="picks">Master Picks</option>
+              <option value="propsLab">Props Lab</option>
+              <option value="lottoParlays">Lotto Parlays</option>
+              <option value="longshots">Longshots / Watchlist</option>
             </select>
           </label>
-          <label class="span-3">Max Picks
-            <input id="generateMaxPicks" name="generateMaxPicks" inputmode="numeric" value="3">
+          <label class="span-4">Date <span class="required">required</span>
+            <input id="date" name="Date" type="date" required />
           </label>
-          <label class="span-3">Access
-            <select id="generateAccess" name="generateAccess">
-              <option value="auto">Auto</option>
-              <option>Free</option>
+          <label class="span-4">Access
+            <select name="Access">
               <option>VIP</option>
-              <option>Premium</option>
+              <option>Premium Vault</option>
+              <option>Free</option>
+              <option>Internal</option>
             </select>
           </label>
-          <div class="span-6 actions">
-            <button type="button" class="primary" id="generatePicks">Run Micks Picks</button>
-            <button type="button" id="generateDryRun">Review Dry Run</button>
-            <a href="/api/todays-picks" target="_blank" rel="noreferrer">Open Today&apos;s Feed</a>
-          </div>
-          <output class="span-12 generator-result" id="generateResult" aria-live="polite"></output>
         </div>
       </section>
 
       <section class="section">
-        <h2>Pick Card</h2>
+        <h2>Pick Details</h2>
         <div class="grid">
-          <label class="span-3">Date <span class="required">required</span>
-            <input id="date" name="date" type="date" required>
-          </label>
           <label class="span-3">Sport
-            <input name="sport" autocomplete="off" placeholder="NBA">
+            <input name="Sport" placeholder="WNBA" autocomplete="off" />
           </label>
           <label class="span-3">League
-            <input name="league" autocomplete="off" placeholder="NBA">
+            <input name="League" placeholder="WNBA" autocomplete="off" />
           </label>
-          <label class="span-3">Access <span class="required">required</span>
-            <select name="access" required>
-              <option>Free</option>
-              <option>VIP</option>
-              <option>Premium</option>
+          <label class="span-6">Game
+            <input name="Game" placeholder="Team A vs Team B" autocomplete="off" />
+          </label>
+
+          <label class="span-6 prop-only">Player
+            <input name="Player" placeholder="A'ja Wilson" autocomplete="off" />
+          </label>
+          <label class="span-6 prop-only">Prop
+            <input name="Prop" placeholder="20+ Points / 8+ Rebounds ladder" autocomplete="off" />
+          </label>
+
+          <label class="span-8 non-prop-title">Pick <span class="required">required for non-props</span>
+            <input name="Pick" placeholder="Over 162.5" autocomplete="off" />
+          </label>
+          <label class="span-4">Bet Type
+            <input name="Bet Type" placeholder="Total / Team Total / Lotto Parlay" autocomplete="off" />
+          </label>
+
+          <label class="span-3">Odds
+            <input name="Odds" placeholder="-110 or better" autocomplete="off" />
+          </label>
+          <label class="span-3">Sportsbook
+            <input name="Sportsbook" placeholder="BetRivers DE / best available" autocomplete="off" />
+          </label>
+          <label class="span-2">Grade
+            <input name="Grade" placeholder="B+" autocomplete="off" />
+          </label>
+          <label class="span-2">Units
+            <input name="Units" inputmode="decimal" placeholder="0.50" />
+          </label>
+          <label class="span-2">Status
+            <select name="Status">
+              <option>Conditional</option>
+              <option>Watchlist</option>
+              <option>Active</option>
+              <option>Posted</option>
+              <option>Downgraded / Watchlist</option>
+              <option>Track Only / Not New Play</option>
             </select>
           </label>
 
-          <label class="span-6">Game <span class="required">required</span>
-            <input name="game" required autocomplete="off" placeholder="Team A vs Team B">
+          <label class="span-6">Best Number
+            <input name="Best Number" placeholder="Over 162.5 / +100 or better" autocomplete="off" />
           </label>
-          <label class="span-6">Pick <span class="required">required</span>
-            <input name="pick" required autocomplete="off" placeholder="Team A ML">
-          </label>
-
-          <label class="span-3">Bet Type <span class="required">required</span>
-            <input name="betType" required autocomplete="off" placeholder="Moneyline">
-          </label>
-          <label class="span-3">Odds <span class="required">required</span>
-            <input name="odds" required inputmode="numeric" placeholder="-110">
-          </label>
-          <label class="span-3">Sportsbook
-            <input name="sportsbook" autocomplete="off" placeholder="BetRivers">
-          </label>
-          <label class="span-3">Units
-            <input name="units" inputmode="decimal" placeholder="1">
-          </label>
-
-          <label class="span-3">Grade
-            <input name="grade" autocomplete="off" placeholder="A">
+          <label class="span-6">No Bet Cutoff
+            <input name="No Bet Cutoff" placeholder="Over 164.5 / Worse than -115" autocomplete="off" />
           </label>
           <label class="span-3">Confidence
-            <input name="confidence" inputmode="decimal" placeholder="60">
+            <input name="Confidence" placeholder="Medium-High" autocomplete="off" />
           </label>
-          <label class="span-3">EV Edge
-            <input name="evEdge" inputmode="decimal" placeholder="2.5">
+          <label class="span-3">Featured
+            <select name="Featured">
+              <option>No</option>
+              <option>Yes</option>
+            </select>
           </label>
-          <label class="span-3">Status
-            <select name="status">
-              <option>Active</option>
-              <option>Posted</option>
-              <option>Released</option>
-              <option>Pregame</option>
-              <option>Open</option>
+          <label class="span-3 lotto-only">Parlay Group
+            <input name="Parlay Group" placeholder="Safe Lotto" autocomplete="off" />
+          </label>
+          <label class="span-3 longshot-only">Longshot
+            <select name="Longshot">
+              <option>Yes</option>
+              <option>No</option>
             </select>
           </label>
         </div>
@@ -322,278 +184,145 @@
         <h2>Analysis</h2>
         <div class="grid">
           <label class="span-6">Writeup
-            <textarea name="writeup"></textarea>
+            <textarea name="Writeup" placeholder="Short card preview shown on site."></textarea>
           </label>
           <label class="span-6">Full Analysis
-            <textarea name="fullAnalysis"></textarea>
+            <textarea name="Full Analysis" placeholder="VIP/full breakdown."></textarea>
           </label>
           <label class="span-4">Market Notes
-            <textarea name="marketNotes"></textarea>
+            <textarea name="Market Notes"></textarea>
           </label>
           <label class="span-4">Injury Notes
-            <textarea name="injuryNotes"></textarea>
+            <textarea name="Injury Notes"></textarea>
           </label>
           <label class="span-4">Source Verification
-            <textarea name="sourceVerification"></textarea>
+            <textarea name="Source Verification"></textarea>
           </label>
         </div>
       </section>
 
       <section class="section">
         <h2>Submit</h2>
-        <div class="grid">
-          <label class="span-6">Sync Secret
-            <input id="syncSecret" name="syncSecret" type="password" autocomplete="current-password">
-          </label>
-          <div class="span-6 actions">
-            <button type="submit" class="primary" id="submitPick">Submit Pick</button>
-            <button type="reset">Reset</button>
-          </div>
+        <div class="actions">
+          <button type="button" id="previewBtn">Preview Payload</button>
+          <button type="submit" class="primary" id="submitPick">Submit to Airtable</button>
+          <button type="reset">Reset</button>
+          <button type="button" id="checkFeed">Check Today’s Feed</button>
         </div>
+        <output id="message" aria-live="polite"></output>
+        <pre id="preview" aria-live="polite"></pre>
       </section>
     </form>
-
-    <output id="message" aria-live="polite"></output>
   </main>
 
   <script>
-    const form = document.getElementById('pickForm')
-    const message = document.getElementById('message')
-    const submitPick = document.getElementById('submitPick')
-    const dryRunSync = document.getElementById('dryRunSync')
-    const generatePicks = document.getElementById('generatePicks')
-    const generateDryRun = document.getElementById('generateDryRun')
-    const generateResult = document.getElementById('generateResult')
-    const requiredFields = ['date', 'game', 'pick', 'betType', 'odds', 'access']
+    const form = document.getElementById('pickForm');
+    const table = document.getElementById('table');
+    const message = document.getElementById('message');
+    const preview = document.getElementById('preview');
+    const submitPick = document.getElementById('submitPick');
+    const previewBtn = document.getElementById('previewBtn');
+    const checkFeed = document.getElementById('checkFeed');
+
+    const safeFields = {
+      picks: ['Date','Sport','League','Game','Pick','Bet Type','Odds','Sportsbook','Grade','Units','Best Number','No Bet Cutoff','Confidence','Status','Access','Writeup','Market Notes','Injury Notes','Source Verification','Full Analysis'],
+      propsLab: ['Date','Player','Prop','Sport','League','Game','Grade','Units','Status','Odds','Sportsbook','Best Number','No Bet Cutoff','Confidence','Access','Featured','Writeup','Market Notes','Injury Notes','Source Verification','Full Analysis'],
+      lottoParlays: ['Date','Sport','League','Game','Pick','Bet Type','Odds','Sportsbook','Grade','Units','Best Number','No Bet Cutoff','Confidence','Status','Access','Featured','Parlay Group','Writeup','Market Notes','Injury Notes','Source Verification','Full Analysis'],
+      longshots: ['Date','Sport','League','Game','Pick','Bet Type','Odds','Sportsbook','Grade','Units','Best Number','No Bet Cutoff','Confidence','Status','Access','Featured','Longshot','Writeup','Market Notes','Injury Notes','Source Verification','Full Analysis']
+    };
 
     function todayKey() {
-      const now = new Date()
-      const offset = now.getTimezoneOffset()
-      return new Date(now.getTime() - offset * 60000).toISOString().slice(0, 10)
+      const now = new Date();
+      const offset = now.getTimezoneOffset();
+      return new Date(now.getTime() - offset * 60000).toISOString().slice(0, 10);
     }
-
-    function numberValue(value, fallback = '') {
-      const cleaned = String(value || '').replace(/[^\d.+-]/g, '')
-      if (!cleaned) return fallback
-      const number = Number(cleaned)
-      return Number.isFinite(number) ? number : fallback
-    }
-
-    function formData() {
-      return Object.fromEntries(new FormData(form).entries())
-    }
-
-    function secretHeaders(data) {
-      const secret = String(data.syncSecret || '').trim()
-      return secret ? { 'x-sync-secret': secret } : {}
-    }
-
     function show(text, good) {
-      message.textContent = text
-      message.className = good ? 'good' : 'bad'
+      message.textContent = text;
+      message.className = good ? 'good' : 'bad';
     }
-
-    function esc(value) {
-      return String(value ?? '').replace(/[&<>"']/g, char => ({
-        '&': '&amp;',
-        '<': '&lt;',
-        '>': '&gt;',
-        '"': '&quot;',
-        "'": '&#39;'
-      })[char])
+    function clean(value) { return String(value ?? '').trim(); }
+    function numMaybe(value) {
+      const raw = clean(value);
+      if (!raw) return '';
+      const n = Number(raw.replace(/[^\d.+-]/g, ''));
+      return Number.isFinite(n) && /^[-+]?\d*\.?\d+$/.test(raw) ? n : raw;
     }
-
-    function validate(data) {
-      const missing = requiredFields.filter(field => !String(data[field] || '').trim())
-      if (missing.length) return `Missing required fields: ${missing.join(', ')}.`
-      if (numberValue(data.odds, null) === null) return 'Odds must be a number like -110 or +145.'
-      return ''
+    function setVisibility() {
+      const t = table.value;
+      document.querySelectorAll('.prop-only').forEach(el => el.classList.toggle('hidden', t !== 'propsLab'));
+      document.querySelectorAll('.lotto-only').forEach(el => el.classList.toggle('hidden', t !== 'lottoParlays'));
+      document.querySelectorAll('.longshot-only').forEach(el => el.classList.toggle('hidden', t !== 'longshots'));
+      document.querySelectorAll('.non-prop-title').forEach(el => el.classList.toggle('hidden', t === 'propsLab'));
     }
-
-    function pickPayload(data) {
-      return {
-        picks: [{
-          date: data.date,
-          sport: data.sport,
-          league: data.league,
-          game: data.game,
-          pick: data.pick,
-          betType: data.betType,
-          access: data.access || 'Free',
-          odds: numberValue(data.odds),
-          sportsbook: data.sportsbook || 'BetRivers',
-          units: numberValue(data.units, 1),
-          grade: data.grade,
-          confidence: numberValue(data.confidence),
-          evEdge: numberValue(data.evEdge),
-          status: data.status || 'Active',
-          result: 'Pending',
-          archiveStatus: 'Active',
-          writeup: data.writeup,
-          fullAnalysis: data.fullAnalysis,
-          marketNotes: data.marketNotes,
-          injuryNotes: data.injuryNotes,
-          sourceVerification: data.sourceVerification
-        }]
+    function buildRecord() {
+      const data = Object.fromEntries(new FormData(form).entries());
+      const t = data.table;
+      const record = {};
+      for (const field of safeFields[t] || []) {
+        let value = data[field];
+        if (field === 'Units') value = numMaybe(value);
+        if (clean(value) !== '') record[field] = value;
       }
-    }
-
-    async function postAdmin(action, data, body) {
-      const response = await fetch(`/api/micks-admin?action=${encodeURIComponent(action)}`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          ...secretHeaders(data)
-        },
-        body: JSON.stringify(body || {})
-      })
-      const result = await response.json().catch(() => ({ success: false, error: response.statusText }))
-      if (!response.ok || (result.success === false && !result.needsDataProvider)) {
-        throw new Error(result.error || `Request failed with ${response.status}`)
+      if (t === 'propsLab' && !record.Pick && record.Player && record.Prop) {
+        // Pick is not sent to Props Lab by default, but preview can still show derived title through website feed.
       }
-      return result
+      if (!record.Date) throw new Error('Date is required.');
+      if (t === 'propsLab' && (!record.Player || !record.Prop)) throw new Error('Props Lab requires Player and Prop.');
+      if (t !== 'propsLab' && !record.Pick) throw new Error('Pick is required for Master, Lotto, and Longshots.');
+      return { table: t, records: [record] };
+    }
+    function writePreview(payload) {
+      preview.textContent = JSON.stringify(payload, null, 2);
     }
 
-    function resultText(result) {
-      const warnings = Array.isArray(result.warnings) && result.warnings.length
-        ? `\nWarnings:\n- ${result.warnings.join('\n- ')}`
-        : ''
-      const errors = Array.isArray(result.errors) && result.errors.length
-        ? `\nErrors:\n- ${result.errors.map(item => item.message || item.error || String(item)).join('\n- ')}`
-        : ''
-      return `Success\nCreated: ${result.created || 0}\nUpdated: ${result.updated || 0}\nSkipped: ${result.skipped || 0}${warnings}${errors}\n\nToday: /api/todays-picks\nBackup dry run: /api/micks-admin?action=run-sync&dryRun=1`
-    }
-
-    function generatorPayload(data, dryRun) {
-      return {
-        date: data.generateDate || todayKey(),
-        sport: data.generateSport,
-        league: data.generateLeague,
-        mode: data.generateMode || 'review',
-        maxPicks: numberValue(data.generateMaxPicks, 3),
-        access: data.generateAccess || 'auto',
-        allowSample: false,
-        dryRun
+    previewBtn.addEventListener('click', () => {
+      try {
+        const payload = buildRecord();
+        writePreview(payload);
+        show('Payload is valid and ready to submit.', true);
+      } catch (error) {
+        show(error.message || String(error), false);
       }
-    }
-
-    function renderGenerated(result) {
-      if (result.needsOpenAI || result.needsDataProvider) {
-        generateResult.innerHTML = `<div class="generated-card"><strong>Missing engine config</strong>${esc(result.message || 'OPENAI_API_KEY is required for Run Micks Picks.')}</div>`
-        return
-      }
-      const cards = Array.isArray(result.cards) ? result.cards : []
-      const header = `Generated: ${result.generated || cards.length || 0} | Created: ${result.created || 0} | Updated: ${result.updated || 0} | Mode: ${result.mode || 'review'}`
-      const provider = result.providerStatus
-        ? `<div class="generated-card"><strong>Engine</strong>${result.providerStatus.configured ? `Manual context: ${esc(result.providerStatus.source || result.providerStatus.type || 'provider')}` : 'OpenAI web search primary'}</div>`
-        : ''
-      const framework = Array.isArray(result.frameworkLoaded)
-        ? `<div class="generated-card"><strong>Framework</strong>${result.frameworkLoaded.map(esc).join('<br>')}</div>`
-        : ''
-      const search = result.searchesRun !== undefined
-        ? `<div class="generated-card"><strong>Search</strong>Searches: ${esc(result.searchesRun)}${result.model ? `<br>Model: ${esc(result.model)}` : ''}</div>`
-        : ''
-      const sources = Array.isArray(result.sourcesUsed) && result.sourcesUsed.length
-        ? `<div class="generated-card"><strong>Sources</strong>${result.sourcesUsed.map(source => {
-          const title = esc(source.title || source.url || 'Source')
-          const url = esc(source.url || '')
-          return url ? `<a href="${url}" target="_blank" rel="noreferrer">${title}</a>` : title
-        }).join('<br>')}</div>`
-        : ''
-      const backup = result.backup
-        ? `<div class="generated-card"><strong>Google Sheets Backup</strong>${esc(result.backup.skipped ? (result.backup.reason || 'Skipped') : `Updated ${result.backup.updated || result.backup.totalRows || 0}`)}</div>`
-        : ''
-      const warnings = Array.isArray(result.warnings) && result.warnings.length
-        ? `<div class="generated-card"><strong>Warnings</strong>${result.warnings.map(esc).join('<br>')}</div>`
-        : ''
-      const cardHtml = cards.map(card => `
-        <div class="generated-card">
-          <strong>${esc(card.Pick || card.pick || 'Pick pending')} ${card.Odds || card.odds ? `(${esc(card.Odds || card.odds)})` : ''}</strong>
-          ${esc(card.Game || card.game || '')}<br>
-          ${esc(card['Bet Type'] || card.betType || '')} | ${esc(card.Access || card.access || '')} | ${esc(card.Status || card.status || '')} / ${esc(card['Release Status'] || card.releaseStatus || '')}<br>
-          ${esc(card.Writeup || card.writeup || '')}
-        </div>
-      `).join('')
-      generateResult.innerHTML = `<div class="generated-card"><strong>${esc(header)}</strong><a href="/api/todays-picks" target="_blank" rel="noreferrer">Open Today&apos;s Feed</a></div>${provider}${search}${sources}${framework}${backup}${warnings}${cardHtml}`
-    }
+    });
 
     form.addEventListener('submit', async event => {
-      event.preventDefault()
-      const data = formData()
-      const validation = validate(data)
-      if (validation) {
-        show(validation, false)
-        return
-      }
-
-      submitPick.disabled = true
+      event.preventDefault();
       try {
-        const result = await postAdmin('ingest-picks', data, pickPayload(data))
-        show(resultText(result), true)
+        submitPick.disabled = true;
+        const payload = buildRecord();
+        writePreview(payload);
+        show('Submitting to Airtable...');
+        const response = await fetch('/api/import-airtable-records', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const result = await response.json().catch(() => ({}));
+        if (!response.ok || result.success === false) throw new Error(result.error || result.message || `Request failed with ${response.status}`);
+        show('Submitted to Airtable successfully. Check Today’s Feed after Vercel/API refresh.', true);
+        writePreview(result);
       } catch (error) {
-        show(error.message, false)
+        show(error.message || String(error), false);
       } finally {
-        submitPick.disabled = false
+        submitPick.disabled = false;
       }
-    })
+    });
 
-    dryRunSync.addEventListener('click', async () => {
-      const data = formData()
-      dryRunSync.disabled = true
+    checkFeed.addEventListener('click', async () => {
       try {
-        const result = await postAdmin('run-sync', data, { dryRun: true })
-        show(resultText(result.airtableToSheets || result), true)
+        show('Checking today’s feed...');
+        const response = await fetch('/api/todays-picks?cache=' + Date.now(), { cache: 'no-store' });
+        const result = await response.json().catch(() => ({}));
+        writePreview(result);
+        show(response.ok ? 'Feed check complete.' : 'Feed check failed.', response.ok);
       } catch (error) {
-        show(error.message, false)
-      } finally {
-        dryRunSync.disabled = false
+        show(error.message || String(error), false);
       }
-    })
+    });
 
-    async function runGenerator(dryRun) {
-      const data = formData()
-      const button = dryRun ? generateDryRun : generatePicks
-      button.disabled = true
-      try {
-        const result = await postAdmin('run-micks-picks', data, generatorPayload(data, dryRun))
-        renderGenerated(result)
-        show(result.success === false ? (result.message || result.error || 'Generation needs attention.') : resultText(result), result.success !== false)
-      } catch (error) {
-        generateResult.innerHTML = ''
-        show(error.message, false)
-      } finally {
-        button.disabled = false
-      }
-    }
-
-    generatePicks.addEventListener('click', () => runGenerator(false))
-    generateDryRun.addEventListener('click', () => runGenerator(true))
-
-    form.addEventListener('reset', () => {
-      setTimeout(() => {
-        form.elements.date.value = todayKey()
-        form.elements.generateDate.value = todayKey()
-        form.elements.generateMode.value = 'review'
-        form.elements.generateAccess.value = 'auto'
-        form.elements.generateMaxPicks.value = '3'
-        form.elements.access.value = 'Free'
-        form.elements.units.value = '1'
-        form.elements.status.value = 'Active'
-        form.elements.sportsbook.value = 'BetRivers'
-        message.textContent = ''
-        message.className = ''
-      }, 0)
-    })
-
-    form.elements.date.value = todayKey()
-    form.elements.generateDate.value = todayKey()
-    form.elements.generateMode.value = 'review'
-    form.elements.generateAccess.value = 'auto'
-    form.elements.generateMaxPicks.value = '3'
-    form.elements.access.value = 'Free'
-    form.elements.units.value = '1'
-    form.elements.status.value = 'Active'
-    form.elements.sportsbook.value = 'BetRivers'
+    table.addEventListener('change', setVisibility);
+    document.getElementById('date').value = todayKey();
+    setVisibility();
   </script>
 </body>
 </html>
