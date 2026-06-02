@@ -86,6 +86,12 @@ function shouldTrustUnitProfitLoss(value = '') {
   return false
 }
 
+function shouldTrustLegacyProfitLoss(value = '') {
+  const existing = text(value)
+  if (!existing) return false
+  return /^[-+]?\d+(?:\.\d+)?(?:u|\s*units?)?$/i.test(existing)
+}
+
 function formatUnits(value) {
   if (!Number.isFinite(value)) return ''
   return `${value > 0 ? '+' : ''}${value.toFixed(2)}u`
@@ -95,6 +101,19 @@ function calculateProfitLoss(row = {}) {
   const result = resultOf(row)
   if (!result) return ''
 
+  const units = parseNumber(text(row.Units, row['Units to Commit'], row.Stake, row.Risk))
+  if (Number.isFinite(units) && units > 0) {
+    if (result === 'Push' || result === 'Void') return '0.00u'
+    if (result === 'Loss') return `-${units.toFixed(2)}u`
+    if (result === 'Win') {
+      const odds = parseNumber(text(row.Odds, row.Price, row['Card Odds'], row['Final Odds']))
+      if (Number.isFinite(odds) && odds !== 0) {
+        const profit = odds > 0 ? units * odds / 100 : units * 100 / Math.abs(odds)
+        return formatUnits(profit)
+      }
+    }
+  }
+
   const automatedUnits = text(row['Profit/Loss Units'], row['P/L Units'], row['Unit Profit/Loss'])
   if (shouldTrustUnitProfitLoss(automatedUnits)) {
     const n = parseNumber(automatedUnits)
@@ -102,21 +121,17 @@ function calculateProfitLoss(row = {}) {
   }
 
   const legacyProfitLoss = text(row['Profit/Loss'], row['P/L'], row.PL, row['Profit Loss'])
-  if (shouldTrustUnitProfitLoss(legacyProfitLoss)) {
+  if (shouldTrustLegacyProfitLoss(legacyProfitLoss)) {
     const n = parseNumber(legacyProfitLoss)
     if (Number.isFinite(n)) return formatUnits(n)
   }
 
-  const units = parseNumber(text(row.Units, row['Units to Commit'], row.Stake, row.Risk))
-  if (!Number.isFinite(units) || units <= 0) return ''
-  if (result === 'Push' || result === 'Void') return '0.00u'
-  if (result === 'Loss') return `-${units.toFixed(2)}u`
-  if (result !== 'Win') return ''
+  return ''
+}
 
-  const odds = parseNumber(text(row.Odds, row.Price, row['Card Odds'], row['Final Odds']))
-  if (!Number.isFinite(odds) || odds === 0) return ''
-  const profit = odds > 0 ? units * odds / 100 : units * 100 / Math.abs(odds)
-  return formatUnits(profit)
+export function hasPositiveUnits(row = {}) {
+  const units = parseNumber(text(row.Units, row['Units to Commit'], row.Stake, row.Risk))
+  return Number.isFinite(units) && units > 0
 }
 
 function sourceSection(row = {}) {
@@ -300,6 +315,7 @@ async function getRows(days) {
     .filter(hasPick)
     .filter(row => isWithinDays(row, days))
     .filter(isFinalResult)
+    .filter(hasPositiveUnits)
     .map(row => normalizeRow(row, row.__table))
 
   const deduped = Array.from(new Map(normalized.map(row => [

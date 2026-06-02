@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { readFile } from 'node:fs/promises'
-import { normalizeRow } from '../api/results.js'
+import { hasPositiveUnits, normalizeRow } from '../api/results.js'
 
 const source = await readFile(new URL('../api/results.js', import.meta.url), 'utf8')
 
@@ -32,6 +32,28 @@ assert.equal(sga.__section, 'props')
 assert.equal(sga.Access, 'VIP')
 assert.equal(sga['Profit/Loss'], '+0.45u')
 assert.equal(sga.Grade, 'B+')
+
+const calculatedBeforeStored = normalizeRow({
+  Pick: 'Calculated Result Wins',
+  Result: 'Win',
+  Units: '1',
+  Odds: '+150',
+  'Profit/Loss Units': '-9.00u',
+  'Profit/Loss': -8
+}, 'Results Archive')
+
+assert.equal(calculatedBeforeStored['Profit/Loss'], '+1.50u')
+
+const legacyCurrencyFallback = normalizeRow({
+  Pick: 'Legacy Currency Fallback',
+  Result: 'Win',
+  Units: '1',
+  'Profit/Loss': 0.75
+}, 'Results Archive')
+
+assert.equal(legacyCurrencyFallback['Profit/Loss'], '+0.75u')
+assert.equal(hasPositiveUnits({ Units: 0, Result: 'Loss', 'Profit/Loss': -1 }), false)
+assert.equal(hasPositiveUnits({ Units: 0.25, Result: 'Loss' }), true)
 
 const parlay = normalizeRow({
   'Record Key': '2026-05-30|mixed|safe 5-leg|safe 5-leg parlay|lotto parlay|vip|450',
