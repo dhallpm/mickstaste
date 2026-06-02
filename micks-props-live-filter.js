@@ -3,7 +3,7 @@
 // repairs page placeholders from /api/todays-picks, and hydrates Odds from /api/odds-feed.
 (function () {
   const TZ = 'America/New_York';
-  const PROP_ROOT_SELECTORS = ['#props', '#propsCards', '#activePropsCards', '#propsResultsRows'];
+  const PROP_ROOT_SELECTORS = ['#props', '#activePropsCards', '#propsResultsRows'];
   const CANDIDATE_SELECTORS = ['.pick-card', '.card', '[class*="card"]', 'tr'];
 
   function todayKey() {
@@ -53,7 +53,7 @@
   }
 
   function isPlayerPropLike(s) {
-    return /\b(player prop|prop|points|rebounds|assists|pra|pa\b|ra\b|strikeouts|total bases|home run|hr\b|sog|shots on goal|saves|steals|blocks|threes|3pm|passing yards|rushing yards|receiving yards|outs|double-double|double double)\b/.test(s);
+    return /\b(player prop|prop|points|rebounds|assists|pra|pa\b|ra\b|strikeouts|total bases|home run|hr\b|sog|shots on goal|saves|steals|blocks|threes|3pm|passing yards|rushing yards|receiving yards|outs|double-double|double double|ladder)\b/.test(s);
   }
 
   function isNonPropMarket(s) {
@@ -95,7 +95,7 @@
           if (!s.trim()) return;
           if (isNonPropMarket(s)) return hide(el, 'non-prop-market');
           if (isStaleOpen(el, s)) return hide(el, 'stale-open-prop');
-          if ((el.closest('#propsCards') || el.closest('#activePropsCards')) && !isPlayerPropLike(s)) return hide(el, 'card-not-player-prop');
+          if (el.closest('#activePropsCards') && !isPlayerPropLike(s)) return hide(el, 'card-not-player-prop');
           show(el);
         });
       });
@@ -116,7 +116,7 @@
   function activeVisible(row) {
     const s = lower([row.status, row.releaseStatus, row.result].join(' '));
     if (/\b(win|won|loss|lost|push|void|settled|graded|closed|archived|pass)\b/.test(s)) return false;
-    return Boolean(row.pick || row.game || row.legs);
+    return Boolean(row.pick || row.game || row.legs || row.cardTitle);
   }
 
   function card(row, label) {
@@ -139,11 +139,29 @@
     </article>`;
   }
 
+  function propsSummary(rows) {
+    const visible = rows.filter(activeVisible);
+    const grades = visible.map(row => row.grade).filter(Boolean).join(' / ') || '--';
+    const sports = Array.from(new Set(visible.map(row => row.sport || row.league).filter(Boolean))).join(' / ') || '--';
+    return `<div class="card glass">
+      <div class="pill"><i data-lucide="zap"></i>Props Lab</div>
+      <h3 class="pick-title mt-4">${esc(visible.length)} active prop${visible.length === 1 ? '' : 's'} loaded</h3>
+      <p class="mt-3 text-[#cbbf9d] leading-7">The actual prop cards are listed once below under Today’s Active Props.</p>
+      <div class="grid grid-cols-2 gap-2 mt-4"><div class="stat"><b class="!text-lg">${esc(grades)}</b><span>Grades</span></div><div class="stat"><b class="!text-lg">${esc(sports)}</b><span>Sports</span></div></div>
+    </div>`;
+  }
+
   function renderCardsInto(id, rows, label, empty) {
     const el = document.getElementById(id);
     if (!el) return;
     const usable = rows.filter(activeVisible).slice(0, 12);
     el.innerHTML = usable.length ? usable.map(row => card(row, label)).join('') : `<div class="empty-picks glass"><h3 class="pick-title">${esc(empty || 'No picks released yet.')}</h3><p class="mt-3 text-[#cbbf9d]">No picks released yet.</p></div>`;
+  }
+
+  function renderPropsSummaryInto(id, rows) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.innerHTML = propsSummary(rows);
   }
 
   async function hydrateOddsFeed() {
@@ -179,11 +197,12 @@
       const props = Array.isArray(data.props) ? data.props : [];
       const lotto = Array.isArray(data.lottoParlays) ? data.lottoParlays : [];
       const longshots = Array.isArray(data.longshots) ? data.longshots : [];
-      renderCardsInto('propsCards', props, 'Props Lab', 'No Props Lab picks released yet.');
+      renderPropsSummaryInto('propsCards', props);
       renderCardsInto('activePropsCards', props, 'Props Lab', 'No active props released yet.');
       renderCardsInto('longshotsCards', [...lotto, ...longshots], 'Lotto / Longshots', 'No lotto parlays or longshots released yet.');
       setTimeout(guardPropsPage, 50);
       if (window.lucide && window.lucide.createIcons) window.lucide.createIcons();
+      console.log('Micks production props rendered once:', props.length);
     } catch (error) {
       console.warn('Micks Picks live section repair failed:', error);
     }
