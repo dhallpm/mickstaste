@@ -13,12 +13,12 @@
   overflow: hidden;
   background-color: #03060c;
   background-image:
-    linear-gradient(135deg, rgba(2, 4, 10, .48), rgba(2, 4, 10, .32), rgba(0, 0, 0, .62)),
+    linear-gradient(135deg, rgba(2, 4, 10, .25), rgba(2, 4, 10, .12), rgba(0, 0, 0, .34)),
     var(--tab-photo) !important;
   background-size: cover !important;
   background-position: center !important;
   background-attachment: fixed;
-  box-shadow: inset 0 0 0 100vmax rgba(0, 0, 0, .08);
+  box-shadow: inset 0 0 0 100vmax rgba(0, 0, 0, .025);
 }
 
 .tab-page::before,
@@ -30,7 +30,7 @@
 
 .tab-page::before {
   content: var(--room-label);
-  opacity: .38 !important;
+  opacity: .24 !important;
   right: clamp(-.15rem, 2vw, 1.5rem);
   bottom: clamp(.5rem, 3vw, 2.5rem);
   color: rgba(255, 255, 255, .045);
@@ -45,12 +45,11 @@
 .tab-page::after {
   content: "";
   inset: 0;
-  opacity: .18 !important;
+  opacity: .72 !important;
   background:
-    radial-gradient(circle at 15% 10%, rgba(247, 201, 72, .22), transparent 28%),
-    radial-gradient(circle at 85% 20%, rgba(53, 167, 255, .18), transparent 30%),
-    linear-gradient(115deg, rgba(255, 255, 255, .035), transparent 28%, transparent 72%, rgba(255, 255, 255, .025)),
-    linear-gradient(180deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .76));
+    var(--room-glow),
+    linear-gradient(115deg, rgba(255, 255, 255, .045), transparent 26%, transparent 74%, rgba(255, 255, 255, .025)),
+    linear-gradient(180deg, rgba(0, 0, 0, .06), rgba(0, 0, 0, .3));
 }
 
 .tab-page > * {
@@ -72,7 +71,7 @@
 
 #vip {
   --room-label: "Premium Vault";
-  --room-glow: radial-gradient(circle at 72% 15%, rgba(247, 201, 72, .3), transparent 36%), radial-gradient(circle at 12% 80%, rgba(126, 76, 21, .25), transparent 34%);
+  --room-glow: radial-gradient(circle at 72% 15%, rgba(255, 211, 92, .48), transparent 38%), radial-gradient(circle at 14% 82%, rgba(186, 109, 30, .38), transparent 38%);
   --tab-photo: url("/assets/backgrounds/vip-vault-lounge.jpg");
 }
 
@@ -90,19 +89,19 @@
 
 #props {
   --room-label: "Props Lab";
-  --room-glow: radial-gradient(circle at 15% 18%, rgba(53, 167, 255, .23), transparent 34%), radial-gradient(circle at 82% 78%, rgba(45, 230, 212, .16), transparent 30%);
+  --room-glow: radial-gradient(circle at 15% 18%, rgba(53, 167, 255, .4), transparent 36%), radial-gradient(circle at 82% 78%, rgba(45, 230, 212, .32), transparent 34%);
   --tab-photo: url("/assets/backgrounds/props-analytics.jpg");
 }
 
 #longshots {
   --room-label: "Parlay Room";
-  --room-glow: radial-gradient(circle at 76% 15%, rgba(255, 116, 56, .24), transparent 34%), radial-gradient(circle at 15% 75%, rgba(247, 201, 72, .2), transparent 36%);
+  --room-glow: radial-gradient(circle at 76% 15%, rgba(220, 50, 45, .42), transparent 38%), radial-gradient(circle at 15% 75%, rgba(247, 201, 72, .38), transparent 38%);
   --tab-photo: url("/assets/backgrounds/longshots-parlay.jpg");
 }
 
 #results {
   --room-label: "Trophy Ledger";
-  --room-glow: radial-gradient(circle at 50% 10%, rgba(247, 201, 72, .22), transparent 36%), radial-gradient(circle at 85% 80%, rgba(57, 233, 145, .15), transparent 30%);
+  --room-glow: radial-gradient(circle at 50% 10%, rgba(247, 201, 72, .42), transparent 38%), radial-gradient(circle at 85% 80%, rgba(57, 233, 145, .3), transparent 34%);
   --tab-photo: url("/assets/backgrounds/results-trophy.jpg");
 }
 
@@ -122,8 +121,36 @@
 .tab-page .card,
 .tab-page .odds-board,
 .tab-page .stat {
-  background: linear-gradient(145deg, rgba(9, 18, 31, .78), rgba(6, 10, 18, .62)) !important;
+  background: linear-gradient(145deg, rgba(9, 18, 31, .74), rgba(6, 10, 18, .56)) !important;
   backdrop-filter: blur(14px) saturate(125%) !important;
+}
+
+#vip .glass,
+#vip .card,
+#vip .stat {
+  border-color: rgba(247, 201, 72, .24);
+  box-shadow: 0 22px 62px rgba(86, 45, 5, .26);
+}
+
+#longshots .glass,
+#longshots .card,
+#longshots .stat {
+  border-color: rgba(247, 201, 72, .2);
+  box-shadow: 0 22px 62px rgba(145, 31, 23, .2);
+}
+
+#props .glass,
+#props .card,
+#props .stat {
+  border-color: rgba(45, 230, 212, .18);
+  box-shadow: 0 22px 62px rgba(17, 105, 137, .2);
+}
+
+#results .glass,
+#results .card,
+#results .stat {
+  border-color: rgba(247, 201, 72, .2);
+  box-shadow: 0 22px 62px rgba(24, 110, 72, .18);
 }
 
 .tab-page .odds-board {
@@ -152,17 +179,17 @@ table {
   .tab-page {
     background-attachment: scroll;
     background-image:
-      linear-gradient(135deg, rgba(2, 4, 10, .52), rgba(2, 4, 10, .38), rgba(0, 0, 0, .68)),
+      linear-gradient(135deg, rgba(2, 4, 10, .3), rgba(2, 4, 10, .18), rgba(0, 0, 0, .42)),
       var(--tab-photo) !important;
   }
 
   .tab-page::before {
-    opacity: .3 !important;
+    opacity: .2 !important;
     bottom: 1.2rem;
     font-size: clamp(2.7rem, 15vw, 5.2rem);
   }
 
   .tab-page::after {
-    opacity: .12 !important;
+    opacity: .62 !important;
   }
 }
