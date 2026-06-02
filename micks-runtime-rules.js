@@ -143,10 +143,17 @@
     return `+${profit.toFixed(2)}u`;
   }
 
+  function hasPositiveUnits(row) {
+    const units = parseNumber(getValue(row, 'units'));
+    return Number.isFinite(units) && units > 0;
+  }
+
   function cleanDisplayProfitLoss(row) {
+    const calculated = calculateProfitLossUnits(row);
+    if (calculated) return calculated;
     const existing = getValue(row, 'pl');
     if (/^[-+]?\d+(\.\d+)?u$/i.test(existing)) return existing.replace(/^([^+-])/, '+$1');
-    return calculateProfitLossUnits(row) || '';
+    return '';
   }
 
   function normalizeForDisplay(row) {
@@ -169,7 +176,7 @@
   function renderLedgerRows(id, rows, empty) {
     const el = document.getElementById(id);
     if (!el) return;
-    const normalized = (rows || []).map(normalizeForDisplay).sort((a, b) => String(dateKey(getValue(b, 'date') || getValue(b, 'timestamp'))).localeCompare(String(dateKey(getValue(a, 'date') || getValue(a, 'timestamp')))));
+    const normalized = (rows || []).filter(hasPositiveUnits).map(normalizeForDisplay).sort((a, b) => String(dateKey(getValue(b, 'date') || getValue(b, 'timestamp'))).localeCompare(String(dateKey(getValue(a, 'date') || getValue(a, 'timestamp')))));
     const cells = [
       r => displayDate(getValue(r, 'date') || getValue(r, 'timestamp')),
       r => esc(getValue(r, 'league') || getValue(r, 'category') || r.__source || '--'),
@@ -187,7 +194,7 @@
   function renderLongshotsRows(rows) {
     const el = document.getElementById('longshotsRows');
     if (!el) return;
-    const normalized = (rows || []).map(normalizeForDisplay).sort((a, b) => String(dateKey(getValue(b, 'date') || getValue(b, 'timestamp'))).localeCompare(String(dateKey(getValue(a, 'date') || getValue(a, 'timestamp')))));
+    const normalized = (rows || []).filter(hasPositiveUnits).map(normalizeForDisplay).sort((a, b) => String(dateKey(getValue(b, 'date') || getValue(b, 'timestamp'))).localeCompare(String(dateKey(getValue(a, 'date') || getValue(a, 'timestamp')))));
     el.innerHTML = tableRows(normalized.slice(0, 120), [
       r => displayDate(getValue(r, 'date') || getValue(r, 'timestamp')),
       r => esc(getValue(r, 'category') || 'Longshots'),
@@ -202,7 +209,7 @@
 
   function writeStats(prefix, rows) {
     if (typeof window.calcStats === 'function' && typeof window.writeStats === 'function') {
-      window.writeStats(prefix, window.calcStats((rows || []).map(normalizeForDisplay), []));
+      window.writeStats(prefix, window.calcStats((rows || []).filter(hasPositiveUnits).map(normalizeForDisplay), []));
     }
   }
 
@@ -221,7 +228,7 @@
     window.renderLedger = function (id, rows, empty) {
       let nextRows = rows || [];
       if (id === 'propsResultsRows') nextRows = nextRows.filter(isTruePlayerProp);
-      nextRows = nextRows.map(normalizeForDisplay);
+      nextRows = nextRows.filter(hasPositiveUnits).map(normalizeForDisplay);
       return originalRenderLedger(id, nextRows, empty);
     };
   }
@@ -229,7 +236,7 @@
   if (typeof window.calcStats === 'function') {
     const originalCalcStats = window.calcStats;
     window.calcStats = function (rows, activeRows) {
-      return originalCalcStats((rows || []).map(normalizeForDisplay), activeRows || []);
+      return originalCalcStats((rows || []).filter(hasPositiveUnits).map(normalizeForDisplay), activeRows || []);
     };
   }
 
@@ -268,7 +275,4 @@
     setTimeout(hydrateResultsFromAirtable, 900);
   });
 
-  if (typeof window.boot === 'function') {
-    window.setTimeout(() => window.boot(), 0);
-  }
 })();

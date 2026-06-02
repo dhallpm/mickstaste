@@ -21,5 +21,8 @@ assert.doesNotMatch(html, /<th>Settled<\/th>/)
 assert.match(runtimeRules, /function renderLongshotsRows\(rows\)/)
 assert.match(runtimeRules, /getValue\(r, 'grade'\) \|\| '--'/)
 assert.match(runtimeRules, /getValue\(r, 'notes'\) \|\| 'No additional notes recorded\.'/)
+assert.match(runtimeRules, /const calculated = calculateProfitLossUnits\(row\);\s+if \(calculated\) return calculated;/)
+assert.match(runtimeRules, /\.filter\(hasPositiveUnits\)\.map\(normalizeForDisplay\)/)
+assert.doesNotMatch(runtimeRules, /window\.setTimeout\(\(\) => window\.boot\(\), 0\)/)
 
 console.log('Airtable results frontend wiring regression test passed.')
