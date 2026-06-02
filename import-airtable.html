@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Micks Picks Airtable Import Helper</title>
+  <style>
+    body { font-family: Arial, sans-serif; background:#0c111d; color:#f8f0d8; margin:0; padding:24px; }
+    .wrap { max-width: 980px; margin: 0 auto; }
+    h1 { margin: 0 0 8px; }
+    p { color:#cbbf9d; line-height:1.5; }
+    textarea { width:100%; min-height:360px; background:#111827; color:#fff; border:1px solid #31405c; border-radius:14px; padding:14px; font-family: Consolas, monospace; font-size:14px; box-sizing:border-box; }
+    button { background:#f2c14e; color:#111; border:0; border-radius:999px; padding:13px 20px; font-weight:800; cursor:pointer; margin-top:14px; margin-right:10px; }
+    button:disabled { opacity:.55; cursor:not-allowed; }
+    pre { white-space:pre-wrap; background:#111827; border:1px solid #31405c; border-radius:14px; padding:14px; color:#d7f9e9; overflow:auto; }
+    .warn { background:#231b0a; border:1px solid #66521e; padding:12px 14px; border-radius:14px; color:#ffe391; }
+    .row { display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+    a { color:#ffe391; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Micks Picks Airtable Import Helper</h1>
+    <p class="warn">Paste the JSON payload from ChatGPT below and click Import. This skips CSV import and strips Result, Outcome, and Profit/Loss automatically.</p>
+    <textarea id="payload" placeholder='Paste JSON here, for example { "batches": [...] }'></textarea>
+    <div class="row">
+      <button id="importBtn">Import to Airtable</button>
+      <button id="checkBtn" type="button">Check Today's Picks</button>
+    </div>
+    <p id="status">Ready.</p>
+    <pre id="output"></pre>
+  </div>
+  <script>
+    const output = document.getElementById('output');
+    const status = document.getElementById('status');
+    const importBtn = document.getElementById('importBtn');
+    const checkBtn = document.getElementById('checkBtn');
+    const payloadBox = document.getElementById('payload');
+
+    function show(value) {
+      output.textContent = typeof value === 'string' ? value : JSON.stringify(value, null, 2);
+    }
+
+    importBtn.addEventListener('click', async () => {
+      try {
+        importBtn.disabled = true;
+        status.textContent = 'Importing to Airtable...';
+        const raw = payloadBox.value.trim();
+        if (!raw) throw new Error('Paste the JSON payload first.');
+        const parsed = JSON.parse(raw);
+        const response = await fetch('/api/import-airtable-records', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(parsed)
+        });
+        const data = await response.json().catch(() => ({}));
+        status.textContent = response.ok ? 'Import finished.' : 'Import failed.';
+        show(data);
+      } catch (error) {
+        status.textContent = 'Import failed.';
+        show(error.message || String(error));
+      } finally {
+        importBtn.disabled = false;
+      }
+    });
+
+    checkBtn.addEventListener('click', async () => {
+      try {
+        checkBtn.disabled = true;
+        status.textContent = 'Checking today\'s picks...';
+        const response = await fetch('/api/todays-picks?cache=' + Date.now(), { cache: 'no-store' });
+        const data = await response.json().catch(() => ({}));
+        status.textContent = response.ok ? 'Check finished.' : 'Check failed.';
+        show(data);
+      } catch (error) {
+        status.textContent = 'Check failed.';
+        show(error.message || String(error));
+      } finally {
+        checkBtn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
