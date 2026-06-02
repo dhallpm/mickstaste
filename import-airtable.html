@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Micks Picks Airtable Import Helper</title>
+  <style>
+    :root {
+      --bg: #050914;
+      --panel: rgba(10, 18, 32, .88);
+      --gold: #f2c14e;
+      --gold2: #ffe391;
+      --text: #f8f0d8;
+      --muted: #cbbf9d;
+      --line: #31405c;
+      --green: #39e991;
+      --red: #ff6b6b;
+      --blue: #35a7ff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background:
+        linear-gradient(135deg, rgba(2,4,10,.72), rgba(2,4,10,.50), rgba(0,0,0,.78)),
+        radial-gradient(circle at 16% 10%, rgba(242,193,78,.22), transparent 32%),
+        radial-gradient(circle at 86% 12%, rgba(53,167,255,.18), transparent 34%),
+        var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 24px;
+      min-height: 100vh;
+    }
+    .wrap { max-width: 1080px; margin: 0 auto; }
+    .top { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 18px; }
+    h1 { margin: 0 0 8px; letter-spacing: -.02em; }
+    p { color: var(--muted); line-height: 1.5; }
+    .panel, textarea, pre {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      box-shadow: 0 24px 70px rgba(0,0,0,.48), inset 0 1px 0 rgba(255,255,255,.08);
+    }
+    .panel { padding: 14px 16px; margin-bottom: 14px; }
+    textarea {
+      width: 100%;
+      min-height: 380px;
+      color: #fff;
+      padding: 14px;
+      font-family: Consolas, monospace;
+      font-size: 14px;
+      outline: none;
+    }
+    button, a.btn {
+      background: var(--gold);
+      color: #111;
+      border: 0;
+      border-radius: 999px;
+      padding: 13px 18px;
+      font-weight: 800;
+      cursor: pointer;
+      margin: 8px 8px 8px 0;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    button.secondary, a.btn.secondary { background: #25324a; color: var(--text); border: 1px solid #536583; }
+    button.danger { background: #41202a; color: #ffd8df; border: 1px solid #7d3c4d; }
+    button:disabled { opacity: .55; cursor: not-allowed; }
+    pre { white-space: pre-wrap; padding: 14px; color: #d7f9e9; overflow: auto; min-height: 110px; }
+    .warn { background: rgba(35,27,10,.92); border: 1px solid #66521e; color: var(--gold2); }
+    .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+    .pill { display: inline-block; border: 1px solid var(--line); border-radius: 999px; padding: 6px 10px; color: var(--gold2); background: rgba(255,255,255,.04); margin: 3px 5px 3px 0; }
+    .ok { color: var(--green); }
+    .bad { color: var(--red); }
+    .small { font-size: 13px; }
+    input[type="file"] { color: var(--muted); margin: 10px 0; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <h1>Micks Picks Airtable Import Helper</h1>
+        <p>Paste JSON from ChatGPT or upload a JSON file. This sends records to the production Airtable importer and avoids CSV parser issues.</p>
+      </div>
+      <div class="row">
+        <a class="btn secondary" href="/">Back to Site</a>
+        <a class="btn secondary" href="/api/todays-picks" target="_blank" rel="noreferrer">Open Feed</a>
+      </div>
+    </div>
+
+    <div class="panel warn">
+      <b>Use JSON, not CSV and not PowerShell.</b><br />
+      JSON should start with either <span class="pill">{ "table": "picks", "records": [...] }</span> or <span class="pill">{ "batches": [...] }</span>.
+      The backend strips blocked fields like Result and Profit/Loss when configured to do so.
+    </div>
+
+    <div class="panel">
+      <div class="row">
+        <input id="fileInput" type="file" accept=".json,application/json" />
+        <button id="clearBtn" class="secondary" type="button">Clear Box</button>
+        <button id="exampleBtn" class="secondary" type="button">Load Example</button>
+      </div>
+      <p class="small">Tip: open the JSON file ChatGPT gave you, copy all text, paste below, then click Import.</p>
+    </div>
+
+    <textarea id="payload" placeholder='Paste JSON here. Example: { "table": "propsLab", "records": [...] }'></textarea>
+
+    <div class="row">
+      <button id="validateBtn" class="secondary" type="button">Validate JSON</button>
+      <button id="importBtn" type="button">Import to Airtable</button>
+      <button id="checkBtn" class="secondary" type="button">Check Today's Picks</button>
+      <button id="apiBtn" class="secondary" type="button">Check Import API</button>
+    </div>
+
+    <p id="status">Ready.</p>
+    <pre id="output"></pre>
+  </div>
+
+  <script>
+    const output = document.getElementById('output');
+    const statusEl = document.getElementById('status');
+    const importBtn = document.getElementById('importBtn');
+    const checkBtn = document.getElementById('checkBtn');
+    const apiBtn = document.getElementById('apiBtn');
+    const validateBtn = document.getElementById('validateBtn');
+    const clearBtn = document.getElementById('clearBtn');
+    const exampleBtn = document.getElementById('exampleBtn');
+    const payloadBox = document.getElementById('payload');
+    const fileInput = document.getElementById('fileInput');
+
+    function show(value) {
+      output.textContent = typeof value === 'string' ? value : JSON.stringify(value, null, 2);
+    }
+
+    function status(text, ok) {
+      statusEl.innerHTML = `<span class="${ok === false ? 'bad' : ok === true ? 'ok' : ''}">${text}</span>`;
+    }
+
+    function parsePayload() {
+      const raw = payloadBox.value.trim();
+      if (!raw) throw new Error('Paste or upload the JSON payload first.');
+      if (raw.startsWith('#')) throw new Error('This looks like a PowerShell script, not JSON. Paste the JSON file contents instead.');
+      if (raw.includes('Date,Sport,League')) throw new Error('This looks like CSV, not JSON. Use the JSON safe-import file.');
+      const parsed = JSON.parse(raw);
+      const batches = Array.isArray(parsed.batches) ? parsed.batches : [{ table: parsed.table, records: parsed.records }];
+      const count = batches.reduce((sum, batch) => sum + (Array.isArray(batch.records) ? batch.records.length : 0), 0);
+      if (!count) throw new Error('JSON parsed, but no records were found. Expected records array.');
+      return { parsed, batches, count };
+    }
+
+    validateBtn.addEventListener('click', () => {
+      try {
+        const result = parsePayload();
+        status(`Valid JSON. Found ${result.count} record(s).`, true);
+        show({ valid: true, batches: result.batches.map(batch => ({ table: batch.table, records: Array.isArray(batch.records) ? batch.records.length : 0 })) });
+      } catch (error) {
+        status('Validation failed.', false);
+        show(error.message || String(error));
+      }
+    });
+
+    importBtn.addEventListener('click', async () => {
+      try {
+        importBtn.disabled = true;
+        const result = parsePayload();
+        status(`Importing ${result.count} record(s) to Airtable...`);
+        const response = await fetch('/api/import-airtable-records', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(result.parsed)
+        });
+        const data = await response.json().catch(() => ({}));
+        status(response.ok ? 'Import finished.' : 'Import failed.', response.ok);
+        show(data);
+      } catch (error) {
+        status('Import failed.', false);
+        show(error.message || String(error));
+      } finally {
+        importBtn.disabled = false;
+      }
+    });
+
+    checkBtn.addEventListener('click', async () => {
+      try {
+        checkBtn.disabled = true;
+        status('Checking today\'s picks...');
+        const response = await fetch('/api/todays-picks?cache=' + Date.now(), { cache: 'no-store' });
+        const data = await response.json().catch(() => ({}));
+        status(response.ok ? 'Check finished.' : 'Check failed.', response.ok);
+        show(data);
+      } catch (error) {
+        status('Check failed.', false);
+        show(error.message || String(error));
+      } finally {
+        checkBtn.disabled = false;
+      }
+    });
+
+    apiBtn.addEventListener('click', async () => {
+      try {
+        apiBtn.disabled = true;
+        status('Checking importer API...');
+        const response = await fetch('/api/import-airtable-records?cache=' + Date.now(), { cache: 'no-store' });
+        const data = await response.json().catch(async () => ({ text: await response.text().catch(() => '') }));
+        status(response.ok ? 'Import API is reachable.' : 'Import API check failed.', response.ok);
+        show(data);
+      } catch (error) {
+        status('Import API check failed.', false);
+        show(error.message || String(error));
+      } finally {
+        apiBtn.disabled = false;
+      }
+    });
+
+    clearBtn.addEventListener('click', () => {
+      payloadBox.value = '';
+      status('Cleared.');
+      show('');
+    });
+
+    exampleBtn.addEventListener('click', () => {
+      payloadBox.value = JSON.stringify({
+        table: 'propsLab',
+        records: [
+          {
+            Date: '2026-06-02',
+            Player: 'Example Player',
+            Prop: 'Over 5.5 Example',
+            Sport: 'MLB',
+            League: 'MLB Props',
+            Game: 'Example Game',
+            Grade: 'C',
+            Units: 0.05,
+            Status: 'Watchlist',
+            Odds: '-110 or better',
+            Sportsbook: 'BetRivers DE / best available'
+          }
+        ]
+      }, null, 2);
+      status('Example loaded. Replace with real payload before importing.');
+      show({ example: true });
+    });
+
+    fileInput.addEventListener('change', async () => {
+      const file = fileInput.files && fileInput.files[0];
+      if (!file) return;
+      try {
+        const text = await file.text();
+        payloadBox.value = text;
+        const result = parsePayload();
+        status(`Loaded ${file.name}. Found ${result.count} record(s).`, true);
+        show({ loaded: file.name, records: result.count });
+      } catch (error) {
+        status('File load failed.', false);
+        show(error.message || String(error));
+      }
+    });
+  </script>
+</body>
+</html>
