@@ -1,15 +1,7 @@
 // Micks Picks production live display repair
-// Renders Airtable props/lotto/longshots and repairs Results tab grade + P/L display.
+// Active picks render from Airtable. Results ledger is reset and future P/L is calculated.
 (function () {
   const TZ = 'America/New_York';
-  const SHEET_ID = '15txBM8qsck7f0ZA_za7xYEykBxKpuq0no3x7yHcKNeE';
-  const GIDS = {
-    results: '1579113575',
-    vipArchive: '210503117',
-    propsResults: '695299787',
-    lottoProps: '39840357',
-    longshotsHistory: '43571320'
-  };
 
   function clean(value) { return String(value ?? '').trim(); }
   function lower(value) { return clean(value).toLowerCase(); }
@@ -22,9 +14,6 @@
   function num(value) {
     const match = clean(value).replace(/,/g, '').match(/[-+]?\d*\.?\d+/);
     return match ? Number(match[0]) : 0;
-  }
-  function todayKey() {
-    return new Date().toLocaleDateString('en-CA', { timeZone: TZ });
   }
   function dateKey(value) {
     const raw = clean(value);
@@ -45,7 +34,7 @@
   function displayDate(value) {
     const key = dateKey(value);
     const m = key.match(/^(\d{4})-(\d{2})-(\d{2})$/);
-    return m ? `${m[2]}/${m[3]}/${m[1]}` : (clean(value) || '--');
+    return m ? `${m[1]}-${m[2]}-${m[3]}` : (clean(value) || '--');
   }
   function get(row, names) {
     for (const name of names) {
@@ -76,7 +65,8 @@
     closing: ['closing', 'Closing Number', 'Closing #', 'Closing Line', 'Timestamp', 'Settled At'],
     writeup: ['writeup', 'Writeup', 'Public Writeup', 'Summary', 'description', 'analysisPreview'],
     notes: ['notes', 'Notes', 'Result Notes', 'Settlement Notes', 'Losing Leg', 'Leg Results'],
-    legs: ['legs', 'Legs']
+    legs: ['legs', 'Legs'],
+    access: ['access', 'Access', 'Tier']
   };
   function val(row, key) { return get(row, A[key] || [key]); }
 
@@ -86,14 +76,13 @@
     return first(val(row, 'cardTitle'), val(row, 'pick'), player && prop ? `${player} ${prop}` : '', player, prop, val(row, 'game'), val(row, 'legs')) || 'Active card';
   }
   function gradeOf(row) {
-    const grade = first(val(row, 'grade'), row.grade, row.Grade, row['Card Grade']);
-    return grade || 'Pending Grade';
+    return first(val(row, 'grade'), row.grade, row.Grade, row['Card Grade'], 'Pending Grade');
   }
   function resultOf(row) {
     const s = lower(`${val(row, 'result')} ${val(row, 'status')}`);
     if (/\b(win|won)\b/.test(s)) return 'Win';
     if (/\b(loss|lost)\b/.test(s)) return 'Loss';
-    if (/\bpush\b/.test(s)) return 'Push';
+    if (/\b(push)\b/.test(s)) return 'Push';
     if (/\b(void|cancel|canceled|cancelled)\b/.test(s)) return 'Void';
     return first(val(row, 'result'), val(row, 'status'), 'Pending');
   }
@@ -114,20 +103,26 @@
     if (Math.abs(n) < 0.005) return '0.00u';
     return `${n > 0 ? '+' : ''}${n.toFixed(2)}u`;
   }
-  function profitUnits(row) {
-    const direct = first(val(row, 'pl'), row.profitLoss, row['Profit/Loss'], row['P/L']);
-    if (direct && !/undefined|null|nan|\[object object\]/i.test(direct)) {
-      const n = num(direct);
-      if (Number.isFinite(n)) return n;
-    }
+  function calculatedProfitUnits(row) {
     const result = resultOf(row);
-    const stake = num(val(row, 'units'));
+    const stake = Math.abs(num(val(row, 'units')));
     const odds = americanOdds(val(row, 'odds'));
     if (!['Win', 'Loss', 'Push', 'Void'].includes(result)) return null;
     if (result === 'Push' || result === 'Void') return 0;
-    if (result === 'Loss') return stake ? -Math.abs(stake) : null;
-    if (!stake || odds === null) return null;
-    return odds > 0 ? stake * odds / 100 : stake * 100 / Math.abs(odds);
+    if (result === 'Loss') return stake ? -stake : null;
+    if (result === 'Win' && stake && odds !== null) return odds > 0 ? stake * odds / 100 : stake * 100 / Math.abs(odds);
+    return null;
+  }
+  function profitUnits(row) {
+    // Future rule: calculate from Result + Units + Odds first. Do not trust old 0.00 P/L on wins.
+    const calculated = calculatedProfitUnits(row);
+    if (calculated !== null) return calculated;
+    const direct = first(val(row, 'pl'), row.profitLoss, row['Profit/Loss'], row['P/L']);
+    if (direct && !/undefined|null|nan|\[object object\]/i.test(direct)) {
+      const parsed = num(direct);
+      return Number.isFinite(parsed) ? parsed : null;
+    }
+    return null;
   }
   function profitDisplay(row) {
     const value = profitUnits(row);
@@ -139,7 +134,7 @@
     return `<span class="${cls}">${esc(result)}</span>`;
   }
   function tableRows(rows, cells, empty) {
-    if (!rows.length) return `<tr><td colspan="${cells.length}">${esc(empty)}</td></tr>`;
+    if (!rows.length) return `<tr><td colspan="${cells.length}">${empty}</td></tr>`;
     return rows.slice(0, 90).map(row => `<tr>${cells.map(fn => `<td>${fn(row)}</td>`).join('')}</tr>`).join('');
   }
   function setText(id, value) {
@@ -153,22 +148,7 @@
     const pushes = graded.filter(row => resultOf(row) === 'Push' || resultOf(row) === 'Void').length;
     const decisions = wins + losses;
     const units = graded.reduce((sum, row) => sum + (profitUnits(row) ?? 0), 0);
-    const ordered = [...graded].sort((a, b) => String(dateKey(val(b, 'date'))).localeCompare(String(dateKey(val(a, 'date')))));
-    let streakType = '', streak = 0;
-    for (const row of ordered) {
-      const result = resultOf(row);
-      if (result !== 'Win' && result !== 'Loss') continue;
-      if (!streakType) streakType = result;
-      if (result !== streakType) break;
-      streak += 1;
-    }
-    return {
-      wins, losses, pushes,
-      winRate: decisions ? `${Math.round(wins / decisions * 100)}%` : '--',
-      units,
-      active: activeRows.filter(isActive).length,
-      streak: streak ? `${streak}${streakType[0]}` : '--'
-    };
+    return { wins, losses, pushes, winRate: decisions ? `${Math.round(wins / decisions * 100)}%` : '--', units, active: activeRows.filter(isActive).length, streak: '--' };
   }
   function writeStats(prefix, s) {
     setText(`${prefix}Record`, `${s.wins}-${s.losses}${s.pushes ? `-${s.pushes}` : ''}`);
@@ -214,60 +194,38 @@
     setText('homeActive', `${active.length} picks`);
   }
 
-  function parseCsv(text) {
-    const rows = [];
-    let row = [], cell = '', q = false;
-    for (let i = 0; i < text.length; i++) {
-      const c = text[i], n = text[i + 1];
-      if (c === '"' && q && n === '"') { cell += '"'; i++; continue; }
-      if (c === '"') { q = !q; continue; }
-      if (c === ',' && !q) { row.push(cell); cell = ''; continue; }
-      if ((c === '\n' || c === '\r') && !q) { if (c === '\r' && n === '\n') i++; row.push(cell); rows.push(row); row = []; cell = ''; continue; }
-      cell += c;
-    }
-    row.push(cell); rows.push(row);
-    const headers = (rows.shift() || []).map(clean);
-    return rows.map(values => Object.fromEntries(headers.map((h, i) => [h, clean(values[i])]))).filter(row => Object.values(row).some(Boolean));
+  function purgeResultsDisplay() {
+    const resetMsg = '<span class="status-pending">Results ledger reset. Future settled picks will calculate P/L from Result + Units + Odds.</span>';
+    const tableMsg7 = `<tr><td colspan="7">${resetMsg}</td></tr>`;
+    const tableMsg8 = `<tr><td colspan="8">${resetMsg}</td></tr>`;
+    const ids7 = ['resultsRows'];
+    const ids8 = ['freeResultsRows', 'vipResultsRows', 'propsResultsRows', 'longshotsRows'];
+    ids7.forEach(id => { const el = document.getElementById(id); if (el) el.innerHTML = tableMsg7; });
+    ids8.forEach(id => { const el = document.getElementById(id); if (el) el.innerHTML = tableMsg8; });
+    ['overall', 'free', 'vip', 'props', 'longshots'].forEach(prefix => writeStats(prefix, { wins: 0, losses: 0, pushes: 0, winRate: '--', units: 0, streak: '--' }));
   }
-  async function fetchSheet(gid, source) {
-    try {
-      const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${gid}&t=${Date.now()}`;
-      const res = await fetch(url, { cache: 'no-store' });
-      if (!res.ok) throw new Error(`${source} ${res.status}`);
-      return parseCsv(await res.text()).map(row => ({ ...row, __source: source }));
-    } catch (error) {
-      console.warn('Micks sheet results fallback failed:', source, error);
-      return [];
-    }
-  }
-  async function loadResultsRows() {
+
+  async function loadFutureResultsRows() {
+    // Hard purge rule: do not use the old Google Sheets results archives anymore.
+    // Only future /api/results rows are allowed to repopulate this section.
     try {
       const res = await fetch('/api/results?days=180&cache=' + Date.now(), { cache: 'no-store' });
       const data = res.ok ? await res.json() : null;
       const rows = data && Array.isArray(data.rows) ? data.rows : [];
-      const hasApiRows = rows.length || ['free', 'vip', 'props', 'lotto', 'longshots'].some(key => Array.isArray(data?.[key]) && data[key].length);
-      if (hasApiRows) {
-        return {
-          free: data.free || [],
-          vip: data.vip || [],
-          props: data.props || [],
-          lotto: data.lotto || [],
-          longshots: data.longshots || [],
-          rows: rows.length ? rows : [...(data.free || []), ...(data.vip || []), ...(data.props || []), ...(data.lotto || []), ...(data.longshots || [])]
-        };
-      }
+      const grouped = {
+        free: Array.isArray(data?.free) ? data.free : [],
+        vip: Array.isArray(data?.vip) ? data.vip : [],
+        props: Array.isArray(data?.props) ? data.props : [],
+        lotto: Array.isArray(data?.lotto) ? data.lotto : [],
+        longshots: Array.isArray(data?.longshots) ? data.longshots : [],
+        rows
+      };
+      const total = grouped.rows.length + grouped.free.length + grouped.vip.length + grouped.props.length + grouped.lotto.length + grouped.longshots.length;
+      return total ? grouped : { free: [], vip: [], props: [], lotto: [], longshots: [], rows: [] };
     } catch (error) {
-      console.warn('Micks /api/results repair fetch failed:', error);
+      console.warn('Micks future results fetch failed:', error);
+      return { free: [], vip: [], props: [], lotto: [], longshots: [], rows: [] };
     }
-
-    const [free, vip, props, lotto, longshots] = await Promise.all([
-      fetchSheet(GIDS.results, 'Results Archive'),
-      fetchSheet(GIDS.vipArchive, 'VIP Archive'),
-      fetchSheet(GIDS.propsResults, 'Props Results'),
-      fetchSheet(GIDS.lottoProps, 'Lotto Props'),
-      fetchSheet(GIDS.longshotsHistory, 'Longshots History')
-    ]);
-    return { free, vip, props, lotto, longshots, rows: [...free, ...vip, ...props, ...lotto, ...longshots] };
   }
   function renderLedger(id, rows, empty) {
     const el = document.getElementById(id);
@@ -296,27 +254,17 @@
       row => esc(first(val(row, 'closing'), '--'))
     ], 'No result rows loaded yet.');
   }
-  function renderLongshotRows(id, rows) {
-    const el = document.getElementById(id);
-    if (!el) return;
-    el.innerHTML = tableRows(rows, [
-      row => esc(displayDate(val(row, 'date'))),
-      row => esc(first(val(row, 'risk'), val(row, 'category'), 'Longshots')),
-      row => esc(first(titleOf(row), 'Parlay')),
-      row => `<div class="max-w-[420px] whitespace-pre-wrap">${esc(first(val(row, 'legs'), val(row, 'notes'), '--'))}</div>`,
-      row => esc(gradeOf(row)),
-      row => statusCell(row),
-      row => esc(profitDisplay(row)),
-      row => esc(first(val(row, 'notes'), 'No additional notes recorded.'))
-    ], 'No Longshots History rows loaded yet.');
-  }
-  async function renderResultsRepair(activeData = null) {
-    const data = await loadResultsRows();
-    const overall = data.rows;
+  async function renderResultsSection(activeData = null) {
+    const data = await loadFutureResultsRows();
+    const overall = data.rows.length ? data.rows : [...data.free, ...data.vip, ...data.props, ...data.lotto, ...data.longshots];
+    if (!overall.length) {
+      purgeResultsDisplay();
+      return;
+    }
     renderLedger('freeResultsRows', data.free, 'No free results archive rows loaded yet.');
     renderLedger('vipResultsRows', data.vip, 'No VIP archive rows loaded yet.');
     renderLedger('propsResultsRows', data.props, 'No Props Results rows loaded yet.');
-    renderLongshotRows('longshotsRows', [...data.lotto, ...data.longshots]);
+    renderLedger('longshotsRows', [...data.lotto, ...data.longshots], 'No Longshots History rows loaded yet.');
     renderOverallResults('resultsRows', overall);
     writeStats('overall', stats(overall, []));
     writeStats('free', stats(data.free, activeData?.free || []));
@@ -350,13 +298,13 @@
       renderPropsSummary('propsCards', props);
       renderCardsInto('activePropsCards', props, 'Props Lab', 'No active props released yet.');
       renderCardsInto('longshotsCards', [...lotto, ...longshots], 'Lotto / Longshots', 'No lotto parlays or longshots released yet.');
-      await renderResultsRepair(data);
+      await renderResultsSection(data);
       hydrateOddsFeed();
       if (window.lucide?.createIcons) window.lucide.createIcons();
-      console.log('Micks production repair rendered:', { props: props.length, lotto: lotto.length, longshots: longshots.length });
+      console.log('Micks production reset rendered:', { props: props.length, lotto: lotto.length, longshots: longshots.length });
     } catch (error) {
-      console.warn('Micks production repair failed:', error);
-      await renderResultsRepair(null);
+      console.warn('Micks production reset failed:', error);
+      purgeResultsDisplay();
     }
   }
   function patchBadExistingCells() {
@@ -369,6 +317,7 @@
     });
   }
   function start() {
+    purgeResultsDisplay();
     patchBadExistingCells();
     renderLiveSections();
     setTimeout(renderLiveSections, 900);
@@ -376,6 +325,7 @@
     window.setInterval(() => { patchBadExistingCells(); renderLiveSections(); }, 30000);
   }
   window.forceRenderMicksLiveSections = renderLiveSections;
+  window.purgeMicksResultsDisplay = purgeResultsDisplay;
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
   window.addEventListener('hashchange', renderLiveSections);
   window.addEventListener('load', renderLiveSections);
