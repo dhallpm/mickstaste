@@ -1,0 +1,118 @@
+/* Sportsbook room overlay: visual treatment only. */
+:root {
+  --sportsbook-grid: repeating-linear-gradient(90deg, transparent 0 84px, rgba(255, 255, 255, .045) 85px 86px);
+  --sportsbook-lines: repeating-linear-gradient(0deg, transparent 0 46px, rgba(255, 255, 255, .035) 47px 48px);
+}
+
+.tab-page {
+  position: relative;
+  isolation: isolate;
+  min-height: calc(100vh - 138px);
+  padding-top: clamp(2rem, 4vw, 3.5rem);
+  padding-bottom: clamp(3.5rem, 7vw, 6rem);
+  overflow: hidden;
+  background-color: rgba(3, 7, 14, .96);
+  background-image: var(--room-glow), var(--sportsbook-grid), var(--sportsbook-lines), linear-gradient(145deg, #050a14, #02040a);
+  background-size: auto, auto, auto, auto;
+  background-position: center;
+}
+
+.tab-page::before,
+.tab-page::after {
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.tab-page::before {
+  content: var(--room-label);
+  right: clamp(-.15rem, 2vw, 1.5rem);
+  bottom: clamp(.5rem, 3vw, 2.5rem);
+  color: rgba(255, 255, 255, .045);
+  font-size: clamp(3.2rem, 10vw, 9rem);
+  font-weight: 1000;
+  line-height: .82;
+  letter-spacing: .075em;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.tab-page::after {
+  content: "";
+  inset: 0;
+  background:
+    linear-gradient(115deg, rgba(255, 255, 255, .035), transparent 28%, transparent 72%, rgba(255, 255, 255, .025)),
+    radial-gradient(circle at 50% 110%, rgba(0, 0, 0, .7), transparent 50%);
+}
+
+.tab-page > * {
+  position: relative;
+  z-index: 1;
+}
+
+#home {
+  --room-label: "Command Center";
+  --room-glow: radial-gradient(circle at 78% 14%, rgba(247, 201, 72, .25), transparent 33%), radial-gradient(circle at 14% 65%, rgba(53, 167, 255, .15), transparent 34%);
+}
+
+#free {
+  --room-label: "Ticket Window";
+  --room-glow: radial-gradient(circle at 15% 12%, rgba(57, 233, 145, .2), transparent 32%), radial-gradient(circle at 84% 72%, rgba(247, 201, 72, .14), transparent 30%);
+}
+
+#vip {
+  --room-label: "Premium Vault";
+  --room-glow: radial-gradient(circle at 72% 15%, rgba(247, 201, 72, .3), transparent 36%), radial-gradient(circle at 12% 80%, rgba(126, 76, 21, .25), transparent 34%);
+}
+
+#odds {
+  --room-label: "Live Odds Wall";
+  --room-glow: radial-gradient(circle at 85% 20%, rgba(45, 230, 212, .2), transparent 34%), radial-gradient(circle at 12% 70%, rgba(53, 167, 255, .2), transparent 36%);
+}
+
+#sports {
+  --room-label: "Arena Selector";
+  --room-glow: radial-gradient(ellipse at 50% 20%, rgba(57, 233, 145, .16), transparent 42%), radial-gradient(circle at 82% 74%, rgba(255, 116, 56, .17), transparent 30%);
+}
+
+#props {
+  --room-label: "Props Lab";
+  --room-glow: radial-gradient(circle at 15% 18%, rgba(53, 167, 255, .23), transparent 34%), radial-gradient(circle at 82% 78%, rgba(45, 230, 212, .16), transparent 30%);
+}
+
+#longshots {
+  --room-label: "Parlay Room";
+  --room-glow: radial-gradient(circle at 76% 15%, rgba(255, 116, 56, .24), transparent 34%), radial-gradient(circle at 15% 75%, rgba(247, 201, 72, .2), transparent 36%);
+}
+
+#results {
+  --room-label: "Trophy Ledger";
+  --room-glow: radial-gradient(circle at 50% 10%, rgba(247, 201, 72, .22), transparent 36%), radial-gradient(circle at 85% 80%, rgba(57, 233, 145, .15), transparent 30%);
+}
+
+#yahgi {
+  --room-label: "Community Intel";
+  --room-glow: radial-gradient(circle at 16% 22%, rgba(152, 95, 255, .23), transparent 34%), radial-gradient(circle at 82% 74%, rgba(53, 167, 255, .16), transparent 32%);
+}
+
+#about {
+  --room-label: "Sports Media";
+  --room-glow: radial-gradient(circle at 78% 18%, rgba(255, 116, 56, .2), transparent 34%), radial-gradient(circle at 14% 72%, rgba(247, 201, 72, .14), transparent 34%);
+}
+
+.tab-page .glass,
+.tab-page .odds-board,
+.tab-page .stat {
+  backdrop-filter: blur(18px);
+}
+
+.tab-page .odds-board {
+  box-shadow: 0 22px 60px rgba(0, 0, 0, .34);
+}
+
+@media (max-width: 640px) {
+  .tab-page::before {
+    bottom: 1.2rem;
+    font-size: clamp(2.7rem, 15vw, 5.2rem);
+  }
+}
