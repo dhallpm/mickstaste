@@ -2,6 +2,7 @@ import { runAirtableDiagnostics } from '../lib/airtableDiagnostics.js'
 import { setupAirtableBase } from '../lib/airtableSetup.js'
 import { runAirtableTokenTest } from '../lib/airtableTokenTest.js'
 import { archiveClosedBets } from '../lib/archiveClosedBets.js'
+import { clearAirtablePicks } from '../lib/clearAirtablePicks.js'
 import { findAirtablePicks } from '../lib/airtablePickLocator.js'
 import { runClosingOddsWorker } from '../lib/closingOddsWorker.js'
 import { generateMicksPicks } from '../lib/micksPicksGenerator.js'
@@ -241,6 +242,10 @@ const ACTIONS = {
   'repair-props-units': req => repairPropsUnits({
     date: param(req, 'date') || '',
     dryRun: boolParam(req, 'dryRun')
+  }),
+  'clear-airtable-picks': req => clearAirtablePicks({
+    dryRun: param(req, 'dryRun') === undefined ? true : boolParam(req, 'dryRun'),
+    confirm: param(req, 'confirm') || ''
   }),
   'find-airtable-picks': req => findAirtablePicks({
     date: param(req, 'date') || '2026-05-30'
