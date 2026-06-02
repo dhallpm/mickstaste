@@ -81,6 +81,36 @@ function cleanValue(value) {
   return value
 }
 
+function gradeValue(fields = {}) {
+  return cleanText(fields.Grade || fields['Card Grade'] || fields.grade || '').toUpperCase()
+}
+
+function isAOrBetter(fields = {}) {
+  const grade = gradeValue(fields)
+  return grade === 'A' || grade === 'A+'
+}
+
+function normalizeAccessByGrade(fields = {}, tableAlias = '') {
+  const canonical = canonicalTable(tableAlias)
+  const next = { ...fields }
+
+  if (canonical === 'propsLab') {
+    const access = cleanText(next.Access).toLowerCase()
+    if (access.includes('vip') && !isAOrBetter(next)) {
+      next.Access = 'Free'
+    }
+  }
+
+  if (canonical === 'picks') {
+    const access = cleanText(next.Access).toLowerCase()
+    if (access.includes('vip') && !isAOrBetter(next)) {
+      next.Access = 'Free'
+    }
+  }
+
+  return next
+}
+
 function cleanFields(fields = {}, tableAlias = '') {
   const canonical = canonicalTable(tableAlias)
   const allowed = TABLE_ALLOWED_FIELDS[canonical]
@@ -95,7 +125,7 @@ function cleanFields(fields = {}, tableAlias = '') {
     cleaned[key] = value
   }
 
-  return cleaned
+  return normalizeAccessByGrade(cleaned, tableAlias)
 }
 
 function extractRejectedField(payload = {}) {
@@ -210,7 +240,7 @@ export default async function handler(req, res) {
     if (req.method !== 'POST') {
       res.status(200).json({
         success: true,
-        message: 'POST JSON with { table: "propsLab", records: [...] } or { batches: [...] }. Result/Outcome/Profit-Loss fields are stripped automatically.',
+        message: 'POST JSON with { table: "propsLab", records: [...] } or { batches: [...] }. Result/Outcome/Profit-Loss fields are stripped automatically. Props Lab and Master Picks below A/A+ cannot import as VIP; they are normalized to Free.',
         baseId: baseId(),
         tables: {
           picks: tableRef('picks'),
