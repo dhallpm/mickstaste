@@ -1,7 +1,7 @@
 // Micks Picks props/lotto live display guard
 // Repairs page placeholders from the live /api/todays-picks Airtable feed.
 (function () {
-  const PROP_ROOT_SELECTORS = ['#props', '#propsCards', '#activePropsCards', '#propsResultsRows'];
+  const PROP_ROOT_SELECTORS = ['#props', '#activePropsCards', '#propsResultsRows'];
   const CANDIDATE_SELECTORS = ['.pick-card', '.card', '[class*="card"]', 'tr'];
 
   function esc(value) {
@@ -45,7 +45,7 @@
           const s = text(el);
           if (!s.trim()) return;
           if (isNonPropMarket(s)) return hide(el, 'non-prop-market');
-          if ((el.closest('#propsCards') || el.closest('#activePropsCards')) && !isPlayerPropLike(s)) return hide(el, 'card-not-player-prop');
+          if (el.closest('#activePropsCards') && !isPlayerPropLike(s)) return hide(el, 'card-not-player-prop');
           show(el);
         });
       });
@@ -78,11 +78,29 @@
     </article>`;
   }
 
+  function propsSummary(rows) {
+    const visible = rows.filter(activeVisible);
+    const grades = visible.map(row => row.grade).filter(Boolean).join(' / ') || '--';
+    const sports = Array.from(new Set(visible.map(row => row.sport || row.league).filter(Boolean))).join(' / ') || '--';
+    return `<div class="card glass">
+      <div class="pill"><i data-lucide="zap"></i>Props Lab</div>
+      <h3 class="pick-title mt-4">${esc(visible.length)} active prop${visible.length === 1 ? '' : 's'} loaded</h3>
+      <p class="mt-3 text-[#cbbf9d] leading-7">The actual prop cards are listed once below under Today’s Active Props.</p>
+      <div class="grid grid-cols-2 gap-2 mt-4"><div class="stat"><b class="!text-lg">${esc(grades)}</b><span>Grades</span></div><div class="stat"><b class="!text-lg">${esc(sports)}</b><span>Sports</span></div></div>
+    </div>`;
+  }
+
   function renderCardsInto(id, rows, label, empty) {
     const el = document.getElementById(id);
     if (!el) return;
     const usable = rows.filter(activeVisible).slice(0, 12);
     el.innerHTML = usable.length ? usable.map(row => card(row, label)).join('') : `<div class="empty-picks glass"><h3 class="pick-title">${esc(empty || 'No picks released yet.')}</h3><p class="mt-3 text-[#cbbf9d]">No picks released yet.</p></div>`;
+  }
+
+  function renderPropsSummaryInto(id, rows) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.innerHTML = propsSummary(rows);
   }
 
   async function forceRenderFromTodayFeed() {
@@ -96,7 +114,7 @@
       window.__micksTodayFeed = data;
       window.__micksPropsCount = props.length;
       if (props.length) {
-        renderCardsInto('propsCards', props, 'Props Lab', 'No Props Lab picks released yet.');
+        renderPropsSummaryInto('propsCards', props);
         renderCardsInto('activePropsCards', props, 'Props Lab', 'No active props released yet.');
       }
       if (lotto.length || longshots.length) {
@@ -104,7 +122,7 @@
       }
       setTimeout(guardPropsPage, 50);
       if (window.lucide && window.lucide.createIcons) window.lucide.createIcons();
-      console.log('Micks props rendered from Airtable:', props.length);
+      console.log('Micks props rendered from Airtable once:', props.length);
     } catch (error) {
       console.warn('Micks Picks live section repair failed:', error);
     }
