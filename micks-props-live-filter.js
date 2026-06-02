@@ -139,6 +139,21 @@
     </article>`;
   }
 
+  function featuredCard(row) {
+    const title = row.cardTitle || row.pick || row.game || 'Active pick';
+    const type = row.betType || row.market || row.category || 'Pick';
+    const line = row.lineNumber || row.bestNumber || row.odds || 'Pending';
+    const status = row.status || row.releaseStatus || 'Posted';
+    const writeup = row.writeup || row.description || 'Airtable card is live. Open the VIP, Props, or Longshots section for the full board.';
+    return `<article id="featuredCard" class="card pick-card glass">
+      <div class="flex items-start justify-between gap-3"><div><div class="text-xs uppercase tracking-[.16em] text-[#ffe391] font-black">${esc(row.league || row.sport || '--')} | ${esc(type)}</div><h3 class="pick-title mt-2">${esc(title)}</h3><p class="mt-2 text-[#cbbf9d]">${esc(row.game || '')}</p></div>${row.grade ? `<div class="grade">${esc(row.grade)}</div>` : ''}</div>
+      <div class="line-box"><span>Line / Number</span><b>${esc(line)}</b></div>
+      <div class="grid grid-cols-2 gap-2 mt-4"><div class="stat"><b class="!text-lg">${esc(row.odds || '--')}</b><span>Odds</span></div><div class="stat"><b class="!text-lg">${esc(row.sportsbook || 'Manual Commit')}</b><span>Sportsbook</span></div><div class="stat"><b class="!text-lg">${esc(normalizeUnits(row.units))}</b><span>Units to Commit</span></div><div class="stat"><b class="!text-lg">${esc(status)}</b><span>Status</span></div></div>
+      <div class="mt-4 leading-7 text-[#f4ead4]"><p>${esc(writeup)}</p></div>
+      <div class="mt-4 flex flex-wrap gap-2"><a class="btn btn-primary" href="#vip" onclick="setTab('vip');return false"><i data-lucide="lock"></i>VIP Vault</a><a class="btn" href="#props" onclick="setTab('props');return false"><i data-lucide="zap"></i>Props Lab</a><a class="btn" href="#longshots" onclick="setTab('longshots');return false"><i data-lucide="flame"></i>Longshots</a></div>
+    </article>`;
+  }
+
   function propsSummary(rows) {
     const visible = rows.filter(activeVisible);
     const grades = visible.map(row => row.grade).filter(Boolean).join(' / ') || '--';
@@ -162,6 +177,21 @@
     const el = document.getElementById(id);
     if (!el) return;
     el.innerHTML = propsSummary(rows);
+  }
+
+  function renderHomeFromFeed(data) {
+    const active = [
+      ...(Array.isArray(data.free) ? data.free : []),
+      ...(Array.isArray(data.vip) ? data.vip : []),
+      ...(Array.isArray(data.props) ? data.props : []),
+      ...(Array.isArray(data.lottoParlays) ? data.lottoParlays : []),
+      ...(Array.isArray(data.longshots) ? data.longshots : [])
+    ].filter(activeVisible);
+    const featured = active[0];
+    const featuredEl = document.getElementById('featuredCard');
+    if (featuredEl && featured) featuredEl.outerHTML = featuredCard(featured);
+    const activeEl = document.getElementById('homeActive');
+    if (activeEl) activeEl.textContent = `${active.length} picks`;
   }
 
   async function hydrateOddsFeed() {
@@ -197,12 +227,13 @@
       const props = Array.isArray(data.props) ? data.props : [];
       const lotto = Array.isArray(data.lottoParlays) ? data.lottoParlays : [];
       const longshots = Array.isArray(data.longshots) ? data.longshots : [];
+      renderHomeFromFeed(data);
       renderPropsSummaryInto('propsCards', props);
       renderCardsInto('activePropsCards', props, 'Props Lab', 'No active props released yet.');
       renderCardsInto('longshotsCards', [...lotto, ...longshots], 'Lotto / Longshots', 'No lotto parlays or longshots released yet.');
       setTimeout(guardPropsPage, 50);
       if (window.lucide && window.lucide.createIcons) window.lucide.createIcons();
-      console.log('Micks production props rendered once:', props.length);
+      console.log('Micks production feed rendered:', { props: props.length, lotto: lotto.length, longshots: longshots.length });
     } catch (error) {
       console.warn('Micks Picks live section repair failed:', error);
     }
