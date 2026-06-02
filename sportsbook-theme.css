@@ -11,16 +11,14 @@
   padding-top: clamp(2rem, 4vw, 3.5rem);
   padding-bottom: clamp(3.5rem, 7vw, 6rem);
   overflow: hidden;
-  background-color: rgba(3, 7, 14, .96);
+  background-color: #03060c;
   background-image:
-    linear-gradient(135deg, rgba(2, 4, 10, .88), rgba(2, 4, 10, .7), rgba(0, 0, 0, .93)),
-    var(--room-glow),
-    var(--sportsbook-grid),
-    var(--sportsbook-lines),
-    var(--tab-photo);
-  background-size: cover, auto, auto, auto, cover;
-  background-position: center;
+    linear-gradient(135deg, rgba(2, 4, 10, .48), rgba(2, 4, 10, .32), rgba(0, 0, 0, .62)),
+    var(--tab-photo) !important;
+  background-size: cover !important;
+  background-position: center !important;
   background-attachment: fixed;
+  box-shadow: inset 0 0 0 100vmax rgba(0, 0, 0, .08);
 }
 
 .tab-page::before,
@@ -32,6 +30,7 @@
 
 .tab-page::before {
   content: var(--room-label);
+  opacity: .38 !important;
   right: clamp(-.15rem, 2vw, 1.5rem);
   bottom: clamp(.5rem, 3vw, 2.5rem);
   color: rgba(255, 255, 255, .045);
@@ -46,6 +45,7 @@
 .tab-page::after {
   content: "";
   inset: 0;
+  opacity: .18 !important;
   background:
     radial-gradient(circle at 15% 10%, rgba(247, 201, 72, .22), transparent 28%),
     radial-gradient(circle at 85% 20%, rgba(53, 167, 255, .18), transparent 30%),
@@ -55,7 +55,7 @@
 
 .tab-page > * {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 #home {
@@ -119,22 +119,50 @@
 }
 
 .tab-page .glass,
+.tab-page .card,
 .tab-page .odds-board,
 .tab-page .stat {
-  backdrop-filter: blur(18px);
+  background: linear-gradient(145deg, rgba(9, 18, 31, .78), rgba(6, 10, 18, .62)) !important;
+  backdrop-filter: blur(14px) saturate(125%) !important;
 }
 
 .tab-page .odds-board {
   box-shadow: 0 22px 60px rgba(0, 0, 0, .34);
 }
 
-@media (max-width: 640px) {
+.odds-board table,
+table {
+  background: linear-gradient(180deg, rgba(6, 13, 23, .9), rgba(4, 7, 13, .94)) !important;
+}
+
+#home,
+#free,
+#vip,
+#odds,
+#sports,
+#props,
+#longshots,
+#results,
+#yahgi,
+#about {
+  background-blend-mode: normal !important;
+}
+
+@media (max-width: 720px) {
   .tab-page {
     background-attachment: scroll;
+    background-image:
+      linear-gradient(135deg, rgba(2, 4, 10, .52), rgba(2, 4, 10, .38), rgba(0, 0, 0, .68)),
+      var(--tab-photo) !important;
   }
 
   .tab-page::before {
+    opacity: .3 !important;
     bottom: 1.2rem;
     font-size: clamp(2.7rem, 15vw, 5.2rem);
+  }
+
+  .tab-page::after {
+    opacity: .12 !important;
   }
 }
