@@ -78,8 +78,21 @@ function resultLabel(value) {
   return ''
 }
 
+function hasSettlementValue(fields = {}) {
+  return Boolean(first(fields, [
+    'Profit/Loss',
+    'P/L',
+    'PL',
+    'Profit Loss',
+    'Profit/Loss Units',
+    'P/L Units',
+    'ROI',
+    'Settled At'
+  ]))
+}
+
 function isSettled(fields = {}) {
-  return Boolean(resultLabel(first(fields, ['Result', 'Outcome', 'Display Status', 'Pick Status'])))
+  return Boolean(resultLabel(first(fields, ['Result', 'Outcome', 'Display Status', 'Pick Status']))) || hasSettlementValue(fields)
 }
 
 function isVip(fields = {}) {
@@ -111,14 +124,24 @@ function normalizeProfitLoss(value) {
   return `${n >= 0 ? '+' : ''}${n.toFixed(2)}u`
 }
 
+function inferResultFromProfitLoss(value) {
+  const raw = text(value)
+  if (!raw) return ''
+  const n = Number(raw.replace(/[u,]/gi, ''))
+  if (!Number.isFinite(n)) return ''
+  if (n > 0) return 'Win'
+  if (n < 0) return 'Loss'
+  return 'Push'
+}
+
 function normalizeRecord(record = {}, config = {}) {
   const fields = record.fields || {}
   const date = dateKey(first(fields, ['Date', 'Game Date', 'Posted Time', 'Timestamp', 'Settled At']))
-  const result = resultLabel(first(fields, ['Result', 'Outcome', 'Display Status', 'Pick Status']))
   const section = config.section
   const access = text(first(fields, ['Access', 'Tier', 'Access Tier'])) || (isVip(fields) ? 'VIP' : 'Free')
   const pick = pickTitle(fields, section)
   const profitLoss = normalizeProfitLoss(first(fields, ['Profit/Loss', 'P/L', 'PL', 'Profit Loss', 'Profit/Loss Units', 'P/L Units']))
+  const result = resultLabel(first(fields, ['Result', 'Outcome', 'Display Status', 'Pick Status'])) || inferResultFromProfitLoss(profitLoss)
   const category = text(first(fields, ['Category', 'Parlay Group', 'Longshot'])) || config.label
   const closingNumber = first(fields, ['Closing Number', 'Closing Line', 'Verified Closing Number', 'Best Number'])
   return {
@@ -232,10 +255,12 @@ export default async function handler(req, res) {
     const days = Math.min(Math.max(Number(req.query?.days || 180), 1), 3650)
     const warnings = []
     const rows = []
+    const scanned = {}
 
     for (const config of Object.values(TABLES)) {
       const result = await listTable(config)
       if (result.warning) warnings.push(result.warning)
+      scanned[config.label] = result.rows.length
       rows.push(...result.rows
         .filter(record => isSettled(record.fields || {}))
         .map(record => normalizeRecord(record, config)))
@@ -259,6 +284,7 @@ export default async function handler(req, res) {
       date: todayET(),
       days,
       warnings,
+      scanned,
       rows: filtered,
       free,
       vip,
