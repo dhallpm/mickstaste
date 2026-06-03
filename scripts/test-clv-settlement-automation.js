@@ -17,45 +17,37 @@ assert.equal(Number(americanToDecimal('-110').toFixed(3)), 1.909)
 assert.deepEqual(calculateClvFields({
   Pick: 'Over 8.5',
   'Bet Type': 'Total',
-  'Best Number': 8.5,
-  'Closing Number': 9.5
+  'Closing Number': 8.5,
+  'Verified Closing Number': 9.5
 }).fields, {
-  'Closing Line Value': 1,
-  'CLV%': '+1.0 pts',
-  'CLV Result': 'Positive'
+  '%CLV': 0.1176
 })
 
 assert.deepEqual(calculateClvFields({
   Pick: 'Under 8.5',
   'Bet Type': 'Total',
-  'Best Number': 8.5,
-  'Closing Number': 7.5
+  'Closing Number': 8.5,
+  'Verified Closing Number': 7.5
 }).fields, {
-  'Closing Line Value': 1,
-  'CLV%': '+1.0 pts',
-  'CLV Result': 'Positive'
+  '%CLV': 0.1176
 })
 
 assert.deepEqual(calculateClvFields({
   Pick: 'Favorite -3.5',
   'Bet Type': 'Spread',
-  'Best Number': -3.5,
-  'Closing Number': -5.5
+  'Closing Number': -3.5,
+  'Verified Closing Number': -5.5
 }).fields, {
-  'Closing Line Value': 2,
-  'CLV%': '+2.0 pts',
-  'CLV Result': 'Positive'
+  '%CLV': 0.5714
 })
 
 assert.deepEqual(calculateClvFields({
   Pick: 'Underdog +5.5',
   'Bet Type': 'Spread',
-  'Best Number': 5.5,
-  'Closing Number': 3.5
+  'Closing Number': 5.5,
+  'Verified Closing Number': 3.5
 }).fields, {
-  'Closing Line Value': 2,
-  'CLV%': '+2.0 pts',
-  'CLV Result': 'Positive'
+  '%CLV': 0.3636
 })
 
 assert.deepEqual(calculateClvFields({
@@ -64,9 +56,14 @@ assert.deepEqual(calculateClvFields({
   Odds: '+150',
   'Closing Odds': '+120'
 }).fields, {
-  'CLV%': 13.64,
-  'CLV Result': 'Positive'
+  '%CLV': 0.1364
 })
+
+assert.deepEqual(calculateClvFields({
+  Pick: 'Over 8.5',
+  'Bet Type': 'Total',
+  'Closing Number': 8.5
+}).fields, {})
 
 assert.equal(calculateSettlementFields({ Result: 'Win', Units: 1, Odds: '+150' }, new Date('2026-06-02T22:00:00Z')).fields['Profit/Loss'], 1.5)
 assert.equal(calculateSettlementFields({ Result: 'Win', Units: 1, Odds: '-110' }, new Date('2026-06-02T22:00:00Z')).fields['Profit/Loss'], 0.91)
@@ -125,6 +122,7 @@ await recalculateHandler({ method: 'GET', query: {} }, clvRes)
 assert.equal(clvRes.statusCode, 200)
 assert.equal(clvRes.body.endpoint, 'recalculate-clv')
 assert.match(clvRes.body.confirmUrl, /confirm=CLV/)
+assert.deepEqual(clvRes.body.updates, ['%CLV'])
 
 const settleRes = makeRes()
 await settleHandler({ method: 'GET', query: {} }, settleRes)

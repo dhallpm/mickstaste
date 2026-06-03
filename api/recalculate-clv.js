@@ -17,7 +17,7 @@ export default async function handler(req, res) {
         defaultDateTimezone: 'America/New_York',
         date,
         confirmUrl: `/api/recalculate-clv?date=${date}&confirm=CLV`,
-        updates: ['Closing Line Value', 'CLV%', 'CLV Result'],
+        updates: ['%CLV'],
         note: 'This endpoint patches fields only; it does not change Airtable field types.'
       })
       return
