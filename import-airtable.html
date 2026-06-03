@@ -75,6 +75,14 @@
     .bad { color: var(--red); }
     .small { font-size: 13px; }
     input[type="file"] { color: var(--muted); margin: 10px 0; }
+    input[type="date"] {
+      background: #0b1424;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--text);
+      padding: 12px 14px;
+      margin: 8px 8px 8px 0;
+    }
   </style>
 </head>
 <body>
@@ -94,6 +102,21 @@
       <b>Use JSON, not CSV and not PowerShell.</b><br />
       JSON should start with either <span class="pill">{ "table": "picks", "records": [...] }</span> or <span class="pill">{ "batches": [...] }</span>.
       The backend strips blocked fields like Result and Profit/Loss when configured to do so.
+    </div>
+
+    <div class="panel">
+      <b>CLV and settlement workflow</b>
+      <p class="small">
+        1. Enter Closing Number / Closing Odds manually in Airtable.
+        2. Run CLV endpoint.
+        3. After games finish, enter Result.
+        4. Run settlement endpoint.
+      </p>
+      <div class="row">
+        <input id="adminDate" type="date" />
+        <a id="clvLink" class="btn secondary" href="/api/recalculate-clv?confirm=CLV" target="_blank" rel="noreferrer">Run CLV</a>
+        <a id="settleLink" class="btn secondary" href="/api/settle-results?confirm=SETTLE" target="_blank" rel="noreferrer">Run Settlement</a>
+      </div>
     </div>
 
     <div class="panel">
@@ -129,6 +152,28 @@
     const exampleBtn = document.getElementById('exampleBtn');
     const payloadBox = document.getElementById('payload');
     const fileInput = document.getElementById('fileInput');
+    const adminDate = document.getElementById('adminDate');
+    const clvLink = document.getElementById('clvLink');
+    const settleLink = document.getElementById('settleLink');
+
+    function todayKey() {
+      return new Intl.DateTimeFormat('en-CA', {
+        timeZone: 'America/New_York',
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit'
+      }).format(new Date());
+    }
+
+    function updateAdminLinks() {
+      const date = adminDate.value || todayKey();
+      clvLink.href = `/api/recalculate-clv?date=${encodeURIComponent(date)}&confirm=CLV`;
+      settleLink.href = `/api/settle-results?date=${encodeURIComponent(date)}&confirm=SETTLE`;
+    }
+
+    adminDate.value = todayKey();
+    adminDate.addEventListener('input', updateAdminLinks);
+    updateAdminLinks();
 
     function show(value) {
       output.textContent = typeof value === 'string' ? value : JSON.stringify(value, null, 2);
