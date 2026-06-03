@@ -38,10 +38,14 @@ function text(value) {
   return String(value ?? '').trim()
 }
 
+function keyToken(value = '') {
+  return String(value || '').toLowerCase().replace(/[^a-z0-9]/g, '')
+}
+
 function first(fields = {}, names = []) {
-  for (const name of names) {
-    const key = Object.keys(fields).find(k => k.toLowerCase() === String(name).toLowerCase())
-    if (key && text(fields[key])) return fields[key]
+  const wanted = new Set(names.map(keyToken))
+  for (const [key, value] of Object.entries(fields || {})) {
+    if (wanted.has(keyToken(key)) && text(value)) return value
   }
   return ''
 }
@@ -75,6 +79,7 @@ function resultLabel(value) {
   if (/^(loss|lost|l|lose|failed)$/.test(result)) return 'Loss'
   if (/^(push)$/.test(result)) return 'Push'
   if (/^(void|cancelled|canceled|no action)$/.test(result)) return 'Void'
+  if (/^(closed|settled|graded|complete|completed|final)$/.test(result)) return 'Closed'
   return ''
 }
 
@@ -84,15 +89,19 @@ function hasSettlementValue(fields = {}) {
     'P/L',
     'PL',
     'Profit Loss',
+    'Profit / Loss',
+    'Profit-Loss',
     'Profit/Loss Units',
     'P/L Units',
+    'Unit Profit/Loss',
     'ROI',
-    'Settled At'
+    'Settled At',
+    'SettledAt'
   ]))
 }
 
 function isSettled(fields = {}) {
-  return Boolean(resultLabel(first(fields, ['Result', 'Outcome', 'Display Status', 'Pick Status']))) || hasSettlementValue(fields)
+  return Boolean(resultLabel(first(fields, ['Result', 'Outcome', 'Display Status', 'Pick Status', 'Status']))) || hasSettlementValue(fields)
 }
 
 function isVip(fields = {}) {
@@ -140,8 +149,9 @@ function normalizeRecord(record = {}, config = {}) {
   const section = config.section
   const access = text(first(fields, ['Access', 'Tier', 'Access Tier'])) || (isVip(fields) ? 'VIP' : 'Free')
   const pick = pickTitle(fields, section)
-  const profitLoss = normalizeProfitLoss(first(fields, ['Profit/Loss', 'P/L', 'PL', 'Profit Loss', 'Profit/Loss Units', 'P/L Units']))
-  const result = resultLabel(first(fields, ['Result', 'Outcome', 'Display Status', 'Pick Status'])) || inferResultFromProfitLoss(profitLoss)
+  const profitLoss = normalizeProfitLoss(first(fields, ['Profit/Loss', 'P/L', 'PL', 'Profit Loss', 'Profit / Loss', 'Profit-Loss', 'Profit/Loss Units', 'P/L Units', 'Unit Profit/Loss']))
+  const statusText = first(fields, ['Result', 'Outcome', 'Display Status', 'Pick Status', 'Status'])
+  const result = resultLabel(statusText) || inferResultFromProfitLoss(profitLoss)
   const category = text(first(fields, ['Category', 'Parlay Group', 'Longshot'])) || config.label
   const closingNumber = first(fields, ['Closing Number', 'Closing Line', 'Verified Closing Number', 'Best Number'])
   return {
