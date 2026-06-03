@@ -1,360 +1,282 @@
-import {
-  ACTIVE_AIRTABLE_TABLE_CONFIG,
-  flattenRecord,
-  listAirtableRecords,
-  listAirtableRecordsFromResolvedTable
-} from '../lib/airtableClient.js'
-import { routePickCategory, rowDateKey } from '../lib/routePickCategory.js'
-import { sendError } from '../lib/syncAuth.js'
+const AIRTABLE_API_ROOT = 'https://api.airtable.com/v0'
+const DEFAULT_BASE_ID = 'appsVhMax3qWQ1odj'
 
-const ARCHIVE_TABLES = [
-  'Results Archive',
-  'VIP Archive',
-  'Props Results',
-  'Lotto Props',
-  'Lotto Parlays Archive',
-  'Longshots History'
-]
-
-function text(...values) {
-  return values.map(value => String(value ?? '').trim()).find(Boolean) || ''
+const TABLES = {
+  masterPicks: {
+    label: 'Master Picks',
+    section: 'master',
+    table: () => process.env.AIRTABLE_MASTER_PICKS_TABLE_ID || process.env.AIRTABLE_MASTER_PICKS_TABLE || 'tblB0LZW6ATToi8tF'
+  },
+  propsLab: {
+    label: 'Props Lab',
+    section: 'props',
+    table: () => process.env.AIRTABLE_PROPS_TABLE_ID || process.env.AIRTABLE_PROPS_TABLE || 'tblPdZG1sTbjD74mx'
+  },
+  lottoParlays: {
+    label: 'Lotto Parlays',
+    section: 'lotto',
+    table: () => process.env.AIRTABLE_LOTTO_TABLE_ID || process.env.AIRTABLE_LOTTO_TABLE || 'tbllr4X5WVUxtmQyL'
+  },
+  longshots: {
+    label: 'Longshots',
+    section: 'longshots',
+    table: () => process.env.AIRTABLE_LONGSHOTS_TABLE_ID || process.env.AIRTABLE_LONGSHOTS_TABLE || 'tblE2H2iiKoFqQXHl'
+  }
 }
 
-function recordKeyParts(row = {}) {
-  const [date = '', league = '', game = '', pick = '', betType = '', access = '', odds = ''] =
-    String(row['Record Key'] || '').split('|').map(value => value.trim())
-  return { date, league, game, pick, betType, access, odds }
+function baseId() {
+  return String(process.env.AIRTABLE_VERIFIED_BASE_ID || process.env.AIRTABLE_BASE_ID || DEFAULT_BASE_ID).trim()
 }
 
-function titleCase(value = '') {
-  return String(value)
-    .replace(/\b[a-z]/g, letter => letter.toUpperCase())
-    .replace(/\bMl\b/g, 'ML')
+function apiKey() {
+  const key = process.env.AIRTABLE_API_KEY
+  if (!key) throw new Error('AIRTABLE_API_KEY is required')
+  return key
 }
 
-function normalizeAccess(value = '') {
-  if (/^vip$/i.test(value)) return 'VIP'
-  if (/^free$/i.test(value)) return 'Free'
-  return value
+function text(value) {
+  return String(value ?? '').trim()
 }
 
-function resultOf(row = {}) {
-  const source = [row.Result, row.Outcome, row.Status, row['Display Status'], row['Pick Status']].join(' ')
-  if (/\b(win|won|cash|cashed)\b/i.test(source)) return 'Win'
-  if (/\b(loss|lost|lose|failed)\b/i.test(source)) return 'Loss'
-  if (/\bpush\b/i.test(source)) return 'Push'
-  if (/\b(void|cancelled|canceled)\b/i.test(source)) return 'Void'
+function first(fields = {}, names = []) {
+  for (const name of names) {
+    const key = Object.keys(fields).find(k => k.toLowerCase() === String(name).toLowerCase())
+    if (key && text(fields[key])) return fields[key]
+  }
   return ''
 }
 
-function inferSide(row = {}) {
-  const source = [row.Pick, row.Selection, row.Play, row.Market, row['Bet Type'], row.Type, row['Prop Type'], row['Full Analysis'], row.Writeup].join(' ')
-  if (/\bover\b/i.test(source)) return 'Over'
-  if (/\bunder\b/i.test(source)) return 'Under'
+function todayET() {
+  return new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'America/New_York',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit'
+  }).format(new Date())
+}
+
+function dateKey(value) {
+  const raw = text(value)
+  if (/^\d{4}-\d{2}-\d{2}/.test(raw)) return raw.slice(0, 10)
+  if (!raw) return ''
+  const parsed = new Date(raw)
+  if (Number.isNaN(parsed.getTime())) return raw.slice(0, 10)
+  return new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'America/New_York',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit'
+  }).format(parsed)
+}
+
+function resultLabel(value) {
+  const result = text(value).toLowerCase()
+  if (/^(win|won|w|cash|cashed)$/.test(result)) return 'Win'
+  if (/^(loss|lost|l|lose|failed)$/.test(result)) return 'Loss'
+  if (/^(push)$/.test(result)) return 'Push'
+  if (/^(void|cancelled|canceled|no action)$/.test(result)) return 'Void'
   return ''
 }
 
-export function displayPick(row = {}) {
-  const existing = text(row.Pick, row.Selection, row.Play, row.Name, row['Card Title'])
-  if (existing && existing !== '--') return existing
-
-  const player = text(row.Player, row.Athlete, row['Player Name'])
-  const propType = text(row['Prop Type'], row.Market, row.Type, row.Category)
-  const line = text(row.Line, row.Number, row['Best Number'])
-  const side = inferSide(row) || (player && propType && line ? 'Over' : '')
-  if (player && propType && line) return [player, side, line, propType].filter(Boolean).join(' ')
-  if (player && propType) return [player, propType].join(' ')
-  const recordKeyPick = recordKeyParts(row).pick
-  if (recordKeyPick) return titleCase(recordKeyPick)
-  return text(row.Game, row.Matchup, row.Event, row.Legs, row['Parlay Type'])
+function isSettled(fields = {}) {
+  return Boolean(resultLabel(first(fields, ['Result', 'Outcome', 'Display Status', 'Pick Status'])))
 }
 
-function hasPick(row = {}) {
-  return Boolean(displayPick(row))
+function isVip(fields = {}) {
+  const access = text(first(fields, ['Access', 'Tier', 'Access Tier'])).toLowerCase()
+  const grade = text(first(fields, ['Grade', 'Card Grade'])).toUpperCase()
+  return access.includes('vip') || access.includes('premium') || grade === 'A' || grade === 'A+'
 }
 
-function parseNumber(value) {
-  const match = String(value ?? '').replace(/,/g, '').match(/[-+]?\d*\.?\d+/)
-  return match ? Number(match[0]) : NaN
+function americanOdds(value) {
+  const odds = text(value)
+  return /^\d+$/.test(odds) && Number(odds) > 0 ? `+${odds}` : odds
 }
 
-function shouldTrustUnitProfitLoss(value = '') {
-  const existing = text(value)
-  if (!existing) return false
-  if (/^[-+]?\d+(?:\.\d+)?u$/i.test(existing)) return true
-  if (/^[-+]?\d+(?:\.\d+)?\s*units?$/i.test(existing)) return true
-  return false
-}
-
-function shouldTrustLegacyProfitLoss(value = '') {
-  const existing = text(value)
-  if (!existing) return false
-  return /^[-+]?\d+(?:\.\d+)?(?:u|\s*units?)?$/i.test(existing)
-}
-
-function formatUnits(value) {
-  if (!Number.isFinite(value)) return ''
-  return `${value > 0 ? '+' : ''}${value.toFixed(2)}u`
-}
-
-function calculateProfitLoss(row = {}) {
-  const result = resultOf(row)
-  if (!result) return ''
-
-  const units = parseNumber(text(row.Units, row['Units to Commit'], row.Stake, row.Risk))
-  if (Number.isFinite(units) && units > 0) {
-    if (result === 'Push' || result === 'Void') return '0.00u'
-    if (result === 'Loss') return `-${units.toFixed(2)}u`
-    if (result === 'Win') {
-      const odds = parseNumber(text(row.Odds, row.Price, row['Card Odds'], row['Final Odds']))
-      if (Number.isFinite(odds) && odds !== 0) {
-        const profit = odds > 0 ? units * odds / 100 : units * 100 / Math.abs(odds)
-        return formatUnits(profit)
-      }
-    }
+function pickTitle(fields = {}, section = '') {
+  if (section === 'props') {
+    const player = text(first(fields, ['Player', 'Athlete', 'Player Name']))
+    const prop = text(first(fields, ['Prop', 'Market', 'Bet Type', 'Type']))
+    return text(first(fields, ['Pick', 'Selection', 'Play'])) || [player, prop].filter(Boolean).join(' ') || prop || player
   }
-
-  const automatedUnits = text(row['Profit/Loss Units'], row['P/L Units'], row['Unit Profit/Loss'])
-  if (shouldTrustUnitProfitLoss(automatedUnits)) {
-    const n = parseNumber(automatedUnits)
-    if (Number.isFinite(n)) return formatUnits(n)
-  }
-
-  const legacyProfitLoss = text(row['Profit/Loss'], row['P/L'], row.PL, row['Profit Loss'])
-  if (shouldTrustLegacyProfitLoss(legacyProfitLoss)) {
-    const n = parseNumber(legacyProfitLoss)
-    if (Number.isFinite(n)) return formatUnits(n)
-  }
-
-  return ''
+  return text(first(fields, ['Pick', 'Selection', 'Play', 'Name', 'Title'])) || text(first(fields, ['Game', 'Matchup', 'Event']))
 }
 
-export function hasPositiveUnits(row = {}) {
-  const units = parseNumber(text(row.Units, row['Units to Commit'], row.Stake, row.Risk))
-  return Number.isFinite(units) && units > 0
+function normalizeProfitLoss(value) {
+  const raw = text(value)
+  if (!raw) return ''
+  if (/u$/i.test(raw)) return raw
+  const n = Number(raw.replace(/,/g, ''))
+  if (!Number.isFinite(n)) return raw
+  return `${n >= 0 ? '+' : ''}${n.toFixed(2)}u`
 }
 
-function sourceSection(row = {}) {
-  const source = text(row['Original Table'], row.__table, row.__source)
-  if (/Props Lab|Props Results/i.test(source)) return 'props'
-  if (/Lotto/i.test(source)) return 'lotto'
-  if (/Longshot/i.test(source)) return 'longshots'
-  return routePickCategory(row).websiteSection
-}
-
-function legNotes(row = {}) {
-  return text(
-    row['Losing Leg'],
-    row['Lost Leg'],
-    row['Failed Leg'],
-    row['Leg That Lost'],
-    row['Loss Reason'],
-    row['Leg Results'],
-    row['Result Notes'],
-    row['Settlement Notes']
-  )
-}
-
-function displayNotes(row = {}, result = '') {
-  const notes = legNotes(row)
-  if (notes) return `Loss/settlement notes: ${notes}`
-  const source = text(row['Original Table'], row.__table, row.__source, row.Category, row['Bet Type'], row['Parlay Type'])
-  if (result === 'Loss' && /lotto|parlay|longshot/i.test(source)) {
-    return 'Loss leg: not recorded in Airtable. Add Losing Leg or Leg Results to show exactly which leg killed the ticket.'
-  }
-  return text(row.Notes, row['Result Notes'], row['Settlement Notes'])
-}
-
-function recommendedNumber(row = {}) {
-  const explicit = text(row['Closing Number'], row['Closing #'], row['Closing Line'], row['Recommended Number'], row['Recommended #'], row['Best Number'], row['Best #'], row['Best Line'], row.Line, row.Number)
-  if (explicit) return explicit
-  const match = displayPick(row).match(/\b(over|under)\s+([+-]?\d+(?:\.\d+)?)\b/i)
-  return match ? `${titleCase(match[1])} ${match[2]}` : ''
-}
-
-const KNOWN_MAY30_ARCHIVE_DETAILS = new Map([
-  ['safe 5-leg parlay', {
-    grade: 'A-',
-    legs: `1. Yankees Team Total Over 5.0
-2. Spurs +3.5
-3. Victor Wembanyama Over 9.5 Rebounds
-4. Fever ML
-5. Amanda Serrano ML`
-  }],
-  ['ultra safe 6-leg parlay', {
-    grade: 'B+',
-    legs: `1. Yankees ML
-2. Braves ML
-3. Spurs +3.5
-4. Victor Wembanyama 8+ Rebounds alt
-5. Fever ML
-6. Dmitry Bivol ML`
-  }],
-  ['shai gilgeous-alexander over 29.5 points', { grade: 'B+' }],
-  ['victor wembanyama over 9.5 rebounds', { grade: 'A-' }]
-])
-
-export function normalizeRow(row = {}, sourceTable = '') {
-  const recordKey = recordKeyParts(row)
-  const result = resultOf(row)
-  const odds = text(row.Odds, row.Price, row['Card Odds'], row['Final Odds'], recordKey.odds)
-  const pl = calculateProfitLoss({ ...row, Odds: odds })
-  const route = sourceSection(row)
-  const pick = displayPick(row)
-  const knownArchiveDetails = KNOWN_MAY30_ARCHIVE_DETAILS.get(pick.toLowerCase()) || {}
-  const originalTable = text(row['Original Table'], row.__table)
-  const closing = recommendedNumber(row)
-  const grade = text(row['Card Grade'], row.Grade, row.grade, knownArchiveDetails.grade, '--')
+function normalizeRecord(record = {}, config = {}) {
+  const fields = record.fields || {}
+  const date = dateKey(first(fields, ['Date', 'Game Date', 'Posted Time', 'Timestamp', 'Settled At']))
+  const result = resultLabel(first(fields, ['Result', 'Outcome', 'Display Status', 'Pick Status']))
+  const section = config.section
+  const access = text(first(fields, ['Access', 'Tier', 'Access Tier'])) || (isVip(fields) ? 'VIP' : 'Free')
+  const pick = pickTitle(fields, section)
+  const profitLoss = normalizeProfitLoss(first(fields, ['Profit/Loss', 'P/L', 'PL', 'Profit Loss', 'Profit/Loss Units', 'P/L Units']))
+  const category = text(first(fields, ['Category', 'Parlay Group', 'Longshot'])) || config.label
+  const closingNumber = first(fields, ['Closing Number', 'Closing Line', 'Verified Closing Number', 'Best Number'])
   return {
-    ...row,
-    __source: sourceTable || row.__table || 'Airtable Results API',
-    __section: row.__section || route,
-    Date: rowDateKey(row) || text(row.Date, row.date, row['Game Date'], row.Timestamp, recordKey.date),
-    League: text(row.League, row.Sport, row.league, recordKey.league.toUpperCase()),
-    Sport: text(row.Sport, row.League, recordKey.league.toUpperCase()),
-    Game: text(row.Game, row.Matchup, row.Event, row.game, titleCase(recordKey.game)),
+    id: record.id,
+    airtableRecordId: record.id,
+    __source: 'Airtable Results API',
+    __table: config.label,
+    __section: section,
+    source: 'Airtable',
+    Date: date,
+    date,
+    Sport: text(first(fields, ['Sport'])),
+    sport: text(first(fields, ['Sport'])),
+    League: text(first(fields, ['League', 'Sport'])),
+    league: text(first(fields, ['League', 'Sport'])),
+    Game: text(first(fields, ['Game', 'Matchup', 'Event'])),
+    game: text(first(fields, ['Game', 'Matchup', 'Event'])),
     Pick: pick,
-    Player: text(row.Player, row.Athlete, row['Player Name']),
-    'Prop Type': text(row['Prop Type'], row.Market, row.Type),
-    Line: text(row.Line, row.Number, row['Best Number']),
-    'Bet Type': text(row['Bet Type'], row.Market, row.Type, row['Prop Type'], row.Player ? 'Prop' : '', titleCase(recordKey.betType)),
-    Odds: odds,
-    Grade: grade,
-    Units: text(row.Units, row['Units to Commit'], row.Stake),
+    pick,
+    cardTitle: pick,
+    'Bet Type': text(first(fields, ['Bet Type', 'Type', 'Market', 'Prop'])) || (section === 'props' ? 'Player Prop' : section === 'lotto' ? 'Parlay' : ''),
+    betType: text(first(fields, ['Bet Type', 'Type', 'Market', 'Prop'])) || (section === 'props' ? 'Player Prop' : section === 'lotto' ? 'Parlay' : ''),
+    Category: category,
+    category,
+    Odds: americanOdds(first(fields, ['Odds', 'Posted Odds', 'American Odds'])),
+    odds: americanOdds(first(fields, ['Odds', 'Posted Odds', 'American Odds'])),
+    Grade: text(first(fields, ['Grade', 'Card Grade'])),
+    grade: text(first(fields, ['Grade', 'Card Grade'])),
+    Units: first(fields, ['Units', 'Units to Commit', 'Stake']),
+    units: first(fields, ['Units', 'Units to Commit', 'Stake']),
+    'Best Number': first(fields, ['Best Number', 'Line', 'Number']),
+    bestNumber: first(fields, ['Best Number', 'Line', 'Number']),
+    'Closing Number': closingNumber,
+    closingNumber,
+    'Closing Odds': first(fields, ['Closing Odds', 'Closing Price']),
+    closingOdds: first(fields, ['Closing Odds', 'Closing Price']),
+    'CLV%': first(fields, ['CLV%', 'CLV']),
+    clvPercent: first(fields, ['CLV%', 'CLV']),
+    'CLV Result': text(first(fields, ['CLV Result'])),
+    clvResult: text(first(fields, ['CLV Result'])),
+    'Closing Line Value': first(fields, ['Closing Line Value']),
+    closingLineValue: first(fields, ['Closing Line Value']),
     Result: result,
     Outcome: result,
-    'Profit/Loss': pl,
-    'Profit/Loss Units': pl,
-    'P/L': pl,
-    PL: pl,
-    Status: 'Closed',
-    'Display Status': 'Closed',
-    'Pick Status': 'Closed',
-    Access: normalizeAccess(text(row.Access, row.Tier, row['Access Tier'], recordKey.access, 'Free')),
-    Category: text(row.Category, row.Type, row['Parlay Type'], row.Player ? 'Player Prop' : ''),
-    Legs: text(row.Legs, row['Legs / Details'], row['Parlay Type'], knownArchiveDetails.legs),
-    Notes: displayNotes(row, result),
-    'Original Table': originalTable,
-    Timestamp: text(row['Settled At'], row['Graded Timestamp'], row.Timestamp, row['Posted Time'], ''),
-    'Closing Number': closing
+    result,
+    Status: result || text(first(fields, ['Status'])),
+    status: result || text(first(fields, ['Status'])),
+    'Profit/Loss': profitLoss,
+    'Profit/Loss Units': profitLoss,
+    'P/L': profitLoss,
+    PL: profitLoss,
+    profitLoss,
+    ROI: first(fields, ['ROI']),
+    roi: first(fields, ['ROI']),
+    Access: access,
+    access,
+    Sportsbook: text(first(fields, ['Sportsbook', 'Book'])),
+    sportsbook: text(first(fields, ['Sportsbook', 'Book'])),
+    Writeup: text(first(fields, ['Writeup', 'Public Writeup', 'Summary'])),
+    writeup: text(first(fields, ['Writeup', 'Public Writeup', 'Summary'])),
+    Notes: text(first(fields, ['Notes', 'Result Notes', 'Settlement Notes', 'Market Notes', 'Leg Results', 'Losing Leg'])),
+    notes: text(first(fields, ['Notes', 'Result Notes', 'Settlement Notes', 'Market Notes', 'Leg Results', 'Losing Leg'])),
+    Legs: text(first(fields, ['Legs', 'Parlay Group'])) || pick,
+    legs: text(first(fields, ['Legs', 'Parlay Group'])) || pick,
+    Timestamp: first(fields, ['Settled At', 'Posted Time', 'Timestamp']),
+    timestamp: first(fields, ['Settled At', 'Posted Time', 'Timestamp'])
   }
 }
 
-function isFinalResult(row = {}) {
-  return ['Win', 'Loss', 'Push', 'Void'].includes(resultOf(row))
-}
-
-function isWithinDays(row = {}, days = 120) {
-  const key = rowDateKey(row) || String(row.Date || '').slice(0, 10)
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(key)) return true
-  const now = new Date()
-  const date = new Date(`${key}T12:00:00Z`)
-  const diff = (now - date) / 86400000
-  return diff >= 0 && diff <= days
-}
-
-function isVip(row = {}) {
-  const source = [row.__table, row.__source, row['Original Table'], row.Access, row.Tier, row['Access Tier']].join(' ')
-  return /\b(vip|premium|member|members only)\b/i.test(source)
-}
-
-function isProps(row = {}) {
-  if (row.__section === 'props') return true
-  const textValue = [row.__table, row.__source, row['Original Table'], row.Category, row.Type, row.Market, row['Bet Type'], row['Prop Type'], row.Player, row.Athlete, row.Pick, row.Game].join(' ')
-  return /Props Lab|Props Results|\b(player prop|prop|points|rebounds|assists|pra|strikeouts|total bases|home run|sog)\b/i.test(textValue) && !/lotto|parlay|longshot|long shot|moneyline|spread|team total|game total/i.test(textValue)
-}
-
-function isLotto(row = {}) {
-  if (row.__section === 'lotto') return true
-  const textValue = [row.__table, row.__source, row['Original Table'], row.Category, row.Type, row.Market, row['Bet Type'], row.Pick, row.Game, row.Legs].join(' ')
-  return /lotto|parlay|5-leg|6-leg|7-leg|8-leg|same game|sgp|round robin/i.test(textValue)
-}
-
-function isLongshot(row = {}) {
-  if (row.__section === 'longshots') return true
-  const textValue = [row.__table, row.__source, row['Original Table'], row.Category, row.Type, row.Market, row['Bet Type'], row.Pick, row.Game].join(' ')
-  return /longshot|long shot|Longshots History/i.test(textValue)
-}
-
-async function safeListArchive(tableName, warnings = []) {
-  try {
-    const records = await listAirtableRecords(tableName)
-    return records.map(record => flattenRecord(record, tableName))
-  } catch (error) {
-    if ([403, 404].includes(error.statusCode) || error.code === 'AIRTABLE_TABLE_NOT_FOUND') {
-      warnings.push(`Optional results table unavailable: ${tableName}`)
-      return []
-    }
-    throw error
-  }
-}
-
-async function getRows(days) {
-  const warnings = []
+async function listTable(config) {
+  const table = config.table()
   const rows = []
-
-  for (const config of ACTIVE_AIRTABLE_TABLE_CONFIG) {
-    try {
-      const result = await listAirtableRecordsFromResolvedTable(config)
-      warnings.push(...(result.warnings || []))
-      rows.push(...result.rows)
-    } catch (error) {
-      if (error.code === 'AIRTABLE_RESOLVED_TABLE_NOT_FOUND' && !config.required) {
-        warnings.push(`Optional active table not found: ${config.defaultName}`)
-        continue
+  let offset = ''
+  do {
+    const url = new URL(`${AIRTABLE_API_ROOT}/${baseId()}/${encodeURIComponent(table)}`)
+    url.searchParams.set('pageSize', '100')
+    if (offset) url.searchParams.set('offset', offset)
+    const response = await fetch(url, {
+      headers: {
+        Authorization: `Bearer ${apiKey()}`,
+        'Content-Type': 'application/json'
       }
-      throw error
+    })
+    const payload = await response.json().catch(() => ({}))
+    if (!response.ok) {
+      return { rows: [], warning: `${config.label}: ${payload?.error?.message || payload?.error?.type || response.statusText}` }
     }
-  }
+    rows.push(...(payload.records || []))
+    offset = payload.offset || ''
+  } while (offset)
+  return { rows, warning: '' }
+}
 
-  for (const table of ARCHIVE_TABLES) {
-    rows.push(...await safeListArchive(table, warnings))
-  }
+function withinDays(row = {}, days = 180) {
+  const key = dateKey(row.date || row.Date)
+  if (!key || !days) return true
+  const rowTime = new Date(`${key}T12:00:00Z`).getTime()
+  const cutoff = Date.now() - Number(days) * 24 * 60 * 60 * 1000
+  return Number.isFinite(rowTime) && rowTime >= cutoff
+}
 
-  const normalized = rows
-    .filter(hasPick)
-    .filter(row => isWithinDays(row, days))
-    .filter(isFinalResult)
-    .filter(hasPositiveUnits)
-    .map(row => normalizeRow(row, row.__table))
-
-  const deduped = Array.from(new Map(normalized.map(row => [
-    [row.Date, row.League, row.Game, row.Pick, row['Bet Type'], row.Access].map(value => String(value || '').toLowerCase()).join('|'),
+function dedupe(rows = []) {
+  return Array.from(new Map(rows.map(row => [
+    [row.date, row.league, row.game, row.pick, row.betType, row.__section].map(value => text(value).toLowerCase()).join('|'),
     row
   ])).values())
-
-  deduped.sort((a, b) => String(b.Date || '').localeCompare(String(a.Date || '')) || String(b.Timestamp || '').localeCompare(String(a.Timestamp || '')))
-
-  return { rows: deduped, warnings }
 }
 
 export default async function handler(req, res) {
   try {
-    const days = Math.min(Math.max(Number(req.query?.days || 120), 1), 365)
-    const result = await getRows(days)
-    const rows = result.rows
-    const props = rows.filter(isProps)
-    const lotto = rows.filter(row => isLotto(row) && !isLongshot(row))
-    const longshots = rows.filter(isLongshot)
-    const vip = rows.filter(row => isVip(row) && !isProps(row) && !isLotto(row) && !isLongshot(row))
-    const free = rows.filter(row => !isVip(row) && !isProps(row) && !isLotto(row) && !isLongshot(row))
+    const days = Math.min(Math.max(Number(req.query?.days || 180), 1), 3650)
+    const warnings = []
+    const rows = []
+
+    for (const config of Object.values(TABLES)) {
+      const result = await listTable(config)
+      if (result.warning) warnings.push(result.warning)
+      rows.push(...result.rows
+        .filter(record => isSettled(record.fields || {}))
+        .map(record => normalizeRecord(record, config)))
+    }
+
+    const filtered = dedupe(rows)
+      .filter(row => withinDays(row, days))
+      .sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')) || String(b.timestamp || '').localeCompare(String(a.timestamp || '')))
+
+    const props = filtered.filter(row => row.__section === 'props')
+    const lotto = filtered.filter(row => row.__section === 'lotto')
+    const longshots = filtered.filter(row => row.__section === 'longshots')
+    const master = filtered.filter(row => row.__section === 'master')
+    const vip = master.filter(row => isVip(row))
+    const free = master.filter(row => !isVip(row))
 
     res.status(200).json({
       success: true,
       source: 'airtable',
       sourceOfTruth: 'Airtable',
+      date: todayET(),
       days,
-      warnings: result.warnings,
-      rows,
+      warnings,
+      rows: filtered,
       free,
       vip,
       props,
       lotto,
       longshots,
-      results: free
+      results: free,
+      counts: {
+        rows: filtered.length,
+        free: free.length,
+        vip: vip.length,
+        props: props.length,
+        lotto: lotto.length,
+        longshots: longshots.length
+      }
     })
   } catch (error) {
     console.error(error)
-    sendError(res, error)
+    res.status(500).json({ success: false, error: error.message || String(error) })
   }
 }
