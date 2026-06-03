@@ -133,6 +133,38 @@ function normalizeProfitLoss(value) {
   return `${n >= 0 ? '+' : ''}${n.toFixed(2)}u`
 }
 
+function parseNumber(value) {
+  const match = String(value ?? '').replace(/,/g, '').match(/[-+]?\d*\.?\d+/)
+  return match ? Number(match[0]) : NaN
+}
+
+function formatUnits(value) {
+  if (!Number.isFinite(value)) return ''
+  return `${value > 0 ? '+' : ''}${value.toFixed(2)}u`
+}
+
+function calculateProfitLoss(fields = {}) {
+  const result = resultLabel(first(fields, ['Result', 'Outcome', 'Display Status', 'Pick Status', 'Status']))
+  const units = parseNumber(first(fields, ['Units', 'Units to Commit', 'Stake']))
+  if (result && Number.isFinite(units) && units > 0) {
+    if (result === 'Push' || result === 'Void') return '0.00u'
+    if (result === 'Loss') return `-${units.toFixed(2)}u`
+    if (result === 'Win') {
+      const odds = parseNumber(first(fields, ['Odds', 'Posted Odds', 'American Odds']))
+      if (Number.isFinite(odds) && odds !== 0) {
+        return formatUnits(odds > 0 ? units * odds / 100 : units * 100 / Math.abs(odds))
+      }
+    }
+  }
+  return normalizeProfitLoss(first(fields, ['Profit/Loss', 'P/L', 'PL', 'Profit Loss', 'Profit / Loss', 'Profit-Loss', 'Profit/Loss Units', 'P/L Units', 'Unit Profit/Loss']))
+}
+
+export function hasPositiveUnits(row = {}) {
+  const fields = row.fields || row
+  const units = parseNumber(first(fields, ['Units', 'Units to Commit', 'Stake']))
+  return Number.isFinite(units) && units > 0
+}
+
 function inferResultFromProfitLoss(value) {
   const raw = text(value)
   if (!raw) return ''
@@ -149,7 +181,7 @@ function normalizeRecord(record = {}, config = {}) {
   const section = config.section
   const access = text(first(fields, ['Access', 'Tier', 'Access Tier'])) || (isVip(fields) ? 'VIP' : 'Free')
   const pick = pickTitle(fields, section)
-  const profitLoss = normalizeProfitLoss(first(fields, ['Profit/Loss', 'P/L', 'PL', 'Profit Loss', 'Profit / Loss', 'Profit-Loss', 'Profit/Loss Units', 'P/L Units', 'Unit Profit/Loss']))
+  const profitLoss = calculateProfitLoss(fields)
   const statusText = first(fields, ['Result', 'Outcome', 'Display Status', 'Pick Status', 'Status'])
   const result = resultLabel(statusText) || inferResultFromProfitLoss(profitLoss)
   const category = text(first(fields, ['Category', 'Parlay Group', 'Longshot'])) || config.label
@@ -221,6 +253,18 @@ function normalizeRecord(record = {}, config = {}) {
   }
 }
 
+export function normalizeRow(row = {}, sourceTable = '') {
+  const source = text(sourceTable || row.__table || row['Original Table'])
+  const section = /props/i.test(source) ? 'props' :
+    /lotto|parlay/i.test(source) ? 'lotto' :
+      /longshot/i.test(source) ? 'longshots' :
+        'master'
+  return normalizeRecord({ id: row.id || row.airtableRecordId || '', fields: row }, {
+    label: source || (section === 'master' ? 'Master Picks' : section),
+    section
+  })
+}
+
 async function listTable(config) {
   const table = config.table()
   const rows = []
@@ -273,6 +317,7 @@ export default async function handler(req, res) {
       scanned[config.label] = result.rows.length
       rows.push(...result.rows
         .filter(record => isSettled(record.fields || {}))
+        .filter(record => hasPositiveUnits(record.fields || {}))
         .map(record => normalizeRecord(record, config)))
     }
 

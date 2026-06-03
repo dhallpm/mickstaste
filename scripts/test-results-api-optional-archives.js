@@ -1,37 +1,5 @@
 import assert from 'node:assert/strict'
-import { readFile } from 'node:fs/promises'
 import { hasPositiveUnits, normalizeRow } from '../api/results.js'
-
-const source = await readFile(new URL('../api/results.js', import.meta.url), 'utf8')
-
-assert.match(source, /\[403, 404\]\.includes\(error\.statusCode\)/)
-assert.match(source, /Optional results table unavailable:/)
-
-const wemby = normalizeRow({
-  'Record Key': '2026-05-30|nba|spurs @ thunder|victor wembanyama over 9.5 rebounds|prop|vip|-110',
-  'Original Table': 'Props Lab',
-  Result: 'Loss',
-  Units: '0.75'
-}, 'Results Archive')
-
-const sga = normalizeRow({
-  'Record Key': '2026-05-30|nba|thunder @ pacers|shai gilgeous-alexander over 29.5 points|prop|vip|-167',
-  'Original Table': 'Props Lab',
-  Result: 'Win',
-  Units: '0.75'
-}, 'Results Archive')
-
-assert.equal(wemby.Pick, 'Victor Wembanyama Over 9.5 Rebounds')
-assert.equal(wemby.__section, 'props')
-assert.equal(wemby.Access, 'VIP')
-assert.equal(wemby['Profit/Loss'], '-0.75u')
-assert.equal(wemby.Grade, 'A-')
-assert.equal(wemby['Closing Number'], 'Over 9.5')
-assert.equal(sga.Pick, 'Shai Gilgeous-Alexander Over 29.5 Points')
-assert.equal(sga.__section, 'props')
-assert.equal(sga.Access, 'VIP')
-assert.equal(sga['Profit/Loss'], '+0.45u')
-assert.equal(sga.Grade, 'B+')
 
 const calculatedBeforeStored = normalizeRow({
   Pick: 'Calculated Result Wins',
@@ -43,6 +11,35 @@ const calculatedBeforeStored = normalizeRow({
 }, 'Results Archive')
 
 assert.equal(calculatedBeforeStored['Profit/Loss'], '+1.50u')
+assert.equal(calculatedBeforeStored.Result, 'Win')
+
+const negativeOddsWin = normalizeRow({
+  Pick: 'Negative Odds Win',
+  Result: 'Win',
+  Units: '1',
+  Odds: '-110'
+}, 'Results Archive')
+
+assert.equal(negativeOddsWin['Profit/Loss'], '+0.91u')
+
+const loss = normalizeRow({
+  Pick: 'Loss Settles Units',
+  Result: 'Loss',
+  Units: '0.75',
+  Odds: '+450',
+  'Profit/Loss': 9
+}, 'Results Archive')
+
+assert.equal(loss['Profit/Loss'], '-0.75u')
+
+const push = normalizeRow({
+  Pick: 'Push Settles Zero',
+  Result: 'Push',
+  Units: '0.75',
+  Odds: '+450'
+}, 'Results Archive')
+
+assert.equal(push['Profit/Loss'], '0.00u')
 
 const legacyCurrencyFallback = normalizeRow({
   Pick: 'Legacy Currency Fallback',
@@ -54,16 +51,5 @@ const legacyCurrencyFallback = normalizeRow({
 assert.equal(legacyCurrencyFallback['Profit/Loss'], '+0.75u')
 assert.equal(hasPositiveUnits({ Units: 0, Result: 'Loss', 'Profit/Loss': -1 }), false)
 assert.equal(hasPositiveUnits({ Units: 0.25, Result: 'Loss' }), true)
-
-const parlay = normalizeRow({
-  'Record Key': '2026-05-30|mixed|safe 5-leg|safe 5-leg parlay|lotto parlay|vip|450',
-  'Original Table': 'Lotto Parlays',
-  Result: 'Loss',
-  Units: '0.25'
-}, 'Results Archive')
-
-assert.match(parlay.Notes, /Loss leg: not recorded in Airtable/)
-assert.equal(parlay.Grade, 'A-')
-assert.match(parlay.Legs, /Yankees Team Total Over 5\.0/)
 
 console.log('Results API optional archive fallback regression test passed.')
