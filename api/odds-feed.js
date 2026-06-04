@@ -1,4 +1,4 @@
-import { buildWebsiteFeed } from '../lib/buildWebsiteFeed.js'
+import { buildWebsiteFeed, isPublicOddsRow } from '../lib/buildWebsiteFeed.js'
 import { sendError } from '../lib/syncAuth.js'
 
 function text(...values) {
@@ -29,11 +29,11 @@ export default async function handler(req, res) {
     })
     const rows = [
       ...(feed.free || []),
-      ...(feed.vip || []),
       ...(feed.props || []),
       ...(feed.lottoParlays || []),
       ...(feed.longshots || [])
     ]
+      .filter(isPublicOddsRow)
       .map(rowToOdds)
       .filter(row => row.pick && row.odds)
 

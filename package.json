@@ -8,6 +8,7 @@
     "fetch:closing-odds": "node scripts/fetch-closing-odds.js",
     "test:closing-odds": "node scripts/fetch-closing-odds.js --dry-run",
     "test:lotto-parlays": "node scripts/test-lotto-parlays-feed.js",
+    "test:odds-vip-filter": "node scripts/test-odds-vip-filter.js",
     "test:results-frontend": "node scripts/test-results-frontend-wiring.js",
     "test:results-api": "node scripts/test-results-api-optional-archives.js",
     "test:clv-settlement": "node scripts/test-clv-settlement-automation.js",
