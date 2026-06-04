@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict'
-import { hasPositiveUnits, normalizeRow } from '../api/results.js'
+import { hasPositiveUnits, normalizeRow, shouldIncludeResultRecord } from '../api/results.js'
 
 const calculatedBeforeStored = normalizeRow({
   Pick: 'Calculated Result Wins',
@@ -51,5 +51,12 @@ const legacyCurrencyFallback = normalizeRow({
 assert.equal(legacyCurrencyFallback['Profit/Loss'], '+0.75u')
 assert.equal(hasPositiveUnits({ Units: 0, Result: 'Loss', 'Profit/Loss': -1 }), false)
 assert.equal(hasPositiveUnits({ Units: 0.25, Result: 'Loss' }), true)
+assert.equal(shouldIncludeResultRecord({ Status: 'Closed' }), true)
+assert.equal(shouldIncludeResultRecord({ Result: 'Pending' }), true)
+assert.equal(shouldIncludeResultRecord({ 'Profit/Loss': 0 }), true)
+assert.equal(shouldIncludeResultRecord({ Units: 0, Result: 'Loss', 'Profit/Loss': -1 }), true)
+assert.equal(shouldIncludeResultRecord({ ROI: 120 }), false)
+assert.equal(shouldIncludeResultRecord({ 'Settled At': '2026-06-04T12:00:00Z' }), false)
+assert.equal(shouldIncludeResultRecord({ Outcome: 'Win' }), false)
 
 console.log('Results API optional archive fallback regression test passed.')

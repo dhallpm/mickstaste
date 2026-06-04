@@ -84,7 +84,7 @@ function resultLabel(value) {
 }
 
 function hasSettlementValue(fields = {}) {
-  return Boolean(first(fields, [
+  const wanted = new Set([
     'Profit/Loss',
     'P/L',
     'PL',
@@ -93,15 +93,15 @@ function hasSettlementValue(fields = {}) {
     'Profit-Loss',
     'Profit/Loss Units',
     'P/L Units',
-    'Unit Profit/Loss',
-    'ROI',
-    'Settled At',
-    'SettledAt'
-  ]))
+    'Unit Profit/Loss'
+  ].map(keyToken))
+  return Object.entries(fields || {}).some(([key, value]) => wanted.has(keyToken(key)) && text(value))
 }
 
-function isSettled(fields = {}) {
-  return Boolean(resultLabel(first(fields, ['Result', 'Outcome', 'Display Status', 'Pick Status', 'Status']))) || hasSettlementValue(fields)
+export function shouldIncludeResultRecord(fields = {}) {
+  const status = text(first(fields, ['Status', 'Display Status', 'Pick Status']))
+  const result = text(first(fields, ['Result']))
+  return /^closed$/i.test(status) || Boolean(result) || hasSettlementValue(fields)
 }
 
 function isVip(fields = {}) {
@@ -316,8 +316,7 @@ export default async function handler(req, res) {
       if (result.warning) warnings.push(result.warning)
       scanned[config.label] = result.rows.length
       rows.push(...result.rows
-        .filter(record => isSettled(record.fields || {}))
-        .filter(record => hasPositiveUnits(record.fields || {}))
+        .filter(record => shouldIncludeResultRecord(record.fields || {}))
         .map(record => normalizeRecord(record, config)))
     }
 
@@ -346,7 +345,7 @@ export default async function handler(req, res) {
       props,
       lotto,
       longshots,
-      results: free,
+      results: filtered,
       counts: {
         rows: filtered.length,
         free: free.length,
