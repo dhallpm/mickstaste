@@ -5,6 +5,7 @@
 
   function clean(value) { return String(value ?? '').trim(); }
   function lower(value) { return clean(value).toLowerCase(); }
+  function keyToken(value) { return String(value ?? '').toLowerCase().replace(/[^a-z0-9]/g, ''); }
   function esc(value) {
     return String(value ?? '').replace(/[&<>"']/g, char => ({
       '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
@@ -37,9 +38,9 @@
     return m ? `${m[1]}-${m[2]}-${m[3]}` : (clean(value) || '--');
   }
   function get(row, names) {
-    for (const name of names) {
-      const key = Object.keys(row || {}).find(k => lower(k) === lower(name));
-      if (key && clean(row[key])) return clean(row[key]);
+    const wanted = new Set((names || []).map(keyToken));
+    for (const [key, value] of Object.entries(row || {})) {
+      if (wanted.has(keyToken(key)) && clean(value)) return clean(value);
     }
     return '';
   }
@@ -60,9 +61,9 @@
     best: ['bestNumber', 'Best Number', 'Best #', 'Best Line', 'Line', 'Number'],
     cutoff: ['noBetCutoff', 'No Bet Cutoff', 'Cutoff'],
     status: ['status', 'Status', 'Display Status', 'Release Status', 'releaseStatus'],
-    result: ['result', 'Result', 'Outcome', 'Status'],
-    pl: ['profitLoss', 'Profit/Loss', 'P/L', 'PL', 'Profit Loss', 'Units Result', 'Net Units'],
-    closing: ['closing', 'Closing Number', 'Closing #', 'Closing Line', 'Timestamp', 'Settled At'],
+    result: ['result', 'Result', 'Results', 'Outcome', 'Final Result', 'Pick Result', 'Graded Result'],
+    pl: ['profitLoss', 'Profit/Loss', 'P/L', 'PL', 'Profit Loss', 'Profit / Loss', 'Profit-Loss', 'Units Result', 'Net Units'],
+    closing: ['closing', 'Closing Number', 'Closing #', 'Closing Line', 'Verified Closing Number'],
     writeup: ['writeup', 'Writeup', 'Public Writeup', 'Summary', 'description', 'analysisPreview'],
     notes: ['notes', 'Notes', 'Result Notes', 'Settlement Notes', 'Losing Leg', 'Leg Results'],
     legs: ['legs', 'Legs'],
@@ -70,25 +71,58 @@
   };
   function val(row, key) { return get(row, A[key] || [key]); }
 
+  function isGenericPickTitle(value) {
+    const title = lower(value);
+    if (!title) return true;
+    return /^(?:live\s+)?(?:over|under)\b/.test(title) ||
+      /\b(points?\s*\/\s*assists?|points?\+assists?|runs?|strikeouts?|rebounds?|assists?|total bases|made 3s|threes)\b.*\b(over|under)\b/.test(title) ||
+      /^(?:over|under)?\s*\d+(?:\.\d+)?\s*(?:runs?|points?|rebounds?|assists?|strikeouts?|total bases)?$/i.test(value);
+  }
+
   function titleOf(row) {
     const player = val(row, 'player');
     const prop = val(row, 'prop');
-    return first(val(row, 'cardTitle'), val(row, 'pick'), player && prop ? `${player} ${prop}` : '', player, prop, val(row, 'game'), val(row, 'legs')) || 'Active card';
+    const game = val(row, 'game');
+    const legs = val(row, 'legs');
+    const raw = first(val(row, 'cardTitle'), val(row, 'pick'), player && prop ? `${player} ${prop}` : '', player, prop, game, legs) || 'Active card';
+    const context = first(player, game, legs);
+    if (context && isGenericPickTitle(raw) && !lower(raw).includes(lower(context))) return `${context} – ${raw}`;
+    return raw;
   }
   function gradeOf(row) {
     return first(val(row, 'grade'), row.grade, row.Grade, row['Card Grade'], 'Pending Grade');
   }
-  function resultOf(row) {
-    const s = lower(`${val(row, 'result')} ${val(row, 'status')}`);
-    if (/\b(win|won)\b/.test(s)) return 'Win';
-    if (/\b(loss|lost)\b/.test(s)) return 'Loss';
+  function finalResultFromText(value) {
+    const s = lower(value);
+    if (/\b(win|won|cash|cashed)\b/.test(s)) return 'Win';
+    if (/\b(loss|lost|lose|failed)\b/.test(s)) return 'Loss';
     if (/\b(push)\b/.test(s)) return 'Push';
-    if (/\b(void|cancel|canceled|cancelled)\b/.test(s)) return 'Void';
-    return first(val(row, 'result'), val(row, 'status'), 'Pending');
+    if (/\b(void|cancel|canceled|cancelled|no action)\b/.test(s)) return 'Void';
+    return '';
+  }
+  function resultFromProfit(row) {
+    const direct = first(val(row, 'pl'), row.profitLoss, row['Profit/Loss'], row['P/L']);
+    if (!direct) return '';
+    const parsed = Number(String(direct).replace(/[u,]/gi, '').match(/[-+]?\d*\.?\d+/)?.[0]);
+    if (!Number.isFinite(parsed)) return '';
+    if (parsed > 0) return 'Win';
+    if (parsed < 0) return 'Loss';
+    return 'Push';
+  }
+  function resultOf(row) {
+    const explicit = finalResultFromText(val(row, 'result'));
+    if (explicit) return explicit;
+    const inferred = resultFromProfit(row);
+    if (inferred) return inferred;
+    const status = val(row, 'status');
+    const statusResult = finalResultFromText(status);
+    if (statusResult) return statusResult;
+    if (/\b(closed|settled|graded|complete|completed|final)\b/i.test(status)) return first(val(row, 'result'), 'Closed');
+    return first(val(row, 'result'), status, 'Pending');
   }
   function isFinal(row) { return ['Win', 'Loss', 'Push', 'Void'].includes(resultOf(row)); }
   function isActive(row) {
-    const s = lower(`${val(row, 'status')} ${val(row, 'result')}`);
+    const s = lower(`${val(row, 'status')} ${val(row, 'result')} ${val(row, 'pl')}`);
     return Boolean(titleOf(row)) && !/\b(win|won|loss|lost|push|void|settled|graded|closed|archived|pass)\b/.test(s);
   }
   function americanOdds(value) {
