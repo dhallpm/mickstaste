@@ -42,12 +42,33 @@ function keyToken(value = '') {
   return String(value || '').toLowerCase().replace(/[^a-z0-9]/g, '')
 }
 
+const RESULT_FIELD_NAMES = ['Result', 'Outcome', 'Final Result', 'Pick Result', 'Graded Result']
+const STATUS_FIELD_NAMES = ['Status', 'Display Status', 'Pick Status']
+const PROFIT_LOSS_FIELD_NAMES = [
+  'Profit/Loss',
+  'P/L',
+  'PL',
+  'Profit Loss',
+  'Profit / Loss',
+  'Profit-Loss',
+  'Profit/Loss Units',
+  'P/L Units',
+  'Unit Profit/Loss'
+]
+
 function first(fields = {}, names = []) {
   const wanted = new Set(names.map(keyToken))
   for (const [key, value] of Object.entries(fields || {})) {
     if (wanted.has(keyToken(key)) && text(value)) return value
   }
   return ''
+}
+
+function values(fields = {}, names = []) {
+  const wanted = new Set(names.map(keyToken))
+  return Object.entries(fields || {})
+    .filter(([key, value]) => wanted.has(keyToken(key)) && text(value))
+    .map(([, value]) => value)
 }
 
 function todayET() {
@@ -73,35 +94,38 @@ function dateKey(value) {
   }).format(parsed)
 }
 
-function resultLabel(value) {
+function finalResultLabel(value) {
   const result = text(value).toLowerCase()
   if (/^(win|won|w|cash|cashed)$/.test(result)) return 'Win'
   if (/^(loss|lost|l|lose|failed)$/.test(result)) return 'Loss'
   if (/^(push)$/.test(result)) return 'Push'
   if (/^(void|cancelled|canceled|no action)$/.test(result)) return 'Void'
-  if (/^(closed|settled|graded|complete|completed|final)$/.test(result)) return 'Closed'
   return ''
 }
 
+function closedStatusLabel(value) {
+  return /^(closed|settled|graded|complete|completed|final)$/i.test(text(value)) ? 'Closed' : ''
+}
+
+function excludedStateLabel(value) {
+  return /^(pending|watchlist|conditional|released|open|active|lean|pass)$/i.test(text(value)) ? text(value) : ''
+}
+
 function hasSettlementValue(fields = {}) {
-  const wanted = new Set([
-    'Profit/Loss',
-    'P/L',
-    'PL',
-    'Profit Loss',
-    'Profit / Loss',
-    'Profit-Loss',
-    'Profit/Loss Units',
-    'P/L Units',
-    'Unit Profit/Loss'
-  ].map(keyToken))
+  const wanted = new Set(PROFIT_LOSS_FIELD_NAMES.map(keyToken))
   return Object.entries(fields || {}).some(([key, value]) => wanted.has(keyToken(key)) && text(value))
 }
 
 export function shouldIncludeResultRecord(fields = {}) {
-  const status = text(first(fields, ['Status', 'Display Status', 'Pick Status']))
-  const result = text(first(fields, ['Result']))
-  return /^closed$/i.test(status) || Boolean(result) || hasSettlementValue(fields)
+  const resultValues = values(fields, RESULT_FIELD_NAMES)
+  const statusValues = values(fields, STATUS_FIELD_NAMES)
+  const hasFinalResult = resultValues.some(value => finalResultLabel(value))
+  const hasClosedStatus = statusValues.some(value => closedStatusLabel(value))
+  const hasProfitLoss = hasSettlementValue(fields)
+  const hasExcludedState = [...resultValues, ...statusValues].some(value => excludedStateLabel(value))
+
+  if (hasExcludedState && !hasFinalResult && !hasProfitLoss) return false
+  return hasFinalResult || hasClosedStatus || hasProfitLoss
 }
 
 function isVip(fields = {}) {
@@ -116,12 +140,30 @@ function americanOdds(value) {
 }
 
 function pickTitle(fields = {}, section = '') {
+  const game = text(first(fields, ['Game', 'Matchup', 'Event']))
+  const player = text(first(fields, ['Player', 'Athlete', 'Player Name']))
   if (section === 'props') {
-    const player = text(first(fields, ['Player', 'Athlete', 'Player Name']))
     const prop = text(first(fields, ['Prop', 'Market', 'Bet Type', 'Type']))
-    return text(first(fields, ['Pick', 'Selection', 'Play'])) || [player, prop].filter(Boolean).join(' ') || prop || player
+    const pick = text(first(fields, ['Pick', 'Selection', 'Play'])) || [player, prop].filter(Boolean).join(' ') || prop || player
+    return contextualPickTitle(pick, player || game)
   }
-  return text(first(fields, ['Pick', 'Selection', 'Play', 'Name', 'Title'])) || text(first(fields, ['Game', 'Matchup', 'Event']))
+  const pick = text(first(fields, ['Pick', 'Selection', 'Play', 'Name', 'Title'])) || game
+  return contextualPickTitle(pick, game || player)
+}
+
+function isGenericPickTitle(value = '') {
+  const title = text(value)
+  if (!title || /\b(vs|versus)\b|@/.test(title.toLowerCase())) return false
+  if (/^(over|under)\s+\d+(?:\.\d+)?(?:\s+[a-z][a-z/ -]*)?$/i.test(title)) return true
+  return /^(?:live\s+)?[a-z][a-z/ -]*\s+(?:over|under)$/i.test(title)
+}
+
+function contextualPickTitle(pick = '', context = '') {
+  const title = text(pick)
+  const prefix = text(context)
+  if (!title || !prefix || !isGenericPickTitle(title)) return title
+  if (title.toLowerCase().includes(prefix.toLowerCase())) return title
+  return `${prefix} \u2013 ${title}`
 }
 
 function normalizeProfitLoss(value) {
@@ -144,7 +186,7 @@ function formatUnits(value) {
 }
 
 function calculateProfitLoss(fields = {}) {
-  const result = resultLabel(first(fields, ['Result', 'Outcome', 'Display Status', 'Pick Status', 'Status']))
+  const result = values(fields, RESULT_FIELD_NAMES).map(value => finalResultLabel(value)).find(Boolean)
   const units = parseNumber(first(fields, ['Units', 'Units to Commit', 'Stake']))
   if (result && Number.isFinite(units) && units > 0) {
     if (result === 'Push' || result === 'Void') return '0.00u'
@@ -156,7 +198,7 @@ function calculateProfitLoss(fields = {}) {
       }
     }
   }
-  return normalizeProfitLoss(first(fields, ['Profit/Loss', 'P/L', 'PL', 'Profit Loss', 'Profit / Loss', 'Profit-Loss', 'Profit/Loss Units', 'P/L Units', 'Unit Profit/Loss']))
+  return normalizeProfitLoss(first(fields, PROFIT_LOSS_FIELD_NAMES))
 }
 
 export function hasPositiveUnits(row = {}) {
@@ -182,8 +224,11 @@ function normalizeRecord(record = {}, config = {}) {
   const access = text(first(fields, ['Access', 'Tier', 'Access Tier'])) || (isVip(fields) ? 'VIP' : 'Free')
   const pick = pickTitle(fields, section)
   const profitLoss = calculateProfitLoss(fields)
-  const statusText = first(fields, ['Result', 'Outcome', 'Display Status', 'Pick Status', 'Status'])
-  const result = resultLabel(statusText) || inferResultFromProfitLoss(profitLoss)
+  const rawStatus = text(first(fields, STATUS_FIELD_NAMES))
+  const finalResult = values(fields, RESULT_FIELD_NAMES).map(value => finalResultLabel(value)).find(Boolean)
+  const result = finalResult || inferResultFromProfitLoss(profitLoss)
+  const closedStatus = values(fields, STATUS_FIELD_NAMES).some(value => closedStatusLabel(value))
+  const status = result || (closedStatus ? 'Closed' : rawStatus)
   const category = text(first(fields, ['Category', 'Parlay Group', 'Longshot'])) || config.label
   const closingNumber = first(fields, ['Closing Number', 'Closing Line', 'Verified Closing Number', 'Best Number'])
   return {
@@ -229,8 +274,8 @@ function normalizeRecord(record = {}, config = {}) {
     Result: result,
     Outcome: result,
     result,
-    Status: result || text(first(fields, ['Status'])),
-    status: result || text(first(fields, ['Status'])),
+    Status: status,
+    status,
     'Profit/Loss': profitLoss,
     'Profit/Loss Units': profitLoss,
     'P/L': profitLoss,

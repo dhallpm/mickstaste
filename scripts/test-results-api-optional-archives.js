@@ -52,11 +52,77 @@ assert.equal(legacyCurrencyFallback['Profit/Loss'], '+0.75u')
 assert.equal(hasPositiveUnits({ Units: 0, Result: 'Loss', 'Profit/Loss': -1 }), false)
 assert.equal(hasPositiveUnits({ Units: 0.25, Result: 'Loss' }), true)
 assert.equal(shouldIncludeResultRecord({ Status: 'Closed' }), true)
-assert.equal(shouldIncludeResultRecord({ Result: 'Pending' }), true)
+assert.equal(shouldIncludeResultRecord({ Status: 'Settled' }), true)
+assert.equal(shouldIncludeResultRecord({ Result: 'Pending' }), false)
+assert.equal(shouldIncludeResultRecord({ Status: 'Watchlist' }), false)
+assert.equal(shouldIncludeResultRecord({ Status: 'Closed', Result: 'Pending' }), false)
 assert.equal(shouldIncludeResultRecord({ 'Profit/Loss': 0 }), true)
+assert.equal(shouldIncludeResultRecord({ Status: 'Pending', 'Profit/Loss': -1 }), true)
 assert.equal(shouldIncludeResultRecord({ Units: 0, Result: 'Loss', 'Profit/Loss': -1 }), true)
 assert.equal(shouldIncludeResultRecord({ ROI: 120 }), false)
 assert.equal(shouldIncludeResultRecord({ 'Settled At': '2026-06-04T12:00:00Z' }), false)
-assert.equal(shouldIncludeResultRecord({ Outcome: 'Win' }), false)
+assert.equal(shouldIncludeResultRecord({ Outcome: 'Win' }), true)
+assert.equal(shouldIncludeResultRecord({ 'Final Result': 'Loss' }), true)
+
+const pendingMaster = normalizeRow({
+  Game: 'Baltimore Orioles vs Boston Red Sox',
+  Pick: 'Under 10 Runs',
+  Status: 'Pending'
+}, 'Master Picks')
+
+assert.equal(shouldIncludeResultRecord(pendingMaster), false)
+
+const settledTotal = normalizeRow({
+  Game: 'Baltimore Orioles vs Boston Red Sox',
+  Pick: 'Under 10 Runs',
+  Result: 'Win',
+  Units: '1',
+  Odds: '+100'
+}, 'Master Picks')
+
+assert.equal(settledTotal.Pick, 'Baltimore Orioles vs Boston Red Sox \u2013 Under 10 Runs')
+assert.equal(settledTotal.Result, 'Win')
+assert.equal(settledTotal.Status, 'Win')
+
+const settledProp = normalizeRow({
+  Player: 'Caitlin Clark',
+  Pick: 'Live Points/Assists Over',
+  Outcome: 'Loss',
+  Units: '1',
+  Odds: '-110'
+}, 'Props Lab')
+
+assert.equal(settledProp.Pick, 'Caitlin Clark \u2013 Live Points/Assists Over')
+assert.equal(settledProp.Result, 'Loss')
+assert.equal(settledProp.Status, 'Loss')
+
+const lottoWin = normalizeRow({
+  Pick: 'Safe 5-Leg Parlay',
+  Result: 'Win',
+  Units: '1',
+  Odds: '+300'
+}, 'Lotto Parlays')
+
+assert.equal(lottoWin.__section, 'lotto')
+assert.equal(lottoWin.Result, 'Win')
+
+const longshotLoss = normalizeRow({
+  Pick: 'Longshot HR Ladder',
+  Result: 'Loss',
+  Units: '0.25',
+  Odds: '+1200'
+}, 'Longshots')
+
+assert.equal(longshotLoss.__section, 'longshots')
+assert.equal(longshotLoss.Result, 'Loss')
+
+const profitLossOnly = normalizeRow({
+  Pick: 'Profit/Loss Only',
+  Status: 'Pending',
+  'Profit/Loss': '-0.25u'
+}, 'Master Picks')
+
+assert.equal(profitLossOnly.Result, 'Loss')
+assert.equal(profitLossOnly.Status, 'Loss')
 
 console.log('Results API optional archive fallback regression test passed.')
