@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Micks Picks | Airtable Import Helper</title>
+  <style>
+    :root {
+      --bg: #090909;
+      --panel: #151515;
+      --line: #2c2c2c;
+      --text: #f7efe0;
+      --muted: #a99f8d;
+      --gold: #e2b84d;
+      --red: #ff6868;
+      --green: #48d597;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    main {
+      width: min(980px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 32px 0 48px;
+    }
+
+    h1 {
+      margin: 0 0 18px;
+      font-size: clamp(28px, 5vw, 48px);
+      letter-spacing: 0;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    select,
+    textarea,
+    input[type="file"] {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #0f0f0f;
+      color: var(--text);
+      padding: 12px;
+      font: inherit;
+    }
+
+    textarea {
+      min-height: 260px;
+      resize: vertical;
+      font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+    }
+
+    button {
+      border: 1px solid transparent;
+      border-radius: 8px;
+      padding: 11px 14px;
+      background: var(--gold);
+      color: #080808;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    button.secondary {
+      background: transparent;
+      color: var(--text);
+      border-color: var(--line);
+    }
+
+    button:disabled {
+      opacity: .55;
+      cursor: progress;
+    }
+
+    pre {
+      min-height: 190px;
+      margin: 0;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #050505;
+      color: var(--text);
+      white-space: pre-wrap;
+      overflow: auto;
+    }
+
+    .banner {
+      display: none;
+      margin-bottom: 18px;
+      padding: 13px 16px;
+      border: 1px solid #6f5414;
+      border-radius: 8px;
+      background: #241a06;
+      color: #ffe097;
+      font-weight: 1000;
+    }
+
+    .banner.on { display: block; }
+
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 18px;
+      margin-top: 16px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .toggle {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text);
+      font-weight: 800;
+    }
+
+    .toggle input {
+      width: 18px;
+      height: 18px;
+    }
+
+    .status {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .status.ok { color: var(--green); }
+    .status.bad { color: var(--red); }
+
+    @media (max-width: 720px) {
+      .grid { grid-template-columns: 1fr; }
+      main {
+        width: min(100% - 20px, 980px);
+        padding-top: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Airtable Import Helper</h1>
+    <div class="banner" id="dryRunBanner">DRY RUN - NO AIRTABLE WRITE</div>
+
+    <section class="panel">
+      <div class="actions">
+        <button id="smokeButton" type="button">Run Smoke Test</button>
+        <a href="/import-airtable.html" style="align-self:center;color:var(--muted);font-weight:800;">Open Legacy Import Page</a>
+      </div>
+      <p class="status" id="status">Idle</p>
+    </section>
+
+    <section class="panel">
+      <div class="grid">
+        <div>
+          <label for="table">Table</label>
+          <select id="table">
+            <option value="picks">picks</option>
+            <option value="propsLab">propsLab</option>
+            <option value="lottoParlays">lottoParlays</option>
+            <option value="longshots">longshots</option>
+          </select>
+        </div>
+        <div>
+          <label for="file">JSON File</label>
+          <input id="file" type="file" accept="application/json,.json">
+        </div>
+      </div>
+      <div class="actions">
+        <label class="toggle"><input id="dryRun" type="checkbox"> Dry run</label>
+        <button id="validateButton" type="button" class="secondary">Validate JSON</button>
+        <button id="importButton" type="button" class="secondary">Import JSON</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <label for="jsonText">Payload</label>
+      <textarea id="jsonText" spellcheck="false" placeholder='{"table":"picks","records":[{"Pick":"Team A ML","Game":"Team A vs Team B","Status":"Pending"}]}'></textarea>
+    </section>
+
+    <section class="panel">
+      <label for="output">Result</label>
+      <pre id="output">{}</pre>
+    </section>
+  </main>
+
+  <script>
+    const endpoint = '/api/import-airtable-records'
+    const table = document.getElementById('table')
+    const file = document.getElementById('file')
+    const dryRun = document.getElementById('dryRun')
+    const banner = document.getElementById('dryRunBanner')
+    const jsonText = document.getElementById('jsonText')
+    const output = document.getElementById('output')
+    const statusEl = document.getElementById('status')
+    const importButton = document.getElementById('importButton')
+    const validateButton = document.getElementById('validateButton')
+    const smokeButton = document.getElementById('smokeButton')
+
+    function setBusy(value) {
+      importButton.disabled = value
+      validateButton.disabled = value
+      smokeButton.disabled = value
+    }
+
+    function setStatus(text, kind = '') {
+      statusEl.textContent = text
+      statusEl.className = `status ${kind}`.trim()
+    }
+
+    function syncBanner() {
+      banner.classList.toggle('on', dryRun.checked)
+    }
+
+    function show(data) {
+      output.textContent = JSON.stringify(data, null, 2)
+      if (data.dryRun) {
+        setStatus('Dry run complete - no Airtable write', '')
+        return
+      }
+      setStatus(data.ok ? `Created ${data.created} record(s)` : (data.error || data.message || 'Import failed'), data.ok ? 'ok' : 'bad')
+    }
+
+    function validatePayloadShape(parsed) {
+      const batches = Array.isArray(parsed.batches) ? parsed.batches : [{ table: parsed.table, records: parsed.records }]
+      const count = batches.reduce((sum, batch) => sum + (Array.isArray(batch.records) ? batch.records.length : 0), 0)
+      if (!count) throw new Error('JSON parsed, but no records were found. Expected records array.')
+      return { batches, count }
+    }
+
+    async function payloadFromInput() {
+      if (file.files[0]) {
+        const text = await file.files[0].text()
+        jsonText.value = text
+      }
+      const raw = jsonText.value.trim()
+      if (!raw) throw new Error('No JSON payload selected.')
+      const parsed = JSON.parse(raw)
+      validatePayloadShape(parsed)
+      if (!parsed.table && !parsed.batches) parsed.table = table.value
+      parsed.dryRun = dryRun.checked
+      return parsed
+    }
+
+    async function postPayload(payload) {
+      banner.classList.toggle('on', payload.dryRun === true)
+      setBusy(true)
+      setStatus('Running...')
+      try {
+        const res = await fetch(endpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        })
+        const data = await res.json().catch(() => ({ ok: false, error: `HTTP ${res.status}` }))
+        show(data)
+      } catch (error) {
+        show({ ok: false, created: 0, recordIds: [], error: error.message || String(error) })
+      } finally {
+        setBusy(false)
+      }
+    }
+
+    validateButton.addEventListener('click', async () => {
+      try {
+        const payload = await payloadFromInput()
+        const result = validatePayloadShape(payload)
+        show({ ok: true, valid: true, count: result.count, batches: result.batches.map(batch => ({ table: batch.table, records: Array.isArray(batch.records) ? batch.records.length : 0 })) })
+      } catch (error) {
+        show({ ok: false, valid: false, error: error.message || String(error) })
+      }
+    })
+
+    importButton.addEventListener('click', async () => {
+      try {
+        await postPayload(await payloadFromInput())
+      } catch (error) {
+        show({ ok: false, created: 0, recordIds: [], error: error.message || String(error) })
+      }
+    })
+
+    smokeButton.addEventListener('click', () => {
+      dryRun.checked = false
+      syncBanner()
+      postPayload({
+        smokeTest: true,
+        dryRun: false,
+        table: 'picks'
+      })
+    })
+
+    dryRun.addEventListener('change', syncBanner)
+    syncBanner()
+  </script>
+</body>
+</html>

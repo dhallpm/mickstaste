@@ -1,17 +1,25 @@
 const AIRTABLE_API_ROOT = 'https://api.airtable.com/v0'
 const DEFAULT_BASE_ID = 'appsVhMax3qWQ1odj'
 
+function firstEnv(...names) {
+  for (const name of names) {
+    const value = String(process.env[name] || '').trim()
+    if (value) return value
+  }
+  return ''
+}
+
 const TABLES = {
-  picks: process.env.AIRTABLE_MASTER_PICKS_TABLE_ID || process.env.AIRTABLE_MASTER_PICKS_TABLE || 'tblB0LZW6ATToi8tF',
-  master: process.env.AIRTABLE_MASTER_PICKS_TABLE_ID || process.env.AIRTABLE_MASTER_PICKS_TABLE || 'tblB0LZW6ATToi8tF',
-  masterPicks: process.env.AIRTABLE_MASTER_PICKS_TABLE_ID || process.env.AIRTABLE_MASTER_PICKS_TABLE || 'tblB0LZW6ATToi8tF',
-  props: process.env.AIRTABLE_PROPS_TABLE_ID || process.env.AIRTABLE_PROPS_TABLE || 'tblPdZG1sTbjD74mx',
-  propsLab: process.env.AIRTABLE_PROPS_TABLE_ID || process.env.AIRTABLE_PROPS_TABLE || 'tblPdZG1sTbjD74mx',
-  lotto: process.env.AIRTABLE_LOTTO_TABLE_ID || process.env.AIRTABLE_LOTTO_TABLE || 'tbllr4X5WVUxtmQyL',
-  parlays: process.env.AIRTABLE_LOTTO_TABLE_ID || process.env.AIRTABLE_LOTTO_TABLE || 'tbllr4X5WVUxtmQyL',
-  lottoParlays: process.env.AIRTABLE_LOTTO_TABLE_ID || process.env.AIRTABLE_LOTTO_TABLE || 'tbllr4X5WVUxtmQyL',
-  longshot: process.env.AIRTABLE_LONGSHOTS_TABLE_ID || process.env.AIRTABLE_LONGSHOTS_TABLE || 'tblE2H2iiKoFqQXHl',
-  longshots: process.env.AIRTABLE_LONGSHOTS_TABLE_ID || process.env.AIRTABLE_LONGSHOTS_TABLE || 'tblE2H2iiKoFqQXHl'
+  picks: firstEnv('AIRTABLE_PICKS_TABLE_ID', 'AIRTABLE_PICKS_TABLE_NAME', 'AIRTABLE_PICKS_TABLE', 'AIRTABLE_MASTER_PICKS_TABLE_ID', 'AIRTABLE_MASTER_PICKS_TABLE_NAME', 'AIRTABLE_MASTER_PICKS_TABLE') || 'tblB0LZW6ATToi8tF',
+  master: firstEnv('AIRTABLE_PICKS_TABLE_ID', 'AIRTABLE_PICKS_TABLE_NAME', 'AIRTABLE_PICKS_TABLE', 'AIRTABLE_MASTER_PICKS_TABLE_ID', 'AIRTABLE_MASTER_PICKS_TABLE_NAME', 'AIRTABLE_MASTER_PICKS_TABLE') || 'tblB0LZW6ATToi8tF',
+  masterPicks: firstEnv('AIRTABLE_PICKS_TABLE_ID', 'AIRTABLE_PICKS_TABLE_NAME', 'AIRTABLE_PICKS_TABLE', 'AIRTABLE_MASTER_PICKS_TABLE_ID', 'AIRTABLE_MASTER_PICKS_TABLE_NAME', 'AIRTABLE_MASTER_PICKS_TABLE') || 'tblB0LZW6ATToi8tF',
+  props: firstEnv('AIRTABLE_PROPS_TABLE_ID', 'AIRTABLE_PROPS_TABLE_NAME', 'AIRTABLE_PROPS_TABLE', 'AIRTABLE_PROPS_LAB_TABLE_ID', 'AIRTABLE_PROPS_LAB_TABLE_NAME') || 'tblPdZG1sTbjD74mx',
+  propsLab: firstEnv('AIRTABLE_PROPS_TABLE_ID', 'AIRTABLE_PROPS_TABLE_NAME', 'AIRTABLE_PROPS_TABLE', 'AIRTABLE_PROPS_LAB_TABLE_ID', 'AIRTABLE_PROPS_LAB_TABLE_NAME') || 'tblPdZG1sTbjD74mx',
+  lotto: firstEnv('AIRTABLE_PARLAYS_TABLE_ID', 'AIRTABLE_PARLAYS_TABLE_NAME', 'AIRTABLE_LOTTO_PARLAYS_TABLE_ID', 'AIRTABLE_LOTTO_PARLAYS_TABLE_NAME', 'AIRTABLE_LOTTO_TABLE_ID', 'AIRTABLE_LOTTO_TABLE_NAME', 'AIRTABLE_LOTTO_TABLE') || 'tbllr4X5WVUxtmQyL',
+  parlays: firstEnv('AIRTABLE_PARLAYS_TABLE_ID', 'AIRTABLE_PARLAYS_TABLE_NAME', 'AIRTABLE_LOTTO_PARLAYS_TABLE_ID', 'AIRTABLE_LOTTO_PARLAYS_TABLE_NAME', 'AIRTABLE_LOTTO_TABLE_ID', 'AIRTABLE_LOTTO_TABLE_NAME', 'AIRTABLE_LOTTO_TABLE') || 'tbllr4X5WVUxtmQyL',
+  lottoParlays: firstEnv('AIRTABLE_PARLAYS_TABLE_ID', 'AIRTABLE_PARLAYS_TABLE_NAME', 'AIRTABLE_LOTTO_PARLAYS_TABLE_ID', 'AIRTABLE_LOTTO_PARLAYS_TABLE_NAME', 'AIRTABLE_LOTTO_TABLE_ID', 'AIRTABLE_LOTTO_TABLE_NAME', 'AIRTABLE_LOTTO_TABLE') || 'tbllr4X5WVUxtmQyL',
+  longshot: firstEnv('AIRTABLE_LONGSHOTS_TABLE_ID', 'AIRTABLE_LONGSHOTS_TABLE_NAME', 'AIRTABLE_LONGSHOTS_TABLE') || 'tblE2H2iiKoFqQXHl',
+  longshots: firstEnv('AIRTABLE_LONGSHOTS_TABLE_ID', 'AIRTABLE_LONGSHOTS_TABLE_NAME', 'AIRTABLE_LONGSHOTS_TABLE') || 'tblE2H2iiKoFqQXHl'
 }
 
 const BLOCKED_FIELDS = new Set([
@@ -65,6 +73,16 @@ function canonicalTable(alias = '') {
 function tableRef(alias = '') {
   const key = String(alias || '').trim()
   return TABLES[key] || TABLES[canonicalTable(key)] || key
+}
+
+function recordIdsFromCreated(records = []) {
+  return (Array.isArray(records) ? records : [])
+    .map(record => String(record?.id || '').trim())
+    .filter(id => /^rec[A-Za-z0-9]{8,}$/.test(id))
+}
+
+function truthy(value) {
+  return value === true || /^(1|true|yes|y|preview|dryrun|dry run)$/i.test(String(value || '').trim())
 }
 
 function cleanText(value) {
@@ -147,7 +165,7 @@ function removeField(records = [], fieldName = '') {
   return { records: next, removed }
 }
 
-async function airtableBatchCreate(tableAlias, records = []) {
+async function airtableBatchCreate(tableAlias, records = [], options = {}) {
   const table = tableRef(tableAlias)
   const base = baseId()
   const warnings = []
@@ -160,6 +178,33 @@ async function airtableBatchCreate(tableAlias, records = []) {
       if (!keep) skipped.push({ index: record.index, reason: 'No valid fields after cleaning' })
       return keep
     })
+
+  console.log('[airtable-import] create records target', {
+    baseId: base,
+    tableAlias,
+    tableName: table,
+    recordCount: records.length,
+    firstRecordKeys: Object.keys(records[0] || {})
+  })
+
+  if (options.dryRun) {
+    return {
+      ok: true,
+      success: true,
+      dryRun: true,
+      tableAlias,
+      tableName: table,
+      attempted: records.length,
+      requested: records.length,
+      cleaned: prepared.length,
+      skipped,
+      created: 0,
+      recordIds: [],
+      warnings,
+      message: 'DRY RUN - NO AIRTABLE WRITE',
+      preview: prepared.slice(0, 10).map(record => record.fields)
+    }
+  }
 
   for (let i = 0; i < prepared.length; i += 10) {
     let body = {
@@ -188,10 +233,14 @@ async function airtableBatchCreate(tableAlias, records = []) {
       const rejectedField = extractRejectedField(payload)
       if (!rejectedField || removedFields.has(rejectedField) || removedFields.size >= 20) {
         return {
+          ok: false,
+          success: false,
           tableAlias,
           tableName: table,
+          attempted: records.length,
           requested: records.length,
-          created: created.length,
+          created: recordIdsFromCreated(created).length,
+          recordIds: recordIdsFromCreated(created),
           skipped,
           warnings,
           error: payload?.error?.message || payload?.error?.type || response.statusText,
@@ -202,10 +251,14 @@ async function airtableBatchCreate(tableAlias, records = []) {
       const next = removeField(body.records, rejectedField)
       if (!next.removed) {
         return {
+          ok: false,
+          success: false,
           tableAlias,
           tableName: table,
+          attempted: records.length,
           requested: records.length,
-          created: created.length,
+          created: recordIdsFromCreated(created).length,
+          recordIds: recordIdsFromCreated(created),
           skipped,
           warnings,
           error: `Airtable rejected field ${rejectedField}, but it was not present in payload`,
@@ -217,14 +270,41 @@ async function airtableBatchCreate(tableAlias, records = []) {
     }
   }
 
+  const recordIds = recordIdsFromCreated(created)
+  const ok = prepared.length > 0 && recordIds.length === prepared.length
   return {
+    ok,
+    success: ok,
     tableAlias,
     tableName: table,
+    attempted: records.length,
     requested: records.length,
     cleaned: prepared.length,
     skipped,
-    created: created.length,
-    warnings
+    created: recordIds.length,
+    recordIds,
+    warnings,
+    ...(ok ? {} : { error: recordIds.length === 0 ? 'Airtable returned zero created records with record IDs.' : `Airtable returned ${recordIds.length} created record IDs for ${prepared.length} cleaned records.` })
+  }
+}
+
+async function runSmokeTest() {
+  const result = await airtableBatchCreate('picks', [{
+    Pick: 'DELETE ME - Smoke Test Pick',
+    Game: 'AIRTABLE IMPORT SMOKE TEST',
+    Status: 'Pending'
+  }], { dryRun: false })
+
+  return {
+    ok: result.ok,
+    success: result.ok,
+    table: 'picks',
+    tableName: result.tableName,
+    attempted: 1,
+    created: result.created,
+    recordIds: result.recordIds || [],
+    ...(result.error ? { error: result.error } : {}),
+    result
   }
 }
 
@@ -238,9 +318,23 @@ export default async function handler(req, res) {
   try {
     if (req.method !== 'POST') {
       res.status(200).json({
+        ok: true,
         success: true,
-        message: 'POST JSON with { table: "propsLab", records: [...] } or { batches: [...] }. Result/Outcome/Profit-Loss fields are stripped automatically. Master Picks metric fields are accepted. Props Lab and Master Picks below A/A+ cannot import as VIP; they are normalized to Free.',
+        message: 'POST JSON with { table: "propsLab", records: [...] } or { batches: [...] }. Result/Outcome/Profit-Loss fields are stripped automatically. Master Picks metric fields are accepted. Props Lab and Master Picks below A/A+ cannot import as VIP; they are normalized to Free. Use smokeTest=true for a one-row smoke test.',
         baseId: baseId(),
+        smokeTest: {
+          method: 'POST',
+          body: {
+            smokeTest: true,
+            dryRun: false,
+            table: 'picks'
+          },
+          creates: {
+            Pick: 'DELETE ME - Smoke Test Pick',
+            Game: 'AIRTABLE IMPORT SMOKE TEST',
+            Status: 'Pending'
+          }
+        },
         tables: {
           picks: tableRef('picks'),
           propsLab: tableRef('propsLab'),
@@ -252,6 +346,13 @@ export default async function handler(req, res) {
     }
 
     const body = parseBody(req)
+    if (body.smokeTest === true) {
+      const result = await runSmokeTest()
+      res.status(result.ok ? 200 : 500).json(result)
+      return
+    }
+
+    const dryRun = truthy(req.query?.dryRun) || truthy(req.query?.preview) || truthy(body.dryRun) || truthy(body.preview)
     const batches = Array.isArray(body.batches)
       ? body.batches
       : [{ table: body.table, records: body.records || [] }]
@@ -264,19 +365,32 @@ export default async function handler(req, res) {
         results.push({ tableAlias: batch.table || '', requested: records.length, created: 0, error: 'Missing table alias' })
         continue
       }
-      results.push(await airtableBatchCreate(table, records))
+      results.push(await airtableBatchCreate(table, records, { dryRun }))
     }
 
     const failed = results.filter(result => result.error)
+    const attempted = results.reduce((sum, result) => sum + Number(result.attempted || result.requested || 0), 0)
+    const created = results.reduce((sum, result) => sum + Number(result.created || 0), 0)
+    const recordIds = results.flatMap(result => result.recordIds || [])
+    const ok = dryRun
+      ? results.length > 0 && failed.length === 0 && results.every(result => result.ok !== false)
+      : results.length > 0 && failed.length === 0 && created > 0 && recordIds.length === created
     res.status(failed.length ? 207 : 200).json({
-      success: failed.length === 0,
-      message: failed.length
+      ok,
+      success: ok,
+      dryRun,
+      ...(results.length === 1 ? { table: results[0].tableAlias || body.table } : {}),
+      attempted,
+      created,
+      recordIds,
+      error: ok ? undefined : (failed[0]?.error || 'Airtable import did not return created record IDs.'),
+      message: !ok
         ? 'Some sections failed. Successful sections may still have imported.'
-        : 'Records imported. Result/Outcome/Profit-Loss fields were intentionally not sent.',
+        : (dryRun ? 'DRY RUN - NO AIRTABLE WRITE' : 'Records imported. Result/Outcome/Profit-Loss fields were intentionally not sent.'),
       results
     })
   } catch (error) {
     console.error(error)
-    res.status(500).json({ success: false, error: error.message || String(error) })
+    res.status(500).json({ ok: false, success: false, created: 0, recordIds: [], error: error.message || String(error) })
   }
 }
