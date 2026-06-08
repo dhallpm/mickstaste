@@ -38,16 +38,16 @@ const BLOCKED_FIELDS = new Set([
 
 const TABLE_ALLOWED_FIELDS = {
   picks: new Set([
-    'Date','Sport','League','Game','Pick','Bet Type','Odds','Sportsbook','Grade','Units','Best Number','No Bet Cutoff','Implied Probability','EV Edge','True Probability','Model Probability','Closing Number','Closing Odds','CLV%','CLV Result','Closing Line Value','Closing Line','Confidence','Status','Access','Writeup','Market Notes','Injury Notes','Source Verification','Posted Time','Full Analysis'
+    'Date','Sport','League','Game','Pick','Bet Type','Odds','Sportsbook','Grade','Units','Best Number','No Bet Cutoff','Implied Probability','EV Edge','True Probability','Model Probability','Closing Number','Closing Odds','CLV%','CLV Result','Closing Line Value','Closing Line','Confidence','Status','Access','Writeup','Market Notes','Injury Notes','Source Verification','Posted Time','Full Analysis','A Grade Gate Result','A Grade Evidence Count','Market Misprice Reason','Unresolved Conflict','A-Hunt Source Notes'
   ]),
   propsLab: new Set([
-    'Date','Player','Prop','Sport','League','Game','Grade','Units','Status','Odds','Sportsbook','Best Number','No Bet Cutoff','Confidence','Access','Featured','Writeup','Market Notes','Injury Notes','Source Verification','Full Analysis'
+    'Date','Player','Prop','Sport','League','Game','Grade','Units','Status','Odds','Sportsbook','Best Number','No Bet Cutoff','Confidence','Access','Featured','Writeup','Market Notes','Injury Notes','Source Verification','Full Analysis','A Grade Gate Result','A Grade Evidence Count','Market Misprice Reason','Unresolved Conflict','A-Hunt Source Notes'
   ]),
   lottoParlays: new Set([
-    'Date','Sport','League','Game','Pick','Bet Type','Odds','Sportsbook','Grade','Units','Best Number','No Bet Cutoff','Confidence','Status','Access','Featured','Parlay Group','Writeup','Market Notes','Injury Notes','Source Verification','Full Analysis'
+    'Date','Sport','League','Game','Pick','Bet Type','Odds','Sportsbook','Grade','Units','Best Number','No Bet Cutoff','Confidence','Status','Access','Featured','Parlay Group','Writeup','Market Notes','Injury Notes','Source Verification','Full Analysis','A Grade Gate Result','A Grade Evidence Count','Market Misprice Reason','Unresolved Conflict','A-Hunt Source Notes'
   ]),
   longshots: new Set([
-    'Date','Sport','League','Game','Pick','Bet Type','Odds','Sportsbook','Grade','Units','Best Number','No Bet Cutoff','Confidence','Status','Access','Featured','Longshot','Writeup','Market Notes','Injury Notes','Source Verification','Full Analysis'
+    'Date','Sport','League','Game','Pick','Bet Type','Odds','Sportsbook','Grade','Units','Best Number','No Bet Cutoff','Confidence','Status','Access','Featured','Longshot','Writeup','Market Notes','Injury Notes','Source Verification','Full Analysis','A Grade Gate Result','A Grade Evidence Count','Market Misprice Reason','Unresolved Conflict','A-Hunt Source Notes'
   ])
 }
 

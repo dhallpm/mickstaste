@@ -6,13 +6,24 @@ _Last backed up: 2026-05-21_
 Micks Picks is a sports betting analysis framework focused on identifying value, not simply predicting winners. The model grades picks by comparing true probability against sportsbook implied probability, then adjusting for matchup sustainability, injuries, market movement, variance, and exposure risk.
 
 ## Core Grading
-- A / A-: playable straight bet when market number still gives edge.
-- B+ / B: lean or public/free pick unless prop/parlay exception applies.
+- A+: rare premium edge only when the A+ gate clears.
+- A: must clear the full A-grade gate; do not force A grades.
+- B+: bridge between B and A when a candidate is strong but misses any A-grade gate requirement.
+- B: lean or public/free pick unless prop/parlay exception applies.
 - C: lean only, low exposure.
 - Pass: no edge or bad number.
 
+## A-Grade Hunt Mode
+- Run an A-candidate search phase before final grading.
+- Prioritize MLB pitcher K props, outs recorded, first 5 lines, team totals, lineup/weather/bullpen driven totals; WNBA injury/rotation spreads, pace totals, role-stable props; NBA role-stable props and rest/pace totals; NHL only after goalie confirmation.
+- A requires 3 independent evidence paths, 5%+ edge versus implied probability or meaningful projection gap, price inside cutoff, confirmed role/news data as needed, no major unresolved source conflict, and a clear market misprice reason.
+- A+ requires the A gate plus 7% to 10%+ edge or major stale-line/news mismatch, low number sensitivity, verified news, and strong price protection.
+- Output an A-Candidate Queue with why each candidate passed or failed the gate.
+- If no candidate passes, output `No A-grade found.`
+
 ## VIP Routing Rule
-- Straight bets must be A- or higher to qualify for VIP.
+- Straight bets must clear the A-grade gate to qualify as A or A+.
+- B+ straight bets are bridge plays, not A-grade plays.
 - B-grade picks can be VIP only if they are props, parlays, longshots, or lotto cards.
 - Moneylines, spreads, and totals must not route to prop result sheets.
 

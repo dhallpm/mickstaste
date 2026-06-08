@@ -1,0 +1,80 @@
+{
+  "name": "Micks Picks A-Grade Hunt Upgrade",
+  "date_added": "2026-06-08",
+  "purpose": "Create more legitimate A-grade opportunities by expanding research depth and market coverage without lowering grading standards.",
+  "core_principle": "Do not manufacture A grades. Add a dedicated A-Hunt phase before final card selection. A grades must be earned by stronger evidence, not looser rules.",
+  "new_workflow_order": [
+    "1. Scan main board as usual.",
+    "2. Build A-candidate queue before assigning final grades.",
+    "3. Deep research each A-candidate across market, injury, matchup, projection, and price.",
+    "4. Compare candidate to no-bet cutoff and best available number.",
+    "5. Promote only candidates that pass A-grade gate.",
+    "6. If no candidate passes, card may still have no A. Record why."
+  ],
+  "a_hunt_markets_to_scan_first": {
+    "MLB": [
+      "Pitcher strikeout props with opponent K profile + pitch count security",
+      "Pitcher outs recorded when leash/efficiency/opponent chase profile align",
+      "First 5 moneyline or first 5 team total when bullpen noise blocks full game",
+      "Hitter HRR / total bases only after lineup confirmed and pitcher handedness verified",
+      "Team totals where lineup, park/weather, bullpen rest, and opposing starter regression align",
+      "Umpire/weather/park edges on totals, especially when market is slow"
+    ],
+    "WNBA": [
+      "Injury/rotation-driven spreads before public adjustment",
+      "Totals where pace + shot quality + defensive matchup all align",
+      "Underdogs with model gap, coaching continuity, and late-game cover path",
+      "Player props only when minutes and role are secure"
+    ],
+    "NBA": [
+      "Role-stable props: rebounds, assists, PRA when minutes are locked",
+      "Game totals when pace, rest, matchup, and market splits agree",
+      "Spreads only when line value plus matchup path clearly beat market"
+    ],
+    "NHL": [
+      "Goalie-confirmed edges only",
+      "Special teams mismatch plus shot-quality edge",
+      "Avoid A grades before goalie confirmation"
+    ]
+  },
+  "a_grade_required_gate": {
+    "minimum_edge": "Estimated true probability must beat implied probability by at least 5 percentage points, or projected line must exceed market by a clearly meaningful sport-specific margin.",
+    "evidence_count": "At least 3 independent evidence paths must agree.",
+    "price_requirement": "Current price must still be inside best number and no-bet cutoff.",
+    "news_requirement": "Injuries, lineups, starters, goalies, weather, and role/minutes must be confirmed where relevant.",
+    "conflict_rule": "No major unresolved contradiction from a trusted source. If strong sources conflict, cap at B+ or watchlist.",
+    "market_rule": "Must have a reason the market is wrong or stale, not just a good handicap.",
+    "correlation_rule": "Cannot be an A if it is overly dependent on another official pick from the same game.",
+    "volatility_rule": "High-variance longshots, HR props, and large plus-money darts cannot be A unless explicitly graded as value-only and backed by exceptional edge."
+  },
+  "a_plus_gate": {
+    "minimum_edge": "At least 7 to 10 percentage points vs implied probability or a major stale-line/injury/lineup mismatch.",
+    "confidence": "Low number sensitivity, verified news, and multiple independent model/source confirmations.",
+    "rarity": "A+ should remain rare and should usually be the Pick of the Day."
+  },
+  "b_plus_new_grade": {
+    "purpose": "Add B+ as a bridge grade so strong plays are not forced into A.",
+    "definition": "Better than normal B, close to A, but missing one requirement such as lineup confirmation, price strength, or conflict resolution.",
+    "units": "0.5u to 0.75u depending on confidence.",
+    "pick_of_day_eligible": "Yes, but only if no A exists and it has full ticket clarity."
+  },
+  "research_expansion_required_for_a_candidates": [
+    "Current odds from at least 2 books where possible",
+    "Line movement from open/current",
+    "Public/handle split if available",
+    "Projection comparison from at least one independent model/source",
+    "Injury/lineup/starter/goalie/weather confirmation",
+    "Matchup metrics: K%, BB%, ISO, wRC+, pace, rebound rate, shot quality, bullpen rating, etc.",
+    "No-bet cutoff before final grade"
+  ],
+  "output_changes": [
+    "Add section: A-Candidate Queue",
+    "Add section: Why this cleared or failed A-grade gate",
+    "Add field: A Grade Gate Result = Pass/Fail/Near Miss",
+    "Add field: A Grade Evidence Count",
+    "Add field: Market Misprice Reason",
+    "Add field: Unresolved Conflict",
+    "Add field: A-Hunt Source Notes"
+  ],
+  "important_warning": "Do not downgrade discipline. The goal is more research and better market selection, not artificial A inflation."
+}

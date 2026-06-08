@@ -31,6 +31,14 @@
 - Added hot/cold team validation rules requiring support from run differential, bullpen quality, and offense.
 - Added MLB series projection formula combining bullpen, home/road, handedness, interleague, form, command, and market price.
 
+## 2026-06-08
+- Added A-Grade Hunt Mode as a pre-grading A-candidate search phase.
+- Added B+ as the bridge grade between B and A without lowering A standards.
+- Added explicit A and A+ gate requirements covering independent evidence, edge size, price cutoff, confirmed role/news data, source conflicts, and market misprice reason.
+- Added A-Candidate Queue output expectations and the valid `No A-grade found.` result.
+- Added supported A-Hunt output fields: A Grade Gate Result, A Grade Evidence Count, Market Misprice Reason, Unresolved Conflict, and A-Hunt Source Notes.
+- Added `current/a-grade-hunt-rules.json` as the current A-Hunt rules config loaded by daily Micks Picks generation.
+
 ---
 
 ## Future Update Rule
