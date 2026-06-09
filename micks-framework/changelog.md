@@ -39,6 +39,14 @@
 - Added supported A-Hunt output fields: A Grade Gate Result, A Grade Evidence Count, Market Misprice Reason, Unresolved Conflict, and A-Hunt Source Notes.
 - Added `current/a-grade-hunt-rules.json` as the current A-Hunt rules config loaded by daily Micks Picks generation.
 
+## 2026-06-09
+- Added `current/post-june8-adjustments.json` and `current/post-june8-adjustments.md` as the current Post-June 8 adjustment config loaded by daily Micks Picks generation.
+- Added MLB full-game total risk adjustment before grade assignment, including Park/Weather Risk, Blow-Up Risk, Volatility Capped, and Tags output fields.
+- Added the extreme run environment B-/Watchlist cap unless 4 run-suppression confirmations exist.
+- Added parlay rejection for fragile high-volatility MLB totals.
+- Added WNBA model-gap B+ and A-candidate upgrade path without lowering A-grade standards.
+- Added role-stable prop priority and tags: Extreme Run Environment, Volatile Total Cap, Park/Weather Conflict, Role-Stable Prop, A-Hunt Candidate, and B+ Near-A.
+
 ---
 
 ## Future Update Rule

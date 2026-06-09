@@ -10,6 +10,8 @@
 - Avoid stacking too many legs that fail from the same hidden assumption unless the ticket is intentionally correlated and labeled that way.
 - Prefer legs with independent edges or clean positive correlation.
 - Do not include stale lines, unclear injury spots, or players with uncertain minutes.
+- Do not include fragile high-volatility MLB full-game totals.
+- If an MLB total has Medium or High Blow-Up Risk or receives a Volatile Total Cap, reject it from the main parlay leg pool.
 - Keep longshot or futures-style tickets in Longshots unless they are explicitly safe lotto parlay builds.
 
 ## Safe Version Vs Value Version

@@ -8,6 +8,8 @@ Store the rules, grading logic, betting systems, routing rules, bankroll rules, 
 ## Core Structure
 - `a-grade-hunt.md` - A-Grade Hunt Mode, A/A+ gate rules, B+ bridge grade, and A-Candidate Queue output.
 - `current/a-grade-hunt-rules.json` - current A-Hunt rules config loaded by daily Micks Picks generation.
+- `current/post-june8-adjustments.md` - post-June 8 risk-adjustment rules for MLB totals, WNBA model gaps, props, and parlays.
+- `current/post-june8-adjustments.json` - current Post-June 8 rules config loaded by daily Micks Picks generation.
 - `mlb.md` - MLB framework
 - `nba.md` — NBA and NBA playoff framework
 - `wnba.md` — WNBA framework

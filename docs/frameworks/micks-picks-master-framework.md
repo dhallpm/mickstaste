@@ -21,6 +21,17 @@ Micks Picks is a sports betting analysis framework focused on identifying value,
 - Output an A-Candidate Queue with why each candidate passed or failed the gate.
 - If no candidate passes, output `No A-grade found.`
 
+## Post-June 8 Risk Adjustment
+- Apply `micks-framework/current/post-june8-adjustments.json` and `micks-framework/current/post-june8-adjustments.md` during daily card generation.
+- MLB full-game totals are risk-adjusted before grade assignment.
+- Any MLB total in an extreme run environment is capped at B-/Watchlist unless at least 4 run-suppression confirmations exist.
+- Extreme run environment includes Las Vegas Ballpark, minor-league or neutral-site hitter parks, heat/altitude carry boosts, total of 10.5 or higher, homer-prone starters, tired/bad bullpens, and market movement toward Over.
+- Every official MLB total must include Park/Weather Risk, Blow-Up Risk, and whether volatility capped the grade.
+- No parlay may include a fragile high-volatility MLB total.
+- WNBA spread model gaps can upgrade to B+ at 4+ points with injury/rotation confirmation, and can enter the A-candidate queue at 5+ points with market support.
+- Role-stable props and lineup-confirmed MLB hitter props can outrank volatile full-game totals when grades are similar.
+- Do not lower A-grade standards; more A grades must come from deeper A-Hunt research, not artificial grade inflation.
+
 ## VIP Routing Rule
 - Straight bets must clear the A-grade gate to qualify as A or A+.
 - B+ straight bets are bridge plays, not A-grade plays.

@@ -22,9 +22,22 @@
 
 ## Grading
 - A = strong projection edge, secure role, clean matchup, current injury news, and playable number.
+- B+ = bridge grade for role-stable props with confirmed role/lineup, plus price or clear number value, weak opponent matchup, and independent projection edge that misses the full A gate.
 - B = positive edge with manageable volatility or one dependency.
 - C = thin edge at the current number only.
 - Pass = uncertain minutes, stale line, unverified injury impact, bad price, or low-data projection.
+
+## Post-June 8 Prop Priority
+Role-stable props and lineup-confirmed MLB hitter props can outrank volatile MLB full-game totals when grades are similar.
+
+Prioritize props with:
+- Confirmed lineup or stable role.
+- Plus-money price or strong number value.
+- Weak opponent matchup.
+- Independent projection edge.
+- Low dependency on one fragile game script.
+
+Tag qualifying props as `Role-Stable Prop`, and use `A-Hunt Candidate` or `B+ Near-A` when supported by the A-grade gate evidence.
 
 ## Best Number And No Bet Cutoff
 - Best Number is the line/price used for the card.

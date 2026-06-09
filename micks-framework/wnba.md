@@ -13,9 +13,18 @@
 
 ## Grading
 - A = strong edge with secure minutes, clear matchup advantage, current injury context, and a playable number.
+- B+ = strong bridge grade when a model-gap spread has a 4+ point gap, current line inside cutoff, and role/injury confirmation, but does not clear the full A gate.
 - B = positive edge with manageable volatility or one unresolved but non-critical factor.
 - C = small edge that is playable only at the posted number and unit size.
 - Pass = stale price, uncertain availability, thin data, low-liquidity move, or no true probability edge.
+
+## Post-June 8 Model-Gap Upgrade Path
+WNBA model-gap spreads can be upgraded more aggressively without lowering A-grade standards.
+
+- 4+ point model gap plus injury/rotation confirmation = B+ eligible.
+- 5+ point model gap plus market support = A-candidate eligible.
+- A still requires the full A-grade gate: 3 independent evidence paths, 5%+ edge or meaningful projection gap, current price inside cutoff, confirmed role/news data, no unresolved source conflict, and clear market misprice reason.
+- If two plays grade similarly, prefer the WNBA model-gap edge over a volatile MLB full-game total.
 
 ## Matchup Layer
 - Evaluate pace, offensive efficiency, defensive scheme, and rebounding profile.

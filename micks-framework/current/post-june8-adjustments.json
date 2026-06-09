@@ -1,0 +1,114 @@
+{
+  "name": "Micks Picks Post-Result Adjustment Pack",
+  "date_added": "2026-06-09",
+  "trigger_result": "June 8 card: official straights 2-2, WNBA 2-0, MLB totals 0-2, Pick of the Day won.",
+  "core_lesson": "Do not let model/projection edge alone push volatile MLB totals onto the official card when park, weather, altitude, bullpen or late-inning volatility create blow-up risk.",
+  "grade_adjustments": {
+    "mlb_totals": {
+      "rule": "Any full-game MLB total in extreme run environment must be capped at B-/watchlist unless park/weather model, umpire, starters, bullpen, and market all agree.",
+      "extreme_run_environment_flags": [
+        "Las Vegas Ballpark / minor league park / neutral site with PCL-style scoring",
+        "Heat or altitude materially boosting carry",
+        "Total 10.5 or higher",
+        "Bullpen fatigue on either side",
+        "Homer-prone starter or low ground-ball profile",
+        "Line moving toward Over despite Under projection"
+      ],
+      "new_grade_cap": "B-/Watchlist unless at least 4 run-suppression confirmations exist",
+      "required_under_confirmations": [
+        "Both starters confirmed and project for real length",
+        "Bullpens rested and above average",
+        "Weather/park neutral or pitcher-friendly",
+        "Umpire not Over-leaning",
+        "Market not strongly moving against the Under",
+        "Lineup strength does not add major power/contact risk"
+      ]
+    },
+    "mlb_sides": {
+      "rule": "When totals are volatile, prefer side/first-5/team-total angles over full-game Under if side has bullpen/start-pitching/market support.",
+      "impact": "Brewers ML should have been considered ahead of Brewers/Athletics Under 11 once Vegas scoring risk was identified."
+    },
+    "wnba": {
+      "rule": "WNBA model-gap plays with line cushion, home/road fit, and role/injury confirmation can be upgraded more aggressively.",
+      "upgrade_path": "B to B+ when projection gap is 4+ points and no major injury contradiction exists. A only if projection gap is 5+ points plus market/line movement supports the side."
+    },
+    "props": {
+      "rule": "Role-stable props and hitter HRR/TB props with confirmed lineup, plus-money price, and pitcher-fade path can outrank volatile game totals.",
+      "upgrade_path": "Strong props can be official even when main side/total card is full; however max 3 official props remains."
+    },
+    "parlays": {
+      "rule": "No parlay leg may rely on the same fragile full-game MLB total profile that is being capped by volatility rules.",
+      "impact": "If Yankees/Guardians Under is top official but not A/B+, do not pair it with Pick of the Day unless it has low volatility."
+    }
+  },
+  "new_tags_to_add": [
+    "Extreme Run Environment",
+    "Volatile Total Cap",
+    "Park/Weather Conflict",
+    "Role-Stable Prop",
+    "A-Hunt Candidate",
+    "B+ Near-A"
+  ],
+  "new_output_requirements": [
+    "For every official MLB total, include Park/Weather Risk.",
+    "For every official MLB Under, include Blow-Up Risk rating: Low / Medium / High.",
+    "For every B+ or A candidate, include A-Grade Gate Result.",
+    "If a play is capped below B because of volatility, explain the cap."
+  ],
+  "automatic_downgrade_rules": [
+    {
+      "condition": "MLB total >= 10.5 and played in known hitter-friendly/altitude/minor-league park",
+      "action": "Cap at B- unless 4+ run-suppression confirmations exist."
+    },
+    {
+      "condition": "Under projection edge exists but weather/park strongly favors offense",
+      "action": "Downgrade one full grade or move to watchlist."
+    },
+    {
+      "condition": "One trusted source attacks the same starter while another source backs pitcher K/Under angle",
+      "action": "Cap player K props and related Unders at watchlist/B- until conflict resolved."
+    },
+    {
+      "condition": "Pick relies on bullpen holding a full-game Under but one or both bullpens are below average/fatigued",
+      "action": "Move from full-game Under to first-5 or pass."
+    }
+  ],
+  "positive_upgrade_rules": [
+    {
+      "condition": "WNBA spread has 4+ point model gap, current line inside cutoff, and injury/rotation confirmation",
+      "action": "Eligible for B+."
+    },
+    {
+      "condition": "WNBA spread has 5+ point model gap, market not moving against it, and matchup supports cover script",
+      "action": "Eligible for A-candidate queue."
+    },
+    {
+      "condition": "Prop has confirmed role/lineup, plus price, weak opponent matchup, and independent projection edge",
+      "action": "Eligible for B+ or A-candidate queue depending on edge size."
+    },
+    {
+      "condition": "MLB side has starter, bullpen, lineup, market/splits, and system support with no major contradiction",
+      "action": "Can outrank volatile totals on official card."
+    }
+  ],
+  "daily_card_selection_changes": [
+    "Before finalizing card, rank plays by risk-adjusted edge, not projection edge alone.",
+    "At least one A-candidate search must be run in props/first-5/team-total markets.",
+    "If two official plays are from MLB totals, require one to be low-volatility or replace with side/prop.",
+    "Do not include a high-volatility total in a parlay.",
+    "Pick of the Day should prefer WNBA/NBA role or spread edges over volatile MLB totals when both grade similarly."
+  ],
+  "lesson_from_june_8": {
+    "worked": [
+      "Mystics +5.5 as Pick of the Day won and was the right style: model gap plus line cushion.",
+      "Liberty/Sun Over won; WNBA model total gap was clean.",
+      "Brunson role prop won; stable usage worked."
+    ],
+    "failed": [
+      "Yankees/Guardians Under 8 lost because full-game total variance was underestimated.",
+      "Brewers/Athletics Under 11 lost badly because Vegas Ballpark/run environment risk should have capped the play harder.",
+      "Parlay used a fragile MLB total leg."
+    ],
+    "framework_change": "Prioritize risk-adjusted certainty over raw projection gap, especially on MLB totals."
+  }
+}

@@ -179,6 +179,35 @@ VegasInsider does not override live odds/API validation.
 ## MLB Formula
 Starting Pitcher Quality + Command Stability + Bullpen Stability + Lineup Pressure + Weather/Wind/Park + Umpire Profile + Series-Level Trend Filters + Market Inflation = MLB Projection.
 
+## Post-June 8 MLB Total Volatility Cap
+Full-game MLB totals are risk-adjusted before grade assignment. Projection edge alone cannot push a volatile full-game total onto the official card.
+
+Every official MLB total must include:
+- Park/Weather Risk.
+- Blow-Up Risk: Low / Medium / High.
+- Whether volatility capped the grade.
+
+Any MLB total in an extreme run environment is capped at B-/Watchlist unless at least 4 run-suppression confirmations exist.
+
+Extreme run environment includes:
+- Las Vegas Ballpark.
+- Minor-league or neutral-site hitter park.
+- Heat or altitude boosting carry.
+- Total of 10.5 or higher.
+- Homer-prone starter.
+- Tired or bad bullpen.
+- Market moving Over.
+
+Run-suppression confirmations include:
+- Both starters confirmed and projected for real length.
+- Bullpens rested and above average.
+- Weather/park neutral or pitcher-friendly.
+- Umpire not Over-leaning.
+- Market not strongly moving against the Under.
+- Lineup strength does not add major power/contact risk.
+
+If Under projection edge exists but park/weather favors offense, downgrade one full grade, move to watchlist, or switch to first 5 if starter path is the real edge. When totals are volatile, prefer side, first-5, team-total, or prop expressions with stronger certainty.
+
 ## Routing
 - MLB sides/totals/team totals route to Master Picks or website feed.
 - MLB player props route to Props Lab only if they are true player props.
