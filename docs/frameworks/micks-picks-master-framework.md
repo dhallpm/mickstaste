@@ -32,6 +32,17 @@ Micks Picks is a sports betting analysis framework focused on identifying value,
 - Role-stable props and lineup-confirmed MLB hitter props can outrank volatile full-game totals when grades are similar.
 - Do not lower A-grade standards; more A grades must come from deeper A-Hunt research, not artificial grade inflation.
 
+## World Cup Path Leverage Mode
+- Apply `micks-framework/current/world-cup-path-leverage.json` before grading World Cup futures, group winner markets, qualify/top-2 markets, and live group-position bets.
+- Treat conditional Cup Win % by group finish as path leverage, not raw title probability.
+- Prioritize group winner, top-2, qualify, and live group-position markets before outright futures.
+- Track bracket collision risk for Spain Group H and Argentina Group J.
+- Monitor Group I for France, Norway, and Senegal.
+- Apply host-field adjustments for USA, Mexico, and Canada.
+- Heavy friendly moneylines are capped unless independent price edge is proven.
+- Do not create official soccer plays without sportsbook price, no-bet cutoff, market type, and path edge explanation.
+- Required output sections: World Cup Path Watchlist, Group Winner Edge Board, Live Group-Position Triggers, Host-Field Adjustment Notes, Bracket Collision Alerts, and Do-Not-Bet Heavy Chalk List.
+
 ## VIP Routing Rule
 - Straight bets must clear the A-grade gate to qualify as A or A+.
 - B+ straight bets are bridge plays, not A-grade plays.

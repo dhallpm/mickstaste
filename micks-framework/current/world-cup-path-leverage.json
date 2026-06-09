@@ -1,0 +1,186 @@
+{
+  "module_name": "Micks Picks World Cup Path Leverage Upgrade",
+  "version": "2026-06-09",
+  "status": "active_framework_addon",
+  "purpose": "Add World Cup bracket-path, group-finish, and home-field leverage rules so soccer futures and group-stage markets are graded by path value instead of raw team strength only.",
+  "core_rule": "Do not bet World Cup teams only because they are stronger. Evaluate whether the market price underrates how group finish changes the knockout path.",
+  "major_concepts": {
+    "conditional_group_finish_value": "Cup Win % from the Silver Bulletin screenshots is conditional on group finish. Use it to compare path value of 1st vs 2nd vs 3rd, not as raw pre-tournament title probability.",
+    "group_winner_leverage": "If a team's Cup Win % nearly doubles or triples when finishing 1st, prioritize group winner and live group-position markets.",
+    "third_place_warning": "Third-place advancement may be possible, but the path is usually worse and should be downgraded unless price compensates.",
+    "host_field_adjustment": "USA, Mexico, and Canada should not be treated as neutral-field teams when playing at home.",
+    "bracket_collision_risk": "Spain Group H and Argentina Group J have important path collision risk if one wins its group while the other finishes second."
+  },
+  "priority_teams_from_screenshots": {
+    "Argentina": {
+      "cup_win_if_1st": "20.6%",
+      "cup_win_if_2nd": "10.9%",
+      "cup_win_if_3rd": "10.2%",
+      "micks_read": "High-priority group winner and live group-position market."
+    },
+    "Spain": {
+      "cup_win_if_1st": "20.1%",
+      "cup_win_if_2nd": "10.1%",
+      "cup_win_if_3rd": "7.6%",
+      "micks_read": "High-priority group winner and live group-position market."
+    },
+    "France": {
+      "cup_win_if_1st": "15.3%",
+      "cup_win_if_2nd": "8.5%",
+      "cup_win_if_3rd": "5.6%",
+      "micks_read": "Group I winner market is high priority. Monitor Senegal/Norway disruption risk."
+    },
+    "England": {
+      "cup_win_if_1st": "11.4%",
+      "cup_win_if_2nd": "7.3%",
+      "cup_win_if_3rd": "5.2%",
+      "micks_read": "Strong team, but path sensitive and may involve host-field problems. Do not overpay futures."
+    },
+    "Germany": {
+      "cup_win_if_1st": "8.8%",
+      "cup_win_if_2nd": "4.0%",
+      "cup_win_if_3rd": "2.3%",
+      "micks_read": "Medium-high priority group winner and live futures team."
+    },
+    "Brazil": {
+      "cup_win_if_1st": "7.9%",
+      "cup_win_if_2nd": "5.2%",
+      "cup_win_if_3rd": "2.8%",
+      "micks_read": "Solid group-winner interest, but less urgent than Argentina/Spain/France."
+    },
+    "Colombia": {
+      "cup_win_if_1st": "6.0%",
+      "cup_win_if_2nd": "3.3%",
+      "cup_win_if_3rd": "1.6%",
+      "micks_read": "Sneaky group-winner value target."
+    },
+    "Norway": {
+      "cup_win_if_1st": "7.7%",
+      "cup_win_if_2nd": "3.4%",
+      "cup_win_if_3rd": "1.9%",
+      "micks_read": "Group I leverage team. Monitor vs France/Senegal."
+    },
+    "Senegal": {
+      "cup_win_if_1st": "1.9%",
+      "cup_win_if_2nd": "0.9%",
+      "cup_win_if_3rd": "0.5%",
+      "micks_read": "Important Group I disruptor. Qualify/top-2/upset markets can create value."
+    },
+    "USA": {
+      "cup_win_if_1st": "2.3%",
+      "cup_win_if_2nd": "1.0%",
+      "cup_win_if_3rd": "0.5%",
+      "micks_read": "Host-field/live knockout market team."
+    },
+    "Mexico": {
+      "cup_win_if_1st": "1.3%",
+      "cup_win_if_2nd": "0.5%",
+      "cup_win_if_3rd": "0.2%",
+      "micks_read": "Host-field upset/advance-market watchlist."
+    },
+    "Canada": {
+      "cup_win_if_1st": "0.8%",
+      "cup_win_if_2nd": "0.3%",
+      "cup_win_if_3rd": "0.2%",
+      "micks_read": "Host-field underdog/spread/double-chance live market only."
+    }
+  },
+  "group_stage_game_leverage_watchlist": [
+    {
+      "date": "2026-06-26",
+      "match": "Uruguay vs Spain",
+      "reason": "Highest bracket leverage; Spain finishing 2nd can trigger Argentina collision risk."
+    },
+    {
+      "date": "2026-06-26",
+      "match": "Norway vs France",
+      "reason": "Group I leverage; affects France, Norway, Senegal path."
+    },
+    {
+      "date": "2026-06-22",
+      "match": "Argentina vs Austria",
+      "reason": "Argentina group-position leverage."
+    },
+    {
+      "date": "2026-06-16",
+      "match": "Argentina vs Algeria",
+      "reason": "Early Argentina group shock could reshape Spain/Argentina bracket."
+    },
+    {
+      "date": "2026-06-16",
+      "match": "France vs Senegal",
+      "reason": "Group I disruption and top-2/third-place implications."
+    },
+    {
+      "date": "2026-06-25",
+      "match": "Ecuador vs Germany",
+      "reason": "Germany group-position leverage."
+    },
+    {
+      "date": "2026-06-21",
+      "match": "Spain vs Saudi Arabia",
+      "reason": "Spain group-position leverage."
+    },
+    {
+      "date": "2026-06-15",
+      "match": "Spain vs Cape Verde",
+      "reason": "Early Spain group control spot."
+    },
+    {
+      "date": "2026-06-17",
+      "match": "England vs Croatia",
+      "reason": "England group path and host-field bracket complications."
+    },
+    {
+      "date": "2026-06-22",
+      "match": "France vs Iraq",
+      "reason": "France group positioning and Group I knockout path."
+    },
+    {
+      "date": "2026-06-27",
+      "match": "Colombia vs Portugal",
+      "reason": "Colombia/Portugal bracket leverage and group winner value."
+    },
+    {
+      "date": "2026-06-22",
+      "match": "Norway vs Senegal",
+      "reason": "Critical Group I qualify/top-2 market leverage."
+    },
+    {
+      "date": "2026-06-13",
+      "match": "Brazil vs Morocco",
+      "reason": "Brazil group control and Morocco disruption test."
+    }
+  ],
+  "betting_market_priority_order": [
+    "Group winner markets for Spain, Argentina, France, Germany, Colombia, Brazil",
+    "Top-2 / to qualify from group markets for Senegal, Norway, USA, Mexico, Canada, Colombia",
+    "Live group-position markets after first match",
+    "Knockout to-advance markets involving hosts at home",
+    "World Cup outright only after path improves or price overreacts",
+    "Friendly moneylines only when there is independent price edge"
+  ],
+  "a_grade_gate_for_world_cup": {
+    "minimum_requirements": [
+      "Market price must be compared to path-adjusted probability, not just raw team rating.",
+      "At least 3 independent supports: model/path leverage, price edge, opponent/path weakness, home-field or schedule advantage, or market mispricing.",
+      "For group winner bets, finishing 1st must materially improve title or knockout path value.",
+      "For host-country bets, home-field venue must be confirmed and market must not already fully price it.",
+      "For heavy favorites, A grade is forbidden unless price still creates clear value."
+    ],
+    "automatic_caps": [
+      "Heavy friendly moneylines capped at C/B- unless price is clearly wrong.",
+      "Outrights capped at B unless path and price both improve.",
+      "Third-place qualification paths capped unless odds compensate for tougher bracket.",
+      "Games with expected heavy rotation capped unless lineup confirms."
+    ]
+  },
+  "new_output_sections": [
+    "World Cup Path Watchlist",
+    "Group Winner Edge Board",
+    "Live Group-Position Triggers",
+    "Host-Field Adjustment Notes",
+    "Bracket Collision Alerts",
+    "Do-Not-Bet Heavy Chalk List"
+  ]
+}

@@ -46,6 +46,9 @@
 - Added parlay rejection for fragile high-volatility MLB totals.
 - Added WNBA model-gap B+ and A-candidate upgrade path without lowering A-grade standards.
 - Added role-stable prop priority and tags: Extreme Run Environment, Volatile Total Cap, Park/Weather Conflict, Role-Stable Prop, A-Hunt Candidate, and B+ Near-A.
+- Added `current/world-cup-path-leverage.json` as the current World Cup Path Leverage Mode config loaded before grading World Cup futures, group winner, qualify/top-2, and live group-position markets.
+- Added soccer/World Cup guardrails requiring sportsbook price, no-bet cutoff, market type, and path edge explanation before official card creation.
+- Added output sections for World Cup Path Watchlist, Group Winner Edge Board, Live Group-Position Triggers, Host-Field Adjustment Notes, Bracket Collision Alerts, and Do-Not-Bet Heavy Chalk List.
 
 ---
 
