@@ -86,7 +86,7 @@ const verifiedSettlement = calculateSettlementFields({
   }
 })
 assert.equal(verifiedSettlement.fields.Result, 'Win')
-assert.equal(verifiedSettlement.fields['Settlement Status'], 'Verified')
+assert.equal(verifiedSettlement.fields['Settlement Status'], 'Settled')
 assert.match(verifiedSettlement.fields['Settlement Source'], /MLB official box score/)
 assert.match(verifiedSettlement.fields['Settlement Notes'], /Final score verified/)
 
@@ -165,6 +165,71 @@ await settleHandler({ method: 'GET', query: {} }, settleRes)
 assert.equal(settleRes.statusCode, 200)
 assert.equal(settleRes.body.endpoint, 'settle-results')
 assert.match(settleRes.body.confirmUrl, /confirm=SETTLE/)
+
+const originalFetch = globalThis.fetch
+const originalAirtableKey = process.env.AIRTABLE_API_KEY
+process.env.AIRTABLE_API_KEY = 'test_airtable_key'
+
+const tableIds = [
+  'tblB0LZW6ATToi8tF',
+  'tblPdZG1sTbjD74mx',
+  'tbllr4X5WVUxtmQyL',
+  'tblE2H2iiKoFqQXHl'
+]
+const recordsByTable = new Map(tableIds.map((tableId, tableIndex) => [
+  tableId,
+  Array.from({ length: tableIndex === 0 ? 6 : 3 }, (_, recordIndex) => ({
+    id: `rec${tableIndex}${recordIndex}settle`,
+    fields: {
+      Date: '2026-06-09',
+      Game: `SettleAll Test Game ${tableIndex}-${recordIndex}`,
+      Pick: `SettleAll Test Pick ${tableIndex}-${recordIndex}`,
+      Status: 'Pending',
+      Units: 1,
+      Odds: '-110'
+    }
+  }))
+]))
+
+let patchedRecords = 0
+globalThis.fetch = async (url, options = {}) => {
+  const requestUrl = new URL(String(url))
+  const tableId = decodeURIComponent(requestUrl.pathname.split('/').pop())
+  if (options.method === 'PATCH') {
+    const body = JSON.parse(options.body || '{}')
+    patchedRecords += body.records?.length || 0
+    return {
+      ok: true,
+      json: async () => ({ records: body.records || [] })
+    }
+  }
+  return {
+    ok: true,
+    json: async () => ({ records: recordsByTable.get(tableId) || [] })
+  }
+}
+
+const settleAllRes = makeRes()
+await settleHandler({
+  method: 'GET',
+  query: {
+    date: '2026-06-09',
+    settleAll: 'true',
+    confirm: 'SETTLE'
+  }
+}, settleAllRes)
+assert.equal(settleAllRes.statusCode, 200)
+assert.equal(settleAllRes.body.settleAll, true)
+assert.equal(settleAllRes.body.scanned, 15)
+assert.equal(settleAllRes.body.needsReview, 15)
+assert.equal(settleAllRes.body.skipped, 0)
+assert.equal(settleAllRes.body.updated, 15)
+assert.equal(settleAllRes.body.needsReviewRecords.length, 15)
+assert.equal(patchedRecords, 15)
+
+globalThis.fetch = originalFetch
+if (originalAirtableKey === undefined) delete process.env.AIRTABLE_API_KEY
+else process.env.AIRTABLE_API_KEY = originalAirtableKey
 
 const html = await readFile(new URL('../import-airtable.html', import.meta.url), 'utf8')
 assert.match(html, /api\/recalculate-clv\?date=/)

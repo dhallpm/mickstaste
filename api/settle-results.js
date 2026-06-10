@@ -6,16 +6,38 @@ function parseBody(req) {
   return req.body
 }
 
+function queryValue(value) {
+  return Array.isArray(value) ? value[0] : value
+}
+
+function truthyFlag(value) {
+  const raw = String(queryValue(value) ?? '').trim().toLowerCase()
+  return raw === 'true' || raw === '1'
+}
+
+function parseSettleAll(req, body = {}) {
+  return truthyFlag(req.query?.settleAll) ||
+    truthyFlag(req.query?.all) ||
+    truthyFlag(req.query?.forceSettle) ||
+    body.settleAll === true ||
+    body.settleAll === 1 ||
+    truthyFlag(body.settleAll) ||
+    truthyFlag(body.all) ||
+    truthyFlag(body.forceSettle)
+}
+
 export default async function handler(req, res) {
   try {
-    if (req.method === 'GET' && req.query?.confirm !== 'SETTLE') {
-      const date = requestedDateKey(req.query?.date)
+    const helpSettleAll = parseSettleAll(req)
+    if (req.method === 'GET' && queryValue(req.query?.confirm) !== 'SETTLE') {
+      const date = requestedDateKey(queryValue(req.query?.date))
       res.status(200).json({
         success: true,
         endpoint: 'settle-results',
         message: 'Add ?confirm=SETTLE to settle records with final Result/Outcome fields or trusted source URLs, or POST JSON { "date": "YYYY-MM-DD" }.',
         defaultDateTimezone: 'America/New_York',
         date,
+        settleAll: helpSettleAll,
         confirmUrl: `/api/settle-results?date=${date}&confirm=SETTLE`,
         trustedSourcePriority: [
           'Official league/team box score',
@@ -35,9 +57,11 @@ export default async function handler(req, res) {
     }
 
     const body = req.method === 'POST' ? parseBody(req) : {}
+    const settleAll = parseSettleAll(req, body)
     const result = await settleResults({
-      date: body.date || req.query?.date,
-      dryRun: body.dryRun === true || req.query?.dryRun === 'true'
+      date: body.date || queryValue(req.query?.date),
+      dryRun: body.dryRun === true || truthyFlag(req.query?.dryRun),
+      settleAll
     })
     res.status(200).json(result)
   } catch (error) {
