@@ -69,7 +69,43 @@ assert.equal(calculateSettlementFields({ Result: 'Win', Units: 1, Odds: '+150' }
 assert.equal(calculateSettlementFields({ Result: 'Win', Units: 1, Odds: '-110' }, new Date('2026-06-02T22:00:00Z')).fields['Profit/Loss'], 0.91)
 assert.equal(calculateSettlementFields({ Result: 'Loss', Units: 0.75, Odds: '+450' }, new Date('2026-06-02T22:00:00Z')).fields['Profit/Loss'], -0.75)
 assert.equal(calculateSettlementFields({ Result: 'Push', Units: 0.75, Odds: '+450' }, new Date('2026-06-02T22:00:00Z')).fields['Profit/Loss'], 0)
+assert.equal(calculateSettlementFields({ Result: 'Void', Units: 0.75, Odds: '+450' }, new Date('2026-06-02T22:00:00Z')).fields.Result, 'Void')
+assert.equal(calculateSettlementFields({ Result: 'Cancelled', Units: 0.75, Odds: '+450' }, new Date('2026-06-02T22:00:00Z')).fields['Profit/Loss'], 0)
 assert.equal(calculateSettlementFields({ Result: 'Pending', Units: 1, Odds: '+150' }).skipped, true)
+
+const verifiedSettlement = calculateSettlementFields({
+  Units: 1,
+  Odds: '+150'
+}, new Date('2026-06-02T22:00:00Z'), {
+  verification: {
+    status: 'verified',
+    result: 'Win',
+    sourceName: 'MLB official box score',
+    sourceUrl: 'https://www.mlb.com/gameday/box-score',
+    notes: 'Final score verified from official box score.'
+  }
+})
+assert.equal(verifiedSettlement.fields.Result, 'Win')
+assert.equal(verifiedSettlement.fields['Settlement Status'], 'Verified')
+assert.match(verifiedSettlement.fields['Settlement Source'], /MLB official box score/)
+assert.match(verifiedSettlement.fields['Settlement Notes'], /Final score verified/)
+
+const parlayMissingOdds = calculateSettlementFields({
+  Pick: 'Knicks ML | Under 205.5',
+  'Bet Type': 'Parlay',
+  Units: 1
+}, new Date('2026-06-02T22:00:00Z'), {
+  verification: {
+    status: 'verified',
+    result: 'Win',
+    sourceName: 'ESPN box score',
+    sourceUrl: 'https://www.espn.com/nba/boxscore/_/gameId/1',
+    notes: 'All parlay legs won.'
+  }
+})
+assert.equal(parlayMissingOdds.fields.Result, 'Win')
+assert.equal(parlayMissingOdds.fields['Profit/Loss'], 'Profit Pending - Missing Odds')
+assert.equal(parlayMissingOdds.fields.ROI, '')
 
 const mapped = cleanWebsiteRow({
   id: 'rec1',

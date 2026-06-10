@@ -13,12 +13,18 @@ export default async function handler(req, res) {
       res.status(200).json({
         success: true,
         endpoint: 'settle-results',
-        message: 'Add ?confirm=SETTLE to settle Master Picks with Result filled, or POST JSON { "date": "YYYY-MM-DD" }.',
+        message: 'Add ?confirm=SETTLE to settle records with final Result/Outcome fields or trusted source URLs, or POST JSON { "date": "YYYY-MM-DD" }.',
         defaultDateTimezone: 'America/New_York',
         date,
         confirmUrl: `/api/settle-results?date=${date}&confirm=SETTLE`,
-        updates: ['Profit/Loss', 'ROI if accepted by Airtable', 'Settled At if accepted by Airtable'],
-        note: 'This endpoint writes numeric Profit/Loss values and does not change Airtable field types.'
+        trustedSourcePriority: [
+          'Official league/team box score',
+          'Sports Reference / Baseball Reference / Basketball Reference / Hockey Reference',
+          'ESPN / CBS Sports / FOX Sports / Yahoo Sports box score',
+          'Approved secondary source'
+        ],
+        updates: ['Result', 'Outcome', 'Profit/Loss', 'ROI', 'Settled At', 'Settlement Source', 'Settlement Status', 'Settlement Notes'],
+        note: 'The source router grades only verified box-score/stat evidence. Conflicts or recap-only evidence are marked Needs Review.'
       })
       return
     }
@@ -30,7 +36,8 @@ export default async function handler(req, res) {
 
     const body = req.method === 'POST' ? parseBody(req) : {}
     const result = await settleResults({
-      date: body.date || req.query?.date
+      date: body.date || req.query?.date,
+      dryRun: body.dryRun === true || req.query?.dryRun === 'true'
     })
     res.status(200).json(result)
   } catch (error) {
