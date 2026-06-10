@@ -94,13 +94,13 @@ assert.equal(teamTotal.status, 'verified')
 assert.equal(teamTotal.result, 'Win')
 
 const moneylineWithPrice = await routeSettlementSources({
-  Game: 'Guardians vs Yankees',
-  Pick: 'Guardians ML +108',
+  Game: 'New York Yankees vs Cleveland Guardians',
+  Pick: 'Guardians ML +108 or better',
   'Box Score URL': officialMlbUrl
 }, {
   urls: [officialMlbUrl],
   sourceTextByUrl: {
-    [officialMlbUrl]: 'Box Score Final: Guardians 4 Yankees 3 runs'
+    [officialMlbUrl]: 'Box Score Final: New York Yankees 3, Cleveland Guardians 4 runs'
   }
 })
 assert.equal(moneylineWithPrice.status, 'verified')
