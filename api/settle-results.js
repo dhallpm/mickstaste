@@ -34,6 +34,8 @@ export default async function handler(req, res) {
       res.status(200).json({
         success: true,
         endpoint: 'settle-results',
+        source: 'google-sheets',
+        sourceOfTruth: 'Google Sheets',
         message: 'Add ?confirm=SETTLE to settle records with final Result/Outcome fields or trusted source URLs, or POST JSON { "date": "YYYY-MM-DD" }.',
         defaultDateTimezone: 'America/New_York',
         date,
@@ -45,7 +47,7 @@ export default async function handler(req, res) {
           'ESPN / CBS Sports / FOX Sports / Yahoo Sports box score',
           'Approved secondary source'
         ],
-        updates: ['Result', 'Outcome', 'Profit/Loss', 'ROI', 'Settled At', 'Settlement Source', 'Settlement Status', 'Settlement Notes'],
+        updates: ['Result', 'Outcome', 'Profit/Loss', 'ROI', 'Closing Number', 'Closing Odds', 'CLV%', 'CLV Result', 'Closing Line Value', 'Settled At', 'Settlement Source', 'Settlement Status', 'Settlement Notes', 'Status'],
         note: 'The source router grades only verified box-score/stat evidence. Conflicts or recap-only evidence are marked Needs Review.'
       })
       return
@@ -61,7 +63,9 @@ export default async function handler(req, res) {
     const result = await settleResults({
       date: body.date || queryValue(req.query?.date),
       dryRun: body.dryRun === true || truthyFlag(req.query?.dryRun),
-      settleAll
+      settleAll,
+      ...(req.sheets ? { sheets: req.sheets } : {}),
+      ...(req.spreadsheetId ? { spreadsheetId: req.spreadsheetId } : {})
     })
     res.status(200).json(result)
   } catch (error) {
