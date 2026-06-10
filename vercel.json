@@ -4,6 +4,12 @@
       "maxDuration": 60
     }
   },
+  "rewrites": [
+    {
+      "source": "/api/website-feed",
+      "destination": "/api/todays-picks"
+    }
+  ],
   "crons": [
     {
       "path": "/api/micks-admin",
