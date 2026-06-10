@@ -240,7 +240,7 @@
     };
   }
 
-  async function hydrateResultsFromAirtable() {
+  async function hydrateResultsFromApi() {
     try {
       const response = await fetch('/api/results?days=180', { cache: 'no-store' });
       if (!response.ok) throw new Error(`Results API ${response.status}`);
@@ -265,14 +265,14 @@
       const homeUnits = document.getElementById('overallUnits')?.textContent;
       if (homeRecord) document.getElementById('homeRecord').textContent = homeRecord;
       if (homeUnits) document.getElementById('homeUnits').textContent = homeUnits;
-      console.log('Airtable results hydrated', rows.length);
+      console.log('Google Sheets results hydrated', rows.length);
     } catch (error) {
-      console.warn('Airtable results hydrate failed:', error);
+      console.warn('Google Sheets results hydrate failed:', error);
     }
   }
 
   window.addEventListener('load', function () {
-    setTimeout(hydrateResultsFromAirtable, 900);
+    setTimeout(hydrateResultsFromApi, 900);
   });
 
 })();

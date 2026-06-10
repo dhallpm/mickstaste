@@ -1,1 +1,232 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Micks Picks | Results</title><link rel="stylesheet" href="./styles.css?v=20260516-sportsbook1"><script data-goatcounter="https://mickspicks.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script></head><body class="page-bg-results"><noscript><img src="https://mickspicks.goatcounter.com/count?p=/noscript" alt="" style="position:absolute;left:-9999px;width:1px;height:1px"></noscript><header class="topbar"><div class="container nav"><a class="brand" href="./index.html"><div class="brand-mark">MP</div><div><div class="brand-title">Micks Picks</div><small>Daily Card</small></div></a><nav class="links"><a href="./index.html">Dashboard</a><a href="./premium.html">VIP Vault</a><a href="./odds-api.html">Odds API</a><a href="./market-heat.html">Market Heat</a><a href="./props-lab.html">Props Lab</a><a href="./leaderboard.html">Leaderboard</a><a href="./results.html" class="active">Results</a><a href="./yahgi.html" class="guru">Yahgi</a><a href="./free-look.html">Free Look</a><a href="./sharp-card.html">Sharp Card</a><a href="./social-studio.html">Social</a></nav><a class="vip-btn" href="./premium.html">Enter VIP</a></div></header><div class="mp-live-strip"><div class="mp-live-strip-track"><span>Betting Ledger</span><span>Win/Loss Badges</span><span>Units Tracked</span><span>Closing Number</span><span>Picked-At Odds</span><span>Current Odds</span><span>CLV Watch</span><span>Betting Ledger</span><span>Win/Loss Badges</span><span>Units Tracked</span><span>Closing Number</span><span>Picked-At Odds</span><span>Current Odds</span><span>CLV Watch</span></div></div><main><section class="hero"><div class="container hero-grid"><div class="hero-card"><div class="hero-content"><div class="kicker">Betting Ledger</div><h1>Results<span class="brush">Archive</span></h1><p class="lead">A sportsbook-style ledger showing closed Free and VIP results together, with units, closing numbers, and odds summaries loaded from the sheet.</p><div class="actions"><a class="btn primary" href="./premium.html">VIP Card</a><a class="btn" href="./free-look.html">Free Picks</a><a class="btn cyan" href="./market-heat.html">Market Heat</a></div></div></div><div class="panel"><h2>Record Cards</h2><p>Performance values are written by app.js from live sheet data.</p><div class="metric-grid"><div class="metric"><strong id="overallRecord">--</strong><span>Overall Record</span></div><div class="metric"><strong id="overallWinRate">--</strong><span>Win Rate</span></div><div class="metric"><strong id="overallTotalUnits">--</strong><span>Units</span></div><div class="metric"><strong class="sync-time">--</strong><span>Last Sync</span></div></div></div></div></section><section class="section"><div class="container data-card"><h2 class="section-title">Results Ledger</h2><p class="section-sub">Result badges, profit/loss units, closing number, picked-at odds, and current odds summary render from the existing results table.</p><div class="table-wrap"><table><thead><tr><th>Date</th><th>League</th><th>Pick</th><th>Grade</th><th>Result</th><th>P/L</th><th>Closing #</th></tr></thead><tbody id="resultsBody"><tr><td colspan="7">Loading...</td></tr></tbody></table></div></div></section></main><footer class="footer"><div class="container">Micks Picks is for entertainment and educational purposes only. Bet responsibly.</div></footer><script src="./slate-validation.js?v=20260516-live1"></script><script src="./app.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Micks Picks | Results</title>
+  <link rel="stylesheet" href="./styles.css?v=20260516-sportsbook1">
+  <script data-goatcounter="https://mickspicks.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+  <style>
+    .results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; }
+    .results-card { border: 1px solid rgba(255,255,255,.12); border-radius: 14px; padding: 16px; background: rgba(10,16,28,.78); }
+    .results-card strong { display: block; color: #fff; font-size: 1.45rem; line-height: 1; }
+    .results-card span { display: block; margin-top: 8px; color: var(--muted, #cbbf9d); font-size: .72rem; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; }
+    .result-win { color: #39e991; font-weight: 900; }
+    .result-loss { color: #ff6868; font-weight: 900; }
+    .result-push, .result-void { color: #35a7ff; font-weight: 900; }
+    .date-row td { background: rgba(247,201,72,.12); color: #ffe391; font-weight: 1000; text-transform: uppercase; letter-spacing: .08em; }
+    .section-pill { display: inline-flex; border: 1px solid rgba(255,255,255,.14); border-radius: 999px; padding: 4px 8px; color: #ffe391; font-size: .72rem; font-weight: 900; white-space: nowrap; }
+    .status-line { color: var(--muted, #cbbf9d); margin-top: 10px; }
+  </style>
+</head>
+<body class="page-bg-results">
+  <noscript><img src="https://mickspicks.goatcounter.com/count?p=/noscript" alt="" style="position:absolute;left:-9999px;width:1px;height:1px"></noscript>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="./index.html">
+        <div class="brand-mark">MP</div>
+        <div><div class="brand-title">Micks Picks</div><small>Daily Card</small></div>
+      </a>
+      <nav class="links">
+        <a href="./index.html">Dashboard</a>
+        <a href="./premium.html">VIP Vault</a>
+        <a href="./odds-api.html">Odds API</a>
+        <a href="./market-heat.html">Market Heat</a>
+        <a href="./props-lab.html">Props Lab</a>
+        <a href="./leaderboard.html">Leaderboard</a>
+        <a href="./results.html" class="active">Results</a>
+        <a href="./yahgi.html" class="guru">Yahgi</a>
+        <a href="./free-look.html">Free Look</a>
+        <a href="./sharp-card.html">Sharp Card</a>
+        <a href="./social-studio.html">Social</a>
+      </nav>
+      <a class="vip-btn" href="./premium.html">Enter VIP</a>
+    </div>
+  </header>
+  <div class="mp-live-strip">
+    <div class="mp-live-strip-track">
+      <span>Google Sheets Results</span><span>Win/Loss Badges</span><span>Units Tracked</span><span>Closing Number</span><span>CLV Watch</span>
+      <span>Google Sheets Results</span><span>Win/Loss Badges</span><span>Units Tracked</span><span>Closing Number</span><span>CLV Watch</span>
+    </div>
+  </div>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-card">
+          <div class="hero-content">
+            <div class="kicker">Betting Ledger</div>
+            <h1>Results<span class="brush">Archive</span></h1>
+            <p class="lead">Settled picks from Master Picks, Props Lab, Lotto Parlays, and Longshots. VIP picks show result data only; locked analysis stays private.</p>
+            <div class="actions">
+              <a class="btn primary" href="./premium.html">VIP Card</a>
+              <a class="btn" href="./free-look.html">Free Picks</a>
+              <a class="btn cyan" href="./market-heat.html">Market Heat</a>
+            </div>
+            <p class="status-line" id="resultsStatus">Loading Google Sheets results...</p>
+          </div>
+        </div>
+        <div class="panel">
+          <h2>Record Cards</h2>
+          <p>Records are calculated from settled Google Sheets rows returned by /api/results.</p>
+          <div class="metric-grid">
+            <div class="metric"><strong id="overallRecord">--</strong><span>Overall Record</span></div>
+            <div class="metric"><strong id="overallWinRate">--</strong><span>Win Rate</span></div>
+            <div class="metric"><strong id="overallTotalUnits">--</strong><span>Units</span></div>
+            <div class="metric"><strong id="overallRoi">--</strong><span>ROI</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container data-card">
+        <h2 class="section-title">Section Records</h2>
+        <p class="section-sub">Official straight, VIP, Props Lab, Lotto Parlays, and Longshots records all come from the settled Google Sheets rows.</p>
+        <div class="results-grid" id="summaryCards"></div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container data-card">
+        <h2 class="section-title">Results Ledger</h2>
+        <p class="section-sub">Grouped by settlement date. Public results show pick, market, and settlement fields only.</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>League</th>
+                <th>Game</th>
+                <th>Pick</th>
+                <th>Odds</th>
+                <th>Grade</th>
+                <th>Units</th>
+                <th>Result</th>
+                <th>Profit/Loss</th>
+                <th>ROI</th>
+                <th>Section</th>
+              </tr>
+            </thead>
+            <tbody id="resultsBody"><tr><td colspan="11">Loading...</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="container">Micks Picks is for entertainment and educational purposes only. Bet responsibly.</div></footer>
+  <script>
+    const body = document.getElementById('resultsBody')
+    const statusEl = document.getElementById('resultsStatus')
+    const summaryCards = document.getElementById('summaryCards')
+
+    function esc(value) {
+      return String(value ?? '').replace(/[&<>"]/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[char]))
+    }
+
+    function money(value) {
+      const n = Number(value || 0)
+      return `${n >= 0 ? '+' : ''}${n.toFixed(2)}u`
+    }
+
+    function pct(value) {
+      const n = Number(value || 0)
+      return `${Math.round(n * 100)}%`
+    }
+
+    function record(summary = {}) {
+      const pushes = Number(summary.pushes || 0) + Number(summary.voids || 0)
+      return `${summary.wins || 0}-${summary.losses || 0}${pushes ? '-' + pushes : ''}`
+    }
+
+    function winRate(summary = {}) {
+      const wins = Number(summary.wins || 0)
+      const losses = Number(summary.losses || 0)
+      const decisions = wins + losses
+      return decisions ? `${Math.round(wins / decisions * 100)}%` : '--'
+    }
+
+    function resultClass(value = '') {
+      const key = String(value || '').toLowerCase()
+      if (key.includes('win')) return 'result-win'
+      if (key.includes('loss')) return 'result-loss'
+      if (key.includes('void')) return 'result-void'
+      if (key.includes('push')) return 'result-push'
+      return ''
+    }
+
+    function sectionName(row = {}) {
+      return row.section || row.originalTable || row.__table || row.resultSection || '--'
+    }
+
+    function renderSummary(data = {}) {
+      const summary = data.summary || {}
+      const overall = summary.overall || {}
+      document.getElementById('overallRecord').textContent = record(overall)
+      document.getElementById('overallWinRate').textContent = winRate(overall)
+      document.getElementById('overallTotalUnits').textContent = money(overall.profitLoss)
+      document.getElementById('overallRoi').textContent = pct(overall.roi)
+
+      const cards = [
+        ['Official Straight Record', summary.officialStraight || summary.masterPicks],
+        ['VIP Record', summary.vip],
+        ['Props Lab Record', summary.propsLab],
+        ['Lotto Parlay Record', summary.lottoParlays],
+        ['Longshots Record', summary.longshots],
+        ['Units Won/Lost', summary.overall],
+        ['ROI', summary.overall]
+      ]
+
+      summaryCards.innerHTML = cards.map(([label, item = {}]) => {
+        const value = label === 'Units Won/Lost' ? money(item.profitLoss) : label === 'ROI' ? pct(item.roi) : record(item)
+        return `<div class="results-card"><strong>${esc(value)}</strong><span>${esc(label)}</span></div>`
+      }).join('')
+    }
+
+    function renderRows(data = {}) {
+      const byDate = data.byDate || {}
+      const dates = Object.keys(byDate).sort().reverse()
+      if (!dates.length) {
+        body.innerHTML = '<tr><td colspan="11">No settled Google Sheets rows found yet.</td></tr>'
+        return
+      }
+
+      body.innerHTML = dates.map(date => {
+        const rows = Array.isArray(byDate[date]) ? byDate[date] : []
+        const header = `<tr class="date-row"><td colspan="11">${esc(date)}</td></tr>`
+        const renderedRows = rows.map(row => `
+          <tr>
+            <td>${esc(row.date || date)}</td>
+            <td>${esc(row.league || row.sport || '--')}</td>
+            <td>${esc(row.game || '--')}</td>
+            <td>${esc(row.pick || '--')}</td>
+            <td>${esc(row.odds || '--')}</td>
+            <td>${esc(row.grade || '--')}</td>
+            <td>${esc(row.units || row.unitsRisked || '--')}</td>
+            <td class="${resultClass(row.result)}">${esc(row.result || '--')}</td>
+            <td>${esc(row.profitLoss || money(row.profitLossValue))}</td>
+            <td>${esc(row.roiDisplay || pct(row.roi))}</td>
+            <td><span class="section-pill">${esc(sectionName(row))}</span></td>
+          </tr>
+        `).join('')
+        return header + renderedRows
+      }).join('')
+    }
+
+    async function boot() {
+      try {
+        const response = await fetch('/api/results?days=3650&cache=' + Date.now(), { cache: 'no-store' })
+        if (!response.ok) throw new Error(`Results API ${response.status}`)
+        const data = await response.json()
+        if (data.success === false) throw new Error(data.error || 'Results API unavailable')
+        renderSummary(data)
+        renderRows(data)
+        statusEl.textContent = `${data.records?.length || 0} settled row(s) loaded from ${data.sourceOfTruth || 'Google Sheets'}.`
+      } catch (error) {
+        body.innerHTML = `<tr><td colspan="11">Results could not load: ${esc(error.message || error)}</td></tr>`
+        statusEl.textContent = 'Results API unavailable.'
+        console.error('Results page failed:', error)
+      }
+    }
+
+    boot()
+  </script>
+</body>
+</html>

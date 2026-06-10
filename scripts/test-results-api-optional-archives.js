@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict'
-import { hasPositiveUnits, normalizeRow, shouldIncludeResultRecord } from '../api/results.js'
+import { buildResultsPayload, hasPositiveUnits, normalizeRow, shouldIncludeResultRecord } from '../api/results.js'
 
 const calculatedBeforeStored = normalizeRow({
   Pick: 'Calculated Result Wins',
@@ -124,5 +124,87 @@ const profitLossOnly = normalizeRow({
 
 assert.equal(profitLossOnly.Result, 'Loss')
 assert.equal(profitLossOnly.Status, 'Loss')
+
+const payload = buildResultsPayload({
+  loadedTabs: ['Master Picks', 'Props Lab', 'Lotto Parlays', 'Longshots'],
+  rows: [
+    {
+      __table: 'Master Picks',
+      Date: '2026-06-09',
+      League: 'NBA',
+      Game: 'Knicks vs Spurs',
+      Pick: 'Knicks +5.5',
+      Result: 'Win',
+      Units: '0.5',
+      Odds: '+100',
+      Grade: 'B',
+      Access: 'Free',
+      'Full Analysis': 'VIP-only material should not leak'
+    },
+    {
+      __table: 'Master Picks',
+      Date: '2026-06-09',
+      League: 'MLB',
+      Game: 'Yankees vs Guardians',
+      Pick: 'Yankees ML',
+      Outcome: 'Loss',
+      Units: '1',
+      Odds: '-110',
+      Grade: 'A',
+      Access: 'VIP'
+    },
+    {
+      __table: 'Props Lab',
+      Date: '2026-06-08',
+      Player: 'Caitlin Clark',
+      Pick: 'Live Points/Assists Over',
+      Result: 'Push',
+      Units: '1',
+      Odds: '-110'
+    },
+    {
+      __table: 'Lotto Parlays',
+      Date: '2026-06-08',
+      Pick: 'Safe 5-Leg Parlay',
+      Result: 'Void',
+      Units: '0.2',
+      Odds: '+400'
+    },
+    {
+      __table: 'Longshots',
+      Date: '2026-06-07',
+      Pick: 'Longshot HR Ladder',
+      'Profit/Loss': '-0.25u',
+      Units: '0.25',
+      Odds: '+1200'
+    },
+    {
+      __table: 'Master Picks',
+      Date: '2026-06-09',
+      Pick: 'Pending Play',
+      Result: 'Pending',
+      Units: '1'
+    }
+  ]
+}, { days: 3650 })
+
+assert.equal(payload.source, 'google-sheets')
+assert.equal(payload.sourceOfTruth, 'Google Sheets')
+assert.equal(payload.records.length, 5)
+assert.equal(payload.summary.overall.wins, 1)
+assert.equal(payload.summary.overall.losses, 2)
+assert.equal(payload.summary.overall.pushes, 1)
+assert.equal(payload.summary.overall.voids, 1)
+assert.equal(payload.summary.vip.losses, 1)
+assert.equal(payload.summary.propsLab.pushes, 1)
+assert.equal(payload.summary.lottoParlays.voids, 1)
+assert.equal(payload.summary.longshots.losses, 1)
+assert.equal(payload.byDate['2026-06-09'].length, 2)
+assert.equal(payload.free.length, 1)
+assert.equal(payload.vip.length, 1)
+assert.equal(payload.props.length, 1)
+assert.equal(payload.lotto.length, 1)
+assert.equal(payload.longshots.length, 1)
+assert.equal(JSON.stringify(payload).includes('VIP-only material should not leak'), false)
 
 console.log('Results API optional archive fallback regression test passed.')

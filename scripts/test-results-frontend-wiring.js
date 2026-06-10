@@ -2,6 +2,7 @@ import assert from 'node:assert/strict'
 import { readFile } from 'node:fs/promises'
 
 const html = await readFile(new URL('../index.html', import.meta.url), 'utf8')
+const resultsHtml = await readFile(new URL('../results.html', import.meta.url), 'utf8')
 const runtimeRules = await readFile(new URL('../micks-runtime-rules.js', import.meta.url), 'utf8')
 
 assert.match(html, /fetch\('\/api\/results\?days=180'/)
@@ -25,5 +26,15 @@ assert.match(runtimeRules, /const calculated = calculateProfitLossUnits\(row\);\
 assert.match(runtimeRules, /\.filter\(hasPositiveUnits\)\.map\(normalizeForDisplay\)/)
 assert.doesNotMatch(runtimeRules, /window\.setTimeout\(\(\) => window\.boot\(\), 0\)/)
 assert.match(html, /featuredCard=document\.getElementById\('featuredCard'\);if\(featuredCard\)/)
+assert.match(resultsHtml, /fetch\('\/api\/results\?days=3650&cache='/)
+assert.match(resultsHtml, /Official Straight Record/)
+assert.match(resultsHtml, /VIP Record/)
+assert.match(resultsHtml, /Props Lab Record/)
+assert.match(resultsHtml, /Lotto Parlay Record/)
+assert.match(resultsHtml, /Longshots Record/)
+assert.match(resultsHtml, /<th>Profit\/Loss<\/th>/)
+assert.match(resultsHtml, /<th>Section<\/th>/)
+assert.doesNotMatch(resultsHtml, /app\.js/)
+assert.doesNotMatch(resultsHtml, /Full Analysis/)
 
-console.log('Airtable results frontend wiring regression test passed.')
+console.log('Google Sheets results frontend wiring regression test passed.')
