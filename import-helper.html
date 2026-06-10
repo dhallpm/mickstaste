@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Micks Picks | Airtable Import Helper</title>
+  <title>Micks Picks | Google Sheets Import Helper</title>
   <style>
     :root {
       --bg: #090909;
@@ -165,13 +165,13 @@
 </head>
 <body>
   <main>
-    <h1>Airtable Import Helper</h1>
-    <div class="banner" id="dryRunBanner">DRY RUN - NO AIRTABLE WRITE</div>
+    <h1>Google Sheets Import Helper</h1>
+    <div class="banner" id="dryRunBanner">DRY RUN - NO GOOGLE SHEETS WRITE</div>
 
     <section class="panel">
       <div class="actions">
         <button id="smokeButton" type="button">Run Smoke Test</button>
-        <a href="/import-airtable.html" style="align-self:center;color:var(--muted);font-weight:800;">Open Legacy Import Page</a>
+        <a href="/import-airtable.html" style="align-self:center;color:var(--muted);font-weight:800;">Open Legacy Airtable Page</a>
       </div>
       <p class="status" id="status">Idle</p>
     </section>
@@ -211,7 +211,7 @@
   </main>
 
   <script>
-    const endpoint = '/api/import-airtable-records'
+    const endpoint = '/api/import-picks'
     const table = document.getElementById('table')
     const file = document.getElementById('file')
     const dryRun = document.getElementById('dryRun')
@@ -241,7 +241,7 @@
     function show(data) {
       output.textContent = JSON.stringify(data, null, 2)
       if (data.dryRun) {
-        setStatus('Dry run complete - no Airtable write', '')
+        setStatus('Dry run complete - no Google Sheets write', '')
         return
       }
       setStatus(data.ok ? `Created ${data.created} record(s)` : (data.error || data.message || 'Import failed'), data.ok ? 'ok' : 'bad')

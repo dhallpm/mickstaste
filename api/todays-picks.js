@@ -73,7 +73,7 @@ export default async function handler(req, res) {
     })
     const result = reclassifyBelowAMasterPicks(rawResult)
     if (result.warnings?.length) {
-      console.warn('Today picks Airtable diagnostics:', result.warnings)
+      console.warn('Today picks Google Sheets diagnostics:', result.warnings)
     }
 
     res.status(200).json({

@@ -39,8 +39,8 @@ export default async function handler(req, res) {
 
     res.status(200).json({
       success: true,
-      source: 'airtable',
-      sourceOfTruth: feed.sourceOfTruth || 'Airtable',
+      source: feed.source || 'google-sheets',
+      sourceOfTruth: feed.sourceOfTruth || 'Google Sheets',
       date: feed.date,
       count: rows.length,
       rows,

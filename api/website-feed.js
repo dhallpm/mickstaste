@@ -8,7 +8,7 @@ export default async function handler(req, res) {
       league: req.query?.league
     })
     if (result.warnings?.length) {
-      console.warn('Website feed Airtable diagnostics:', result.warnings)
+      console.warn('Website feed Google Sheets diagnostics:', result.warnings)
     }
     res.status(200).json({
       success: true,

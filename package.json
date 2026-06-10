@@ -13,6 +13,7 @@
     "test:results-api": "node scripts/test-results-api-optional-archives.js",
     "test:clv-settlement": "node scripts/test-clv-settlement-automation.js",
     "test:repair-may30": "node scripts/test-repair-may30-airtable.js",
+    "test:google-sheets-pick-store": "node scripts/test-google-sheets-pick-store.js",
     "test:archive-closed-bets": "node scripts/test-archive-closed-bets.js"
   },
   "dependencies": {
