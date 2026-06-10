@@ -67,6 +67,19 @@ const strikeouts = await routeSettlementSources({
 assert.equal(strikeouts.status, 'verified')
 assert.equal(strikeouts.result, 'Win')
 
+const strikeoutsAtLeast = await routeSettlementSources({
+  Player: 'Nick Martinez',
+  Pick: 'Nick Martinez 5+ Strikeouts',
+  'Box Score URL': officialMlbUrl
+}, {
+  urls: [officialMlbUrl],
+  sourceTextByUrl: {
+    [officialMlbUrl]: 'Box Score Pitching Nick Martinez strikeouts 5'
+  }
+})
+assert.equal(strikeoutsAtLeast.status, 'verified')
+assert.equal(strikeoutsAtLeast.result, 'Win')
+
 const teamTotal = await routeSettlementSources({
   Game: 'Cubs vs Brewers',
   Pick: 'Cubs Team Total Over 5.5',
@@ -79,6 +92,19 @@ const teamTotal = await routeSettlementSources({
 })
 assert.equal(teamTotal.status, 'verified')
 assert.equal(teamTotal.result, 'Win')
+
+const moneylineWithPrice = await routeSettlementSources({
+  Game: 'Guardians vs Yankees',
+  Pick: 'Guardians ML +108',
+  'Box Score URL': officialMlbUrl
+}, {
+  urls: [officialMlbUrl],
+  sourceTextByUrl: {
+    [officialMlbUrl]: 'Box Score Final: Guardians 4 Yankees 3 runs'
+  }
+})
+assert.equal(moneylineWithPrice.status, 'verified')
+assert.equal(moneylineWithPrice.result, 'Win')
 
 const hrr = await routeSettlementSources({
   Player: 'Colton Cowser',

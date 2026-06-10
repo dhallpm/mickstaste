@@ -182,8 +182,9 @@ const recordsByTable = new Map(tableIds.map((tableId, tableIndex) => [
     id: `rec${tableIndex}${recordIndex}settle`,
     fields: {
       Date: '2026-06-09',
-      Game: `SettleAll Test Game ${tableIndex}-${recordIndex}`,
-      Pick: `SettleAll Test Pick ${tableIndex}-${recordIndex}`,
+      League: tableIndex === 0 && recordIndex === 0 ? 'MLB' : '',
+      Game: tableIndex === 0 && recordIndex === 0 ? 'Baltimore Orioles vs Boston Red Sox' : `SettleAll Test Game ${tableIndex}-${recordIndex}`,
+      Pick: tableIndex === 0 && recordIndex === 0 ? 'Orioles/Red Sox Under 7.5' : `SettleAll Test Pick ${tableIndex}-${recordIndex}`,
       Status: 'Pending',
       Units: 1,
       Odds: '-110'
@@ -194,6 +195,28 @@ const recordsByTable = new Map(tableIds.map((tableId, tableIndex) => [
 let patchedRecords = 0
 globalThis.fetch = async (url, options = {}) => {
   const requestUrl = new URL(String(url))
+  if (requestUrl.hostname === 'statsapi.mlb.com' && requestUrl.pathname === '/api/v1/schedule') {
+    return {
+      ok: true,
+      json: async () => ({
+        dates: [{
+          games: [{
+            gamePk: 12345,
+            teams: {
+              away: { score: 4, team: { name: 'Baltimore Orioles', teamName: 'Orioles' } },
+              home: { score: 2, team: { name: 'Boston Red Sox', teamName: 'Red Sox' } }
+            }
+          }]
+        }]
+      })
+    }
+  }
+  if (requestUrl.hostname === 'statsapi.mlb.com' && requestUrl.pathname === '/api/v1/game/12345/boxscore') {
+    return {
+      ok: true,
+      json: async () => ({ teams: { away: { players: {} }, home: { players: {} } } })
+    }
+  }
   const tableId = decodeURIComponent(requestUrl.pathname.split('/').pop())
   if (options.method === 'PATCH') {
     const body = JSON.parse(options.body || '{}')
@@ -221,10 +244,15 @@ await settleHandler({
 assert.equal(settleAllRes.statusCode, 200)
 assert.equal(settleAllRes.body.settleAll, true)
 assert.equal(settleAllRes.body.scanned, 15)
-assert.equal(settleAllRes.body.needsReview, 15)
+assert.equal(settleAllRes.body.matched, 1)
+assert.equal(settleAllRes.body.needsReview, 14)
 assert.equal(settleAllRes.body.skipped, 0)
 assert.equal(settleAllRes.body.updated, 15)
-assert.equal(settleAllRes.body.needsReviewRecords.length, 15)
+assert.equal(settleAllRes.body.records.length, 1)
+assert.equal(settleAllRes.body.records[0].plannedSettlementStatus, 'Settled')
+assert.equal(settleAllRes.body.records[0].plannedResult, 'Win')
+assert.match(settleAllRes.body.records[0].discoveredSources[0].sourceUrl, /statsapi\.mlb\.com/)
+assert.equal(settleAllRes.body.needsReviewRecords.length, 14)
 assert.equal(patchedRecords, 15)
 
 globalThis.fetch = originalFetch
