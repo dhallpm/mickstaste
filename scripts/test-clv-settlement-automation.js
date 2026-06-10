@@ -104,8 +104,10 @@ const parlayMissingOdds = calculateSettlementFields({
   }
 })
 assert.equal(parlayMissingOdds.fields.Result, 'Win')
-assert.equal(parlayMissingOdds.fields['Profit/Loss'], 'Profit Pending - Missing Odds')
+assert.equal(parlayMissingOdds.fields['Profit/Loss'], '')
 assert.equal(parlayMissingOdds.fields.ROI, '')
+assert.equal(parlayMissingOdds.fields['Settlement Status'], 'Profit Pending - Missing Odds')
+assert.match(parlayMissingOdds.fields['Settlement Notes'], /Profit pending/)
 
 const mapped = cleanWebsiteRow({
   id: 'rec1',
@@ -184,9 +186,13 @@ const recordsByTable = new Map(tableIds.map((tableId, tableIndex) => [
       Date: '2026-06-09',
       League: tableIndex === 0 && recordIndex === 0 ? 'MLB' : '',
       Game: tableIndex === 0 && recordIndex === 0 ? 'Baltimore Orioles vs Boston Red Sox' : `SettleAll Test Game ${tableIndex}-${recordIndex}`,
-      Pick: tableIndex === 0 && recordIndex === 0 ? 'Orioles/Red Sox Under 7.5' : `SettleAll Test Pick ${tableIndex}-${recordIndex}`,
-      Status: 'Pending',
-      Units: 1,
+      Pick: tableIndex === 0 && recordIndex === 0
+        ? 'Orioles/Red Sox Under 7.5'
+        : tableIndex === 0 && recordIndex === 1
+          ? 'Heavy soccer favorites pass'
+          : `SettleAll Test Pick ${tableIndex}-${recordIndex}`,
+      Status: tableIndex === 0 && recordIndex === 1 ? 'Pass' : 'Pending',
+      Units: tableIndex === 0 && recordIndex === 1 ? '' : 1,
       Odds: '-110'
     }
   }))
@@ -245,15 +251,17 @@ assert.equal(settleAllRes.statusCode, 200)
 assert.equal(settleAllRes.body.settleAll, true)
 assert.equal(settleAllRes.body.scanned, 15)
 assert.equal(settleAllRes.body.matched, 1)
-assert.equal(settleAllRes.body.needsReview, 14)
-assert.equal(settleAllRes.body.skipped, 0)
-assert.equal(settleAllRes.body.updated, 15)
+assert.equal(settleAllRes.body.needsReview, 13)
+assert.equal(settleAllRes.body.skipped, 1)
+assert.equal(settleAllRes.body.updated, 14)
 assert.equal(settleAllRes.body.records.length, 1)
 assert.equal(settleAllRes.body.records[0].plannedSettlementStatus, 'Settled')
 assert.equal(settleAllRes.body.records[0].plannedResult, 'Win')
 assert.match(settleAllRes.body.records[0].discoveredSources[0].sourceUrl, /statsapi\.mlb\.com/)
-assert.equal(settleAllRes.body.needsReviewRecords.length, 14)
-assert.equal(patchedRecords, 15)
+assert.equal(settleAllRes.body.needsReviewRecords.length, 13)
+assert.equal(settleAllRes.body.skippedRecords.length, 1)
+assert.equal(settleAllRes.body.skippedRecords[0].reason, 'Skipped non-official watchlist/pass row.')
+assert.equal(patchedRecords, 14)
 
 globalThis.fetch = originalFetch
 if (originalAirtableKey === undefined) delete process.env.AIRTABLE_API_KEY

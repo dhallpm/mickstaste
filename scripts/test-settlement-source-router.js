@@ -148,4 +148,20 @@ assert.equal(parlay.status, 'verified')
 assert.equal(parlay.result, 'Win')
 assert.equal(parlay.legResults.length, 2)
 
+const mixedParlay = await routeSettlementSources({
+  Date: '2026-06-09',
+  Pick: 'Yankees/Guardians Under 8.5 | Hurricanes ML',
+  'Bet Type': 'Parlay',
+  Legs: 'Yankees/Guardians Under 8.5 | Hurricanes ML'
+}, {
+  urls: [officialMlbUrl, nhlUrl],
+  sourceTextByUrl: {
+    [officialMlbUrl]: 'Box Score Final: New York Yankees 3, Cleveland Guardians 2 runs',
+    [nhlUrl]: 'Box Score Final: Carolina Hurricanes 5, Vegas Golden Knights 3 goals'
+  }
+})
+assert.equal(mixedParlay.status, 'verified')
+assert.equal(mixedParlay.result, 'Win')
+assert.equal(mixedParlay.legResults.length, 2)
+
 console.log('Settlement source router tests passed.')

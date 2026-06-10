@@ -77,6 +77,43 @@ const fetchImpl = async url => {
       json: async () => ({ boxscore: { players: [] } })
     }
   }
+  if (value.includes('api-web.nhle.com/v1/schedule')) {
+    return {
+      ok: true,
+      json: async () => ({
+        gameWeek: [{
+          games: [{
+            id: 2025030414,
+            awayTeam: {
+              commonName: { default: 'Hurricanes' },
+              placeName: { default: 'Carolina' },
+              abbrev: 'CAR',
+              score: 5
+            },
+            homeTeam: {
+              commonName: { default: 'Golden Knights' },
+              placeName: { default: 'Vegas' },
+              abbrev: 'VGK',
+              score: 3
+            }
+          }]
+        }]
+      })
+    }
+  }
+  if (value.includes('api-web.nhle.com/v1/gamecenter/2025030414/play-by-play')) {
+    return {
+      ok: true,
+      json: async () => ({
+        rosterSpots: [
+          { playerId: 8478427, firstName: { default: 'Seth' }, lastName: { default: 'Jarvis' } }
+        ],
+        plays: [
+          { typeDescKey: 'goal', details: { scoringPlayerId: 8478427 } }
+        ]
+      })
+    }
+  }
   throw new Error(`Unexpected fetch: ${value}`)
 }
 
@@ -103,6 +140,26 @@ const wnbaDiscovery = await discoverTrustedSourcesForPick({
 assert.equal(wnbaDiscovery.urls.length, 1)
 assert.match(wnbaDiscovery.urls[0], /espn\.com/)
 assert.match(wnbaDiscovery.sourceTextByUrl[wnbaDiscovery.urls[0]], /Chicago Sky 88, Minnesota Lynx 92 points/)
+
+const nhlTeamDiscovery = await discoverTrustedSourcesForPick({
+  Date: '2026-06-09',
+  League: 'NHL',
+  Pick: 'Carolina Hurricanes ML'
+}, { fetchImpl })
+
+assert.equal(nhlTeamDiscovery.urls.length, 1)
+assert.match(nhlTeamDiscovery.urls[0], /api-web\.nhle\.com/)
+assert.match(nhlTeamDiscovery.sourceTextByUrl[nhlTeamDiscovery.urls[0]], /Carolina Hurricanes 5, Vegas Golden Knights 3 goals/)
+
+const nhlPlayerDiscovery = await discoverTrustedSourcesForPick({
+  Date: '2026-06-09',
+  League: 'NHL',
+  Pick: 'Seth Jarvis Anytime Goal',
+  Player: 'Seth Jarvis'
+}, { fetchImpl })
+
+assert.equal(nhlPlayerDiscovery.urls.length, 1)
+assert.match(nhlPlayerDiscovery.sourceTextByUrl[nhlPlayerDiscovery.urls[0]], /Scoring Summary Seth Jarvis goals 1/)
 
 const prefilled = await discoverTrustedSourcesForPick({
   'Source URL': 'https://www.espn.com/nba/boxscore/_/gameId/1'
