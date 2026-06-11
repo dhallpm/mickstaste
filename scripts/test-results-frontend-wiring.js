@@ -1,32 +1,34 @@
 import assert from 'node:assert/strict'
-import { readFile } from 'node:fs/promises'
+import { readFile, readdir } from 'node:fs/promises'
 import vm from 'node:vm'
 
+const rootUrl = new URL('../', import.meta.url)
 const html = await readFile(new URL('../index.html', import.meta.url), 'utf8')
 const resultsHtml = await readFile(new URL('../results.html', import.meta.url), 'utf8')
 const runtimeRules = await readFile(new URL('../micks-runtime-rules.js', import.meta.url), 'utf8')
+const propsLiveFilter = await readFile(new URL('../micks-props-live-filter.js', import.meta.url), 'utf8')
 
-assert.match(html, /fetch\('\/api\/results\?days=180'/)
-assert.match(html, /Results feed failed; using Google Sheets fallback:/)
-assert.match(html, /rows:group\('rows'\),free:group\('free'\),vip:group\('vip'\),props:group\('props'\),lotto:group\('lotto'\),longshots:group\('longshots'\)/)
-assert.match(html, /freeResults=airtableResults\?dedupe\(airtableResults\.free\):sheetFreeResults/)
-assert.match(html, /vipResults=airtableResults\?dedupe\(airtableResults\.vip\):sheetVipResults/)
-assert.match(html, /propsRows=airtableResults\?dedupe\(airtableResults\.props\):sheetPropsRows/)
-assert.match(html, /longshotRows=airtableResults\?dedupe\(airtableResults\.lotto\.concat\(airtableResults\.longshots\)\):sheetLongshotRows/)
-assert.match(html, /overallRows=airtableResults\?dedupe\(airtableResults\.rows\):sheetOverallRows/)
-assert.match(html, /renderResultsSummary\('resultsRows',overallRows\)/)
-assert.match(runtimeRules, /if \(id === 'resultsRows'\) cells\.splice\(2, 1\)/)
-assert.doesNotMatch(html, /allArchiveRows/)
-assert.doesNotMatch(runtimeRules, /allArchiveRows/)
-assert.match(html, /<th>Legs \/ Loss Notes<\/th>.*<th>Notes<\/th>/)
-assert.doesNotMatch(html, /<th>Settled<\/th>/)
-assert.match(runtimeRules, /function renderLongshotsRows\(rows\)/)
-assert.match(runtimeRules, /getValue\(r, 'grade'\) \|\| '--'/)
-assert.match(runtimeRules, /getValue\(r, 'notes'\) \|\| 'No additional notes recorded\.'/)
-assert.match(runtimeRules, /const calculated = calculateProfitLossUnits\(row\);\s+if \(calculated\) return calculated;/)
-assert.match(runtimeRules, /\.filter\(hasPositiveUnits\)\.map\(normalizeForDisplay\)/)
-assert.doesNotMatch(runtimeRules, /window\.setTimeout\(\(\) => window\.boot\(\), 0\)/)
-assert.match(html, /featuredCard=document\.getElementById\('featuredCard'\);if\(featuredCard\)/)
+assert.match(html, /fetch\('\/api\/results\?days=3650'/)
+assert.match(runtimeRules, /fetch\('\/api\/results\?days=3650'/)
+assert.match(propsLiveFilter, /fetch\('\/api\/results\?days=3650&cache='/)
+assert.match(html, /id="resultsBody"/)
+assert.match(html, /id="summaryCards"/)
+assert.match(html, /id="resultsStatus"/)
+assert.match(html, /class="results-grid/)
+assert.match(html, /class="results-card/)
+assert.match(html, /Section Records/)
+assert.match(html, /Results Ledger/)
+assert.match(html, /Master Picks \/ Official/)
+assert.match(html, /No settled results yet\./)
+assert.match(html, /renderCanonicalResults\(airtableResults\|\|/)
+assert.match(runtimeRules, /window\.renderCanonicalResults/)
+assert.match(propsLiveFilter, /window\.renderCanonicalResults/)
+assert.doesNotMatch(html, /id="resultsRows"/)
+assert.doesNotMatch(html, /renderResultsSummary\('resultsRows',overallRows\)/)
+assert.doesNotMatch(html, /\/api\/results\?days=180/)
+assert.doesNotMatch(runtimeRules, /\/api\/results\?days=180/)
+assert.doesNotMatch(propsLiveFilter, /\/api\/results\?days=180/)
+
 assert.match(resultsHtml, /fetch\('\/api\/results\?days=3650&cache='/)
 assert.match(resultsHtml, /Official Straight Record/)
 assert.match(resultsHtml, /VIP Record/)
@@ -39,26 +41,114 @@ assert.doesNotMatch(resultsHtml, /app\.js/)
 assert.doesNotMatch(resultsHtml, /Full Analysis/)
 assert.match(resultsHtml, /rowsFromByDate/)
 assert.match(resultsHtml, /rowsFromPayload/)
-assert.match(resultsHtml, /No settled results returned from \/api\/results\./)
 assert.match(resultsHtml, /Profit Pending - Missing Odds/)
 assert.match(resultsHtml, /Math\.abs\(n\) <= 1 \? n \* 100 : n/)
 
-function resultPageScript(source = '') {
+const htmlFiles = (await readdir(rootUrl)).filter(file => file.endsWith('.html'))
+for (const file of htmlFiles) {
+  const source = await readFile(new URL(`../${file}`, import.meta.url), 'utf8')
+  assert.doesNotMatch(source, /href=["']\.\/results\.html["']/, `${file} should not link main nav to ./results.html`)
+  assert.doesNotMatch(source, /href=["']\/results\.html["']/, `${file} should not link main nav to /results.html`)
+}
+
+function inlineScript(source = '', label = 'page') {
   const scripts = Array.from(source.matchAll(/<script>([\s\S]*?)<\/script>/g))
-  assert.ok(scripts.length, 'results.html should include an inline script')
+  assert.ok(scripts.length, `${label} should include an inline script`)
   return scripts.at(-1)[1]
+}
+
+function fakeElement(id) {
+  return {
+    id,
+    value: id === 'evProb' ? '50' : id === 'evOdds' ? '-110' : id === 'evStake' ? '1' : '',
+    innerHTML: '',
+    outerHTML: '',
+    textContent: '',
+    dataset: {},
+    classList: {
+      add() {},
+      remove() {},
+      toggle() {}
+    },
+    addEventListener() {},
+    querySelectorAll() {
+      return []
+    }
+  }
+}
+
+async function renderIndexPage(payload) {
+  const elements = new Map()
+  const elementFor = id => {
+    if (!elements.has(id)) elements.set(id, fakeElement(id))
+    return elements.get(id)
+  }
+
+  const evProb = elementFor('evProb')
+  const evOdds = elementFor('evOdds')
+  const evStake = elementFor('evStake')
+  const evResult = elementFor('evResult')
+
+  const context = vm.createContext({
+    console: { log() {}, warn() {}, error() {} },
+    Date,
+    RegExp,
+    Promise,
+    setTimeout,
+    clearTimeout,
+    evProb,
+    evOdds,
+    evStake,
+    evResult,
+    document: {
+      getElementById: elementFor,
+      querySelectorAll() {
+        return []
+      }
+    },
+    window: {
+      addEventListener() {},
+      scrollTo() {}
+    },
+    history: { replaceState() {} },
+    location: { hash: '' },
+    lucide: { createIcons() {} },
+    fetch: async url => {
+      const href = String(url)
+      if (href.startsWith('/api/results')) {
+        return {
+          ok: true,
+          json: async () => payload
+        }
+      }
+      return {
+        ok: true,
+        text: async () => 'Date,Pick,Status\n'
+      }
+    }
+  })
+  context.window.window = context.window
+  context.window.document = context.document
+  context.window.renderCanonicalResults = undefined
+
+  new vm.Script(inlineScript(html, 'index.html')).runInContext(context)
+  await new Promise(resolve => setTimeout(resolve, 0))
+  await new Promise(resolve => setTimeout(resolve, 0))
+  await new Promise(resolve => setTimeout(resolve, 0))
+
+  return {
+    bodyHtml: elementFor('resultsBody').innerHTML,
+    statusText: elementFor('resultsStatus').textContent,
+    summaryHtml: elementFor('summaryCards').innerHTML,
+    overallRecord: elementFor('overallRecord').textContent,
+    overallRoi: elementFor('overallRoi').textContent
+  }
 }
 
 async function renderResultsPage(payload) {
   const elements = new Map()
   const elementFor = id => {
-    if (!elements.has(id)) {
-      elements.set(id, {
-        id,
-        innerHTML: '',
-        textContent: ''
-      })
-    }
+    if (!elements.has(id)) elements.set(id, fakeElement(id))
     return elements.get(id)
   }
 
@@ -74,7 +164,7 @@ async function renderResultsPage(payload) {
     })
   })
 
-  new vm.Script(resultPageScript(resultsHtml)).runInContext(context)
+  new vm.Script(inlineScript(resultsHtml, 'results.html')).runInContext(context)
   await new Promise(resolve => setTimeout(resolve, 0))
   await new Promise(resolve => setTimeout(resolve, 0))
 
@@ -89,6 +179,7 @@ async function renderResultsPage(payload) {
 const summary = {
   overall: { wins: 6, losses: 5, pushes: 0, voids: 0, profitLoss: 1.07, roi: 0.27 },
   officialStraight: { wins: 4, losses: 1 },
+  masterPicks: { wins: 4, losses: 1 },
   vip: { wins: 0, losses: 1 },
   propsLab: { wins: 1, losses: 1 },
   lottoParlays: { wins: 1, losses: 0 },
@@ -109,15 +200,25 @@ const june9Rows = [
   { date: '2026-06-09', section: 'Longshots', league: 'NHL', game: 'Carolina Hurricanes vs Vegas Golden Knights', pick: 'Seth Jarvis Anytime Goal', odds: '+250', grade: 'C', units: '0.05', result: 'Loss', profitLoss: '-0.05u', roi: -100 }
 ]
 
-const byDateRender = await renderResultsPage({
+const byDatePayload = {
   success: true,
+  source: 'google-sheets',
   sourceOfTruth: 'Google Sheets',
   summary,
   byDate: { '2026-06-09': june9Rows },
   records: []
-})
+}
 
-assert.match(byDateRender.bodyHtml, /2026-06-09/)
+const indexByDateRender = await renderIndexPage(byDatePayload)
+assert.match(indexByDateRender.bodyHtml, /2026-06-09/)
+assert.match(indexByDateRender.summaryHtml, /Master Picks \/ Official/)
+assert.match(indexByDateRender.summaryHtml, /VIP Record/)
+assert.match(indexByDateRender.summaryHtml, /Props Lab Record/)
+assert.match(indexByDateRender.summaryHtml, /Lotto Parlay Record/)
+assert.match(indexByDateRender.summaryHtml, /Longshots Record/)
+assert.equal(indexByDateRender.overallRecord, '6-5')
+assert.equal(indexByDateRender.overallRoi, '27%')
+
 for (const pick of [
   'Colton Cowser HRR Over 0.5',
   'Yankees/Guardians Under 8.5',
@@ -131,43 +232,61 @@ for (const pick of [
   'Nick Martinez 5\\+ Strikeouts',
   'Seth Jarvis Anytime Goal'
 ]) {
-  assert.match(byDateRender.bodyHtml, new RegExp(pick))
+  assert.match(indexByDateRender.bodyHtml, new RegExp(pick))
 }
-assert.match(byDateRender.bodyHtml, /90\.91%/)
-assert.match(byDateRender.bodyHtml, /Profit Pending - Missing Odds/)
-assert.match(byDateRender.bodyHtml, /VIP/)
-assert.match(byDateRender.bodyHtml, /Props Lab/)
-assert.match(byDateRender.bodyHtml, /Lotto Parlays/)
-assert.match(byDateRender.bodyHtml, /Longshots/)
-assert.equal(byDateRender.statusText, '11 settled row(s) loaded from Google Sheets.')
-assert.equal(byDateRender.overallRoi, '27%')
+assert.match(indexByDateRender.bodyHtml, /90\.91%/)
+assert.doesNotMatch(indexByDateRender.bodyHtml, /9091%/)
+assert.match(indexByDateRender.bodyHtml, /Profit Pending - Missing Odds/)
+assert.match(indexByDateRender.bodyHtml, /-0\.75u/)
+assert.match(indexByDateRender.bodyHtml, /\+0\.45u/)
+assert.match(indexByDateRender.bodyHtml, /VIP/)
+assert.match(indexByDateRender.bodyHtml, /Props Lab/)
+assert.match(indexByDateRender.bodyHtml, /Lotto Parlays/)
+assert.match(indexByDateRender.bodyHtml, /Longshots/)
+assert.equal(indexByDateRender.statusText, '11 settled row(s) loaded from Google Sheets.')
 
-const recordsRender = await renderResultsPage({
+const indexRecordsRender = await renderIndexPage({
   success: true,
   sourceOfTruth: 'Google Sheets',
   summary,
   records: [{ Date: '2026-06-09', League: 'MLB', Game: 'Records Game', Pick: 'Records Fallback Pick', Result: 'Win', Odds: '-110', ROI: 90.91, section: 'Master Picks' }]
 })
-assert.match(recordsRender.bodyHtml, /Records Fallback Pick/)
-assert.match(recordsRender.bodyHtml, /2026-06-09/)
-assert.match(recordsRender.bodyHtml, /90\.91%/)
+assert.match(indexRecordsRender.bodyHtml, /Records Fallback Pick/)
+assert.match(indexRecordsRender.bodyHtml, /2026-06-09/)
+assert.match(indexRecordsRender.bodyHtml, /90\.91%/)
 
-const rowsRender = await renderResultsPage({
+const indexRowsRender = await renderIndexPage({
   success: true,
   sourceOfTruth: 'Google Sheets',
   summary,
   rows: [{ date: '2026-06-09', league: 'MLB', game: 'Rows Game', pick: 'Rows Fallback Pick', result: 'Loss', odds: '+100', roi: -100, section: 'Longshots' }]
 })
-assert.match(rowsRender.bodyHtml, /Rows Fallback Pick/)
+assert.match(indexRowsRender.bodyHtml, /Rows Fallback Pick/)
 
-const emptyRender = await renderResultsPage({
+const indexEmptyRender = await renderIndexPage({
   success: true,
   sourceOfTruth: 'Google Sheets',
-  summary,
+  summary: {},
   byDate: {},
   records: [],
   rows: []
 })
-assert.match(emptyRender.bodyHtml, /No settled results returned from \/api\/results\./)
+assert.match(indexEmptyRender.bodyHtml, /No settled results yet\./)
 
-console.log('Google Sheets results frontend wiring regression test passed.')
+const resultsByDateRender = await renderResultsPage(byDatePayload)
+assert.match(resultsByDateRender.bodyHtml, /2026-06-09/)
+assert.match(resultsByDateRender.bodyHtml, /Profit Pending - Missing Odds/)
+assert.match(resultsByDateRender.bodyHtml, /90\.91%/)
+assert.equal(resultsByDateRender.statusText, '11 settled row(s) loaded from Google Sheets.')
+assert.equal(resultsByDateRender.overallRoi, '27%')
+
+const resultsRecordsRender = await renderResultsPage({
+  success: true,
+  sourceOfTruth: 'Google Sheets',
+  summary,
+  records: [{ Date: '2026-06-09', League: 'MLB', Game: 'Records Game', Pick: 'Records Fallback Pick', Result: 'Win', Odds: '-110', ROI: 90.91, section: 'Master Picks' }]
+})
+assert.match(resultsRecordsRender.bodyHtml, /Records Fallback Pick/)
+assert.match(resultsRecordsRender.bodyHtml, /90\.91%/)
+
+console.log('Canonical Google Sheets results frontend wiring regression test passed.')

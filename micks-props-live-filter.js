@@ -243,16 +243,17 @@
     // Hard purge rule: do not use the old Google Sheets results archives anymore.
     // Only future /api/results rows are allowed to repopulate this section.
     try {
-      const res = await fetch('/api/results?days=180&cache=' + Date.now(), { cache: 'no-store' });
+      const res = await fetch('/api/results?days=3650&cache=' + Date.now(), { cache: 'no-store' });
       const data = res.ok ? await res.json() : null;
-      const rows = data && Array.isArray(data.rows) ? data.rows : [];
+      const rows = rowsFromResultsPayload(data || {});
       const grouped = {
         free: Array.isArray(data?.free) ? data.free : [],
         vip: Array.isArray(data?.vip) ? data.vip : [],
         props: Array.isArray(data?.props) ? data.props : [],
         lotto: Array.isArray(data?.lotto) ? data.lotto : [],
         longshots: Array.isArray(data?.longshots) ? data.longshots : [],
-        rows
+        rows,
+        payload: data || {}
       };
       const total = grouped.rows.length + grouped.free.length + grouped.vip.length + grouped.props.length + grouped.lotto.length + grouped.longshots.length;
       return total ? grouped : { free: [], vip: [], props: [], lotto: [], longshots: [], rows: [] };
@@ -260,6 +261,15 @@
       console.warn('Micks future results fetch failed:', error);
       return { free: [], vip: [], props: [], lotto: [], longshots: [], rows: [] };
     }
+  }
+  function rowsFromResultsPayload(data) {
+    if (data?.byDate && typeof data.byDate === 'object' && !Array.isArray(data.byDate)) {
+      const rows = Object.entries(data.byDate).flatMap(([date, group]) => Array.isArray(group) ? group.map(row => Object.assign({ date }, row)) : []);
+      if (rows.length) return rows;
+    }
+    if (Array.isArray(data?.records) && data.records.length) return data.records;
+    if (Array.isArray(data?.rows) && data.rows.length) return data.rows;
+    return [];
   }
   function renderLedger(id, rows, empty) {
     const el = document.getElementById(id);
@@ -292,7 +302,8 @@
     const data = await loadFutureResultsRows();
     const overall = data.rows.length ? data.rows : [...data.free, ...data.vip, ...data.props, ...data.lotto, ...data.longshots];
     if (!overall.length) {
-      purgeResultsDisplay();
+      if (typeof window.renderCanonicalResults === 'function') window.renderCanonicalResults(data.payload || {});
+      else purgeResultsDisplay();
       return;
     }
     renderLedger('freeResultsRows', data.free, 'No free results archive rows loaded yet.');
@@ -305,6 +316,7 @@
     writeStats('vip', stats(data.vip, activeData?.vip || []));
     writeStats('props', stats(data.props, activeData?.props || []));
     writeStats('longshots', stats([...data.lotto, ...data.longshots], [...(activeData?.lottoParlays || []), ...(activeData?.longshots || [])]));
+    if (typeof window.renderCanonicalResults === 'function') window.renderCanonicalResults(data.payload || { rows: overall });
   }
   async function hydrateOddsFeed() {
     const table = document.getElementById('oddsRows');

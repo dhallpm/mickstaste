@@ -242,7 +242,7 @@
 
   async function hydrateResultsFromApi() {
     try {
-      const response = await fetch('/api/results?days=180', { cache: 'no-store' });
+      const response = await fetch('/api/results?days=3650', { cache: 'no-store' });
       if (!response.ok) throw new Error(`Results API ${response.status}`);
       const data = await response.json();
       if (data.success === false) throw new Error(data.error || 'Results API unavailable');
@@ -261,6 +261,7 @@
       writeStats('vip', vip);
       writeStats('props', props);
       writeStats('longshots', cards);
+      if (typeof window.renderCanonicalResults === 'function') window.renderCanonicalResults(data);
       const homeRecord = document.getElementById('overallRecord')?.textContent;
       const homeUnits = document.getElementById('overallUnits')?.textContent;
       if (homeRecord) document.getElementById('homeRecord').textContent = homeRecord;
