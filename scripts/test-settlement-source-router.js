@@ -184,6 +184,7 @@ const wnbaUrl = 'https://www.wnba.com/game/box-score'
 const plusParlay = await routeSettlementSources({
   Date: '2026-06-10',
   Pick: 'Braves 1st 5 -0.5 + Toronto Tempo -8 + Mariners ML + Tempo/Sun Under 169 + Ohtani Over 6.5 Ks',
+  Legs: '5',
   'Bet Type': 'Parlay'
 }, {
   urls: [bravesF5Url, wnbaUrl, marinersUrl, ohtaniUrl],

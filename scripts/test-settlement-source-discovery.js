@@ -201,6 +201,19 @@ assert.equal(playerOnlyMlbDiscovery.urls.length, 1)
 assert.match(playerOnlyMlbDiscovery.urls[0], /statsapi\.mlb\.com\/api\/v1\/game\/99999\/boxscore/)
 assert.match(playerOnlyMlbDiscovery.sourceTextByUrl[playerOnlyMlbDiscovery.urls[0]], /Pitching Ohtani strikeouts 7/)
 
+const plusParlayDiscovery = await discoverTrustedSourcesForPick({
+  Date: '2026-06-09',
+  League: 'MLB',
+  Pick: 'Braves 1st 5 -0.5 + Ohtani Over 6.5 Ks',
+  Legs: '2',
+  'Bet Type': 'Parlay'
+}, { fetchImpl })
+
+assert.equal(plusParlayDiscovery.urls.length, 2)
+assert.equal(plusParlayDiscovery.discoveredSources.map(source => source.leg).join(' | '), 'Braves 1st 5 -0.5 | Ohtani Over 6.5 Ks')
+assert.ok(plusParlayDiscovery.urls.some(url => /linescore/.test(url)))
+assert.ok(plusParlayDiscovery.urls.some(url => /boxscore/.test(url)))
+
 const wnbaDiscovery = await discoverTrustedSourcesForPick({
   Date: '2026-06-09',
   League: 'WNBA',
