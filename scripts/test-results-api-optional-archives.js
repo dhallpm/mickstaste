@@ -100,11 +100,17 @@ const lottoWin = normalizeRow({
   Pick: 'Safe 5-Leg Parlay',
   Result: 'Win',
   Units: '1',
-  Odds: '+300'
+  Odds: '+300',
+  ROI: '90.91',
+  'Settlement Status': 'Profit Pending - Missing Odds',
+  'Settlement Notes': 'Profit pending because parlay odds are missing or invalid.'
 }, 'Lotto Parlays')
 
 assert.equal(lottoWin.__section, 'lotto')
 assert.equal(lottoWin.Result, 'Win')
+assert.equal(lottoWin.roiDisplay, '90.91%')
+assert.equal(lottoWin.settlementStatus, 'Profit Pending - Missing Odds')
+assert.equal(lottoWin.settlementNotes, 'Profit pending because parlay odds are missing or invalid.')
 
 const longshotLoss = normalizeRow({
   Pick: 'Longshot HR Ladder',

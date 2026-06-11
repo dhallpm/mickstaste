@@ -120,6 +120,13 @@ function formatUnits(value) {
   return `${value > 0 ? '+' : ''}${value.toFixed(2)}u`
 }
 
+function formatRoiDisplay(value) {
+  if (!Number.isFinite(value)) return ''
+  const percent = Math.abs(value) <= 1 ? value * 100 : value
+  const rounded = round2(percent)
+  return `${Number.isInteger(rounded) ? rounded.toFixed(0) : String(rounded)}%`
+}
+
 function normalizeProfitLoss(value) {
   const raw = text(value)
   if (!raw) return ''
@@ -253,6 +260,8 @@ export function normalizeRecord(record = {}, config = {}) {
   const betType = text(first(fields, ['Bet Type', 'Type', 'Market', 'Prop'])) || (section === 'props' ? 'Player Prop' : section === 'lotto' ? 'Parlay' : '')
   const closingNumber = first(fields, ['Closing Number', 'Closing Line', 'Verified Closing Number'])
   const recordKey = fields['Record Key'] || buildRecordKey({ ...fields, Pick: pick })
+  const settlementStatus = first(fields, ['Settlement Status'])
+  const settlementNotes = first(fields, ['Settlement Notes'])
 
   return {
     id: record.id || recordKey,
@@ -313,7 +322,7 @@ export function normalizeRecord(record = {}, config = {}) {
     profitLossValue,
     ROI: roi,
     roi,
-    roiDisplay: unitsRisked > 0 ? `${Math.round(roi * 100)}%` : '',
+    roiDisplay: unitsRisked > 0 ? formatRoiDisplay(roi) : '',
     Access: access,
     access,
     Sportsbook: text(first(fields, ['Sportsbook', 'Book'])),
@@ -322,6 +331,10 @@ export function normalizeRecord(record = {}, config = {}) {
     settledAt: first(fields, ['Settled At']),
     'Settlement Source': first(fields, ['Settlement Source']),
     settlementSource: first(fields, ['Settlement Source']),
+    'Settlement Status': settlementStatus,
+    settlementStatus,
+    'Settlement Notes': settlementNotes,
+    settlementNotes,
     Notes: text(first(fields, ['Notes', 'Result Notes', 'Settlement Notes', 'Market Notes', 'Leg Results', 'Losing Leg'])),
     notes: text(first(fields, ['Notes', 'Result Notes', 'Settlement Notes', 'Market Notes', 'Leg Results', 'Losing Leg'])),
     Legs: text(first(fields, ['Legs', 'Parlay Group'])) || pick,

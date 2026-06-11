@@ -121,14 +121,32 @@
       return String(value ?? '').replace(/[&<>"]/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[char]))
     }
 
+    function firstText(...values) {
+      return values
+        .map(value => String(value ?? '').trim())
+        .find(Boolean) || ''
+    }
+
+    function numericValue(value) {
+      if (typeof value === 'number') return Number.isFinite(value) ? value : NaN
+      const match = String(value ?? '').replace(/,/g, '').match(/[+-]?\d+(?:\.\d+)?/)
+      return match ? Number(match[0]) : NaN
+    }
+
     function money(value) {
-      const n = Number(value || 0)
+      const n = numericValue(value)
+      if (!Number.isFinite(n)) return '--'
       return `${n >= 0 ? '+' : ''}${n.toFixed(2)}u`
     }
 
     function pct(value) {
-      const n = Number(value || 0)
-      return `${Math.round(n * 100)}%`
+      const raw = String(value ?? '').trim()
+      if (!raw) return '--'
+      const n = numericValue(raw)
+      if (!Number.isFinite(n)) return raw
+      const percent = Math.abs(n) <= 1 ? n * 100 : n
+      const rounded = Math.round(percent * 100) / 100
+      return `${Number.isInteger(rounded) ? rounded.toFixed(0) : rounded}%`
     }
 
     function record(summary = {}) {
@@ -152,8 +170,76 @@
       return ''
     }
 
+    function field(row = {}, ...names) {
+      return firstText(...names.map(name => row[name]))
+    }
+
     function sectionName(row = {}) {
-      return row.section || row.originalTable || row.__table || row.resultSection || '--'
+      const section = firstText(row.section, row.originalTable, row.__table, row.resultSection)
+      if (/^propslab$/i.test(section)) return 'Props Lab'
+      if (/^lottoparlays$/i.test(section)) return 'Lotto Parlays'
+      if (/^masterpicks$/i.test(section)) return 'Master Picks'
+      if (/^longshots$/i.test(section)) return 'Longshots'
+      return section || '--'
+    }
+
+    function rowDate(row = {}, fallback = '') {
+      return firstText(row.date, row.Date, row.settledAt, row['Settled At'], fallback).slice(0, 10) || fallback || 'Undated'
+    }
+
+    function rowsFromByDate(byDate = {}) {
+      if (!byDate || typeof byDate !== 'object' || Array.isArray(byDate)) return []
+      return Object.entries(byDate).flatMap(([date, rows]) => {
+        return Array.isArray(rows) ? rows.map(row => ({ ...row, date: rowDate(row, date), _groupDate: date })) : []
+      })
+    }
+
+    function rowsFromPayload(data = {}) {
+      const byDateRows = rowsFromByDate(data.byDate)
+      if (byDateRows.length) return byDateRows
+      if (Array.isArray(data.records) && data.records.length) return data.records
+      if (Array.isArray(data.rows) && data.rows.length) return data.rows
+      return []
+    }
+
+    function groupedRows(data = {}) {
+      const rows = rowsFromPayload(data)
+      return rows.reduce((groups, row) => {
+        const date = row._groupDate || rowDate(row)
+        if (!groups[date]) groups[date] = []
+        groups[date].push(row)
+        return groups
+      }, {})
+    }
+
+    function invalidOdds(row = {}) {
+      const odds = firstText(row.odds, row.Odds)
+      return !odds || /^(?:#error!?|n\/a|na|pass|watchlist|live only|missing)$/i.test(odds)
+    }
+
+    function profitPending(row = {}) {
+      const settlementStatus = firstText(row.settlementStatus, row['Settlement Status'])
+      if (/profit pending\s*-\s*missing odds/i.test(settlementStatus)) return true
+      const marketText = [row.betType, row['Bet Type'], row.category, row.Category, row.section, row.pick, row.Pick].join(' ')
+      const result = firstText(row.result, row.Result, row.Outcome)
+      const profit = firstText(row.profitLoss, row['Profit/Loss'], row['P/L'], row.PL)
+      return /\b(lotto|parlay)\b/i.test(marketText) &&
+        /^win$/i.test(result) &&
+        invalidOdds(row) &&
+        (!profit || /^[-+]?0(?:\.00)?u?$/i.test(profit))
+    }
+
+    function profitDisplay(row = {}) {
+      if (profitPending(row)) return 'Profit Pending - Missing Odds'
+      const stored = firstText(row.profitLoss, row['Profit/Loss'], row['P/L'], row.PL)
+      if (stored) return stored
+      if (row.profitLossValue !== undefined && row.profitLossValue !== null && row.profitLossValue !== '') return money(row.profitLossValue)
+      return '--'
+    }
+
+    function roiDisplay(row = {}) {
+      const value = firstText(row.roi, row.ROI, row.roiDisplay)
+      return value ? pct(value) : '--'
     }
 
     function renderSummary(data = {}) {
@@ -181,31 +267,33 @@
     }
 
     function renderRows(data = {}) {
-      const byDate = data.byDate || {}
+      const byDate = groupedRows(data)
       const dates = Object.keys(byDate).sort().reverse()
       if (!dates.length) {
-        body.innerHTML = '<tr><td colspan="11">No settled Google Sheets rows found yet.</td></tr>'
+        body.innerHTML = '<tr><td colspan="11">No settled results returned from /api/results.</td></tr>'
         return
       }
 
       body.innerHTML = dates.map(date => {
         const rows = Array.isArray(byDate[date]) ? byDate[date] : []
         const header = `<tr class="date-row"><td colspan="11">${esc(date)}</td></tr>`
-        const renderedRows = rows.map(row => `
+        const renderedRows = rows.map(row => {
+          const result = field(row, 'result', 'Result', 'Outcome')
+          return `
           <tr>
             <td>${esc(row.date || date)}</td>
-            <td>${esc(row.league || row.sport || '--')}</td>
-            <td>${esc(row.game || '--')}</td>
-            <td>${esc(row.pick || '--')}</td>
-            <td>${esc(row.odds || '--')}</td>
-            <td>${esc(row.grade || '--')}</td>
-            <td>${esc(row.units || row.unitsRisked || '--')}</td>
-            <td class="${resultClass(row.result)}">${esc(row.result || '--')}</td>
-            <td>${esc(row.profitLoss || money(row.profitLossValue))}</td>
-            <td>${esc(row.roiDisplay || pct(row.roi))}</td>
+            <td>${esc(field(row, 'league', 'League', 'sport', 'Sport') || '--')}</td>
+            <td>${esc(field(row, 'game', 'Game', 'Matchup') || '--')}</td>
+            <td>${esc(field(row, 'pick', 'Pick', 'Selection') || '--')}</td>
+            <td>${esc(field(row, 'odds', 'Odds') || '--')}</td>
+            <td>${esc(field(row, 'grade', 'Grade') || '--')}</td>
+            <td>${esc(field(row, 'units', 'Units', 'unitsRisked') || '--')}</td>
+            <td class="${resultClass(result)}">${esc(result || '--')}</td>
+            <td>${esc(profitDisplay(row))}</td>
+            <td>${esc(roiDisplay(row))}</td>
             <td><span class="section-pill">${esc(sectionName(row))}</span></td>
           </tr>
-        `).join('')
+        `}).join('')
         return header + renderedRows
       }).join('')
     }
@@ -218,7 +306,7 @@
         if (data.success === false) throw new Error(data.error || 'Results API unavailable')
         renderSummary(data)
         renderRows(data)
-        statusEl.textContent = `${data.records?.length || 0} settled row(s) loaded from ${data.sourceOfTruth || 'Google Sheets'}.`
+        statusEl.textContent = `${rowsFromPayload(data).length} settled row(s) loaded from ${data.sourceOfTruth || 'Google Sheets'}.`
       } catch (error) {
         body.innerHTML = `<tr><td colspan="11">Results could not load: ${esc(error.message || error)}</td></tr>`
         statusEl.textContent = 'Results API unavailable.'
