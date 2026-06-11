@@ -331,6 +331,7 @@ const todayCardRender = await renderIndexPage({
       game: 'Stanley Cup Final',
       player: 'Jordan Staal',
       pick: 'Over 1.5 Shots on Goal',
+      betLine: 'Over 1.5 Shots on Goal',
       prop: 'Shots on Goal',
       cardTitle: 'Stanley Cup Final | Player Prop',
       betType: 'Player Prop',
@@ -355,6 +356,17 @@ const todayCardRender = await renderIndexPage({
       grade: 'B',
       units: '0.5',
       writeup: 'Prop writeup details should render even with no player.'
+    },
+    {
+      section: 'props',
+      date: '2026-06-11',
+      league: 'MLB',
+      game: 'Dodgers vs Padres',
+      pick: 'Over 6.5 Strikeouts',
+      betType: 'Player Prop',
+      grade: 'B',
+      units: '0.5',
+      fullAnalysis: 'Strikeout prop analysis should render even when the price is not available.'
     }
   ],
   vip: [],
@@ -368,12 +380,21 @@ assert.doesNotMatch(todayCardRender.freeHtml, /<span class="pill">No Bet<\/span>
 assert.match(todayCardRender.freeHtml, /<span class="pill">Pass<\/span>/)
 assert.match(todayCardRender.propsHtml, /Jordan Staal - Over 1\.5 Shots on Goal/)
 assert.match(todayCardRender.propsHtml, /Over 1\.5 Shots on Goal/)
-assert.match(todayCardRender.propsHtml, /-120/)
-assert.match(todayCardRender.propsHtml, /1/)
+assert.match(todayCardRender.propsHtml, /Bet Line:<\/b> Over 1\.5 Shots on Goal/)
+assert.match(todayCardRender.propsHtml, /Odds:<\/b> -120/)
+assert.match(todayCardRender.propsHtml, /Grade:<\/b> B\+/)
+assert.match(todayCardRender.propsHtml, /Units:<\/b> 1u/)
 assert.match(todayCardRender.propsHtml, /B\+/)
 assert.match(todayCardRender.propsHtml, /Over 1\.5/)
+assert.match(todayCardRender.propsHtml, /Best Number:<\/b> Over 1\.5/)
+assert.match(todayCardRender.propsHtml, /No-Bet Cutoff:<\/b> Over 1\.5 -145/)
 assert.match(todayCardRender.propsHtml, /Jordan Staal owns enough shot volume/)
 assert.match(todayCardRender.propsHtml, /Prop writeup details should render even with no player/)
+assert.match(todayCardRender.propsHtml, /Bet Line:<\/b> Over 6\.5 Strikeouts/)
+assert.match(todayCardRender.propsHtml, /Odds:<\/b> Shop best price/)
+assert.match(todayCardRender.propsHtml, /Strikeout prop analysis should render/)
+assert.ok(todayCardRender.propsHtml.indexOf('Bet Line:</b> Over 1.5 Shots on Goal') < todayCardRender.propsHtml.indexOf('Jordan Staal owns enough shot volume'))
+assert.ok(todayCardRender.propsHtml.indexOf('Odds:</b> -120') < todayCardRender.propsHtml.indexOf('Jordan Staal owns enough shot volume'))
 
 const indexEmptyRender = await renderIndexPage({
   success: true,

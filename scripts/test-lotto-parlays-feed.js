@@ -184,11 +184,29 @@ const propsPlayerCard = cleanWebsiteRow({
 })
 assert.equal(propsPlayerCard.section, 'props')
 assert.equal(propsPlayerCard.pick, 'Jordan Staal - Over 1.5 Shots on Goal')
+assert.equal(propsPlayerCard.betLine, 'Over 1.5 Shots on Goal')
 assert.equal(propsPlayerCard.player, 'Jordan Staal')
 assert.equal(propsPlayerCard.prop, 'Shots on Goal')
 assert.match(propsPlayerCard.writeup, /shot-volume role/)
 assert.match(propsPlayerCard.fullAnalysis, /shot attempts/)
 assert.match(propsPlayerCard.notes, /Props note/)
+
+const propsFallbackCard = cleanWebsiteRow({
+  id: 'rec-props-fallback',
+  __table: 'Props Lab',
+  Date: '2026-06-11',
+  League: 'MLB',
+  Pick: 'Shohei Ohtani Over 6.5 Strikeouts',
+  'American Odds': '+113',
+  Units: 0.5,
+  Grade: 'B',
+  Notes: 'Playable to +100; pass above -115.'
+})
+assert.equal(propsFallbackCard.pick, 'Shohei Ohtani Over 6.5 Strikeouts')
+assert.equal(propsFallbackCard.betLine, 'Shohei Ohtani Over 6.5 Strikeouts')
+assert.equal(propsFallbackCard.player, 'Shohei Ohtani')
+assert.equal(propsFallbackCard.odds, '+113')
+assert.match(propsFallbackCard.noBetCutoff, /pass above -115/i)
 
 const feed = categorizeWebsiteRows([card, { ...dateLessCard, date: '2026-05-30' }])
 assert.equal(feed.lottoParlays.length, 2)
