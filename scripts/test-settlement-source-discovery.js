@@ -31,6 +31,12 @@ const fetchImpl = async url => {
               away: { score: 5, team: { name: 'Atlanta Braves', teamName: 'Braves' } },
               home: { score: 4, team: { name: 'New York Mets', teamName: 'Mets' } }
             }
+          }, {
+            gamePk: 99999,
+            teams: {
+              away: { score: 6, team: { name: 'Los Angeles Dodgers', teamName: 'Dodgers' } },
+              home: { score: 2, team: { name: 'San Diego Padres', teamName: 'Padres' } }
+            }
           }]
         }]
       })
@@ -80,6 +86,24 @@ const fetchImpl = async url => {
     return {
       ok: true,
       json: async () => ({ teams: { away: { players: {} }, home: { players: {} } } })
+    }
+  }
+  if (value.includes('/api/v1/game/99999/boxscore')) {
+    return {
+      ok: true,
+      json: async () => ({
+        teams: {
+          away: {
+            players: {
+              ID17: {
+                person: { fullName: 'Shohei Ohtani' },
+                stats: { pitching: { strikeOuts: 7 } }
+              }
+            }
+          },
+          home: { players: {} }
+        }
+      })
     }
   }
   if (value.includes('/basketball/wnba/scoreboard')) {
@@ -167,6 +191,15 @@ const firstFiveDiscovery = await discoverTrustedSourcesForPick({
 assert.equal(firstFiveDiscovery.urls.length, 1)
 assert.match(firstFiveDiscovery.urls[0], /statsapi\.mlb\.com\/api\/v1\/game\/67890\/linescore/)
 assert.match(firstFiveDiscovery.sourceTextByUrl[firstFiveDiscovery.urls[0]], /First 5 Final: Atlanta Braves 3, New York Mets 1 runs/)
+
+const playerOnlyMlbDiscovery = await discoverTrustedSourcesForPick({
+  Date: '2026-06-09',
+  Pick: 'Ohtani Over 6.5 Ks'
+}, { fetchImpl })
+
+assert.equal(playerOnlyMlbDiscovery.urls.length, 1)
+assert.match(playerOnlyMlbDiscovery.urls[0], /statsapi\.mlb\.com\/api\/v1\/game\/99999\/boxscore/)
+assert.match(playerOnlyMlbDiscovery.sourceTextByUrl[playerOnlyMlbDiscovery.urls[0]], /Pitching Ohtani strikeouts 7/)
 
 const wnbaDiscovery = await discoverTrustedSourcesForPick({
   Date: '2026-06-09',
