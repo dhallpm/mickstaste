@@ -284,6 +284,101 @@ function makeFakeSheets() {
   return { sheets, data, calls }
 }
 
+function makeParlayFallbackSheets() {
+  const headers = ['Date', 'League', 'Game', 'Pick', 'Bet Type', 'Status', 'Units', 'Odds', 'Category', 'Official Bet']
+  const row = values => headers.map(header => values[header] ?? '')
+  const data = new Map([
+    ['Master Picks', [headers.slice(), row({
+      Date: '2026-06-09',
+      League: 'MLB',
+      Game: 'Baltimore Orioles vs Boston Red Sox',
+      Pick: 'Boston Red Sox ML',
+      'Bet Type': 'Moneyline',
+      Status: 'Pending',
+      Units: 1,
+      Odds: '-110'
+    })]],
+    ['Props Lab', [headers.slice(), row({
+      Date: '2026-06-09',
+      League: 'MLB',
+      Game: 'Baltimore Orioles vs Boston Red Sox',
+      Pick: 'Orioles/Red Sox Under 7.5',
+      'Bet Type': 'Total',
+      Status: 'Pending',
+      Units: 1,
+      Odds: '-110'
+    })]],
+    ['Lotto Parlays', [headers.slice(), row({
+      Date: '2026-06-09',
+      League: 'MLB',
+      Game: 'Baltimore Orioles vs Boston Red Sox',
+      Pick: 'Boston Red Sox ML + Orioles/Red Sox Under 7.5',
+      'Bet Type': 'Parlay',
+      Status: 'Pending',
+      Units: 0.25,
+      Odds: '#ERROR!'
+    })]],
+    ['Longshots', [headers.slice()]]
+  ])
+  const calls = {
+    headerUpdates: 0,
+    batchUpdates: 0,
+    updatedRanges: []
+  }
+
+  const sheets = {
+    spreadsheets: {
+      values: {
+        get: async ({ range }) => {
+          const { sheetName, cellRange } = parseSheetRange(range)
+          const values = data.get(sheetName) || []
+          return {
+            data: {
+              values: cellRange === '1:1' ? [values[0] || []] : values
+            }
+          }
+        },
+        update: async ({ range, requestBody }) => {
+          const { sheetName, cellRange } = parseSheetRange(range)
+          assert.equal(cellRange, 'A1')
+          const values = data.get(sheetName) || [[]]
+          values[0] = requestBody.values?.[0] || []
+          data.set(sheetName, values)
+          calls.headerUpdates += 1
+          calls.updatedRanges.push(range)
+          return { data: { updatedRange: range } }
+        },
+        batchUpdate: async ({ requestBody }) => {
+          calls.batchUpdates += 1
+          let updatedCells = 0
+          const responses = []
+          for (const update of requestBody.data || []) {
+            const { sheetName, cellRange } = parseSheetRange(update.range)
+            const match = cellRange.match(/^([A-Z]+)(\d+)$/)
+            if (!match) throw new Error(`Unexpected update range: ${update.range}`)
+            const column = columnIndex(match[1])
+            const rowIndex = Number(match[2]) - 1
+            const values = data.get(sheetName)
+            while (values.length <= rowIndex) values.push([])
+            values[rowIndex][column] = update.values?.[0]?.[0] ?? ''
+            updatedCells += 1
+            responses.push({ updatedRange: update.range })
+          }
+          return {
+            data: {
+              spreadsheetId: 'test-spreadsheet',
+              totalUpdatedCells: updatedCells,
+              responses
+            }
+          }
+        }
+      }
+    }
+  }
+
+  return { sheets, data, calls }
+}
+
 const originalFetch = globalThis.fetch
 globalThis.fetch = async url => {
   const requestUrl = new URL(String(url))
@@ -393,6 +488,22 @@ assert.equal(masterRows[1][profitLossIndex], 0.91)
 assert.equal(masterRows[1][settlementStatusIndex], 'Settled')
 assert.match(masterRows[1][settlementSourceIndex], /MLB official box score/)
 assert.notEqual(masterRows[2][settlementStatusIndex], 'Needs Review')
+
+const parlayFallbackSheets = makeParlayFallbackSheets()
+const parlayFallbackResult = await settleResults({
+  date: '2026-06-09',
+  settleAll: true,
+  dryRun: true,
+  sheets: parlayFallbackSheets.sheets,
+  spreadsheetId: 'test-spreadsheet'
+})
+const parlayFallbackRecord = parlayFallbackResult.records.find(record => record.pick === 'Boston Red Sox ML + Orioles/Red Sox Under 7.5')
+assert.ok(parlayFallbackRecord, 'cross-tab plus-separated parlay should settle from same-date leg rows')
+assert.equal(parlayFallbackRecord.plannedResult, 'Loss')
+assert.equal(parlayFallbackRecord.plannedSettlementStatus, 'Settled')
+assert.match(parlayFallbackRecord.plannedSettlementNotes, /Boston Red Sox ML=Loss/)
+assert.match(parlayFallbackRecord.plannedSettlementNotes, /Orioles\/Red Sox Under 7.5=Win/)
+assert.equal(parlayFallbackResult.needsReviewRecords.some(record => record.pick === parlayFallbackRecord.pick), false)
 
 globalThis.fetch = originalFetch
 
