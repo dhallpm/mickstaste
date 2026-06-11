@@ -111,6 +111,22 @@ assert.equal(parlayMissingOdds.fields.ROI, '')
 assert.equal(parlayMissingOdds.fields['Settlement Status'], 'Profit Pending - Missing Odds')
 assert.match(parlayMissingOdds.fields['Settlement Notes'], /Profit pending/)
 
+const plusParlayMissingOdds = calculateSettlementFields({
+  Pick: 'Braves 1st 5 -0.5 + Toronto Tempo -8 + Mariners ML',
+  Units: 0.2
+}, new Date('2026-06-10T22:00:00Z'), {
+  verification: {
+    status: 'verified',
+    result: 'Win',
+    sourceName: 'MLB official box score / WNBA official box score',
+    sourceUrl: 'https://statsapi.mlb.com/api/v1/game/111/linescore https://www.wnba.com/game/box-score',
+    notes: 'All plus-separated parlay legs won.'
+  }
+})
+assert.equal(plusParlayMissingOdds.fields.Result, 'Win')
+assert.equal(plusParlayMissingOdds.fields['Profit/Loss'], '')
+assert.equal(plusParlayMissingOdds.fields['Settlement Status'], 'Profit Pending - Missing Odds')
+
 const mapped = cleanWebsiteRow({
   id: 'rec1',
   Date: '2026-06-02',
@@ -202,10 +218,11 @@ function makeFakeSheets() {
     Odds: '-110'
   }))
 
+  const blankDatedRow = row({ Date: '2026-06-09' })
   const data = new Map([
-    ['Master Picks', [headers.slice(), ...tableRows(0, 6)]],
-    ['Props Lab', [headers.slice(), ...tableRows(1, 3)]],
-    ['Lotto Parlays', [headers.slice(), ...tableRows(2, 3)]],
+    ['Master Picks', [headers.slice(), ...tableRows(0, 6), blankDatedRow, blankDatedRow.slice()]],
+    ['Props Lab', [headers.slice(), ...tableRows(1, 3), blankDatedRow.slice()]],
+    ['Lotto Parlays', [headers.slice(), ...tableRows(2, 3), blankDatedRow.slice()]],
     ['Longshots', [headers.slice(), ...tableRows(3, 3)]]
   ])
   const calls = {
@@ -313,16 +330,18 @@ assert.equal(dryRunResult.source, 'google-sheets')
 assert.equal(dryRunResult.sourceOfTruth, 'Google Sheets')
 assert.equal(dryRunResult.spreadsheetId, 'test-spreadsheet')
 assert.equal(dryRunResult.settleAll, true)
-assert.equal(dryRunResult.scanned, 15)
+assert.equal(dryRunResult.scanned, 19)
 assert.equal(dryRunResult.matched, 1)
 assert.equal(dryRunResult.needsReview, 13)
-assert.equal(dryRunResult.skipped, 1)
+assert.equal(dryRunResult.skipped, 5)
 assert.equal(dryRunResult.updated, 0)
 assert.equal(dryRunResult.records[0].sheetName, 'Master Picks')
 assert.equal(dryRunResult.records[0].sheetRowNumber, 2)
 assert.match(dryRunResult.records[0].updatedRange, /'Master Picks'![A-Z]+2/)
 assert.equal(dryRunSheets.calls.headerUpdates, 0)
 assert.equal(dryRunSheets.calls.batchUpdates, 0)
+assert.equal(dryRunResult.skippedRecords.filter(record => /Skipped blank row/.test(record.reason)).length, 4)
+assert.equal(dryRunResult.needsReviewRecords.filter(record => !record.pick).length, 0)
 assert.doesNotMatch(JSON.stringify(dryRunResult), /Airtable|tbl[A-Za-z0-9]{10,}/)
 
 const writeSheets = makeFakeSheets()
@@ -342,18 +361,19 @@ assert.equal(settleAllRes.body.settleAll, true)
 assert.equal(settleAllRes.body.source, 'google-sheets')
 assert.equal(settleAllRes.body.sourceOfTruth, 'Google Sheets')
 assert.equal(settleAllRes.body.spreadsheetId, 'test-spreadsheet')
-assert.equal(settleAllRes.body.scanned, 15)
+assert.equal(settleAllRes.body.scanned, 19)
 assert.equal(settleAllRes.body.matched, 1)
 assert.equal(settleAllRes.body.needsReview, 13)
-assert.equal(settleAllRes.body.skipped, 1)
+assert.equal(settleAllRes.body.skipped, 5)
 assert.equal(settleAllRes.body.updated, 14)
 assert.equal(settleAllRes.body.records.length, 1)
 assert.equal(settleAllRes.body.records[0].plannedSettlementStatus, 'Settled')
 assert.equal(settleAllRes.body.records[0].plannedResult, 'Win')
 assert.match(settleAllRes.body.records[0].discoveredSources[0].sourceUrl, /statsapi\.mlb\.com/)
 assert.equal(settleAllRes.body.needsReviewRecords.length, 13)
-assert.equal(settleAllRes.body.skippedRecords.length, 1)
-assert.equal(settleAllRes.body.skippedRecords[0].reason, 'Skipped non-official watchlist/pass row.')
+assert.equal(settleAllRes.body.skippedRecords.length, 5)
+assert.equal(settleAllRes.body.skippedRecords.filter(record => /Skipped blank row/.test(record.reason)).length, 4)
+assert.equal(settleAllRes.body.skippedRecords.some(record => record.reason === 'Skipped non-official watchlist/pass row.'), true)
 assert.equal(writeSheets.calls.headerUpdates, 4)
 assert.equal(writeSheets.calls.batchUpdates, 14)
 assert.doesNotMatch(JSON.stringify(settleAllRes.body), /Airtable|tbl[A-Za-z0-9]{10,}/)

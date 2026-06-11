@@ -93,6 +93,19 @@ const teamTotal = await routeSettlementSources({
 assert.equal(teamTotal.status, 'verified')
 assert.equal(teamTotal.result, 'Win')
 
+const firstFiveSpread = await routeSettlementSources({
+  Game: 'Atlanta Braves vs New York Mets',
+  Pick: 'Braves 1st 5 -0.5',
+  'Box Score URL': officialMlbUrl
+}, {
+  urls: [officialMlbUrl],
+  sourceTextByUrl: {
+    [officialMlbUrl]: 'First 5 Final: Atlanta Braves 3, New York Mets 1 runs. Box Score Final: Atlanta Braves 5, New York Mets 4 runs'
+  }
+})
+assert.equal(firstFiveSpread.status, 'verified')
+assert.equal(firstFiveSpread.result, 'Win')
+
 const moneylineWithPrice = await routeSettlementSources({
   Game: 'New York Yankees vs Cleveland Guardians',
   Pick: 'Guardians ML +108 or better',
@@ -163,5 +176,34 @@ const mixedParlay = await routeSettlementSources({
 assert.equal(mixedParlay.status, 'verified')
 assert.equal(mixedParlay.result, 'Win')
 assert.equal(mixedParlay.legResults.length, 2)
+
+const bravesF5Url = 'https://statsapi.mlb.com/api/v1/game/111/linescore'
+const marinersUrl = 'https://statsapi.mlb.com/api/v1/game/222/boxscore'
+const ohtaniUrl = 'https://statsapi.mlb.com/api/v1/game/333/boxscore'
+const wnbaUrl = 'https://www.wnba.com/game/box-score'
+const plusParlay = await routeSettlementSources({
+  Date: '2026-06-10',
+  Pick: 'Braves 1st 5 -0.5 + Toronto Tempo -8 + Mariners ML + Tempo/Sun Under 169 + Ohtani Over 6.5 Ks',
+  'Bet Type': 'Parlay'
+}, {
+  urls: [bravesF5Url, wnbaUrl, marinersUrl, ohtaniUrl],
+  sourceTextByUrl: {
+    [bravesF5Url]: 'First 5 Final: Atlanta Braves 2, New York Mets 3 runs. Box Score Final: Atlanta Braves 7, New York Mets 4 runs',
+    [wnbaUrl]: 'Box Score Final: Toronto Tempo 88, Connecticut Sun 79 points',
+    [marinersUrl]: 'Box Score Final: Seattle Mariners 4, Oakland Athletics 2 runs',
+    [ohtaniUrl]: 'Box Score Pitching Ohtani strikeouts 7'
+  }
+})
+assert.equal(plusParlay.status, 'verified')
+assert.equal(plusParlay.result, 'Loss')
+assert.equal(plusParlay.legResults.length, 5)
+assert.deepEqual(plusParlay.legResults.map(leg => leg.leg), [
+  'Braves 1st 5 -0.5',
+  'Toronto Tempo -8',
+  'Mariners ML',
+  'Tempo/Sun Under 169',
+  'Ohtani Over 6.5 Ks'
+])
+assert.equal(plusParlay.legResults[0].result, 'Loss')
 
 console.log('Settlement source router tests passed.')

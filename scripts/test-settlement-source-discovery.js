@@ -25,6 +25,12 @@ const fetchImpl = async url => {
               away: { score: 4, team: { name: 'Baltimore Orioles', teamName: 'Orioles' } },
               home: { score: 2, team: { name: 'Boston Red Sox', teamName: 'Red Sox' } }
             }
+          }, {
+            gamePk: 67890,
+            teams: {
+              away: { score: 5, team: { name: 'Atlanta Braves', teamName: 'Braves' } },
+              home: { score: 4, team: { name: 'New York Mets', teamName: 'Mets' } }
+            }
           }]
         }]
       })
@@ -53,6 +59,27 @@ const fetchImpl = async url => {
           }
         }
       })
+    }
+  }
+  if (value.includes('/api/v1/game/67890/linescore')) {
+    return {
+      ok: true,
+      json: async () => ({
+        innings: [
+          { num: 1, away: { runs: 1 }, home: { runs: 0 } },
+          { num: 2, away: { runs: 0 }, home: { runs: 0 } },
+          { num: 3, away: { runs: 1 }, home: { runs: 0 } },
+          { num: 4, away: { runs: 0 }, home: { runs: 1 } },
+          { num: 5, away: { runs: 1 }, home: { runs: 0 } },
+          { num: 6, away: { runs: 2 }, home: { runs: 3 } }
+        ]
+      })
+    }
+  }
+  if (value.includes('/api/v1/game/67890/boxscore')) {
+    return {
+      ok: true,
+      json: async () => ({ teams: { away: { players: {} }, home: { players: {} } } })
     }
   }
   if (value.includes('/basketball/wnba/scoreboard')) {
@@ -129,6 +156,17 @@ assert.equal(mlbDiscovery.urls.length, 1)
 assert.match(mlbDiscovery.urls[0], /statsapi\.mlb\.com/)
 assert.match(mlbDiscovery.sourceTextByUrl[mlbDiscovery.urls[0]], /Box Score Final: Baltimore Orioles 4, Boston Red Sox 2 runs/)
 assert.match(mlbDiscovery.sourceTextByUrl[mlbDiscovery.urls[0]], /Batting Colton Cowser hits 1 runs 0 RBI 0/)
+
+const firstFiveDiscovery = await discoverTrustedSourcesForPick({
+  Date: '2026-06-09',
+  League: 'MLB',
+  Game: 'Atlanta Braves vs New York Mets',
+  Pick: 'Braves 1st 5 -0.5'
+}, { fetchImpl })
+
+assert.equal(firstFiveDiscovery.urls.length, 1)
+assert.match(firstFiveDiscovery.urls[0], /statsapi\.mlb\.com\/api\/v1\/game\/67890\/linescore/)
+assert.match(firstFiveDiscovery.sourceTextByUrl[firstFiveDiscovery.urls[0]], /First 5 Final: Atlanta Braves 3, New York Mets 1 runs/)
 
 const wnbaDiscovery = await discoverTrustedSourcesForPick({
   Date: '2026-06-09',
