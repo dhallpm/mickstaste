@@ -77,7 +77,7 @@ function fakeElement(id) {
   }
 }
 
-async function renderIndexPage(payload) {
+async function renderIndexPage(payload, todayPayload = { success: true, free: [], vip: [], vipVault: [], props: [], lottoParlays: [], longshots: [] }) {
   const elements = new Map()
   const elementFor = id => {
     if (!elements.has(id)) elements.set(id, fakeElement(id))
@@ -115,6 +115,12 @@ async function renderIndexPage(payload) {
     lucide: { createIcons() {} },
     fetch: async url => {
       const href = String(url)
+      if (href.startsWith('/api/todays-picks')) {
+        return {
+          ok: true,
+          json: async () => todayPayload
+        }
+      }
       if (href.startsWith('/api/results')) {
         return {
           ok: true,
@@ -138,6 +144,9 @@ async function renderIndexPage(payload) {
 
   return {
     bodyHtml: elementFor('resultsBody').innerHTML,
+    freeHtml: elementFor('freeCards').innerHTML,
+    propsHtml: elementFor('activePropsCards').innerHTML,
+    featuredHtml: elementFor('featuredCard').outerHTML || elementFor('featuredCard').innerHTML,
     statusText: elementFor('resultsStatus').textContent,
     summaryHtml: elementFor('summaryCards').innerHTML,
     overallRecord: elementFor('overallRecord').textContent,
@@ -262,6 +271,109 @@ const indexRowsRender = await renderIndexPage({
   rows: [{ date: '2026-06-09', league: 'MLB', game: 'Rows Game', pick: 'Rows Fallback Pick', result: 'Loss', odds: '+100', roi: -100, section: 'Longshots' }]
 })
 assert.match(indexRowsRender.bodyHtml, /Rows Fallback Pick/)
+
+const todayCardRender = await renderIndexPage({
+  success: true,
+  sourceOfTruth: 'Google Sheets',
+  summary: {},
+  records: []
+}, {
+  success: true,
+  free: [
+    {
+      section: 'picks',
+      date: '2026-06-11',
+      league: 'FIFA World Cup',
+      game: 'South Korea vs Czechia',
+      pick: 'South Korea Draw No Bet',
+      cardTitle: 'South Korea Draw No Bet',
+      betType: 'Draw No Bet',
+      market: 'Draw No Bet',
+      status: 'Pending',
+      releaseStatus: 'Free Released',
+      officialBet: 'Yes',
+      units: '1',
+      odds: '+105',
+      grade: 'B'
+    },
+    {
+      section: 'picks',
+      date: '2026-06-11',
+      league: 'FIFA World Cup',
+      game: 'South Korea vs Czechia',
+      pick: 'South Korea No Draw',
+      cardTitle: 'South Korea No Draw',
+      betType: 'No Draw',
+      market: 'No Draw',
+      status: 'Pending',
+      officialBet: 'Yes',
+      units: '1',
+      odds: '+100',
+      grade: 'B'
+    },
+    {
+      section: 'picks',
+      date: '2026-06-11',
+      league: 'FIFA World Cup',
+      game: 'Heavy Favorite',
+      pick: 'Heavy favorite pass',
+      betType: 'Pass',
+      status: 'Pass',
+      grade: 'Pass',
+      units: '0'
+    }
+  ],
+  props: [
+    {
+      section: 'props',
+      date: '2026-06-11',
+      league: 'Stanley Cup Final',
+      game: 'Stanley Cup Final',
+      player: 'Jordan Staal',
+      pick: 'Over 1.5 Shots on Goal',
+      prop: 'Shots on Goal',
+      cardTitle: 'Stanley Cup Final | Player Prop',
+      betType: 'Player Prop',
+      odds: '-120',
+      grade: 'B+',
+      units: '1',
+      bestNumber: 'Over 1.5',
+      noBetCutoff: 'Over 1.5 -145',
+      writeup: 'Generic public card text is on the public card for this matchup. Check the listed number and sportsbook close to lock before placing a wager.',
+      fullAnalysis: 'Jordan Staal owns enough shot volume to make Over 1.5 Shots on Goal playable at this number.',
+      notes: 'Props note should stay visible.'
+    },
+    {
+      section: 'props',
+      date: '2026-06-11',
+      league: 'Stanley Cup Final',
+      game: 'Stanley Cup Final',
+      pick: 'Over 1.5 Shots on Goal',
+      prop: 'Shots on Goal',
+      betType: 'Player Prop',
+      odds: '-110',
+      grade: 'B',
+      units: '0.5',
+      writeup: 'Prop writeup details should render even with no player.'
+    }
+  ],
+  vip: [],
+  vipVault: [],
+  lottoParlays: [],
+  longshots: []
+})
+assert.match(todayCardRender.freeHtml, /South Korea Draw No Bet/)
+assert.match(todayCardRender.freeHtml, /South Korea No Draw/)
+assert.doesNotMatch(todayCardRender.freeHtml, /<span class="pill">No Bet<\/span>/)
+assert.match(todayCardRender.freeHtml, /<span class="pill">Pass<\/span>/)
+assert.match(todayCardRender.propsHtml, /Jordan Staal - Over 1\.5 Shots on Goal/)
+assert.match(todayCardRender.propsHtml, /Over 1\.5 Shots on Goal/)
+assert.match(todayCardRender.propsHtml, /-120/)
+assert.match(todayCardRender.propsHtml, /1/)
+assert.match(todayCardRender.propsHtml, /B\+/)
+assert.match(todayCardRender.propsHtml, /Over 1\.5/)
+assert.match(todayCardRender.propsHtml, /Jordan Staal owns enough shot volume/)
+assert.match(todayCardRender.propsHtml, /Prop writeup details should render even with no player/)
 
 const indexEmptyRender = await renderIndexPage({
   success: true,

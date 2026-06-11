@@ -114,6 +114,82 @@ const activeNumericOddsCard = cleanWebsiteRow({
 assert.equal(activeNumericOddsCard.odds, '+450')
 assert.equal(activeNumericOddsCard.releaseStatus, 'Released')
 
+const drawNoBetCard = cleanWebsiteRow({
+  id: 'rec-south-korea-dnb',
+  __table: 'Master Picks',
+  Date: '2026-06-11',
+  League: 'FIFA World Cup',
+  Game: 'South Korea vs Czechia',
+  Pick: 'South Korea Draw No Bet',
+  'Bet Type': 'Draw No Bet',
+  Market: 'Draw No Bet',
+  Status: 'Pending',
+  'Release Status': 'Free Released',
+  'Official Bet': 'Yes',
+  Units: 1,
+  Grade: 'B'
+})
+assert.equal(drawNoBetCard.pick, 'South Korea Draw No Bet')
+assert.equal(drawNoBetCard.betType, 'Draw No Bet')
+assert.equal(drawNoBetCard.market, 'Draw No Bet')
+assert.equal(drawNoBetCard.status, 'Pending')
+assert.equal(drawNoBetCard.officialBet, 'Yes')
+
+const noDrawCard = cleanWebsiteRow({
+  id: 'rec-south-korea-no-draw',
+  __table: 'Master Picks',
+  Date: '2026-06-11',
+  League: 'FIFA World Cup',
+  Game: 'South Korea vs Czechia',
+  Pick: 'South Korea No Draw',
+  'Bet Type': 'No Draw',
+  Market: 'No Draw',
+  Status: 'Pending',
+  'Official Bet': 'Yes',
+  Units: 1,
+  Grade: 'B'
+})
+assert.equal(noDrawCard.pick, 'South Korea No Draw')
+assert.equal(noDrawCard.market, 'No Draw')
+assert.notEqual(noDrawCard.status, 'No Bet')
+
+const explicitPassCard = cleanWebsiteRow({
+  id: 'rec-explicit-pass',
+  __table: 'Master Picks',
+  Pick: 'Heavy soccer favorite',
+  Status: 'Pass',
+  Grade: 'Pass'
+})
+assert.equal(explicitPassCard.status, 'Pass')
+assert.equal(explicitPassCard.grade, 'Pass')
+
+const propsPlayerCard = cleanWebsiteRow({
+  id: 'rec-props-player',
+  __table: 'Props Lab',
+  Date: '2026-06-11',
+  League: 'Stanley Cup Final',
+  Game: 'Stanley Cup Final',
+  Player: 'Jordan Staal',
+  Pick: 'Over 1.5 Shots on Goal',
+  Prop: 'Shots on Goal',
+  'Bet Type': 'Player Prop',
+  Odds: '-120',
+  Units: 1,
+  Grade: 'B+',
+  'Best Number': 'Over 1.5',
+  'No Bet Cutoff': 'Over 1.5 -145',
+  Writeup: 'Jordan Staal has the shot-volume role to clear this number.',
+  'Full Analysis': 'Jordan Staal projects for enough shot attempts to make Over 1.5 Shots on Goal playable at the listed price.',
+  Notes: 'Props note should stay visible.'
+})
+assert.equal(propsPlayerCard.section, 'props')
+assert.equal(propsPlayerCard.pick, 'Jordan Staal - Over 1.5 Shots on Goal')
+assert.equal(propsPlayerCard.player, 'Jordan Staal')
+assert.equal(propsPlayerCard.prop, 'Shots on Goal')
+assert.match(propsPlayerCard.writeup, /shot-volume role/)
+assert.match(propsPlayerCard.fullAnalysis, /shot attempts/)
+assert.match(propsPlayerCard.notes, /Props note/)
+
 const feed = categorizeWebsiteRows([card, { ...dateLessCard, date: '2026-05-30' }])
 assert.equal(feed.lottoParlays.length, 2)
 assert.equal(feed.free.length, 0)
