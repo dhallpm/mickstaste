@@ -27,6 +27,13 @@ const bGradeVip = await googleSheetsBatchAppend('picks', [{
   Grade: 'B',
   Access: 'VIP',
   Units: 0.5,
+  'Short Take': 'Knicks can stay inside this number if the half-court pace holds.',
+  'Why This Play': 'The market is pricing Knicks vs Spurs too close to neutral despite the matchup pace.',
+  'Matchup Edge': 'Knicks can slow Spurs transition chances enough to keep the spread live.',
+  'Projection Edge': 'Projected fair spread closer to +4.5 vs available +5.5.',
+  'Key Metrics': 'Half-court rate and rebounding profile both matter here.',
+  Risk: 'The risk is Spurs transition scoring if Knicks turn it over.',
+  'Final Take': 'Free play at +5.5 or better.',
   Result: 'Win',
   'Profit/Loss': 0.5
 }], { dryRun: true })
@@ -34,6 +41,10 @@ const bGradeVip = await googleSheetsBatchAppend('picks', [{
 assert.equal(bGradeVip.ok, true)
 assert.equal(bGradeVip.tableName, 'Master Picks')
 assert.equal(bGradeVip.preview[0].Access, 'Free')
+assert.equal(bGradeVip.preview[0]['Short Take'], 'Knicks can stay inside this number if the half-court pace holds.')
+assert.equal(bGradeVip.preview[0]['Why This Play'], 'The market is pricing Knicks vs Spurs too close to neutral despite the matchup pace.')
+assert.equal(bGradeVip.preview[0]['Projection Edge'], 'Projected fair spread closer to +4.5 vs available +5.5.')
+assert.equal(bGradeVip.preview[0].Risk, 'The risk is Spurs transition scoring if Knicks turn it over.')
 assert.equal(Object.hasOwn(bGradeVip.preview[0], 'Result'), false)
 assert.equal(Object.hasOwn(bGradeVip.preview[0], 'Profit/Loss'), false)
 

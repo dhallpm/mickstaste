@@ -38,16 +38,16 @@ const BLOCKED_FIELDS = new Set([
 
 const TABLE_ALLOWED_FIELDS = {
   picks: new Set([
-    'Date','Sport','League','Game','Pick','Bet Type','Odds','Sportsbook','Grade','Units','Best Number','No Bet Cutoff','Implied Probability','EV Edge','True Probability','Model Probability','Closing Number','Closing Odds','CLV%','CLV Result','Closing Line Value','Closing Line','Confidence','Status','Access','Writeup','Market Notes','Injury Notes','Source Verification','Posted Time','Full Analysis','A Grade Gate Result','A Grade Evidence Count','Market Misprice Reason','Unresolved Conflict','A-Hunt Source Notes','Park/Weather Risk','Blow-Up Risk','Volatility Capped','Tags'
+    'Date','Sport','League','Game','Pick','Bet Type','Odds','Sportsbook','Grade','Units','Best Number','No Bet Cutoff','Implied Probability','EV Edge','True Probability','Model Probability','Closing Number','Closing Odds','CLV%','CLV Result','Closing Line Value','Closing Line','Confidence','Status','Access','Writeup','Short Take','Why This Play','Matchup Edge','Projection Edge','Key Metrics','Risk','Final Take','Market Notes','Injury Notes','Source Verification','Posted Time','Full Analysis','A Grade Gate Result','A Grade Evidence Count','Market Misprice Reason','Unresolved Conflict','A-Hunt Source Notes','Park/Weather Risk','Blow-Up Risk','Volatility Capped','Tags'
   ]),
   propsLab: new Set([
-    'Date','Player','Prop','Sport','League','Game','Grade','Units','Status','Odds','Sportsbook','Best Number','No Bet Cutoff','Confidence','Access','Featured','Writeup','Market Notes','Injury Notes','Source Verification','Full Analysis','A Grade Gate Result','A Grade Evidence Count','Market Misprice Reason','Unresolved Conflict','A-Hunt Source Notes','Park/Weather Risk','Blow-Up Risk','Volatility Capped','Tags'
+    'Date','Player','Prop','Sport','League','Game','Grade','Units','Status','Odds','Sportsbook','Best Number','No Bet Cutoff','Confidence','Access','Featured','Writeup','Short Take','Why This Play','Matchup Edge','Projection Edge','Key Metrics','Risk','Final Take','Market Notes','Injury Notes','Source Verification','Full Analysis','A Grade Gate Result','A Grade Evidence Count','Market Misprice Reason','Unresolved Conflict','A-Hunt Source Notes','Park/Weather Risk','Blow-Up Risk','Volatility Capped','Tags'
   ]),
   lottoParlays: new Set([
-    'Date','Sport','League','Game','Pick','Bet Type','Odds','Sportsbook','Grade','Units','Best Number','No Bet Cutoff','Confidence','Status','Access','Featured','Parlay Group','Writeup','Market Notes','Injury Notes','Source Verification','Full Analysis','A Grade Gate Result','A Grade Evidence Count','Market Misprice Reason','Unresolved Conflict','A-Hunt Source Notes','Park/Weather Risk','Blow-Up Risk','Volatility Capped','Tags'
+    'Date','Sport','League','Game','Pick','Bet Type','Odds','Sportsbook','Grade','Units','Best Number','No Bet Cutoff','Confidence','Status','Access','Featured','Parlay Group','Writeup','Short Take','Why This Play','Matchup Edge','Projection Edge','Key Metrics','Risk','Final Take','Market Notes','Injury Notes','Source Verification','Full Analysis','A Grade Gate Result','A Grade Evidence Count','Market Misprice Reason','Unresolved Conflict','A-Hunt Source Notes','Park/Weather Risk','Blow-Up Risk','Volatility Capped','Tags'
   ]),
   longshots: new Set([
-    'Date','Sport','League','Game','Pick','Bet Type','Odds','Sportsbook','Grade','Units','Best Number','No Bet Cutoff','Confidence','Status','Access','Featured','Longshot','Writeup','Market Notes','Injury Notes','Source Verification','Full Analysis','A Grade Gate Result','A Grade Evidence Count','Market Misprice Reason','Unresolved Conflict','A-Hunt Source Notes','Park/Weather Risk','Blow-Up Risk','Volatility Capped','Tags'
+    'Date','Sport','League','Game','Pick','Bet Type','Odds','Sportsbook','Grade','Units','Best Number','No Bet Cutoff','Confidence','Status','Access','Featured','Longshot','Writeup','Short Take','Why This Play','Matchup Edge','Projection Edge','Key Metrics','Risk','Final Take','Market Notes','Injury Notes','Source Verification','Full Analysis','A Grade Gate Result','A Grade Evidence Count','Market Misprice Reason','Unresolved Conflict','A-Hunt Source Notes','Park/Weather Risk','Blow-Up Risk','Volatility Capped','Tags'
   ])
 }
 
@@ -320,7 +320,7 @@ export default async function handler(req, res) {
       res.status(200).json({
         ok: true,
         success: true,
-        message: 'POST JSON with { table: "propsLab", records: [...] } or { batches: [...] }. Result/Outcome/Profit-Loss fields are stripped automatically. Master Picks metric fields are accepted. Props Lab and Master Picks below A/A+ cannot import as VIP; they are normalized to Free. Use smokeTest=true for a one-row smoke test.',
+        message: 'POST JSON with { table: "propsLab", records: [...] } or { batches: [...] }. Result/Outcome/Profit-Loss fields are stripped automatically. Customer-friendly imports should include Short Take, Why This Play, Matchup Edge, Projection Edge, Key Metrics, Risk, Final Take, and Full Analysis. Master Picks metric fields are accepted. Props Lab and Master Picks below A/A+ cannot import as VIP; they are normalized to Free. Use smokeTest=true for a one-row smoke test.',
         baseId: baseId(),
         smokeTest: {
           method: 'POST',

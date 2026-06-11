@@ -81,7 +81,7 @@ export default async function handler(req, res) {
         ok: true,
         success: true,
         destination: 'Google Sheets',
-        message: 'POST JSON with { table: "picks", records: [...] } or { batches: [...] }. Result/Outcome/Profit-Loss fields are stripped automatically. VIP Access below A/A+ is normalized to Free. Use smokeTest=true for a one-row Google Sheets smoke test.',
+        message: 'POST JSON with { table: "picks", records: [...] } or { batches: [...] }. Result/Outcome/Profit-Loss fields are stripped automatically. VIP Access below A/A+ is normalized to Free. Customer-friendly imports should include Short Take, Why This Play, Matchup Edge, Projection Edge, Key Metrics, Risk, Final Take, and Full Analysis. Use smokeTest=true for a one-row Google Sheets smoke test.',
         spreadsheetIdEnv: 'GOOGLE_SHEETS_PICK_SHEET_ID',
         tables: {
           picks: resolveGoogleSheetsPickTab('picks'),

@@ -361,6 +361,13 @@ const todayCardRender = await renderIndexPage({
       units: '1',
       bestNumber: 'Over 1.5',
       noBetCutoff: 'Over 1.5 -145',
+      shortTake: 'Jordan Staal can clear this at normal shot volume.',
+      whyThisPlay: 'This is not just a trend play. Jordan Staal is getting enough shot volume against Florida to make Over 1.5 Shots on Goal playable.',
+      matchupEdge: 'Florida can allow Carolina to build zone time, and Staal role gives him enough even-strength looks to matter.',
+      projectionEdge: 'Projected shots closer to 2.4 vs line 1.5.',
+      keyMetrics: 'Recent attempts are climbing, ice time is stable, and the line asks for normal volume instead of a ceiling game.',
+      risk: 'The risk is game script. If Carolina plays from ahead and lowers event volume, shots can flatten.',
+      finalTake: 'Props Lab play at Over 1.5 -120 or better.',
       writeup: 'Generic public card text is on the public card for this matchup. Check the listed number and sportsbook close to lock before placing a wager.',
       fullAnalysis: 'Jordan Staal owns enough shot volume to make Over 1.5 Shots on Goal playable at this number.',
       notes: 'Props note should stay visible.'
@@ -381,6 +388,13 @@ const todayCardRender = await renderIndexPage({
       units: '1',
       bestNumber: 'Over 1.5',
       noBetCutoff: 'Over 1.5 -145',
+      shortTake: 'Jordan Staal can clear this at normal shot volume.',
+      whyThisPlay: 'This is not just a trend play. Jordan Staal is getting enough shot volume against Florida to make Over 1.5 Shots on Goal playable.',
+      matchupEdge: 'Florida can allow Carolina to build zone time, and Staal role gives him enough even-strength looks to matter.',
+      projectionEdge: 'Projected shots closer to 2.4 vs line 1.5.',
+      keyMetrics: 'Recent attempts are climbing, ice time is stable, and the line asks for normal volume instead of a ceiling game.',
+      risk: 'The risk is game script. If Carolina plays from ahead and lowers event volume, shots can flatten.',
+      finalTake: 'Props Lab play at Over 1.5 -120 or better.',
       writeup: 'Generic public card text is on the public card for this matchup. Check the listed number and sportsbook close to lock before placing a wager.',
       fullAnalysis: 'Jordan Staal owns enough shot volume to make Over 1.5 Shots on Goal playable at this number.',
       notes: 'Props note should stay visible.'
@@ -429,13 +443,22 @@ assert.match(todayCardRender.propsHtml, /B\+/)
 assert.match(todayCardRender.propsHtml, /Over 1\.5/)
 assert.match(todayCardRender.propsHtml, /Best Number:<\/b> Over 1\.5/)
 assert.match(todayCardRender.propsHtml, /No-Bet Cutoff:<\/b> Over 1\.5 -145/)
-assert.match(todayCardRender.propsHtml, /Jordan Staal owns enough shot volume/)
+assert.match(todayCardRender.propsHtml, /Jordan Staal can clear this at normal shot volume/)
+assert.match(todayCardRender.propsHtml, /Full Analysis/)
+assert.match(todayCardRender.propsHtml, /Why This Play:<\/b> This is not just a trend play/)
+assert.match(todayCardRender.propsHtml, /Matchup Edge:<\/b> Florida can allow Carolina/)
+assert.match(todayCardRender.propsHtml, /Projection Edge:<\/b> Projected shots closer to 2\.4 vs line 1\.5/)
+assert.match(todayCardRender.propsHtml, /Key Metrics:<\/b> Recent attempts are climbing/)
+assert.match(todayCardRender.propsHtml, /Risk:<\/b> The risk is game script/)
+assert.match(todayCardRender.propsHtml, /Final Take:<\/b> Props Lab play/)
 assert.match(todayCardRender.propsHtml, /Prop writeup details should render even with no player/)
 assert.match(todayCardRender.propsHtml, /Bet Line:<\/b> Over 6\.5 Strikeouts/)
 assert.match(todayCardRender.propsHtml, /Odds:<\/b> Shop best price/)
 assert.match(todayCardRender.propsHtml, /Strikeout prop analysis should render/)
-assert.ok(todayCardRender.propsHtml.indexOf('Bet Line:</b> Over 1.5 Shots on Goal') < todayCardRender.propsHtml.indexOf('Jordan Staal owns enough shot volume'))
-assert.ok(todayCardRender.propsHtml.indexOf('Odds:</b> -120') < todayCardRender.propsHtml.indexOf('Jordan Staal owns enough shot volume'))
+assert.ok(todayCardRender.propsHtml.indexOf('Bet Line:</b> Over 1.5 Shots on Goal') < todayCardRender.propsHtml.indexOf('Why This Play:</b>'))
+assert.ok(todayCardRender.propsHtml.indexOf('Odds:</b> -120') < todayCardRender.propsHtml.indexOf('Why This Play:</b>'))
+assert.ok(todayCardRender.propsHtml.indexOf('Jordan Staal can clear this at normal shot volume') < todayCardRender.propsHtml.indexOf('Full Analysis'))
+assert.doesNotMatch(todayCardRender.propsHtml, /Generic public card text is on the public card/)
 assert.equal(todayCardRender.fetchCalls.filter(href => href.startsWith('/api/todays-picks')).length, 1)
 assert.equal(todayCardRender.fetchCalls.some(href => /\/api\/props/i.test(href)), false)
 assert.equal(todayCardRender.legacyPropsHtml, '')
