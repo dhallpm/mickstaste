@@ -17,13 +17,11 @@
   const CARD_GRID_SELECTORS = [
     '#freeCards',
     '#vipCards',
-    '#propsCards',
-    '#activePropsCards',
     '#longshotsCards',
     '#sportPanels'
   ];
 
-  const ACTIVE_CARD_CONTAINERS = ['#freeCards', '#vipCards', '#activePropsCards', '#longshotsCards'];
+  const ACTIVE_CARD_CONTAINERS = ['#freeCards', '#vipCards', '#longshotsCards'];
 
   function text(el) {
     return String((el && el.textContent) || '').trim();
@@ -187,17 +185,6 @@
 
   function hideWrongCards() {
     hideCardsWithResult();
-
-    const propsContainer = document.querySelector('#activePropsCards');
-    if (propsContainer) {
-      Array.from(propsContainer.children || []).forEach(card => {
-        const s = text(card);
-        if (!looksLikeActiveCard(card)) return;
-        if (!isPropText(s) || isParlayText(s)) card.style.display = 'none';
-        const d = cardDateKey(card);
-        if (d && d < TODAY && isOpenString(s)) card.style.display = 'none';
-      });
-    }
 
     const vipContainer = document.querySelector('#vipCards');
     if (vipContainer) {

@@ -10,10 +10,14 @@ const propsLiveFilter = await readFile(new URL('../micks-props-live-filter.js', 
 
 assert.match(html, /fetch\('\/api\/results\?days=3650'/)
 assert.match(runtimeRules, /fetch\('\/api\/results\?days=3650'/)
-assert.match(propsLiveFilter, /fetch\('\/api\/results\?days=3650&cache='/)
 assert.match(html, /id="resultsBody"/)
 assert.match(html, /id="summaryCards"/)
 assert.match(html, /id="resultsStatus"/)
+assert.match(html, /id="propsCards"/)
+assert.match(html, /renderPropsLabCards/)
+assert.match(html, /propsContainer\.innerHTML=''/)
+assert.match(html, /renderPropsLabCards\(activeProps\)/)
+assert.match(propsLiveFilter, /Props Lab cards now render once from index\.html using \/api\/todays-picks/)
 assert.match(html, /class="results-grid/)
 assert.match(html, /class="results-card/)
 assert.match(html, /Section Records/)
@@ -22,7 +26,14 @@ assert.match(html, /Master Picks \/ Official/)
 assert.match(html, /No settled results yet\./)
 assert.match(html, /renderCanonicalResults\(airtableResults\|\|/)
 assert.match(runtimeRules, /window\.renderCanonicalResults/)
-assert.match(propsLiveFilter, /window\.renderCanonicalResults/)
+assert.doesNotMatch(html, /micks-props-live-filter\.js/)
+assert.doesNotMatch(html, /id="activePropsCards"/)
+assert.doesNotMatch(html, /renderPropSummary/)
+assert.doesNotMatch(html, /\/api\/props/)
+assert.doesNotMatch(propsLiveFilter, /fetch\('/)
+assert.doesNotMatch(propsLiveFilter, /setInterval/)
+assert.doesNotMatch(propsLiveFilter, /setTimeout/)
+assert.doesNotMatch(propsLiveFilter, /propsCards|activePropsCards/)
 assert.doesNotMatch(html, /id="resultsRows"/)
 assert.doesNotMatch(html, /renderResultsSummary\('resultsRows',overallRows\)/)
 assert.doesNotMatch(html, /\/api\/results\?days=180/)
@@ -79,6 +90,7 @@ function fakeElement(id) {
 
 async function renderIndexPage(payload, todayPayload = { success: true, free: [], vip: [], vipVault: [], props: [], lottoParlays: [], longshots: [] }) {
   const elements = new Map()
+  const fetchCalls = []
   const elementFor = id => {
     if (!elements.has(id)) elements.set(id, fakeElement(id))
     return elements.get(id)
@@ -111,10 +123,11 @@ async function renderIndexPage(payload, todayPayload = { success: true, free: []
       scrollTo() {}
     },
     history: { replaceState() {} },
-    location: { hash: '' },
+    location: { hash: '', hostname: 'localhost' },
     lucide: { createIcons() {} },
     fetch: async url => {
       const href = String(url)
+      fetchCalls.push(href)
       if (href.startsWith('/api/todays-picks')) {
         return {
           ok: true,
@@ -142,10 +155,18 @@ async function renderIndexPage(payload, todayPayload = { success: true, free: []
   await new Promise(resolve => setTimeout(resolve, 0))
   await new Promise(resolve => setTimeout(resolve, 0))
 
+  const propsBeforeHash = elementFor('propsCards').innerHTML
+  if (typeof context.setTab === 'function') context.setTab('props')
+  const propsAfterHash = elementFor('propsCards').innerHTML
+
   return {
     bodyHtml: elementFor('resultsBody').innerHTML,
     freeHtml: elementFor('freeCards').innerHTML,
-    propsHtml: elementFor('activePropsCards').innerHTML,
+    propsHtml: elementFor('propsCards').innerHTML,
+    legacyPropsHtml: elementFor('activePropsCards').innerHTML,
+    propsDataset: elementFor('propsCards').dataset,
+    propsStableAfterHash: propsBeforeHash === propsAfterHash,
+    fetchCalls,
     featuredHtml: elementFor('featuredCard').outerHTML || elementFor('featuredCard').innerHTML,
     statusText: elementFor('resultsStatus').textContent,
     summaryHtml: elementFor('summaryCards').innerHTML,
@@ -349,6 +370,26 @@ const todayCardRender = await renderIndexPage({
       date: '2026-06-11',
       league: 'Stanley Cup Final',
       game: 'Stanley Cup Final',
+      player: 'Jordan Staal',
+      pick: 'Over 1.5 Shots on Goal',
+      betLine: 'Over 1.5 Shots on Goal',
+      prop: 'Shots on Goal',
+      cardTitle: 'Stanley Cup Final | Player Prop',
+      betType: 'Player Prop',
+      odds: '-120',
+      grade: 'B+',
+      units: '1',
+      bestNumber: 'Over 1.5',
+      noBetCutoff: 'Over 1.5 -145',
+      writeup: 'Generic public card text is on the public card for this matchup. Check the listed number and sportsbook close to lock before placing a wager.',
+      fullAnalysis: 'Jordan Staal owns enough shot volume to make Over 1.5 Shots on Goal playable at this number.',
+      notes: 'Props note should stay visible.'
+    },
+    {
+      section: 'props',
+      date: '2026-06-11',
+      league: 'Stanley Cup Final',
+      game: 'Stanley Cup Final',
       pick: 'Over 1.5 Shots on Goal',
       prop: 'Shots on Goal',
       betType: 'Player Prop',
@@ -395,6 +436,15 @@ assert.match(todayCardRender.propsHtml, /Odds:<\/b> Shop best price/)
 assert.match(todayCardRender.propsHtml, /Strikeout prop analysis should render/)
 assert.ok(todayCardRender.propsHtml.indexOf('Bet Line:</b> Over 1.5 Shots on Goal') < todayCardRender.propsHtml.indexOf('Jordan Staal owns enough shot volume'))
 assert.ok(todayCardRender.propsHtml.indexOf('Odds:</b> -120') < todayCardRender.propsHtml.indexOf('Jordan Staal owns enough shot volume'))
+assert.equal(todayCardRender.fetchCalls.filter(href => href.startsWith('/api/todays-picks')).length, 1)
+assert.equal(todayCardRender.fetchCalls.some(href => /\/api\/props/i.test(href)), false)
+assert.equal(todayCardRender.legacyPropsHtml, '')
+assert.equal(todayCardRender.propsDataset.source, 'api-todays-picks')
+assert.match(todayCardRender.propsDataset.renderedAt, /^\d{4}-\d{2}-\d{2}T/)
+assert.equal(todayCardRender.propsStableAfterHash, true)
+assert.equal((todayCardRender.propsHtml.match(/<article class="card pick-card/g) || []).length, 3)
+assert.equal((todayCardRender.propsHtml.match(/Jordan Staal - Over 1\.5 Shots on Goal/g) || []).length, 1)
+assert.doesNotMatch(todayCardRender.propsHtml, /Released player props will appear|Today’s Active Props|No active props released|No picks released yet/)
 
 const indexEmptyRender = await renderIndexPage({
   success: true,
