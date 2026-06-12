@@ -230,17 +230,41 @@ const june9Rows = [
   { date: '2026-06-09', section: 'Longshots', league: 'NHL', game: 'Carolina Hurricanes vs Vegas Golden Knights', pick: 'Seth Jarvis Anytime Goal', odds: '+250', grade: 'C', units: '0.05', result: 'Loss', profitLoss: '-0.05u', roi: -100 }
 ]
 
+const june10Rows = [
+  { date: '2026-06-10', section: 'Master Picks', league: 'WNBA', game: 'Toronto Tempo vs Connecticut Sun', pick: 'Toronto Tempo -8', odds: '', bestNumber: 'Toronto Tempo -8 -110 or better', grade: 'B', units: '0.5', result: 'Win', profitLoss: '+0.45u', roi: 90.91 }
+]
+
+const june11Rows = [
+  { date: '2026-06-11', section: 'Props Lab', league: 'Stanley Cup Final', game: '', player: 'Jordan Staal', pick: 'Over 1.5 Shots on Goal', odds: '', grade: 'A-', units: '1', result: 'Win', profitLoss: '', roi: 0, settlementStatus: 'Profit Pending - Missing Odds' },
+  { date: '2026-06-11', section: 'Lotto Parlays', league: '', game: '', pick: 'Over 164 + Under 171 + South Korea DNB + Canada ML + Jordan Staal Over 1.5 SOG', odds: '', grade: 'B', units: '0.25', result: 'Loss', profitLoss: '-0.25u', roi: -100 },
+  { date: '2026-06-11', section: 'Master Picks', league: 'Soccer', game: 'South Korea vs Kuwait', pick: 'South Korea Draw No Bet', market: 'Draw No Bet', betType: 'Draw No Bet', odds: '+120', grade: 'B', units: '0.5', result: 'Win', profitLoss: '+0.60u', roi: 120 },
+  { date: '2026-06-11', section: 'Master Picks', league: 'Soccer', game: 'Canada vs Curacao', pick: 'Canada ML', odds: '-140', grade: 'B', units: '1', result: '', profitLoss: '', roi: '', settlementStatus: 'Pending - Game Not Started' }
+]
+
 const byDatePayload = {
   success: true,
   source: 'google-sheets',
   sourceOfTruth: 'Google Sheets',
   summary,
-  byDate: { '2026-06-09': june9Rows },
+  byDate: {
+    '2026-06-11': june11Rows,
+    '2026-06-10': june10Rows,
+    '2026-06-09': june9Rows
+  },
   records: []
+}
+
+const june9OnlyPayload = {
+  ...byDatePayload,
+  byDate: { '2026-06-09': june9Rows }
 }
 
 const indexByDateRender = await renderIndexPage(byDatePayload)
 assert.match(indexByDateRender.bodyHtml, /2026-06-09/)
+assert.match(indexByDateRender.bodyHtml, /June 9, 2026/)
+assert.match(indexByDateRender.bodyHtml, /June 10, 2026/)
+assert.match(indexByDateRender.bodyHtml, /June 11, 2026/)
+assert.doesNotMatch(indexByDateRender.bodyHtml, /<td colspan="11">2026-06-11<\/td>/)
 assert.match(indexByDateRender.summaryHtml, /Master Picks \/ Official/)
 assert.match(indexByDateRender.summaryHtml, /VIP Record/)
 assert.match(indexByDateRender.summaryHtml, /Props Lab Record/)
@@ -267,13 +291,29 @@ for (const pick of [
 assert.match(indexByDateRender.bodyHtml, /90\.91%/)
 assert.doesNotMatch(indexByDateRender.bodyHtml, /9091%/)
 assert.match(indexByDateRender.bodyHtml, /Profit Pending - Missing Odds/)
+assert.match(indexByDateRender.bodyHtml, /Missing Odds/)
+assert.match(indexByDateRender.bodyHtml, /Odds needed/)
+assert.match(indexByDateRender.bodyHtml, />Pending<\/td>/)
+assert.doesNotMatch(indexByDateRender.bodyHtml, />0%<\/td>/)
 assert.match(indexByDateRender.bodyHtml, /-0\.75u/)
 assert.match(indexByDateRender.bodyHtml, /\+0\.45u/)
+assert.match(indexByDateRender.bodyHtml, /Seattle Mariners vs Baltimore Orioles/)
+assert.match(indexByDateRender.bodyHtml, /-149/)
+assert.match(indexByDateRender.bodyHtml, /Toronto Tempo -8 -110 or better/)
+assert.match(indexByDateRender.bodyHtml, /Jordan Staal - Over 1\.5 Shots on Goal/)
+assert.match(indexByDateRender.bodyHtml, /Stanley Cup Final/)
+assert.match(indexByDateRender.bodyHtml, /Multi-Sport/)
+assert.match(indexByDateRender.bodyHtml, /Multiple Games/)
+assert.match(indexByDateRender.bodyHtml, /Over 164 \+ Under 171 \+ South Korea DNB \+ Canada ML \+ Jordan Staal Over 1\.5 SOG/)
+assert.match(indexByDateRender.bodyHtml, /South Korea Draw No Bet/)
+assert.doesNotMatch(indexByDateRender.bodyHtml, />No Bet</)
+assert.doesNotMatch(indexByDateRender.bodyHtml, /Canada vs Curacao/)
+assert.doesNotMatch(indexByDateRender.bodyHtml, />Canada ML</)
 assert.match(indexByDateRender.bodyHtml, /VIP/)
 assert.match(indexByDateRender.bodyHtml, /Props Lab/)
 assert.match(indexByDateRender.bodyHtml, /Lotto Parlays/)
 assert.match(indexByDateRender.bodyHtml, /Longshots/)
-assert.equal(indexByDateRender.statusText, '11 settled row(s) loaded from Google Sheets.')
+assert.equal(indexByDateRender.statusText, '15 settled row(s) loaded from Google Sheets.')
 
 const indexRecordsRender = await renderIndexPage({
   success: true,
@@ -479,7 +519,7 @@ const indexEmptyRender = await renderIndexPage({
 })
 assert.match(indexEmptyRender.bodyHtml, /No settled results yet\./)
 
-const resultsByDateRender = await renderResultsPage(byDatePayload)
+const resultsByDateRender = await renderResultsPage(june9OnlyPayload)
 assert.match(resultsByDateRender.bodyHtml, /2026-06-09/)
 assert.match(resultsByDateRender.bodyHtml, /Profit Pending - Missing Odds/)
 assert.match(resultsByDateRender.bodyHtml, /90\.91%/)
