@@ -305,7 +305,7 @@ assert.match(nhlPlayerDiscovery.sourceTextByUrl[nhlPlayerDiscovery.urls[0]], /Sc
 
 const nhlShotsDiscovery = await discoverTrustedSourcesForPick({
   Date: '2026-06-09',
-  League: 'NHL',
+  League: 'Stanley Cup Final',
   Pick: 'Over 1.5 Shots on Goal',
   Player: 'Jordan Staal'
 }, { fetchImpl })
