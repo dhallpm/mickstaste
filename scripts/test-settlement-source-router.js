@@ -145,6 +145,62 @@ const goal = await routeSettlementSources({
 assert.equal(goal.status, 'verified')
 assert.equal(goal.result, 'Win')
 
+const shotsOnGoal = await routeSettlementSources({
+  Player: 'Jordan Staal',
+  Pick: 'Over 1.5 Shots on Goal',
+  'Box Score URL': nhlUrl
+}, {
+  urls: [nhlUrl],
+  sourceTextByUrl: {
+    [nhlUrl]: 'Box Score Player Stats Jordan Staal shots on goal 3 goals 1'
+  }
+})
+assert.equal(shotsOnGoal.status, 'verified')
+assert.equal(shotsOnGoal.result, 'Win')
+
+const dnbWin = await routeSettlementSources({
+  Game: 'South Korea vs Czechia',
+  Pick: 'South Korea Draw No Bet',
+  'Bet Type': 'Draw No Bet',
+  'Box Score URL': espnUrl
+}, {
+  urls: [espnUrl],
+  sourceTextByUrl: {
+    [espnUrl]: 'Box Score Final: South Korea 2, Czechia 1 points'
+  }
+})
+assert.equal(dnbWin.status, 'verified')
+assert.equal(dnbWin.result, 'Win')
+assert.notEqual(dnbWin.result, 'No Bet')
+
+const dnbPush = await routeSettlementSources({
+  Game: 'South Korea vs Czechia',
+  Pick: 'South Korea DNB',
+  'Bet Type': 'DNB',
+  'Box Score URL': espnUrl
+}, {
+  urls: [espnUrl],
+  sourceTextByUrl: {
+    [espnUrl]: 'Box Score Final: South Korea 1, Czechia 1 points'
+  }
+})
+assert.equal(dnbPush.status, 'verified')
+assert.equal(dnbPush.result, 'Push')
+
+const dnbLoss = await routeSettlementSources({
+  Game: 'South Korea vs Czechia',
+  Pick: 'South Korea No Draw',
+  'Bet Type': 'No Draw',
+  'Box Score URL': espnUrl
+}, {
+  urls: [espnUrl],
+  sourceTextByUrl: {
+    [espnUrl]: 'Box Score Final: South Korea 0, Czechia 1 points'
+  }
+})
+assert.equal(dnbLoss.status, 'verified')
+assert.equal(dnbLoss.result, 'Loss')
+
 const parlay = await routeSettlementSources({
   Game: 'Knicks vs Spurs',
   Pick: 'Knicks ML | Under 205.5',
@@ -176,6 +232,59 @@ const mixedParlay = await routeSettlementSources({
 assert.equal(mixedParlay.status, 'verified')
 assert.equal(mixedParlay.result, 'Win')
 assert.equal(mixedParlay.legResults.length, 2)
+
+const standaloneParlay = await routeSettlementSources({
+  Date: '2026-06-11',
+  Pick: 'Over 164 + Under 171',
+  'Bet Type': 'Parlay'
+}, {
+  urls: [espnUrl],
+  standaloneLegResults: [
+    {
+      pick: 'Over 164',
+      result: 'Loss',
+      fields: { Game: 'Atlanta Dream vs New York Liberty', Pick: 'Over 164', 'Bet Type': 'Total' },
+      sourceName: 'ESPN box score',
+      sourceUrl: espnUrl
+    },
+    {
+      pick: 'Under 171',
+      result: 'Win',
+      fields: { Game: 'Indiana Fever vs Chicago Sky', Pick: 'Under 171', 'Bet Type': 'Total' },
+      sourceName: 'ESPN box score',
+      sourceUrl: espnUrl
+    }
+  ],
+  sourceTextByUrl: {
+    [espnUrl]: 'Box Score Final: Atlanta Dream 76, New York Liberty 78 points'
+  }
+})
+assert.equal(standaloneParlay.status, 'verified')
+assert.equal(standaloneParlay.result, 'Loss')
+assert.equal(standaloneParlay.legResults[0].result, 'Loss')
+assert.equal(standaloneParlay.legResults[1].result, 'Win')
+assert.match(standaloneParlay.notes, /Over 164=Loss/)
+assert.match(standaloneParlay.legResults[0].notes, /Reused same-date standalone result/)
+
+const conflictParlay = await routeSettlementSources({
+  Date: '2026-06-11',
+  Pick: 'Over 164',
+  'Bet Type': 'Parlay'
+}, {
+  urls: [espnUrl],
+  standaloneLegResults: [{
+    pick: 'Over 164',
+    result: 'Loss',
+    fields: { Game: 'Atlanta Dream vs New York Liberty', Pick: 'Over 164', 'Bet Type': 'Total' },
+    sourceName: 'ESPN box score',
+    sourceUrl: espnUrl
+  }],
+  sourceTextByUrl: {
+    [espnUrl]: 'Box Score Final: Atlanta Dream 90, New York Liberty 88 points'
+  }
+})
+assert.equal(conflictParlay.status, 'needs_review')
+assert.match(conflictParlay.notes, /Standalone result conflict/)
 
 const bravesF5Url = 'https://statsapi.mlb.com/api/v1/game/111/linescore'
 const marinersUrl = 'https://statsapi.mlb.com/api/v1/game/222/boxscore'

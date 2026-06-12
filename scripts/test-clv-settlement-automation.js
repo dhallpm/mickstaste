@@ -109,7 +109,28 @@ assert.equal(parlayMissingOdds.fields.Result, 'Win')
 assert.equal(parlayMissingOdds.fields['Profit/Loss'], '')
 assert.equal(parlayMissingOdds.fields.ROI, '')
 assert.equal(parlayMissingOdds.fields['Settlement Status'], 'Profit Pending - Missing Odds')
-assert.match(parlayMissingOdds.fields['Settlement Notes'], /Profit pending/)
+assert.equal(parlayMissingOdds.fields['Settlement Notes'], 'Result verified, profit pending because odds are missing or invalid.')
+
+const straightMissingOdds = calculateSettlementFields({
+  Pick: 'Under 171',
+  'Bet Type': 'Total',
+  Units: 1.25
+}, new Date('2026-06-11T22:00:00Z'), {
+  verification: {
+    status: 'verified',
+    result: 'Win',
+    sourceName: 'ESPN box score',
+    sourceUrl: 'https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/summary?event=1',
+    notes: 'ESPN box score verified total as Win.'
+  }
+})
+assert.equal(straightMissingOdds.fields.Result, 'Win')
+assert.equal(straightMissingOdds.fields.Outcome, 'Win')
+assert.equal(straightMissingOdds.fields.Status, 'Closed')
+assert.equal(straightMissingOdds.fields['Profit/Loss'], '')
+assert.equal(straightMissingOdds.fields.ROI, '')
+assert.equal(straightMissingOdds.fields['Settlement Status'], 'Profit Pending - Missing Odds')
+assert.equal(straightMissingOdds.fields['Settlement Notes'], 'Result verified, profit pending because odds are missing or invalid.')
 
 const plusParlayMissingOdds = calculateSettlementFields({
   Pick: 'Braves 1st 5 -0.5 + Toronto Tempo -8 + Mariners ML',
@@ -126,6 +147,7 @@ const plusParlayMissingOdds = calculateSettlementFields({
 assert.equal(plusParlayMissingOdds.fields.Result, 'Win')
 assert.equal(plusParlayMissingOdds.fields['Profit/Loss'], '')
 assert.equal(plusParlayMissingOdds.fields['Settlement Status'], 'Profit Pending - Missing Odds')
+assert.equal(plusParlayMissingOdds.fields['Settlement Notes'], 'Result verified, profit pending because odds are missing or invalid.')
 
 const mapped = cleanWebsiteRow({
   id: 'rec1',
