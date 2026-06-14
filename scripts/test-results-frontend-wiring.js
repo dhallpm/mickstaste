@@ -162,6 +162,7 @@ async function renderIndexPage(payload, todayPayload = { success: true, free: []
   return {
     bodyHtml: elementFor('resultsBody').innerHTML,
     freeHtml: elementFor('freeCards').innerHTML,
+    vipHtml: elementFor('vipCards').innerHTML,
     propsHtml: elementFor('propsCards').innerHTML,
     legacyPropsHtml: elementFor('activePropsCards').innerHTML,
     propsDataset: elementFor('propsCards').dataset,
@@ -464,7 +465,28 @@ const todayCardRender = await renderIndexPage({
       fullAnalysis: 'Strikeout prop analysis should render even when the price is not available.'
     }
   ],
-  vip: [],
+  vip: [
+    {
+      section: 'picks',
+      date: '2026-06-14',
+      league: 'WNBA',
+      game: 'Toronto Tempo vs Atlanta Dream',
+      pick: 'Tempo/Dream Under 172.5',
+      cardTitle: 'Tempo/Dream Under 172.5',
+      betType: 'Total',
+      status: 'Pending',
+      releaseStatus: 'VIP Released',
+      officialBet: 'Yes',
+      access: 'VIP',
+      units: '1.25',
+      odds: '-110',
+      grade: 'A',
+      bestNumber: 'Under 172.5',
+      noBetCutoff: 'Pass below 170.5',
+      writeup: 'VIP preview should not replace the full analysis.',
+      fullAnalysis: 'Why This Play: VIP A-grade WNBA total. TSI projects 170 against a 172.5 market.\n\nMatchup Edge: Toronto and Atlanta create an Under setup.\n\nProjection Edge: The projection sits below the market.\n\nKey Metrics: Market line Under 172.5, cutoff 170.5.\n\nRisk: Overtime or late fouling can push this over.\n\nFinal Take: Official VIP play at 172.5.'
+    }
+  ],
   vipVault: [],
   lottoParlays: [],
   longshots: []
@@ -473,6 +495,11 @@ assert.match(todayCardRender.freeHtml, /South Korea Draw No Bet/)
 assert.match(todayCardRender.freeHtml, /South Korea No Draw/)
 assert.doesNotMatch(todayCardRender.freeHtml, /<span class="pill">No Bet<\/span>/)
 assert.match(todayCardRender.freeHtml, /<span class="pill">Pass<\/span>/)
+assert.match(todayCardRender.vipHtml, /Tempo\/Dream Under 172\.5/)
+assert.match(todayCardRender.vipHtml, /Full Analysis/)
+assert.match(todayCardRender.vipHtml, /TSI projects 170/)
+assert.doesNotMatch(todayCardRender.vipHtml, /No picks released yet/)
+assert.equal((todayCardRender.vipHtml.match(/<article class="card pick-card/g) || []).length, 1)
 assert.match(todayCardRender.propsHtml, /Jordan Staal - Over 1\.5 Shots on Goal/)
 assert.match(todayCardRender.propsHtml, /Over 1\.5 Shots on Goal/)
 assert.match(todayCardRender.propsHtml, /Bet Line:<\/b> Over 1\.5 Shots on Goal/)

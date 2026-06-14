@@ -2,7 +2,7 @@ import { googleSheetsBatchAppend, resolveGoogleSheetsPickTab } from '../lib/goog
 
 const SMOKE_TEST_ROW = {
   Pick: 'Google Sheets Smoke Test',
-  Game: 'AIRTABLE IMPORT SMOKE TEST',
+  Game: 'GOOGLE SHEETS IMPORT SMOKE TEST',
   Status: 'Pending',
   Access: 'Free',
   Grade: 'C',

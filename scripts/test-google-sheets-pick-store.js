@@ -1,7 +1,12 @@
 import assert from 'node:assert/strict'
 
 import importPicksHandler from '../api/import-picks.js'
-import { buildWebsiteFeed } from '../lib/buildWebsiteFeed.js'
+import {
+  buildWebsiteFeed,
+  cleanWebsiteRow,
+  dedupeWebsiteRows,
+  sourceRowVisible
+} from '../lib/buildWebsiteFeed.js'
 import { googleSheetsBatchAppend } from '../lib/googleSheetsPickStore.js'
 
 function apiCall(body) {
@@ -64,10 +69,58 @@ assert.equal(smoke.status, 200)
 assert.equal(smoke.payload.destination, 'Google Sheets')
 assert.equal(smoke.payload.tableName, 'Master Picks')
 assert.equal(smoke.payload.results[0].preview[0].Pick, 'Google Sheets Smoke Test')
+assert.equal(smoke.payload.results[0].preview[0].Game, 'GOOGLE SHEETS IMPORT SMOKE TEST')
+
+const vipSourceRow = {
+  Date: '2026-06-14',
+  League: 'WNBA',
+  Game: 'Toronto Tempo vs Atlanta Dream',
+  Pick: 'Tempo/Dream Under 172.5',
+  'Bet Type': 'Total',
+  Status: 'Pending',
+  'Release Status': 'VIP Released',
+  Access: 'VIP',
+  'Official Bet': 'Yes',
+  Grade: 'A',
+  Odds: '-110',
+  'Full Analysis': 'Why This Play: This VIP analysis should render in full.'
+}
+const targetDate = new Date('2026-06-14T12:00:00-04:00')
+
+assert.equal(sourceRowVisible(vipSourceRow, targetDate), true)
+assert.equal(sourceRowVisible({ ...vipSourceRow, 'Official Bet': 'No' }, targetDate), false)
+assert.equal(sourceRowVisible({ ...vipSourceRow, 'Release Status': 'No Release' }, targetDate), false)
+assert.equal(sourceRowVisible({ ...vipSourceRow, 'Release Status': 'Free Released' }, targetDate), false)
+assert.equal(sourceRowVisible({ ...vipSourceRow, 'Archive Status': 'Archived' }, targetDate), false)
+assert.equal(sourceRowVisible({ ...vipSourceRow, Status: 'Settled', Result: 'Win' }, targetDate), false)
+
+const olderDuplicate = cleanWebsiteRow({
+  ...vipSourceRow,
+  'Record Key': 'vip-tempo-under',
+  Timestamp: '2026-06-14T14:00:00Z',
+  'Full Analysis': 'Short analysis.'
+})
+const newerDuplicate = cleanWebsiteRow({
+  ...vipSourceRow,
+  'Record Key': 'vip-tempo-under',
+  Timestamp: '2026-06-14T15:00:00Z',
+  'Full Analysis': 'Longer analysis with more complete VIP context for the same record key.'
+})
+const alternateKeyDuplicate = cleanWebsiteRow({
+  ...vipSourceRow,
+  'Record Key': 'vip-tempo-under-alt',
+  Timestamp: '2026-06-14T16:00:00Z',
+  'Full Analysis': 'Newest duplicate by Date/Game/Pick should win even when Record Key differs.'
+})
+const deduped = dedupeWebsiteRows([olderDuplicate, newerDuplicate, alternateKeyDuplicate])
+
+assert.equal(deduped.length, 1)
+assert.match(deduped[0].fullAnalysis, /Newest duplicate by Date\/Game\/Pick/)
 
 const feed = await buildWebsiteFeed({ date: '2026-06-10' })
 assert.equal(feed.source, 'google-sheets')
 assert.equal(feed.sourceOfTruth, 'Google Sheets')
+assert.equal(feed.spreadsheetId, '1wber196DbbsSXwcITRXWbIF-IZzOJGwkIKPMIWv0AC4')
 assert.equal(Array.isArray(feed.free), true)
 
 console.log('Google Sheets pick store regression passed.')

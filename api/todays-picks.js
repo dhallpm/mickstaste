@@ -80,6 +80,7 @@ export default async function handler(req, res) {
       success: true,
       source: result.source,
       sourceOfTruth: result.sourceOfTruth,
+      spreadsheetId: result.spreadsheetId,
       date: result.date,
       warnings: result.warnings || [],
       free: result.free,

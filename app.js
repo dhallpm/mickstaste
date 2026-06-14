@@ -2,7 +2,7 @@
    Sheets-driven cards, VIP-safe public rendering, no-API odds mode support.
 */
 
-const SHEET_ID = "15txBM8qsck7f0ZA_za7xYEykBxKpuq0no3x7yHcKNeE";
+const SHEET_ID = "1wber196DbbsSXwcITRXWbIF-IZzOJGwkIKPMIWv0AC4";
 const ACTIVE_GID = "1231201305";
 const RESULTS_ARCHIVE_GID = "1579113575";
 const VIP_ARCHIVE_GID = "210503117";
