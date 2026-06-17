@@ -236,6 +236,84 @@ Full Analysis</pre>
     const validateButton = document.getElementById('validateButton')
     const smokeButton = document.getElementById('smokeButton')
 
+    const FIELD_ALIASES = {
+      date: 'Date',
+      sport: 'Sport',
+      league: 'League',
+      game: 'Game',
+      matchup: 'Game',
+      pick: 'Pick',
+      play: 'Pick',
+      player: 'Player',
+      prop: 'Prop',
+      market: 'Bet Type',
+      type: 'Bet Type',
+      pick_type: 'Bet Type',
+      bet_type: 'Bet Type',
+      category: 'Category',
+      odds: 'Odds',
+      current_odds: 'Odds',
+      currentOdds: 'Odds',
+      circa_odds: 'Odds',
+      circaOdds: 'Odds',
+      sportsbook: 'Sportsbook',
+      book: 'Sportsbook',
+      grade: 'Grade',
+      units: 'Units',
+      best_number: 'Best Number',
+      bestNumber: 'Best Number',
+      cutoff: 'No Bet Cutoff',
+      no_bet_cutoff: 'No Bet Cutoff',
+      noBetCutoff: 'No Bet Cutoff',
+      implied_probability: 'Implied Probability',
+      impliedProbability: 'Implied Probability',
+      edge: 'EV Edge',
+      ev_edge: 'EV Edge',
+      evEdge: 'EV Edge',
+      estimated_true_probability: 'True Probability',
+      true_probability: 'True Probability',
+      trueProbability: 'True Probability',
+      model_probability: 'Model Probability',
+      modelProbability: 'Model Probability',
+      fair_odds: 'Market Notes',
+      status: 'Status',
+      release_status: 'Release Status',
+      releaseStatus: 'Release Status',
+      tier: 'Access',
+      access: 'Access',
+      featured: 'Featured',
+      official_bet: 'Official Bet',
+      officialBet: 'Official Bet',
+      pick_of_day_eligible: 'Pick of the Day Eligible',
+      pickOfDayEligible: 'Pick of the Day Eligible',
+      writeup: 'Writeup',
+      short_take: 'Short Take',
+      shortTake: 'Short Take',
+      why_this_play: 'Why This Play',
+      whyThisPlay: 'Why This Play',
+      matchup_notes: 'Matchup Edge',
+      matchup_edge: 'Matchup Edge',
+      matchupEdge: 'Matchup Edge',
+      projection_edge: 'Projection Edge',
+      projectionEdge: 'Projection Edge',
+      key_metrics: 'Key Metrics',
+      keyMetrics: 'Key Metrics',
+      risk: 'Risk',
+      final_take: 'Final Take',
+      finalTake: 'Final Take',
+      market_notes: 'Market Notes',
+      marketNotes: 'Market Notes',
+      injury_notes: 'Injury Notes',
+      injuryNotes: 'Injury Notes',
+      injury_lineup_notes: 'Injury Notes',
+      source_verification: 'Source Verification',
+      source: 'Source Verification',
+      analysis: 'Full Analysis',
+      full_analysis: 'Full Analysis',
+      fullAnalysis: 'Full Analysis',
+      tags: 'Tags'
+    }
+
     function setBusy(value) {
       importButton.disabled = value
       validateButton.disabled = value
@@ -260,6 +338,52 @@ Full Analysis</pre>
       setStatus(data.ok ? `Created ${data.created} record(s)` : (data.error || data.message || 'Import failed'), data.ok ? 'ok' : 'bad')
     }
 
+    function normalizeAccess(value, grade) {
+      const access = String(value || '').trim()
+      const g = String(grade || '').trim().toUpperCase()
+      if (/^(vip|premium|member|members only)$/i.test(access) && !['A', 'A+'].includes(g)) return 'Free'
+      return access || 'Free'
+    }
+
+    function canonicalizeRecord(record = {}, defaultTable = 'picks') {
+      const row = {}
+      const extras = []
+      for (const [key, value] of Object.entries(record || {})) {
+        if (value === undefined || value === null || value === '') continue
+        const mapped = FIELD_ALIASES[key] || FIELD_ALIASES[String(key).trim()] || key
+        if (mapped === 'Market Notes' && key === 'fair_odds') {
+          extras.push(`Fair Odds: ${value}`)
+          continue
+        }
+        row[mapped] = value
+      }
+
+      if (extras.length) row['Market Notes'] = [row['Market Notes'], ...extras].filter(Boolean).join(' | ')
+      row.Status = row.Status || 'Pending'
+      row['Release Status'] = row['Release Status'] || (normalizeAccess(row.Access || row.tier, row.Grade).toLowerCase() === 'vip' ? 'VIP Released' : 'Free Released')
+      row.Access = normalizeAccess(row.Access, row.Grade)
+      row.Featured = row.Featured || (['A', 'A+', 'A-'].includes(String(row.Grade || '').toUpperCase()) ? 'Yes' : 'No')
+      row['Official Bet'] = row['Official Bet'] || 'Yes'
+      row['Pick of the Day Eligible'] = row['Pick of the Day Eligible'] || (row.Access === 'VIP' && ['A', 'A+'].includes(String(row.Grade || '').toUpperCase()) ? 'Yes' : 'No')
+      row.Confidence = row.Confidence || (String(row.Grade || '').toUpperCase().startsWith('A') ? 'High' : 'Medium')
+      if (!row.Writeup && row['Full Analysis']) row.Writeup = String(row['Full Analysis']).slice(0, 220)
+      if (!row['Projection Edge'] && (record.edge || record.ev_edge || record.fair_odds)) {
+        row['Projection Edge'] = [record.edge ? `Edge: ${record.edge}` : '', record.fair_odds ? `Fair Odds: ${record.fair_odds}` : ''].filter(Boolean).join(' | ')
+      }
+      return row
+    }
+
+    function canonicalizePayload(parsed) {
+      const convertBatch = batch => ({
+        ...batch,
+        table: batch.table || parsed.table || table.value,
+        records: (Array.isArray(batch.records) ? batch.records : []).map(record => canonicalizeRecord(record, batch.table || parsed.table || table.value))
+      })
+
+      if (Array.isArray(parsed.batches)) return { ...parsed, batches: parsed.batches.map(convertBatch) }
+      return { ...parsed, records: (Array.isArray(parsed.records) ? parsed.records : []).map(record => canonicalizeRecord(record, parsed.table || table.value)) }
+    }
+
     function validatePayloadShape(parsed) {
       const batches = Array.isArray(parsed.batches) ? parsed.batches : [{ table: parsed.table, records: parsed.records }]
       const count = batches.reduce((sum, batch) => sum + (Array.isArray(batch.records) ? batch.records.length : 0), 0)
@@ -274,7 +398,7 @@ Full Analysis</pre>
       }
       const raw = jsonText.value.trim()
       if (!raw) throw new Error('No JSON payload selected.')
-      const parsed = JSON.parse(raw)
+      const parsed = canonicalizePayload(JSON.parse(raw))
       validatePayloadShape(parsed)
       if (!parsed.table && !parsed.batches) parsed.table = table.value
       parsed.dryRun = dryRun.checked
@@ -304,7 +428,7 @@ Full Analysis</pre>
       try {
         const payload = await payloadFromInput()
         const result = validatePayloadShape(payload)
-        show({ ok: true, valid: true, count: result.count, batches: result.batches.map(batch => ({ table: batch.table, records: Array.isArray(batch.records) ? batch.records.length : 0 })) })
+        show({ ok: true, valid: true, count: result.count, batches: result.batches.map(batch => ({ table: batch.table, records: Array.isArray(batch.records) ? batch.records.length : 0, preview: batch.records?.slice?.(0, 3) || [] })) })
       } catch (error) {
         show({ ok: false, valid: false, error: error.message || String(error) })
       }
