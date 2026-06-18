@@ -1,4 +1,8 @@
-import { listSettledGoogleSheetsPicksWithWarnings } from '../lib/googleSheetsPickStore.js'
+import {
+  inferGoogleSheetsSettlementResult,
+  isGoogleSheetsSettledPickRow,
+  listSettledGoogleSheetsPicksWithWarnings
+} from '../lib/googleSheetsPickStore.js'
 import { buildRecordKey } from '../lib/recordKey.js'
 
 const RESULT_FIELD_NAMES = ['Result', 'Outcome', 'Final Result', 'Pick Result', 'Graded Result']
@@ -74,25 +78,8 @@ function closedStatusLabel(value) {
   return /^(closed|settled|graded|complete|completed|final)$/i.test(text(value)) ? 'Closed' : ''
 }
 
-function excludedStateLabel(value) {
-  return /^(pending|watchlist|conditional|released|open|active|lean|pass)$/i.test(text(value)) ? text(value) : ''
-}
-
-function hasSettlementValue(fields = {}) {
-  const wanted = new Set(PROFIT_LOSS_FIELD_NAMES.map(keyToken))
-  return Object.entries(fields || {}).some(([key, value]) => wanted.has(keyToken(key)) && text(value))
-}
-
 export function shouldIncludeResultRecord(fields = {}) {
-  const resultValues = values(fields, RESULT_FIELD_NAMES)
-  const statusValues = values(fields, STATUS_FIELD_NAMES)
-  const hasFinalResult = resultValues.some(value => finalResultLabel(value))
-  const hasClosedStatus = statusValues.some(value => closedStatusLabel(value))
-  const hasProfitLoss = hasSettlementValue(fields)
-  const hasExcludedState = [...resultValues, ...statusValues].some(value => excludedStateLabel(value))
-
-  if (hasExcludedState && !hasFinalResult && !hasProfitLoss) return false
-  return hasFinalResult || hasClosedStatus || hasProfitLoss
+  return isGoogleSheetsSettledPickRow(fields)
 }
 
 function isVip(fields = {}) {
@@ -246,10 +233,11 @@ export function normalizeRecord(record = {}, config = {}) {
   const label = config.label || table.label
   const rawDate = first(fields, ['Date', 'Game Date', 'Posted Time', 'Timestamp', 'Settled At'])
   const date = dateKey(rawDate) || todayET()
-  const finalResult = values(fields, RESULT_FIELD_NAMES).map(value => finalResultLabel(value)).find(Boolean)
-  const profitLoss = calculateProfitLoss(fields)
-  const profitLossValue = round2(calculateProfitLossNumber(fields))
-  const result = finalResult || inferResultFromProfitLoss(profitLoss)
+  const storedProfitLoss = first(fields, PROFIT_LOSS_FIELD_NAMES)
+  const result = inferGoogleSheetsSettlementResult(fields) || inferResultFromProfitLoss(storedProfitLoss)
+  const normalizedFields = result ? { ...fields, Result: result, Outcome: result } : fields
+  const profitLoss = calculateProfitLoss(normalizedFields)
+  const profitLossValue = round2(calculateProfitLossNumber(normalizedFields))
   const rawStatus = text(first(fields, STATUS_FIELD_NAMES))
   const closedStatus = values(fields, STATUS_FIELD_NAMES).some(value => closedStatusLabel(value))
   const status = result || (closedStatus ? 'Closed' : rawStatus)

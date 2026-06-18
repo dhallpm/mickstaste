@@ -57,12 +57,16 @@ assert.equal(shouldIncludeResultRecord({ Result: 'Pending' }), false)
 assert.equal(shouldIncludeResultRecord({ Status: 'Watchlist' }), false)
 assert.equal(shouldIncludeResultRecord({ Status: 'Closed', Result: 'Pending' }), false)
 assert.equal(shouldIncludeResultRecord({ 'Profit/Loss': 0 }), true)
-assert.equal(shouldIncludeResultRecord({ Status: 'Pending', 'Profit/Loss': -1 }), true)
+assert.equal(shouldIncludeResultRecord({ Status: 'Pending', 'Profit/Loss': -1 }), false)
 assert.equal(shouldIncludeResultRecord({ Units: 0, Result: 'Loss', 'Profit/Loss': -1 }), true)
 assert.equal(shouldIncludeResultRecord({ ROI: 120 }), false)
 assert.equal(shouldIncludeResultRecord({ 'Settled At': '2026-06-04T12:00:00Z' }), false)
 assert.equal(shouldIncludeResultRecord({ Outcome: 'Win' }), true)
 assert.equal(shouldIncludeResultRecord({ 'Final Result': 'Loss' }), true)
+assert.equal(shouldIncludeResultRecord({ 'Settlement Status': 'Settled' }), true)
+assert.equal(shouldIncludeResultRecord({ 'Settlement Status': 'Won' }), true)
+assert.equal(shouldIncludeResultRecord({ 'Settlement Notes': 'The prop cashed.' }), true)
+assert.equal(shouldIncludeResultRecord({ 'Short Take': 'The matchup has won attention from sharp bettors.' }), false)
 
 const pendingMaster = normalizeRow({
   Game: 'Baltimore Orioles vs Boston Red Sox',
@@ -95,6 +99,21 @@ const settledProp = normalizeRow({
 assert.equal(settledProp.Pick, 'Caitlin Clark \u2013 Live Points/Assists Over')
 assert.equal(settledProp.Result, 'Loss')
 assert.equal(settledProp.Status, 'Loss')
+
+const settledPropFromNotes = normalizeRow({
+  Player: 'Emmet Sheehan',
+  Pick: 'Emmet Sheehan Over 5.5 Strikeouts',
+  Status: 'Archive',
+  status: 'Pending',
+  Units: '1',
+  Odds: '+109',
+  'Settlement Notes': 'Sheehan Over 5.5 Ks won; he recorded 8 strikeouts.'
+}, 'Props Lab')
+
+assert.equal(settledPropFromNotes.Result, 'Win')
+assert.equal(settledPropFromNotes.Outcome, 'Win')
+assert.equal(settledPropFromNotes.Status, 'Win')
+assert.equal(settledPropFromNotes['Profit/Loss'], '+1.09u')
 
 const lottoWin = normalizeRow({
   Pick: 'Safe 5-Leg Parlay',
@@ -169,6 +188,17 @@ const payload = buildResultsPayload({
       Odds: '-110'
     },
     {
+      __table: 'Props Lab',
+      Date: '2026-06-14',
+      Player: 'Emmet Sheehan',
+      Pick: 'Emmet Sheehan Over 5.5 Strikeouts',
+      Status: 'Archive',
+      status: 'Pending',
+      Units: '1',
+      Odds: '+109',
+      'Settlement Notes': 'Sheehan Over 5.5 Ks won; he recorded 8 strikeouts.'
+    },
+    {
       __table: 'Lotto Parlays',
       Date: '2026-06-08',
       Pick: 'Safe 5-Leg Parlay',
@@ -196,19 +226,22 @@ const payload = buildResultsPayload({
 
 assert.equal(payload.source, 'google-sheets')
 assert.equal(payload.sourceOfTruth, 'Google Sheets')
-assert.equal(payload.records.length, 5)
-assert.equal(payload.summary.overall.wins, 1)
+assert.equal(payload.records.length, 6)
+assert.equal(payload.summary.overall.wins, 2)
 assert.equal(payload.summary.overall.losses, 2)
 assert.equal(payload.summary.overall.pushes, 1)
 assert.equal(payload.summary.overall.voids, 1)
 assert.equal(payload.summary.vip.losses, 1)
+assert.equal(payload.summary.propsLab.wins, 1)
 assert.equal(payload.summary.propsLab.pushes, 1)
 assert.equal(payload.summary.lottoParlays.voids, 1)
 assert.equal(payload.summary.longshots.losses, 1)
 assert.equal(payload.byDate['2026-06-09'].length, 2)
 assert.equal(payload.free.length, 1)
 assert.equal(payload.vip.length, 1)
-assert.equal(payload.props.length, 1)
+assert.equal(payload.props.length, 2)
+assert.equal(payload.props.find(row => row.pick.includes('Emmet Sheehan')).Result, 'Win')
+assert.equal(payload.props.find(row => row.pick.includes('Emmet Sheehan')).Outcome, 'Win')
 assert.equal(payload.lotto.length, 1)
 assert.equal(payload.longshots.length, 1)
 assert.equal(JSON.stringify(payload).includes('VIP-only material should not leak'), false)

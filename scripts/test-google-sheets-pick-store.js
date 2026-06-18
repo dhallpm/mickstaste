@@ -7,7 +7,11 @@ import {
   dedupeWebsiteRows,
   sourceRowVisible
 } from '../lib/buildWebsiteFeed.js'
-import { googleSheetsBatchAppend } from '../lib/googleSheetsPickStore.js'
+import {
+  googleSheetsBatchAppend,
+  inferGoogleSheetsSettlementResult,
+  isGoogleSheetsSettledPickRow
+} from '../lib/googleSheetsPickStore.js'
 
 function apiCall(body) {
   return new Promise(resolve => {
@@ -63,6 +67,24 @@ const aGradeVip = await googleSheetsBatchAppend('propsLab', [{
 
 assert.equal(aGradeVip.tableName, 'Props Lab')
 assert.equal(aGradeVip.preview[0].Access, 'VIP')
+
+const settledPropFromNotes = {
+  Status: 'Archive',
+  status: 'Pending',
+  'Settlement Notes': 'Sheehan Over 5.5 Ks won; he recorded 8 strikeouts.'
+}
+assert.equal(inferGoogleSheetsSettlementResult(settledPropFromNotes), 'Win')
+assert.equal(isGoogleSheetsSettledPickRow(settledPropFromNotes), true)
+assert.equal(isGoogleSheetsSettledPickRow({ Status: 'Pending', 'Short Take': 'Strong matchup and plus-money value.' }), false)
+assert.equal(isGoogleSheetsSettledPickRow({ Status: 'Pending', 'Settlement Notes': 'The prop won.' }), false)
+assert.equal(isGoogleSheetsSettledPickRow({ Status: 'Watchlist', 'Settlement Notes': 'The pick won.' }), false)
+assert.equal(isGoogleSheetsSettledPickRow({ Status: 'Pass', 'Profit/Loss': '+1.00u' }), false)
+assert.equal(isGoogleSheetsSettledPickRow({ 'Settlement Status': 'Graded' }), true)
+assert.equal(inferGoogleSheetsSettlementResult({ 'Settlement Status': 'Lost' }), 'Loss')
+assert.equal(inferGoogleSheetsSettlementResult({ 'Short Take': 'The White Sox have won four of their last five games.' }), '')
+assert.equal(inferGoogleSheetsSettlementResult({ 'Settlement Notes': 'The prop failed to cash.' }), 'Loss')
+assert.equal(inferGoogleSheetsSettlementResult({ 'Settlement Notes': 'The bet was graded a push.' }), 'Push')
+assert.equal(inferGoogleSheetsSettlementResult({ 'Settlement Notes': 'The wager was voided.' }), 'Void')
 
 const smoke = await apiCall({ smokeTest: true, dryRun: true, table: 'picks' })
 assert.equal(smoke.status, 200)
