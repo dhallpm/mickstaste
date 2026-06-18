@@ -12,7 +12,6 @@ assert.match(html, /fetch\('\/api\/results\?days=3650'/)
 assert.match(runtimeRules, /fetch\('\/api\/results\?days=3650'/)
 assert.match(html, /id="resultsBody"/)
 assert.match(html, /id="summaryCards"/)
-assert.match(html, /id="resultsStatus"/)
 assert.match(html, /id="propsCards"/)
 assert.match(html, /renderPropsLabCards/)
 assert.match(html, /propsContainer\.innerHTML=''/)
@@ -24,6 +23,9 @@ assert.match(html, /Section Records/)
 assert.match(html, /Results Ledger/)
 assert.match(html, /Master Picks \/ Official/)
 assert.match(html, /No settled results yet\./)
+const publicResultsSection = html.match(/<section id="results"[\s\S]*?<\/section>/)?.[0] || ''
+assert.ok(publicResultsSection)
+assert.doesNotMatch(publicResultsSection, /Results Archive|Google Sheets|Airtable|source of truth|row\(s\) loaded/i)
 assert.match(html, /renderCanonicalResults\(airtableResults\|\|/)
 assert.match(runtimeRules, /window\.renderCanonicalResults/)
 assert.doesNotMatch(html, /micks-props-live-filter\.js/)
@@ -315,8 +317,7 @@ assert.match(indexByDateRender.bodyHtml, /VIP/)
 assert.match(indexByDateRender.bodyHtml, /Props Lab/)
 assert.match(indexByDateRender.bodyHtml, /Lotto Parlays/)
 assert.match(indexByDateRender.bodyHtml, /Longshots/)
-assert.equal(indexByDateRender.statusText, '15 settled row(s) loaded from Google Sheets.')
-
+assert.doesNotMatch(`${indexByDateRender.summaryHtml}${indexByDateRender.bodyHtml}`, /Google Sheets|Airtable|source of truth/i)
 const indexRecordsRender = await renderIndexPage({
   success: true,
   sourceOfTruth: 'Google Sheets',
