@@ -50,6 +50,11 @@
 - Added soccer/World Cup guardrails requiring sportsbook price, no-bet cutoff, market type, and path edge explanation before official card creation.
 - Added output sections for World Cup Path Watchlist, Group Winner Edge Board, Live Group-Position Triggers, Host-Field Adjustment Notes, Bracket Collision Alerts, and Do-Not-Bet Heavy Chalk List.
 
+## 2026-06-19
+- Added DocSports (`docsports.com`) as an approved backup source for source acquisition, matchup previews, trends, line discussion, and market context.
+- Updated source policy so DocSports can support watchlist/pass/context and backup confidence labels, but cannot alone create an A-grade or verified closing number.
+- Updated data-integrity rules to reflect Google Sheets as the current live source of truth and Airtable as legacy/deprecated for public display.
+
 ---
 
 ## Future Update Rule
