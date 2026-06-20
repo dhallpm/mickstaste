@@ -227,11 +227,12 @@ function publicSection(fields = {}, section = '') {
 
 export function normalizeRecord(record = {}, config = {}) {
   const fields = record.fields || record
-  const sourceTable = text(config.label || record.__table || record['Original Table'] || record.Table || '')
+  const sourceTable = text(first(fields, ['Original Table', 'Source Table', 'Original Tab', 'Source Tab']) || config.label || record.__table || record.Table || '')
   const table = tableSection(sourceTable)
   const section = config.section || table.section
   const label = config.label || table.label
-  const rawDate = first(fields, ['Date', 'Game Date', 'Posted Time', 'Timestamp', 'Settled At'])
+  const settlementDate = first(fields, ['Settled At', 'Settlement Date', 'Archive Timestamp'])
+  const rawDate = settlementDate || first(fields, ['Date', 'Game Date', 'Posted Time', 'Timestamp'])
   const date = dateKey(rawDate) || todayET()
   const storedProfitLoss = first(fields, PROFIT_LOSS_FIELD_NAMES)
   const result = inferGoogleSheetsSettlementResult(fields) || inferResultFromProfitLoss(storedProfitLoss)
@@ -315,8 +316,8 @@ export function normalizeRecord(record = {}, config = {}) {
     access,
     Sportsbook: text(first(fields, ['Sportsbook', 'Book'])),
     sportsbook: text(first(fields, ['Sportsbook', 'Book'])),
-    'Settled At': first(fields, ['Settled At']),
-    settledAt: first(fields, ['Settled At']),
+    'Settled At': settlementDate,
+    settledAt: settlementDate,
     'Settlement Source': first(fields, ['Settlement Source']),
     settlementSource: first(fields, ['Settlement Source']),
     'Settlement Status': settlementStatus,
@@ -327,8 +328,8 @@ export function normalizeRecord(record = {}, config = {}) {
     notes: text(first(fields, ['Notes', 'Result Notes', 'Settlement Notes', 'Market Notes', 'Leg Results', 'Losing Leg'])),
     Legs: text(first(fields, ['Legs', 'Parlay Group'])) || pick,
     legs: text(first(fields, ['Legs', 'Parlay Group'])) || pick,
-    Timestamp: first(fields, ['Settled At', 'Posted Time', 'Timestamp']),
-    timestamp: first(fields, ['Settled At', 'Posted Time', 'Timestamp']),
+    Timestamp: settlementDate || first(fields, ['Posted Time', 'Timestamp']),
+    timestamp: settlementDate || first(fields, ['Posted Time', 'Timestamp']),
     originalTable: label
   }
 }

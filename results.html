@@ -45,8 +45,8 @@
   </header>
   <div class="mp-live-strip">
     <div class="mp-live-strip-track">
-      <span>Google Sheets Results</span><span>Win/Loss Badges</span><span>Units Tracked</span><span>Closing Number</span><span>CLV Watch</span>
-      <span>Google Sheets Results</span><span>Win/Loss Badges</span><span>Units Tracked</span><span>Closing Number</span><span>CLV Watch</span>
+      <span>Verified Results</span><span>Win/Loss Badges</span><span>Units Tracked</span><span>Closing Number</span><span>CLV Watch</span>
+      <span>Verified Results</span><span>Win/Loss Badges</span><span>Units Tracked</span><span>Closing Number</span><span>CLV Watch</span>
     </div>
   </div>
   <main>
@@ -62,12 +62,12 @@
               <a class="btn" href="./free-look.html">Free Picks</a>
               <a class="btn cyan" href="./market-heat.html">Market Heat</a>
             </div>
-            <p class="status-line" id="resultsStatus">Loading Google Sheets results...</p>
+            <p class="status-line" id="resultsStatus">Loading settled results...</p>
           </div>
         </div>
         <div class="panel">
           <h2>Record Cards</h2>
-          <p>Records are calculated from settled Google Sheets rows returned by /api/results.</p>
+          <p>Records are calculated from finalized picks across every tracked section.</p>
           <div class="metric-grid">
             <div class="metric"><strong id="overallRecord">--</strong><span>Overall Record</span></div>
             <div class="metric"><strong id="overallWinRate">--</strong><span>Win Rate</span></div>
@@ -80,7 +80,7 @@
     <section class="section">
       <div class="container data-card">
         <h2 class="section-title">Section Records</h2>
-        <p class="section-sub">Official straight, VIP, Props Lab, Lotto Parlays, and Longshots records all come from the settled Google Sheets rows.</p>
+        <p class="section-sub">Official straight, VIP, Props Lab, Lotto Parlays, and Longshots records update from finalized picks.</p>
         <div class="results-grid" id="summaryCards"></div>
       </div>
     </section>
@@ -270,7 +270,7 @@
       const byDate = groupedRows(data)
       const dates = Object.keys(byDate).sort().reverse()
       if (!dates.length) {
-        body.innerHTML = '<tr><td colspan="11">No settled results returned from /api/results.</td></tr>'
+        body.innerHTML = '<tr><td colspan="11">No settled results yet.</td></tr>'
         return
       }
 
@@ -306,10 +306,10 @@
         if (data.success === false) throw new Error(data.error || 'Results API unavailable')
         renderSummary(data)
         renderRows(data)
-        statusEl.textContent = `${rowsFromPayload(data).length} settled row(s) loaded from ${data.sourceOfTruth || 'Google Sheets'}.`
+        statusEl.textContent = `${rowsFromPayload(data).length} settled result(s) loaded.`
       } catch (error) {
-        body.innerHTML = `<tr><td colspan="11">Results could not load: ${esc(error.message || error)}</td></tr>`
-        statusEl.textContent = 'Results API unavailable.'
+        body.innerHTML = '<tr><td colspan="11">Results are temporarily unavailable.</td></tr>'
+        statusEl.textContent = 'Results are temporarily unavailable.'
         console.error('Results page failed:', error)
       }
     }

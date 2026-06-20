@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict'
 import { buildResultsPayload, hasPositiveUnits, normalizeRow, shouldIncludeResultRecord } from '../api/results.js'
+import { listSettledGoogleSheetsPicksWithWarnings } from '../lib/googleSheetsPickStore.js'
 
 const calculatedBeforeStored = normalizeRow({
   Pick: 'Calculated Result Wins',
@@ -67,6 +68,26 @@ assert.equal(shouldIncludeResultRecord({ 'Settlement Status': 'Settled' }), true
 assert.equal(shouldIncludeResultRecord({ 'Settlement Status': 'Won' }), true)
 assert.equal(shouldIncludeResultRecord({ 'Settlement Notes': 'The prop cashed.' }), true)
 assert.equal(shouldIncludeResultRecord({ 'Short Take': 'The matchup has won attention from sharp bettors.' }), false)
+
+assert.equal(normalizeRow({
+  Date: '2026-06-18',
+  'Settled At': '2026-06-19T21:30:00-04:00',
+  Result: 'Win'
+}, 'Master Picks').date, '2026-06-19')
+assert.equal(normalizeRow({
+  Date: '2026-06-18',
+  'Settlement Date': '2026-06-19',
+  Result: 'Win'
+}, 'Results Archive 2026-06-19').date, '2026-06-19')
+assert.equal(normalizeRow({
+  Date: '2026-06-18',
+  'Archive Timestamp': '2026-06-19T23:45:00-04:00',
+  Result: 'Win'
+}, 'Results Archive 2026-06-19').date, '2026-06-19')
+assert.equal(normalizeRow({
+  Date: '2026-06-18',
+  Result: 'Win'
+}, 'Master Picks').date, '2026-06-18')
 
 const pendingMaster = normalizeRow({
   Game: 'Baltimore Orioles vs Boston Red Sox',
@@ -245,5 +266,53 @@ assert.equal(payload.props.find(row => row.pick.includes('Emmet Sheehan')).Outco
 assert.equal(payload.lotto.length, 1)
 assert.equal(payload.longshots.length, 1)
 assert.equal(JSON.stringify(payload).includes('VIP-only material should not leak'), false)
+
+const requestedRanges = []
+const sheets = {
+  spreadsheets: {
+    get: async () => ({
+      data: {
+        sheets: [
+          ...['Master Picks', 'Props Lab', 'Lotto Parlays', 'Longshots']
+            .map(title => ({ properties: { title } })),
+          { properties: { title: 'Results Archive 2026-06-19' } },
+          { properties: { title: 'results archive legacy' } },
+          { properties: { title: 'VIP Archive' } }
+        ]
+      }
+    }),
+    values: {
+      get: async ({ range }) => {
+        requestedRanges.push(range)
+        if (range === "'Results Archive 2026-06-19'") {
+          return {
+            data: {
+              values: [
+                ['Date', 'Settlement Date', 'League', 'Pick', 'Result', 'Units', 'Odds'],
+                ['2026-06-18', '2026-06-19', 'MLB', 'June 19 Archived Winner', 'Win', '1', '+110']
+              ]
+            }
+          }
+        }
+        return { data: { values: [] } }
+      }
+    }
+  }
+}
+const dynamicArchiveResult = await listSettledGoogleSheetsPicksWithWarnings({ sheets, spreadsheetId: 'test-sheet' })
+assert.deepEqual(dynamicArchiveResult.loadedTabs, [
+  'Master Picks',
+  'Props Lab',
+  'Lotto Parlays',
+  'Longshots',
+  'Results Archive 2026-06-19',
+  'results archive legacy'
+])
+assert.equal(requestedRanges.includes("'VIP Archive'"), false)
+assert.equal(dynamicArchiveResult.rows.length, 1)
+const dynamicArchivePayload = buildResultsPayload(dynamicArchiveResult, { days: 3650 })
+assert.equal(dynamicArchivePayload.records.length, 1)
+assert.equal(dynamicArchivePayload.records[0].pick, 'June 19 Archived Winner')
+assert.equal(dynamicArchivePayload.records[0].date, '2026-06-19')
 
 console.log('Results API optional archive fallback regression test passed.')

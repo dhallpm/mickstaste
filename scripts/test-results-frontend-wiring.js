@@ -26,6 +26,8 @@ assert.match(html, /No settled results yet\./)
 const publicResultsSection = html.match(/<section id="results"[\s\S]*?<\/section>/)?.[0] || ''
 assert.ok(publicResultsSection)
 assert.doesNotMatch(publicResultsSection, /Results Archive|Google Sheets|Airtable|source of truth|row\(s\) loaded/i)
+const resultsVisibleMarkup = resultsHtml.replace(/<script[\s\S]*?<\/script>/gi, '')
+assert.doesNotMatch(resultsVisibleMarkup, /Google Sheets|Airtable|source of truth|\/api\/results|row\(s\) loaded/i)
 assert.match(html, /renderCanonicalResults\(airtableResults\|\|/)
 assert.match(runtimeRules, /window\.renderCanonicalResults/)
 assert.doesNotMatch(html, /micks-props-live-filter\.js/)
@@ -591,7 +593,7 @@ const resultsByDateRender = await renderResultsPage(june9OnlyPayload)
 assert.match(resultsByDateRender.bodyHtml, /2026-06-09/)
 assert.match(resultsByDateRender.bodyHtml, /Profit Pending - Missing Odds/)
 assert.match(resultsByDateRender.bodyHtml, /90\.91%/)
-assert.equal(resultsByDateRender.statusText, '11 settled row(s) loaded from Google Sheets.')
+assert.equal(resultsByDateRender.statusText, '11 settled result(s) loaded.')
 assert.equal(resultsByDateRender.overallRoi, '27%')
 
 const resultsRecordsRender = await renderResultsPage({
