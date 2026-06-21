@@ -255,6 +255,8 @@ export function normalizeRecord(record = {}, config = {}) {
   return {
     id: record.id || recordKey,
     recordKey,
+    sourceTab: record.__table || label,
+    sourceRow: record.__rowNumber || null,
     __source: 'Google Sheets Results API',
     __table: label,
     __section: section,
@@ -391,6 +393,33 @@ function groupByDate(rows = []) {
   }, {})
 }
 
+function countBy(rows = [], valueOf = () => '') {
+  return rows.reduce((counts, row) => {
+    const key = text(valueOf(row)) || 'Unknown'
+    counts[key] = (counts[key] || 0) + 1
+    return counts
+  }, {})
+}
+
+function diagnosticRow(row = {}) {
+  return {
+    id: row.id,
+    date: row.date,
+    sourceTab: row.sourceTab || row.__table,
+    sourceRow: row.sourceRow || null,
+    section: row.section,
+    access: row.access,
+    league: row.league,
+    game: row.game,
+    pick: row.pick,
+    result: row.result,
+    outcome: row.Outcome,
+    profitLoss: row.profitLoss,
+    settledAt: row.settledAt,
+    settlementStatus: row.settlementStatus
+  }
+}
+
 export function buildResultsPayload(source = {}, options = {}) {
   const days = Math.min(Math.max(Number(options.days || 180), 1), 3650)
   const sourceRows = Array.isArray(source.rows) ? source.rows : []
@@ -416,15 +445,56 @@ export function buildResultsPayload(source = {}, options = {}) {
     lottoParlays: summarize(lottoParlays),
     longshots: summarize(longshots)
   }
+  const loadedTabs = source.loadedTabs || []
+  const scannedRowCounts = source.scannedRowCounts || Object.fromEntries(loadedTabs.map(tab => [
+    tab,
+    sourceRows.filter(row => row.__table === tab).length
+  ]))
+  const resultRowCounts = source.resultRowCounts || Object.fromEntries(loadedTabs.map(tab => [
+    tab,
+    rows.filter(row => row.__table === tab).length
+  ]))
+  const counts = {
+    records: rows.length,
+    rows: rows.length,
+    free: free.length,
+    vip: vip.length,
+    props: propsLab.length,
+    lotto: lottoParlays.length,
+    longshots: longshots.length
+  }
+  const resultCounts = {
+    total: rows.length,
+    byOutcome: countBy(rows, row => row.result),
+    bySection: countBy(rows, row => row.section),
+    byDate: countBy(rows, row => row.date)
+  }
+  const recentSettledRows = rows
+    .filter(row => row.date === '2026-06-20' || row.date === '2026-06-19')
+    .map(diagnosticRow)
 
   return {
     success: true,
     source: 'google-sheets',
     sourceOfTruth: 'Google Sheets',
+    spreadsheetId: source.spreadsheetId || '',
+    loadedTabs,
     date: todayET(),
     days,
     warnings: source.warnings || [],
-    scanned: Object.fromEntries((source.loadedTabs || []).map(tab => [tab, sourceRows.filter(row => row.__table === tab).length])),
+    scanned: scannedRowCounts,
+    scannedRowCounts,
+    resultRowCounts,
+    resultCounts,
+    recentSettledRows,
+    diagnostics: {
+      spreadsheetId: source.spreadsheetId || '',
+      loadedTabs,
+      scannedRowCounts,
+      resultRowCounts,
+      resultCounts,
+      recentSettledRows
+    },
     summary,
     byDate: groupByDate(rows),
     records: rows,
@@ -434,15 +504,7 @@ export function buildResultsPayload(source = {}, options = {}) {
     props: propsLab,
     lotto: lottoParlays,
     longshots,
-    counts: {
-      records: rows.length,
-      rows: rows.length,
-      free: free.length,
-      vip: vip.length,
-      props: propsLab.length,
-      lotto: lottoParlays.length,
-      longshots: longshots.length
-    }
+    counts
   }
 }
 

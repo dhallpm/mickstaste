@@ -187,6 +187,7 @@ assert.equal(profitLossOnly.Result, 'Loss')
 assert.equal(profitLossOnly.Status, 'Loss')
 
 const payload = buildResultsPayload({
+  spreadsheetId: 'fixture-sheet',
   loadedTabs: ['Master Picks', 'Props Lab', 'Lotto Parlays', 'Longshots'],
   rows: [
     {
@@ -281,6 +282,26 @@ const payload = buildResultsPayload({
 
 assert.equal(payload.source, 'google-sheets')
 assert.equal(payload.sourceOfTruth, 'Google Sheets')
+assert.equal(payload.spreadsheetId, 'fixture-sheet')
+assert.deepEqual(payload.loadedTabs, ['Master Picks', 'Props Lab', 'Lotto Parlays', 'Longshots'])
+assert.deepEqual(payload.scannedRowCounts, {
+  'Master Picks': 3,
+  'Props Lab': 2,
+  'Lotto Parlays': 1,
+  Longshots: 1
+})
+assert.deepEqual(payload.resultRowCounts, {
+  'Master Picks': 2,
+  'Props Lab': 2,
+  'Lotto Parlays': 1,
+  Longshots: 1
+})
+assert.equal(payload.resultCounts.total, 6)
+assert.deepEqual(payload.resultCounts.byOutcome, { Win: 2, Loss: 2, Push: 1, Void: 1 })
+assert.equal(payload.diagnostics.spreadsheetId, 'fixture-sheet')
+assert.deepEqual(payload.diagnostics.loadedTabs, payload.loadedTabs)
+assert.deepEqual(payload.diagnostics.scannedRowCounts, payload.scannedRowCounts)
+assert.deepEqual(payload.diagnostics.resultCounts, payload.resultCounts)
 assert.equal(payload.records.length, 6)
 assert.equal(payload.summary.overall.wins, 2)
 assert.equal(payload.summary.overall.losses, 2)
@@ -348,5 +369,12 @@ const dynamicArchivePayload = buildResultsPayload(dynamicArchiveResult, { days: 
 assert.equal(dynamicArchivePayload.records.length, 1)
 assert.equal(dynamicArchivePayload.records[0].pick, 'June 20 Archived Winner')
 assert.equal(dynamicArchivePayload.records[0].date, '2026-06-20')
+assert.equal(dynamicArchivePayload.spreadsheetId, 'test-sheet')
+assert.equal(dynamicArchivePayload.scannedRowCounts['Results Archive 2026-06-20'], 1)
+assert.equal(dynamicArchivePayload.resultRowCounts['Results Archive 2026-06-20'], 1)
+assert.equal(dynamicArchivePayload.resultCounts.byDate['2026-06-20'], 1)
+assert.equal(dynamicArchivePayload.recentSettledRows.length, 1)
+assert.equal(dynamicArchivePayload.recentSettledRows[0].pick, 'June 20 Archived Winner')
+assert.deepEqual(dynamicArchivePayload.diagnostics.recentSettledRows, dynamicArchivePayload.recentSettledRows)
 
 console.log('Results API optional archive fallback regression test passed.')
