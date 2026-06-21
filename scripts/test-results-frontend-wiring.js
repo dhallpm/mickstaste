@@ -26,6 +26,12 @@ assert.match(html, /No settled results yet\./)
 const publicResultsSection = html.match(/<section id="results"[\s\S]*?<\/section>/)?.[0] || ''
 assert.ok(publicResultsSection)
 assert.doesNotMatch(publicResultsSection, /Results Archive|Google Sheets|Airtable|source of truth|row\(s\) loaded/i)
+const emptyPicksStateSource = html.match(/function emptyPicksState[\s\S]*?(?=\nfunction )/)?.[0] || ''
+assert.ok(emptyPicksStateSource)
+assert.doesNotMatch(emptyPicksStateSource, /Google Sheets|Airtable|source of truth/i)
+const renderLedgerSource = html.match(/function renderLedger[\s\S]*?(?=\nfunction )/)?.[0] || ''
+assert.ok(renderLedgerSource)
+assert.doesNotMatch(renderLedgerSource, /__source/)
 const resultsVisibleMarkup = resultsHtml.replace(/<script[\s\S]*?<\/script>/gi, '')
 assert.doesNotMatch(resultsVisibleMarkup, /Google Sheets|Airtable|source of truth|\/api\/results|row\(s\) loaded/i)
 assert.match(html, /renderCanonicalResults\(airtableResults\|\|/)

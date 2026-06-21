@@ -52,13 +52,13 @@ const legacyCurrencyFallback = normalizeRow({
 assert.equal(legacyCurrencyFallback['Profit/Loss'], '+0.75u')
 assert.equal(hasPositiveUnits({ Units: 0, Result: 'Loss', 'Profit/Loss': -1 }), false)
 assert.equal(hasPositiveUnits({ Units: 0.25, Result: 'Loss' }), true)
-assert.equal(shouldIncludeResultRecord({ Status: 'Closed' }), true)
-assert.equal(shouldIncludeResultRecord({ Status: 'Settled' }), true)
+assert.equal(shouldIncludeResultRecord({ Status: 'Closed' }), false)
+assert.equal(shouldIncludeResultRecord({ Status: 'Settled' }), false)
 assert.equal(shouldIncludeResultRecord({ Result: 'Pending' }), false)
 assert.equal(shouldIncludeResultRecord({ Status: 'Watchlist' }), false)
 assert.equal(shouldIncludeResultRecord({ Status: 'Closed', Result: 'Pending' }), false)
 assert.equal(shouldIncludeResultRecord({ 'Profit/Loss': 0 }), true)
-assert.equal(shouldIncludeResultRecord({ Status: 'Pending', 'Profit/Loss': -1 }), false)
+assert.equal(shouldIncludeResultRecord({ Status: 'Pending', 'Profit/Loss': -1 }), true)
 assert.equal(shouldIncludeResultRecord({ Units: 0, Result: 'Loss', 'Profit/Loss': -1 }), true)
 assert.equal(shouldIncludeResultRecord({ ROI: 120 }), false)
 assert.equal(shouldIncludeResultRecord({ 'Settled At': '2026-06-04T12:00:00Z' }), false)
@@ -67,6 +67,9 @@ assert.equal(shouldIncludeResultRecord({ 'Final Result': 'Loss' }), true)
 assert.equal(shouldIncludeResultRecord({ 'Settlement Status': 'Settled' }), true)
 assert.equal(shouldIncludeResultRecord({ 'Settlement Status': 'Won' }), true)
 assert.equal(shouldIncludeResultRecord({ 'Settlement Notes': 'The prop cashed.' }), true)
+assert.equal(shouldIncludeResultRecord({ 'Result Notes': 'The bet lost.' }), true)
+assert.equal(shouldIncludeResultRecord({ Notes: 'The ticket was graded a push.' }), true)
+assert.equal(shouldIncludeResultRecord({ 'Archive Reason': 'The selection was voided.' }), true)
 assert.equal(shouldIncludeResultRecord({ 'Short Take': 'The matchup has won attention from sharp bettors.' }), false)
 
 assert.equal(normalizeRow({
@@ -275,7 +278,7 @@ const sheets = {
         sheets: [
           ...['Master Picks', 'Props Lab', 'Lotto Parlays', 'Longshots']
             .map(title => ({ properties: { title } })),
-          { properties: { title: 'Results Archive 2026-06-19' } },
+          { properties: { title: 'Results Archive 2026-06-20' } },
           { properties: { title: 'results archive legacy' } },
           { properties: { title: 'VIP Archive' } }
         ]
@@ -284,12 +287,12 @@ const sheets = {
     values: {
       get: async ({ range }) => {
         requestedRanges.push(range)
-        if (range === "'Results Archive 2026-06-19'") {
+        if (range === "'Results Archive 2026-06-20'") {
           return {
             data: {
               values: [
                 ['Date', 'Settlement Date', 'League', 'Pick', 'Result', 'Units', 'Odds'],
-                ['2026-06-18', '2026-06-19', 'MLB', 'June 19 Archived Winner', 'Win', '1', '+110']
+                ['2026-06-19', '2026-06-20', 'MLB', 'June 20 Archived Winner', 'Win', '1', '+110']
               ]
             }
           }
@@ -305,14 +308,14 @@ assert.deepEqual(dynamicArchiveResult.loadedTabs, [
   'Props Lab',
   'Lotto Parlays',
   'Longshots',
-  'Results Archive 2026-06-19',
+  'Results Archive 2026-06-20',
   'results archive legacy'
 ])
 assert.equal(requestedRanges.includes("'VIP Archive'"), false)
 assert.equal(dynamicArchiveResult.rows.length, 1)
 const dynamicArchivePayload = buildResultsPayload(dynamicArchiveResult, { days: 3650 })
 assert.equal(dynamicArchivePayload.records.length, 1)
-assert.equal(dynamicArchivePayload.records[0].pick, 'June 19 Archived Winner')
-assert.equal(dynamicArchivePayload.records[0].date, '2026-06-19')
+assert.equal(dynamicArchivePayload.records[0].pick, 'June 20 Archived Winner')
+assert.equal(dynamicArchivePayload.records[0].date, '2026-06-20')
 
 console.log('Results API optional archive fallback regression test passed.')

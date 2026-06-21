@@ -227,7 +227,7 @@ function publicSection(fields = {}, section = '') {
 
 export function normalizeRecord(record = {}, config = {}) {
   const fields = record.fields || record
-  const sourceTable = text(first(fields, ['Original Table', 'Source Table', 'Original Tab', 'Source Tab']) || config.label || record.__table || record.Table || '')
+  const sourceTable = text(first(fields, ['Original Table', 'Source Table', 'Source Sheet', 'Original Tab', 'Source Tab']) || config.label || record.__table || record.Table || '')
   const table = tableSection(sourceTable)
   const section = config.section || table.section
   const label = config.label || table.label
