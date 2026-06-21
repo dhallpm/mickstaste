@@ -1,6 +1,6 @@
 import {
   inferGoogleSheetsSettlementResult,
-  isGoogleSheetsSettledPickRow,
+  isGoogleSheetsPublicResultRow,
   listSettledGoogleSheetsPicksWithWarnings
 } from '../lib/googleSheetsPickStore.js'
 import { buildRecordKey } from '../lib/recordKey.js'
@@ -79,7 +79,7 @@ function closedStatusLabel(value) {
 }
 
 export function shouldIncludeResultRecord(fields = {}) {
-  return isGoogleSheetsSettledPickRow(fields)
+  return isGoogleSheetsPublicResultRow(fields)
 }
 
 function isVip(fields = {}) {

@@ -57,20 +57,32 @@ assert.equal(shouldIncludeResultRecord({ Status: 'Settled' }), false)
 assert.equal(shouldIncludeResultRecord({ Result: 'Pending' }), false)
 assert.equal(shouldIncludeResultRecord({ Status: 'Watchlist' }), false)
 assert.equal(shouldIncludeResultRecord({ Status: 'Closed', Result: 'Pending' }), false)
-assert.equal(shouldIncludeResultRecord({ 'Profit/Loss': 0 }), true)
-assert.equal(shouldIncludeResultRecord({ Status: 'Pending', 'Profit/Loss': -1 }), true)
-assert.equal(shouldIncludeResultRecord({ Units: 0, Result: 'Loss', 'Profit/Loss': -1 }), true)
+assert.equal(shouldIncludeResultRecord({ 'Profit/Loss': 0 }), false)
+assert.equal(shouldIncludeResultRecord({ Status: 'Pending', 'Profit/Loss': -1 }), false)
+assert.equal(shouldIncludeResultRecord({ Units: 0, Result: 'Loss', 'Profit/Loss': -1 }), false)
 assert.equal(shouldIncludeResultRecord({ ROI: 120 }), false)
 assert.equal(shouldIncludeResultRecord({ 'Settled At': '2026-06-04T12:00:00Z' }), false)
-assert.equal(shouldIncludeResultRecord({ Outcome: 'Win' }), true)
-assert.equal(shouldIncludeResultRecord({ 'Final Result': 'Loss' }), true)
-assert.equal(shouldIncludeResultRecord({ 'Settlement Status': 'Settled' }), true)
-assert.equal(shouldIncludeResultRecord({ 'Settlement Status': 'Won' }), true)
-assert.equal(shouldIncludeResultRecord({ 'Settlement Notes': 'The prop cashed.' }), true)
-assert.equal(shouldIncludeResultRecord({ 'Result Notes': 'The bet lost.' }), true)
-assert.equal(shouldIncludeResultRecord({ Notes: 'The ticket was graded a push.' }), true)
-assert.equal(shouldIncludeResultRecord({ 'Archive Reason': 'The selection was voided.' }), true)
+assert.equal(shouldIncludeResultRecord({ Outcome: 'Win' }), false)
+assert.equal(shouldIncludeResultRecord({ 'Final Result': 'Loss' }), false)
+assert.equal(shouldIncludeResultRecord({ 'Settlement Status': 'Settled' }), false)
+assert.equal(shouldIncludeResultRecord({ 'Settlement Status': 'Won' }), false)
+assert.equal(shouldIncludeResultRecord({ 'Settlement Notes': 'The prop cashed.' }), false)
+assert.equal(shouldIncludeResultRecord({ 'Result Notes': 'The bet lost.' }), false)
+assert.equal(shouldIncludeResultRecord({ Notes: 'The ticket was graded a push.' }), false)
+assert.equal(shouldIncludeResultRecord({ 'Archive Reason': 'The selection was voided.' }), false)
 assert.equal(shouldIncludeResultRecord({ 'Short Take': 'The matchup has won attention from sharp bettors.' }), false)
+assert.equal(shouldIncludeResultRecord({
+  Result: 'Win',
+  'Profit/Loss': '+0.80u',
+  'Settled At': '2026-06-20',
+  'Settlement Status': 'Settled'
+}), true)
+assert.equal(shouldIncludeResultRecord({
+  Outcome: 'Loss',
+  'Profit/Loss': '-1.00u',
+  'Settled At': '2026-06-20',
+  'Settlement Status': 'Settled'
+}), true)
 
 assert.equal(normalizeRow({
   Date: '2026-06-18',
@@ -188,6 +200,9 @@ const payload = buildResultsPayload({
       Odds: '+100',
       Grade: 'B',
       Access: 'Free',
+      'Profit/Loss': '+0.50u',
+      'Settled At': '2026-06-09',
+      'Settlement Status': 'Settled',
       'Full Analysis': 'VIP-only material should not leak'
     },
     {
@@ -200,7 +215,10 @@ const payload = buildResultsPayload({
       Units: '1',
       Odds: '-110',
       Grade: 'A',
-      Access: 'VIP'
+      Access: 'VIP',
+      'Profit/Loss': '-1.00u',
+      'Settled At': '2026-06-09',
+      'Settlement Status': 'Settled'
     },
     {
       __table: 'Props Lab',
@@ -209,7 +227,10 @@ const payload = buildResultsPayload({
       Pick: 'Live Points/Assists Over',
       Result: 'Push',
       Units: '1',
-      Odds: '-110'
+      Odds: '-110',
+      'Profit/Loss': '0.00u',
+      'Settled At': '2026-06-08',
+      'Settlement Status': 'Settled'
     },
     {
       __table: 'Props Lab',
@@ -220,6 +241,10 @@ const payload = buildResultsPayload({
       status: 'Pending',
       Units: '1',
       Odds: '+109',
+      Outcome: 'Win',
+      'Profit/Loss': '+1.09u',
+      'Settled At': '2026-06-14',
+      'Settlement Status': 'Settled',
       'Settlement Notes': 'Sheehan Over 5.5 Ks won; he recorded 8 strikeouts.'
     },
     {
@@ -228,15 +253,21 @@ const payload = buildResultsPayload({
       Pick: 'Safe 5-Leg Parlay',
       Result: 'Void',
       Units: '0.2',
-      Odds: '+400'
+      Odds: '+400',
+      'Profit/Loss': '0.00u',
+      'Settled At': '2026-06-08',
+      'Settlement Status': 'Settled'
     },
     {
       __table: 'Longshots',
       Date: '2026-06-07',
       Pick: 'Longshot HR Ladder',
+      Result: 'Loss',
       'Profit/Loss': '-0.25u',
       Units: '0.25',
-      Odds: '+1200'
+      Odds: '+1200',
+      'Settled At': '2026-06-07',
+      'Settlement Status': 'Settled'
     },
     {
       __table: 'Master Picks',
@@ -291,8 +322,8 @@ const sheets = {
           return {
             data: {
               values: [
-                ['Date', 'Settlement Date', 'League', 'Pick', 'Result', 'Units', 'Odds'],
-                ['2026-06-19', '2026-06-20', 'MLB', 'June 20 Archived Winner', 'Win', '1', '+110']
+                ['Date', 'Settlement Date', 'League', 'Pick', 'Result', 'Units', 'Odds', 'Profit/Loss', 'Settled At', 'Settlement Status'],
+                ['2026-06-19', '2026-06-20', 'MLB', 'June 20 Archived Winner', 'Win', '1', '+110', '+1.10u', '2026-06-20', 'Settled']
               ]
             }
           }

@@ -17,6 +17,7 @@
     "test:settlement-source-discovery": "node scripts/test-settlement-source-discovery.js",
     "test:repair-may30": "node scripts/test-repair-may30-airtable.js",
     "test:google-sheets-pick-store": "node scripts/test-google-sheets-pick-store.js",
+    "test:needs-settlement": "node scripts/test-needs-settlement.js",
     "test:archive-closed-bets": "node scripts/test-archive-closed-bets.js"
   },
   "dependencies": {

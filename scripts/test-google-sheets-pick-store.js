@@ -10,6 +10,7 @@ import {
 import {
   googleSheetsBatchAppend,
   inferGoogleSheetsSettlementResult,
+  isGoogleSheetsPublicResultRow,
   isGoogleSheetsSettledPickRow
 } from '../lib/googleSheetsPickStore.js'
 
@@ -89,6 +90,23 @@ assert.equal(inferGoogleSheetsSettlementResult({ 'Result Notes': 'The selection 
 assert.equal(inferGoogleSheetsSettlementResult({ Notes: 'The ticket lost.' }), 'Loss')
 assert.equal(inferGoogleSheetsSettlementResult({ 'Leg Results': 'The wager was graded a push.' }), 'Push')
 assert.equal(inferGoogleSheetsSettlementResult({ 'Archive Reason': 'The pick was voided.' }), 'Void')
+assert.equal(isGoogleSheetsPublicResultRow({
+  Result: 'Win',
+  'Profit/Loss': '+1.00u',
+  'Settled At': '2026-06-20',
+  'Settlement Status': 'Settled'
+}), true)
+assert.equal(isGoogleSheetsPublicResultRow({
+  Result: 'Win',
+  'Profit/Loss': '+1.00u',
+  'Settlement Status': 'Settled'
+}), false)
+assert.equal(isGoogleSheetsPublicResultRow({
+  Result: 'Win',
+  'Profit/Loss': '+1.00u',
+  'Settled At': '2026-06-20',
+  'Settlement Status': 'Needs Settlement'
+}), false)
 
 const smoke = await apiCall({ smokeTest: true, dryRun: true, table: 'picks' })
 assert.equal(smoke.status, 200)
@@ -119,6 +137,7 @@ assert.equal(sourceRowVisible({ ...vipSourceRow, 'Release Status': 'No Release' 
 assert.equal(sourceRowVisible({ ...vipSourceRow, 'Release Status': 'Free Released' }, targetDate), false)
 assert.equal(sourceRowVisible({ ...vipSourceRow, 'Archive Status': 'Archived' }, targetDate), false)
 assert.equal(sourceRowVisible({ ...vipSourceRow, Status: 'Settled', Result: 'Win' }, targetDate), false)
+assert.equal(sourceRowVisible({ ...vipSourceRow, Date: '2026-06-13', Status: 'Pending' }, targetDate), false)
 
 const olderDuplicate = cleanWebsiteRow({
   ...vipSourceRow,

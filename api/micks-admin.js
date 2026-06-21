@@ -8,6 +8,7 @@ import { runClosingOddsWorker } from '../lib/closingOddsWorker.js'
 import { generateMicksPicks } from '../lib/micksPicksGenerator.js'
 import { repairMay30Airtable } from '../lib/repairMay30Airtable.js'
 import { repairPropsUnits } from '../lib/repairPropsUnits.js'
+import { listNeedsSettlementGoogleSheetsPicksWithWarnings } from '../lib/needsSettlement.js'
 import {
   ingestPicksToAirtable,
   runMicksSync,
@@ -249,6 +250,9 @@ const ACTIONS = {
   }),
   'find-airtable-picks': req => findAirtablePicks({
     date: param(req, 'date') || '2026-05-30'
+  }),
+  'needs-settlement': req => listNeedsSettlementGoogleSheetsPicksWithWarnings({
+    today: param(req, 'today') || ''
   }),
   'closing-odds-worker': req => runClosingOddsWorker({
     dryRun: boolParam(req, 'dryRun')
