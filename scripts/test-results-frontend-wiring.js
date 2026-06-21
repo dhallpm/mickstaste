@@ -9,6 +9,8 @@ const runtimeRules = await readFile(new URL('../micks-runtime-rules.js', import.
 const propsLiveFilter = await readFile(new URL('../micks-props-live-filter.js', import.meta.url), 'utf8')
 
 assert.match(html, /fetch\('\/api\/results\?days=3650'/)
+assert.match(html, /results-ui-build="0e6315a-frontend-fix"/)
+assert.doesNotMatch(html, /Settled Google Sheets picks|Loading Google Sheets results|Loading settled Google Sheets results|come from settled Google Sheets rows/i)
 assert.match(runtimeRules, /fetch\('\/api\/results\?days=3650'/)
 assert.match(html, /id="resultsBody"/)
 assert.match(html, /id="summaryCards"/)
@@ -34,7 +36,8 @@ assert.ok(renderLedgerSource)
 assert.doesNotMatch(renderLedgerSource, /__source/)
 const resultsVisibleMarkup = resultsHtml.replace(/<script[\s\S]*?<\/script>/gi, '')
 assert.doesNotMatch(resultsVisibleMarkup, /Google Sheets|Airtable|source of truth|\/api\/results|row\(s\) loaded/i)
-assert.match(html, /renderCanonicalResults\(airtableResults\|\|/)
+assert.match(html, /const resultsPayload=await loadResultsFeed\(\);renderCanonicalResults\(resultsPayload\)/)
+assert.doesNotMatch(html, /loadSheet\(GIDS\.(?:results|vipArchive|propsResults|lottoProps|longshotsHistory)/)
 assert.match(runtimeRules, /window\.renderCanonicalResults/)
 assert.doesNotMatch(html, /micks-props-live-filter\.js/)
 assert.doesNotMatch(html, /id="activePropsCards"/)
@@ -171,6 +174,7 @@ async function renderIndexPage(payload, todayPayload = { success: true, free: []
 
   return {
     bodyHtml: elementFor('resultsBody').innerHTML,
+    vipResultsHtml: elementFor('vipResultsRows').innerHTML,
     freeHtml: elementFor('freeCards').innerHTML,
     vipHtml: elementFor('vipCards').innerHTML,
     sportsHtml: elementFor('sportPanels').innerHTML,
@@ -252,6 +256,23 @@ const june11Rows = [
   { date: '2026-06-11', section: 'Master Picks', league: 'Soccer', game: 'South Korea vs Kuwait', pick: 'South Korea Draw No Bet', market: 'Draw No Bet', betType: 'Draw No Bet', odds: '+120', grade: 'B', units: '0.5', result: 'Win', profitLoss: '+0.60u', roi: 120 },
   { date: '2026-06-11', section: 'Master Picks', league: 'Soccer', game: 'Canada vs Curacao', pick: 'Canada ML', odds: '-140', grade: 'B', units: '1', result: '', profitLoss: '', roi: '', settlementStatus: 'Pending - Game Not Started' }
 ]
+
+const june20VipRow = {
+  date: '2026-06-20',
+  settledAt: '2026-06-20',
+  section: 'Master Picks',
+  access: 'VIP',
+  league: 'Soccer',
+  game: 'Netherlands vs Sweden',
+  pick: 'Both Teams To Score - Yes',
+  odds: '+100',
+  grade: 'A',
+  units: '1',
+  result: 'Win',
+  outcome: 'Win',
+  profitLoss: '+1.00u',
+  settlementStatus: 'Settled'
+}
 
 const byDatePayload = {
   success: true,
@@ -343,6 +364,18 @@ const indexRowsRender = await renderIndexPage({
   rows: [{ date: '2026-06-09', league: 'MLB', game: 'Rows Game', pick: 'Rows Fallback Pick', result: 'Loss', odds: '+100', roi: -100, section: 'Longshots' }]
 })
 assert.match(indexRowsRender.bodyHtml, /Rows Fallback Pick/)
+
+const june20Render = await renderIndexPage({
+  success: true,
+  summary: {},
+  records: [june20VipRow],
+  rows: [june20VipRow]
+})
+assert.match(june20Render.bodyHtml, /June 20, 2026/)
+assert.match(june20Render.bodyHtml, /Netherlands vs Sweden/)
+assert.match(june20Render.bodyHtml, /Both Teams To Score - Yes/)
+assert.match(june20Render.vipResultsHtml, /Netherlands vs Sweden/)
+assert.match(june20Render.vipResultsHtml, /Both Teams To Score - Yes/)
 
 const todayCardRender = await renderIndexPage({
   success: true,
