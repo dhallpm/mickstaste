@@ -1,4 +1,38 @@
 (function(){
+  function lower(v){return String(v||'').trim().toLowerCase();}
+  function get(row,names){
+    if(!row)return'';
+    for(var i=0;i<names.length;i++){
+      var wanted=lower(names[i]);
+      for(var key in row){
+        if(lower(key)===wanted&&String(row[key]||'').trim())return String(row[key]).trim();
+      }
+    }
+    return'';
+  }
+  function isLottoRow(row){
+    var text=[
+      row&&row.__section,
+      get(row,['section','originalTable','Category','category','Access','access','Bet Type','betType','Type','type','Market','market','Pick','pick','Game','game','League','league'])
+    ].join(' ').toLowerCase();
+    return /lotto|parlay|longshot|sgp/.test(text);
+  }
+  try{
+    if(typeof isPublicVisible==='function'){
+      var previousIsPublicVisible=isPublicVisible;
+      isPublicVisible=function(row){
+        if(isLottoRow(row))return true;
+        return previousIsPublicVisible(row);
+      };
+    }
+    if(typeof isOddsEligible==='function'){
+      var previousIsOddsEligible=isOddsEligible;
+      isOddsEligible=function(row){
+        if(isLottoRow(row))return false;
+        return previousIsOddsEligible(row);
+      };
+    }
+  }catch(e){console.warn('Micks override visibility patch failed',e);}
   function hideInternalNotes(){
     document.querySelectorAll('.analysis-box p,.analysis-box div,.card p,.card div').forEach(function(el){
       var t=(el.textContent||'').trim();
