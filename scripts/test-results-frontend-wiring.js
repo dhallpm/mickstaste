@@ -36,7 +36,7 @@ assert.ok(renderLedgerSource)
 assert.doesNotMatch(renderLedgerSource, /__source/)
 const resultsVisibleMarkup = resultsHtml.replace(/<script[\s\S]*?<\/script>/gi, '')
 assert.doesNotMatch(resultsVisibleMarkup, /Google Sheets|Airtable|source of truth|\/api\/results|row\(s\) loaded/i)
-assert.match(html, /const resultsPayload=await loadResultsFeed\(\);renderCanonicalResults\(resultsPayload\)/)
+assert.match(html, /const resultsPayload=await loadResultsFeed\(\);\s*renderCanonicalResults\(resultsPayload\)/)
 assert.doesNotMatch(html, /loadSheet\(GIDS\.(?:results|vipArchive|propsResults|lottoProps|longshotsHistory)/)
 assert.match(runtimeRules, /window\.renderCanonicalResults/)
 assert.doesNotMatch(html, /micks-props-live-filter\.js/)
@@ -177,6 +177,7 @@ async function renderIndexPage(payload, todayPayload = { success: true, free: []
     vipResultsHtml: elementFor('vipResultsRows').innerHTML,
     freeHtml: elementFor('freeCards').innerHTML,
     vipHtml: elementFor('vipCards').innerHTML,
+    longshotsHtml: elementFor('longshotsCards').innerHTML,
     sportsHtml: elementFor('sportPanels').innerHTML,
     propsHtml: elementFor('propsCards').innerHTML,
     legacyPropsHtml: elementFor('activePropsCards').innerHTML,
@@ -437,6 +438,54 @@ const todayCardRender = await renderIndexPage({
     },
     {
       section: 'picks',
+      date: '2026-06-14',
+      league: 'MLB',
+      game: 'Master Prop Game',
+      pick: 'Aaron Judge Over 1.5 Total Bases',
+      cardTitle: 'Aaron Judge Over 1.5 Total Bases',
+      betType: 'Master Pick',
+      market: 'Total Bases',
+      status: 'Pending',
+      releaseStatus: 'Free Released',
+      access: 'Free',
+      units: '0.5',
+      odds: '+110',
+      grade: 'B+'
+    },
+    {
+      section: 'picks',
+      date: '2026-06-14',
+      league: 'MLB/NBA',
+      game: 'Master Lotto Game',
+      pick: 'Yankees ML + Knicks ML SGP Lotto',
+      cardTitle: 'Yankees ML + Knicks ML SGP Lotto',
+      betType: 'Master Pick',
+      market: 'SGP Lotto Parlay',
+      status: 'Pending',
+      releaseStatus: 'Free Released',
+      access: 'Free',
+      units: '0.2',
+      odds: '+450',
+      grade: 'B'
+    },
+    {
+      section: 'picks',
+      date: '2026-06-14',
+      league: 'WNBA',
+      game: 'Free A Plus Game',
+      pick: 'Free A Plus Should Be VIP',
+      cardTitle: 'Free A Plus Should Be VIP',
+      betType: 'Spread',
+      status: 'Pending',
+      releaseStatus: 'Free Released',
+      access: 'Free',
+      officialBet: 'Yes',
+      units: '1',
+      odds: '-110',
+      grade: 'A+'
+    },
+    {
+      section: 'picks',
       date: '2026-06-11',
       league: 'FIFA World Cup',
       game: 'Heavy Favorite',
@@ -572,17 +621,21 @@ const todayCardRender = await renderIndexPage({
 assert.match(todayCardRender.freeHtml, /South Korea Draw No Bet/)
 assert.match(todayCardRender.freeHtml, /South Korea No Draw/)
 assert.match(todayCardRender.freeHtml, /Public WNBA Free Pick/)
+assert.doesNotMatch(todayCardRender.freeHtml, /Free A Plus Should Be VIP/)
 assert.doesNotMatch(todayCardRender.freeHtml, /<span class="pill">No Bet<\/span>/)
 assert.match(todayCardRender.freeHtml, /<span class="pill">Pass<\/span>/)
 assert.match(todayCardRender.vipHtml, /Tempo\/Dream Under 172\.5/)
+assert.match(todayCardRender.vipHtml, /Free A Plus Should Be VIP/)
 assert.match(todayCardRender.vipHtml, /Full Analysis/)
 assert.match(todayCardRender.vipHtml, /RAW FULL ANALYSIS MAIN/)
 assert.match(todayCardRender.vipHtml, /TSI projects 170/)
 assert.doesNotMatch(todayCardRender.vipHtml, /No picks released yet/)
-assert.equal((todayCardRender.vipHtml.match(/<article class="card pick-card/g) || []).length, 1)
+assert.equal((todayCardRender.vipHtml.match(/<article class="card pick-card/g) || []).length, 2)
 assert.match(todayCardRender.sportsHtml, /Public WNBA Free Pick/)
 assert.doesNotMatch(todayCardRender.sportsHtml, /Tempo\/Dream Under 172\.5/)
 assert.match(todayCardRender.propsHtml, /Jordan Staal - Over 1\.5 Shots on Goal/)
+assert.match(todayCardRender.propsHtml, /Aaron Judge Over 1\.5 Total Bases/)
+assert.match(todayCardRender.longshotsHtml, /Yankees ML \+ Knicks ML SGP Lotto/)
 assert.match(todayCardRender.propsHtml, /Over 1\.5 Shots on Goal/)
 assert.match(todayCardRender.propsHtml, /Bet Line:<\/b> Over 1\.5 Shots on Goal/)
 assert.match(todayCardRender.propsHtml, /Odds:<\/b> -120/)
@@ -614,7 +667,7 @@ assert.equal(todayCardRender.legacyPropsHtml, '')
 assert.equal(todayCardRender.propsDataset.source, 'api-todays-picks')
 assert.match(todayCardRender.propsDataset.renderedAt, /^\d{4}-\d{2}-\d{2}T/)
 assert.equal(todayCardRender.propsStableAfterHash, true)
-assert.equal((todayCardRender.propsHtml.match(/<article class="card pick-card/g) || []).length, 3)
+assert.equal((todayCardRender.propsHtml.match(/<article class="card pick-card/g) || []).length, 4)
 assert.equal((todayCardRender.propsHtml.match(/Jordan Staal - Over 1\.5 Shots on Goal/g) || []).length, 1)
 assert.doesNotMatch(todayCardRender.propsHtml, /Released player props will appear|Today’s Active Props|No active props released|No picks released yet/)
 
