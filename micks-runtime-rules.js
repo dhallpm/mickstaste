@@ -4,7 +4,7 @@
   const TZ = 'America/New_York';
   const FINAL_RE = /\b(win|won|loss|lost|push|void|cancelled|canceled|settled|graded|closed|final|complete|completed|archived|removed|invalid)\b/i;
   const OPEN_RE = /\b(active|posted|released|open|pending|pregame|manual approved|api pending)\b/i;
-  const PLAYER_PROP_RE = /\b(player prop|prop|points?|pts|rebounds?|rebs|assists?|asts|pra|p\+r\+a|\bpa\b|\bra\b|strikeouts?|total bases|\btb\b|home runs?|\bhr\b|hits?|rbi|shots on goal|\bsog\b|saves|round|distance)\b/i;
+  const PLAYER_PROP_RE = /\b(player prop|prop|points?|pts|rebounds?|rebs|assists?|asts|pra|p\+r\+a|\bpa\b|\bra\b|strikeouts?|\bks\b|k's|\bhrr\b|hits?\s*(?:\+|and)\s*runs?\s*(?:\+|and)\s*rbi?s?|total bases|\btb\b|home runs?|\bhr\b|hits?|rbi|shots on goal|\bsog\b|saves|round|distance)\b/i;
   const NON_PROP_RE = /\b(parlay|lotto|5-leg|6-leg|7-leg|8-leg|sgp|same game|moneyline|money line|\bml\b|spread|run line|puck line|game total|full game total|team total|period total|quarter total|half|1h|2h)\b/i;
   const PARLAY_ONLY_RE = /\b(parlay|5-leg|6-leg|7-leg|8-leg|sgp|same game|ladder|sprinkle)\b/i;
   const LOTTO_ONLY_RE = /\b(lotto|lotto prop|hr lotto|home run lotto|safe lotto|moonshot)\b/i;
@@ -72,11 +72,11 @@
   function todayKey() { return new Date().toLocaleDateString('en-CA', { timeZone: TZ }); }
 
   function statusText(row) {
-    return [getValue(row, 'status'), getValue(row, 'release'), getValue(row, 'result'), getValue(row, 'confirm')].join(' ');
+    return [getValue(row, 'status'), getValue(row, 'release'), getValue(row, 'result'), getValue(row, 'confirm')].map(text).filter(Boolean).join(' ');
   }
 
   function marketText(row) {
-    return [getValue(row, 'type'), getValue(row, 'category'), getValue(row, 'pick'), getValue(row, 'game'), getValue(row, 'legs'), getValue(row, 'writeup'), getValue(row, 'full'), row?.__source, row?.__table].join(' ');
+    return [getValue(row, 'type'), getValue(row, 'category'), getValue(row, 'pick'), getValue(row, 'game'), getValue(row, 'legs'), getValue(row, 'writeup'), getValue(row, 'full'), getValue(row, 'grade'), row?.__source, row?.__table, row?.__section].join(' ');
   }
 
   function isCurrentActive(row) {
@@ -98,8 +98,9 @@
   function isTruePlayerProp(row) {
     const source = `${row?.__source || ''} ${row?.__table || ''}`;
     const market = marketText(row);
+    const spacedPlusCombo = /\s\+\s/.test(market) && !/hits?\s*\+\s*runs?\s*\+\s*rbi?s?/i.test(market);
     if (/Props Lab|Props Results/i.test(source)) return !NON_PROP_RE.test(market);
-    if (NON_PROP_RE.test(market)) return false;
+    if (NON_PROP_RE.test(market) || spacedPlusCombo) return false;
     return PLAYER_PROP_RE.test(market);
   }
 
