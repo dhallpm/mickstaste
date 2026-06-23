@@ -11,10 +11,7 @@
     return'';
   }
   function isLottoRow(row){
-    var text=[
-      row&&row.__section,
-      get(row,['section','originalTable','Category','category','Access','access','Bet Type','betType','Type','type','Market','market','Pick','pick','Game','game','League','league'])
-    ].join(' ').toLowerCase();
+    var text=[row&&row.__section,get(row,['section','originalTable','Category','category','Access','access','Bet Type','betType','Type','type','Market','market','Pick','pick','Game','game','League','league'])].join(' ').toLowerCase();
     return /lotto|parlay|longshot|sgp/.test(text);
   }
   try{
@@ -61,7 +58,23 @@
       if(Number.isFinite(d)&&(d<start||d>=end)){row.remove();}
     });
   }
-  function run(){hideInternalNotes();hidePrivateFromSports();weeklyResultsOnly();}
+  function removeStaleNonCardPicks(){
+    var stalePatterns=[
+      /\bjapan\b/i,
+      /chokheli\s+ko\s*\/\s*tko\s*\/\s*dq/i,
+      /chokheli/i
+    ];
+    document.querySelectorAll('.pick-card,.card,tr').forEach(function(el){
+      var text=el.textContent||'';
+      if(stalePatterns.some(function(re){return re.test(text);})){
+        el.remove();
+      }
+    });
+  }
+  function run(){hideInternalNotes();hidePrivateFromSports();weeklyResultsOnly();removeStaleNonCardPicks();}
   window.addEventListener('load',run);
+  setTimeout(run,500);
+  setTimeout(run,1500);
+  setTimeout(run,3000);
   setInterval(run,1500);
 })();
