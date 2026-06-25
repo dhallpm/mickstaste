@@ -28,6 +28,35 @@ function makePublicCard(row = {}) {
   return card
 }
 
+export function makePublicVipTeaser(row = {}) {
+  return {
+    id: row.id || '',
+    recordKey: row.recordKey || '',
+    source: row.source || 'Google Sheets',
+    section: row.section || 'picks',
+    date: row.date || '',
+    league: row.league || '',
+    game: row.league ? `${row.league} VIP Market Room` : 'VIP Market Room',
+    pick: 'VIP Pick Locked',
+    cardTitle: 'VIP Pick Locked',
+    betType: 'Members Only',
+    category: 'VIP Vault',
+    access: 'VIP',
+    status: 'VIP Locked',
+    releaseStatus: 'VIP Locked',
+    grade: 'VIP',
+    odds: 'Protected',
+    units: 'Members',
+    bestNumber: 'Members only',
+    noBetCutoff: 'Protected portal',
+    sportsbook: 'VIP Portal',
+    fullAnalysisLocked: true,
+    homePreview: 'Full betting number, stake, sportsbook, and analysis are available inside the protected VIP portal.',
+    analysisPreview: 'Full betting number, stake, sportsbook, and analysis are available inside the protected VIP portal.',
+    originalTable: row.originalTable || ''
+  }
+}
+
 function keyOf(row = {}) {
   return String(row.recordKey || row.id || `${row.date || ''}|${row.game || ''}|${row.pick || ''}|${row.grade || ''}`)
 }
@@ -36,7 +65,7 @@ function dedupe(rows = []) {
   return Array.from(new Map(rows.map(row => [keyOf(row), row])).values())
 }
 
-function reclassifyBelowAMasterPicks(result = {}) {
+export function reclassifyBelowAMasterPicks(result = {}) {
   const vip = Array.isArray(result.vip) ? result.vip : []
   const free = Array.isArray(result.free) ? result.free : []
   const vipVault = Array.isArray(result.vipVault) ? result.vipVault : []
@@ -66,6 +95,7 @@ function reclassifyBelowAMasterPicks(result = {}) {
 }
 
 export default async function handler(req, res) {
+  res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate')
   try {
     const rawResult = await buildWebsiteFeed({
       date: req.query?.date,
@@ -84,8 +114,8 @@ export default async function handler(req, res) {
       date: result.date,
       warnings: result.warnings || [],
       free: result.free,
-      vip: result.vip,
-      vipVault: result.vipVault,
+      vip: dedupe([...(result.vip || []), ...(result.vipVault || [])]).map(makePublicVipTeaser),
+      vipVault: [],
       props: result.props,
       lottoParlays: result.lottoParlays,
       longshots: result.longshots

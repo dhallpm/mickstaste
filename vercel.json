@@ -109,6 +109,15 @@
       ]
     },
     {
+      "source": "/vip.html",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        }
+      ]
+    },
+    {
       "source": "/props-fix-loader.html",
       "headers": [
         {
@@ -169,6 +178,21 @@
     }
   },
   "rewrites": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "host",
+          "value": "vip.mickspicks.us"
+        }
+      ],
+      "destination": "/vip.html"
+    },
+    {
+      "source": "/vip",
+      "destination": "/vip.html"
+    },
     {
       "source": "/api/website-feed",
       "destination": "/api/todays-picks"
