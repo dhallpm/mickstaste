@@ -8,7 +8,10 @@
 
 ## Approved Source / Backup Policy
 - DocSports (`docsports.com`) is an approved backup source for Micks Picks source acquisition and market context.
-- Use DocSports as a secondary/backup reference for betting previews, matchups, trends, injuries/availability context, team form, odds discussion, and market framing when primary odds/news/model sources are incomplete.
+- DocSports review must include at least the first three free-picks archive pages each run: the main free-picks page, `?start=20`, and `?start=40`, because relevant current or recent articles may not appear on page 1 only.
+- Review publicly accessible free-picks pages only. Premium, subscriber-only, login-gated, or paywalled picks are excluded.
+- Use DocSports as a secondary/backup reference for previews, matchups, trends, injuries/availability context, team form, odds discussion, and market framing when primary odds/news/model sources are incomplete.
+- For every DocSports article used, extract the angle, line/odds, reasoning, injuries/availability notes, matchup notes, trends, and whether multiple handicappers align or conflict.
 - DocSports may support a pick, watchlist angle, pass, matchup note, or backup confidence label, but it must not be treated as an automatic A-grade source by itself.
 - A-grade and official-card decisions still require independent confirmation from the broader framework: current sportsbook price, matchup/model edge, injury/news confirmation, implied probability vs estimated true probability, best number, no-bet cutoff, and conflict checks.
 - If DocSports conflicts with sportsbook markets, injury reports, official lineups, or more current odds data, record the conflict in `Unresolved Conflict` and downgrade to Watchlist/Pass until resolved.
