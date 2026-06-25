@@ -12,6 +12,7 @@ const sportsbookTheme = await readFile(new URL('../sportsbook-theme.css', import
 assert.match(html, /fetch\('\/api\/results\?days=3650'/)
 assert.match(html, /MICKS_BUILD: 2d7cf29-results-frontend/)
 assert.match(html, /MICKS_VIP_ROUTING: protected-portal-links-20260625/)
+assert.match(html, /MICKS_VIP_SOURCE: live-index-protected-links-20260625/)
 assert.doesNotMatch(html, /Settled Google Sheets picks|Loading Google Sheets results|Loading settled Google Sheets results|come from settled Google Sheets rows/i)
 assert.match(runtimeRules, /fetch\('\/api\/results\?days=3650'/)
 assert.match(html, /id="resultsBody"/)
@@ -21,6 +22,20 @@ assert.match(html, /https:\/\/vip\.mickspicks\.us\//)
 assert.match(html, /<a class="nav-link" href="https:\/\/vip\.mickspicks\.us\/"><i data-lucide="lock"><\/i>VIP Portal<\/a>/)
 assert.doesNotMatch(html, /<a class="nav-link" href="#vip" data-tab-target="vip"><i data-lucide="crown"><\/i>VIP<\/a>/)
 assert.match(html, /<a class="nav-link" href="#vip" data-tab-target="vip"><i data-lucide="crown"><\/i>VIP Preview<\/a>/)
+const publicAnchors = Array.from(html.matchAll(/<a\b[^>]*>[\s\S]*?<\/a>/gi)).map(match => {
+  const anchor = match[0]
+  const href = anchor.match(/\bhref=(["'])(.*?)\1/i)?.[2] || ''
+  const tabTarget = anchor.match(/\bdata-tab-target=(["'])(.*?)\1/i)?.[2] || ''
+  const text = anchor.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim()
+  return { href, tabTarget, text }
+})
+const protectedVipLabels = /^(?:Enter VIP|Enter Protected VIP|Enter VIP Portal|VIP Portal|Members Only|Unlock VIP)$/i
+const protectedVipLinks = publicAnchors.filter(anchor => protectedVipLabels.test(anchor.text))
+assert.ok(protectedVipLinks.length >= 3, 'public page should expose protected VIP portal CTAs')
+for (const anchor of protectedVipLinks) {
+  assert.equal(anchor.href, 'https://vip.mickspicks.us/', `${anchor.text} should route to protected VIP portal`)
+  assert.equal(anchor.tabTarget, '', `${anchor.text} should not be handled as a public tab route`)
+}
 assert.doesNotMatch(sportsbookTheme, /a\.nav-link\[href=["']#vip["']\]\[data-tab-target=["']vip["']\]\s*\{[^}]*display:\s*none/i)
 assert.match(html, /renderPropsLabCards/)
 assert.match(html, /propsContainer\.innerHTML=''/)
