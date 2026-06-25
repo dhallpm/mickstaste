@@ -1,7 +1,6 @@
 import assert from 'node:assert/strict'
 
-import { makePublicVipTeaser } from '../api/todays-picks.js'
-import { isAllowedVipRequest, requestHost } from '../api/vip-picks.js'
+import { isAllowedVipRequest, makePublicVipTeaser, requestHost } from '../api/todays-picks.js'
 
 const vipRow = {
   id: 'vip-1',

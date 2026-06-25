@@ -194,6 +194,10 @@
       "destination": "/vip.html"
     },
     {
+      "source": "/api/vip-picks",
+      "destination": "/api/todays-picks?vip=1"
+    },
+    {
       "source": "/api/website-feed",
       "destination": "/api/todays-picks"
     }
