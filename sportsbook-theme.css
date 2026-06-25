@@ -175,13 +175,6 @@ table {
   background-blend-mode: normal !important;
 }
 
-/* Public VIP navigation guard: keep the nice locked preview card available by direct hash,
-   but prevent the main navigation from routing users to www.mickspicks.us/#vip.
-   The visible Enter VIP / VIP Portal buttons still route to https://vip.mickspicks.us/. */
-a.nav-link[href="#vip"][data-tab-target="vip"] {
-  display: none !important;
-}
-
 @media (max-width: 720px) {
   .tab-page {
     background-attachment: scroll;
