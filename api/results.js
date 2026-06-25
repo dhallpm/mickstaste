@@ -509,6 +509,7 @@ export function buildResultsPayload(source = {}, options = {}) {
 }
 
 export default async function handler(req, res) {
+  res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate')
   try {
     const days = Math.min(Math.max(Number(req.query?.days || 180), 1), 3650)
     const source = await listSettledGoogleSheetsPicksWithWarnings()

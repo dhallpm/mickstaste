@@ -9,7 +9,7 @@ const runtimeRules = await readFile(new URL('../micks-runtime-rules.js', import.
 const propsLiveFilter = await readFile(new URL('../micks-props-live-filter.js', import.meta.url), 'utf8')
 
 assert.match(html, /fetch\('\/api\/results\?days=3650'/)
-assert.match(html, /results-ui-build="0e6315a-frontend-fix"/)
+assert.match(html, /MICKS_BUILD: 2d7cf29-results-frontend/)
 assert.doesNotMatch(html, /Settled Google Sheets picks|Loading Google Sheets results|Loading settled Google Sheets results|come from settled Google Sheets rows/i)
 assert.match(runtimeRules, /fetch\('\/api\/results\?days=3650'/)
 assert.match(html, /id="resultsBody"/)
