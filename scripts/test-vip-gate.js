@@ -30,9 +30,9 @@ assert.doesNotMatch(publicPayload, /BetRivers|-110|1\.25/)
 
 assert.equal(requestHost({ headers: { host: 'vip.mickspicks.us' } }), 'vip.mickspicks.us')
 assert.equal(requestHost({ headers: { 'x-forwarded-host': 'vip.mickspicks.us, example.com' } }), 'vip.mickspicks.us')
-assert.equal(isAllowedVipRequest({ headers: { host: 'vip.mickspicks.us' } }), false)
-assert.equal(isAllowedVipRequest({ headers: { host: 'vip.mickspicks.us', 'cf-access-jwt-assertion': 'token' } }), true)
-assert.equal(isAllowedVipRequest({ headers: { host: 'www.mickspicks.us', 'cf-access-jwt-assertion': 'token' } }), false)
-assert.equal(isAllowedVipRequest({ headers: { host: 'localhost:3000' } }), true)
+assert.equal(await isAllowedVipRequest({ headers: { host: 'vip.mickspicks.us' } }, {}), false)
+assert.equal(await isAllowedVipRequest({ headers: { host: 'vip.mickspicks.us', 'cf-access-jwt-assertion': 'token' } }, {}), false)
+assert.equal(await isAllowedVipRequest({ headers: { host: 'www.mickspicks.us', 'cf-access-jwt-assertion': 'token' } }, {}), false)
+assert.equal(await isAllowedVipRequest({ headers: { host: 'localhost:3000' } }, {}), true)
 
 console.log('VIP gate regression passed.')

@@ -1,8 +1,11 @@
+import { createPublicKey, verify as verifySignature } from 'node:crypto'
+
 import { buildWebsiteFeed } from '../lib/buildWebsiteFeed.js'
 import { sendError } from '../lib/syncAuth.js'
 
 const VIP_HOST = 'vip.mickspicks.us'
 const LOCAL_HOSTS = new Set(['localhost', '127.0.0.1', '::1'])
+const JWKS_CACHE = new Map()
 
 function firstHeader(headers = {}, name = '') {
   const lowerName = name.toLowerCase()
@@ -21,10 +24,77 @@ export function cloudflareAccessToken(req = {}) {
   return firstHeader(req.headers, 'cf-access-jwt-assertion')
 }
 
-export function isAllowedVipRequest(req = {}) {
+function accessConfig(env = process.env) {
+  const teamDomain = String(env.CF_ACCESS_TEAM_DOMAIN || env.CLOUDFLARE_ACCESS_TEAM_DOMAIN || '').trim()
+    .replace(/^https?:\/\//i, '')
+    .replace(/\/.*$/, '')
+  const audience = String(env.CF_ACCESS_AUD || env.CLOUDFLARE_ACCESS_AUD || env.VIP_ACCESS_AUD || '').trim()
+  const allowedEmails = String(env.VIP_ACCESS_EMAILS || env.CF_ACCESS_ALLOWED_EMAILS || '').split(',')
+    .map(email => email.trim().toLowerCase())
+    .filter(Boolean)
+  return { teamDomain, audience, allowedEmails }
+}
+
+function decodeBase64Url(input = '') {
+  return Buffer.from(input.replace(/-/g, '+').replace(/_/g, '/'), 'base64')
+}
+
+function decodeJwtPart(part = '') {
+  return JSON.parse(decodeBase64Url(part).toString('utf8'))
+}
+
+async function cloudflareAccessJwks(teamDomain) {
+  const cached = JWKS_CACHE.get(teamDomain)
+  if (cached && cached.expiresAt > Date.now()) return cached.keys
+  const response = await fetch(`https://${teamDomain}/cdn-cgi/access/certs`, { cache: 'no-store' })
+  if (!response.ok) throw new Error(`Cloudflare Access certs ${response.status}`)
+  const body = await response.json()
+  const keys = Array.isArray(body.keys) ? body.keys : []
+  JWKS_CACHE.set(teamDomain, { keys, expiresAt: Date.now() + 5 * 60 * 1000 })
+  return keys
+}
+
+function tokenEmail(payload = {}) {
+  return String(payload.email || payload.common_name || payload.identity?.email || '').trim().toLowerCase()
+}
+
+export async function validateCloudflareAccessJwt(token = '', config = accessConfig()) {
+  const parts = String(token || '').split('.')
+  if (parts.length !== 3 || !config.teamDomain || !config.audience) return null
+  const [encodedHeader, encodedPayload, encodedSignature] = parts
+  const header = decodeJwtPart(encodedHeader)
+  const payload = decodeJwtPart(encodedPayload)
+  const now = Math.floor(Date.now() / 1000)
+  const expectedIssuer = `https://${config.teamDomain}`
+  const audiences = Array.isArray(payload.aud) ? payload.aud : [payload.aud]
+  if (header.alg !== 'RS256' || !header.kid) return null
+  if (payload.iss !== expectedIssuer || !audiences.includes(config.audience)) return null
+  if (payload.exp && now >= Number(payload.exp)) return null
+  if (payload.nbf && now < Number(payload.nbf)) return null
+
+  const keys = await cloudflareAccessJwks(config.teamDomain)
+  const jwk = keys.find(key => key.kid === header.kid)
+  if (!jwk) return null
+  const publicKey = createPublicKey({ key: jwk, format: 'jwk' })
+  const valid = verifySignature('RSA-SHA256', Buffer.from(`${encodedHeader}.${encodedPayload}`), publicKey, decodeBase64Url(encodedSignature))
+  return valid ? payload : null
+}
+
+export async function isAllowedVipRequest(req = {}, env = process.env) {
   const host = requestHost(req)
   if (LOCAL_HOSTS.has(host)) return true
-  return host === VIP_HOST && Boolean(cloudflareAccessToken(req))
+  if (host !== VIP_HOST) return false
+  const token = cloudflareAccessToken(req)
+  if (!token) return false
+  const config = accessConfig(env)
+  try {
+    const payload = await validateCloudflareAccessJwt(token, config)
+    if (!payload) return false
+    return !config.allowedEmails.length || config.allowedEmails.includes(tokenEmail(payload))
+  } catch (error) {
+    console.warn('Cloudflare Access JWT validation failed:', error.message)
+    return false
+  }
 }
 
 function gradeValue(row = {}) {
@@ -124,10 +194,10 @@ export default async function handler(req, res) {
   res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate')
   try {
     const vipFeed = String(req.query?.vip || '').trim() === '1'
-    if (vipFeed && !isAllowedVipRequest(req)) {
+    if (vipFeed && !(await isAllowedVipRequest(req))) {
       res.status(403).json({
         success: false,
-        error: 'VIP feed requires the Cloudflare Access protected vip.mickspicks.us host.'
+        error: 'VIP feed requires a valid Cloudflare Access session on vip.mickspicks.us.'
       })
       return
     }
