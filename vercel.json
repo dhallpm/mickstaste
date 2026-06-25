@@ -186,13 +186,25 @@
       "maxDuration": 60
     }
   },
+  "redirects": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "vip.mickspicks.us"
+        }
+      ],
+      "destination": "/vip",
+      "permanent": false
+    }
+  ],
   "rewrites": [
     {
       "source": "/",
       "has": [
         {
-          "type": "header",
-          "key": "host",
+          "type": "host",
           "value": "vip.mickspicks.us"
         }
       ],
