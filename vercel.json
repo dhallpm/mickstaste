@@ -3,210 +3,43 @@
     {
       "source": "/",
       "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-cache, no-store, must-revalidate"
-        }
-      ]
-    },
-    {
-      "source": "/404.html",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-cache, no-store, must-revalidate"
-        }
-      ]
-    },
-    {
-      "source": "/free-look.html",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-cache, no-store, must-revalidate"
-        }
-      ]
-    },
-    {
-      "source": "/import-airtable.html",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-cache, no-store, must-revalidate"
-        }
-      ]
-    },
-    {
-      "source": "/import-helper.html",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-cache, no-store, must-revalidate"
-        }
+        { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }
       ]
     },
     {
       "source": "/index.html",
       "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-cache, no-store, must-revalidate"
-        }
-      ]
-    },
-    {
-      "source": "/leaderboard.html",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-cache, no-store, must-revalidate"
-        }
-      ]
-    },
-    {
-      "source": "/market-heat.html",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-cache, no-store, must-revalidate"
-        }
-      ]
-    },
-    {
-      "source": "/micks-longshots.html",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-cache, no-store, must-revalidate"
-        }
-      ]
-    },
-    {
-      "source": "/odds-api.html",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-cache, no-store, must-revalidate"
-        }
-      ]
-    },
-    {
-      "source": "/pick-entry.html",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-cache, no-store, must-revalidate"
-        }
-      ]
-    },
-    {
-      "source": "/premium.html",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-cache, no-store, must-revalidate"
-        }
+        { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }
       ]
     },
     {
       "source": "/vip.html",
       "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-cache, no-store, must-revalidate"
-        }
+        { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }
       ]
     },
     {
       "source": "/vip",
       "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-cache, no-store, must-revalidate"
-        }
-      ]
-    },
-    {
-      "source": "/props-fix-loader.html",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-cache, no-store, must-revalidate"
-        }
-      ]
-    },
-    {
-      "source": "/props-lab.html",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-cache, no-store, must-revalidate"
-        }
+        { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }
       ]
     },
     {
       "source": "/results.html",
       "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-cache, no-store, must-revalidate"
-        }
-      ]
-    },
-    {
-      "source": "/sharp-card.html",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-cache, no-store, must-revalidate"
-        }
-      ]
-    },
-    {
-      "source": "/social-studio.html",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-cache, no-store, must-revalidate"
-        }
-      ]
-    },
-    {
-      "source": "/yahgi.html",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "no-cache, no-store, must-revalidate"
-        }
+        { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }
       ]
     }
   ],
   "functions": {
-    "api/micks-admin.js": {
-      "maxDuration": 60
-    }
+    "api/micks-admin.js": { "maxDuration": 60 }
   },
-  "redirects": [
-    {
-      "source": "/",
-      "has": [
-        {
-          "type": "host",
-          "value": "vip.mickspicks.us"
-        }
-      ],
-      "destination": "/vip",
-      "permanent": false
-    }
-  ],
+  "redirects": [],
   "rewrites": [
     {
       "source": "/",
       "has": [
-        {
-          "type": "host",
-          "value": "vip.mickspicks.us"
-        }
+        { "type": "host", "value": "vip.mickspicks.us" }
       ],
       "destination": "/vip.html"
     },
@@ -224,9 +57,6 @@
     }
   ],
   "crons": [
-    {
-      "path": "/api/micks-admin",
-      "schedule": "0 0 * * *"
-    }
+    { "path": "/api/micks-admin", "schedule": "0 0 * * *" }
   ]
 }
