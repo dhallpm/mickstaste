@@ -3,7 +3,7 @@ import { createPublicKey, verify as verifySignature } from 'node:crypto'
 import { buildWebsiteFeed } from '../lib/buildWebsiteFeed.js'
 import { sendError } from '../lib/syncAuth.js'
 
-const VIP_HOST = 'vip.mickspicks.us'
+const VIP_HOST = 'mickspicks-vip.vercel.app'
 const LOCAL_HOSTS = new Set(['localhost', '127.0.0.1', '::1'])
 const JWKS_CACHE = new Map()
 
@@ -147,8 +147,8 @@ export function makePublicVipTeaser(row = {}) {
     noBetCutoff: 'Protected portal',
     sportsbook: 'VIP Portal',
     fullAnalysisLocked: true,
-    homePreview: 'Full betting number, stake, sportsbook, and analysis are available inside the protected VIP portal.',
-    analysisPreview: 'Full betting number, stake, sportsbook, and analysis are available inside the protected VIP portal.',
+    homePreview: 'Full betting number, stake, sportsbook, and analysis are available inside the VIP Vault.',
+    analysisPreview: 'Full betting number, stake, sportsbook, and analysis are available inside the VIP Vault.',
     originalTable: row.originalTable || ''
   }
 }
@@ -197,7 +197,7 @@ export default async function handler(req, res) {
     if (vipFeed && !(await isAllowedVipRequest(req))) {
       res.status(403).json({
         success: false,
-        error: 'VIP feed requires a valid Cloudflare Access session on vip.mickspicks.us.'
+        error: 'VIP feed requires access through the VIP Vault destination.'
       })
       return
     }

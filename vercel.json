@@ -25,6 +25,12 @@
       ]
     },
     {
+      "source": "/premium.html",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }
+      ]
+    },
+    {
       "source": "/results.html",
       "headers": [
         { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }
@@ -40,19 +46,19 @@
   "functions": {
     "api/micks-admin.js": { "maxDuration": 60 }
   },
-  "redirects": [],
-  "rewrites": [
-    {
-      "source": "/",
-      "has": [
-        { "type": "host", "value": "vip.mickspicks.us" }
-      ],
-      "destination": "/vip.html"
-    },
+  "redirects": [
     {
       "source": "/vip",
-      "destination": "/vip.html"
+      "destination": "https://mickspicks-vip.vercel.app/premium.html",
+      "permanent": false
     },
+    {
+      "source": "/premium.html",
+      "destination": "https://mickspicks-vip.vercel.app/premium.html",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
     {
       "source": "/api/vip-picks",
       "destination": "/api/todays-picks?vip=1"
