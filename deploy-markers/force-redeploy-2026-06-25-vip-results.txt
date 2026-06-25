@@ -1,0 +1,3 @@
+Force production redeploy after restoring 2026-06-20 results rows and Cloudflare VIP setup checks.
+Timestamp: 2026-06-25
+Reason: www.mickspicks.us was serving stale HTML while current source no longer contains the old Google Sheets wording.
