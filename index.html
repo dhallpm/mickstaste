@@ -204,7 +204,6 @@ async function boot(){
   const activeProps=dedupe([...activeRows.filter(r=>val(r,'__section')==='props'),...activeRows.filter(isPropMarket)]).filter(r=>isPropMarket(r)&&!isHrLotto(r));
   const resultRows=dedupe(canonicalRowsFromPayload(resultsPayload));
   const freeResults=dedupe(resultRows.filter(r=>!isVip(r)&&!/^vip$/i.test(canonicalSectionName(r))));
-  const vipResults=dedupe(resultRows.filter(r=>isVip(r)||/^vip$/i.test(canonicalSectionName(r))));
   const propsRows=dedupe(resultRows.filter(r=>canonicalSectionName(r)==='Props Lab'||isPropMarket(r)));
   const longshotRows=dedupe(resultRows.filter(r=>['Lotto Parlays','Longshots'].includes(canonicalSectionName(r))||isLongshotMarket(r)));
   const overallRows=resultRows,source='/api/todays-picks',totalCards=activeRows.length;
@@ -216,12 +215,11 @@ async function boot(){
   renderCards('longshotsCards',longshotActive,'No picks released yet.',false);
   renderPropsLabCards(activeProps);
   renderLedger('freeResultsRows',freeResults,'No free results archive rows loaded yet.');
-  renderLedger('vipResultsRows',vipResults,'No VIP archive rows loaded yet.');
   renderLedger('propsResultsRows',propsRows,'No Props Results rows loaded yet.');
   renderLongshots('longshotsRows',longshotRows);
   renderOdds(odds.filter(hasPick),publicActiveRows);
   renderSportTabs(publicActiveRows);
-  const overallStats=calcStats(overallRows,activeRows),freeStats=calcStats(freeResults,freeActive),vipStats=calcStats(vipResults,vipActive),propsStats=calcStats(propsRows,activeProps),longshotStats=calcStats(longshotRows,longshotActive);
+  const overallStats=calcStats(overallRows,activeRows),freeStats=calcStats(freeResults,freeActive),vipStats=calcStats([],vipActive),propsStats=calcStats(propsRows,activeProps),longshotStats=calcStats(longshotRows,longshotActive);
   writeStats('free',freeStats);
   writeStats('vip',vipStats);
   writeStats('props',propsStats);

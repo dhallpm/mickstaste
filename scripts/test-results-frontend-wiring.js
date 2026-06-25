@@ -39,6 +39,7 @@ const resultsVisibleMarkup = resultsHtml.replace(/<script[\s\S]*?<\/script>/gi, 
 assert.doesNotMatch(resultsVisibleMarkup, /Google Sheets|Airtable|source of truth|\/api\/results|row\(s\) loaded/i)
 assert.match(html, /const resultsPayload=await loadResultsFeed\(\);\s*renderCanonicalResults\(resultsPayload\)/)
 assert.doesNotMatch(html, /loadSheet\(GIDS\.(?:results|vipArchive|propsResults|lottoProps|longshotsHistory)/)
+assert.doesNotMatch(html, /vipResultsRows/)
 assert.match(runtimeRules, /window\.renderCanonicalResults/)
 assert.doesNotMatch(html, /micks-props-live-filter\.js/)
 assert.doesNotMatch(html, /id="activePropsCards"/)
@@ -376,8 +377,7 @@ const june20Render = await renderIndexPage({
 assert.match(june20Render.bodyHtml, /June 20, 2026/)
 assert.match(june20Render.bodyHtml, /Netherlands vs Sweden/)
 assert.match(june20Render.bodyHtml, /Both Teams To Score - Yes/)
-assert.match(june20Render.vipResultsHtml, /Netherlands vs Sweden/)
-assert.match(june20Render.vipResultsHtml, /Both Teams To Score - Yes/)
+assert.equal(june20Render.vipResultsHtml, '')
 
 const todayCardRender = await renderIndexPage({
   success: true,
