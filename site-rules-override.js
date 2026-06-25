@@ -1,79 +1,88 @@
 (function(){
-  function lower(v){return String(v||'').trim().toLowerCase();}
-  function get(row,names){
-    if(!row)return'';
-    for(var i=0;i<names.length;i++){
-      var wanted=lower(names[i]);
-      for(var key in row){
-        if(lower(key)===wanted&&String(row[key]||'').trim())return String(row[key]).trim();
-      }
-    }
-    return'';
-  }
-  function isLottoRow(row){
-    var text=[row&&row.__section,get(row,['section','originalTable','Category','category','Access','access','Bet Type','betType','Type','type','Market','market','Pick','pick','Game','game','League','league'])].join(' ').toLowerCase();
-    return /lotto|parlay|longshot|sgp/.test(text);
-  }
-  try{
-    if(typeof isPublicVisible==='function'){
-      var previousIsPublicVisible=isPublicVisible;
-      isPublicVisible=function(row){
-        if(isLottoRow(row))return true;
-        return previousIsPublicVisible(row);
-      };
-    }
-    if(typeof isOddsEligible==='function'){
-      var previousIsOddsEligible=isOddsEligible;
-      isOddsEligible=function(row){
-        if(isLottoRow(row))return false;
-        return previousIsOddsEligible(row);
-      };
-    }
-  }catch(e){console.warn('Micks override visibility patch failed',e);}
-  function hideInternalNotes(){
-    document.querySelectorAll('.analysis-box p,.analysis-box div,.card p,.card div').forEach(function(el){
-      var t=(el.textContent||'').trim();
-      if(/^Analysis Note:/i.test(t)||/Needs Customer-Friendly Rewrite/i.test(t)){el.remove();}
-    });
-  }
-  function hidePrivateFromSports(){
-    var sports=document.getElementById('sportPanels');
-    if(!sports)return;
-    sports.querySelectorAll('.stat').forEach(function(el){
-      var t=(el.textContent||'').toLowerCase();
-      if(t.includes('vip')||t.includes('members only')||t.includes('locked')){el.remove();}
-    });
-  }
-  function weeklyResultsOnly(){
+  window.MICKS_PUBLIC_RESULTS_OFF = true;
+
+  function lower(value){return String(value||'').trim().toLowerCase();}
+  function text(el){return String((el&&el.textContent)||'');}
+
+  function emptyResultsBody(){
     var body=document.getElementById('resultsBody');
-    if(!body)return;
-    var now=new Date();
-    var day=now.getDay()||7;
-    var start=new Date(now.getFullYear(),now.getMonth(),now.getDate()-day+1).getTime();
-    var end=start+7*86400000;
-    body.querySelectorAll('tr').forEach(function(row){
-      var first=row.querySelector('td');
-      if(!first)return;
-      var d=new Date((first.textContent||'').trim()+'T00:00:00').getTime();
-      if(Number.isFinite(d)&&(d<start||d>=end)){row.remove();}
+    if(body){
+      body.innerHTML='<tr><td colspan="11" class="odds-empty"><div class="empty-kicker">Results board offline</div><div class="pick-title mt-2">Public results are disconnected.</div><p class="mt-2 text-[#cbbf9d]">This prevents stale settled rows from flashing onto the public site.</p></td></tr>';
+    }
+  }
+
+  function emptySectionRows(){
+    ['freeResultsRows','propsResultsRows','longshotsRows'].forEach(function(id){
+      var body=document.getElementById(id);
+      if(body){
+        body.innerHTML='<tr><td colspan="8" class="odds-empty"><div class="empty-kicker">Ledger offline</div><div class="pick-title mt-2">Results feed disconnected.</div></td></tr>';
+      }
     });
   }
-  function removeStaleNonCardPicks(){
-    var stalePatterns=[
-      /\bjapan\b/i,
-      /chokheli\s+ko\s*\/\s*tko\s*\/\s*dq/i,
-      /chokheli/i
-    ];
-    document.querySelectorAll('.pick-card,.card,tr').forEach(function(el){
-      var text=el.textContent||'';
-      if(stalePatterns.some(function(re){return re.test(text);})){
+
+  function resetResultStats(){
+    ['overallRecord','overallWinRate','overallUnits','overallRoi','freeRecord','freeWinRate','freeUnits','freeStreak','propsRecord','propsUnits','propsStreak','longshotsRecord','longshotsWinRate','longshotsUnits','longshotsStreak'].forEach(function(id){
+      var el=document.getElementById(id);
+      if(el)el.textContent='--';
+    });
+    var summary=document.getElementById('summaryCards');
+    if(summary){
+      summary.innerHTML='<div class="results-card"><strong>OFF</strong><span>Public Results</span></div>';
+    }
+  }
+
+  function removeSettledCardsFromPublicBoards(){
+    document.querySelectorAll('#freeCards .card,#vipCards .card,#propsCards .card,#longshotsCards .card,#sportPanels .stat').forEach(function(el){
+      var t=lower(text(el));
+      if(/\b(win|loss|push|void|settled|cashed|lost|profit\/loss|result restored)\b/.test(t)){
         el.remove();
       }
     });
   }
-  function run(){hideInternalNotes();hidePrivateFromSports();weeklyResultsOnly();removeStaleNonCardPicks();}
+
+  function hideInternalNotes(){
+    document.querySelectorAll('.analysis-box p,.analysis-box div,.card p,.card div').forEach(function(el){
+      var t=text(el).trim();
+      if(/^Analysis Note:/i.test(t)||/Needs Customer-Friendly Rewrite/i.test(t)){el.remove();}
+    });
+  }
+
+  function hidePrivateFromSports(){
+    var sports=document.getElementById('sportPanels');
+    if(!sports)return;
+    sports.querySelectorAll('.stat').forEach(function(el){
+      var t=lower(text(el));
+      if(t.includes('vip')||t.includes('members only')||t.includes('locked')){el.remove();}
+    });
+  }
+
+  function patchGlobals(){
+    try{
+      if(typeof window.loadResultsFeed==='function'){
+        window.loadResultsFeed=async function(){
+          return {success:true,summary:{},byDate:{},records:[],rows:[],free:[],vip:[],props:[],lotto:[],longshots:[],counts:{records:0,rows:0,free:0,vip:0,props:0,lotto:0,longshots:0}};
+        };
+      }
+      if(typeof window.renderCanonicalResults==='function'){
+        window.renderCanonicalResults=function(){emptyResultsBody();resetResultStats();};
+      }
+    }catch(e){console.warn('Micks public results override failed',e);}
+  }
+
+  function run(){
+    patchGlobals();
+    emptyResultsBody();
+    emptySectionRows();
+    resetResultStats();
+    removeSettledCardsFromPublicBoards();
+    hideInternalNotes();
+    hidePrivateFromSports();
+  }
+
+  run();
   window.addEventListener('load',run);
-  setTimeout(run,500);
+  setTimeout(run,250);
+  setTimeout(run,750);
   setTimeout(run,1500);
   setTimeout(run,3000);
   setInterval(run,1500);
