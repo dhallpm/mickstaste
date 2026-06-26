@@ -1,8 +1,24 @@
 (function(){
   window.MICKS_PUBLIC_RESULTS_OFF = true;
+  var VIP_ROOT = 'https://vip.mickspicks.us/';
 
   function lower(value){return String(value||'').trim().toLowerCase();}
   function text(el){return String((el&&el.textContent)||'');}
+
+  function forceVipLinksToRoot(){
+    document.querySelectorAll('a[href]').forEach(function(anchor){
+      var href = anchor.getAttribute('href') || '';
+      var label = lower(text(anchor));
+      var badVipHref = /mickspicks-vip\.vercel\.app|\/premium\.html|vip\.mickspicks\.us\/index\.html|www\.mickspicks\.us\/#vip/i.test(href);
+      var vipIntent = /vip|protected|vault|member|unlock|premium/.test(label) || anchor.classList.contains('vip-btn');
+      if(badVipHref || (vipIntent && /#vip|\/vip|premium\.html/i.test(href))){
+        anchor.setAttribute('href', VIP_ROOT);
+        anchor.removeAttribute('data-tab-target');
+        anchor.setAttribute('target','_self');
+        anchor.setAttribute('rel','noopener');
+      }
+    });
+  }
 
   function emptyResultsBody(){
     var body=document.getElementById('resultsBody');
@@ -71,6 +87,7 @@
 
   function run(){
     patchGlobals();
+    forceVipLinksToRoot();
     emptyResultsBody();
     emptySectionRows();
     resetResultStats();
@@ -81,6 +98,14 @@
 
   run();
   window.addEventListener('load',run);
+  document.addEventListener('click',function(event){
+    var anchor = event.target && event.target.closest ? event.target.closest('a[href]') : null;
+    if(!anchor)return;
+    forceVipLinksToRoot();
+    if((anchor.getAttribute('href')||'')===VIP_ROOT){
+      event.stopPropagation();
+    }
+  },true);
   setTimeout(run,250);
   setTimeout(run,750);
   setTimeout(run,1500);
