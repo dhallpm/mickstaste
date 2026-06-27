@@ -1,0 +1,5 @@
+Redeploy marker for main repo VIP route.
+
+Added /vip/index.html with marker casino-board-main-route-v1.
+
+If the VIP hostname serves the main project, this route should show the new VIP page after deployment.
