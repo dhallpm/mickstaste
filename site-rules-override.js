@@ -1,6 +1,17 @@
 (function(){
   window.MICKS_PUBLIC_RESULTS_OFF = true;
   var VIP_ROOT = 'https://vip.mickspicks.us/';
+  var VIP_PATH = '/vip/';
+
+  function onVipHost(){return String(location.hostname||'').toLowerCase()==='vip.mickspicks.us';}
+  function forceVipHostToVipPage(){
+    if(!onVipHost())return;
+    var path=String(location.pathname||'/').toLowerCase();
+    if(path==='/'||path==='/index.html'||path==='/home'||path==='/home/'){
+      location.replace(VIP_PATH);
+    }
+  }
+  forceVipHostToVipPage();
 
   function lower(value){return String(value||'').trim().toLowerCase();}
   function text(el){return String((el&&el.textContent)||'');}
@@ -86,6 +97,7 @@
   }
 
   function run(){
+    forceVipHostToVipPage();
     patchGlobals();
     forceVipLinksToRoot();
     emptyResultsBody();
