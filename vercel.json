@@ -60,11 +60,25 @@
     },
     {
       "source": "/premium.html",
-      "destination": "https://vip.mickspicks.us/",
+      "destination": "/vip/",
       "permanent": false
     }
   ],
   "rewrites": [
+    {
+      "source": "/",
+      "has": [
+        { "type": "host", "value": "vip.mickspicks.us" }
+      ],
+      "destination": "/vip/index.html"
+    },
+    {
+      "source": "/index.html",
+      "has": [
+        { "type": "host", "value": "vip.mickspicks.us" }
+      ],
+      "destination": "/vip/index.html"
+    },
     {
       "source": "/api/vip-picks",
       "destination": "/api/todays-picks?vip=1"
