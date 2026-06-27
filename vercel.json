@@ -25,6 +25,12 @@
       ]
     },
     {
+      "source": "/vip/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }
+      ]
+    },
+    {
       "source": "/premium.html",
       "headers": [
         { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }
@@ -49,12 +55,12 @@
   "redirects": [
     {
       "source": "/vip",
-      "destination": "https://mickspicks-vip.vercel.app/premium.html",
+      "destination": "/vip/",
       "permanent": false
     },
     {
       "source": "/premium.html",
-      "destination": "https://mickspicks-vip.vercel.app/premium.html",
+      "destination": "https://vip.mickspicks.us/",
       "permanent": false
     }
   ],
