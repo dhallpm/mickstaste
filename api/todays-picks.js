@@ -3,7 +3,7 @@ import { createPublicKey, verify as verifySignature } from 'node:crypto'
 import { buildWebsiteFeed } from '../lib/buildWebsiteFeed.js'
 import { sendError } from '../lib/syncAuth.js'
 
-const VIP_HOST = 'mickspicks-vip.vercel.app'
+const VIP_ORIGIN_HOSTS = new Set(['vip.mickspicks.us', 'www.mickspicks.us'])
 const LOCAL_HOSTS = new Set(['localhost', '127.0.0.1', '::1'])
 const JWKS_CACHE = new Map()
 
@@ -83,7 +83,7 @@ export async function validateCloudflareAccessJwt(token = '', config = accessCon
 export async function isAllowedVipRequest(req = {}, env = process.env) {
   const host = requestHost(req)
   if (LOCAL_HOSTS.has(host)) return true
-  if (host !== VIP_HOST) return false
+  if (!VIP_ORIGIN_HOSTS.has(host)) return false
   const token = cloudflareAccessToken(req)
   if (!token) return false
   const config = accessConfig(env)
