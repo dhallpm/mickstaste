@@ -243,11 +243,15 @@
 
   async function hydrateResultsFromApi() {
     try {
-      const response = await fetch('/api/results?days=3650', { cache: 'no-store' });
+      const response = await fetch(`/api/results?days=3650&cache=${Date.now()}`, { cache: 'no-store' });
       if (!response.ok) throw new Error(`Results API ${response.status}`);
       const data = await response.json();
       if (data.success === false) throw new Error(data.error || 'Results API unavailable');
-      const rows = Array.isArray(data.rows) ? data.rows : [];
+      const rows = typeof window.canonicalRowsFromPayload === 'function'
+        ? window.canonicalRowsFromPayload(data)
+        : ['results', 'weeklyResults', 'resultRows', 'records', 'rows', 'allRows', 'archive', 'resultsArchive']
+            .map(key => data[key])
+            .find(value => Array.isArray(value) && value.length) || [];
       const free = Array.isArray(data.free) ? data.free : [];
       const vip = Array.isArray(data.vip) ? data.vip : [];
       const props = (Array.isArray(data.props) ? data.props : []).filter(isTruePlayerProp);
