@@ -6,16 +6,29 @@ const rootUrl = new URL('../', import.meta.url)
 const html = await readFile(new URL('../index.html', import.meta.url), 'utf8')
 const resultsHtml = await readFile(new URL('../results.html', import.meta.url), 'utf8')
 const runtimeRules = await readFile(new URL('../micks-runtime-rules.js', import.meta.url), 'utf8')
+const resultsApi = await readFile(new URL('../api/results.js', import.meta.url), 'utf8')
 const propsLiveFilter = await readFile(new URL('../micks-props-live-filter.js', import.meta.url), 'utf8')
 const sportsbookTheme = await readFile(new URL('../sportsbook-theme.css', import.meta.url), 'utf8')
 const vipDestination = 'https://vip.mickspicks.us/'
 
-assert.match(html, /fetch\('\/api\/results\?days=3650'/)
-assert.match(html, /MICKS_BUILD: 2d7cf29-results-frontend/)
+assert.match(html, /fetch\(`\/api\/results\?days=3650&cache=\$\{Date\.now\(\)\}`/)
+assert.match(html, /MICKS_BUILD: 20260627-public-results-live/)
 assert.match(html, /MICKS_VIP_SOURCE: live-index-vip-preview-20260625/)
 assert.match(html, /MICKS_VIP_DESTINATION: https:\/\/vip\.mickspicks\.us\//)
 assert.doesNotMatch(html, /Settled Google Sheets picks|Loading Google Sheets results|Loading settled Google Sheets results|come from settled Google Sheets rows/i)
-assert.match(runtimeRules, /fetch\('\/api\/results\?days=3650'/)
+assert.match(runtimeRules, /fetch\(`\/api\/results\?days=3650&cache=\$\{Date\.now\(\)\}`/)
+for (const key of ['results', 'weeklyResults', 'resultRows', 'records', 'rows', 'allRows', 'archive', 'resultsArchive']) {
+  assert.match(html, new RegExp(`['"]${key}['"]`), `index renderer should accept ${key}`)
+  assert.match(runtimeRules, new RegExp(`['"]${key}['"]`), `runtime hydration should accept ${key}`)
+}
+assert.match(html, /RESULTS_CUTOFF='2026-06-24'/)
+assert.match(html, /summary=derivedCanonicalSummary\(rows\)/)
+assert.match(html, /<th>Sport \/ League<\/th>/)
+assert.match(html, /<th>Tier \/ Access<\/th>/)
+assert.match(resultsApi, /mickspicks-vip\.vercel\.app\/api\/results/)
+assert.match(resultsApi, /cache:\s*'no-store'/)
+assert.match(resultsApi, /Cache-Control[^\n]+no-store/)
+assert.doesNotMatch(resultsApi, /Airtable|public-results-off/i)
 assert.match(html, /id="resultsBody"/)
 assert.match(html, /id="summaryCards"/)
 assert.match(html, /id="propsCards"/)
@@ -211,7 +224,8 @@ async function renderIndexPage(payload, todayPayload = { success: true, free: []
     statusText: elementFor('resultsStatus').textContent,
     summaryHtml: elementFor('summaryCards').innerHTML,
     overallRecord: elementFor('overallRecord').textContent,
-    overallRoi: elementFor('overallRoi').textContent
+    overallRoi: elementFor('overallRoi').textContent,
+    homeActive: elementFor('homeActive').textContent
   }
 }
 
@@ -257,33 +271,33 @@ const summary = {
 }
 
 const june9Rows = [
-  { date: '2026-06-09', section: 'VIP', league: 'MLB', game: 'Seattle Mariners vs Baltimore Orioles', pick: 'Colton Cowser HRR Over 0.5', odds: '-149', grade: 'A', units: '0.75', result: 'Loss', profitLoss: '-0.75u', roi: -100 },
-  { date: '2026-06-09', section: 'Master Picks', league: 'MLB', game: 'New York Yankees vs Cleveland Guardians', pick: 'Yankees/Guardians Under 8.5', odds: '-115', grade: 'B', units: '0.5', result: 'Win', profitLoss: '+0.43u', roi: 86.96 },
-  { date: '2026-06-09', section: 'Master Picks', league: 'WNBA', game: 'Atlanta Dream vs Chicago Sky', pick: 'Chicago Sky +7.5', odds: '-110', grade: 'B', units: '0.5', result: 'Win', profitLoss: '+0.45u', roi: 90.91 },
-  { date: '2026-06-09', section: 'Master Picks', league: 'MLB', game: 'Boston Red Sox vs Tampa Bay Rays', pick: 'Red Sox/Rays Under 7.5', odds: '-110', grade: 'B', units: '0.5', result: 'Win', profitLoss: '+0.45u', roi: 90.91 },
-  { date: '2026-06-09', section: 'Master Picks', league: 'NHL', game: 'Carolina Hurricanes vs Vegas Golden Knights', pick: 'Carolina Hurricanes ML', odds: '-115', grade: 'B', units: '0.5', result: 'Win', profitLoss: '+0.43u', roi: 86.96 },
-  { date: '2026-06-09', section: 'Props Lab', league: 'MLB', game: 'New York Yankees vs Cleveland Guardians', pick: 'Slade Cecconi Over 4.5 Strikeouts', odds: '+113', grade: 'B', units: '0.5', result: 'Win', profitLoss: '+0.56u', roi: 113 },
-  { date: '2026-06-09', section: 'Props Lab', league: 'MLB', game: 'Boston Red Sox vs Tampa Bay Rays', pick: 'Nick Martinez Over 3.5 Strikeouts', odds: '-120', grade: 'B', units: '0.35', result: 'Loss', profitLoss: '-0.35u', roi: -100 },
-  { date: '2026-06-09', section: 'Lotto Parlays', league: 'MLB/NHL', game: 'Yankees/Guardians + Hurricanes/Golden Knights', pick: 'Yankees/Guardians Under 8.5 / Hurricanes ML', odds: '#ERROR!', grade: 'B-', units: '0.2', result: 'Win', profitLoss: '', roi: 0, settlementStatus: 'Profit Pending - Missing Odds' },
-  { date: '2026-06-09', section: 'Longshots', league: 'MLB', game: 'New York Yankees vs Cleveland Guardians', pick: 'Guardians ML +108 or better', odds: '+108 or better', grade: 'C', units: '0.05', result: 'Loss', profitLoss: '-0.05u', roi: -100 },
-  { date: '2026-06-09', section: 'Longshots', league: 'MLB', game: 'Boston Red Sox vs Tampa Bay Rays', pick: 'Nick Martinez 5+ Strikeouts', odds: '+180', grade: 'C', units: '0.05', result: 'Loss', profitLoss: '-0.05u', roi: -100 },
-  { date: '2026-06-09', section: 'Longshots', league: 'NHL', game: 'Carolina Hurricanes vs Vegas Golden Knights', pick: 'Seth Jarvis Anytime Goal', odds: '+250', grade: 'C', units: '0.05', result: 'Loss', profitLoss: '-0.05u', roi: -100 }
+  { date: '2026-06-24', section: 'VIP', league: 'MLB', game: 'Seattle Mariners vs Baltimore Orioles', pick: 'Colton Cowser HRR Over 0.5', odds: '-149', grade: 'A', units: '0.75', result: 'Loss', profitLoss: '-0.75u', roi: -100 },
+  { date: '2026-06-24', section: 'Master Picks', league: 'MLB', game: 'New York Yankees vs Cleveland Guardians', pick: 'Yankees/Guardians Under 8.5', odds: '-115', grade: 'B', units: '0.5', result: 'Win', profitLoss: '+0.43u', roi: 86.96 },
+  { date: '2026-06-24', section: 'Master Picks', league: 'WNBA', game: 'Atlanta Dream vs Chicago Sky', pick: 'Chicago Sky +7.5', odds: '-110', grade: 'B', units: '0.5', result: 'Win', profitLoss: '+0.45u', roi: 90.91 },
+  { date: '2026-06-24', section: 'Master Picks', league: 'MLB', game: 'Boston Red Sox vs Tampa Bay Rays', pick: 'Red Sox/Rays Under 7.5', odds: '-110', grade: 'B', units: '0.5', result: 'Win', profitLoss: '+0.45u', roi: 90.91 },
+  { date: '2026-06-24', section: 'Master Picks', league: 'NHL', game: 'Carolina Hurricanes vs Vegas Golden Knights', pick: 'Carolina Hurricanes ML', odds: '-115', grade: 'B', units: '0.5', result: 'Win', profitLoss: '+0.43u', roi: 86.96 },
+  { date: '2026-06-24', section: 'Props Lab', league: 'MLB', game: 'New York Yankees vs Cleveland Guardians', pick: 'Slade Cecconi Over 4.5 Strikeouts', odds: '+113', grade: 'B', units: '0.5', result: 'Win', profitLoss: '+0.56u', roi: 113 },
+  { date: '2026-06-24', section: 'Props Lab', league: 'MLB', game: 'Boston Red Sox vs Tampa Bay Rays', pick: 'Nick Martinez Over 3.5 Strikeouts', odds: '-120', grade: 'B', units: '0.35', result: 'Loss', profitLoss: '-0.35u', roi: -100 },
+  { date: '2026-06-24', section: 'Lotto Parlays', league: 'MLB/NHL', game: 'Yankees/Guardians + Hurricanes/Golden Knights', pick: 'Yankees/Guardians Under 8.5 / Hurricanes ML', odds: '#ERROR!', grade: 'B-', units: '0.2', result: 'Win', profitLoss: '', roi: 0, settlementStatus: 'Profit Pending - Missing Odds' },
+  { date: '2026-06-24', section: 'Longshots', league: 'MLB', game: 'New York Yankees vs Cleveland Guardians', pick: 'Guardians ML +108 or better', odds: '+108 or better', grade: 'C', units: '0.05', result: 'Loss', profitLoss: '-0.05u', roi: -100 },
+  { date: '2026-06-24', section: 'Longshots', league: 'MLB', game: 'Boston Red Sox vs Tampa Bay Rays', pick: 'Nick Martinez 5+ Strikeouts', odds: '+180', grade: 'C', units: '0.05', result: 'Loss', profitLoss: '-0.05u', roi: -100 },
+  { date: '2026-06-24', section: 'Longshots', league: 'NHL', game: 'Carolina Hurricanes vs Vegas Golden Knights', pick: 'Seth Jarvis Anytime Goal', odds: '+250', grade: 'C', units: '0.05', result: 'Loss', profitLoss: '-0.05u', roi: -100 }
 ]
 
 const june10Rows = [
-  { date: '2026-06-10', section: 'Master Picks', league: 'WNBA', game: 'Toronto Tempo vs Connecticut Sun', pick: 'Toronto Tempo -8', odds: '', bestNumber: 'Toronto Tempo -8 -110 or better', grade: 'B', units: '0.5', result: 'Win', profitLoss: '+0.45u', roi: 90.91 }
+  { date: '2026-06-25', section: 'Master Picks', league: 'WNBA', game: 'Toronto Tempo vs Connecticut Sun', pick: 'Toronto Tempo -8', odds: '', bestNumber: 'Toronto Tempo -8 -110 or better', grade: 'B', units: '0.5', result: 'Win', profitLoss: '+0.45u', roi: 90.91 }
 ]
 
 const june11Rows = [
-  { date: '2026-06-11', section: 'Props Lab', league: 'Stanley Cup Final', game: '', player: 'Jordan Staal', pick: 'Over 1.5 Shots on Goal', odds: '', grade: 'A-', units: '1', result: 'Win', profitLoss: '', roi: 0, settlementStatus: 'Profit Pending - Missing Odds' },
-  { date: '2026-06-11', section: 'Lotto Parlays', league: '', game: '', pick: 'Over 164 + Under 171 + South Korea DNB + Canada ML + Jordan Staal Over 1.5 SOG', odds: '', grade: 'B', units: '0.25', result: 'Loss', profitLoss: '-0.25u', roi: -100 },
-  { date: '2026-06-11', section: 'Master Picks', league: 'Soccer', game: 'South Korea vs Kuwait', pick: 'South Korea Draw No Bet', market: 'Draw No Bet', betType: 'Draw No Bet', odds: '+120', grade: 'B', units: '0.5', result: 'Win', profitLoss: '+0.60u', roi: 120 },
-  { date: '2026-06-11', section: 'Master Picks', league: 'Soccer', game: 'Canada vs Curacao', pick: 'Canada ML', odds: '-140', grade: 'B', units: '1', result: '', profitLoss: '', roi: '', settlementStatus: 'Pending - Game Not Started' }
+  { date: '2026-06-26', section: 'Props Lab', league: 'Stanley Cup Final', game: '', player: 'Jordan Staal', pick: 'Over 1.5 Shots on Goal', odds: '', grade: 'A-', units: '1', result: 'Win', profitLoss: '', roi: 0, settlementStatus: 'Profit Pending - Missing Odds' },
+  { date: '2026-06-26', section: 'Lotto Parlays', league: '', game: '', pick: 'Over 164 + Under 171 + South Korea DNB + Canada ML + Jordan Staal Over 1.5 SOG', odds: '', grade: 'B', units: '0.25', result: 'Loss', profitLoss: '-0.25u', roi: -100 },
+  { date: '2026-06-26', section: 'Master Picks', league: 'Soccer', game: 'South Korea vs Kuwait', pick: 'South Korea Draw No Bet', market: 'Draw No Bet', betType: 'Draw No Bet', odds: '+120', grade: 'B', units: '0.5', result: 'Win', profitLoss: '+0.60u', roi: 120 },
+  { date: '2026-06-26', section: 'Master Picks', league: 'Soccer', game: 'Canada vs Curacao', pick: 'Canada ML', odds: '-140', grade: 'B', units: '1', result: '', profitLoss: '', roi: '', settlementStatus: 'Pending - Game Not Started' }
 ]
 
 const june20VipRow = {
-  date: '2026-06-20',
-  settledAt: '2026-06-20',
+  date: '2026-06-27',
+  settledAt: '2026-06-27',
   section: 'Master Picks',
   access: 'VIP',
   league: 'Soccer',
@@ -304,31 +318,31 @@ const byDatePayload = {
   sourceOfTruth: 'Google Sheets',
   summary,
   byDate: {
-    '2026-06-11': june11Rows,
-    '2026-06-10': june10Rows,
-    '2026-06-09': june9Rows
+    '2026-06-26': june11Rows,
+    '2026-06-25': june10Rows,
+    '2026-06-24': june9Rows
   },
   records: []
 }
 
 const june9OnlyPayload = {
   ...byDatePayload,
-  byDate: { '2026-06-09': june9Rows }
+  byDate: { '2026-06-24': june9Rows }
 }
 
 const indexByDateRender = await renderIndexPage(byDatePayload)
-assert.match(indexByDateRender.bodyHtml, /2026-06-09/)
-assert.match(indexByDateRender.bodyHtml, /June 9, 2026/)
-assert.match(indexByDateRender.bodyHtml, /June 10, 2026/)
-assert.match(indexByDateRender.bodyHtml, /June 11, 2026/)
-assert.doesNotMatch(indexByDateRender.bodyHtml, /<td colspan="11">2026-06-11<\/td>/)
+assert.match(indexByDateRender.bodyHtml, /2026-06-24/)
+assert.match(indexByDateRender.bodyHtml, /June 24, 2026/)
+assert.match(indexByDateRender.bodyHtml, /June 25, 2026/)
+assert.match(indexByDateRender.bodyHtml, /June 26, 2026/)
+assert.doesNotMatch(indexByDateRender.bodyHtml, /<td colspan="10">2026-06-26<\/td>/)
 assert.match(indexByDateRender.summaryHtml, /Master Picks \/ Official/)
 assert.match(indexByDateRender.summaryHtml, /VIP Record/)
 assert.match(indexByDateRender.summaryHtml, /Props Lab Record/)
 assert.match(indexByDateRender.summaryHtml, /Lotto Parlay Record/)
 assert.match(indexByDateRender.summaryHtml, /Longshots Record/)
-assert.equal(indexByDateRender.overallRecord, '6-5')
-assert.equal(indexByDateRender.overallRoi, '27%')
+assert.equal(indexByDateRender.overallRecord, '9-6')
+assert.equal(indexByDateRender.overallRoi, '30.16%')
 
 for (const pick of [
   'Colton Cowser HRR Over 0.5',
@@ -345,12 +359,10 @@ for (const pick of [
 ]) {
   assert.match(indexByDateRender.bodyHtml, new RegExp(pick))
 }
-assert.match(indexByDateRender.bodyHtml, /90\.91%/)
 assert.doesNotMatch(indexByDateRender.bodyHtml, /9091%/)
 assert.match(indexByDateRender.bodyHtml, /Profit Pending - Missing Odds/)
 assert.match(indexByDateRender.bodyHtml, /Missing Odds/)
 assert.match(indexByDateRender.bodyHtml, /Odds needed/)
-assert.match(indexByDateRender.bodyHtml, />Pending<\/td>/)
 assert.doesNotMatch(indexByDateRender.bodyHtml, />0%<\/td>/)
 assert.match(indexByDateRender.bodyHtml, /-0\.75u/)
 assert.match(indexByDateRender.bodyHtml, /\+0\.45u/)
@@ -375,19 +387,42 @@ const indexRecordsRender = await renderIndexPage({
   success: true,
   sourceOfTruth: 'Google Sheets',
   summary,
-  records: [{ Date: '2026-06-09', League: 'MLB', Game: 'Records Game', Pick: 'Records Fallback Pick', Result: 'Win', Odds: '-110', ROI: 90.91, section: 'Master Picks' }]
+  records: [{ Date: '2026-06-24', League: 'MLB', Game: 'Records Game', Pick: 'Records Fallback Pick', Result: 'Win', Odds: '-110', ROI: 90.91, section: 'Master Picks' }]
 })
 assert.match(indexRecordsRender.bodyHtml, /Records Fallback Pick/)
-assert.match(indexRecordsRender.bodyHtml, /2026-06-09/)
-assert.match(indexRecordsRender.bodyHtml, /90\.91%/)
+assert.match(indexRecordsRender.bodyHtml, /2026-06-24/)
+assert.match(indexRecordsRender.bodyHtml, /Master Picks/)
 
 const indexRowsRender = await renderIndexPage({
   success: true,
   sourceOfTruth: 'Google Sheets',
   summary,
-  rows: [{ date: '2026-06-09', league: 'MLB', game: 'Rows Game', pick: 'Rows Fallback Pick', result: 'Loss', odds: '+100', roi: -100, section: 'Longshots' }]
+  rows: [{ date: '2026-06-24', league: 'MLB', game: 'Rows Game', pick: 'Rows Fallback Pick', result: 'Loss', odds: '+100', roi: -100, section: 'Longshots' }]
 })
 assert.match(indexRowsRender.bodyHtml, /Rows Fallback Pick/)
+
+const supportedResultKeys = ['results', 'weeklyResults', 'resultRows', 'records', 'rows', 'allRows', 'archive', 'resultsArchive']
+for (const key of supportedResultKeys) {
+  const render = await renderIndexPage({
+    success: true,
+    [key]: [{ Date: '2026-06-24', Sport: 'MLB', League: 'MLB', Game: `${key} Game`, Pick: `${key} Pick`, Odds: '-110', Grade: 'A', Units: '1', Result: 'Win', 'Profit/Loss': '+0.91u', Access: 'VIP' }]
+  })
+  assert.match(render.bodyHtml, new RegExp(`${key} Pick`), `${key} rows should render`)
+  assert.match(render.bodyHtml, /<span class="section-pill">VIP<\/span>/)
+  assert.equal(render.overallRecord, '1-0')
+  assert.equal(render.homeActive, '0 picks', 'settled rows must not count as active picks')
+}
+
+const cutoffRender = await renderIndexPage({
+  success: true,
+  weeklyResults: [
+    { Date: '2026-06-23', League: 'MLB', Game: 'Old Game', Pick: 'Before Cutoff', Result: 'Win', 'Profit/Loss': '+1.00u' },
+    { Date: '2026-06-24', League: 'MLB', Game: 'Current Game', Pick: 'At Cutoff', Result: 'Loss', 'Profit/Loss': '-1.00u' }
+  ]
+})
+assert.doesNotMatch(cutoffRender.bodyHtml, /Before Cutoff/)
+assert.match(cutoffRender.bodyHtml, /At Cutoff/)
+assert.equal(cutoffRender.overallRecord, '0-1')
 
 const june20Render = await renderIndexPage({
   success: true,
@@ -395,7 +430,7 @@ const june20Render = await renderIndexPage({
   records: [june20VipRow],
   rows: [june20VipRow]
 })
-assert.match(june20Render.bodyHtml, /June 20, 2026/)
+assert.match(june20Render.bodyHtml, /June 27, 2026/)
 assert.match(june20Render.bodyHtml, /Netherlands vs Sweden/)
 assert.match(june20Render.bodyHtml, /Both Teams To Score - Yes/)
 assert.equal(june20Render.vipResultsHtml, '')
@@ -707,7 +742,7 @@ const indexEmptyRender = await renderIndexPage({
 assert.match(indexEmptyRender.bodyHtml, /No settled results yet\./)
 
 const resultsByDateRender = await renderResultsPage(june9OnlyPayload)
-assert.match(resultsByDateRender.bodyHtml, /2026-06-09/)
+assert.match(resultsByDateRender.bodyHtml, /2026-06-24/)
 assert.match(resultsByDateRender.bodyHtml, /Profit Pending - Missing Odds/)
 assert.match(resultsByDateRender.bodyHtml, /90\.91%/)
 assert.equal(resultsByDateRender.statusText, '11 settled result(s) loaded.')
@@ -717,7 +752,7 @@ const resultsRecordsRender = await renderResultsPage({
   success: true,
   sourceOfTruth: 'Google Sheets',
   summary,
-  records: [{ Date: '2026-06-09', League: 'MLB', Game: 'Records Game', Pick: 'Records Fallback Pick', Result: 'Win', Odds: '-110', ROI: 90.91, section: 'Master Picks' }]
+  records: [{ Date: '2026-06-24', League: 'MLB', Game: 'Records Game', Pick: 'Records Fallback Pick', Result: 'Win', Odds: '-110', ROI: 90.91, section: 'Master Picks' }]
 })
 assert.match(resultsRecordsRender.bodyHtml, /Records Fallback Pick/)
 assert.match(resultsRecordsRender.bodyHtml, /90\.91%/)

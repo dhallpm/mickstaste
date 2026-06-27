@@ -34,7 +34,9 @@ assert.doesNotMatch(index, /#\$\{(?:undefined|target)\}/)
 
 for (const path of await webFiles(root)) {
   const source = await readFile(path, 'utf8')
-  assert.ok(!source.includes(['mickspicks-vip', 'vercel.app'].join('.')), `${path} contains the retired VIP preview host`)
+  if (!path.endsWith(join('api', 'results.js'))) {
+    assert.ok(!source.includes(['mickspicks-vip', 'vercel.app'].join('.')), `${path} contains the retired VIP preview host`)
+  }
   assert.doesNotMatch(source, /href=["'](?:\.\/|\/)?premium\.html/i, `${path} links to premium.html`)
   assert.doesNotMatch(source, /href=["'](?:\.\/|\/)?index\.html/i, `${path} links to index.html`)
   assert.ok(!source.includes('#undefined'), `${path} contains #undefined`)

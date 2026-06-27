@@ -1,64 +1,43 @@
-function todayET() {
-  return new Intl.DateTimeFormat('en-CA', {
-    timeZone: 'America/New_York',
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit'
-  }).format(new Date())
+const DEFAULT_RESULTS_UPSTREAM = 'https://mickspicks-vip.vercel.app/api/results'
+
+function boundedDays(value) {
+  return Math.min(Math.max(Number(value || 180), 1), 3650)
 }
 
-function summary() {
-  return { wins: 0, losses: 0, pushes: 0, voids: 0, unitsRisked: 0, profitLoss: 0, roi: 0 }
-}
-
-function payload(days = 180) {
-  return {
-    success: true,
-    source: 'public-results-off',
-    sourceOfTruth: 'public-results-off',
-    spreadsheetId: '',
-    loadedTabs: [],
-    date: todayET(),
-    days,
-    warnings: ['Public results display is off.'],
-    scanned: {},
-    scannedRowCounts: {},
-    resultRowCounts: {},
-    resultCounts: { total: 0, byOutcome: {}, bySection: {}, byDate: {} },
-    recentSettledRows: [],
-    diagnostics: { publicResultsOff: true, resultCounts: { total: 0, byOutcome: {}, bySection: {}, byDate: {} } },
-    summary: {
-      overall: summary(),
-      masterPicks: summary(),
-      officialStraight: summary(),
-      vip: summary(),
-      propsLab: summary(),
-      lottoParlays: summary(),
-      longshots: summary()
-    },
-    byDate: {},
-    records: [],
-    rows: [],
-    free: [],
-    vip: [],
-    props: [],
-    lotto: [],
-    longshots: [],
-    counts: { records: 0, rows: 0, free: 0, vip: 0, props: 0, lotto: 0, longshots: 0 }
-  }
-}
-
-export function shouldIncludeResultRecord() { return false }
-export function normalizeRecord(record = {}) { return record }
-export function normalizeRow(row = {}) { return row }
-export function hasPositiveUnits() { return false }
-export function buildResultsPayload(_source = {}, options = {}) {
-  const days = Math.min(Math.max(Number(options.days || 180), 1), 3650)
-  return payload(days)
+function upstreamUrl(req) {
+  const target = new URL(process.env.RESULTS_API_URL || DEFAULT_RESULTS_UPSTREAM)
+  target.searchParams.set('days', String(boundedDays(req.query?.days)))
+  target.searchParams.set('cache', String(Date.now()))
+  return target
 }
 
 export default async function handler(req, res) {
-  res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate')
-  const days = Math.min(Math.max(Number(req.query?.days || 180), 1), 3650)
-  res.status(200).json(payload(days))
+  res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0')
+  res.setHeader('Pragma', 'no-cache')
+  res.setHeader('Expires', '0')
+
+  try {
+    const response = await fetch(upstreamUrl(req), {
+      cache: 'no-store',
+      headers: { Accept: 'application/json' }
+    })
+
+    if (!response.ok) {
+      throw new Error(`Results upstream returned ${response.status}`)
+    }
+
+    const payload = await response.json()
+    res.status(200).json({
+      ...payload,
+      success: payload.success !== false,
+      proxiedBy: 'mickstaste-public-results'
+    })
+  } catch (error) {
+    console.error('Public results proxy failed:', error)
+    res.status(502).json({
+      success: false,
+      source: 'results-upstream',
+      error: 'Results feed is temporarily unavailable.'
+    })
+  }
 }
