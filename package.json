@@ -10,6 +10,7 @@
     "test:lotto-parlays": "node scripts/test-lotto-parlays-feed.js",
     "test:odds-vip-filter": "node scripts/test-odds-vip-filter.js",
     "test:results-frontend": "node scripts/test-results-frontend-wiring.js",
+    "test:vip-routing": "node scripts/test-vip-routing.js",
     "test:vip-gate": "node scripts/test-vip-gate.js",
     "test:customer-analysis": "node scripts/test-customer-friendly-analysis.js",
     "test:results-api": "node scripts/test-results-api-optional-archives.js",

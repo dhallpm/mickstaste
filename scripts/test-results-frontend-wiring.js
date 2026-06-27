@@ -8,22 +8,20 @@ const resultsHtml = await readFile(new URL('../results.html', import.meta.url), 
 const runtimeRules = await readFile(new URL('../micks-runtime-rules.js', import.meta.url), 'utf8')
 const propsLiveFilter = await readFile(new URL('../micks-props-live-filter.js', import.meta.url), 'utf8')
 const sportsbookTheme = await readFile(new URL('../sportsbook-theme.css', import.meta.url), 'utf8')
-const vipDestination = 'https://mickspicks-vip.vercel.app/premium.html'
+const vipDestination = 'https://vip.mickspicks.us/'
 
 assert.match(html, /fetch\('\/api\/results\?days=3650'/)
 assert.match(html, /MICKS_BUILD: 2d7cf29-results-frontend/)
 assert.match(html, /MICKS_VIP_SOURCE: live-index-vip-preview-20260625/)
-assert.match(html, /MICKS_VIP_DESTINATION: mickspicks-vip-premium-20260625/)
+assert.match(html, /MICKS_VIP_DESTINATION: https:\/\/vip\.mickspicks\.us\//)
 assert.doesNotMatch(html, /Settled Google Sheets picks|Loading Google Sheets results|Loading settled Google Sheets results|come from settled Google Sheets rows/i)
 assert.match(runtimeRules, /fetch\('\/api\/results\?days=3650'/)
 assert.match(html, /id="resultsBody"/)
 assert.match(html, /id="summaryCards"/)
 assert.match(html, /id="propsCards"/)
-assert.match(html, /https:\/\/mickspicks-vip\.vercel\.app\/premium\.html/)
-assert.doesNotMatch(html, /https:\/\/vip\.mickspicks\.us\//)
-assert.match(html, /<a class="nav-link" href="https:\/\/mickspicks-vip\.vercel\.app\/premium\.html"><i data-lucide="lock"><\/i>VIP Portal<\/a>/)
-assert.doesNotMatch(html, /<a class="nav-link" href="#vip" data-tab-target="vip"><i data-lucide="crown"><\/i>VIP<\/a>/)
-assert.match(html, /<a class="nav-link" href="#vip" data-tab-target="vip"><i data-lucide="crown"><\/i>VIP Preview<\/a>/)
+assert.match(html, /https:\/\/vip\.mickspicks\.us\//)
+assert.doesNotMatch(html, /mickspicks-vip\.vercel\.app|href=["']#vip["']/)
+assert.match(html, /<a class="nav-link" href="https:\/\/vip\.mickspicks\.us\/"><i data-lucide="lock"><\/i>VIP Portal<\/a>/)
 const publicAnchors = Array.from(html.matchAll(/<a\b[^>]*>[\s\S]*?<\/a>/gi)).map(match => {
   const anchor = match[0]
   const href = anchor.match(/\bhref=(["'])(.*?)\1/i)?.[2] || ''
@@ -650,8 +648,7 @@ assert.doesNotMatch(todayCardRender.freeHtml, /<span class="pill">No Bet<\/span>
 assert.match(todayCardRender.freeHtml, /<span class="pill">Pass<\/span>/)
 assert.match(todayCardRender.vipHtml, /VIP Pick Locked/)
 assert.match(todayCardRender.vipHtml, /VIP Locked Analysis/)
-assert.match(todayCardRender.vipHtml, /https:\/\/mickspicks-vip\.vercel\.app\/premium\.html/)
-assert.doesNotMatch(todayCardRender.vipHtml, /https:\/\/vip\.mickspicks\.us\//)
+assert.match(todayCardRender.vipHtml, /https:\/\/vip\.mickspicks\.us\//)
 assert.doesNotMatch(todayCardRender.vipHtml, /Tempo\/Dream Under 172\.5/)
 assert.doesNotMatch(todayCardRender.vipHtml, /Free A Plus Should Be VIP/)
 assert.doesNotMatch(todayCardRender.vipHtml, /Full Analysis/)

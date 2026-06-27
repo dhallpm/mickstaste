@@ -55,30 +55,26 @@
   "redirects": [
     {
       "source": "/vip",
-      "destination": "/vip/",
-      "permanent": false
+      "destination": "https://vip.mickspicks.us/",
+      "permanent": true
+    },
+    {
+      "source": "/vip/(.*)",
+      "destination": "https://vip.mickspicks.us/",
+      "permanent": true
     },
     {
       "source": "/premium.html",
-      "destination": "/vip/",
-      "permanent": false
+      "destination": "https://vip.mickspicks.us/",
+      "permanent": true
+    },
+    {
+      "source": "/vip.html",
+      "destination": "https://vip.mickspicks.us/",
+      "permanent": true
     }
   ],
   "rewrites": [
-    {
-      "source": "/",
-      "has": [
-        { "type": "host", "value": "vip.mickspicks.us" }
-      ],
-      "destination": "/vip/index.html"
-    },
-    {
-      "source": "/index.html",
-      "has": [
-        { "type": "host", "value": "vip.mickspicks.us" }
-      ],
-      "destination": "/vip/index.html"
-    },
     {
       "source": "/api/vip-picks",
       "destination": "/api/todays-picks?vip=1"
