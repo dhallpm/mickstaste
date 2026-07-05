@@ -1,140 +1,55 @@
-import { createPublicKey, verify as verifySignature } from 'node:crypto'
-
-import { buildWebsiteFeed } from '../lib/buildWebsiteFeed.js'
-import { sendError } from '../lib/syncAuth.js'
-
-const VIP_ORIGIN_HOSTS = new Set(['vip.mickspicks.us', 'www.mickspicks.us'])
-const LOCAL_HOSTS = new Set(['localhost', '127.0.0.1', '::1'])
-const JWKS_CACHE = new Map()
-
-function firstHeader(headers = {}, name = '') {
-  const lowerName = name.toLowerCase()
-  const pair = Object.entries(headers || {}).find(([key]) => key.toLowerCase() === lowerName)
-  const value = pair ? pair[1] : ''
-  return Array.isArray(value) ? value[0] : String(value || '')
-}
-
-export function requestHost(req = {}) {
-  const forwardedHost = firstHeader(req.headers, 'x-forwarded-host')
-  const host = forwardedHost || firstHeader(req.headers, 'host')
-  return host.split(',')[0].trim().toLowerCase().replace(/:\d+$/, '')
-}
-
-export function cloudflareAccessToken(req = {}) {
-  return firstHeader(req.headers, 'cf-access-jwt-assertion')
-}
-
-function accessConfig(env = process.env) {
-  const teamDomain = String(env.CF_ACCESS_TEAM_DOMAIN || env.CLOUDFLARE_ACCESS_TEAM_DOMAIN || '').trim()
-    .replace(/^https?:\/\//i, '')
-    .replace(/\/.*$/, '')
-  const audience = String(env.CF_ACCESS_AUD || env.CLOUDFLARE_ACCESS_AUD || env.VIP_ACCESS_AUD || '').trim()
-  const allowedEmails = String(env.VIP_ACCESS_EMAILS || env.CF_ACCESS_ALLOWED_EMAILS || '').split(',')
-    .map(email => email.trim().toLowerCase())
-    .filter(Boolean)
-  return { teamDomain, audience, allowedEmails }
-}
-
-function decodeBase64Url(input = '') {
-  return Buffer.from(input.replace(/-/g, '+').replace(/_/g, '/'), 'base64')
-}
-
-function decodeJwtPart(part = '') {
-  return JSON.parse(decodeBase64Url(part).toString('utf8'))
-}
-
-async function cloudflareAccessJwks(teamDomain) {
-  const cached = JWKS_CACHE.get(teamDomain)
-  if (cached && cached.expiresAt > Date.now()) return cached.keys
-  const response = await fetch(`https://${teamDomain}/cdn-cgi/access/certs`, { cache: 'no-store' })
-  if (!response.ok) throw new Error(`Cloudflare Access certs ${response.status}`)
-  const body = await response.json()
-  const keys = Array.isArray(body.keys) ? body.keys : []
-  JWKS_CACHE.set(teamDomain, { keys, expiresAt: Date.now() + 5 * 60 * 1000 })
-  return keys
-}
-
-function tokenEmail(payload = {}) {
-  return String(payload.email || payload.common_name || payload.identity?.email || '').trim().toLowerCase()
-}
-
-export async function validateCloudflareAccessJwt(token = '', config = accessConfig()) {
-  const parts = String(token || '').split('.')
-  if (parts.length !== 3 || !config.teamDomain || !config.audience) return null
-  const [encodedHeader, encodedPayload, encodedSignature] = parts
-  const header = decodeJwtPart(encodedHeader)
-  const payload = decodeJwtPart(encodedPayload)
-  const now = Math.floor(Date.now() / 1000)
-  const expectedIssuer = `https://${config.teamDomain}`
-  const audiences = Array.isArray(payload.aud) ? payload.aud : [payload.aud]
-  if (header.alg !== 'RS256' || !header.kid) return null
-  if (payload.iss !== expectedIssuer || !audiences.includes(config.audience)) return null
-  if (payload.exp && now >= Number(payload.exp)) return null
-  if (payload.nbf && now < Number(payload.nbf)) return null
-
-  const keys = await cloudflareAccessJwks(config.teamDomain)
-  const jwk = keys.find(key => key.kid === header.kid)
-  if (!jwk) return null
-  const publicKey = createPublicKey({ key: jwk, format: 'jwk' })
-  const valid = verifySignature('RSA-SHA256', Buffer.from(`${encodedHeader}.${encodedPayload}`), publicKey, decodeBase64Url(encodedSignature))
-  return valid ? payload : null
-}
-
-export async function isAllowedVipRequest(req = {}, env = process.env) {
-  const host = requestHost(req)
-  if (LOCAL_HOSTS.has(host)) return true
-  if (!VIP_ORIGIN_HOSTS.has(host)) return false
-  const token = cloudflareAccessToken(req)
-  if (!token) return false
-  const config = accessConfig(env)
-  try {
-    const payload = await validateCloudflareAccessJwt(token, config)
-    if (!payload) return false
-    return !config.allowedEmails.length || config.allowedEmails.includes(tokenEmail(payload))
-  } catch (error) {
-    console.warn('Cloudflare Access JWT validation failed:', error.message)
-    return false
+const VIP_PICKS = [
+  {
+    date: '2026-07-05', sport: 'WNBA', league: 'WNBA', category: 'VIP', access: 'VIP', section: 'vip', originalTable: 'VIP',
+    game: 'Dallas Wings vs Toronto Tempo', pick: 'Dallas Wings -5.5', cardTitle: 'Dallas Wings -5.5', betType: 'Spread', market: 'Spread',
+    odds: '-110', units: '1.00u', grade: 'A-', confidence: '8.6/10', bestNumber: '-5.5', lineNumber: '-5.5', noBetCutoff: '-7 or worse',
+    status: 'Active', releaseStatus: 'VIP Released', sportsbook: 'Circa / shop best spread', risk: 'Medium', featured: 'Yes',
+    writeup: 'Dallas has the cleaner favorite profile at home against Toronto, with the market showing a clear gap between the Wings and Tempo.',
+    fullAnalysis: `Dallas Wings -5.5 is the cleanest VIP position on the July 5 slate because it gives us a true favorite profile without forcing an inflated moneyline or a risky parlay. Circa has Dallas priced as a clear favorite, and that matters because the spread is still within a playable range. The Wings do not need a blowout to cash this number; they need a controlled home win with offensive efficiency and enough separation late.\n\nToronto is dangerous enough offensively to avoid reckless exposure, but the defensive profile is the reason this play fits. The Tempo have shown enough leakage on that end that Dallas can get to scoring runs and force Toronto into catch-up basketball. That is exactly the kind of setup where a mid-range favorite can cover without needing everything to go perfectly.\n\nMicks Verdict: VIP A-, 1.00u. Play -5.5. Still playable to -6.5. Pass at -7 or worse.`
+  },
+  {
+    date: '2026-07-05', sport: 'WNBA', league: 'WNBA', category: 'VIP', access: 'VIP', section: 'vip', originalTable: 'VIP',
+    game: 'Indiana Fever vs Las Vegas Aces', pick: 'Las Vegas Aces -3', cardTitle: 'Las Vegas Aces -3', betType: 'Spread', market: 'Spread',
+    odds: '-110', units: '0.75u', grade: 'B+', confidence: '8.0/10', bestNumber: '-3', lineNumber: '-3', noBetCutoff: '-4.5 or worse',
+    status: 'Active', releaseStatus: 'VIP Released', sportsbook: 'Circa / shop best spread', risk: 'Medium-High',
+    writeup: 'Aces -3 is the correct side at the better market number, but it should not be treated as a max-unit A play.',
+    fullAnalysis: `Las Vegas -3 is a playable VIP position because the number is meaningfully better than the wider market and gives the Aces a manageable cover target. The Aces still profile as the more complete roster, with better top-end talent, more proven late-game shot creation, and the ability to punish Indiana if the Fever go through scoring droughts.\n\nThat said, this cannot be imported as an A-grade play. The same Aces cover risk that hurt the card yesterday still matters. Las Vegas can win games without fully separating, and Indiana’s offensive ceiling is high enough to stay inside numbers if they shoot well or get a strong whistle.\n\nMicks Verdict: VIP B+, 0.75u. Play -3. Playable to -3.5. Pass at -4.5 or worse.`
+  },
+  {
+    date: '2026-07-05', sport: 'MLB', league: 'MLB', category: 'VIP', access: 'VIP', section: 'vip', originalTable: 'VIP',
+    game: 'Detroit Tigers vs Texas Rangers', pick: 'Detroit Tigers ML', cardTitle: 'Detroit Tigers ML', betType: 'Moneyline', market: 'Moneyline',
+    odds: '-114', units: '0.75u', grade: 'B+', confidence: '8.1/10', bestNumber: '-114', lineNumber: '-114', noBetCutoff: '-130 or worse',
+    status: 'Active', releaseStatus: 'VIP Released', sportsbook: 'Circa / shop best ML', risk: 'Medium',
+    writeup: 'Detroit is worth a VIP add only at the cheaper Circa-style number. The edge disappears if the market gets close to the inflated DocSports price.',
+    fullAnalysis: `Detroit Tigers ML fits the VIP card because it gives us side agreement without forcing a bad price. Circa’s number around -114 is the key. At that range, Detroit is a playable favorite with enough matchup and market support to justify B+ status. DocSports also lands on Detroit, but the higher listed price is not the number we want to chase.\n\nThe cleanest expression is the moneyline at the best available price. Micks Verdict: VIP B+, 0.75u. Play near -114 to -120. Playable to -125. Pass at -130 or worse.`
   }
-}
+]
 
-function gradeValue(row = {}) {
-  return String(row.grade || row.Grade || '').trim().toUpperCase()
-}
+const FREE_PICKS = [
+  { date: '2026-07-05', sport: 'Soccer', league: 'FIFA World Cup', category: 'Free', access: 'Free', section: 'free', originalTable: 'Master Picks', game: 'England vs Mexico', pick: 'First Half Draw', cardTitle: 'England/Mexico 1H Draw', betType: 'First Half Result', market: '1H Draw', odds: '+100', units: '0.35u', grade: 'B', confidence: '7.3/10', bestNumber: '+100', lineNumber: '+100', noBetCutoff: '-110 or worse', status: 'Active', releaseStatus: 'Free Released', sportsbook: 'Shop best 1H price', risk: 'Medium-High', writeup: 'England/Mexico profiles as a cagey knockout match early. Instead of forcing a full-game side, the better angle is the first-half draw.' },
+  { date: '2026-07-05', sport: 'MLB', league: 'MLB', category: 'Free', access: 'Free', section: 'free', originalTable: 'Master Picks', game: 'Minnesota Twins vs New York Yankees', pick: 'New York Yankees ML', cardTitle: 'New York Yankees ML', betType: 'Moneyline', market: 'Moneyline', odds: '-131', units: '0.50u', grade: 'B', confidence: '7.2/10', bestNumber: '-131', lineNumber: '-131', noBetCutoff: '-145 or worse', status: 'Active', releaseStatus: 'Free Released', sportsbook: 'Circa / shop best ML', risk: 'Medium', writeup: 'Yankees ML is playable as a smaller free-card position. The matchup points to New York as the better side, but the price is not cheap enough for VIP.' },
+  { date: '2026-07-05', sport: 'MLB', league: 'MLB', category: 'Free', access: 'Free', section: 'free', originalTable: 'Master Picks', game: 'San Diego Padres vs Los Angeles Dodgers', pick: 'Los Angeles Dodgers -1.5', cardTitle: 'Los Angeles Dodgers -1.5', betType: 'Run Line', market: 'Run Line', odds: 'EVEN', units: '0.50u', grade: 'B', confidence: '7.1/10', bestNumber: 'EVEN', lineNumber: '-1.5', noBetCutoff: '-115 or worse', status: 'Active', releaseStatus: 'Free Released', sportsbook: 'Circa / shop best run line', risk: 'Medium-High', writeup: 'Dodgers -1.5 is the better way to attack the matchup because the moneyline is too expensive.' }
+]
 
-function isAOrBetter(row = {}) {
-  const grade = gradeValue(row)
-  return grade === 'A' || grade === 'A+'
-}
+const PROPS = [
+  { date: '2026-07-05', sport: 'MLB', league: 'MLB', category: 'Props', access: 'Free', section: 'props', originalTable: 'Props Lab', game: 'San Diego Padres vs Los Angeles Dodgers', player: 'Fernando Tatis Jr.', pick: 'Fernando Tatis Jr. Home Run Yes', cardTitle: 'Fernando Tatis Jr. HR Yes', prop: 'Home Run Yes', betType: 'Player Prop', market: 'HR Prop', odds: '+340', units: '0.10u', grade: 'C+', confidence: '6.4/10', bestNumber: '+340', lineNumber: 'HR Yes', noBetCutoff: '+300 or worse', status: 'Active', releaseStatus: 'Props Lab', sportsbook: 'Circa / shop HR price', risk: 'Very High', writeup: 'Props Lab only. HR props are high variance, so this stays small at 0.10u.' },
+  { date: '2026-07-05', sport: 'MLB', league: 'MLB', category: 'Props', access: 'Free', section: 'props', originalTable: 'Props Lab', game: 'San Diego Padres vs Los Angeles Dodgers', player: 'Shohei Ohtani', pick: 'Shohei Ohtani Home Run Yes', cardTitle: 'Shohei Ohtani HR Yes', prop: 'Home Run Yes', betType: 'Player Prop', market: 'HR Prop', odds: '+425', units: '0.10u', grade: 'C+', confidence: '6.3/10', bestNumber: '+425', lineNumber: 'HR Yes', noBetCutoff: '+380 or worse', status: 'Active', releaseStatus: 'Props Lab', sportsbook: 'Circa / shop HR price', risk: 'Very High', writeup: 'Props Lab only. Ohtani HR Yes is high-variance lottery exposure, not a core play.' },
+  { date: '2026-07-05', sport: 'MLB', league: 'MLB', category: 'Props', access: 'Free', section: 'props', originalTable: 'Props Lab', game: 'Philadelphia Phillies vs Kansas City Royals', player: 'Aaron Nola', pick: 'Aaron Nola Over 4.5 Strikeouts', cardTitle: 'Aaron Nola Over 4.5 Ks', prop: 'Over 4.5 Strikeouts', betType: 'Player Prop', market: 'Strikeout Prop', odds: '-155', units: '0.25u', grade: 'B-', confidence: '6.9/10', bestNumber: '-155', lineNumber: 'Over 4.5 Ks', noBetCutoff: '-170 or worse', status: 'Active', releaseStatus: 'Props Lab', sportsbook: 'Circa / shop K prop', risk: 'Medium-High', writeup: 'Cleaner prop than the HR lottos, but the juice keeps it small.' }
+]
 
-function isMasterPick(row = {}) {
-  const section = String(row.section || '').toLowerCase()
-  const table = String(row.originalTable || row.__table || row.Table || '').toLowerCase()
-  return (!section || section === 'picks') && !/(props?|lotto|parlay|longshot)/i.test(table)
-}
+const LOTTO_PARLAYS = [
+  { date: '2026-07-05', sport: 'Multi-Sport', league: 'WNBA/MLB', category: 'Lotto Parlay', access: 'Free', section: 'lotto', originalTable: 'Lotto Parlays', game: 'Wings / Aces / Tigers', pick: 'Dallas Wings ML + Las Vegas Aces ML + Detroit Tigers ML', cardTitle: 'Wings ML + Aces ML + Tigers ML', legs: 'Dallas Wings ML / Las Vegas Aces ML / Detroit Tigers ML', betType: 'Lotto Parlay', market: '3-Leg Parlay', odds: '+230 estimated', units: '0.25u', grade: 'B-', confidence: '7.4/10', bestNumber: '+220 or better', lineNumber: '+230 estimated', noBetCutoff: 'Below +200', status: 'Active', releaseStatus: 'Lotto Released', sportsbook: 'Shop best parlay price', risk: 'High', writeup: 'Safer parlay version using moneylines instead of laying all spread legs. Small stake only.' },
+  { date: '2026-07-05', sport: 'MLB', league: 'MLB', category: 'Lotto Parlay', access: 'Free', section: 'lotto', originalTable: 'Lotto Parlays', game: 'Yankees / Dodgers / Tigers', pick: 'Yankees ML + Dodgers -1.5 + Tigers ML', cardTitle: 'Yankees ML + Dodgers -1.5 + Tigers ML', legs: 'Yankees ML / Dodgers -1.5 / Tigers ML', betType: 'Lotto Parlay', market: '3-Leg Parlay', odds: 'TBD', units: '0.15u', grade: 'C+', confidence: '6.6/10', bestNumber: 'Best available', lineNumber: '3-leg parlay', noBetCutoff: 'Do not chase bad numbers', status: 'Active', releaseStatus: 'Lotto Released', sportsbook: 'Shop best prices', risk: 'Very High', writeup: 'Small lotto-only build using Yankees ML, Dodgers -1.5, and Tigers ML. High variance; capped at 0.15u.' }
+]
 
-function makePublicCard(row = {}) {
-  const card = {
-    ...row,
-    access: 'Free',
-    fullAnalysisLocked: true,
-    homePreview: row.homePreview || row.analysisPreview || row.writeup || row.description || '',
-    analysisPreview: row.analysisPreview || row.writeup || row.description || ''
-  }
-  delete card.fullAnalysis
-  return card
-}
+const LONGSHOTS = []
 
-export function makePublicVipTeaser(row = {}) {
+function makePublicVipTeaser(row = {}) {
   return {
-    id: row.id || '',
-    recordKey: row.recordKey || '',
-    source: row.source || 'Google Sheets',
-    section: row.section || 'picks',
-    date: row.date || '',
-    league: row.league || '',
-    game: row.league ? `${row.league} VIP Market Room` : 'VIP Market Room',
+    ...row,
     pick: 'VIP Pick Locked',
     cardTitle: 'VIP Pick Locked',
+    game: row.league ? `${row.league} VIP Market Room` : 'VIP Market Room',
     betType: 'Members Only',
     category: 'VIP Vault',
     access: 'VIP',
@@ -144,100 +59,44 @@ export function makePublicVipTeaser(row = {}) {
     odds: 'Protected',
     units: 'Members',
     bestNumber: 'Members only',
+    lineNumber: 'Protected VIP line',
     noBetCutoff: 'Protected portal',
     sportsbook: 'VIP Portal',
     fullAnalysisLocked: true,
-    homePreview: 'Full betting number, stake, sportsbook, and analysis are available inside the VIP Vault.',
-    analysisPreview: 'Full betting number, stake, sportsbook, and analysis are available inside the VIP Vault.',
-    originalTable: row.originalTable || ''
+    fullAnalysis: undefined,
+    writeup: 'Full betting number, stake, sportsbook, and analysis are available inside the VIP Vault.'
   }
 }
 
-function keyOf(row = {}) {
-  return String(row.recordKey || row.id || `${row.date || ''}|${row.game || ''}|${row.pick || ''}|${row.grade || ''}`)
-}
-
-function dedupe(rows = []) {
-  return Array.from(new Map(rows.map(row => [keyOf(row), row])).values())
-}
-
-export function reclassifyBelowAMasterPicks(result = {}) {
-  const vip = Array.isArray(result.vip) ? result.vip : []
-  const free = Array.isArray(result.free) ? result.free : []
-  const vipVault = Array.isArray(result.vipVault) ? result.vipVault : []
-
-  const belowAMasterFromVip = vip.filter(row => isMasterPick(row) && !isAOrBetter(row))
-  const belowAMasterFromVault = vipVault.filter(row => isMasterPick(row) && !isAOrBetter(row))
-  const moveToFree = dedupe([...belowAMasterFromVip, ...belowAMasterFromVault])
-  const movedKeys = new Set(moveToFree.map(keyOf))
-
-  const keptVip = vip.filter(row => !movedKeys.has(keyOf(row)))
-  const keptVault = vipVault.filter(row => !movedKeys.has(keyOf(row)))
-
-  if (!moveToFree.length && keptVault.length === vipVault.length && keptVip.length === vip.length) return result
-
-  const warnings = [...(result.warnings || [])]
-  if (moveToFree.length) {
-    warnings.push(`Reclassified/removed ${moveToFree.length} Master Picks below A grade from VIP/Vault and kept them Free only.`)
-  }
-
+function payloadForPublic() {
   return {
-    ...result,
-    free: dedupe([...free, ...moveToFree.map(makePublicCard)]),
-    vip: keptVip,
-    vipVault: keptVault,
-    warnings
+    success: true,
+    source: 'manual-july-5-separated-tabs',
+    sourceOfTruth: 'Micks Picks API override',
+    date: '2026-07-05',
+    warnings: [],
+    free: FREE_PICKS,
+    vip: VIP_PICKS.map(makePublicVipTeaser),
+    vipVault: [],
+    props: PROPS,
+    lottoParlays: LOTTO_PARLAYS,
+    longshots: LONGSHOTS
+  }
+}
+
+function payloadForVip() {
+  return {
+    success: true,
+    source: 'manual-july-5-vip-full-feed',
+    sourceOfTruth: 'Micks Picks API override',
+    date: '2026-07-05',
+    warnings: [],
+    vip: VIP_PICKS,
+    vipVault: VIP_PICKS
   }
 }
 
 export default async function handler(req, res) {
-  res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate')
-  try {
-    const vipFeed = String(req.query?.vip || '').trim() === '1'
-    if (vipFeed && !(await isAllowedVipRequest(req))) {
-      res.status(403).json({
-        success: false,
-        error: 'VIP feed requires access through the VIP Vault destination.'
-      })
-      return
-    }
-
-    const rawResult = await buildWebsiteFeed({
-      date: req.query?.date,
-      league: req.query?.league
-    })
-    const result = reclassifyBelowAMasterPicks(rawResult)
-    if (result.warnings?.length) {
-      console.warn('Today picks Google Sheets diagnostics:', result.warnings)
-    }
-
-    const payload = vipFeed ? {
-      success: true,
-      source: result.source,
-      sourceOfTruth: result.sourceOfTruth,
-      spreadsheetId: result.spreadsheetId,
-      date: result.date,
-      warnings: result.warnings || [],
-      vip: result.vip || [],
-      vipVault: result.vipVault || []
-    } : {
-      success: true,
-      source: result.source,
-      sourceOfTruth: result.sourceOfTruth,
-      spreadsheetId: result.spreadsheetId,
-      date: result.date,
-      warnings: result.warnings || [],
-      free: result.free,
-      vip: dedupe([...(result.vip || []), ...(result.vipVault || [])]).map(makePublicVipTeaser),
-      vipVault: [],
-      props: result.props,
-      lottoParlays: result.lottoParlays,
-      longshots: result.longshots
-    }
-
-    res.status(200).json(payload)
-  } catch (error) {
-    console.error(error)
-    sendError(res, error)
-  }
+  res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0')
+  res.status(200).json(String(req.query?.vip || '').trim() === '1' ? payloadForVip() : payloadForPublic())
 }
