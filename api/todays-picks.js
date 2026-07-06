@@ -25,8 +25,7 @@ const FREE_PICKS = [
 ]
 
 const PROPS = [
-  { date: '2026-07-06', sport: 'MLB', league: 'MLB', category: 'Props Watchlist', access: 'Free', section: 'props', originalTable: 'Props Lab', game: 'MLB HR Props', pick: 'MLB HR Props Watchlist', cardTitle: 'MLB HR Props Watchlist', betType: 'Watchlist', market: 'HR Props', odds: 'TBD', units: '0.00u', grade: 'Watchlist', confidence: 'Watchlist', bestNumber: 'Confirm exact price', lineNumber: 'Watchlist', noBetCutoff: 'Do not import as official without exact player and price', status: 'Watchlist', releaseStatus: 'Watchlist Only', sportsbook: 'TBD', risk: 'High', writeup: 'Target Dodgers bats vs Rockies, Braves bats vs Mets, and one Yankees or Rays power bat only after confirming exact HR odds.' },
-  { date: '2026-07-06', sport: 'Soccer', league: 'FIFA World Cup', category: 'Props Watchlist', access: 'Free', section: 'props', originalTable: 'Props Lab', game: 'World Cup Goal Scorers', pick: 'World Cup Goal Scorer Props Watchlist', cardTitle: 'World Cup Goal Scorer Props Watchlist', betType: 'Watchlist', market: 'Goal Scorer', odds: 'TBD', units: '0.00u', grade: 'Watchlist', confidence: 'Watchlist', bestNumber: 'Confirm exact price', lineNumber: 'Watchlist', noBetCutoff: 'Do not import as official without exact player and price', status: 'Watchlist', releaseStatus: 'Watchlist Only', sportsbook: 'TBD', risk: 'High', writeup: 'Possible scorer props include one Spain attacker and one USA or Belgium primary attacker, but only after exact prices are confirmed.', birthdayNotes: 'July 6 football birthdays, for example Zé Roberto and Rory Delap, are narrative only and should not be treated as edge.' }
+  { date: '2026-07-06', sport: 'MLB/Soccer', league: 'Props Lab', category: 'Props', access: 'Free', section: 'props', originalTable: 'Props Lab', game: 'Props Lab', pick: 'No Official Props Released', cardTitle: 'No Official Props Released', betType: 'Props Notice', market: 'Props Hold', odds: 'N/A', units: '0.00u', grade: 'Pass', confidence: 'Pass', bestNumber: 'Need exact player and price', lineNumber: 'Props held', noBetCutoff: 'Do not play without exact number', status: 'Hold', releaseStatus: 'Props Held', sportsbook: 'TBD', risk: 'High', writeup: 'Props are held. No official props are released until exact player, market, odds, and sportsbook are confirmed.' }
 ]
 
 const LOTTO_PARLAYS = [
@@ -40,35 +39,15 @@ const MAIN_PICKS = [...VIP_PICKS, ...FREE_PICKS]
 const ALL_ROWS = [...MAIN_PICKS, ...PROPS, ...LOTTO_PARLAYS]
 
 function makePublicVipTeaser(row = {}) {
-  return {
-    ...row,
-    pick: 'VIP Pick Locked',
-    cardTitle: 'VIP Pick Locked',
-    game: row.league ? `${row.league} VIP Market Room` : 'VIP Market Room',
-    betType: 'Members Only',
-    category: 'VIP Vault',
-    access: 'VIP',
-    status: 'VIP Locked',
-    releaseStatus: 'VIP Locked',
-    grade: 'VIP',
-    odds: 'Protected',
-    units: 'Members',
-    bestNumber: 'Members only',
-    lineNumber: 'Protected VIP line',
-    noBetCutoff: 'Protected portal',
-    sportsbook: 'VIP Portal',
-    fullAnalysisLocked: true,
-    fullAnalysis: undefined,
-    writeup: 'Full betting number, stake, sportsbook, and analysis are available inside the VIP Vault.'
-  }
+  return { ...row, pick: 'VIP Pick Locked', cardTitle: 'VIP Pick Locked', game: row.league ? `${row.league} VIP Market Room` : 'VIP Market Room', betType: 'Members Only', category: 'VIP Vault', access: 'VIP', status: 'VIP Locked', releaseStatus: 'VIP Locked', grade: 'VIP', odds: 'Protected', units: 'Members', bestNumber: 'Members only', lineNumber: 'Protected VIP line', noBetCutoff: 'Protected portal', sportsbook: 'VIP Portal', fullAnalysisLocked: true, fullAnalysis: undefined, writeup: 'Full betting number, stake, sportsbook, and analysis are available inside the VIP Vault.' }
 }
 
 function payloadForPublic() {
-  return { success: true, source: 'manual-july-6-active-card', sourceOfTruth: 'Micks Picks API override', date: '2026-07-06', warnings: [], activePicks: MAIN_PICKS, rows: MAIN_PICKS, records: MAIN_PICKS, picks: MAIN_PICKS, mainPicks: MAIN_PICKS, free: FREE_PICKS, vip: VIP_PICKS.map(makePublicVipTeaser), vipVault: [], props: PROPS, propsLab: PROPS, lottoParlays: LOTTO_PARLAYS, lotto: LOTTO_PARLAYS, parlays: LOTTO_PARLAYS, longshots: LONGSHOTS, allRows: ALL_ROWS }
+  return { success: true, source: 'manual-july-6-active-card-props-clear', sourceOfTruth: 'Micks Picks API override', date: '2026-07-06', warnings: [], activePicks: MAIN_PICKS, rows: MAIN_PICKS, records: MAIN_PICKS, picks: MAIN_PICKS, mainPicks: MAIN_PICKS, free: FREE_PICKS, vip: VIP_PICKS.map(makePublicVipTeaser), vipVault: [], props: PROPS, propsLab: PROPS, lottoParlays: LOTTO_PARLAYS, lotto: LOTTO_PARLAYS, parlays: LOTTO_PARLAYS, longshots: LONGSHOTS, allRows: ALL_ROWS }
 }
 
 function payloadForVip() {
-  return { success: true, source: 'manual-july-6-vip-full-feed', sourceOfTruth: 'Micks Picks API override', date: '2026-07-06', warnings: [], activePicks: MAIN_PICKS, rows: MAIN_PICKS, records: MAIN_PICKS, picks: MAIN_PICKS, mainPicks: MAIN_PICKS, free: FREE_PICKS, vip: VIP_PICKS, vipVault: VIP_PICKS, props: PROPS, propsLab: PROPS, lottoParlays: LOTTO_PARLAYS, lotto: LOTTO_PARLAYS, parlays: LOTTO_PARLAYS, longshots: LONGSHOTS, allRows: ALL_ROWS }
+  return { success: true, source: 'manual-july-6-vip-full-feed-props-clear', sourceOfTruth: 'Micks Picks API override', date: '2026-07-06', warnings: [], activePicks: MAIN_PICKS, rows: MAIN_PICKS, records: MAIN_PICKS, picks: MAIN_PICKS, mainPicks: MAIN_PICKS, free: FREE_PICKS, vip: VIP_PICKS, vipVault: VIP_PICKS, props: PROPS, propsLab: PROPS, lottoParlays: LOTTO_PARLAYS, lotto: LOTTO_PARLAYS, parlays: LOTTO_PARLAYS, longshots: LONGSHOTS, allRows: ALL_ROWS }
 }
 
 export default async function handler(req, res) {
