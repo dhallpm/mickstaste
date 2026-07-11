@@ -5,9 +5,6 @@
 
   if (host === 'vip.mickspicks.us') {
     const tab = location.hash.slice(1).toLowerCase()
-    // This script only ships with the public project. If that project is ever
-    // attached to the VIP hostname again, escape its public UI to the public
-    // domain without rewriting links or touching data-tab-target attributes.
     location.replace(`${PUBLIC_ROOT}#${PUBLIC_TABS.has(tab) ? tab : 'home'}`)
     return
   }
@@ -37,6 +34,35 @@
   const cutoff = row => first(row, ['noBetCutoff', 'No-Bet Cutoff', 'No Bet Cutoff']) || 'Number discipline required'
   const sportsbook = row => first(row, ['sportsbook', 'Sportsbook', 'book', 'Book']) || 'Best Available'
   const writeup = row => first(row, ['writeup', 'Writeup', 'analysis', 'Analysis', 'shortAnalysis', 'Short Analysis']) || 'Released to the live card.'
+
+  const JULY_11_PARLAYS = [
+    {
+      Date: '2026-07-11',
+      League: 'World Cup',
+      Game: 'England vs Norway; Argentina vs Switzerland',
+      Pick: 'England to Advance + Argentina to Advance',
+      Grade: 'B+',
+      Units: '0.50',
+      Odds: 'Shop best available',
+      'Best Number': 'Use current to-advance prices within listed cutoffs',
+      'No-Bet Cutoff': 'Do not play if either leg exceeds its cutoff',
+      Sportsbook: 'Best Available',
+      Writeup: 'This is the safer two-leg card built from the two strongest knockout positions. Both legs use the to-advance market, which protects against a draw after 90 minutes and keeps extra time and penalties live as additional paths to cash. The price will be shorter than a regulation-moneyline parlay, but the structure is materially safer and better aligned with the original handicaps. Risk is concentrated in knockout variance, so the stake stays at 0.50u.'
+    },
+    {
+      Date: '2026-07-11',
+      League: 'NBA Summer League / WNBA',
+      Game: 'Nuggets vs Timberwolves; Mercury vs Aces',
+      Pick: 'Timberwolves -4.5 + Mercury/Aces Over 170.5',
+      Grade: 'B',
+      Units: '0.25',
+      Odds: 'Shop best available',
+      'Best Number': 'Minnesota -4.5 and total 170.5',
+      'No-Bet Cutoff': 'Minnesota -5.5 or total 172',
+      Sportsbook: 'Best Available',
+      Writeup: 'The value parlay combines the improved Minnesota spread with the cleaner WNBA total. Moving to Timberwolves -4.5 protects against a five-point result, while the Mercury-Aces over avoids forcing a side where outside opinions conflict. These legs come from separate games, reducing direct correlation, but parlay variance remains high. Keep the exposure at 0.25u and do not chase worse numbers.'
+    }
+  ]
 
   function pickCard(row, label) {
     return `<article class="card pick-card glass">
@@ -81,10 +107,13 @@
       if (!res.ok) throw new Error(`todays-picks ${res.status}`)
       const data = await res.json()
       renderSpecialTab('propsCards', data.props || data.propsLab || data.playerProps || [], 'Props Lab', 'No props released yet.')
-      renderSpecialTab('longshotsCards', data.lottoParlays || data.lotto || data.parlays || data.longshots || [], 'Lotto Parlay', 'No lotto parlays released yet.')
+      const apiParlays = data.lottoParlays || data.lotto || data.parlays || []
+      renderSpecialTab('longshotsCards', Array.isArray(apiParlays) && apiParlays.length ? apiParlays : JULY_11_PARLAYS, 'Lotto Parlay', 'No lotto parlays released yet.')
       if (window.lucide && typeof window.lucide.createIcons === 'function') window.lucide.createIcons()
     } catch (error) {
       console.warn('Special tab hydration failed:', error)
+      renderSpecialTab('longshotsCards', JULY_11_PARLAYS, 'Lotto Parlay', 'No lotto parlays released yet.')
+      if (window.lucide && typeof window.lucide.createIcons === 'function') window.lucide.createIcons()
     }
   }
 
