@@ -1,31 +1,27 @@
-const empty = []
+function rec(section,data){const access=data.Access||(section==='VIP'?'VIP':'Free');return{...data,section,__section:section,originalTable:section,access,Access:access,date:data.Date,sport:data.Sport,league:data.League,game:data.Game,pick:data.Pick,market:data['Bet Type']||data.Prop||'',odds:data.Odds||'',grade:data.Grade||'',units:data.Units||'',confidence:data.Confidence||'',status:data.Status||'Pending',notes:data.Writeup||data['Full Analysis']||'',source:'Micks Picks July 11 all-sports card'}}
 
-export default function handler(req, res) {
-  res.setHeader('Content-Type', 'application/json')
-  res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0')
-  res.status(200).json({
-    ok: true,
-    success: true,
-    source: 'active-card-cleared-after-july-10-grading',
-    date: '2026-07-11',
-    vip: empty,
-    vipPicks: empty,
-    vipVault: empty,
-    free: empty,
-    freePicks: empty,
-    props: empty,
-    propsLab: empty,
-    lottoParlays: empty,
-    lotto: empty,
-    parlays: empty,
-    longshots: empty,
-    mainPicks: empty,
-    activePicks: empty,
-    rows: empty,
-    records: empty,
-    picks: empty,
-    allRows: empty,
-    publicRows: empty,
-    message: 'July 10 card graded and archived.'
-  })
-}
+const vip=[
+rec('VIP',{Date:'2026-07-11',Sport:'MMA',League:'UFC 329',Game:'Max Holloway vs Conor McGregor',Pick:'Max Holloway ML','Bet Type':'Moneyline',Odds:'-210',Grade:'A-',Units:'1.00','Best Number':'-210 or better','No-Bet Cutoff':'-240',Confidence:'8.7/10',Status:'Pending',Access:'VIP',Featured:'Yes','Official Bet':'Yes','Pick of the Day Eligible':'Yes','Full Analysis':'Holloway owns the decisive activity, durability, volume, and recent-form advantages. McGregor enters after nearly five years away, which creates major timing and cardio uncertainty. The moneyline is preferred over a method prop because it protects against a decision while still backing the more reliable fighter.','Risk':'McGregor early power and five-round variance.'}),
+rec('VIP',{Date:'2026-07-11',Sport:'Soccer',League:'FIFA World Cup',Game:'Norway vs England',Pick:'England to Advance','Bet Type':'To Advance',Odds:'-250',Grade:'A-',Units:'1.00','Best Number':'-250 or better','No-Bet Cutoff':'-285',Confidence:'8.5/10',Status:'Pending',Access:'VIP',Featured:'Yes','Official Bet':'Yes','Full Analysis':'England has won 15 of its last 16 competitive matches and brings the deeper midfield and bench. Norway is dangerous through Haaland and transitions, so the to-advance market is preferred to the 90-minute moneyline because it protects against extra time.','Risk':'Extreme Miami heat and Haaland transition threat.'})]
+
+const free=[
+rec('Free',{Date:'2026-07-11',Sport:'Baseball',League:'MLB',Game:'Seattle Mariners vs Tampa Bay Rays',Pick:'Seattle Mariners ML','Bet Type':'Moneyline',Grade:'B+',Units:'0.75','Best Number':'-135 or better','No-Bet Cutoff':'-150',Confidence:'7.8/10',Status:'Pending',Access:'Free','Official Bet':'Yes',Writeup:'Logan Gilbert enters in strong form and holds the starting-pitching edge over Griffin Jax. Seattle is the preferred side if the price remains manageable.'}),
+rec('Free',{Date:'2026-07-11',Sport:'Basketball',League:'WNBA',Game:'New York Liberty vs Minnesota Lynx',Pick:'Minnesota Lynx ML','Bet Type':'Moneyline',Grade:'B',Units:'0.50','Best Number':'-130 or better','No-Bet Cutoff':'-145',Confidence:'7.2/10',Status:'Pending',Access:'Free','Official Bet':'Yes',Writeup:'New York remains shorthanded while Minnesota gets Olivia Miles back and has the home-court edge. Collier remains out, keeping the stake moderate.'}),
+rec('Free',{Date:'2026-07-11',Sport:'Soccer',League:'FIFA World Cup',Game:'Argentina vs Switzerland',Pick:'Argentina to Advance','Bet Type':'To Advance',Grade:'B+',Units:'0.75','Best Number':'-300 or better','No-Bet Cutoff':'-340',Confidence:'7.9/10',Status:'Pending',Access:'Free','Official Bet':'Yes',Writeup:'Argentina retains the superior attacking ceiling and knockout experience. Switzerland is disciplined enough to make the 90-minute line uncomfortable, so advancement is the safer market.'})]
+
+const propsLab=[
+rec('Props',{Date:'2026-07-11',Sport:'MMA',League:'UFC 329',Game:'Max Holloway vs Conor McGregor',Pick:'Max Holloway by KO/TKO',Prop:'Method of Victory',Grade:'B+',Units:'0.50','Best Number':'+140 or better','No-Bet Cutoff':'+115',Confidence:'7.6/10',Status:'Pending',Access:'Free','Official Bet':'Yes',Writeup:'McGregor inactivity and likely late-fight cardio decline create a finish window for Holloway after sustained volume.'}),
+rec('Props',{Date:'2026-07-11',Sport:'MMA',League:'UFC 329',Game:'Cory Sandhagen vs Mario Bautista',Pick:'Cory Sandhagen by Decision',Prop:'Method of Victory',Odds:'+190',Grade:'B',Units:'0.50',Confidence:'7.2/10',Status:'Pending',Access:'Free','Official Bet':'Yes',Writeup:'Sandhagen has the range, elite-level experience, and five-round composure to manage Bautista pressure and win minutes.'}),
+rec('Props',{Date:'2026-07-11',Sport:'MMA',League:'UFC 329',Game:'Adrian Yanez vs Cody Garbrandt',Pick:'Adrian Yanez by KO/TKO',Prop:'Method of Victory',Odds:'+100',Grade:'B',Units:'0.50',Confidence:'7.1/10',Status:'Pending',Access:'Free','Official Bet':'Yes',Writeup:'Yanez carries the cleaner boxing and sustained pressure against an opponent with recurring durability concerns.'}),
+rec('Props',{Date:'2026-07-11',Sport:'Soccer',League:'FIFA World Cup',Game:'Norway vs England',Pick:'Erling Haaland Anytime Scorer',Player:'Erling Haaland',Prop:'Anytime Scorer',Grade:'B-',Units:'0.35','Best Number':'+120 or better','No-Bet Cutoff':'+100',Confidence:'6.8/10',Status:'Pending',Access:'Free','Official Bet':'Yes',Writeup:'Haaland enters with seven tournament goals and remains Norway’s highest-leverage route to scoring.'})]
+
+const lottoParlays=[
+rec('Lotto',{Date:'2026-07-11',Sport:'Multi-Sport',League:'World Cup / UFC',Game:'Norway vs England; Holloway vs McGregor',Pick:'England to Advance + Max Holloway ML','Bet Type':'2-Leg Parlay',Grade:'B+',Units:'0.50',Confidence:'7.8/10',Status:'Pending',Access:'Free','Official Bet':'Yes',Writeup:'A two-leg combination of the two highest-confidence advancement and moneyline positions.'}),
+rec('Lotto',{Date:'2026-07-11',Sport:'Multi-Sport',League:'MLB / WNBA / World Cup',Game:'Mariners vs Rays; Liberty vs Lynx; Argentina vs Switzerland',Pick:'Mariners ML + Lynx ML + Argentina to Advance','Bet Type':'3-Leg Parlay',Grade:'B',Units:'0.25',Confidence:'6.9/10',Status:'Pending',Access:'Free','Official Bet':'Yes',Writeup:'Small-stake value parlay built from the strongest public sides across baseball, basketball, and soccer.'})]
+
+const longshots=[
+rec('Longshots',{Date:'2026-07-11',Sport:'MMA',League:'UFC 329',Game:'Paddy Pimblett vs Benoit Saint Denis',Pick:'Paddy Pimblett by Submission in Rounds 2 or 3',Prop:'Method / Round',Odds:'+1200',Grade:'C+',Units:'0.15',Confidence:'5.8/10',Status:'Pending',Access:'Free','Official Bet':'Yes',Writeup:'Saint Denis aggression can create late grappling openings if his pace fades.'}),
+rec('Longshots',{Date:'2026-07-11',Sport:'MMA',League:'UFC 329',Game:'Wang Cong vs Tracy Cortez',Pick:'Wang Cong by Decision',Prop:'Method of Victory',Odds:'+245',Grade:'C+',Units:'0.20',Confidence:'5.9/10',Status:'Pending',Access:'Free','Official Bet':'Yes',Writeup:'Wang’s striking volume provides an upset path if she keeps the fight at range and wins rounds.'})]
+
+const publicRows=[...free,...propsLab,...lottoParlays,...longshots],allRows=[...vip,...publicRows]
+export default function handler(req,res){res.setHeader('Content-Type','application/json');res.setHeader('Cache-Control','no-store, no-cache, must-revalidate, max-age=0');res.status(200).json({ok:true,success:true,source:'micks-picks-july-11-all-sports-card',date:'2026-07-11',vip,vipPicks:vip,vipVault:vip,free,freePicks:free,props:propsLab,propsLab,lottoParlays,lotto:lottoParlays,parlays:lottoParlays,longshots,mainPicks:[...vip,...free],activePicks:allRows,rows:allRows,records:allRows,picks:allRows,allRows,publicRows,message:'July 11 all-sports card released.'})}
