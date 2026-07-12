@@ -17,6 +17,60 @@ function isActivePick(row = {}) {
   return true
 }
 
+// Permanent import helper: normalizes the API contract for every current and future renderer.
+function importPick(row = {}, section, access) {
+  const fullAnalysis = row['Full Analysis'] || row.fullAnalysis || row.full || ''
+  const bestNumber = row['Best Number'] || row.bestNumber || row.best || ''
+  const cutoff = row['No-Bet Cutoff'] || row.noBetCutoff || row.cutoff || ''
+  const matchup = row.Matchup || row.matchup || row.Game || row.game || ''
+  const pick = row.Pick || row.pick || row.Selection || row.selection || ''
+  const sport = row.Sport || row.sport || row.League || row.league || ''
+  const line = row.Line || row.line || row.Odds || row.odds || ''
+  const grade = row.Grade || row.grade || ''
+  const units = Number(row.Units ?? row.units ?? 0)
+  const status = row.Status || row.status || 'Pending'
+
+  return {
+    ...row,
+    Section: section,
+    section,
+    Access: access,
+    access: access.toLowerCase(),
+    Sport: sport,
+    sport,
+    League: sport,
+    league: sport,
+    Matchup: matchup,
+    matchup,
+    Game: matchup,
+    game: matchup,
+    Pick: pick,
+    pick,
+    Line: line,
+    line,
+    Odds: line,
+    odds: line,
+    Grade: grade,
+    grade,
+    Units: units,
+    units,
+    Status: status,
+    status,
+    Writeup: row.Writeup || row.writeup || '',
+    writeup: row.Writeup || row.writeup || '',
+    'Full Analysis': fullAnalysis,
+    fullAnalysis,
+    full: fullAnalysis,
+    'Best Number': bestNumber,
+    bestNumber,
+    best: bestNumber,
+    'No-Bet Cutoff': cutoff,
+    noBetCutoff: cutoff,
+    cutoff,
+    officialBet: row['Official Bet'] || row.officialBet || 'Yes'
+  }
+}
+
 const birthdayNote = 'July 12 sports birthdays (Vinícius Júnior, James Rodríguez, Nico Williams, Shai Gilgeous-Alexander, Christian Vieri, etc.) are narrative only and should not be treated as edge.'
 
 const rawVip = [
@@ -102,11 +156,11 @@ const rawLottoParlays = [
 ]
 
 const rawLongshots = []
-const vip = rawVip.filter(isActivePick)
-const free = rawFree.filter(isActivePick)
-const propsLab = rawPropsLab.filter(isActivePick)
-const lottoParlays = rawLottoParlays.filter(isActivePick)
-const longshots = rawLongshots.filter(isActivePick)
+const vip = rawVip.map(row => importPick(row, 'VIP', 'VIP')).filter(isActivePick)
+const free = rawFree.map(row => importPick(row, 'Free Picks', 'Free')).filter(isActivePick)
+const propsLab = rawPropsLab.map(row => importPick(row, 'Props Lab', 'Free')).filter(isActivePick)
+const lottoParlays = rawLottoParlays.map(row => importPick(row, 'Lotto Parlays', 'Free')).filter(isActivePick)
+const longshots = rawLongshots.map(row => importPick(row, 'Longshots', 'Free')).filter(isActivePick)
 const publicRows = [...free, ...propsLab, ...lottoParlays, ...longshots]
 const allRows = [...vip, ...publicRows]
 const straightAndPropsUnits = [...vip, ...free, ...propsLab].reduce((sum, row) => sum + Number(row.Units || 0), 0)
@@ -119,7 +173,7 @@ export default function handler(req, res) {
   res.setHeader('Pragma', 'no-cache')
   res.setHeader('Expires', '0')
   res.status(200).json({
-    ok: true, success: true, source: 'micks-picks-july-12-final', date: '2026-07-12',
+    ok: true, success: true, source: 'micks-picks-july-12-import-normalized', date: '2026-07-12',
     vip, vipPicks: vip, vipVault: vip,
     free, freePicks: free,
     props: propsLab, propsLab,
@@ -130,6 +184,7 @@ export default function handler(req, res) {
     parlayUnits: Number(parlayUnits.toFixed(2)),
     totalUnits: Number(totalUnits.toFixed(2)),
     birthdayNote,
+    importContractVersion: '2026-07-12-v1',
     message: `${allRows.length} active picks posted for July 12, 2026.`
   })
 }
