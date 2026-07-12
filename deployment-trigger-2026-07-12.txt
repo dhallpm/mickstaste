@@ -1,0 +1,2 @@
+Force production deployment after July 11 card settlement.
+Active cards must load from api/todays-picks.js on main.
