@@ -1,52 +1,77 @@
-function rec(section,data){const access=data.Access||(section==='VIP'?'VIP':'Free');return{...data,section,__section:section,originalTable:section,access,Access:access,date:data.Date,sport:data.Sport,league:data.League,game:data.Game,pick:data.Pick,market:data['Bet Type']||data.Prop||'',odds:data.Odds||'',grade:data.Grade||'',units:data.Units||'',confidence:data.Confidence||'',status:data.Status||'Pending',notes:data.Writeup||data['Full Analysis']||'',source:'Micks Picks July 11 live card with parlays'}}
+const SETTLED_VALUES = new Set([
+  'graded', 'settled', 'final', 'completed', 'complete',
+  'win', 'won', 'loss', 'lost', 'push', 'void', 'voided',
+  'cancelled', 'canceled'
+])
 
-const vip=[
-rec('VIP',{Date:'2026-07-11',Sport:'Soccer',League:'FIFA World Cup',Game:'England vs Norway',Pick:'England to Advance','Bet Type':'To Advance',Odds:'-220',Grade:'A-',Units:'1.00','Best Number':'-220 or better','No-Bet Cutoff':'-250',Confidence:'8.6/10',Status:'Pending',Access:'VIP',Featured:'Yes','Official Bet':'Yes','Pick of the Day Eligible':'Yes','Full Analysis':`Opening Thesis: England is the more complete side over a full knockout match, and the to-advance market removes the unnecessary 90-minute draw risk.
+function normalized(value) {
+  return String(value || '').trim().toLowerCase()
+}
 
-Matchup Edge: England owns the deeper midfield, stronger bench and more reliable late-match options. Norway remains dangerous through direct transitions and Erling Haaland, but it is more dependent on isolated moments than sustained pressure.
+function isActivePick(row = {}) {
+  const status = normalized(row.Status || row.status || row['Release Status'])
+  const result = normalized(row.Result || row.result || row.Outcome || row.outcome)
+  const official = normalized(row['Official Bet'] || row.officialBet)
 
-Market and Number: Play England to advance at -220 or better. Do not chase beyond -250 because knockout variance makes the price too thin.
+  if (SETTLED_VALUES.has(status) || SETTLED_VALUES.has(result)) return false
+  if (official === 'no') return false
+  return true
+}
 
-Why It Made VIP: Superior squad depth, midfield control and multiple paths to advance.
+// Only ungraded, currently released picks belong in these source arrays.
+// Settled picks are retained exclusively in /api/results.
+const rawVip = []
+const rawFree = []
+const rawPropsLab = []
+const rawLottoParlays = []
+const rawLongshots = []
 
-Risk: Haaland finishing, Norway counterattacks and knockout volatility.`}),
-rec('VIP',{Date:'2026-07-11',Sport:'Soccer',League:'FIFA World Cup',Game:'Argentina vs Switzerland',Pick:'Argentina to Advance','Bet Type':'To Advance',Odds:'-290',Grade:'A-',Units:'1.00','Best Number':'-290 or better','No-Bet Cutoff':'-325',Confidence:'8.4/10',Status:'Pending',Access:'VIP',Featured:'Yes','Official Bet':'Yes','Full Analysis':`Opening Thesis: Argentina owns the higher attacking ceiling, greater individual quality and superior knockout pedigree.
+const vip = rawVip.filter(isActivePick)
+const free = rawFree.filter(isActivePick)
+const propsLab = rawPropsLab.filter(isActivePick)
+const lottoParlays = rawLottoParlays.filter(isActivePick)
+const longshots = rawLongshots.filter(isActivePick)
 
-Matchup Edge: Switzerland can compress the match with defensive organization, but Argentina has more creators, one-on-one quality and tactical flexibility to solve a compact block over 90 or 120 minutes.
+const publicRows = [...free, ...propsLab, ...lottoParlays, ...longshots]
+const allRows = [...vip, ...publicRows]
+const straightAndPropsUnits = [...vip, ...free, ...propsLab]
+  .reduce((sum, row) => sum + Number(row.Units || row.units || 0), 0)
+const parlayUnits = lottoParlays
+  .reduce((sum, row) => sum + Number(row.Units || row.units || 0), 0)
+const totalUnits = straightAndPropsUnits + parlayUnits
 
-Market and Number: The to-advance market protects against a regulation draw. Play -290 or better and do not chase beyond -325.
+export default function handler(req, res) {
+  res.setHeader('Content-Type', 'application/json')
+  res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0')
+  res.setHeader('Pragma', 'no-cache')
+  res.setHeader('Expires', '0')
 
-Why It Made VIP: Stronger attack, deeper talent and better late-match solutions.
-
-Risk: Switzerland's defensive structure and a low-event knockout script.`})]
-
-const free=[
-rec('Free',{Date:'2026-07-11',Sport:'Baseball',League:'MLB',Game:'Arizona Diamondbacks vs Los Angeles Dodgers',Pick:'Los Angeles Dodgers -1.5','Bet Type':'Run Line',Odds:'-125',Grade:'B+',Units:'0.75','Best Number':'-1.5 at -125 or better','No-Bet Cutoff':'-140',Confidence:'7.8/10',Status:'Pending',Access:'Free','Official Bet':'Yes',Writeup:`The Dodgers hold the stronger lineup, run-creation and pitching profile. The run line is preferable to paying the heavy moneyline tax and gives Los Angeles a full nine innings to separate through lineup depth and bullpen pressure. Divisional familiarity and one-run variance keep this below VIP. Risk: a one-run win or missed early scoring chances.`}),
-rec('Free',{Date:'2026-07-11',Sport:'Baseball',League:'MLB',Game:'New York Yankees vs Washington Nationals',Pick:'New York Yankees -1.5','Bet Type':'Run Line',Odds:'-122',Grade:'B',Units:'0.50','Best Number':'-1.5 at -122 or better','No-Bet Cutoff':'-135',Confidence:'7.2/10',Status:'Pending',Access:'Free','Official Bet':'Yes',Writeup:`New York has the lineup power and pitching profile to win by margin. The Yankees can create repeated scoring chances against weaker depth, but road-favorite sequencing and bullpen volatility keep the stake at a half-unit. Risk: a one-run win or late bullpen leakage.`}),
-rec('Free',{Date:'2026-07-11',Sport:'Basketball',League:'WNBA',Game:'Portland Fire vs Atlanta Dream',Pick:'Atlanta Dream -13.5','Bet Type':'Spread',Odds:'-110',Grade:'B',Units:'0.50','Best Number':'-13.5','No-Bet Cutoff':'-15',Confidence:'7.0/10',Status:'Pending',Access:'Free','Official Bet':'Yes',Writeup:`Atlanta owns the clear talent, depth and two-way advantage. The Dream should control the glass and create more efficient half-court offense, but the large spread introduces fourth-quarter bench and backdoor risk. Do not chase beyond -15.`}),
-rec('Free',{Date:'2026-07-11',Sport:'Basketball',League:'WNBA',Game:'New York Liberty vs Minnesota Lynx',Pick:'Minnesota Lynx -5','Bet Type':'Spread',Odds:'-110',Grade:'B',Units:'0.50','Best Number':'-5','No-Bet Cutoff':'-6',Confidence:'7.0/10',Status:'Pending',Access:'Free','Official Bet':'Yes',Writeup:`Minnesota has the stronger two-way profile and home-court edge. Its defensive structure should force New York into more difficult possessions, but the Liberty's shot creation and conflicting external projections keep this at B. The value is gone beyond -6.`}),
-rec('Free',{Date:'2026-07-11',Sport:'Basketball',League:'WNBA',Game:'Phoenix Mercury vs Las Vegas Aces',Pick:'Over 170.5','Bet Type':'Game Total',Odds:'-110',Grade:'B',Units:'0.50','Best Number':'170.5','No-Bet Cutoff':'172',Confidence:'7.3/10',Status:'Pending',Access:'Free','Official Bet':'Yes',Writeup:`The total is cleaner than either side because the side market is divided. Las Vegas can score efficiently through A'ja Wilson and second chances, while Phoenix has enough creation to contribute. Late fouling provides another path if the game stays competitive. Risk: slow opening pace, poor perimeter shooting or a blowout.`}),
-rec('Free',{Date:'2026-07-11',Sport:'Basketball',League:'NBA Summer League',Game:'Miami Heat vs Orlando Magic',Pick:'Orlando Magic -4.5','Bet Type':'Spread',Odds:'-110',Grade:'B',Units:'0.50','Best Number':'-4.5','No-Bet Cutoff':'-5.5',Confidence:'7.0/10',Status:'Pending',Access:'Free','Official Bet':'Yes',Writeup:`Orlando projects with the stronger Summer League roster and better top-end creation. That matters when structure breaks down and individual shot-making carries more weight. Rotation uncertainty and experimental lineups keep the play at a half-unit.`}),
-rec('Free',{Date:'2026-07-11',Sport:'Basketball',League:'NBA Summer League',Game:'Denver Nuggets vs Minnesota Timberwolves',Pick:'Minnesota Timberwolves -4.5','Bet Type':'Spread',Odds:'-117',Grade:'B+',Units:'0.75','Best Number':'-4.5 at -117 or better','No-Bet Cutoff':'-5.5',Confidence:'7.6/10',Status:'Pending',Access:'Free','Official Bet':'Yes',Writeup:`Minnesota has the more appealing young core and better projected depth. Paying -117 to move from -5 to -4.5 protects against a five-point result without forcing the expensive -200 moneyline. That half-point matters in Summer League, where unstable closing rotations and late free throws create frequent one- and two-possession finishes. Risk: rotation uncertainty and late-game bench execution.`})]
-
-const propsLab=[
-rec('Props',{Date:'2026-07-11',Sport:'Soccer',League:'FIFA World Cup',Game:'England vs Norway',Pick:'Both Teams to Score - Yes',Prop:'BTTS Yes',Odds:'-110',Grade:'B',Units:'0.50',Confidence:'7.1/10',Status:'Pending',Access:'Free','Official Bet':'Yes',Writeup:`England should create enough final-third volume to score, while Norway's transition game and Haaland give it a credible path to answer without controlling possession. Risk: a cautious knockout script or England denying transition space.`}),
-rec('Props',{Date:'2026-07-11',Sport:'Soccer',League:'FIFA World Cup',Game:'Argentina vs Switzerland',Pick:'Argentina Team Total Over 1.5',Prop:'Team Total',Odds:'-115',Grade:'B+',Units:'0.50',Confidence:'7.7/10',Status:'Pending',Access:'Free','Official Bet':'Yes',Writeup:`Argentina has multiple paths to two goals through possession, individual creation, set pieces and late transitions. The team total keeps the handicap focused on the stronger attack. Risk: Switzerland's compact block and Argentina protecting a one-goal lead.`}),
-rec('Props',{Date:'2026-07-11',Sport:'Basketball',League:'WNBA',Game:'New York Liberty vs Minnesota Lynx',Pick:'Breanna Stewart Over 19.5 Points',Player:'Breanna Stewart',Prop:'Points Over 19.5',Odds:'-110',Grade:'B',Units:'0.50',Confidence:'7.1/10',Status:'Pending',Access:'Free','Official Bet':'Yes',Writeup:`Stewart's usage, shot volume and three-level scoring make 20 points reachable in a competitive game. She can get there through field goals, free throws and second chances. Risk: defensive attention, foul trouble or inefficient shooting.`}),
-rec('Props',{Date:'2026-07-11',Sport:'Basketball',League:'WNBA',Game:'New York Liberty vs Minnesota Lynx',Pick:'Kayla McBride Over 2.5 Threes',Player:'Kayla McBride',Prop:'Three-Pointers Over 2.5',Odds:'+105',Grade:'B',Units:'0.50',Confidence:'7.0/10',Status:'Pending',Access:'Free','Official Bet':'Yes',Writeup:`McBride's perimeter role and willingness to shoot make this an attractive plus-money ceiling prop. Three makes are realistic at her expected attempt volume. Risk: reduced attempts or cold shooting variance.`}),
-rec('Props',{Date:'2026-07-11',Sport:'Basketball',League:'WNBA',Game:'Phoenix Mercury vs Las Vegas Aces',Pick:'A’ja Wilson Over 24.5 Points',Player:'A’ja Wilson',Prop:'Points Over 24.5',Odds:'-110',Grade:'B+',Units:'0.50',Confidence:'7.6/10',Status:'Pending',Access:'Free','Official Bet':'Yes',Writeup:`Wilson's elite usage and scoring responsibility make her the center of the Las Vegas offense in a high-total environment. She can reach the over through post touches, drives, free throws and offensive rebounds. Risk: a blowout or persistent double teams.`}),
-rec('Props',{Date:'2026-07-11',Sport:'Basketball',League:'WNBA',Game:'Phoenix Mercury vs Las Vegas Aces',Pick:'A’ja Wilson Over 9.5 Rebounds',Player:'A’ja Wilson',Prop:'Rebounds Over 9.5',Odds:'-110',Grade:'B',Units:'0.50',Confidence:'7.1/10',Status:'Pending',Access:'Free','Official Bet':'Yes',Writeup:`Wilson's minutes, interior positioning and two-way role give her a strong path to double-digit rebounds. Phoenix should create enough missed shots for defensive-board opportunities, while her offensive rebounding adds a second route. Risk: blowout minutes or long-rebound distribution.`})]
-
-const lottoParlays=[
-rec('Lotto',{Date:'2026-07-11',Sport:'Multi-Sport',League:'FIFA World Cup',Game:'England vs Norway; Argentina vs Switzerland',Pick:'England to Advance + Argentina to Advance',Legs:'England to Advance\nArgentina to Advance','Bet Type':'2-Leg Parlay',Category:'Safer Parlay',Grade:'B+',Units:'0.50',Confidence:'7.9/10',Status:'Pending',Access:'Free','Official Bet':'Yes','Best Number':'Use listed advancement prices or better','No-Bet Cutoff':'Pass if either leg exceeds its cutoff',Writeup:`This is the safer two-leg parlay because both legs use the to-advance market rather than the 90-minute moneyline. England and Argentina each receive extra time and penalties as additional paths to cash. The legs are from separate matches, so there is no same-game correlation, but the ticket still carries normal parlay compounding risk. Keep the stake at 0.50u and do not chase either favorite beyond its posted cutoff.`}),
-rec('Lotto',{Date:'2026-07-11',Sport:'Multi-Sport',League:'NBA Summer League / WNBA',Game:'Nuggets vs Timberwolves; Mercury vs Aces',Pick:'Timberwolves -4.5 + Mercury/Aces Over 170.5',Legs:'Minnesota Timberwolves -4.5 (-117)\nPhoenix Mercury/Las Vegas Aces Over 170.5 (-110)','Bet Type':'2-Leg Parlay',Category:'Value Parlay',Grade:'B',Units:'0.25',Confidence:'7.0/10',Status:'Pending',Access:'Free','Official Bet':'Yes','Best Number':'Timberwolves -4.5 and total 170.5','No-Bet Cutoff':'Timberwolves -5.5 or total 172',Writeup:`This value parlay combines Minnesota's improved -4.5 number with the cleaner scoring angle in Phoenix-Las Vegas. The legs come from separate games and do not depend on the same result. Summer League rotation variance and an elevated WNBA total make this a small 0.25u ticket rather than a core play. Pass if Minnesota moves beyond -5.5 or the total rises above 172.`})]
-
-const longshots=[]
-const birthdayNotes='July 11 football birthdays (Hugo Sánchez, Lucas Ocampos, Tony Cottee, Éric Abidal, etc.) are narrative only and should not be treated as edge.'
-const publicRows=[...free,...propsLab,...lottoParlays,...longshots]
-const allRows=[...vip,...publicRows]
-const straightAndPropsUnits=[...vip,...free,...propsLab].reduce((sum,row)=>sum+Number(row.Units||0),0)
-const parlayUnits=lottoParlays.reduce((sum,row)=>sum+Number(row.Units||0),0)
-const totalUnits=straightAndPropsUnits+parlayUnits
-
-export default function handler(req,res){res.setHeader('Content-Type','application/json');res.setHeader('Cache-Control','no-store, no-cache, must-revalidate, max-age=0');res.setHeader('Pragma','no-cache');res.setHeader('Expires','0');res.status(200).json({ok:true,success:true,source:'micks-picks-july-11-live-with-two-parlays',date:'2026-07-11',vip,vipPicks:vip,vipVault:vip,free,freePicks:free,props:propsLab,propsLab,lottoParlays,lotto:lottoParlays,parlays:lottoParlays,longshots,mainPicks:[...vip,...free],activePicks:allRows,rows:allRows,records:allRows,picks:allRows,allRows,publicRows,straightAndPropsUnits:Number(straightAndPropsUnits.toFixed(2)),parlayUnits:Number(parlayUnits.toFixed(2)),totalUnits:Number(totalUnits.toFixed(2)),birthdayNotes,message:'July 11 card live with two Lotto Parlays. Total risk including parlays: 9.75u.'})}
+  res.status(200).json({
+    ok: true,
+    success: true,
+    source: 'micks-picks-active-card-auto-removal',
+    date: null,
+    vip,
+    vipPicks: vip,
+    vipVault: vip,
+    free,
+    freePicks: free,
+    props: propsLab,
+    propsLab,
+    lottoParlays,
+    lotto: lottoParlays,
+    parlays: lottoParlays,
+    longshots,
+    mainPicks: [...vip, ...free],
+    activePicks: allRows,
+    rows: allRows,
+    records: allRows,
+    picks: allRows,
+    allRows,
+    publicRows,
+    straightAndPropsUnits: Number(straightAndPropsUnits.toFixed(2)),
+    parlayUnits: Number(parlayUnits.toFixed(2)),
+    totalUnits: Number(totalUnits.toFixed(2)),
+    message: 'No active picks. The previous card has been graded and moved to Results.'
+  })
+}
