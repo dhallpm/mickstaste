@@ -51,13 +51,6 @@ const rawVip = [{
 
 const rawFree = [
   {
-    Sport:'FIFA World Cup', Matchup:'Spain vs France — Semifinal', Pick:'France To Advance', Line:'-155', Grade:'B', Units:0.50,
-    Status:'Pending', 'Official Bet':'Yes', 'Best Number':'-155 or better', 'No-Bet Cutoff':'-170',
-    'Lineup Note':'Check the confirmed elevens before kickoff when practical. The card remains active without confirmation; use the -170 cutoff and pass for any material France attacking absence.',
-    Writeup:'France is the preferred team to reach the final, but the matchup is too balanced for VIP treatment. The To Advance market is the correct expression because it protects the wager through extra time and penalties, unlike the regulation moneyline. France has the more direct transition threat and multiple players capable of deciding a tight match, while Spain can control territory through possession and pressure. That tactical conflict and divided outside analysis keep the stake at 0.50u. The expected cashing path is France disrupting Spain’s midfield rhythm, attacking behind the press and remaining dangerous if the match reaches extra time. Play -155 or better and pass beyond -170. Confirmed lineups are useful for the final decision but are not required for the card to be published.',
-    'Full Analysis':'France has the direct attacking ceiling, while Spain owns the stronger possession structure. To Advance protects against a 90-minute draw. The price is the controlling factor: -155 is acceptable and -170 is the cutoff. Confirm lineups when possible, but the customer can use the cutoff and injury news to decide whether to pass.'
-  },
-  {
     Sport:'WNBA', Matchup:'Portland Fire at Connecticut Sun', Pick:'Connecticut Sun +1 or better', Line:'Conditional +1 or better', Grade:'B', Units:0.50,
     Status:'Pending', 'Official Bet':'Yes', 'Best Number':'+1.5 or better', 'No-Bet Cutoff':'+1',
     'Lineup Note':'Confirm Brittney Griner and the current Connecticut rotation when practical. This is a price-conditional release: do not play Connecticut as a favorite or at pick’em.',
@@ -105,11 +98,11 @@ const rawProps = [
 ]
 
 const rawLotto = [{
-  Sport:'Cross-Sport', Matchup:'Tempo / France / 76ers', Pick:'Toronto Tempo ML + France To Advance + Philadelphia 76ers ML', Line:'Parlay', Grade:'B-', Units:0.25,
-  Status:'Pending', 'Official Bet':'Yes', 'Best Number':'Minimum +160 combined return', 'No-Bet Cutoff':'Below +160 combined return',
-  'Lineup Note':'Confirm active participants when practical. The parlay remains published, but do not play below +160 and do not add extra legs.',
-  Writeup:'This three-leg parlay converts two spread opinions to moneylines and keeps France in the protected To Advance market. Toronto only needs to win outright, Philadelphia only needs to win its Summer League game, and France can advance through regulation, extra time or penalties. The construction reduces margin risk but still carries normal parlay fragility because every leg must win. It also duplicates existing straight-game exposure, so the stake is limited to 0.25u and no additional legs should be added. Require at least +160 combined return; below that price, the payout no longer compensates for three independent failure points.',
-  'Full Analysis':'Structure: Toronto ML, France To Advance and Philadelphia ML. The legs are independent and each removes a spread requirement. Duplicate exposure is acknowledged and controlled through the 0.25u stake. Require +160 or better.'
+  Sport:'Cross-Sport', Matchup:'Tempo / 76ers', Pick:'Toronto Tempo ML + Philadelphia 76ers ML', Line:'Parlay', Grade:'B-', Units:0.25,
+  Status:'Pending', 'Official Bet':'Yes', 'Best Number':'Minimum -105 combined return', 'No-Bet Cutoff':'Worse than -120 combined return',
+  'Lineup Note':'Confirm active participants when practical. The parlay remains published, but do not play at a price worse than -120 and do not add extra legs.',
+  Writeup:'This two-leg parlay removes the spread requirement from Toronto and Philadelphia. Toronto only needs to win outright, while Philadelphia only needs to win its Summer League game. Reducing the construction from three legs to two lowers the number of independent failure points and removes all France exposure. The ticket still duplicates existing straight-game exposure, so the stake remains limited to 0.25u. Shop for approximately -105 or better and pass if the combined price is worse than -120.',
+  'Full Analysis':'Structure: Toronto Tempo ML plus Philadelphia 76ers ML. Both legs remove spread requirements, and France has been removed entirely. Duplicate exposure is controlled through the 0.25u stake.'
 }]
 
 const rawLongshots = []
@@ -133,7 +126,7 @@ export default function handler(req, res) {
   const parlayUnits = lottoParlays.reduce((sum, row) => sum + Number(row.Units || 0), 0)
   const totalUnits = straightAndPropsUnits + parlayUnits
   res.status(200).json({
-    ok:true, success:true, source:'micks-picks-july-14-expanded', date:CARD_DATE,
+    ok:true, success:true, source:'micks-picks-july-14-france-removed', date:CARD_DATE,
     expiresAt:'2026-07-15T02:00:00-04:00', vip, vipPicks:vip, vipVault:vip,
     free, freePicks:free, props:propsLab, propsLab, lottoParlays, lotto:lottoParlays,
     parlays:lottoParlays, longshots, mainPicks:[...vip, ...free], activePicks:allRows,
