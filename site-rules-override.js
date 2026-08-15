@@ -31,7 +31,7 @@
       menu.dataset.mobileRepairBound = '1'
       menu.addEventListener('click', function (event) {
         event.preventDefault()
-        event.stopPropagation()
+        event.stopImmediatePropagation()
         mobile.classList.toggle('open')
         menu.setAttribute('aria-expanded', mobile.classList.contains('open') ? 'true' : 'false')
       }, true)
