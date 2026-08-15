@@ -1,132 +1,184 @@
 (function () {
-  const PUBLIC_ROOT = 'https://www.mickspicks.us/'
-  const PUBLIC_TABS = new Set(['home', 'free', 'vip', 'odds', 'sports', 'props', 'longshots', 'results', 'yahgi', 'about'])
+  const PUBLIC_ROOT = 'https://www.mickspicks.us/';
+  const PUBLIC_TABS = new Set(['home','free','vip','odds','sports','props','longshots','results','yahgi','about']);
 
-  function safeTab(id) {
-    const tab = String(id || '').trim().toLowerCase()
-    if (!PUBLIC_TABS.has(tab) || !document.getElementById(tab)) return false
-
-    document.querySelectorAll('.tab-page').forEach(page => page.classList.toggle('active', page.id === tab))
-    document.querySelectorAll('[data-tab-target]').forEach(link => link.classList.toggle('active', link.dataset.tabTarget === tab))
-
-    const mobile = document.getElementById('mobileNav')
-    if (mobile) mobile.classList.remove('open')
-
-    const next = tab === 'home' ? '#home' : `#${tab}`
-    if (location.hostname.toLowerCase() === 'www.mickspicks.us' || location.hostname.toLowerCase() === 'mickspicks.us') {
-      history.replaceState(null, '', `${PUBLIC_ROOT}${next}`)
-    } else {
-      history.replaceState(null, '', next)
-    }
-
-    window.scrollTo({ top: 0, behavior: 'auto' })
-    return true
+  function normalizeTab(value) {
+    const tab = String(value || '').trim().toLowerCase();
+    return PUBLIC_TABS.has(tab) && document.getElementById(tab) ? tab : '';
   }
 
-  function installNavigationRepair() {
-    const menu = document.getElementById('menuBtn')
-    const mobile = document.getElementById('mobileNav')
+  function closeMobileNav() {
+    const menu = document.getElementById('menuBtn');
+    const nav = document.getElementById('mobileNav');
+    if (nav) nav.classList.remove('open');
+    if (menu) menu.setAttribute('aria-expanded', 'false');
+    document.documentElement.classList.remove('mp-nav-open');
+  }
 
-    if (menu && mobile && !menu.dataset.mobileRepairBound) {
-      menu.dataset.mobileRepairBound = '1'
-      menu.addEventListener('click', function (event) {
-        event.preventDefault()
-        event.stopImmediatePropagation()
-        mobile.classList.toggle('open')
-        menu.setAttribute('aria-expanded', mobile.classList.contains('open') ? 'true' : 'false')
-      }, true)
-    }
+  function openMobileNav() {
+    const menu = document.getElementById('menuBtn');
+    const nav = document.getElementById('mobileNav');
+    if (!nav) return;
+    nav.classList.add('open');
+    if (menu) menu.setAttribute('aria-expanded', 'true');
+    document.documentElement.classList.add('mp-nav-open');
+  }
 
+  function toggleMobileNav() {
+    const nav = document.getElementById('mobileNav');
+    if (!nav) return;
+    nav.classList.contains('open') ? closeMobileNav() : openMobileNav();
+  }
+
+  function activateTab(tab, updateUrl = true) {
+    tab = normalizeTab(tab);
+    if (!tab) return false;
+
+    document.querySelectorAll('.tab-page').forEach(page => {
+      page.classList.toggle('active', page.id === tab);
+    });
     document.querySelectorAll('[data-tab-target]').forEach(link => {
-      if (link.dataset.mobileRepairBound) return
-      link.dataset.mobileRepairBound = '1'
-      link.addEventListener('click', function (event) {
-        const tab = link.dataset.tabTarget
-        if (!tab || !PUBLIC_TABS.has(tab)) return
-        event.preventDefault()
-        event.stopImmediatePropagation()
-        safeTab(tab)
-      }, true)
-    })
+      link.classList.toggle('active', String(link.dataset.tabTarget || '').toLowerCase() === tab);
+    });
 
-    document.querySelectorAll('a[href="https://vip.mickspicks.us/"], a[href^="https://vip.mickspicks.us/"]').forEach(link => {
-      link.removeAttribute('data-tab-target')
-    })
+    closeMobileNav();
 
-    if (location.hash === '#undefined' || !location.hash) {
-      if (location.hash === '#undefined') safeTab('home')
-    } else {
-      const hashTab = location.hash.slice(1).toLowerCase()
-      if (PUBLIC_TABS.has(hashTab)) safeTab(hashTab)
+    if (updateUrl) {
+      const next = `${PUBLIC_ROOT}#${tab}`;
+      try { history.replaceState(null, '', next); }
+      catch (_) { location.hash = tab; }
     }
+
+    window.scrollTo({ top: 0, behavior: 'auto' });
+    return true;
   }
 
-  function installMobileStyles() {
-    if (document.getElementById('micks-mobile-repair-style')) return
-    const style = document.createElement('style')
-    style.id = 'micks-mobile-repair-style'
+  function repairLinks() {
+    document.querySelectorAll('[data-tab-target]').forEach(link => {
+      const tab = normalizeTab(link.dataset.tabTarget);
+      if (!tab) return;
+      link.setAttribute('href', `${PUBLIC_ROOT}#${tab}`);
+    });
+
+    document.querySelectorAll('a[href*="vip.mickspicks.us"], a[href*="mickspicks-vip.vercel.app"], a[href$="/premium.html"]').forEach(link => {
+      link.setAttribute('href', 'https://vip.mickspicks.us/');
+      link.removeAttribute('data-tab-target');
+    });
+  }
+
+  function installEvents() {
+    if (document.documentElement.dataset.mpNavBound === '1') return;
+    document.documentElement.dataset.mpNavBound = '1';
+
+    document.addEventListener('click', function (event) {
+      const menu = event.target.closest && event.target.closest('#menuBtn');
+      if (menu) {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        toggleMobileNav();
+        return;
+      }
+
+      const tabLink = event.target.closest && event.target.closest('[data-tab-target]');
+      if (tabLink) {
+        const tab = normalizeTab(tabLink.dataset.tabTarget);
+        if (!tab) return;
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        activateTab(tab, true);
+        return;
+      }
+
+      if (window.innerWidth <= 1024) {
+        const nav = document.getElementById('mobileNav');
+        if (nav && nav.classList.contains('open') && !event.target.closest('#mobileNav')) closeMobileNav();
+      }
+    }, true);
+
+    window.addEventListener('hashchange', function () {
+      const tab = normalizeTab(location.hash.slice(1));
+      if (tab) activateTab(tab, false);
+    });
+
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 1024) closeMobileNav();
+    });
+  }
+
+  function installStyles() {
+    if (document.getElementById('micks-mobile-v2')) return;
+    const style = document.createElement('style');
+    style.id = 'micks-mobile-v2';
     style.textContent = `
-      @media (max-width: 1024px) {
-        .topbar > .shell { display:grid !important; grid-template-columns:auto 1fr auto; align-items:center; gap:.65rem !important; }
-        #menuBtn { display:inline-flex !important; align-items:center; justify-content:center; width:44px !important; height:44px !important; min-width:44px; padding:0 !important; }
-        .desktop-nav { display:none !important; }
-        .topbar .brand { width:42px !important; height:42px !important; }
-        .topbar > .shell > a[data-tab-target="home"] { min-width:0; }
-        .topbar > .shell > a[data-tab-target="home"] > div:last-child { min-width:0; }
-        .topbar > .shell > a[data-tab-target="home"] .font-black { font-size:.92rem !important; white-space:nowrap; }
-        .topbar > .shell > a[data-tab-target="home"] .text-[10px] { display:none !important; }
-        #mobileNav { position:absolute; left:0; right:0; top:100%; z-index:100; width:100% !important; max-height:calc(100vh - 72px); overflow-y:auto; padding:.7rem 1rem 1rem !important; background:rgba(3,6,12,.985); border-bottom:1px solid rgba(255,227,145,.22); box-shadow:0 24px 55px rgba(0,0,0,.55); }
-        #mobileNav.open { display:grid !important; grid-template-columns:1fr 1fr; gap:.55rem !important; }
-        #mobileNav .nav-link { width:100%; min-height:46px; justify-content:flex-start; border:1px solid rgba(255,255,255,.09); background:rgba(255,255,255,.035); padding:.75rem .8rem; }
-        main { overflow-x:hidden; }
-        .hero { min-height:0 !important; padding:1.1rem !important; border-radius:20px !important; }
-        .hero .title { font-size:clamp(2.75rem,15vw,5rem) !important; line-height:.84 !important; overflow-wrap:anywhere; }
-        .hero-dashboard .relative.z-10 { grid-template-columns:1fr !important; min-height:0 !important; }
-        .dashboard-phone { width:100% !important; max-width:100% !important; margin-top:1rem !important; padding:.65rem !important; border-radius:24px !important; }
-        .dashboard-screen { border-radius:18px !important; padding:.75rem !important; }
-        .sport-chip-row,.tech-labels { max-width:100%; }
-        .metric-grid { grid-template-columns:repeat(2,minmax(0,1fr)) !important; }
-        .pick-card { padding:.9rem !important; }
-        .line-box b { font-size:1.15rem !important; overflow-wrap:anywhere; }
-        .odds-board { width:100%; overflow-x:auto !important; -webkit-overflow-scrolling:touch; }
-        table { min-width:760px; }
-        .section-title { font-size:clamp(1.8rem,10vw,3rem) !important; }
+      html,body{max-width:100%;overflow-x:hidden}
+      #menuBtn{flex:0 0 auto}
+      #mobileNav{display:none!important}
+
+      @media (max-width:1024px){
+        .topbar{position:sticky!important;top:0!important;z-index:999!important}
+        .topbar>.shell{display:flex!important;align-items:center!important;gap:.7rem!important;padding-top:.65rem!important;padding-bottom:.65rem!important;position:relative}
+        #menuBtn{display:inline-flex!important;width:44px!important;height:44px!important;min-width:44px!important;padding:0!important;align-items:center!important;justify-content:center!important;order:1}
+        .topbar>.shell>a[data-tab-target="home"]{order:2;flex:1 1 auto;min-width:0!important;display:flex!important;align-items:center!important}
+        .topbar>.shell>a[data-tab-target="home"] .brand{width:40px!important;height:40px!important;min-width:40px!important}
+        .topbar>.shell>a[data-tab-target="home"] .font-black{font-size:.92rem!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
+        .topbar>.shell>a.btn{order:3;flex:0 0 auto;width:auto!important;min-height:40px!important;padding:.6rem .8rem!important}
+        .desktop-nav{display:none!important}
+
+        #mobileNav.open{display:grid!important;position:fixed!important;left:10px!important;right:10px!important;top:68px!important;width:auto!important;max-height:calc(100dvh - 82px)!important;overflow-y:auto!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:.55rem!important;padding:.75rem!important;margin:0!important;background:rgba(3,6,12,.985)!important;border:1px solid rgba(255,227,145,.22)!important;border-radius:18px!important;box-shadow:0 24px 70px rgba(0,0,0,.65)!important;z-index:1000!important}
+        #mobileNav .nav-link{display:flex!important;width:100%!important;min-height:48px!important;justify-content:flex-start!important;padding:.78rem .82rem!important;border:1px solid rgba(255,255,255,.09)!important;background:rgba(255,255,255,.045)!important;border-radius:12px!important}
+        #mobileNav .nav-link.active{background:rgba(247,201,72,.13)!important;border-color:rgba(247,201,72,.3)!important}
+
+        main{width:100%!important;overflow-x:hidden!important}
+        .shell{max-width:100%!important}
+        .hero{min-height:0!important;padding:1.15rem!important;border-radius:20px!important}
+        .hero-dashboard>.relative.z-10{display:grid!important;grid-template-columns:1fr!important;min-height:0!important;gap:1rem!important}
+        .hero .title{font-size:clamp(2.7rem,12vw,5.3rem)!important;line-height:.86!important;word-break:normal!important}
+        .dashboard-phone{width:100%!important;max-width:100%!important;margin-top:.5rem!important;padding:.7rem!important;border-radius:24px!important}
+        .dashboard-screen{padding:.75rem!important;border-radius:18px!important}
+        .hero-mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+        .sport-chip-row,.tech-labels{max-width:100%!important}
+        .pick-card,.card{max-width:100%!important}
+        .metric-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+        .line-box b,.stat b,.pick-title{overflow-wrap:anywhere!important}
+        .odds-board{width:100%!important;max-width:100%!important;overflow-x:auto!important;-webkit-overflow-scrolling:touch!important}
+        .odds-board table,.results-ledger-table{min-width:760px!important}
+        .section-title{font-size:clamp(1.9rem,8vw,3.2rem)!important}
+        .grid.lg\\:grid-cols-3,.grid.lg\\:grid-cols-2,.grid.lg\\:grid-cols-\\[\\.85fr_1\\.15fr\\]{grid-template-columns:1fr!important}
       }
-      @media (max-width: 640px) {
-        .shell { width:calc(100% - 20px) !important; }
-        #mobileNav.open { grid-template-columns:1fr; }
-        .topbar > .shell { grid-template-columns:44px minmax(0,1fr); }
-        .topbar > .shell > a.btn { display:none !important; }
-        .topbar > .shell > a[data-tab-target="home"] { justify-self:start; }
-        .hero .title { font-size:clamp(2.5rem,16vw,4.35rem) !important; }
-        .hero p { font-size:.98rem !important; line-height:1.55 !important; }
-        .hero .mt-7.flex.flex-wrap.gap-3 { display:grid !important; grid-template-columns:1fr !important; }
-        .hero .btn { width:100% !important; }
-        .hero .grid.sm\\:grid-cols-3 { grid-template-columns:1fr !important; }
-        .hero-mini-grid,.metric-grid { grid-template-columns:1fr !important; }
-        .card { border-radius:18px !important; }
-        .stat b { font-size:1.25rem !important; overflow-wrap:anywhere; }
+
+      @media (max-width:640px){
+        .shell{width:calc(100% - 20px)!important}
+        .topbar>.shell>a.btn{display:none!important}
+        .topbar>.shell>a[data-tab-target="home"] .text-\\[10px\\]{display:none!important}
+        #mobileNav.open{grid-template-columns:1fr!important;left:8px!important;right:8px!important;top:64px!important}
+        .hero{padding:1rem!important}
+        .hero .title{font-size:clamp(2.45rem,15vw,4.2rem)!important}
+        .hero p{font-size:.96rem!important;line-height:1.55!important}
+        .hero .mt-7.flex.flex-wrap.gap-3{display:grid!important;grid-template-columns:1fr!important}
+        .hero .btn{width:100%!important}
+        .hero .grid.sm\\:grid-cols-3{grid-template-columns:1fr!important}
+        .hero-mini-grid,.metric-grid{grid-template-columns:1fr!important}
+        .grid.sm\\:grid-cols-4,.grid.sm\\:grid-cols-3,.grid.sm\\:grid-cols-2{grid-template-columns:1fr!important}
+        .section{padding-left:0!important;padding-right:0!important}
+        .card{border-radius:18px!important;padding:.95rem!important}
+        .stat{min-width:0!important}
+        .stat b{font-size:1.2rem!important}
+        .btn{max-width:100%!important}
       }
-    `
-    document.head.appendChild(style)
+    `;
+    document.head.appendChild(style);
   }
 
-  function runRepair() {
-    installMobileStyles()
-    installNavigationRepair()
+  function bootRepair() {
+    repairLinks();
+    installStyles();
+    installEvents();
+    const hashTab = normalizeTab(location.hash.slice(1));
+    if (hashTab) activateTab(hashTab, false);
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', runRepair)
-  } else {
-    runRepair()
-  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', bootRepair, { once:true });
+  else bootRepair();
 
-  window.addEventListener('hashchange', function () {
-    const tab = location.hash.slice(1).toLowerCase()
-    if (PUBLIC_TABS.has(tab)) safeTab(tab)
-  })
-
-  setTimeout(runRepair, 250)
-  setTimeout(runRepair, 1000)
-})()
+  setTimeout(bootRepair, 300);
+})();
