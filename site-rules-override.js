@@ -1,123 +1,132 @@
 (function () {
   const PUBLIC_ROOT = 'https://www.mickspicks.us/'
-  const PUBLIC_TABS = new Set(['home', 'free', 'odds', 'sports', 'props', 'longshots', 'results', 'yahgi', 'about'])
-  const host = location.hostname.toLowerCase()
+  const PUBLIC_TABS = new Set(['home', 'free', 'vip', 'odds', 'sports', 'props', 'longshots', 'results', 'yahgi', 'about'])
 
-  if (host === 'vip.mickspicks.us') {
-    const tab = location.hash.slice(1).toLowerCase()
-    location.replace(`${PUBLIC_ROOT}#${PUBLIC_TABS.has(tab) ? tab : 'home'}`)
-    return
-  }
+  function safeTab(id) {
+    const tab = String(id || '').trim().toLowerCase()
+    if (!PUBLIC_TABS.has(tab) || !document.getElementById(tab)) return false
 
-  const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({
-    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
-  }[char]))
+    document.querySelectorAll('.tab-page').forEach(page => page.classList.toggle('active', page.id === tab))
+    document.querySelectorAll('[data-tab-target]').forEach(link => link.classList.toggle('active', link.dataset.tabTarget === tab))
 
-  const first = (row, names) => {
-    for (const name of names) {
-      if (row && row[name] !== undefined && String(row[name]).trim()) return String(row[name]).trim()
+    const mobile = document.getElementById('mobileNav')
+    if (mobile) mobile.classList.remove('open')
+
+    const next = tab === 'home' ? '#home' : `#${tab}`
+    if (location.hostname.toLowerCase() === 'www.mickspicks.us' || location.hostname.toLowerCase() === 'mickspicks.us') {
+      history.replaceState(null, '', `${PUBLIC_ROOT}${next}`)
+    } else {
+      history.replaceState(null, '', next)
     }
-    return ''
+
+    window.scrollTo({ top: 0, behavior: 'auto' })
+    return true
   }
 
-  function easternParts(date = new Date()) {
-    const parts = new Intl.DateTimeFormat('en-US', {
-      timeZone: 'America/New_York', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', hourCycle: 'h23'
-    }).formatToParts(date)
-    return Object.fromEntries(parts.map(part => [part.type, part.value]))
-  }
+  function installNavigationRepair() {
+    const menu = document.getElementById('menuBtn')
+    const mobile = document.getElementById('mobileNav')
 
-  function effectiveCardDate() {
-    const now = new Date()
-    const parts = easternParts(now)
-    if (Number(parts.hour) >= 2) return `${parts.year}-${parts.month}-${parts.day}`
-    const previous = new Date(now.getTime() - 24 * 60 * 60 * 1000)
-    const prior = easternParts(previous)
-    return `${prior.year}-${prior.month}-${prior.day}`
-  }
+    if (menu && mobile && !menu.dataset.mobileRepairBound) {
+      menu.dataset.mobileRepairBound = '1'
+      menu.addEventListener('click', function (event) {
+        event.preventDefault()
+        event.stopPropagation()
+        mobile.classList.toggle('open')
+        menu.setAttribute('aria-expanded', mobile.classList.contains('open') ? 'true' : 'false')
+      }, true)
+    }
 
-  const normalizedDate = value => {
-    const text = String(value || '').trim()
-    const iso = text.match(/^(\d{4})-(\d{2})-(\d{2})/)
-    if (iso) return `${iso[1]}-${iso[2]}-${iso[3]}`
-    const us = text.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})/)
-    return us ? `${us[3]}-${String(us[1]).padStart(2, '0')}-${String(us[2]).padStart(2, '0')}` : ''
-  }
-
-  const settled = row => /\b(win|won|loss|lost|push|void|voided|graded|settled|final|completed|complete|cancelled|canceled)\b/i.test([
-    first(row, ['Status', 'status', 'Release Status']), first(row, ['Result', 'result', 'Outcome', 'outcome'])
-  ].join(' '))
-
-  function currentRows(rows, payloadDate = '') {
-    const activeDate = effectiveCardDate()
-    return (Array.isArray(rows) ? rows : []).filter(row => {
-      if (settled(row)) return false
-      const rowDate = normalizedDate(first(row, ['Date', 'date', 'Posted Date', 'postedDate']) || payloadDate)
-      return rowDate ? rowDate === activeDate : normalizedDate(payloadDate) === activeDate
+    document.querySelectorAll('[data-tab-target]').forEach(link => {
+      if (link.dataset.mobileRepairBound) return
+      link.dataset.mobileRepairBound = '1'
+      link.addEventListener('click', function (event) {
+        const tab = link.dataset.tabTarget
+        if (!tab || !PUBLIC_TABS.has(tab)) return
+        event.preventDefault()
+        event.stopImmediatePropagation()
+        safeTab(tab)
+      }, true)
     })
-  }
 
-  const cardTitle = row => first(row, ['cardTitle', 'Card Title', 'pick', 'Pick', 'selection', 'Selection']) || 'Active pick'
-  const game = row => first(row, ['game', 'Game', 'matchup', 'Matchup']) || 'Live Card'
-  const league = row => first(row, ['league', 'League', 'sport', 'Sport']) || '--'
-  const odds = row => first(row, ['odds', 'Odds', 'price', 'Price']) || 'Shop best price'
-  const grade = row => first(row, ['grade', 'Grade']) || '--'
-  const units = row => first(row, ['units', 'Units']) || '--'
-  const line = row => first(row, ['lineNumber', 'Line / Number', 'bestNumber', 'Best Number', 'line', 'Line', 'prop', 'Prop']) || odds(row)
-  const cutoff = row => first(row, ['noBetCutoff', 'No-Bet Cutoff', 'No Bet Cutoff']) || 'Number discipline required'
-  const sportsbook = row => first(row, ['sportsbook', 'Sportsbook', 'book', 'Book']) || 'Best Available'
-  const writeup = row => first(row, ['writeup', 'Writeup', 'analysis', 'Analysis', 'shortAnalysis', 'Short Analysis']) || 'Released to the live card.'
-
-  function pickCard(row, label) {
-    return `<article class="card pick-card glass"><div class="flex items-start justify-between gap-3"><div><div class="text-xs uppercase tracking-[.16em] text-[#ffe391] font-black">${esc(league(row))} | ${esc(label)}</div><h3 class="pick-title mt-2">${esc(cardTitle(row))}</h3><p class="mt-2 text-[#cbbf9d]">${esc(game(row))}</p></div><div class="grade">${esc(grade(row))}</div></div><div class="tech-labels"><span class="tech-label"><i data-lucide="scan-line"></i>AI Market Scan</span><span class="tech-label"><i data-lucide="activity"></i>Line Check</span></div><div class="line-box"><span>Line / Number</span><b>${esc(line(row))}</b><span>${esc(label)} | Odds: ${esc(odds(row))}</span></div><div class="grid metric-grid gap-2 mt-4"><div class="stat"><b class="!text-lg">${esc(grade(row))}</b><span>Grade</span></div><div class="stat"><b class="!text-lg">${esc(odds(row))}</b><span>Odds</span></div><div class="stat"><b class="!text-lg">${esc(sportsbook(row))}</b><span>Sportsbook</span></div><div class="stat"><b class="!text-lg">${esc(units(row))}</b><span>Units</span></div></div><div class="flex flex-wrap gap-2 mt-4"><span class="pill">${esc(cutoff(row))}</span><span class="pill">Active</span></div><div class="mt-4 leading-7 text-[#f4ead4]"><p>${esc(writeup(row))}</p></div></article>`
-  }
-
-  function emptyState(message) {
-    return `<div class="empty-picks glass premium-empty"><div class="empty-kicker">Dashboard waiting on live card</div><h3 class="pick-title mt-2">${esc(message)}</h3><p class="mt-3 text-[#cbbf9d] leading-7">Graded cards disappear immediately. Unsettled cards expire automatically at 2:00 AM Eastern.</p></div>`
-  }
-
-  function renderSpecialTab(id, rows, label, empty) {
-    const el = document.getElementById(id)
-    if (!el) return
-    el.innerHTML = rows.length ? rows.map(row => pickCard(row, label)).join('') : emptyState(empty)
-  }
-
-  function clearAllActiveCards(message) {
-    ;['freeCards', 'vipCards', 'propsCards', 'longshotsCards'].forEach(id => {
-      const el = document.getElementById(id)
-      if (el) el.innerHTML = emptyState(message)
+    document.querySelectorAll('a[href="https://vip.mickspicks.us/"], a[href^="https://vip.mickspicks.us/"]').forEach(link => {
+      link.removeAttribute('data-tab-target')
     })
-    const featured = document.getElementById('featuredCard')
-    if (featured) featured.innerHTML = `<h3 class="pick-title">${esc(message)}</h3><p class="mt-3 text-[#cbbf9d]">The prior card has moved to Results.</p>`
-    const active = document.getElementById('homeActive')
-    if (active) active.textContent = '0 picks'
+
+    if (location.hash === '#undefined' || !location.hash) {
+      if (location.hash === '#undefined') safeTab('home')
+    } else {
+      const hashTab = location.hash.slice(1).toLowerCase()
+      if (PUBLIC_TABS.has(hashTab)) safeTab(hashTab)
+    }
   }
 
-  async function enforceActiveCardRules() {
-    try {
-      const res = await fetch(`/api/todays-picks?expiryRules=1&cache=${Date.now()}`, { cache: 'no-store' })
-      if (!res.ok) throw new Error(`todays-picks ${res.status}`)
-      const data = await res.json()
-      const date = data.date || ''
-      const free = currentRows(data.free || data.freePicks || [], date)
-      const vip = currentRows(data.vip || data.vipPicks || data.vipVault || [], date)
-      const props = currentRows(data.props || data.propsLab || data.playerProps || [], date)
-      const parlays = currentRows(data.lottoParlays || data.lotto || data.parlays || [], date)
-      const longshots = currentRows(data.longshots || [], date)
-      const total = free.length + vip.length + props.length + parlays.length + longshots.length
-
-      if (!total) clearAllActiveCards('No active picks. The previous card has expired or been graded.')
-      else {
-        renderSpecialTab('propsCards', props, 'Props Lab', 'No props released yet.')
-        renderSpecialTab('longshotsCards', [...parlays, ...longshots], 'Lotto / Longshot', 'No lotto parlays or longshots released yet.')
+  function installMobileStyles() {
+    if (document.getElementById('micks-mobile-repair-style')) return
+    const style = document.createElement('style')
+    style.id = 'micks-mobile-repair-style'
+    style.textContent = `
+      @media (max-width: 1024px) {
+        .topbar > .shell { display:grid !important; grid-template-columns:auto 1fr auto; align-items:center; gap:.65rem !important; }
+        #menuBtn { display:inline-flex !important; align-items:center; justify-content:center; width:44px !important; height:44px !important; min-width:44px; padding:0 !important; }
+        .desktop-nav { display:none !important; }
+        .topbar .brand { width:42px !important; height:42px !important; }
+        .topbar > .shell > a[data-tab-target="home"] { min-width:0; }
+        .topbar > .shell > a[data-tab-target="home"] > div:last-child { min-width:0; }
+        .topbar > .shell > a[data-tab-target="home"] .font-black { font-size:.92rem !important; white-space:nowrap; }
+        .topbar > .shell > a[data-tab-target="home"] .text-[10px] { display:none !important; }
+        #mobileNav { position:absolute; left:0; right:0; top:100%; z-index:100; width:100% !important; max-height:calc(100vh - 72px); overflow-y:auto; padding:.7rem 1rem 1rem !important; background:rgba(3,6,12,.985); border-bottom:1px solid rgba(255,227,145,.22); box-shadow:0 24px 55px rgba(0,0,0,.55); }
+        #mobileNav.open { display:grid !important; grid-template-columns:1fr 1fr; gap:.55rem !important; }
+        #mobileNav .nav-link { width:100%; min-height:46px; justify-content:flex-start; border:1px solid rgba(255,255,255,.09); background:rgba(255,255,255,.035); padding:.75rem .8rem; }
+        main { overflow-x:hidden; }
+        .hero { min-height:0 !important; padding:1.1rem !important; border-radius:20px !important; }
+        .hero .title { font-size:clamp(2.75rem,15vw,5rem) !important; line-height:.84 !important; overflow-wrap:anywhere; }
+        .hero-dashboard .relative.z-10 { grid-template-columns:1fr !important; min-height:0 !important; }
+        .dashboard-phone { width:100% !important; max-width:100% !important; margin-top:1rem !important; padding:.65rem !important; border-radius:24px !important; }
+        .dashboard-screen { border-radius:18px !important; padding:.75rem !important; }
+        .sport-chip-row,.tech-labels { max-width:100%; }
+        .metric-grid { grid-template-columns:repeat(2,minmax(0,1fr)) !important; }
+        .pick-card { padding:.9rem !important; }
+        .line-box b { font-size:1.15rem !important; overflow-wrap:anywhere; }
+        .odds-board { width:100%; overflow-x:auto !important; -webkit-overflow-scrolling:touch; }
+        table { min-width:760px; }
+        .section-title { font-size:clamp(1.8rem,10vw,3rem) !important; }
       }
-      if (window.lucide && typeof window.lucide.createIcons === 'function') window.lucide.createIcons()
-    } catch (error) {
-      console.warn('Active-card expiry enforcement failed:', error)
-      clearAllActiveCards('Active card temporarily unavailable.')
-    }
+      @media (max-width: 640px) {
+        .shell { width:calc(100% - 20px) !important; }
+        #mobileNav.open { grid-template-columns:1fr; }
+        .topbar > .shell { grid-template-columns:44px minmax(0,1fr); }
+        .topbar > .shell > a.btn { display:none !important; }
+        .topbar > .shell > a[data-tab-target="home"] { justify-self:start; }
+        .hero .title { font-size:clamp(2.5rem,16vw,4.35rem) !important; }
+        .hero p { font-size:.98rem !important; line-height:1.55 !important; }
+        .hero .mt-7.flex.flex-wrap.gap-3 { display:grid !important; grid-template-columns:1fr !important; }
+        .hero .btn { width:100% !important; }
+        .hero .grid.sm\\:grid-cols-3 { grid-template-columns:1fr !important; }
+        .hero-mini-grid,.metric-grid { grid-template-columns:1fr !important; }
+        .card { border-radius:18px !important; }
+        .stat b { font-size:1.25rem !important; overflow-wrap:anywhere; }
+      }
+    `
+    document.head.appendChild(style)
   }
 
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => setTimeout(enforceActiveCardRules, 700))
-  else setTimeout(enforceActiveCardRules, 700)
+  function runRepair() {
+    installMobileStyles()
+    installNavigationRepair()
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', runRepair)
+  } else {
+    runRepair()
+  }
+
+  window.addEventListener('hashchange', function () {
+    const tab = location.hash.slice(1).toLowerCase()
+    if (PUBLIC_TABS.has(tab)) safeTab(tab)
+  })
+
+  setTimeout(runRepair, 250)
+  setTimeout(runRepair, 1000)
 })()
