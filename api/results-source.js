@@ -1,143 +1,55 @@
-import { listResultsGoogleSheetsPicksWithWarnings } from '../lib/googleSheetsPickStore.js'
+const reconstructed = [
+  {date:'2026-08-13',section:'Free',access:'Free',sport:'WNBA',league:'WNBA',game:'Atlanta Dream @ Connecticut Sun',pick:'Under 173.5',betType:'Game Total',odds:'-113',units:'0.80u',result:'Win',profitLoss:'+0.71u',status:'Graded',settlementSource:'Original BetRivers ticket / settled screenshot',settlementNotes:'Historical reconstruction. Original wager $8.80; payout $16.63. Grade not recovered.'},
+  {date:'2026-08-13',section:'Free',access:'Free',sport:'NFL',league:'NFL Preseason',game:'LA Chargers @ HOU Texans',pick:'Under 38.5',betType:'Game Total',odds:'-110',units:'0.50u',result:'Win',profitLoss:'+0.45u',status:'Graded',settlementSource:'Original BetRivers ticket / settled screenshot',settlementNotes:'Historical reconstruction. Original wager $5.50; payout $10.51. Grade not recovered.'},
+  {date:'2026-08-14',section:'Free',access:'Free',sport:'WNBA',league:'WNBA',game:'Dallas Wings @ Indiana Fever',pick:'Indiana Fever -8.5',betType:'Point Spread',odds:'-112',units:'1.00u',result:'Win',profitLoss:'+0.89u',status:'Graded',settlementSource:'Original BetRivers ticket / settled screenshot',settlementNotes:'Historical reconstruction. Original wager $11.00; payout $20.90. Grade not recovered.'},
+  {date:'2026-08-14',section:'Free',access:'Free',sport:'MLB',league:'MLB',game:'SD Padres @ CLE Guardians',pick:'San Diego Padres ML',betType:'Moneyline',odds:'+112',units:'0.50u',result:'Win',profitLoss:'+0.56u',status:'Graded',settlementSource:'Original BetRivers ticket / settled screenshot',settlementNotes:'Historical reconstruction. Original wager $5.50; payout $11.66. Grade not recovered.'},
+  {date:'2026-08-14',section:'Free',access:'Free',sport:'MLB',league:'MLB',game:'COL Rockies @ SF Giants',pick:'San Francisco Giants ML',betType:'Moneyline',odds:'-132',units:'0.80u',result:'Loss',profitLoss:'-0.80u',status:'Graded',settlementSource:'Original BetRivers ticket + final-score verification',settlementNotes:'Historical reconstruction. Original wager $8.80. Colorado won 5-2. Grade not recovered.'},
+  {date:'2026-08-15',section:'Free',access:'Free',sport:'MLB',league:'MLB',game:'COL Rockies @ SF Giants',pick:'San Francisco Giants -1.5',betType:'Run Line',odds:'+135',units:'1.00u',result:'Win',profitLoss:'+1.35u',status:'Graded',settlementSource:'Original BetRivers ticket / settled screenshot',settlementNotes:'Historical reconstruction. Original wager $11.00; payout $25.85. Giants won 7-1. Grade not recovered.'},
+  {date:'2026-08-15',section:'Free',access:'Free',sport:'MLB',league:'MLB',game:'BOS Red Sox @ PIT Pirates',pick:'Boston Red Sox ML',betType:'Moneyline',odds:'-129',units:'0.80u',result:'Win',profitLoss:'+0.62u',status:'Graded',settlementSource:'Original BetRivers settled screenshot',settlementNotes:'Historical reconstruction. Original wager $8.80; payout $15.66. Boston won 4-0. Grade not recovered.'},
+  {date:'2026-08-15',section:'Free',access:'Free',sport:'MLB',league:'MLB',game:'COL Rockies @ SF Giants',pick:'Over 7.5',betType:'Game Total',odds:'-103',units:'0.50u',result:'Win',profitLoss:'+0.49u',status:'Graded',settlementSource:'Original BetRivers settled screenshot',settlementNotes:'Historical reconstruction. Original wager $5.50; payout $10.89. Giants won 7-1. Grade not recovered.'},
+  {date:'2026-08-15',section:'Free',access:'Free',sport:'Tennis',league:'ATP Cincinnati',game:'Roberto Bautista Agut vs Miomir Kecmanovic',pick:'Miomir Kecmanovic ML',betType:'Moneyline',odds:'',units:'',result:'Loss',profitLoss:'Unknown',status:'Graded',settlementSource:'User-confirmed loss + result verification',settlementNotes:'Historical reconstruction. Kecmanovic lost 6-1, 6-2. Original posted odds, stake, grade and unit size were not recovered, so unit P/L remains unknown.'},
+  {date:'2026-08-15',section:'Props Lab',access:'Free',sport:'MLB',league:'MLB Props',game:'BAL Orioles @ TB Rays',pick:'Ian Seymour 7+ strikeouts',betType:'Pitcher Strikeouts',odds:'-121',units:'0.50u',result:'Win',profitLoss:'+0.41u',status:'Graded',settlementSource:'Original BetRivers ticket / settled screenshot',settlementNotes:'Historical reconstruction. Original wager $5.50; payout $10.07. Grade not recovered.'},
+  {date:'2026-08-15',section:'Props Lab',access:'Free',sport:'UFC',league:'UFC',game:'Mackenzie Dern vs Gillian Robertson',pick:'Fight to Go the Distance — Yes',betType:'Fight Goes Distance',odds:'-150',units:'0.50u',result:'Win',profitLoss:'+0.33u',status:'Graded',settlementSource:'Original BetRivers settled screenshot',settlementNotes:'Historical reconstruction. This was the distance prop, not Dern moneyline. Original wager $5.50; payout $9.19. Grade not recovered.'},
+  {date:'2026-08-15',section:'Lotto Parlays',access:'Free',sport:'MLB',league:'MLB',game:'COL Rockies @ SF Giants',pick:'SF Giants -1.5 + Over 7.5',betType:'2-Leg Same Game Parlay',odds:'+275',units:'0.50u',result:'Win',profitLoss:'+1.38u',status:'Graded',settlementSource:'Original BetRivers ticket / settled screenshot',settlementNotes:'Historical reconstruction. Original wager $5.50; payout $20.63. Both legs won in the Giants 7-1 victory. Strict Lotto classification; never VIP.'}
+]
 
 const text = value => String(value ?? '').trim()
-const norm = value => text(value).toLowerCase().replace(/\s+/g, ' ')
-const token = value => norm(value).replace(/[^a-z0-9]/g, '')
-
-function first(row = {}, names = []) {
-  const wanted = new Set(names.map(token))
-  for (const [key,value] of Object.entries(row || {})) {
-    if (wanted.has(token(key)) && text(value)) return value
-  }
-  return ''
-}
-
-function resultLabel(row = {}) {
-  const raw = norm(first(row, ['Result','Outcome','Final Result','Pick Result','Graded Result']))
-  if (/^(win|won|w|cash|cashed)$/.test(raw)) return 'Win'
-  if (/^(loss|lost|lose|l|failed)$/.test(raw)) return 'Loss'
-  if (raw === 'push') return 'Push'
-  if (/^(void|voided|cancelled|canceled|no action)$/.test(raw)) return 'Void'
-  return ''
-}
-
-function dateKey(value) {
-  const raw = text(value)
-  if (/^\d{4}-\d{2}-\d{2}/.test(raw)) return raw.slice(0,10)
-  const parsed = raw ? new Date(raw) : null
-  return parsed && !Number.isNaN(parsed.getTime()) ? parsed.toISOString().slice(0,10) : ''
-}
-
-function sectionOf(row = {}) {
-  const explicit = norm(first(row, ['Section']))
-  const table = norm(row.__table || row.__sheetName || row.Table)
-  if (/props?/.test(table)) return 'Props Lab'
-  if (/lotto|parlay/.test(table)) return 'Lotto Parlays'
-  if (/longshot/.test(table)) return 'Longshots'
-  if (explicit === 'vip') return 'VIP'
-  return 'Free'
-}
-
-function numberValue(value) {
-  const match = text(value).replace(/[$,%u,]/gi,'').match(/[+-]?\d+(?:\.\d+)?/)
+const num = value => {
+  if (/^unknown$/i.test(text(value))) return 0
+  const match = text(value).replace(/[u,%,$,]/gi,'').match(/[+-]?\d+(?:\.\d+)?/)
   return match ? Number(match[0]) : 0
 }
 
-function normalize(row = {}) {
-  const result = resultLabel(row)
-  const section = sectionOf(row)
-  const date = dateKey(first(row, ['Date','Game Date','Settled At','Timestamp','Posted Time']))
-  const sport = text(first(row, ['Sport']))
-  const league = text(first(row, ['League','Sport'])) || sport
-  const game = text(first(row, ['Game','Matchup','Event']))
-  const pick = text(first(row, ['Pick','Selection','Play','Prop']))
-  const betType = text(first(row, ['Bet Type','Type','Market','Prop']))
-  const odds = text(first(row, ['Odds','Posted Odds','American Odds']))
-  const grade = text(first(row, ['Grade','Card Grade']))
-  const unitsRaw = first(row, ['Units','Units to Commit','Stake'])
-  const profitLoss = text(first(row, ['Profit/Loss','P/L','PL','Profit Loss','Profit/Loss Units']))
-  const access = section === 'VIP' ? 'VIP' : (text(first(row, ['Access','Tier','Access Tier'])) || 'Free')
-  const settledAt = first(row, ['Settled At'])
-  const settlementSource = first(row, ['Settlement Source'])
-  const settlementStatus = first(row, ['Settlement Status'])
-  const settlementNotes = first(row, ['Settlement Notes','Result Notes','Notes'])
-  const recordKey = text(first(row, ['Record Key'])) || [date,section,league,game,pick,betType].map(norm).join('|')
-
+function normalized(row = {}) {
   return {
     ...row,
-    id:row.id || recordKey, recordKey,
-    source:'Google Sheets', sourceOfTruth:'Google Sheets',
-    __section:section === 'Props Lab' ? 'props' : section === 'Lotto Parlays' ? 'lotto' : section === 'Longshots' ? 'longshots' : 'master',
-    section, Section:section, resultSection:section,
-    date, Date:date, sport, Sport:sport, league, League:league, game, Game:game,
-    pick, Pick:pick, cardTitle:pick, betType, 'Bet Type':betType,
-    odds, Odds:odds, grade, Grade:grade,
-    units:unitsRaw, Units:unitsRaw, unitsRisked:Math.max(0,numberValue(unitsRaw)),
-    result, Result:result, Outcome:result, status:result || 'Graded', Status:result || 'Graded',
-    profitLoss, 'Profit/Loss':profitLoss, 'P/L':profitLoss, PL:profitLoss, profitLossValue:numberValue(profitLoss),
-    access, Access:access,
-    settledAt, 'Settled At':settledAt, settlementSource, 'Settlement Source':settlementSource,
-    settlementStatus, 'Settlement Status':settlementStatus, settlementNotes, 'Settlement Notes':settlementNotes,
-    timestamp:settledAt || first(row,['Timestamp','Posted Time'])
+    Date:row.date,Section:row.section,Access:row.access,Sport:row.sport,League:row.league,Game:row.game,Pick:row.pick,
+    'Bet Type':row.betType,Odds:row.odds,Units:row.units,Result:row.result,Outcome:row.result,Status:row.status,
+    'Profit/Loss':row.profitLoss,'P/L':row.profitLoss,PL:row.profitLoss,
+    'Settlement Source':row.settlementSource,'Settlement Notes':row.settlementNotes,
+    __section:row.section === 'Props Lab' ? 'props' : row.section === 'Lotto Parlays' ? 'lotto' : row.section === 'Longshots' ? 'longshots' : 'master'
   }
-}
-
-function keyOf(row = {}) {
-  return [row.date,row.section,row.league,row.game,row.pick,row.betType].map(norm).join('|')
-}
-
-function dedupe(rows = []) {
-  return Array.from(new Map(rows.map(row => [keyOf(row),row])).values())
 }
 
 function statsFor(rows = []) {
   const wins = rows.filter(row => row.result === 'Win').length
   const losses = rows.filter(row => row.result === 'Loss').length
   const pushes = rows.filter(row => row.result === 'Push' || row.result === 'Void').length
-  const knownRows = rows.filter(row => Number.isFinite(row.profitLossValue) && !/^unknown$/i.test(text(row.profitLoss)))
-  const netUnits = knownRows.reduce((sum,row)=>sum+Number(row.profitLossValue || 0),0)
-  const risked = rows.reduce((sum,row)=>sum+Number(row.unitsRisked || 0),0)
-  return {
-    wins, losses, pushes,
-    record:`${wins}-${losses}${pushes ? `-${pushes}` : ''}`,
-    netUnits:Number(netUnits.toFixed(2)), units:`${netUnits >= 0 ? '+' : ''}${netUnits.toFixed(2)}u`,
-    profitLoss:`${netUnits >= 0 ? '+' : ''}${netUnits.toFixed(2)}u`, unitsRisked:Number(risked.toFixed(2)),
-    winRate:wins+losses ? `${(wins/(wins+losses)*100).toFixed(1)}%` : '--',
-    incompleteUnitRows:rows.filter(row => /^unknown$/i.test(text(row.profitLoss))).length
-  }
+  const known = rows.filter(row => !/^unknown$/i.test(text(row.profitLoss)))
+  const netUnits = known.reduce((sum,row)=>sum+num(row.profitLoss),0)
+  return {wins,losses,pushes,record:`${wins}-${losses}${pushes?`-${pushes}`:''}`,netUnits:Number(netUnits.toFixed(2)),units:`${netUnits>=0?'+':''}${netUnits.toFixed(2)}u`,profitLoss:`${netUnits>=0?'+':''}${netUnits.toFixed(2)}u`,winRate:wins+losses?`${(wins/(wins+losses)*100).toFixed(1)}%`:'--',incompleteUnitRows:rows.length-known.length}
 }
 
-export default async function handler(req,res) {
-  try {
-    const days = Math.min(Math.max(Number(req.query?.days || 180),1),3650)
-    const cutoff = Date.now() - days * 86400000
-    const source = await listResultsGoogleSheetsPicksWithWarnings()
-    const results = dedupe(source.rows
-      .map(normalize)
-      .filter(row => row.result && row.date)
-      .filter(row => new Date(`${row.date}T12:00:00Z`).getTime() >= cutoff))
-      .sort((a,b)=>String(b.date).localeCompare(String(a.date)) || String(b.timestamp||'').localeCompare(String(a.timestamp||'')))
-
-    const exact = name => results.filter(row => row.section === name)
-    const vip = exact('VIP'), free = exact('Free'), props = exact('Props Lab'), lotto = exact('Lotto Parlays'), longshots = exact('Longshots')
-    const stats = statsFor(results)
-    const breakdown = { overall:stats, vip:statsFor(vip), free:statsFor(free), props:statsFor(props), parlays:statsFor(lotto), lotto:statsFor(lotto), longshots:statsFor(longshots) }
-
-    res.setHeader('Cache-Control','no-store, no-cache, must-revalidate, max-age=0')
-    res.status(200).json({
-      ok:true, success:true, source:'google-sheets-results', sourceOfTruth:'Google Sheets',
-      date:results[0]?.date || '', warnings:source.warnings || [],
-      results, rows:results, records:results, resultRows:results, archive:results, resultsArchive:results,
-      gradedPicks:results, settledPicks:results, recentResults:results, latestResults:results, allRows:results,
-      vip, free, props, lotto, longshots,
-      record:stats.record, overallRecord:stats.record, vipRecord:breakdown.vip.record, freeRecord:breakdown.free.record,
-      propsRecord:breakdown.props.record, parlayRecord:breakdown.parlays.record, lottoRecord:breakdown.lotto.record,
-      units:stats.units, totalUnits:stats.units, overallUnits:stats.units, profitLoss:stats.profitLoss,
-      winRate:stats.winRate, stats, metrics:stats, breakdown, sectionRecords:breakdown, recordsBySection:breakdown,
-      summary:{record:stats.record,units:stats.units,winRate:stats.winRate,totalPicks:results.length,incompleteUnitRows:stats.incompleteUnitRows}
-    })
-  } catch (error) {
-    console.error('results-source Google Sheets error', error)
-    res.status(500).json({ok:false,success:false,source:'google-sheets-results',error:error?.message || 'Unable to load results'})
-  }
+export default function handler(req,res) {
+  const days = Math.min(Math.max(Number(req.query?.days || 180),1),3650)
+  const cutoff = Date.now() - days * 86400000
+  const results = reconstructed.map(normalized).filter(row => new Date(`${row.date}T12:00:00Z`).getTime() >= cutoff)
+    .sort((a,b)=>String(b.date).localeCompare(String(a.date)))
+  const exact = name => results.filter(row=>row.section===name)
+  const vip=exact('VIP'),free=exact('Free'),props=exact('Props Lab'),lotto=exact('Lotto Parlays'),longshots=exact('Longshots')
+  const stats=statsFor(results)
+  const breakdown={overall:stats,vip:statsFor(vip),free:statsFor(free),props:statsFor(props),parlays:statsFor(lotto),lotto:statsFor(lotto),longshots:statsFor(longshots)}
+  res.setHeader('Content-Type','application/json')
+  res.setHeader('Cache-Control','no-store, no-cache, must-revalidate, max-age=0')
+  res.status(200).json({ok:true,success:true,source:'reconstructed-results-2026-08-13-15',date:'2026-08-15',results,rows:results,records:results,resultRows:results,archive:results,resultsArchive:results,gradedPicks:results,settledPicks:results,recentResults:results,latestResults:results,allRows:results,vip,free,props,lotto,longshots,record:stats.record,overallRecord:stats.record,vipRecord:breakdown.vip.record,freeRecord:breakdown.free.record,propsRecord:breakdown.props.record,parlayRecord:breakdown.parlays.record,lottoRecord:breakdown.lotto.record,units:stats.units,totalUnits:stats.units,overallUnits:stats.units,profitLoss:stats.profitLoss,winRate:stats.winRate,stats,metrics:stats,breakdown,sectionRecords:breakdown,recordsBySection:breakdown,summary:{record:stats.record,units:stats.units,winRate:stats.winRate,totalPicks:results.length,incompleteUnitRows:stats.incompleteUnitRows,note:'Known unit total excludes the unrecovered Kecmanovic stake. The same reconstructed ledger is also stored in Google Sheets.'}})
 }
