@@ -1,6 +1,6 @@
 # Micks Picks Scoring Framework
 
-Effective: 2026-08-18
+Effective: 2026-08-19
 
 ## Purpose
 
@@ -9,7 +9,7 @@ This file is the persisted decision framework for daily Micks Picks candidate sc
 ## Core Score — 110 Points
 
 ### 1. Matchup Edge — 0 to 20
-Measures the underlying basketball/baseball/football/etc. edge before price.
+Measures the underlying sports edge before price.
 - 17-20: major structural edge supported by multiple independent indicators
 - 13-16: clear edge with limited counter-signals
 - 9-12: moderate edge
@@ -29,6 +29,8 @@ Price-decay rule: if a plus-money play loses 15-20 cents or more from the number
 ### 3. Form / Splits / Situational Fit — 0 to 15
 Includes recent form, opponent-specific splits, home/away, handedness, rest, travel, pace, park, weather, surface, and schedule context where relevant.
 
+RECENCY OVERRIDE: season-long strength cannot erase a meaningful current-form warning. For team scoring markets, explicitly check last 5/10/15 games, runs/points per game, frequency of failing the proposed threshold, quality of contact/shot creation, and performance against the relevant pitcher/defense archetype. If recent form materially contradicts the bet, Form/Splits is capped at 8/15 unless there is a specific, evidence-backed reason for an immediate rebound.
+
 ### 4. Availability / Role Certainty — 0 to 15
 Includes injuries, lineup certainty, minutes, starting status, usage, bullpen availability, rotation role, and workload.
 
@@ -37,15 +39,16 @@ Returning-from-injury rule: first game back after missed time is capped at B+ un
 ### 5. Independent Confirmation — 0 to 10
 Use VSiN, Doc's Sports, StatMuse, credible articles, beat reports, official injury reports, lineup sources, and other independent inputs.
 
-Agreement alone does not earn full points. The reasoning must independently support the same handicap.
+Agreement alone does not earn full points. The reasoning must independently support the same handicap. Recommendation articles cannot substitute for primary statistical validation.
 
 ### 6. Market Structure / Failure-Path Quality — 0 to 15
 Measures whether the chosen market isolates the actual edge and avoids fragile assumptions.
 - Prefer derivatives when they cleanly isolate the edge.
 - Penalize markets that require extra outcomes not established by the handicap.
+- Explicitly model the most plausible failure path before awarding 12+ points.
 
 ### 7. Correlation / Portfolio Fit — 0 to 5
-Penalize multiple plays relying on the same fragile game script, player role, offensive environment, or injury assumption.
+Penalize multiple plays relying on the same fragile game script, player role, offensive environment, injury assumption, or analytical thesis.
 
 ### 8. Execution / Information Quality — 0 to 10
 Includes confirmed lineups, weather, starting pitchers, injury reports, market availability, and timing quality.
@@ -67,13 +70,14 @@ A-range hard stops:
 - single-source dependency
 - weak lineup/weather confirmation where relevant
 - fragile market structure where the handicap does not directly support the bet condition
+- team-total or offensive Over with a material recent scoring slump that has not been independently explained/offset
 
 ## Market-Specific Modules
 
 ### MLB Run Lines
 A moneyline edge does not automatically justify -1.5.
 
-Add a mandatory Margin Creation test:
+Mandatory Margin Creation test:
 - offensive separation potential
 - opponent bullpen vulnerability
 - favorite bullpen ability to protect margin
@@ -82,6 +86,27 @@ Add a mandatory Margin Creation test:
 - starting-pitching mismatch large enough to create early separation
 
 If the handicap mainly proves 'favorite likely wins' but not 'favorite likely wins by 2+', downgrade or choose ML/F5/team total instead.
+
+### MLB Team Totals / Offensive Overs
+Opponent pitcher weakness is only one half of the handicap. A bad opposing ERA/FIP/WHIP does NOT by itself create an Over.
+
+Mandatory checks:
+- offense runs/game last 5, 10 and 15
+- proposed total hit rate over those samples
+- team wRC+/OPS or comparable production over recent sample
+- top-of-order current form
+- confirmed lineup quality and missing bats
+- handedness/platoon matchup
+- starter pitch mix, velocity, whiff and command — not ERA alone
+- bullpen quality/availability behind the starter
+- park/weather
+- price versus estimated true probability
+
+BAD-PITCHER FALLACY PENALTY: if the main case is simply 'opposing starter has a bad ERA/WHIP/FIP,' Market Structure cannot exceed 8/15 and the play cannot be A-range.
+
+OFFENSIVE-SLUMP RULE: if the offense has scored 2 or fewer in at least 5 of its previous 10 games, or is materially below its season scoring baseline across the last 10-15, an Over/team-total Over is capped at B unless current lineup/contact-quality evidence strongly demonstrates the slump is misleading.
+
+THRESHOLD HIT-RATE RULE: before releasing a team total, calculate how often the team has actually cleared the proposed number in its last 10 and 20. A candidate cannot receive 15+ Market/Price points without a positive threshold hit-rate/value case.
 
 ### MLB F5 / First-Half Derivatives
 Use only when the early-game edge is specifically stronger than full-game exposure.
@@ -156,11 +181,14 @@ Mandatory checks:
 - umpire if material
 - price versus threshold
 
+Prefer skill-vs-opportunity props when the underlying event is directly controlled by the player and the threshold has a measurable distribution edge. The Aug. 18 Harrison win reinforces this structure, but a single result does not justify automatic upgrades.
+
 ## Source Framework
 
 Daily research should include, where applicable:
+- all user-supplied research URLs
 - Circa numbers / market reference
-- VSiN model and market scan
+- VSiN model and market scan, including relevant analyzers/projections
 - Doc's Sports free-pick/statistics/video scan
 - StatMuse
 - credible article sources
@@ -169,7 +197,7 @@ Daily research should include, where applicable:
 - reliable lineup/news sources
 - weather and park context
 
-No single source can make a play A-range by itself.
+No single source can make a play A-range by itself. Every supplied URL must be checked during a full daily scan; inaccessible/stale sources should be logged rather than silently skipped.
 
 ## Card Construction Rules
 
@@ -180,8 +208,9 @@ No single source can make a play A-range by itself.
 - Maximum 3 longshots
 - PASS aggressively rather than force volume
 - Top 5 is a cap, not a quota
+- After a negative two-day run, require at least two independent evidence paths for every B+ or higher release; no narrative-only plays
 
-## Review Rules From Aug 16-17, 2026
+## Review Rules From Aug 16-18, 2026
 
 1. Do not overrate favorite superiority; choose the market that matches the proven edge.
 2. First game back from injury cannot be A-range without affirmative workload evidence.
@@ -190,17 +219,25 @@ No single source can make a play A-range by itself.
 5. Derivatives are preferred only when they improve price without adding an unjustified condition.
 6. Multiple correlated props from the same fragile offensive environment should be penalized.
 7. Optimize for unit return, not number of releases.
+8. Do not infer team-total value from a weak opposing starter alone. Houston's Aug. 18 loss showed that a struggling offense can fail even against ugly season-long pitcher numbers; Klassen threw seven scoreless innings.
+9. Recent offensive form must be independently measured before any team-total Over. Houston had scored two or fewer in 7 of 13 entering/through the Aug. 18 stretch, a warning the prior score underweighted.
+10. Pitcher evaluation must include current stuff and underlying pitch traits. Small-sample/young pitchers can improve faster than ERA-based handicaps capture.
+11. Two team-total Overs on one card require separate, independently strong offensive-form cases. Do not create portfolio concentration around the same 'attack bad starter' thesis.
+12. A winning pick is not automatically evidence that its category deserves more weight; process quality and repeatability matter more than one result.
 
 ## Daily Workflow
 
 1. Pull current market numbers.
-2. Scan VSiN.
-3. Scan Doc's Sports.
-4. Pull StatMuse and credible article support.
-5. Check injuries, lineups, weather, starting pitchers, minutes/workload, and role.
-6. Build candidate pool across sides, totals, derivatives, NRFI/YRFI, and props.
-7. Score every candidate through the 110-point framework and the relevant market-specific module.
-8. Apply hard-stop rules and correlation penalties.
-9. Rank by expected value and execution quality.
-10. Release only candidates that clear threshold; do not force a Top 5.
-11. After settlement, grade, archive, and update the framework only when a recurring process error is identified.
+2. Check every user-supplied research URL.
+3. Scan VSiN and relevant tools/analyzers.
+4. Scan Doc's Sports free picks, statistics and videos.
+5. Pull StatMuse and credible article support.
+6. Check injuries, lineups, weather, starting pitchers, minutes/workload, role, and recent team/player form.
+7. Build candidate pool across sides, totals, derivatives, NRFI/YRFI, and props.
+8. For MLB team totals, calculate last-10/20 threshold hit rates before scoring.
+9. Score every candidate through the 110-point framework and the relevant market-specific module.
+10. Apply hard-stop rules, recency overrides and correlation penalties.
+11. Rank by expected value and execution quality.
+12. Release only candidates that clear threshold; do not force a Top 5.
+13. Display the scored candidate chart/table on every full run or rerun.
+14. After settlement, grade, archive, and update the framework only when a recurring process error is identified.
