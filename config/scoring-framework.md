@@ -1,6 +1,6 @@
 # Micks Picks Scoring Framework
 
-Effective: 2026-08-19
+Effective: 2026-08-20
 
 ## Purpose
 
@@ -37,15 +37,23 @@ Includes injuries, lineup certainty, minutes, starting status, usage, bullpen av
 Returning-from-injury rule: first game back after missed time is capped at B+ unless unrestricted workload is affirmatively supported by credible pregame reporting and normal role evidence.
 
 ### 5. Independent Confirmation — 0 to 10
-Use VSiN, Doc's Sports, StatMuse, credible articles, beat reports, official injury reports, lineup sources, and other independent inputs.
+Use VSiN, Doc's Sports, TeamRankings, StatMuse, credible articles, beat reports, official injury reports, lineup sources, and other independent inputs.
 
 Agreement alone does not earn full points. The reasoning must independently support the same handicap. Recommendation articles cannot substitute for primary statistical validation.
 
 ### 6. Market Structure / Failure-Path Quality — 0 to 15
 Measures whether the chosen market isolates the actual edge and avoids fragile assumptions.
-- Prefer derivatives when they cleanly isolate the edge.
+- Prefer derivatives only when they cleanly isolate the edge.
 - Penalize markets that require extra outcomes not established by the handicap.
 - Explicitly model the most plausible failure path before awarding 12+ points.
+
+MANDATORY FAILURE-CASE SCORE: every official candidate receives a separate 0-10 failure-case score before release. This score is a gate and does not add to the 110-point total.
+- 8-10: primary failure paths are low probability and directly addressed by the market structure
+- 6-7: acceptable but meaningful counter-path remains
+- 4-5: fragile; maximum B
+- 0-3: PASS
+
+The failure-case review must identify at least one credible way the bet loses even if the main handicap is directionally correct.
 
 ### 7. Correlation / Portfolio Fit — 0 to 5
 Penalize multiple plays relying on the same fragile game script, player role, offensive environment, injury assumption, or analytical thesis.
@@ -53,24 +61,73 @@ Penalize multiple plays relying on the same fragile game script, player role, of
 ### 8. Execution / Information Quality — 0 to 10
 Includes confirmed lineups, weather, starting pitchers, injury reports, market availability, and timing quality.
 
-## Grade Thresholds
+## Standard Grade Thresholds
 
-- A+: 94-110 — rare, exceptional edge, minimal unresolved risk
-- A: 88-93 — 1.25u
-- A-: 82-87 — 1.00u
-- B+: 75-81 — 0.75u
-- B: 69-74 — 0.50u
-- B-: 64-68 — small straight only
+- A+: 94-110 — rare, exceptional edge
+- A: 88-93
+- A-: 82-87
+- B+: 75-81
+- B: 69-74
+- B-: 64-68
 - C: 58-63 — lean/watchlist/live/longshot only
 - Below 58: PASS
 
-A-range hard stops:
+## Recovery Mode — ACTIVE
+
+Recovery Mode is active following the Aug. 17-19 drawdown. It overrides the standard grade/stake table until the exit condition is met.
+
+### Recovery grading/staking
+- A+, A and A- scores may still be displayed analytically, but **A-range releases are suspended**.
+- Highest official release grade: **B+**.
+- B+ stake: **0.75u maximum**.
+- B stake: **0.50u maximum**.
+- B- stake: **0.25u maximum**.
+- C and below: no standard straight release.
+- Normal daily exposure cap: **1.50u**.
+- Exceptional daily exposure cap: **2.00u**, only with three distinct evidence paths per play and no material correlation.
+- Maximum 3 standard straights while Recovery Mode is active.
+
+### Recovery evidence requirement
+Every B+ candidate must have at least **three independent evidence paths**:
+1. primary matchup/statistical case;
+2. independent current-data validation from a separate source or model;
+3. market/price, situational, lineup, injury, weather, or role evidence that supports the same outcome.
+
+Two articles repeating the same reasoning count as one evidence path, not two.
+
+### Recovery exit condition
+Recovery Mode stays active until at least 10 newly released official picks have been graded and that sample is both:
+- net positive in units; and
+- at least 55% wins on non-push decisions.
+
+Do not remove Recovery Mode because of one good card.
+
+## A-Range Hard Stops After Recovery
+
+Even after Recovery Mode ends, A-range is prohibited with:
 - unresolved injury/workload uncertainty
 - materially deteriorated price
 - single-source dependency
 - weak lineup/weather confirmation where relevant
 - fragile market structure where the handicap does not directly support the bet condition
 - team-total or offensive Over with a material recent scoring slump that has not been independently explained/offset
+
+## Market-Family Performance Penalty
+
+Track rolling results by market family: full-game favorite/run line, F5, team total, full-game total, player prop type, WNBA spread, NRFI/YRFI, etc.
+
+If a market family loses 3 consecutive official releases or is below 35% over its last 5+ official releases:
+- subtract 5 points from new candidates in that family;
+- maximum release grade is B;
+- require three independent evidence paths;
+- penalty remains until that family records either 2 consecutive wins or a 4-2-or-better six-pick sample.
+
+Current penalty flags entering Aug. 20:
+- MLB favorite/run-line style sides: penalty active.
+- MLB team-total Overs: penalty active.
+- WNBA projection-gap spreads: penalty active.
+
+Do not apply the penalty to unrelated market families merely because the overall card is losing.
 
 ## Market-Specific Modules
 
@@ -149,8 +206,6 @@ Mandatory checks:
 Do not rely on raw averages alone.
 
 ### Assist Props
-Opportunity alone is insufficient.
-
 Mandatory checks:
 - potential assists
 - teammate shooting/finishing quality
@@ -181,7 +236,7 @@ Mandatory checks:
 - umpire if material
 - price versus threshold
 
-Prefer skill-vs-opportunity props when the underlying event is directly controlled by the player and the threshold has a measurable distribution edge. The Aug. 18 Harrison win reinforces this structure, but a single result does not justify automatic upgrades.
+Prefer skill-vs-opportunity props when the underlying event is directly controlled by the player and the threshold has a measurable distribution edge.
 
 ## Source Framework
 
@@ -190,6 +245,7 @@ Daily research should include, where applicable:
 - Circa numbers / market reference
 - VSiN model and market scan, including relevant analyzers/projections
 - Doc's Sports free-pick/statistics/video scan
+- **TeamRankings (teamrankings.com / www2.teamrankings.com)**
 - StatMuse
 - credible article sources
 - official league/team injury reports
@@ -197,20 +253,46 @@ Daily research should include, where applicable:
 - reliable lineup/news sources
 - weather and park context
 
-No single source can make a play A-range by itself. Every supplied URL must be checked during a full daily scan; inaccessible/stale sources should be logged rather than silently skipped.
+### TeamRankings scan requirements
+Use TeamRankings as a primary statistical cross-check, not merely as an article source.
+
+For MLB, check where available:
+- matchup stats
+- efficiency stats
+- season vs recent splits
+- home/away splits
+- runs/game and run differential
+- batting and pitching rates
+- strikeout rates
+- bullpen/run-prevention context
+- close-game performance when relevant to ML/run-line decisions
+
+For WNBA/NBA, check where available:
+- points/game and opponent points/game
+- average scoring margin
+- pace/possession-related indicators
+- rebounding
+- assists/turnovers
+- home/away and recent splits
+
+For NFL/NCAAF/NCAAB and other supported sports, use the equivalent matchup, efficiency, scoring, margin, turnover, pace and split pages when available.
+
+TeamRankings can confirm or contradict a thesis but does not automatically add points. If TeamRankings materially conflicts with VSiN/Doc's/StatMuse, document the conflict and reduce confidence until resolved.
+
+No single source can make a play B+ during Recovery Mode or A-range after Recovery Mode. Every supplied URL and TeamRankings must be checked during a full daily scan; inaccessible/stale sources should be logged rather than silently skipped.
 
 ## Card Construction Rules
 
-- Normal exposure target: approximately 1.25u-2.25u unless slate quality clearly supports more
-- Maximum 4 straights unless exceptional slate quality
+- Recovery Mode exposure cap: 1.50u normal / 2.00u exceptional
+- Maximum 3 standard straights during Recovery Mode
 - Maximum 3 props
 - Maximum 1 parlay
 - Maximum 3 longshots
 - PASS aggressively rather than force volume
 - Top 5 is a cap, not a quota
-- After a negative two-day run, require at least two independent evidence paths for every B+ or higher release; no narrative-only plays
+- Avoid multiple bets based on the same analytical thesis
 
-## Review Rules From Aug 16-18, 2026
+## Review Rules From Aug 16-19, 2026
 
 1. Do not overrate favorite superiority; choose the market that matches the proven edge.
 2. First game back from injury cannot be A-range without affirmative workload evidence.
@@ -219,11 +301,13 @@ No single source can make a play A-range by itself. Every supplied URL must be c
 5. Derivatives are preferred only when they improve price without adding an unjustified condition.
 6. Multiple correlated props from the same fragile offensive environment should be penalized.
 7. Optimize for unit return, not number of releases.
-8. Do not infer team-total value from a weak opposing starter alone. Houston's Aug. 18 loss showed that a struggling offense can fail even against ugly season-long pitcher numbers; Klassen threw seven scoreless innings.
-9. Recent offensive form must be independently measured before any team-total Over. Houston had scored two or fewer in 7 of 13 entering/through the Aug. 18 stretch, a warning the prior score underweighted.
-10. Pitcher evaluation must include current stuff and underlying pitch traits. Small-sample/young pitchers can improve faster than ERA-based handicaps capture.
-11. Two team-total Overs on one card require separate, independently strong offensive-form cases. Do not create portfolio concentration around the same 'attack bad starter' thesis.
-12. A winning pick is not automatically evidence that its category deserves more weight; process quality and repeatability matter more than one result.
+8. Do not infer team-total value from a weak opposing starter alone.
+9. Recent offensive form must be independently measured before any team-total Over.
+10. Pitcher evaluation must include current stuff and underlying pitch traits.
+11. Multiple team-total Overs require separately strong offensive-form cases.
+12. A winning pick is not automatically evidence that its category deserves more weight.
+13. Source/model agreement must be tested against a credible losing scenario before release.
+14. When a market family repeatedly fails, reduce its score and stake instead of assuming variance will immediately reverse.
 
 ## Daily Workflow
 
@@ -231,13 +315,16 @@ No single source can make a play A-range by itself. Every supplied URL must be c
 2. Check every user-supplied research URL.
 3. Scan VSiN and relevant tools/analyzers.
 4. Scan Doc's Sports free picks, statistics and videos.
-5. Pull StatMuse and credible article support.
-6. Check injuries, lineups, weather, starting pitchers, minutes/workload, role, and recent team/player form.
-7. Build candidate pool across sides, totals, derivatives, NRFI/YRFI, and props.
-8. For MLB team totals, calculate last-10/20 threshold hit rates before scoring.
-9. Score every candidate through the 110-point framework and the relevant market-specific module.
-10. Apply hard-stop rules, recency overrides and correlation penalties.
-11. Rank by expected value and execution quality.
-12. Release only candidates that clear threshold; do not force a Top 5.
-13. Display the scored candidate chart/table on every full run or rerun.
-14. After settlement, grade, archive, and update the framework only when a recurring process error is identified.
+5. Scan TeamRankings matchup, efficiency and split pages for the candidate slate.
+6. Pull StatMuse and credible article support.
+7. Check injuries, lineups, weather, starting pitchers, minutes/workload, role, and recent team/player form.
+8. Build candidate pool across sides, totals, derivatives, NRFI/YRFI, and props.
+9. For MLB team totals, calculate last-10/20 threshold hit rates before scoring.
+10. Score every candidate through the 110-point framework and relevant market-specific module.
+11. Assign the mandatory 0-10 failure-case score.
+12. Apply hard-stop rules, recency overrides, market-family penalties and correlation penalties.
+13. Verify B+ candidates have three independent evidence paths during Recovery Mode.
+14. Rank by expected value and execution quality.
+15. Release only candidates that clear threshold; do not force a Top 5.
+16. Display the scored candidate chart/table on every full run or rerun.
+17. After settlement, grade, archive, update rolling market-family performance, and modify the framework only when a recurring process error is identified.
