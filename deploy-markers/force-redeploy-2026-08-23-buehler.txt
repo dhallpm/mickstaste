@@ -1,0 +1,2 @@
+Force production redeploy for the August 23, 2026 active-card update.
+Reason: Walker Buehler Over 15.5 Outs Recorded was committed to data/active-card.js but was not visible on the live page after the initial publish commit.
