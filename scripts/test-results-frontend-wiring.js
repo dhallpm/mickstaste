@@ -25,6 +25,18 @@ assert.deepEqual(todayPicks.free.map(row => [row.pick, row.odds, row.grade, row.
 ])
 assert.equal(todayPicks.lottoParlays[0].cardTitle, 'Jets +1.5 / Vikings -1.5 Lotto Parlay')
 assert.equal(todayPicks.lottoParlays[0].units, 0.25)
+const canonicalCardFields = ['writeup', 'fullAnalysis', 'bestNumber', 'playableTo', 'noBetCutoff', 'grade', 'units', 'micksScore', 'replicaScore', 'failureScore', 'officialBet']
+const publicCardRows = [...todayPicks.free, ...todayPicks.lottoParlays]
+for (const row of publicCardRows) {
+  for (const field of canonicalCardFields) assert.ok(Object.hasOwn(row, field), `${row.cardTitle} is missing ${field}`)
+  const publicWordCount = row.writeup.trim().split(/\s+/).filter(Boolean).length
+  assert.ok(publicWordCount >= 125 && publicWordCount <= 225, `${row.cardTitle} public writeup is ${publicWordCount} words`)
+}
+assert.deepEqual(todayPicks.free.map(row => [row.micksScore, row.replicaScore, row.failureScore]), [
+  ['81/110', '84/100', '8/10'],
+  ['80/110', '82/100', '7/10']
+])
+assert.doesNotMatch(JSON.stringify(todayPicks), /New York \+1\.5 is the preferred straight-side expression|Minnesota -1\.5 is released at the current BetRivers price|The two-leg Lotto Parlay combines the two strongest/)
 assert.equal(staticResults.source, 'published-results-static')
 assert.equal(staticResults.results.length, 92)
 assert.match(resultsHtml, /fetch\('\/data\/results\.json'/)
@@ -153,6 +165,10 @@ function fakeElement(id) {
   }
 }
 
+const vipFullAnalysisFixture = `${'Market context matchup personnel model situational value risk discipline conclusion '.repeat(32)}VIP-END-MARKER`
+assert.ok(vipFullAnalysisFixture.trim().split(/\s+/).length >= 300)
+assert.ok(vipFullAnalysisFixture.trim().split(/\s+/).length <= 600)
+
 async function renderIndexPage(payload, todayPayload = { success: true, free: [], vip: [], vipVault: [], props: [], lottoParlays: [], longshots: [] }) {
   const elements = new Map()
   const fetchCalls = []
@@ -242,7 +258,8 @@ async function renderIndexPage(payload, todayPayload = { success: true, free: []
     summaryHtml: elementFor('summaryCards').innerHTML,
     overallRecord: elementFor('overallRecord').textContent,
     overallRoi: elementFor('overallRoi').textContent,
-    homeActive: elementFor('homeActive').textContent
+    homeActive: elementFor('homeActive').textContent,
+    vipArchitectureHtml: context.fullAnalysisBox({ __section: 'vipVault', access: 'VIP', fullAnalysis: vipFullAnalysisFixture }, false)
   }
 }
 
@@ -746,6 +763,20 @@ assert.match(todayCardRender.propsDataset.renderedAt, /^\d{4}-\d{2}-\d{2}T/)
 assert.equal(todayCardRender.propsStableAfterHash, true)
 assert.equal((todayCardRender.propsHtml.match(/<article class="card pick-card/g) || []).length, 4)
 assert.equal((todayCardRender.propsHtml.match(/Jordan Staal - Over 1\.5 Shots on Goal/g) || []).length, 1)
+
+const canonicalTodayRender = await renderIndexPage({ success: true, results: [] }, todayPicks)
+assert.match(canonicalTodayRender.freeHtml, /The opener made Tennessee roughly a three-point favorite/)
+assert.match(canonicalTodayRender.freeHtml, /At the posted price, Jets \+1\.5 -110 is the official B\+ play\./)
+assert.match(canonicalTodayRender.freeHtml, /Green Bay opened as the market favorite/)
+assert.match(canonicalTodayRender.freeHtml, /Minnesota -1\.5 -114 remains the official B\+ position\./)
+assert.match(canonicalTodayRender.freeHtml, /Playable To/)
+assert.match(canonicalTodayRender.freeHtml, /Jets \+1\.5 at -115/)
+assert.match(canonicalTodayRender.freeHtml, /Vikings -1\.5 at -115/)
+assert.doesNotMatch(canonicalTodayRender.freeHtml, /<h4>Full Analysis<\/h4>/)
+assert.match(canonicalTodayRender.longshotsHtml, /This two-leg Lotto Parlay pairs New York \+1\.5 with Minnesota -1\.5/)
+assert.match(canonicalTodayRender.longshotsHtml, /official B\+ play for 0\.25 units/)
+assert.match(canonicalTodayRender.vipArchitectureHtml, /Full Analysis/)
+assert.match(canonicalTodayRender.vipArchitectureHtml, /VIP-END-MARKER/)
 assert.doesNotMatch(todayCardRender.propsHtml, /Released player props will appear|Today’s Active Props|No active props released|No picks released yet/)
 
 const indexEmptyRender = await renderIndexPage({

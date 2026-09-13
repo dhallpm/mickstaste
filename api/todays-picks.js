@@ -58,7 +58,12 @@ function normalize(row = {}, cardDate = '') {
   const writeup = text(row.Writeup || row.writeup)
   const fullAnalysis = text(row['Full Analysis'] || row.fullAnalysis || row.full)
   const bestNumber = text(row['Best Number'] || row.bestNumber || row.best)
+  const playableTo = text(row['Playable To'] || row.playableTo || row.playable)
   const cutoff = text(row['No-Bet Cutoff'] || row.noBetCutoff || row.cutoff)
+  const micksScore = text(row['Micks Score'] || row.micksScore || row.Score || row.score)
+  const replicaScore = text(row['Replica Score'] || row.replicaScore || row['Market AI Replica'] || row.marketAiReplica)
+  const failureScore = text(row['Failure Score'] || row.failureScore)
+  const officialBet = text(row['Official Bet'] || row.officialBet || 'Yes')
   const accessRaw = text(row.Access || row.access || (sec === 'VIP' ? 'VIP' : 'Free'))
   const access = sec === 'VIP' ? 'VIP' : accessRaw
   const status = text(row.Status || row.status || 'Pending')
@@ -68,8 +73,10 @@ function normalize(row = {}, cardDate = '') {
     Sport:sport,sport,League:league,league,Matchup:matchup,matchup,Game:matchup,game:matchup,
     Pick:pick,pick,Line:line,line,Odds:odds,odds,Grade:grade,grade,Units:units,units,Status:status,status,
     Writeup:writeup,writeup,'Full Analysis':fullAnalysis,fullAnalysis,full:fullAnalysis,
-    'Best Number':bestNumber,bestNumber,best:bestNumber,'No-Bet Cutoff':cutoff,noBetCutoff:cutoff,cutoff,
-    'Official Bet':'Yes',officialBet:'Yes'
+    'Best Number':bestNumber,bestNumber,best:bestNumber,'Playable To':playableTo,playableTo,
+    'No-Bet Cutoff':cutoff,noBetCutoff:cutoff,cutoff,
+    'Micks Score':micksScore,micksScore,score:micksScore,'Replica Score':replicaScore,replicaScore,marketAiReplica:replicaScore,
+    'Failure Score':failureScore,failureScore,'Official Bet':officialBet,officialBet
   }
 }
 
