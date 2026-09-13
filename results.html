@@ -197,6 +197,7 @@
     function rowsFromPayload(data = {}) {
       const byDateRows = rowsFromByDate(data.byDate)
       if (byDateRows.length) return byDateRows
+      if (Array.isArray(data.results) && data.results.length) return data.results
       if (Array.isArray(data.records) && data.records.length) return data.records
       if (Array.isArray(data.rows) && data.rows.length) return data.rows
       return []
@@ -300,10 +301,10 @@
 
     async function boot() {
       try {
-        const response = await fetch('/api/results?days=3650&cache=' + Date.now(), { cache: 'no-store' })
-        if (!response.ok) throw new Error(`Results API ${response.status}`)
+        const response = await fetch('/data/results.json', { cache: 'no-store' })
+        if (!response.ok) throw new Error(`Results file ${response.status}`)
         const data = await response.json()
-        if (data.success === false) throw new Error(data.error || 'Results API unavailable')
+        if (data.success === false) throw new Error(data.error || 'Results file unavailable')
         renderSummary(data)
         renderRows(data)
         statusEl.textContent = `${rowsFromPayload(data).length} settled result(s) loaded.`

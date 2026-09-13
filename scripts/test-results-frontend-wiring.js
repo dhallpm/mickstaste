@@ -5,6 +5,7 @@ import vm from 'node:vm'
 const rootUrl = new URL('../', import.meta.url)
 const html = await readFile(new URL('../index.html', import.meta.url), 'utf8')
 const todayPicks = JSON.parse(await readFile(new URL('../data/todays-picks.json', import.meta.url), 'utf8'))
+const staticResults = JSON.parse(await readFile(new URL('../data/results.json', import.meta.url), 'utf8'))
 const resultsHtml = await readFile(new URL('../results.html', import.meta.url), 'utf8')
 const runtimeRules = await readFile(new URL('../micks-runtime-rules.js', import.meta.url), 'utf8')
 const resultsApi = await readFile(new URL('../api/results.js', import.meta.url), 'utf8')
@@ -12,8 +13,9 @@ const propsLiveFilter = await readFile(new URL('../micks-props-live-filter.js', 
 const sportsbookTheme = await readFile(new URL('../sportsbook-theme.css', import.meta.url), 'utf8')
 const vipDestination = 'https://vip.mickspicks.us/'
 
-assert.match(html, /fetch\(`\/api\/results\?days=3650&cache=\$\{Date\.now\(\)\}`/)
+assert.match(html, /fetch\('\/data\/results\.json'/)
 assert.match(html, /fetch\('\/data\/todays-picks\.json'/)
+assert.doesNotMatch(html, /fetch\([^\n]*\/api\/results/)
 assert.doesNotMatch(html, /fetch\([^\n]*\/api\/todays-picks/)
 assert.doesNotMatch(html, /MICKS_STATIC_CARD_RESCUE|site-rules-override|data-static-card/)
 assert.equal(todayPicks.totalExposure, 1.75)
@@ -23,6 +25,10 @@ assert.deepEqual(todayPicks.free.map(row => [row.pick, row.odds, row.grade, row.
 ])
 assert.equal(todayPicks.lottoParlays[0].cardTitle, 'Jets +1.5 / Vikings -1.5 Lotto Parlay')
 assert.equal(todayPicks.lottoParlays[0].units, 0.25)
+assert.equal(staticResults.source, 'published-results-static')
+assert.equal(staticResults.results.length, 92)
+assert.match(resultsHtml, /fetch\('\/data\/results\.json'/)
+assert.doesNotMatch(resultsHtml, /fetch\([^\n]*\/api\/results/)
 assert.match(html, /MICKS_BUILD: 20260627-public-results-live/)
 assert.match(html, /MICKS_VIP_SOURCE: live-index-vip-preview-20260625/)
 assert.match(html, /MICKS_VIP_DESTINATION: https:\/\/vip\.mickspicks\.us\//)
@@ -99,7 +105,7 @@ assert.doesNotMatch(html, /\/api\/results\?days=180/)
 assert.doesNotMatch(runtimeRules, /\/api\/results\?days=180/)
 assert.doesNotMatch(propsLiveFilter, /\/api\/results\?days=180/)
 
-assert.match(resultsHtml, /fetch\('\/api\/results\?days=3650&cache='/)
+assert.match(resultsHtml, /fetch\('\/data\/results\.json'/)
 assert.match(resultsHtml, /Official Straight Record/)
 assert.match(resultsHtml, /VIP Record/)
 assert.match(resultsHtml, /Props Lab Record/)
@@ -193,7 +199,7 @@ async function renderIndexPage(payload, todayPayload = { success: true, free: []
           json: async () => todayPayload
         }
       }
-      if (href.startsWith('/api/results')) {
+      if (href.startsWith('/data/results.json')) {
         return {
           ok: true,
           json: async () => payload
