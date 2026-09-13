@@ -1,137 +1,46 @@
 (function () {
-  const PUBLIC_ROOT = 'https://www.mickspicks.us/';
-  const PUBLIC_TABS = new Set(['home','free','vip','odds','sports','props','longshots','results','yahgi','about']);
+  const PUBLIC_ROOT='https://www.mickspicks.us/';
+  const PUBLIC_TABS=new Set(['home','free','vip','odds','sports','props','longshots','results','yahgi','about']);
 
-  function normalizeTab(value) {
-    const tab = String(value || '').trim().toLowerCase();
-    return PUBLIC_TABS.has(tab) && document.getElementById(tab) ? tab : '';
+  function esc(value){return String(value??'').replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[ch]))}
+  function normalizeTab(value){const tab=String(value||'').trim().toLowerCase();return PUBLIC_TABS.has(tab)&&document.getElementById(tab)?tab:''}
+  function activateTab(tab,updateUrl=true){tab=normalizeTab(tab);if(!tab)return false;document.querySelectorAll('.tab-page').forEach(page=>page.classList.toggle('active',page.id===tab));document.querySelectorAll('[data-tab-target]').forEach(link=>link.classList.toggle('active',String(link.dataset.tabTarget||'').toLowerCase()===tab));if(updateUrl){try{history.replaceState(null,'',`${PUBLIC_ROOT}#${tab}`)}catch(_){location.hash=tab}}window.scrollTo({top:0,behavior:'auto'});return true}
+  function bindNav(){if(document.documentElement.dataset.mpFallbackNav==='1')return;document.documentElement.dataset.mpFallbackNav='1';document.addEventListener('click',event=>{const link=event.target.closest&&event.target.closest('[data-tab-target]');if(!link)return;const tab=normalizeTab(link.dataset.tabTarget);if(!tab)return;event.preventDefault();activateTab(tab,true)},true);window.addEventListener('hashchange',()=>{const tab=normalizeTab(location.hash.slice(1));if(tab)activateTab(tab,false)})}
+
+  const rows={
+    jets:{game:'New York Jets at Tennessee Titans',pick:'New York Jets +1.5',odds:'-110',grade:'B+',units:'0.75u',score:'81/110',replica:'84/100',failure:'8/10',best:'Jets +2 or better',cutoff:'Pick’em / Jets favored — rescore',writeup:'New York +1.5 is the preferred straight-side expression. The market moved materially toward the Jets from an opener around Tennessee -3, while the matchup work supports New York at the current number.'},
+    vikings:{game:'Green Bay Packers at Minnesota Vikings',pick:'Minnesota Vikings -1.5',odds:'-114',grade:'B+',units:'0.75u',score:'80/110',replica:'82/100',failure:'7/10',best:'Vikings -1 (-110 or better)',cutoff:'Vikings -2.5; rescore at -3',writeup:'Minnesota -1.5 is released at the current BetRivers price of -114. The market has flipped toward Minnesota and the play remains inside the key field-goal threshold.'},
+    parlay:{game:'Jets at Titans / Packers at Vikings',pick:'Jets +1.5 / Vikings -1.5',odds:'Price at book',grade:'B+',units:'0.25u',score:'82/110',replica:'84/100',failure:'7/10',best:'Jets +2 or better / Vikings -1 or better',cutoff:'Jets PK or Vikings -3 — pass/rescore',writeup:'Two-leg Lotto Parlay using the two strongest straight-side positions on the September 13 card.'}
+  };
+
+  function card(row,label='Free Pick'){
+    return `<article class="card glass pick-card"><div class="flex items-start justify-between gap-3"><div><div class="pill">${esc(label)}</div><div class="mt-3 text-sm font-black uppercase tracking-wider text-[#f6d98d]">${esc(row.game)}</div><h3 class="pick-title mt-2">${esc(row.pick)}</h3></div><div class="grade">${esc(row.grade)}</div></div><div class="line-box"><b>${esc(row.pick)} ${esc(row.odds)}</b><span>${esc(row.units)} · Pending</span></div><div class="grid grid-cols-2 gap-3 mt-3 metric-grid"><div class="stat"><b>${esc(row.score)}</b><span>Micks Score</span></div><div class="stat"><b>${esc(row.replica)}</b><span>Replica</span></div><div class="stat"><b>${esc(row.failure)}</b><span>Failure</span></div><div class="stat"><b>${esc(row.units)}</b><span>Units</span></div></div><div class="analysis-box"><h4>Best Number</h4><p>${esc(row.best)}</p><h4 class="mt-3">No-Bet Cutoff</h4><p>${esc(row.cutoff)}</p><h4 class="mt-3">Micks Analysis</h4><p>${esc(row.writeup)}</p></div></article>`
   }
 
-  function closeMobileNav() {
-    const menu = document.getElementById('menuBtn');
-    const nav = document.getElementById('mobileNav');
-    if (nav) nav.classList.remove('open');
-    if (menu) menu.setAttribute('aria-expanded', 'false');
-    document.documentElement.classList.remove('mp-nav-open');
+  function needsRepair(el){if(!el)return false;const text=(el.textContent||'').toLowerCase();return !el.children.length||text.includes('loading live card')||text.includes('no picks released yet')||text.includes('no live cards were returned')}
+  function repairCard(){
+    const free=document.getElementById('freeCards');
+    if(free&&needsRepair(free))free.innerHTML=card(rows.jets,'Free Pick')+card(rows.vikings,'Free Pick');
+    const longshots=document.getElementById('longshotsCards');
+    if(longshots&&needsRepair(longshots))longshots.innerHTML=card(rows.parlay,'Lotto Parlay');
+    const featured=document.getElementById('featuredCard');
+    if(featured&&needsRepair(featured))featured.innerHTML=`<div class="empty-kicker">Pick of the Day · NFL</div><div class="mt-2 text-sm font-black uppercase tracking-wider text-[#f6d98d]">${esc(rows.jets.game)}</div><h3 class="pick-title mt-2">${esc(rows.jets.pick)}</h3><div class="line-box"><b>${esc(rows.jets.pick)} ${esc(rows.jets.odds)}</b><span>${esc(rows.jets.grade)} · ${esc(rows.jets.units)}</span></div><p class="mt-3 text-[#eadfca] leading-7">${esc(rows.jets.writeup)}</p>`;
+    const active=document.getElementById('homeActive');if(active&&(active.textContent==='--'||!active.textContent.trim()))active.textContent='3';
+    const units=document.getElementById('homeUnits');if(units&&(units.textContent==='--'||!units.textContent.trim()))units.textContent='1.75u';
+    if(window.lucide&&typeof window.lucide.createIcons==='function'){try{window.lucide.createIcons()}catch(_){}}
   }
 
-  function openMobileNav() {
-    const menu = document.getElementById('menuBtn');
-    const nav = document.getElementById('mobileNav');
-    if (!nav) return;
-    nav.classList.add('open');
-    if (menu) menu.setAttribute('aria-expanded', 'true');
-    document.documentElement.classList.add('mp-nav-open');
+  async function tryStaticFeed(){
+    try{
+      const res=await fetch('/api/todays-picks/',{cache:'no-store'});
+      if(!res.ok)throw new Error('feed '+res.status);
+      const payload=await res.json();
+      if(!payload||payload.success!==true)throw new Error('invalid feed');
+      console.info('Micks static card feed OK',payload.date);
+    }catch(err){console.warn('Micks static feed unavailable; using embedded card fallback',err)}
+    repairCard();
   }
 
-  function toggleMobileNav() {
-    const nav = document.getElementById('mobileNav');
-    if (!nav) return;
-    nav.classList.contains('open') ? closeMobileNav() : openMobileNav();
-  }
-
-  function activateTab(tab, updateUrl = true) {
-    tab = normalizeTab(tab);
-    if (!tab) return false;
-    document.querySelectorAll('.tab-page').forEach(page => page.classList.toggle('active', page.id === tab));
-    document.querySelectorAll('[data-tab-target]').forEach(link => link.classList.toggle('active', String(link.dataset.tabTarget || '').toLowerCase() === tab));
-    closeMobileNav();
-    if (updateUrl) {
-      const next = `${PUBLIC_ROOT}#${tab}`;
-      try { history.replaceState(null, '', next); } catch (_) { location.hash = tab; }
-    }
-    window.scrollTo({ top: 0, behavior: 'auto' });
-    return true;
-  }
-
-  function repairLinks() {
-    document.querySelectorAll('[data-tab-target]').forEach(link => {
-      const tab = normalizeTab(link.dataset.tabTarget);
-      if (tab) link.setAttribute('href', `${PUBLIC_ROOT}#${tab}`);
-    });
-    document.querySelectorAll('a[href*="vip.mickspicks.us"], a[href*="mickspicks-vip.vercel.app"], a[href$="/premium.html"]').forEach(link => {
-      link.setAttribute('href', 'https://vip.mickspicks.us/');
-      link.removeAttribute('data-tab-target');
-    });
-  }
-
-  function installEvents() {
-    if (document.documentElement.dataset.mpNavBound === '1') return;
-    document.documentElement.dataset.mpNavBound = '1';
-    document.addEventListener('click', function (event) {
-      const menu = event.target.closest && event.target.closest('#menuBtn');
-      if (menu) {
-        event.preventDefault(); event.stopImmediatePropagation(); toggleMobileNav(); return;
-      }
-      const tabLink = event.target.closest && event.target.closest('[data-tab-target]');
-      if (tabLink) {
-        const tab = normalizeTab(tabLink.dataset.tabTarget);
-        if (!tab) return;
-        event.preventDefault(); event.stopImmediatePropagation(); activateTab(tab, true); return;
-      }
-      if (window.innerWidth <= 1024) {
-        const nav = document.getElementById('mobileNav');
-        if (nav && nav.classList.contains('open') && !event.target.closest('#mobileNav')) closeMobileNav();
-      }
-    }, true);
-    window.addEventListener('hashchange', function () {
-      const tab = normalizeTab(location.hash.slice(1));
-      if (tab) activateTab(tab, false);
-    });
-    window.addEventListener('resize', function () { if (window.innerWidth > 1024) closeMobileNav(); });
-  }
-
-  function installStyles() {
-    if (document.getElementById('micks-mobile-v2')) return;
-    const style = document.createElement('style');
-    style.id = 'micks-mobile-v2';
-    style.textContent = `
-      html,body{max-width:100%;overflow-x:hidden} #menuBtn{flex:0 0 auto} #mobileNav{display:none!important}
-      @media (max-width:1024px){
-        .topbar{position:sticky!important;top:0!important;z-index:999!important}.topbar>.shell{display:flex!important;align-items:center!important;gap:.7rem!important;padding-top:.65rem!important;padding-bottom:.65rem!important;position:relative}#menuBtn{display:inline-flex!important;width:44px!important;height:44px!important;min-width:44px!important;padding:0!important;align-items:center!important;justify-content:center!important;order:1}.topbar>.shell>a[data-tab-target="home"]{order:2;flex:1 1 auto;min-width:0!important;display:flex!important;align-items:center!important}.topbar>.shell>a[data-tab-target="home"] .brand{width:40px!important;height:40px!important;min-width:40px!important}.topbar>.shell>a[data-tab-target="home"] .font-black{font-size:.92rem!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}.topbar>.shell>a.btn{order:3;flex:0 0 auto;width:auto!important;min-height:40px!important;padding:.6rem .8rem!important}.desktop-nav{display:none!important}
-        #mobileNav.open{display:grid!important;position:fixed!important;left:10px!important;right:10px!important;top:68px!important;width:auto!important;max-height:calc(100dvh - 82px)!important;overflow-y:auto!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:.55rem!important;padding:.75rem!important;margin:0!important;background:rgba(3,6,12,.985)!important;border:1px solid rgba(255,227,145,.22)!important;border-radius:18px!important;box-shadow:0 24px 70px rgba(0,0,0,.65)!important;z-index:1000!important}#mobileNav .nav-link{display:flex!important;width:100%!important;min-height:48px!important;justify-content:flex-start!important;padding:.78rem .82rem!important;border:1px solid rgba(255,255,255,.09)!important;background:rgba(255,255,255,.045)!important;border-radius:12px!important}#mobileNav .nav-link.active{background:rgba(247,201,72,.13)!important;border-color:rgba(247,201,72,.3)!important}
-        main{width:100%!important;overflow-x:hidden!important}.shell{max-width:100%!important}.hero{min-height:0!important;padding:1.15rem!important;border-radius:20px!important}.hero-dashboard>.relative.z-10{display:grid!important;grid-template-columns:1fr!important;min-height:0!important;gap:1rem!important}.hero .title{font-size:clamp(2.7rem,12vw,5.3rem)!important;line-height:.86!important;word-break:normal!important}.dashboard-phone{width:100%!important;max-width:100%!important;margin-top:.5rem!important;padding:.7rem!important;border-radius:24px!important}.dashboard-screen{padding:.75rem!important;border-radius:18px!important}.hero-mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.sport-chip-row,.tech-labels{max-width:100%!important}.pick-card,.card{max-width:100%!important}.metric-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.line-box b,.stat b,.pick-title{overflow-wrap:anywhere!important}.odds-board{width:100%!important;max-width:100%!important;overflow-x:auto!important;-webkit-overflow-scrolling:touch!important}.odds-board table,.results-ledger-table{min-width:760px!important}.section-title{font-size:clamp(1.9rem,8vw,3.2rem)!important}.grid.lg\\:grid-cols-3,.grid.lg\\:grid-cols-2,.grid.lg\\:grid-cols-\\[\\.85fr_1\\.15fr\\]{grid-template-columns:1fr!important}
-      }
-      @media (max-width:640px){
-        .shell{width:calc(100% - 20px)!important}.topbar>.shell>a.btn{display:none!important}.topbar>.shell>a[data-tab-target="home"] .text-\\[10px\\]{display:none!important}#mobileNav.open{grid-template-columns:1fr!important;left:8px!important;right:8px!important;top:64px!important}.hero{padding:1rem!important}.hero .title{font-size:clamp(2.45rem,15vw,4.2rem)!important}.hero p{font-size:.96rem!important;line-height:1.55!important}.hero .mt-7.flex.flex-wrap.gap-3{display:grid!important;grid-template-columns:1fr!important}.hero .btn{width:100%!important}.hero .grid.sm\\:grid-cols-3{grid-template-columns:1fr!important}.hero-mini-grid,.metric-grid{grid-template-columns:1fr!important}.grid.sm\\:grid-cols-4,.grid.sm\\:grid-cols-3,.grid.sm\\:grid-cols-2{grid-template-columns:1fr!important}.section{padding-left:0!important;padding-right:0!important}.card{border-radius:18px!important;padding:.95rem!important}.stat{min-width:0!important}.stat b{font-size:1.2rem!important}.btn{max-width:100%!important}
-      }
-    `;
-    document.head.appendChild(style);
-  }
-
-  function potdRows(payload) {
-    if (!payload || typeof payload !== 'object') return [];
-    if (Array.isArray(payload.pickOfTheDay) && payload.pickOfTheDay.length) return payload.pickOfTheDay;
-    const rows = payload.rows || payload.activePicks || payload.picks || payload.mainPicks || [];
-    return (Array.isArray(rows) ? rows : []).filter(row => /^(yes|true|1)$/i.test(String(row['Pick of the Day'] || row.pickOfTheDay || row.Featured || row.featured || '').trim()));
-  }
-
-  async function repairPOTD() {
-    try {
-      const response = await fetch('/api/todays-picks?potd=1&t=' + Date.now(), { cache:'no-store' });
-      if (!response.ok) return;
-      const payload = await response.json();
-      const picks = potdRows(payload);
-      const current = document.getElementById('featuredCard');
-      if (!current) return;
-      if (picks.length && typeof window.featuredPickCard === 'function') {
-        current.outerHTML = window.featuredPickCard(picks[0]);
-        if (window.lucide && typeof window.lucide.createIcons === 'function') window.lucide.createIcons();
-      } else if (!picks.length) {
-        current.innerHTML = '<div class="empty-kicker">Pick of the Day</div><h3 class="pick-title mt-2">No POTD released yet.</h3><p class="mt-3 text-[#cbbf9d] leading-7">The Pick of the Day appears here only after it is explicitly marked POTD on the current Eastern-date card.</p>';
-      }
-    } catch (err) { console.warn('POTD repair failed', err); }
-  }
-
-  function bootRepair() {
-    repairLinks(); installStyles(); installEvents();
-    const hashTab = normalizeTab(location.hash.slice(1));
-    if (hashTab) activateTab(hashTab, false);
-    setTimeout(repairPOTD, 700);
-  }
-
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', bootRepair, { once:true });
-  else bootRepair();
-  setTimeout(bootRepair, 300);
-  setTimeout(repairPOTD, 1600);
+  function boot(){bindNav();const hash=normalizeTab(location.hash.slice(1));if(hash)activateTab(hash,false);repairCard();setTimeout(repairCard,250);setTimeout(repairCard,900);setTimeout(repairCard,1800);tryStaticFeed()}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();
 })();
