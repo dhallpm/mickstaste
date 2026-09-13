@@ -20,7 +20,6 @@ async function webFiles(dir) {
 }
 
 const index = await readFile(join(root, 'index.html'), 'utf8')
-const override = await readFile(join(root, 'site-rules-override.js'), 'utf8')
 const vercel = JSON.parse(await readFile(join(root, 'vercel.json'), 'utf8'))
 
 for (const id of publicTabs) {
@@ -43,8 +42,7 @@ for (const path of await webFiles(root)) {
 }
 
 assert.match(index, new RegExp(`href="${canonicalVip.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}"`))
-assert.doesNotMatch(override, /setTimeout|setInterval|removeAttribute|querySelectorAll\(['"]a\[href\]/)
-assert.match(override, /PUBLIC_TABS\.has\(tab\)/)
+assert.doesNotMatch(index, /site-rules-override|MICKS_STATIC_CARD_RESCUE/)
 
 for (const path of ['/vip', '/vip/(.*)', '/premium.html', '/vip.html']) {
   const redirect = vercel.redirects.find(rule => rule.source === path)

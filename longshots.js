@@ -15,7 +15,7 @@ function lsParseCSV(text){ const rows=[]; let row=[], cur='', quoted=false; for(
 function lsNormHeader(value){ return String(value||'').trim().toLowerCase().replace(/\s+/g,' ').replace(/[^\w#/% ]/g,''); }
 function lsAlias(headers, aliases){ return headers.find(header => aliases.some(alias => lsNormHeader(alias) === lsNormHeader(header))); }
 function lsObjects(rows){ if(!rows.length) return []; const headers=rows[0].map(h=>String(h||'').trim()); return rows.slice(1).map(row=>{ const raw={}; headers.forEach((header,index)=>raw[header]=String(row[index]||'').trim()); const out={_raw:raw}; Object.entries(LONGSHOTS_COLUMNS).forEach(([key,aliases])=>{ const real=lsAlias(headers,aliases); out[key]=real ? String(raw[real]||'').trim() : ''; }); return out; }).filter(row => Object.values(row._raw).some(Boolean)); }
-async function lsTodayRows(){ try{ const res=await fetch('/api/todays-picks',{cache:'no-store'}); if(!res.ok) throw new Error('Today picks feed '+res.status); const data=await res.json(); if(data.success===false) throw new Error(data.error||'Today picks feed unavailable'); return (Array.isArray(data.longshots)?data.longshots:[]).map(r=>({...r,_raw:r,_sourceTab:'Today Picks API',section:'longshots'})); }catch(error){ console.warn('Today picks feed failed closed:', error); return []; } }
+async function lsTodayRows(){ try{ const res=await fetch('/data/todays-picks.json',{cache:'no-store'}); if(!res.ok) throw new Error('Today picks file '+res.status); const data=await res.json(); if(data.success===false) throw new Error(data.error||'Today picks file unavailable'); return (Array.isArray(data.longshots)?data.longshots:[]).map(r=>({...r,_raw:r,_sourceTab:'Today Picks Static JSON',section:'longshots'})); }catch(error){ console.warn('Today picks static file unavailable:', error); return []; } }
 function lsIsReleased(row){ const status=lsClean(`${row.releaseStatus} ${row.status}`); return status.includes('released') || status.includes('manual posted') || status.includes('pregame') || status.includes('pending live market validation') || status.includes('rejected'); }
 function lsIsVip(row){ return lsClean(`${row.access} ${row.featured} ${row.riskTier}`).includes('vip') || lsClean(row.featured)==='yes'; }
 function lsIsParlay(row){ return lsClean(`${row.type} ${row.pick}`).includes('parlay') || Number(row.legCount) > 1; }
@@ -60,7 +60,7 @@ function lsCard(row){
     ${legs}
     <div class="longshot-metrics"><div><strong>${lsEscape(row.odds || '--')}</strong><span>Odds</span></div><div><strong>${lsEscape(row.units || '--')}</strong><span>Units to Commit</span></div><div><strong>${lsEscape(row.bestNumber || '--')}</strong><span>Best #</span></div><div><strong>${lsEscape(row.cutoff || '--')}</strong><span>Cutoff</span></div></div>
     ${lsSettlementStrip(row)}
-    <p class="longshot-writeup">${lsEscape(row.writeup || 'Longshot notes loading from /api/todays-picks.')}</p>
+    <p class="longshot-writeup">${lsEscape(row.writeup || 'Longshot notes loading from the published static card.')}</p>
     <div class="longshot-note"><strong>Market:</strong> ${lsEscape(row.marketNotes || 'Confirm price before betting.')} ${row.payoutTarget ? `<br><strong>Target:</strong> ${lsEscape(row.payoutTarget)}` : ''}</div>
     ${validation}
     <div class="longshot-status">${lsEscape(row.status || row.releaseStatus || 'Pending')}</div>

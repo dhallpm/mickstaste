@@ -1,4 +1,9 @@
-import activeCardRows from '../data/active-card.js'
+import { createRequire } from 'node:module'
+
+const require = createRequire(import.meta.url)
+const publishedCard = require('../data/todays-picks.json')
+const activeCardRows = ['free','vip','vipVault','props','lottoParlays','longshots']
+  .flatMap(key => Array.isArray(publishedCard[key]) ? publishedCard[key] : [])
 
 const SETTLED = new Set(['graded','settled','final','completed','complete','win','won','loss','lost','push','void','voided','cancelled','canceled','closed'])
 const text = value => String(value ?? '').trim()
@@ -46,7 +51,7 @@ function normalize(row = {}, cardDate = '') {
   const sport = text(row.Sport || row.sport || row.League || row.league)
   const league = text(row.League || row.league || sport)
   const pick = text(row.Pick || row.pick)
-  const line = text(row.Line || row.line || row.Odds || row.odds)
+  const line = text(row.lineNumber || row.Line || row.line || row.Odds || row.odds)
   const odds = text(row.Odds || row.odds || line)
   const grade = text(row.Grade || row.grade).toUpperCase()
   const units = Number(row.Units ?? row.units ?? 0) || 0
@@ -84,7 +89,7 @@ export default function handler(req,res) {
   const passes = rows.filter(row => row.section === 'Passes')
   const official = rows.filter(row => !['Watchlist / Live Only','Passes'].includes(row.section))
   const publicRows = official.filter(row => row.section !== 'VIP' && norm(row.access) !== 'vip')
-  const pickOfTheDay = official.filter(row => /^(yes|true|1)$/i.test(text(row['Pick of the Day'] || row.pickOfTheDay || row.Featured)))
+  const pickOfTheDay = official.filter(row => /^(yes|true|1)$/i.test(text(row['Pick of the Day'] || row.pickOfTheDay || row.Featured || row.featured)))
 
   res.setHeader('Content-Type','application/json')
   res.setHeader('Cache-Control','no-store, no-cache, must-revalidate, max-age=0')

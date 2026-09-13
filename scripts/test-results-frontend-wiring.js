@@ -4,6 +4,7 @@ import vm from 'node:vm'
 
 const rootUrl = new URL('../', import.meta.url)
 const html = await readFile(new URL('../index.html', import.meta.url), 'utf8')
+const todayPicks = JSON.parse(await readFile(new URL('../data/todays-picks.json', import.meta.url), 'utf8'))
 const resultsHtml = await readFile(new URL('../results.html', import.meta.url), 'utf8')
 const runtimeRules = await readFile(new URL('../micks-runtime-rules.js', import.meta.url), 'utf8')
 const resultsApi = await readFile(new URL('../api/results.js', import.meta.url), 'utf8')
@@ -12,14 +13,23 @@ const sportsbookTheme = await readFile(new URL('../sportsbook-theme.css', import
 const vipDestination = 'https://vip.mickspicks.us/'
 
 assert.match(html, /fetch\(`\/api\/results\?days=3650&cache=\$\{Date\.now\(\)\}`/)
+assert.match(html, /fetch\('\/data\/todays-picks\.json'/)
+assert.doesNotMatch(html, /fetch\([^\n]*\/api\/todays-picks/)
+assert.doesNotMatch(html, /MICKS_STATIC_CARD_RESCUE|site-rules-override|data-static-card/)
+assert.equal(todayPicks.totalExposure, 1.75)
+assert.deepEqual(todayPicks.free.map(row => [row.pick, row.odds, row.grade, row.units]), [
+  ['New York Jets +1.5', '-110', 'B+', 0.75],
+  ['Minnesota Vikings -1.5', '-114', 'B+', 0.75]
+])
+assert.equal(todayPicks.lottoParlays[0].cardTitle, 'Jets +1.5 / Vikings -1.5 Lotto Parlay')
+assert.equal(todayPicks.lottoParlays[0].units, 0.25)
 assert.match(html, /MICKS_BUILD: 20260627-public-results-live/)
 assert.match(html, /MICKS_VIP_SOURCE: live-index-vip-preview-20260625/)
 assert.match(html, /MICKS_VIP_DESTINATION: https:\/\/vip\.mickspicks\.us\//)
 assert.doesNotMatch(html, /Settled Google Sheets picks|Loading Google Sheets results|Loading settled Google Sheets results|come from settled Google Sheets rows/i)
-assert.match(runtimeRules, /fetch\(`\/api\/results\?days=3650&cache=\$\{Date\.now\(\)\}`/)
+assert.doesNotMatch(runtimeRules, /fetch\(`\/api\/results|homeUnits/)
 for (const key of ['results', 'weeklyResults', 'resultRows', 'records', 'rows', 'allRows', 'archive', 'resultsArchive']) {
   assert.match(html, new RegExp(`['"]${key}['"]`), `index renderer should accept ${key}`)
-  assert.match(runtimeRules, new RegExp(`['"]${key}['"]`), `runtime hydration should accept ${key}`)
 }
 assert.match(html, /RESULTS_CUTOFF='2026-06-24'/)
 assert.match(html, /summary=derivedCanonicalSummary\(rows\)/)
@@ -53,7 +63,7 @@ assert.doesNotMatch(sportsbookTheme, /a\.nav-link\[href=["']#vip["']\]\[data-tab
 assert.match(html, /renderPropsLabCards/)
 assert.match(html, /propsContainer\.innerHTML=''/)
 assert.match(html, /renderPropsLabCards\(activeProps\)/)
-assert.match(propsLiveFilter, /Props Lab cards now render once from index\.html using \/api\/todays-picks/)
+assert.match(propsLiveFilter, /Props Lab cards now render once from index\.html using \/data\/todays-picks\.json/)
 assert.match(html, /class="results-grid/)
 assert.match(html, /class="results-card/)
 assert.match(html, /Section Records/)
@@ -71,10 +81,10 @@ assert.ok(renderLedgerSource)
 assert.doesNotMatch(renderLedgerSource, /__source/)
 const resultsVisibleMarkup = resultsHtml.replace(/<script[\s\S]*?<\/script>/gi, '')
 assert.doesNotMatch(resultsVisibleMarkup, /Google Sheets|Airtable|source of truth|\/api\/results|row\(s\) loaded/i)
-assert.match(html, /const resultsPayload=await loadResultsFeed\(\);\s*renderCanonicalResults\(resultsPayload\)/)
+assert.match(html, /const resultsPromise=loadResultsFeed\(\)/)
+assert.match(html, /const resultsPayload=await resultsPromise;\s*renderCanonicalResults\(resultsPayload\)/)
 assert.doesNotMatch(html, /loadSheet\(GIDS\.(?:results|vipArchive|propsResults|lottoProps|longshotsHistory)/)
 assert.doesNotMatch(html, /vipResultsRows/)
-assert.match(runtimeRules, /window\.renderCanonicalResults/)
 assert.doesNotMatch(html, /micks-props-live-filter\.js/)
 assert.doesNotMatch(html, /id="activePropsCards"/)
 assert.doesNotMatch(html, /renderPropSummary/)
@@ -177,7 +187,7 @@ async function renderIndexPage(payload, todayPayload = { success: true, free: []
     fetch: async url => {
       const href = String(url)
       fetchCalls.push(href)
-      if (href.startsWith('/api/todays-picks')) {
+      if (href.startsWith('/data/todays-picks.json')) {
         return {
           ok: true,
           json: async () => todayPayload
@@ -197,6 +207,7 @@ async function renderIndexPage(payload, todayPayload = { success: true, free: []
   })
   context.window.window = context.window
   context.window.document = context.document
+  context.window.lucide = context.lucide
   context.window.renderCanonicalResults = undefined
 
   new vm.Script(inlineScript(html, 'index.html')).runInContext(context)
@@ -721,10 +732,10 @@ assert.ok(todayCardRender.propsHtml.indexOf('Bet Line:</b> Over 1.5 Shots on Goa
 assert.ok(todayCardRender.propsHtml.indexOf('Odds:</b> -120') < todayCardRender.propsHtml.indexOf('Why This Play:</b>'))
 assert.ok(todayCardRender.propsHtml.indexOf('Jordan Staal can clear this at normal shot volume') < todayCardRender.propsHtml.indexOf('Full Analysis'))
 assert.doesNotMatch(todayCardRender.propsHtml, /Generic public card text is on the public card/)
-assert.equal(todayCardRender.fetchCalls.filter(href => href.startsWith('/api/todays-picks')).length, 1)
+assert.equal(todayCardRender.fetchCalls.filter(href => href.startsWith('/data/todays-picks.json')).length, 1)
 assert.equal(todayCardRender.fetchCalls.some(href => /\/api\/props/i.test(href)), false)
 assert.equal(todayCardRender.legacyPropsHtml, '')
-assert.equal(todayCardRender.propsDataset.source, 'api-todays-picks')
+assert.equal(todayCardRender.propsDataset.source, 'static-todays-picks')
 assert.match(todayCardRender.propsDataset.renderedAt, /^\d{4}-\d{2}-\d{2}T/)
 assert.equal(todayCardRender.propsStableAfterHash, true)
 assert.equal((todayCardRender.propsHtml.match(/<article class="card pick-card/g) || []).length, 4)
