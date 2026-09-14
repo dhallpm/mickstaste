@@ -1,0 +1,75 @@
+{
+  "success": true,
+  "results": [
+    {
+      "date": "2026-09-13",
+      "type": "Delaware Big Teaser / Super Teaser",
+      "result": "WIN",
+      "record": "10-0",
+      "payout": "13-to-2",
+      "ticket": "118-129-97-101-113-126-140-96-136-120",
+      "legs": [
+        {
+          "number": 118,
+          "pick": "Jets +9.5",
+          "final": "NYJ 23-10 TEN",
+          "result": "Win"
+        },
+        {
+          "number": 129,
+          "pick": "Vikings +6.5",
+          "final": "MIN 39-22 GB",
+          "result": "Win"
+        },
+        {
+          "number": 97,
+          "pick": "Ravens +4.5",
+          "final": "BAL 41-23 IND",
+          "result": "Win"
+        },
+        {
+          "number": 101,
+          "pick": "Bills +6.5",
+          "final": "BUF 36-31 HOU",
+          "result": "Win"
+        },
+        {
+          "number": 113,
+          "pick": "Lions +1.5",
+          "final": "DET 31-30 NO (OT)",
+          "result": "Win"
+        },
+        {
+          "number": 126,
+          "pick": "Cardinals +17.5",
+          "final": "ARI 26-14 LAC",
+          "result": "Win"
+        },
+        {
+          "number": 140,
+          "pick": "WAS-PHI Under 51.5",
+          "final": "46 points",
+          "result": "Win"
+        },
+        {
+          "number": 96,
+          "pick": "ATL-PIT Under 48.5",
+          "final": "33 points",
+          "result": "Win"
+        },
+        {
+          "number": 136,
+          "pick": "MIA-LV Under 47.5",
+          "final": "40 points",
+          "result": "Win"
+        },
+        {
+          "number": 120,
+          "pick": "NYJ-TEN Under 46.5",
+          "final": "33 points",
+          "result": "Win"
+        }
+      ]
+    }
+  ]
+}

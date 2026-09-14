@@ -20,7 +20,7 @@
       "sportsbook": "BetRivers",
       "grade": "B+",
       "units": 0.75,
-      "status": "Pending",
+      "status": "Graded",
       "featured": "Yes",
       "officialBet": "Yes",
       "micksScore": "81/110",
@@ -28,9 +28,15 @@
       "failureScore": "8/10",
       "bestNumber": "Jets +2 or better",
       "playableTo": "Jets +1.5 at -115",
-      "noBetCutoff": "Pick'em / Jets favored — rescore",
+      "noBetCutoff": "Pick'em / Jets favored \u2014 rescore",
       "writeup": "The opener made Tennessee roughly a three-point favorite, but the market has crossed zero and now offers New York +1.5 at -110. That move validates the Jets' upgraded baseline, yet the current number still preserves the most valuable outcome in a low-margin Week 1 game: a one-point Jets loss. New York's cleanest matchup is its defensive front against Cam Ward and a Titans protection group that must prove it can handle pressure without falling behind the chains. Offensively, Breece Hall practiced fully after the camp groin issue and gives Geno Smith and Frank Reich a dependable early-down and checkdown answer. Tennessee will be without linebacker Cedric Gray, while the Jets lose edge depth with Joseph Ossai out. The Micks number lands at 81/110, with the replica model at 84/100 and an 8/10 failure score, enough support for a 0.75-unit position rather than a full-unit release. The situational concern is real: New York is installing new systems on both sides, and Jeffery Simmons can wreck the interior before those units settle. That volatility argues for taking points, not laying them after the steam. Best Number is Jets +2 or better; Playable To is +1.5 at -115; No-Bet Cutoff is pick'em or any Jets favorite, where the game must be rescored. At the posted price, Jets +1.5 -110 is the official B+ play.",
-      "fullAnalysis": ""
+      "fullAnalysis": "",
+      "result": "Win",
+      "Result": "Win",
+      "Outcome": "Win",
+      "finalScore": "Jets 23, Titans 10",
+      "profitLoss": "+0.68u",
+      "P/L": "+0.68u"
     },
     {
       "date": "2026-09-13",
@@ -47,7 +53,7 @@
       "sportsbook": "BetRivers",
       "grade": "B+",
       "units": 0.75,
-      "status": "Pending",
+      "status": "Graded",
       "officialBet": "Yes",
       "micksScore": "80/110",
       "replicaScore": "82/100",
@@ -56,7 +62,13 @@
       "playableTo": "Vikings -1.5 at -115",
       "noBetCutoff": "Vikings -2.5; rescore at -3",
       "writeup": "Green Bay opened as the market favorite, but sustained Minnesota money has flipped the game to Vikings -1.5 at -114. The move is meaningful without having exhausted the playable range: Minnesota remains below the key field goal at home, where crowd noise can amplify Brian Flores' pressure menu against Jordan Love. Kyler Murray steps into a favorable skill-position structure with Justin Jefferson, Jordan Addison, Jauan Jennings, T.J. Hockenson, Aaron Jones and Jordan Mason, while the projected offensive line returns established tackles on both edges. Minnesota's opening injury report was comparatively light and limited to rookies; Green Bay entered the week monitoring several trench players, a relevant detail against a defense built to force protection declarations. The Micks score is 80/110, the replica score is 82/100 and the failure score is 7/10, supporting 0.75 units but not an aggressive add. The counterargument is divisional familiarity: Love has seen Flores' simulated pressure before, and Green Bay's healthy receiver group can punish a missed rotation. Week 1 uncertainty around Murray's first start also raises variance. Best Number is Vikings -1 at -110 or better; Playable To is -1.5 at -115; No-Bet Cutoff is -2.5, with a mandatory rescore and likely pass at -3. Minnesota -1.5 -114 remains the official B+ position.",
-      "fullAnalysis": ""
+      "fullAnalysis": "",
+      "result": "Win",
+      "Result": "Win",
+      "Outcome": "Win",
+      "finalScore": "Vikings 39, Packers 22",
+      "profitLoss": "+0.66u",
+      "P/L": "+0.66u"
     }
   ],
   "vip": [],
@@ -78,16 +90,22 @@
       "sportsbook": "Shop best price",
       "grade": "B+",
       "units": 0.25,
-      "status": "Pending",
+      "status": "Graded",
       "officialBet": "Yes",
       "micksScore": "82/110",
       "replicaScore": "84/100",
       "failureScore": "7/10",
       "bestNumber": "Jets +2 or better / Vikings -1 or better",
       "playableTo": "Jets +1.5 / Vikings -1.5",
-      "noBetCutoff": "Jets PK or Vikings -3 — pass/rescore",
+      "noBetCutoff": "Jets PK or Vikings -3 \u2014 pass/rescore",
       "writeup": "This two-leg Lotto Parlay pairs New York +1.5 with Minnesota -1.5 and deliberately stops there; adding a third side would increase payout while diluting the card's two clearest number-based edges. The Jets leg captures a market that moved from Tennessee -3 through pick'em but still gives New York the one-point-loss window. The Vikings leg follows the move toward Minnesota while keeping the wager below the key field goal at home. The combined Micks score is 82/110, replica score 84/100 and failure score 7/10, which supports only a 0.25-unit lottery allocation. These legs are not mechanically correlated, so the parlay is a price-and-conviction expression rather than a hedge; either Week 1 game can fail independently. The primary risk is buying after two meaningful moves, especially if New York's new systems start slowly or Green Bay's experience against Brian Flores creates explosive plays. Best Number is Jets +2 or better with Vikings -1 or better. Playable To is Jets +1.5 and Vikings -1.5 at a competitive combined price. No-Bet Cutoff is Jets pick'em or Vikings -3; if either threshold appears, pass or rescore instead of forcing the ticket. At the listed numbers, the two-leg Jets/Vikings Lotto Parlay is an official B+ play for 0.25 units.",
-      "fullAnalysis": ""
+      "fullAnalysis": "",
+      "result": "Win",
+      "Result": "Win",
+      "Outcome": "Win",
+      "finalScore": "Jets 23-10; Vikings 39-22",
+      "profitLoss": "N/A \u2014 posted parlay price not captured",
+      "P/L": "N/A \u2014 posted parlay price not captured"
     }
   ],
   "longshots": []
