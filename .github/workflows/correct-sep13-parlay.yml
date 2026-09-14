@@ -1,0 +1,46 @@
+name: Correct Sep 13 parlay odds
+on:
+  push:
+    paths:
+      - '.github/workflows/correct-sep13-parlay.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  correct:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply +255 parlay settlement
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          profit = 0.25 * 2.55
+          pl = f'+{profit:.2f}u'
+          p=pathlib.Path('data/todays-picks.json')
+          card=json.loads(p.read_text())
+          for row in card.get('lottoParlays',[]):
+              if row.get('date')=='2026-09-13' and 'Jets +1.5 / Vikings -1.5' in row.get('pick',''):
+                  row['odds']='+255'
+                  row['profitLoss']=pl
+                  row['P/L']=pl
+          p.write_text(json.dumps(card,indent=2)+'\n')
+
+          rp=pathlib.Path('data/results.json')
+          data=json.loads(rp.read_text())
+          for row in data.get('results',[]):
+              if (row.get('date') or row.get('Date'))=='2026-09-13' and (row.get('pick') or row.get('Pick'))=='Jets +1.5 / Vikings -1.5':
+                  row['Odds']=row['odds']='+255'
+                  row['Profit/Loss']=row['profitLoss']=row['P/L']=row['PL']=pl
+          s=data['summary']
+          s['overall'].update({'units':'+1.66u','profitLoss':'+1.66u','netUnits':1.66,'incompleteUnitRows':0,'roi':2.9})
+          s['lottoParlays'].update({'units':'+2.79u','profitLoss':'+2.79u','netUnits':2.79,'incompleteUnitRows':0,'roi':64.1})
+          rp.write_text(json.dumps(data,indent=2)+'\n')
+          PY
+      - name: Commit correction
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/todays-picks.json data/results.json
+          git diff --cached --quiet || git commit -m 'Settle Sep 13 Jets Vikings parlay at +255'
+          git push
