@@ -86,7 +86,7 @@
       "cardTitle": "Jets +1.5 / Vikings -1.5 Lotto Parlay",
       "type": "Lotto Parlay",
       "lineNumber": "Jets +1.5 / Vikings -1.5",
-      "odds": "Price at book",
+      "odds": "+255",
       "sportsbook": "Shop best price",
       "grade": "B+",
       "units": 0.25,
@@ -104,8 +104,8 @@
       "Result": "Win",
       "Outcome": "Win",
       "finalScore": "Jets 23-10; Vikings 39-22",
-      "profitLoss": "N/A \u2014 posted parlay price not captured",
-      "P/L": "N/A \u2014 posted parlay price not captured"
+      "profitLoss": "+0.64u",
+      "P/L": "+0.64u"
     }
   ],
   "longshots": []
