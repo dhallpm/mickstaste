@@ -63,3 +63,4 @@ jobs:
           git add data/todays-picks.json data/results.json data/super-teaser-results.json
           git diff --cached --quiet || git commit -m 'Grade Sep 13 sweep and archive 10-0 Super Teaser'
           git push
+# rerun trigger 2026-09-13
