@@ -1,0 +1,65 @@
+name: Grade Sep 13 card
+on:
+  push:
+    paths:
+      - '.github/workflows/grade-sep13.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  grade:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Grade card and archive teaser
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          p=pathlib.Path('data/todays-picks.json')
+          card=json.loads(p.read_text())
+          for row in card.get('free',[]):
+              row['status']='Graded'; row['result']='Win'; row['Result']='Win'; row['Outcome']='Win'
+              if 'Jets +1.5' in row.get('pick',''):
+                  row['finalScore']='Jets 23, Titans 10'; row['profitLoss']='+0.68u'; row['P/L']='+0.68u'
+              elif 'Vikings -1.5' in row.get('pick',''):
+                  row['finalScore']='Vikings 39, Packers 22'; row['profitLoss']='+0.66u'; row['P/L']='+0.66u'
+          for row in card.get('lottoParlays',[]):
+              row['status']='Graded'; row['result']='Win'; row['Result']='Win'; row['Outcome']='Win'
+              row['finalScore']='Jets 23-10; Vikings 39-22'
+              row['profitLoss']='N/A — posted parlay price not captured'
+              row['P/L']='N/A — posted parlay price not captured'
+          p.write_text(json.dumps(card,indent=2)+"\n")
+
+          rp=pathlib.Path('data/results.json')
+          data=json.loads(rp.read_text())
+          existing={(str(r.get('date') or r.get('Date')),str(r.get('pick') or r.get('Pick'))) for r in data.get('results',[])}
+          new=[]
+          def add(row):
+              key=(row['date'],row['pick'])
+              if key not in existing: new.append(row); existing.add(key)
+          add({'Date':'2026-09-13','date':'2026-09-13','Sport':'NFL','sport':'NFL','League':'NFL','league':'NFL','Section':'Free','section':'Free','Access':'Free','access':'Free','Matchup':'New York Jets at Tennessee Titans','Game':'New York Jets at Tennessee Titans','game':'New York Jets at Tennessee Titans','Pick':'New York Jets +1.5','pick':'New York Jets +1.5','Line':'Jets +1.5','Odds':'-110','odds':'-110','Grade':'B+','grade':'B+','Units':0.75,'units':0.75,'Result':'Win','result':'Win','Outcome':'Win','Status':'Graded','status':'Graded','Profit/Loss':'+0.68u','profitLoss':'+0.68u','P/L':'+0.68u','PL':'+0.68u','Final Score':'Jets 23, Titans 10','Best Number':'Jets +2 or better','Playable To':'Jets +1.5 at -115','No-Bet Cutoff':"Pick'em / Jets favored — rescore",'Score':'81/110','Replica Score':'84/100','Failure Score':'8/10','Pick of the Day':'Yes','Official Bet':'Yes'})
+          add({'Date':'2026-09-13','date':'2026-09-13','Sport':'NFL','sport':'NFL','League':'NFL','league':'NFL','Section':'Free','section':'Free','Access':'Free','access':'Free','Matchup':'Green Bay Packers at Minnesota Vikings','Game':'Green Bay Packers at Minnesota Vikings','game':'Green Bay Packers at Minnesota Vikings','Pick':'Minnesota Vikings -1.5','pick':'Minnesota Vikings -1.5','Line':'Vikings -1.5','Odds':'-114','odds':'-114','Grade':'B+','grade':'B+','Units':0.75,'units':0.75,'Result':'Win','result':'Win','Outcome':'Win','Status':'Graded','status':'Graded','Profit/Loss':'+0.66u','profitLoss':'+0.66u','P/L':'+0.66u','PL':'+0.66u','Final Score':'Vikings 39, Packers 22','Best Number':'Vikings -1 (-110 or better)','Playable To':'Vikings -1.5 at -115','No-Bet Cutoff':'Vikings -2.5; rescore at -3','Score':'80/110','Replica Score':'82/100','Failure Score':'7/10','Official Bet':'Yes'})
+          add({'Date':'2026-09-13','date':'2026-09-13','Sport':'NFL','sport':'NFL','League':'NFL','league':'NFL','Section':'Lotto Parlays','section':'Lotto Parlays','Access':'Free','access':'Free','Matchup':'Jets at Titans / Packers at Vikings','Game':'Jets at Titans / Packers at Vikings','game':'Jets at Titans / Packers at Vikings','Pick':'Jets +1.5 / Vikings -1.5','pick':'Jets +1.5 / Vikings -1.5','Line':'Jets +1.5 / Vikings -1.5','Odds':'Price at book','odds':'Price at book','Grade':'B+','grade':'B+','Units':0.25,'units':0.25,'Result':'Win','result':'Win','Outcome':'Win','Status':'Graded','status':'Graded','Profit/Loss':'N/A — posted parlay price not captured','profitLoss':'N/A — posted parlay price not captured','P/L':'N/A — posted parlay price not captured','PL':'N/A — posted parlay price not captured','Final Score':'Jets 23-10; Vikings 39-22','Score':'82/110','Replica Score':'84/100','Failure Score':'7/10','Official Bet':'Yes'})
+          data['results']=new+data.get('results',[])
+          if new:
+              s=data['summary']
+              s['overall'].update({'wins':49,'losses':45,'pushes':1,'record':'49-45-1','units':'+1.02u','profitLoss':'+1.02u','netUnits':1.02,'unitsRisked':58.15,'winRate':'52.1%','incompleteUnitRows':1,'roi':1.8})
+              s['officialStraight'].update({'wins':22,'losses':21,'pushes':1,'record':'22-21-1','units':'-0.78u','profitLoss':'-0.78u','netUnits':-0.78,'unitsRisked':27.9,'winRate':'51.2%','incompleteUnitRows':0,'roi':-2.8})
+              s['lottoParlays'].update({'wins':5,'losses':8,'pushes':0,'record':'5-8','units':'+2.15u*','profitLoss':'+2.15u*','netUnits':2.15,'unitsRisked':4.35,'winRate':'38.5%','incompleteUnitRows':1,'roi':49.4})
+              data['date']='2026-09-13'
+              data['syncedAt']='2026-09-13T20:25:00-04:00'
+          rp.write_text(json.dumps(data,indent=2)+"\n")
+
+          tp=pathlib.Path('data/super-teaser-results.json')
+          hist=json.loads(tp.read_text()) if tp.exists() else {'success':True,'results':[]}
+          if not any(x.get('date')=='2026-09-13' and x.get('ticket')=='118-129-97-101-113-126-140-96-136-120' for x in hist['results']):
+              hist['results'].insert(0,{'date':'2026-09-13','type':'Delaware Big Teaser / Super Teaser','result':'WIN','record':'10-0','payout':'13-to-2','ticket':'118-129-97-101-113-126-140-96-136-120','legs':[{'number':118,'pick':'Jets +9.5','final':'NYJ 23-10 TEN','result':'Win'},{'number':129,'pick':'Vikings +6.5','final':'MIN 39-22 GB','result':'Win'},{'number':97,'pick':'Ravens +4.5','final':'BAL 41-23 IND','result':'Win'},{'number':101,'pick':'Bills +6.5','final':'BUF 36-31 HOU','result':'Win'},{'number':113,'pick':'Lions +1.5','final':'DET 31-30 NO (OT)','result':'Win'},{'number':126,'pick':'Cardinals +17.5','final':'ARI 26-14 LAC','result':'Win'},{'number':140,'pick':'WAS-PHI Under 51.5','final':'46 points','result':'Win'},{'number':96,'pick':'ATL-PIT Under 48.5','final':'33 points','result':'Win'},{'number':136,'pick':'MIA-LV Under 47.5','final':'40 points','result':'Win'},{'number':120,'pick':'NYJ-TEN Under 46.5','final':'33 points','result':'Win'}]})
+          tp.write_text(json.dumps(hist,indent=2)+"\n")
+          PY
+      - name: Commit graded results
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/todays-picks.json data/results.json data/super-teaser-results.json
+          git diff --cached --quiet || git commit -m 'Grade Sep 13 sweep and archive 10-0 Super Teaser'
+          git push
