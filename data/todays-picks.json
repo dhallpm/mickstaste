@@ -3,7 +3,7 @@
   "source": "published-active-card-static",
   "sourceOfTruth": "Micks Picks publish data",
   "date": "2026-09-15",
-  "totalExposure": 0.5,
+  "totalExposure": 0,
   "free": [
     {
       "date": "2026-09-15",
@@ -21,15 +21,23 @@
       "sportsbook": "BetRivers",
       "grade": "B",
       "units": 0.5,
-      "status": "Pending",
+      "status": "Graded",
       "officialBet": "Yes",
       "micksScore": "72/110",
       "bestNumber": "Rays -2 +118 or better",
       "playableTo": "Rays -2 +110",
       "noBetCutoff": "Rays -2 below +105 — pass/rescore",
-      "writeup": "Tampa Bay’s alternate -2 run line is the preferred way to attack a heavily priced favorite without laying -245 on the moneyline or -112 on -1.5. Athletics starter Jack Perkins enters with a 6.53 ERA. His 4.97 FIP and 10.4 K/9 warn that he is better than the surface number, but Oakland’s current lineup is missing its three leading home-run hitters and ranks 26th in road scoring at roughly 4.1 runs per game. Griffin Jax has been steadier in Tampa Bay’s rotation, carrying about a 3.59 ERA as a starter, and the Rays have the stronger defense and bullpen behind him. The expected script is Tampa creating traffic against Perkins, forcing Oakland into its weaker relief group, then extending the lead in the middle innings. A Rays win by three or more cashes; exactly two pushes. The failure case is Perkins missing bats, Tampa stranding runners, or the Rays winning a tight one-run game. At +118, that push protection makes -2 preferable to laying juice on -1.5.",
-      "fullAnalysis": "The wager is built around both matchup and price. Tampa Bay is roughly a -245 moneyline favorite, but that price requires an extremely high win rate and offers little protection against baseball variance. The standard Rays -1.5 was -112, already beyond the preferred -110 ceiling. Moving to the alternate -2 at +118 gives up the two-run win as a cashing result, but it converts that outcome into a push and adds meaningful plus money.\n\nJack Perkins is the main matchup target. His 6.53 ERA signals repeated run-prevention problems, although the 4.97 FIP and 10.4 strikeouts per nine innings keep this from being an aggressive full-unit play. He can miss enough bats to interrupt rallies. The larger issue for Oakland is the lineup around him: the Athletics are missing their three leading home-run hitters and sit 26th in road scoring at about 4.1 runs per game. That reduces their ability to answer if Tampa establishes a multi-run lead.\n\nGriffin Jax has posted about a 3.59 ERA as a Tampa Bay starter and is supported by the better defense and relief structure. The preferred game script is Jax working with a lead, Tampa forcing Perkins into stressful innings, and the Rays reaching Oakland’s weaker bullpen early enough to create separation. Three-plus runs wins the bet; exactly two pushes. The primary failure paths are Perkins’ strikeout skill playing up, Tampa stranding early runners, or a late Oakland rally turning a comfortable lead into a one-run finish.",
-      "sourceVerification": "BetRivers market screenshots and Micks September 15 MLB slate scan; checked 2026-09-15."
+      "writeup": "Tampa Bay won the game 2-1 on Junior Caminero’s ninth-inning walk-off home run, but the alternate -2 run line lost because the Rays did not create the required three-run margin. Jack Perkins produced the exact failure script identified before first pitch: he missed bats and repeatedly stranded Tampa runners, allowing no earned runs over 6.2 innings while striking out eight. Griffin Jax handled his side of the handicap with five scoreless innings and seven strikeouts, but Tampa generated only five hits and its first run scored on a passed ball. The Rays finished with the victory, yet winning by one means the -2 ticket is graded a loss rather than a push.",
+      "fullAnalysis": "The pitching matchup broke in the opposite direction from the run-line thesis. Jack Perkins entered with a 6.53 ERA but delivered 6.2 innings of four-hit baseball, allowed no earned runs and struck out eight. That prevented Tampa Bay from reaching Oakland's bullpen early or creating the middle-inning separation the wager required. Griffin Jax was strong—five scoreless innings, two hits and seven strikeouts—but a sixth-inning wild pitch tied the game. Junior Caminero’s walk-off homer secured a 2-1 Rays win in the ninth. The team-side read was directionally correct, but the alternate run-line construction failed because Tampa never built margin.",
+      "sourceVerification": "BetRivers market screenshots and Micks September 15 MLB slate scan; checked 2026-09-15.",
+      "result": "Loss",
+      "Result": "Loss",
+      "Outcome": "Loss",
+      "finalScore": "Rays 2, Athletics 1",
+      "profitLoss": "-0.50u",
+      "P/L": "-0.50u",
+      "settlementSource": "ESPN final box score",
+      "settlementNotes": "Tampa Bay won 2-1 on Junior Caminero's ninth-inning walk-off home run, but Rays -2 required a win by at least three runs to cash."
     },
     {
       "date": "2026-09-14",
