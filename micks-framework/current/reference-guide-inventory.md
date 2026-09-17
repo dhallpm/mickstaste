@@ -74,7 +74,7 @@ Whenever a betting guide, preview book, projection package, PDF or season magazi
 
 Every full NFL scan must produce a Guide/System Reconciliation Table and Fantasy Projection Delta Board before the candidate scorecard. The output must identify added and removed candidates, player-level usage changes, updated game scripts, current prices and no-bet cutoffs.
 
-An unresolved material contradiction between the stored guide, verified role/health evidence and current weekly projection caps the candidate at 81/110 and blocks a Recovery Mode+ release.
+An unresolved material contradiction between the stored guide, verified role/health evidence and current weekly projection caps the candidate at 81/110 and requires `WATCH/PASS` until resolved. NFL otherwise uses standard operating mode; Recovery Mode+ does not apply to NFL candidates.
 
 ## Audit conclusion — updated 2026-09-17
 

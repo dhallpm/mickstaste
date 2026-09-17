@@ -43,7 +43,9 @@ Every side, total, prop, derivative and parlay leg must cross-reference:
 
 Fantasy Life magazine projections and current Fantasy Life pages are one source family. VSiN guide, model, system and editorial pages are one source family. Agreement inside one family cannot be counted as multiple independent confirmations.
 
-The reconciliation must identify what changed, why the projection changed and whether the guide assumption is `CONFIRMED`, `PARTIALLY CURRENT`, `STALE` or `OVERRIDDEN`. An unresolved material contradiction caps the candidate at 81/110 and blocks a Recovery Mode+ release.
+The reconciliation must identify what changed, why the projection changed and whether the guide assumption is `CONFIRMED`, `PARTIALLY_CURRENT`, `STALE` or `OVERRIDDEN`. An unresolved material contradiction caps the candidate at 81/110 and requires `WATCH/PASS` until resolved.
+
+NFL is in standard operating mode as of 2026-09-17. Recovery Mode+ does not apply to NFL candidates; the normal grade ladder, standard card limits, price discipline and all verification requirements remain controlling.
 
 ## NFL side framework
 

@@ -43,6 +43,8 @@ When Recovery Mode+ is active:
 
 A candidate that clears 82/110 but fails the Failure Score is not an official release.
 
+As of 2026-09-17, NFL candidates are exempt from Recovery Mode+ and use the standard operating rules in `nfl-post-week1-reconciliation.md`. Recovery Mode+ remains active for non-NFL daily-card candidates unless separately disabled. NFL candidates retain the 110-point grade ladder, mandatory failure-path analysis, price cutoffs and every NFL verification gate; the NFL-specific 82/110 threshold, 7/10 hard Failure Score gate and 1–2-play cap are removed.
+
 ## Grades
 
 - 96–110: A+
@@ -78,7 +80,7 @@ Do not read a respected pick first and then build a rationale around it.
 
 For NFL candidates, the guide/current-projection reconciliation is a verification gate, not an extra point category. Fantasy Life magazine, weekly projections, rankings and utilization pages are one source family. VSiN guide, models and systems are one source family. Do not double-count agreement inside either family.
 
-An unresolved material NFL contradiction caps the candidate at 81/110 and blocks a Recovery Mode+ release even if the raw factor sum would otherwise exceed 82.
+An unresolved material NFL contradiction caps the candidate at 81/110 and requires `WATCH/PASS`; it cannot be an official release even if the raw factor sum would otherwise be higher.
 
 ## CLV tracking
 

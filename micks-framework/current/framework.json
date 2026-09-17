@@ -1,5 +1,5 @@
 {
-  "backup_version": "2026-09-17-nfl-post-week1-reconciliation",
+  "backup_version": "2026-09-17-nfl-standard-mode",
   "brand": "Micks Picks",
   "principle": "Micks-first. Outside handicappers and models are supporting confirmation only, not the engine.",
   "run_every_time": [
@@ -90,9 +90,20 @@
     ],
     "source_family_rule": "Fantasy Life outputs are one family and VSiN outputs are one family.",
     "unresolved_material_contradiction_maximum_score": 81,
-    "recovery_mode_plus_minimum_score": 82,
-    "minimum_failure_score": 7,
-    "maximum_official_plays": 2
+    "unresolved_material_contradiction_disposition": "WATCH/PASS until resolved",
+    "operating_mode": "standard",
+    "recovery_mode_plus_applies": false,
+    "normal_official_minimum_score": 74,
+    "normal_official_minimum_grade": "B",
+    "b_minus_exception_maximum_units": 0.25,
+    "a_range_enabled": true,
+    "failure_score_required_as_diagnostic": true,
+    "recovery_minimum_failure_score_applies": false,
+    "maximum_official_straight_bets": 4,
+    "maximum_official_props": 3,
+    "maximum_main_parlays": 1,
+    "target_official_exposure": "1.25u to 2.25u",
+    "limits_are_not_quotas": true
   },
   "writeup_style": {
     "permanent": true,

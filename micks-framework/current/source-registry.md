@@ -648,7 +648,7 @@ Before a full Micks Picks run can be labeled COMPLETE:
 13. Check market splits, opening/current movement, liquidity, movement timing and exact executable price.
 14. Score the Market Intelligence Layer out of 20 without double-counting signals.
 15. Include props and NRFI/YRFI in the candidate pool before final ranking.
-16. Apply the current Micks 110-point scoring framework, Recovery Mode, market-family penalties and failure-case score.
+16. Apply the current Micks 110-point scoring framework, market-family penalties and failure-case score. Apply Recovery Mode+ to non-NFL candidates when active; NFL uses the standard operating rules in `nfl-post-week1-reconciliation`.
 17. Record conflicts; do not average conflicting sources away.
 18. Show the scored candidate chart/table on every full run/rerun.
 19. If a required source is stale/inaccessible, state that explicitly and reduce confidence when material.

@@ -9,13 +9,17 @@ Every NFL side, moneyline, total, player prop, derivative and parlay leg must co
 
 The stored 2026 VSiN NFL Betting Guide and Fantasy Life Fantasy Football 2026 magazine are preseason priors. Current weekly projections, verified Week 1 usage, injuries, depth charts and executable prices are the live evidence. A guide can establish an expectation; it cannot overrule current verified information or create a bet by itself.
 
-Recovery Mode+ remains controlling:
+NFL is in **standard operating mode** as of 2026-09-17. Recovery Mode+ does not apply to NFL candidates; it remains active for non-NFL daily-card candidates unless separately disabled.
 
-- minimum official score: 82/110
-- minimum Failure Score: 7/10
-- maximum official plays: 1–2
-- no forced release
-- exact price must remain inside the No-Bet Cutoff
+NFL standard-mode controls:
+
+- The normal 110-point grade ladder remains controlling, and A-range releases are available.
+- The normal official-release floor is B (74/110).
+- A B- (66–73) may be released only as a clearly labeled small play of 0.25u or less when every NFL verification gate is complete and no material contradiction remains.
+- Failure Score and the strongest failure path must still be recorded, but the Recovery Mode+ 7/10 minimum is not an NFL hard gate. Weak failure resistance must reduce score, grade and units or produce a Pass.
+- Normal card limits apply: no more than four official straight bets, three official props and one main parlay, with 1.25u–2.25u target official exposure.
+- Card limits and exposure ranges are ceilings and planning bands, not quotas. No play is forced.
+- Every executable price must remain inside its No-Bet Cutoff.
 
 ## Mandatory evidence lanes
 
@@ -151,7 +155,7 @@ Every serious NFL candidate must contain:
 - Best Number and No-Bet Cutoff
 - Failure Score and final disposition
 
-An unresolved material contradiction caps the candidate at 81/110 and blocks an official Recovery Mode+ release.
+An unresolved material contradiction caps the candidate at 81/110 and requires `WATCH/PASS`; it cannot be an official NFL release until the contradiction is resolved.
 
 ## Required full-scan output
 

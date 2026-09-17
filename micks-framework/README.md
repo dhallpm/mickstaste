@@ -8,7 +8,7 @@ Store the rules, grading logic, betting systems, routing rules, bankroll rules, 
 ## Core Structure
 - `current/README.md` - controlling active setup and module index.
 - `current/source-registry.md` - mandatory full-scan source checklist.
-- `current/candidate-scoring-and-writeup-standard.md` - controlling 110-point score and Recovery Mode+ gates.
+- `current/candidate-scoring-and-writeup-standard.md` - controlling 110-point score and Recovery Mode+ gates for non-NFL candidates; NFL uses standard mode.
 - `current/market-intelligence-layer.md/.json` - market movement, splits, liquidity, timing and CLV rules.
 - `current/nfl-2026-reference-module.md/.json` - stored 2026 VSiN and Fantasy Life guide priors.
 - `current/nfl-post-week1-reconciliation.md/.json` - mandatory Week 2+ NFL guide, usage, current-projection and betting-system reconciliation.

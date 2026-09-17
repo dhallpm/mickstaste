@@ -30,7 +30,9 @@ A full scan is not complete until every applicable source category in that regis
 
 Before any NFL candidate is scored, cross-reference the stored VSiN and Fantasy Life guide priors with verified current-season usage/efficiency, current Fantasy Life weekly projections/utilization, current VSiN models/systems and the executable market. Every scan must show a Guide/System Reconciliation Table and Fantasy Projection Delta Board.
 
-Fantasy Life pages are one source family; VSiN pages are one source family. An unresolved material contradiction caps the candidate at 81/110 and blocks a Recovery Mode+ release.
+Fantasy Life pages are one source family; VSiN pages are one source family. An unresolved material contradiction caps the candidate at 81/110 and requires `WATCH/PASS` until resolved.
+
+NFL is in standard operating mode as of 2026-09-17. Recovery Mode+ no longer applies to NFL candidates. NFL uses the normal grade ladder, A-range eligibility and standard card limits in `framework.md/.json`; Recovery Mode+ remains active for non-NFL daily-card candidates unless separately disabled.
 
 ## Micks 2.0 Market Intelligence Layer
 
@@ -109,11 +111,13 @@ For futures, also track current-price / mark-to-market movement over the life of
 
 Normal daily-card limits remain governed by the current framework and any active Recovery Mode rules. Do not force every sport to produce a bet. A PASS or zero-play card is a valid model output.
 
+For NFL, standard limits apply: maximum four official straight bets, three official props and one main parlay, with 1.25u–2.25u target official exposure. These are limits and a planning range, not quotas. The normal NFL release floor is B (74/110); a B- may be released only as a fully verified play of 0.25u or less under the NFL reconciliation module.
+
 Futures exposure is tracked separately under `futures-lab.md`.
 
 ## Recovery Mode+
 
-When active:
+When active for non-NFL daily-card candidates:
 - Minimum daily-card release score: 82/110
 - Minimum Failure Score: 7/10
 - Current daily play cap applies

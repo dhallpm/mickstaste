@@ -12,7 +12,8 @@ Controlling order:
 Micks-first rules:
 - Scan every active sport and market family, but do not force plays.
 - Outside handicappers, guides, models and betting systems are supporting inputs only.
-- Apply Recovery Mode+: score >= 82/110, Failure Score >= 7/10, maximum 1–2 official plays.
+- Apply Recovery Mode+ to non-NFL daily-card candidates when active: score >= 82/110, Failure Score >= 7/10, maximum 1–2 official plays.
+- NFL is in standard operating mode: use the normal grade ladder, B (74/110) normal release floor, A-range eligibility, standard card limits and all NFL verification gates. A B- is limited to a fully verified 0.25u-or-less exception.
 - Do not release a play mainly from one model, one handicapper or one market signal.
 - Current executable price must remain inside the No-Bet Cutoff.
 - Include sides, totals, player props and applicable derivatives before ranking candidates.
@@ -33,6 +34,7 @@ NFL Week 2+ mandatory reconciliation:
 - Do not react to final score, fantasy points, touchdowns or one explosive play without repeatable opportunity evidence.
 - Increase trench weight and name the players/roles that drive the game script.
 - An unresolved material contradiction caps the play at 81/110 and blocks release.
+- Record the Failure Score and strongest failure path, but do not apply the Recovery Mode+ 7/10 hard gate or 1–2-play cap to NFL.
 
 Every NFL scan must output:
 1. Guide/System Reconciliation Table

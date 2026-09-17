@@ -68,6 +68,8 @@
   "recovery_mode_plus": {
     "minimum_score": "82/110",
     "minimum_failure_score": "7/10",
-    "single_source_release_allowed": false
+    "single_source_release_allowed": false,
+    "applies_to_nfl": false,
+    "nfl_mode": "standard"
   }
 }

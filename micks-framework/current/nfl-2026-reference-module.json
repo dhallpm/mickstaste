@@ -37,7 +37,10 @@
       "STALE",
       "OVERRIDDEN"
     ],
-    "unresolvedMaterialContradictionMaximumScore": 81
+    "unresolvedMaterialContradictionMaximumScore": 81,
+    "unresolvedMaterialContradictionDisposition": "WATCH/PASS until resolved",
+    "operatingMode": "standard",
+    "recoveryModePlusApplies": false
   },
   "sourceHierarchy": [
     "current odds and line movement",

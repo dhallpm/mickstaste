@@ -1,5 +1,14 @@
 # Micks Picks Framework Changelog
 
+## 2026-09-17 — NFL returned to standard operating mode
+
+- Removed Recovery Mode+ from NFL candidates only; Recovery Mode+ remains active for non-NFL daily-card candidates unless separately disabled.
+- Re-enabled the full NFL grade ladder, including A-range releases, and restored the normal card limits of four official straight bets, three official props and one main parlay.
+- Set the normal NFL official-release floor at B (74/110), with a fully verified B- limited to 0.25u or less.
+- Retained mandatory Failure Score and strongest-failure-path analysis without the Recovery Mode+ 7/10 hard gate.
+- Retained all post-Week 1 guide/system reconciliation, source-family deduplication, price discipline, player/game-script requirements and no-forced-play rules.
+- Made unresolved material guide/current-data contradictions `WATCH/PASS` until resolved.
+
 ## 2026-09-17
 - Added and synchronized the permanent NFL post-Week 1 reconciliation module across the public and VIP framework repositories.
 - Made the stored VSiN 2026 NFL guide and Fantasy Life Fantasy Football 2026 magazine explicit preseason priors that must be checked against current usage, injuries, weekly projections and prices before scoring.

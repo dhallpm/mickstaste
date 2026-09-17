@@ -12,7 +12,9 @@ Before scoring any NFL side, total, prop, derivative or parlay leg, load `nfl-20
 
 Cross-reference the stored VSiN and Fantasy Life guide priors with verified current-season role/efficiency, the newest Fantasy Life weekly projection/utilization layer, the newest VSiN model/system layer and the current executable price. Show the Guide/System Reconciliation Table and Fantasy Projection Delta Board on every full NFL scan.
 
-The Fantasy Life magazine and current Fantasy Life pages are one source family. The VSiN guide, models and systems are one source family. An unresolved material contradiction caps the candidate at 81/110 and blocks a Recovery Mode+ release.
+The Fantasy Life magazine and current Fantasy Life pages are one source family. The VSiN guide, models and systems are one source family. An unresolved material contradiction caps the candidate at 81/110 and requires `WATCH/PASS` until resolved.
+
+NFL is in standard operating mode as of 2026-09-17. Recovery Mode+ does not apply to NFL; it remains active for non-NFL daily-card candidates unless separately disabled. NFL uses the normal grade ladder with A-range releases enabled, a normal B (74/110) official-release floor, and standard card limits. A B- is limited to a fully verified small release of 0.25u or less.
 
 ## Required sections every run
 
@@ -51,6 +53,8 @@ Below A-/A/A+ must normalize to Free unless the user explicitly overrides access
 - Target official exposure: 1.25u to 2.25u on normal cards
 - Larger tournament or all-sports slates must show the total unit risk before publishing
 - Do not force plays from every sport
+
+For NFL, the limits above replace the Recovery Mode+ 1–2-play cap. The Failure Score and strongest failure path remain mandatory diagnostics, but the Recovery Mode+ 7/10 minimum is not an NFL hard gate.
 
 ## Pick of the Day eligibility
 

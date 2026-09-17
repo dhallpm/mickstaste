@@ -142,4 +142,4 @@ Examples:
 
 The Market Intelligence Score does not replace the Failure Score.
 
-Every official play still requires an explicit strongest failure path. Under Recovery Mode+, a candidate must satisfy both the current 110-point release threshold and the current minimum Failure Score. Strong market confirmation cannot rescue a weak failure-case profile.
+Every official play still requires an explicit strongest failure path. Under Recovery Mode+, a non-NFL candidate must satisfy both the current 110-point release threshold and the current minimum Failure Score. NFL is exempt from Recovery Mode+ and follows its standard-mode module, but strong market confirmation still cannot rescue a weak failure-case profile.

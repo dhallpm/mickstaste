@@ -11,12 +11,27 @@
     "NFL derivatives",
     "NFL parlay legs"
   ],
-  "recoveryModePlus": {
-    "minimumScore": 82,
+  "operatingMode": {
+    "mode": "standard",
+    "recoveryModePlusApplies": false,
+    "recoveryModePlusRemainsActiveForNonNFL": true,
     "scoreMaximum": 110,
-    "minimumFailureScore": 7,
-    "failureScoreMaximum": 10,
-    "maximumOfficialPlays": 2,
+    "normalOfficialMinimumScore": 74,
+    "normalOfficialMinimumGrade": "B",
+    "bMinusException": {
+      "scoreRange": "66-73",
+      "maximumUnits": 0.25,
+      "requiresAllNFLVerificationGates": true,
+      "materialContradictionAllowed": false
+    },
+    "aRangeEnabled": true,
+    "failureScoreRequired": true,
+    "recoveryMinimumFailureScoreApplies": false,
+    "maximumOfficialStraightBets": 4,
+    "maximumOfficialProps": 3,
+    "maximumMainParlays": 1,
+    "targetOfficialExposure": "1.25u to 2.25u",
+    "limitsAreNotQuotas": true,
     "forceRelease": false,
     "mustBeInsideNoBetCutoff": true
   },
