@@ -1,65 +1,121 @@
 # Micks Picks Candidate Scoring and Premium Writeup Standard
 
-## Purpose
-Every candidate across every active sport must be scored before a grade or access level is assigned. VIP status is earned by score and independent support; it is never filled to satisfy a quota.
+Every candidate across every active sport must be scored before grade or access is assigned. VIP status is earned; it is never filled by quota.
 
-## Candidate score
-Maximum 100 points:
+Micks Picks is Micks-first. Build the independent handicap before reading market signals. Outside models, handicappers and market behavior may confirm, challenge or downgrade the play, but they may not create the handicap.
 
-- Micks model edge greater than 5%: 25
-- VSiN agreement: 15
-- Doc’s Sports agreement: 10
-- Line value: 15
-- Injury or lineup advantage: 10
-- Scheduling, rest or travel edge: 10
+## Score factors — 110 points
+
+- Micks independent model / fair-price edge: 25
+- Line value / executable price versus fair number: 15
+- Injury, lineup, role, starter or availability advantage: 10
+- Scheduling, rest, travel or situational edge: 10
 - Progressive Fade trigger: 10
 - Favorite Inflation screen passed: 5
-- Sharp-money or credible market confirmation: 10
+- VSiN / independent model agreement: 10
+- Doc’s Sports confirmation, including AI-v3 when it has a current relevant selection: 5
+- Market Intelligence Layer: 20
 
-Award zero when a factor is unavailable or unsupported. Do not invent sharp money, injury advantages, projections or model agreement.
+### Market Intelligence Layer — 20 points
 
-## Grade thresholds
+The 20 points are split as follows:
 
-- 90–100: A+
-- 85–89: A
-- 80–84: A-
-- 70–79: B+
-- 60–69: B
-- Below 60: Pass
+- Sharp / respected movement: 0–6
+- Ticket / handle divergence: 0–5
+- Liquidity / market quality: 0–4
+- Movement timing / reversal quality: 0–5
 
-A B- small-position exception may be used only for props, parlays, longshots or clearly identified lean-level releases. It may not be used to manufacture a VIP or regular straight bet.
+Use `market-intelligence-layer.md` as the controlling module for these points.
 
-## VIP gate
+Unsupported, unavailable, stale or unverified factors receive zero. Never invent projections, splits, injuries, sharp action, handle percentages, liquidity or bettor-profile information.
 
-- VIP requires 80 points or higher.
-- VIP normally requires at least two independent support paths.
-- There is no minimum or maximum VIP quota.
-- A daily card may have zero VIP picks.
-- A qualifying slate may have several VIP picks.
-- Access labels never determine results classification; only section === "VIP" counts toward VIP results.
+Do not double-count the same market fact across multiple categories. A single line move cannot simultaneously earn full sharp-movement credit, full VSiN confirmation credit and full Doc’s confirmation credit when all three references are reacting to the same underlying market event.
 
-## Customer-facing writeup requirements
+## Recovery Mode+ release gate
 
-### VIP
-Target 400–700 words when the available evidence supports that length. Include:
+When Recovery Mode+ is active:
 
-1. Opening Thesis
-2. Market Analysis: opening/current Circa number, movement and splits when verified
-3. Model Breakdown: Micks score and factor-level points, VSiN, Doc’s and independent confirmation
-4. Matchup Analysis: pace, efficiency, recent form, rest, coaching and relevant matchup details
-5. Why the Bet Wins: expected game script
-6. How the Bet Loses: realistic failure paths
-7. Price Sensitivity: Best Number, playable range, No-Bet Cutoff and alternative market
-8. Final Verdict: score, confidence, units and grade
+- Official release threshold: minimum 82/110
+- Failure Score: minimum 7/10
+- Maximum official plays: current Recovery Mode+ cap
+- No release may depend mainly on one model, one handicapper or one market signal
+- Exact executable price must remain inside the No-Bet Cutoff
 
-### Free Picks
-Target 175–300 words. Include the thesis, matchup edge, market context, cashing path, failure path, score, best number, cutoff and why the play did not reach VIP.
+A candidate that clears 82/110 but fails the Failure Score is not an official release.
 
-### Props Lab
-Target 100–180 words. Include role, minutes or opportunity, usage or volume, threshold, price, cashing path and failure path.
+## Grades
 
-### Lotto Parlays
-Target 125–225 words. Explain every leg, correlation or independence, duplicate exposure, price requirement, why the leg count is limited and why the stake is small. Never call a parlay safe.
+- 96–110: A+
+- 91–95: A
+- 86–90: A-
+- 82–85: B+
+- 74–81: B
+- 66–73: B-
+- 58–65: C / Lean / Watchlist
+- Below 58: Pass
 
-## Publication rule
-Lineup confirmation and exact live-price confirmation are advisory, not blockers. Publish the card with a Best Number, No-Bet Cutoff and lineup note. The customer makes the final pass decision when the live market exceeds the cutoff or material lineup news changes the handicap.
+Grade does not override sport-specific restrictions, correlation rules, exposure limits, market-family penalties or Recovery Mode+ caps.
+
+VIP normally requires A- or better plus multiple independent support paths and no unresolved material contradiction. A B+ may remain a strong public release even when it is one of the best plays on the slate.
+
+## Candidate evaluation order
+
+Use this order every time:
+
+1. Independent Micks handicap and fair-price estimate
+2. Matchup / role / availability verification
+3. When NFL is active, complete the Post-Week 1 Guide/System Reconciliation Table and Fantasy Projection Delta Board
+4. Market Intelligence Layer
+5. VSiN, Doc’s Sports, AI-v3 and other outside confirmation
+6. Failure-case analysis
+7. Final 110-point score
+8. Grade and units
+9. Best Number and No-Bet Cutoff
+10. Correlation / card-exposure check
+11. Release or pass
+
+Do not read a respected pick first and then build a rationale around it.
+
+For NFL candidates, the guide/current-projection reconciliation is a verification gate, not an extra point category. Fantasy Life magazine, weekly projections, rankings and utilization pages are one source family. VSiN guide, models and systems are one source family. Do not double-count agreement inside either family.
+
+An unresolved material NFL contradiction caps the candidate at 81/110 and blocks a Recovery Mode+ release even if the raw factor sum would otherwise exceed 82.
+
+## CLV tracking
+
+Every official play should have release price and closing price captured when a reliable close is available.
+
+Record:
+
+- Release line / odds
+- Closing line / odds
+- Beat Close / Neutral / Lost Close
+- CLV magnitude when calculable
+- Closing-market source
+
+CLV is a process-quality metric only. It never changes a Win to a Loss, a Loss to a Win, or retroactively changes the assigned grade.
+
+Review rolling CLV by sport, market family, grade and release timing over 20, 50 and 100 official plays.
+
+## Writeups
+
+VIP: 400–700 words when evidence supports it, including opening thesis, verified market analysis, scored model breakdown, matchup analysis, expected winning script, failure paths, price sensitivity, confidence, units and final verdict.
+
+Free Picks: 175–300 words with thesis, matchup edge, market context, cashing path, failure path, score, Best Number, cutoff and why it did not qualify for VIP.
+
+Props: 100–180 words covering role, opportunity, usage, threshold, price, cashing path and failure path.
+
+Parlays: 125–225 words covering every leg, correlation or independence, duplicate exposure, required return, limited leg count and small stake. Never call a parlay safe.
+
+Market writeups should distinguish:
+
+- independent Micks projection
+- verified market movement
+- ticket / handle information
+- liquidity / timing interpretation
+- outside model or handicapper confirmation
+
+Never describe generic line movement as “sharp money” without evidence.
+
+## Publication
+
+Lineup and exact live-price confirmation are advisory only when the sport-specific framework permits it; any mandatory sport-specific confirmation remains a blocker. Every official card carries a Best Number, No-Bet Cutoff and relevant availability note so the bettor can make the final pass decision.

@@ -1,0 +1,198 @@
+{
+  "module": "Micks Picks NFL Post-Week 1 Reconciliation",
+  "version": "2026-09-17",
+  "status": "permanent_active",
+  "effectiveFromWeek": 2,
+  "appliesTo": [
+    "NFL sides",
+    "NFL moneylines",
+    "NFL totals",
+    "NFL player props",
+    "NFL derivatives",
+    "NFL parlay legs"
+  ],
+  "recoveryModePlus": {
+    "minimumScore": 82,
+    "scoreMaximum": 110,
+    "minimumFailureScore": 7,
+    "failureScoreMaximum": 10,
+    "maximumOfficialPlays": 2,
+    "forceRelease": false,
+    "mustBeInsideNoBetCutoff": true
+  },
+  "sourceFamilies": {
+    "vsin": [
+      "2026 VSiN NFL Betting Guide",
+      "VSiN current NFL game projections",
+      "Makinen power ratings",
+      "VSiN injury and matchup tools",
+      "VSiN prop projections and analyzer",
+      "VSiN WR/CB matchup tool",
+      "VSiN systems and splits"
+    ],
+    "fantasyLife": [
+      "Fantasy Life Fantasy Football 2026 magazine",
+      "Fantasy Life weekly projections",
+      "Fantasy Life weekly rankings",
+      "Fantasy Life Utilization Report",
+      "Fantasy Life snap counts and air yards",
+      "Fantasy Life game-by-game analysis"
+    ]
+  },
+  "sourceFamilyRule": "Pages or models from the same publisher family do not count as separate independent confirmations.",
+  "guideStatuses": [
+    "CONFIRMED",
+    "PARTIALLY_CURRENT",
+    "STALE",
+    "OVERRIDDEN"
+  ],
+  "mandatoryEvidenceLanes": [
+    "stored VSiN guide prior",
+    "stored Fantasy Life magazine prior",
+    "current Fantasy Life weekly prediction and utilization layer",
+    "current VSiN model, system and market layer",
+    "verified current-season team and player evidence",
+    "Micks updated projection and fair number",
+    "current executable market price"
+  ],
+  "blendingMatrix": {
+    "week2": {
+      "playerOpportunityAndRole": {
+        "preseasonPriorPercent": 40,
+        "currentSeasonPercent": 60
+      },
+      "teamPacePassRateAndVolume": {
+        "preseasonPriorPercent": 65,
+        "currentSeasonPercent": 35
+      },
+      "efficiency": {
+        "preseasonPriorPercent": 75,
+        "currentSeasonPercent": 25
+      },
+      "trenchesAndCoverage": {
+        "preseasonPriorPercent": 50,
+        "currentSeasonPercent": 50
+      }
+    },
+    "weeks3To4": {
+      "playerOpportunityAndRole": {
+        "preseasonPriorPercent": 25,
+        "currentSeasonPercent": 75
+      },
+      "teamPacePassRateAndVolume": {
+        "preseasonPriorPercent": 45,
+        "currentSeasonPercent": 55
+      },
+      "efficiency": {
+        "preseasonPriorPercent": 55,
+        "currentSeasonPercent": 45
+      },
+      "trenchesAndCoverage": {
+        "preseasonPriorPercent": 35,
+        "currentSeasonPercent": 65
+      }
+    }
+  },
+  "sampleQualityDowngrades": [
+    "early injury",
+    "extreme weather",
+    "overtime",
+    "major blowout",
+    "defensive or special-teams scoring distortion",
+    "incomplete role sample"
+  ],
+  "teamMetrics": [
+    "neutral-script pace",
+    "pass rate over expectation",
+    "plays and drives",
+    "seconds per snap",
+    "early-down pass rate",
+    "no-huddle usage",
+    "EPA and success rate",
+    "yards per play",
+    "pressure created and allowed",
+    "run blocking and run defense",
+    "explosive pass and run rate",
+    "third down",
+    "red zone",
+    "points per drive",
+    "personnel and motion",
+    "offensive-line combinations",
+    "defensive rotations"
+  ],
+  "playerMetrics": [
+    "snaps and snap share",
+    "routes and route participation",
+    "targets and target share",
+    "first-read share",
+    "targets per route",
+    "air-yard share and aDOT",
+    "carries and rush share",
+    "designed quarterback runs",
+    "two-minute and third-down role",
+    "short-yardage and goal-line role",
+    "red-zone and end-zone opportunities",
+    "workload and injury limitations"
+  ],
+  "powerRatingAdjustment": {
+    "normalMinimumPoints": 0.25,
+    "normalMaximumPoints": 1.0,
+    "oneWeekMaximumWithoutStructuralEvent": 1.5,
+    "moreThanOnePointRequiresStructuralReason": true,
+    "finalScoreAloneMayTriggerChange": false
+  },
+  "propProjectionRule": "updated opportunity multiplied by regressed efficiency equals updated median projection",
+  "newRolePropExposure": {
+    "defaultMaximumUnits": 0.5,
+    "alignedEvidenceMaximumUnits": 0.75,
+    "alignedEvidenceRequires": [
+      "guide prior",
+      "verified usage",
+      "current weekly projection",
+      "matchup",
+      "acceptable price"
+    ]
+  },
+  "systemControls": {
+    "candidateFilterOnly": true,
+    "recordExactRule": true,
+    "recordSamplePeriodAndSize": true,
+    "recordATSorOUAndPriceAssumption": true,
+    "requiresPlausibleFootballMechanism": true,
+    "requiresCurrentRosterAndMarketFit": true,
+    "allVSiNSystemsOneLane": true,
+    "systemShoppingProhibited": true,
+    "doubleCountWithProgressiveFadeOrMarketPoints": false
+  },
+  "mandatoryCandidateRecord": [
+    "market and exact executable price",
+    "VSiN guide prior",
+    "Fantasy Life magazine prior",
+    "current-season usage and efficiency",
+    "current Fantasy Life update",
+    "current VSiN model or system position",
+    "Micks updated projection and fair number",
+    "source-family count",
+    "guide status",
+    "strongest agreement",
+    "strongest contradiction",
+    "projection change reason",
+    "Best Number",
+    "No-Bet Cutoff",
+    "Failure Score",
+    "final disposition"
+  ],
+  "unresolvedMaterialContradiction": {
+    "maximumScore": 81,
+    "officialReleaseAllowed": false
+  },
+  "requiredScanOutputs": [
+    "Guide/System Reconciliation Table",
+    "Fantasy Projection Delta Board",
+    "Micks power-rating and total changes",
+    "scored sides totals props and derivatives",
+    "added and removed candidates",
+    "exact price ranges and no-bet cutoffs",
+    "player-level and game-script analysis"
+  ]
+}

@@ -1,5 +1,16 @@
 # Micks Picks Framework Changelog
 
+## 2026-09-17
+- Added and synchronized the permanent NFL post-Week 1 reconciliation module across the public and VIP framework repositories.
+- Made the stored VSiN 2026 NFL guide and Fantasy Life Fantasy Football 2026 magazine explicit preseason priors that must be checked against current usage, injuries, weekly projections and prices before scoring.
+- Added Fantasy Life weekly projections, rankings, Utilization Report, snap counts, air yards and game analysis as a mandatory current prediction layer.
+- Added current VSiN game/prop projections, power ratings, injury tools, WR/CB matchups, systems and splits as a mandatory current layer.
+- Added guide-status labels, publisher-family deduplication, Week 2–4 data-class blending, Week 1 power-rating controls, trench emphasis and opportunity-first prop recalculation.
+- Added the Guide/System Reconciliation Table and Fantasy Projection Delta Board to every full NFL scan.
+- Preserved Recovery Mode+: minimum 82/110, Failure Score at least 7/10, maximum 1–2 official plays and no forced releases.
+- Added an 81/110 cap when a material guide/current-data contradiction remains unresolved.
+- Replaced the stale public 100-point candidate standard with the controlling 110-point standard and synchronized the current source registry and scan prompt.
+
 ## 2026-05-19
 - Created permanent GitHub framework knowledge base.
 - Added structure for NBA, WNBA, UFC, props, lotto parlays, bankroll, and closing odds rules.

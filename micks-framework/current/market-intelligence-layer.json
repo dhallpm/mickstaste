@@ -1,0 +1,73 @@
+{
+  "name": "Micks Picks 2.0 Market Intelligence Layer",
+  "effective_date": "2026-08-23",
+  "status": "permanent_active_module",
+  "principle": "Independent Micks handicap first. Market intelligence confirms, challenges, downgrades or improves timing; it never creates a play by itself.",
+  "decision_order": [
+    "Independent Micks handicap and fair-price estimate",
+    "Matchup/role/injury/lineup verification",
+    "Market Intelligence Layer",
+    "External-model and handicapper confirmation",
+    "Failure-case analysis",
+    "Final 110-point score, grade, units, Best Number and No-Bet Cutoff"
+  ],
+  "score": {
+    "max": 20,
+    "sharp_respected_movement": {"max": 6},
+    "ticket_handle_divergence": {"max": 5},
+    "liquidity_market_quality": {"max": 4},
+    "movement_timing_reversal_quality": {"max": 5}
+  },
+  "required_market_fields_when_available": [
+    "opening_line_price",
+    "current_line_price",
+    "best_executable_price",
+    "ticket_percentage",
+    "handle_money_percentage",
+    "high_limit_reference",
+    "market_family",
+    "liquidity_class",
+    "material_move_timing",
+    "news_explaining_move",
+    "market_confirms_or_contradicts_micks",
+    "market_intelligence_score"
+  ],
+  "rules": [
+    "Unavailable or unverified data scores zero",
+    "Ticket percentage alone is not sharp-money evidence",
+    "A line move alone is not proof of respected action",
+    "Do not double-count one market event through multiple sources",
+    "Strong market confirmation cannot rescue a weak Failure Score",
+    "Exact price must remain inside the No-Bet Cutoff"
+  ],
+  "docs_ai_v3": {
+    "url": "https://www.docsports.com/cappers.html?cap_id=88",
+    "dynamic": true,
+    "role": "supporting_confirmation_only",
+    "no_points_for": [
+      "marketing claims",
+      "historical-profit claims",
+      "model descriptions without a current relevant selection"
+    ]
+  },
+  "clv": {
+    "mandatory_when_reliable_close_available": true,
+    "fields": [
+      "release_line_price",
+      "closing_line_price",
+      "clv_direction",
+      "clv_magnitude",
+      "closing_market_source"
+    ],
+    "directions": ["Beat Close", "Neutral", "Lost Close"],
+    "review_windows": [20, 50, 100],
+    "review_dimensions": ["sport", "market_family", "grade", "release_timing"],
+    "retroactive_grade_change": false,
+    "result_override": false
+  },
+  "recovery_mode_plus": {
+    "minimum_score": "82/110",
+    "minimum_failure_score": "7/10",
+    "single_source_release_allowed": false
+  }
+}

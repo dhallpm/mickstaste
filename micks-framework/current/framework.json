@@ -1,0 +1,382 @@
+{
+  "backup_version": "2026-09-17-nfl-post-week1-reconciliation",
+  "brand": "Micks Picks",
+  "principle": "Micks-first. Outside handicappers and models are supporting confirmation only, not the engine.",
+  "run_every_time": [
+    "Master Picks",
+    "Props Lab",
+    "Lotto Parlays",
+    "Longshots",
+    "Watchlist / Live-only angles",
+    "Passes",
+    "Pick of the Day",
+    "Separate import JSON files",
+    "Complete all-sections import JSON"
+  ],
+  "grading": {
+    "A+": "Rare premium straight bet. VIP eligible.",
+    "A": "Strong straight bet. VIP eligible.",
+    "A-": "Strong premium play with one material variance concern. VIP eligible.",
+    "B+": "Strong public play with multiple verified edges.",
+    "B": "Playable straight bet.",
+    "B-": "Small straight bet.",
+    "C": "Lean, watchlist, longshot, live-only, or optional sprinkle.",
+    "Pass": "No edge."
+  },
+  "limits": {
+    "official_straight_bets_max": 4,
+    "official_props_max": 3,
+    "main_parlay_max": 1,
+    "longshots_max": 3,
+    "longshot_total_units_max": 0.15,
+    "target_official_units": "1.25u to 2.25u",
+    "larger_slates_must_show_total_units": true,
+    "do_not_force_all_sports_bets": true
+  },
+  "pick_of_the_day": {
+    "must_have": [
+      "Real team/player/matchup",
+      "Real odds",
+      "Units > 0",
+      "Grade A+, A, A-, B+, or B",
+      "Status Pending, Released, VIP Released, or Free Released",
+      "Not Watchlist",
+      "Not Pass",
+      "Not live-only",
+      "Not generic framework rule"
+    ],
+    "never_eligible": [
+      "Elite Favorite Set-1 Loss Live Watchlist",
+      "No Game Today",
+      "Pass Today",
+      "Game 3 Watchlist",
+      "Live Watchlist",
+      "Units = 0",
+      "Odds = Watchlist",
+      "Odds = Live only",
+      "Odds = Pass",
+      "Odds = N/A"
+    ]
+  },
+  "source_policy": {
+    "priority": [
+      "Current odds and line movement",
+      "Injury/lineup/pitcher/goalie confirmations",
+      "Team matchup and game-script analysis",
+      "Market splits/sharp money",
+      "Models/projections",
+      "Outside handicappers",
+      "Historical trends"
+    ],
+    "micks_first": true,
+    "outside_sources_are_confirmation_only": true,
+    "conflict_rule": "Downgrade to B-, C, Watchlist, or Pass unless Micks has a clear independent reason.",
+    "writeup_requirement": "Distinguish verified facts, model projections, external opinions, and Micks conclusions."
+  },
+  "nfl_post_week1": {
+    "active_from_week": 2,
+    "module_files": [
+      "nfl-2026-reference-module.md",
+      "nfl-2026-reference-module.json",
+      "nfl-post-week1-reconciliation.md",
+      "nfl-post-week1-reconciliation.json"
+    ],
+    "required_before_scoring": true,
+    "required_outputs": [
+      "Guide/System Reconciliation Table",
+      "Fantasy Projection Delta Board",
+      "updated Micks power-rating and total changes",
+      "added and removed candidates"
+    ],
+    "source_family_rule": "Fantasy Life outputs are one family and VSiN outputs are one family.",
+    "unresolved_material_contradiction_maximum_score": 81,
+    "recovery_mode_plus_minimum_score": 82,
+    "minimum_failure_score": 7,
+    "maximum_official_plays": 2
+  },
+  "writeup_style": {
+    "permanent": true,
+    "applies_to": [
+      "All future cards",
+      "API records",
+      "Airtable imports",
+      "Public website cards",
+      "VIP releases",
+      "Text blasts",
+      "Results recaps"
+    ],
+    "required_analysis_order": [
+      "Opening Thesis",
+      "Matchup Edge",
+      "Projection / Metric Edge",
+      "Market and Number Context",
+      "How It Cashes",
+      "Risk and Variance",
+      "Micks Picks Verdict"
+    ],
+    "universal_requirements": [
+      "State the betting thesis immediately",
+      "Explain the actual matchup or role-based edge",
+      "Include odds, best number, and no-bet cutoff when available",
+      "Explain how the bet is expected to cash",
+      "Identify the strongest failure path",
+      "Connect grade and units to evidence strength",
+      "Use customer-facing language only",
+      "Do not invent statistics, injuries, trends, or consensus",
+      "Preserve exact pick, market, grade, units, odds, best number, and cutoff",
+      "Write specifically for the listed matchup"
+    ],
+    "tiers": {
+      "VIP": {
+        "target_words": "300-600",
+        "minimum_words": 225,
+        "required_concepts": [
+          "Opening Thesis",
+          "Matchup Edge",
+          "Projection / Metric Edge",
+          "Market and Number Context",
+          "How It Cashes",
+          "Risk and Variance",
+          "Micks Picks Verdict",
+          "Why it made VIP",
+          "Best Number",
+          "No-Bet Cutoff",
+          "Confidence"
+        ],
+        "field": "Full Analysis",
+        "public_teaser_fields": ["Writeup", "Home Preview"]
+      },
+      "Free": {
+        "target_words": "125-225",
+        "minimum_words": 100,
+        "required_concepts": [
+          "Opening Thesis",
+          "Matchup Edge",
+          "Market and Number Context",
+          "How It Cashes",
+          "Risk",
+          "Verdict"
+        ],
+        "must_explain_free_tier_limit": true
+      },
+      "Props Lab": {
+        "target_words": "90-160",
+        "minimum_words": 75,
+        "required_concepts": [
+          "Role or opportunity",
+          "Minutes or volume",
+          "Usage",
+          "Matchup",
+          "Exact threshold",
+          "Price",
+          "Failure path"
+        ]
+      },
+      "Lotto Parlays": {
+        "target_words": "100-175",
+        "required_concepts": [
+          "Explanation of every leg",
+          "Correlation or independence",
+          "Reason for limiting leg count",
+          "Smaller stake rationale",
+          "Straight-play duplication disclosure"
+        ],
+        "prohibited_phrase": "safe parlay"
+      },
+      "Longshots": {
+        "target_words": "60-120",
+        "required_concepts": [
+          "Plausible upset or scoring path",
+          "Price-driven upside",
+          "High-variance label",
+          "Strict bankroll discipline"
+        ]
+      },
+      "Watchlist / Live-only": {
+        "target_words": "40-100",
+        "required_concepts": [
+          "Exact trigger",
+          "Acceptable live number",
+          "Required game state",
+          "Reason no pregame wager is made"
+        ]
+      },
+      "Pass": {
+        "target_words": "30-90",
+        "required_concepts": [
+          "Specific conflict, pricing issue, uncertainty, correlation problem, or missing confirmation"
+        ]
+      }
+    },
+    "field_mapping": {
+      "Writeup": "Customer-facing concise analysis appropriate to the pick tier",
+      "Full Analysis": "Complete protected VIP-style structured breakdown",
+      "Risk": "Strongest failure path, not a generic disclaimer",
+      "Market Notes": "Price movement, alternative-market comparison, best number, and cutoff context",
+      "Home Preview": "Public teaser that does not expose protected VIP numbers or full reasoning",
+      "structured_fields": [
+        "Why This Play",
+        "Matchup Edge",
+        "Projection Edge",
+        "Key Metrics",
+        "Final Take"
+      ]
+    },
+    "style_rules": {
+      "use": [
+        "Direct sportsbook and handicapping language",
+        "Concrete matchup detail",
+        "Clear separation of model projection and market price",
+        "Short mobile-friendly paragraphs",
+        "Active voice",
+        "Honest uncertainty"
+      ],
+      "avoid": [
+        "Generic filler",
+        "Unsupported sharp-money or consensus claims",
+        "Guaranteed-win language",
+        "Locks or certainty claims",
+        "Birthday or superstition as handicapping evidence",
+        "Outside handicapper wording copied verbatim",
+        "Backend, routing, JSON, prompt, model-debug, or import terminology"
+      ]
+    },
+    "publishing_validation": [
+      "Every official pick has a tier-compliant writeup",
+      "No writeup contains internal-system language",
+      "VIP full analysis is visible only in the protected destination",
+      "Free, Props, Parlays, and Longshots render in their proper sections",
+      "Displayed unit total equals official play risk",
+      "Public and VIP repositories use the same final pick facts while respecting access gating",
+      "Live endpoint is verified after deployment"
+    ]
+  },
+  "airtable": {
+    "valid_aliases": ["picks", "propsLab", "lottoParlays", "longshots"],
+    "accepted_shapes": [
+      {"table": "propsLab", "records": []},
+      {"batches": []}
+    ],
+    "do_not_import_fields": ["Result", "Outcome", "Profit/Loss", "Profit-Loss"],
+    "standard_fields": [
+      "Date",
+      "Sport",
+      "League",
+      "Game",
+      "Pick",
+      "Bet Type",
+      "Category",
+      "Access",
+      "Odds",
+      "Sportsbook",
+      "Grade",
+      "Units",
+      "Best Number",
+      "No Bet Cutoff",
+      "Confidence",
+      "Status",
+      "Release Status",
+      "Official Bet",
+      "Featured",
+      "Pick of the Day Eligible",
+      "Correlation Group",
+      "Primary Edge Type",
+      "Secondary Edge Type",
+      "Source Influence Level",
+      "Micks Independent Confirmation",
+      "Writeup",
+      "Market Notes",
+      "Injury Notes",
+      "Source Verification",
+      "Full Analysis",
+      "Risk",
+      "Home Preview",
+      "Why This Play",
+      "Matchup Edge",
+      "Projection Edge",
+      "Key Metrics",
+      "Final Take",
+      "Posted Time"
+    ]
+  },
+  "results_archive": {
+    "final_results": ["Win", "Loss", "Push", "Void", "Cancelled"],
+    "archive_table": "Results Archive",
+    "rules": [
+      "Calculate Profit/Loss, ROI, CLV, CLV Result",
+      "Copy completed row to Results Archive",
+      "Include Original Table, Original Record ID, Record Key, Archived At",
+      "Delete from active table only after archive creation succeeds",
+      "Avoid duplicates by Record Key or Original Record ID"
+    ]
+  },
+  "full_analysis_sections": [
+    "Opening Thesis / Why We Like It",
+    "Matchup Edge / Game Script",
+    "Projection or Metric Edge",
+    "Market and Number Context",
+    "How It Cashes",
+    "Risk / What Can Go Wrong",
+    "Best Number / Cutoff",
+    "Micks Picks Verdict"
+  ],
+  "sport_modules": {
+    "MLB": {
+      "B_or_higher_gate": [
+        "Starting pitcher confirmed",
+        "Lineup confirmed or projected lineup supports handicap",
+        "Weather/wind/park checked",
+        "Bullpen usage last 2 days checked",
+        "Current odds inside cutoff",
+        "Not dependent on one source/capper",
+        "At least two independent paths to cash"
+      ],
+      "correlation_rule": "Do not stack side + pitcher K + pitcher outs + team total as official plays from same game."
+    },
+    "WNBA": {
+      "rules": [
+        "Model gap plus injury/role confirmation required",
+        "Expansion-team volatility matters",
+        "Avoid forcing large favorites",
+        "Use live triggers when pregame number is uncertain"
+      ]
+    },
+    "NBA": {
+      "rules": [
+        "Prefer spread protection over ML when close-game script is likely",
+        "Check injuries, minutes, foul trouble, pace, and late-game path",
+        "Role-stable props preferred"
+      ]
+    },
+    "NHL": {
+      "rules": [
+        "Confirm goalies",
+        "Playoff ML coin flips stay B- or lower unless price is strong",
+        "Use live entry when pace/goalie/penalty flow determines edge"
+      ]
+    },
+    "UFC_Boxing": {
+      "rules": [
+        "Confirm fight active",
+        "Confirm weigh-ins",
+        "Prefer one clear ML/value side over multiple underdog darts"
+      ]
+    },
+    "Tennis": {
+      "status": "Pilot only. Generic live rules are watchlist only unless actual player/match/odds/units are specified."
+    },
+    "NASCAR": {
+      "rule": "No official NASCAR after race starts unless using live-market edge. Without price, Watchlist only."
+    }
+  },
+  "codex_role": [
+    "Fix site logic",
+    "Enforce permanent tiered writeup standard",
+    "Validate Pick of the Day filters",
+    "Protect Results Archive",
+    "Separate watchlists",
+    "Enforce correlation and parlay/longshot limits",
+    "Preserve VIP/free gating",
+    "Verify deployed endpoints before reporting completion"
+  ]
+}

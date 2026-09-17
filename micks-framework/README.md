@@ -6,6 +6,12 @@ This folder is the permanent source of truth for the Micks Picks betting analyti
 Store the rules, grading logic, betting systems, routing rules, bankroll rules, odds/CLV logic, and archive/data-integrity rules outside of ChatGPT memory so the website, Sheets, Codex, Vercel workers, and future tools can all reference the same framework.
 
 ## Core Structure
+- `current/README.md` - controlling active setup and module index.
+- `current/source-registry.md` - mandatory full-scan source checklist.
+- `current/candidate-scoring-and-writeup-standard.md` - controlling 110-point score and Recovery Mode+ gates.
+- `current/market-intelligence-layer.md/.json` - market movement, splits, liquidity, timing and CLV rules.
+- `current/nfl-2026-reference-module.md/.json` - stored 2026 VSiN and Fantasy Life guide priors.
+- `current/nfl-post-week1-reconciliation.md/.json` - mandatory Week 2+ NFL guide, usage, current-projection and betting-system reconciliation.
 - `a-grade-hunt.md` - A-Grade Hunt Mode, A/A+ gate rules, B+ bridge grade, and A-Candidate Queue output.
 - `current/a-grade-hunt-rules.json` - current A-Hunt rules config loaded by daily Micks Picks generation.
 - `current/world-cup-path-leverage.json` - World Cup Path Leverage Mode for soccer futures, group winner, qualify/top-2, and live group-position markets.
@@ -24,6 +30,8 @@ Store the rules, grading logic, betting systems, routing rules, bankroll rules, 
 
 ## Operating Rule
 When the Micks Picks framework changes, update the relevant file and add a dated note to `changelog.md`.
+
+From NFL Week 2 forward, no NFL candidate may be scored before completing the Guide/System Reconciliation Table and Fantasy Projection Delta Board required by `current/nfl-post-week1-reconciliation.md`.
 
 ## Source of Truth Priority
 1. GitHub framework files in this folder

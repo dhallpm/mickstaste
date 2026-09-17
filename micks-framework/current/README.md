@@ -1,0 +1,151 @@
+# Micks Picks Framework — Current Setup
+
+Effective date: 2026-09-17
+
+This folder stores the active Micks Picks operating framework used for daily all-sports runs, candidate scoring, Pick of the Day selection, Futures Lab evaluation, results archiving, research-agent work and site publishing.
+
+## Core principle
+
+Micks Picks is **Micks-first**. Outside handicappers, VSiN, Doc’s Sports, AI-v3, Action Network, Covers, ESPN, TeamRankings, StatMuse, Sports Reference, Perplexity and any other source are supporting confirmation only. They do not create the handicap or grade by themselves.
+
+The required daily-card decision order is:
+
+1. Independent Micks handicap and fair-price estimate
+2. Matchup / role / injury / lineup verification
+3. NFL guide/current-projection reconciliation when NFL is active
+4. Market Intelligence Layer
+5. External-model and handicapper confirmation
+6. Failure-case analysis
+7. Final 110-point score, grade, units, Best Number and No-Bet Cutoff
+
+## Master source registry — controlling
+
+`source-registry.md` is the canonical checklist for every full Micks Picks research scan and rerun.
+
+A full scan is not complete until every applicable source category in that registry has been checked and classified as CURRENT, STALE, INACCESSIBLE, NOT APPLICABLE, or SUPPORTING ONLY.
+
+## NFL post-Week 1 reconciliation — mandatory
+
+`nfl-post-week1-reconciliation.md` and `.json` control every NFL scan from Week 2 forward.
+
+Before any NFL candidate is scored, cross-reference the stored VSiN and Fantasy Life guide priors with verified current-season usage/efficiency, current Fantasy Life weekly projections/utilization, current VSiN models/systems and the executable market. Every scan must show a Guide/System Reconciliation Table and Fantasy Projection Delta Board.
+
+Fantasy Life pages are one source family; VSiN pages are one source family. An unresolved material contradiction caps the candidate at 81/110 and blocks a Recovery Mode+ release.
+
+## Micks 2.0 Market Intelligence Layer
+
+`market-intelligence-layer.md` is a permanent active module.
+
+It adds a 20-point market-intelligence component to the existing 110-point daily-card scoring framework:
+
+- Sharp / respected movement: 0–6
+- Ticket / handle divergence: 0–5
+- Liquidity / market quality: 0–4
+- Movement timing / reversal quality: 0–5
+
+The market layer is read only **after** the independent handicap is formed. It may confirm, challenge or downgrade Micks; it may never create a play by itself.
+
+Doc’s Sports AI-v3 (`https://www.docsports.com/cappers.html?cap_id=88`) is a dynamic comparison source for this layer when it has a current relevant selection. Model descriptions or marketing claims do not earn score points.
+
+## Market AI Replica — experimental shadow module
+
+`market-ai-replica.md` and `market-ai-replica.json` define a permanent experimental shadow engine built from observable market behavior rather than proprietary Doc's internals.
+
+Every serious candidate on a full Micks scan now receives a shadow Market AI Replica evaluation after the normal Micks handicap has been built. The replica measures:
+
+- independent fair-line strength
+- market dislocation / EV
+- fundamental confirmation
+- market microstructure
+- independent calculated-model agreement
+- best market expression
+- market regime quality
+- failure-case robustness
+
+The replica can return a shadow candidate or PASS, but it does not override the official 110-point Micks release framework. Results and CLV are reviewed after 20, 50 and 100 shadow candidates before replica-derived weighting can be promoted into the official score.
+
+`ai-v3-audit-ledger.csv` is the controlling historical benchmark schema. Historical Doc's AI-v3 rows must be independently verified before their result, line, P/L arithmetic, CLV or trigger tags are used as training evidence. Unknown historical market fields stay UNKNOWN rather than being inferred.
+
+## Futures Lab
+
+`futures-lab.md` and `futures-lab.json` control all long-horizon markets. `futures-source-registry.md` is the futures-specific model/source checklist.
+
+Futures are evaluated separately from the daily card. They use independent Micks probability estimates, multi-book de-vigged market consensus, independent projection/model inputs, scenario or Monte Carlo simulation where appropriate, roster/role/health/schedule analysis, Market Intelligence, EV and correlation controls.
+
+Futures use a separate 100-point score and separate bankroll ledger. They do **not** consume Recovery Mode+ daily official-play slots.
+
+Default Futures Lab release gates:
+- score >= 78/100
+- Failure Score >= 7/10
+- estimated EV >= 5%
+- 8%+ preferred for long-dated markets
+- 10%+ preferred for thin, high-variance outrights
+- at least two independent support paths beyond the sportsbook price
+
+## CLV tracking
+
+Closing Line Value is a mandatory post-release diagnostic whenever a reliable comparable closing number is available.
+
+Store release line/price, closing line/price, Beat Close / Neutral / Lost Close, CLV magnitude when calculable and closing-market source.
+
+For futures, also track current-price / mark-to-market movement over the life of the position. Review rolling CLV over 20, 50 and 100 official plays by sport, market family, grade and release timing.
+
+## Every run must include
+
+1. Master Picks
+2. Props Lab
+3. NRFI/YRFI and derivative-market candidates where applicable
+4. Futures Lab scan
+5. Lotto Parlays
+6. Longshots
+7. Watchlist / Live-only angles
+8. Passes
+9. Pick of the Day
+10. Scored candidate chart before final release
+11. Market AI Replica shadow score for serious candidates
+12. NFL Guide/System Reconciliation Table and Fantasy Projection Delta Board when NFL is active
+
+## Official limits
+
+Normal daily-card limits remain governed by the current framework and any active Recovery Mode rules. Do not force every sport to produce a bet. A PASS or zero-play card is a valid model output.
+
+Futures exposure is tracked separately under `futures-lab.md`.
+
+## Recovery Mode+
+
+When active:
+- Minimum daily-card release score: 82/110
+- Minimum Failure Score: 7/10
+- Current daily play cap applies
+- No release based mainly on one model, one handicapper or one market signal
+- Exact price must remain inside the No-Bet Cutoff
+- Futures Lab positions do not consume the daily play cap
+
+## Pick of the Day rules
+
+Pick of the Day must be a real, actionable daily-card official release with a live price, positive units and a qualifying grade. Futures, watchlists, passes, live-only placeholders and generic framework rules are not Pick of the Day unless a separate Futures Feature designation is explicitly created.
+
+## Results archive
+
+After settlement, completed daily-card rows move to Results Archive and are removed from the active card. Results tracking should include Profit/Loss and CLV fields when reliable closing data is available.
+
+Futures remain active until the market is closed/graded and use their own lifecycle fields including posted price, current price, fair probability, estimated EV, correlation group and final result.
+
+## Key files
+
+- `source-registry.md` — canonical full-scan source checklist and sport-specific research stack
+- `nfl-2026-reference-module.md/.json` — stored 2026 VSiN and Fantasy Life guide priors
+- `nfl-post-week1-reconciliation.md/.json` — mandatory Week 2+ guide, usage, projection and system reconciliation
+- `candidate-scoring-and-writeup-standard.md` — controlling 110-point daily-card score and grade rules
+- `market-intelligence-layer.md` — market movement, splits, liquidity, timing and CLV rules
+- `market-ai-replica.md` — experimental market-aware shadow decision engine
+- `market-ai-replica.json` — machine-readable replica configuration
+- `ai-v3-audit-ledger.csv` — historical benchmark feature ledger
+- `futures-lab.md` — Futures Lab probability, EV, scoring, exposure and tracking rules
+- `futures-lab.json` — machine-readable Futures Lab configuration
+- `futures-source-registry.md` — futures-specific model/source checklist
+- `reference-guide-inventory.md` — stored annual-guide inventory and guide-ingestion policy
+- `framework.md` — human-readable operating rules
+- `framework.json` — machine-readable framework/config
+- `perplexity-master-prompt.txt` — research-agent prompt
+- `codex-maintenance-prompt.md` — site/framework maintenance prompt

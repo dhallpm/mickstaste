@@ -1,0 +1,196 @@
+{
+  "module": "Micks Picks NFL 2026 Reference Module",
+  "version": "2026-09-17",
+  "status": "permanent_reference",
+  "scope": ["NFL sides", "NFL totals", "NFL props", "NFL futures", "NFL awards", "NFL derivatives"],
+  "baselineSources": [
+    {
+      "title": "2026 VSiN NFL Betting Guide",
+      "season": 2026,
+      "type": "preseason betting guide",
+      "persistentLibraryPath": "/Micks Picks/Reference Guides/2026-VSiN-NFL-Betting-Guide.pdf"
+    },
+    {
+      "title": "Fantasy Life Fantasy Football 2026",
+      "season": 2026,
+      "type": "preseason projections and role guide",
+      "persistentLibraryPath": "/Micks Picks/Reference Guides/2026-Fantasy-Life-Magazine.pdf"
+    }
+  ],
+  "postWeek1Reconciliation": {
+    "requiredFromWeek": 2,
+    "humanReadableModule": "nfl-post-week1-reconciliation.md",
+    "machineReadableModule": "nfl-post-week1-reconciliation.json",
+    "mustCompleteBeforeScoring": true,
+    "requiredLanes": [
+      "VSiN guide prior",
+      "Fantasy Life magazine prior",
+      "verified current-season usage and efficiency",
+      "current Fantasy Life weekly projection and utilization layer",
+      "current VSiN model system and market layer",
+      "updated Micks projection and executable price"
+    ],
+    "samePublisherPagesAreIndependentConfirmations": false,
+    "guideStatuses": [
+      "CONFIRMED",
+      "PARTIALLY_CURRENT",
+      "STALE",
+      "OVERRIDDEN"
+    ],
+    "unresolvedMaterialContradictionMaximumScore": 81
+  },
+  "sourceHierarchy": [
+    "current odds and line movement",
+    "confirmed quarterback, injury, inactive, offensive-line and weather information",
+    "current depth chart and player usage",
+    "current-season matchup efficiency",
+    "Micks projected line and total",
+    "current VSiN models, ratings and splits",
+    "2026 guide baselines",
+    "outside handicappers and historical trends"
+  ],
+  "sideChecklist": [
+    "micks line versus market",
+    "key numbers 3, 7 and 10",
+    "quarterback and backup value",
+    "pass protection versus pass rush",
+    "secondary versus receiving structure",
+    "run blocking versus run defense",
+    "EPA and success rate",
+    "yards per play and points per drive",
+    "third down and red zone",
+    "turnover regression",
+    "one-score regression",
+    "coaching and scheme",
+    "rest travel byes and schedule clusters",
+    "weather and field",
+    "tickets handle and line movement"
+  ],
+  "powerRatingPersonnelPriority": [
+    "quarterback play",
+    "pass rush",
+    "defensive backs",
+    "pass protection",
+    "skill and volume of playmakers"
+  ],
+  "gradeControls": {
+    "vipMinimumNormalModelEdgePoints": 2,
+    "vipRequiresIndependentSupportPaths": 2,
+    "unresolvedQuarterbackOrMajorInactive": "downgrade_or_pass",
+    "lostKeyNumber": "downgrade_or_pass",
+    "splitsAloneCanUpgradeToVIP": false,
+    "stalePreseasonAssumptionCanQualify": false
+  },
+  "bettingSplits": {
+    "publicTicketWarningThreshold": {"publicPercent": 65, "contrarianPercent": 35},
+    "meaningfulCircaHandleTicketGapPercent": 10,
+    "preferredWindowHoursBeforeKickoff": 24,
+    "requiresBookTimestampAndMovementForSharpClaim": true,
+    "strongestPattern": "low tickets, higher Circa handle, confirming line movement",
+    "conflictingOrStaleSplitsScoreCredit": 0
+  },
+  "totalsChecklist": [
+    "plays and pace",
+    "neutral pass rate and dropback rate",
+    "EPA success rate and yards per play",
+    "explosive pass and run rate",
+    "offensive line and pressure",
+    "quarterback efficiency mobility turnovers and health",
+    "red zone and points per drive",
+    "third-down sustainability",
+    "run efficiency and clock behavior",
+    "coordinator and personnel usage",
+    "weather wind surface and temperature",
+    "game script",
+    "market movement"
+  ],
+  "propProjectionGapScreen": [
+    {"minimumPercent": 0, "maximumPercent": 4.9, "normalDisposition": "Pass"},
+    {"minimumPercent": 5, "maximumPercent": 9.9, "normalMaxGrade": "B-", "requires": "strong current role confirmation"},
+    {"minimumPercent": 10, "maximumPercent": 14.9, "normalMaxGrade": "B", "requires": "stable role and acceptable price"},
+    {"minimumPercent": 15, "normalMaxGrade": "B+ or higher", "requires": "current role health matchup and price independently support projection"}
+  ],
+  "propRequiredInputs": [
+    "Micks projection",
+    "external projection",
+    "current line and price",
+    "snaps and routes",
+    "carries and targets",
+    "targets per route and efficiency",
+    "goal-line and red-zone role",
+    "target competition and committee risk",
+    "offensive line and quarterback",
+    "opponent matchup",
+    "game script",
+    "injury and workload restriction"
+  ],
+  "rookieRules": {
+    "controllingPrinciple": "role and usage outrank draft buzz",
+    "wideReceiver": "draft capital supports volume only after depth chart and quarterback verification",
+    "runningBack": "requires credible 200-carry or high-value receiving path",
+    "quarterback": "start timing and attempts matter more than highlight efficiency",
+    "tightEnd": "verify routes and personnel packages",
+    "committeeOrUncertainStart": "conservative_projection"
+  },
+  "replacementRoleMap": [
+    "direct backup versus committee",
+    "early-down succession",
+    "passing-down succession",
+    "goal-line succession",
+    "team scoring environment",
+    "coaching committee history",
+    "replacement efficiency and pass protection"
+  ],
+  "futuresChecklist": [
+    "starting and backup quarterback",
+    "offensive-line and defensive-front depth",
+    "schedule strength and clustering",
+    "bye placement and opponents off bye",
+    "coaching stability",
+    "tanking shutdown and firing risk",
+    "turnover regression",
+    "one-score regression",
+    "point differential versus record",
+    "scoring and allowance profile versus wins",
+    "power rating versus win total"
+  ],
+  "regressionFlags": [
+    "negative turnover differential with stronger point differential or efficiency",
+    "positive turnover differential with weak point differential",
+    "extreme one-score record",
+    "high wins despite weak scoring or defense",
+    "losing record despite positive point differential",
+    "major win increase driven by turnovers and close games",
+    "red-zone or third-down results conflicting with broad efficiency"
+  ],
+  "guideWeightingBySeasonPhase": {
+    "preseason_through_week_1": "substantial baseline weight after roster and injury confirmation",
+    "week_2": "use explicit data-class weights in nfl-post-week1-reconciliation; player opportunity can move faster than team efficiency",
+    "weeks_3_to_4": "use explicit data-class weights in nfl-post-week1-reconciliation and increase current-season weight",
+    "week_5_onward": "current role health and performance normally take priority"
+  },
+  "annualGuideSourcePolicyAllSports": {
+    "storeInPersistentLibrary": true,
+    "recordMetadata": ["sport", "season", "publisher", "file name", "date accessed"],
+    "extractOnlySportRelevantConcepts": true,
+    "createHumanAndMachineRules": true,
+    "currentVerifiedInformationWins": true,
+    "dateStampProjections": true,
+    "noCrossSportTransferWithoutJustification": true,
+    "noPublisherCopyInCustomerWriteups": true,
+    "trackGuideAssumptionAfterGrading": true
+  },
+  "postCardClassifications": [
+    "power-rating error",
+    "quarterback or injury information error",
+    "offensive-line or pass-rush mismatch error",
+    "role or workload projection error",
+    "market timing or key-number error",
+    "split interpretation error",
+    "turnover or red-zone variance",
+    "weather or game-script error",
+    "duplicate exposure",
+    "correct handicap adverse variance"
+  ],
+  "trackClosingLineValueSeparately": true
+}

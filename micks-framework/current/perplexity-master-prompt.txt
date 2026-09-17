@@ -1,0 +1,64 @@
+Run today’s complete Micks Picks all-sports scan.
+
+Controlling order:
+1. Build the independent Micks handicap and fair price.
+2. Verify matchup, role, injury, lineup and availability.
+3. When NFL is active, complete the post-Week 1 guide/current-projection reconciliation.
+4. Evaluate the Market Intelligence Layer.
+5. Compare VSiN, Doc’s Sports AI-v3 and other outside sources.
+6. Score the strongest failure path.
+7. Assign the final 110-point score, grade, units, Best Number and No-Bet Cutoff.
+
+Micks-first rules:
+- Scan every active sport and market family, but do not force plays.
+- Outside handicappers, guides, models and betting systems are supporting inputs only.
+- Apply Recovery Mode+: score >= 82/110, Failure Score >= 7/10, maximum 1–2 official plays.
+- Do not release a play mainly from one model, one handicapper or one market signal.
+- Current executable price must remain inside the No-Bet Cutoff.
+- Include sides, totals, player props and applicable derivatives before ranking candidates.
+- Avoid same-game overstacking and duplicated exposure.
+- Watchlist and Pass records have Units = 0.
+- Pick of the Day must be an actionable official release with a live price and positive units.
+
+NFL Week 2+ mandatory reconciliation:
+- Load nfl-2026-reference-module and nfl-post-week1-reconciliation.
+- Record the relevant VSiN 2026 guide prior.
+- Record the relevant Fantasy Life Fantasy Football 2026 magazine prior.
+- Verify current snaps, routes, targets, carries, high-value role, pace, pass rate, EPA, trenches and injuries.
+- Check the newest Fantasy Life weekly projections, rankings, Utilization Report, snap counts, air yards and game analysis.
+- Check current VSiN game projections, power ratings, injury report, prop tools, WR/CB tool, systems and splits.
+- Treat all Fantasy Life outputs as one source family and all VSiN outputs as one source family.
+- Mark each guide assumption CONFIRMED, PARTIALLY CURRENT, STALE or OVERRIDDEN.
+- Show the projection delta and explain why it changed.
+- Do not react to final score, fantasy points, touchdowns or one explosive play without repeatable opportunity evidence.
+- Increase trench weight and name the players/roles that drive the game script.
+- An unresolved material contradiction caps the play at 81/110 and blocks release.
+
+Every NFL scan must output:
+1. Guide/System Reconciliation Table
+2. Fantasy Projection Delta Board
+3. Updated Micks power-rating and total changes
+4. Scored sides, totals, props and derivatives
+5. Added/removed candidates with reasons
+6. Exact best numbers, playable ranges and no-bet cutoffs
+7. Player and game-script analysis for official releases
+
+For each official pick include:
+- Opening thesis
+- Matchup and player/role edge
+- Projection or metric edge
+- Current market and number context
+- Expected winning game script
+- Strongest failure path
+- Micks score, grade, units, Best Number and No-Bet Cutoff
+
+Required final sections:
+- Official card
+- Props Lab
+- Parlays/longshots only when qualified
+- Watchlist/live-only triggers
+- Passes and removed candidates
+- Pick of the Day or explicit no-Pick-of-the-Day result
+- Total official exposure
+
+Do not call a scan complete when an applicable required source was skipped. Mark every required source CURRENT, STALE, INACCESSIBLE, NOT APPLICABLE or SUPPORTING ONLY, and reduce confidence when missing data is material.
