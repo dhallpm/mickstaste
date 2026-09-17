@@ -31,7 +31,7 @@ function active(row = {}, cardDate = '') {
   const status = norm(row.Status || row.status || row['Release Status'])
   const result = norm(row.Result || row.result || row.Outcome || row.outcome)
   const official = norm(row['Official Bet'] ?? row.officialBet ?? 'yes')
-  const nonOfficialSection = ['Watchlist / Live Only','Passes'].includes(section(row))
+  const nonOfficialSection = (['Watchlist / Live Only','Passes'].includes(section(row)) || (section(row) === 'Lotto Parlays' && /^watch/i.test(status)))
   return dateKey(row.Date || row.date) === cardDate && !SETTLED.has(status) && !SETTLED.has(result) && (nonOfficialSection || !/^(no|false|0)$/.test(official))
 }
 
@@ -55,7 +55,8 @@ function normalize(row = {}, cardDate = '') {
   const line = text(row.lineNumber || row.Line || row.line || row.Odds || row.odds)
   const odds = text(row.Odds || row.odds || line)
   const grade = text(row.Grade || row.grade).toUpperCase()
-  const units = Number(row.Units ?? row.units ?? 0) || 0
+  const rawUnits = row.Units ?? row.units ?? 0
+  const units = /^TBD\b/i.test(text(rawUnits)) ? text(rawUnits) : Number(rawUnits) || 0
   const writeup = text(row.Writeup || row.writeup)
   const fullAnalysis = text(row['Full Analysis'] || row.fullAnalysis || row.full)
   const bestNumber = text(row['Best Number'] || row.bestNumber || row.best)
@@ -95,7 +96,7 @@ export default function handler(req,res) {
   const longshots = rows.filter(row => row.section === 'Longshots')
   const watchlist = rows.filter(row => row.section === 'Watchlist / Live Only')
   const passes = rows.filter(row => row.section === 'Passes')
-  const official = rows.filter(row => !['Watchlist / Live Only','Passes'].includes(row.section))
+  const official = rows.filter(row => !['Watchlist / Live Only','Passes'].includes(row.section) && !/^(no|false|0)$/.test(norm(row.officialBet)))
   const publicRows = official.filter(row => row.section !== 'VIP' && norm(row.access) !== 'vip')
   const pickOfTheDay = official.filter(row => /^(yes|true|1)$/i.test(text(row['Pick of the Day'] || row.pickOfTheDay || row.Featured || row.featured)))
 
