@@ -2,7 +2,7 @@ import { createRequire } from 'node:module'
 
 const require = createRequire(import.meta.url)
 const publishedCard = require('../data/todays-picks.json')
-const activeCardRows = ['free','vip','vipVault','props','lottoParlays','longshots']
+const activeCardRows = ['free','vip','vipVault','props','lottoParlays','longshots','watchlist']
   .flatMap(key => Array.isArray(publishedCard[key]) ? publishedCard[key] : [])
 
 const SETTLED = new Set(['graded','settled','final','completed','complete','win','won','loss','lost','push','void','voided','cancelled','canceled','closed'])
@@ -31,7 +31,8 @@ function active(row = {}, cardDate = '') {
   const status = norm(row.Status || row.status || row['Release Status'])
   const result = norm(row.Result || row.result || row.Outcome || row.outcome)
   const official = norm(row['Official Bet'] ?? row.officialBet ?? 'yes')
-  return dateKey(row.Date || row.date) === cardDate && !SETTLED.has(status) && !SETTLED.has(result) && !/^(no|false|0)$/.test(official)
+  const nonOfficialSection = ['Watchlist / Live Only','Passes'].includes(section(row))
+  return dateKey(row.Date || row.date) === cardDate && !SETTLED.has(status) && !SETTLED.has(result) && (nonOfficialSection || !/^(no|false|0)$/.test(official))
 }
 
 function section(row = {}) {
