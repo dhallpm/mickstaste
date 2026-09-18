@@ -1,0 +1,20 @@
+{
+  "batches": [
+    {
+      "table": "picks",
+      "records": []
+    },
+    {
+      "table": "propsLab",
+      "records": []
+    },
+    {
+      "table": "lottoParlays",
+      "records": []
+    },
+    {
+      "table": "longshots",
+      "records": []
+    }
+  ]
+}

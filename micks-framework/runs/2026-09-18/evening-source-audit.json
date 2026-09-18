@@ -1,0 +1,765 @@
+{
+  "date": "2026-09-18",
+  "coverage": "PARTIAL_ALL_SPORTS; principal late candidates assessed",
+  "primary": [
+    {
+      "source": "mlb",
+      "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-09-18&hydrate=probablePitcher",
+      "checked_at": "2026-09-18T23:03:45.945191+00:00",
+      "summary": [
+        {
+          "id": 824463,
+          "time": "2026-09-18T22:40:00Z",
+          "status": "In Progress",
+          "away": "Chicago Cubs",
+          "home": "Cincinnati Reds"
+        },
+        {
+          "id": 823331,
+          "time": "2026-09-18T22:40:00Z",
+          "status": "In Progress",
+          "away": "Kansas City Royals",
+          "home": "Pittsburgh Pirates"
+        },
+        {
+          "id": 824790,
+          "time": "2026-09-18T23:05:00Z",
+          "status": "Warmup",
+          "away": "Milwaukee Brewers",
+          "home": "Baltimore Orioles"
+        },
+        {
+          "id": 824383,
+          "time": "2026-09-18T23:10:00Z",
+          "status": "Warmup",
+          "away": "Athletics",
+          "home": "Cleveland Guardians"
+        },
+        {
+          "id": 822923,
+          "time": "2026-09-18T23:10:00Z",
+          "status": "Warmup",
+          "away": "Boston Red Sox",
+          "home": "Tampa Bay Rays"
+        },
+        {
+          "id": 823572,
+          "time": "2026-09-18T23:15:00Z",
+          "status": "Warmup",
+          "away": "Philadelphia Phillies",
+          "home": "New York Mets"
+        },
+        {
+          "id": 824547,
+          "time": "2026-09-18T23:40:00Z",
+          "status": "Pre-Game",
+          "away": "Detroit Tigers",
+          "home": "Chicago White Sox"
+        },
+        {
+          "id": 822847,
+          "time": "2026-09-19T00:05:00Z",
+          "status": "Pre-Game",
+          "away": "Toronto Blue Jays",
+          "home": "Texas Rangers"
+        },
+        {
+          "id": 824303,
+          "time": "2026-09-19T00:10:00Z",
+          "status": "Pre-Game",
+          "away": "Seattle Mariners",
+          "home": "Colorado Rockies"
+        },
+        {
+          "id": 824138,
+          "time": "2026-09-19T00:10:00Z",
+          "status": "Pre-Game",
+          "away": "Atlanta Braves",
+          "home": "Houston Astros"
+        },
+        {
+          "id": 823005,
+          "time": "2026-09-19T00:15:00Z",
+          "status": "Pre-Game",
+          "away": "Washington Nationals",
+          "home": "St. Louis Cardinals"
+        },
+        {
+          "id": 823977,
+          "time": "2026-09-19T01:38:00Z",
+          "status": "Pre-Game",
+          "away": "Minnesota Twins",
+          "home": "Los Angeles Angels"
+        },
+        {
+          "id": 823252,
+          "time": "2026-09-19T01:40:00Z",
+          "status": "Pre-Game",
+          "away": "Miami Marlins",
+          "home": "San Diego Padres"
+        },
+        {
+          "id": 825032,
+          "time": "2026-09-19T01:40:00Z",
+          "status": "Pre-Game",
+          "away": "New York Yankees",
+          "home": "Arizona Diamondbacks"
+        },
+        {
+          "id": 823898,
+          "time": "2026-09-19T02:15:00Z",
+          "status": "Pre-Game",
+          "away": "San Francisco Giants",
+          "home": "Los Angeles Dodgers"
+        }
+      ]
+    },
+    {
+      "source": "mlb_board",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard?dates=20260918",
+      "checked_at": "2026-09-18T23:03:45.985364+00:00",
+      "summary": [
+        {
+          "event": "Chicago Cubs at Cincinnati Reds",
+          "time": "2026-09-18T22:40Z",
+          "status": "In Progress",
+          "odds_board_present": false
+        },
+        {
+          "event": "Kansas City Royals at Pittsburgh Pirates",
+          "time": "2026-09-18T22:40Z",
+          "status": "In Progress",
+          "odds_board_present": false
+        },
+        {
+          "event": "Milwaukee Brewers at Baltimore Orioles",
+          "time": "2026-09-18T23:05Z",
+          "status": "Scheduled",
+          "odds_board_present": true
+        },
+        {
+          "event": "Athletics Athletics at Cleveland Guardians",
+          "time": "2026-09-18T23:10Z",
+          "status": "Scheduled",
+          "odds_board_present": true
+        },
+        {
+          "event": "Boston Red Sox at Tampa Bay Rays",
+          "time": "2026-09-18T23:10Z",
+          "status": "Scheduled",
+          "odds_board_present": true
+        },
+        {
+          "event": "Philadelphia Phillies at New York Mets",
+          "time": "2026-09-18T23:10Z",
+          "status": "Scheduled",
+          "odds_board_present": true
+        },
+        {
+          "event": "Detroit Tigers at Chicago White Sox",
+          "time": "2026-09-18T23:40Z",
+          "status": "Scheduled",
+          "odds_board_present": true
+        },
+        {
+          "event": "Toronto Blue Jays at Texas Rangers",
+          "time": "2026-09-19T00:05Z",
+          "status": "Scheduled",
+          "odds_board_present": true
+        },
+        {
+          "event": "Atlanta Braves at Houston Astros",
+          "time": "2026-09-19T00:10Z",
+          "status": "Scheduled",
+          "odds_board_present": true
+        },
+        {
+          "event": "Seattle Mariners at Colorado Rockies",
+          "time": "2026-09-19T00:10Z",
+          "status": "Scheduled",
+          "odds_board_present": true
+        },
+        {
+          "event": "Washington Nationals at St. Louis Cardinals",
+          "time": "2026-09-19T00:15Z",
+          "status": "Scheduled",
+          "odds_board_present": true
+        },
+        {
+          "event": "Minnesota Twins at Los Angeles Angels",
+          "time": "2026-09-19T01:38Z",
+          "status": "Scheduled",
+          "odds_board_present": true
+        },
+        {
+          "event": "Miami Marlins at San Diego Padres",
+          "time": "2026-09-19T01:40Z",
+          "status": "Scheduled",
+          "odds_board_present": true
+        },
+        {
+          "event": "New York Yankees at Arizona Diamondbacks",
+          "time": "2026-09-19T01:40Z",
+          "status": "Scheduled",
+          "odds_board_present": true
+        },
+        {
+          "event": "San Francisco Giants at Los Angeles Dodgers",
+          "time": "2026-09-19T02:15Z",
+          "status": "Scheduled",
+          "odds_board_present": true
+        }
+      ]
+    },
+    {
+      "source": "wnba",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/scoreboard?dates=20260918",
+      "checked_at": "2026-09-18T23:03:46.037036+00:00",
+      "summary": [
+        {
+          "event": "Indiana Fever at Toronto Tempo",
+          "time": "2026-09-18T23:30Z",
+          "status": "Scheduled",
+          "odds_board_present": true
+        },
+        {
+          "event": "New York Liberty at Minnesota Lynx",
+          "time": "2026-09-18T23:30Z",
+          "status": "Scheduled",
+          "odds_board_present": true
+        },
+        {
+          "event": "Portland Fire at Golden State Valkyries",
+          "time": "2026-09-19T02:00Z",
+          "status": "Scheduled",
+          "odds_board_present": true
+        }
+      ]
+    },
+    {
+      "source": "cfb",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20260918&groups=80&limit=100",
+      "checked_at": "2026-09-18T23:03:45.994917+00:00",
+      "summary": [
+        {
+          "event": "Miami Hurricanes at Wake Forest Demon Deacons",
+          "time": "2026-09-18T23:30Z",
+          "status": "Scheduled",
+          "odds_board_present": true
+        },
+        {
+          "event": "Houston Cougars at Texas Tech Red Raiders",
+          "time": "2026-09-19T00:00Z",
+          "status": "Scheduled",
+          "odds_board_present": true
+        },
+        {
+          "event": "Portland State Vikings at Oregon Ducks",
+          "time": "2026-09-19T02:30Z",
+          "status": "Scheduled",
+          "odds_board_present": true
+        }
+      ]
+    },
+    {
+      "source": "nfl",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=20260918",
+      "checked_at": "2026-09-18T23:03:45.659366+00:00",
+      "summary": []
+    },
+    {
+      "source": "nhl",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard?dates=20260918",
+      "checked_at": "2026-09-18T23:03:46.268540+00:00",
+      "summary": []
+    },
+    {
+      "source": "nba",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=20260918",
+      "checked_at": "2026-09-18T23:03:46.275680+00:00",
+      "summary": []
+    },
+    {
+      "source": "cfl",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/football/cfl/scoreboard?dates=20260918",
+      "checked_at": "2026-09-18T23:03:46.048597+00:00",
+      "summary": []
+    },
+    {
+      "source": "ufc",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/mma/ufc/scoreboard?dates=20260918",
+      "checked_at": "2026-09-18T23:03:46.716349+00:00",
+      "summary": []
+    },
+    {
+      "source": "box",
+      "url": "https://statsapi.mlb.com/api/v1/game/822847/boxscore",
+      "checked_at": "2026-09-18T23:03:46.040852+00:00",
+      "summary": {
+        "officials": [
+          {
+            "official": {
+              "id": 665297,
+              "fullName": "Tom Hanahan",
+              "link": "/api/v1/people/665297"
+            },
+            "officialType": "Home Plate"
+          },
+          {
+            "official": {
+              "id": 484499,
+              "fullName": "Manny Gonzalez",
+              "link": "/api/v1/people/484499"
+            },
+            "officialType": "First Base"
+          },
+          {
+            "official": {
+              "id": 676581,
+              "fullName": "James Jean",
+              "link": "/api/v1/people/676581"
+            },
+            "officialType": "Second Base"
+          },
+          {
+            "official": {
+              "id": 482608,
+              "fullName": "Scott Barry",
+              "link": "/api/v1/people/482608"
+            },
+            "officialType": "Third Base"
+          }
+        ],
+        "lineups": {
+          "away": [
+            "Brett Bateman",
+            "Nathan Lukes",
+            "Vladimir Guerrero Jr.",
+            "George Springer",
+            "Alejandro Kirk",
+            "Kazuma Okamoto",
+            "Josh Smith",
+            "Ernie Clement",
+            "Myles Straw"
+          ],
+          "home": [
+            "Ezequiel Duran",
+            "Corey Seager",
+            "Josh Jung",
+            "Brandon Nimmo",
+            "Wyatt Langford",
+            "Jake Burger",
+            "Nicky Lopez",
+            "Elias Díaz",
+            "Evan Carter"
+          ]
+        }
+      }
+    },
+    {
+      "source": "feed",
+      "url": "https://statsapi.mlb.com/api/v1.1/game/822847/feed/live",
+      "checked_at": "2026-09-18T23:03:46.167469+00:00",
+      "summary": {
+        "status": {
+          "abstractGameState": "Preview",
+          "codedGameState": "P",
+          "detailedState": "Pre-Game",
+          "statusCode": "P",
+          "startTimeTBD": false,
+          "abstractGameCode": "P"
+        },
+        "weather": {
+          "condition": "Roof Closed",
+          "temp": "74",
+          "wind": "0 mph, None"
+        },
+        "probablePitchers": {
+          "away": {
+            "id": 656302,
+            "fullName": "Dylan Cease",
+            "link": "/api/v1/people/656302"
+          },
+          "home": {
+            "id": 677958,
+            "fullName": "Kumar Rocker",
+            "link": "/api/v1/people/677958"
+          }
+        }
+      }
+    },
+    {
+      "source": "usage",
+      "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-09-16&endDate=2026-09-17&teamId=140,141",
+      "checked_at": "2026-09-18T23:03:46.003482+00:00",
+      "summary": [
+        {
+          "id": 822763,
+          "time": "2026-09-16T19:07:00Z",
+          "status": "Final",
+          "away": "Detroit Tigers",
+          "home": "Toronto Blue Jays"
+        },
+        {
+          "id": 822846,
+          "time": "2026-09-17T00:05:00Z",
+          "status": "Final",
+          "away": "Boston Red Sox",
+          "home": "Texas Rangers"
+        },
+        {
+          "id": 822845,
+          "time": "2026-09-18T00:05:00Z",
+          "status": "Final",
+          "away": "Boston Red Sox",
+          "home": "Texas Rangers"
+        }
+      ]
+    },
+    {
+      "source": "eng.1",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20260918",
+      "checked_at": "2026-09-18T23:03:52.824609+00:00",
+      "summary": [
+        {
+          "event": "Chelsea at Brentford",
+          "time": "2026-09-18T19:00Z",
+          "status": "Full Time",
+          "odds_board_present": true
+        }
+      ]
+    },
+    {
+      "source": "esp.1",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard?dates=20260918",
+      "checked_at": "2026-09-18T23:03:53.069551+00:00",
+      "summary": [
+        {
+          "event": "Elche at Espanyol",
+          "time": "2026-09-18T19:00Z",
+          "status": "Full Time",
+          "odds_board_present": true
+        }
+      ]
+    },
+    {
+      "source": "ger.1",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard?dates=20260918",
+      "checked_at": "2026-09-18T23:03:52.687632+00:00",
+      "summary": [
+        {
+          "event": "1. FC Union Berlin at Bayern Munich",
+          "time": "2026-09-18T18:30Z",
+          "status": "Full Time",
+          "odds_board_present": true
+        }
+      ]
+    },
+    {
+      "source": "ita.1",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard?dates=20260918",
+      "checked_at": "2026-09-18T23:03:52.871682+00:00",
+      "summary": [
+        {
+          "event": "Sassuolo at Monza",
+          "time": "2026-09-18T18:45Z",
+          "status": "Full Time",
+          "odds_board_present": true
+        }
+      ]
+    },
+    {
+      "source": "fra.1",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard?dates=20260918",
+      "checked_at": "2026-09-18T23:03:52.677339+00:00",
+      "summary": [
+        {
+          "event": "Lens at AS Monaco",
+          "time": "2026-09-18T18:45Z",
+          "status": "Full Time",
+          "odds_board_present": true
+        }
+      ]
+    },
+    {
+      "source": "usa.1",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/scoreboard?dates=20260918",
+      "checked_at": "2026-09-18T23:03:52.745843+00:00",
+      "summary": [
+        {
+          "event": "Red Bull New York at New York City FC",
+          "time": "2026-09-18T23:30Z",
+          "status": "Scheduled",
+          "odds_board_present": true
+        }
+      ]
+    },
+    {
+      "source": "usa.nwsl",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/scoreboard?dates=20260918",
+      "checked_at": "2026-09-18T23:03:52.705220+00:00",
+      "summary": [
+        {
+          "event": "Kansas City Current at San Diego Wave FC",
+          "time": "2026-09-19T02:00Z",
+          "status": "Scheduled",
+          "odds_board_present": true
+        }
+      ]
+    }
+  ],
+  "supplement": [
+    {
+      "source": "docs_tech",
+      "url": "https://www.docsports.com/free-picks/football/2026/houston-cougars-vs-texas-tech-red-raiders-prediction-9-18-2026-college-football-picks-best-bets-odds.html",
+      "status": "RETRIEVED_REQUIRES_CONTENT_VERIFICATION",
+      "hits": [
+        "ootball game against the spread? Josh's Pick: Take the Cougars +8.5 Get $60 worth of FREE premium member picks. No Obligation. No Salesman. No Credit Card. Fast Sign up with Instant Access Click Here Get college football picks on every single game, or if you want our very best bets by the experts, sign up for your free $60 account with a "
+      ]
+    },
+    {
+      "source": "savant",
+      "url": "https://baseballsavant.mlb.com/savant-player/dylan-cease-656302",
+      "status": "RETRIEVED_REQUIRES_CONTENT_VERIFICATION",
+      "hits": [
+        "act % Edge % 1st Pitch Strike % Swing % Whiff % Meatball % Meatball Swing % 2019 1,364 45.6 65.8 80.4 26.5 60.4 41.5 59.4 44.4 26.1 6.9 81.9 2020 1,085 44.2 64.8 80.7 23.0 61.2 40.5 54.9 41.5 25.3 7.6 74.4 2021 2,957 46.9 67.0 74.1 28.9 47.7 40.0 58.3 46.8 34.6 6.8 72.6 2022 3,120 43.7 68.0 76.5 31.3 50.3 41.2 58.2 47.3 33.3 6.7 77.0 2023",
+        " Fastball Spin Curve Spin Avg EV Chase% Whiff% K% BB% Barrel% Hard- Hit% GB% Extension 2019 26 12 64 78 39 91 90 65 70 20 54 61 17 37 42 58 26 2020 6 9 44 4 5 97 95 68 23 13 40 14 11 29 25 37 21 2021 83 54 95 45 70 90 97 85 38 60 94 93 32 15 48 13 25 2022 98 75 100 13 90 90 97 79 84 69 91 88 16 70 93 30 26 2023 27 44 14 69 50 78 97 71 23 ",
+        ".3 +2.6 ↑ 47.7 -13.5 ↓ 61.2 +0.8 ↑ 60.4 Whiff % 33.4 0.0 33.4 +1.0 ↑ 32.4 +1.4 ↑ 31.0 -2.3 ↓ 33.3 -1.3 ↓ 34.6 +9.3 ↑ 25.3 -0.8 ↓ 26.1 First Strike % 63.2 +3.1 ↑ 60.1 +0.3 ↑ 59.8 -1.3 ↓ 61.1 +2.9 ↑ 58.2 -0.1 ↓ 58.3 +3.4 ↑ 54.9 -4.5 ↓ 59.4 First Pitch Swing % 32.0 -1.2 ↓ 33.2 +1.3 ↑ 31.9 +0.1 ↑ 31.8 -0.3 ↓ 32.1 +3.0 ↑ 29.1 +4.8 ↑ 24.3 -4.6 "
+      ]
+    },
+    {
+      "source": "weather",
+      "url": "https://forecast.weather.gov/MapClick.php?lat=33.585&lon=-101.885",
+      "status": "RETRIEVED_REQUIRES_CONTENT_VERIFICATION",
+      "hits": [
+        "recast Extended Forecast for Lubbock TX Tonight Low: 73 °F Mostly Clear Saturday High: 95 °F Mostly Sunny then Chance T-storms Saturday Night Low: 71 °F Chance T-storms Sunday High: 94 °F Partly Sunny then Slight Chance T-storms Sunday Night Low: 68 °F Slight Chance T-storms Monday High: 88 °F Mostly Sunny then Chance T-storms Monday Nigh",
+        "c\").height(maxh); }); Detailed Forecast Tonight Mostly clear, with a low around 73. South southeast wind around 10 mph. Saturday A 30 percent chance of showers and thunderstorms after 4pm. Mostly sunny, with a high near 95. South southwest wind around 10 mph. Saturday Night A 40 percent chance of showers and thunderstorms before 1am. Most"
+      ]
+    },
+    {
+      "source": "fg",
+      "url": "https://www.fangraphs.com/players/dylan-cease/18525/stats/pitching",
+      "status": "INACCESSIBLE",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "covers",
+      "url": "https://www.covers.com/mlb",
+      "status": "RETRIEVED_REQUIRES_CONTENT_VERIFICATION",
+      "hits": []
+    },
+    {
+      "source": "nascar",
+      "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+      "status": "INACCESSIBLE",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "golf",
+      "url": "https://www.europeantour.com/dpworld-tour/bmw-pga-championship-2026/leaderboard",
+      "status": "INACCESSIBLE",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "tennis",
+      "url": "https://www.wtatennis.com/tournaments",
+      "status": "RETRIEVED_REQUIRES_CONTENT_VERIFICATION",
+      "hits": []
+    }
+  ],
+  "cross_references": [
+    {
+      "url": "https://vsin.com/mlb/mlb-picks-today-greg-peterson-best-bets-friday-september-18/",
+      "status": "CURRENT",
+      "observation": "Toronto -130 recommendation; -141 attributed fair line; not a Micks forecast.",
+      "checked_date": "2026-09-18"
+    },
+    {
+      "url": "https://vsin.com/mlb/best-mlb-player-props-today-september-18-2026-picks-predictions/",
+      "status": "CURRENT",
+      "observation": "Cease O6.5 -148 / O7.5 +123 article entries, not verified live executable odds.",
+      "checked_date": "2026-09-18"
+    },
+    {
+      "url": "https://vsin.com/mlb/steve-makinens-mlb-picks-from-betting-splits-and-systems-for-friday-september-18/",
+      "status": "SUPPORTING ONLY",
+      "observation": "Toronto starter/bullpen system; same source family; Washington conflicts.",
+      "checked_date": "2026-09-18"
+    },
+    {
+      "url": "https://vsin.com/college-football/college-football-week-3-picks-houston-vs-texas-tech/",
+      "status": "CURRENT",
+      "observation": "Tech -7.5; protection/run-game concerns.",
+      "checked_date": "2026-09-18"
+    },
+    {
+      "url": "https://data.vsin.com/college-football/weekly-power-ratings/",
+      "status": "CURRENT",
+      "observation": "Ratings support Tech; Miami side near market.",
+      "checked_date": "2026-09-18"
+    },
+    {
+      "url": "https://data.vsin.com/wnba/daily-power-ratings/",
+      "status": "CURRENT",
+      "observation": "WNBA ratings disagreement; not independent of VSiN.",
+      "checked_date": "2026-09-18"
+    },
+    {
+      "url": "https://vsin.com/projections-yrfi/",
+      "status": "INACCESSIBLE",
+      "observation": "Page says projections temporarily unavailable.",
+      "checked_date": "2026-09-18"
+    },
+    {
+      "url": "https://data.vsin.com/mlb/analysis/team-summary/?view=f5",
+      "status": "SUPPORTING ONLY",
+      "observation": "Season F5 table; no user-book derivative price.",
+      "checked_date": "2026-09-18"
+    },
+    {
+      "url": "https://vsin.com/tools/vegas-betting-sheets/",
+      "status": "INACCESSIBLE",
+      "observation": "Current Circa quote rows not verified.",
+      "checked_date": "2026-09-18"
+    },
+    {
+      "url": "https://data.vsin.com/betting-splits/?source=DK&sport=MLB",
+      "status": "INACCESSIBLE",
+      "observation": "Current candidate ticket/handle rows not verified.",
+      "checked_date": "2026-09-18"
+    },
+    {
+      "url": "https://www.docsports.com/#freepicks",
+      "status": "CURRENT",
+      "observation": "Entry point and legacy MLB/CFB/WNBA listings checked.",
+      "checked_date": "2026-09-18"
+    },
+    {
+      "url": "https://www.docsports.com/statistics/matches.html",
+      "status": "INACCESSIBLE",
+      "observation": "Shell accessible, relevant current match rows not established.",
+      "checked_date": "2026-09-18"
+    },
+    {
+      "url": "https://www.docsports.com/video/free-picks/",
+      "status": "SUPPORTING ONLY",
+      "observation": "Video index checked; Tech video accessible text did not reveal actual pick.",
+      "checked_date": "2026-09-18"
+    },
+    {
+      "url": "https://www.docsports.com/cappers.html?cap_id=88",
+      "status": "CURRENT",
+      "observation": "No free AI-v3 selection displayed.",
+      "checked_date": "2026-09-18"
+    },
+    {
+      "url": "https://www.docsports.com/free-picks/baseball/2026/toronto-blue-jays-vs-texas-rangers-prediction-9-18-2026-mlb-picks-best-bets-odds.html",
+      "status": "STALE",
+      "observation": "Texas +162 recommendation, Toronto -196 and total9 mismatch; no confirmation credit.",
+      "checked_date": "2026-09-18"
+    },
+    {
+      "url": "https://www.docsports.com/free-picks/baseball/2026/washington-nationals-vs-st-louis-cardinals-prediction-9-18-2026-mlb-picks-best-bets-odds.html",
+      "status": "STALE",
+      "observation": "Opposing starter mismatch Hjerpe vs MLB Leahy; no confirmation.",
+      "checked_date": "2026-09-18"
+    },
+    {
+      "url": "https://www.docsports.com/free-picks/football/2026/houston-cougars-vs-texas-tech-red-raiders-prediction-9-18-2026-college-football-picks-best-bets-odds.html",
+      "status": "SUPPORTING ONLY",
+      "observation": "Houston +8.5 recommendation; current +7.5 is a different number.",
+      "checked_date": "2026-09-18"
+    },
+    {
+      "url": "https://www.rotowire.com/wnba/lineups.php",
+      "status": "CURRENT",
+      "observation": "NY/MIN confirmed; other lineups/availability not all confirmed.",
+      "checked_date": "2026-09-18"
+    },
+    {
+      "url": "https://www.actionnetwork.com/mlb",
+      "status": "SUPPORTING ONLY",
+      "observation": "Index accessed; Toronto article retrieval incomplete.",
+      "checked_date": "2026-09-18"
+    },
+    {
+      "url": "https://www.covers.com/mlb",
+      "status": "SUPPORTING ONLY",
+      "observation": "Index available; no candidate confirmation extracted.",
+      "checked_date": "2026-09-18"
+    },
+    {
+      "url": "https://www.teamrankings.com/mlb/matchup/blue-jays-rangers-2026-09-18",
+      "status": "SUPPORTING ONLY",
+      "observation": "Matchup page checked.",
+      "checked_date": "2026-09-18"
+    },
+    {
+      "url": "https://www.statmuse.com/mlb/ask/dylan-cease-strikeouts-last-10-games",
+      "status": "SUPPORTING ONLY",
+      "observation": "Game log cross-check; primary logs used.",
+      "checked_date": "2026-09-18"
+    },
+    {
+      "url": "https://baseballsavant.mlb.com/savant-player/dylan-cease-656302",
+      "status": "SUPPORTING ONLY",
+      "observation": "Downloaded; current velocity/whiff trend not independently established.",
+      "checked_date": "2026-09-18"
+    },
+    {
+      "url": "https://www.fangraphs.com/players/dylan-cease/18525/stats/pitching",
+      "status": "SUPPORTING ONLY",
+      "observation": "Web page accessible, no additional current metric awarded.",
+      "checked_date": "2026-09-18"
+    },
+    {
+      "url": "https://www.baseball-reference.com/players/c/ceasedy01.shtml",
+      "status": "INACCESSIBLE",
+      "observation": "Alternative primary MLB logs used.",
+      "checked_date": "2026-09-18"
+    },
+    {
+      "url": "https://www.sports-reference.com/cfb/schools/texas-tech/2026.html",
+      "status": "INACCESSIBLE",
+      "observation": "Current matchup reporting used as alternative.",
+      "checked_date": "2026-09-18"
+    },
+    {
+      "url": "https://umpscorecards.com/",
+      "status": "INACCESSIBLE",
+      "observation": "Interactive current Hanahan zone profile not verified.",
+      "checked_date": "2026-09-18"
+    },
+    {
+      "url": "https://forecast.weather.gov/MapClick.php?lat=33.585&lon=-101.885",
+      "status": "CURRENT",
+      "observation": "Mostly clear, SSE10mph tonight.",
+      "checked_date": "2026-09-18"
+    },
+    {
+      "url": "https://www.houstonchronicle.com/sports/college/cougars/article/houston-texas-tech-live-updates-score-tv-22437942.php",
+      "status": "CURRENT",
+      "observation": "Brooks suspension; Terrill expected return.",
+      "checked_date": "2026-09-18"
+    }
+  ],
+  "guides": [
+    {
+      "name": "VSiN NFL Betting Guide 2026",
+      "status": "NOT APPLICABLE",
+      "reason": "No September18 NFL candidate; original inventoried."
+    },
+    {
+      "name": "Fantasy Life Fantasy Football 2026",
+      "status": "NOT APPLICABLE",
+      "reason": "NFL-only publication; original inventoried."
+    }
+  ],
+  "missing": [
+    "Verified closing-line windows and comparable ATS/run-line history",
+    "Current candidate splits and high-limit movement",
+    "Complete specialist-sport role/event/odds checks",
+    "Current umpire profile and velocity trend"
+  ],
+  "independent_probability_gate": false
+}
