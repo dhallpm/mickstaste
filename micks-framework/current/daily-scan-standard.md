@@ -1,3 +1,5 @@
+User-directed method restoration (September 18, 2026): research-readiness.md controls. Use the established sources, scans, guides and 110-point handicap. No new standalone win-probability, numerical EV or model-validation prerequisite for daily picks.
+
 # Standard command: Run Micks Picks for today's slate
 
 Effective: 2026-09-18. Permanent, user-requested workflow.
@@ -40,10 +42,10 @@ Systems require an exact rule, sample period/size, market, price assumptions and
 
 ## Build and score the card
 
-1. Form and record the independent Micks hypothesis and reproducible fair-number estimate from fundamentals before reading outside selections or market narratives. Retain the initial snapshot. If an outside selection was already encountered, disclose that; do not backdate an independent prediction or relabel an outside model as Micks.
+1. Complete the established source-and-scan handicap, cross-referencing guides and systems. Document matchup, game script and price judgment; no newly required standalone probability model or numerical EV. Attribute any outside projections.
 2. Verify the matchup, player opportunity and failure paths. Compare alternative market expressions instead of automatically stacking a side, prop and parlay.
 3. Check exact current prices and movement, then outside confirmation. Book/date/market/line/odds must match. Different articles' prices are not a verified opening-to-current series. Record benchmark prices separately from executable user-book quotes and from genuine closing prices.
-4. Apply all 110-point factors with evidence beside each. Use research-readiness.md: unsupported inputs are UNKNOWN/null; verified adverse evidence may receive zero. Essential unverified inputs block release and produce INCOMPLETE/UNGRADED, not a poor final grade. An incomplete evidence subtotal is not a calibrated win probability. Do not invent a fair line, EV, grade or price cutoff to fill the table.
+4. Apply all established 110-point factors using the evidence and documented handicapping judgment. Do not equate the score with a win probability or impose new probability/calibration gates. Disclose material missing research; do not invent confirmation points or numerical forecasts.
 5. Run Progressive Fade and Favorite Inflation: distinct SU versus ATS/run-line 5/10/20 windows, comparable line bands, margin versus closing expectations, rest/travel, current role changes and reset conditions. Missing closing data cannot establish or clear an alert.
 6. Apply Market Intelligence (6/5/4/5) without double-counting. Ordinary line movement does not establish sharp action. Run the 100-point Market AI Replica in shadow only; it does not replace the official framework.
 7. Apply Failure Score, sport caps, units, correlation and card limits. Non-NFL recovery releases require 82/110 and Failure Score 7/10. NFL follows the existing standard-mode gate. Futures use their separate 100-point model/EV/portfolio gates.

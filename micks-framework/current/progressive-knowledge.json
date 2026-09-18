@@ -61,6 +61,12 @@
       "verified_on": "2026-09-18",
       "type": "projection_inputs",
       "action": "Pitcher strikeout opportunities use batters faced and pitch workload, not innings alone. Cease recent five-inning starts had 22 and 24 BF. New matchup calculator remains provisional pending calibration."
+    },
+    {
+      "id": "PK-010",
+      "verified_on": "2026-09-18",
+      "type": "explicit_user_direction",
+      "action": "Restore established source/scan/guide handicapping. User rejects new standalone probabilities and unwarranted method changes. No new daily win-probability, numerical EV or model-validation gate. research-readiness.md supersedes earlier conflicting rules. NFL Recovery remains off; other existing settings unchanged."
     }
   ]
 }

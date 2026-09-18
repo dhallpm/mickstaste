@@ -97,3 +97,7 @@ Every framework change should:
 
 ## 2026-09-18 — research completeness correction
 Separated missing evidence from verified zero-point factors; withdrew incomplete September 18 final grades and added a reproducible provisional Cease sensitivity calculation. No prior official release grades, stakes, results, operating modes or release gates changed.
+
+
+## 2026-09-18 — user-directed restoration
+Restored source/scan/guide handicapping and established score-based decisions. Removed the newly introduced readiness/probability helper and its new release gates. Preserved historical reports as records, not operative rules; preserved the user-requested NFL Recovery exemption.

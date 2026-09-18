@@ -1,4 +1,4 @@
-Research completeness correction (September 18, 2026): apply research-readiness.md before legacy scoring instructions. Unknown data is null, not negative evidence; incomplete core research is UNGRADED. Existing weights, modes and release standards remain unchanged.
+User-directed method restoration (September 18, 2026): research-readiness.md controls. Use the established sources, scans, guides and 110-point handicap. No new standalone win-probability, numerical EV or model-validation prerequisite for daily picks.
 
 # Micks Picks Framework — Current Setup
 

@@ -1,3 +1,4 @@
+# NON-OPERATIVE SEPTEMBER 18 RESEARCH EXPERIMENT. Not required or used for daily release decisions.
 """Provisional Poisson-binomial sensitivity calculator, not a calibrated betting model.
 
 Inputs are frozen pregame facts. Workload is treated as exogenous, a simplifying

@@ -36,3 +36,7 @@ PK-007 (2026-09-18): Prefer a dated league injury report over a generic game-tim
 PK-008: Apply research-readiness.md: unfinished research is ungraded, not a bad bet. Optional missing feeds do not automatically veto a candidate; never grant unsupported points.
 
 PK-009: Use batters faced for strikeout opportunities. Cease faced 22 and 24 hitters in his recent five-inning starts; innings alone did not establish a reduced leash. Newly constructed sensitivity models remain provisional.
+
+
+## PK-010 — explicit user direction, September 18
+Restore the established sources/scans/guides and framework scoring. Remove newly imposed standalone probability/EV/calibration requirements for daily picks. research-readiness.md now records the user-directed restoration and overrides conflicting earlier instructions. No other method, weight or mode changes.

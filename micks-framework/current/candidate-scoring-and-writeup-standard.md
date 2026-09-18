@@ -1,8 +1,10 @@
+User-directed method restoration (September 18, 2026): research-readiness.md controls. Use the established sources, scans, guides and 110-point handicap. No new standalone win-probability, numerical EV or model-validation prerequisite for daily picks.
+
 # Micks Picks Candidate Scoring and Premium Writeup Standard
 
 Every candidate across every active sport must be scored before grade or access is assigned. VIP status is earned; it is never filled by quota.
 
-Micks Picks is Micks-first. Build the independent handicap before reading market signals. Outside models, handicappers and market behavior may confirm, challenge or downgrade the play, but they may not create the handicap.
+Micks Picks is Micks-first. Synthesize the registered sources, scans, guides and systems into the Micks handicap; use judgment and independent evidence paths rather than blindly copying a selection.
 
 ## Score factors — 110 points
 
@@ -27,7 +29,7 @@ The 20 points are split as follows:
 
 Use `market-intelligence-layer.md` as the controlling module for these points.
 
-Missing, stale or unverified inputs are UNKNOWN with null points, not verified zeroes. Apply research-readiness.md before assigning a final score, grade or disposition. Never invent projections, splits, injuries, sharp action, handle percentages, liquidity or bettor-profile information.
+Disclose missing, stale or unverified evidence; do not award unsupported points. Apply the established scoring through documented handicapping judgment as clarified in research-readiness.md. Never invent projections, splits, injuries, sharp action, handle percentages, liquidity or bettor-profile information.
 
 Do not double-count the same market fact across multiple categories. A single line move cannot simultaneously earn full sharp-movement credit, full VSiN confirmation credit and full Doc’s confirmation credit when all three references are reacting to the same underlying market event.
 
@@ -64,7 +66,7 @@ VIP normally requires A- or better plus multiple independent support paths and n
 
 Use this order every time:
 
-1. Independent Micks handicap and fair-price estimate
+1. Source-informed Micks handicap and assessment of the available number
 2. Matchup / role / availability verification
 3. When NFL is active, complete the Post-Week 1 Guide/System Reconciliation Table and Fantasy Projection Delta Board
 4. Market Intelligence Layer
@@ -76,7 +78,7 @@ Use this order every time:
 10. Correlation / card-exposure check
 11. Release or pass
 
-Do not read a respected pick first and then build a rationale around it.
+Do not blindly copy a respected pick or manufacture confirming evidence. Source consultation order is not a release blocker.
 
 For NFL candidates, the guide/current-projection reconciliation is a verification gate, not an extra point category. Fantasy Life magazine, weekly projections, rankings and utilization pages are one source family. VSiN guide, models and systems are one source family. Do not double-count agreement inside either family.
 
