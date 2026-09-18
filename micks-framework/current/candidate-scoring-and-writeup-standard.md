@@ -27,7 +27,7 @@ The 20 points are split as follows:
 
 Use `market-intelligence-layer.md` as the controlling module for these points.
 
-Unsupported, unavailable, stale or unverified factors receive zero. Never invent projections, splits, injuries, sharp action, handle percentages, liquidity or bettor-profile information.
+Missing, stale or unverified inputs are UNKNOWN with null points, not verified zeroes. Apply research-readiness.md before assigning a final score, grade or disposition. Never invent projections, splits, injuries, sharp action, handle percentages, liquidity or bettor-profile information.
 
 Do not double-count the same market fact across multiple categories. A single line move cannot simultaneously earn full sharp-movement credit, full VSiN confirmation credit and full Doc’s confirmation credit when all three references are reacting to the same underlying market event.
 

@@ -1,3 +1,5 @@
+Research completeness correction (September 18, 2026): apply research-readiness.md before legacy scoring instructions. Unknown data is null, not negative evidence; incomplete core research is UNGRADED. Existing weights, modes and release standards remain unchanged.
+
 # Micks Picks Framework — Current Setup
 
 ## Standard daily command — effective 2026-09-18

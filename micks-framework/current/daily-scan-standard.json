@@ -48,12 +48,15 @@
     "missing_guide": "disclose; never invent"
   },
   "evidence_policy": {
-    "unsupported_factor_points": 0,
     "essential_unknown_blocks_release": true,
     "external_fair_line_is_not_micks": true,
     "unplayed_bet_counts_in_record": false,
     "calibrated_model_claim_requires_reproducible_evidence": true,
-    "source_http_success_is_not_data_verification": true
+    "source_http_success_is_not_data_verification": true,
+    "unknown_factor_points": null,
+    "missing_research_is_not_negative_evidence": true,
+    "readiness_controller": "research-readiness.md",
+    "outside_opinions_seen_first_do_not_prevent_later_disclosed_independent_calculation": true
   },
   "outputs": [
     "dated report",

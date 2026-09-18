@@ -30,3 +30,9 @@ A structural change (confirmed injury, trade, starter/role change) can update a 
 ## Injury labels
 
 PK-007 (2026-09-18): Prefer a dated league injury report over a generic game-time tag. Clark was probable in the September 17 4:45 p.m. ET official report; do not relabel that as questionable or as final game-day clearance.
+
+
+## September 18 scoring correction
+PK-008: Apply research-readiness.md: unfinished research is ungraded, not a bad bet. Optional missing feeds do not automatically veto a candidate; never grant unsupported points.
+
+PK-009: Use batters faced for strikeout opportunities. Cease faced 22 and 24 hitters in his recent five-inning starts; innings alone did not establish a reduced leash. Newly constructed sensitivity models remain provisional.

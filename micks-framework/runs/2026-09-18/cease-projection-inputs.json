@@ -1,0 +1,160 @@
+{
+  "date": "2026-09-18",
+  "purpose": "Post-screenshot provisional sensitivity, not official fair odds",
+  "market_source": "User BetRivers screenshot at 5:20 p.m. ET; not independently refreshed",
+  "game_id": 822847,
+  "league": {
+    "strikeouts": 38353,
+    "plate_appearances": 173693
+  },
+  "pitcher": {
+    "name": "Dylan Cease",
+    "strikeouts": 236,
+    "batters_faced": 668
+  },
+  "lineup": [
+    {
+      "player_id": 677649,
+      "name": "Ezequiel Duran",
+      "strikeouts_vs_R": 96,
+      "plate_appearances_vs_R": 406,
+      "source": "https://statsapi.mlb.com/api/v1/people/677649/stats?stats=statSplits&group=hitting&season=2026&sitCodes=vr"
+    },
+    {
+      "player_id": 608369,
+      "name": "Corey Seager",
+      "strikeouts_vs_R": 58,
+      "plate_appearances_vs_R": 261,
+      "source": "https://statsapi.mlb.com/api/v1/people/608369/stats?stats=statSplits&group=hitting&season=2026&sitCodes=vr"
+    },
+    {
+      "player_id": 673962,
+      "name": "Josh Jung",
+      "strikeouts_vs_R": 59,
+      "plate_appearances_vs_R": 312,
+      "source": "https://statsapi.mlb.com/api/v1/people/673962/stats?stats=statSplits&group=hitting&season=2026&sitCodes=vr"
+    },
+    {
+      "player_id": 607043,
+      "name": "Brandon Nimmo",
+      "strikeouts_vs_R": 101,
+      "plate_appearances_vs_R": 429,
+      "source": "https://statsapi.mlb.com/api/v1/people/607043/stats?stats=statSplits&group=hitting&season=2026&sitCodes=vr"
+    },
+    {
+      "player_id": 694671,
+      "name": "Wyatt Langford",
+      "strikeouts_vs_R": 61,
+      "plate_appearances_vs_R": 288,
+      "source": "https://statsapi.mlb.com/api/v1/people/694671/stats?stats=statSplits&group=hitting&season=2026&sitCodes=vr"
+    },
+    {
+      "player_id": 669394,
+      "name": "Jake Burger",
+      "strikeouts_vs_R": 114,
+      "plate_appearances_vs_R": 423,
+      "source": "https://statsapi.mlb.com/api/v1/people/669394/stats?stats=statSplits&group=hitting&season=2026&sitCodes=vr"
+    },
+    {
+      "player_id": 670032,
+      "name": "Nicky Lopez",
+      "strikeouts_vs_R": 33,
+      "plate_appearances_vs_R": 191,
+      "source": "https://statsapi.mlb.com/api/v1/people/670032/stats?stats=statSplits&group=hitting&season=2026&sitCodes=vr"
+    },
+    {
+      "player_id": 553869,
+      "name": "Elias D\u00edaz",
+      "strikeouts_vs_R": 33,
+      "plate_appearances_vs_R": 127,
+      "source": "https://statsapi.mlb.com/api/v1/people/553869/stats?stats=statSplits&group=hitting&season=2026&sitCodes=vr"
+    },
+    {
+      "player_id": 694497,
+      "name": "Evan Carter",
+      "strikeouts_vs_R": 83,
+      "plate_appearances_vs_R": 357,
+      "source": "https://statsapi.mlb.com/api/v1/people/694497/stats?stats=statSplits&group=hitting&season=2026&sitCodes=vr"
+    }
+  ],
+  "last_ten_batters_faced": [
+    30,
+    24,
+    24,
+    24,
+    24,
+    26,
+    22,
+    21,
+    22,
+    24
+  ],
+  "last_ten_starts": [
+    {
+      "date": "2026-07-25",
+      "innings": "9.0",
+      "batters_faced": 30,
+      "strikeouts": 12
+    },
+    {
+      "date": "2026-07-31",
+      "innings": "6.0",
+      "batters_faced": 24,
+      "strikeouts": 7
+    },
+    {
+      "date": "2026-08-06",
+      "innings": "7.0",
+      "batters_faced": 24,
+      "strikeouts": 10
+    },
+    {
+      "date": "2026-08-11",
+      "innings": "5.0",
+      "batters_faced": 24,
+      "strikeouts": 7
+    },
+    {
+      "date": "2026-08-16",
+      "innings": "6.1",
+      "batters_faced": 24,
+      "strikeouts": 10
+    },
+    {
+      "date": "2026-08-22",
+      "innings": "6.2",
+      "batters_faced": 26,
+      "strikeouts": 8
+    },
+    {
+      "date": "2026-08-28",
+      "innings": "6.0",
+      "batters_faced": 22,
+      "strikeouts": 8
+    },
+    {
+      "date": "2026-09-02",
+      "innings": "6.0",
+      "batters_faced": 21,
+      "strikeouts": 4
+    },
+    {
+      "date": "2026-09-07",
+      "innings": "5.0",
+      "batters_faced": 22,
+      "strikeouts": 6
+    },
+    {
+      "date": "2026-09-13",
+      "innings": "5.0",
+      "batters_faced": 24,
+      "strikeouts": 9
+    }
+  ],
+  "primary_sources": [
+    "https://statsapi.mlb.com/api/v1/game/822847/boxscore",
+    "https://statsapi.mlb.com/api/v1/people/656302/stats?stats=season&group=pitching&season=2026",
+    "https://statsapi.mlb.com/api/v1/people/656302/stats?stats=gameLog&group=pitching&season=2026",
+    "https://statsapi.mlb.com/api/v1/teams/stats?stats=season&group=hitting&season=2026&sportIds=1"
+  ]
+}

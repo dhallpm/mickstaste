@@ -93,3 +93,7 @@ Every framework change should:
 2. Add a dated note here.
 3. Include what changed and why.
 4. Avoid undocumented framework drift.
+
+
+## 2026-09-18 — research completeness correction
+Separated missing evidence from verified zero-point factors; withdrew incomplete September 18 final grades and added a reproducible provisional Cease sensitivity calculation. No prior official release grades, stakes, results, operating modes or release gates changed.

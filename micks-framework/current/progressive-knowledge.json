@@ -49,6 +49,18 @@
       "verified_on": "2026-09-18",
       "type": "source_quality",
       "action": "Use the dated official injury designation rather than a generic game-time tag. Clark was probable in the September 17 4:45 p.m. ET report; final September 18 clearance remains a separate check."
+    },
+    {
+      "id": "PK-008",
+      "verified_on": "2026-09-18",
+      "type": "process_correction",
+      "action": "Separate research completeness, betting quality and release eligibility. Missing core probability/EV yields UNGRADED; optional unavailable sources are disclosed without automatic veto or free points. No release thresholds or weights changed."
+    },
+    {
+      "id": "PK-009",
+      "verified_on": "2026-09-18",
+      "type": "projection_inputs",
+      "action": "Pitcher strikeout opportunities use batters faced and pitch workload, not innings alone. Cease recent five-inning starts had 22 and 24 BF. New matchup calculator remains provisional pending calibration."
     }
   ]
 }

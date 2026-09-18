@@ -6,7 +6,7 @@
   "official_releases": [],
   "official_exposure_units": 0,
   "pick_of_the_day": null,
-  "grade_summary": "No release grade earned; no A-grade found.",
+  "grade_summary": "Original incomplete subtotals withdrawn as final grades; core probability/EV research incomplete.",
   "operating_modes": {
     "NFL": "standard",
     "other_daily_sports": "Recovery Mode+"
@@ -37,38 +37,95 @@
       "price_retrieved_at": "2026-09-18T17:14:16.879881+00:00",
       "user_book_executable": false,
       "units": 0,
-      "grade": "Pass",
-      "disposition": "FIRST RESEARCH ALTERNATE",
-      "score": 12,
+      "grade": null,
+      "disposition": "INCOMPLETE_UNGRADED",
+      "score": null,
       "score_max": 110,
-      "score_type": "incomplete_verified_evidence_subtotal_not_forecast_confidence",
+      "score_type": "no_final_score_core_research_incomplete",
       "factors": {
-        "independent_fair_edge": 0,
-        "executable_value": 0,
-        "availability_matchup": 7,
-        "schedule_rest": 3,
-        "progressive_fade": 0,
-        "favorite_inflation": 0,
-        "external_model_agreement": 0,
-        "docs_confirmation": 0,
-        "sharp_movement": 0,
-        "handle_ticket_divergence": 0,
-        "market_quality": 2,
-        "movement_timing": 0
+        "independent_fair_edge": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 25,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "executable_value": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 15,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "availability_matchup": {
+          "status": "VERIFIED",
+          "points": 7,
+          "maximum": 10
+        },
+        "schedule_rest": {
+          "status": "VERIFIED",
+          "points": 3,
+          "maximum": 10
+        },
+        "progressive_fade": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 10,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "favorite_inflation": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "external_model_agreement": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 10,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "docs_confirmation": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "sharp_movement": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 6,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "handle_ticket_divergence": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "market_quality": {
+          "status": "VERIFIED",
+          "points": 2,
+          "maximum": 4
+        },
+        "movement_timing": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        }
       },
       "factor_evidence": {
-        "independent_fair_edge": "No independent, reproducible Micks fair estimate established before outside selections were encountered; zero.",
-        "executable_value": "No independent fair estimate and no current BetRivers quote; zero.",
+        "independent_fair_edge": "No independent, reproducible Micks fair estimate established before outside selections were encountered; unknown.",
+        "executable_value": "No independent fair estimate and no current BetRivers quote; unknown.",
         "availability_matchup": "Cease versus Rocker; Toronto had September 17 off.",
         "schedule_rest": "Toronto off September 17; supported partial rest credit.",
-        "progressive_fade": "Comparable closing-line windows not established; zero.",
-        "favorite_inflation": "Required margin/closing data not verified; zero.",
-        "external_model_agreement": "External opinions recorded but cannot establish agreement with an absent independent Micks forecast; zero.",
-        "docs_confirmation": "Relevant prices stale or no accessible exact selection; zero.",
-        "sharp_movement": "No verified respected/high-limit sequence; zero.",
-        "handle_ticket_divergence": "No applicable candidate-specific verified split; zero.",
+        "progressive_fade": "Comparable closing-line windows not established; unknown.",
+        "favorite_inflation": "Required margin/closing data not verified; unknown.",
+        "external_model_agreement": "External opinions recorded but cannot establish agreement with an absent independent Micks forecast; unknown.",
+        "docs_confirmation": "Relevant prices stale or no accessible exact selection; unknown.",
+        "sharp_movement": "No verified respected/high-limit sequence; unknown.",
+        "handle_ticket_divergence": "No applicable candidate-specific verified split; unknown.",
         "market_quality": "Partial credit for a quoted major-league main market; limits unverified.",
-        "movement_timing": "No reliable beneficial timing/reversal established; zero."
+        "movement_timing": "No reliable beneficial timing/reversal established; unknown."
       },
       "fair_probability": null,
       "fair_odds": null,
@@ -81,20 +138,43 @@
       "hypothesis": "Cease versus Rocker; Toronto had September 17 off.",
       "strongest_failure_path": "Cease walked five in five innings last start; order and independent fair edge unverified.",
       "shadow_replica": {
-        "max": 100,
+        "status": "INCOMPLETE_UNGRADED"
+      },
+      "superseded_assessment": {
+        "score": 12,
+        "grade": "Pass",
+        "disposition": "FIRST RESEARCH ALTERNATE",
+        "score_type": "incomplete_verified_evidence_subtotal_not_forecast_confidence",
         "factors": {
-          "independent_fair_line": 0,
-          "market_dislocation_ev": 0,
-          "fundamental_confirmation": 7,
-          "market_microstructure": 0,
-          "independent_model_agreement": 0,
-          "market_expression_advantage": 0,
-          "market_regime_quality": 2,
-          "failure_case_robustness": 0
+          "independent_fair_edge": 0,
+          "executable_value": 0,
+          "availability_matchup": 7,
+          "schedule_rest": 3,
+          "progressive_fade": 0,
+          "favorite_inflation": 0,
+          "external_model_agreement": 0,
+          "docs_confirmation": 0,
+          "sharp_movement": 0,
+          "handle_ticket_divergence": 0,
+          "market_quality": 2,
+          "movement_timing": 0
         },
-        "verified_subtotal": 9,
-        "status": "PASS / INCOMPLETE",
-        "official_authority": false
+        "shadow_replica": {
+          "max": 100,
+          "factors": {
+            "independent_fair_line": 0,
+            "market_dislocation_ev": 0,
+            "fundamental_confirmation": 7,
+            "market_microstructure": 0,
+            "independent_model_agreement": 0,
+            "market_expression_advantage": 0,
+            "market_regime_quality": 2,
+            "failure_case_robustness": 0
+          },
+          "verified_subtotal": 9,
+          "status": "PASS / INCOMPLETE",
+          "official_authority": false
+        }
       }
     },
     {
@@ -108,38 +188,96 @@
       "price_retrieved_at": "2026-09-18T17:14:16.879881+00:00",
       "user_book_executable": false,
       "units": 0,
-      "grade": "Pass",
-      "disposition": "SECOND RESEARCH ALTERNATE",
-      "score": 8,
+      "grade": null,
+      "disposition": "INCOMPLETE_UNGRADED",
+      "score": null,
       "score_max": 110,
-      "score_type": "incomplete_verified_evidence_subtotal_not_forecast_confidence",
+      "score_type": "no_final_score_core_research_incomplete",
       "factors": {
-        "independent_fair_edge": 0,
-        "executable_value": 0,
-        "availability_matchup": 6,
-        "schedule_rest": 0,
-        "progressive_fade": 0,
-        "favorite_inflation": 0,
-        "external_model_agreement": 0,
-        "docs_confirmation": 0,
-        "sharp_movement": 0,
-        "handle_ticket_divergence": 0,
-        "market_quality": 2,
-        "movement_timing": 0
+        "independent_fair_edge": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 25,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "executable_value": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 15,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "availability_matchup": {
+          "status": "VERIFIED",
+          "points": 6,
+          "maximum": 10
+        },
+        "schedule_rest": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 10,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "progressive_fade": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 10,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "favorite_inflation": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "external_model_agreement": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 10,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "docs_confirmation": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "sharp_movement": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 6,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "handle_ticket_divergence": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "market_quality": {
+          "status": "VERIFIED",
+          "points": 2,
+          "maximum": 4
+        },
+        "movement_timing": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        }
       },
       "factor_evidence": {
-        "independent_fair_edge": "No independent, reproducible Micks fair estimate established before outside selections were encountered; zero.",
-        "executable_value": "No independent fair estimate and no current BetRivers quote; zero.",
+        "independent_fair_edge": "No independent, reproducible Micks fair estimate established before outside selections were encountered; unknown.",
+        "executable_value": "No independent fair estimate and no current BetRivers quote; unknown.",
         "availability_matchup": "Suarez run prevention and reviewed bullpen workload.",
-        "schedule_rest": "No established net schedule advantage; zero.",
-        "progressive_fade": "Comparable closing-line windows not established; zero.",
-        "favorite_inflation": "Required margin/closing data not verified; zero.",
-        "external_model_agreement": "External opinions recorded but cannot establish agreement with an absent independent Micks forecast; zero.",
-        "docs_confirmation": "Relevant prices stale or no accessible exact selection; zero.",
-        "sharp_movement": "No verified respected/high-limit sequence; zero.",
-        "handle_ticket_divergence": "No applicable candidate-specific verified split; zero.",
+        "schedule_rest": "No established net schedule advantage; unknown.",
+        "progressive_fade": "Comparable closing-line windows not established; unknown.",
+        "favorite_inflation": "Required margin/closing data not verified; unknown.",
+        "external_model_agreement": "External opinions recorded but cannot establish agreement with an absent independent Micks forecast; unknown.",
+        "docs_confirmation": "Relevant prices stale or no accessible exact selection; unknown.",
+        "sharp_movement": "No verified respected/high-limit sequence; unknown.",
+        "handle_ticket_divergence": "No applicable candidate-specific verified split; unknown.",
         "market_quality": "Partial credit for a quoted major-league main market; limits unverified.",
-        "movement_timing": "No reliable beneficial timing/reversal established; zero."
+        "movement_timing": "No reliable beneficial timing/reversal established; unknown."
       },
       "fair_probability": null,
       "fair_odds": null,
@@ -152,20 +290,43 @@
       "hypothesis": "Suarez run prevention and reviewed bullpen workload.",
       "strongest_failure_path": "Caminero/Aranda power and an unconfirmed batting order; no independent fair edge.",
       "shadow_replica": {
-        "max": 100,
+        "status": "INCOMPLETE_UNGRADED"
+      },
+      "superseded_assessment": {
+        "score": 8,
+        "grade": "Pass",
+        "disposition": "SECOND RESEARCH ALTERNATE",
+        "score_type": "incomplete_verified_evidence_subtotal_not_forecast_confidence",
         "factors": {
-          "independent_fair_line": 0,
-          "market_dislocation_ev": 0,
-          "fundamental_confirmation": 6,
-          "market_microstructure": 0,
-          "independent_model_agreement": 0,
-          "market_expression_advantage": 0,
-          "market_regime_quality": 2,
-          "failure_case_robustness": 0
+          "independent_fair_edge": 0,
+          "executable_value": 0,
+          "availability_matchup": 6,
+          "schedule_rest": 0,
+          "progressive_fade": 0,
+          "favorite_inflation": 0,
+          "external_model_agreement": 0,
+          "docs_confirmation": 0,
+          "sharp_movement": 0,
+          "handle_ticket_divergence": 0,
+          "market_quality": 2,
+          "movement_timing": 0
         },
-        "verified_subtotal": 8,
-        "status": "PASS / INCOMPLETE",
-        "official_authority": false
+        "shadow_replica": {
+          "max": 100,
+          "factors": {
+            "independent_fair_line": 0,
+            "market_dislocation_ev": 0,
+            "fundamental_confirmation": 6,
+            "market_microstructure": 0,
+            "independent_model_agreement": 0,
+            "market_expression_advantage": 0,
+            "market_regime_quality": 2,
+            "failure_case_robustness": 0
+          },
+          "verified_subtotal": 8,
+          "status": "PASS / INCOMPLETE",
+          "official_authority": false
+        }
       }
     },
     {
@@ -179,38 +340,96 @@
       "price_retrieved_at": "2026-09-18T17:14:16.879881+00:00",
       "user_book_executable": false,
       "units": 0,
-      "grade": "Pass",
-      "disposition": "PASS",
-      "score": 8,
+      "grade": null,
+      "disposition": "INCOMPLETE_UNGRADED",
+      "score": null,
       "score_max": 110,
-      "score_type": "incomplete_verified_evidence_subtotal_not_forecast_confidence",
+      "score_type": "no_final_score_core_research_incomplete",
       "factors": {
-        "independent_fair_edge": 0,
-        "executable_value": 0,
-        "availability_matchup": 6,
-        "schedule_rest": 0,
-        "progressive_fade": 0,
-        "favorite_inflation": 0,
-        "external_model_agreement": 0,
-        "docs_confirmation": 0,
-        "sharp_movement": 0,
-        "handle_ticket_divergence": 0,
-        "market_quality": 2,
-        "movement_timing": 0
+        "independent_fair_edge": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 25,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "executable_value": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 15,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "availability_matchup": {
+          "status": "VERIFIED",
+          "points": 6,
+          "maximum": 10
+        },
+        "schedule_rest": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 10,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "progressive_fade": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 10,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "favorite_inflation": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "external_model_agreement": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 10,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "docs_confirmation": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "sharp_movement": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 6,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "handle_ticket_divergence": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "market_quality": {
+          "status": "VERIFIED",
+          "points": 2,
+          "maximum": 4
+        },
+        "movement_timing": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        }
       },
       "factor_evidence": {
-        "independent_fair_edge": "No independent, reproducible Micks fair estimate established before outside selections were encountered; zero.",
-        "executable_value": "No independent fair estimate and no current BetRivers quote; zero.",
+        "independent_fair_edge": "No independent, reproducible Micks fair estimate established before outside selections were encountered; unknown.",
+        "executable_value": "No independent fair estimate and no current BetRivers quote; unknown.",
         "availability_matchup": "Skenes starter advantage is the initial research thesis.",
-        "schedule_rest": "No established net schedule advantage; zero.",
-        "progressive_fade": "Comparable closing-line windows not established; zero.",
-        "favorite_inflation": "Required margin/closing data not verified; zero.",
-        "external_model_agreement": "External opinions recorded but cannot establish agreement with an absent independent Micks forecast; zero.",
-        "docs_confirmation": "Relevant prices stale or no accessible exact selection; zero.",
-        "sharp_movement": "No verified respected/high-limit sequence; zero.",
-        "handle_ticket_divergence": "No applicable candidate-specific verified split; zero.",
+        "schedule_rest": "No established net schedule advantage; unknown.",
+        "progressive_fade": "Comparable closing-line windows not established; unknown.",
+        "favorite_inflation": "Required margin/closing data not verified; unknown.",
+        "external_model_agreement": "External opinions recorded but cannot establish agreement with an absent independent Micks forecast; unknown.",
+        "docs_confirmation": "Relevant prices stale or no accessible exact selection; unknown.",
+        "sharp_movement": "No verified respected/high-limit sequence; unknown.",
+        "handle_ticket_divergence": "No applicable candidate-specific verified split; unknown.",
         "market_quality": "Partial credit for a quoted major-league main market; limits unverified.",
-        "movement_timing": "No reliable beneficial timing/reversal established; zero."
+        "movement_timing": "No reliable beneficial timing/reversal established; unknown."
       },
       "fair_probability": null,
       "fair_odds": null,
@@ -223,20 +442,43 @@
       "hypothesis": "Skenes starter advantage is the initial research thesis.",
       "strongest_failure_path": "Earlier +125 article price is gone; current margin-cover and bullpen case unverified.",
       "shadow_replica": {
-        "max": 100,
+        "status": "INCOMPLETE_UNGRADED"
+      },
+      "superseded_assessment": {
+        "score": 8,
+        "grade": "Pass",
+        "disposition": "PASS",
+        "score_type": "incomplete_verified_evidence_subtotal_not_forecast_confidence",
         "factors": {
-          "independent_fair_line": 0,
-          "market_dislocation_ev": 0,
-          "fundamental_confirmation": 6,
-          "market_microstructure": 0,
-          "independent_model_agreement": 0,
-          "market_expression_advantage": 0,
-          "market_regime_quality": 2,
-          "failure_case_robustness": 0
+          "independent_fair_edge": 0,
+          "executable_value": 0,
+          "availability_matchup": 6,
+          "schedule_rest": 0,
+          "progressive_fade": 0,
+          "favorite_inflation": 0,
+          "external_model_agreement": 0,
+          "docs_confirmation": 0,
+          "sharp_movement": 0,
+          "handle_ticket_divergence": 0,
+          "market_quality": 2,
+          "movement_timing": 0
         },
-        "verified_subtotal": 8,
-        "status": "PASS / INCOMPLETE",
-        "official_authority": false
+        "shadow_replica": {
+          "max": 100,
+          "factors": {
+            "independent_fair_line": 0,
+            "market_dislocation_ev": 0,
+            "fundamental_confirmation": 6,
+            "market_microstructure": 0,
+            "independent_model_agreement": 0,
+            "market_expression_advantage": 0,
+            "market_regime_quality": 2,
+            "failure_case_robustness": 0
+          },
+          "verified_subtotal": 8,
+          "status": "PASS / INCOMPLETE",
+          "official_authority": false
+        }
       }
     },
     {
@@ -250,38 +492,96 @@
       "price_retrieved_at": "2026-09-18T17:14:16.879881+00:00",
       "user_book_executable": false,
       "units": 0,
-      "grade": "Pass",
-      "disposition": "PASS",
-      "score": 5,
+      "grade": null,
+      "disposition": "INCOMPLETE_UNGRADED",
+      "score": null,
       "score_max": 110,
-      "score_type": "incomplete_verified_evidence_subtotal_not_forecast_confidence",
+      "score_type": "no_final_score_core_research_incomplete",
       "factors": {
-        "independent_fair_edge": 0,
-        "executable_value": 0,
-        "availability_matchup": 3,
-        "schedule_rest": 0,
-        "progressive_fade": 0,
-        "favorite_inflation": 0,
-        "external_model_agreement": 0,
-        "docs_confirmation": 0,
-        "sharp_movement": 0,
-        "handle_ticket_divergence": 0,
-        "market_quality": 2,
-        "movement_timing": 0
+        "independent_fair_edge": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 25,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "executable_value": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 15,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "availability_matchup": {
+          "status": "VERIFIED",
+          "points": 3,
+          "maximum": 10
+        },
+        "schedule_rest": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 10,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "progressive_fade": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 10,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "favorite_inflation": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "external_model_agreement": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 10,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "docs_confirmation": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "sharp_movement": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 6,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "handle_ticket_divergence": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "market_quality": {
+          "status": "VERIFIED",
+          "points": 2,
+          "maximum": 4
+        },
+        "movement_timing": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        }
       },
       "factor_evidence": {
-        "independent_fair_edge": "No independent, reproducible Micks fair estimate established before outside selections were encountered; zero.",
-        "executable_value": "No independent fair estimate and no current BetRivers quote; zero.",
+        "independent_fair_edge": "No independent, reproducible Micks fair estimate established before outside selections were encountered; unknown.",
+        "executable_value": "No independent fair estimate and no current BetRivers quote; unknown.",
         "availability_matchup": "Favorable opponent/pitching hypothesis requires verified opener/bulk roles.",
-        "schedule_rest": "No established net schedule advantage; zero.",
-        "progressive_fade": "Comparable closing-line windows not established; zero.",
-        "favorite_inflation": "Required margin/closing data not verified; zero.",
-        "external_model_agreement": "External opinions recorded but cannot establish agreement with an absent independent Micks forecast; zero.",
-        "docs_confirmation": "Relevant prices stale or no accessible exact selection; zero.",
-        "sharp_movement": "No verified respected/high-limit sequence; zero.",
-        "handle_ticket_divergence": "No applicable candidate-specific verified split; zero.",
+        "schedule_rest": "No established net schedule advantage; unknown.",
+        "progressive_fade": "Comparable closing-line windows not established; unknown.",
+        "favorite_inflation": "Required margin/closing data not verified; unknown.",
+        "external_model_agreement": "External opinions recorded but cannot establish agreement with an absent independent Micks forecast; unknown.",
+        "docs_confirmation": "Relevant prices stale or no accessible exact selection; unknown.",
+        "sharp_movement": "No verified respected/high-limit sequence; unknown.",
+        "handle_ticket_divergence": "No applicable candidate-specific verified split; unknown.",
         "market_quality": "Partial credit for a quoted major-league main market; limits unverified.",
-        "movement_timing": "No reliable beneficial timing/reversal established; zero."
+        "movement_timing": "No reliable beneficial timing/reversal established; unknown."
       },
       "fair_probability": null,
       "fair_odds": null,
@@ -294,20 +594,43 @@
       "hypothesis": "Favorable opponent/pitching hypothesis requires verified opener/bulk roles.",
       "strongest_failure_path": "Old +115 price is gone; Espino/Cantillo role chain and margin value unresolved.",
       "shadow_replica": {
-        "max": 100,
+        "status": "INCOMPLETE_UNGRADED"
+      },
+      "superseded_assessment": {
+        "score": 5,
+        "grade": "Pass",
+        "disposition": "PASS",
+        "score_type": "incomplete_verified_evidence_subtotal_not_forecast_confidence",
         "factors": {
-          "independent_fair_line": 0,
-          "market_dislocation_ev": 0,
-          "fundamental_confirmation": 3,
-          "market_microstructure": 0,
-          "independent_model_agreement": 0,
-          "market_expression_advantage": 0,
-          "market_regime_quality": 2,
-          "failure_case_robustness": 0
+          "independent_fair_edge": 0,
+          "executable_value": 0,
+          "availability_matchup": 3,
+          "schedule_rest": 0,
+          "progressive_fade": 0,
+          "favorite_inflation": 0,
+          "external_model_agreement": 0,
+          "docs_confirmation": 0,
+          "sharp_movement": 0,
+          "handle_ticket_divergence": 0,
+          "market_quality": 2,
+          "movement_timing": 0
         },
-        "verified_subtotal": 5,
-        "status": "PASS / INCOMPLETE",
-        "official_authority": false
+        "shadow_replica": {
+          "max": 100,
+          "factors": {
+            "independent_fair_line": 0,
+            "market_dislocation_ev": 0,
+            "fundamental_confirmation": 3,
+            "market_microstructure": 0,
+            "independent_model_agreement": 0,
+            "market_expression_advantage": 0,
+            "market_regime_quality": 2,
+            "failure_case_robustness": 0
+          },
+          "verified_subtotal": 5,
+          "status": "PASS / INCOMPLETE",
+          "official_authority": false
+        }
       }
     },
     {
@@ -321,38 +644,96 @@
       "price_retrieved_at": "2026-09-18T17:14:16.879881+00:00",
       "user_book_executable": false,
       "units": 0,
-      "grade": "Pass",
-      "disposition": "PASS",
-      "score": 5,
+      "grade": null,
+      "disposition": "INCOMPLETE_UNGRADED",
+      "score": null,
       "score_max": 110,
-      "score_type": "incomplete_verified_evidence_subtotal_not_forecast_confidence",
+      "score_type": "no_final_score_core_research_incomplete",
       "factors": {
-        "independent_fair_edge": 0,
-        "executable_value": 0,
-        "availability_matchup": 3,
-        "schedule_rest": 0,
-        "progressive_fade": 0,
-        "favorite_inflation": 0,
-        "external_model_agreement": 0,
-        "docs_confirmation": 0,
-        "sharp_movement": 0,
-        "handle_ticket_divergence": 0,
-        "market_quality": 2,
-        "movement_timing": 0
+        "independent_fair_edge": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 25,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "executable_value": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 15,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "availability_matchup": {
+          "status": "VERIFIED",
+          "points": 3,
+          "maximum": 10
+        },
+        "schedule_rest": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 10,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "progressive_fade": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 10,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "favorite_inflation": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "external_model_agreement": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 10,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "docs_confirmation": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "sharp_movement": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 6,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "handle_ticket_divergence": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "market_quality": {
+          "status": "VERIFIED",
+          "points": 2,
+          "maximum": 4
+        },
+        "movement_timing": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        }
       },
       "factor_evidence": {
-        "independent_fair_edge": "No independent, reproducible Micks fair estimate established before outside selections were encountered; zero.",
-        "executable_value": "No independent fair estimate and no current BetRivers quote; zero.",
+        "independent_fair_edge": "No independent, reproducible Micks fair estimate established before outside selections were encountered; unknown.",
+        "executable_value": "No independent fair estimate and no current BetRivers quote; unknown.",
         "availability_matchup": "Prielipp starting matchup merited comparison.",
-        "schedule_rest": "No established net schedule advantage; zero.",
-        "progressive_fade": "Comparable closing-line windows not established; zero.",
-        "favorite_inflation": "Required margin/closing data not verified; zero.",
-        "external_model_agreement": "External opinions recorded but cannot establish agreement with an absent independent Micks forecast; zero.",
-        "docs_confirmation": "Relevant prices stale or no accessible exact selection; zero.",
-        "sharp_movement": "No verified respected/high-limit sequence; zero.",
-        "handle_ticket_divergence": "No applicable candidate-specific verified split; zero.",
+        "schedule_rest": "No established net schedule advantage; unknown.",
+        "progressive_fade": "Comparable closing-line windows not established; unknown.",
+        "favorite_inflation": "Required margin/closing data not verified; unknown.",
+        "external_model_agreement": "External opinions recorded but cannot establish agreement with an absent independent Micks forecast; unknown.",
+        "docs_confirmation": "Relevant prices stale or no accessible exact selection; unknown.",
+        "sharp_movement": "No verified respected/high-limit sequence; unknown.",
+        "handle_ticket_divergence": "No applicable candidate-specific verified split; unknown.",
         "market_quality": "Partial credit for a quoted major-league main market; limits unverified.",
-        "movement_timing": "No reliable beneficial timing/reversal established; zero."
+        "movement_timing": "No reliable beneficial timing/reversal established; unknown."
       },
       "fair_probability": null,
       "fair_odds": null,
@@ -365,20 +746,43 @@
       "hypothesis": "Prielipp starting matchup merited comparison.",
       "strongest_failure_path": "No independent fair number or full lineup/bullpen verification.",
       "shadow_replica": {
-        "max": 100,
+        "status": "INCOMPLETE_UNGRADED"
+      },
+      "superseded_assessment": {
+        "score": 5,
+        "grade": "Pass",
+        "disposition": "PASS",
+        "score_type": "incomplete_verified_evidence_subtotal_not_forecast_confidence",
         "factors": {
-          "independent_fair_line": 0,
-          "market_dislocation_ev": 0,
-          "fundamental_confirmation": 3,
-          "market_microstructure": 0,
-          "independent_model_agreement": 0,
-          "market_expression_advantage": 0,
-          "market_regime_quality": 2,
-          "failure_case_robustness": 0
+          "independent_fair_edge": 0,
+          "executable_value": 0,
+          "availability_matchup": 3,
+          "schedule_rest": 0,
+          "progressive_fade": 0,
+          "favorite_inflation": 0,
+          "external_model_agreement": 0,
+          "docs_confirmation": 0,
+          "sharp_movement": 0,
+          "handle_ticket_divergence": 0,
+          "market_quality": 2,
+          "movement_timing": 0
         },
-        "verified_subtotal": 5,
-        "status": "PASS / INCOMPLETE",
-        "official_authority": false
+        "shadow_replica": {
+          "max": 100,
+          "factors": {
+            "independent_fair_line": 0,
+            "market_dislocation_ev": 0,
+            "fundamental_confirmation": 3,
+            "market_microstructure": 0,
+            "independent_model_agreement": 0,
+            "market_expression_advantage": 0,
+            "market_regime_quality": 2,
+            "failure_case_robustness": 0
+          },
+          "verified_subtotal": 5,
+          "status": "PASS / INCOMPLETE",
+          "official_authority": false
+        }
       }
     },
     {
@@ -392,38 +796,96 @@
       "price_retrieved_at": "2026-09-18T17:14:16.879881+00:00",
       "user_book_executable": false,
       "units": 0,
-      "grade": "Pass",
-      "disposition": "PASS",
-      "score": 4,
+      "grade": null,
+      "disposition": "INCOMPLETE_UNGRADED",
+      "score": null,
       "score_max": 110,
-      "score_type": "incomplete_verified_evidence_subtotal_not_forecast_confidence",
+      "score_type": "no_final_score_core_research_incomplete",
       "factors": {
-        "independent_fair_edge": 0,
-        "executable_value": 0,
-        "availability_matchup": 2,
-        "schedule_rest": 0,
-        "progressive_fade": 0,
-        "favorite_inflation": 0,
-        "external_model_agreement": 0,
-        "docs_confirmation": 0,
-        "sharp_movement": 0,
-        "handle_ticket_divergence": 0,
-        "market_quality": 2,
-        "movement_timing": 0
+        "independent_fair_edge": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 25,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "executable_value": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 15,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "availability_matchup": {
+          "status": "VERIFIED",
+          "points": 2,
+          "maximum": 10
+        },
+        "schedule_rest": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 10,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "progressive_fade": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 10,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "favorite_inflation": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "external_model_agreement": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 10,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "docs_confirmation": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "sharp_movement": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 6,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "handle_ticket_divergence": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "market_quality": {
+          "status": "VERIFIED",
+          "points": 2,
+          "maximum": 4
+        },
+        "movement_timing": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        }
       },
       "factor_evidence": {
-        "independent_fair_edge": "No independent, reproducible Micks fair estimate established before outside selections were encountered; zero.",
-        "executable_value": "No independent fair estimate and no current BetRivers quote; zero.",
+        "independent_fair_edge": "No independent, reproducible Micks fair estimate established before outside selections were encountered; unknown.",
+        "executable_value": "No independent fair estimate and no current BetRivers quote; unknown.",
         "availability_matchup": "Outside support prompted a matchup check.",
-        "schedule_rest": "No established net schedule advantage; zero.",
-        "progressive_fade": "Comparable closing-line windows not established; zero.",
-        "favorite_inflation": "Required margin/closing data not verified; zero.",
-        "external_model_agreement": "External opinions recorded but cannot establish agreement with an absent independent Micks forecast; zero.",
-        "docs_confirmation": "Relevant prices stale or no accessible exact selection; zero.",
-        "sharp_movement": "No verified respected/high-limit sequence; zero.",
-        "handle_ticket_divergence": "No applicable candidate-specific verified split; zero.",
+        "schedule_rest": "No established net schedule advantage; unknown.",
+        "progressive_fade": "Comparable closing-line windows not established; unknown.",
+        "favorite_inflation": "Required margin/closing data not verified; unknown.",
+        "external_model_agreement": "External opinions recorded but cannot establish agreement with an absent independent Micks forecast; unknown.",
+        "docs_confirmation": "Relevant prices stale or no accessible exact selection; unknown.",
+        "sharp_movement": "No verified respected/high-limit sequence; unknown.",
+        "handle_ticket_divergence": "No applicable candidate-specific verified split; unknown.",
         "market_quality": "Partial credit for a quoted major-league main market; limits unverified.",
-        "movement_timing": "No reliable beneficial timing/reversal established; zero."
+        "movement_timing": "No reliable beneficial timing/reversal established; unknown."
       },
       "fair_probability": null,
       "fair_odds": null,
@@ -436,20 +898,43 @@
       "hypothesis": "Outside support prompted a matchup check.",
       "strongest_failure_path": "No independent edge established for Lambert versus Mahle; cannot inherit the outside pick.",
       "shadow_replica": {
-        "max": 100,
+        "status": "INCOMPLETE_UNGRADED"
+      },
+      "superseded_assessment": {
+        "score": 4,
+        "grade": "Pass",
+        "disposition": "PASS",
+        "score_type": "incomplete_verified_evidence_subtotal_not_forecast_confidence",
         "factors": {
-          "independent_fair_line": 0,
-          "market_dislocation_ev": 0,
-          "fundamental_confirmation": 2,
-          "market_microstructure": 0,
-          "independent_model_agreement": 0,
-          "market_expression_advantage": 0,
-          "market_regime_quality": 2,
-          "failure_case_robustness": 0
+          "independent_fair_edge": 0,
+          "executable_value": 0,
+          "availability_matchup": 2,
+          "schedule_rest": 0,
+          "progressive_fade": 0,
+          "favorite_inflation": 0,
+          "external_model_agreement": 0,
+          "docs_confirmation": 0,
+          "sharp_movement": 0,
+          "handle_ticket_divergence": 0,
+          "market_quality": 2,
+          "movement_timing": 0
         },
-        "verified_subtotal": 4,
-        "status": "PASS / INCOMPLETE",
-        "official_authority": false
+        "shadow_replica": {
+          "max": 100,
+          "factors": {
+            "independent_fair_line": 0,
+            "market_dislocation_ev": 0,
+            "fundamental_confirmation": 2,
+            "market_microstructure": 0,
+            "independent_model_agreement": 0,
+            "market_expression_advantage": 0,
+            "market_regime_quality": 2,
+            "failure_case_robustness": 0
+          },
+          "verified_subtotal": 4,
+          "status": "PASS / INCOMPLETE",
+          "official_authority": false
+        }
       }
     },
     {
@@ -463,38 +948,96 @@
       "price_retrieved_at": "2026-09-18T17:14:16.729148+00:00",
       "user_book_executable": false,
       "units": 0,
-      "grade": "Pass",
-      "disposition": "PASS / CONTRADICTION",
-      "score": 4,
+      "grade": null,
+      "disposition": "INCOMPLETE_UNGRADED",
+      "score": null,
       "score_max": 110,
-      "score_type": "incomplete_verified_evidence_subtotal_not_forecast_confidence",
+      "score_type": "no_final_score_core_research_incomplete",
       "factors": {
-        "independent_fair_edge": 0,
-        "executable_value": 0,
-        "availability_matchup": 2,
-        "schedule_rest": 0,
-        "progressive_fade": 0,
-        "favorite_inflation": 0,
-        "external_model_agreement": 0,
-        "docs_confirmation": 0,
-        "sharp_movement": 0,
-        "handle_ticket_divergence": 0,
-        "market_quality": 2,
-        "movement_timing": 0
+        "independent_fair_edge": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 25,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "executable_value": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 15,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "availability_matchup": {
+          "status": "VERIFIED",
+          "points": 2,
+          "maximum": 10
+        },
+        "schedule_rest": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 10,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "progressive_fade": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 10,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "favorite_inflation": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "external_model_agreement": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 10,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "docs_confirmation": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "sharp_movement": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 6,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "handle_ticket_divergence": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "market_quality": {
+          "status": "VERIFIED",
+          "points": 2,
+          "maximum": 4
+        },
+        "movement_timing": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        }
       },
       "factor_evidence": {
-        "independent_fair_edge": "No independent, reproducible Micks fair estimate established before outside selections were encountered; zero.",
-        "executable_value": "No independent fair estimate and no current BetRivers quote; zero.",
+        "independent_fair_edge": "No independent, reproducible Micks fair estimate established before outside selections were encountered; unknown.",
+        "executable_value": "No independent fair estimate and no current BetRivers quote; unknown.",
         "availability_matchup": "Weigman-led offense offers a possible competitive script.",
-        "schedule_rest": "No established net schedule advantage; zero.",
-        "progressive_fade": "Comparable closing-line windows not established; zero.",
-        "favorite_inflation": "Required margin/closing data not verified; zero.",
-        "external_model_agreement": "External opinions recorded but cannot establish agreement with an absent independent Micks forecast; zero.",
-        "docs_confirmation": "Relevant prices stale or no accessible exact selection; zero.",
-        "sharp_movement": "No verified respected/high-limit sequence; zero.",
-        "handle_ticket_divergence": "No applicable candidate-specific verified split; zero.",
+        "schedule_rest": "No established net schedule advantage; unknown.",
+        "progressive_fade": "Comparable closing-line windows not established; unknown.",
+        "favorite_inflation": "Required margin/closing data not verified; unknown.",
+        "external_model_agreement": "External opinions recorded but cannot establish agreement with an absent independent Micks forecast; unknown.",
+        "docs_confirmation": "Relevant prices stale or no accessible exact selection; unknown.",
+        "sharp_movement": "No verified respected/high-limit sequence; unknown.",
+        "handle_ticket_divergence": "No applicable candidate-specific verified split; unknown.",
         "market_quality": "Partial credit for a quoted major-league main market; limits unverified.",
-        "movement_timing": "No reliable beneficial timing/reversal established; zero."
+        "movement_timing": "No reliable beneficial timing/reversal established; unknown."
       },
       "fair_probability": null,
       "fair_odds": null,
@@ -507,20 +1050,43 @@
       "hypothesis": "Weigman-led offense offers a possible competitive script.",
       "strongest_failure_path": "VSiN ratings materially favor Texas Tech; common-opponent and two-game samples are insufficient.",
       "shadow_replica": {
-        "max": 100,
+        "status": "INCOMPLETE_UNGRADED"
+      },
+      "superseded_assessment": {
+        "score": 4,
+        "grade": "Pass",
+        "disposition": "PASS / CONTRADICTION",
+        "score_type": "incomplete_verified_evidence_subtotal_not_forecast_confidence",
         "factors": {
-          "independent_fair_line": 0,
-          "market_dislocation_ev": 0,
-          "fundamental_confirmation": 2,
-          "market_microstructure": 0,
-          "independent_model_agreement": 0,
-          "market_expression_advantage": 0,
-          "market_regime_quality": 2,
-          "failure_case_robustness": 0
+          "independent_fair_edge": 0,
+          "executable_value": 0,
+          "availability_matchup": 2,
+          "schedule_rest": 0,
+          "progressive_fade": 0,
+          "favorite_inflation": 0,
+          "external_model_agreement": 0,
+          "docs_confirmation": 0,
+          "sharp_movement": 0,
+          "handle_ticket_divergence": 0,
+          "market_quality": 2,
+          "movement_timing": 0
         },
-        "verified_subtotal": 4,
-        "status": "PASS / INCOMPLETE",
-        "official_authority": false
+        "shadow_replica": {
+          "max": 100,
+          "factors": {
+            "independent_fair_line": 0,
+            "market_dislocation_ev": 0,
+            "fundamental_confirmation": 2,
+            "market_microstructure": 0,
+            "independent_model_agreement": 0,
+            "market_expression_advantage": 0,
+            "market_regime_quality": 2,
+            "failure_case_robustness": 0
+          },
+          "verified_subtotal": 4,
+          "status": "PASS / INCOMPLETE",
+          "official_authority": false
+        }
       }
     },
     {
@@ -534,38 +1100,96 @@
       "price_retrieved_at": "2026-09-18T17:14:16.729148+00:00",
       "user_book_executable": false,
       "units": 0,
-      "grade": "Pass",
-      "disposition": "RESEARCH ONLY",
-      "score": 4,
+      "grade": null,
+      "disposition": "INCOMPLETE_UNGRADED",
+      "score": null,
       "score_max": 110,
-      "score_type": "incomplete_verified_evidence_subtotal_not_forecast_confidence",
+      "score_type": "no_final_score_core_research_incomplete",
       "factors": {
-        "independent_fair_edge": 0,
-        "executable_value": 0,
-        "availability_matchup": 2,
-        "schedule_rest": 0,
-        "progressive_fade": 0,
-        "favorite_inflation": 0,
-        "external_model_agreement": 0,
-        "docs_confirmation": 0,
-        "sharp_movement": 0,
-        "handle_ticket_divergence": 0,
-        "market_quality": 2,
-        "movement_timing": 0
+        "independent_fair_edge": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 25,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "executable_value": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 15,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "availability_matchup": {
+          "status": "VERIFIED",
+          "points": 2,
+          "maximum": 10
+        },
+        "schedule_rest": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 10,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "progressive_fade": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 10,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "favorite_inflation": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "external_model_agreement": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 10,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "docs_confirmation": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "sharp_movement": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 6,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "handle_ticket_divergence": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "market_quality": {
+          "status": "VERIFIED",
+          "points": 2,
+          "maximum": 4
+        },
+        "movement_timing": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        }
       },
       "factor_evidence": {
-        "independent_fair_edge": "No independent, reproducible Micks fair estimate established before outside selections were encountered; zero.",
-        "executable_value": "No independent fair estimate and no current BetRivers quote; zero.",
+        "independent_fair_edge": "No independent, reproducible Micks fair estimate established before outside selections were encountered; unknown.",
+        "executable_value": "No independent fair estimate and no current BetRivers quote; unknown.",
         "availability_matchup": "Outside ratings support Tech, but they are not a Micks projection.",
-        "schedule_rest": "No established net schedule advantage; zero.",
-        "progressive_fade": "Comparable closing-line windows not established; zero.",
-        "favorite_inflation": "Required margin/closing data not verified; zero.",
-        "external_model_agreement": "External opinions recorded but cannot establish agreement with an absent independent Micks forecast; zero.",
-        "docs_confirmation": "Relevant prices stale or no accessible exact selection; zero.",
-        "sharp_movement": "No verified respected/high-limit sequence; zero.",
-        "handle_ticket_divergence": "No applicable candidate-specific verified split; zero.",
+        "schedule_rest": "No established net schedule advantage; unknown.",
+        "progressive_fade": "Comparable closing-line windows not established; unknown.",
+        "favorite_inflation": "Required margin/closing data not verified; unknown.",
+        "external_model_agreement": "External opinions recorded but cannot establish agreement with an absent independent Micks forecast; unknown.",
+        "docs_confirmation": "Relevant prices stale or no accessible exact selection; unknown.",
+        "sharp_movement": "No verified respected/high-limit sequence; unknown.",
+        "handle_ticket_divergence": "No applicable candidate-specific verified split; unknown.",
         "market_quality": "Partial credit for a quoted major-league main market; limits unverified.",
-        "movement_timing": "No reliable beneficial timing/reversal established; zero."
+        "movement_timing": "No reliable beneficial timing/reversal established; unknown."
       },
       "fair_probability": null,
       "fair_odds": null,
@@ -578,65 +1202,146 @@
       "hypothesis": "Outside ratings support Tech, but they are not a Micks projection.",
       "strongest_failure_path": "Hammond/OL execution and material availability need verification; no independent cover estimate.",
       "shadow_replica": {
-        "max": 100,
+        "status": "INCOMPLETE_UNGRADED"
+      },
+      "superseded_assessment": {
+        "score": 4,
+        "grade": "Pass",
+        "disposition": "RESEARCH ONLY",
+        "score_type": "incomplete_verified_evidence_subtotal_not_forecast_confidence",
         "factors": {
-          "independent_fair_line": 0,
-          "market_dislocation_ev": 0,
-          "fundamental_confirmation": 2,
-          "market_microstructure": 0,
-          "independent_model_agreement": 0,
-          "market_expression_advantage": 0,
-          "market_regime_quality": 2,
-          "failure_case_robustness": 0
+          "independent_fair_edge": 0,
+          "executable_value": 0,
+          "availability_matchup": 2,
+          "schedule_rest": 0,
+          "progressive_fade": 0,
+          "favorite_inflation": 0,
+          "external_model_agreement": 0,
+          "docs_confirmation": 0,
+          "sharp_movement": 0,
+          "handle_ticket_divergence": 0,
+          "market_quality": 2,
+          "movement_timing": 0
         },
-        "verified_subtotal": 4,
-        "status": "PASS / INCOMPLETE",
-        "official_authority": false
+        "shadow_replica": {
+          "max": 100,
+          "factors": {
+            "independent_fair_line": 0,
+            "market_dislocation_ev": 0,
+            "fundamental_confirmation": 2,
+            "market_microstructure": 0,
+            "independent_model_agreement": 0,
+            "market_expression_advantage": 0,
+            "market_regime_quality": 2,
+            "failure_case_robustness": 0
+          },
+          "verified_subtotal": 4,
+          "status": "PASS / INCOMPLETE",
+          "official_authority": false
+        }
       }
     },
     {
       "id": "MIA-TOTAL",
       "event": "Miami Hurricanes at Wake Forest Demon Deacons",
       "sport": "CFB",
-      "pick": "Miami–Wake Over 55.5",
+      "pick": "Miami\u2013Wake Over 55.5",
       "reference_odds": "-108",
       "reference_book": "DraftKings via ESPN",
       "reference_only": true,
       "price_retrieved_at": "2026-09-18T17:14:16.729148+00:00",
       "user_book_executable": false,
       "units": 0,
-      "grade": "Pass",
-      "disposition": "PASS / CONFLICT",
-      "score": 5,
+      "grade": null,
+      "disposition": "INCOMPLETE_UNGRADED",
+      "score": null,
       "score_max": 110,
-      "score_type": "incomplete_verified_evidence_subtotal_not_forecast_confidence",
+      "score_type": "no_final_score_core_research_incomplete",
       "factors": {
-        "independent_fair_edge": 0,
-        "executable_value": 0,
-        "availability_matchup": 3,
-        "schedule_rest": 0,
-        "progressive_fade": 0,
-        "favorite_inflation": 0,
-        "external_model_agreement": 0,
-        "docs_confirmation": 0,
-        "sharp_movement": 0,
-        "handle_ticket_divergence": 0,
-        "market_quality": 2,
-        "movement_timing": 0
+        "independent_fair_edge": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 25,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "executable_value": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 15,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "availability_matchup": {
+          "status": "VERIFIED",
+          "points": 3,
+          "maximum": 10
+        },
+        "schedule_rest": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 10,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "progressive_fade": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 10,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "favorite_inflation": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "external_model_agreement": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 10,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "docs_confirmation": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "sharp_movement": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 6,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "handle_ticket_divergence": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "market_quality": {
+          "status": "VERIFIED",
+          "points": 2,
+          "maximum": 4
+        },
+        "movement_timing": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        }
       },
       "factor_evidence": {
-        "independent_fair_edge": "No independent, reproducible Micks fair estimate established before outside selections were encountered; zero.",
-        "executable_value": "No independent fair estimate and no current BetRivers quote; zero.",
+        "independent_fair_edge": "No independent, reproducible Micks fair estimate established before outside selections were encountered; unknown.",
+        "executable_value": "No independent fair estimate and no current BetRivers quote; unknown.",
         "availability_matchup": "Mensah/Toney and Lopez offer an offensive path.",
-        "schedule_rest": "No established net schedule advantage; zero.",
-        "progressive_fade": "Comparable closing-line windows not established; zero.",
-        "favorite_inflation": "Required margin/closing data not verified; zero.",
-        "external_model_agreement": "External opinions recorded but cannot establish agreement with an absent independent Micks forecast; zero.",
-        "docs_confirmation": "Relevant prices stale or no accessible exact selection; zero.",
-        "sharp_movement": "No verified respected/high-limit sequence; zero.",
-        "handle_ticket_divergence": "No applicable candidate-specific verified split; zero.",
+        "schedule_rest": "No established net schedule advantage; unknown.",
+        "progressive_fade": "Comparable closing-line windows not established; unknown.",
+        "favorite_inflation": "Required margin/closing data not verified; unknown.",
+        "external_model_agreement": "External opinions recorded but cannot establish agreement with an absent independent Micks forecast; unknown.",
+        "docs_confirmation": "Relevant prices stale or no accessible exact selection; unknown.",
+        "sharp_movement": "No verified respected/high-limit sequence; unknown.",
+        "handle_ticket_divergence": "No applicable candidate-specific verified split; unknown.",
         "market_quality": "Partial credit for a quoted major-league main market; limits unverified.",
-        "movement_timing": "No reliable beneficial timing/reversal established; zero."
+        "movement_timing": "No reliable beneficial timing/reversal established; unknown."
       },
       "fair_probability": null,
       "fair_odds": null,
@@ -649,20 +1354,43 @@
       "hypothesis": "Mensah/Toney and Lopez offer an offensive path.",
       "strongest_failure_path": "Total has already risen; external scoring ratings and the Over opinion conflict.",
       "shadow_replica": {
-        "max": 100,
+        "status": "INCOMPLETE_UNGRADED"
+      },
+      "superseded_assessment": {
+        "score": 5,
+        "grade": "Pass",
+        "disposition": "PASS / CONFLICT",
+        "score_type": "incomplete_verified_evidence_subtotal_not_forecast_confidence",
         "factors": {
-          "independent_fair_line": 0,
-          "market_dislocation_ev": 0,
-          "fundamental_confirmation": 3,
-          "market_microstructure": 0,
-          "independent_model_agreement": 0,
-          "market_expression_advantage": 0,
-          "market_regime_quality": 2,
-          "failure_case_robustness": 0
+          "independent_fair_edge": 0,
+          "executable_value": 0,
+          "availability_matchup": 3,
+          "schedule_rest": 0,
+          "progressive_fade": 0,
+          "favorite_inflation": 0,
+          "external_model_agreement": 0,
+          "docs_confirmation": 0,
+          "sharp_movement": 0,
+          "handle_ticket_divergence": 0,
+          "market_quality": 2,
+          "movement_timing": 0
         },
-        "verified_subtotal": 5,
-        "status": "PASS / INCOMPLETE",
-        "official_authority": false
+        "shadow_replica": {
+          "max": 100,
+          "factors": {
+            "independent_fair_line": 0,
+            "market_dislocation_ev": 0,
+            "fundamental_confirmation": 3,
+            "market_microstructure": 0,
+            "independent_model_agreement": 0,
+            "market_expression_advantage": 0,
+            "market_regime_quality": 2,
+            "failure_case_robustness": 0
+          },
+          "verified_subtotal": 5,
+          "status": "PASS / INCOMPLETE",
+          "official_authority": false
+        }
       }
     },
     {
@@ -676,38 +1404,97 @@
       "price_retrieved_at": "2026-09-18T17:14:16.788103+00:00",
       "user_book_executable": false,
       "units": 0,
-      "grade": "Pass",
-      "disposition": "PASS",
-      "score": 2,
+      "grade": null,
+      "disposition": "INCOMPLETE_UNGRADED",
+      "score": null,
       "score_max": 110,
-      "score_type": "incomplete_verified_evidence_subtotal_not_forecast_confidence",
+      "score_type": "no_final_score_core_research_incomplete",
       "factors": {
-        "independent_fair_edge": 0,
-        "executable_value": 0,
-        "availability_matchup": 0,
-        "schedule_rest": 0,
-        "progressive_fade": 0,
-        "favorite_inflation": 0,
-        "external_model_agreement": 0,
-        "docs_confirmation": 0,
-        "sharp_movement": 0,
-        "handle_ticket_divergence": 0,
-        "market_quality": 2,
-        "movement_timing": 0
+        "independent_fair_edge": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 25,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "executable_value": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 15,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "availability_matchup": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 10,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "schedule_rest": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 10,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "progressive_fade": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 10,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "favorite_inflation": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "external_model_agreement": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 10,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "docs_confirmation": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "sharp_movement": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 6,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "handle_ticket_divergence": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "market_quality": {
+          "status": "VERIFIED",
+          "points": 2,
+          "maximum": 4
+        },
+        "movement_timing": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        }
       },
       "factor_evidence": {
-        "independent_fair_edge": "No independent, reproducible Micks fair estimate established before outside selections were encountered; zero.",
-        "executable_value": "No independent fair estimate and no current BetRivers quote; zero.",
+        "independent_fair_edge": "No independent, reproducible Micks fair estimate established before outside selections were encountered; unknown.",
+        "executable_value": "No independent fair estimate and no current BetRivers quote; unknown.",
         "availability_matchup": "Large spread merits price/rotation review.",
-        "schedule_rest": "No established net schedule advantage; zero.",
-        "progressive_fade": "Comparable closing-line windows not established; zero.",
-        "favorite_inflation": "Required margin/closing data not verified; zero.",
-        "external_model_agreement": "External opinions recorded but cannot establish agreement with an absent independent Micks forecast; zero.",
-        "docs_confirmation": "Relevant prices stale or no accessible exact selection; zero.",
-        "sharp_movement": "No verified respected/high-limit sequence; zero.",
-        "handle_ticket_divergence": "No applicable candidate-specific verified split; zero.",
+        "schedule_rest": "No established net schedule advantage; unknown.",
+        "progressive_fade": "Comparable closing-line windows not established; unknown.",
+        "favorite_inflation": "Required margin/closing data not verified; unknown.",
+        "external_model_agreement": "External opinions recorded but cannot establish agreement with an absent independent Micks forecast; unknown.",
+        "docs_confirmation": "Relevant prices stale or no accessible exact selection; unknown.",
+        "sharp_movement": "No verified respected/high-limit sequence; unknown.",
+        "handle_ticket_divergence": "No applicable candidate-specific verified split; unknown.",
         "market_quality": "Partial credit for a quoted major-league main market; limits unverified.",
-        "movement_timing": "No reliable beneficial timing/reversal established; zero."
+        "movement_timing": "No reliable beneficial timing/reversal established; unknown."
       },
       "fair_probability": null,
       "fair_odds": null,
@@ -720,20 +1507,43 @@
       "hypothesis": "Large spread merits price/rotation review.",
       "strongest_failure_path": "Official prior-day report: Clark probable; Toronto absences. No verified four-point independent model gap.",
       "shadow_replica": {
-        "max": 100,
+        "status": "INCOMPLETE_UNGRADED"
+      },
+      "superseded_assessment": {
+        "score": 2,
+        "grade": "Pass",
+        "disposition": "PASS",
+        "score_type": "incomplete_verified_evidence_subtotal_not_forecast_confidence",
         "factors": {
-          "independent_fair_line": 0,
-          "market_dislocation_ev": 0,
-          "fundamental_confirmation": 0,
-          "market_microstructure": 0,
-          "independent_model_agreement": 0,
-          "market_expression_advantage": 0,
-          "market_regime_quality": 2,
-          "failure_case_robustness": 0
+          "independent_fair_edge": 0,
+          "executable_value": 0,
+          "availability_matchup": 0,
+          "schedule_rest": 0,
+          "progressive_fade": 0,
+          "favorite_inflation": 0,
+          "external_model_agreement": 0,
+          "docs_confirmation": 0,
+          "sharp_movement": 0,
+          "handle_ticket_divergence": 0,
+          "market_quality": 2,
+          "movement_timing": 0
         },
-        "verified_subtotal": 2,
-        "status": "PASS / INCOMPLETE",
-        "official_authority": false
+        "shadow_replica": {
+          "max": 100,
+          "factors": {
+            "independent_fair_line": 0,
+            "market_dislocation_ev": 0,
+            "fundamental_confirmation": 0,
+            "market_microstructure": 0,
+            "independent_model_agreement": 0,
+            "market_expression_advantage": 0,
+            "market_regime_quality": 2,
+            "failure_case_robustness": 0
+          },
+          "verified_subtotal": 2,
+          "status": "PASS / INCOMPLETE",
+          "official_authority": false
+        }
       }
     },
     {
@@ -747,38 +1557,97 @@
       "price_retrieved_at": "2026-09-18T17:14:16.788103+00:00",
       "user_book_executable": false,
       "units": 0,
-      "grade": "Pass",
-      "disposition": "PASS",
-      "score": 2,
+      "grade": null,
+      "disposition": "INCOMPLETE_UNGRADED",
+      "score": null,
       "score_max": 110,
-      "score_type": "incomplete_verified_evidence_subtotal_not_forecast_confidence",
+      "score_type": "no_final_score_core_research_incomplete",
       "factors": {
-        "independent_fair_edge": 0,
-        "executable_value": 0,
-        "availability_matchup": 0,
-        "schedule_rest": 0,
-        "progressive_fade": 0,
-        "favorite_inflation": 0,
-        "external_model_agreement": 0,
-        "docs_confirmation": 0,
-        "sharp_movement": 0,
-        "handle_ticket_divergence": 0,
-        "market_quality": 2,
-        "movement_timing": 0
+        "independent_fair_edge": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 25,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "executable_value": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 15,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "availability_matchup": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 10,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "schedule_rest": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 10,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "progressive_fade": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 10,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "favorite_inflation": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "external_model_agreement": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 10,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "docs_confirmation": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "sharp_movement": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 6,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "handle_ticket_divergence": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "market_quality": {
+          "status": "VERIFIED",
+          "points": 2,
+          "maximum": 4
+        },
+        "movement_timing": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        }
       },
       "factor_evidence": {
-        "independent_fair_edge": "No independent, reproducible Micks fair estimate established before outside selections were encountered; zero.",
-        "executable_value": "No independent fair estimate and no current BetRivers quote; zero.",
+        "independent_fair_edge": "No independent, reproducible Micks fair estimate established before outside selections were encountered; unknown.",
+        "executable_value": "No independent fair estimate and no current BetRivers quote; unknown.",
         "availability_matchup": "Liberty versus Lynx screened against current ratings.",
-        "schedule_rest": "No established net schedule advantage; zero.",
-        "progressive_fade": "Comparable closing-line windows not established; zero.",
-        "favorite_inflation": "Required margin/closing data not verified; zero.",
-        "external_model_agreement": "External opinions recorded but cannot establish agreement with an absent independent Micks forecast; zero.",
-        "docs_confirmation": "Relevant prices stale or no accessible exact selection; zero.",
-        "sharp_movement": "No verified respected/high-limit sequence; zero.",
-        "handle_ticket_divergence": "No applicable candidate-specific verified split; zero.",
+        "schedule_rest": "No established net schedule advantage; unknown.",
+        "progressive_fade": "Comparable closing-line windows not established; unknown.",
+        "favorite_inflation": "Required margin/closing data not verified; unknown.",
+        "external_model_agreement": "External opinions recorded but cannot establish agreement with an absent independent Micks forecast; unknown.",
+        "docs_confirmation": "Relevant prices stale or no accessible exact selection; unknown.",
+        "sharp_movement": "No verified respected/high-limit sequence; unknown.",
+        "handle_ticket_divergence": "No applicable candidate-specific verified split; unknown.",
         "market_quality": "Partial credit for a quoted major-league main market; limits unverified.",
-        "movement_timing": "No reliable beneficial timing/reversal established; zero."
+        "movement_timing": "No reliable beneficial timing/reversal established; unknown."
       },
       "fair_probability": null,
       "fair_odds": null,
@@ -791,20 +1660,43 @@
       "hypothesis": "Liberty versus Lynx screened against current ratings.",
       "strongest_failure_path": "Ratings imply little or conflicting spread value; final availability and margin screen unresolved.",
       "shadow_replica": {
-        "max": 100,
+        "status": "INCOMPLETE_UNGRADED"
+      },
+      "superseded_assessment": {
+        "score": 2,
+        "grade": "Pass",
+        "disposition": "PASS",
+        "score_type": "incomplete_verified_evidence_subtotal_not_forecast_confidence",
         "factors": {
-          "independent_fair_line": 0,
-          "market_dislocation_ev": 0,
-          "fundamental_confirmation": 0,
-          "market_microstructure": 0,
-          "independent_model_agreement": 0,
-          "market_expression_advantage": 0,
-          "market_regime_quality": 2,
-          "failure_case_robustness": 0
+          "independent_fair_edge": 0,
+          "executable_value": 0,
+          "availability_matchup": 0,
+          "schedule_rest": 0,
+          "progressive_fade": 0,
+          "favorite_inflation": 0,
+          "external_model_agreement": 0,
+          "docs_confirmation": 0,
+          "sharp_movement": 0,
+          "handle_ticket_divergence": 0,
+          "market_quality": 2,
+          "movement_timing": 0
         },
-        "verified_subtotal": 2,
-        "status": "PASS / INCOMPLETE",
-        "official_authority": false
+        "shadow_replica": {
+          "max": 100,
+          "factors": {
+            "independent_fair_line": 0,
+            "market_dislocation_ev": 0,
+            "fundamental_confirmation": 0,
+            "market_microstructure": 0,
+            "independent_model_agreement": 0,
+            "market_expression_advantage": 0,
+            "market_regime_quality": 2,
+            "failure_case_robustness": 0
+          },
+          "verified_subtotal": 2,
+          "status": "PASS / INCOMPLETE",
+          "official_authority": false
+        }
       }
     },
     {
@@ -818,38 +1710,97 @@
       "price_retrieved_at": "2026-09-18T17:14:16.788103+00:00",
       "user_book_executable": false,
       "units": 0,
-      "grade": "Pass",
-      "disposition": "PASS",
-      "score": 2,
+      "grade": null,
+      "disposition": "INCOMPLETE_UNGRADED",
+      "score": null,
       "score_max": 110,
-      "score_type": "incomplete_verified_evidence_subtotal_not_forecast_confidence",
+      "score_type": "no_final_score_core_research_incomplete",
       "factors": {
-        "independent_fair_edge": 0,
-        "executable_value": 0,
-        "availability_matchup": 0,
-        "schedule_rest": 0,
-        "progressive_fade": 0,
-        "favorite_inflation": 0,
-        "external_model_agreement": 0,
-        "docs_confirmation": 0,
-        "sharp_movement": 0,
-        "handle_ticket_divergence": 0,
-        "market_quality": 2,
-        "movement_timing": 0
+        "independent_fair_edge": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 25,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "executable_value": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 15,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "availability_matchup": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 10,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "schedule_rest": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 10,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "progressive_fade": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 10,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "favorite_inflation": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "external_model_agreement": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 10,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "docs_confirmation": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "sharp_movement": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 6,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "handle_ticket_divergence": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "market_quality": {
+          "status": "VERIFIED",
+          "points": 2,
+          "maximum": 4
+        },
+        "movement_timing": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        }
       },
       "factor_evidence": {
-        "independent_fair_edge": "No independent, reproducible Micks fair estimate established before outside selections were encountered; zero.",
-        "executable_value": "No independent fair estimate and no current BetRivers quote; zero.",
+        "independent_fair_edge": "No independent, reproducible Micks fair estimate established before outside selections were encountered; unknown.",
+        "executable_value": "No independent fair estimate and no current BetRivers quote; unknown.",
         "availability_matchup": "Portland availability could matter substantially.",
-        "schedule_rest": "No established net schedule advantage; zero.",
-        "progressive_fade": "Comparable closing-line windows not established; zero.",
-        "favorite_inflation": "Required margin/closing data not verified; zero.",
-        "external_model_agreement": "External opinions recorded but cannot establish agreement with an absent independent Micks forecast; zero.",
-        "docs_confirmation": "Relevant prices stale or no accessible exact selection; zero.",
-        "sharp_movement": "No verified respected/high-limit sequence; zero.",
-        "handle_ticket_divergence": "No applicable candidate-specific verified split; zero.",
+        "schedule_rest": "No established net schedule advantage; unknown.",
+        "progressive_fade": "Comparable closing-line windows not established; unknown.",
+        "favorite_inflation": "Required margin/closing data not verified; unknown.",
+        "external_model_agreement": "External opinions recorded but cannot establish agreement with an absent independent Micks forecast; unknown.",
+        "docs_confirmation": "Relevant prices stale or no accessible exact selection; unknown.",
+        "sharp_movement": "No verified respected/high-limit sequence; unknown.",
+        "handle_ticket_divergence": "No applicable candidate-specific verified split; unknown.",
         "market_quality": "Partial credit for a quoted major-league main market; limits unverified.",
-        "movement_timing": "No reliable beneficial timing/reversal established; zero."
+        "movement_timing": "No reliable beneficial timing/reversal established; unknown."
       },
       "fair_probability": null,
       "fair_odds": null,
@@ -862,65 +1813,147 @@
       "hypothesis": "Portland availability could matter substantially.",
       "strongest_failure_path": "Ratings disagree widely, lineup projections conflict with injury tags, and margin validation is missing.",
       "shadow_replica": {
-        "max": 100,
+        "status": "INCOMPLETE_UNGRADED"
+      },
+      "superseded_assessment": {
+        "score": 2,
+        "grade": "Pass",
+        "disposition": "PASS",
+        "score_type": "incomplete_verified_evidence_subtotal_not_forecast_confidence",
         "factors": {
-          "independent_fair_line": 0,
-          "market_dislocation_ev": 0,
-          "fundamental_confirmation": 0,
-          "market_microstructure": 0,
-          "independent_model_agreement": 0,
-          "market_expression_advantage": 0,
-          "market_regime_quality": 2,
-          "failure_case_robustness": 0
+          "independent_fair_edge": 0,
+          "executable_value": 0,
+          "availability_matchup": 0,
+          "schedule_rest": 0,
+          "progressive_fade": 0,
+          "favorite_inflation": 0,
+          "external_model_agreement": 0,
+          "docs_confirmation": 0,
+          "sharp_movement": 0,
+          "handle_ticket_divergence": 0,
+          "market_quality": 2,
+          "movement_timing": 0
         },
-        "verified_subtotal": 2,
-        "status": "PASS / INCOMPLETE",
-        "official_authority": false
+        "shadow_replica": {
+          "max": 100,
+          "factors": {
+            "independent_fair_line": 0,
+            "market_dislocation_ev": 0,
+            "fundamental_confirmation": 0,
+            "market_microstructure": 0,
+            "independent_model_agreement": 0,
+            "market_expression_advantage": 0,
+            "market_regime_quality": 2,
+            "failure_case_robustness": 0
+          },
+          "verified_subtotal": 2,
+          "status": "PASS / INCOMPLETE",
+          "official_authority": false
+        }
       }
     },
     {
       "id": "CEASE-PROP",
       "event": "Toronto Blue Jays at Texas Rangers",
       "sport": "MLB",
-      "pick": "Dylan Cease strikeouts — threshold unverified",
+      "pick": "Dylan Cease strikeouts \u2014 threshold unverified",
       "reference_odds": null,
       "reference_book": null,
       "reference_only": true,
       "price_retrieved_at": "2026-09-18T17:14:16.879881+00:00",
       "user_book_executable": false,
       "units": 0,
-      "grade": "Pass",
-      "disposition": "RESEARCH ONLY",
-      "score": 6,
+      "grade": null,
+      "disposition": "INCOMPLETE_UNGRADED",
+      "score": null,
       "score_max": 110,
-      "score_type": "incomplete_verified_evidence_subtotal_not_forecast_confidence",
+      "score_type": "no_final_score_core_research_incomplete",
       "factors": {
-        "independent_fair_edge": 0,
-        "executable_value": 0,
-        "availability_matchup": 6,
-        "schedule_rest": 0,
-        "progressive_fade": 0,
-        "favorite_inflation": 0,
-        "external_model_agreement": 0,
-        "docs_confirmation": 0,
-        "sharp_movement": 0,
-        "handle_ticket_divergence": 0,
-        "market_quality": 0,
-        "movement_timing": 0
+        "independent_fair_edge": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 25,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "executable_value": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 15,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "availability_matchup": {
+          "status": "VERIFIED",
+          "points": 6,
+          "maximum": 10
+        },
+        "schedule_rest": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 10,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "progressive_fade": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 10,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "favorite_inflation": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "external_model_agreement": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 10,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "docs_confirmation": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "sharp_movement": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 6,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "handle_ticket_divergence": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "market_quality": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 4,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        },
+        "movement_timing": {
+          "status": "UNKNOWN",
+          "points": null,
+          "maximum": 5,
+          "reason": "Original zero did not document verified negative evidence; requires reassessment."
+        }
       },
       "factor_evidence": {
-        "independent_fair_edge": "No independent, reproducible Micks fair estimate established before outside selections were encountered; zero.",
-        "executable_value": "No independent fair estimate and no current BetRivers quote; zero.",
+        "independent_fair_edge": "No independent, reproducible Micks fair estimate established before outside selections were encountered; unknown.",
+        "executable_value": "No independent fair estimate and no current BetRivers quote; unknown.",
         "availability_matchup": "236 strikeouts in 166.1 innings supports looking at the market.",
-        "schedule_rest": "No established net schedule advantage; zero.",
-        "progressive_fade": "Comparable closing-line windows not established; zero.",
-        "favorite_inflation": "Required margin/closing data not verified; zero.",
-        "external_model_agreement": "External opinions recorded but cannot establish agreement with an absent independent Micks forecast; zero.",
-        "docs_confirmation": "Relevant prices stale or no accessible exact selection; zero.",
-        "sharp_movement": "No verified respected/high-limit sequence; zero.",
-        "handle_ticket_divergence": "No applicable candidate-specific verified split; zero.",
-        "market_quality": "Exact prop market not obtained; zero.",
-        "movement_timing": "No reliable beneficial timing/reversal established; zero."
+        "schedule_rest": "No established net schedule advantage; unknown.",
+        "progressive_fade": "Comparable closing-line windows not established; unknown.",
+        "favorite_inflation": "Required margin/closing data not verified; unknown.",
+        "external_model_agreement": "External opinions recorded but cannot establish agreement with an absent independent Micks forecast; unknown.",
+        "docs_confirmation": "Relevant prices stale or no accessible exact selection; unknown.",
+        "sharp_movement": "No verified respected/high-limit sequence; unknown.",
+        "handle_ticket_divergence": "No applicable candidate-specific verified split; unknown.",
+        "market_quality": "Exact prop market not obtained; unknown.",
+        "movement_timing": "No reliable beneficial timing/reversal established; unknown."
       },
       "fair_probability": null,
       "fair_odds": null,
@@ -933,20 +1966,43 @@
       "hypothesis": "236 strikeouts in 166.1 innings supports looking at the market.",
       "strongest_failure_path": "No dated executable threshold/price; walks can shorten innings and no opponent-order model is established.",
       "shadow_replica": {
-        "max": 100,
+        "status": "INCOMPLETE_UNGRADED"
+      },
+      "superseded_assessment": {
+        "score": 6,
+        "grade": "Pass",
+        "disposition": "RESEARCH ONLY",
+        "score_type": "incomplete_verified_evidence_subtotal_not_forecast_confidence",
         "factors": {
-          "independent_fair_line": 0,
-          "market_dislocation_ev": 0,
-          "fundamental_confirmation": 6,
-          "market_microstructure": 0,
-          "independent_model_agreement": 0,
-          "market_expression_advantage": 0,
-          "market_regime_quality": 0,
-          "failure_case_robustness": 0
+          "independent_fair_edge": 0,
+          "executable_value": 0,
+          "availability_matchup": 6,
+          "schedule_rest": 0,
+          "progressive_fade": 0,
+          "favorite_inflation": 0,
+          "external_model_agreement": 0,
+          "docs_confirmation": 0,
+          "sharp_movement": 0,
+          "handle_ticket_divergence": 0,
+          "market_quality": 0,
+          "movement_timing": 0
         },
-        "verified_subtotal": 6,
-        "status": "PASS / INCOMPLETE",
-        "official_authority": false
+        "shadow_replica": {
+          "max": 100,
+          "factors": {
+            "independent_fair_line": 0,
+            "market_dislocation_ev": 0,
+            "fundamental_confirmation": 6,
+            "market_microstructure": 0,
+            "independent_model_agreement": 0,
+            "market_expression_advantage": 0,
+            "market_regime_quality": 0,
+            "failure_case_robustness": 0
+          },
+          "verified_subtotal": 6,
+          "status": "PASS / INCOMPLETE",
+          "official_authority": false
+        }
       }
     }
   ],
@@ -975,5 +2031,11 @@
     "unplayed_Sparks": "PASS / PRICE NOT MET; 0u; excluded from betting record",
     "new_statistical_weights": false,
     "rolling_results": "not recomputed without a complete verified execution/closing-price ledger"
+  },
+  "correction": {
+    "date": "2026-09-18",
+    "reason": "Missing research was scored as zero and displayed as a final Pass grade.",
+    "later_cease_analysis": "cease-projection-output.json",
+    "historical_snapshot_preserved": true
   }
 }

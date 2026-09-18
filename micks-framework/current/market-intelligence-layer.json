@@ -13,10 +13,18 @@
   ],
   "score": {
     "max": 20,
-    "sharp_respected_movement": {"max": 6},
-    "ticket_handle_divergence": {"max": 5},
-    "liquidity_market_quality": {"max": 4},
-    "movement_timing_reversal_quality": {"max": 5}
+    "sharp_respected_movement": {
+      "max": 6
+    },
+    "ticket_handle_divergence": {
+      "max": 5
+    },
+    "liquidity_market_quality": {
+      "max": 4
+    },
+    "movement_timing_reversal_quality": {
+      "max": 5
+    }
   },
   "required_market_fields_when_available": [
     "opening_line_price",
@@ -59,9 +67,22 @@
       "clv_magnitude",
       "closing_market_source"
     ],
-    "directions": ["Beat Close", "Neutral", "Lost Close"],
-    "review_windows": [20, 50, 100],
-    "review_dimensions": ["sport", "market_family", "grade", "release_timing"],
+    "directions": [
+      "Beat Close",
+      "Neutral",
+      "Lost Close"
+    ],
+    "review_windows": [
+      20,
+      50,
+      100
+    ],
+    "review_dimensions": [
+      "sport",
+      "market_family",
+      "grade",
+      "release_timing"
+    ],
     "retroactive_grade_change": false,
     "result_override": false
   },
@@ -71,5 +92,6 @@
     "single_source_release_allowed": false,
     "applies_to_nfl": false,
     "nfl_mode": "standard"
-  }
+  },
+  "readiness_override": "research-readiness.md controls missing-data handling; unknown is null, never fabricated negative evidence."
 }

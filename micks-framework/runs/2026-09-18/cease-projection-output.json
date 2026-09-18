@@ -1,0 +1,63 @@
+{
+  "status": "PROVISIONAL_SENSITIVITY_ONLY",
+  "prior_pa": 100,
+  "league_k_rate": 0.22080912875015113,
+  "pitcher_shrunk_k_rate": 0.33604285530600925,
+  "lineup_matchup_rates": [
+    0.3521850772573295,
+    0.3373668338906337,
+    0.3043966781256518,
+    0.35129917770169705,
+    0.3273372738902996,
+    0.38580332697243613,
+    0.2942757811733481,
+    0.363954272455366,
+    0.3478071455452174
+  ],
+  "scenarios": [
+    {
+      "batters_faced": 18,
+      "p_7_plus": 0.41682794436969034,
+      "p_8_plus": 0.24321558783832015
+    },
+    {
+      "batters_faced": 20,
+      "p_7_plus": 0.5496283453748011,
+      "p_8_plus": 0.36561340881139354
+    },
+    {
+      "batters_faced": 22,
+      "p_7_plus": 0.661893827613045,
+      "p_8_plus": 0.4856080207564257
+    },
+    {
+      "batters_faced": 24,
+      "p_7_plus": 0.7627532751884771,
+      "p_8_plus": 0.6079778344763966
+    },
+    {
+      "batters_faced": 26,
+      "p_7_plus": 0.834323258946635,
+      "p_8_plus": 0.7057157076105104
+    }
+  ],
+  "empirical_workload_mixture": {
+    "7": 0.7502440151333316,
+    "8": 0.5989265714538208
+  },
+  "break_even": {
+    "7_plus_at_minus167": 0.6254681647940075,
+    "8_plus_at_plus112": 0.4716981132075472
+  },
+  "calibrated": false,
+  "official_release": false,
+  "limitations": [
+    "100-PA shrinkage is an assumption, not fitted calibration",
+    "League baseline is all handedness; batter inputs are versus right-handers",
+    "Independent plate appearances ignore within-game dependence",
+    "Recent workload mixture is not a manager-specific pitch-limit forecast",
+    "No park, catcher, umpire, velocity or lineup substitution adjustment",
+    "No out-of-sample calibration; scenario spread is not a confidence interval",
+    "Constructed after prices/outside opinions were observed; not a blind forecast"
+  ]
+}
