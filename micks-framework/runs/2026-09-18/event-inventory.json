@@ -1,0 +1,2413 @@
+[
+  {
+    "league": "CFB",
+    "event_id": "401858226",
+    "event": "Miami Hurricanes at Wake Forest Demon Deacons",
+    "scheduled_at": "2026-09-18T23:30Z",
+    "state": "pre",
+    "market": {
+      "provider": "DraftKings",
+      "headline": "MIA -20.5",
+      "total": 55.5,
+      "markets": {
+        "moneyline": {
+          "home": {
+            "close": {
+              "odds": "+950"
+            },
+            "open": {
+              "odds": "+750"
+            }
+          },
+          "away": {
+            "close": {
+              "odds": "-1650"
+            },
+            "open": {
+              "odds": "-1200"
+            }
+          }
+        },
+        "pointSpread": {
+          "home": {
+            "close": {
+              "line": "+20.5",
+              "odds": "-108"
+            },
+            "open": {
+              "line": "+19.5",
+              "odds": "-110"
+            }
+          },
+          "away": {
+            "close": {
+              "line": "-20.5",
+              "odds": "-112"
+            },
+            "open": {
+              "line": "-19.5",
+              "odds": "-110"
+            }
+          }
+        },
+        "total": {
+          "over": {
+            "close": {
+              "line": "o55.5",
+              "odds": "-108"
+            },
+            "open": {
+              "line": "o50.5",
+              "odds": "-110"
+            }
+          },
+          "under": {
+            "close": {
+              "line": "u55.5",
+              "odds": "-112"
+            },
+            "open": {
+              "line": "u50.5",
+              "odds": "-110"
+            }
+          }
+        }
+      }
+    },
+    "retrieved_at": "2026-09-18T17:14:16.729148+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20260918&limit=100"
+  },
+  {
+    "league": "CFB",
+    "event_id": "401856811",
+    "event": "Houston Cougars at Texas Tech Red Raiders",
+    "scheduled_at": "2026-09-19T00:00Z",
+    "state": "pre",
+    "market": {
+      "provider": "DraftKings",
+      "headline": "TTU -7.5",
+      "total": 52.5,
+      "markets": {
+        "moneyline": {
+          "home": {
+            "close": {
+              "odds": "-325"
+            },
+            "open": {
+              "odds": "-290"
+            }
+          },
+          "away": {
+            "close": {
+              "odds": "+260"
+            },
+            "open": {
+              "odds": "+235"
+            }
+          }
+        },
+        "pointSpread": {
+          "home": {
+            "close": {
+              "line": "-7.5",
+              "odds": "-108"
+            },
+            "open": {
+              "line": "-12.5",
+              "odds": "-110"
+            }
+          },
+          "away": {
+            "close": {
+              "line": "+7.5",
+              "odds": "-112"
+            },
+            "open": {
+              "line": "+12.5",
+              "odds": "-110"
+            }
+          }
+        },
+        "total": {
+          "over": {
+            "close": {
+              "line": "o52.5",
+              "odds": "-108"
+            },
+            "open": {
+              "line": "o53.5",
+              "odds": "-105"
+            }
+          },
+          "under": {
+            "close": {
+              "line": "u52.5",
+              "odds": "-112"
+            },
+            "open": {
+              "line": "u53.5",
+              "odds": "-115"
+            }
+          }
+        }
+      }
+    },
+    "retrieved_at": "2026-09-18T17:14:16.729148+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20260918&limit=100"
+  },
+  {
+    "league": "CFB",
+    "event_id": "401858455",
+    "event": "Portland State Vikings at Oregon Ducks",
+    "scheduled_at": "2026-09-19T02:30Z",
+    "state": "pre",
+    "market": {
+      "provider": "DraftKings",
+      "headline": "ORE -58.5",
+      "total": 69.5,
+      "markets": {
+        "moneyline": {
+          "home": {
+            "close": {
+              "odds": "OFF"
+            },
+            "open": {
+              "odds": "OFF"
+            }
+          },
+          "away": {
+            "close": {
+              "odds": "OFF"
+            },
+            "open": {
+              "odds": "OFF"
+            }
+          }
+        },
+        "pointSpread": {
+          "home": {
+            "close": {
+              "line": "-58.5",
+              "odds": "-110"
+            },
+            "open": {
+              "line": "-57.5",
+              "odds": "-112"
+            }
+          },
+          "away": {
+            "close": {
+              "line": "+58.5",
+              "odds": "-110"
+            },
+            "open": {
+              "line": "+57.5",
+              "odds": "-108"
+            }
+          }
+        },
+        "total": {
+          "over": {
+            "close": {
+              "line": "o69.5",
+              "odds": "-120"
+            },
+            "open": {
+              "line": "o66.5",
+              "odds": "-115"
+            }
+          },
+          "under": {
+            "close": {
+              "line": "u69.5",
+              "odds": "+100"
+            },
+            "open": {
+              "line": "u66.5",
+              "odds": "-105"
+            }
+          }
+        }
+      }
+    },
+    "retrieved_at": "2026-09-18T17:14:16.729148+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20260918&limit=100"
+  },
+  {
+    "league": "GOLF-eur",
+    "event_id": "401822702",
+    "event": "BMW PGA Championship",
+    "scheduled_at": "2026-09-17T04:00Z",
+    "state": "in",
+    "market": {
+      "provider": null,
+      "headline": null,
+      "total": null,
+      "markets": {
+        "moneyline": {},
+        "pointSpread": {},
+        "total": {}
+      }
+    },
+    "retrieved_at": null,
+    "source": "ESPN dated scoreboard; initial retrieval during this run"
+  },
+  {
+    "league": "GOLF-pga",
+    "event_id": "401850914",
+    "event": "Biltmore Championship Asheville",
+    "scheduled_at": "2026-09-17T04:00Z",
+    "state": "in",
+    "market": {
+      "provider": null,
+      "headline": null,
+      "total": null,
+      "markets": {
+        "moneyline": {},
+        "pointSpread": {},
+        "total": {}
+      }
+    },
+    "retrieved_at": null,
+    "source": "ESPN dated scoreboard; initial retrieval during this run"
+  },
+  {
+    "league": "MLB",
+    "event_id": "401816984",
+    "event": "Chicago Cubs at Cincinnati Reds",
+    "scheduled_at": "2026-09-18T22:40Z",
+    "state": "pre",
+    "market": {
+      "provider": "DraftKings",
+      "headline": "CHC -143",
+      "total": 8.5,
+      "markets": {
+        "moneyline": {
+          "home": {
+            "close": {
+              "odds": "+119"
+            },
+            "open": {
+              "odds": "+108"
+            }
+          },
+          "away": {
+            "close": {
+              "odds": "-143"
+            },
+            "open": {
+              "odds": "-130"
+            }
+          }
+        },
+        "pointSpread": {
+          "home": {
+            "close": {
+              "line": "+1.5",
+              "odds": "-142"
+            },
+            "open": {
+              "line": "+1.5",
+              "odds": "-149"
+            }
+          },
+          "away": {
+            "close": {
+              "line": "-1.5",
+              "odds": "+118"
+            },
+            "open": {
+              "line": "-1.5",
+              "odds": "+123"
+            }
+          }
+        },
+        "total": {
+          "over": {
+            "close": {
+              "line": "o8.5",
+              "odds": "-116"
+            },
+            "open": {
+              "line": "o9",
+              "odds": "+100"
+            }
+          },
+          "under": {
+            "close": {
+              "line": "u8.5",
+              "odds": "-104"
+            },
+            "open": {
+              "line": "u9",
+              "odds": "-120"
+            }
+          }
+        }
+      }
+    },
+    "retrieved_at": "2026-09-18T17:14:16.879881+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard?dates=20260918&limit=100"
+  },
+  {
+    "league": "MLB",
+    "event_id": "401816985",
+    "event": "Kansas City Royals at Pittsburgh Pirates",
+    "scheduled_at": "2026-09-18T22:40Z",
+    "state": "pre",
+    "market": {
+      "provider": "DraftKings",
+      "headline": "PIT -193",
+      "total": 8.5,
+      "markets": {
+        "moneyline": {
+          "home": {
+            "close": {
+              "odds": "-193"
+            },
+            "open": {
+              "odds": "-173"
+            }
+          },
+          "away": {
+            "close": {
+              "odds": "+158"
+            },
+            "open": {
+              "odds": "+142"
+            }
+          }
+        },
+        "pointSpread": {
+          "home": {
+            "close": {
+              "line": "-1.5",
+              "odds": "+113"
+            },
+            "open": {
+              "line": "-1.5",
+              "odds": "+119"
+            }
+          },
+          "away": {
+            "close": {
+              "line": "+1.5",
+              "odds": "-136"
+            },
+            "open": {
+              "line": "+1.5",
+              "odds": "-144"
+            }
+          }
+        },
+        "total": {
+          "over": {
+            "close": {
+              "line": "o8.5",
+              "odds": "-107"
+            },
+            "open": {
+              "line": "o8",
+              "odds": "+100"
+            }
+          },
+          "under": {
+            "close": {
+              "line": "u8.5",
+              "odds": "-112"
+            },
+            "open": {
+              "line": "u8",
+              "odds": "-120"
+            }
+          }
+        }
+      }
+    },
+    "retrieved_at": "2026-09-18T17:14:16.879881+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard?dates=20260918&limit=100"
+  },
+  {
+    "league": "MLB",
+    "event_id": "401816986",
+    "event": "Milwaukee Brewers at Baltimore Orioles",
+    "scheduled_at": "2026-09-18T23:05Z",
+    "state": "pre",
+    "market": {
+      "provider": "DraftKings",
+      "headline": "MIL -148",
+      "total": 8.5,
+      "markets": {
+        "moneyline": {
+          "home": {
+            "close": {
+              "odds": "+123"
+            },
+            "open": {
+              "odds": "+123"
+            }
+          },
+          "away": {
+            "close": {
+              "odds": "-148"
+            },
+            "open": {
+              "odds": "-149"
+            }
+          }
+        },
+        "pointSpread": {
+          "home": {
+            "close": {
+              "line": "+1.5",
+              "odds": "-136"
+            },
+            "open": {
+              "line": "+1.5",
+              "odds": "-136"
+            }
+          },
+          "away": {
+            "close": {
+              "line": "-1.5",
+              "odds": "+113"
+            },
+            "open": {
+              "line": "-1.5",
+              "odds": "+113"
+            }
+          }
+        },
+        "total": {
+          "over": {
+            "close": {
+              "line": "o8.5",
+              "odds": "-108"
+            },
+            "open": {
+              "line": "o8.5",
+              "odds": "-108"
+            }
+          },
+          "under": {
+            "close": {
+              "line": "u8.5",
+              "odds": "-112"
+            },
+            "open": {
+              "line": "u8.5",
+              "odds": "-112"
+            }
+          }
+        }
+      }
+    },
+    "retrieved_at": "2026-09-18T17:14:16.879881+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard?dates=20260918&limit=100"
+  },
+  {
+    "league": "MLB",
+    "event_id": "401816982",
+    "event": "Athletics Athletics at Cleveland Guardians",
+    "scheduled_at": "2026-09-18T23:10Z",
+    "state": "pre",
+    "market": {
+      "provider": "DraftKings",
+      "headline": "CLE -231",
+      "total": 8.5,
+      "markets": {
+        "moneyline": {
+          "home": {
+            "close": {
+              "odds": "-231"
+            },
+            "open": {
+              "odds": "-193"
+            }
+          },
+          "away": {
+            "close": {
+              "odds": "+188"
+            },
+            "open": {
+              "odds": "+159"
+            }
+          }
+        },
+        "pointSpread": {
+          "home": {
+            "close": {
+              "line": "-1.5",
+              "odds": "-107"
+            },
+            "open": {
+              "line": "-1.5",
+              "odds": "+113"
+            }
+          },
+          "away": {
+            "close": {
+              "line": "+1.5",
+              "odds": "-112"
+            },
+            "open": {
+              "line": "+1.5",
+              "odds": "-136"
+            }
+          }
+        },
+        "total": {
+          "over": {
+            "close": {
+              "line": "o8.5",
+              "odds": "-108"
+            },
+            "open": {
+              "line": "o8.5",
+              "odds": "-108"
+            }
+          },
+          "under": {
+            "close": {
+              "line": "u8.5",
+              "odds": "-112"
+            },
+            "open": {
+              "line": "u8.5",
+              "odds": "-112"
+            }
+          }
+        }
+      }
+    },
+    "retrieved_at": "2026-09-18T17:14:16.879881+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard?dates=20260918&limit=100"
+  },
+  {
+    "league": "MLB",
+    "event_id": "401816983",
+    "event": "Boston Red Sox at Tampa Bay Rays",
+    "scheduled_at": "2026-09-18T23:10Z",
+    "state": "pre",
+    "market": {
+      "provider": "DraftKings",
+      "headline": "TB -136",
+      "total": 7.0,
+      "markets": {
+        "moneyline": {
+          "home": {
+            "close": {
+              "odds": "-136"
+            },
+            "open": {
+              "odds": "-131"
+            }
+          },
+          "away": {
+            "close": {
+              "odds": "+113"
+            },
+            "open": {
+              "odds": "+108"
+            }
+          }
+        },
+        "pointSpread": {
+          "home": {
+            "close": {
+              "line": "-1.5",
+              "odds": "+159"
+            },
+            "open": {
+              "line": "+1.5",
+              "odds": "-208"
+            }
+          },
+          "away": {
+            "close": {
+              "line": "+1.5",
+              "odds": "-193"
+            },
+            "open": {
+              "line": "-1.5",
+              "odds": "+170"
+            }
+          }
+        },
+        "total": {
+          "over": {
+            "close": {
+              "line": "o7",
+              "odds": "-112"
+            },
+            "open": {
+              "line": "o8",
+              "odds": "+109"
+            }
+          },
+          "under": {
+            "close": {
+              "line": "u7",
+              "odds": "-108"
+            },
+            "open": {
+              "line": "u8",
+              "odds": "-131"
+            }
+          }
+        }
+      }
+    },
+    "retrieved_at": "2026-09-18T17:14:16.879881+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard?dates=20260918&limit=100"
+  },
+  {
+    "league": "MLB",
+    "event_id": "401816987",
+    "event": "Philadelphia Phillies at New York Mets",
+    "scheduled_at": "2026-09-18T23:10Z",
+    "state": "pre",
+    "market": {
+      "provider": "DraftKings",
+      "headline": "NYM -112",
+      "total": 8.5,
+      "markets": {
+        "moneyline": {
+          "home": {
+            "close": {
+              "odds": "-112"
+            },
+            "open": {
+              "odds": "-118"
+            }
+          },
+          "away": {
+            "close": {
+              "odds": "-108"
+            },
+            "open": {
+              "odds": "-102"
+            }
+          }
+        },
+        "pointSpread": {
+          "home": {
+            "close": {
+              "line": "+1.5",
+              "odds": "-187"
+            },
+            "open": {
+              "line": "+1.5",
+              "odds": "-194"
+            }
+          },
+          "away": {
+            "close": {
+              "line": "-1.5",
+              "odds": "+153"
+            },
+            "open": {
+              "line": "-1.5",
+              "odds": "+159"
+            }
+          }
+        },
+        "total": {
+          "over": {
+            "close": {
+              "line": "o8.5",
+              "odds": "-115"
+            },
+            "open": {
+              "line": "o8.5",
+              "odds": "-108"
+            }
+          },
+          "under": {
+            "close": {
+              "line": "u8.5",
+              "odds": "-105"
+            },
+            "open": {
+              "line": "u8.5",
+              "odds": "-112"
+            }
+          }
+        }
+      }
+    },
+    "retrieved_at": "2026-09-18T17:14:16.879881+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard?dates=20260918&limit=100"
+  },
+  {
+    "league": "MLB",
+    "event_id": "401816989",
+    "event": "Detroit Tigers at Chicago White Sox",
+    "scheduled_at": "2026-09-18T23:40Z",
+    "state": "pre",
+    "market": {
+      "provider": "DraftKings",
+      "headline": "CHW -132",
+      "total": 8.5,
+      "markets": {
+        "moneyline": {
+          "home": {
+            "close": {
+              "odds": "-132"
+            },
+            "open": {
+              "odds": "-142"
+            }
+          },
+          "away": {
+            "close": {
+              "odds": "+109"
+            },
+            "open": {
+              "odds": "+118"
+            }
+          }
+        },
+        "pointSpread": {
+          "home": {
+            "close": {
+              "line": "-1.5",
+              "odds": "+157"
+            },
+            "open": {
+              "line": "-1.5",
+              "odds": "+162"
+            }
+          },
+          "away": {
+            "close": {
+              "line": "+1.5",
+              "odds": "-192"
+            },
+            "open": {
+              "line": "+1.5",
+              "odds": "-198"
+            }
+          }
+        },
+        "total": {
+          "over": {
+            "close": {
+              "line": "o8.5",
+              "odds": "-112"
+            },
+            "open": {
+              "line": "o8.5",
+              "odds": "-108"
+            }
+          },
+          "under": {
+            "close": {
+              "line": "u8.5",
+              "odds": "-107"
+            },
+            "open": {
+              "line": "u8.5",
+              "odds": "-112"
+            }
+          }
+        }
+      }
+    },
+    "retrieved_at": "2026-09-18T17:14:16.879881+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard?dates=20260918&limit=100"
+  },
+  {
+    "league": "MLB",
+    "event_id": "401816990",
+    "event": "Toronto Blue Jays at Texas Rangers",
+    "scheduled_at": "2026-09-19T00:05Z",
+    "state": "pre",
+    "market": {
+      "provider": "DraftKings",
+      "headline": "TOR -137",
+      "total": 7.5,
+      "markets": {
+        "moneyline": {
+          "home": {
+            "close": {
+              "odds": "+114"
+            },
+            "open": {
+              "odds": "+112"
+            }
+          },
+          "away": {
+            "close": {
+              "odds": "-137"
+            },
+            "open": {
+              "odds": "-135"
+            }
+          }
+        },
+        "pointSpread": {
+          "home": {
+            "close": {
+              "line": "+1.5",
+              "odds": "-149"
+            },
+            "open": {
+              "line": "+1.5",
+              "odds": "-156"
+            }
+          },
+          "away": {
+            "close": {
+              "line": "-1.5",
+              "odds": "+124"
+            },
+            "open": {
+              "line": "-1.5",
+              "odds": "+129"
+            }
+          }
+        },
+        "total": {
+          "over": {
+            "close": {
+              "line": "o7.5",
+              "odds": "-107"
+            },
+            "open": {
+              "line": "o7.5",
+              "odds": "-118"
+            }
+          },
+          "under": {
+            "close": {
+              "line": "u7.5",
+              "odds": "-113"
+            },
+            "open": {
+              "line": "u7.5",
+              "odds": "-102"
+            }
+          }
+        }
+      }
+    },
+    "retrieved_at": "2026-09-18T17:14:16.879881+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard?dates=20260918&limit=100"
+  },
+  {
+    "league": "MLB",
+    "event_id": "401816988",
+    "event": "Atlanta Braves at Houston Astros",
+    "scheduled_at": "2026-09-19T00:10Z",
+    "state": "pre",
+    "market": {
+      "provider": "DraftKings",
+      "headline": "ATL -120",
+      "total": 8.0,
+      "markets": {
+        "moneyline": {
+          "home": {
+            "close": {
+              "odds": "+100"
+            },
+            "open": {
+              "odds": "+100"
+            }
+          },
+          "away": {
+            "close": {
+              "odds": "-120"
+            },
+            "open": {
+              "odds": "-120"
+            }
+          }
+        },
+        "pointSpread": {
+          "home": {
+            "close": {
+              "line": "+1.5",
+              "odds": "-166"
+            },
+            "open": {
+              "line": "+1.5",
+              "odds": "-171"
+            }
+          },
+          "away": {
+            "close": {
+              "line": "-1.5",
+              "odds": "+137"
+            },
+            "open": {
+              "line": "-1.5",
+              "odds": "+141"
+            }
+          }
+        },
+        "total": {
+          "over": {
+            "close": {
+              "line": "o8",
+              "odds": "-118"
+            },
+            "open": {
+              "line": "o8",
+              "odds": "-118"
+            }
+          },
+          "under": {
+            "close": {
+              "line": "u8",
+              "odds": "-102"
+            },
+            "open": {
+              "line": "u8",
+              "odds": "-102"
+            }
+          }
+        }
+      }
+    },
+    "retrieved_at": "2026-09-18T17:14:16.879881+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard?dates=20260918&limit=100"
+  },
+  {
+    "league": "MLB",
+    "event_id": "401816992",
+    "event": "Seattle Mariners at Colorado Rockies",
+    "scheduled_at": "2026-09-19T00:10Z",
+    "state": "pre",
+    "market": {
+      "provider": "DraftKings",
+      "headline": "SEA -193",
+      "total": 10.5,
+      "markets": {
+        "moneyline": {
+          "home": {
+            "close": {
+              "odds": "+158"
+            },
+            "open": {
+              "odds": "+153"
+            }
+          },
+          "away": {
+            "close": {
+              "odds": "-193"
+            },
+            "open": {
+              "odds": "-186"
+            }
+          }
+        },
+        "pointSpread": {
+          "home": {
+            "close": {
+              "line": "+1.5",
+              "odds": "+102"
+            },
+            "open": {
+              "line": "+1.5",
+              "odds": "-102"
+            }
+          },
+          "away": {
+            "close": {
+              "line": "-1.5",
+              "odds": "-122"
+            },
+            "open": {
+              "line": "-1.5",
+              "odds": "-118"
+            }
+          }
+        },
+        "total": {
+          "over": {
+            "close": {
+              "line": "o10.5",
+              "odds": "-114"
+            },
+            "open": {
+              "line": "o10.5",
+              "odds": "-110"
+            }
+          },
+          "under": {
+            "close": {
+              "line": "u10.5",
+              "odds": "-105"
+            },
+            "open": {
+              "line": "u10.5",
+              "odds": "-110"
+            }
+          }
+        }
+      }
+    },
+    "retrieved_at": "2026-09-18T17:14:16.879881+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard?dates=20260918&limit=100"
+  },
+  {
+    "league": "MLB",
+    "event_id": "401816991",
+    "event": "Washington Nationals at St. Louis Cardinals",
+    "scheduled_at": "2026-09-19T00:15Z",
+    "state": "pre",
+    "market": {
+      "provider": "DraftKings",
+      "headline": "WSH -111",
+      "total": 7.5,
+      "markets": {
+        "moneyline": {
+          "home": {
+            "close": {
+              "odds": "-108"
+            },
+            "open": {
+              "odds": "-115"
+            }
+          },
+          "away": {
+            "close": {
+              "odds": "-111"
+            },
+            "open": {
+              "odds": "-105"
+            }
+          }
+        },
+        "pointSpread": {
+          "home": {
+            "close": {
+              "line": "+1.5",
+              "odds": "-182"
+            },
+            "open": {
+              "line": "+1.5",
+              "odds": "-198"
+            }
+          },
+          "away": {
+            "close": {
+              "line": "-1.5",
+              "odds": "+149"
+            },
+            "open": {
+              "line": "-1.5",
+              "odds": "+163"
+            }
+          }
+        },
+        "total": {
+          "over": {
+            "close": {
+              "line": "o7.5",
+              "odds": "-115"
+            },
+            "open": {
+              "line": "o7.5",
+              "odds": "-117"
+            }
+          },
+          "under": {
+            "close": {
+              "line": "u7.5",
+              "odds": "-105"
+            },
+            "open": {
+              "line": "u7.5",
+              "odds": "+104"
+            }
+          }
+        }
+      }
+    },
+    "retrieved_at": "2026-09-18T17:14:16.879881+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard?dates=20260918&limit=100"
+  },
+  {
+    "league": "MLB",
+    "event_id": "401816994",
+    "event": "Minnesota Twins at Los Angeles Angels",
+    "scheduled_at": "2026-09-19T01:38Z",
+    "state": "pre",
+    "market": {
+      "provider": "DraftKings",
+      "headline": "MIN -115",
+      "total": 8.0,
+      "markets": {
+        "moneyline": {
+          "home": {
+            "close": {
+              "odds": "-105"
+            },
+            "open": {
+              "odds": "+100"
+            }
+          },
+          "away": {
+            "close": {
+              "odds": "-115"
+            },
+            "open": {
+              "odds": "-120"
+            }
+          }
+        },
+        "pointSpread": {
+          "home": {
+            "close": {
+              "line": "+1.5",
+              "odds": "-175"
+            },
+            "open": {
+              "line": "+1.5",
+              "odds": "-157"
+            }
+          },
+          "away": {
+            "close": {
+              "line": "-1.5",
+              "odds": "+144"
+            },
+            "open": {
+              "line": "-1.5",
+              "odds": "+130"
+            }
+          }
+        },
+        "total": {
+          "over": {
+            "close": {
+              "line": "o8",
+              "odds": "-111"
+            },
+            "open": {
+              "line": "o8.5",
+              "odds": "-110"
+            }
+          },
+          "under": {
+            "close": {
+              "line": "u8",
+              "odds": "-108"
+            },
+            "open": {
+              "line": "u8.5",
+              "odds": "-110"
+            }
+          }
+        }
+      }
+    },
+    "retrieved_at": "2026-09-18T17:14:16.879881+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard?dates=20260918&limit=100"
+  },
+  {
+    "league": "MLB",
+    "event_id": "401816993",
+    "event": "Miami Marlins at San Diego Padres",
+    "scheduled_at": "2026-09-19T01:40Z",
+    "state": "pre",
+    "market": {
+      "provider": "DraftKings",
+      "headline": "SD -219",
+      "total": 7.5,
+      "markets": {
+        "moneyline": {
+          "home": {
+            "close": {
+              "odds": "-219"
+            },
+            "open": {
+              "odds": "-204"
+            }
+          },
+          "away": {
+            "close": {
+              "odds": "+179"
+            },
+            "open": {
+              "odds": "+167"
+            }
+          }
+        },
+        "pointSpread": {
+          "home": {
+            "close": {
+              "line": "-1.5",
+              "odds": "+105"
+            },
+            "open": {
+              "line": "-1.5",
+              "odds": "+123"
+            }
+          },
+          "away": {
+            "close": {
+              "line": "+1.5",
+              "odds": "-126"
+            },
+            "open": {
+              "line": "+1.5",
+              "odds": "-148"
+            }
+          }
+        },
+        "total": {
+          "over": {
+            "close": {
+              "line": "o7.5",
+              "odds": "-111"
+            },
+            "open": {
+              "line": "o7.5",
+              "odds": "-105"
+            }
+          },
+          "under": {
+            "close": {
+              "line": "u7.5",
+              "odds": "-109"
+            },
+            "open": {
+              "line": "u7.5",
+              "odds": "-115"
+            }
+          }
+        }
+      }
+    },
+    "retrieved_at": "2026-09-18T17:14:16.879881+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard?dates=20260918&limit=100"
+  },
+  {
+    "league": "MLB",
+    "event_id": "401816995",
+    "event": "New York Yankees at Arizona Diamondbacks",
+    "scheduled_at": "2026-09-19T01:40Z",
+    "state": "pre",
+    "market": {
+      "provider": "DraftKings",
+      "headline": "NYY -118",
+      "total": 8.0,
+      "markets": {
+        "moneyline": {
+          "home": {
+            "close": {
+              "odds": "-102"
+            },
+            "open": {
+              "odds": "+113"
+            }
+          },
+          "away": {
+            "close": {
+              "odds": "-118"
+            },
+            "open": {
+              "odds": "-136"
+            }
+          }
+        },
+        "pointSpread": {
+          "home": {
+            "close": {
+              "line": "+1.5",
+              "odds": "-171"
+            },
+            "open": {
+              "line": "+1.5",
+              "odds": "-163"
+            }
+          },
+          "away": {
+            "close": {
+              "line": "-1.5",
+              "odds": "+141"
+            },
+            "open": {
+              "line": "-1.5",
+              "odds": "+134"
+            }
+          }
+        },
+        "total": {
+          "over": {
+            "close": {
+              "line": "o8",
+              "odds": "-102"
+            },
+            "open": {
+              "line": "o8",
+              "odds": "-105"
+            }
+          },
+          "under": {
+            "close": {
+              "line": "u8",
+              "odds": "-118"
+            },
+            "open": {
+              "line": "u8",
+              "odds": "-115"
+            }
+          }
+        }
+      }
+    },
+    "retrieved_at": "2026-09-18T17:14:16.879881+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard?dates=20260918&limit=100"
+  },
+  {
+    "league": "MLB",
+    "event_id": "401816996",
+    "event": "San Francisco Giants at Los Angeles Dodgers",
+    "scheduled_at": "2026-09-19T02:15Z",
+    "state": "pre",
+    "market": {
+      "provider": "DraftKings",
+      "headline": "LAD -313",
+      "total": 8.0,
+      "markets": {
+        "moneyline": {
+          "home": {
+            "close": {
+              "odds": "-313"
+            },
+            "open": {
+              "odds": "-295"
+            }
+          },
+          "away": {
+            "close": {
+              "odds": "+248"
+            },
+            "open": {
+              "odds": "+235"
+            }
+          }
+        },
+        "pointSpread": {
+          "home": {
+            "close": {
+              "line": "-1.5",
+              "odds": "-137"
+            },
+            "open": {
+              "line": "-1.5",
+              "odds": "-131"
+            }
+          },
+          "away": {
+            "close": {
+              "line": "+1.5",
+              "odds": "+113"
+            },
+            "open": {
+              "line": "+1.5",
+              "odds": "+109"
+            }
+          }
+        },
+        "total": {
+          "over": {
+            "close": {
+              "line": "o8",
+              "odds": "-109"
+            },
+            "open": {
+              "line": "o8",
+              "odds": "-105"
+            }
+          },
+          "under": {
+            "close": {
+              "line": "u8",
+              "odds": "-110"
+            },
+            "open": {
+              "line": "u8",
+              "odds": "-115"
+            }
+          }
+        }
+      }
+    },
+    "retrieved_at": "2026-09-18T17:14:16.879881+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard?dates=20260918&limit=100"
+  },
+  {
+    "league": "MLS",
+    "event_id": "761815",
+    "event": "Red Bull New York at New York City FC",
+    "scheduled_at": "2026-09-18T23:30Z",
+    "state": "pre",
+    "market": {
+      "provider": "DraftKings",
+      "headline": "NYC -125",
+      "total": 3.5,
+      "markets": {
+        "moneyline": {
+          "home": {
+            "open": {
+              "odds": "-130"
+            },
+            "close": {
+              "odds": "-125"
+            }
+          },
+          "away": {
+            "open": {
+              "odds": "+265"
+            },
+            "close": {
+              "odds": "+270"
+            }
+          },
+          "draw": {
+            "open": {
+              "odds": "+295"
+            },
+            "close": {
+              "odds": "+290"
+            }
+          }
+        },
+        "pointSpread": {
+          "home": {
+            "open": {
+              "line": "-0.5",
+              "odds": "-135"
+            },
+            "close": {
+              "line": "-0.5",
+              "odds": "-130"
+            }
+          },
+          "away": {
+            "open": {
+              "line": "+0.5",
+              "odds": "-105"
+            },
+            "close": {
+              "line": "+0.5",
+              "odds": "-105"
+            }
+          }
+        },
+        "total": {
+          "over": {
+            "open": {
+              "line": "o3.5",
+              "odds": "+120"
+            },
+            "close": {
+              "line": "o3.5",
+              "odds": "+125"
+            }
+          },
+          "under": {
+            "open": {
+              "line": "u3.5",
+              "odds": "-160"
+            },
+            "close": {
+              "line": "u3.5",
+              "odds": "-155"
+            }
+          }
+        }
+      }
+    },
+    "retrieved_at": "2026-09-18T17:14:16.943637+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/scoreboard?dates=20260918&limit=100"
+  },
+  {
+    "league": "NWSL",
+    "event_id": "401854003",
+    "event": "Kansas City Current at San Diego Wave FC",
+    "scheduled_at": "2026-09-19T02:00Z",
+    "state": "pre",
+    "market": {
+      "provider": "DraftKings",
+      "headline": "SD +120",
+      "total": 2.5,
+      "markets": {
+        "moneyline": {
+          "home": {
+            "open": {
+              "odds": "+120"
+            },
+            "close": {
+              "odds": "+120"
+            }
+          },
+          "away": {
+            "open": {
+              "odds": "+175"
+            },
+            "close": {
+              "odds": "+175"
+            }
+          },
+          "draw": {
+            "open": {
+              "odds": "+250"
+            },
+            "close": {
+              "odds": "+265"
+            }
+          }
+        },
+        "pointSpread": {
+          "home": {
+            "open": {
+              "line": "-0.5",
+              "odds": "+110"
+            },
+            "close": {
+              "line": "-0.5",
+              "odds": "+115"
+            }
+          },
+          "away": {
+            "open": {
+              "line": "+0.5",
+              "odds": "-170"
+            },
+            "close": {
+              "line": "+0.5",
+              "odds": "-170"
+            }
+          }
+        },
+        "total": {
+          "over": {
+            "open": {
+              "line": "o2.5",
+              "odds": "-175"
+            },
+            "close": {
+              "line": "o2.5",
+              "odds": "-180"
+            }
+          },
+          "under": {
+            "open": {
+              "line": "u2.5",
+              "odds": "+115"
+            },
+            "close": {
+              "line": "u2.5",
+              "odds": "+125"
+            }
+          }
+        }
+      }
+    },
+    "retrieved_at": "2026-09-18T17:14:16.706220+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/scoreboard?dates=20260918&limit=100"
+  },
+  {
+    "league": "Soccer_EPL",
+    "event_id": "401879275",
+    "event": "Chelsea at Brentford",
+    "scheduled_at": "2026-09-18T19:00Z",
+    "state": "pre",
+    "market": {
+      "provider": "DraftKings",
+      "headline": "CHE +155",
+      "total": 3.5,
+      "markets": {
+        "moneyline": {
+          "home": {
+            "open": {
+              "odds": "+170"
+            },
+            "close": {
+              "odds": "+165"
+            }
+          },
+          "away": {
+            "open": {
+              "odds": "+135"
+            },
+            "close": {
+              "odds": "+155"
+            }
+          },
+          "draw": {
+            "open": {
+              "odds": "+260"
+            },
+            "close": {
+              "odds": "+265"
+            }
+          }
+        },
+        "pointSpread": {
+          "home": {
+            "open": {
+              "line": "+0.5",
+              "odds": "-195"
+            },
+            "close": {
+              "line": "+0.5",
+              "odds": "-195"
+            }
+          },
+          "away": {
+            "open": {
+              "line": "-0.5",
+              "odds": "+125"
+            },
+            "close": {
+              "line": "-0.5",
+              "odds": "+140"
+            }
+          }
+        },
+        "total": {
+          "over": {
+            "open": {
+              "line": "o2.5",
+              "odds": "-175"
+            },
+            "close": {
+              "line": "o3.5",
+              "odds": "+125"
+            }
+          },
+          "under": {
+            "open": {
+              "line": "u2.5",
+              "odds": "+125"
+            },
+            "close": {
+              "line": "u3.5",
+              "odds": "-160"
+            }
+          }
+        }
+      }
+    },
+    "retrieved_at": null,
+    "source": "ESPN dated scoreboard; initial retrieval during this run"
+  },
+  {
+    "league": "Soccer_France",
+    "event_id": "401876453",
+    "event": "Lens at AS Monaco",
+    "scheduled_at": "2026-09-18T18:45Z",
+    "state": "pre",
+    "market": {
+      "provider": "DraftKings",
+      "headline": "MON -105",
+      "total": 2.5,
+      "markets": {
+        "moneyline": {
+          "home": {
+            "open": {
+              "odds": "+120"
+            },
+            "close": {
+              "odds": "-105"
+            }
+          },
+          "away": {
+            "open": {
+              "odds": "+185"
+            },
+            "close": {
+              "odds": "+280"
+            }
+          },
+          "draw": {
+            "open": {
+              "odds": "+275"
+            },
+            "close": {
+              "odds": "+275"
+            }
+          }
+        },
+        "pointSpread": {
+          "home": {
+            "open": {
+              "line": "-0.5",
+              "odds": "+110"
+            },
+            "close": {
+              "line": "-0.5",
+              "odds": "-115"
+            }
+          },
+          "away": {
+            "open": {
+              "line": "+0.5",
+              "odds": "-165"
+            },
+            "close": {
+              "line": "+0.5",
+              "odds": "-120"
+            }
+          }
+        },
+        "total": {
+          "over": {
+            "open": {
+              "line": "o3.5",
+              "odds": "+125"
+            },
+            "close": {
+              "line": "o2.5",
+              "odds": "-180"
+            }
+          },
+          "under": {
+            "open": {
+              "line": "u3.5",
+              "odds": "-170"
+            },
+            "close": {
+              "line": "u2.5",
+              "odds": "+140"
+            }
+          }
+        }
+      }
+    },
+    "retrieved_at": null,
+    "source": "ESPN dated scoreboard; initial retrieval during this run"
+  },
+  {
+    "league": "Soccer_Germany",
+    "event_id": "401884790",
+    "event": "1. FC Union Berlin at Bayern Munich",
+    "scheduled_at": "2026-09-18T18:30Z",
+    "state": "pre",
+    "market": {
+      "provider": "DraftKings",
+      "headline": "MUN -5000",
+      "total": 5.5,
+      "markets": {
+        "moneyline": {
+          "home": {
+            "open": {
+              "odds": "-1100"
+            },
+            "close": {
+              "odds": "-5000"
+            }
+          },
+          "away": {
+            "open": {
+              "odds": "+1200"
+            },
+            "close": {
+              "odds": "+2800"
+            }
+          },
+          "draw": {
+            "open": {
+              "odds": "+800"
+            },
+            "close": {
+              "odds": "+1400"
+            }
+          }
+        },
+        "pointSpread": {
+          "home": {
+            "open": {
+              "line": "-2.5",
+              "odds": "-135"
+            },
+            "close": {
+              "line": "-3.5",
+              "odds": "-150"
+            }
+          },
+          "away": {
+            "open": {
+              "line": "+2.5",
+              "odds": "-115"
+            },
+            "close": {
+              "line": "+3.5",
+              "odds": "+105"
+            }
+          }
+        },
+        "total": {
+          "over": {
+            "open": {
+              "line": "o4.5",
+              "odds": "+105"
+            },
+            "close": {
+              "line": "o5.5",
+              "odds": "+115"
+            }
+          },
+          "under": {
+            "open": {
+              "line": "u4.5",
+              "odds": "-150"
+            },
+            "close": {
+              "line": "u5.5",
+              "odds": "-150"
+            }
+          }
+        }
+      }
+    },
+    "retrieved_at": null,
+    "source": "ESPN dated scoreboard; initial retrieval during this run"
+  },
+  {
+    "league": "Soccer_Italy",
+    "event_id": "401874756",
+    "event": "Sassuolo at Monza",
+    "scheduled_at": "2026-09-18T18:45Z",
+    "state": "pre",
+    "market": {
+      "provider": "DraftKings",
+      "headline": "SAS +150",
+      "total": 2.5,
+      "markets": {
+        "moneyline": {
+          "home": {
+            "open": {
+              "odds": "+165"
+            },
+            "close": {
+              "odds": "+170"
+            }
+          },
+          "away": {
+            "open": {
+              "odds": "+140"
+            },
+            "close": {
+              "odds": "+150"
+            }
+          },
+          "draw": {
+            "open": {
+              "odds": "+225"
+            },
+            "close": {
+              "odds": "+220"
+            }
+          }
+        },
+        "pointSpread": {
+          "home": {
+            "open": {
+              "line": "+0.5",
+              "odds": "-200"
+            },
+            "close": {
+              "line": "+0.5",
+              "odds": "-205"
+            }
+          },
+          "away": {
+            "open": {
+              "line": "-0.5",
+              "odds": "+130"
+            },
+            "close": {
+              "line": "-0.5",
+              "odds": "+145"
+            }
+          }
+        },
+        "total": {
+          "over": {
+            "open": {
+              "line": "o2.5",
+              "odds": "-115"
+            },
+            "close": {
+              "line": "o2.5",
+              "odds": "-135"
+            }
+          },
+          "under": {
+            "open": {
+              "line": "u2.5",
+              "odds": "-120"
+            },
+            "close": {
+              "line": "u2.5",
+              "odds": "+105"
+            }
+          }
+        }
+      }
+    },
+    "retrieved_at": null,
+    "source": "ESPN dated scoreboard; initial retrieval during this run"
+  },
+  {
+    "league": "Soccer_Spain",
+    "event_id": "401882862",
+    "event": "Elche at Espanyol",
+    "scheduled_at": "2026-09-18T19:00Z",
+    "state": "pre",
+    "market": {
+      "provider": "DraftKings",
+      "headline": "ESP -130",
+      "total": 2.5,
+      "markets": {
+        "moneyline": {
+          "home": {
+            "open": {
+              "odds": "-115"
+            },
+            "close": {
+              "odds": "-130"
+            }
+          },
+          "away": {
+            "open": {
+              "odds": "+330"
+            },
+            "close": {
+              "odds": "+370"
+            }
+          },
+          "draw": {
+            "open": {
+              "odds": "+245"
+            },
+            "close": {
+              "odds": "+275"
+            }
+          }
+        },
+        "pointSpread": {
+          "home": {
+            "open": {
+              "line": "-0.5",
+              "odds": "-125"
+            },
+            "close": {
+              "line": "-0.5",
+              "odds": "-145"
+            }
+          },
+          "away": {
+            "open": {
+              "line": "+0.5",
+              "odds": "-115"
+            },
+            "close": {
+              "line": "+0.5",
+              "odds": "+105"
+            }
+          }
+        },
+        "total": {
+          "over": {
+            "open": {
+              "line": "o2.5",
+              "odds": "-110"
+            },
+            "close": {
+              "line": "o2.5",
+              "odds": "-135"
+            }
+          },
+          "under": {
+            "open": {
+              "line": "u2.5",
+              "odds": "-115"
+            },
+            "close": {
+              "line": "u2.5",
+              "odds": "+110"
+            }
+          }
+        }
+      }
+    },
+    "retrieved_at": null,
+    "source": "ESPN dated scoreboard; initial retrieval during this run"
+  },
+  {
+    "league": "WNBA",
+    "event_id": "401857195",
+    "event": "Indiana Fever at Toronto Tempo",
+    "scheduled_at": "2026-09-18T23:30Z",
+    "state": "pre",
+    "market": {
+      "provider": "DraftKings",
+      "headline": "IND -15.5",
+      "total": 187.5,
+      "markets": {
+        "moneyline": {
+          "home": {
+            "close": {
+              "odds": "+800"
+            },
+            "open": {
+              "odds": "+455"
+            }
+          },
+          "away": {
+            "close": {
+              "odds": "-1350"
+            },
+            "open": {
+              "odds": "-625"
+            }
+          }
+        },
+        "pointSpread": {
+          "home": {
+            "close": {
+              "line": "+15.5",
+              "odds": "-115"
+            },
+            "open": {
+              "line": "+11.5",
+              "odds": "-110"
+            }
+          },
+          "away": {
+            "close": {
+              "line": "-15.5",
+              "odds": "-105"
+            },
+            "open": {
+              "line": "-11.5",
+              "odds": "-110"
+            }
+          }
+        },
+        "total": {
+          "over": {
+            "close": {
+              "line": "o187.5",
+              "odds": "-108"
+            },
+            "open": {
+              "line": "o189.5",
+              "odds": "-110"
+            }
+          },
+          "under": {
+            "close": {
+              "line": "u187.5",
+              "odds": "-112"
+            },
+            "open": {
+              "line": "u189.5",
+              "odds": "-110"
+            }
+          }
+        }
+      }
+    },
+    "retrieved_at": "2026-09-18T17:14:16.788103+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/scoreboard?dates=20260918&limit=100"
+  },
+  {
+    "league": "WNBA",
+    "event_id": "401857196",
+    "event": "New York Liberty at Minnesota Lynx",
+    "scheduled_at": "2026-09-18T23:30Z",
+    "state": "pre",
+    "market": {
+      "provider": "DraftKings",
+      "headline": "MIN -6.5",
+      "total": 177.5,
+      "markets": {
+        "moneyline": {
+          "home": {
+            "close": {
+              "odds": "-245"
+            },
+            "open": {
+              "odds": "-250"
+            }
+          },
+          "away": {
+            "close": {
+              "odds": "+200"
+            },
+            "open": {
+              "odds": "+205"
+            }
+          }
+        },
+        "pointSpread": {
+          "home": {
+            "close": {
+              "line": "-6.5",
+              "odds": "-110"
+            },
+            "open": {
+              "line": "-6.5",
+              "odds": "-115"
+            }
+          },
+          "away": {
+            "close": {
+              "line": "+6.5",
+              "odds": "-110"
+            },
+            "open": {
+              "line": "+6.5",
+              "odds": "-105"
+            }
+          }
+        },
+        "total": {
+          "over": {
+            "close": {
+              "line": "o177.5",
+              "odds": "-112"
+            },
+            "open": {
+              "line": "o178.5",
+              "odds": "-110"
+            }
+          },
+          "under": {
+            "close": {
+              "line": "u177.5",
+              "odds": "-108"
+            },
+            "open": {
+              "line": "u178.5",
+              "odds": "-110"
+            }
+          }
+        }
+      }
+    },
+    "retrieved_at": "2026-09-18T17:14:16.788103+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/scoreboard?dates=20260918&limit=100"
+  },
+  {
+    "league": "WNBA",
+    "event_id": "401857197",
+    "event": "Portland Fire at Golden State Valkyries",
+    "scheduled_at": "2026-09-19T02:00Z",
+    "state": "pre",
+    "market": {
+      "provider": "DraftKings",
+      "headline": "GS -12.5",
+      "total": 160.5,
+      "markets": {
+        "moneyline": {
+          "home": {
+            "close": {
+              "odds": "-800"
+            },
+            "open": {
+              "odds": "-750"
+            }
+          },
+          "away": {
+            "close": {
+              "odds": "+550"
+            },
+            "open": {
+              "odds": "+525"
+            }
+          }
+        },
+        "pointSpread": {
+          "home": {
+            "close": {
+              "line": "-12.5",
+              "odds": "-115"
+            },
+            "open": {
+              "line": "-12.5",
+              "odds": "-110"
+            }
+          },
+          "away": {
+            "close": {
+              "line": "+12.5",
+              "odds": "-105"
+            },
+            "open": {
+              "line": "+12.5",
+              "odds": "-110"
+            }
+          }
+        },
+        "total": {
+          "over": {
+            "close": {
+              "line": "o160.5",
+              "odds": "-108"
+            },
+            "open": {
+              "line": "o161.5",
+              "odds": "-110"
+            }
+          },
+          "under": {
+            "close": {
+              "line": "u160.5",
+              "odds": "-112"
+            },
+            "open": {
+              "line": "u161.5",
+              "odds": "-110"
+            }
+          }
+        }
+      }
+    },
+    "retrieved_at": "2026-09-18T17:14:16.788103+00:00",
+    "source": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/scoreboard?dates=20260918&limit=100"
+  },
+  {
+    "league": "WTA",
+    "event_id": "887-2026",
+    "event": "Guadalajara Open presentado por Santander",
+    "scheduled_at": "2026-09-12T04:00Z",
+    "state": "post",
+    "market": {
+      "provider": null,
+      "headline": null,
+      "total": null,
+      "markets": {
+        "moneyline": {},
+        "pointSpread": {},
+        "total": {}
+      }
+    },
+    "retrieved_at": null,
+    "source": "ESPN dated scoreboard; initial retrieval during this run"
+  },
+  {
+    "league": "WTA",
+    "event_id": "1005-2026",
+    "event": "SP Open",
+    "scheduled_at": "2026-09-12T04:00Z",
+    "state": "post",
+    "market": {
+      "provider": null,
+      "headline": null,
+      "total": null,
+      "markets": {
+        "moneyline": {},
+        "pointSpread": {},
+        "total": {}
+      }
+    },
+    "retrieved_at": null,
+    "source": "ESPN dated scoreboard; initial retrieval during this run"
+  },
+  {
+    "league": "WTA",
+    "event_id": "871-2026",
+    "event": "BBVA Open Internacional De Valencia",
+    "scheduled_at": "2026-09-13T04:00Z",
+    "state": "post",
+    "market": {
+      "provider": null,
+      "headline": null,
+      "total": null,
+      "markets": {
+        "moneyline": {},
+        "pointSpread": {},
+        "total": {}
+      }
+    },
+    "retrieved_at": null,
+    "source": "ESPN dated scoreboard; initial retrieval during this run"
+  },
+  {
+    "league": "WTA",
+    "event_id": "1024-2026",
+    "event": "Caldas da Rainha Ladies Open",
+    "scheduled_at": "2026-09-13T04:00Z",
+    "state": "post",
+    "market": {
+      "provider": null,
+      "headline": null,
+      "total": null,
+      "markets": {
+        "moneyline": {},
+        "pointSpread": {},
+        "total": {}
+      }
+    },
+    "retrieved_at": null,
+    "source": "ESPN dated scoreboard; initial retrieval during this run"
+  },
+  {
+    "league": "WTA",
+    "event_id": "786-2026",
+    "event": "Zavarovalnica Triglav Ljubljana",
+    "scheduled_at": "2026-09-14T04:00Z",
+    "state": "post",
+    "market": {
+      "provider": null,
+      "headline": null,
+      "total": null,
+      "markets": {
+        "moneyline": {},
+        "pointSpread": {},
+        "total": {}
+      }
+    },
+    "retrieved_at": null,
+    "source": "ESPN dated scoreboard; initial retrieval during this run"
+  },
+  {
+    "league": "WTA",
+    "event_id": "811-2026",
+    "event": "Korea Open",
+    "scheduled_at": "2026-09-18T04:00Z",
+    "state": "pre",
+    "market": {
+      "provider": null,
+      "headline": null,
+      "total": null,
+      "markets": {
+        "moneyline": {},
+        "pointSpread": {},
+        "total": {}
+      }
+    },
+    "retrieved_at": null,
+    "source": "ESPN dated scoreboard; initial retrieval during this run"
+  },
+  {
+    "league": "WTA",
+    "event_id": "1009-2026",
+    "event": "Singapore Tennis Open presented by BNP Paribas",
+    "scheduled_at": "2026-09-18T04:00Z",
+    "state": "pre",
+    "market": {
+      "provider": null,
+      "headline": null,
+      "total": null,
+      "markets": {
+        "moneyline": {},
+        "pointSpread": {},
+        "total": {}
+      }
+    },
+    "retrieved_at": null,
+    "source": "ESPN dated scoreboard; initial retrieval during this run"
+  }
+]

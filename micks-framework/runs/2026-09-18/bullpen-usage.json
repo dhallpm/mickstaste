@@ -1,0 +1,200 @@
+[
+  {
+    "game": 822763,
+    "url": "https://statsapi.mlb.com/api/v1/game/822763/boxscore",
+    "relievers": [
+      {
+        "game": 822763,
+        "team": "Toronto Blue Jays",
+        "name": "Mason Fluharty",
+        "ip": "1.0",
+        "pitches": 11
+      },
+      {
+        "game": 822763,
+        "team": "Toronto Blue Jays",
+        "name": "Spencer Miles",
+        "ip": "2.0",
+        "pitches": 35
+      },
+      {
+        "game": 822763,
+        "team": "Toronto Blue Jays",
+        "name": "Louis Varland",
+        "ip": "1.0",
+        "pitches": 14
+      }
+    ]
+  },
+  {
+    "game": 822926,
+    "url": "https://statsapi.mlb.com/api/v1/game/822926/boxscore",
+    "relievers": [
+      {
+        "game": 822926,
+        "team": "Tampa Bay Rays",
+        "name": "Kevin Kelly",
+        "ip": "2.0",
+        "pitches": 28
+      },
+      {
+        "game": 822926,
+        "team": "Tampa Bay Rays",
+        "name": "Cam Booser",
+        "ip": "1.0",
+        "pitches": 9
+      },
+      {
+        "game": 822926,
+        "team": "Tampa Bay Rays",
+        "name": "Cole Sulser",
+        "ip": "1.0",
+        "pitches": 12
+      }
+    ]
+  },
+  {
+    "game": 822846,
+    "url": "https://statsapi.mlb.com/api/v1/game/822846/boxscore",
+    "relievers": [
+      {
+        "game": 822846,
+        "team": "Boston Red Sox",
+        "name": "Greg Weissert",
+        "ip": "1.1",
+        "pitches": 15
+      },
+      {
+        "game": 822846,
+        "team": "Boston Red Sox",
+        "name": "Erik Miller",
+        "ip": "1.0",
+        "pitches": 22
+      },
+      {
+        "game": 822846,
+        "team": "Boston Red Sox",
+        "name": "Raymond Burgos",
+        "ip": "1.0",
+        "pitches": 18
+      },
+      {
+        "game": 822846,
+        "team": "Texas Rangers",
+        "name": "Jakob Junis",
+        "ip": "1.0",
+        "pitches": 13
+      },
+      {
+        "game": 822846,
+        "team": "Texas Rangers",
+        "name": "Nathan Eovaldi",
+        "ip": "4.0",
+        "pitches": 46
+      }
+    ]
+  },
+  {
+    "game": 822924,
+    "url": "https://statsapi.mlb.com/api/v1/game/822924/boxscore",
+    "relievers": [
+      {
+        "game": 822924,
+        "team": "Tampa Bay Rays",
+        "name": "Casey Legumina",
+        "ip": "1.0",
+        "pitches": 11
+      },
+      {
+        "game": 822924,
+        "team": "Tampa Bay Rays",
+        "name": "Brody Hopkins",
+        "ip": "1.0",
+        "pitches": 17
+      },
+      {
+        "game": 822924,
+        "team": "Tampa Bay Rays",
+        "name": "Steven Matz",
+        "ip": "1.0",
+        "pitches": 14
+      },
+      {
+        "game": 822924,
+        "team": "Tampa Bay Rays",
+        "name": "Alex Cook",
+        "ip": "1.0",
+        "pitches": 13
+      }
+    ]
+  },
+  {
+    "game": 822845,
+    "url": "https://statsapi.mlb.com/api/v1/game/822845/boxscore",
+    "relievers": [
+      {
+        "game": 822845,
+        "team": "Boston Red Sox",
+        "name": "Wyatt Olds",
+        "ip": "1.0",
+        "pitches": 12
+      },
+      {
+        "game": 822845,
+        "team": "Boston Red Sox",
+        "name": "Alec Gamboa",
+        "ip": "0.2",
+        "pitches": 7
+      },
+      {
+        "game": 822845,
+        "team": "Boston Red Sox",
+        "name": "Garrett Whitlock",
+        "ip": "1.0",
+        "pitches": 12
+      },
+      {
+        "game": 822845,
+        "team": "Texas Rangers",
+        "name": "Cody Bradford",
+        "ip": "4.1",
+        "pitches": 73
+      },
+      {
+        "game": 822845,
+        "team": "Texas Rangers",
+        "name": "Chase Silseth",
+        "ip": "0.2",
+        "pitches": 13
+      },
+      {
+        "game": 822845,
+        "team": "Texas Rangers",
+        "name": "Robby Ahlstrom",
+        "ip": "0.2",
+        "pitches": 18
+      },
+      {
+        "game": 822845,
+        "team": "Texas Rangers",
+        "name": "Jakob Junis",
+        "ip": "0.1",
+        "pitches": 14
+      },
+      {
+        "game": 822845,
+        "team": "Texas Rangers",
+        "name": "Jacob Latz",
+        "ip": "1.0",
+        "pitches": 15
+      },
+      {
+        "game": 822845,
+        "team": "Texas Rangers",
+        "name": "Jordan Montgomery",
+        "ip": "1.0",
+        "pitches": 16
+      }
+    ]
+  }
+]

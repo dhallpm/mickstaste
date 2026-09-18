@@ -1,0 +1,45 @@
+{
+  "originals": [
+    {
+      "publication": "VSiN 2026 NFL Betting Guide",
+      "file": "2026-VSiN-NFL-Betting-Guide.pdf",
+      "location": "Micks Picks/Reference Guides",
+      "pages": 110,
+      "pages_reviewed_this_run": [
+        45,
+        46
+      ],
+      "daily_applicability": "NOT APPLICABLE: no NFL event September 18",
+      "role": "preseason prior, not a current weekly forecast"
+    },
+    {
+      "publication": "Fantasy Life Fantasy Football 2026",
+      "file": "2026-Fantasy-Life-Magazine.pdf",
+      "location": "Micks Picks/Reference Guides",
+      "pages": 148,
+      "pages_reviewed_this_run": [
+        136
+      ],
+      "daily_applicability": "NOT APPLICABLE: no NFL event September 18",
+      "role": "season role/projection prior; weekly updates required for NFL candidates"
+    }
+  ],
+  "stored_modules_loaded": [
+    "framework",
+    "source-registry",
+    "candidate-scoring-and-writeup-standard",
+    "market-intelligence-layer",
+    "market-ai-replica",
+    "futures-lab",
+    "favorite-inflation-module",
+    "post-june8-adjustments",
+    "nfl-2026-reference-module",
+    "nfl-post-week1-reconciliation",
+    "MLB",
+    "WNBA",
+    "bankroll",
+    "Docs source rule"
+  ],
+  "additional_sport_guide_originals": "none found in audited repository trees or Reference Guides folder",
+  "reconciliation": "No NFL candidate scored today. Future teaser remains separate; no claim every guide page was reread."
+}

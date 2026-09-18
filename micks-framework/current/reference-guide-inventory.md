@@ -1,7 +1,7 @@
 # Micks Picks Reference Guide Inventory
 
 Status: Controlling inventory
-Effective date: 2026-09-17
+Effective date: 2026-09-18
 
 ## Repository inventory audit
 
@@ -81,3 +81,16 @@ An unresolved material contradiction between the stored guide, verified role/hea
 At audit time, the only identifiable stored guide-derived knowledge in the repositories is the NFL 2026 reference module based on the VSiN 2026 NFL Betting Guide and Fantasy Life Fantasy Football 2026. No separate MLB, WNBA/NBA, NHL, soccer, UFC/boxing, tennis, NASCAR, college football or college basketball guide files/modules were found in the repository trees.
 
 The stored guides are now wired to the active post-Week 1 reconciliation module. Current Fantasy Life and VSiN weekly forecasts must be checked as live layers rather than treated as interchangeable with the preseason publications.
+
+## Original guide locations — verified 2026-09-18
+
+The persistent folder `Micks Picks/Reference Guides` contains both originals, despite their absence from the Git repositories:
+
+| Publication | Original file | Extent | Checked this run |
+|---|---|---:|---|
+| VSiN 2026 NFL Betting Guide | `2026-VSiN-NFL-Betting-Guide.pdf` | 110 pages | Jets baseline, pages 45–46 |
+| Fantasy Life Fantasy Football 2026 | `2026-Fantasy-Life-Magazine.pdf` | 148 pages | Jets season projection, page 136 |
+
+Both were stored July 24, 2026. Page references are original-PDF page references. The September 18 slate has no NFL game, so these are inventoried season priors, not inputs that can validate an MLB, WNBA or college-football release. Other team pages and current weekly projections must be read when their NFL candidates are evaluated. Sunday's existing teaser remains a separate future-day watch item and has not been re-released by this audit.
+
+No additional original sport guide was found in this folder or the audited repository guide trees. Do not describe either original NFL guide as missing. The folder is the retrieval location; only notes and rules belong in this repository unless separately authorized.

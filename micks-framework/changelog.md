@@ -1,5 +1,15 @@
 # Micks Picks Framework Changelog
 
+## 2026-09-18 — Standard daily command and progressive knowledge
+
+- Made “run micks picks for today's slate” the full, on-demand all-sports workflow with all market lanes, guide/current-data reconciliation, scoring, player/game-script analysis and source audit.
+- Added persistent markdown/JSON command configuration and a progressive-knowledge ledger; retained scoring weights, NFL standard mode and non-NFL Recovery Mode+.
+- Located both original NFL guide PDFs, corrected their retrieval inventory, and kept their season priors distinct from current weekly projections.
+- Preserved the Sparks odds-based pass as an unplayed 0u item outside betting W/L and ROI.
+- Aligned JSON writeup targets with the existing controlling premium-writeup standard.
+- Saved September 18 research, explicit data gaps, candidate diagnostics and empty official import payloads; did not replace the active website card.
+
+
 ## 2026-09-17 — NFL returned to standard operating mode
 
 - Removed Recovery Mode+ from NFL candidates only; Recovery Mode+ remains active for non-NFL daily-card candidates unless separately disabled.

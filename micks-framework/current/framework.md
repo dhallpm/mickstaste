@@ -1,5 +1,9 @@
 # Micks Picks Framework — Current Operating Setup
 
+## Standard daily command — effective 2026-09-18
+
+“Run Micks Picks for today's slate” invokes the complete workflow in [daily-scan-standard.md](daily-scan-standard.md) and loads [progressive-knowledge.md](progressive-knowledge.md). This includes all applicable sports/market scans, original-guide and current-prediction reconciliation, the 110-point framework, shadow/futures modules, player/game-script writeups, price gates and a source audit. Preserve NFL standard mode and non-NFL Recovery Mode+. Dated reports live under `micks-framework/runs/YYYY-MM-DD/`. Missing essential evidence blocks release; zero official bets is a valid outcome.
+
 Backup date: 2026-07-11
 
 ## Principle

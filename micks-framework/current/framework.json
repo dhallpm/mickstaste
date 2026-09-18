@@ -1,5 +1,5 @@
 {
-  "backup_version": "2026-09-17-nfl-standard-mode",
+  "backup_version": "2026-09-18-standard-daily-scan",
   "brand": "Micks Picks",
   "principle": "Micks-first. Outside handicappers and models are supporting confirmation only, not the engine.",
   "run_every_time": [
@@ -11,7 +11,13 @@
     "Passes",
     "Pick of the Day",
     "Separate import JSON files",
-    "Complete all-sections import JSON"
+    "Complete all-sections import JSON",
+    "NRFI/YRFI and derivatives",
+    "Futures Lab",
+    "Scored candidate chart",
+    "Source and guide audit",
+    "Market AI Replica shadow evaluation",
+    "Progressive knowledge review"
   ],
   "grading": {
     "A+": "Rare premium straight bet. VIP eligible.",
@@ -139,7 +145,7 @@
     ],
     "tiers": {
       "VIP": {
-        "target_words": "300-600",
+        "target_words": "400-700",
         "minimum_words": 225,
         "required_concepts": [
           "Opening Thesis",
@@ -155,10 +161,13 @@
           "Confidence"
         ],
         "field": "Full Analysis",
-        "public_teaser_fields": ["Writeup", "Home Preview"]
+        "public_teaser_fields": [
+          "Writeup",
+          "Home Preview"
+        ]
       },
       "Free": {
-        "target_words": "125-225",
+        "target_words": "175-300",
         "minimum_words": 100,
         "required_concepts": [
           "Opening Thesis",
@@ -171,7 +180,7 @@
         "must_explain_free_tier_limit": true
       },
       "Props Lab": {
-        "target_words": "90-160",
+        "target_words": "100-180",
         "minimum_words": 75,
         "required_concepts": [
           "Role or opportunity",
@@ -184,7 +193,7 @@
         ]
       },
       "Lotto Parlays": {
-        "target_words": "100-175",
+        "target_words": "125-225",
         "required_concepts": [
           "Explanation of every leg",
           "Correlation or independence",
@@ -260,15 +269,31 @@
       "Displayed unit total equals official play risk",
       "Public and VIP repositories use the same final pick facts while respecting access gating",
       "Live endpoint is verified after deployment"
-    ]
+    ],
+    "controlling_standard": "candidate-scoring-and-writeup-standard.md"
   },
   "airtable": {
-    "valid_aliases": ["picks", "propsLab", "lottoParlays", "longshots"],
-    "accepted_shapes": [
-      {"table": "propsLab", "records": []},
-      {"batches": []}
+    "valid_aliases": [
+      "picks",
+      "propsLab",
+      "lottoParlays",
+      "longshots"
     ],
-    "do_not_import_fields": ["Result", "Outcome", "Profit/Loss", "Profit-Loss"],
+    "accepted_shapes": [
+      {
+        "table": "propsLab",
+        "records": []
+      },
+      {
+        "batches": []
+      }
+    ],
+    "do_not_import_fields": [
+      "Result",
+      "Outcome",
+      "Profit/Loss",
+      "Profit-Loss"
+    ],
     "standard_fields": [
       "Date",
       "Sport",
@@ -311,7 +336,13 @@
     ]
   },
   "results_archive": {
-    "final_results": ["Win", "Loss", "Push", "Void", "Cancelled"],
+    "final_results": [
+      "Win",
+      "Loss",
+      "Push",
+      "Void",
+      "Cancelled"
+    ],
     "archive_table": "Results Archive",
     "rules": [
       "Calculate Profit/Loss, ROI, CLV, CLV Result",
@@ -389,5 +420,89 @@
     "Enforce correlation and parlay/longshot limits",
     "Preserve VIP/free gating",
     "Verify deployed endpoints before reporting completion"
-  ]
+  ],
+  "standard_daily_command": {
+    "effective_date": "2026-09-18",
+    "command": "run micks picks for today's slate",
+    "case_insensitive": true,
+    "minor_wording_variants": true,
+    "timezone": "America/New_York",
+    "workflow": "daily-scan-standard.md",
+    "knowledge_ledger": "progressive-knowledge.json",
+    "invocation": "on_demand",
+    "creates_automation": false,
+    "modes": {
+      "NFL": "standard",
+      "non_NFL_daily": "recovery_mode_plus"
+    },
+    "required_lanes": [
+      "sport_event_inventory",
+      "Master Picks",
+      "Props Lab",
+      "derivatives",
+      "NRFI/YRFI",
+      "Futures Lab",
+      "Lotto Parlays",
+      "Longshots",
+      "Watchlist / Live-only",
+      "Passes",
+      "Pick of the Day"
+    ],
+    "required_inputs": [
+      "framework.md",
+      "framework.json",
+      "source-registry.md",
+      "candidate-scoring-and-writeup-standard.md",
+      "reference-guide-inventory.md",
+      "progressive-knowledge.md",
+      "market-intelligence-layer.md",
+      "market-ai-replica.md",
+      "futures-lab.md",
+      "favorite-inflation-module.md",
+      "applicable sport and adjustment modules",
+      "recent releases/results"
+    ],
+    "guide_policy": {
+      "original_pages_required_when_applicable": true,
+      "NFL_week_2_reconciliation_required": true,
+      "current_health_role_overrides_prior": true,
+      "publisher_family_deduplication": true,
+      "unrelated_guides": "NOT APPLICABLE",
+      "missing_guide": "disclose; never invent"
+    },
+    "evidence_policy": {
+      "unsupported_factor_points": 0,
+      "essential_unknown_blocks_release": true,
+      "external_fair_line_is_not_micks": true,
+      "unplayed_bet_counts_in_record": false,
+      "calibrated_model_claim_requires_reproducible_evidence": true,
+      "source_http_success_is_not_data_verification": true
+    },
+    "outputs": [
+      "dated report",
+      "source and guide audit",
+      "scored candidate record",
+      "player analysis and game script",
+      "failure paths",
+      "official releases or explicit NO BET",
+      "best numbers/playable ranges/no-bet cutoffs when established",
+      "first alternates and missing gates",
+      "section and complete import payloads"
+    ],
+    "report_directory": "micks-framework/runs/YYYY-MM-DD/",
+    "publishing": "Follow explicit session authorization; a research command alone must not replace the active card.",
+    "progressive_review": {
+      "windows": [
+        20,
+        50,
+        100
+      ],
+      "actual_sample_counts_required": true,
+      "CLV_required_when_available": true,
+      "process_errors_separate_from_variance": true,
+      "new_weights_shadow_tested_first": true,
+      "no_loss_chasing": true,
+      "freeze_released_grade_odds_units": true
+    }
+  }
 }

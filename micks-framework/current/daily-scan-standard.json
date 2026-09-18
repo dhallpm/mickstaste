@@ -1,0 +1,84 @@
+{
+  "effective_date": "2026-09-18",
+  "command": "run micks picks for today's slate",
+  "case_insensitive": true,
+  "minor_wording_variants": true,
+  "timezone": "America/New_York",
+  "workflow": "daily-scan-standard.md",
+  "knowledge_ledger": "progressive-knowledge.json",
+  "invocation": "on_demand",
+  "creates_automation": false,
+  "modes": {
+    "NFL": "standard",
+    "non_NFL_daily": "recovery_mode_plus"
+  },
+  "required_lanes": [
+    "sport_event_inventory",
+    "Master Picks",
+    "Props Lab",
+    "derivatives",
+    "NRFI/YRFI",
+    "Futures Lab",
+    "Lotto Parlays",
+    "Longshots",
+    "Watchlist / Live-only",
+    "Passes",
+    "Pick of the Day"
+  ],
+  "required_inputs": [
+    "framework.md",
+    "framework.json",
+    "source-registry.md",
+    "candidate-scoring-and-writeup-standard.md",
+    "reference-guide-inventory.md",
+    "progressive-knowledge.md",
+    "market-intelligence-layer.md",
+    "market-ai-replica.md",
+    "futures-lab.md",
+    "favorite-inflation-module.md",
+    "applicable sport and adjustment modules",
+    "recent releases/results"
+  ],
+  "guide_policy": {
+    "original_pages_required_when_applicable": true,
+    "NFL_week_2_reconciliation_required": true,
+    "current_health_role_overrides_prior": true,
+    "publisher_family_deduplication": true,
+    "unrelated_guides": "NOT APPLICABLE",
+    "missing_guide": "disclose; never invent"
+  },
+  "evidence_policy": {
+    "unsupported_factor_points": 0,
+    "essential_unknown_blocks_release": true,
+    "external_fair_line_is_not_micks": true,
+    "unplayed_bet_counts_in_record": false,
+    "calibrated_model_claim_requires_reproducible_evidence": true,
+    "source_http_success_is_not_data_verification": true
+  },
+  "outputs": [
+    "dated report",
+    "source and guide audit",
+    "scored candidate record",
+    "player analysis and game script",
+    "failure paths",
+    "official releases or explicit NO BET",
+    "best numbers/playable ranges/no-bet cutoffs when established",
+    "first alternates and missing gates",
+    "section and complete import payloads"
+  ],
+  "report_directory": "micks-framework/runs/YYYY-MM-DD/",
+  "publishing": "Follow explicit session authorization; a research command alone must not replace the active card.",
+  "progressive_review": {
+    "windows": [
+      20,
+      50,
+      100
+    ],
+    "actual_sample_counts_required": true,
+    "CLV_required_when_available": true,
+    "process_errors_separate_from_variance": true,
+    "new_weights_shadow_tested_first": true,
+    "no_loss_chasing": true,
+    "freeze_released_grade_odds_units": true
+  }
+}

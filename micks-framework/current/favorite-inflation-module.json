@@ -1,0 +1,280 @@
+{
+  "module": "favorite_inflation_and_failure_to_cover",
+  "version": "2026-07-13",
+  "status": "permanent",
+  "applies_to": [
+    "market_refresh",
+    "card_grading",
+    "writeups",
+    "api_records",
+    "website_releases",
+    "parlays",
+    "post_card_reviews"
+  ],
+  "principle": "Strong teams are not automatically strong bets. Separate outright-win probability from spread or run-line cover probability and account for market tax, market selection, and total exposure.",
+  "required_windows": [5, 10, 20],
+  "required_metrics": [
+    "straight_up_record",
+    "ats_or_run_line_record",
+    "closing_number",
+    "final_margin",
+    "margin_vs_closing_expectation",
+    "consecutive_non_covers",
+    "favorite_cover_rate",
+    "comparable_spread_band_record",
+    "home_road_split",
+    "rest_and_travel_context",
+    "public_ticket_percentage",
+    "handle_percentage",
+    "opening_line",
+    "closing_line",
+    "non_covering_win_type",
+    "brand_reputation_tax"
+  ],
+  "alert_levels": {
+    "level_1_caution": {
+      "minimum_conditions": 2,
+      "conditions": [
+        "failed_to_cover_3_of_last_5",
+        "last_10_cover_rate_below_45_percent",
+        "two_consecutive_non_covers_as_favorite",
+        "average_margin_underperformance_at_least_1_5_points_or_0_5_runs",
+        "public_tickets_above_70_percent_with_reverse_or_flat_line_move",
+        "current_number_at_least_1_5_points_or_0_5_runs_worse_than_comparable_band"
+      ],
+      "actions": [
+        "reduce_confidence",
+        "prohibit_automatic_A_grade",
+        "document_inflation_in_market_context",
+        "evaluate_alternate_markets"
+      ]
+    },
+    "level_2_strong_inflation": {
+      "minimum_conditions": 1,
+      "conditions": [
+        "failed_to_cover_4_of_last_5",
+        "failed_to_cover_6_of_last_8",
+        "last_10_favorite_cover_rate_40_percent_or_lower",
+        "three_or_more_consecutive_non_covers_while_still_winning_often",
+        "average_margin_underperformance_at_least_3_points_or_0_75_runs",
+        "closing_number_worsens_despite_repeated_non_covers",
+        "lost_at_least_1_5_units_last_5_ats_or_run_line_bets"
+      ],
+      "grade_cap": "B",
+      "unit_cap": 0.5,
+      "actions": [
+        "spread_or_run_line_not_vip_eligible",
+        "exclude_inflated_market_from_parlays",
+        "route_to_derivative_live_watchlist_or_pass"
+      ]
+    },
+    "level_3_progressive_fade": {
+      "minimum_conditions": 2,
+      "conditions": [
+        "failed_to_cover_5_of_last_6",
+        "last_10_comparable_cover_rate_30_percent_or_lower",
+        "four_consecutive_non_covers",
+        "negative_ats_or_run_line_roi_at_least_20_percent_last_10",
+        "repeated_wins_by_margins_materially_below_closing_requirement",
+        "public_support_above_75_percent_while_number_inflates",
+        "current_price_is_worst_recent_comparable_number_without_material_upgrade"
+      ],
+      "spread_or_run_line_action": "automatic_pass_unless_explicit_user_override",
+      "derivative_grade_cap": "B-",
+      "derivative_unit_cap": 0.25,
+      "actions": [
+        "exclude_from_lotto_parlays",
+        "exclude_from_pick_of_the_day",
+        "require_explicit_favorite_inflation_alert",
+        "opponent_spread_requires_independent_matchup_validation"
+      ]
+    }
+  },
+  "automatic_adjustments": {
+    "level_1": "reduce_half_grade_or_confidence_by_0_5_to_1_0",
+    "level_2": "reduce_at_least_one_full_grade_and_cap_at_B_0_50u",
+    "level_3": "spread_or_run_line_pass_and_derivative_cap_B_minus_0_25u"
+  },
+  "A_grade_favorite_requirements": [
+    "no_level_2_or_level_3_alert",
+    "meaningful_cover_rate_at_least_50_percent_or_documented_sample_break",
+    "current_lineup_starter_role_or_matchup_upgrade_supports_margin",
+    "current_number_not_worse_than_comparable_historical_band",
+    "at_least_two_independent_cover_paths",
+    "no_unresolved_public_tax_or_reverse_line_movement_concern"
+  ],
+  "alternate_market_order": [
+    "moneyline_if_price_is_acceptable",
+    "first_half_or_first_quarter",
+    "first_to_10_or_first_to_15",
+    "first_five_innings",
+    "team_total_with_independent_support",
+    "opponent_spread_with_independent_support",
+    "live_entry_with_exact_trigger",
+    "pass"
+  ],
+  "parlay_rules": [
+    "level_2_or_level_3_spread_or_run_line_cannot_be_parlay_leg",
+    "moneyline_allowed_only_with_strong_outright_profile_and_acceptable_combined_price",
+    "do_not_stack_same_inflated_team_across_straight_derivative_and_parlay",
+    "disclose_conversion_from_spread_or_run_line_to_moneyline",
+    "do_not_pair_two_active_inflation_alert_teams_in_one_official_parlay"
+  ],
+  "post_card_trend_rules": {
+    "duplicate_exposure_prohibition": {
+      "active_alert_team_max_official_appearances": 1,
+      "default_prohibitions": [
+        "spread_or_run_line_plus_moneyline_parlay_leg",
+        "spread_or_run_line_plus_first_to_x_derivative",
+        "moneyline_parlay_leg_plus_team_derivative",
+        "second_wager_without_independent_edge"
+      ],
+      "approved_duplicate_exposure_cap": "largest_normal_straight_stake_for_final_grade"
+    },
+    "derivative_beats_side": {
+      "trigger": "side_failed_to_cover_3_of_last_5_and_repeatable_derivative_profile_is_stronger",
+      "action": "evaluate_derivative_first_and_downgrade_or_pass_side",
+      "examples": [
+        "first_inning_or_first_five_instead_of_full_game_run_line",
+        "first_quarter_or_first_to_10_instead_of_full_game_spread",
+        "team_total_instead_of_margin_market",
+        "first_half_instead_of_full_game_when_backdoor_risk_is_high"
+      ],
+      "rule": "A derivative win does not justify keeping the losing side on the same card."
+    },
+    "large_favorite_margin_gate": {
+      "basketball_threshold": "favorite_minus_6_5_or_higher",
+      "mlb_threshold": "any_run_line",
+      "B_plus_or_higher_requirements": [
+        "verified_recent_margin_performance_in_same_line_band",
+        "comparable_cover_rate_at_least_50_percent",
+        "no_level_2_or_level_3_alert",
+        "current_matchup_reason_specific_to_separation",
+        "number_not_worse_than_recent_comparable_closing_range"
+      ],
+      "otherwise": "maximum_B_0_50u_or_pass"
+    },
+    "card_concentration_caps": {
+      "normal_team_or_game_max_units": 1.0,
+      "level_1_max_units": 0.5,
+      "level_2_max_units": 0.25,
+      "level_2_market_limit": "one_approved_derivative_only",
+      "level_3_action": "no_pregame_exposure_without_explicit_override",
+      "parlay_stake_counting": "full_parlay_stake_counts_toward_each_team_exposure_cap"
+    },
+    "summer_league_volatility": {
+      "standard_grade_cap": "B",
+      "standard_unit_cap": 0.5,
+      "minus_6_or_higher_requires": "confirmed_rotation_and_availability",
+      "normal_card_side_max": 2,
+      "additional_angles": "watchlist_live_trigger_or_small_parlay_after_exposure_review",
+      "moneyline_parlay_warning": "does_not_remove_rotation_variance"
+    },
+    "win_but_no_cover_classification": {
+      "side_market_result": "Loss",
+      "outright_profile_result": "Win",
+      "inflation_evidence": "Non-covering win",
+      "progressive_pattern_effect": "increase_non_cover_count"
+    },
+    "closing_line_discipline": {
+      "regrade_trigger_basketball_points": 1.5,
+      "regrade_trigger_price_cents": 20,
+      "allowed_actions": [
+        "reduce_stake",
+        "reduce_grade",
+        "switch_market",
+        "move_to_watchlist",
+        "pass"
+      ]
+    },
+    "post_card_learning": {
+      "trigger": "two_or_more_favorite_losses_on_card",
+      "required_review": [
+        "classify_matchup_price_margin_duplicate_exposure_or_line_movement_error",
+        "update_monitored_teams_and_markets",
+        "record_whether_derivatives_outperformed_sides",
+        "adjust_alert_levels_before_next_card",
+        "prohibit_repeating_same_market_construction_without_new_evidence"
+      ]
+    }
+  },
+  "writeup_requirements": [
+    "recent_straight_up_performance",
+    "recent_ats_or_run_line_performance",
+    "whether_team_is_winning_without_covering",
+    "current_number_vs_recent_comparable_numbers",
+    "exact_alert_level",
+    "grade_or_unit_deduction",
+    "alternate_market_or_pass_reason",
+    "pattern_reset_condition"
+  ],
+  "approved_label": "Favorite Inflation Alert: The team remains capable of winning outright, but its recent margin profile has not justified the market's spread or run-line tax.",
+  "reset_conditions": [
+    "covers_3_of_4_comparable_favorite_spots",
+    "last_10_cover_rate_returns_above_50_percent",
+    "average_margin_meets_or_exceeds_closing_requirement",
+    "material_roster_injury_rotation_pitching_coaching_or_tactical_change_invalidates_sample",
+    "market_materially_corrects_price",
+    "current_matchup_has_demonstrably_different_margin_profile"
+  ],
+  "single_cover_does_not_reset_level_2_or_level_3": true,
+  "initial_team_watchlist": {
+    "New York Liberty": {
+      "status": "monitored_not_automatic_fade",
+      "restrictions_until_review": [
+        "no_A_grade_spread",
+        "no_spread_in_official_parlay",
+        "moneyline_or_derivative_requires_price_validation",
+        "no_duplicate_straight_and_parlay_exposure"
+      ]
+    },
+    "Los Angeles Dodgers": {
+      "status": "monitored_not_automatic_fade",
+      "restrictions_until_review": [
+        "no_A_grade_run_line",
+        "no_run_line_in_official_parlay",
+        "moneyline_or_derivative_requires_price_validation",
+        "no_duplicate_straight_and_parlay_exposure"
+      ]
+    }
+  },
+  "publishing_validation": [
+    "progressive_pattern_scan_completed",
+    "alert_level_recorded_or_none",
+    "straight_up_data_separated_from_cover_data",
+    "grade_and_unit_adjustment_applied",
+    "alternate_markets_evaluated",
+    "parlay_restrictions_enforced",
+    "team_level_exposure_cap_enforced",
+    "duplicate_exposure_check_completed",
+    "writeup_explains_market_tax_and_failure_path",
+    "line_inside_no_bet_cutoff",
+    "no_unsupported_trend_statistics",
+    "endpoint_preserves_alert_fields"
+  ],
+  "record_fields": [
+    "Favorite Inflation Alert",
+    "Inflation Alert Level",
+    "Last 5 Cover Record",
+    "Last 10 Cover Record",
+    "Last 20 Cover Record",
+    "Favorite Cover Rate",
+    "Consecutive Non-Covers",
+    "Average Margin vs Closing Line",
+    "Comparable Spread Band Record",
+    "Public Ticket Percentage",
+    "Handle Percentage",
+    "Opening Line",
+    "Closing Line",
+    "Inflation Grade Adjustment",
+    "Inflation Unit Adjustment",
+    "Alternate Market Reviewed",
+    "Preferred Derivative Market",
+    "Duplicate Team Exposure",
+    "Combined Team Exposure",
+    "Margin Creation Evidence",
+    "Post-Card Error Type",
+    "Pattern Reset Condition"
+  ],
+  "governing_rule": "Protect the bankroll from repeatedly paying a premium for elite teams that win games but fail to beat the number. Team quality sets the baseline; price, margin performance, market selection, and total exposure determine whether the bet belongs on the card."
+}

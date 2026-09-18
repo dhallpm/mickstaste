@@ -1,0 +1,81 @@
+{
+  "module": "Micks Picks Futures Lab",
+  "effectiveDate": "2026-08-24",
+  "separateFromDailyCard": true,
+  "recoveryModeDailyCapApplies": false,
+  "scoreMax": 100,
+  "scoreFactors": {
+    "micksProbabilityEdge": 25,
+    "deviggedMarketConsensusAndPrice": 15,
+    "externalModelAgreement": 15,
+    "rosterRoleHealthDurability": 10,
+    "schedulePathFormat": 10,
+    "marketIntelligence": 10,
+    "simulationRobustness": 10,
+    "portfolioFitCorrelation": 5
+  },
+  "releaseGates": {
+    "minimumScore": 78,
+    "minimumFailureScore": 7,
+    "minimumEstimatedEvPct": 5,
+    "preferredLongDatedEvPct": 8,
+    "thinMarketPreferredEvPct": 10,
+    "minimumIndependentSupportPaths": 2
+  },
+  "units": {
+    "A": 0.5,
+    "A-": 0.4,
+    "B+": 0.3,
+    "B": 0.2,
+    "B-": 0.1,
+    "C": 0,
+    "Pass": 0
+  },
+  "portfolioLimits": {
+    "maxOpenExposureUnits": 2.0,
+    "maxOutcomeClusterUnits": 0.75,
+    "maxSingleFutureUnits": 0.5,
+    "maxCorrelatedChampionshipClusterUnits": 0.75,
+    "maxAwardsNarrativeClusterUnits": 0.5
+  },
+  "probabilityEngine": {
+    "independentMicksEstimateFirst": true,
+    "devigMarket": true,
+    "multipleBooksPreferred": true,
+    "simulationPreferredTrials": 10000,
+    "shrinkExtremeEstimatesWhenUncertain": true,
+    "fairOddsRequired": true,
+    "estimatedEvRequired": true
+  },
+  "requiredFields": [
+    "Sport",
+    "League",
+    "Market",
+    "Pick",
+    "Sportsbook",
+    "Posted Odds",
+    "Current Best Price",
+    "Micks Probability",
+    "Market Fair Probability",
+    "Micks Fair Odds",
+    "Estimated EV",
+    "Score",
+    "Failure Score",
+    "Grade",
+    "Units",
+    "Best Number",
+    "No-Bet Cutoff",
+    "Market Intelligence",
+    "Risk",
+    "Posted At",
+    "Status",
+    "Correlation Group"
+  ],
+  "tracking": {
+    "freezeReleaseSnapshot": true,
+    "trackCurrentPrice": true,
+    "trackMarkToMarket": true,
+    "trackClosingPriceWhenComparable": true,
+    "clvLabels": ["Beat Close", "Neutral", "Lost Close", "Unavailable"]
+  }
+}

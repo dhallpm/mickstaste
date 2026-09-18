@@ -1,0 +1,54 @@
+{
+  "effective_date": "2026-09-18",
+  "changes_scoring_weights": false,
+  "new_statistical_adjustments": [],
+  "rolling_performance_review": {
+    "status": "not_recomputed_in_this_run",
+    "sample_size": null,
+    "reason": "Do not infer complete verified executions, results or comparable closing odds from conversation summaries."
+  },
+  "lessons": [
+    {
+      "id": "PK-001",
+      "verified_on": "2026-09-18",
+      "type": "confirmed_accounting",
+      "action": "Sparks September 17 not bet because odds failed cutoff. PASS / PRICE NOT MET; stake and P/L zero; excluded from betting W/L and ROI."
+    },
+    {
+      "id": "PK-002",
+      "verified_on": "2026-09-18",
+      "type": "confirmed_preference",
+      "action": "NFL Recovery Mode+ is OFF. NFL standard; other daily sports retain Recovery Mode+."
+    },
+    {
+      "id": "PK-003",
+      "verified_on": "2026-09-18",
+      "type": "retrieval",
+      "action": "Original VSiN and Fantasy Life PDFs exist in Micks Picks/Reference Guides. Consult relevant pages and current updates; preserve provenance without copying the publications."
+    },
+    {
+      "id": "PK-004",
+      "verified_on": "2026-09-18",
+      "type": "source_quality",
+      "action": "September 18 Doc's Boston -160 and Toronto -196 differed materially from dated market references +113 and -137. Stale article prices cannot earn confirmation or establish a line-movement series."
+    },
+    {
+      "id": "PK-005",
+      "verified_on": "2026-09-18",
+      "type": "existing_rules",
+      "action": "Carry forward June 8 and July 12 risk controls; review margin versus line, not only wins, and prevent duplicated/correlated exposure."
+    },
+    {
+      "id": "PK-006",
+      "verified_on": "2026-09-18",
+      "type": "model_integrity",
+      "action": "Framework rules are not proof of a calibrated probability model execution. Unknown fair probabilities remain null; outside predictions remain outside predictions."
+    },
+    {
+      "id": "PK-007",
+      "verified_on": "2026-09-18",
+      "type": "source_quality",
+      "action": "Use the dated official injury designation rather than a generic game-time tag. Clark was probable in the September 17 4:45 p.m. ET report; final September 18 clearance remains a separate check."
+    }
+  ]
+}

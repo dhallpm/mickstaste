@@ -1,0 +1,757 @@
+[
+  {
+    "source": "docs-page1",
+    "url": "https://www.docsports.com/free-picks/",
+    "status": "SUPPORTING ONLY",
+    "observations": "Listing checked; exact picks still require dated selection/price validation.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:01:12.445571+00:00",
+    "http_status": 200
+  },
+  {
+    "source": "docs-page2",
+    "url": "https://www.docsports.com/free-picks/?start=20",
+    "status": "SUPPORTING ONLY",
+    "observations": "Legacy page 2 checked; no duplicate confirmation awarded.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:01:12.409433+00:00",
+    "http_status": 200
+  },
+  {
+    "source": "docs-page3",
+    "url": "https://www.docsports.com/free-picks/?start=40",
+    "status": "SUPPORTING ONLY",
+    "observations": "Legacy page 3 checked; future-day listings excluded.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:01:12.324426+00:00",
+    "http_status": 200
+  },
+  {
+    "source": "rotowire-lineups",
+    "url": "https://www.rotowire.com/baseball/daily-lineups.php",
+    "status": "CURRENT",
+    "observations": "All 15 games screened; expected orders are not confirmed. Starter conflicts remain.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:01:12.515244+00:00",
+    "http_status": 200
+  },
+  {
+    "source": "rotowire-weather",
+    "url": "https://www.rotowire.com/baseball/weather.php",
+    "status": "CURRENT",
+    "observations": "Weather board checked; Coors rain risk flagged. A domed-park label is not roof-status confirmation.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:01:12.031175+00:00",
+    "http_status": 200
+  },
+  {
+    "source": "rotowire-bullpen",
+    "url": "https://www.rotowire.com/baseball/bullpen-usage.php",
+    "status": "SUPPORTING ONLY",
+    "observations": "Used primary September 16–17 box scores for Boston/Tampa and Toronto/Texas workload audit.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:01:12.361699+00:00",
+    "http_status": 200
+  },
+  {
+    "source": "savant-cease",
+    "url": "https://baseballsavant.mlb.com/savant-player/dylan-cease-656302",
+    "status": "CURRENT",
+    "observations": "Season starter strikeouts, walks, innings, ERA and pitch-quality indicators inspected.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:01:11.215940+00:00",
+    "http_status": 200
+  },
+  {
+    "source": "savant-suarez",
+    "url": "https://baseballsavant.mlb.com/savant-player/ranger-suarez-624133",
+    "status": "CURRENT",
+    "observations": "Season innings, strikeouts, walks, home runs and ERA inspected.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:01:11.112723+00:00",
+    "http_status": 200
+  },
+  {
+    "source": "fangraphs-pitching",
+    "url": "https://www.fangraphs.com/leaders/major-league?pos=all&stats=pit&lg=all&qual=y&type=1&season=2026",
+    "status": "INACCESSIBLE",
+    "observations": "Leader table could not be verified in this run.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00",
+    "http_status": null
+  },
+  {
+    "source": "fangraphs-playoffs",
+    "url": "https://www.fangraphs.com/standings/playoff-odds",
+    "status": "INACCESSIBLE",
+    "observations": "This route failed; alternate official division projection page succeeded below.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00",
+    "http_status": null
+  },
+  {
+    "source": "baseball-reference",
+    "url": "https://www.baseball-reference.com/leagues/majors/2026.shtml",
+    "status": "INACCESSIBLE",
+    "observations": "403 response; no data credited.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00",
+    "http_status": null
+  },
+  {
+    "source": "umpire-scorecards",
+    "url": "https://umpscorecards.com/",
+    "status": "SUPPORTING ONLY",
+    "observations": "Historical profiles do not establish today's plate assignment.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:01:18.731112+00:00",
+    "http_status": 200
+  },
+  {
+    "source": "action-mlb",
+    "url": "https://www.actionnetwork.com/mlb/odds",
+    "status": "SUPPORTING ONLY",
+    "observations": "Comparison board accessible; bookmaker-column mapping not sufficiently verified for best-executable claim.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:01:20.750019+00:00",
+    "http_status": 200
+  },
+  {
+    "source": "covers-mlb",
+    "url": "https://www.covers.com/sport/baseball/mlb/odds",
+    "status": "SUPPORTING ONLY",
+    "observations": "Odds page checked; not used as an executed-price record.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:01:21.176372+00:00",
+    "http_status": 200
+  },
+  {
+    "source": "statmuse-mlb",
+    "url": "https://www.statmuse.com/mlb/ask/dylan-cease-stats-this-season",
+    "status": "CURRENT",
+    "observations": "Cease season and recent-start results checked; five walks September 13 flagged.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:01:21.286413+00:00",
+    "http_status": 200
+  },
+  {
+    "source": "action-cfb",
+    "url": "https://www.actionnetwork.com/ncaaf/odds",
+    "status": "SUPPORTING ONLY",
+    "observations": "Market comparison only; no verified sharp sequence.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:01:21.085253+00:00",
+    "http_status": 200
+  },
+  {
+    "source": "covers-cfb",
+    "url": "https://www.covers.com/sport/football/ncaaf/odds",
+    "status": "SUPPORTING ONLY",
+    "observations": "Market comparison checked.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:01:24.909066+00:00",
+    "http_status": 200
+  },
+  {
+    "source": "teamrankings-cfb",
+    "url": "https://www.teamrankings.com/college-football/",
+    "status": "SUPPORTING ONLY",
+    "observations": "Use corrected /ncf/ route below; model is external, not Micks.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:01:26.694373+00:00",
+    "http_status": 200
+  },
+  {
+    "source": "wnba-official",
+    "url": "https://www.wnba.com/injuries",
+    "status": "INACCESSIBLE",
+    "observations": "Incorrect route; league injury PDF recovered via dated RotoWire report below.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00",
+    "http_status": null
+  },
+  {
+    "source": "wnba-reference",
+    "url": "https://www.basketball-reference.com/wnba/years/2026.html",
+    "status": "INACCESSIBLE",
+    "observations": "403; no recent margin sample credited.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00",
+    "http_status": null
+  },
+  {
+    "source": "rotowire-wnba",
+    "url": "https://www.rotowire.com/basketball/wnba-lineups.php",
+    "status": "INACCESSIBLE",
+    "observations": "Incorrect route; corrected /wnba/lineups.php checked below.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00",
+    "http_status": null
+  },
+  {
+    "source": "covers-wnba",
+    "url": "https://www.covers.com/sport/basketball/wnba/odds",
+    "status": "SUPPORTING ONLY",
+    "observations": "Board checked; no independent model margin established.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:01:27.893654+00:00",
+    "http_status": 200
+  },
+  {
+    "source": "opta-soccer",
+    "url": "https://theanalyst.com/competition/premier-league/fixtures",
+    "status": "INACCESSIBLE",
+    "observations": "Fixture shell accessible but applicable xG data not returned.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:01:25.916544+00:00",
+    "http_status": 200
+  },
+  {
+    "source": "fbref-soccer",
+    "url": "https://fbref.com/en/comps/9/Premier-League-Stats",
+    "status": "INACCESSIBLE",
+    "observations": "403; no xG evidence credited.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00",
+    "http_status": null
+  },
+  {
+    "source": "cfl-schedule",
+    "url": "https://www.cfl.ca/schedule/2026/",
+    "status": "SUPPORTING ONLY",
+    "observations": "Official schedule shell accessible; ESPN returned no September 18 event.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:01:32.722219+00:00",
+    "http_status": 200
+  },
+  {
+    "source": "nascar-schedule",
+    "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+    "status": "INACCESSIBLE",
+    "observations": "Schedule route failed; official weekend page recovered below.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00",
+    "http_status": null
+  },
+  {
+    "source": "atp-schedule",
+    "url": "https://www.atptour.com/en/scores/current",
+    "status": "INACCESSIBLE",
+    "observations": "Official endpoint blocked; no match release.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00",
+    "http_status": null
+  },
+  {
+    "source": "wta-schedule",
+    "url": "https://www.wtatennis.com/tournaments",
+    "status": "SUPPORTING ONLY",
+    "observations": "Tournament inventory only; match status and exact prices unverified.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:01:26.887757+00:00",
+    "http_status": 200
+  },
+  {
+    "source": "boxing-schedule",
+    "url": "https://www.espn.com/boxing/story/_/id/12508267/boxing-schedule",
+    "status": "CURRENT",
+    "observations": "Covered major-card schedule points to September 19; not proof of no boxing worldwide.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:01:30.109223+00:00",
+    "http_status": 200
+  },
+  {
+    "source": "ufc-schedule",
+    "url": "https://www.ufc.com/events",
+    "status": "CURRENT",
+    "observations": "Next listed UFC event September 19; no Friday UFC/DWCS release.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:01:31.924745+00:00",
+    "http_status": 200
+  },
+  {
+    "source": "weather-lubbock",
+    "url": "https://forecast.weather.gov/MapClick.php?lat=33.585&lon=-101.885",
+    "status": "CURRENT",
+    "observations": "September 18 NWS forecast inspected; tonight mostly clear with south wind about 10 mph.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:01:32.290203+00:00",
+    "http_status": 200
+  },
+  {
+    "source": "weather-cincinnati",
+    "url": "https://forecast.weather.gov/MapClick.php?lat=39.097&lon=-84.508",
+    "status": "CURRENT",
+    "observations": "Primary weather endpoint checked; no candidate released from weather alone.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:01:32.290316+00:00",
+    "http_status": 200
+  },
+  {
+    "source": "weather-pittsburgh",
+    "url": "https://forecast.weather.gov/MapClick.php?lat=40.447&lon=-80.006",
+    "status": "CURRENT",
+    "observations": "Primary weather endpoint checked; no candidate released from weather alone.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:01:32.136252+00:00",
+    "http_status": 200
+  },
+  {
+    "source": "fantasylife-weekly",
+    "url": "https://www.fantasylife.com/nfl/utilization-report",
+    "status": "NOT APPLICABLE",
+    "observations": "Redirect yielded utilization landing content; no weekly numeric projection verified. No NFL game today.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:01:37.727167+00:00",
+    "http_status": 200
+  },
+  {
+    "source": "futures-odds",
+    "url": "https://www.vegasinsider.com/mlb/odds/futures/",
+    "status": "SUPPORTING ONLY",
+    "observations": "World Series odds board screened; book mapping/execution and independent probabilities not established.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:01:32.714398+00:00",
+    "http_status": 200
+  },
+  {
+    "source": "MLB primary schedule",
+    "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-09-16&endDate=2026-09-18&hydrate=probablePitcher",
+    "status": "CURRENT",
+    "observations": "September 16–18 schedules/probables checked. Probable is not confirmed; Colorado and Philadelphia discrepancies remain.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "MLB official lineups",
+    "url": "https://www.mlb.com/starting-lineups",
+    "status": "CURRENT",
+    "observations": "Batting-order confirmations incomplete at this midday check.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "VSiN main",
+    "url": "https://vsin.com/",
+    "status": "CURRENT",
+    "observations": "Current analysis and required tools inventoried.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "VSiN Greg Peterson",
+    "url": "https://vsin.com/mlb/mlb-picks-today-greg-peterson-best-bets-friday-september-18/",
+    "status": "CURRENT",
+    "observations": "Outside picks/fair lines inspected, not relabeled as independent Micks output.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "VSiN Adam Burke MLB",
+    "url": "https://vsin.com/mlb/mlb-picks-today-adam-burkes-best-bets-for-friday-september-18/",
+    "status": "CURRENT",
+    "observations": "Boston/Houston external support checked; same VSiN family.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "VSiN CFB Houston",
+    "url": "https://vsin.com/college-football/college-football-week-3-picks-houston-vs-texas-tech/",
+    "status": "SUPPORTING ONLY",
+    "observations": "Dated preview and Tech -10.5 outside fair number considered; article market timestamp September 16.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "VSiN Miami preview",
+    "url": "https://vsin.com/college-football/college-football-week-3-picks-miami-vs-wake-forest/",
+    "status": "SUPPORTING ONLY",
+    "observations": "Over opinion conflicts with lower outside scoring ratings; no independent Micks total.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "VSiN CFB ratings",
+    "url": "https://data.vsin.com/college-football/weekly-power-ratings/",
+    "status": "CURRENT",
+    "observations": "Tech -13.7 power / -14.2 effective-strength / -12.5 bettor rating conflicts with Houston +7.5 thesis.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "VSiN WNBA ratings",
+    "url": "https://data.vsin.com/wnba/daily-power-ratings/",
+    "status": "CURRENT",
+    "observations": "September 18 matchups read; opposing Golden State ratings and insufficient Toronto gap flagged.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "VSiN JOLT",
+    "url": "https://data.vsin.com/propicks/jolt/",
+    "status": "INACCESSIBLE",
+    "observations": "No actual current selection rows returned; zero confirmation.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "VSiN VOLT",
+    "url": "https://data.vsin.com/propicks/volt/",
+    "status": "INACCESSIBLE",
+    "observations": "No actual current selection rows returned; zero confirmation.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "VSiN Opta props",
+    "url": "https://data.vsin.com/projections/?sport=mlb",
+    "status": "INACCESSIBLE",
+    "observations": "Current executable prop projections/prices not returned.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "VSiN NRFI/YRFI",
+    "url": "https://vsin.com/projections-yrfi/",
+    "status": "INACCESSIBLE",
+    "observations": "Tool reports temporary unavailability/feed refresh; checked again, no current model rows.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "VSiN F5",
+    "url": "https://data.vsin.com/mlb/analysis/team-summary/?view=f5",
+    "status": "SUPPORTING ONLY",
+    "observations": "Season team data accessible; no event-specific executable F5 quote verified.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "VSiN plate umpire profiles",
+    "url": "https://data.vsin.com/mlb/analysis/umpire-summary/",
+    "status": "SUPPORTING ONLY",
+    "observations": "Season profiles available; assignment unverified.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "VSiN DraftKings splits",
+    "url": "https://data.vsin.com/betting-splits/?source=DK&sport=MLB",
+    "status": "SUPPORTING ONLY",
+    "observations": "Only limited free game data visible; no candidate-specific split points awarded.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "VSiN Circa sheets",
+    "url": "https://vsin.com/tools/vegas-betting-sheets/",
+    "status": "INACCESSIBLE",
+    "observations": "Landing page read; dated executable sheet prices not verified.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "Docs required main",
+    "url": "https://www.docsports.com/#freepicks",
+    "status": "SUPPORTING ONLY",
+    "observations": "Main/free-picks checked; outside support only after exact selection validation.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "Docs required statistics",
+    "url": "https://www.docsports.com/statistics/matches.html",
+    "status": "INACCESSIBLE",
+    "observations": "Page shell does not supply verified candidate data.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "Docs required videos",
+    "url": "https://www.docsports.com/video/free-picks/",
+    "status": "SUPPORTING ONLY",
+    "observations": "Current dated videos listed; Houston/Tech title is not a readable exact selection.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "Docs required AI-v3",
+    "url": "https://www.docsports.com/cappers.html?cap_id=88",
+    "status": "INACCESSIBLE",
+    "observations": "No accessible exact relevant current selection; marketing excluded.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "Docs Boston article",
+    "url": "https://www.docsports.com/free-picks/baseball/2026/boston-red-sox-vs-tampa-bay-rays-prediction-9-18-2026-mlb-picks-best-bets-odds.html",
+    "status": "STALE",
+    "observations": "Article Boston -160 / total 8.5 conflicts with current Boston +113 / total 7; no price confirmation.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "Docs Toronto article",
+    "url": "https://www.docsports.com/free-picks/baseball/2026/toronto-blue-jays-vs-texas-rangers-prediction-9-18-2026-mlb-picks-best-bets-odds.html",
+    "status": "STALE",
+    "observations": "Article -196 / total 9 conflicts with current -137 / total 7.5; no price confirmation.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "TeamRankings MLB",
+    "url": "https://www.teamrankings.com/mlb/",
+    "status": "SUPPORTING ONLY",
+    "observations": "Current schedule/power context checked; not a Micks probability.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "TeamRankings CFB corrected",
+    "url": "https://www.teamrankings.com/ncf/",
+    "status": "SUPPORTING ONLY",
+    "observations": "Current college football context checked.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "RotoWire WNBA corrected",
+    "url": "https://www.rotowire.com/wnba/lineups.php",
+    "status": "CURRENT",
+    "observations": "Expected orders and injury tags inspected; generic GTD label is not official questionable status.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "WNBA injury PDF",
+    "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-09-17_04_45PM.pdf",
+    "status": "SUPPORTING ONLY",
+    "observations": "September 17 4:45 p.m. ET report: Clark probable, Conde questionable, Toronto Mabrey/Morrow/Sykes out. Other September 18 teams not yet submitted. Not final game-day clearance.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "FanGraphs playoff alternative",
+    "url": "https://www.fangraphs.com/standings/playoff-odds/fg/div",
+    "status": "CURRENT",
+    "observations": "Accessible external playoff probabilities reviewed. No Micks probability/simulation or executable consensus established.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "NASCAR official weekend",
+    "url": "https://www.nascar.com/weekend-schedule/weekend-schedule-for-2026-bristol-motor-speedway-chase-race/",
+    "status": "CURRENT",
+    "observations": "Friday O'Reilly race at Bristol 7:30 p.m. ET; no practice/qualifying-price model verified.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "PGA official schedule",
+    "url": "https://www.pgatour.com/schedule",
+    "status": "INACCESSIBLE",
+    "observations": "403; ESPN dates confirm Biltmore event in progress.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "DP World official schedule",
+    "url": "https://www.europeantour.com/dpworld-tour/schedule/",
+    "status": "SUPPORTING ONLY",
+    "observations": "Schedule accessed; ESPN identifies BMW PGA Championship in progress.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "LPGA official schedule",
+    "url": "https://www.lpga.com/tournaments",
+    "status": "SUPPORTING ONLY",
+    "observations": "Schedule page checked; no dated match price or candidate verified.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "MLB box score 822763",
+    "url": "https://statsapi.mlb.com/api/v1/game/822763/boxscore",
+    "status": "CURRENT",
+    "observations": "Individual pitching lines inspected for two-day bullpen usage; appearance does not prove next-day availability.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "MLB box score 822926",
+    "url": "https://statsapi.mlb.com/api/v1/game/822926/boxscore",
+    "status": "CURRENT",
+    "observations": "Individual pitching lines inspected for two-day bullpen usage; appearance does not prove next-day availability.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "MLB box score 822846",
+    "url": "https://statsapi.mlb.com/api/v1/game/822846/boxscore",
+    "status": "CURRENT",
+    "observations": "Individual pitching lines inspected for two-day bullpen usage; appearance does not prove next-day availability.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "MLB box score 822924",
+    "url": "https://statsapi.mlb.com/api/v1/game/822924/boxscore",
+    "status": "CURRENT",
+    "observations": "Individual pitching lines inspected for two-day bullpen usage; appearance does not prove next-day availability.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "MLB box score 822845",
+    "url": "https://statsapi.mlb.com/api/v1/game/822845/boxscore",
+    "status": "CURRENT",
+    "observations": "Individual pitching lines inspected for two-day bullpen usage; appearance does not prove next-day availability.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "ESPN WNBA",
+    "url": "https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/scoreboard?dates=20260918&limit=100",
+    "status": "CURRENT",
+    "observations": "Dated event inventory and quoted benchmark odds where present; not BetRivers execution. API close field is latest pregame quote, not a settled closing price.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "ESPN NWSL",
+    "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.nwsl/scoreboard?dates=20260918&limit=100",
+    "status": "CURRENT",
+    "observations": "Dated event inventory and quoted benchmark odds where present; not BetRivers execution. API close field is latest pregame quote, not a settled closing price.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "ESPN MLS",
+    "url": "https://site.api.espn.com/apis/site/v2/sports/soccer/usa.1/scoreboard?dates=20260918&limit=100",
+    "status": "CURRENT",
+    "observations": "Dated event inventory and quoted benchmark odds where present; not BetRivers execution. API close field is latest pregame quote, not a settled closing price.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "ESPN UFL",
+    "url": "https://site.api.espn.com/apis/site/v2/sports/football/ufl/scoreboard?dates=20260918&limit=100",
+    "status": "CURRENT",
+    "observations": "Dated event inventory and quoted benchmark odds where present; not BetRivers execution. API close field is latest pregame quote, not a settled closing price.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "ESPN CFB",
+    "url": "https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=20260918&limit=100",
+    "status": "CURRENT",
+    "observations": "Dated event inventory and quoted benchmark odds where present; not BetRivers execution. API close field is latest pregame quote, not a settled closing price.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "ESPN NCAAB",
+    "url": "https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/scoreboard?dates=20260918&limit=100",
+    "status": "CURRENT",
+    "observations": "Dated event inventory and quoted benchmark odds where present; not BetRivers execution. API close field is latest pregame quote, not a settled closing price.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "ESPN NCAAW",
+    "url": "https://site.api.espn.com/apis/site/v2/sports/basketball/womens-college-basketball/scoreboard?dates=20260918&limit=100",
+    "status": "CURRENT",
+    "observations": "Dated event inventory and quoted benchmark odds where present; not BetRivers execution. API close field is latest pregame quote, not a settled closing price.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  },
+  {
+    "source": "ESPN MLB",
+    "url": "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard?dates=20260918&limit=100",
+    "status": "CURRENT",
+    "observations": "Dated event inventory and quoted benchmark odds where present; not BetRivers execution. API close field is latest pregame quote, not a settled closing price.",
+    "source_as_of": null,
+    "retrieved_during": "2026-09-18 scan",
+    "access_timestamp": "2026-09-18T17:24:07.008667+00:00"
+  }
+]
