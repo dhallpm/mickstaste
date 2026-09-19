@@ -57,7 +57,7 @@ function normalize(row = {}, cardDate = '') {
   const odds = text(row.Odds || row.odds || line)
   const grade = text(row.Grade || row.grade).toUpperCase()
   const rawUnits = row.Units ?? row.units ?? 0
-  const units = /^TBD\b/i.test(text(rawUnits)) ? text(rawUnits) : Number(rawUnits) || 0
+  const units = row.hideWagerAmounts === true ? '' : /^TBD\b/i.test(text(rawUnits)) ? text(rawUnits) : Number(rawUnits) || 0
   const writeup = text(row.Writeup || row.writeup)
   const fullAnalysis = text(row['Full Analysis'] || row.fullAnalysis || row.full)
   const bestNumber = text(row['Best Number'] || row.bestNumber || row.best)
