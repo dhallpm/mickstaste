@@ -3,7 +3,7 @@
 (function () {
   const TZ = 'America/New_York';
   const FINAL_RE = /\b(win|won|loss|lost|push|void|cancelled|canceled|settled|graded|closed|final|complete|completed|archived|removed|invalid)\b/i;
-  const OPEN_RE = /\b(active|posted|released|open|pending|pregame|manual approved|api pending)\b/i;
+  const OPEN_RE = /\b(active|posted|released|open|pending|pregame|watch|watchlist|manual approved|api pending)\b/i;
   const PLAYER_PROP_RE = /\b(player prop|prop|points?|pts|rebounds?|rebs|assists?|asts|pra|p\+r\+a|\bpa\b|\bra\b|strikeouts?|\bks\b|k's|\bhrr\b|hits?\s*(?:\+|and)\s*runs?\s*(?:\+|and)\s*rbi?s?|total bases|\btb\b|home runs?|\bhr\b|hits?|rbi|shots on goal|\bsog\b|saves|round|distance)\b/i;
   const NON_PROP_RE = /\b(parlay|lotto|5-leg|6-leg|7-leg|8-leg|sgp|same game|moneyline|money line|\bml\b|spread|run line|puck line|game total|full game total|team total|period total|quarter total|half|1h|2h)\b/i;
   const PARLAY_ONLY_RE = /\b(parlay|5-leg|6-leg|7-leg|8-leg|sgp|same game|ladder|sprinkle)\b/i;
@@ -69,7 +69,12 @@
     return m ? `${m[2]}/${m[3]}/${m[1]}` : esc(value || '--');
   }
 
-  function todayKey() { return new Date().toLocaleDateString('en-CA', { timeZone: TZ }); }
+  function todayKey() {
+    const now = new Date();
+    const hour = Number(new Intl.DateTimeFormat('en-US', { timeZone: TZ, hour: '2-digit', hourCycle: 'h23' }).format(now));
+    const cardTime = hour < 2 ? new Date(now.getTime() - 24 * 60 * 60 * 1000) : now;
+    return cardTime.toLocaleDateString('en-CA', { timeZone: TZ });
+  }
 
   function statusText(row) {
     return [getValue(row, 'status'), getValue(row, 'release'), getValue(row, 'result'), getValue(row, 'confirm')].map(text).filter(Boolean).join(' ');
@@ -81,10 +86,7 @@
 
   function isCurrentActive(row) {
     const rowDate = dateKey(getValue(row, 'date') || getValue(row, 'timestamp'));
-    const release = lower(getValue(row, 'release'));
-    const status = lower(statusText(row));
-    const explicitlyActive = OPEN_RE.test(status) || /current active|active card/.test(release);
-    return rowDate === todayKey() || explicitlyActive;
+    return rowDate === todayKey();
   }
 
   function isOpenOrPending(row) {
