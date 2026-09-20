@@ -1,22 +1,22 @@
 {
-  "date": "2026-09-19",
+  "date": "2026-09-20",
   "cards": [
     {
-      "id": "nfl-delaware-big-super-2026-09-19",
-      "date": "2026-09-19",
+      "id": "nfl-daytime-super-2026-09-20",
+      "date": "2026-09-20",
       "eventDate": "2026-09-20",
-      "eventEndDate": "2026-09-21",
+      "eventEndDate": "2026-09-20",
       "section": "Lotto Parlays",
       "access": "free",
       "sport": "NFL",
       "league": "NFL",
-      "game": "NFL Week 2 — September 20–21, 2026",
-      "pick": "Bengals +9.5 / Steelers +13.5 / Vikings–Bears Under 55.5 / Giants +15.5 / Packers +4.5 / Jaguars–Broncos Under 51.5 / Chargers +1.5 / Cowboys +4.5 / Seahawks +3.5 / Eagles +1.5",
-      "cardTitle": "10-Pick Big / Super Teaser",
-      "type": "10-Pick Big / Super Teaser",
-      "market": "NFL parlay card",
-      "lineNumber": "Bengals +9.5 / Steelers +13.5 / Vikings–Bears Under 55.5 / Giants +15.5 / Packers +4.5 / Jaguars–Broncos Under 51.5 / Chargers +1.5 / Cowboys +4.5 / Seahawks +3.5 / Eagles +1.5",
-      "legs": "#106: Bengals +9.5\n#130: Steelers +13.5\n#120: Vikings–Bears Under 55.5\n#158: Giants +15.5\n#113: Packers +4.5\n#136: Jaguars–Broncos Under 51.5\n#137: Chargers +1.5\n#149: Cowboys +4.5\n#145: Seahawks +3.5\n#125: Eagles +1.5",
+      "game": "NFL Week 2 — Sunday September 20 — 1 PM / 4 PM ET",
+      "pick": "Falcons +9.5 / Bengals +9.5 / Buccaneers -0.5 / Packers +4.5 / Vikings–Bears Under 55.5 / Eagles +1.5 / Jaguars–Broncos Under 51.5 / Chargers +1.5 / 49ers -5.5 / Cowboys +4.5",
+      "cardTitle": "10-Pick Daytime Big / Super Teaser",
+      "type": "10-Pick Daytime Big / Super Teaser",
+      "market": "NFL parlay",
+      "lineNumber": "#102: Falcons +9.5 — 1:00 PM ET / #106: Bengals +9.5 — 1:00 PM ET / #109: Buccaneers -0.5 — 1:00 PM ET / #113: Packers +4.5 — 1:00 PM ET / #120: Vikings–Bears Under 55.5 — 1:00 PM ET / #125: Eagles +1.5 — 1:00 PM ET / #136: Jaguars–Broncos Under 51.5 — 4:05 PM ET / #137: Chargers +1.5 — 4:05 PM ET / #141: 49ers -5.5 — 4:25 PM ET / #149: Cowboys +4.5 — 4:25 PM ET",
+      "legs": "#102: Falcons +9.5 — 1:00 PM ET\n#106: Bengals +9.5 — 1:00 PM ET\n#109: Buccaneers -0.5 — 1:00 PM ET\n#113: Packers +4.5 — 1:00 PM ET\n#120: Vikings–Bears Under 55.5 — 1:00 PM ET\n#125: Eagles +1.5 — 1:00 PM ET\n#136: Jaguars–Broncos Under 51.5 — 4:05 PM ET\n#137: Chargers +1.5 — 4:05 PM ET\n#141: 49ers -5.5 — 4:25 PM ET\n#149: Cowboys +4.5 — 4:25 PM ET",
       "legCount": 10,
       "odds": "+650",
       "payoutOdds": "13 to 2",
@@ -30,40 +30,57 @@
       "pickOfTheDay": "No",
       "hideWagerAmounts": true,
       "showFullAnalysis": true,
-      "bestNumber": "Exact printed selections listed above",
-      "playableTo": "Listed card lines only",
-      "noBetCutoff": "Any worse line or unresolved material availability — pass/reassess",
-      "writeup": "The preferred Big/Super construction uses eight sides and two unders, with one selection per game. Pittsburgh receives a substantial cushion, Green Bay can lose by a field goal, and the two unders have room above the ordinary card totals. Cincinnati requires Joe Burrow to start without a material limitation. The Giants leg also depends on usable tackle availability. Seattle is a weaker confidence leg with Drew Lock starting for Sam Darnold. Dallas defensive absences and short-field scoring against either under are additional failure paths. All ten selections must win under the card rules. This is a WATCH construction, not an official Micks release; no premium grade or validated ticket hit probability is claimed.",
-      "fullAnalysis": "#106: Bengals +9.5\n#130: Steelers +13.5\n#120: Vikings–Bears Under 55.5\n#158: Giants +15.5\n#113: Packers +4.5\n#136: Jaguars–Broncos Under 51.5\n#137: Chargers +1.5\n#149: Cowboys +4.5\n#145: Seahawks +3.5\n#125: Eagles +1.5\n\nThe preferred Big/Super construction uses eight sides and two unders, with one selection per game. Pittsburgh receives a substantial cushion, Green Bay can lose by a field goal, and the two unders have room above the ordinary card totals. Cincinnati requires Joe Burrow to start without a material limitation. The Giants leg also depends on usable tackle availability. Seattle is a weaker confidence leg with Drew Lock starting for Sam Darnold. Dallas defensive absences and short-field scoring against either under are additional failure paths. All ten selections must win under the card rules. This is a WATCH construction, not an official Micks release; no premium grade or validated ticket hit probability is claimed.\n\nIf Burrow does not start or is materially limited, replace #106 with Buccaneers -0.5 (#109), provided no new Mayfield issue emerges. If Giants protection cannot be verified, or for an all-Sunday version, replace #158 with Chiefs +1.5 (#153), provided Mahomes remains unrestricted. Both substitutions may be used together.\n\nGiants: check the Monday tackle availability before entry. All listed numbers must match the printed Delaware ticket. These are alternative constructions with overlapping games, not three independent positions.",
-      "injuryNotes": "If Burrow does not start or is materially limited, replace #106 with Buccaneers -0.5 (#109), provided no new Mayfield issue emerges. If Giants protection cannot be verified, or for an all-Sunday version, replace #158 with Chiefs +1.5 (#153), provided Mahomes remains unrestricted. Both substitutions may be used together.",
-      "sourceVerification": "September 19 research using September 17 Delaware cards, original VSiN and Fantasy Life guides, current matchup analysis and official injury reports. Availability conditions remain pending.",
+      "bestNumber": "Exact printed Big/Super selections",
+      "playableTo": "Listed lines only; reassess any change",
+      "noBetCutoff": "Any worse line, unavailable combination or material availability change — reassess",
+      "writeup": "All ten games start in the Sunday 1 PM or 4 PM Eastern windows. Atlanta +9.5 and Cincinnati +9.5 replace the night-game legs from the earlier research ticket. Burrow is confirmed to start and Lindstrom is available. Eight selections overlap that earlier ticket; these are shared outcomes, not independent exposure. The printed Big/Super numbers apply exactly as listed, with one selection per game. Short-field scoring threatens the two unders, while San Francisco must win by six or more. This remains a WATCH research construction below official Micks release standards. All ten selections must win under the printed card rules.",
+      "fullAnalysis": "#102: Falcons +9.5 — 1:00 PM ET\n#106: Bengals +9.5 — 1:00 PM ET\n#109: Buccaneers -0.5 — 1:00 PM ET\n#113: Packers +4.5 — 1:00 PM ET\n#120: Vikings–Bears Under 55.5 — 1:00 PM ET\n#125: Eagles +1.5 — 1:00 PM ET\n#136: Jaguars–Broncos Under 51.5 — 4:05 PM ET\n#137: Chargers +1.5 — 4:05 PM ET\n#141: 49ers -5.5 — 4:25 PM ET\n#149: Cowboys +4.5 — 4:25 PM ET\n\nAll ten games start in the Sunday 1 PM or 4 PM Eastern windows. Atlanta +9.5 and Cincinnati +9.5 replace the night-game legs from the earlier research ticket. Burrow is confirmed to start and Lindstrom is available. Eight selections overlap that earlier ticket; these are shared outcomes, not independent exposure. The printed Big/Super numbers apply exactly as listed, with one selection per game. Short-field scoring threatens the two unders, while San Francisco must win by six or more. This remains a WATCH research construction below official Micks release standards. All ten selections must win under the printed card rules.\n\nUse only the September 17 Big/Super card. Research reviewed September 20 before kickoff; late-game final inactives remain subject to confirmation.",
+      "injuryNotes": "Use only the September 17 Big/Super card. Research reviewed September 20 before kickoff; late-game final inactives remain subject to confirmation.",
+      "sourceVerification": "September 20 pregame research. Burrow starting and Lindstrom available confirmed from team reports. Props are target thresholds from today's DraftKings analysis; combined sportsbook price unverified.",
       "sourceLinks": [
         {
           "title": "Delaware Big / Super Teaser, September 17",
           "url": "https://delotterywebcontent.blob.core.windows.net/delottery-site-assets/assets/sports/b5203cec-c34b-4a93-bf8c-964501c5065b_Delaware%20-%20Big%20Teaser%20-%20Super%209.17.2026.pdf"
+        },
+        {
+          "title": "Falcons final availability",
+          "url": "https://www.atlantafalcons.com/news/atlanta-falcons-week-2-inactives-vs-carolina-panthers"
+        },
+        {
+          "title": "Bengals final availability",
+          "url": "https://www.bengals.com/news/pregame-quick-hits-joe-burrow-gets-nod-shemar-makes-season-debut-with-b-j-hill-out"
+        },
+        {
+          "title": "Bijan prop analysis — September 20",
+          "url": "https://dknetwork.draftkings.com/2026/09/20/panthers-vs-falcons-nfl-player-prop-bets/"
+        },
+        {
+          "title": "Smith prop analysis — September 20",
+          "url": "https://dknetwork.draftkings.com/2026/09/20/devonta-smith-receiving-yards-pick-for-eagles-vs-titans/"
         }
-      ]
+      ],
+      "publishedAt": "2026-09-20T16:56:45.374Z"
     },
     {
-      "id": "nfl-delaware-regular-2026-09-19",
-      "date": "2026-09-19",
+      "id": "nfl-mixed-six-2026-09-20",
+      "date": "2026-09-20",
       "eventDate": "2026-09-20",
-      "eventEndDate": "2026-09-21",
+      "eventEndDate": "2026-09-20",
       "section": "Lotto Parlays",
       "access": "free",
       "sport": "NFL",
       "league": "NFL",
-      "game": "NFL Week 2 — September 20–21, 2026",
-      "pick": "Steelers +10.5 / Vikings–Bears Under 53.5 / Jaguars–Broncos Under 49.5 / Giants +13.5",
-      "cardTitle": "4-Pick Regular Teaser",
-      "type": "4-Pick Regular Teaser",
-      "market": "NFL parlay card",
-      "lineNumber": "Steelers +10.5 / Vikings–Bears Under 53.5 / Jaguars–Broncos Under 49.5 / Giants +13.5",
-      "legs": "#130: Steelers +10.5\n#120: Vikings–Bears Under 53.5\n#136: Jaguars–Broncos Under 49.5\n#158: Giants +13.5",
-      "legCount": 4,
-      "odds": "+250",
-      "payoutOdds": "5 to 2",
-      "sportsbook": "Delaware Lottery",
+      "game": "NFL Week 2 — Sunday September 20 — 1 PM / 4 PM ET",
+      "pick": "Buccaneers moneyline / Eagles moneyline / Vikings–Bears Under 47.5 / Jaguars–Broncos Under 45.5 / Bijan Robinson 130+ rushing + receiving yards / DeVonta Smith Over 59.5 receiving yards",
+      "cardTitle": "6-Leg Mixed Parlay — Games + Props",
+      "type": "6-Leg Mixed Parlay — Games + Props",
+      "market": "NFL parlay",
+      "lineNumber": "Buccaneers moneyline — 1:00 PM ET / Eagles moneyline — 1:00 PM ET / Vikings–Bears Under 47.5 — 1:00 PM ET / Jaguars–Broncos Under 45.5 — 4:05 PM ET / Bijan Robinson 130+ rushing + receiving yards — 1:00 PM ET / DeVonta Smith Over 59.5 receiving yards — 1:00 PM ET",
+      "legs": "Buccaneers moneyline — 1:00 PM ET\nEagles moneyline — 1:00 PM ET\nVikings–Bears Under 47.5 — 1:00 PM ET\nJaguars–Broncos Under 45.5 — 4:05 PM ET\nBijan Robinson 130+ rushing + receiving yards — 1:00 PM ET\nDeVonta Smith Over 59.5 receiving yards — 1:00 PM ET",
+      "legCount": 6,
+      "odds": "Price unverified",
+      "payoutOdds": "Combined price unverified",
+      "sportsbook": "Sportsbook — availability check required",
       "grade": "WATCH",
       "status": "Watch — conditional construction",
       "officialBet": "No",
@@ -73,40 +90,57 @@
       "pickOfTheDay": "No",
       "hideWagerAmounts": true,
       "showFullAnalysis": true,
-      "bestNumber": "Exact printed selections listed above",
-      "playableTo": "Listed card lines only",
-      "noBetCutoff": "Any worse line or unresolved material availability — pass/reassess",
-      "writeup": "This shorter regular teaser keeps the Pittsburgh cushion, the two under directions and a Giants back-door cover path across four separate games. The tradeoff is less protection than the Big card: a Giants loss by fourteen defeats this leg, and the totals have less room for late scoring. Overtime, turnovers that create short fields, and defensive touchdowns can undermine either under. A recovered Rams offense against an injured Giants defense is the main matchup concern. Giants tackle availability must be checked before entry. This remains a WATCH alternative, not an official Micks release. It shares four outcomes with the larger construction and should not be treated as independent exposure.",
-      "fullAnalysis": "#130: Steelers +10.5\n#120: Vikings–Bears Under 53.5\n#136: Jaguars–Broncos Under 49.5\n#158: Giants +13.5\n\nThis shorter regular teaser keeps the Pittsburgh cushion, the two under directions and a Giants back-door cover path across four separate games. The tradeoff is less protection than the Big card: a Giants loss by fourteen defeats this leg, and the totals have less room for late scoring. Overtime, turnovers that create short fields, and defensive touchdowns can undermine either under. A recovered Rams offense against an injured Giants defense is the main matchup concern. Giants tackle availability must be checked before entry. This remains a WATCH alternative, not an official Micks release. It shares four outcomes with the larger construction and should not be treated as independent exposure.\n\nIf Giants availability remains unresolved, omit that leg and use the first three selections on the regular teaser card. The three-pick regular teaser pays 7 to 5. Do not use Big/Super lines on this card.\n\nGiants: check the Monday tackle availability before entry. All listed numbers must match the printed Delaware ticket. These are alternative constructions with overlapping games, not three independent positions.",
-      "injuryNotes": "If Giants availability remains unresolved, omit that leg and use the first three selections on the regular teaser card. The three-pick regular teaser pays 7 to 5. Do not use Big/Super lines on this card.",
-      "sourceVerification": "September 19 research using September 17 Delaware cards, original VSiN and Fantasy Life guides, current matchup analysis and official injury reports. Availability conditions remain pending.",
+      "bestNumber": "Target lines listed; sportsbook quote unverified",
+      "playableTo": "Listed lines only; reassess any change",
+      "noBetCutoff": "Any worse line, unavailable combination or material availability change — reassess",
+      "writeup": "This six-leg construction combines two moneylines, two game unders and two player props. Bijan's offensive workload and Smith's leading receiving role support their inclusion, using thresholds from September 20 DraftKings analysis. These are target lines, not a verified executable sportsbook quote. Eagles moneyline and Smith receiving yards come from the same game; the sportsbook must permit and price that combination. A run-heavy Eagles win can cash the moneyline while Smith misses his threshold. The unders share direction with the Super ticket but have less point protection. This is a WATCH construction, not an official release. No combined payout or ticket hit probability is claimed.",
+      "fullAnalysis": "Buccaneers moneyline — 1:00 PM ET\nEagles moneyline — 1:00 PM ET\nVikings–Bears Under 47.5 — 1:00 PM ET\nJaguars–Broncos Under 45.5 — 4:05 PM ET\nBijan Robinson 130+ rushing + receiving yards — 1:00 PM ET\nDeVonta Smith Over 59.5 receiving yards — 1:00 PM ET\n\nThis six-leg construction combines two moneylines, two game unders and two player props. Bijan's offensive workload and Smith's leading receiving role support their inclusion, using thresholds from September 20 DraftKings analysis. These are target lines, not a verified executable sportsbook quote. Eagles moneyline and Smith receiving yards come from the same game; the sportsbook must permit and price that combination. A run-heavy Eagles win can cash the moneyline while Smith misses his threshold. The unders share direction with the Super ticket but have less point protection. This is a WATCH construction, not an official release. No combined payout or ticket hit probability is claimed.\n\nConfirm every target line, price, player availability and same-game eligibility before entry. Delaware teaser numbers and fixed payouts do not transfer to this mixed sportsbook ticket.",
+      "injuryNotes": "Confirm every target line, price, player availability and same-game eligibility before entry. Delaware teaser numbers and fixed payouts do not transfer to this mixed sportsbook ticket.",
+      "sourceVerification": "September 20 pregame research. Burrow starting and Lindstrom available confirmed from team reports. Props are target thresholds from today's DraftKings analysis; combined sportsbook price unverified.",
       "sourceLinks": [
         {
-          "title": "Delaware regular teaser, September 17",
-          "url": "https://delotterywebcontent.blob.core.windows.net/delottery-site-assets/assets/sports/aa7c4441-9384-41fc-b7e6-acd063944338_Delaware%20-%20Teaser%209.17.2026.pdf"
+          "title": "Delaware Big / Super Teaser, September 17",
+          "url": "https://delotterywebcontent.blob.core.windows.net/delottery-site-assets/assets/sports/b5203cec-c34b-4a93-bf8c-964501c5065b_Delaware%20-%20Big%20Teaser%20-%20Super%209.17.2026.pdf"
+        },
+        {
+          "title": "Falcons final availability",
+          "url": "https://www.atlantafalcons.com/news/atlanta-falcons-week-2-inactives-vs-carolina-panthers"
+        },
+        {
+          "title": "Bengals final availability",
+          "url": "https://www.bengals.com/news/pregame-quick-hits-joe-burrow-gets-nod-shemar-makes-season-debut-with-b-j-hill-out"
+        },
+        {
+          "title": "Bijan prop analysis — September 20",
+          "url": "https://dknetwork.draftkings.com/2026/09/20/panthers-vs-falcons-nfl-player-prop-bets/"
+        },
+        {
+          "title": "Smith prop analysis — September 20",
+          "url": "https://dknetwork.draftkings.com/2026/09/20/devonta-smith-receiving-yards-pick-for-eagles-vs-titans/"
         }
-      ]
+      ],
+      "publishedAt": "2026-09-20T16:56:45.375Z"
     },
     {
-      "id": "nfl-delaware-half-point-2026-09-19",
-      "date": "2026-09-19",
+      "id": "nfl-expanded-twelve-2026-09-20",
+      "date": "2026-09-20",
       "eventDate": "2026-09-20",
-      "eventEndDate": "2026-09-21",
+      "eventEndDate": "2026-09-20",
       "section": "Lotto Parlays",
       "access": "free",
       "sport": "NFL",
       "league": "NFL",
-      "game": "NFL Week 2 — September 20–21, 2026",
-      "pick": "Vikings–Bears Under 48.5 / Jaguars–Broncos Under 45.5 / Giants +7.5",
-      "cardTitle": "3-Pick Half-Point Parlay",
-      "type": "3-Pick Half-Point Parlay",
-      "market": "NFL parlay card",
-      "lineNumber": "Vikings–Bears Under 48.5 / Jaguars–Broncos Under 45.5 / Giants +7.5",
-      "legs": "#120: Vikings–Bears Under 48.5\n#136: Jaguars–Broncos Under 45.5\n#158: Giants +7.5",
-      "legCount": 3,
-      "odds": "+550",
-      "payoutOdds": "11 to 2",
-      "sportsbook": "Delaware Lottery",
+      "game": "NFL Week 2 — Sunday September 20 — 1 PM / 4 PM ET",
+      "pick": "Falcons +9.5 / Bengals +9.5 / Buccaneers -0.5 / Packers +4.5 / Vikings–Bears Under 55.5 / Eagles +1.5 / Jaguars–Broncos Under 51.5 / Chargers +1.5 / 49ers -5.5 / Cowboys +4.5 / Bijan Robinson 130+ rushing + receiving yards / DeVonta Smith Over 59.5 receiving yards",
+      "cardTitle": "12-Leg Expanded Multi — All Super Picks + Props",
+      "type": "12-Leg Expanded Multi — All Super Picks + Props",
+      "market": "NFL parlay",
+      "lineNumber": "Falcons +9.5 — 1:00 PM ET / Bengals +9.5 — 1:00 PM ET / Buccaneers -0.5 — 1:00 PM ET / Packers +4.5 — 1:00 PM ET / Vikings–Bears Under 55.5 — 1:00 PM ET / Eagles +1.5 — 1:00 PM ET / Jaguars–Broncos Under 51.5 — 4:05 PM ET / Chargers +1.5 — 4:05 PM ET / 49ers -5.5 — 4:25 PM ET / Cowboys +4.5 — 4:25 PM ET / Bijan Robinson 130+ rushing + receiving yards — 1:00 PM ET / DeVonta Smith Over 59.5 receiving yards — 1:00 PM ET",
+      "legs": "Falcons +9.5 — 1:00 PM ET\nBengals +9.5 — 1:00 PM ET\nBuccaneers -0.5 — 1:00 PM ET\nPackers +4.5 — 1:00 PM ET\nVikings–Bears Under 55.5 — 1:00 PM ET\nEagles +1.5 — 1:00 PM ET\nJaguars–Broncos Under 51.5 — 4:05 PM ET\nChargers +1.5 — 4:05 PM ET\n49ers -5.5 — 4:25 PM ET\nCowboys +4.5 — 4:25 PM ET\nBijan Robinson 130+ rushing + receiving yards — 1:00 PM ET\nDeVonta Smith Over 59.5 receiving yards — 1:00 PM ET",
+      "legCount": 12,
+      "odds": "Price unverified",
+      "payoutOdds": "Combined price unverified",
+      "sportsbook": "Sportsbook — alternate lines required",
       "grade": "WATCH",
       "status": "Watch — conditional construction",
       "officialBet": "No",
@@ -116,19 +150,36 @@
       "pickOfTheDay": "No",
       "hideWagerAmounts": true,
       "showFullAnalysis": true,
-      "bestNumber": "Exact printed selections listed above",
-      "playableTo": "Listed card lines only",
-      "noBetCutoff": "Any worse line or unresolved material availability — pass/reassess",
-      "writeup": "This is the more aggressive alternative: two ordinary totals and Giants +7.5 without the teaser allowance. Chicago–Minnesota must finish with no more than forty-eight points. Jacksonville–Denver must finish at forty-five or fewer. The Giants can win or lose by seven or fewer. Current totals commentary supports both under directions, but Chicago defensive weakness and Jacksonville scoring efficiency are real counterarguments. The Giants still require a workable protection plan against the Rams. These three selections overlap the larger cards. This is a WATCH construction with no official Micks release or premium grade.",
-      "fullAnalysis": "#120: Vikings–Bears Under 48.5\n#136: Jaguars–Broncos Under 45.5\n#158: Giants +7.5\n\nThis is the more aggressive alternative: two ordinary totals and Giants +7.5 without the teaser allowance. Chicago–Minnesota must finish with no more than forty-eight points. Jacksonville–Denver must finish at forty-five or fewer. The Giants can win or lose by seven or fewer. Current totals commentary supports both under directions, but Chicago defensive weakness and Jacksonville scoring efficiency are real counterarguments. The Giants still require a workable protection plan against the Rams. These three selections overlap the larger cards. This is a WATCH construction with no official Micks release or premium grade.\n\nKeep the Giants injury condition. If that leg cannot be supported, pass this three-pick construction rather than silently inserting a different selection.\n\nGiants: check the Monday tackle availability before entry. All listed numbers must match the printed Delaware ticket. These are alternative constructions with overlapping games, not three independent positions.",
-      "injuryNotes": "Keep the Giants injury condition. If that leg cannot be supported, pass this three-pick construction rather than silently inserting a different selection.",
-      "sourceVerification": "September 19 research using September 17 Delaware cards, original VSiN and Fantasy Life guides, current matchup analysis and official injury reports. Availability conditions remain pending.",
+      "bestNumber": "Target lines listed; sportsbook quote unverified",
+      "playableTo": "Listed lines only; reassess any change",
+      "noBetCutoff": "Any worse line, unavailable combination or material availability change — reassess",
+      "writeup": "This expanded multi combines all ten daytime Super directions with Bijan Robinson 130+ rushing and receiving yards and DeVonta Smith Over 59.5 receiving yards. It is a conditional sportsbook construction: the listed game numbers must be available as alternate lines, and the book must accept both same-game combinations. Atlanta with Bijan and Philadelphia with Smith add shared game exposure. The Delaware card's fixed payout does not apply. More required outcomes make this harder to complete than the ten-leg Super or six-leg mixed version. No executable combined quote, validated joint probability or official Micks grade is available. This remains WATCH and should not be presented as a confirmed offered ticket.",
+      "fullAnalysis": "Falcons +9.5 — 1:00 PM ET\nBengals +9.5 — 1:00 PM ET\nBuccaneers -0.5 — 1:00 PM ET\nPackers +4.5 — 1:00 PM ET\nVikings–Bears Under 55.5 — 1:00 PM ET\nEagles +1.5 — 1:00 PM ET\nJaguars–Broncos Under 51.5 — 4:05 PM ET\nChargers +1.5 — 4:05 PM ET\n49ers -5.5 — 4:25 PM ET\nCowboys +4.5 — 4:25 PM ET\nBijan Robinson 130+ rushing + receiving yards — 1:00 PM ET\nDeVonta Smith Over 59.5 receiving yards — 1:00 PM ET\n\nThis expanded multi combines all ten daytime Super directions with Bijan Robinson 130+ rushing and receiving yards and DeVonta Smith Over 59.5 receiving yards. It is a conditional sportsbook construction: the listed game numbers must be available as alternate lines, and the book must accept both same-game combinations. Atlanta with Bijan and Philadelphia with Smith add shared game exposure. The Delaware card's fixed payout does not apply. More required outcomes make this harder to complete than the ten-leg Super or six-leg mixed version. No executable combined quote, validated joint probability or official Micks grade is available. This remains WATCH and should not be presented as a confirmed offered ticket.\n\nOnly available if the sportsbook offers all ten alternate game lines and both props in one combination. No automatic substitutions or quoted combined payout.",
+      "injuryNotes": "Only available if the sportsbook offers all ten alternate game lines and both props in one combination. No automatic substitutions or quoted combined payout.",
+      "sourceVerification": "September 20 pregame research. Burrow starting and Lindstrom available confirmed from team reports. Props are target thresholds from today's DraftKings analysis; combined sportsbook price unverified.",
       "sourceLinks": [
         {
-          "title": "Delaware half-point card, September 17",
-          "url": "https://delotterywebcontent.blob.core.windows.net/delottery-site-assets/assets/sports/928a9b02-2362-4404-b6f7-25b9d1068fa3_Delaware%20-%20Half%20Pt%209.17.2026.pdf"
+          "title": "Delaware Big / Super Teaser, September 17",
+          "url": "https://delotterywebcontent.blob.core.windows.net/delottery-site-assets/assets/sports/b5203cec-c34b-4a93-bf8c-964501c5065b_Delaware%20-%20Big%20Teaser%20-%20Super%209.17.2026.pdf"
+        },
+        {
+          "title": "Falcons final availability",
+          "url": "https://www.atlantafalcons.com/news/atlanta-falcons-week-2-inactives-vs-carolina-panthers"
+        },
+        {
+          "title": "Bengals final availability",
+          "url": "https://www.bengals.com/news/pregame-quick-hits-joe-burrow-gets-nod-shemar-makes-season-debut-with-b-j-hill-out"
+        },
+        {
+          "title": "Bijan prop analysis — September 20",
+          "url": "https://dknetwork.draftkings.com/2026/09/20/panthers-vs-falcons-nfl-player-prop-bets/"
+        },
+        {
+          "title": "Smith prop analysis — September 20",
+          "url": "https://dknetwork.draftkings.com/2026/09/20/devonta-smith-receiving-yards-pick-for-eagles-vs-titans/"
         }
-      ]
+      ],
+      "publishedAt": "2026-09-20T16:56:45.375Z"
     }
   ]
 }
