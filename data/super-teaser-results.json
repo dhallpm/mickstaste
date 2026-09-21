@@ -2,6 +2,172 @@
   "success": true,
   "results": [
     {
+      "id": "nfl-delaware-big-super-2026-09-19",
+      "date": "2026-09-19",
+      "type": "10-Pick Big / Super Teaser",
+      "result": "LOSS",
+      "record": "7-2; 1 pending",
+      "payout": "13 to 2",
+      "legs": [
+        {
+          "pick": "Bengals +9.5",
+          "result": "Win",
+          "final": "HOU 6; CIN 20",
+          "gradingMargin": 23.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872934"
+        },
+        {
+          "pick": "Steelers +13.5",
+          "result": "Loss",
+          "final": "NE 20; PIT 3",
+          "gradingMargin": -3.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872946"
+        },
+        {
+          "pick": "Vikings\u2013Bears Under 55.5",
+          "result": "Win",
+          "final": "CHI 3; MIN 9",
+          "gradingMargin": 43.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872937"
+        },
+        {
+          "pick": "Giants +15.5",
+          "result": "Pending",
+          "final": "Scheduled September 21, 8:15 p.m. ET",
+          "gradingMargin": null,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872947"
+        },
+        {
+          "pick": "Packers +4.5",
+          "result": "Win",
+          "final": "NYJ 17; GB 20",
+          "gradingMargin": 7.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872936"
+        },
+        {
+          "pick": "Jaguars\u2013Broncos Under 51.5",
+          "result": "Win",
+          "final": "DEN 20; JAX 13",
+          "gradingMargin": 18.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872940"
+        },
+        {
+          "pick": "Chargers +1.5",
+          "result": "Loss",
+          "final": "LAC 14; LV 26",
+          "gradingMargin": -10.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872941"
+        },
+        {
+          "pick": "Cowboys +4.5",
+          "result": "Win",
+          "final": "DAL 37; WSH 20",
+          "gradingMargin": 21.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872944"
+        },
+        {
+          "pick": "Seahawks +3.5",
+          "result": "Win",
+          "final": "ARI 7; SEA 31",
+          "gradingMargin": 27.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872943"
+        },
+        {
+          "pick": "Eagles +1.5",
+          "result": "Win",
+          "final": "TEN 20; PHI 24",
+          "gradingMargin": 5.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872939"
+        }
+      ],
+      "excludeFromRecord": true,
+      "hideWagerAmounts": true,
+      "settlementNotes": "LOSS. Leg record: 7-2; 1 pending. Losing legs: Steelers +13.5, Chargers +1.5. Giants\u2013Rams is scheduled Monday, September 21 at 8:15 p.m. ET. Existing losing legs already determine the ticket loss."
+    },
+    {
+      "id": "nfl-daytime-super-2026-09-20",
+      "date": "2026-09-20",
+      "type": "10-Pick Daytime Big / Super Teaser",
+      "result": "LOSS",
+      "record": "7-3",
+      "payout": "13 to 2",
+      "legs": [
+        {
+          "pick": "Falcons +9.5",
+          "result": "Loss",
+          "final": "ATL 3; CAR 34",
+          "gradingMargin": -21.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872933"
+        },
+        {
+          "pick": "Bengals +9.5",
+          "result": "Win",
+          "final": "HOU 6; CIN 20",
+          "gradingMargin": 23.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872934"
+        },
+        {
+          "pick": "Buccaneers -0.5",
+          "result": "Loss",
+          "final": "TB 19; CLE 23",
+          "gradingMargin": -4.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872935"
+        },
+        {
+          "pick": "Packers +4.5",
+          "result": "Win",
+          "final": "NYJ 17; GB 20",
+          "gradingMargin": 7.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872936"
+        },
+        {
+          "pick": "Vikings\u2013Bears Under 55.5",
+          "result": "Win",
+          "final": "CHI 3; MIN 9",
+          "gradingMargin": 43.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872937"
+        },
+        {
+          "pick": "Eagles +1.5",
+          "result": "Win",
+          "final": "TEN 20; PHI 24",
+          "gradingMargin": 5.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872939"
+        },
+        {
+          "pick": "Jaguars\u2013Broncos Under 51.5",
+          "result": "Win",
+          "final": "DEN 20; JAX 13",
+          "gradingMargin": 18.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872940"
+        },
+        {
+          "pick": "Chargers +1.5",
+          "result": "Loss",
+          "final": "LAC 14; LV 26",
+          "gradingMargin": -10.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872941"
+        },
+        {
+          "pick": "49ers -5.5",
+          "result": "Win",
+          "final": "SF 35; MIA 13",
+          "gradingMargin": 16.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872942"
+        },
+        {
+          "pick": "Cowboys +4.5",
+          "result": "Win",
+          "final": "DAL 37; WSH 20",
+          "gradingMargin": 21.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872944"
+        }
+      ],
+      "excludeFromRecord": true,
+      "hideWagerAmounts": true,
+      "settlementNotes": "LOSS. Leg record: 7-3. Losing legs: Falcons +9.5, Buccaneers -0.5, Chargers +1.5."
+    },
+    {
       "date": "2026-09-13",
       "type": "Delaware Big Teaser / Super Teaser",
       "result": "WIN",

@@ -265,6 +265,13 @@
         const value = label === 'Units Won/Lost' ? money(item.profitLoss) : label === 'ROI' ? pct(item.roi) : record(item)
         return `<div class="results-card"><strong>${esc(value)}</strong><span>${esc(label)}</span></div>`
       }).join('')
+      if (data.cardReview) summaryCards.innerHTML += `<div class="results-card"><strong>${data.cardReview.wins}-${data.cardReview.losses}</strong><span>Posted Cards • Sept 17–20</span></div><div class="results-card"><strong>${data.cardReview.pending}</strong><span>Cards Still Open</span></div>`
+    }
+
+    function cardSettlementDetails(row = {}) {
+      if (!Array.isArray(row.legGrades)) return ''
+      const detail = [row.settlementNotes, row.legResults, row.recordScope].filter(Boolean).join('\n\n')
+      return `<details><summary>Leg results</summary><div style="white-space:pre-wrap">${esc(detail)}</div></details>`
     }
 
     function renderRows(data = {}) {
@@ -285,10 +292,10 @@
             <td>${esc(row.date || date)}</td>
             <td>${esc(field(row, 'league', 'League', 'sport', 'Sport') || '--')}</td>
             <td>${esc(field(row, 'game', 'Game', 'Matchup') || '--')}</td>
-            <td>${esc(field(row, 'pick', 'Pick', 'Selection') || '--')}</td>
+            <td>${esc(field(row, 'pick', 'Pick', 'Selection') || '--')}${cardSettlementDetails(row)}</td>
             <td>${esc(field(row, 'odds', 'Odds') || '--')}</td>
             <td>${esc(field(row, 'grade', 'Grade') || '--')}</td>
-            <td>${esc(field(row, 'units', 'Units', 'unitsRisked') || '--')}</td>
+            <td>${esc(row.hideWagerAmounts ? '--' : field(row, 'units', 'Units', 'unitsRisked') || '--')}</td>
             <td class="${resultClass(result)}">${esc(result || '--')}</td>
             <td>${esc(profitDisplay(row))}</td>
             <td>${esc(roiDisplay(row))}</td>

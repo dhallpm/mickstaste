@@ -2,7 +2,7 @@
   "success": true,
   "source": "published-active-card-static",
   "sourceOfTruth": "Micks Picks publish data",
-  "date": "2026-09-20",
+  "date": "2026-09-21",
   "totalExposure": 0,
   "free": [
     {
@@ -26,9 +26,9 @@
       "micksScore": "72/110",
       "bestNumber": "Rays -2 +118 or better",
       "playableTo": "Rays -2 +110",
-      "noBetCutoff": "Rays -2 below +105 — pass/rescore",
-      "writeup": "Tampa Bay won the game 2-1 on Junior Caminero’s ninth-inning walk-off home run, but the alternate -2 run line lost because the Rays did not create the required three-run margin. Jack Perkins produced the exact failure script identified before first pitch: he missed bats and repeatedly stranded Tampa runners, allowing no earned runs over 6.2 innings while striking out eight. Griffin Jax handled his side of the handicap with five scoreless innings and seven strikeouts, but Tampa generated only five hits and its first run scored on a passed ball. The Rays finished with the victory, yet winning by one means the -2 ticket is graded a loss rather than a push.",
-      "fullAnalysis": "The pitching matchup broke in the opposite direction from the run-line thesis. Jack Perkins entered with a 6.53 ERA but delivered 6.2 innings of four-hit baseball, allowed no earned runs and struck out eight. That prevented Tampa Bay from reaching Oakland's bullpen early or creating the middle-inning separation the wager required. Griffin Jax was strong—five scoreless innings, two hits and seven strikeouts—but a sixth-inning wild pitch tied the game. Junior Caminero’s walk-off homer secured a 2-1 Rays win in the ninth. The team-side read was directionally correct, but the alternate run-line construction failed because Tampa never built margin.",
+      "noBetCutoff": "Rays -2 below +105 \u2014 pass/rescore",
+      "writeup": "Tampa Bay won the game 2-1 on Junior Caminero\u2019s ninth-inning walk-off home run, but the alternate -2 run line lost because the Rays did not create the required three-run margin. Jack Perkins produced the exact failure script identified before first pitch: he missed bats and repeatedly stranded Tampa runners, allowing no earned runs over 6.2 innings while striking out eight. Griffin Jax handled his side of the handicap with five scoreless innings and seven strikeouts, but Tampa generated only five hits and its first run scored on a passed ball. The Rays finished with the victory, yet winning by one means the -2 ticket is graded a loss rather than a push.",
+      "fullAnalysis": "The pitching matchup broke in the opposite direction from the run-line thesis. Jack Perkins entered with a 6.53 ERA but delivered 6.2 innings of four-hit baseball, allowed no earned runs and struck out eight. That prevented Tampa Bay from reaching Oakland's bullpen early or creating the middle-inning separation the wager required. Griffin Jax was strong\u2014five scoreless innings, two hits and seven strikeouts\u2014but a sixth-inning wild pitch tied the game. Junior Caminero\u2019s walk-off homer secured a 2-1 Rays win in the ninth. The team-side read was directionally correct, but the alternate run-line construction failed because Tampa never built margin.",
       "sourceVerification": "BetRivers market screenshots and Micks September 15 MLB slate scan; checked 2026-09-15.",
       "result": "Loss",
       "Result": "Loss",
@@ -58,7 +58,7 @@
       "officialBet": "Yes",
       "bestNumber": "Broncos +3",
       "playableTo": "Broncos +2.5 at -115",
-      "noBetCutoff": "Broncos +2 — pass/rescore",
+      "noBetCutoff": "Broncos +2 \u2014 pass/rescore",
       "writeup": "Denver needed to keep this inside one score by protecting Bo Nix from Steve Spagnuolo's pressure packages, sustaining drives with J.K. Dobbins and RJ Harvey, and preventing Patrick Mahomes from creating short fields. Kansas City instead controlled the game and pulled away 31-10, so the +2.5 never threatened late.",
       "fullAnalysis": "The pregame case centered on Denver's defensive front forcing Kansas City into quick throws and a measured return plan for Patrick Mahomes, while Bo Nix used the run game and short targets to keep the Broncos within one possession. The failure condition was Kansas City winning early downs, creating explosive plays and forcing Nix into obvious passing situations. That adverse script arrived: the Chiefs separated on the scoreboard and Denver could not stay within the field-goal window.",
       "result": "Loss",
@@ -77,7 +77,7 @@
       "league": "NFL",
       "game": "Denver Broncos at Kansas City Chiefs",
       "pick": "Under 43.5",
-      "cardTitle": "Broncos–Chiefs Under 43.5",
+      "cardTitle": "Broncos\u2013Chiefs Under 43.5",
       "type": "Total",
       "lineNumber": "Under 43.5 -115",
       "odds": "-115",
@@ -88,7 +88,7 @@
       "officialBet": "Yes",
       "bestNumber": "Under 44",
       "playableTo": "Under 43.5 at -115",
-      "noBetCutoff": "Under 42.5 — rescore; below 42.5 — pass",
+      "noBetCutoff": "Under 42.5 \u2014 rescore; below 42.5 \u2014 pass",
       "writeup": "The Under needed Kansas City to manage Patrick Mahomes' return, Denver to lean on a controlled Bo Nix passing plan, and both defenses to limit explosive scores. Kansas City won 31-10, producing 41 total points. The margin was wider than projected, but Denver's limited scoring kept the game below 43.5.",
       "fullAnalysis": "The expected low-possession script did not produce the close game paired with the Broncos spread, but it still delivered the total. Kansas City's offense did enough to control the matchup while Denver generated only 10 points. With 41 combined points, Under 43.5 cleared by 2.5 points.",
       "result": "Win",
@@ -122,7 +122,7 @@
       "failureScore": "8/10",
       "bestNumber": "Jets +2 or better",
       "playableTo": "Jets +1.5 at -115",
-      "noBetCutoff": "Pick'em / Jets favored — rescore",
+      "noBetCutoff": "Pick'em / Jets favored \u2014 rescore",
       "writeup": "The opener made Tennessee roughly a three-point favorite, but the market has crossed zero and now offers New York +1.5 at -110. That move validates the Jets' upgraded baseline, yet the current number still preserves the most valuable outcome in a low-margin Week 1 game: a one-point Jets loss. New York's cleanest matchup is its defensive front against Cam Ward and a Titans protection group that must prove it can handle pressure without falling behind the chains. Offensively, Breece Hall practiced fully after the camp groin issue and gives Geno Smith and Frank Reich a dependable early-down and checkdown answer. Tennessee will be without linebacker Cedric Gray, while the Jets lose edge depth with Joseph Ossai out. The Micks number lands at 81/110, with the replica model at 84/100 and an 8/10 failure score, enough support for a 0.75-unit position rather than a full-unit release. The situational concern is real: New York is installing new systems on both sides, and Jeffery Simmons can wreck the interior before those units settle. That volatility argues for taking points, not laying them after the steam. Best Number is Jets +2 or better; Playable To is +1.5 at -115; No-Bet Cutoff is pick'em or any Jets favorite, where the game must be rescored. At the posted price, Jets +1.5 -110 is the official B+ play.",
       "fullAnalysis": "",
       "result": "Win",
@@ -177,7 +177,7 @@
       "league": "NFL",
       "game": "Buffalo Bills player props",
       "pick": "Dalton Kincaid Over 38.5 Receiving Yards",
-      "cardTitle": "Kincaid Receiving Yards — Price Needed",
+      "cardTitle": "Kincaid Receiving Yards \u2014 Price Needed",
       "type": "Player Prop Watchlist",
       "lineNumber": "Need Over 38.5 at -125 or better",
       "odds": "Price needed",
@@ -187,8 +187,8 @@
       "status": "Watchlist",
       "officialBet": "No",
       "bestNumber": "Over 38.5 receiving yards",
-      "playableTo": "Over 38.5 at -125 or better — rescore",
-      "noBetCutoff": "Over 39.5+ or worse than -125 — pass",
+      "playableTo": "Over 38.5 at -125 or better \u2014 rescore",
+      "noBetCutoff": "Over 39.5+ or worse than -125 \u2014 pass",
       "writeup": "Kincaid's route and target role can support an Over, but the scanned Over 49.5 at -115 demanded too much volume. Only reopen the prop if the yardage falls to 38.5 without juice worse than -125. This is a rescore trigger, not an automatic bet."
     },
     {
@@ -199,7 +199,7 @@
       "league": "NFL",
       "game": "Buffalo Bills player props",
       "pick": "Dawson Knox Over 10.5 Receiving Yards",
-      "cardTitle": "Knox Receiving Yards — Price Needed",
+      "cardTitle": "Knox Receiving Yards \u2014 Price Needed",
       "type": "Player Prop Watchlist",
       "lineNumber": "Need Over 10.5 at -115 or better",
       "odds": "Price needed",
@@ -209,8 +209,8 @@
       "status": "Watchlist",
       "officialBet": "No",
       "bestNumber": "Over 10.5 receiving yards",
-      "playableTo": "Over 10.5 at -115 or better — rescore",
-      "noBetCutoff": "Over 12.5 at -114 or worse — pass",
+      "playableTo": "Over 10.5 at -115 or better \u2014 rescore",
+      "noBetCutoff": "Over 12.5 at -114 or worse \u2014 pass",
       "writeup": "The low threshold is attractive, but Knox drew only one target in Week 1 and remains a volatile secondary option. A drop to 10.5 at ordinary juice is required before another review; 12.5 at -114 stays off the card."
     },
     {
@@ -221,7 +221,7 @@
       "league": "NFL",
       "game": "Detroit Lions at Buffalo Bills",
       "pick": "Detroit Lions +6.5",
-      "cardTitle": "Lions Spread — Number Needed",
+      "cardTitle": "Lions Spread \u2014 Number Needed",
       "type": "Spread Watchlist",
       "lineNumber": "Need Lions +6.5 at -115 or better",
       "odds": "Price needed",
@@ -231,8 +231,8 @@
       "status": "Watchlist",
       "officialBet": "No",
       "bestNumber": "Lions +6.5",
-      "playableTo": "+6.5 at -115 or better — rescore",
-      "noBetCutoff": "+5.5 or worse — pass",
+      "playableTo": "+6.5 at -115 or better \u2014 rescore",
+      "noBetCutoff": "+5.5 or worse \u2014 pass",
       "writeup": "Detroit +5.5 did not provide enough protection against the current injury and market conflicts. Reopen only at +6.5 or better, where the extra point materially improves the one-score loss window."
     },
     {
@@ -243,7 +243,7 @@
       "league": "NFL",
       "game": "Detroit Lions at Buffalo Bills",
       "pick": "Over 53.5",
-      "cardTitle": "Lions–Bills Total — Price Needed",
+      "cardTitle": "Lions\u2013Bills Total \u2014 Price Needed",
       "type": "Total Watchlist",
       "lineNumber": "Need Over 53.5 at -110 or better",
       "odds": "Price needed",
@@ -253,8 +253,8 @@
       "status": "Watchlist",
       "officialBet": "No",
       "bestNumber": "Over 53.5",
-      "playableTo": "Over 53.5 at -110 or better — rescore",
-      "noBetCutoff": "Over 54.5 at -113 or worse — pass",
+      "playableTo": "Over 53.5 at -110 or better \u2014 rescore",
+      "noBetCutoff": "Over 54.5 at -113 or worse \u2014 pass",
       "writeup": "The offensive ceiling supports an Over script, but the market model and fantasy projection disagreed on the fair total. A full-point discount to 53.5 at standard juice is required just to rescore the matchup; 54.5 at -113 remains a pass."
     },
     {
@@ -265,7 +265,7 @@
       "league": "NCAAF",
       "game": "Syracuse at Pittsburgh",
       "pick": "Under 53",
-      "cardTitle": "Syracuse–Pitt Under — Number Needed",
+      "cardTitle": "Syracuse\u2013Pitt Under \u2014 Number Needed",
       "type": "Total Watchlist",
       "lineNumber": "Need Under 53 at -115 or better",
       "odds": "Price needed",
@@ -275,8 +275,8 @@
       "status": "Watchlist",
       "officialBet": "No",
       "bestNumber": "Under 53",
-      "playableTo": "Under 53 at -115 or better with weather intact — rescore",
-      "noBetCutoff": "Under 51.5 or lower — pass",
+      "playableTo": "Under 53 at -115 or better with weather intact \u2014 rescore",
+      "noBetCutoff": "Under 51.5 or lower \u2014 pass",
       "writeup": "The Under thesis needs the weather and lower-tempo script, but the market already compressed to 51.5. Do not chase the move. A return to 53 at -115 or better is the minimum rescore point."
     },
     {
@@ -287,7 +287,7 @@
       "league": "MLB",
       "game": "Houston Astros game",
       "pick": "Houston Astros Moneyline",
-      "cardTitle": "Astros ML — Price and Confirmation Needed",
+      "cardTitle": "Astros ML \u2014 Price and Confirmation Needed",
       "type": "Moneyline Watchlist",
       "lineNumber": "Need Astros -135 or better",
       "odds": "Price needed",
@@ -297,8 +297,8 @@
       "status": "Watchlist",
       "officialBet": "No",
       "bestNumber": "Astros -135 or better",
-      "playableTo": "-135 after lineup, starter and roof confirmation — rescore",
-      "noBetCutoff": "-145 or worse, or missing confirmations — pass",
+      "playableTo": "-135 after lineup, starter and roof confirmation \u2014 rescore",
+      "noBetCutoff": "-145 or worse, or missing confirmations \u2014 pass",
       "writeup": "Houston's matchup was viable, but -145 did not clear the price gate while lineup, starter and roof variables remained unresolved. The market must improve to -135 or better and all three confirmations must hold before release consideration."
     },
     {
@@ -309,7 +309,7 @@
       "league": "MLB",
       "game": "Boston Red Sox game",
       "pick": "Boston Red Sox Moneyline",
-      "cardTitle": "Red Sox ML — Price Needed",
+      "cardTitle": "Red Sox ML \u2014 Price Needed",
       "type": "Moneyline Watchlist",
       "lineNumber": "Need Red Sox -110 or better",
       "odds": "Price needed",
@@ -319,8 +319,8 @@
       "status": "Watchlist",
       "officialBet": "No",
       "bestNumber": "Red Sox -110 or better",
-      "playableTo": "-110 or plus money after lineup confirmation — rescore",
-      "noBetCutoff": "Worse than -110 or continued adverse movement — pass",
+      "playableTo": "-110 or plus money after lineup confirmation \u2014 rescore",
+      "noBetCutoff": "Worse than -110 or continued adverse movement \u2014 pass",
       "writeup": "Boston's move from roughly -135/-140 toward -117 was adverse rather than validating. Wait for -110 or plus money, a confirmed lineup and evidence that the move has stabilized before considering a release."
     },
     {
@@ -331,7 +331,7 @@
       "league": "WNBA",
       "game": "Seattle Storm game",
       "pick": "Seattle Storm +12.5",
-      "cardTitle": "Storm Spread — Number and Availability Needed",
+      "cardTitle": "Storm Spread \u2014 Number and Availability Needed",
       "type": "Spread Watchlist",
       "lineNumber": "Need Storm +12.5 at -115 or better",
       "odds": "Price needed",
@@ -341,8 +341,8 @@
       "status": "Watchlist",
       "officialBet": "No",
       "bestNumber": "Storm +12.5",
-      "playableTo": "+12.5 at -115 or better with core availability confirmed — rescore",
-      "noBetCutoff": "+10.5 or unresolved injuries — pass",
+      "playableTo": "+12.5 at -115 or better with core availability confirmed \u2014 rescore",
+      "noBetCutoff": "+10.5 or unresolved injuries \u2014 pass",
       "writeup": "Seattle +10.5 did not compensate for the injury uncertainty. The spread must reach +12.5 at -115 or better and the core rotation must be confirmed before the matchup can return to the release board."
     }
   ],
@@ -356,19 +356,19 @@
       "access": "free",
       "sport": "NFL",
       "league": "NFL",
-      "game": "NFL Week 2 — Sunday September 20 — 1 PM / 4 PM ET",
-      "pick": "Falcons +9.5 / Bengals +9.5 / Buccaneers -0.5 / Packers +4.5 / Vikings–Bears Under 55.5 / Eagles +1.5 / Jaguars–Broncos Under 51.5 / Chargers +1.5 / 49ers -5.5 / Cowboys +4.5",
+      "game": "NFL Week 2 \u2014 Sunday September 20 \u2014 1 PM / 4 PM ET",
+      "pick": "Falcons +9.5 / Bengals +9.5 / Buccaneers -0.5 / Packers +4.5 / Vikings\u2013Bears Under 55.5 / Eagles +1.5 / Jaguars\u2013Broncos Under 51.5 / Chargers +1.5 / 49ers -5.5 / Cowboys +4.5",
       "cardTitle": "10-Pick Daytime Big / Super Teaser",
       "type": "10-Pick Daytime Big / Super Teaser",
       "market": "NFL parlay",
-      "lineNumber": "#102: Falcons +9.5 — 1:00 PM ET / #106: Bengals +9.5 — 1:00 PM ET / #109: Buccaneers -0.5 — 1:00 PM ET / #113: Packers +4.5 — 1:00 PM ET / #120: Vikings–Bears Under 55.5 — 1:00 PM ET / #125: Eagles +1.5 — 1:00 PM ET / #136: Jaguars–Broncos Under 51.5 — 4:05 PM ET / #137: Chargers +1.5 — 4:05 PM ET / #141: 49ers -5.5 — 4:25 PM ET / #149: Cowboys +4.5 — 4:25 PM ET",
-      "legs": "#102: Falcons +9.5 — 1:00 PM ET\n#106: Bengals +9.5 — 1:00 PM ET\n#109: Buccaneers -0.5 — 1:00 PM ET\n#113: Packers +4.5 — 1:00 PM ET\n#120: Vikings–Bears Under 55.5 — 1:00 PM ET\n#125: Eagles +1.5 — 1:00 PM ET\n#136: Jaguars–Broncos Under 51.5 — 4:05 PM ET\n#137: Chargers +1.5 — 4:05 PM ET\n#141: 49ers -5.5 — 4:25 PM ET\n#149: Cowboys +4.5 — 4:25 PM ET",
+      "lineNumber": "#102: Falcons +9.5 \u2014 1:00 PM ET / #106: Bengals +9.5 \u2014 1:00 PM ET / #109: Buccaneers -0.5 \u2014 1:00 PM ET / #113: Packers +4.5 \u2014 1:00 PM ET / #120: Vikings\u2013Bears Under 55.5 \u2014 1:00 PM ET / #125: Eagles +1.5 \u2014 1:00 PM ET / #136: Jaguars\u2013Broncos Under 51.5 \u2014 4:05 PM ET / #137: Chargers +1.5 \u2014 4:05 PM ET / #141: 49ers -5.5 \u2014 4:25 PM ET / #149: Cowboys +4.5 \u2014 4:25 PM ET",
+      "legs": "#102: Falcons +9.5 \u2014 1:00 PM ET\n#106: Bengals +9.5 \u2014 1:00 PM ET\n#109: Buccaneers -0.5 \u2014 1:00 PM ET\n#113: Packers +4.5 \u2014 1:00 PM ET\n#120: Vikings\u2013Bears Under 55.5 \u2014 1:00 PM ET\n#125: Eagles +1.5 \u2014 1:00 PM ET\n#136: Jaguars\u2013Broncos Under 51.5 \u2014 4:05 PM ET\n#137: Chargers +1.5 \u2014 4:05 PM ET\n#141: 49ers -5.5 \u2014 4:25 PM ET\n#149: Cowboys +4.5 \u2014 4:25 PM ET",
       "legCount": 10,
       "odds": "+650",
       "payoutOdds": "13 to 2",
       "sportsbook": "Delaware Lottery",
       "grade": "WATCH",
-      "status": "Watch — conditional construction",
+      "status": "Graded",
       "officialBet": "No",
       "frameworkApproved": false,
       "betPlaced": false,
@@ -378,9 +378,9 @@
       "showFullAnalysis": true,
       "bestNumber": "Exact printed Big/Super selections",
       "playableTo": "Listed lines only; reassess any change",
-      "noBetCutoff": "Any worse line, unavailable combination or material availability change — reassess",
-      "writeup": "All ten games start in the Sunday 1 PM or 4 PM Eastern windows. Atlanta +9.5 and Cincinnati +9.5 replace the night-game legs from the earlier research ticket. Burrow is confirmed to start and Lindstrom is available. Eight selections overlap that earlier ticket; these are shared outcomes, not independent exposure. The printed Big/Super numbers apply exactly as listed, with one selection per game. Short-field scoring threatens the two unders, while San Francisco must win by six or more. This remains a WATCH research construction below official Micks release standards. All ten selections must win under the printed card rules.",
-      "fullAnalysis": "#102: Falcons +9.5 — 1:00 PM ET\n#106: Bengals +9.5 — 1:00 PM ET\n#109: Buccaneers -0.5 — 1:00 PM ET\n#113: Packers +4.5 — 1:00 PM ET\n#120: Vikings–Bears Under 55.5 — 1:00 PM ET\n#125: Eagles +1.5 — 1:00 PM ET\n#136: Jaguars–Broncos Under 51.5 — 4:05 PM ET\n#137: Chargers +1.5 — 4:05 PM ET\n#141: 49ers -5.5 — 4:25 PM ET\n#149: Cowboys +4.5 — 4:25 PM ET\n\nAll ten games start in the Sunday 1 PM or 4 PM Eastern windows. Atlanta +9.5 and Cincinnati +9.5 replace the night-game legs from the earlier research ticket. Burrow is confirmed to start and Lindstrom is available. Eight selections overlap that earlier ticket; these are shared outcomes, not independent exposure. The printed Big/Super numbers apply exactly as listed, with one selection per game. Short-field scoring threatens the two unders, while San Francisco must win by six or more. This remains a WATCH research construction below official Micks release standards. All ten selections must win under the printed card rules.\n\nUse only the September 17 Big/Super card. Research reviewed September 20 before kickoff; late-game final inactives remain subject to confirmation.",
+      "noBetCutoff": "Any worse line, unavailable combination or material availability change \u2014 reassess",
+      "writeup": "LOSS. Leg record: 7-3. Losing legs: Falcons +9.5, Buccaneers -0.5, Chargers +1.5.\n\nFalcons +9.5 \u2014 Loss: ATL 3; CAR 34\nBengals +9.5 \u2014 Win: HOU 6; CIN 20\nBuccaneers -0.5 \u2014 Loss: TB 19; CLE 23\nPackers +4.5 \u2014 Win: NYJ 17; GB 20\nVikings\u2013Bears Under 55.5 \u2014 Win: CHI 3; MIN 9\nEagles +1.5 \u2014 Win: TEN 20; PHI 24\nJaguars\u2013Broncos Under 51.5 \u2014 Win: DEN 20; JAX 13\nChargers +1.5 \u2014 Loss: LAC 14; LV 26\n49ers -5.5 \u2014 Win: SF 35; MIA 13\nCowboys +4.5 \u2014 Win: DAL 37; WSH 20",
+      "fullAnalysis": "LOSS. Leg record: 7-3. Losing legs: Falcons +9.5, Buccaneers -0.5, Chargers +1.5.\n\nFalcons +9.5 \u2014 Loss: ATL 3; CAR 34\nBengals +9.5 \u2014 Win: HOU 6; CIN 20\nBuccaneers -0.5 \u2014 Loss: TB 19; CLE 23\nPackers +4.5 \u2014 Win: NYJ 17; GB 20\nVikings\u2013Bears Under 55.5 \u2014 Win: CHI 3; MIN 9\nEagles +1.5 \u2014 Win: TEN 20; PHI 24\nJaguars\u2013Broncos Under 51.5 \u2014 Win: DEN 20; JAX 13\nChargers +1.5 \u2014 Loss: LAC 14; LV 26\n49ers -5.5 \u2014 Win: SF 35; MIA 13\nCowboys +4.5 \u2014 Win: DAL 37; WSH 20\n\nPosted pregame analysis:\n#102: Falcons +9.5 \u2014 1:00 PM ET\n#106: Bengals +9.5 \u2014 1:00 PM ET\n#109: Buccaneers -0.5 \u2014 1:00 PM ET\n#113: Packers +4.5 \u2014 1:00 PM ET\n#120: Vikings\u2013Bears Under 55.5 \u2014 1:00 PM ET\n#125: Eagles +1.5 \u2014 1:00 PM ET\n#136: Jaguars\u2013Broncos Under 51.5 \u2014 4:05 PM ET\n#137: Chargers +1.5 \u2014 4:05 PM ET\n#141: 49ers -5.5 \u2014 4:25 PM ET\n#149: Cowboys +4.5 \u2014 4:25 PM ET\n\nAll ten games start in the Sunday 1 PM or 4 PM Eastern windows. Atlanta +9.5 and Cincinnati +9.5 replace the night-game legs from the earlier research ticket. Burrow is confirmed to start and Lindstrom is available. Eight selections overlap that earlier ticket; these are shared outcomes, not independent exposure. The printed Big/Super numbers apply exactly as listed, with one selection per game. Short-field scoring threatens the two unders, while San Francisco must win by six or more. This remains a WATCH research construction below official Micks release standards. All ten selections must win under the printed card rules.\n\nUse only the September 17 Big/Super card. Research reviewed September 20 before kickoff; late-game final inactives remain subject to confirmation.\n\nRecord classification: Posted construction; execution unconfirmed; excluded from official betting record. No wager amounts published; unit profit/loss is not inferred.",
       "injuryNotes": "Use only the September 17 Big/Super card. Research reviewed September 20 before kickoff; late-game final inactives remain subject to confirmation.",
       "sourceVerification": "September 20 pregame research. Burrow starting and Lindstrom available confirmed from team reports. Props are target thresholds from today's DraftKings analysis; combined sportsbook price unverified.",
       "sourceLinks": [
@@ -397,15 +397,132 @@
           "url": "https://www.bengals.com/news/pregame-quick-hits-joe-burrow-gets-nod-shemar-makes-season-debut-with-b-j-hill-out"
         },
         {
-          "title": "Bijan prop analysis — September 20",
+          "title": "Bijan prop analysis \u2014 September 20",
           "url": "https://dknetwork.draftkings.com/2026/09/20/panthers-vs-falcons-nfl-player-prop-bets/"
         },
         {
-          "title": "Smith prop analysis — September 20",
+          "title": "Smith prop analysis \u2014 September 20",
           "url": "https://dknetwork.draftkings.com/2026/09/20/devonta-smith-receiving-yards-pick-for-eagles-vs-titans/"
         }
       ],
-      "publishedAt": "2026-09-20T16:56:45.374Z"
+      "publishedAt": "2026-09-20T16:56:45.374Z",
+      "originalPublication": {
+        "date": "2026-09-20",
+        "status": "Watch \u2014 conditional construction",
+        "grade": "WATCH",
+        "officialBet": "No",
+        "betPlaced": false,
+        "writeup": "All ten games start in the Sunday 1 PM or 4 PM Eastern windows. Atlanta +9.5 and Cincinnati +9.5 replace the night-game legs from the earlier research ticket. Burrow is confirmed to start and Lindstrom is available. Eight selections overlap that earlier ticket; these are shared outcomes, not independent exposure. The printed Big/Super numbers apply exactly as listed, with one selection per game. Short-field scoring threatens the two unders, while San Francisco must win by six or more. This remains a WATCH research construction below official Micks release standards. All ten selections must win under the printed card rules.",
+        "fullAnalysis": "#102: Falcons +9.5 \u2014 1:00 PM ET\n#106: Bengals +9.5 \u2014 1:00 PM ET\n#109: Buccaneers -0.5 \u2014 1:00 PM ET\n#113: Packers +4.5 \u2014 1:00 PM ET\n#120: Vikings\u2013Bears Under 55.5 \u2014 1:00 PM ET\n#125: Eagles +1.5 \u2014 1:00 PM ET\n#136: Jaguars\u2013Broncos Under 51.5 \u2014 4:05 PM ET\n#137: Chargers +1.5 \u2014 4:05 PM ET\n#141: 49ers -5.5 \u2014 4:25 PM ET\n#149: Cowboys +4.5 \u2014 4:25 PM ET\n\nAll ten games start in the Sunday 1 PM or 4 PM Eastern windows. Atlanta +9.5 and Cincinnati +9.5 replace the night-game legs from the earlier research ticket. Burrow is confirmed to start and Lindstrom is available. Eight selections overlap that earlier ticket; these are shared outcomes, not independent exposure. The printed Big/Super numbers apply exactly as listed, with one selection per game. Short-field scoring threatens the two unders, while San Francisco must win by six or more. This remains a WATCH research construction below official Micks release standards. All ten selections must win under the printed card rules.\n\nUse only the September 17 Big/Super card. Research reviewed September 20 before kickoff; late-game final inactives remain subject to confirmation."
+      },
+      "postedDate": "2026-09-20",
+      "Date": "2026-09-20",
+      "result": "Loss",
+      "Result": "Loss",
+      "Outcome": "Loss",
+      "Status": "Graded",
+      "legGrades": [
+        {
+          "pick": "Falcons +9.5",
+          "result": "Loss",
+          "final": "ATL 3; CAR 34",
+          "gradingMargin": -21.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872933"
+        },
+        {
+          "pick": "Bengals +9.5",
+          "result": "Win",
+          "final": "HOU 6; CIN 20",
+          "gradingMargin": 23.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872934"
+        },
+        {
+          "pick": "Buccaneers -0.5",
+          "result": "Loss",
+          "final": "TB 19; CLE 23",
+          "gradingMargin": -4.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872935"
+        },
+        {
+          "pick": "Packers +4.5",
+          "result": "Win",
+          "final": "NYJ 17; GB 20",
+          "gradingMargin": 7.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872936"
+        },
+        {
+          "pick": "Vikings\u2013Bears Under 55.5",
+          "result": "Win",
+          "final": "CHI 3; MIN 9",
+          "gradingMargin": 43.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872937"
+        },
+        {
+          "pick": "Eagles +1.5",
+          "result": "Win",
+          "final": "TEN 20; PHI 24",
+          "gradingMargin": 5.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872939"
+        },
+        {
+          "pick": "Jaguars\u2013Broncos Under 51.5",
+          "result": "Win",
+          "final": "DEN 20; JAX 13",
+          "gradingMargin": 18.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872940"
+        },
+        {
+          "pick": "Chargers +1.5",
+          "result": "Loss",
+          "final": "LAC 14; LV 26",
+          "gradingMargin": -10.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872941"
+        },
+        {
+          "pick": "49ers -5.5",
+          "result": "Win",
+          "final": "SF 35; MIA 13",
+          "gradingMargin": 16.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872942"
+        },
+        {
+          "pick": "Cowboys +4.5",
+          "result": "Win",
+          "final": "DAL 37; WSH 20",
+          "gradingMargin": 21.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872944"
+        }
+      ],
+      "legRecord": "7-3",
+      "excludeFromRecord": true,
+      "Official Bet": "No",
+      "profitLoss": "Unknown",
+      "Profit/Loss": "Unknown",
+      "P/L": "Unknown",
+      "PL": "Unknown",
+      "units": "",
+      "Units": "",
+      "settlementCheckedAt": "2026-09-21T12:53:43.893011+00:00",
+      "recordScope": "Posted construction; execution unconfirmed; excluded from official betting record",
+      "legResults": "Falcons +9.5 \u2014 Loss: ATL 3; CAR 34\nBengals +9.5 \u2014 Win: HOU 6; CIN 20\nBuccaneers -0.5 \u2014 Loss: TB 19; CLE 23\nPackers +4.5 \u2014 Win: NYJ 17; GB 20\nVikings\u2013Bears Under 55.5 \u2014 Win: CHI 3; MIN 9\nEagles +1.5 \u2014 Win: TEN 20; PHI 24\nJaguars\u2013Broncos Under 51.5 \u2014 Win: DEN 20; JAX 13\nChargers +1.5 \u2014 Loss: LAC 14; LV 26\n49ers -5.5 \u2014 Win: SF 35; MIA 13\nCowboys +4.5 \u2014 Win: DAL 37; WSH 20",
+      "settlementNotes": "LOSS. Leg record: 7-3. Losing legs: Falcons +9.5, Buccaneers -0.5, Chargers +1.5.",
+      "finalScore": "Falcons +9.5 \u2014 Loss: ATL 3; CAR 34\nBengals +9.5 \u2014 Win: HOU 6; CIN 20\nBuccaneers -0.5 \u2014 Loss: TB 19; CLE 23\nPackers +4.5 \u2014 Win: NYJ 17; GB 20\nVikings\u2013Bears Under 55.5 \u2014 Win: CHI 3; MIN 9\nEagles +1.5 \u2014 Win: TEN 20; PHI 24\nJaguars\u2013Broncos Under 51.5 \u2014 Win: DEN 20; JAX 13\nChargers +1.5 \u2014 Loss: LAC 14; LV 26\n49ers -5.5 \u2014 Win: SF 35; MIA 13\nCowboys +4.5 \u2014 Win: DAL 37; WSH 20",
+      "settlementSource": "MLB final box score and ESPN final scoreboard/box scores, checked September 21, 2026.",
+      "settlementSources": [
+        "https://www.espn.com/nfl/game/_/gameId/401872933",
+        "https://www.espn.com/nfl/game/_/gameId/401872934",
+        "https://www.espn.com/nfl/game/_/gameId/401872935",
+        "https://www.espn.com/nfl/game/_/gameId/401872936",
+        "https://www.espn.com/nfl/game/_/gameId/401872937",
+        "https://www.espn.com/nfl/game/_/gameId/401872939",
+        "https://www.espn.com/nfl/game/_/gameId/401872940",
+        "https://www.espn.com/nfl/game/_/gameId/401872941",
+        "https://www.espn.com/nfl/game/_/gameId/401872942",
+        "https://www.espn.com/nfl/game/_/gameId/401872944"
+      ],
+      "Writeup": "LOSS. Leg record: 7-3. Losing legs: Falcons +9.5, Buccaneers -0.5, Chargers +1.5.\n\nFalcons +9.5 \u2014 Loss: ATL 3; CAR 34\nBengals +9.5 \u2014 Win: HOU 6; CIN 20\nBuccaneers -0.5 \u2014 Loss: TB 19; CLE 23\nPackers +4.5 \u2014 Win: NYJ 17; GB 20\nVikings\u2013Bears Under 55.5 \u2014 Win: CHI 3; MIN 9\nEagles +1.5 \u2014 Win: TEN 20; PHI 24\nJaguars\u2013Broncos Under 51.5 \u2014 Win: DEN 20; JAX 13\nChargers +1.5 \u2014 Loss: LAC 14; LV 26\n49ers -5.5 \u2014 Win: SF 35; MIA 13\nCowboys +4.5 \u2014 Win: DAL 37; WSH 20",
+      "Full Analysis": "LOSS. Leg record: 7-3. Losing legs: Falcons +9.5, Buccaneers -0.5, Chargers +1.5.\n\nFalcons +9.5 \u2014 Loss: ATL 3; CAR 34\nBengals +9.5 \u2014 Win: HOU 6; CIN 20\nBuccaneers -0.5 \u2014 Loss: TB 19; CLE 23\nPackers +4.5 \u2014 Win: NYJ 17; GB 20\nVikings\u2013Bears Under 55.5 \u2014 Win: CHI 3; MIN 9\nEagles +1.5 \u2014 Win: TEN 20; PHI 24\nJaguars\u2013Broncos Under 51.5 \u2014 Win: DEN 20; JAX 13\nChargers +1.5 \u2014 Loss: LAC 14; LV 26\n49ers -5.5 \u2014 Win: SF 35; MIA 13\nCowboys +4.5 \u2014 Win: DAL 37; WSH 20\n\nPosted pregame analysis:\n#102: Falcons +9.5 \u2014 1:00 PM ET\n#106: Bengals +9.5 \u2014 1:00 PM ET\n#109: Buccaneers -0.5 \u2014 1:00 PM ET\n#113: Packers +4.5 \u2014 1:00 PM ET\n#120: Vikings\u2013Bears Under 55.5 \u2014 1:00 PM ET\n#125: Eagles +1.5 \u2014 1:00 PM ET\n#136: Jaguars\u2013Broncos Under 51.5 \u2014 4:05 PM ET\n#137: Chargers +1.5 \u2014 4:05 PM ET\n#141: 49ers -5.5 \u2014 4:25 PM ET\n#149: Cowboys +4.5 \u2014 4:25 PM ET\n\nAll ten games start in the Sunday 1 PM or 4 PM Eastern windows. Atlanta +9.5 and Cincinnati +9.5 replace the night-game legs from the earlier research ticket. Burrow is confirmed to start and Lindstrom is available. Eight selections overlap that earlier ticket; these are shared outcomes, not independent exposure. The printed Big/Super numbers apply exactly as listed, with one selection per game. Short-field scoring threatens the two unders, while San Francisco must win by six or more. This remains a WATCH research construction below official Micks release standards. All ten selections must win under the printed card rules.\n\nUse only the September 17 Big/Super card. Research reviewed September 20 before kickoff; late-game final inactives remain subject to confirmation.\n\nRecord classification: Posted construction; execution unconfirmed; excluded from official betting record. No wager amounts published; unit profit/loss is not inferred.",
+      "settledAt": "2026-09-21T12:53:43.893011+00:00"
     },
     {
       "id": "nfl-mixed-six-2026-09-20",
@@ -416,19 +533,19 @@
       "access": "free",
       "sport": "NFL",
       "league": "NFL",
-      "game": "NFL Week 2 — Sunday September 20 — 1 PM / 4 PM ET",
-      "pick": "Buccaneers moneyline / Eagles moneyline / Vikings–Bears Under 47.5 / Jaguars–Broncos Under 45.5 / Bijan Robinson 130+ rushing + receiving yards / DeVonta Smith Over 59.5 receiving yards",
-      "cardTitle": "6-Leg Mixed Parlay — Games + Props",
-      "type": "6-Leg Mixed Parlay — Games + Props",
+      "game": "NFL Week 2 \u2014 Sunday September 20 \u2014 1 PM / 4 PM ET",
+      "pick": "Buccaneers moneyline / Eagles moneyline / Vikings\u2013Bears Under 47.5 / Jaguars\u2013Broncos Under 45.5 / Bijan Robinson 130+ rushing + receiving yards / DeVonta Smith Over 59.5 receiving yards",
+      "cardTitle": "6-Leg Mixed Parlay \u2014 Games + Props",
+      "type": "6-Leg Mixed Parlay \u2014 Games + Props",
       "market": "NFL parlay",
-      "lineNumber": "Buccaneers moneyline — 1:00 PM ET / Eagles moneyline — 1:00 PM ET / Vikings–Bears Under 47.5 — 1:00 PM ET / Jaguars–Broncos Under 45.5 — 4:05 PM ET / Bijan Robinson 130+ rushing + receiving yards — 1:00 PM ET / DeVonta Smith Over 59.5 receiving yards — 1:00 PM ET",
-      "legs": "Buccaneers moneyline — 1:00 PM ET\nEagles moneyline — 1:00 PM ET\nVikings–Bears Under 47.5 — 1:00 PM ET\nJaguars–Broncos Under 45.5 — 4:05 PM ET\nBijan Robinson 130+ rushing + receiving yards — 1:00 PM ET\nDeVonta Smith Over 59.5 receiving yards — 1:00 PM ET",
+      "lineNumber": "Buccaneers moneyline \u2014 1:00 PM ET / Eagles moneyline \u2014 1:00 PM ET / Vikings\u2013Bears Under 47.5 \u2014 1:00 PM ET / Jaguars\u2013Broncos Under 45.5 \u2014 4:05 PM ET / Bijan Robinson 130+ rushing + receiving yards \u2014 1:00 PM ET / DeVonta Smith Over 59.5 receiving yards \u2014 1:00 PM ET",
+      "legs": "Buccaneers moneyline \u2014 1:00 PM ET\nEagles moneyline \u2014 1:00 PM ET\nVikings\u2013Bears Under 47.5 \u2014 1:00 PM ET\nJaguars\u2013Broncos Under 45.5 \u2014 4:05 PM ET\nBijan Robinson 130+ rushing + receiving yards \u2014 1:00 PM ET\nDeVonta Smith Over 59.5 receiving yards \u2014 1:00 PM ET",
       "legCount": 6,
       "odds": "Price unverified",
       "payoutOdds": "Combined price unverified",
-      "sportsbook": "Sportsbook — availability check required",
+      "sportsbook": "Sportsbook \u2014 availability check required",
       "grade": "WATCH",
-      "status": "Watch — conditional construction",
+      "status": "Graded",
       "officialBet": "No",
       "frameworkApproved": false,
       "betPlaced": false,
@@ -438,9 +555,9 @@
       "showFullAnalysis": true,
       "bestNumber": "Target lines listed; sportsbook quote unverified",
       "playableTo": "Listed lines only; reassess any change",
-      "noBetCutoff": "Any worse line, unavailable combination or material availability change — reassess",
-      "writeup": "This six-leg construction combines two moneylines, two game unders and two player props. Bijan's offensive workload and Smith's leading receiving role support their inclusion, using thresholds from September 20 DraftKings analysis. These are target lines, not a verified executable sportsbook quote. Eagles moneyline and Smith receiving yards come from the same game; the sportsbook must permit and price that combination. A run-heavy Eagles win can cash the moneyline while Smith misses his threshold. The unders share direction with the Super ticket but have less point protection. This is a WATCH construction, not an official release. No combined payout or ticket hit probability is claimed.",
-      "fullAnalysis": "Buccaneers moneyline — 1:00 PM ET\nEagles moneyline — 1:00 PM ET\nVikings–Bears Under 47.5 — 1:00 PM ET\nJaguars–Broncos Under 45.5 — 4:05 PM ET\nBijan Robinson 130+ rushing + receiving yards — 1:00 PM ET\nDeVonta Smith Over 59.5 receiving yards — 1:00 PM ET\n\nThis six-leg construction combines two moneylines, two game unders and two player props. Bijan's offensive workload and Smith's leading receiving role support their inclusion, using thresholds from September 20 DraftKings analysis. These are target lines, not a verified executable sportsbook quote. Eagles moneyline and Smith receiving yards come from the same game; the sportsbook must permit and price that combination. A run-heavy Eagles win can cash the moneyline while Smith misses his threshold. The unders share direction with the Super ticket but have less point protection. This is a WATCH construction, not an official release. No combined payout or ticket hit probability is claimed.\n\nConfirm every target line, price, player availability and same-game eligibility before entry. Delaware teaser numbers and fixed payouts do not transfer to this mixed sportsbook ticket.",
+      "noBetCutoff": "Any worse line, unavailable combination or material availability change \u2014 reassess",
+      "writeup": "LOSS. Leg record: 4-2. Losing legs: Buccaneers moneyline, Bijan Robinson 130+ rushing + receiving yards.\n\nBuccaneers moneyline \u2014 Loss: TB 19; CLE 23\nEagles moneyline \u2014 Win: TEN 20; PHI 24\nVikings\u2013Bears Under 47.5 \u2014 Win: CHI 3; MIN 9\nJaguars\u2013Broncos Under 45.5 \u2014 Win: DEN 20; JAX 13\nBijan Robinson 130+ rushing + receiving yards \u2014 Loss: 81 yards (72 rushing + 9 receiving)\nDeVonta Smith Over 59.5 receiving yards \u2014 Win: 117 receiving yards",
+      "fullAnalysis": "LOSS. Leg record: 4-2. Losing legs: Buccaneers moneyline, Bijan Robinson 130+ rushing + receiving yards.\n\nBuccaneers moneyline \u2014 Loss: TB 19; CLE 23\nEagles moneyline \u2014 Win: TEN 20; PHI 24\nVikings\u2013Bears Under 47.5 \u2014 Win: CHI 3; MIN 9\nJaguars\u2013Broncos Under 45.5 \u2014 Win: DEN 20; JAX 13\nBijan Robinson 130+ rushing + receiving yards \u2014 Loss: 81 yards (72 rushing + 9 receiving)\nDeVonta Smith Over 59.5 receiving yards \u2014 Win: 117 receiving yards\n\nPosted pregame analysis:\nBuccaneers moneyline \u2014 1:00 PM ET\nEagles moneyline \u2014 1:00 PM ET\nVikings\u2013Bears Under 47.5 \u2014 1:00 PM ET\nJaguars\u2013Broncos Under 45.5 \u2014 4:05 PM ET\nBijan Robinson 130+ rushing + receiving yards \u2014 1:00 PM ET\nDeVonta Smith Over 59.5 receiving yards \u2014 1:00 PM ET\n\nThis six-leg construction combines two moneylines, two game unders and two player props. Bijan's offensive workload and Smith's leading receiving role support their inclusion, using thresholds from September 20 DraftKings analysis. These are target lines, not a verified executable sportsbook quote. Eagles moneyline and Smith receiving yards come from the same game; the sportsbook must permit and price that combination. A run-heavy Eagles win can cash the moneyline while Smith misses his threshold. The unders share direction with the Super ticket but have less point protection. This is a WATCH construction, not an official release. No combined payout or ticket hit probability is claimed.\n\nConfirm every target line, price, player availability and same-game eligibility before entry. Delaware teaser numbers and fixed payouts do not transfer to this mixed sportsbook ticket.\n\nRecord classification: Posted construction; execution unconfirmed; excluded from official betting record. No wager amounts published; unit profit/loss is not inferred.",
       "injuryNotes": "Confirm every target line, price, player availability and same-game eligibility before entry. Delaware teaser numbers and fixed payouts do not transfer to this mixed sportsbook ticket.",
       "sourceVerification": "September 20 pregame research. Burrow starting and Lindstrom available confirmed from team reports. Props are target thresholds from today's DraftKings analysis; combined sportsbook price unverified.",
       "sourceLinks": [
@@ -457,15 +574,98 @@
           "url": "https://www.bengals.com/news/pregame-quick-hits-joe-burrow-gets-nod-shemar-makes-season-debut-with-b-j-hill-out"
         },
         {
-          "title": "Bijan prop analysis — September 20",
+          "title": "Bijan prop analysis \u2014 September 20",
           "url": "https://dknetwork.draftkings.com/2026/09/20/panthers-vs-falcons-nfl-player-prop-bets/"
         },
         {
-          "title": "Smith prop analysis — September 20",
+          "title": "Smith prop analysis \u2014 September 20",
           "url": "https://dknetwork.draftkings.com/2026/09/20/devonta-smith-receiving-yards-pick-for-eagles-vs-titans/"
         }
       ],
-      "publishedAt": "2026-09-20T16:56:45.375Z"
+      "publishedAt": "2026-09-20T16:56:45.375Z",
+      "originalPublication": {
+        "date": "2026-09-20",
+        "status": "Watch \u2014 conditional construction",
+        "grade": "WATCH",
+        "officialBet": "No",
+        "betPlaced": false,
+        "writeup": "This six-leg construction combines two moneylines, two game unders and two player props. Bijan's offensive workload and Smith's leading receiving role support their inclusion, using thresholds from September 20 DraftKings analysis. These are target lines, not a verified executable sportsbook quote. Eagles moneyline and Smith receiving yards come from the same game; the sportsbook must permit and price that combination. A run-heavy Eagles win can cash the moneyline while Smith misses his threshold. The unders share direction with the Super ticket but have less point protection. This is a WATCH construction, not an official release. No combined payout or ticket hit probability is claimed.",
+        "fullAnalysis": "Buccaneers moneyline \u2014 1:00 PM ET\nEagles moneyline \u2014 1:00 PM ET\nVikings\u2013Bears Under 47.5 \u2014 1:00 PM ET\nJaguars\u2013Broncos Under 45.5 \u2014 4:05 PM ET\nBijan Robinson 130+ rushing + receiving yards \u2014 1:00 PM ET\nDeVonta Smith Over 59.5 receiving yards \u2014 1:00 PM ET\n\nThis six-leg construction combines two moneylines, two game unders and two player props. Bijan's offensive workload and Smith's leading receiving role support their inclusion, using thresholds from September 20 DraftKings analysis. These are target lines, not a verified executable sportsbook quote. Eagles moneyline and Smith receiving yards come from the same game; the sportsbook must permit and price that combination. A run-heavy Eagles win can cash the moneyline while Smith misses his threshold. The unders share direction with the Super ticket but have less point protection. This is a WATCH construction, not an official release. No combined payout or ticket hit probability is claimed.\n\nConfirm every target line, price, player availability and same-game eligibility before entry. Delaware teaser numbers and fixed payouts do not transfer to this mixed sportsbook ticket."
+      },
+      "postedDate": "2026-09-20",
+      "Date": "2026-09-20",
+      "result": "Loss",
+      "Result": "Loss",
+      "Outcome": "Loss",
+      "Status": "Graded",
+      "legGrades": [
+        {
+          "pick": "Buccaneers moneyline",
+          "result": "Loss",
+          "final": "TB 19; CLE 23",
+          "gradingMargin": -4,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872935"
+        },
+        {
+          "pick": "Eagles moneyline",
+          "result": "Win",
+          "final": "TEN 20; PHI 24",
+          "gradingMargin": 4,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872939"
+        },
+        {
+          "pick": "Vikings\u2013Bears Under 47.5",
+          "result": "Win",
+          "final": "CHI 3; MIN 9",
+          "gradingMargin": 35.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872937"
+        },
+        {
+          "pick": "Jaguars\u2013Broncos Under 45.5",
+          "result": "Win",
+          "final": "DEN 20; JAX 13",
+          "gradingMargin": 12.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872940"
+        },
+        {
+          "pick": "Bijan Robinson 130+ rushing + receiving yards",
+          "result": "Loss",
+          "final": "81 yards (72 rushing + 9 receiving)",
+          "sourceUrl": "https://www.espn.com/nfl/boxscore/_/gameId/401872933"
+        },
+        {
+          "pick": "DeVonta Smith Over 59.5 receiving yards",
+          "result": "Win",
+          "final": "117 receiving yards",
+          "sourceUrl": "https://www.espn.com/nfl/boxscore/_/gameId/401872939"
+        }
+      ],
+      "legRecord": "4-2",
+      "excludeFromRecord": true,
+      "Official Bet": "No",
+      "profitLoss": "Unknown",
+      "Profit/Loss": "Unknown",
+      "P/L": "Unknown",
+      "PL": "Unknown",
+      "units": "",
+      "Units": "",
+      "settlementCheckedAt": "2026-09-21T12:53:43.893011+00:00",
+      "recordScope": "Posted construction; execution unconfirmed; excluded from official betting record",
+      "legResults": "Buccaneers moneyline \u2014 Loss: TB 19; CLE 23\nEagles moneyline \u2014 Win: TEN 20; PHI 24\nVikings\u2013Bears Under 47.5 \u2014 Win: CHI 3; MIN 9\nJaguars\u2013Broncos Under 45.5 \u2014 Win: DEN 20; JAX 13\nBijan Robinson 130+ rushing + receiving yards \u2014 Loss: 81 yards (72 rushing + 9 receiving)\nDeVonta Smith Over 59.5 receiving yards \u2014 Win: 117 receiving yards",
+      "settlementNotes": "LOSS. Leg record: 4-2. Losing legs: Buccaneers moneyline, Bijan Robinson 130+ rushing + receiving yards.",
+      "finalScore": "Buccaneers moneyline \u2014 Loss: TB 19; CLE 23\nEagles moneyline \u2014 Win: TEN 20; PHI 24\nVikings\u2013Bears Under 47.5 \u2014 Win: CHI 3; MIN 9\nJaguars\u2013Broncos Under 45.5 \u2014 Win: DEN 20; JAX 13\nBijan Robinson 130+ rushing + receiving yards \u2014 Loss: 81 yards (72 rushing + 9 receiving)\nDeVonta Smith Over 59.5 receiving yards \u2014 Win: 117 receiving yards",
+      "settlementSource": "MLB final box score and ESPN final scoreboard/box scores, checked September 21, 2026.",
+      "settlementSources": [
+        "https://www.espn.com/nfl/game/_/gameId/401872935",
+        "https://www.espn.com/nfl/game/_/gameId/401872939",
+        "https://www.espn.com/nfl/game/_/gameId/401872937",
+        "https://www.espn.com/nfl/game/_/gameId/401872940",
+        "https://www.espn.com/nfl/boxscore/_/gameId/401872933",
+        "https://www.espn.com/nfl/boxscore/_/gameId/401872939"
+      ],
+      "Writeup": "LOSS. Leg record: 4-2. Losing legs: Buccaneers moneyline, Bijan Robinson 130+ rushing + receiving yards.\n\nBuccaneers moneyline \u2014 Loss: TB 19; CLE 23\nEagles moneyline \u2014 Win: TEN 20; PHI 24\nVikings\u2013Bears Under 47.5 \u2014 Win: CHI 3; MIN 9\nJaguars\u2013Broncos Under 45.5 \u2014 Win: DEN 20; JAX 13\nBijan Robinson 130+ rushing + receiving yards \u2014 Loss: 81 yards (72 rushing + 9 receiving)\nDeVonta Smith Over 59.5 receiving yards \u2014 Win: 117 receiving yards",
+      "Full Analysis": "LOSS. Leg record: 4-2. Losing legs: Buccaneers moneyline, Bijan Robinson 130+ rushing + receiving yards.\n\nBuccaneers moneyline \u2014 Loss: TB 19; CLE 23\nEagles moneyline \u2014 Win: TEN 20; PHI 24\nVikings\u2013Bears Under 47.5 \u2014 Win: CHI 3; MIN 9\nJaguars\u2013Broncos Under 45.5 \u2014 Win: DEN 20; JAX 13\nBijan Robinson 130+ rushing + receiving yards \u2014 Loss: 81 yards (72 rushing + 9 receiving)\nDeVonta Smith Over 59.5 receiving yards \u2014 Win: 117 receiving yards\n\nPosted pregame analysis:\nBuccaneers moneyline \u2014 1:00 PM ET\nEagles moneyline \u2014 1:00 PM ET\nVikings\u2013Bears Under 47.5 \u2014 1:00 PM ET\nJaguars\u2013Broncos Under 45.5 \u2014 4:05 PM ET\nBijan Robinson 130+ rushing + receiving yards \u2014 1:00 PM ET\nDeVonta Smith Over 59.5 receiving yards \u2014 1:00 PM ET\n\nThis six-leg construction combines two moneylines, two game unders and two player props. Bijan's offensive workload and Smith's leading receiving role support their inclusion, using thresholds from September 20 DraftKings analysis. These are target lines, not a verified executable sportsbook quote. Eagles moneyline and Smith receiving yards come from the same game; the sportsbook must permit and price that combination. A run-heavy Eagles win can cash the moneyline while Smith misses his threshold. The unders share direction with the Super ticket but have less point protection. This is a WATCH construction, not an official release. No combined payout or ticket hit probability is claimed.\n\nConfirm every target line, price, player availability and same-game eligibility before entry. Delaware teaser numbers and fixed payouts do not transfer to this mixed sportsbook ticket.\n\nRecord classification: Posted construction; execution unconfirmed; excluded from official betting record. No wager amounts published; unit profit/loss is not inferred.",
+      "settledAt": "2026-09-21T12:53:43.893011+00:00"
     },
     {
       "id": "nfl-expanded-twelve-2026-09-20",
@@ -476,19 +676,19 @@
       "access": "free",
       "sport": "NFL",
       "league": "NFL",
-      "game": "NFL Week 2 — Sunday September 20 — 1 PM / 4 PM ET",
-      "pick": "Falcons +9.5 / Bengals +9.5 / Buccaneers -0.5 / Packers +4.5 / Vikings–Bears Under 55.5 / Eagles +1.5 / Jaguars–Broncos Under 51.5 / Chargers +1.5 / 49ers -5.5 / Cowboys +4.5 / Bijan Robinson 130+ rushing + receiving yards / DeVonta Smith Over 59.5 receiving yards",
-      "cardTitle": "12-Leg Expanded Multi — All Super Picks + Props",
-      "type": "12-Leg Expanded Multi — All Super Picks + Props",
+      "game": "NFL Week 2 \u2014 Sunday September 20 \u2014 1 PM / 4 PM ET",
+      "pick": "Falcons +9.5 / Bengals +9.5 / Buccaneers -0.5 / Packers +4.5 / Vikings\u2013Bears Under 55.5 / Eagles +1.5 / Jaguars\u2013Broncos Under 51.5 / Chargers +1.5 / 49ers -5.5 / Cowboys +4.5 / Bijan Robinson 130+ rushing + receiving yards / DeVonta Smith Over 59.5 receiving yards",
+      "cardTitle": "12-Leg Expanded Multi \u2014 All Super Picks + Props",
+      "type": "12-Leg Expanded Multi \u2014 All Super Picks + Props",
       "market": "NFL parlay",
-      "lineNumber": "Falcons +9.5 — 1:00 PM ET / Bengals +9.5 — 1:00 PM ET / Buccaneers -0.5 — 1:00 PM ET / Packers +4.5 — 1:00 PM ET / Vikings–Bears Under 55.5 — 1:00 PM ET / Eagles +1.5 — 1:00 PM ET / Jaguars–Broncos Under 51.5 — 4:05 PM ET / Chargers +1.5 — 4:05 PM ET / 49ers -5.5 — 4:25 PM ET / Cowboys +4.5 — 4:25 PM ET / Bijan Robinson 130+ rushing + receiving yards — 1:00 PM ET / DeVonta Smith Over 59.5 receiving yards — 1:00 PM ET",
-      "legs": "Falcons +9.5 — 1:00 PM ET\nBengals +9.5 — 1:00 PM ET\nBuccaneers -0.5 — 1:00 PM ET\nPackers +4.5 — 1:00 PM ET\nVikings–Bears Under 55.5 — 1:00 PM ET\nEagles +1.5 — 1:00 PM ET\nJaguars–Broncos Under 51.5 — 4:05 PM ET\nChargers +1.5 — 4:05 PM ET\n49ers -5.5 — 4:25 PM ET\nCowboys +4.5 — 4:25 PM ET\nBijan Robinson 130+ rushing + receiving yards — 1:00 PM ET\nDeVonta Smith Over 59.5 receiving yards — 1:00 PM ET",
+      "lineNumber": "Falcons +9.5 \u2014 1:00 PM ET / Bengals +9.5 \u2014 1:00 PM ET / Buccaneers -0.5 \u2014 1:00 PM ET / Packers +4.5 \u2014 1:00 PM ET / Vikings\u2013Bears Under 55.5 \u2014 1:00 PM ET / Eagles +1.5 \u2014 1:00 PM ET / Jaguars\u2013Broncos Under 51.5 \u2014 4:05 PM ET / Chargers +1.5 \u2014 4:05 PM ET / 49ers -5.5 \u2014 4:25 PM ET / Cowboys +4.5 \u2014 4:25 PM ET / Bijan Robinson 130+ rushing + receiving yards \u2014 1:00 PM ET / DeVonta Smith Over 59.5 receiving yards \u2014 1:00 PM ET",
+      "legs": "Falcons +9.5 \u2014 1:00 PM ET\nBengals +9.5 \u2014 1:00 PM ET\nBuccaneers -0.5 \u2014 1:00 PM ET\nPackers +4.5 \u2014 1:00 PM ET\nVikings\u2013Bears Under 55.5 \u2014 1:00 PM ET\nEagles +1.5 \u2014 1:00 PM ET\nJaguars\u2013Broncos Under 51.5 \u2014 4:05 PM ET\nChargers +1.5 \u2014 4:05 PM ET\n49ers -5.5 \u2014 4:25 PM ET\nCowboys +4.5 \u2014 4:25 PM ET\nBijan Robinson 130+ rushing + receiving yards \u2014 1:00 PM ET\nDeVonta Smith Over 59.5 receiving yards \u2014 1:00 PM ET",
       "legCount": 12,
       "odds": "Price unverified",
       "payoutOdds": "Combined price unverified",
-      "sportsbook": "Sportsbook — alternate lines required",
+      "sportsbook": "Sportsbook \u2014 alternate lines required",
       "grade": "WATCH",
-      "status": "Watch — conditional construction",
+      "status": "Graded",
       "officialBet": "No",
       "frameworkApproved": false,
       "betPlaced": false,
@@ -498,9 +698,9 @@
       "showFullAnalysis": true,
       "bestNumber": "Target lines listed; sportsbook quote unverified",
       "playableTo": "Listed lines only; reassess any change",
-      "noBetCutoff": "Any worse line, unavailable combination or material availability change — reassess",
-      "writeup": "This expanded multi combines all ten daytime Super directions with Bijan Robinson 130+ rushing and receiving yards and DeVonta Smith Over 59.5 receiving yards. It is a conditional sportsbook construction: the listed game numbers must be available as alternate lines, and the book must accept both same-game combinations. Atlanta with Bijan and Philadelphia with Smith add shared game exposure. The Delaware card's fixed payout does not apply. More required outcomes make this harder to complete than the ten-leg Super or six-leg mixed version. No executable combined quote, validated joint probability or official Micks grade is available. This remains WATCH and should not be presented as a confirmed offered ticket.",
-      "fullAnalysis": "Falcons +9.5 — 1:00 PM ET\nBengals +9.5 — 1:00 PM ET\nBuccaneers -0.5 — 1:00 PM ET\nPackers +4.5 — 1:00 PM ET\nVikings–Bears Under 55.5 — 1:00 PM ET\nEagles +1.5 — 1:00 PM ET\nJaguars–Broncos Under 51.5 — 4:05 PM ET\nChargers +1.5 — 4:05 PM ET\n49ers -5.5 — 4:25 PM ET\nCowboys +4.5 — 4:25 PM ET\nBijan Robinson 130+ rushing + receiving yards — 1:00 PM ET\nDeVonta Smith Over 59.5 receiving yards — 1:00 PM ET\n\nThis expanded multi combines all ten daytime Super directions with Bijan Robinson 130+ rushing and receiving yards and DeVonta Smith Over 59.5 receiving yards. It is a conditional sportsbook construction: the listed game numbers must be available as alternate lines, and the book must accept both same-game combinations. Atlanta with Bijan and Philadelphia with Smith add shared game exposure. The Delaware card's fixed payout does not apply. More required outcomes make this harder to complete than the ten-leg Super or six-leg mixed version. No executable combined quote, validated joint probability or official Micks grade is available. This remains WATCH and should not be presented as a confirmed offered ticket.\n\nOnly available if the sportsbook offers all ten alternate game lines and both props in one combination. No automatic substitutions or quoted combined payout.",
+      "noBetCutoff": "Any worse line, unavailable combination or material availability change \u2014 reassess",
+      "writeup": "LOSS. Leg record: 8-4. Losing legs: Falcons +9.5, Buccaneers -0.5, Chargers +1.5, Bijan Robinson 130+ rushing + receiving yards.\n\nFalcons +9.5 \u2014 Loss: ATL 3; CAR 34\nBengals +9.5 \u2014 Win: HOU 6; CIN 20\nBuccaneers -0.5 \u2014 Loss: TB 19; CLE 23\nPackers +4.5 \u2014 Win: NYJ 17; GB 20\nVikings\u2013Bears Under 55.5 \u2014 Win: CHI 3; MIN 9\nEagles +1.5 \u2014 Win: TEN 20; PHI 24\nJaguars\u2013Broncos Under 51.5 \u2014 Win: DEN 20; JAX 13\nChargers +1.5 \u2014 Loss: LAC 14; LV 26\n49ers -5.5 \u2014 Win: SF 35; MIA 13\nCowboys +4.5 \u2014 Win: DAL 37; WSH 20\nBijan Robinson 130+ rushing + receiving yards \u2014 Loss: 81 yards (72 rushing + 9 receiving)\nDeVonta Smith Over 59.5 receiving yards \u2014 Win: 117 receiving yards",
+      "fullAnalysis": "LOSS. Leg record: 8-4. Losing legs: Falcons +9.5, Buccaneers -0.5, Chargers +1.5, Bijan Robinson 130+ rushing + receiving yards.\n\nFalcons +9.5 \u2014 Loss: ATL 3; CAR 34\nBengals +9.5 \u2014 Win: HOU 6; CIN 20\nBuccaneers -0.5 \u2014 Loss: TB 19; CLE 23\nPackers +4.5 \u2014 Win: NYJ 17; GB 20\nVikings\u2013Bears Under 55.5 \u2014 Win: CHI 3; MIN 9\nEagles +1.5 \u2014 Win: TEN 20; PHI 24\nJaguars\u2013Broncos Under 51.5 \u2014 Win: DEN 20; JAX 13\nChargers +1.5 \u2014 Loss: LAC 14; LV 26\n49ers -5.5 \u2014 Win: SF 35; MIA 13\nCowboys +4.5 \u2014 Win: DAL 37; WSH 20\nBijan Robinson 130+ rushing + receiving yards \u2014 Loss: 81 yards (72 rushing + 9 receiving)\nDeVonta Smith Over 59.5 receiving yards \u2014 Win: 117 receiving yards\n\nPosted pregame analysis:\nFalcons +9.5 \u2014 1:00 PM ET\nBengals +9.5 \u2014 1:00 PM ET\nBuccaneers -0.5 \u2014 1:00 PM ET\nPackers +4.5 \u2014 1:00 PM ET\nVikings\u2013Bears Under 55.5 \u2014 1:00 PM ET\nEagles +1.5 \u2014 1:00 PM ET\nJaguars\u2013Broncos Under 51.5 \u2014 4:05 PM ET\nChargers +1.5 \u2014 4:05 PM ET\n49ers -5.5 \u2014 4:25 PM ET\nCowboys +4.5 \u2014 4:25 PM ET\nBijan Robinson 130+ rushing + receiving yards \u2014 1:00 PM ET\nDeVonta Smith Over 59.5 receiving yards \u2014 1:00 PM ET\n\nThis expanded multi combines all ten daytime Super directions with Bijan Robinson 130+ rushing and receiving yards and DeVonta Smith Over 59.5 receiving yards. It is a conditional sportsbook construction: the listed game numbers must be available as alternate lines, and the book must accept both same-game combinations. Atlanta with Bijan and Philadelphia with Smith add shared game exposure. The Delaware card's fixed payout does not apply. More required outcomes make this harder to complete than the ten-leg Super or six-leg mixed version. No executable combined quote, validated joint probability or official Micks grade is available. This remains WATCH and should not be presented as a confirmed offered ticket.\n\nOnly available if the sportsbook offers all ten alternate game lines and both props in one combination. No automatic substitutions or quoted combined payout.\n\nRecord classification: Posted construction; execution unconfirmed; excluded from official betting record. No wager amounts published; unit profit/loss is not inferred.",
       "injuryNotes": "Only available if the sportsbook offers all ten alternate game lines and both props in one combination. No automatic substitutions or quoted combined payout.",
       "sourceVerification": "September 20 pregame research. Burrow starting and Lindstrom available confirmed from team reports. Props are target thresholds from today's DraftKings analysis; combined sportsbook price unverified.",
       "sourceLinks": [
@@ -517,15 +717,146 @@
           "url": "https://www.bengals.com/news/pregame-quick-hits-joe-burrow-gets-nod-shemar-makes-season-debut-with-b-j-hill-out"
         },
         {
-          "title": "Bijan prop analysis — September 20",
+          "title": "Bijan prop analysis \u2014 September 20",
           "url": "https://dknetwork.draftkings.com/2026/09/20/panthers-vs-falcons-nfl-player-prop-bets/"
         },
         {
-          "title": "Smith prop analysis — September 20",
+          "title": "Smith prop analysis \u2014 September 20",
           "url": "https://dknetwork.draftkings.com/2026/09/20/devonta-smith-receiving-yards-pick-for-eagles-vs-titans/"
         }
       ],
-      "publishedAt": "2026-09-20T16:56:45.375Z"
+      "publishedAt": "2026-09-20T16:56:45.375Z",
+      "originalPublication": {
+        "date": "2026-09-20",
+        "status": "Watch \u2014 conditional construction",
+        "grade": "WATCH",
+        "officialBet": "No",
+        "betPlaced": false,
+        "writeup": "This expanded multi combines all ten daytime Super directions with Bijan Robinson 130+ rushing and receiving yards and DeVonta Smith Over 59.5 receiving yards. It is a conditional sportsbook construction: the listed game numbers must be available as alternate lines, and the book must accept both same-game combinations. Atlanta with Bijan and Philadelphia with Smith add shared game exposure. The Delaware card's fixed payout does not apply. More required outcomes make this harder to complete than the ten-leg Super or six-leg mixed version. No executable combined quote, validated joint probability or official Micks grade is available. This remains WATCH and should not be presented as a confirmed offered ticket.",
+        "fullAnalysis": "Falcons +9.5 \u2014 1:00 PM ET\nBengals +9.5 \u2014 1:00 PM ET\nBuccaneers -0.5 \u2014 1:00 PM ET\nPackers +4.5 \u2014 1:00 PM ET\nVikings\u2013Bears Under 55.5 \u2014 1:00 PM ET\nEagles +1.5 \u2014 1:00 PM ET\nJaguars\u2013Broncos Under 51.5 \u2014 4:05 PM ET\nChargers +1.5 \u2014 4:05 PM ET\n49ers -5.5 \u2014 4:25 PM ET\nCowboys +4.5 \u2014 4:25 PM ET\nBijan Robinson 130+ rushing + receiving yards \u2014 1:00 PM ET\nDeVonta Smith Over 59.5 receiving yards \u2014 1:00 PM ET\n\nThis expanded multi combines all ten daytime Super directions with Bijan Robinson 130+ rushing and receiving yards and DeVonta Smith Over 59.5 receiving yards. It is a conditional sportsbook construction: the listed game numbers must be available as alternate lines, and the book must accept both same-game combinations. Atlanta with Bijan and Philadelphia with Smith add shared game exposure. The Delaware card's fixed payout does not apply. More required outcomes make this harder to complete than the ten-leg Super or six-leg mixed version. No executable combined quote, validated joint probability or official Micks grade is available. This remains WATCH and should not be presented as a confirmed offered ticket.\n\nOnly available if the sportsbook offers all ten alternate game lines and both props in one combination. No automatic substitutions or quoted combined payout."
+      },
+      "postedDate": "2026-09-20",
+      "Date": "2026-09-20",
+      "result": "Loss",
+      "Result": "Loss",
+      "Outcome": "Loss",
+      "Status": "Graded",
+      "legGrades": [
+        {
+          "pick": "Falcons +9.5",
+          "result": "Loss",
+          "final": "ATL 3; CAR 34",
+          "gradingMargin": -21.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872933"
+        },
+        {
+          "pick": "Bengals +9.5",
+          "result": "Win",
+          "final": "HOU 6; CIN 20",
+          "gradingMargin": 23.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872934"
+        },
+        {
+          "pick": "Buccaneers -0.5",
+          "result": "Loss",
+          "final": "TB 19; CLE 23",
+          "gradingMargin": -4.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872935"
+        },
+        {
+          "pick": "Packers +4.5",
+          "result": "Win",
+          "final": "NYJ 17; GB 20",
+          "gradingMargin": 7.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872936"
+        },
+        {
+          "pick": "Vikings\u2013Bears Under 55.5",
+          "result": "Win",
+          "final": "CHI 3; MIN 9",
+          "gradingMargin": 43.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872937"
+        },
+        {
+          "pick": "Eagles +1.5",
+          "result": "Win",
+          "final": "TEN 20; PHI 24",
+          "gradingMargin": 5.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872939"
+        },
+        {
+          "pick": "Jaguars\u2013Broncos Under 51.5",
+          "result": "Win",
+          "final": "DEN 20; JAX 13",
+          "gradingMargin": 18.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872940"
+        },
+        {
+          "pick": "Chargers +1.5",
+          "result": "Loss",
+          "final": "LAC 14; LV 26",
+          "gradingMargin": -10.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872941"
+        },
+        {
+          "pick": "49ers -5.5",
+          "result": "Win",
+          "final": "SF 35; MIA 13",
+          "gradingMargin": 16.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872942"
+        },
+        {
+          "pick": "Cowboys +4.5",
+          "result": "Win",
+          "final": "DAL 37; WSH 20",
+          "gradingMargin": 21.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872944"
+        },
+        {
+          "pick": "Bijan Robinson 130+ rushing + receiving yards",
+          "result": "Loss",
+          "final": "81 yards (72 rushing + 9 receiving)",
+          "sourceUrl": "https://www.espn.com/nfl/boxscore/_/gameId/401872933"
+        },
+        {
+          "pick": "DeVonta Smith Over 59.5 receiving yards",
+          "result": "Win",
+          "final": "117 receiving yards",
+          "sourceUrl": "https://www.espn.com/nfl/boxscore/_/gameId/401872939"
+        }
+      ],
+      "legRecord": "8-4",
+      "excludeFromRecord": true,
+      "Official Bet": "No",
+      "profitLoss": "Unknown",
+      "Profit/Loss": "Unknown",
+      "P/L": "Unknown",
+      "PL": "Unknown",
+      "units": "",
+      "Units": "",
+      "settlementCheckedAt": "2026-09-21T12:53:43.893011+00:00",
+      "recordScope": "Posted construction; execution unconfirmed; excluded from official betting record",
+      "legResults": "Falcons +9.5 \u2014 Loss: ATL 3; CAR 34\nBengals +9.5 \u2014 Win: HOU 6; CIN 20\nBuccaneers -0.5 \u2014 Loss: TB 19; CLE 23\nPackers +4.5 \u2014 Win: NYJ 17; GB 20\nVikings\u2013Bears Under 55.5 \u2014 Win: CHI 3; MIN 9\nEagles +1.5 \u2014 Win: TEN 20; PHI 24\nJaguars\u2013Broncos Under 51.5 \u2014 Win: DEN 20; JAX 13\nChargers +1.5 \u2014 Loss: LAC 14; LV 26\n49ers -5.5 \u2014 Win: SF 35; MIA 13\nCowboys +4.5 \u2014 Win: DAL 37; WSH 20\nBijan Robinson 130+ rushing + receiving yards \u2014 Loss: 81 yards (72 rushing + 9 receiving)\nDeVonta Smith Over 59.5 receiving yards \u2014 Win: 117 receiving yards",
+      "settlementNotes": "LOSS. Leg record: 8-4. Losing legs: Falcons +9.5, Buccaneers -0.5, Chargers +1.5, Bijan Robinson 130+ rushing + receiving yards.",
+      "finalScore": "Falcons +9.5 \u2014 Loss: ATL 3; CAR 34\nBengals +9.5 \u2014 Win: HOU 6; CIN 20\nBuccaneers -0.5 \u2014 Loss: TB 19; CLE 23\nPackers +4.5 \u2014 Win: NYJ 17; GB 20\nVikings\u2013Bears Under 55.5 \u2014 Win: CHI 3; MIN 9\nEagles +1.5 \u2014 Win: TEN 20; PHI 24\nJaguars\u2013Broncos Under 51.5 \u2014 Win: DEN 20; JAX 13\nChargers +1.5 \u2014 Loss: LAC 14; LV 26\n49ers -5.5 \u2014 Win: SF 35; MIA 13\nCowboys +4.5 \u2014 Win: DAL 37; WSH 20\nBijan Robinson 130+ rushing + receiving yards \u2014 Loss: 81 yards (72 rushing + 9 receiving)\nDeVonta Smith Over 59.5 receiving yards \u2014 Win: 117 receiving yards",
+      "settlementSource": "MLB final box score and ESPN final scoreboard/box scores, checked September 21, 2026.",
+      "settlementSources": [
+        "https://www.espn.com/nfl/game/_/gameId/401872933",
+        "https://www.espn.com/nfl/game/_/gameId/401872934",
+        "https://www.espn.com/nfl/game/_/gameId/401872935",
+        "https://www.espn.com/nfl/game/_/gameId/401872936",
+        "https://www.espn.com/nfl/game/_/gameId/401872937",
+        "https://www.espn.com/nfl/game/_/gameId/401872939",
+        "https://www.espn.com/nfl/game/_/gameId/401872940",
+        "https://www.espn.com/nfl/game/_/gameId/401872941",
+        "https://www.espn.com/nfl/game/_/gameId/401872942",
+        "https://www.espn.com/nfl/game/_/gameId/401872944",
+        "https://www.espn.com/nfl/boxscore/_/gameId/401872933",
+        "https://www.espn.com/nfl/boxscore/_/gameId/401872939"
+      ],
+      "Writeup": "LOSS. Leg record: 8-4. Losing legs: Falcons +9.5, Buccaneers -0.5, Chargers +1.5, Bijan Robinson 130+ rushing + receiving yards.\n\nFalcons +9.5 \u2014 Loss: ATL 3; CAR 34\nBengals +9.5 \u2014 Win: HOU 6; CIN 20\nBuccaneers -0.5 \u2014 Loss: TB 19; CLE 23\nPackers +4.5 \u2014 Win: NYJ 17; GB 20\nVikings\u2013Bears Under 55.5 \u2014 Win: CHI 3; MIN 9\nEagles +1.5 \u2014 Win: TEN 20; PHI 24\nJaguars\u2013Broncos Under 51.5 \u2014 Win: DEN 20; JAX 13\nChargers +1.5 \u2014 Loss: LAC 14; LV 26\n49ers -5.5 \u2014 Win: SF 35; MIA 13\nCowboys +4.5 \u2014 Win: DAL 37; WSH 20\nBijan Robinson 130+ rushing + receiving yards \u2014 Loss: 81 yards (72 rushing + 9 receiving)\nDeVonta Smith Over 59.5 receiving yards \u2014 Win: 117 receiving yards",
+      "Full Analysis": "LOSS. Leg record: 8-4. Losing legs: Falcons +9.5, Buccaneers -0.5, Chargers +1.5, Bijan Robinson 130+ rushing + receiving yards.\n\nFalcons +9.5 \u2014 Loss: ATL 3; CAR 34\nBengals +9.5 \u2014 Win: HOU 6; CIN 20\nBuccaneers -0.5 \u2014 Loss: TB 19; CLE 23\nPackers +4.5 \u2014 Win: NYJ 17; GB 20\nVikings\u2013Bears Under 55.5 \u2014 Win: CHI 3; MIN 9\nEagles +1.5 \u2014 Win: TEN 20; PHI 24\nJaguars\u2013Broncos Under 51.5 \u2014 Win: DEN 20; JAX 13\nChargers +1.5 \u2014 Loss: LAC 14; LV 26\n49ers -5.5 \u2014 Win: SF 35; MIA 13\nCowboys +4.5 \u2014 Win: DAL 37; WSH 20\nBijan Robinson 130+ rushing + receiving yards \u2014 Loss: 81 yards (72 rushing + 9 receiving)\nDeVonta Smith Over 59.5 receiving yards \u2014 Win: 117 receiving yards\n\nPosted pregame analysis:\nFalcons +9.5 \u2014 1:00 PM ET\nBengals +9.5 \u2014 1:00 PM ET\nBuccaneers -0.5 \u2014 1:00 PM ET\nPackers +4.5 \u2014 1:00 PM ET\nVikings\u2013Bears Under 55.5 \u2014 1:00 PM ET\nEagles +1.5 \u2014 1:00 PM ET\nJaguars\u2013Broncos Under 51.5 \u2014 4:05 PM ET\nChargers +1.5 \u2014 4:05 PM ET\n49ers -5.5 \u2014 4:25 PM ET\nCowboys +4.5 \u2014 4:25 PM ET\nBijan Robinson 130+ rushing + receiving yards \u2014 1:00 PM ET\nDeVonta Smith Over 59.5 receiving yards \u2014 1:00 PM ET\n\nThis expanded multi combines all ten daytime Super directions with Bijan Robinson 130+ rushing and receiving yards and DeVonta Smith Over 59.5 receiving yards. It is a conditional sportsbook construction: the listed game numbers must be available as alternate lines, and the book must accept both same-game combinations. Atlanta with Bijan and Philadelphia with Smith add shared game exposure. The Delaware card's fixed payout does not apply. More required outcomes make this harder to complete than the ten-leg Super or six-leg mixed version. No executable combined quote, validated joint probability or official Micks grade is available. This remains WATCH and should not be presented as a confirmed offered ticket.\n\nOnly available if the sportsbook offers all ten alternate game lines and both props in one combination. No automatic substitutions or quoted combined payout.\n\nRecord classification: Posted construction; execution unconfirmed; excluded from official betting record. No wager amounts published; unit profit/loss is not inferred.",
+      "settledAt": "2026-09-21T12:53:43.893011+00:00"
     },
     {
       "id": "nfl-delaware-big-super-2026-09-19",
@@ -536,19 +867,19 @@
       "access": "free",
       "sport": "NFL",
       "league": "NFL",
-      "game": "NFL Week 2 — September 20–21, 2026",
-      "pick": "Bengals +9.5 / Steelers +13.5 / Vikings–Bears Under 55.5 / Giants +15.5 / Packers +4.5 / Jaguars–Broncos Under 51.5 / Chargers +1.5 / Cowboys +4.5 / Seahawks +3.5 / Eagles +1.5",
+      "game": "NFL Week 2 \u2014 September 20\u201321, 2026",
+      "pick": "Bengals +9.5 / Steelers +13.5 / Vikings\u2013Bears Under 55.5 / Giants +15.5 / Packers +4.5 / Jaguars\u2013Broncos Under 51.5 / Chargers +1.5 / Cowboys +4.5 / Seahawks +3.5 / Eagles +1.5",
       "cardTitle": "10-Pick Big / Super Teaser",
       "type": "10-Pick Big / Super Teaser",
       "market": "NFL parlay card",
-      "lineNumber": "Bengals +9.5 / Steelers +13.5 / Vikings–Bears Under 55.5 / Giants +15.5 / Packers +4.5 / Jaguars–Broncos Under 51.5 / Chargers +1.5 / Cowboys +4.5 / Seahawks +3.5 / Eagles +1.5",
-      "legs": "#106: Bengals +9.5\n#130: Steelers +13.5\n#120: Vikings–Bears Under 55.5\n#158: Giants +15.5\n#113: Packers +4.5\n#136: Jaguars–Broncos Under 51.5\n#137: Chargers +1.5\n#149: Cowboys +4.5\n#145: Seahawks +3.5\n#125: Eagles +1.5",
+      "lineNumber": "Bengals +9.5 / Steelers +13.5 / Vikings\u2013Bears Under 55.5 / Giants +15.5 / Packers +4.5 / Jaguars\u2013Broncos Under 51.5 / Chargers +1.5 / Cowboys +4.5 / Seahawks +3.5 / Eagles +1.5",
+      "legs": "#106: Bengals +9.5\n#130: Steelers +13.5\n#120: Vikings\u2013Bears Under 55.5\n#158: Giants +15.5\n#113: Packers +4.5\n#136: Jaguars\u2013Broncos Under 51.5\n#137: Chargers +1.5\n#149: Cowboys +4.5\n#145: Seahawks +3.5\n#125: Eagles +1.5",
       "legCount": 10,
       "odds": "+650",
       "payoutOdds": "13 to 2",
       "sportsbook": "Delaware Lottery",
       "grade": "WATCH",
-      "status": "Watch — conditional construction",
+      "status": "Graded",
       "officialBet": "No",
       "frameworkApproved": false,
       "betPlaced": false,
@@ -558,9 +889,9 @@
       "showFullAnalysis": true,
       "bestNumber": "Exact printed selections listed above",
       "playableTo": "Listed card lines only",
-      "noBetCutoff": "Any worse line or unresolved material availability — pass/reassess",
-      "writeup": "The preferred Big/Super construction uses eight sides and two unders, with one selection per game. Pittsburgh receives a substantial cushion, Green Bay can lose by a field goal, and the two unders have room above the ordinary card totals. Cincinnati requires Joe Burrow to start without a material limitation. The Giants leg also depends on usable tackle availability. Seattle is a weaker confidence leg with Drew Lock starting for Sam Darnold. Dallas defensive absences and short-field scoring against either under are additional failure paths. All ten selections must win under the card rules. This is a WATCH construction, not an official Micks release; no premium grade or validated ticket hit probability is claimed.",
-      "fullAnalysis": "#106: Bengals +9.5\n#130: Steelers +13.5\n#120: Vikings–Bears Under 55.5\n#158: Giants +15.5\n#113: Packers +4.5\n#136: Jaguars–Broncos Under 51.5\n#137: Chargers +1.5\n#149: Cowboys +4.5\n#145: Seahawks +3.5\n#125: Eagles +1.5\n\nThe preferred Big/Super construction uses eight sides and two unders, with one selection per game. Pittsburgh receives a substantial cushion, Green Bay can lose by a field goal, and the two unders have room above the ordinary card totals. Cincinnati requires Joe Burrow to start without a material limitation. The Giants leg also depends on usable tackle availability. Seattle is a weaker confidence leg with Drew Lock starting for Sam Darnold. Dallas defensive absences and short-field scoring against either under are additional failure paths. All ten selections must win under the card rules. This is a WATCH construction, not an official Micks release; no premium grade or validated ticket hit probability is claimed.\n\nIf Burrow does not start or is materially limited, replace #106 with Buccaneers -0.5 (#109), provided no new Mayfield issue emerges. If Giants protection cannot be verified, or for an all-Sunday version, replace #158 with Chiefs +1.5 (#153), provided Mahomes remains unrestricted. Both substitutions may be used together.\n\nGiants: check the Monday tackle availability before entry. All listed numbers must match the printed Delaware ticket. These are alternative constructions with overlapping games, not three independent positions.",
+      "noBetCutoff": "Any worse line or unresolved material availability \u2014 pass/reassess",
+      "writeup": "LOSS. Leg record: 7-2; 1 pending. Losing legs: Steelers +13.5, Chargers +1.5. Giants\u2013Rams is scheduled Monday, September 21 at 8:15 p.m. ET. Existing losing legs already determine the ticket loss.\n\nBengals +9.5 \u2014 Win: HOU 6; CIN 20\nSteelers +13.5 \u2014 Loss: NE 20; PIT 3\nVikings\u2013Bears Under 55.5 \u2014 Win: CHI 3; MIN 9\nGiants +15.5 \u2014 Pending: Scheduled September 21, 8:15 p.m. ET\nPackers +4.5 \u2014 Win: NYJ 17; GB 20\nJaguars\u2013Broncos Under 51.5 \u2014 Win: DEN 20; JAX 13\nChargers +1.5 \u2014 Loss: LAC 14; LV 26\nCowboys +4.5 \u2014 Win: DAL 37; WSH 20\nSeahawks +3.5 \u2014 Win: ARI 7; SEA 31\nEagles +1.5 \u2014 Win: TEN 20; PHI 24",
+      "fullAnalysis": "LOSS. Leg record: 7-2; 1 pending. Losing legs: Steelers +13.5, Chargers +1.5. Giants\u2013Rams is scheduled Monday, September 21 at 8:15 p.m. ET. Existing losing legs already determine the ticket loss.\n\nBengals +9.5 \u2014 Win: HOU 6; CIN 20\nSteelers +13.5 \u2014 Loss: NE 20; PIT 3\nVikings\u2013Bears Under 55.5 \u2014 Win: CHI 3; MIN 9\nGiants +15.5 \u2014 Pending: Scheduled September 21, 8:15 p.m. ET\nPackers +4.5 \u2014 Win: NYJ 17; GB 20\nJaguars\u2013Broncos Under 51.5 \u2014 Win: DEN 20; JAX 13\nChargers +1.5 \u2014 Loss: LAC 14; LV 26\nCowboys +4.5 \u2014 Win: DAL 37; WSH 20\nSeahawks +3.5 \u2014 Win: ARI 7; SEA 31\nEagles +1.5 \u2014 Win: TEN 20; PHI 24\n\nPosted pregame analysis:\n#106: Bengals +9.5\n#130: Steelers +13.5\n#120: Vikings\u2013Bears Under 55.5\n#158: Giants +15.5\n#113: Packers +4.5\n#136: Jaguars\u2013Broncos Under 51.5\n#137: Chargers +1.5\n#149: Cowboys +4.5\n#145: Seahawks +3.5\n#125: Eagles +1.5\n\nThe preferred Big/Super construction uses eight sides and two unders, with one selection per game. Pittsburgh receives a substantial cushion, Green Bay can lose by a field goal, and the two unders have room above the ordinary card totals. Cincinnati requires Joe Burrow to start without a material limitation. The Giants leg also depends on usable tackle availability. Seattle is a weaker confidence leg with Drew Lock starting for Sam Darnold. Dallas defensive absences and short-field scoring against either under are additional failure paths. All ten selections must win under the card rules. This is a WATCH construction, not an official Micks release; no premium grade or validated ticket hit probability is claimed.\n\nIf Burrow does not start or is materially limited, replace #106 with Buccaneers -0.5 (#109), provided no new Mayfield issue emerges. If Giants protection cannot be verified, or for an all-Sunday version, replace #158 with Chiefs +1.5 (#153), provided Mahomes remains unrestricted. Both substitutions may be used together.\n\nGiants: check the Monday tackle availability before entry. All listed numbers must match the printed Delaware ticket. These are alternative constructions with overlapping games, not three independent positions.\n\nRecord classification: Posted construction; execution unconfirmed; excluded from official betting record. No wager amounts published; unit profit/loss is not inferred.",
       "injuryNotes": "If Burrow does not start or is materially limited, replace #106 with Buccaneers -0.5 (#109), provided no new Mayfield issue emerges. If Giants protection cannot be verified, or for an all-Sunday version, replace #158 with Chiefs +1.5 (#153), provided Mahomes remains unrestricted. Both substitutions may be used together.",
       "sourceVerification": "September 19 research using September 17 Delaware cards, original VSiN and Fantasy Life guides, current matchup analysis and official injury reports. Availability conditions remain pending.",
       "sourceLinks": [
@@ -568,7 +899,124 @@
           "title": "Delaware Big / Super Teaser, September 17",
           "url": "https://delotterywebcontent.blob.core.windows.net/delottery-site-assets/assets/sports/b5203cec-c34b-4a93-bf8c-964501c5065b_Delaware%20-%20Big%20Teaser%20-%20Super%209.17.2026.pdf"
         }
-      ]
+      ],
+      "originalPublication": {
+        "date": "2026-09-19",
+        "status": "Watch \u2014 conditional construction",
+        "grade": "WATCH",
+        "officialBet": "No",
+        "betPlaced": false,
+        "writeup": "The preferred Big/Super construction uses eight sides and two unders, with one selection per game. Pittsburgh receives a substantial cushion, Green Bay can lose by a field goal, and the two unders have room above the ordinary card totals. Cincinnati requires Joe Burrow to start without a material limitation. The Giants leg also depends on usable tackle availability. Seattle is a weaker confidence leg with Drew Lock starting for Sam Darnold. Dallas defensive absences and short-field scoring against either under are additional failure paths. All ten selections must win under the card rules. This is a WATCH construction, not an official Micks release; no premium grade or validated ticket hit probability is claimed.",
+        "fullAnalysis": "#106: Bengals +9.5\n#130: Steelers +13.5\n#120: Vikings\u2013Bears Under 55.5\n#158: Giants +15.5\n#113: Packers +4.5\n#136: Jaguars\u2013Broncos Under 51.5\n#137: Chargers +1.5\n#149: Cowboys +4.5\n#145: Seahawks +3.5\n#125: Eagles +1.5\n\nThe preferred Big/Super construction uses eight sides and two unders, with one selection per game. Pittsburgh receives a substantial cushion, Green Bay can lose by a field goal, and the two unders have room above the ordinary card totals. Cincinnati requires Joe Burrow to start without a material limitation. The Giants leg also depends on usable tackle availability. Seattle is a weaker confidence leg with Drew Lock starting for Sam Darnold. Dallas defensive absences and short-field scoring against either under are additional failure paths. All ten selections must win under the card rules. This is a WATCH construction, not an official Micks release; no premium grade or validated ticket hit probability is claimed.\n\nIf Burrow does not start or is materially limited, replace #106 with Buccaneers -0.5 (#109), provided no new Mayfield issue emerges. If Giants protection cannot be verified, or for an all-Sunday version, replace #158 with Chiefs +1.5 (#153), provided Mahomes remains unrestricted. Both substitutions may be used together.\n\nGiants: check the Monday tackle availability before entry. All listed numbers must match the printed Delaware ticket. These are alternative constructions with overlapping games, not three independent positions."
+      },
+      "postedDate": "2026-09-19",
+      "Date": "2026-09-19",
+      "result": "Loss",
+      "Result": "Loss",
+      "Outcome": "Loss",
+      "Status": "Graded",
+      "legGrades": [
+        {
+          "pick": "Bengals +9.5",
+          "result": "Win",
+          "final": "HOU 6; CIN 20",
+          "gradingMargin": 23.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872934"
+        },
+        {
+          "pick": "Steelers +13.5",
+          "result": "Loss",
+          "final": "NE 20; PIT 3",
+          "gradingMargin": -3.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872946"
+        },
+        {
+          "pick": "Vikings\u2013Bears Under 55.5",
+          "result": "Win",
+          "final": "CHI 3; MIN 9",
+          "gradingMargin": 43.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872937"
+        },
+        {
+          "pick": "Giants +15.5",
+          "result": "Pending",
+          "final": "Scheduled September 21, 8:15 p.m. ET",
+          "gradingMargin": null,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872947"
+        },
+        {
+          "pick": "Packers +4.5",
+          "result": "Win",
+          "final": "NYJ 17; GB 20",
+          "gradingMargin": 7.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872936"
+        },
+        {
+          "pick": "Jaguars\u2013Broncos Under 51.5",
+          "result": "Win",
+          "final": "DEN 20; JAX 13",
+          "gradingMargin": 18.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872940"
+        },
+        {
+          "pick": "Chargers +1.5",
+          "result": "Loss",
+          "final": "LAC 14; LV 26",
+          "gradingMargin": -10.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872941"
+        },
+        {
+          "pick": "Cowboys +4.5",
+          "result": "Win",
+          "final": "DAL 37; WSH 20",
+          "gradingMargin": 21.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872944"
+        },
+        {
+          "pick": "Seahawks +3.5",
+          "result": "Win",
+          "final": "ARI 7; SEA 31",
+          "gradingMargin": 27.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872943"
+        },
+        {
+          "pick": "Eagles +1.5",
+          "result": "Win",
+          "final": "TEN 20; PHI 24",
+          "gradingMargin": 5.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872939"
+        }
+      ],
+      "legRecord": "7-2; 1 pending",
+      "excludeFromRecord": true,
+      "Official Bet": "No",
+      "profitLoss": "Unknown",
+      "Profit/Loss": "Unknown",
+      "P/L": "Unknown",
+      "PL": "Unknown",
+      "units": "",
+      "Units": "",
+      "settlementCheckedAt": "2026-09-21T12:53:43.893011+00:00",
+      "recordScope": "Posted construction; execution unconfirmed; excluded from official betting record",
+      "legResults": "Bengals +9.5 \u2014 Win: HOU 6; CIN 20\nSteelers +13.5 \u2014 Loss: NE 20; PIT 3\nVikings\u2013Bears Under 55.5 \u2014 Win: CHI 3; MIN 9\nGiants +15.5 \u2014 Pending: Scheduled September 21, 8:15 p.m. ET\nPackers +4.5 \u2014 Win: NYJ 17; GB 20\nJaguars\u2013Broncos Under 51.5 \u2014 Win: DEN 20; JAX 13\nChargers +1.5 \u2014 Loss: LAC 14; LV 26\nCowboys +4.5 \u2014 Win: DAL 37; WSH 20\nSeahawks +3.5 \u2014 Win: ARI 7; SEA 31\nEagles +1.5 \u2014 Win: TEN 20; PHI 24",
+      "settlementNotes": "LOSS. Leg record: 7-2; 1 pending. Losing legs: Steelers +13.5, Chargers +1.5. Giants\u2013Rams is scheduled Monday, September 21 at 8:15 p.m. ET. Existing losing legs already determine the ticket loss.",
+      "finalScore": "Bengals +9.5 \u2014 Win: HOU 6; CIN 20\nSteelers +13.5 \u2014 Loss: NE 20; PIT 3\nVikings\u2013Bears Under 55.5 \u2014 Win: CHI 3; MIN 9\nGiants +15.5 \u2014 Pending: Scheduled September 21, 8:15 p.m. ET\nPackers +4.5 \u2014 Win: NYJ 17; GB 20\nJaguars\u2013Broncos Under 51.5 \u2014 Win: DEN 20; JAX 13\nChargers +1.5 \u2014 Loss: LAC 14; LV 26\nCowboys +4.5 \u2014 Win: DAL 37; WSH 20\nSeahawks +3.5 \u2014 Win: ARI 7; SEA 31\nEagles +1.5 \u2014 Win: TEN 20; PHI 24",
+      "settlementSource": "MLB final box score and ESPN final scoreboard/box scores, checked September 21, 2026.",
+      "settlementSources": [
+        "https://www.espn.com/nfl/game/_/gameId/401872934",
+        "https://www.espn.com/nfl/game/_/gameId/401872946",
+        "https://www.espn.com/nfl/game/_/gameId/401872937",
+        "https://www.espn.com/nfl/game/_/gameId/401872947",
+        "https://www.espn.com/nfl/game/_/gameId/401872936",
+        "https://www.espn.com/nfl/game/_/gameId/401872940",
+        "https://www.espn.com/nfl/game/_/gameId/401872941",
+        "https://www.espn.com/nfl/game/_/gameId/401872944",
+        "https://www.espn.com/nfl/game/_/gameId/401872943",
+        "https://www.espn.com/nfl/game/_/gameId/401872939"
+      ],
+      "Writeup": "LOSS. Leg record: 7-2; 1 pending. Losing legs: Steelers +13.5, Chargers +1.5. Giants\u2013Rams is scheduled Monday, September 21 at 8:15 p.m. ET. Existing losing legs already determine the ticket loss.\n\nBengals +9.5 \u2014 Win: HOU 6; CIN 20\nSteelers +13.5 \u2014 Loss: NE 20; PIT 3\nVikings\u2013Bears Under 55.5 \u2014 Win: CHI 3; MIN 9\nGiants +15.5 \u2014 Pending: Scheduled September 21, 8:15 p.m. ET\nPackers +4.5 \u2014 Win: NYJ 17; GB 20\nJaguars\u2013Broncos Under 51.5 \u2014 Win: DEN 20; JAX 13\nChargers +1.5 \u2014 Loss: LAC 14; LV 26\nCowboys +4.5 \u2014 Win: DAL 37; WSH 20\nSeahawks +3.5 \u2014 Win: ARI 7; SEA 31\nEagles +1.5 \u2014 Win: TEN 20; PHI 24",
+      "Full Analysis": "LOSS. Leg record: 7-2; 1 pending. Losing legs: Steelers +13.5, Chargers +1.5. Giants\u2013Rams is scheduled Monday, September 21 at 8:15 p.m. ET. Existing losing legs already determine the ticket loss.\n\nBengals +9.5 \u2014 Win: HOU 6; CIN 20\nSteelers +13.5 \u2014 Loss: NE 20; PIT 3\nVikings\u2013Bears Under 55.5 \u2014 Win: CHI 3; MIN 9\nGiants +15.5 \u2014 Pending: Scheduled September 21, 8:15 p.m. ET\nPackers +4.5 \u2014 Win: NYJ 17; GB 20\nJaguars\u2013Broncos Under 51.5 \u2014 Win: DEN 20; JAX 13\nChargers +1.5 \u2014 Loss: LAC 14; LV 26\nCowboys +4.5 \u2014 Win: DAL 37; WSH 20\nSeahawks +3.5 \u2014 Win: ARI 7; SEA 31\nEagles +1.5 \u2014 Win: TEN 20; PHI 24\n\nPosted pregame analysis:\n#106: Bengals +9.5\n#130: Steelers +13.5\n#120: Vikings\u2013Bears Under 55.5\n#158: Giants +15.5\n#113: Packers +4.5\n#136: Jaguars\u2013Broncos Under 51.5\n#137: Chargers +1.5\n#149: Cowboys +4.5\n#145: Seahawks +3.5\n#125: Eagles +1.5\n\nThe preferred Big/Super construction uses eight sides and two unders, with one selection per game. Pittsburgh receives a substantial cushion, Green Bay can lose by a field goal, and the two unders have room above the ordinary card totals. Cincinnati requires Joe Burrow to start without a material limitation. The Giants leg also depends on usable tackle availability. Seattle is a weaker confidence leg with Drew Lock starting for Sam Darnold. Dallas defensive absences and short-field scoring against either under are additional failure paths. All ten selections must win under the card rules. This is a WATCH construction, not an official Micks release; no premium grade or validated ticket hit probability is claimed.\n\nIf Burrow does not start or is materially limited, replace #106 with Buccaneers -0.5 (#109), provided no new Mayfield issue emerges. If Giants protection cannot be verified, or for an all-Sunday version, replace #158 with Chiefs +1.5 (#153), provided Mahomes remains unrestricted. Both substitutions may be used together.\n\nGiants: check the Monday tackle availability before entry. All listed numbers must match the printed Delaware ticket. These are alternative constructions with overlapping games, not three independent positions.\n\nRecord classification: Posted construction; execution unconfirmed; excluded from official betting record. No wager amounts published; unit profit/loss is not inferred.",
+      "settledAt": "2026-09-21T12:53:43.893011+00:00"
     },
     {
       "id": "nfl-delaware-regular-2026-09-19",
@@ -579,19 +1027,19 @@
       "access": "free",
       "sport": "NFL",
       "league": "NFL",
-      "game": "NFL Week 2 — September 20–21, 2026",
-      "pick": "Steelers +10.5 / Vikings–Bears Under 53.5 / Jaguars–Broncos Under 49.5 / Giants +13.5",
+      "game": "NFL Week 2 \u2014 September 20\u201321, 2026",
+      "pick": "Steelers +10.5 / Vikings\u2013Bears Under 53.5 / Jaguars\u2013Broncos Under 49.5 / Giants +13.5",
       "cardTitle": "4-Pick Regular Teaser",
       "type": "4-Pick Regular Teaser",
       "market": "NFL parlay card",
-      "lineNumber": "Steelers +10.5 / Vikings–Bears Under 53.5 / Jaguars–Broncos Under 49.5 / Giants +13.5",
-      "legs": "#130: Steelers +10.5\n#120: Vikings–Bears Under 53.5\n#136: Jaguars–Broncos Under 49.5\n#158: Giants +13.5",
+      "lineNumber": "Steelers +10.5 / Vikings\u2013Bears Under 53.5 / Jaguars\u2013Broncos Under 49.5 / Giants +13.5",
+      "legs": "#130: Steelers +10.5\n#120: Vikings\u2013Bears Under 53.5\n#136: Jaguars\u2013Broncos Under 49.5\n#158: Giants +13.5",
       "legCount": 4,
       "odds": "+250",
       "payoutOdds": "5 to 2",
       "sportsbook": "Delaware Lottery",
       "grade": "WATCH",
-      "status": "Watch — conditional construction",
+      "status": "Graded",
       "officialBet": "No",
       "frameworkApproved": false,
       "betPlaced": false,
@@ -601,9 +1049,9 @@
       "showFullAnalysis": true,
       "bestNumber": "Exact printed selections listed above",
       "playableTo": "Listed card lines only",
-      "noBetCutoff": "Any worse line or unresolved material availability — pass/reassess",
-      "writeup": "This shorter regular teaser keeps the Pittsburgh cushion, the two under directions and a Giants back-door cover path across four separate games. The tradeoff is less protection than the Big card: a Giants loss by fourteen defeats this leg, and the totals have less room for late scoring. Overtime, turnovers that create short fields, and defensive touchdowns can undermine either under. A recovered Rams offense against an injured Giants defense is the main matchup concern. Giants tackle availability must be checked before entry. This remains a WATCH alternative, not an official Micks release. It shares four outcomes with the larger construction and should not be treated as independent exposure.",
-      "fullAnalysis": "#130: Steelers +10.5\n#120: Vikings–Bears Under 53.5\n#136: Jaguars–Broncos Under 49.5\n#158: Giants +13.5\n\nThis shorter regular teaser keeps the Pittsburgh cushion, the two under directions and a Giants back-door cover path across four separate games. The tradeoff is less protection than the Big card: a Giants loss by fourteen defeats this leg, and the totals have less room for late scoring. Overtime, turnovers that create short fields, and defensive touchdowns can undermine either under. A recovered Rams offense against an injured Giants defense is the main matchup concern. Giants tackle availability must be checked before entry. This remains a WATCH alternative, not an official Micks release. It shares four outcomes with the larger construction and should not be treated as independent exposure.\n\nIf Giants availability remains unresolved, omit that leg and use the first three selections on the regular teaser card. The three-pick regular teaser pays 7 to 5. Do not use Big/Super lines on this card.\n\nGiants: check the Monday tackle availability before entry. All listed numbers must match the printed Delaware ticket. These are alternative constructions with overlapping games, not three independent positions.",
+      "noBetCutoff": "Any worse line or unresolved material availability \u2014 pass/reassess",
+      "writeup": "LOSS. Leg record: 2-1; 1 pending. Losing legs: Steelers +10.5. Giants\u2013Rams is scheduled Monday, September 21 at 8:15 p.m. ET. Existing losing legs already determine the ticket loss.\n\nSteelers +10.5 \u2014 Loss: NE 20; PIT 3\nVikings\u2013Bears Under 53.5 \u2014 Win: CHI 3; MIN 9\nJaguars\u2013Broncos Under 49.5 \u2014 Win: DEN 20; JAX 13\nGiants +13.5 \u2014 Pending: Scheduled September 21, 8:15 p.m. ET",
+      "fullAnalysis": "LOSS. Leg record: 2-1; 1 pending. Losing legs: Steelers +10.5. Giants\u2013Rams is scheduled Monday, September 21 at 8:15 p.m. ET. Existing losing legs already determine the ticket loss.\n\nSteelers +10.5 \u2014 Loss: NE 20; PIT 3\nVikings\u2013Bears Under 53.5 \u2014 Win: CHI 3; MIN 9\nJaguars\u2013Broncos Under 49.5 \u2014 Win: DEN 20; JAX 13\nGiants +13.5 \u2014 Pending: Scheduled September 21, 8:15 p.m. ET\n\nPosted pregame analysis:\n#130: Steelers +10.5\n#120: Vikings\u2013Bears Under 53.5\n#136: Jaguars\u2013Broncos Under 49.5\n#158: Giants +13.5\n\nThis shorter regular teaser keeps the Pittsburgh cushion, the two under directions and a Giants back-door cover path across four separate games. The tradeoff is less protection than the Big card: a Giants loss by fourteen defeats this leg, and the totals have less room for late scoring. Overtime, turnovers that create short fields, and defensive touchdowns can undermine either under. A recovered Rams offense against an injured Giants defense is the main matchup concern. Giants tackle availability must be checked before entry. This remains a WATCH alternative, not an official Micks release. It shares four outcomes with the larger construction and should not be treated as independent exposure.\n\nIf Giants availability remains unresolved, omit that leg and use the first three selections on the regular teaser card. The three-pick regular teaser pays 7 to 5. Do not use Big/Super lines on this card.\n\nGiants: check the Monday tackle availability before entry. All listed numbers must match the printed Delaware ticket. These are alternative constructions with overlapping games, not three independent positions.\n\nRecord classification: Posted construction; execution unconfirmed; excluded from official betting record. No wager amounts published; unit profit/loss is not inferred.",
       "injuryNotes": "If Giants availability remains unresolved, omit that leg and use the first three selections on the regular teaser card. The three-pick regular teaser pays 7 to 5. Do not use Big/Super lines on this card.",
       "sourceVerification": "September 19 research using September 17 Delaware cards, original VSiN and Fantasy Life guides, current matchup analysis and official injury reports. Availability conditions remain pending.",
       "sourceLinks": [
@@ -611,30 +1059,99 @@
           "title": "Delaware regular teaser, September 17",
           "url": "https://delotterywebcontent.blob.core.windows.net/delottery-site-assets/assets/sports/aa7c4441-9384-41fc-b7e6-acd063944338_Delaware%20-%20Teaser%209.17.2026.pdf"
         }
-      ]
+      ],
+      "originalPublication": {
+        "date": "2026-09-19",
+        "status": "Watch \u2014 conditional construction",
+        "grade": "WATCH",
+        "officialBet": "No",
+        "betPlaced": false,
+        "writeup": "This shorter regular teaser keeps the Pittsburgh cushion, the two under directions and a Giants back-door cover path across four separate games. The tradeoff is less protection than the Big card: a Giants loss by fourteen defeats this leg, and the totals have less room for late scoring. Overtime, turnovers that create short fields, and defensive touchdowns can undermine either under. A recovered Rams offense against an injured Giants defense is the main matchup concern. Giants tackle availability must be checked before entry. This remains a WATCH alternative, not an official Micks release. It shares four outcomes with the larger construction and should not be treated as independent exposure.",
+        "fullAnalysis": "#130: Steelers +10.5\n#120: Vikings\u2013Bears Under 53.5\n#136: Jaguars\u2013Broncos Under 49.5\n#158: Giants +13.5\n\nThis shorter regular teaser keeps the Pittsburgh cushion, the two under directions and a Giants back-door cover path across four separate games. The tradeoff is less protection than the Big card: a Giants loss by fourteen defeats this leg, and the totals have less room for late scoring. Overtime, turnovers that create short fields, and defensive touchdowns can undermine either under. A recovered Rams offense against an injured Giants defense is the main matchup concern. Giants tackle availability must be checked before entry. This remains a WATCH alternative, not an official Micks release. It shares four outcomes with the larger construction and should not be treated as independent exposure.\n\nIf Giants availability remains unresolved, omit that leg and use the first three selections on the regular teaser card. The three-pick regular teaser pays 7 to 5. Do not use Big/Super lines on this card.\n\nGiants: check the Monday tackle availability before entry. All listed numbers must match the printed Delaware ticket. These are alternative constructions with overlapping games, not three independent positions."
+      },
+      "postedDate": "2026-09-19",
+      "Date": "2026-09-19",
+      "result": "Loss",
+      "Result": "Loss",
+      "Outcome": "Loss",
+      "Status": "Graded",
+      "legGrades": [
+        {
+          "pick": "Steelers +10.5",
+          "result": "Loss",
+          "final": "NE 20; PIT 3",
+          "gradingMargin": -6.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872946"
+        },
+        {
+          "pick": "Vikings\u2013Bears Under 53.5",
+          "result": "Win",
+          "final": "CHI 3; MIN 9",
+          "gradingMargin": 41.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872937"
+        },
+        {
+          "pick": "Jaguars\u2013Broncos Under 49.5",
+          "result": "Win",
+          "final": "DEN 20; JAX 13",
+          "gradingMargin": 16.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872940"
+        },
+        {
+          "pick": "Giants +13.5",
+          "result": "Pending",
+          "final": "Scheduled September 21, 8:15 p.m. ET",
+          "gradingMargin": null,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872947"
+        }
+      ],
+      "legRecord": "2-1; 1 pending",
+      "excludeFromRecord": true,
+      "Official Bet": "No",
+      "profitLoss": "Unknown",
+      "Profit/Loss": "Unknown",
+      "P/L": "Unknown",
+      "PL": "Unknown",
+      "units": "",
+      "Units": "",
+      "settlementCheckedAt": "2026-09-21T12:53:43.893011+00:00",
+      "recordScope": "Posted construction; execution unconfirmed; excluded from official betting record",
+      "legResults": "Steelers +10.5 \u2014 Loss: NE 20; PIT 3\nVikings\u2013Bears Under 53.5 \u2014 Win: CHI 3; MIN 9\nJaguars\u2013Broncos Under 49.5 \u2014 Win: DEN 20; JAX 13\nGiants +13.5 \u2014 Pending: Scheduled September 21, 8:15 p.m. ET",
+      "settlementNotes": "LOSS. Leg record: 2-1; 1 pending. Losing legs: Steelers +10.5. Giants\u2013Rams is scheduled Monday, September 21 at 8:15 p.m. ET. Existing losing legs already determine the ticket loss.",
+      "finalScore": "Steelers +10.5 \u2014 Loss: NE 20; PIT 3\nVikings\u2013Bears Under 53.5 \u2014 Win: CHI 3; MIN 9\nJaguars\u2013Broncos Under 49.5 \u2014 Win: DEN 20; JAX 13\nGiants +13.5 \u2014 Pending: Scheduled September 21, 8:15 p.m. ET",
+      "settlementSource": "MLB final box score and ESPN final scoreboard/box scores, checked September 21, 2026.",
+      "settlementSources": [
+        "https://www.espn.com/nfl/game/_/gameId/401872946",
+        "https://www.espn.com/nfl/game/_/gameId/401872937",
+        "https://www.espn.com/nfl/game/_/gameId/401872940",
+        "https://www.espn.com/nfl/game/_/gameId/401872947"
+      ],
+      "Writeup": "LOSS. Leg record: 2-1; 1 pending. Losing legs: Steelers +10.5. Giants\u2013Rams is scheduled Monday, September 21 at 8:15 p.m. ET. Existing losing legs already determine the ticket loss.\n\nSteelers +10.5 \u2014 Loss: NE 20; PIT 3\nVikings\u2013Bears Under 53.5 \u2014 Win: CHI 3; MIN 9\nJaguars\u2013Broncos Under 49.5 \u2014 Win: DEN 20; JAX 13\nGiants +13.5 \u2014 Pending: Scheduled September 21, 8:15 p.m. ET",
+      "Full Analysis": "LOSS. Leg record: 2-1; 1 pending. Losing legs: Steelers +10.5. Giants\u2013Rams is scheduled Monday, September 21 at 8:15 p.m. ET. Existing losing legs already determine the ticket loss.\n\nSteelers +10.5 \u2014 Loss: NE 20; PIT 3\nVikings\u2013Bears Under 53.5 \u2014 Win: CHI 3; MIN 9\nJaguars\u2013Broncos Under 49.5 \u2014 Win: DEN 20; JAX 13\nGiants +13.5 \u2014 Pending: Scheduled September 21, 8:15 p.m. ET\n\nPosted pregame analysis:\n#130: Steelers +10.5\n#120: Vikings\u2013Bears Under 53.5\n#136: Jaguars\u2013Broncos Under 49.5\n#158: Giants +13.5\n\nThis shorter regular teaser keeps the Pittsburgh cushion, the two under directions and a Giants back-door cover path across four separate games. The tradeoff is less protection than the Big card: a Giants loss by fourteen defeats this leg, and the totals have less room for late scoring. Overtime, turnovers that create short fields, and defensive touchdowns can undermine either under. A recovered Rams offense against an injured Giants defense is the main matchup concern. Giants tackle availability must be checked before entry. This remains a WATCH alternative, not an official Micks release. It shares four outcomes with the larger construction and should not be treated as independent exposure.\n\nIf Giants availability remains unresolved, omit that leg and use the first three selections on the regular teaser card. The three-pick regular teaser pays 7 to 5. Do not use Big/Super lines on this card.\n\nGiants: check the Monday tackle availability before entry. All listed numbers must match the printed Delaware ticket. These are alternative constructions with overlapping games, not three independent positions.\n\nRecord classification: Posted construction; execution unconfirmed; excluded from official betting record. No wager amounts published; unit profit/loss is not inferred.",
+      "settledAt": "2026-09-21T12:53:43.893011+00:00"
     },
     {
       "id": "nfl-delaware-half-point-2026-09-19",
-      "date": "2026-09-19",
+      "date": "2026-09-21",
       "eventDate": "2026-09-20",
       "eventEndDate": "2026-09-21",
       "section": "Lotto Parlays",
       "access": "free",
       "sport": "NFL",
       "league": "NFL",
-      "game": "NFL Week 2 — September 20–21, 2026",
-      "pick": "Vikings–Bears Under 48.5 / Jaguars–Broncos Under 45.5 / Giants +7.5",
+      "game": "NFL Week 2 \u2014 September 20\u201321, 2026",
+      "pick": "Vikings\u2013Bears Under 48.5 / Jaguars\u2013Broncos Under 45.5 / Giants +7.5",
       "cardTitle": "3-Pick Half-Point Parlay",
       "type": "3-Pick Half-Point Parlay",
       "market": "NFL parlay card",
-      "lineNumber": "Vikings–Bears Under 48.5 / Jaguars–Broncos Under 45.5 / Giants +7.5",
-      "legs": "#120: Vikings–Bears Under 48.5\n#136: Jaguars–Broncos Under 45.5\n#158: Giants +7.5",
+      "lineNumber": "Vikings\u2013Bears Under 48.5 / Jaguars\u2013Broncos Under 45.5 / Giants +7.5",
+      "legs": "#120: Vikings\u2013Bears Under 48.5\n#136: Jaguars\u2013Broncos Under 45.5\n#158: Giants +7.5",
       "legCount": 3,
       "odds": "+550",
       "payoutOdds": "11 to 2",
       "sportsbook": "Delaware Lottery",
       "grade": "WATCH",
-      "status": "Watch — conditional construction",
+      "status": "Watch \u2014 Giants +7.5 pending",
       "officialBet": "No",
       "frameworkApproved": false,
       "betPlaced": false,
@@ -644,9 +1161,9 @@
       "showFullAnalysis": true,
       "bestNumber": "Exact printed selections listed above",
       "playableTo": "Listed card lines only",
-      "noBetCutoff": "Any worse line or unresolved material availability — pass/reassess",
-      "writeup": "This is the more aggressive alternative: two ordinary totals and Giants +7.5 without the teaser allowance. Chicago–Minnesota must finish with no more than forty-eight points. Jacksonville–Denver must finish at forty-five or fewer. The Giants can win or lose by seven or fewer. Current totals commentary supports both under directions, but Chicago defensive weakness and Jacksonville scoring efficiency are real counterarguments. The Giants still require a workable protection plan against the Rams. These three selections overlap the larger cards. This is a WATCH construction with no official Micks release or premium grade.",
-      "fullAnalysis": "#120: Vikings–Bears Under 48.5\n#136: Jaguars–Broncos Under 45.5\n#158: Giants +7.5\n\nThis is the more aggressive alternative: two ordinary totals and Giants +7.5 without the teaser allowance. Chicago–Minnesota must finish with no more than forty-eight points. Jacksonville–Denver must finish at forty-five or fewer. The Giants can win or lose by seven or fewer. Current totals commentary supports both under directions, but Chicago defensive weakness and Jacksonville scoring efficiency are real counterarguments. The Giants still require a workable protection plan against the Rams. These three selections overlap the larger cards. This is a WATCH construction with no official Micks release or premium grade.\n\nKeep the Giants injury condition. If that leg cannot be supported, pass this three-pick construction rather than silently inserting a different selection.\n\nGiants: check the Monday tackle availability before entry. All listed numbers must match the printed Delaware ticket. These are alternative constructions with overlapping games, not three independent positions.",
+      "noBetCutoff": "Any worse line or unresolved material availability \u2014 pass/reassess",
+      "writeup": "PENDING. Leg record: 2-0; 1 pending. Giants\u2013Rams is scheduled Monday, September 21 at 8:15 p.m. ET. Giants +7.5 is the only remaining leg.\n\nVikings\u2013Bears Under 48.5 \u2014 Win: CHI 3; MIN 9\nJaguars\u2013Broncos Under 45.5 \u2014 Win: DEN 20; JAX 13\nGiants +7.5 \u2014 Pending: Scheduled September 21, 8:15 p.m. ET",
+      "fullAnalysis": "PENDING. Leg record: 2-0; 1 pending. Giants\u2013Rams is scheduled Monday, September 21 at 8:15 p.m. ET. Giants +7.5 is the only remaining leg.\n\nVikings\u2013Bears Under 48.5 \u2014 Win: CHI 3; MIN 9\nJaguars\u2013Broncos Under 45.5 \u2014 Win: DEN 20; JAX 13\nGiants +7.5 \u2014 Pending: Scheduled September 21, 8:15 p.m. ET\n\nPosted pregame analysis:\n#120: Vikings\u2013Bears Under 48.5\n#136: Jaguars\u2013Broncos Under 45.5\n#158: Giants +7.5\n\nThis is the more aggressive alternative: two ordinary totals and Giants +7.5 without the teaser allowance. Chicago\u2013Minnesota must finish with no more than forty-eight points. Jacksonville\u2013Denver must finish at forty-five or fewer. The Giants can win or lose by seven or fewer. Current totals commentary supports both under directions, but Chicago defensive weakness and Jacksonville scoring efficiency are real counterarguments. The Giants still require a workable protection plan against the Rams. These three selections overlap the larger cards. This is a WATCH construction with no official Micks release or premium grade.\n\nKeep the Giants injury condition. If that leg cannot be supported, pass this three-pick construction rather than silently inserting a different selection.\n\nGiants: check the Monday tackle availability before entry. All listed numbers must match the printed Delaware ticket. These are alternative constructions with overlapping games, not three independent positions.\n\nRecord classification: Posted construction; execution unconfirmed; excluded from official betting record. No wager amounts published; unit profit/loss is not inferred.",
       "injuryNotes": "Keep the Giants injury condition. If that leg cannot be supported, pass this three-pick construction rather than silently inserting a different selection.",
       "sourceVerification": "September 19 research using September 17 Delaware cards, original VSiN and Fantasy Life guides, current matchup analysis and official injury reports. Availability conditions remain pending.",
       "sourceLinks": [
@@ -654,7 +1171,67 @@
           "title": "Delaware half-point card, September 17",
           "url": "https://delotterywebcontent.blob.core.windows.net/delottery-site-assets/assets/sports/928a9b02-2362-4404-b6f7-25b9d1068fa3_Delaware%20-%20Half%20Pt%209.17.2026.pdf"
         }
-      ]
+      ],
+      "originalPublication": {
+        "date": "2026-09-19",
+        "status": "Watch \u2014 conditional construction",
+        "grade": "WATCH",
+        "officialBet": "No",
+        "betPlaced": false,
+        "writeup": "This is the more aggressive alternative: two ordinary totals and Giants +7.5 without the teaser allowance. Chicago\u2013Minnesota must finish with no more than forty-eight points. Jacksonville\u2013Denver must finish at forty-five or fewer. The Giants can win or lose by seven or fewer. Current totals commentary supports both under directions, but Chicago defensive weakness and Jacksonville scoring efficiency are real counterarguments. The Giants still require a workable protection plan against the Rams. These three selections overlap the larger cards. This is a WATCH construction with no official Micks release or premium grade.",
+        "fullAnalysis": "#120: Vikings\u2013Bears Under 48.5\n#136: Jaguars\u2013Broncos Under 45.5\n#158: Giants +7.5\n\nThis is the more aggressive alternative: two ordinary totals and Giants +7.5 without the teaser allowance. Chicago\u2013Minnesota must finish with no more than forty-eight points. Jacksonville\u2013Denver must finish at forty-five or fewer. The Giants can win or lose by seven or fewer. Current totals commentary supports both under directions, but Chicago defensive weakness and Jacksonville scoring efficiency are real counterarguments. The Giants still require a workable protection plan against the Rams. These three selections overlap the larger cards. This is a WATCH construction with no official Micks release or premium grade.\n\nKeep the Giants injury condition. If that leg cannot be supported, pass this three-pick construction rather than silently inserting a different selection.\n\nGiants: check the Monday tackle availability before entry. All listed numbers must match the printed Delaware ticket. These are alternative constructions with overlapping games, not three independent positions."
+      },
+      "postedDate": "2026-09-19",
+      "Date": "2026-09-21",
+      "result": "Pending",
+      "Result": "Pending",
+      "Outcome": "Pending",
+      "Status": "Watch \u2014 Giants +7.5 pending",
+      "legGrades": [
+        {
+          "pick": "Vikings\u2013Bears Under 48.5",
+          "result": "Win",
+          "final": "CHI 3; MIN 9",
+          "gradingMargin": 36.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872937"
+        },
+        {
+          "pick": "Jaguars\u2013Broncos Under 45.5",
+          "result": "Win",
+          "final": "DEN 20; JAX 13",
+          "gradingMargin": 12.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872940"
+        },
+        {
+          "pick": "Giants +7.5",
+          "result": "Pending",
+          "final": "Scheduled September 21, 8:15 p.m. ET",
+          "gradingMargin": null,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872947"
+        }
+      ],
+      "legRecord": "2-0; 1 pending",
+      "excludeFromRecord": true,
+      "Official Bet": "No",
+      "profitLoss": "Unknown",
+      "Profit/Loss": "Unknown",
+      "P/L": "Unknown",
+      "PL": "Unknown",
+      "units": "",
+      "Units": "",
+      "settlementCheckedAt": "2026-09-21T12:53:43.893011+00:00",
+      "recordScope": "Posted construction; execution unconfirmed; excluded from official betting record",
+      "legResults": "Vikings\u2013Bears Under 48.5 \u2014 Win: CHI 3; MIN 9\nJaguars\u2013Broncos Under 45.5 \u2014 Win: DEN 20; JAX 13\nGiants +7.5 \u2014 Pending: Scheduled September 21, 8:15 p.m. ET",
+      "settlementNotes": "PENDING. Leg record: 2-0; 1 pending. Giants\u2013Rams is scheduled Monday, September 21 at 8:15 p.m. ET. Giants +7.5 is the only remaining leg.",
+      "finalScore": "Vikings\u2013Bears Under 48.5 \u2014 Win: CHI 3; MIN 9\nJaguars\u2013Broncos Under 45.5 \u2014 Win: DEN 20; JAX 13\nGiants +7.5 \u2014 Pending: Scheduled September 21, 8:15 p.m. ET",
+      "settlementSource": "MLB final box score and ESPN final scoreboard/box scores, checked September 21, 2026.",
+      "settlementSources": [
+        "https://www.espn.com/nfl/game/_/gameId/401872937",
+        "https://www.espn.com/nfl/game/_/gameId/401872940",
+        "https://www.espn.com/nfl/game/_/gameId/401872947"
+      ],
+      "Writeup": "PENDING. Leg record: 2-0; 1 pending. Giants\u2013Rams is scheduled Monday, September 21 at 8:15 p.m. ET. Giants +7.5 is the only remaining leg.\n\nVikings\u2013Bears Under 48.5 \u2014 Win: CHI 3; MIN 9\nJaguars\u2013Broncos Under 45.5 \u2014 Win: DEN 20; JAX 13\nGiants +7.5 \u2014 Pending: Scheduled September 21, 8:15 p.m. ET",
+      "Full Analysis": "PENDING. Leg record: 2-0; 1 pending. Giants\u2013Rams is scheduled Monday, September 21 at 8:15 p.m. ET. Giants +7.5 is the only remaining leg.\n\nVikings\u2013Bears Under 48.5 \u2014 Win: CHI 3; MIN 9\nJaguars\u2013Broncos Under 45.5 \u2014 Win: DEN 20; JAX 13\nGiants +7.5 \u2014 Pending: Scheduled September 21, 8:15 p.m. ET\n\nPosted pregame analysis:\n#120: Vikings\u2013Bears Under 48.5\n#136: Jaguars\u2013Broncos Under 45.5\n#158: Giants +7.5\n\nThis is the more aggressive alternative: two ordinary totals and Giants +7.5 without the teaser allowance. Chicago\u2013Minnesota must finish with no more than forty-eight points. Jacksonville\u2013Denver must finish at forty-five or fewer. The Giants can win or lose by seven or fewer. Current totals commentary supports both under directions, but Chicago defensive weakness and Jacksonville scoring efficiency are real counterarguments. The Giants still require a workable protection plan against the Rams. These three selections overlap the larger cards. This is a WATCH construction with no official Micks release or premium grade.\n\nKeep the Giants injury condition. If that leg cannot be supported, pass this three-pick construction rather than silently inserting a different selection.\n\nGiants: check the Monday tackle availability before entry. All listed numbers must match the printed Delaware ticket. These are alternative constructions with overlapping games, not three independent positions.\n\nRecord classification: Posted construction; execution unconfirmed; excluded from official betting record. No wager amounts published; unit profit/loss is not inferred."
     },
     {
       "id": "placed-parlay-2026-09-18-tor-cease-ttu",
@@ -666,16 +1243,16 @@
       "league": "MLB / NCAAF",
       "game": "Toronto Blue Jays at Texas Rangers / Houston at Texas Tech",
       "pick": "Toronto ML / Dylan Cease 7+ strikeouts / Texas Tech -7.5",
-      "cardTitle": "Placed 3-Leg Parlay — Toronto ML / Cease 7+ Ks / Texas Tech -7.5",
-      "type": "Lotto Parlay — Personal Ticket",
+      "cardTitle": "Placed 3-Leg Parlay \u2014 Toronto ML / Cease 7+ Ks / Texas Tech -7.5",
+      "type": "Lotto Parlay \u2014 Personal Ticket",
       "market": "3-leg parlay with Toronto same-game pair",
       "lineNumber": "Toronto ML / Cease 7+ Ks / Texas Tech -7.5",
       "legs": "Toronto Blue Jays moneyline; Dylan Cease 7+ strikeouts; Texas Tech -7.5",
       "odds": "+303",
       "sportsbook": "BetRivers",
       "grade": "Not rated",
-      "units": "TBD",
-      "status": "Open — placed ticket",
+      "units": "",
+      "status": "Graded",
       "officialBet": "No",
       "betPlaced": true,
       "frameworkApproved": false,
@@ -684,13 +1261,71 @@
       "placedAt": "2026-09-18T19:18:00-04:00",
       "eventStart": "2026-09-18T20:00:00-04:00",
       "bestNumber": "Accepted ticket +303",
-      "playableTo": "Placed ticket — no new entry recommendation",
+      "playableTo": "Placed ticket \u2014 no new entry recommendation",
       "noBetCutoff": "No additional wager recommended from this record",
-      "writeup": "Placed September 18 at 7:18 p.m. ET: Toronto Blue Jays moneyline, Dylan Cease 7+ strikeouts and Texas Tech -7.5. BetRivers accepted the three-leg parlay at +303. Toronto ML and Cease 7+ form the same-game pair shown at +112; Texas Tech -7.5 is shown at -112. The baseball script needs Cease to miss bats while Toronto generates enough offense to win. Texas Tech must beat Houston by at least eight points. A strong Cease outing can support both baseball legs, so they are correlated and should not be treated as independent chances. A low-strikeout Toronto win, a high-strikeout Toronto loss or a Texas Tech victory by seven or fewer can still break the ticket. This is the user's confirmed placed wager, tracked separately from framework-approved releases. Units remain TBD.",
-      "fullAnalysis": "Ticket details and settlement:\nThree-leg BetRivers parlay, accepted September 18, 2026 at 7:18 p.m. ET. Combined displayed odds +303. Status on receipt: Open. Units are TBD. No result is assigned.\n\nToronto moneyline — player and game script:\nThe earlier September 18 scan confirmed Dylan Cease against Kumar Rocker. Toronto's preferred path is Cease limiting early damage while Vladimir Guerrero Jr., George Springer and the lineup capitalize on Rocker's traffic. Toronto's September 17 off-day supports its bullpen-rest position. The failure path is insufficient run support or late relief damage even if Cease pitches well. This leg needs Toronto to win; no run margin is required.\n\nDylan Cease 7+ strikeouts:\nThis leg needs at least seven strikeouts, equivalent to over 6.5. Cease's strikeout record supplied the matchup rationale in the pregame scan, but walks, contact outs and an early removal can prevent the seventh strikeout. The receipt's player-start condition applies. Toronto can win without this prop winning, and Cease can reach seven in a Toronto loss. The +112 shown belongs to the Toronto/Cease same-game pair, not a standalone Toronto moneyline or standalone strikeout quote.\n\nTexas Tech -7.5:\nTexas Tech must win by eight or more. The intended script is Hammond receiving enough protection to sustain drives while Tech's defense creates separation against Houston. The earlier analysis flagged Tech's protection and run-efficiency concerns and Weigman's ability to keep Houston competitive. A close Tech victory fails this spread. The ticket shows -112 for this component and an 8:00 p.m. ET kickoff; Toronto–Texas is listed at 8:05 p.m. ET.\n\nConstruction and recordkeeping:\nAll three legs must win for the displayed full payout, subject to BetRivers' applicable void and settlement rules. The two baseball legs share game exposure; Texas Tech adds a separate game risk. This post records the wager the user placed and requested published. It does not retroactively change the prior scan's grades or represent a framework-approved release. No standalone bets are implied. Track this ticket once in Lotto Parlays, with settlement tracked separately from official framework performance. No new playable range or additional stake is recommended.",
+      "writeup": "LOSS. Leg record: 0-3. Losing legs: Toronto moneyline, Dylan Cease 7+ strikeouts, Texas Tech -7.5.\n\nToronto moneyline \u2014 Loss: Toronto 1, Texas 7\nDylan Cease 7+ strikeouts \u2014 Loss: 3 strikeouts in 2.2 innings\nTexas Tech -7.5 \u2014 Loss: Texas Tech 28, Houston 26",
+      "fullAnalysis": "LOSS. Leg record: 0-3. Losing legs: Toronto moneyline, Dylan Cease 7+ strikeouts, Texas Tech -7.5.\n\nToronto moneyline \u2014 Loss: Toronto 1, Texas 7\nDylan Cease 7+ strikeouts \u2014 Loss: 3 strikeouts in 2.2 innings\nTexas Tech -7.5 \u2014 Loss: Texas Tech 28, Houston 26\n\nPosted pregame analysis:\nTicket details and settlement:\nThree-leg BetRivers parlay, accepted September 18, 2026 at 7:18 p.m. ET. Combined displayed odds +303. Status on receipt: Open. Units are TBD. No result is assigned.\n\nToronto moneyline \u2014 player and game script:\nThe earlier September 18 scan confirmed Dylan Cease against Kumar Rocker. Toronto's preferred path is Cease limiting early damage while Vladimir Guerrero Jr., George Springer and the lineup capitalize on Rocker's traffic. Toronto's September 17 off-day supports its bullpen-rest position. The failure path is insufficient run support or late relief damage even if Cease pitches well. This leg needs Toronto to win; no run margin is required.\n\nDylan Cease 7+ strikeouts:\nThis leg needs at least seven strikeouts, equivalent to over 6.5. Cease's strikeout record supplied the matchup rationale in the pregame scan, but walks, contact outs and an early removal can prevent the seventh strikeout. The receipt's player-start condition applies. Toronto can win without this prop winning, and Cease can reach seven in a Toronto loss. The +112 shown belongs to the Toronto/Cease same-game pair, not a standalone Toronto moneyline or standalone strikeout quote.\n\nTexas Tech -7.5:\nTexas Tech must win by eight or more. The intended script is Hammond receiving enough protection to sustain drives while Tech's defense creates separation against Houston. The earlier analysis flagged Tech's protection and run-efficiency concerns and Weigman's ability to keep Houston competitive. A close Tech victory fails this spread. The ticket shows -112 for this component and an 8:00 p.m. ET kickoff; Toronto\u2013Texas is listed at 8:05 p.m. ET.\n\nConstruction and recordkeeping:\nAll three legs must win for the displayed full payout, subject to BetRivers' applicable void and settlement rules. The two baseball legs share game exposure; Texas Tech adds a separate game risk. This post records the wager the user placed and requested published. It does not retroactively change the prior scan's grades or represent a framework-approved release. No standalone bets are implied. Track this ticket once in Lotto Parlays, with settlement tracked separately from official framework performance. No new playable range or additional stake is recommended.\n\nRecord classification: Personal placed ticket; separate from official framework record. No wager amounts published; unit profit/loss is not inferred.",
       "showFullAnalysis": true,
       "sourceVerification": "User-supplied BetRivers placed-ticket screenshot IMG_3840.jpeg, September 18, 2026, 7:18 p.m. ET. Matchup discussion carried forward from the same-day evening scan.",
-      "accountingCategory": "Personal placed wager — separate from framework official record"
+      "accountingCategory": "Personal placed wager \u2014 separate from framework official record",
+      "originalPublication": {
+        "date": "2026-09-18",
+        "status": "Open \u2014 placed ticket",
+        "grade": "Not rated",
+        "officialBet": "No",
+        "betPlaced": true,
+        "writeup": "Placed September 18 at 7:18 p.m. ET: Toronto Blue Jays moneyline, Dylan Cease 7+ strikeouts and Texas Tech -7.5. BetRivers accepted the three-leg parlay at +303. Toronto ML and Cease 7+ form the same-game pair shown at +112; Texas Tech -7.5 is shown at -112. The baseball script needs Cease to miss bats while Toronto generates enough offense to win. Texas Tech must beat Houston by at least eight points. A strong Cease outing can support both baseball legs, so they are correlated and should not be treated as independent chances. A low-strikeout Toronto win, a high-strikeout Toronto loss or a Texas Tech victory by seven or fewer can still break the ticket. This is the user's confirmed placed wager, tracked separately from framework-approved releases. Units remain TBD.",
+        "fullAnalysis": "Ticket details and settlement:\nThree-leg BetRivers parlay, accepted September 18, 2026 at 7:18 p.m. ET. Combined displayed odds +303. Status on receipt: Open. Units are TBD. No result is assigned.\n\nToronto moneyline \u2014 player and game script:\nThe earlier September 18 scan confirmed Dylan Cease against Kumar Rocker. Toronto's preferred path is Cease limiting early damage while Vladimir Guerrero Jr., George Springer and the lineup capitalize on Rocker's traffic. Toronto's September 17 off-day supports its bullpen-rest position. The failure path is insufficient run support or late relief damage even if Cease pitches well. This leg needs Toronto to win; no run margin is required.\n\nDylan Cease 7+ strikeouts:\nThis leg needs at least seven strikeouts, equivalent to over 6.5. Cease's strikeout record supplied the matchup rationale in the pregame scan, but walks, contact outs and an early removal can prevent the seventh strikeout. The receipt's player-start condition applies. Toronto can win without this prop winning, and Cease can reach seven in a Toronto loss. The +112 shown belongs to the Toronto/Cease same-game pair, not a standalone Toronto moneyline or standalone strikeout quote.\n\nTexas Tech -7.5:\nTexas Tech must win by eight or more. The intended script is Hammond receiving enough protection to sustain drives while Tech's defense creates separation against Houston. The earlier analysis flagged Tech's protection and run-efficiency concerns and Weigman's ability to keep Houston competitive. A close Tech victory fails this spread. The ticket shows -112 for this component and an 8:00 p.m. ET kickoff; Toronto\u2013Texas is listed at 8:05 p.m. ET.\n\nConstruction and recordkeeping:\nAll three legs must win for the displayed full payout, subject to BetRivers' applicable void and settlement rules. The two baseball legs share game exposure; Texas Tech adds a separate game risk. This post records the wager the user placed and requested published. It does not retroactively change the prior scan's grades or represent a framework-approved release. No standalone bets are implied. Track this ticket once in Lotto Parlays, with settlement tracked separately from official framework performance. No new playable range or additional stake is recommended."
+      },
+      "postedDate": "2026-09-18",
+      "Date": "2026-09-18",
+      "result": "Loss",
+      "Result": "Loss",
+      "Outcome": "Loss",
+      "Status": "Graded",
+      "legGrades": [
+        {
+          "pick": "Toronto moneyline",
+          "result": "Loss",
+          "final": "Toronto 1, Texas 7",
+          "sourceUrl": "https://www.mlb.com/gameday/822847/final/box"
+        },
+        {
+          "pick": "Dylan Cease 7+ strikeouts",
+          "result": "Loss",
+          "final": "3 strikeouts in 2.2 innings",
+          "sourceUrl": "https://statsapi.mlb.com/api/v1/game/822847/boxscore"
+        },
+        {
+          "pick": "Texas Tech -7.5",
+          "result": "Loss",
+          "final": "Texas Tech 28, Houston 26",
+          "sourceUrl": "https://www.espn.com/college-football/game/_/gameId/401856811"
+        }
+      ],
+      "legRecord": "0-3",
+      "hideWagerAmounts": true,
+      "excludeFromRecord": true,
+      "Official Bet": "No",
+      "profitLoss": "Unknown",
+      "Profit/Loss": "Unknown",
+      "P/L": "Unknown",
+      "PL": "Unknown",
+      "Units": "",
+      "settlementCheckedAt": "2026-09-21T12:53:43.893011+00:00",
+      "recordScope": "Personal placed ticket; separate from official framework record",
+      "legResults": "Toronto moneyline \u2014 Loss: Toronto 1, Texas 7\nDylan Cease 7+ strikeouts \u2014 Loss: 3 strikeouts in 2.2 innings\nTexas Tech -7.5 \u2014 Loss: Texas Tech 28, Houston 26",
+      "settlementNotes": "LOSS. Leg record: 0-3. Losing legs: Toronto moneyline, Dylan Cease 7+ strikeouts, Texas Tech -7.5.",
+      "finalScore": "Toronto moneyline \u2014 Loss: Toronto 1, Texas 7\nDylan Cease 7+ strikeouts \u2014 Loss: 3 strikeouts in 2.2 innings\nTexas Tech -7.5 \u2014 Loss: Texas Tech 28, Houston 26",
+      "settlementSource": "MLB final box score and ESPN final scoreboard/box scores, checked September 21, 2026.",
+      "settlementSources": [
+        "https://www.mlb.com/gameday/822847/final/box",
+        "https://statsapi.mlb.com/api/v1/game/822847/boxscore",
+        "https://www.espn.com/college-football/game/_/gameId/401856811"
+      ],
+      "Writeup": "LOSS. Leg record: 0-3. Losing legs: Toronto moneyline, Dylan Cease 7+ strikeouts, Texas Tech -7.5.\n\nToronto moneyline \u2014 Loss: Toronto 1, Texas 7\nDylan Cease 7+ strikeouts \u2014 Loss: 3 strikeouts in 2.2 innings\nTexas Tech -7.5 \u2014 Loss: Texas Tech 28, Houston 26",
+      "Full Analysis": "LOSS. Leg record: 0-3. Losing legs: Toronto moneyline, Dylan Cease 7+ strikeouts, Texas Tech -7.5.\n\nToronto moneyline \u2014 Loss: Toronto 1, Texas 7\nDylan Cease 7+ strikeouts \u2014 Loss: 3 strikeouts in 2.2 innings\nTexas Tech -7.5 \u2014 Loss: Texas Tech 28, Houston 26\n\nPosted pregame analysis:\nTicket details and settlement:\nThree-leg BetRivers parlay, accepted September 18, 2026 at 7:18 p.m. ET. Combined displayed odds +303. Status on receipt: Open. Units are TBD. No result is assigned.\n\nToronto moneyline \u2014 player and game script:\nThe earlier September 18 scan confirmed Dylan Cease against Kumar Rocker. Toronto's preferred path is Cease limiting early damage while Vladimir Guerrero Jr., George Springer and the lineup capitalize on Rocker's traffic. Toronto's September 17 off-day supports its bullpen-rest position. The failure path is insufficient run support or late relief damage even if Cease pitches well. This leg needs Toronto to win; no run margin is required.\n\nDylan Cease 7+ strikeouts:\nThis leg needs at least seven strikeouts, equivalent to over 6.5. Cease's strikeout record supplied the matchup rationale in the pregame scan, but walks, contact outs and an early removal can prevent the seventh strikeout. The receipt's player-start condition applies. Toronto can win without this prop winning, and Cease can reach seven in a Toronto loss. The +112 shown belongs to the Toronto/Cease same-game pair, not a standalone Toronto moneyline or standalone strikeout quote.\n\nTexas Tech -7.5:\nTexas Tech must win by eight or more. The intended script is Hammond receiving enough protection to sustain drives while Tech's defense creates separation against Houston. The earlier analysis flagged Tech's protection and run-efficiency concerns and Weigman's ability to keep Houston competitive. A close Tech victory fails this spread. The ticket shows -112 for this component and an 8:00 p.m. ET kickoff; Toronto\u2013Texas is listed at 8:05 p.m. ET.\n\nConstruction and recordkeeping:\nAll three legs must win for the displayed full payout, subject to BetRivers' applicable void and settlement rules. The two baseball legs share game exposure; Texas Tech adds a separate game risk. This post records the wager the user placed and requested published. It does not retroactively change the prior scan's grades or represent a framework-approved release. No standalone bets are implied. Track this ticket once in Lotto Parlays, with settlement tracked separately from official framework performance. No new playable range or additional stake is recommended.\n\nRecord classification: Personal placed ticket; separate from official framework record. No wager amounts published; unit profit/loss is not inferred.",
+      "settledAt": "2026-09-21T12:53:43.893011+00:00"
     },
     {
       "date": "2026-09-14",
@@ -720,7 +1355,7 @@
       "Result": "Loss",
       "Outcome": "Loss",
       "finalScore": "Chiefs 31, Broncos 10 (41 total)",
-      "legResults": "Broncos +2.5 — Loss; Under 43.5 — Win",
+      "legResults": "Broncos +2.5 \u2014 Loss; Under 43.5 \u2014 Win",
       "profitLoss": "-0.25u",
       "P/L": "-0.25u"
     },
@@ -746,7 +1381,7 @@
       "failureScore": "7/10",
       "bestNumber": "Jets +2 or better / Vikings -1 or better",
       "playableTo": "Jets +1.5 / Vikings -1.5",
-      "noBetCutoff": "Jets PK or Vikings -3 — pass/rescore",
+      "noBetCutoff": "Jets PK or Vikings -3 \u2014 pass/rescore",
       "writeup": "This two-leg Lotto Parlay pairs New York +1.5 with Minnesota -1.5 and deliberately stops there; adding a third side would increase payout while diluting the card's two clearest number-based edges. The Jets leg captures a market that moved from Tennessee -3 through pick'em but still gives New York the one-point-loss window. The Vikings leg follows the move toward Minnesota while keeping the wager below the key field goal at home. The combined Micks score is 82/110, replica score 84/100 and failure score 7/10, which supports only a 0.25-unit lottery allocation. These legs are not mechanically correlated, so the parlay is a price-and-conviction expression rather than a hedge; either Week 1 game can fail independently. The primary risk is buying after two meaningful moves, especially if New York's new systems start slowly or Green Bay's experience against Brian Flores creates explosive plays. Best Number is Jets +2 or better with Vikings -1 or better. Playable To is Jets +1.5 and Vikings -1.5 at a competitive combined price. No-Bet Cutoff is Jets pick'em or Vikings -3; if either threshold appears, pass or rescore instead of forcing the ticket. At the listed numbers, the two-leg Jets/Vikings Lotto Parlay is an official B+ play for 0.25 units.",
       "fullAnalysis": "",
       "result": "Win",
@@ -764,26 +1399,26 @@
       "access": "free",
       "sport": "NFL",
       "league": "NFL",
-      "game": "NFL Week 2 — Sunday, September 20, 2026",
+      "game": "NFL Week 2 \u2014 Sunday, September 20, 2026",
       "pick": "Jets +8.5 / Titans +12.5 / Colts +12.5 / Raiders +12.5",
-      "cardTitle": "NFL Week 2 — Four-Leg Delaware Teaser (WATCH)",
+      "cardTitle": "Thursday Four-Leg Delaware Teaser \u2014 WIN",
       "type": "Teaser Parlay",
       "market": "Four-game NFL teaser",
       "lineNumber": "Jets +8.5 / Titans +12.5 / Colts +12.5 / Raiders +12.5",
       "legs": "Jets +8.5 / Titans +12.5 / Colts +12.5 / Raiders +12.5",
       "odds": "+250 (5-to-2 profit)",
-      "sportsbook": "Delaware Sports Lottery — Teaser card",
+      "sportsbook": "Delaware Sports Lottery \u2014 Teaser card",
       "grade": "TBD",
-      "units": "TBD pending info",
-      "status": "Archived — superseded by September 19 card review",
+      "units": "",
+      "status": "Graded",
       "officialBet": "No",
       "featured": "No",
       "pickOfTheDay": "No",
       "bestNumber": "Jets +8.5 / Titans +12.5 / Colts +12.5 / Raiders +12.5; +250",
-      "playableTo": "Not released — retain all four listed lines and +250 or better for rescore",
+      "playableTo": "Not released \u2014 retain all four listed lines and +250 or better for rescore",
       "noBetCutoff": "No bet pending info; rescore any worse line/payout or material availability change",
-      "writeup": "This four-leg NFL teaser is a WATCH candidate for Sunday, September 20, not an official bet. Units are TBD pending info. Use Delaware Teaser selections 114 Jets +8.5, 126 Titans +12.5, 154 Colts +12.5 and 138 Raiders +12.5. The printed payout is 5-to-2 profit (+250): a $2 winning ticket returns $7 including stake. Doc’s Sports supports all four underdogs at their standard spreads, but that agreement alone does not establish a profitable teaser. The intended scripts are sustained Jets possessions, a lower-scoring Titans game, Jonathan Taylor controlling possessions for Indianapolis, and Ashton Jeanty keeping Las Vegas competitive. The Raiders are the least settled leg because Brock Bowers’ availability and a conflicting Chargers rebound signal remain unresolved. Final injury designations, updated guide and model projections, weather and accepted ticket lines must be checked before release. Do not add a fifth leg or substitute a different card type. If one leg fails review, withdraw this combination rather than force a replacement.",
-      "fullAnalysis": "Ticket and settlement:\nNFL Week 2 — Sunday, September 20, 2026. Delaware TEASER card dated September 17. Selection 114: New York Jets +8.5 vs Green Bay; 126: Tennessee Titans +12.5 vs Philadelphia; 154: Indianapolis Colts +12.5 at Kansas City; 138: Las Vegas Raiders +12.5 at Los Angeles Chargers. All four must cover. These are the printed teaser spreads, not assumed six-point adjustments. Verify the accepted ticket. Four correct pays 5-to-2 profit (+250); $2 returns $7 total. Minimum wager $2. No stake has been recommended.\n\nJets +8.5 — players and game script:\nGeno Smith, Breece Hall and Garrett Wilson offer a route to sustained possessions and a competitive home game. The +8.5 line protects against a seven- or eight-point defeat. Doc’s Sports selects Jets +3.5 at the standard spread. Green Bay’s offensive production was stronger than its opening loss suggests, so Jordan Love and explosive passing remain the failure scenario. Monitor both offensive lines and the Jets secondary; Green Bay’s Wednesday report includes several limited linemen and defenders. This is the strongest structural teaser leg of the shortlist, not a quantified cover-probability claim.\n\nTitans +12.5 — players and game script:\nThe preferred script is fewer possessions and limited explosive scores, with Cam Ward protecting the ball. The standard card total is 39.5, making the 12.5-point cushion worth investigating. Doc’s Sports selects Titans +7. Philadelphia can still break this leg through Jalen Hurts and Saquon Barkley if Tennessee cannot sustain drives. Jalen Carter and Cooper DeJean missed Wednesday practice; that is not confirmation either will miss the game. Recheck final availability and Tennessee’s offensive outlook.\n\nColts +12.5 — players and game script:\nJonathan Taylor sustaining drives would limit Patrick Mahomes’ possessions and support a result inside two scores. Doc’s Sports selects Colts +7. The major concern is Indianapolis’ run defense against Kenneth Walker after its difficult Baltimore matchup. Kansas City controlling the ground game or short-field turnovers could create a runaway result. The Wednesday report lists Mahomes as a full participant, Chris Jones limited and Josh Simmons absent. Reassess Indianapolis’ defensive front and Kansas City’s protection before release.\n\nRaiders +12.5 — players and game script:\nAshton Jeanty’s rushing and receiving role provides a route to keeping Las Vegas competitive. Doc’s Sports selects Raiders +7, but this is the least settled leg. Brock Bowers missed Wednesday practice with a knee injury; Jeanty practiced fully. Chargers receiver Ladd McConkey missed practice with a rib injury. Final availability matters on both sides. VSiN’s Chargers rebound system conflicts with the Raiders direction, so Justin Herbert producing a decisive home response remains a material risk. Do not assume Bowers or McConkey will play.\n\nFramework and payout check:\nNFL uses the standard framework with Recovery Mode off. Doc’s previews and VSiN systems are supporting evidence, not independent cover probabilities. Some Week 2 systems support Tennessee and Indianapolis; the Chargers rebound signal is a contradiction. Numerical preseason-guide projections and a complete current projection reconciliation were unavailable in the September 17 review, so no numerical Micks score or letter grade is assigned. At +250, the ticket needs a joint cover probability above 28.57% to break even; this review has not established that edge. Adding a fifth leg is not approved.\n\nPending information and release conditions:\nGrade: TBD pending info. Units: TBD pending info. Status: WATCH — not an official bet. Required before release: final injury designations and game-day availability, current team and player projections reconciled with the guides, weather, current market comparison, and confirmation of all four printed ticket lines and payout. Preserve Jets +8.5, Titans +12.5, Colts +12.5 and Raiders +12.5 at 5-to-2 profit or better for any rescore. Those numbers are review targets, not automatic betting triggers. Any reduced cushion, worse payout, material player/line change or unresolved edge means no bet pending rescore. No automatic replacement and no fifth leg.",
+      "writeup": "WIN. Leg record: 4-0. Thursday September 17 publication corrected to WIN at the user\u2019s request; all four Sunday legs independently verified.\n\nJets +8.5 \u2014 Win: NYJ 17; GB 20\nTitans +12.5 \u2014 Win: TEN 20; PHI 24\nColts +12.5 \u2014 Win: KC 33; IND 30\nRaiders +12.5 \u2014 Win: LAC 14; LV 26",
+      "fullAnalysis": "WIN. Leg record: 4-0. Thursday September 17 publication corrected to WIN at the user\u2019s request; all four Sunday legs independently verified.\n\nJets +8.5 \u2014 Win: NYJ 17; GB 20\nTitans +12.5 \u2014 Win: TEN 20; PHI 24\nColts +12.5 \u2014 Win: KC 33; IND 30\nRaiders +12.5 \u2014 Win: LAC 14; LV 26\n\nPosted pregame analysis:\nTicket and settlement:\nNFL Week 2 \u2014 Sunday, September 20, 2026. Delaware TEASER card dated September 17. Selection 114: New York Jets +8.5 vs Green Bay; 126: Tennessee Titans +12.5 vs Philadelphia; 154: Indianapolis Colts +12.5 at Kansas City; 138: Las Vegas Raiders +12.5 at Los Angeles Chargers. All four must cover. These are the printed teaser spreads, not assumed six-point adjustments. Verify the accepted ticket. Four correct pays 5-to-2 profit (+250).\n\nJets +8.5 \u2014 players and game script:\nGeno Smith, Breece Hall and Garrett Wilson offer a route to sustained possessions and a competitive home game. The +8.5 line protects against a seven- or eight-point defeat. Doc\u2019s Sports selects Jets +3.5 at the standard spread. Green Bay\u2019s offensive production was stronger than its opening loss suggests, so Jordan Love and explosive passing remain the failure scenario. Monitor both offensive lines and the Jets secondary; Green Bay\u2019s Wednesday report includes several limited linemen and defenders. This is the strongest structural teaser leg of the shortlist, not a quantified cover-probability claim.\n\nTitans +12.5 \u2014 players and game script:\nThe preferred script is fewer possessions and limited explosive scores, with Cam Ward protecting the ball. The standard card total is 39.5, making the 12.5-point cushion worth investigating. Doc\u2019s Sports selects Titans +7. Philadelphia can still break this leg through Jalen Hurts and Saquon Barkley if Tennessee cannot sustain drives. Jalen Carter and Cooper DeJean missed Wednesday practice; that is not confirmation either will miss the game. Recheck final availability and Tennessee\u2019s offensive outlook.\n\nColts +12.5 \u2014 players and game script:\nJonathan Taylor sustaining drives would limit Patrick Mahomes\u2019 possessions and support a result inside two scores. Doc\u2019s Sports selects Colts +7. The major concern is Indianapolis\u2019 run defense against Kenneth Walker after its difficult Baltimore matchup. Kansas City controlling the ground game or short-field turnovers could create a runaway result. The Wednesday report lists Mahomes as a full participant, Chris Jones limited and Josh Simmons absent. Reassess Indianapolis\u2019 defensive front and Kansas City\u2019s protection before release.\n\nRaiders +12.5 \u2014 players and game script:\nAshton Jeanty\u2019s rushing and receiving role provides a route to keeping Las Vegas competitive. Doc\u2019s Sports selects Raiders +7, but this is the least settled leg. Brock Bowers missed Wednesday practice with a knee injury; Jeanty practiced fully. Chargers receiver Ladd McConkey missed practice with a rib injury. Final availability matters on both sides. VSiN\u2019s Chargers rebound system conflicts with the Raiders direction, so Justin Herbert producing a decisive home response remains a material risk. Do not assume Bowers or McConkey will play.\n\nFramework and payout check:\nNFL uses the standard framework with Recovery Mode off. Doc\u2019s previews and VSiN systems are supporting evidence, not independent cover probabilities. Some Week 2 systems support Tennessee and Indianapolis; the Chargers rebound signal is a contradiction. Numerical preseason-guide projections and a complete current projection reconciliation were unavailable in the September 17 review, so no numerical Micks score or letter grade is assigned. At +250, the ticket needs a joint cover probability above 28.57% to break even; this review has not established that edge. Adding a fifth leg is not approved.\n\nPending information and release conditions:\nGrade: TBD pending info. Units: TBD pending info. Status: WATCH \u2014 not an official bet. Required before release: final injury designations and game-day availability, current team and player projections reconciled with the guides, weather, current market comparison, and confirmation of all four printed ticket lines and payout. Preserve Jets +8.5, Titans +12.5, Colts +12.5 and Raiders +12.5 at 5-to-2 profit or better for any rescore. Those numbers are review targets, not automatic betting triggers. Any reduced cushion, worse payout, material player/line change or unresolved edge means no bet pending rescore. No automatic replacement and no fifth leg.\n\nRecord classification: Posted construction; execution unconfirmed; excluded from official betting record. No wager amounts published; unit profit/loss is not inferred.",
       "showFullAnalysis": true,
       "sourceLinks": [
         {
@@ -791,19 +1426,19 @@
           "url": "https://delotterywebcontent.blob.core.windows.net/delottery-site-assets/assets/sports/aa7c4441-9384-41fc-b7e6-acd063944338_Delaware%20-%20Teaser%209.17.2026.pdf"
         },
         {
-          "title": "Doc’s Sports — Jets",
+          "title": "Doc\u2019s Sports \u2014 Jets",
           "url": "https://www.docsports.com/free-picks/nfl/2026/green-bay-packers-vs-new-york-jets-prediction-9-20-2026-nfl-picks-best-bets-odds-week-2.html"
         },
         {
-          "title": "Doc’s Sports — Titans",
+          "title": "Doc\u2019s Sports \u2014 Titans",
           "url": "https://www.docsports.com/free-picks/nfl/2026/philadelphia-eagles-vs-tennessee-titans-prediction-9-20-2026-nfl-picks-best-bets-odds-week-2.html"
         },
         {
-          "title": "Doc’s Sports — Colts",
+          "title": "Doc\u2019s Sports \u2014 Colts",
           "url": "https://www.docsports.com/free-picks/nfl/2026/indianapolis-colts-vs-kansas-city-chiefs-prediction-9-20-2026-nfl-picks-best-bets-odds-week-2.html"
         },
         {
-          "title": "Doc’s Sports — Raiders",
+          "title": "Doc\u2019s Sports \u2014 Raiders",
           "url": "https://www.docsports.com/free-picks/nfl/2026/las-vegas-raiders-vs-los-angeles-chargers-prediction-9-20-2026-nfl-picks-best-bets-odds-week-2.html"
         },
         {
@@ -827,8 +1462,80 @@
           "url": "https://www.raiders.com/news/las-vegas-raiders-los-angeles-chargers-nfl-week-2-injury-report-2026-season"
         }
       ],
-      "sourceVerification": "Research checked September 17, 2026. Injury reports reflect Wednesday practice, not final game status. Complete guide/projection reconciliation and game-day checks remain pending."
+      "sourceVerification": "Research checked September 17, 2026. Injury reports reflect Wednesday practice, not final game status. Complete guide/projection reconciliation and game-day checks remain pending.",
+      "originalPublication": {
+        "date": "2026-09-17",
+        "status": "Archived \u2014 superseded by September 19 card review",
+        "grade": "TBD",
+        "officialBet": "No",
+        "writeup": "This four-leg NFL teaser is a WATCH candidate for Sunday, September 20, not an official bet. Units are TBD pending info. Use Delaware Teaser selections 114 Jets +8.5, 126 Titans +12.5, 154 Colts +12.5 and 138 Raiders +12.5. The printed payout is 5-to-2 profit (+250). Doc\u2019s Sports supports all four underdogs at their standard spreads, but that agreement alone does not establish a profitable teaser. The intended scripts are sustained Jets possessions, a lower-scoring Titans game, Jonathan Taylor controlling possessions for Indianapolis, and Ashton Jeanty keeping Las Vegas competitive. The Raiders are the least settled leg because Brock Bowers\u2019 availability and a conflicting Chargers rebound signal remain unresolved. Final injury designations, updated guide and model projections, weather and accepted ticket lines must be checked before release. Do not add a fifth leg or substitute a different card type. If one leg fails review, withdraw this combination rather than force a replacement.",
+        "fullAnalysis": "Ticket and settlement:\nNFL Week 2 \u2014 Sunday, September 20, 2026. Delaware TEASER card dated September 17. Selection 114: New York Jets +8.5 vs Green Bay; 126: Tennessee Titans +12.5 vs Philadelphia; 154: Indianapolis Colts +12.5 at Kansas City; 138: Las Vegas Raiders +12.5 at Los Angeles Chargers. All four must cover. These are the printed teaser spreads, not assumed six-point adjustments. Verify the accepted ticket. Four correct pays 5-to-2 profit (+250).\n\nJets +8.5 \u2014 players and game script:\nGeno Smith, Breece Hall and Garrett Wilson offer a route to sustained possessions and a competitive home game. The +8.5 line protects against a seven- or eight-point defeat. Doc\u2019s Sports selects Jets +3.5 at the standard spread. Green Bay\u2019s offensive production was stronger than its opening loss suggests, so Jordan Love and explosive passing remain the failure scenario. Monitor both offensive lines and the Jets secondary; Green Bay\u2019s Wednesday report includes several limited linemen and defenders. This is the strongest structural teaser leg of the shortlist, not a quantified cover-probability claim.\n\nTitans +12.5 \u2014 players and game script:\nThe preferred script is fewer possessions and limited explosive scores, with Cam Ward protecting the ball. The standard card total is 39.5, making the 12.5-point cushion worth investigating. Doc\u2019s Sports selects Titans +7. Philadelphia can still break this leg through Jalen Hurts and Saquon Barkley if Tennessee cannot sustain drives. Jalen Carter and Cooper DeJean missed Wednesday practice; that is not confirmation either will miss the game. Recheck final availability and Tennessee\u2019s offensive outlook.\n\nColts +12.5 \u2014 players and game script:\nJonathan Taylor sustaining drives would limit Patrick Mahomes\u2019 possessions and support a result inside two scores. Doc\u2019s Sports selects Colts +7. The major concern is Indianapolis\u2019 run defense against Kenneth Walker after its difficult Baltimore matchup. Kansas City controlling the ground game or short-field turnovers could create a runaway result. The Wednesday report lists Mahomes as a full participant, Chris Jones limited and Josh Simmons absent. Reassess Indianapolis\u2019 defensive front and Kansas City\u2019s protection before release.\n\nRaiders +12.5 \u2014 players and game script:\nAshton Jeanty\u2019s rushing and receiving role provides a route to keeping Las Vegas competitive. Doc\u2019s Sports selects Raiders +7, but this is the least settled leg. Brock Bowers missed Wednesday practice with a knee injury; Jeanty practiced fully. Chargers receiver Ladd McConkey missed practice with a rib injury. Final availability matters on both sides. VSiN\u2019s Chargers rebound system conflicts with the Raiders direction, so Justin Herbert producing a decisive home response remains a material risk. Do not assume Bowers or McConkey will play.\n\nFramework and payout check:\nNFL uses the standard framework with Recovery Mode off. Doc\u2019s previews and VSiN systems are supporting evidence, not independent cover probabilities. Some Week 2 systems support Tennessee and Indianapolis; the Chargers rebound signal is a contradiction. Numerical preseason-guide projections and a complete current projection reconciliation were unavailable in the September 17 review, so no numerical Micks score or letter grade is assigned. At +250, the ticket needs a joint cover probability above 28.57% to break even; this review has not established that edge. Adding a fifth leg is not approved.\n\nPending information and release conditions:\nGrade: TBD pending info. Units: TBD pending info. Status: WATCH \u2014 not an official bet. Required before release: final injury designations and game-day availability, current team and player projections reconciled with the guides, weather, current market comparison, and confirmation of all four printed ticket lines and payout. Preserve Jets +8.5, Titans +12.5, Colts +12.5 and Raiders +12.5 at 5-to-2 profit or better for any rescore. Those numbers are review targets, not automatic betting triggers. Any reduced cushion, worse payout, material player/line change or unresolved edge means no bet pending rescore. No automatic replacement and no fifth leg."
+      },
+      "postedDate": "2026-09-17",
+      "Date": "2026-09-17",
+      "result": "Win",
+      "Result": "Win",
+      "Outcome": "Win",
+      "Status": "Graded",
+      "legGrades": [
+        {
+          "pick": "Jets +8.5",
+          "result": "Win",
+          "final": "NYJ 17; GB 20",
+          "gradingMargin": 5.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872936"
+        },
+        {
+          "pick": "Titans +12.5",
+          "result": "Win",
+          "final": "TEN 20; PHI 24",
+          "gradingMargin": 8.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872939"
+        },
+        {
+          "pick": "Colts +12.5",
+          "result": "Win",
+          "final": "KC 33; IND 30",
+          "gradingMargin": 9.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872945"
+        },
+        {
+          "pick": "Raiders +12.5",
+          "result": "Win",
+          "final": "LAC 14; LV 26",
+          "gradingMargin": 24.5,
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872941"
+        }
+      ],
+      "legRecord": "4-0",
+      "hideWagerAmounts": true,
+      "excludeFromRecord": true,
+      "Official Bet": "No",
+      "frameworkApproved": false,
+      "profitLoss": "Unknown",
+      "Profit/Loss": "Unknown",
+      "P/L": "Unknown",
+      "PL": "Unknown",
+      "Units": "",
+      "settlementCheckedAt": "2026-09-21T12:53:43.893011+00:00",
+      "recordScope": "Posted construction; execution unconfirmed; excluded from official betting record",
+      "legResults": "Jets +8.5 \u2014 Win: NYJ 17; GB 20\nTitans +12.5 \u2014 Win: TEN 20; PHI 24\nColts +12.5 \u2014 Win: KC 33; IND 30\nRaiders +12.5 \u2014 Win: LAC 14; LV 26",
+      "userConfirmedOutcome": "Win",
+      "previousArchiveStatus": "Archived \u2014 superseded by September 19 card review",
+      "settlementNotes": "WIN. Leg record: 4-0. Thursday September 17 publication corrected to WIN at the user\u2019s request; all four Sunday legs independently verified.",
+      "finalScore": "Jets +8.5 \u2014 Win: NYJ 17; GB 20\nTitans +12.5 \u2014 Win: TEN 20; PHI 24\nColts +12.5 \u2014 Win: KC 33; IND 30\nRaiders +12.5 \u2014 Win: LAC 14; LV 26",
+      "settlementSource": "MLB final box score and ESPN final scoreboard/box scores, checked September 21, 2026.",
+      "settlementSources": [
+        "https://www.espn.com/nfl/game/_/gameId/401872936",
+        "https://www.espn.com/nfl/game/_/gameId/401872939",
+        "https://www.espn.com/nfl/game/_/gameId/401872945",
+        "https://www.espn.com/nfl/game/_/gameId/401872941"
+      ],
+      "Writeup": "WIN. Leg record: 4-0. Thursday September 17 publication corrected to WIN at the user\u2019s request; all four Sunday legs independently verified.\n\nJets +8.5 \u2014 Win: NYJ 17; GB 20\nTitans +12.5 \u2014 Win: TEN 20; PHI 24\nColts +12.5 \u2014 Win: KC 33; IND 30\nRaiders +12.5 \u2014 Win: LAC 14; LV 26",
+      "Full Analysis": "WIN. Leg record: 4-0. Thursday September 17 publication corrected to WIN at the user\u2019s request; all four Sunday legs independently verified.\n\nJets +8.5 \u2014 Win: NYJ 17; GB 20\nTitans +12.5 \u2014 Win: TEN 20; PHI 24\nColts +12.5 \u2014 Win: KC 33; IND 30\nRaiders +12.5 \u2014 Win: LAC 14; LV 26\n\nPosted pregame analysis:\nTicket and settlement:\nNFL Week 2 \u2014 Sunday, September 20, 2026. Delaware TEASER card dated September 17. Selection 114: New York Jets +8.5 vs Green Bay; 126: Tennessee Titans +12.5 vs Philadelphia; 154: Indianapolis Colts +12.5 at Kansas City; 138: Las Vegas Raiders +12.5 at Los Angeles Chargers. All four must cover. These are the printed teaser spreads, not assumed six-point adjustments. Verify the accepted ticket. Four correct pays 5-to-2 profit (+250).\n\nJets +8.5 \u2014 players and game script:\nGeno Smith, Breece Hall and Garrett Wilson offer a route to sustained possessions and a competitive home game. The +8.5 line protects against a seven- or eight-point defeat. Doc\u2019s Sports selects Jets +3.5 at the standard spread. Green Bay\u2019s offensive production was stronger than its opening loss suggests, so Jordan Love and explosive passing remain the failure scenario. Monitor both offensive lines and the Jets secondary; Green Bay\u2019s Wednesday report includes several limited linemen and defenders. This is the strongest structural teaser leg of the shortlist, not a quantified cover-probability claim.\n\nTitans +12.5 \u2014 players and game script:\nThe preferred script is fewer possessions and limited explosive scores, with Cam Ward protecting the ball. The standard card total is 39.5, making the 12.5-point cushion worth investigating. Doc\u2019s Sports selects Titans +7. Philadelphia can still break this leg through Jalen Hurts and Saquon Barkley if Tennessee cannot sustain drives. Jalen Carter and Cooper DeJean missed Wednesday practice; that is not confirmation either will miss the game. Recheck final availability and Tennessee\u2019s offensive outlook.\n\nColts +12.5 \u2014 players and game script:\nJonathan Taylor sustaining drives would limit Patrick Mahomes\u2019 possessions and support a result inside two scores. Doc\u2019s Sports selects Colts +7. The major concern is Indianapolis\u2019 run defense against Kenneth Walker after its difficult Baltimore matchup. Kansas City controlling the ground game or short-field turnovers could create a runaway result. The Wednesday report lists Mahomes as a full participant, Chris Jones limited and Josh Simmons absent. Reassess Indianapolis\u2019 defensive front and Kansas City\u2019s protection before release.\n\nRaiders +12.5 \u2014 players and game script:\nAshton Jeanty\u2019s rushing and receiving role provides a route to keeping Las Vegas competitive. Doc\u2019s Sports selects Raiders +7, but this is the least settled leg. Brock Bowers missed Wednesday practice with a knee injury; Jeanty practiced fully. Chargers receiver Ladd McConkey missed practice with a rib injury. Final availability matters on both sides. VSiN\u2019s Chargers rebound system conflicts with the Raiders direction, so Justin Herbert producing a decisive home response remains a material risk. Do not assume Bowers or McConkey will play.\n\nFramework and payout check:\nNFL uses the standard framework with Recovery Mode off. Doc\u2019s previews and VSiN systems are supporting evidence, not independent cover probabilities. Some Week 2 systems support Tennessee and Indianapolis; the Chargers rebound signal is a contradiction. Numerical preseason-guide projections and a complete current projection reconciliation were unavailable in the September 17 review, so no numerical Micks score or letter grade is assigned. At +250, the ticket needs a joint cover probability above 28.57% to break even; this review has not established that edge. Adding a fifth leg is not approved.\n\nPending information and release conditions:\nGrade: TBD pending info. Units: TBD pending info. Status: WATCH \u2014 not an official bet. Required before release: final injury designations and game-day availability, current team and player projections reconciled with the guides, weather, current market comparison, and confirmation of all four printed ticket lines and payout. Preserve Jets +8.5, Titans +12.5, Colts +12.5 and Raiders +12.5 at 5-to-2 profit or better for any rescore. Those numbers are review targets, not automatic betting triggers. Any reduced cushion, worse payout, material player/line change or unresolved edge means no bet pending rescore. No automatic replacement and no fifth leg.\n\nRecord classification: Posted construction; execution unconfirmed; excluded from official betting record. No wager amounts published; unit profit/loss is not inferred.",
+      "settledAt": "2026-09-21T12:53:43.893011+00:00"
     }
   ],
-  "longshots": []
+  "longshots": [],
+  "gradedAt": "2026-09-21T12:53:43.893011+00:00"
 }
