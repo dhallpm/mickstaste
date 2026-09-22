@@ -1,0 +1,130 @@
+{
+  "id": "placed-teaser-2026-09-20-min-phi-jax-nyg",
+  "date": "2026-09-21",
+  "Date": "2026-09-21",
+  "postedDate": "2026-09-21",
+  "betPlacedAt": "2026-09-20T12:47:00-04:00",
+  "eventDate": "2026-09-20",
+  "eventEndDate": "2026-09-21",
+  "section": "Lotto Parlays",
+  "Section": "Lotto Parlays",
+  "access": "free",
+  "Access": "Free",
+  "sport": "NFL",
+  "Sport": "NFL",
+  "league": "NFL",
+  "League": "NFL",
+  "game": "NFL Week 2 \u2014 September 20\u201321, 2026",
+  "Matchup": "NFL Week 2 \u2014 September 20\u201321, 2026",
+  "pick": "Vikings\u2013Bears Under 53.5 / Eagles -1.5 / Jaguars\u2013Broncos Under 49.5 / Giants +13.5",
+  "Pick": "Vikings\u2013Bears Under 53.5 / Eagles -1.5 / Jaguars\u2013Broncos Under 49.5 / Giants +13.5",
+  "cardTitle": "Placed 4-Pick Regular Teaser \u2014 Loss (3\u20131)",
+  "type": "4-Pick Regular Teaser",
+  "market": "NFL parlay card",
+  "lineNumber": "Vikings\u2013Bears Under 53.5 / Eagles -1.5 / Jaguars\u2013Broncos Under 49.5 / Giants +13.5",
+  "Line": "Vikings\u2013Bears Under 53.5 / Eagles -1.5 / Jaguars\u2013Broncos Under 49.5 / Giants +13.5",
+  "legs": "Vikings\u2013Bears Under 53.5\nEagles -1.5\nJaguars\u2013Broncos Under 49.5\nGiants +13.5",
+  "legCount": 4,
+  "odds": "+250",
+  "Odds": "+250",
+  "payoutOdds": "5 to 2",
+  "sportsbook": "Delaware Lottery",
+  "grade": "Not scored",
+  "Grade": "Not scored",
+  "status": "Graded",
+  "Status": "Graded",
+  "result": "Loss",
+  "Result": "Loss",
+  "Outcome": "Loss",
+  "officialBet": "No",
+  "Official Bet": "No",
+  "frameworkApproved": false,
+  "betPlaced": true,
+  "userConfirmedTicket": true,
+  "featured": "No",
+  "pickOfTheDay": "No",
+  "hideWagerAmounts": true,
+  "showFullAnalysis": true,
+  "units": "",
+  "Units": "",
+  "profitLoss": "Unknown",
+  "Profit/Loss": "Unknown",
+  "P/L": "Unknown",
+  "PL": "Unknown",
+  "excludeFromRecord": true,
+  "recordScope": "User-confirmed placed teaser; tracked separately from framework-approved releases and the original posted Steelers construction.",
+  "bestNumber": "Placed ticket: Giants +13.5 remaining",
+  "Best Number": "Placed ticket: Giants +13.5 remaining",
+  "playableTo": "Existing ticket \u2014 tracking only",
+  "Playable To": "Existing ticket \u2014 tracking only",
+  "noBetCutoff": "Existing ticket \u2014 no new betting recommendation",
+  "No-Bet Cutoff": "Existing ticket \u2014 no new betting recommendation",
+  "writeup": "LOSS. Final leg record: 3-1. The Rams beat the Giants 28\u20136 on September 21, 2026. New York lost by 22 points, so the Giants spread leg did not cover. All legs are final.\n\nVikings\u2013Bears Under 53.5 \u2014 Win: MIN 9; CHI 3\nEagles -1.5 \u2014 Win: PHI 24; TEN 20\nJaguars\u2013Broncos Under 49.5 \u2014 Win: DEN 20; JAX 13\nGiants +13.5 \u2014 Loss: LAR 28; NYG 6",
+  "Writeup": "LOSS. Final leg record: 3-1. The Rams beat the Giants 28\u20136 on September 21, 2026. New York lost by 22 points, so the Giants spread leg did not cover. All legs are final.\n\nVikings\u2013Bears Under 53.5 \u2014 Win: MIN 9; CHI 3\nEagles -1.5 \u2014 Win: PHI 24; TEN 20\nJaguars\u2013Broncos Under 49.5 \u2014 Win: DEN 20; JAX 13\nGiants +13.5 \u2014 Loss: LAR 28; NYG 6",
+  "fullAnalysis": "LOSS. Final leg record: 3-1. The Rams beat the Giants 28\u20136 on September 21, 2026. New York lost by 22 points, so the Giants spread leg did not cover. All legs are final.\n\nVikings\u2013Bears Under 53.5 \u2014 Win: MIN 9; CHI 3\nEagles -1.5 \u2014 Win: PHI 24; TEN 20\nJaguars\u2013Broncos Under 49.5 \u2014 Win: DEN 20; JAX 13\nGiants +13.5 \u2014 Loss: LAR 28; NYG 6\n\nUser-confirmed placed teaser; tracked separately from framework-approved releases and the original posted Steelers construction.",
+  "Full Analysis": "LOSS. Final leg record: 3-1. The Rams beat the Giants 28\u20136 on September 21, 2026. New York lost by 22 points, so the Giants spread leg did not cover. All legs are final.\n\nVikings\u2013Bears Under 53.5 \u2014 Win: MIN 9; CHI 3\nEagles -1.5 \u2014 Win: PHI 24; TEN 20\nJaguars\u2013Broncos Under 49.5 \u2014 Win: DEN 20; JAX 13\nGiants +13.5 \u2014 Loss: LAR 28; NYG 6\n\nUser-confirmed placed teaser; tracked separately from framework-approved releases and the original posted Steelers construction.",
+  "legGrades": [
+    {
+      "pick": "Vikings\u2013Bears Under 53.5",
+      "result": "Win",
+      "final": "MIN 9; CHI 3",
+      "gradingMargin": 41.5,
+      "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872937"
+    },
+    {
+      "pick": "Eagles -1.5",
+      "result": "Win",
+      "final": "PHI 24; TEN 20",
+      "gradingMargin": 2.5,
+      "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872939"
+    },
+    {
+      "pick": "Jaguars\u2013Broncos Under 49.5",
+      "result": "Win",
+      "final": "DEN 20; JAX 13",
+      "gradingMargin": 16.5,
+      "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872940"
+    },
+    {
+      "pick": "Giants +13.5",
+      "result": "Loss",
+      "final": "LAR 28; NYG 6",
+      "gradingMargin": -8.5,
+      "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872947"
+    }
+  ],
+  "legRecord": "3-1",
+  "legResults": "Vikings\u2013Bears Under 53.5 \u2014 Win: MIN 9; CHI 3\nEagles -1.5 \u2014 Win: PHI 24; TEN 20\nJaguars\u2013Broncos Under 49.5 \u2014 Win: DEN 20; JAX 13\nGiants +13.5 \u2014 Loss: LAR 28; NYG 6",
+  "settlementNotes": "LOSS. Final leg record: 3-1. The Rams beat the Giants 28\u20136 on September 21, 2026. New York lost by 22 points, so the Giants spread leg did not cover. All legs are final.",
+  "notes": "LOSS. Final leg record: 3-1. The Rams beat the Giants 28\u20136 on September 21, 2026. New York lost by 22 points, so the Giants spread leg did not cover. All legs are final.",
+  "settlementCheckedAt": "2026-09-22T08:39:15.951556+00:00",
+  "settlementSource": "ESPN final scoreboard and NFL final: Giants 6, Rams 28; checked September 22, 2026.",
+  "settlementSources": [
+    "https://www.espn.com/nfl/game/_/gameId/401872937",
+    "https://www.espn.com/nfl/game/_/gameId/401872939",
+    "https://www.espn.com/nfl/game/_/gameId/401872940",
+    "https://www.espn.com/nfl/game/_/gameId/401872947"
+  ],
+  "sourceVerification": "Ticket selections and three winning leg indicators verified from user-provided IMG_1652.png on September 21, 2026.",
+  "sourceLinks": [
+    {
+      "title": "Vikings\u2013Bears Under 53.5 game record",
+      "url": "https://www.espn.com/nfl/game/_/gameId/401872937"
+    },
+    {
+      "title": "Eagles -1.5 game record",
+      "url": "https://www.espn.com/nfl/game/_/gameId/401872939"
+    },
+    {
+      "title": "Jaguars\u2013Broncos Under 49.5 game record",
+      "url": "https://www.espn.com/nfl/game/_/gameId/401872940"
+    },
+    {
+      "title": "Giants +13.5 game record",
+      "url": "https://www.espn.com/nfl/game/_/gameId/401872947"
+    }
+  ],
+  "receiptEvidence": "IMG_1652.png; financial fields and ticket identifier omitted",
+  "settledAt": "2026-09-22T08:39:15.951556+00:00",
+  "finalScore": "Vikings\u2013Bears Under 53.5 \u2014 Win: MIN 9; CHI 3\nEagles -1.5 \u2014 Win: PHI 24; TEN 20\nJaguars\u2013Broncos Under 49.5 \u2014 Win: DEN 20; JAX 13\nGiants +13.5 \u2014 Loss: LAR 28; NYG 6"
+}

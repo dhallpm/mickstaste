@@ -6,7 +6,7 @@
       "date": "2026-09-19",
       "type": "10-Pick Big / Super Teaser",
       "result": "LOSS",
-      "record": "7-2; 1 pending",
+      "record": "7-3",
       "payout": "13 to 2",
       "legs": [
         {
@@ -32,9 +32,9 @@
         },
         {
           "pick": "Giants +15.5",
-          "result": "Pending",
-          "final": "Scheduled September 21, 8:15 p.m. ET",
-          "gradingMargin": null,
+          "result": "Loss",
+          "final": "LAR 28; NYG 6",
+          "gradingMargin": -6.5,
           "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872947"
         },
         {
@@ -82,7 +82,7 @@
       ],
       "excludeFromRecord": true,
       "hideWagerAmounts": true,
-      "settlementNotes": "LOSS. Leg record: 7-2; 1 pending. Losing legs: Steelers +13.5, Chargers +1.5. Giants\u2013Rams is scheduled Monday, September 21 at 8:15 p.m. ET. Existing losing legs already determine the ticket loss."
+      "settlementNotes": "LOSS. All legs final. Rams 28, Giants 6; Giants +15.5 lost. Final leg record: 7-3."
     },
     {
       "id": "nfl-daytime-super-2026-09-20",
