@@ -1,0 +1,856 @@
+{
+  "golf": [],
+  "nhl": [
+    {
+      "id": "401879362",
+      "name": "Philadelphia Flyers at Boston Bruins",
+      "date": "2026-09-22T23:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401879451",
+      "name": "Detroit Red Wings at Pittsburgh Penguins",
+      "date": "2026-09-22T23:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401879454",
+      "name": "Columbus Blue Jackets at Buffalo Sabres",
+      "date": "2026-09-22T23:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401879648",
+      "name": "New York Islanders at New York Rangers",
+      "date": "2026-09-22T23:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401879933",
+      "name": "Florida Panthers at Carolina Hurricanes",
+      "date": "2026-09-22T23:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401878101",
+      "name": "Edmonton Oilers at Winnipeg Jets",
+      "date": "2026-09-23T00:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401881132",
+      "name": "Tampa Bay Lightning at Nashville Predators",
+      "date": "2026-09-23T00:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401879310",
+      "name": "Vancouver Canucks at Calgary Flames",
+      "date": "2026-09-23T01:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401879366",
+      "name": "Utah Mammoth at Los Angeles Kings",
+      "date": "2026-09-23T02:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401879413",
+      "name": "Vegas Golden Knights at San Jose Sharks",
+      "date": "2026-09-23T02:00Z",
+      "status": "Scheduled"
+    }
+  ],
+  "soccer": [
+    {
+      "id": "401917018",
+      "name": "Manchester City at Bayern Munich",
+      "date": "2026-09-22T16:45Z",
+      "status": "Second Half"
+    },
+    {
+      "id": "401917017",
+      "name": "BK H\u00e4cken at Internazionale",
+      "date": "2026-09-22T16:45Z",
+      "status": "Second Half"
+    },
+    {
+      "id": "401917016",
+      "name": "HB K\u00f8ge at Arsenal",
+      "date": "2026-09-22T19:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401917015",
+      "name": "Benfica at Juventus",
+      "date": "2026-09-22T19:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401917014",
+      "name": "Paris Saint-Germain at Real Madrid",
+      "date": "2026-09-22T19:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401878633",
+      "name": "Fort Lauderdale United FC at DC Power FC",
+      "date": "2026-09-22T15:00Z",
+      "status": "Full Time"
+    },
+    {
+      "id": "401916456",
+      "name": "Hoogeveen at ACV",
+      "date": "2026-09-22T18:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401916910",
+      "name": "RBC Roosendaal at Eemdijk",
+      "date": "2026-09-22T18:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401916917",
+      "name": "RKSV Halsteren at EVV Echt",
+      "date": "2026-09-22T18:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401916914",
+      "name": "AFC '34 at Excelsior '31",
+      "date": "2026-09-22T18:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401916461",
+      "name": "VVSB at FC Rijnvogels",
+      "date": "2026-09-22T18:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401916454",
+      "name": "DVS '33 Ermelo at GVVV",
+      "date": "2026-09-22T18:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401916452",
+      "name": "BVV Barendrecht at HHC Hardenberg",
+      "date": "2026-09-22T18:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401916459",
+      "name": "Achilles Veen at Kloetinge",
+      "date": "2026-09-22T18:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401916915",
+      "name": "DOVO at Koninklijke HFC",
+      "date": "2026-09-22T18:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401916457",
+      "name": "LAC Frisia 1883 at Noordwijk",
+      "date": "2026-09-22T18:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401916460",
+      "name": "Spakenburg at RKAV Volendam",
+      "date": "2026-09-22T18:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401916908",
+      "name": "AFC at RKSV Groene Ster",
+      "date": "2026-09-22T18:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401916916",
+      "name": "Excelsior Maassluis at Sportlust '46",
+      "date": "2026-09-22T18:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401916911",
+      "name": "SC Genemuiden at VV Staphorst",
+      "date": "2026-09-22T18:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401906379",
+      "name": "Sunderland U21 at Accrington Stanley",
+      "date": "2026-09-22T18:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401909639",
+      "name": "Leeds United U21 at Barnsley",
+      "date": "2026-09-22T18:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401906374",
+      "name": "Nottingham Forest U21 at Burton Albion",
+      "date": "2026-09-22T18:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401906371",
+      "name": "Exeter City at Cheltenham Town",
+      "date": "2026-09-22T18:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401906376",
+      "name": "Port Vale at Chesterfield",
+      "date": "2026-09-22T18:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401906377",
+      "name": "Aston Villa U21 at Crewe Alexandra",
+      "date": "2026-09-22T18:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401906365",
+      "name": "Cambridge United at Gillingham",
+      "date": "2026-09-22T18:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401906370",
+      "name": "Fulham U21 at Leicester City",
+      "date": "2026-09-22T18:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401906276",
+      "name": "Ipswich Town U21 at Luton Town",
+      "date": "2026-09-22T18:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401906259",
+      "name": "Crawley Town at Milton Keynes Dons",
+      "date": "2026-09-22T18:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401906373",
+      "name": "Grimsby Town at Notts County",
+      "date": "2026-09-22T18:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401906372",
+      "name": "Fleetwood Town at Oldham Athletic",
+      "date": "2026-09-22T18:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401906368",
+      "name": "Colchester United at Peterborough United",
+      "date": "2026-09-22T18:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401906367",
+      "name": "Crystal Palace U21 at Plymouth Argyle",
+      "date": "2026-09-22T18:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401909638",
+      "name": "Liverpool U21 at Rochdale",
+      "date": "2026-09-22T18:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401906378",
+      "name": "Sheffield Wednesday at Salford City",
+      "date": "2026-09-22T18:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401906366",
+      "name": "Newport County at Swindon Town",
+      "date": "2026-09-22T18:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401906375",
+      "name": "Shrewsbury Town at Tranmere Rovers",
+      "date": "2026-09-22T18:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401906369",
+      "name": "Stevenage at Walsall",
+      "date": "2026-09-22T18:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401911179",
+      "name": "Blackpool at Wigan Athletic",
+      "date": "2026-09-22T18:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401906260",
+      "name": "Rotherham United at York City",
+      "date": "2026-09-22T18:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401906258",
+      "name": "Newcastle United U21 at Bradford City",
+      "date": "2026-09-22T18:30Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401906275",
+      "name": "Brentford U21 at Bromley",
+      "date": "2026-09-22T18:30Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401922634",
+      "name": "Needham Market at Braintree Town",
+      "date": "2026-09-22T18:45Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401922620",
+      "name": "Yate Town at Chippenham Town",
+      "date": "2026-09-22T18:45Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401922637",
+      "name": "Hampton & Richmond at Crowborough Athletic",
+      "date": "2026-09-22T18:45Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401922380",
+      "name": "Waltham Abbey at Dagenham & Redbridge",
+      "date": "2026-09-22T18:45Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401922670",
+      "name": "Southall at Dorking Wanderers",
+      "date": "2026-09-22T18:45Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401922652",
+      "name": "Uxbridge at Farnborough",
+      "date": "2026-09-22T18:45Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401922633",
+      "name": "Cirencester Town at Farnham Town FC",
+      "date": "2026-09-22T18:45Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401922381",
+      "name": "Leamington at Gainsborough Trinity",
+      "date": "2026-09-22T18:45Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401922632",
+      "name": "Cray Wanderers at Maidstone United",
+      "date": "2026-09-22T18:45Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401922650",
+      "name": "Merthyr Town at Truro City",
+      "date": "2026-09-22T18:45Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401922651",
+      "name": "Weston-super-Mare at Wimborne Town",
+      "date": "2026-09-22T18:45Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401922635",
+      "name": "Hemel Hempstead Town at Wingate & Finchley",
+      "date": "2026-09-22T18:45Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401922379",
+      "name": "AFC Telford United at Worksop Town",
+      "date": "2026-09-22T18:45Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401896312",
+      "name": "Hibernian B at Alloa Athletic",
+      "date": "2026-09-22T18:45Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401896311",
+      "name": "Aberdeen B at Banks O'Dee",
+      "date": "2026-09-22T18:45Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401896310",
+      "name": "Stranraer at Berwick Rangers",
+      "date": "2026-09-22T18:45Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401896309",
+      "name": "Airdrieonians at Bonnyrigg Rose",
+      "date": "2026-09-22T18:45Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401896308",
+      "name": "Ross County at Clachnacuddin",
+      "date": "2026-09-22T18:45Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401896306",
+      "name": "Rangers B at Clyde",
+      "date": "2026-09-22T18:45Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401896307",
+      "name": "St Mirren B at Clydebank",
+      "date": "2026-09-22T18:45Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401896305",
+      "name": "Kilmarnock B at Dumbarton",
+      "date": "2026-09-22T18:45Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401896303",
+      "name": "Celtic B at East Kilbride",
+      "date": "2026-09-22T18:45Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401896302",
+      "name": "Dundee United B at Edinburgh City",
+      "date": "2026-09-22T18:45Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401896301",
+      "name": "Dundee B at Elgin City",
+      "date": "2026-09-22T18:45Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401896300",
+      "name": "Peterhead at Forfar Athletic",
+      "date": "2026-09-22T18:45Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401896299",
+      "name": "Montrose at Formartine United",
+      "date": "2026-09-22T18:45Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401896298",
+      "name": "Cove Rangers at Fraserburgh",
+      "date": "2026-09-22T18:45Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401896297",
+      "name": "Spartans FC at Gala Fairydean",
+      "date": "2026-09-22T18:45Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401896296",
+      "name": "Heart of Midlothian B at Kelty Hearts",
+      "date": "2026-09-22T18:45Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401896295",
+      "name": "Annan Athletic at Queen of the South",
+      "date": "2026-09-22T18:45Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401896294",
+      "name": "Cumbernauld Colts at Stirling Albion",
+      "date": "2026-09-22T18:45Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401860351",
+      "name": "Oper\u00e1rio PR at Crici\u00fama",
+      "date": "2026-09-22T22:30Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401916351",
+      "name": "\u00d1ublense at Puerto Montt",
+      "date": "2026-09-22T21:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401916349",
+      "name": "Colo Colo at Audax Italiano",
+      "date": "2026-09-22T23:30Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401916350",
+      "name": "Coquimbo Unido at Cobreloa",
+      "date": "2026-09-22T23:30Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401877885",
+      "name": "Jaguares de C\u00f3rdoba at Independiente Medell\u00edn",
+      "date": "2026-09-22T23:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401877961",
+      "name": "Deportivo Cali at Independiente Santa Fe",
+      "date": "2026-09-23T01:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401907931",
+      "name": "Real Potos\u00ed at Nacional Potos\u00ed",
+      "date": "2026-09-22T23:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401887569",
+      "name": "Drexel at Villanova",
+      "date": "2026-09-22T20:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401892268",
+      "name": "Winthrop at Campbell",
+      "date": "2026-09-22T22:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401899127",
+      "name": "George Washington at Delaware",
+      "date": "2026-09-22T22:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401899037",
+      "name": "Presbyterian at East Tennessee State",
+      "date": "2026-09-22T22:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401898733",
+      "name": "Western Illinois at IU Indianapolis",
+      "date": "2026-09-22T22:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401898498",
+      "name": "Hofstra at Loyola Maryland",
+      "date": "2026-09-22T22:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401892374",
+      "name": "William & Mary at Old Dominion",
+      "date": "2026-09-22T22:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401901400",
+      "name": "Cleveland State at St. Bonaventure",
+      "date": "2026-09-22T22:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401901799",
+      "name": "Rhode Island at Stony Brook",
+      "date": "2026-09-22T22:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401887553",
+      "name": "Siena at UConn",
+      "date": "2026-09-22T22:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401892204",
+      "name": "Queens University at Virginia Tech",
+      "date": "2026-09-22T22:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401899104",
+      "name": "Coastal Carolina at Wofford",
+      "date": "2026-09-22T22:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401898132",
+      "name": "New Haven at Yale",
+      "date": "2026-09-22T22:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401887728",
+      "name": "Wright State at Xavier",
+      "date": "2026-09-22T22:30Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401890750",
+      "name": "Robert Morris at Akron",
+      "date": "2026-09-22T23:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401898109",
+      "name": "Harvard at Boston University",
+      "date": "2026-09-22T23:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401898466",
+      "name": "Saint Joseph's at Bucknell",
+      "date": "2026-09-22T23:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401898077",
+      "name": "Lehigh at Columbia",
+      "date": "2026-09-22T23:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401898139",
+      "name": "Binghamton at Cornell",
+      "date": "2026-09-22T23:00Z",
+      "status": "Scheduled"
+    }
+  ],
+  "tennis": [
+    {
+      "id": "441-2026",
+      "name": "Chengdu Open",
+      "date": "2026-09-22T04:00Z",
+      "status": "Final"
+    },
+    {
+      "id": "1001-2026",
+      "name": "AITO Hangzhou Open",
+      "date": "2026-09-22T04:00Z",
+      "status": "Final"
+    }
+  ],
+  "wnba": [
+    {
+      "id": "401857208",
+      "name": "Connecticut Sun at Washington Mystics",
+      "date": "2026-09-22T23:30Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401857209",
+      "name": "Minnesota Lynx at Indiana Fever",
+      "date": "2026-09-23T00:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401857210",
+      "name": "Toronto Tempo at Chicago Sky",
+      "date": "2026-09-23T00:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401857211",
+      "name": "Los Angeles Sparks at Las Vegas Aces",
+      "date": "2026-09-23T02:00Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401857212",
+      "name": "Golden State Valkyries at Portland Fire",
+      "date": "2026-09-23T02:00Z",
+      "status": "Scheduled"
+    }
+  ],
+  "mlb": [
+    {
+      "id": "401873648",
+      "name": "Tampa Bay Rays at New York Yankees",
+      "date": "2026-09-22T17:05Z",
+      "status": "In Progress"
+    },
+    {
+      "id": "401817035",
+      "name": "Toronto Blue Jays at Baltimore Orioles",
+      "date": "2026-09-22T22:35Z",
+      "status": "Postponed"
+    },
+    {
+      "id": "401817032",
+      "name": "Milwaukee Brewers at Philadelphia Phillies",
+      "date": "2026-09-22T22:40Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401817033",
+      "name": "St. Louis Cardinals at Pittsburgh Pirates",
+      "date": "2026-09-22T22:40Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401817036",
+      "name": "Washington Nationals at Detroit Tigers",
+      "date": "2026-09-22T22:40Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401817031",
+      "name": "Cleveland Guardians at Boston Red Sox",
+      "date": "2026-09-22T22:45Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401817034",
+      "name": "Tampa Bay Rays at New York Yankees",
+      "date": "2026-09-22T23:05Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401817030",
+      "name": "Cincinnati Reds at Atlanta Braves",
+      "date": "2026-09-22T23:15Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401817037",
+      "name": "Chicago White Sox at Kansas City Royals",
+      "date": "2026-09-22T23:40Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401817038",
+      "name": "Miami Marlins at Chicago Cubs",
+      "date": "2026-09-22T23:40Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401817039",
+      "name": "New York Mets at Texas Rangers",
+      "date": "2026-09-23T00:05Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401817040",
+      "name": "Arizona Diamondbacks at Colorado Rockies",
+      "date": "2026-09-23T00:40Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401817041",
+      "name": "Los Angeles Angels at Athletics Athletics",
+      "date": "2026-09-23T01:40Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401817042",
+      "name": "Houston Astros at Seattle Mariners",
+      "date": "2026-09-23T01:40Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401817043",
+      "name": "Minnesota Twins at San Francisco Giants",
+      "date": "2026-09-23T01:45Z",
+      "status": "Scheduled"
+    },
+    {
+      "id": "401817044",
+      "name": "San Diego Padres at Los Angeles Dodgers",
+      "date": "2026-09-23T02:10Z",
+      "status": "Scheduled"
+    }
+  ],
+  "nba": [],
+  "nfl": [],
+  "wta": [
+    {
+      "id": "811-2026",
+      "name": "Korea Open",
+      "date": "2026-09-18T04:00Z",
+      "status": "Final"
+    },
+    {
+      "id": "1009-2026",
+      "name": "Singapore Tennis Open presented by BNP Paribas",
+      "date": "2026-09-18T04:00Z",
+      "status": "Final"
+    },
+    {
+      "id": "1019-2026",
+      "name": "Delta Motors Tolentino Open",
+      "date": "2026-09-20T04:00Z",
+      "status": "Final"
+    },
+    {
+      "id": "1022-2026",
+      "name": "Eupago Porto Open",
+      "date": "2026-09-20T04:00Z",
+      "status": "Final"
+    },
+    {
+      "id": "1077-2026",
+      "name": "Turk Telekom Ankara Open",
+      "date": "2026-09-20T04:00Z",
+      "status": "Final"
+    }
+  ],
+  "racing": [],
+  "mma": [
+    {
+      "id": "600060738",
+      "name": "Dana White's Contender Series: Season 10, Week 7",
+      "date": "2026-09-22T23:00Z",
+      "status": "Scheduled"
+    }
+  ],
+  "cfl": [],
+  "cfb": []
+}

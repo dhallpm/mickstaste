@@ -1,0 +1,66 @@
+{
+  "date": "2026-09-22",
+  "status": "research_incomplete",
+  "candidates": [
+    {
+      "pick": "Boston ML",
+      "reference_american_odds": -125,
+      "status": "WATCH",
+      "units": 0,
+      "score": null,
+      "grade": null,
+      "playable_to": null,
+      "reason": "See report; material verification incomplete"
+    },
+    {
+      "pick": "White Sox ML",
+      "reference_american_odds": -118,
+      "status": "WATCH",
+      "units": 0,
+      "score": null,
+      "grade": null,
+      "playable_to": null,
+      "reason": "See report; material verification incomplete"
+    },
+    {
+      "pick": "Pallante over 15.5 outs",
+      "reference_american_odds": 100,
+      "status": "WATCH",
+      "units": 0,
+      "score": null,
+      "grade": null,
+      "playable_to": null,
+      "reason": "See report; material verification incomplete"
+    },
+    {
+      "pick": "Vargas over 1.5 total bases",
+      "reference_american_odds": 108,
+      "status": "WATCH",
+      "units": 0,
+      "score": null,
+      "grade": null,
+      "playable_to": null,
+      "reason": "See report; material verification incomplete"
+    },
+    {
+      "pick": "Grichuk over 1.5 total bases",
+      "reference_american_odds": 155,
+      "status": "WATCH",
+      "units": 0,
+      "score": null,
+      "grade": null,
+      "playable_to": null,
+      "reason": "See report; material verification incomplete"
+    },
+    {
+      "pick": "Fever +1.5",
+      "reference_american_odds": -113,
+      "status": "WATCH",
+      "units": 0,
+      "score": null,
+      "grade": null,
+      "playable_to": null,
+      "reason": "See report; material verification incomplete"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "date": "2026-09-22",
+  "complete": false,
+  "checked": [
+    "MLB schedule and CWS live feed",
+    "ESPN 13 sport feeds",
+    "CWS/KC two-day relief logs",
+    "NWS Kansas City",
+    "VSiN articles and Betting Sheets landing page",
+    "four Doc Sports mandatory pages and matchup articles",
+    "Covers matchup",
+    "Action matchup articles",
+    "FanDuel props NRFI and odds",
+    "WNBA official pages",
+    "Sherdog weigh-ins",
+    "MMA Index odds"
+  ],
+  "inaccessible": [
+    "Savant direct HTTP403",
+    "Baseball Reference direct HTTP403",
+    "TeamRankings direct HTTP403",
+    "UFC Brazil weigh-in HTTP403",
+    "VSiN later article retries failed"
+  ],
+  "not_verified": [
+    "Circa prices",
+    "ticket/handle splits",
+    "full FanGraphs queries",
+    "remaining games weather and bullpen usage",
+    "all final lineups",
+    "soccer and tennis full handicaps",
+    "all 110-point scores"
+  ],
+  "guides": "Stored NFL and Fantasy Life guides not applicable to same-day non-NFL slate; no new guide claimed"
+}
