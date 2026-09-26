@@ -32,7 +32,7 @@ function active(row = {}, cardDate = '') {
   const result = norm(row.Result || row.result || row.Outcome || row.outcome)
   const official = norm(row['Official Bet'] ?? row.officialBet ?? 'yes')
   const placedPersonalTicket = section(row) === 'Lotto Parlays' && row.betPlaced === true
-  const nonOfficialSection = (['Watchlist / Live Only','Passes'].includes(section(row)) || (section(row) === 'Lotto Parlays' && /^watch/i.test(status)))
+  const nonOfficialSection = (['Watchlist / Live Only','Passes'].includes(section(row)) || ((section(row) === 'Lotto Parlays' || section(row) === 'VIP') && /^watch/i.test(status)))
   return dateKey(row.Date || row.date) === cardDate && !SETTLED.has(status) && !SETTLED.has(result) && (placedPersonalTicket || nonOfficialSection || !/^(no|false|0)$/.test(official))
 }
 
