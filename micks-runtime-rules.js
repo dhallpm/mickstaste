@@ -5,7 +5,7 @@
   const FINAL_RE = /\b(win|won|loss|lost|push|void|cancelled|canceled|settled|graded|closed|final|complete|completed|archived|removed|invalid)\b/i;
   const OPEN_RE = /\b(active|posted|released|open|pending|pregame|watch|watchlist|manual approved|api pending)\b/i;
   const PLAYER_PROP_RE = /\b(player prop|prop|points?|pts|rebounds?|rebs|assists?|asts|pra|p\+r\+a|\bpa\b|\bra\b|strikeouts?|\bks\b|k's|\bhrr\b|hits?\s*(?:\+|and)\s*runs?\s*(?:\+|and)\s*rbi?s?|total bases|\btb\b|home runs?|\bhr\b|hits?|rbi|shots on goal|\bsog\b|saves|round|distance)\b/i;
-  const NON_PROP_RE = /\b(parlay|lotto|5-leg|6-leg|7-leg|8-leg|sgp|same game|moneyline|money line|\bml\b|spread|run line|puck line|game total|full game total|team total|period total|quarter total|half|1h|2h)\b/i;
+  const NON_PROP_RE = /\b(parlay|lotto|teaser|4-leg|5-leg|6-leg|7-leg|8-leg|sgp|same game|moneyline|money line|\bml\b|spread|run line|puck line|game total|full game total|team total|period total|quarter total|half|1h|2h)\b/i;
   const PARLAY_ONLY_RE = /\b(parlay|5-leg|6-leg|7-leg|8-leg|sgp|same game|ladder|sprinkle)\b/i;
   const LOTTO_ONLY_RE = /\b(lotto|lotto prop|hr lotto|home run lotto|safe lotto|moonshot)\b/i;
 
