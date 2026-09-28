@@ -329,6 +329,7 @@ Pitcher props: confirm starter, pitch count stability, opponent profile, and sof
 
 ## NBA framework
 
+- Consult the dated Silver Bulletin NBA franchise outlook in [nba-fotf-2026-prior.md](nba-fotf-2026-prior.md) and its structured [JSON](nba-fotf-2026-prior.json) for NBA preseason and Futures Lab structural context. Its ten-season title horizon cannot be converted directly to a game line, season-win number or current title probability. Verify roster/role changes and follow source-registry.md and futures-lab.md gates.
 - Prefer spread protection over ML when close-game script is likely.
 - Favor role-stable props such as rebounds, assists, usage, and minutes.
 - Check injuries, minutes, foul trouble, pace, and late-game path.
