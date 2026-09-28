@@ -158,6 +158,7 @@ Use current sources when accessible and applicable. Outside models are inputs, n
 - Schedule, returning production, QB and coaching changes
 
 ### NBA / WNBA
+- Silver Bulletin's dated 2026 NBA Future of the Franchise 4.0 panel outlook, as a supporting ten-season structural prior only; use [nba-fotf-2026-prior.md](nba-fotf-2026-prior.md) and [nba-fotf-2026-prior.json](nba-fotf-2026-prior.json). Do not use its rank or ten-season title expectation as a single-season probability. Reconcile current changes and panel disagreement before assigning outside support.
 - ESPN/BPI or equivalent current projection systems when available
 - TeamRankings
 - Basketball Reference
