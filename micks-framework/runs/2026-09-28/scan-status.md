@@ -20,8 +20,8 @@ Original VSiN guide pp.79–80/84–85: PHI preseason PR 27, CHI 26; both contai
 
 | Candidate | Price evidence | Score/grade | Failure path | Disposition |
 |---|---|---|---|---|
-| Bears +4.5 | old DK/VSiN -120; current Circa +3.5, no user-book quote | UNGRADED | Keenum's uncertain passing and Eagles defense create multi-score loss | WATCH, +4.5 price requires recheck |
-| Bears +3.5 | Circa benchmark, odds not shown in uploaded sheet | UNGRADED | key-number downgrade from +4.5, offense stalls | PASS pending independent fair line |
+| Bears +4.5 | old DK/VSiN -120; current Circa +3.5, BetRivers +4 -113 at 1:11 p.m. ET (user screenshot), no +4.5 quote | UNGRADED | Keenum's uncertain passing and Eagles defense create multi-score loss | WATCH; target +4.5 not available in visible BetRivers quote |
+| Bears +4 | BetRivers Delaware -113 at 1:11 p.m. ET; Circa +3.5 benchmark | UNGRADED | Keenum's uncertain passing and Eagles defense create multi-score loss | WATCH; half-point cushion over Circa, but unverified independent fair line |\n| Bears +3.5 | Circa benchmark, odds not shown in uploaded sheet | UNGRADED | key-number downgrade from +4.5, offense stalls | PASS pending independent fair line |
 | Over 41.5 | Sunday DK -105; Circa 41.5, current executable price missing | UNGRADED | Keenum slow pace/turnovers; guide historical Under conflicts | WATCH |
 | Keenum over 1.5 pass TD | old DK +210; Circa sheet prop needs exact odds read; no current role-based median | UNGRADED | reduced pass volume/red-zone rushes | PASS |
 | Eagles side/ML, derivatives, props | Circa benchmark only | UNGRADED | price/role mismatch | PASS |
@@ -31,8 +31,11 @@ No model score is assigned before the guide/current-projection delta, independen
 ## Source audit / gaps
 CURRENT: Dropbox Circa printed sheet; NFL schedule, game/injury and Keenum news; VSiN articles, Circa split display; Doc's dated Bears +3 selection; original VSiN and Fantasy Life guide pages; TeamRankings market page; MLB, WNBA, NHL league date calendars.
 STALE: Doc's Sep 22 odds/starting-QB premise; Sunday VSiN DraftKings +4.5 and Over -105 until rechecked.
-INACCESSIBLE/NOT VERIFIED: executable BetRivers/Delaware quote, Circa opening-line history, full VSiN numeric models/systems, current Fantasy Life paid matchup/usage, Doc's AI-v3 actual selection, detailed active-status/weather, broader global board.
+INACCESSIBLE/NOT VERIFIED: updated BetRivers/Delaware quote after 1:11 p.m., Circa opening-line history, full VSiN numeric models/systems, current Fantasy Life paid matchup/usage, Doc's AI-v3 actual selection, detailed active-status/weather, broader global board.
 NOT APPLICABLE to today's confirmed events: MLB F5/NRFI/YRFI/bullpen/umpire; WNBA minutes/props; NHL goalie.
 PROPS, derivatives, futures, parlays, longshots: none released. Future-day NHL/MLB/CFB sheets are separate cards.
 
-Release gate: final inactives; current exact Delaware/user-book line and odds; current Fantasy Life role/projection; a defensible independent Micks number and failure score; market and source conflict reconciliation. No active import payload. No wager or monitoring scheduled.
+Release gate: final inactives; refresh exact Delaware/user-book line and odds; current Fantasy Life role/projection; a defensible independent Micks number and failure score; market and source conflict reconciliation. No active import payload. No wager or monitoring scheduled.
+
+## 1:11 p.m. ET user-book update
+User-supplied BetRivers Delaware screenshot shows standard spread Eagles -4 (-108), Bears +4 (-113), and separate 14UP Early Win moneyline Eagles -250 / Bears +148. Circa 9:27 a.m. was Bears +3.5. Bears +4 protects a four-point loss with a push, whereas +3.5 loses; it does not meet the VSiN handicappers' +4.5 cited price. No Bears +4.5 price or total is visible in this screenshot. The special moneyline is a different settlement market and should not be compared directly to Circa regulation ML. No bet is inferred from an odds screenshot.
