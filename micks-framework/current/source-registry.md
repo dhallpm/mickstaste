@@ -468,6 +468,14 @@ An unresolved material contradiction caps the candidate at 81/110. If the stored
 
 # 6. NBA / WNBA / Basketball Sources
 
+## Silver Bulletin / Nate Silver NBA Future of the Franchise 4.0
+
+- Original: https://www.natesilver.net/p/nba-future-of-the-franchise-rankings-6cb (September 28, 2026).
+- Dated Micks interpretation and structured team data: [nba-fotf-2026-prior.md](nba-fotf-2026-prior.md) and [nba-fotf-2026-prior.json](nba-fotf-2026-prior.json).
+- Status: SUPPORTING ONLY. The consensus ranks expected championships over 2026-27 through 2035-36; they are a ten-year organizational outlook, not current game power ratings or one-season probabilities.
+- On an NBA slate/futures scan, consult this prior for structural roster, asset, coaching/management and contention-window questions when relevant. Mark it STALE/OVERRIDDEN after material changes. Current injuries, rotations, efficiency, projections and executable markets control daily releases.
+- Silver Bulletin's three panelists are one source family. No automatic score/confirmation, direct rank-to-spread conversion or standalone futures bet. Futures use the separate model/market/EV gates in futures-lab.md.
+
 Mandatory source categories:
 - VSiN current matchup/model pages
 - TeamRankings
