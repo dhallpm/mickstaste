@@ -21,7 +21,8 @@ Original VSiN guide pp.79–80/84–85: PHI preseason PR 27, CHI 26; both contai
 | Candidate | Price evidence | Score/grade | Failure path | Disposition |
 |---|---|---|---|---|
 | Bears +4.5 | old DK/VSiN -120; current Circa +3.5, BetRivers +4 -113 at 1:11 p.m. ET (user screenshot), no +4.5 quote | UNGRADED | Keenum's uncertain passing and Eagles defense create multi-score loss | WATCH; target +4.5 not available in visible BetRivers quote |
-| Bears +4 | BetRivers Delaware -113 at 1:11 p.m. ET; Circa +3.5 benchmark | UNGRADED | Keenum's uncertain passing and Eagles defense create multi-score loss | WATCH; half-point cushion over Circa, but unverified independent fair line |\n| Bears +3.5 | Circa benchmark, odds not shown in uploaded sheet | UNGRADED | key-number downgrade from +4.5, offense stalls | PASS pending independent fair line |
+| Bears +4 | BetRivers Delaware -113 at 1:11 p.m. ET; Circa +3.5 benchmark | UNGRADED | Keenum's uncertain passing and Eagles defense create multi-score loss | WATCH; half-point cushion over Circa, but unverified independent fair line |
+| Bears +3.5 | Circa benchmark, odds not shown in uploaded sheet | UNGRADED | key-number downgrade from +4.5, offense stalls | PASS pending independent fair line |
 | Over 41.5 | Sunday DK -105; Circa 41.5, current executable price missing | UNGRADED | Keenum slow pace/turnovers; guide historical Under conflicts | WATCH |
 | Keenum over 1.5 pass TD | old DK +210; Circa sheet prop needs exact odds read; no current role-based median | UNGRADED | reduced pass volume/red-zone rushes | PASS |
 | Eagles side/ML, derivatives, props | Circa benchmark only | UNGRADED | price/role mismatch | PASS |
