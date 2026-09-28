@@ -1,0 +1,537 @@
+{
+  "id": "silver-bulletin-nba-fotf-4-2026-09-28",
+  "sport": "NBA",
+  "sourceFamily": "Silver Bulletin",
+  "sourceTitle": "NBA Future of the Franchise Rankings 4.0",
+  "sourceUrl": "https://www.natesilver.net/p/nba-future-of-the-franchise-rankings-6cb",
+  "asOf": "2026-09-28",
+  "horizon": {
+    "startSeason": "2026-27",
+    "endSeason": "2035-36",
+    "target": "expected championships over ten seasons"
+  },
+  "status": "SUPPORTING_ONLY",
+  "useFor": [
+    "structural preseason prior",
+    "long-term roster and franchise outlook",
+    "NBA futures scenario checks"
+  ],
+  "notDirectlyFor": [
+    "daily spread or total projection",
+    "single-season title probability",
+    "automatic 110-point score",
+    "standalone futures release"
+  ],
+  "teams": [
+    {
+      "team": "San Antonio Spurs",
+      "consensusRank": 1,
+      "panel": {
+        "nateSilver": 1,
+        "josephGeorge": 1,
+        "jeremiasEngelmann": 2
+      },
+      "priorEditionRanks": [
+        2,
+        2,
+        2,
+        1
+      ],
+      "panelRankRange": 1,
+      "uncertaintyFlag": "low"
+    },
+    {
+      "team": "Oklahoma City Thunder",
+      "consensusRank": 2,
+      "panel": {
+        "nateSilver": 2,
+        "josephGeorge": 2,
+        "jeremiasEngelmann": 1
+      },
+      "priorEditionRanks": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "panelRankRange": 1,
+      "uncertaintyFlag": "low"
+    },
+    {
+      "team": "Boston Celtics",
+      "consensusRank": 3,
+      "panel": {
+        "nateSilver": 5,
+        "josephGeorge": 3,
+        "jeremiasEngelmann": 3
+      },
+      "priorEditionRanks": [
+        3,
+        14,
+        4,
+        3
+      ],
+      "panelRankRange": 2,
+      "uncertaintyFlag": "low"
+    },
+    {
+      "team": "New York Knicks",
+      "consensusRank": 4,
+      "panel": {
+        "nateSilver": 3,
+        "josephGeorge": 6,
+        "jeremiasEngelmann": 4
+      },
+      "priorEditionRanks": [
+        8,
+        7,
+        9,
+        3
+      ],
+      "panelRankRange": 3,
+      "uncertaintyFlag": "low"
+    },
+    {
+      "team": "Houston Rockets",
+      "consensusRank": 5,
+      "panel": {
+        "nateSilver": 4,
+        "josephGeorge": 4,
+        "jeremiasEngelmann": 5
+      },
+      "priorEditionRanks": [
+        5,
+        3,
+        6,
+        5
+      ],
+      "panelRankRange": 1,
+      "uncertaintyFlag": "low"
+    },
+    {
+      "team": "Memphis Grizzlies",
+      "consensusRank": 6,
+      "panel": {
+        "nateSilver": 7,
+        "josephGeorge": 5,
+        "jeremiasEngelmann": 10
+      },
+      "priorEditionRanks": [
+        6,
+        12,
+        17,
+        6
+      ],
+      "panelRankRange": 5,
+      "uncertaintyFlag": "moderate"
+    },
+    {
+      "team": "Detroit Pistons",
+      "consensusRank": 7,
+      "panel": {
+        "nateSilver": 6,
+        "josephGeorge": 10,
+        "jeremiasEngelmann": 7
+      },
+      "priorEditionRanks": [
+        13,
+        6,
+        3,
+        7
+      ],
+      "panelRankRange": 4,
+      "uncertaintyFlag": "moderate"
+    },
+    {
+      "team": "Charlotte Hornets",
+      "consensusRank": 8,
+      "panel": {
+        "nateSilver": 8,
+        "josephGeorge": 7,
+        "jeremiasEngelmann": 9
+      },
+      "priorEditionRanks": [
+        22,
+        20,
+        10,
+        8
+      ],
+      "panelRankRange": 2,
+      "uncertaintyFlag": "low"
+    },
+    {
+      "team": "Minnesota Timberwolves",
+      "consensusRank": 9,
+      "panel": {
+        "nateSilver": 9,
+        "josephGeorge": 8,
+        "jeremiasEngelmann": 14
+      },
+      "priorEditionRanks": [
+        12,
+        11,
+        7,
+        9
+      ],
+      "panelRankRange": 6,
+      "uncertaintyFlag": "moderate"
+    },
+    {
+      "team": "Denver Nuggets",
+      "consensusRank": 10,
+      "panel": {
+        "nateSilver": 11,
+        "josephGeorge": 15,
+        "jeremiasEngelmann": 6
+      },
+      "priorEditionRanks": [
+        10,
+        5,
+        5,
+        10
+      ],
+      "panelRankRange": 9,
+      "uncertaintyFlag": "high"
+    },
+    {
+      "team": "Philadelphia 76ers",
+      "consensusRank": 11,
+      "panel": {
+        "nateSilver": 10,
+        "josephGeorge": 14,
+        "jeremiasEngelmann": 12
+      },
+      "priorEditionRanks": [
+        16,
+        15,
+        12,
+        11
+      ],
+      "panelRankRange": 4,
+      "uncertaintyFlag": "moderate"
+    },
+    {
+      "team": "Los Angeles Lakers",
+      "consensusRank": 12,
+      "panel": {
+        "nateSilver": 12,
+        "josephGeorge": 13,
+        "jeremiasEngelmann": 16
+      },
+      "priorEditionRanks": [
+        7,
+        13,
+        14,
+        12
+      ],
+      "panelRankRange": 4,
+      "uncertaintyFlag": "moderate"
+    },
+    {
+      "team": "Orlando Magic",
+      "consensusRank": 13,
+      "panel": {
+        "nateSilver": 20,
+        "josephGeorge": 12,
+        "jeremiasEngelmann": 11
+      },
+      "priorEditionRanks": [
+        9,
+        8,
+        15,
+        13
+      ],
+      "panelRankRange": 9,
+      "uncertaintyFlag": "high"
+    },
+    {
+      "team": "Cleveland Cavaliers",
+      "consensusRank": 14,
+      "panel": {
+        "nateSilver": 13,
+        "josephGeorge": 17,
+        "jeremiasEngelmann": 13
+      },
+      "priorEditionRanks": [
+        4,
+        4,
+        8,
+        14
+      ],
+      "panelRankRange": 4,
+      "uncertaintyFlag": "moderate"
+    },
+    {
+      "team": "Miami Heat",
+      "consensusRank": 15,
+      "panel": {
+        "nateSilver": 19,
+        "josephGeorge": 18,
+        "jeremiasEngelmann": 8
+      },
+      "priorEditionRanks": [
+        11,
+        21,
+        20,
+        15
+      ],
+      "panelRankRange": 11,
+      "uncertaintyFlag": "high"
+    },
+    {
+      "team": "Toronto Raptors",
+      "consensusRank": 16,
+      "panel": {
+        "nateSilver": 18,
+        "josephGeorge": 9,
+        "jeremiasEngelmann": 20
+      },
+      "priorEditionRanks": [
+        26,
+        23,
+        19,
+        16
+      ],
+      "panelRankRange": 11,
+      "uncertaintyFlag": "high"
+    },
+    {
+      "team": "Indiana Pacers",
+      "consensusRank": 17,
+      "panel": {
+        "nateSilver": 17,
+        "josephGeorge": 11,
+        "jeremiasEngelmann": 24
+      },
+      "priorEditionRanks": [
+        21,
+        16,
+        11,
+        17
+      ],
+      "panelRankRange": 13,
+      "uncertaintyFlag": "high"
+    },
+    {
+      "team": "Dallas Mavericks",
+      "consensusRank": 18,
+      "panel": {
+        "nateSilver": 14,
+        "josephGeorge": 16,
+        "jeremiasEngelmann": 23
+      },
+      "priorEditionRanks": [
+        25,
+        9,
+        13,
+        18
+      ],
+      "panelRankRange": 9,
+      "uncertaintyFlag": "high"
+    },
+    {
+      "team": "Utah Jazz",
+      "consensusRank": 19,
+      "panel": {
+        "nateSilver": 16,
+        "josephGeorge": 19,
+        "jeremiasEngelmann": 18
+      },
+      "priorEditionRanks": [
+        18,
+        22,
+        21,
+        19
+      ],
+      "panelRankRange": 3,
+      "uncertaintyFlag": "low"
+    },
+    {
+      "team": "Atlanta Hawks",
+      "consensusRank": 20,
+      "panel": {
+        "nateSilver": 15,
+        "josephGeorge": 20,
+        "jeremiasEngelmann": 19
+      },
+      "priorEditionRanks": [
+        14,
+        10,
+        16,
+        20
+      ],
+      "panelRankRange": 5,
+      "uncertaintyFlag": "moderate"
+    },
+    {
+      "team": "Portland Trail Blazers",
+      "consensusRank": 21,
+      "panel": {
+        "nateSilver": 21,
+        "josephGeorge": 22,
+        "jeremiasEngelmann": 17
+      },
+      "priorEditionRanks": [
+        24,
+        17,
+        18,
+        21
+      ],
+      "panelRankRange": 5,
+      "uncertaintyFlag": "moderate"
+    },
+    {
+      "team": "Golden State Warriors",
+      "consensusRank": 22,
+      "panel": {
+        "nateSilver": 24,
+        "josephGeorge": 21,
+        "jeremiasEngelmann": 15
+      },
+      "priorEditionRanks": [
+        20,
+        18,
+        23,
+        22
+      ],
+      "panelRankRange": 9,
+      "uncertaintyFlag": "high"
+    },
+    {
+      "team": "Chicago Bulls",
+      "consensusRank": 23,
+      "panel": {
+        "nateSilver": 22,
+        "josephGeorge": 24,
+        "jeremiasEngelmann": 22
+      },
+      "priorEditionRanks": [
+        27,
+        24,
+        27,
+        23
+      ],
+      "panelRankRange": 2,
+      "uncertaintyFlag": "low"
+    },
+    {
+      "team": "Phoenix Suns",
+      "consensusRank": 24,
+      "panel": {
+        "nateSilver": 26,
+        "josephGeorge": 23,
+        "jeremiasEngelmann": 21
+      },
+      "priorEditionRanks": [
+        29,
+        29,
+        22,
+        24
+      ],
+      "panelRankRange": 5,
+      "uncertaintyFlag": "moderate"
+    },
+    {
+      "team": "Washington Wizards",
+      "consensusRank": 25,
+      "panel": {
+        "nateSilver": 23,
+        "josephGeorge": 25,
+        "jeremiasEngelmann": 26
+      },
+      "priorEditionRanks": [
+        23,
+        27,
+        28,
+        25
+      ],
+      "panelRankRange": 3,
+      "uncertaintyFlag": "low"
+    },
+    {
+      "team": "Brooklyn Nets",
+      "consensusRank": 26,
+      "panel": {
+        "nateSilver": 25,
+        "josephGeorge": 26,
+        "jeremiasEngelmann": 25
+      },
+      "priorEditionRanks": [
+        17,
+        19,
+        24,
+        26
+      ],
+      "panelRankRange": 1,
+      "uncertaintyFlag": "low"
+    },
+    {
+      "team": "Milwaukee Bucks",
+      "consensusRank": 27,
+      "panel": {
+        "nateSilver": 27,
+        "josephGeorge": 27,
+        "jeremiasEngelmann": 27
+      },
+      "priorEditionRanks": [
+        15,
+        26,
+        27,
+        27
+      ],
+      "panelRankRange": 0,
+      "uncertaintyFlag": "low"
+    },
+    {
+      "team": "New Orleans Pelicans",
+      "consensusRank": 28,
+      "panel": {
+        "nateSilver": 28,
+        "josephGeorge": 28,
+        "jeremiasEngelmann": 28
+      },
+      "priorEditionRanks": [
+        19,
+        28,
+        29,
+        28
+      ],
+      "panelRankRange": 0,
+      "uncertaintyFlag": "low"
+    },
+    {
+      "team": "Sacramento Kings",
+      "consensusRank": 29,
+      "panel": {
+        "nateSilver": 29,
+        "josephGeorge": 29,
+        "jeremiasEngelmann": 29
+      },
+      "priorEditionRanks": [
+        28,
+        30,
+        30,
+        29
+      ],
+      "panelRankRange": 0,
+      "uncertaintyFlag": "low"
+    },
+    {
+      "team": "Los Angeles Clippers",
+      "consensusRank": 30,
+      "panel": {
+        "nateSilver": 30,
+        "josephGeorge": 30,
+        "jeremiasEngelmann": 30
+      },
+      "priorEditionRanks": [
+        30,
+        25,
+        25,
+        30
+      ],
+      "panelRankRange": 0,
+      "uncertaintyFlag": "low"
+    }
+  ]
+}
