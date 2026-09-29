@@ -20,49 +20,23 @@ The order is mandatory:
 
 Do not reverse this order to chase steam or copy a respected source.
 
-## Market Intelligence Score — 20 points maximum
+## Market context — 10 points (v2, September 29, 2026)
 
-### 1. Sharp / respected movement — 0 to 6
-Award only when movement is verified and meaningful for the market.
+The user-authorized `micks-110-v2-2026-09-29` daily scoring standard supersedes the former 20-point 6/5/4/5 allocation. This module remains an evidence audit; no market signal can create a pick by itself.
 
-- 0: no verified movement, stale information, or movement contradicts the handicap
-- 2: modest movement in the Micks direction
-- 4: meaningful movement with credible market confirmation
-- 6: strong respected-money signal or high-limit movement with independent Micks agreement
+### Reference market context — 0–5
 
-Do not call movement sharp merely because a line changed.
+Assess the reliability, recency, comparability and coherence of the reference board for the exact market. 0 = absent/unusable; 1–2 = partial or materially stale; 3 = usable dated comparison with limitations; 4 = current credible comparison in a normal market; 5 = multiple independent current comparable references with clear market state. Do not award points merely because a sportsbook exists or the sport is liquid. The separate 20-point price factor assesses the user's offered number, so the same price advantage is not counted here again.
 
-### 2. Ticket / handle divergence — 0 to 5
-Use verified ticket and money/handle splits when available.
+### Verified movement and timing — 0–3
 
-- 0: unavailable, balanced, stale, or contradictory
-- 2: modest divergence supportive of Micks
-- 3-4: clear lower-ticket / higher-handle support or equivalent respected-money pattern
-- 5: unusually strong divergence confirmed by more than one credible market source or by high-limit market behavior
+0 = unavailable, contradictory or unusable; 1 = modest verified same-book movement relevant to the handicap; 2 = meaningful same-book movement with news/timing understood; 3 = persuasive independently supported movement/timing aligned with the Micks analysis. Record book, opening/current timestamps and exact market. Different capper prices do not establish movement. Call action sharp only when actual evidence supports that characterization.
 
-Ticket percentage alone earns no sharp-money credit.
+### Ticket/handle evidence — 0–2
 
-### 3. Liquidity / market quality — 0 to 4
-Score how trustworthy the observed movement is in that specific market.
+0 = unavailable, stale, balanced or opposing; 1 = current relevant supportive divergence with source/book/time; 2 = strong credible divergence with context and corroboration. Ticket share alone does not establish respected money. Missing splits cost at most the unsupported two points; no additional source-access penalty.
 
-- 0: very thin, obscure, stale, or unreliable market
-- 1: low-liquidity derivative / niche prop
-- 2: normal player prop or secondary derivative with usable depth
-- 3: liquid mainstream side/total market
-- 4: high-limit, highly liquid market with reliable price discovery
-
-Liquidity does not mean a bet is good; it determines how much confidence to place in the movement signal.
-
-### 4. Movement timing / reversal quality — 0 to 5
-Classify why and when the move occurred.
-
-- 0: unexplained reversal against Micks, stale move, or post-news move already fully priced
-- 1-2: ordinary market drift
-- 3: supportive opener-to-current move with no obvious public-only explanation
-- 4: meaningful early or late respected move aligned with Micks
-- 5: strong timing signal such as verified steam, resistance, buyback, or reversal that materially supports the independent handicap
-
-Always distinguish injury/lineup-driven movement from information-free steam.
+Unknown evidence is disclosed, never invented. Optional subfactor points are zero when unsupported while their evidence state is UNKNOWN; zero is not a finding of negative value. The full daily score retains a fixed 110 denominator and is never inflated by dropping unavailable categories. Core-unknown/UNGRADED handling is controlled by the current candidate scoring standard.
 
 ## Required market record for every serious candidate
 
@@ -78,7 +52,7 @@ Record when available:
 - time of meaningful moves
 - known injury, lineup, weather, starter, goalie, or role news that explains movement
 - whether movement confirms or contradicts Micks
-- Market Intelligence Score out of 20
+- Market context score out of 10 (reference 5, movement/timing 3, splits 2)
 
 Unavailable data must be marked unavailable and scored zero rather than inferred.
 
