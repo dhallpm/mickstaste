@@ -102,3 +102,22 @@ The `MI` totals break down as movement /6, ticket-handle /5, liquidity /4, timin
 **Main gaps:** exact live BetRivers Delaware offer for any candidate; subscription-only VSiN model and splits/Doc's AI-v3 actual selection; MLB relief usage, roof/weather and batting orders for the late games; NHL final goalie confirmations; WNBA late availability; current soccer XI/GK and current market; tennis/motorsports global board completeness. This is an honest partial scan and a firm **NO BET** at snapshot, not an assertion that every source yielded full data.
 
 See [source audit](source-audit.md) and [machine candidate record](candidates.json).
+
+## 3:05–3:06 p.m. ET — user-book screenshot recheck
+
+Five BetRivers Delaware screenshots supplied by Darren show **offered prices**, not a wager receipt. They replace outside-book comparisons for the *exact visible markets* at this timestamp; the earlier 2:48 chart remains a dated snapshot. The wallet display is not evidence of what was bet. Odds may have moved since the screenshots.
+
+| Exact market | BetRivers Delaware screenshot | Earlier Circa / outside benchmark | Price assessment |
+|---|---|---|---|
+| White Sox ML | **+106** (3:05 p.m.; IMG_1711.png), Astros -125 | Circa CWS +105 / HOU -115 9:59 a.m.; outside +108 | +106 break-even 48.54%. The outside Covers 46% estimate and Doc's HOU pick do not validate it. |
+| Cubs–Padres Under 7.5 runs | **-118** (3:05 p.m.; IMG_1712.png), Over 7.5 -104 | Circa Under 7.5 -120 | Slightly improved price; break-even 54.13%. No quantified Micks Under chance, and both lineups remain TBD on MLB.com. |
+| Aces +1.5 | **-117** (3:06 p.m.; IMG_1714.png); +2.5 -132 and ML -104 also visible | DK comparison +1.5 -115, Doc's +1.5 (unspecified live odds) | -117 break-even 53.92%; two cents worse than outside comparison. Doc's direction agrees, but it alone is not sufficient. |
+| Liberty +3.5 | **-117** (3:06 p.m.; IMG_1715.png); +4.5 -134 and ML +125 also visible | bet365 comparison +3.5 -110, Doc's old +2.5 | -117 break-even 53.92%; seven cents worse than outside. The +4.5 has a materially different threshold and greater cost; neither is authorized. |
+| Bruins ML | **-112** (3:06 p.m.; IMG_1716.png), Rangers also -112 | Circa Bruins -105 | -112 break-even 52.83%; MoneyPuck's prior 54% leaves only ~1.17 percentage points before model and personnel uncertainty. NHL lists Charlie McAvoy suspended; Shesterkin/Swayman are projected, not both confirmed starters. |
+| Oilers ML | **-315** (3:06 p.m.; IMG_1716.png), Vancouver +240 | Circa Edmonton -290 | -315 break-even 75.90%, slightly above the prior MoneyPuck 75.8%; Ryan Nugent-Hopkins is out and the top-line construction changes. No edge on that comparison. |
+| Rangers–Bruins total | Over 5.5 -130 / Under 5.5 +100 (3:06 p.m.; IMG_1716.png) | Circa 5.5 Over -125 / Under +105 | No total handicap released; exact market noted. |
+| Montreal–Toronto | Toronto ML -110, Under 6.5 -124 partially visible (3:06 p.m.; IMG_1716.png) | Circa Toronto -102, total Under 6.5 -118 | Partial card image; Montreal ML and full market context not transcribed as current executable quotes. |
+
+**Updated verdict: NO BET, 0u.** The screenshot closes the missing-price checkbox for the visible exact markets, but the provisional 110-point research scores are **not upgraded** merely because a price was supplied. White Sox +106 still lacks a supported value case and last-two-day relief/roof verification. Cubs–Padres Under needs actual batting orders, recent individual bullpen usage and weather/roof/umpire adjustment. Aces +1.5 and Liberty +3.5 are worse prices than the earlier outside comparisons, with Game 2 minutes/availability and a fair spread still unverified. Bruins -112 is weaker than the Circa benchmark with McAvoy absent; Oilers -315 has no positive MoneyPuck price gap and Nugent-Hopkins is out. Each still fails the 82/110 and 7/10 gates. **Best number/no-bet cutoff remains not established—regrade before any bet.**
+
+Official game-status refresh: [MLB starting lineups](https://www.mlb.com/starting-lineups/2026-09-29) lists Smith/Blubaugh and both CWS/HOU orders; Boyd/King with CHC/SD orders TBD at ~3:08 p.m. [NHL projected lineups](https://www.nhl.com/news/nhl-lineup-projections-2026-27-season) lists McAvoy suspended and the Shesterkin/Swayman projections. [NHL status report](https://www.nhl.com/news/nhl-status-report-news-and-notes-september-29-2026) confirms Nugent-Hopkins out. No game was added to the active import payload and no wager can be inferred from a market screenshot.
