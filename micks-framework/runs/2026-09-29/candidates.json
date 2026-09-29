@@ -44,7 +44,16 @@
       "score": 29,
       "failure_score": 3,
       "disposition": "PASS",
-      "units": 0
+      "units": 0,
+      "user_book_offer": {
+        "book": "BetRivers Delaware",
+        "as_of": "2026-09-29T15:05:00-04:00",
+        "odds": "+106",
+        "market": "White Sox moneyline",
+        "source_image": "IMG_1711.png",
+        "offered_not_wagered": true
+      },
+      "score_status": "provisional at 2:48 p.m.; no automatic price-only upgrade"
     },
     {
       "id": "mlb_chc_sd_under",
@@ -75,7 +84,16 @@
       "score": 31,
       "failure_score": 3,
       "disposition": "PASS",
-      "units": 0
+      "units": 0,
+      "user_book_offer": {
+        "book": "BetRivers Delaware",
+        "as_of": "2026-09-29T15:05:00-04:00",
+        "odds": "-118",
+        "market": "Under 7.5 runs",
+        "source_image": "IMG_1712.png",
+        "offered_not_wagered": true
+      },
+      "score_status": "provisional at 2:48 p.m.; no automatic price-only upgrade"
     },
     {
       "id": "wnba_lva_spread",
@@ -106,7 +124,16 @@
       "score": 33,
       "failure_score": 4,
       "disposition": "PASS",
-      "units": 0
+      "units": 0,
+      "user_book_offer": {
+        "book": "BetRivers Delaware",
+        "as_of": "2026-09-29T15:05:00-04:00",
+        "odds": "-117",
+        "market": "Aces +1.5",
+        "source_image": "IMG_1714.png",
+        "offered_not_wagered": true
+      },
+      "score_status": "provisional at 2:48 p.m.; no automatic price-only upgrade"
     },
     {
       "id": "wnba_nyl_spread",
@@ -137,7 +164,16 @@
       "score": 28,
       "failure_score": 3,
       "disposition": "PASS",
-      "units": 0
+      "units": 0,
+      "user_book_offer": {
+        "book": "BetRivers Delaware",
+        "as_of": "2026-09-29T15:05:00-04:00",
+        "odds": "-117",
+        "market": "Liberty +3.5",
+        "source_image": "IMG_1715.png",
+        "offered_not_wagered": true
+      },
+      "score_status": "provisional at 2:48 p.m.; no automatic price-only upgrade"
     },
     {
       "id": "nhl_bos_ml",
@@ -168,7 +204,16 @@
       "score": 27,
       "failure_score": 3,
       "disposition": "PASS",
-      "units": 0
+      "units": 0,
+      "user_book_offer": {
+        "book": "BetRivers Delaware",
+        "as_of": "2026-09-29T15:05:00-04:00",
+        "odds": "-112",
+        "market": "Bruins moneyline",
+        "source_image": "IMG_1716.png",
+        "offered_not_wagered": true
+      },
+      "score_status": "provisional at 2:48 p.m.; no automatic price-only upgrade"
     },
     {
       "id": "nhl_edm_ml",
@@ -199,7 +244,16 @@
       "score": 24,
       "failure_score": 3,
       "disposition": "PASS",
-      "units": 0
+      "units": 0,
+      "user_book_offer": {
+        "book": "BetRivers Delaware",
+        "as_of": "2026-09-29T15:05:00-04:00",
+        "odds": "-315",
+        "market": "Oilers moneyline",
+        "source_image": "IMG_1716.png",
+        "offered_not_wagered": true
+      },
+      "score_status": "provisional at 2:48 p.m.; no automatic price-only upgrade"
     },
     {
       "id": "nhl_vgk_ml",
@@ -230,7 +284,8 @@
       "score": 23,
       "failure_score": 3,
       "disposition": "PASS",
-      "units": 0
+      "units": 0,
+      "score_status": "provisional at 2:48 p.m.; no automatic price-only upgrade"
     }
   ],
   "ungraded": [
@@ -266,5 +321,8 @@
       "mtl_tor": "Guy Bruhn Toronto ML -108"
     }
   },
-  "correction": "2026-09-29 3 p.m. ET: aligned visible candidate totals with factor sums; Liberty Doc's stale-price confirmation reduced to 0/5; named handicapper audit and exact-number checklist added to report."
+  "correction": "2026-09-29 3 p.m. ET: aligned visible candidate totals with factor sums; Liberty Doc's stale-price confirmation reduced to 0/5; named handicapper audit and exact-number checklist added to report.",
+  "latest_price_check": "2026-09-29T15:06:00-04:00",
+  "user_book_disposition": "NO BET",
+  "latest_update": "User-book offers added. NHL McAvoy suspension and Edmonton Nugent-Hopkins absence noted; no grade/release upgrade. Other primary sport checks remain incomplete."
 }
