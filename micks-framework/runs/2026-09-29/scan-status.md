@@ -266,3 +266,36 @@ Darren's **IMG_1717.png** shows offered full-game prices **including overtime an
 
 **Release blockers:** BOS ML **44 < 82 and 3 < 7**, with VSiN public projection opposing; Bruins ML **47 < 82 and 3 < 7**, McAvoy absent and NYR goalie/price unsettled; USA core **UNGRADED** and no executable line; DWCS pregame window closed. **Best observed references** are BOS +116 Circa and Bruins -105 Circa, neither a playable best number. **No-Bet Cutoff** is unestablished for each; **units 0**. No wager or active website card was made.
 
+
+
+## 7:45–7:54 p.m. ET — Lynx at Liberty 45-minute gate (v2)
+
+**Decision: NO BET, 0u.** Liberty +3.5 was freshly assessed at **75/110, B / Watchlist (provisional)** with **Failure Score 5/10** under `micks-110-v2-2026-09-29`. The prior 26/110 v1 score remains preserved in [the machine record](candidates.json); it was not multiplied or mechanically converted. Recovery Mode+ requires 82/110 and 7/10 plus official lineup and executable-price gates.
+
+| Factor | Score | Evidence and limitation |
+|---|---:|---|
+| Matchup / cashing path | 26/35 | New York won Game 1 **91-75**, including a 51-31 second half, and also beat Minnesota 93-81 on Sept. 18. New York's length and pressure held Olivia Miles to 11 points, one assist and four turnovers. Liberty have won three of four 2026 meetings. Countercase: Minnesota went 33-11, shoots 39.2% from three, creates more turnovers and faces elimination. |
+| Number / price | 14/20 | [Current FanDuel screen](https://bleacherreport.com/game/minnesota-lynx-vs-new-york-liberty-2026-9-29-19-30) shows **Liberty +3.5 -108**; [Action consensus](https://www.actionnetwork.com/wnba-game/lynx-liberty-score-odds-september-29-2026/302509) **+3.5 -109**. Darren's BetRivers Delaware **+3.5 -117 at 3:05 p.m.** remains historical, not live. [VSiN](https://data.vsin.com/wnba/games/?gamedate=2026-09-29) lists MIN -3.5 but estimated scores 85.2 MIN, 87.3 NY, directional value toward New York. |
+| Personnel / opportunity | 10/15 | [WNBA official preview](https://www.wnba.com/game/min-vs-nyl-1042600102) says Collier is about 80% after offseason ankle surgeries. A current [injury roundup](https://www.prizepicks.com/playbook-article/lynx-vs-liberty-prediction-spread-picks-wnba-playoffs-september-29) cites only Kosu out for Minnesota and no New York injuries, while Action's feed showed several stale/conflicting day-to-day tags. Neither team had posted its official starting five at the checkpoint. |
+| Situation | 7/10 | New York leads 1-0 and returns home. Minnesota's elimination urgency is a real opposing force. Liberty players explicitly referenced last year's failure to close after winning Game 1, reducing complacency concern. |
+| VSiN | 5/10 | Public estimated score favors New York 87.3-85.2 against a market displaying MIN -3.5. This supports the candidate direction, but no named VSiN Liberty spread selection was found. |
+| Doc's | 7/10 | [Guy Bruhn explicitly selected New York +2.5](https://www.docsports.com/free-picks/wnba/2026/minnesota-lynx-vs-new-york-liberty-prediction-9-29-2026-wnba-pick-tips-and-odds.html). Current +3.5 is a better threshold; the article's opening market is older. |
+| Market | 6/10 | Reference **4/5**: current +3.5 quotes from multiple books and VSiN board. Movement **2/3**: Action logs Minnesota from -1.5 open to -3.5, verified movement against the candidate that now supplies a larger cushion. Splits **0/2**: the exposed 45% bets/55% money figures could not be unambiguously assigned and paid detail was locked. |
+| **Total** | **75/110** | **B / Watchlist, provisional; NO BET.** |
+
+### Failure Score
+
+| Dimension | Score | Reason |
+|---|---:|---|
+| Strongest failure path | 1/2 | Minnesota's league-best record, three-point shooting and elimination response can erase the Game 1 result. |
+| Personnel resilience | 1/2 | Core players appear available and Collier played Game 1, but official starters were still missing and injury feeds conflict. |
+| Variance resilience | 1/2 | Three recent New York wins help, but Game 1's 50.8% field-goal and 52% three-point shooting can regress. |
+| Price protection | 1/2 | +3.5 near -108/-109 is observable, but no current Delaware execution or official release price was confirmed. |
+| Contradiction resolution | 1/2 | Doc's and VSiN's estimated score support New York; the market's two-point move and Minnesota season metrics remain substantial opposition. |
+| **Total** | **5/10** | Below the required 7/10. |
+
+**Change from the earlier assessment:** the revised scale recognizes the actual matchup evidence, better current threshold, VSiN projection and Doc's selection, lifting the research grade from the preserved v1 **26/110 Pass** to a fresh v2 **75/110 B Watchlist**. It still does not qualify as official.
+
+**Best Number:** Liberty **+3.5 at -110 or better**, research target only. **No-Bet Cutoff:** below **+3**, or worse than **-115 at +3.5**; in every case remain NO BET unless the 82/110, 7/10, lineup and live-price gates clear.
+
+**Missing evidence:** confirmed starting fives; resolution of conflicting player designations; exact live BetRivers Delaware spread/juice; unambiguous tickets and handle; named current VSiN Liberty spread pick. **Release blockers:** 75 < 82; 5 < 7; starters not official; Delaware price not live. The Dropbox scan returned only **WNBA - 2026-9-30.pdf**, so there was no Sept. 29 Circa PDF to substitute for the current VSiN/market references. No wager or active website card was created.
