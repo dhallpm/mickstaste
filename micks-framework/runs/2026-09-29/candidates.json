@@ -1,8 +1,8 @@
 {
   "date": "2026-09-29",
   "timezone": "America/New_York",
-  "snapshot": "2026-09-29T15:15:00-04:00",
-  "status": "PARTIAL / RE-GRADED",
+  "snapshot": "2026-09-29T16:15:00-04:00",
+  "status": "PARTIAL / 5 P.M. GATES RE-GRADED",
   "official_releases": [],
   "official_units": 0,
   "import_payload": {
@@ -53,7 +53,7 @@
         "source_image": "IMG_1711.png",
         "offered_not_wagered": true
       },
-      "score_status": "Provisional evidence-based grade with exact BetRivers quote where shown; no release and 0u.",
+      "score_status": "4:15 ET evidence recheck; 29/110 Pass unchanged; latest user-book quote is historical 3:05 screenshot, not executable live quote.",
       "prior_snapshot": {
         "score": 29,
         "factors": {
@@ -76,7 +76,17 @@
       "grade": "PASS",
       "points_to_c": 29,
       "points_to_recovery_gate": 53,
-      "grade_as_of": "2026-09-29T15:15:00-04:00"
+      "grade_as_of": "2026-09-29T16:15:00-04:00",
+      "points_to_failure_gate": 4,
+      "best_number": null,
+      "no_bet_cutoff": null,
+      "missing_verification": [
+        "current BetRivers Delaware moneyline",
+        "same-book opening/current movement and ticket/handle splits",
+        "individual Sep 27-28 bullpen availability",
+        "Blubaugh leash",
+        "Daikin Park roof state"
+      ]
     },
     {
       "id": "mlb_chc_sd_under",
@@ -447,6 +457,67 @@
       "points_to_c": 35,
       "points_to_recovery_gate": 59,
       "grade_as_of": "2026-09-29T15:15:00-04:00"
+    },
+    {
+      "id": "nhl_fla_ml",
+      "sport": "NHL",
+      "event": "FLA at CAR",
+      "market": "Panthers moneyline",
+      "benchmark": {
+        "book": "Circa",
+        "odds": "+109",
+        "as_of": "2026-09-29T08:29:00-04:00"
+      },
+      "factors": {
+        "micks": 9,
+        "line": 1,
+        "availability": 6,
+        "situation": 3,
+        "fade": 0,
+        "favorite_inflation": 0,
+        "vsin": 4,
+        "docs": 4,
+        "market": {
+          "movement": 0,
+          "splits": 0,
+          "liquidity": 3,
+          "timing": 0
+        }
+      },
+      "score": 30,
+      "grade": "PASS",
+      "failure_score": 3,
+      "points_to_c": 28,
+      "points_to_recovery_gate": 52,
+      "points_to_failure_gate": 4,
+      "disposition": "PASS",
+      "units": 0,
+      "grade_as_of": "2026-09-29T16:15:00-04:00",
+      "best_number": null,
+      "no_bet_cutoff": null,
+      "user_book_offer": null,
+      "handicapper_audit": {
+        "vsin": "Jonathan Davis Florida +105, 0.5u; article price",
+        "docs": "Tony Florida +110; article price"
+      },
+      "personnel": {
+        "carolina_goalie": "Brandon Bussi confirmed 2:43 p.m. ET",
+        "florida_goalie": "Jacob Markstrom unconfirmed; NHL projected",
+        "injuries": [
+          "Florida Brad Marchand out",
+          "Florida Jonah Gadjovich out",
+          "Carolina Seth Jarvis out"
+        ]
+      },
+      "contrary_evidence": "Morning MoneyPuck Florida 41% versus +109 break-even 47.85%; no verified current model refresh.",
+      "missing_verification": [
+        "current BetRivers Delaware moneyline",
+        "current Circa line",
+        "Florida confirmed starting goalie",
+        "same-book movement and ticket/handle splits",
+        "Micks fair price and best-number/cutoff"
+      ],
+      "score_status": "New 4:15 ET pregame grade. Two handicapper opinions support Florida but an outside model disagrees and current execution price is unknown."
     }
   ],
   "ungraded": [
@@ -479,12 +550,13 @@
       "lva_ind": "Tony Sink Las Vegas +1.5",
       "min_nyl": "Guy Bruhn New York +2.5 (old line)",
       "nyr_bos": "Josh Schonwald New York Rangers ML -110",
-      "mtl_tor": "Guy Bruhn Toronto ML -108"
+      "mtl_tor": "Guy Bruhn Toronto ML -108",
+      "fla_car": "Tony Florida +110 (article price)"
     }
   },
   "correction": "2026-09-29 3 p.m. ET: aligned visible candidate totals with factor sums; Liberty Doc's stale-price confirmation reduced to 0/5; named handicapper audit and exact-number checklist added to report.",
-  "latest_price_check": "2026-09-29T15:06:00-04:00",
+  "latest_price_check": "2026-09-29T15:05:00-04:00",
   "user_book_disposition": "NO BET",
-  "latest_update": "User-book offers added. NHL McAvoy suspension and Edmonton Nugent-Hopkins absence noted; no grade/release upgrade. Other primary sport checks remain incomplete.",
+  "latest_update": "4:15 ET gate: CWS-HOU lineups and starters rechecked, White Sox unchanged 29/110 Failure 3/10; CAR Bussi confirmed, FLA Markstrom unconfirmed, Doc's Tony joins VSiN on Florida but MoneyPuck 41% opposes +109 required 47.85%; Panthers newly scored 30/110 Failure 3/10. No current BetRivers DE price, no official release.",
   "grading_note": "A score measures current evidence and Micks judgment, not win probability. Unverified factors stay zero; missing points are not automatic possible upgrades. No official releases."
 }
