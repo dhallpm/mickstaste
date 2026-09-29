@@ -1,6 +1,6 @@
 {
   "name": "Micks Picks 2.0 Market Intelligence Layer",
-  "effective_date": "2026-08-23",
+  "effective_date": "2026-09-29",
   "status": "permanent_active_module",
   "principle": "Independent Micks handicap first. Market intelligence confirms, challenges, downgrades or improves timing; it never creates a play by itself.",
   "decision_order": [
@@ -12,18 +12,15 @@
     "Final 110-point score, grade, units, Best Number and No-Bet Cutoff"
   ],
   "score": {
-    "max": 20,
-    "sharp_respected_movement": {
-      "max": 6
-    },
-    "ticket_handle_divergence": {
+    "max": 10,
+    "reference_context": {
       "max": 5
     },
-    "liquidity_market_quality": {
-      "max": 4
+    "verified_movement_timing": {
+      "max": 3
     },
-    "movement_timing_reversal_quality": {
-      "max": 5
+    "ticket_handle_evidence": {
+      "max": 2
     }
   },
   "required_market_fields_when_available": [
@@ -93,5 +90,6 @@
     "applies_to_nfl": false,
     "nfl_mode": "standard"
   },
-  "readiness_override": "research-readiness.md controls missing-data handling; unknown is null, never fabricated negative evidence."
+  "readiness_override": "research-readiness.md and candidate-scoring-and-writeup-standard.md v2 control missing-data handling. Optional UNKNOWN evidence earns no invented points; core unknown yields UNGRADED. No normalization.",
+  "scoring_version": "micks-110-v2-2026-09-29"
 }
