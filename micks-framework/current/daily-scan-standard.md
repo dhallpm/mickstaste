@@ -51,6 +51,14 @@ Systems require an exact rule, sample period/size, market, price assumptions and
 7. Apply Failure Score, sport caps, units, correlation and card limits. Non-NFL recovery releases require 82/110 and Failure Score 7/10. NFL follows the existing standard-mode gate. Futures use their separate 100-point model/EV/portfolio gates.
 8. Recheck news and current price before release. Every release needs a justified Best Number, playable range and no-bet cutoff. For a blocked candidate, use “not established—no bet until regraded” instead of implying that a better price alone authorizes a bet.
 
+## Event-time missing-information regrade — user direction September 29, 2026
+
+For every remaining event with a verified start time on an on-demand Micks Picks slate, perform a dedicated pregame scan **45 minutes before the event**. Group games with the same start time, but preserve each distinct 45-minute checkpoint. When automation capacity is available, schedule the one-time checks for that day's verified start times. This is an event-specific regrade, not a blind reminder or a claim of continuous monitoring.
+
+At each checkpoint, revisit every missing item from the candidate chart: current executable user-book price and market identity; Circa/VSiN reference and named handicapper positions; confirmed lineup, starter/goalie, injury, role/minutes or XI; bullpen, weather/roof, umpire and relevant sport-specific gates; authentic movement and splits. Update each 110-point factor, Failure Score, grade, best number, no-bet cutoff and units with timestamp. Missing sources remain zero/unknown; a late quote alone does not earn matchup or confirmation points. Report official release or explicit NO BET with additions, removals and changes. Preserve the earlier score for audit. Do not treat a sportsbook screenshot as a wager receipt.
+
+If a start time changes, move the check to 45 minutes before the verified new start when possible. If the check cannot be scheduled or executed, disclose that promptly; do not imply monitoring is active. Exclude already-started games from pregame release.
+
 ## Required output every run
 
 - Date/time, scope, source/guide coverage and material verification gaps.
