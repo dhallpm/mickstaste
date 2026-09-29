@@ -1,3 +1,5 @@
+Scoring amendment (September 29, 2026): daily candidates use micks-110-v2-2026-09-29: matchup35, price20, personnel15, situation10, VSiN10, Doc's10, market10. candidate-scoring-and-writeup-standard.md controls over legacy factor allocations. Mode settings, grade ladder, sport gates and units remain in force; historical grades are preserved.
+
 User-directed method restoration (September 18, 2026): research-readiness.md controls. Use the established sources, scans, guides and 110-point handicap. No new standalone win-probability, numerical EV or model-validation prerequisite for daily picks.
 
 # Micks Picks Framework — Current Operating Setup
