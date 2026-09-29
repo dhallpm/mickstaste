@@ -1,8 +1,8 @@
 {
   "date": "2026-09-29",
   "timezone": "America/New_York",
-  "snapshot": "2026-09-29T17:53:00-04:00",
-  "status": "PARTIAL / ACES-FEVER 5:45 P.M. GATE RE-GRADED V2",
+  "snapshot": "2026-09-29T18:15:00-04:00",
+  "status": "PARTIAL / TORONTO 6:15 P.M. GATE RE-GRADED V2",
   "official_releases": [],
   "official_units": 0,
   "import_payload": {
@@ -627,6 +627,99 @@
       "score_status": "New 4:15 ET pregame grade. Two handicapper opinions support Florida but an outside model disagrees and current execution price is unknown. Historical v1 assessment; not a v2 grade.",
       "scoring_version": "micks-110-v1",
       "v2_reassessment_status": "pregame_frozen_event_started"
+    },
+    {
+      "id": "nhl_tor_ml",
+      "sport": "NHL",
+      "event": "MTL at TOR",
+      "market": "Maple Leafs moneyline",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "grade_as_of": "2026-09-29T18:15:00-04:00",
+      "score_status": "PROVISIONAL fresh pregame v2 assessment; exact user-book execution price and Marchenko status unresolved",
+      "factors": {
+        "matchup": 21,
+        "price": 9,
+        "personnel": 10,
+        "situation": 5,
+        "vsin": 3,
+        "docs": 6,
+        "market": {
+          "reference": 4,
+          "movement": 0,
+          "splits": 0
+        }
+      },
+      "score": 58,
+      "grade": "C / Lean / Watchlist",
+      "failure_score": 4,
+      "failure_dimensions": {
+        "strongest_failure": {
+          "score": 1,
+          "reason": "Montreal's 2025-26 offense and Suzuki-Caufield top line could exploit Toronto roster churn; VSiN likes Montreal team total Over 3."
+        },
+        "personnel_resilience": {
+          "score": 0,
+          "reason": "Marchenko visa/lineup status unresolved after Matthew Knies traded; top-line composition may change."
+        },
+        "variance_resilience": {
+          "score": 1,
+          "reason": "Confirmed Bobrovsky/Dobes help identify game script, but goaltending variance and Toronto new-line chemistry remain large."
+        },
+        "price_protection": {
+          "score": 1,
+          "reason": "Circa -105 is a better observed reference than -110 elsewhere, but no exact Delaware quote or supported cutoff."
+        },
+        "contradiction_resolution": {
+          "score": 1,
+          "reason": "Doc's Toronto ML and VSiN projection align, but VSiN Montreal team-total Over 3 and 2025-26 team-strength gap remain unresolved."
+        }
+      },
+      "factor_evidence": {
+        "matchup": "21/35: Toronto home with Matthews/Nylander and Bobrovsky; VSiN estimated Toronto 3.4-2.7, but Montreal's Suzuki-Caufield-Kreider line and stronger 2025-26 record counter, plus massive Toronto roster change.",
+        "price": "9/20: VSiN Circa TOR -105 at 6:10 ET vs FanDuel -110 and Doc's article -108. Circa break-even 51.22%; VSiN estimated TOR -133 is one model, not Micks fair line. No exact BetRivers DE offer or justified cutoff.",
+        "personnel": "10/15: Daily Faceoff lists Dobes confirmed at 12:56 and Bobrovsky confirmed at 3:15 ET. NHL projected lines; Marchenko immigration unresolved. Montreal Guhle/Kapanen out, Toronto Joshua/Domi out per NHL. Final skater lineup unknown.",
+        "situation": "5/10: Opening night in Toronto, no travel-rest edge established. Home advantage tempered by Toronto roster/coach overhaul and Montreal top line.",
+        "vsin": "3/10: VSiN public NHL board projects Toronto -133 (3.4-2.7), supportive direction, but no named Toronto ML selection verified. Jonathan Davis instead named Montreal TT Over 3 and multiple props; this raises Toronto defensive countercase.",
+        "docs": "6/10: Guy Bruhn Sept 29 named Toronto ML -108; rationale relies heavily on prior-season stats and Bobrovsky start, but Toronto has traded Knies for Marchenko with latter's status unsettled.",
+        "market": "4/10 = reference 4/5 (Circa TOR -105 at VSiN 6:10 ET, FanDuel -110); movement 0/3 (opening and current book-constant series not established); splits 0/2 (VSiN public screen exposed no game figures)."
+      },
+      "benchmark": {
+        "book": "Circa via VSiN NHL Vegas Odds",
+        "odds": "-105",
+        "as_of": "2026-09-29T18:10:00-04:00"
+      },
+      "outside_offer": {
+        "book": "FanDuel via Bleacher Report",
+        "odds": "-110",
+        "as_of": "2026-09-29T18:13:00-04:00"
+      },
+      "user_book_offer": null,
+      "best_number": "Toronto ML -105 observed at Circa, research reference only; no executable recommendation",
+      "no_bet_cutoff": null,
+      "missing_evidence": [
+        "current exact BetRivers Delaware TOR moneyline",
+        "Marchenko work authorization and final skater lineup",
+        "verified same-book opening/current move and Circa/DK ticket-handle splits",
+        "independent price judgment and no-bet cutoff",
+        "named VSiN Toronto ML handicapper selection"
+      ],
+      "release_blockers": [
+        "58/110 below non-NFL 82/110 gate",
+        "Failure Score 4/10 below 7/10 gate",
+        "Marchenko/first-line status unresolved",
+        "current BetRivers Delaware price and supported cutoff unavailable"
+      ],
+      "disposition": "NO BET",
+      "units": 0,
+      "sources": [
+        "https://www.dailyfaceoff.com/starting-goalies",
+        "https://www.nhl.com/news/nhl-lineup-projections-2026-27-season",
+        "https://data.vsin.com/vegas-odds-linetracker/?sportid=nhl",
+        "https://data.vsin.com/nhl/games/?gamedate=2026-09-29",
+        "https://vsin.com/nhl/nhl-predictions-expert-picks-on-tuesday-september-29/",
+        "https://www.docsports.com/free-picks/nhl-hockey/2026/montreal-canadiens-vs-toronto-maple-leafs-prediction-9-29-2026-nhl-picks-best-bets-odds.html",
+        "https://bleacherreport.com/game/montreal-canadiens-vs-toronto-maple-leafs-2026-9-30-1-00"
+      ]
     }
   ],
   "ungraded": [
@@ -645,6 +738,13 @@
       "sport": "NHL",
       "market": "Raddysh over 2.5 shots",
       "reason": "user-book quote and role unverified"
+    },
+    {
+      "sport": "NHL",
+      "event": "MTL at TOR",
+      "market": "Darren Raddysh Over 2.5 shots",
+      "reason": "VSiN Jonathan Davis +104 opinion verified, but exact current BetRivers DE prop and role/shot distribution unverified; no complete core price and opportunity assessment",
+      "scoring_version": "micks-110-v2-2026-09-29"
     }
   ],
   "note": "Research record only. Empty import arrays; no active site import or wager.",
@@ -666,7 +766,7 @@
   "correction": "2026-09-29 3 p.m. ET: aligned visible candidate totals with factor sums; Liberty Doc's stale-price confirmation reduced to 0/5; named handicapper audit and exact-number checklist added to report.",
   "latest_price_check": "2026-09-29T15:05:00-04:00",
   "user_book_disposition": "NO BET",
-  "latest_update": "5:45 ET gate: Aces +1.5 freshly assessed under v2 at 50/110 PASS, Failure 3/10, 0u. Clark/Boston officially available 5:46 ET. Fresh outside +1.5 -115; VSiN est IND -1.1 near IND -1.5 market. No Sep29 Circa WNBA sheet, current DE quote, named VSiN pick, Boston minute projection, or splits. Older v1 32/110 preserved; scores are not comparable.",
+  "latest_update": "6:15 ET gate: Toronto ML newly assessed v2 58/110 C/Watch, Failure 4/10, 0u. Dobes/Bobrovsky confirmed. Circa TOR -105 at 6:10 via VSiN, outside -110. Marchenko lineup/visa and exact BetRivers DE odds unverified. Doc's Guy Toronto -108; VSiN model TOR -133 but no named TOR ML pick and Davis likes MTL TT Over 3. No release.",
   "grading_note": "A score measures current evidence and Micks judgment, not win probability. Unverified factors stay zero; missing points are not automatic possible upgrades. No official releases.",
   "active_scoring_version": "micks-110-v2-2026-09-29",
   "scoring_migration": {
