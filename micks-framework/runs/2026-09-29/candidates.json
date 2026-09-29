@@ -126,7 +126,7 @@
         "fade": 0,
         "favorite_inflation": 0,
         "vsin": 0,
-        "docs": 2,
+        "docs": 0,
         "market": {
           "movement": 0,
           "splits": 0,
@@ -134,7 +134,7 @@
           "timing": 0
         }
       },
-      "score": 30,
+      "score": 28,
       "failure_score": 3,
       "disposition": "PASS",
       "units": 0
@@ -251,5 +251,20 @@
       "reason": "user-book quote and role unverified"
     }
   ],
-  "note": "Research record only. Empty import arrays; no active site import or wager."
+  "note": "Research record only. Empty import arrays; no active site import or wager.",
+  "handicapper_audit": {
+    "vsin_nhl": "Jonathan Davis Panthers +105, FLA/CAR Over 6 -118, Montreal TT Over 3 -125, Raddysh Over 2.5 SOG +104, Dorofeyev Over 2.5 SOG -125, Pastrnak Over 3.5 SOG +135, Vegas/Edmonton parlay -115; no Bruins ML selection",
+    "vsin_mlb": "Steve Makinen Wild Card Under systems and Houston run-line angle; conflicting trends and different totals; no verified White Sox ML personal pick",
+    "vsin_wnba": "public matchup lines only; no verified named selection",
+    "docs": {
+      "cws_hou": "Guy Bruhn Houston ML -144 (older price)",
+      "chc_sd": "Parlay's Pundit San Diego ML -126 and Under 7.5",
+      "bos_nyy": "Josh Schonwald Boston ML +129 (older price)",
+      "lva_ind": "Tony Sink Las Vegas +1.5",
+      "min_nyl": "Guy Bruhn New York +2.5 (old line)",
+      "nyr_bos": "Josh Schonwald New York Rangers ML -110",
+      "mtl_tor": "Guy Bruhn Toronto ML -108"
+    }
+  },
+  "correction": "2026-09-29 3 p.m. ET: aligned visible candidate totals with factor sums; Liberty Doc's stale-price confirmation reduced to 0/5; named handicapper audit and exact-number checklist added to report."
 }
