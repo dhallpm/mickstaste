@@ -53,7 +53,7 @@
         "source_image": "IMG_1711.png",
         "offered_not_wagered": true
       },
-      "score_status": "4:15 ET evidence recheck; 29/110 Pass unchanged; latest user-book quote is historical 3:05 screenshot, not executable live quote.",
+      "score_status": "4:15 ET evidence recheck; 29/110 Pass unchanged; latest user-book quote is historical 3:05 screenshot, not executable live quote. Historical v1 assessment; not a v2 grade.",
       "prior_snapshot": {
         "score": 29,
         "factors": {
@@ -86,7 +86,9 @@
         "individual Sep 27-28 bullpen availability",
         "Blubaugh leash",
         "Daikin Park roof state"
-      ]
+      ],
+      "scoring_version": "micks-110-v1",
+      "v2_reassessment_status": "pregame_frozen_event_started"
     },
     {
       "id": "mlb_chc_sd_under",
@@ -126,7 +128,7 @@
         "source_image": "IMG_1712.png",
         "offered_not_wagered": true
       },
-      "score_status": "Provisional evidence-based grade with exact BetRivers quote where shown; no release and 0u.",
+      "score_status": "Provisional evidence-based grade with exact BetRivers quote where shown; no release and 0u. Historical v1 assessment; not a v2 grade.",
       "prior_snapshot": {
         "score": 31,
         "factors": {
@@ -149,7 +151,9 @@
       "grade": "PASS",
       "points_to_c": 26,
       "points_to_recovery_gate": 50,
-      "grade_as_of": "2026-09-29T15:15:00-04:00"
+      "grade_as_of": "2026-09-29T15:15:00-04:00",
+      "scoring_version": "micks-110-v1",
+      "v2_reassessment_status": "pending_fresh_assessment"
     },
     {
       "id": "wnba_lva_spread",
@@ -189,7 +193,7 @@
         "source_image": "IMG_1714.png",
         "offered_not_wagered": true
       },
-      "score_status": "Provisional evidence-based grade with exact BetRivers quote where shown; no release and 0u.",
+      "score_status": "Provisional evidence-based grade with exact BetRivers quote where shown; no release and 0u. Historical v1 assessment; not a v2 grade.",
       "prior_snapshot": {
         "score": 33,
         "factors": {
@@ -212,7 +216,9 @@
       "grade": "PASS",
       "points_to_c": 26,
       "points_to_recovery_gate": 50,
-      "grade_as_of": "2026-09-29T15:15:00-04:00"
+      "grade_as_of": "2026-09-29T15:15:00-04:00",
+      "scoring_version": "micks-110-v1",
+      "v2_reassessment_status": "pending_fresh_assessment"
     },
     {
       "id": "wnba_nyl_spread",
@@ -252,7 +258,7 @@
         "source_image": "IMG_1715.png",
         "offered_not_wagered": true
       },
-      "score_status": "Provisional evidence-based grade with exact BetRivers quote where shown; no release and 0u.",
+      "score_status": "Provisional evidence-based grade with exact BetRivers quote where shown; no release and 0u. Historical v1 assessment; not a v2 grade.",
       "prior_snapshot": {
         "score": 28,
         "factors": {
@@ -275,7 +281,9 @@
       "grade": "PASS",
       "points_to_c": 32,
       "points_to_recovery_gate": 56,
-      "grade_as_of": "2026-09-29T15:15:00-04:00"
+      "grade_as_of": "2026-09-29T15:15:00-04:00",
+      "scoring_version": "micks-110-v1",
+      "v2_reassessment_status": "pending_fresh_assessment"
     },
     {
       "id": "nhl_bos_ml",
@@ -315,7 +323,7 @@
         "source_image": "IMG_1716.png",
         "offered_not_wagered": true
       },
-      "score_status": "Provisional evidence-based grade with exact BetRivers quote where shown; no release and 0u.",
+      "score_status": "Provisional evidence-based grade with exact BetRivers quote where shown; no release and 0u. Historical v1 assessment; not a v2 grade.",
       "prior_snapshot": {
         "score": 27,
         "factors": {
@@ -338,7 +346,9 @@
       "grade": "PASS",
       "points_to_c": 35,
       "points_to_recovery_gate": 59,
-      "grade_as_of": "2026-09-29T15:15:00-04:00"
+      "grade_as_of": "2026-09-29T15:15:00-04:00",
+      "scoring_version": "micks-110-v1",
+      "v2_reassessment_status": "pending_fresh_assessment"
     },
     {
       "id": "nhl_edm_ml",
@@ -378,7 +388,7 @@
         "source_image": "IMG_1716.png",
         "offered_not_wagered": true
       },
-      "score_status": "Provisional evidence-based grade with exact BetRivers quote where shown; no release and 0u.",
+      "score_status": "Provisional evidence-based grade with exact BetRivers quote where shown; no release and 0u. Historical v1 assessment; not a v2 grade.",
       "prior_snapshot": {
         "score": 24,
         "factors": {
@@ -401,7 +411,9 @@
       "grade": "PASS",
       "points_to_c": 37,
       "points_to_recovery_gate": 61,
-      "grade_as_of": "2026-09-29T15:15:00-04:00"
+      "grade_as_of": "2026-09-29T15:15:00-04:00",
+      "scoring_version": "micks-110-v1",
+      "v2_reassessment_status": "pending_fresh_assessment"
     },
     {
       "id": "nhl_vgk_ml",
@@ -433,7 +445,7 @@
       "failure_score": 3,
       "disposition": "PASS",
       "units": 0,
-      "score_status": "Provisional evidence-based grade with exact BetRivers quote where shown; no release and 0u.",
+      "score_status": "Provisional evidence-based grade with exact BetRivers quote where shown; no release and 0u. Historical v1 assessment; not a v2 grade.",
       "prior_snapshot": {
         "score": 23,
         "factors": {
@@ -456,7 +468,9 @@
       "grade": "PASS",
       "points_to_c": 35,
       "points_to_recovery_gate": 59,
-      "grade_as_of": "2026-09-29T15:15:00-04:00"
+      "grade_as_of": "2026-09-29T15:15:00-04:00",
+      "scoring_version": "micks-110-v1",
+      "v2_reassessment_status": "pending_fresh_assessment"
     },
     {
       "id": "nhl_fla_ml",
@@ -517,7 +531,9 @@
         "same-book movement and ticket/handle splits",
         "Micks fair price and best-number/cutoff"
       ],
-      "score_status": "New 4:15 ET pregame grade. Two handicapper opinions support Florida but an outside model disagrees and current execution price is unknown."
+      "score_status": "New 4:15 ET pregame grade. Two handicapper opinions support Florida but an outside model disagrees and current execution price is unknown. Historical v1 assessment; not a v2 grade.",
+      "scoring_version": "micks-110-v1",
+      "v2_reassessment_status": "pregame_frozen_event_started"
     }
   ],
   "ungraded": [
@@ -558,5 +574,23 @@
   "latest_price_check": "2026-09-29T15:05:00-04:00",
   "user_book_disposition": "NO BET",
   "latest_update": "4:15 ET gate: CWS-HOU lineups and starters rechecked, White Sox unchanged 29/110 Failure 3/10; CAR Bussi confirmed, FLA Markstrom unconfirmed, Doc's Tony joins VSiN on Florida but MoneyPuck 41% opposes +109 required 47.85%; Panthers newly scored 30/110 Failure 3/10. No current BetRivers DE price, no official release.",
-  "grading_note": "A score measures current evidence and Micks judgment, not win probability. Unverified factors stay zero; missing points are not automatic possible upgrades. No official releases."
+  "grading_note": "A score measures current evidence and Micks judgment, not win probability. Unverified factors stay zero; missing points are not automatic possible upgrades. No official releases.",
+  "active_scoring_version": "micks-110-v2-2026-09-29",
+  "scoring_migration": {
+    "date": "2026-09-29",
+    "authorized_by": "Darren",
+    "weights": {
+      "matchup": 35,
+      "price": 20,
+      "personnel": 15,
+      "situation": 10,
+      "vsin": 10,
+      "docs": 10,
+      "market": 10
+    },
+    "prior_scores_preserved": true,
+    "remaining_events": "Fresh v2 assessment at next pregame checkpoint; no mechanical conversion.",
+    "already_started_events": "Prior pregame assessment frozen; no retrospective release.",
+    "release_thresholds_unchanged": true
+  }
 }
