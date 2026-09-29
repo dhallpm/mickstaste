@@ -1,8 +1,8 @@
 {
   "date": "2026-09-29",
   "timezone": "America/New_York",
-  "snapshot": "2026-09-29T19:23:00-04:00",
-  "status": "PARTIAL / 8 P.M. GATE V2 RE-GRADED; NO OFFICIAL RELEASE",
+  "snapshot": "2026-09-29T19:54:00-04:00",
+  "status": "PARTIAL / LYNX-LIBERTY 7:45 P.M. GATE V2 RE-GRADED; NO OFFICIAL RELEASE",
   "official_releases": [],
   "official_units": 0,
   "import_payload": {
@@ -319,29 +319,26 @@
       "event": "MIN at NYL",
       "market": "Liberty +3.5",
       "benchmark": {
-        "book": "bet365 comparison",
-        "odds": "-110",
-        "as_of": "2026-09-29T14:45:00-04:00"
+        "book": "Consensus via Action / FanDuel / DraftKings",
+        "odds": "+3.5 -108 to -110",
+        "as_of": "2026-09-29T19:54:00-04:00"
       },
       "factors": {
-        "micks": 13,
-        "line": 1,
-        "availability": 5,
-        "situation": 4,
-        "fade": 0,
-        "favorite_inflation": 0,
-        "vsin": 0,
-        "docs": 0,
+        "matchup": 26,
+        "price": 14,
+        "personnel": 10,
+        "situation": 7,
+        "vsin": 5,
+        "docs": 7,
         "market": {
-          "movement": 0,
-          "splits": 0,
-          "liquidity": 3,
-          "timing": 0
+          "reference": 4,
+          "movement": 2,
+          "splits": 0
         }
       },
-      "score": 26,
-      "failure_score": 3,
-      "disposition": "PASS",
+      "score": 75,
+      "failure_score": 5,
+      "disposition": "NO BET",
       "units": 0,
       "user_book_offer": {
         "book": "BetRivers Delaware",
@@ -349,9 +346,10 @@
         "odds": "-117",
         "market": "Liberty +3.5",
         "source_image": "IMG_1715.png",
-        "offered_not_wagered": true
+        "offered_not_wagered": true,
+        "historical_quote": true
       },
-      "score_status": "Provisional evidence-based grade with exact BetRivers quote where shown; no release and 0u. Historical v1 assessment; not a v2 grade.",
+      "score_status": "PROVISIONAL fresh 45-minute v2 assessment; starting fives and current BetRivers Delaware offer unavailable",
       "prior_snapshot": {
         "score": 28,
         "factors": {
@@ -371,12 +369,118 @@
           }
         }
       },
-      "grade": "PASS",
+      "grade": "B / Watchlist",
       "points_to_c": 32,
       "points_to_recovery_gate": 56,
-      "grade_as_of": "2026-09-29T15:15:00-04:00",
-      "scoring_version": "micks-110-v1",
-      "v2_reassessment_status": "pending_fresh_assessment"
+      "grade_as_of": "2026-09-29T19:54:00-04:00",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "v2_reassessment_status": "completed_pregame_provisional",
+      "historical_v1_snapshot": {
+        "score": 26,
+        "factors": {
+          "micks": 13,
+          "line": 1,
+          "availability": 5,
+          "situation": 4,
+          "fade": 0,
+          "favorite_inflation": 0,
+          "vsin": 0,
+          "docs": 0,
+          "market": {
+            "movement": 0,
+            "splits": 0,
+            "liquidity": 3,
+            "timing": 0
+          }
+        },
+        "grade": "PASS",
+        "failure_score": 3,
+        "benchmark": {
+          "book": "bet365 comparison",
+          "odds": "-110",
+          "as_of": "2026-09-29T14:45:00-04:00"
+        },
+        "grade_as_of": "2026-09-29T15:15:00-04:00",
+        "prior_snapshot": {
+          "score": 28,
+          "factors": {
+            "micks": 13,
+            "line": 3,
+            "availability": 5,
+            "situation": 4,
+            "fade": 0,
+            "favorite_inflation": 0,
+            "vsin": 0,
+            "docs": 0,
+            "market": {
+              "movement": 0,
+              "splits": 0,
+              "liquidity": 3,
+              "timing": 0
+            }
+          }
+        }
+      },
+      "failure_dimensions": {
+        "strongest_failure": {
+          "score": 1,
+          "reason": "Minnesota's league-best record, 39.2% three-point shooting and elimination response can erase Game 1's New York edge."
+        },
+        "personnel_resilience": {
+          "score": 1,
+          "reason": "Current injury reporting indicates only Kosu out for Minnesota and no new Liberty absences, but official starting fives were not posted and Collier said she is about 80% after ankle surgery."
+        },
+        "variance_resilience": {
+          "score": 1,
+          "reason": "New York has won three recent meetings, but Game 1's 50.8% field-goal and 52% three-point shooting can regress."
+        },
+        "price_protection": {
+          "score": 1,
+          "reason": "Consensus +3.5 around -108/-109 is usable research context, but the only Delaware quote is the historical +3.5 -117 screenshot and no live execution was verified."
+        },
+        "contradiction_resolution": {
+          "score": 1,
+          "reason": "Doc's and the VSiN estimated-score direction support New York, while the market moved from +1.5 to +3.5 and Minnesota's season metrics oppose; conflict remains material."
+        }
+      },
+      "factor_evidence": {
+        "matchup": "26/35: New York won Game 1 91-75 and also won 93-81 on Sep 18; size and defensive pressure limited Olivia Miles to 11 points, one assist and four turnovers. Liberty have won three of four 2026 meetings. Countercase: Minnesota was 33-11, owns 39.2% three-point shooting, stronger turnover creation and faces elimination.",
+        "price": "14/20: Current consensus/major-book market is Liberty +3.5 -108 to -110; historical BetRivers Delaware screenshot was +3.5 -117 at 15:05. VSiN estimated scores favor New York 87.3-85.2 despite listed MIN -3.5. Price is materially better than Doc's +2.5, but no live Delaware quote.",
+        "personnel": "10/15: WNBA official preview says Collier is about 80% after bilateral ankle surgery. Current injury roundup via PrizePicks cites only Kosu out for Minnesota and none for New York, conflicting with a stale aggregator feed listing several day-to-day players. Official starting fives were not posted by 19:54.",
+        "situation": "7/10: Liberty lead 1-0 and return home; Minnesota has maximum elimination urgency. New York remembers losing last year's series after winning Game 1, reducing complacency concern.",
+        "vsin": "5/10: VSiN public board lists MIN -3.5 but estimated scores 85.2 MIN, 87.3 NY, directional support for Liberty +3.5. No named VSiN handicapper selection was verified.",
+        "docs": "7/10: Guy Bruhn explicitly selected Liberty +2.5. Current +3.5 is a better threshold, while the article's older total and opening market are stale.",
+        "market": "6/10 = reference 4/5 (current FanDuel/DraftKings/Action consensus +3.5 -108/-109 and VSiN board); movement 2/3 (Action records MIN -1.5 open to -3.5, a verified move against Liberty but a better current cushion); splits 0/2 (45% bets/55% money display was not clearly mapped to team and paid detail locked)."
+      },
+      "movement": {
+        "open": "Liberty +1.5",
+        "current": "Liberty +3.5 -109 consensus",
+        "source": "Action Network",
+        "as_of": "2026-09-29T19:36:00-04:00"
+      },
+      "best_number": "Liberty +3.5 at -110 or better (research target only; not an official release)",
+      "no_bet_cutoff": "Below Liberty +3, or worse than -115 at +3.5; still NO BET unless 82/110, Failure 7/10 and live Delaware gates clear",
+      "missing_evidence": [
+        "official confirmed starting fives",
+        "current exact BetRivers Delaware Liberty spread and juice",
+        "unambiguous ticket/handle splits",
+        "named current VSiN Liberty spread selection",
+        "final resolution of conflicting aggregator injury designations"
+      ],
+      "release_blockers": [
+        "75/110 below non-NFL 82/110 gate",
+        "Failure Score 5/10 below 7/10 gate",
+        "official starters not posted and injury feeds conflict",
+        "current BetRivers Delaware price not verified"
+      ],
+      "sources": [
+        "https://www.wnba.com/game/min-vs-nyl-1042600102",
+        "https://data.vsin.com/wnba/games/?gamedate=2026-09-29",
+        "https://www.docsports.com/free-picks/wnba/2026/minnesota-lynx-vs-new-york-liberty-prediction-9-29-2026-wnba-pick-tips-and-odds.html",
+        "https://www.actionnetwork.com/wnba-game/lynx-liberty-score-odds-september-29-2026/302509",
+        "https://bleacherreport.com/game/minnesota-lynx-vs-new-york-liberty-2026-9-29-19-30",
+        "https://www.prizepicks.com/playbook-article/lynx-vs-liberty-prediction-spread-picks-wnba-playoffs-september-29"
+      ]
     },
     {
       "id": "nhl_bos_ml",
@@ -1040,10 +1144,10 @@
   "latest_price_check": "2026-09-29T18:17:00-04:00",
   "user_book_disposition": "NO BET",
   "latest_update": {
-    "as_of": "2026-09-29T19:23:00-04:00",
-    "event_group": "BOS-NYY / NYR-BOS / USA-CHI / DWCS",
+    "as_of": "2026-09-29T19:54:00-04:00",
+    "event_group": "MIN-NYL 45-minute gate",
     "decision": "NO BET 0u",
-    "note": "BOS 44/110 F3; Bruins 47/110 F3; USA core UNGRADED; DWCS 7pm start, pregame frozen."
+    "note": "Liberty +3.5 regraded 75/110 B watchlist, Failure 5/10. Official starters and current BetRivers Delaware quote unavailable."
   },
   "grading_note": "A score measures current evidence and Micks judgment, not win probability. Unverified factors stay zero; missing points are not automatic possible upgrades. No official releases.",
   "active_scoring_version": "micks-110-v2-2026-09-29",
