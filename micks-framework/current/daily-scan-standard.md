@@ -1,3 +1,5 @@
+Scoring amendment (September 29, 2026): use micks-110-v2-2026-09-29 in candidate-scoring-and-writeup-standard.md. It supersedes legacy daily factor allocations; retain source scans, sport gates, modes and release thresholds.
+
 User-directed method restoration (September 18, 2026): research-readiness.md controls. Use the established sources, scans, guides and 110-point handicap. No new standalone win-probability, numerical EV or model-validation prerequisite for daily picks.
 
 # Standard command: Run Micks Picks for today's slate
@@ -45,9 +47,9 @@ Systems require an exact rule, sample period/size, market, price assumptions and
 1. Complete the established source-and-scan handicap, cross-referencing guides and systems. Document matchup, game script and price judgment; no newly required standalone probability model or numerical EV. Attribute any outside projections.
 2. Verify the matchup, player opportunity and failure paths. Compare alternative market expressions instead of automatically stacking a side, prop and parlay.
 3. Check exact current prices and movement, then outside confirmation. Book/date/market/line/odds must match. Different articles' prices are not a verified opening-to-current series. Record benchmark prices separately from executable user-book quotes and from genuine closing prices.
-4. Apply all established 110-point factors using the evidence and documented handicapping judgment. Do not equate the score with a win probability or impose new probability/calibration gates. Disclose material missing research; do not invent confirmation points or numerical forecasts.
+4. Apply the current v2 110-point factors (35/20/15/10/10/10/10) using the evidence and documented handicapping judgment; score advantage, not research completeness. Do not equate the score with a win probability or impose new probability/calibration gates. Disclose material missing research; do not invent confirmation points or numerical forecasts.
 5. Run Progressive Fade and Favorite Inflation: distinct SU versus ATS/run-line 5/10/20 windows, comparable line bands, margin versus closing expectations, rest/travel, current role changes and reset conditions. Missing closing data cannot establish or clear an alert.
-6. Apply Market Intelligence (6/5/4/5) without double-counting. Ordinary line movement does not establish sharp action. Run the 100-point Market AI Replica in shadow only; it does not replace the official framework.
+6. Apply Market context v2 (reference context 5, verified movement/timing 3, ticket/handle 2) without double-counting. Ordinary line movement does not establish sharp action. Run the 100-point Market AI Replica in shadow only; it does not replace the official framework.
 7. Apply Failure Score, sport caps, units, correlation and card limits. Non-NFL recovery releases require 82/110 and Failure Score 7/10. NFL follows the existing standard-mode gate. Futures use their separate 100-point model/EV/portfolio gates.
 8. Recheck news and current price before release. Every release needs a justified Best Number, playable range and no-bet cutoff. For a blocked candidate, use “not established—no bet until regraded” instead of implying that a better price alone authorizes a bet.
 
@@ -55,14 +57,14 @@ Systems require an exact rule, sample period/size, market, price assumptions and
 
 For every remaining event with a verified start time on an on-demand Micks Picks slate, perform a dedicated pregame scan **45 minutes before the event**. Group games with the same start time, but preserve each distinct 45-minute checkpoint. When automation capacity is available, schedule the one-time checks for that day's verified start times. This is an event-specific regrade, not a blind reminder or a claim of continuous monitoring.
 
-At each checkpoint, revisit every missing item from the candidate chart: current executable user-book price and market identity; Circa/VSiN reference and named handicapper positions; confirmed lineup, starter/goalie, injury, role/minutes or XI; bullpen, weather/roof, umpire and relevant sport-specific gates; authentic movement and splits. Update each 110-point factor, Failure Score, grade, best number, no-bet cutoff and units with timestamp. Missing sources remain zero/unknown; a late quote alone does not earn matchup or confirmation points. Report official release or explicit NO BET with additions, removals and changes. Preserve the earlier score for audit. Do not treat a sportsbook screenshot as a wager receipt.
+At each checkpoint, revisit every missing item from the candidate chart: current executable user-book price and market identity; Circa/VSiN reference and named handicapper positions; confirmed lineup, starter/goalie, injury, role/minutes or XI; bullpen, weather/roof, umpire and relevant sport-specific gates; authentic movement and splits. Update each 110-point factor, Failure Score, grade, best number, no-bet cutoff and units with timestamp. Use v2 evidence states: missing optional evidence is UNKNOWN with no invented points; unassessable core factors make the candidate UNGRADED, while mandatory missing confirmations separately block release. A late quote alone does not earn matchup or confirmation points. Report official release or explicit NO BET with additions, removals and changes. Preserve the earlier score for audit. Do not treat a sportsbook screenshot as a wager receipt.
 
 If a start time changes, move the check to 45 minutes before the verified new start when possible. If the check cannot be scheduled or executed, disclose that promptly; do not imply monitoring is active. Exclude already-started games from pregame release.
 
 ## Required output every run
 
 - Date/time, scope, source/guide coverage and material verification gaps.
-- Scored candidate chart: sport, game, exact market and price, book, score/grade, Failure Score, units, disposition and reasons.
+- Scored candidate chart: sport, game, exact market and price, book, scoring version, each factor and rationale, score/grade and provisional/final/UNGRADED status, five Failure Score dimensions, missing evidence, release blockers, units, disposition and reasons.
 - Official releases and total exposure, or explicit **NO BET**. No A-grade found when applicable. No forced Pick of the Day.
 - Player-specific matchup analysis, expected winning game script, strongest failure path, price sensitivity and why a candidate is official/watch/pass. Use the tiered writeup lengths in the controlling scoring standard for releases; avoid filler on passes.
 - First alternates and exact remaining verification/price requirements, added/removed picks and explanations.
