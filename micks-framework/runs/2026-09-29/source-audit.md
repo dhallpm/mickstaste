@@ -28,3 +28,6 @@ Statuses concern *usable data*, not just page access. Links are direct source lo
 
 ## 3 p.m. clarification
 Named selections and score allocation now appear in [scan-status.md](scan-status.md). VSiN Jonathan Davis's September 29 NHL article was verified directly, including Panthers +105, FLA/CAR Over 6 -118, Montreal team total Over 3 -125, Raddysh Over 2.5 SOG +104, Dorofeyev Over 2.5 SOG -125, Pastrnak Over 3.5 SOG +135 and Vegas/Edmonton parlay -115. These are not automatic Micks selections. Doc's individual article bottom-line picks were extracted, not inferred from titles. The source-audit and scorecard disclose old/different prices.
+
+## 3:05–3:08 p.m. Delaware offer refresh
+User BetRivers Delaware screenshots IMG_1711/1712/1714/1715/1716 show White Sox ML +106, CHC–SD Under 7.5 -118, Aces +1.5 -117, Liberty +3.5 -117, Bruins ML -112, Oilers ML -315 and NYR–BOS total 5.5 Over -130/Under +100. They are exact observed offers, not receipts. MLB official lineups retain Cubs–Padres orders TBD; NHL official projected lineup reports McAvoy suspension, and NHL status report confirms Nugent-Hopkins out. See updated scan-status.md for price comparison and disposition.
