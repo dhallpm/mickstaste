@@ -1,8 +1,8 @@
 {
   "date": "2026-09-29",
   "timezone": "America/New_York",
-  "snapshot": "2026-09-29T14:48:00-04:00",
-  "status": "PARTIAL",
+  "snapshot": "2026-09-29T15:15:00-04:00",
+  "status": "PARTIAL / RE-GRADED",
   "official_releases": [],
   "official_units": 0,
   "import_payload": {
@@ -53,7 +53,30 @@
         "source_image": "IMG_1711.png",
         "offered_not_wagered": true
       },
-      "score_status": "provisional at 2:48 p.m.; no automatic price-only upgrade"
+      "score_status": "Provisional evidence-based grade with exact BetRivers quote where shown; no release and 0u.",
+      "prior_snapshot": {
+        "score": 29,
+        "factors": {
+          "micks": 12,
+          "line": 2,
+          "availability": 5,
+          "situation": 4,
+          "fade": 0,
+          "favorite_inflation": 0,
+          "vsin": 0,
+          "docs": 0,
+          "market": {
+            "movement": 2,
+            "splits": 0,
+            "liquidity": 3,
+            "timing": 1
+          }
+        }
+      },
+      "grade": "PASS",
+      "points_to_c": 29,
+      "points_to_recovery_gate": 53,
+      "grade_as_of": "2026-09-29T15:15:00-04:00"
     },
     {
       "id": "mlb_chc_sd_under",
@@ -67,7 +90,7 @@
       },
       "factors": {
         "micks": 12,
-        "line": 2,
+        "line": 3,
         "availability": 4,
         "situation": 4,
         "fade": 0,
@@ -81,7 +104,7 @@
           "timing": 0
         }
       },
-      "score": 31,
+      "score": 32,
       "failure_score": 3,
       "disposition": "PASS",
       "units": 0,
@@ -93,7 +116,30 @@
         "source_image": "IMG_1712.png",
         "offered_not_wagered": true
       },
-      "score_status": "provisional at 2:48 p.m.; no automatic price-only upgrade"
+      "score_status": "Provisional evidence-based grade with exact BetRivers quote where shown; no release and 0u.",
+      "prior_snapshot": {
+        "score": 31,
+        "factors": {
+          "micks": 12,
+          "line": 2,
+          "availability": 4,
+          "situation": 4,
+          "fade": 0,
+          "favorite_inflation": 0,
+          "vsin": 3,
+          "docs": 3,
+          "market": {
+            "movement": 0,
+            "splits": 0,
+            "liquidity": 3,
+            "timing": 0
+          }
+        }
+      },
+      "grade": "PASS",
+      "points_to_c": 26,
+      "points_to_recovery_gate": 50,
+      "grade_as_of": "2026-09-29T15:15:00-04:00"
     },
     {
       "id": "wnba_lva_spread",
@@ -107,7 +153,7 @@
       },
       "factors": {
         "micks": 14,
-        "line": 3,
+        "line": 2,
         "availability": 4,
         "situation": 5,
         "fade": 0,
@@ -121,7 +167,7 @@
           "timing": 0
         }
       },
-      "score": 33,
+      "score": 32,
       "failure_score": 4,
       "disposition": "PASS",
       "units": 0,
@@ -133,7 +179,30 @@
         "source_image": "IMG_1714.png",
         "offered_not_wagered": true
       },
-      "score_status": "provisional at 2:48 p.m.; no automatic price-only upgrade"
+      "score_status": "Provisional evidence-based grade with exact BetRivers quote where shown; no release and 0u.",
+      "prior_snapshot": {
+        "score": 33,
+        "factors": {
+          "micks": 14,
+          "line": 3,
+          "availability": 4,
+          "situation": 5,
+          "fade": 0,
+          "favorite_inflation": 0,
+          "vsin": 0,
+          "docs": 4,
+          "market": {
+            "movement": 0,
+            "splits": 0,
+            "liquidity": 3,
+            "timing": 0
+          }
+        }
+      },
+      "grade": "PASS",
+      "points_to_c": 26,
+      "points_to_recovery_gate": 50,
+      "grade_as_of": "2026-09-29T15:15:00-04:00"
     },
     {
       "id": "wnba_nyl_spread",
@@ -147,7 +216,7 @@
       },
       "factors": {
         "micks": 13,
-        "line": 3,
+        "line": 1,
         "availability": 5,
         "situation": 4,
         "fade": 0,
@@ -161,7 +230,7 @@
           "timing": 0
         }
       },
-      "score": 28,
+      "score": 26,
       "failure_score": 3,
       "disposition": "PASS",
       "units": 0,
@@ -173,7 +242,30 @@
         "source_image": "IMG_1715.png",
         "offered_not_wagered": true
       },
-      "score_status": "provisional at 2:48 p.m.; no automatic price-only upgrade"
+      "score_status": "Provisional evidence-based grade with exact BetRivers quote where shown; no release and 0u.",
+      "prior_snapshot": {
+        "score": 28,
+        "factors": {
+          "micks": 13,
+          "line": 3,
+          "availability": 5,
+          "situation": 4,
+          "fade": 0,
+          "favorite_inflation": 0,
+          "vsin": 0,
+          "docs": 0,
+          "market": {
+            "movement": 0,
+            "splits": 0,
+            "liquidity": 3,
+            "timing": 0
+          }
+        }
+      },
+      "grade": "PASS",
+      "points_to_c": 32,
+      "points_to_recovery_gate": 56,
+      "grade_as_of": "2026-09-29T15:15:00-04:00"
     },
     {
       "id": "nhl_bos_ml",
@@ -186,47 +278,7 @@
         "as_of": "2026-09-29T08:29:00-04:00"
       },
       "factors": {
-        "micks": 13,
-        "line": 3,
-        "availability": 4,
-        "situation": 4,
-        "fade": 0,
-        "favorite_inflation": 0,
-        "vsin": 0,
-        "docs": 0,
-        "market": {
-          "movement": 0,
-          "splits": 0,
-          "liquidity": 3,
-          "timing": 0
-        }
-      },
-      "score": 27,
-      "failure_score": 3,
-      "disposition": "PASS",
-      "units": 0,
-      "user_book_offer": {
-        "book": "BetRivers Delaware",
-        "as_of": "2026-09-29T15:05:00-04:00",
-        "odds": "-112",
-        "market": "Bruins moneyline",
-        "source_image": "IMG_1716.png",
-        "offered_not_wagered": true
-      },
-      "score_status": "provisional at 2:48 p.m.; no automatic price-only upgrade"
-    },
-    {
-      "id": "nhl_edm_ml",
-      "sport": "NHL",
-      "event": "VAN at EDM",
-      "market": "Oilers moneyline",
-      "benchmark": {
-        "book": "Circa",
-        "odds": "-290",
-        "as_of": "2026-09-29T08:29:00-04:00"
-      },
-      "factors": {
-        "micks": 12,
+        "micks": 11,
         "line": 1,
         "availability": 4,
         "situation": 4,
@@ -241,7 +293,70 @@
           "timing": 0
         }
       },
-      "score": 24,
+      "score": 23,
+      "failure_score": 3,
+      "disposition": "PASS",
+      "units": 0,
+      "user_book_offer": {
+        "book": "BetRivers Delaware",
+        "as_of": "2026-09-29T15:05:00-04:00",
+        "odds": "-112",
+        "market": "Bruins moneyline",
+        "source_image": "IMG_1716.png",
+        "offered_not_wagered": true
+      },
+      "score_status": "Provisional evidence-based grade with exact BetRivers quote where shown; no release and 0u.",
+      "prior_snapshot": {
+        "score": 27,
+        "factors": {
+          "micks": 13,
+          "line": 3,
+          "availability": 4,
+          "situation": 4,
+          "fade": 0,
+          "favorite_inflation": 0,
+          "vsin": 0,
+          "docs": 0,
+          "market": {
+            "movement": 0,
+            "splits": 0,
+            "liquidity": 3,
+            "timing": 0
+          }
+        }
+      },
+      "grade": "PASS",
+      "points_to_c": 35,
+      "points_to_recovery_gate": 59,
+      "grade_as_of": "2026-09-29T15:15:00-04:00"
+    },
+    {
+      "id": "nhl_edm_ml",
+      "sport": "NHL",
+      "event": "VAN at EDM",
+      "market": "Oilers moneyline",
+      "benchmark": {
+        "book": "Circa",
+        "odds": "-290",
+        "as_of": "2026-09-29T08:29:00-04:00"
+      },
+      "factors": {
+        "micks": 10,
+        "line": 0,
+        "availability": 4,
+        "situation": 4,
+        "fade": 0,
+        "favorite_inflation": 0,
+        "vsin": 0,
+        "docs": 0,
+        "market": {
+          "movement": 0,
+          "splits": 0,
+          "liquidity": 3,
+          "timing": 0
+        }
+      },
+      "score": 21,
       "failure_score": 3,
       "disposition": "PASS",
       "units": 0,
@@ -253,7 +368,30 @@
         "source_image": "IMG_1716.png",
         "offered_not_wagered": true
       },
-      "score_status": "provisional at 2:48 p.m.; no automatic price-only upgrade"
+      "score_status": "Provisional evidence-based grade with exact BetRivers quote where shown; no release and 0u.",
+      "prior_snapshot": {
+        "score": 24,
+        "factors": {
+          "micks": 12,
+          "line": 1,
+          "availability": 4,
+          "situation": 4,
+          "fade": 0,
+          "favorite_inflation": 0,
+          "vsin": 0,
+          "docs": 0,
+          "market": {
+            "movement": 0,
+            "splits": 0,
+            "liquidity": 3,
+            "timing": 0
+          }
+        }
+      },
+      "grade": "PASS",
+      "points_to_c": 37,
+      "points_to_recovery_gate": 61,
+      "grade_as_of": "2026-09-29T15:15:00-04:00"
     },
     {
       "id": "nhl_vgk_ml",
@@ -285,7 +423,30 @@
       "failure_score": 3,
       "disposition": "PASS",
       "units": 0,
-      "score_status": "provisional at 2:48 p.m.; no automatic price-only upgrade"
+      "score_status": "Provisional evidence-based grade with exact BetRivers quote where shown; no release and 0u.",
+      "prior_snapshot": {
+        "score": 23,
+        "factors": {
+          "micks": 11,
+          "line": 1,
+          "availability": 4,
+          "situation": 4,
+          "fade": 0,
+          "favorite_inflation": 0,
+          "vsin": 0,
+          "docs": 0,
+          "market": {
+            "movement": 0,
+            "splits": 0,
+            "liquidity": 3,
+            "timing": 0
+          }
+        }
+      },
+      "grade": "PASS",
+      "points_to_c": 35,
+      "points_to_recovery_gate": 59,
+      "grade_as_of": "2026-09-29T15:15:00-04:00"
     }
   ],
   "ungraded": [
@@ -324,5 +485,6 @@
   "correction": "2026-09-29 3 p.m. ET: aligned visible candidate totals with factor sums; Liberty Doc's stale-price confirmation reduced to 0/5; named handicapper audit and exact-number checklist added to report.",
   "latest_price_check": "2026-09-29T15:06:00-04:00",
   "user_book_disposition": "NO BET",
-  "latest_update": "User-book offers added. NHL McAvoy suspension and Edmonton Nugent-Hopkins absence noted; no grade/release upgrade. Other primary sport checks remain incomplete."
+  "latest_update": "User-book offers added. NHL McAvoy suspension and Edmonton Nugent-Hopkins absence noted; no grade/release upgrade. Other primary sport checks remain incomplete.",
+  "grading_note": "A score measures current evidence and Micks judgment, not win probability. Unverified factors stay zero; missing points are not automatic possible upgrades. No official releases."
 }
