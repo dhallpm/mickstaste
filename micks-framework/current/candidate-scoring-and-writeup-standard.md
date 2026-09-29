@@ -6,32 +6,67 @@ Every candidate across every active sport must be scored before grade or access 
 
 Micks Picks is Micks-first. Synthesize the registered sources, scans, guides and systems into the Micks handicap; use judgment and independent evidence paths rather than blindly copying a selection.
 
-## Score factors — 110 points
+## Score factors — 110 points (v2, effective September 29, 2026)
 
-- Micks independent model / fair-price edge: 25
-- Line value / executable price versus fair number: 15
-- Injury, lineup, role, starter or availability advantage: 10
-- Scheduling, rest, travel or situational edge: 10
-- Progressive Fade trigger: 10
-- Favorite Inflation screen passed: 5
-- VSiN / independent model agreement: 10
-- Doc’s Sports confirmation, including AI-v3 when it has a current relevant selection: 5
-- Market Intelligence Layer: 20
+Darren authorized this rework because the prior allocation repeatedly produced sub-40 scores dominated by unavailable inputs. Version `micks-110-v2-2026-09-29` is the controlling allocation for all new daily-candidate assessments. It supersedes older daily 25/15/10/10/10/5/10/5/20 allocations and the Market Intelligence 6/5/4/5 split wherever copied. Specialist 100-point futures/shadow models are unchanged. Historical assessments and released bets retain their original version, scores and outcomes.
 
-### Market Intelligence Layer — 20 points
+| Factor | Maximum | Evidence used |
+|---|---:|---|
+| Micks matchup and cashing path | 35 | Current team/player efficiency, style, relevant metrics, applicable guide/system reconciliation, two independent matchup paths and the strongest opposing case |
+| Number and price assessment | 20 | Exact market/threshold, usable offered price, Circa or another dated comparison, alternatives, Best Number and No-Bet Cutoff assessed through documented judgment |
+| Personnel and opportunity | 15 | Starters, lineups, goalie/XI, injuries, expected minutes/leash/usage, bullpen availability and how these affect the selected market |
+| Game conditions and situation | 10 | Rest/travel, venue, pace, weather/roof/park, schedule and other sport-specific context |
+| VSiN relevant confirmation | 10 | Actual current selection/model/system for this candidate, supporting rationale and acknowledged opposing evidence |
+| Doc's relevant confirmation | 10 | Actual named handicapper or AI-v3 selection and rationale for this candidate; verified relevant free picks can qualify without AI-v3 access |
+| Market context | 10 | Trustworthy current reference context (5), verified movement/timing (3), ticket/handle evidence (2) |
+| **Total** | **110** | **Fixed denominator; no automatic rescaling or source-count bonus** |
 
-The 20 points are split as follows:
+### Score the strength of the bet, not the number of sources opened
 
-- Sharp / respected movement: 0–6
-- Ticket / handle divergence: 0–5
-- Liquidity / market quality: 0–4
-- Movement timing / reversal quality: 0–5
+Assess each factor from the evidence and explain awarded points. Merely confirming a lineup, finding an article or completing a scan is not an advantage. A clean information checklist cannot turn a neutral matchup into a strong bet. Conversely, a qualitative Micks handicap is fully assessable without inventing a numerical probability or fair line.
 
-Use `market-intelligence-layer.md` as the controlling module for these points.
+Use these common anchors within each factor, selecting an integer within the stated band and explaining the choice:
 
-Disclose missing, stale or unverified evidence; do not award unsupported points. Apply the established scoring through documented handicapping judgment as clarified in research-readiness.md. Never invent projections, splits, injuries, sharp action, handle percentages, liquidity or bettor-profile information.
+- 0–20% of the factor maximum: verified evidence opposes the candidate or offers negligible support.
+- 25–45%: mixed, thin or materially conflicted support.
+- 50–65%: a modest identifiable advantage with meaningful limitations.
+- 70–85%: strong, specific, current support after considering the countercase.
+- 90–100%: unusually compelling support with few material weaknesses; rare, not a reward for source volume.
 
-Do not double-count the same market fact across multiple categories. A single line move cannot simultaneously earn full sharp-movement credit, full VSiN confirmation credit and full Doc’s confirmation credit when all three references are reacting to the same underlying market event.
+For example, strong support could reasonably score matchup 26–30/35, price 14–17/20, personnel 11–13/15, situation 7–8/10 and each capper 7–8/10. These are anchors, not a default score or a promised grade. A candidate can reach a release grade from accessible evidence, but it must earn each factor independently.
+
+### Source interpretation
+
+- VSiN and Doc's positions must state author, exact market, article price/time, current available number and supporting rationale. A benchmark line listing earns no capper agreement points.
+- An older article's **same side/market at a worse number** can remain relevant if the roster, rationale and settlement are unchanged. Record the stale article price and reconcile it explicitly; do not zero a Liberty +2.5 opinion solely because +3.5 is now offered. An attractive threshold at excessive juice need not be attractive overall.
+- A different total, alternate spread, prop, parlay leg or settlement requires separate analysis. Direction alone is not exact-market confirmation. Opposing picks get low/zero support rather than being marked missing.
+- Multiple publications within one source family remain one factor. A Doc's free pick can earn the full Doc's range when its current relevance and rationale justify it; inaccessible AI-v3 is disclosed separately and does not impose a second missing-points penalty.
+- Outside model disagreement is weighed in the Micks synthesis and countercase. One outside probability is not an automatic veto, invented Micks forecast or newly required probability gate.
+- Applicable guides feed matchup/personnel reasoning; they do not create bonus points. Unrelated guides are NOT APPLICABLE.
+
+### Fade, inflation and market handling
+
+Progressive Fade and Favorite Inflation remain required scans where applicable. They no longer reserve standalone 15 points. A validated trigger informs matchup, price or situation once; an absent or non-applicable trigger does not deduct points. Unsupported triggers stay UNKNOWN, never assumed clear.
+
+Market context is out of **10**, controlled by `market-intelligence-layer.md/.json`: reference context 5, movement/timing 3, splits 2. Missing paid splits can withhold at most those 2 points, not 5 plus an invented sharp-money penalty. A liquid mainstream market alone is not an edge. Do not score the same price advantage twice: the price factor assesses the selected offer; market context assesses the reliability and state of the reference market.
+
+### Missing information and release status are separate
+
+Every row must show **handicap score /110**, **score status**, **missing evidence**, **release blockers** and **Failure Score**.
+
+- If matchup, personnel impact or price cannot be assessed meaningfully, the factor is `null` and the total is **UNGRADED**. Show the known subtotal as `known points / assessed maximum` for audit only; never convert it to /110 or assign a final grade. Complete the missing core work.
+- A stale but identified quote can support a dated provisional price assessment. Label score **PROVISIONAL** and the quote historical. Exact live price requirements and mandatory sport gates control release separately. Do not subtract arbitrary points from every factor because one gate remains open.
+- Missing optional movement/splits or a capper opinion is UNKNOWN; award no unsupported points in that subfactor and disclose what was unavailable. Do not treat it as evidence the bet loses. The denominator remains 110; never redistribute missing points automatically.
+- A completed assessment with genuinely weak or opposing evidence can be **Pass**. An otherwise high-scoring candidate with a mandatory missing goalie, bullpen check or execution price is **WATCH/BLOCKED**, not official.
+- No points-to-grade table should imply that obtaining a missing source automatically supplies the needed points.
+
+### Failure Score — 10, scored independently
+
+Record five dimensions at 0–2 each: (1) how severe the strongest failure path is, (2) whether the cashing path survives plausible personnel/role changes, (3) how sensitive the angle is to variance/game script, (4) price sensitivity and alternative-market protection, (5) whether independent evidence resolves the strongest contradiction. For each: 0 = fragile/unresolved, 1 = partly supported with meaningful risk, 2 = robustly supported. Explain each award. If an essential dimension cannot be assessed, mark it unknown and the Failure Score provisional; it cannot clear the hard non-NFL gate. Merely naming a risk does not earn resilience points. Never inherit a generic 3/10 because splits or a source are missing.
+
+### Migration and prospective evaluation
+
+Apply v2 at the next fresh assessment of each not-yet-started event; preserve the earlier version as an audit snapshot. Do not multiply old totals, mechanically remap factors, upgrade started games retrospectively or release an unplayed historical candidate. Record `scoring_version`, factor explanations, source timestamps, provisional/final status, release blockers and independent Failure Score dimensions in dated JSON. Compare subsequent outcomes and CLV by version with actual sample counts; the revised scale is not yet empirically calibrated.
 
 ## Recovery Mode+ release gate
 
