@@ -1,5 +1,5 @@
 {
-  "backup_version": "2026-09-18-user-directed-method-restoration",
+  "backup_version": "2026-09-29-user-authorized-scoring-v2",
   "brand": "Micks Picks",
   "principle": "Micks-first. Outside handicappers and models are supporting confirmation only, not the engine.",
   "run_every_time": [
@@ -509,7 +509,7 @@
       "actual_sample_counts_required": true,
       "CLV_required_when_available": true,
       "process_errors_separate_from_variance": true,
-      "new_weights_shadow_tested_first": true,
+      "new_weights_shadow_tested_first": "Prefer shadow evaluation unless user directs activation; v2 explicitly authorized for prospective daily use September 29.",
       "no_loss_chasing": true,
       "freeze_released_grade_odds_units": true
     }
@@ -518,6 +518,44 @@
     "controller": "research-readiness.md",
     "precedence": "User-directed restoration supersedes new September 18 probability, EV, calibration and helper gates for daily picks.",
     "standalone_probability_required": false,
-    "established_weights_and_modes_preserved": true
+    "established_weights_and_modes_preserved": false,
+    "modes_preserved": true,
+    "weights_controller": "user-authorized September 29 scoring v2"
+  },
+  "daily_scoring": {
+    "version": "micks-110-v2-2026-09-29",
+    "effective_date": "2026-09-29",
+    "controller": "candidate-scoring-and-writeup-standard.md",
+    "maximum": 110,
+    "factors": {
+      "matchup": 35,
+      "price": 20,
+      "personnel": 15,
+      "situation": 10,
+      "vsin": 10,
+      "docs": 10,
+      "market": 10
+    },
+    "market_subfactors": {
+      "reference_context": 5,
+      "movement_timing": 3,
+      "splits": 2
+    },
+    "standalone_fade_inflation_points": false,
+    "fixed_denominator": true,
+    "automatic_normalization": false,
+    "core_unknown": "UNGRADED; show known subtotal only, no final /110 grade",
+    "optional_unknown": "no unsupported points; UNKNOWN evidence status; no extra penalty",
+    "release_blockers_separate": true,
+    "failure_score_dimensions": [
+      "failure_path_severity",
+      "personnel_role_resilience",
+      "variance_game_script_resilience",
+      "price_sensitivity_protection",
+      "contradiction_resolution"
+    ],
+    "failure_score_each_max": 2,
+    "prospective_only": true,
+    "empirically_calibrated": false
   }
 }
