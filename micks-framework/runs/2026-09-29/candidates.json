@@ -1,8 +1,8 @@
 {
   "date": "2026-09-29",
   "timezone": "America/New_York",
-  "snapshot": "2026-09-29T18:15:00-04:00",
-  "status": "PARTIAL / TORONTO 6:15 P.M. GATE RE-GRADED V2",
+  "snapshot": "2026-09-29T19:23:00-04:00",
+  "status": "PARTIAL / 8 P.M. GATE V2 RE-GRADED; NO OFFICIAL RELEASE",
   "official_releases": [],
   "official_units": 0,
   "import_payload": {
@@ -384,29 +384,27 @@
       "event": "NYR at BOS",
       "market": "Bruins moneyline",
       "benchmark": {
-        "book": "Circa",
+        "book": "Circa via VSiN Vegas Odds",
         "odds": "-105",
-        "as_of": "2026-09-29T08:29:00-04:00"
+        "opponent_odds": "-107",
+        "as_of": "2026-09-29T19:15:00-04:00"
       },
       "factors": {
-        "micks": 11,
-        "line": 1,
-        "availability": 4,
-        "situation": 4,
-        "fade": 0,
-        "favorite_inflation": 0,
-        "vsin": 0,
+        "matchup": 19,
+        "price": 8,
+        "personnel": 8,
+        "situation": 5,
+        "vsin": 3,
         "docs": 0,
         "market": {
+          "reference": 4,
           "movement": 0,
-          "splits": 0,
-          "liquidity": 3,
-          "timing": 0
+          "splits": 0
         }
       },
-      "score": 23,
+      "score": 47,
       "failure_score": 3,
-      "disposition": "PASS",
+      "disposition": "NO BET",
       "units": 0,
       "user_book_offer": {
         "book": "BetRivers Delaware",
@@ -416,7 +414,7 @@
         "source_image": "IMG_1716.png",
         "offered_not_wagered": true
       },
-      "score_status": "Provisional evidence-based grade with exact BetRivers quote where shown; no release and 0u. Historical v1 assessment; not a v2 grade.",
+      "score_status": "PROVISIONAL fresh pregame v2 assessment",
       "prior_snapshot": {
         "score": 27,
         "factors": {
@@ -439,9 +437,90 @@
       "grade": "PASS",
       "points_to_c": 35,
       "points_to_recovery_gate": 59,
-      "grade_as_of": "2026-09-29T15:15:00-04:00",
-      "scoring_version": "micks-110-v1",
-      "v2_reassessment_status": "pending_fresh_assessment"
+      "grade_as_of": "2026-09-29T19:23:00-04:00",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "v2_reassessment_status": "pending_fresh_assessment",
+      "historical_v1_snapshot": {
+        "score": 23,
+        "factors": {
+          "micks": 11,
+          "line": 1,
+          "availability": 4,
+          "situation": 4,
+          "fade": 0,
+          "favorite_inflation": 0,
+          "vsin": 0,
+          "docs": 0,
+          "market": {
+            "movement": 0,
+            "splits": 0,
+            "liquidity": 3,
+            "timing": 0
+          }
+        },
+        "grade": "PASS",
+        "failure_score": 3,
+        "benchmark": {
+          "book": "Circa",
+          "odds": "-105",
+          "as_of": "2026-09-29T08:29:00-04:00"
+        },
+        "grade_as_of": "2026-09-29T15:15:00-04:00"
+      },
+      "failure_dimensions": {
+        "strongest_failure": {
+          "score": 1,
+          "reason": "Shesterkin and New York's top-six scoring can overturn a modest Boston goalie/home case."
+        },
+        "personnel_resilience": {
+          "score": 0,
+          "reason": "McAvoy is suspended and Shesterkin remained likely rather than officially confirmed at this check."
+        },
+        "variance_resilience": {
+          "score": 1,
+          "reason": "Hockey finishing and goaltending variance remain high in a near pick'em."
+        },
+        "price_protection": {
+          "score": 1,
+          "reason": "Circa -105 is observable, but the earlier Delaware -112 is historical and no cutoff is justified."
+        },
+        "contradiction_resolution": {
+          "score": 0,
+          "reason": "Doc's picks Rangers ML; VSiN public Bruins projection may not incorporate McAvoy, and no named Bruins straight pick resolves conflict."
+        }
+      },
+      "factor_evidence": {
+        "matchup": "19/35: Home Swayman and VSiN public BOS -149/3.3-2.4 estimate support Boston; upgraded Rangers attack, Shesterkin and McAvoy suspension constrain edge.",
+        "price": "8/20: Circa Bruins -105/Rangers -107 at 19:15 ET; historical 15:05 BetRivers Delaware Bruins -112. VSiN -149 public model is not a Micks fair line; no current user execution or justified cutoff.",
+        "personnel": "8/15: Daily Faceoff confirmed Swayman at 11:02 ET; Shesterkin only likely at 13:24. NHL official projected skaters show McAvoy six-game suspension, Poitras out, Iorio out. Final skater lines and Rangers goalie confirmation outstanding.",
+        "situation": "5/10: Boston home opener with Swayman; no clear rest/travel advantage beyond venue.",
+        "vsin": "3/10: VSiN public Bruins estimate BOS -149 supports direction, but Jonathan Davis selected only player props, no Bruins ML; model roster timing uncertain.",
+        "docs": "0/10: Josh Schonwald selected opposing Rangers ML -110, an earlier article price.",
+        "market": "4/10: current Circa reference 4/5. Morning to evening Bruins -105 is stable but authentic opening price is unverified, so movement 0/3; splits 0/2."
+      },
+      "best_number": "Bruins -105 Circa observed research reference; no playable best number",
+      "no_bet_cutoff": null,
+      "missing_evidence": [
+        "official Shesterkin confirmation",
+        "final Rangers and Bruins skater lines",
+        "current exact BetRivers Delaware Bruins ML",
+        "same-book true opening/current history and ticket/handle splits",
+        "price cutoff accounting for McAvoy absence"
+      ],
+      "release_blockers": [
+        "47/110 below non-NFL 82/110",
+        "Failure Score 3/10 below 7/10",
+        "McAvoy out and Doc's opposing pick",
+        "Rangers starting goalie not officially confirmed and no live Delaware quote/cutoff"
+      ],
+      "sources": [
+        "https://www.nhl.com/news/new-york-rangers-boston-bruins-game-preview-september-29-2026",
+        "https://www.dailyfaceoff.com/starting-goalies",
+        "https://data.vsin.com/vegas-odds-linetracker/?sportid=nhl",
+        "https://data.vsin.com/nhl/games/?gamedate=2026-09-29",
+        "https://vsin.com/nhl/nhl-predictions-expert-picks-on-tuesday-september-29/",
+        "https://www.docsports.com/free-picks/nhl-hockey/2026/new-york-rangers-vs-boston-bruins-prediction-9-29-2026-nhl-picks-best-bets-odds.html"
+      ]
     },
     {
       "id": "nhl_edm_ml",
@@ -739,6 +818,171 @@
           "under_6_5": "-112"
         }
       }
+    },
+    {
+      "id": "mlb_bos_ml",
+      "sport": "MLB",
+      "event": "BOS at NYY (AL Wild Card Game 1)",
+      "market": "Red Sox moneyline",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "grade_as_of": "2026-09-29T19:23:00-04:00",
+      "score_status": "PROVISIONAL fresh pregame assessment",
+      "factors": {
+        "matchup": 15,
+        "price": 6,
+        "personnel": 10,
+        "situation": 4,
+        "vsin": 0,
+        "docs": 5,
+        "market": {
+          "reference": 4,
+          "movement": 0,
+          "splits": 0
+        }
+      },
+      "score": 44,
+      "grade": "PASS",
+      "failure_score": 3,
+      "failure_dimensions": {
+        "strongest_failure": {
+          "score": 0,
+          "reason": "Schlittler's form and Boston's weak September run production threaten the dog cashing path."
+        },
+        "personnel_resilience": {
+          "score": 1,
+          "reason": "Both official batting orders and pitchers are posted, but bullpen roster/role confirmation remains incomplete."
+        },
+        "variance_resilience": {
+          "score": 1,
+          "reason": "Low total gives a dog upset path, yet few runs amplify pitching and sequencing variance."
+        },
+        "price_protection": {
+          "score": 0,
+          "reason": "No current BetRivers Delaware offer, supported best number, or no-bet cutoff."
+        },
+        "contradiction_resolution": {
+          "score": 1,
+          "reason": "Doc's Boston opinion is offset by a VSiN public Yankees model; the conflict is explicit, not resolved."
+        }
+      },
+      "factor_evidence": {
+        "matchup": "15/35: Boston can keep a six-run-total game close behind Tolle and a rested high-leverage pen; VSiN public board instead estimates NYY -153 and 3.8-2.6, Schlittler 1.95 ERA, while Boston scored an MLB-low 71 September runs.",
+        "price": "6/20: Circa via VSiN BOS +116/NYY -126 and total 6 at 19:15 ET. Doc's +129 article is 13 cents better than present Circa, not executable. No live Delaware offer or justified edge/cutoff.",
+        "personnel": "10/15: MLB official complete batting orders show Tolle vs Schlittler; Contreras active for BOS; Judge absent for NYY. Independent relief-usage table suggests Chapman/Whitlock/Bednar rested, but final bullpen roster roles not independently confirmed.",
+        "situation": "4/10: Yankee Stadium, overcast near 69F and NW wind near 9 mph per VSiN, plate umpire Nate Tomlinson per MLB. Park/weather do not create a demonstrated Boston advantage.",
+        "vsin": "0/10: No named VSiN Boston ML selection found; public VSiN projected NYY -153, opposing Boston at current +116.",
+        "docs": "5/10: Josh Schonwald explicitly selected Boston ML +129 in earlier Doc's article; same side/settlement but article number substantially better and roster/September scoring rationale not refreshed.",
+        "market": "4/10: reference 4/5 from current labeled Circa board; movement 0/3 because authentic opening/current same-book sequence unverified; splits 0/2 unavailable."
+      },
+      "benchmark": {
+        "book": "Circa via VSiN Vegas Odds",
+        "odds": "+116",
+        "opponent_odds": "-126",
+        "as_of": "2026-09-29T19:15:00-04:00"
+      },
+      "best_number": "Boston +116 Circa observed research reference; no playable best number",
+      "no_bet_cutoff": null,
+      "missing_evidence": [
+        "current exact BetRivers Delaware Boston ML offer",
+        "authenticated same-book opening/current sequence and ticket/handle splits",
+        "final bullpen roster and leverage roles",
+        "independent supported price cutoff"
+      ],
+      "release_blockers": [
+        "44/110 below non-NFL 82/110",
+        "Failure Score 3/10 below 7/10",
+        "VSiN public model and recent offense oppose Boston",
+        "no current executable user-book quote or cutoff"
+      ],
+      "disposition": "NO BET",
+      "units": 0,
+      "sources": [
+        "https://www.mlb.com/starting-lineups/2026-09-29",
+        "https://www.mlb.com/press-release/press-release-umpires-for-2026-wild-card-series-presented-by-abbvie-announced",
+        "https://data.vsin.com/vegas-odds-linetracker/?sportid=mlb",
+        "https://data.vsin.com/mlb/games/?gamedate=2026-09-29",
+        "https://www.docsports.com/free-picks/baseball/2026/boston-red-sox-vs-new-york-yankees-prediction-9-29-2026-mlb-picks-best-bets-odds.html",
+        "https://insidethepen.com/team/BOS-bullpen.html",
+        "https://insidethepen.com/team/NYY-bullpen.html"
+      ]
+    },
+    {
+      "id": "soccer_usa_chi",
+      "sport": "Soccer",
+      "event": "Chile at USA friendly",
+      "market": "USA three-way moneyline (screen only)",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "grade_as_of": "2026-09-29T19:23:00-04:00",
+      "score_status": "UNGRADED: core matchup and price cannot be meaningfully assessed",
+      "factors": {
+        "matchup": null,
+        "price": null,
+        "personnel": 7,
+        "situation": 4,
+        "vsin": 0,
+        "docs": 0,
+        "market": {
+          "reference": 0,
+          "movement": 0,
+          "splits": 0
+        }
+      },
+      "known_subtotal": 11,
+      "assessed_maximum": 45,
+      "score": null,
+      "grade": "UNGRADED",
+      "failure_score": null,
+      "failure_dimensions": {
+        "strongest_failure": {
+          "score": 0,
+          "reason": "Ten USA XI changes and six first starts undermine favorite continuity."
+        },
+        "personnel_resilience": {
+          "score": 0,
+          "reason": "Both XIs posted but new-player roles and effects not assessed adequately."
+        },
+        "variance_resilience": {
+          "score": null,
+          "reason": "No current xG-based matchup assessment or robust friendly substitution assumptions."
+        },
+        "price_protection": {
+          "score": 0,
+          "reason": "No authenticated current three-way BetRivers Delaware or Circa market/cutoff."
+        },
+        "contradiction_resolution": {
+          "score": null,
+          "reason": "No current Doc's or named VSiN selection to reconcile."
+        }
+      },
+      "factor_evidence": {
+        "matchup": "null/35: both XI known, but no trustworthy current Chile/USA xG matchup synthesis; cannot assert US edge.",
+        "price": "null/20: Sep 28 Dropbox soccer sheet is stale; current exact three-way/draw offer unverified.",
+        "personnel": "7/15: US Soccer confirms both XIs, ten changes, six first starts and Brady first start; effects on expected quality uncertain.",
+        "situation": "4/10: USA home; friendly rotations and substitutions weaken normal home/continuity inference.",
+        "vsin": "0/10: no verified named same-market selection.",
+        "docs": "0/10: no verified named same-market selection.",
+        "market": "0/10: current Circa reference, true movement and splits unavailable."
+      },
+      "missing_evidence": [
+        "current exact three-way market including draw from Circa/VSiN and BetRivers Delaware",
+        "current xG-based matchup and substitution assessment",
+        "verified named VSiN/Doc's same-market selections",
+        "same-book movement and splits"
+      ],
+      "release_blockers": [
+        "core score UNGRADED",
+        "Failure Score incomplete and below 7 if known only",
+        "USA ten-change XI/Brady debut adds personnel uncertainty",
+        "no executable price or cutoff"
+      ],
+      "best_number": null,
+      "no_bet_cutoff": null,
+      "disposition": "NO BET",
+      "units": 0,
+      "sources": [
+        "https://www.ussoccer.com/competitions/usmnt-friendlies-2026/matches/united-states-vs-chile-tickets-live-score-match-hub-lineups-highlights",
+        "https://www.ussoccer.com/stories/2026/09/usmnt/starting-xi-lineup-notes-vs-chile-st-louis"
+      ]
     }
   ],
   "ungraded": [
@@ -764,6 +1008,16 @@
       "market": "Darren Raddysh Over 2.5 shots",
       "reason": "VSiN Jonathan Davis +104 opinion verified, but exact current BetRivers DE prop and role/shot distribution unverified; no complete core price and opportunity assessment",
       "scoring_version": "micks-110-v2-2026-09-29"
+    },
+    {
+      "sport": "DWCS",
+      "event": "Season 10 Episode 8, five-bout card",
+      "score_status": "PREGAME FROZEN: UFC published 7:00 p.m. ET card start, before 19:23 ET check",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "reason": "Official UFC card start was 7 p.m. ET, not 8; no retrospective pregame v2 score. Earlier morning odds diverged; no exact pre-bout user-book line, named picks or failure checks established.",
+      "disposition": "NO BET",
+      "units": 0,
+      "source": "https://www.ufc.com/news/dwcs-season-10-episode-8-preview-athletes-bouts-start-time-streaming"
     }
   ],
   "note": "Research record only. Empty import arrays; no active site import or wager.",
@@ -785,7 +1039,12 @@
   "correction": "2026-09-29 3 p.m. ET: aligned visible candidate totals with factor sums; Liberty Doc's stale-price confirmation reduced to 0/5; named handicapper audit and exact-number checklist added to report.",
   "latest_price_check": "2026-09-29T18:17:00-04:00",
   "user_book_disposition": "NO BET",
-  "latest_update": "18:17 ET screenshot IMG_1717 confirms BetRivers Delaware TOR ML -110 inc OT/SO, MTL -113, total6.5 O-115/U-112. Toronto remains 58/110 C watch, Failure4/10, NO BET0u; no automatic points from quote receipt. Marchenko/final lines check scheduled18:37.",
+  "latest_update": {
+    "as_of": "2026-09-29T19:23:00-04:00",
+    "event_group": "BOS-NYY / NYR-BOS / USA-CHI / DWCS",
+    "decision": "NO BET 0u",
+    "note": "BOS 44/110 F3; Bruins 47/110 F3; USA core UNGRADED; DWCS 7pm start, pregame frozen."
+  },
   "grading_note": "A score measures current evidence and Micks judgment, not win probability. Unverified factors stay zero; missing points are not automatic possible upgrades. No official releases.",
   "active_scoring_version": "micks-110-v2-2026-09-29",
   "scoring_migration": {
