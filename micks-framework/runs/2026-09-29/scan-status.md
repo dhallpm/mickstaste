@@ -227,3 +227,42 @@ This user-requested weight change is prospective and has no outcome calibration 
 ## 6:17 p.m. ET — BetRivers Delaware quote supplied
 
 Darren's **IMG_1717.png** shows offered full-game prices **including overtime and shootout**: Toronto ML **-110**, Montreal ML **-113**, Toronto -1.5 **+220**, Montreal +1.5 **-305**, total **6.5 Over -115 / Under -112**. These are screenshot offers, not receipts. Toronto -110 requires **52.38%** break-even and is five cents worse than Circa -105 observed at 6:10. The screenshot closes the identified user-book quote gap at its timestamp; it does not strengthen the matchup by itself. **Toronto remains 58/110 C watch, Failure Score 4/10, NO BET, 0u.** A supported cutoff is still absent; Marchenko/final skater availability and price freshness are to be rechecked at 6:37 p.m. The prior gate snapshot remains preserved.
+
+
+## 7:15–7:23 p.m. ET — 8 p.m. event gate (v2)
+
+**Official decision: NO BET, 0u.** [Machine record](candidates.json) contains fresh `micks-110-v2-2026-09-29` factors and five separate Failure Score dimensions. Prior v1 Bruins score (23/110) is retained as a historical snapshot. These are research grades, not win probabilities. Neither an earlier screenshot nor a source pick is a wager receipt or a live Delaware quote.
+
+| Event / candidate | Current evidence and change | v2 score / Failure | Decision |
+|---|---|---:|---|
+| BOS at NYY, Red Sox ML | [MLB official batting orders](https://www.mlb.com/starting-lineups/2026-09-29) now complete: Payton Tolle vs Cam Schlittler, Contreras active, Judge absent. [VSiN Circa at 7:15](https://data.vsin.com/vegas-odds-linetracker/?sportid=mlb): BOS +116, NYY -126, total 6. Doc's Boston +129 article is 13 cents better than current Circa; VSiN public model favors NYY. | **44/110 PASS; 3/10** | **NO BET 0u** |
+| NYR at BOS, Bruins ML | [Daily Faceoff](https://www.dailyfaceoff.com/starting-goalies): Swayman confirmed; Shesterkin still “likely” at this check. [NHL official projected lines](https://www.nhl.com/news/new-york-rangers-boston-bruins-game-preview-september-29-2026): McAvoy suspended, Poitras/Iorio out. [VSiN Circa at 7:15](https://data.vsin.com/vegas-odds-linetracker/?sportid=nhl): BOS -105, NYR -107. Doc's picks NYR. | **47/110 PASS; 3/10** | **NO BET 0u** |
+| Chile at USA, USA three-way | [Both official XIs posted](https://www.ussoccer.com/competitions/usmnt-friendlies-2026/matches/united-states-vs-chile-tickets-live-score-match-hub-lineups-highlights). [U.S. Soccer confirms ten changes, six first starts and Brady's first start](https://www.ussoccer.com/stories/2026/09/usmnt/starting-xi-lineup-notes-vs-chile-st-louis). Today's exact three-way odds and current xG assessment unavailable; Sep 28 Circa soccer PDF is stale. | **UNGRADED**, core matchup/price null; Failure incomplete | **NO BET 0u** |
+| DWCS five bouts | [UFC official preview](https://www.ufc.com/news/dwcs-season-10-episode-8-preview-athletes-bouts-start-time-streaming) states **7 p.m. ET** card start. Pregame window already passed by this check; morning Visconde–Bulaid odds had a favorite reversal and no executable user price. | Pregame **FROZEN/UNGRADED** | **NO BET 0u** |
+
+### Factor ledger and rationale
+
+| Candidate | Matchup /35 | Price /20 | Personnel /15 | Situation /10 | VSiN /10 | Doc's /10 | Market /10 | Total |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Boston Red Sox ML | 15 | 6 | 10 | 4 | 0 | 5 | 4 (reference 4, move 0, splits 0) | **44/110** |
+| Boston Bruins ML | 19 | 8 | 8 | 5 | 3 | 0 | 4 (reference 4, move 0, splits 0) | **47/110** |
+| USA three-way | null | null | 7 | 4 | 0 | 0 | 0 | **UNGRADED**; known subtotal **11/55 assessed maximum**, audit only |
+
+**Red Sox ML.** Matchup 15: low total and Tolle give an upset route, but Schlittler's 1.95 ERA, Boston's MLB-low 71 September runs and [VSiN public NYY -153 / 3.8–2.6 estimate](https://data.vsin.com/mlb/games/?gamedate=2026-09-29) form a serious countercase. Price 6: the Circa +116 reference is below [Josh Schonwald's earlier Doc's +129 Boston pick](https://www.docsports.com/free-picks/baseball/2026/boston-red-sox-vs-new-york-yankees-prediction-9-29-2026-mlb-picks-best-bets-odds.html), with no live Delaware line or justified edge. Personnel 10: official starters/orders settle Contreras and Judge, while [Boston](https://insidethepen.com/team/BOS-bullpen.html) and [New York](https://insidethepen.com/team/NYY-bullpen.html) relief usage suggests rested late arms but roster/leverage roles remain unconfirmed. Situation 4: Yankee Stadium and VSiN's roughly 69°F, NW 9 mph overcast report; [MLB names Nate Tomlinson home-plate umpire](https://www.mlb.com/press-release/press-release-umpires-for-2026-wild-card-series-presented-by-abbvie-announced), without a demonstrated side edge. VSiN 0: no named Boston ML selection; public model opposes. Doc's 5: explicit same-market Boston pick, old +129 price. Market 4: current labeled Circa reference, no authenticated same-book opening/current series or reliable splits.
+
+**Bruins ML.** Matchup 19: Swayman/home and [VSiN public BOS -149 / 3.3–2.4 estimate](https://data.vsin.com/nhl/games/?gamedate=2026-09-29) give a directional case, tempered by Shesterkin, Rangers attack and McAvoy's suspension; the model's roster timing is uncertain. Price 8: current Circa -105 compares with Darren's **3:05 p.m. historical BetRivers -112** offer, which is not executable now. Personnel 8: Swayman confirmed, Shesterkin likely only, projected skaters not final. Situation 5: Boston home opener without a clear further rest edge. VSiN 3: model supports Boston; [Jonathan Davis named player props](https://vsin.com/nhl/nhl-predictions-expert-picks-on-tuesday-september-29/), **not Bruins ML**. Doc's 0: [Josh Schonwald selected opposing Rangers ML -110](https://www.docsports.com/free-picks/nhl-hockey/2026/new-york-rangers-vs-boston-bruins-prediction-9-29-2026-nhl-picks-best-bets-odds.html). Market 4: labeled Circa reference; unchanged morning-to-evening quote is not a verified opening move, and no split figures were exposed.
+
+**USA three-way.** Matchup and price are **null**, because a meaningful current xG/role matchup and authentic current three-way odds were not established. Personnel 7 records the confirmed XIs while accounting for U.S. turnover; situation 4 records home venue and friendly substitution uncertainty. VSiN 0 and Doc's 0 mean no verified named same-market picks; market 0 means no current trusted reference, move or splits. The known **11/55** is only an audit subtotal and is **not** a rescaled /110 grade.
+
+### Failure Score and release checks
+
+| Candidate | Strongest path /2 | Personnel /2 | Variance /2 | Price /2 | Contradiction /2 | Total |
+|---|---:|---:|---:|---:|---:|---:|
+| Red Sox ML | 0 — Schlittler/offense gap | 1 — lineups in, bullpen roles incomplete | 1 — low-total sequencing | 0 — no live DE/cutoff | 1 — Doc's vs VSiN unresolved | **3/10** |
+| Bruins ML | 1 — Shesterkin/Rangers attack | 0 — McAvoy out, NYR goalie likely | 1 — hockey finishing variance | 1 — Circa only, stale DE | 0 — Doc's NYR vs VSiN model | **3/10** |
+| USA three-way | 0 — ten changes | 0 — new XI roles | unknown — no robust xG/game script | 0 — no current price | unknown — no cappers | **incomplete** |
+
+**Missing evidence:** Red Sox need current BetRivers Delaware ML, bullpen role/roster verification, same-book opening/current movement and splits. Bruins need official Shesterkin start, final skater lines, current Delaware ML, true movement and splits. USA needs current three-way Circa and Delaware odds, an independent xG/rotation assessment, and actual named VSiN/Doc's selections if published. DWCS cannot be given a new pregame score after the official card start.
+
+**Release blockers:** BOS ML **44 < 82 and 3 < 7**, with VSiN public projection opposing; Bruins ML **47 < 82 and 3 < 7**, McAvoy absent and NYR goalie/price unsettled; USA core **UNGRADED** and no executable line; DWCS pregame window closed. **Best observed references** are BOS +116 Circa and Bruins -105 Circa, neither a playable best number. **No-Bet Cutoff** is unestablished for each; **units 0**. No wager or active website card was made.
+
