@@ -693,11 +693,19 @@
         "odds": "-110",
         "as_of": "2026-09-29T18:13:00-04:00"
       },
-      "user_book_offer": null,
+      "user_book_offer": {
+        "book": "BetRivers Delaware",
+        "as_of": "2026-09-29T18:17:00-04:00",
+        "market": "Toronto moneyline including overtime and shootout",
+        "odds": "-110",
+        "source_image": "IMG_1717.png",
+        "offered_not_wagered": true,
+        "historical_quote": true
+      },
       "best_number": "Toronto ML -105 observed at Circa, research reference only; no executable recommendation",
       "no_bet_cutoff": null,
       "missing_evidence": [
-        "current exact BetRivers Delaware TOR moneyline",
+        "refresh BetRivers Delaware -110 screenshot offer at next checkpoint; posted at 18:17 ET, not continuously live",
         "Marchenko work authorization and final skater lineup",
         "verified same-book opening/current move and Circa/DK ticket-handle splits",
         "independent price judgment and no-bet cutoff",
@@ -707,7 +715,7 @@
         "58/110 below non-NFL 82/110 gate",
         "Failure Score 4/10 below 7/10 gate",
         "Marchenko/first-line status unresolved",
-        "current BetRivers Delaware price and supported cutoff unavailable"
+        "supported no-bet cutoff unavailable; screenshot offer requires freshness check at 6:37 ET"
       ],
       "disposition": "NO BET",
       "units": 0,
@@ -719,7 +727,18 @@
         "https://vsin.com/nhl/nhl-predictions-expert-picks-on-tuesday-september-29/",
         "https://www.docsports.com/free-picks/nhl-hockey/2026/montreal-canadiens-vs-toronto-maple-leafs-prediction-9-29-2026-nhl-picks-best-bets-odds.html",
         "https://bleacherreport.com/game/montreal-canadiens-vs-toronto-maple-leafs-2026-9-30-1-00"
-      ]
+      ],
+      "price_update": {
+        "as_of": "2026-09-29T18:17:00-04:00",
+        "note": "User screenshot confirms TOR ML -110 inc OT/SO; five cents worse than Circa -105 at 18:10; break-even 52.38%. This closes the identified user-book quote gap at screenshot time, not an independent matchup advantage. No automatic score or Failure Score increase; remains 58/110 C watch, Failure 4/10, NO BET 0u pending scheduled personnel recheck.",
+        "other_visible_markets": {
+          "montreal_ml": "-113",
+          "toronto_minus_1_5": "+220",
+          "montreal_plus_1_5": "-305",
+          "over_6_5": "-115",
+          "under_6_5": "-112"
+        }
+      }
     }
   ],
   "ungraded": [
@@ -764,9 +783,9 @@
     }
   },
   "correction": "2026-09-29 3 p.m. ET: aligned visible candidate totals with factor sums; Liberty Doc's stale-price confirmation reduced to 0/5; named handicapper audit and exact-number checklist added to report.",
-  "latest_price_check": "2026-09-29T15:05:00-04:00",
+  "latest_price_check": "2026-09-29T18:17:00-04:00",
   "user_book_disposition": "NO BET",
-  "latest_update": "6:15 ET gate: Toronto ML newly assessed v2 58/110 C/Watch, Failure 4/10, 0u. Dobes/Bobrovsky confirmed. Circa TOR -105 at 6:10 via VSiN, outside -110. Marchenko lineup/visa and exact BetRivers DE odds unverified. Doc's Guy Toronto -108; VSiN model TOR -133 but no named TOR ML pick and Davis likes MTL TT Over 3. No release.",
+  "latest_update": "18:17 ET screenshot IMG_1717 confirms BetRivers Delaware TOR ML -110 inc OT/SO, MTL -113, total6.5 O-115/U-112. Toronto remains 58/110 C watch, Failure4/10, NO BET0u; no automatic points from quote receipt. Marchenko/final lines check scheduled18:37.",
   "grading_note": "A score measures current evidence and Micks judgment, not win probability. Unverified factors stay zero; missing points are not automatic possible upgrades. No official releases.",
   "active_scoring_version": "micks-110-v2-2026-09-29",
   "scoring_migration": {
