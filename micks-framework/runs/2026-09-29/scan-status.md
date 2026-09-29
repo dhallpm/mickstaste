@@ -150,3 +150,8 @@ The **grade below is for a pregame candidate, not a settled result**. BetRivers 
 | Golden Knights ML | Obtain an exact BetRivers quote, confirmed starter/lines, matchup and favorite-tax scan; compare a refreshed independent handicap with price. | Morning Circa -250 and prior MoneyPuck 72.8% are thin context. No screenshot of this exact moneyline; VSiN parlay is not a straight pick. |
 
 **Current exposure: 0u.** None is close to even the C watch band on the documented evidence, and all have Failure Scores below the 7/10 non-NFL gate. Thus a single late lineup or a few cents of improved price would not make a pick official. The next meaningful scan is a substantive matchup/market re-evaluation, not an automatic score bump.
+
+
+## 3:48 p.m. ET — event-time rechecks scheduled
+
+Per Darren's instruction, a fresh missing-information score is due exactly 45 minutes before each verified remaining event. Four scheduled tasks cover eight checkpoints (grouping simultaneous games): **4:15** CWS–HOU and FLA–CAR; **5:45** LVA–IND; **6:15** MTL–TOR; **7:15** BOS–NYY, NYR–BOS, Chile–USA and DWCS; **7:45** MIN–NYL; **8:15** Peru–Mexico; **9:15** CHC–SD and VAN–EDM; **9:45** CHI–VGK. All times America/New_York on Sep 29. Each task must fetch fresh evidence, regrade the 110 factors and Failure Score, update this dated record and send an official/no-bet result. The already-started PHI–ATL game is excluded from pregame scheduling. A scheduled scan does not itself place a bet or publish a card.
