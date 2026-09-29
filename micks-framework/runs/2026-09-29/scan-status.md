@@ -182,3 +182,23 @@ Earlier totals in this report and JSON are **v1 historical research snapshots**,
 Grades now assess strength of the handicap; missing core information yields UNGRADED, mandatory unresolved release conditions are listed as blockers, and missing optional sources remain UNKNOWN without invented negative-value findings. Fade and inflation remain scans integrated into matchup/price/situation once, without a standalone 15-point reservation. VSiN and Doc's actual selections and rationale must be visible; a relevant same-side article at an older worse threshold can remain supportive after explicit price/roster reconciliation. Inaccessible AI-v3 is not an extra deduction when a relevant Doc's free pick is available. The Failure Score must show five 0–2 dimensions and reasons, not inherit a generic 3/10 from source gaps.
 
 This user-requested weight change is prospective and has no outcome calibration sample yet. No existing bet, result or official release was changed by this amendment.
+
+
+## 5:45–5:53 p.m. ET — Aces at Fever 45-minute gate (v2)
+
+**Decision: NO BET, 0u.** Las Vegas +1.5 is **50/110, PASS (provisional)** under `micks-110-v2-2026-09-29`; Failure Score **3/10**. The earlier 32/110 was a v1 snapshot, preserved in JSON and **not converted** into this grade. Non-NFL Recovery Mode+ needs 82/110 and 7/10, along with sport gates and an executable price.
+
+| Factor | Score | Current evidence and limit |
+|---|---:|---|
+| Matchup / cashing path | 20/35 | Vegas won Game 1 102–85, Wilson 38/16, and turnover pressure produced 28 points off Indiana turnovers. Vegas shot 59.4%; Clark and Mitchell were 10/33. Indiana home and likely shooting response limit the repeat edge. |
+| Number / price | 5/20 | Historical BetRivers Delaware screenshot **Aces +1.5 -117 at 3:06 p.m.** (53.92% break-even); fresh outside FanDuel screen **+1.5 -115 at ~5:52 p.m.** VSiN's estimated Fever -1.1 is near market -1.5, with no demonstrated price margin after juice. |
+| Personnel / opportunity | 10/15 | [Fever announced Clark (back) and Boston (right lower leg) **available at 5:46 p.m.**](https://x.com/IndianaFever/status/2105051609017246059). [Official preview](https://fever.wnba.com/news/game-preview-fever-aces-260929) names probable starters; Boston played 25:03 with five fouls in Game 1. Harris and Dantas out; Vegas Evans out, Smith/Barker season out. Final starters and Boston minutes still unconfirmed. |
+| Situation | 5/10 | Aces can sweep; Indiana hosts an elimination game. Venue/urgency cut against a direct Game 1 extrapolation. |
+| VSiN | 1/10 | [Public Sept. 29 board](https://data.vsin.com/wnba/games/?gamedate=2026-09-29) lists Aces +1.5, estimated Fever -1.1 (90.8–91.9); no named pick on this game. A near-market model is weak confirmation. |
+| Doc's | 6/10 | [Tony Sink (Sept. 28) explicitly selected Aces +1.5](https://www.docsports.com/free-picks/wnba/2026/las-vegas-aces-vs-indiana-fever-prediction-9-29-2026-wnba-pick-tips-and-odds.html), citing Game 1/team efficiency. No current juice or Boston minute answer in the article. |
+| Market | 3/10 | Reference **3/5**: VSiN line and outside FanDuel quote. Movement **0/3**: no verified same-book open/current sequence. Splits **0/2**: no reliable Circa/DK ticket and handle figures. Dropbox Circa folder has only **WNBA - 2026-9-30.pdf**, not Sept. 29. |
+| **Total** | **50/110** | Provisional research score, **PASS**. |
+
+**Failure Score (independent 0–2 dimensions):** strongest failure path **1** (Indiana shooting/Boston response); personnel resilience **1** (Clark/Boston available, minutes unknown); variance resilience **1** (Vegas Game 1 shooting/turnover repeat uncertain); price protection **0** (no fresh Delaware quote or supported cutoff); contradiction resolution **0** (Doc's side agrees but VSiN near-market projection and Indiana response remain). **3/10.**
+
+**Missing evidence:** current Sept. 29 Circa WNBA price; exact live BetRivers Delaware +1.5 and juice; final lineups and Boston minute expectation; same-book price history, splits, and a current named VSiN selection. **Release blockers:** 50 < 82, 3 < 7, exact executable price and justified cutoff absent, role/model edge unconvincing. **Best Number / No-Bet Cutoff:** none supported; no playable price assigned. Prior screenshot is an offered quote, never a wager receipt. No wager or website card was placed/published. [Machine record](candidates.json).
