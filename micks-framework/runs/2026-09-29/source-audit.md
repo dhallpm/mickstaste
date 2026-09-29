@@ -25,3 +25,6 @@ Statuses concern *usable data*, not just page access. Links are direct source lo
 | NFL original VSiN guide / Fantasy Life magazine; Nate Silver NBA FOTF | NOT APPLICABLE daily / SUPPORTING ONLY NBA prior | Original PDFs are inventoried in persistent Reference Guides; no verified NFL game today. NBA ten-year organization ranking stored as dated prior; no current NBA game or priced future derived from it. |
 
 **Acquisition:** Firecrawl searched/scraped accessible source pages; league/team pages cross-checked important facts. Subscription walls and blank widgets were not treated as verified data. Retrieval window approximately 2:25–2:48 p.m. ET. The report's prices can change and are not user-book offers.
+
+## 3 p.m. clarification
+Named selections and score allocation now appear in [scan-status.md](scan-status.md). VSiN Jonathan Davis's September 29 NHL article was verified directly, including Panthers +105, FLA/CAR Over 6 -118, Montreal team total Over 3 -125, Raddysh Over 2.5 SOG +104, Dorofeyev Over 2.5 SOG -125, Pastrnak Over 3.5 SOG +135 and Vegas/Edmonton parlay -115. These are not automatic Micks selections. Doc's individual article bottom-line picks were extracted, not inferred from titles. The source-audit and scorecard disclose old/different prices.
