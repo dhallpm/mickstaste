@@ -31,3 +31,8 @@ Named selections and score allocation now appear in [scan-status.md](scan-status
 
 ## 3:05–3:08 p.m. Delaware offer refresh
 User BetRivers Delaware screenshots IMG_1711/1712/1714/1715/1716 show White Sox ML +106, CHC–SD Under 7.5 -118, Aces +1.5 -117, Liberty +3.5 -117, Bruins ML -112, Oilers ML -315 and NYR–BOS total 5.5 Over -130/Under +100. They are exact observed offers, not receipts. MLB official lineups retain Cubs–Padres orders TBD; NHL official projected lineup reports McAvoy suspension, and NHL status report confirms Nugent-Hopkins out. See updated scan-status.md for price comparison and disposition.
+
+
+## Soccer refresh — September 29, 2026, 8:22 p.m. ET
+
+Mexico XI official announcement at 20:15:04 ET and Peru at 19:55:24 ET located; attached-image player names not exposed by Firecrawl. ESPN lineup endpoint redirects with data unavailable. Fresh ESPN shows 21:00 ET and MEX -265, superseding cached 22:30/-185 display; neither quote is authenticated Circa/BetRivers or a movement sequence. Dropbox `/Circa Sports sheets (1)/Soccer - 2026-9-29.pdf` (id:i73DAJ09gUAAAAAAAAAUoQ) server_modified Sep29 17:55:54Z but extracted text blank; prior audit Sep28 printed timestamp is not refreshed. VSiN sportid=soccer falls back to MLB board. Targeted VSiN and Doc's searches plus current VSiN soccer hub provide no verified named same-market selection. FPF October roster article is dated Oct2 2025 and rejected as irrelevant. No current full three-way/draw market, same-book movement, splits or DE executable offer recovered. No xG retrieved; numerical model is not a newly imposed prerequisite. Full assessment in scan-status and candidates.json; UNGRADED / NO BET 0u.
