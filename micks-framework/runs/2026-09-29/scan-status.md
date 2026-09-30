@@ -434,3 +434,51 @@ The Under price improves from historical DE-118, but is worse than the recent la
 Other displayed prices retained for research, without separate grading: CHC+112/SD-136; CHC+1.5-175/SD-1.5+140; Under7+110,Under8-136,Under8.5-157. NHL VAN+250; EDM-1.5-121,VAN+1.5-108; Over6.5-121/Under6.5-108. Favorable-looking alternate thresholds do not inherit moneyline/total scores or qualify automatically.
 
 No release, wager, published website card or new automation. Historical snapshots and this timestamped update retained.
+
+
+## 2026-09-29T21:50:00-04:00 — Blackhawks–Golden Knights 45-minute v2 checkpoint
+
+**Decision: NO BET, 0u.** Fresh v2 assessment; old 23/110 v1 record is preserved separately and was not multiplied.
+
+| Candidate | Matchup | Price | Personnel | Situation | VSiN | Doc's | Market | Total | Failure | Decision |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| Vegas ML | 27/35 | 5/20 | 12/15 | 6/10 | 3/10 | 0/10 | 6/10 | **59/110 (C/Watchlist)** | **2/10** | **NO BET, 0u** |
+
+### Changed evidence
+
+| Evidence | Finding | Handicap effect |
+|---|---|---|
+| [NHL.com projected lineups](https://www.nhl.com/news/chicago-blackhawks-vegas-golden-knights-game-preview-september-29-2026) | CHI lines posted; Connor Bedard out with shoulder injury, Teravainen projected scratched. VGK top six has Eichel/Stone/Marner/Karlsson/Hertl; Lavoie injured. | Strong Vegas matchup/personnel support, but final warmup dressed sheet unavailable. |
+| [Daily Faceoff goalies](https://www.dailyfaceoff.com/starting-goalies) | Spencer Knight confirmed 2:54pm; Carter Hart confirmed 2:22pm. Knight 2025-26 .902/2.82; Hart .891/2.71 with Vegas. | Closes goalie gate but Hart's save rate is a material favorite risk. |
+| [VSiN labeled line tracker](https://data.vsin.com/vegas-odds-linetracker/?sportid=nhl) | Circa CHI+223/VGK-252, VGK-1.5+102, total6-110. CHI opened+209. Other books VGK-260 to-295. | Movement toward Vegas, but price is expensive and exact VGK opener/time unavailable. |
+| [VSiN game board](https://data.vsin.com/nhl/games/?gamedate=2026-09-29) | Generic VGK-258; estimate VGK-244 and4.3–1.8; 2 pro picks but no split percentages. | Direction supports Vegas, price estimate is shorter than current market. |
+| [VSiN Jonathan Davis](https://vsin.com/nhl/nhl-predictions-expert-picks-on-tuesday-september-29/) | Vegas/Edmonton ML parlay-115 for2u; Eichel/Stone/Marner points parlay. | Vegas is a parlay leg, not standalone ML confirmation at-252. |
+| [Doc's Guy Bruhn](https://www.docsports.com/free-picks/nhl-hockey/2026/chicago-blackhawks-vs-vegas-golden-knights-prediction-9-29-2026-nhl-picks-best-bets-odds.html) | Selects Chicago+210; article lists Knight/Hart. | Direct contradiction:0/10 Doc's support for Vegas. |
+| Dropbox | NHL-2026-9-29.pdf found, modified17:55:54Z. | Historical sheet retained; current labeled VSiN Circa board used. |
+
+### Factor evidence
+
+- **Matchup27/35:** Vegas scored264 with24.47% PP last season; Chicago210 with16.95% PP, and Bedard is out. Two cashing paths are Vegas' top-six five-on-five edge and special teams. Countercase is the crease: Knight's .902 exceeded Hart's .891.
+- **Price5/20:** -252 implies about71.6% before hold adjustment, while VSiN estimate is-244. Best research target-220 or better; no-bet cutoff worse than-230. Current number fails.
+- **Personnel12/15:** both goalies confirmed and line combinations assessed; final dressed warmup sheet not recovered.
+- **Situation6/10:** Vegas home opener and Chicago travel modestly support the favorite; opening-night uncertainty and optional skate add no standalone edge.
+- **VSiN3/10:** only parlay-leg support, no standalone ML pick at current price.
+- **Doc's0/10:** named handicapper selects Chicago+210.
+- **Market6/10:** reference4/5, movement2/3, splits0/2. No sharp-money label.
+
+### Failure Score
+
+| Dimension | Score | Reason |
+|---|---:|---|
+| Strongest failure | 1/2 | Knight can outplay Hart even if Vegas controls play. |
+| Personnel resilience | 1/2 | Bedard absence and Vegas depth persist; Hart/final sheet risk remains. |
+| Variance resilience | 0/2 | One-game goalie and special-teams variance. |
+| Price protection | 0/2 | -252 is outside cutoff; no independently graded alternate escape. |
+| Contradiction resolution | 0/2 | Doc's opposition, VSiN -244 estimate and Hart's save rate remain unresolved. |
+| **Total** | **2/10** | Below required7/10. |
+
+**Missing evidence:** exact live BetRivers Delaware ML including OT/shootout; final dressed warmup sheets; authenticated ticket/handle percentages; exact Circa Vegas opener/time; validated Favorite Inflation sample.
+
+**Release blockers:** 59<82; Failure2<7; Circa-252 exceeds-230 cutoff; Doc's opposes; exact Delaware execution price unavailable. Progressive Fade and Favorite Inflation remain UNKNOWN, not automatically clear and not double-counted. Fantasy Life NFL and NBA franchise-ranking inputs are not applicable.
+
+No wager, import payload or website card was created.
