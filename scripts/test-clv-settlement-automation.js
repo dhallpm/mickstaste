@@ -1,11 +1,9 @@
 import assert from 'node:assert/strict'
-import { readFile } from 'node:fs/promises'
-import recalculateHandler from '../api/recalculate-clv.js'
-import settleHandler from '../api/settle-results.js'
 import {
   americanToDecimal,
   calculateClvFields,
   calculateSettlementFields,
+  recalculateClv,
   requestedDateKey,
   settleResults
 } from '../lib/clvSettlementAutomation.js'
@@ -172,42 +170,73 @@ const mapped = cleanWebsiteRow({
 assert.equal(mapped.impliedProbability, '40')
 assert.equal(mapped.evEdge, '2.5')
 assert.equal(mapped.trueProbability, '44')
-assert.equal(mapped.closingOdds, '+120')
-assert.equal(mapped.clvPercent, '13.64')
-assert.equal(mapped.clvResult, 'Positive')
-assert.equal(mapped.closingLineValue, '2')
-assert.equal(mapped.result, 'Win')
-assert.equal(mapped.profitLoss, '1.5')
-assert.equal(mapped.roi, '150')
 assert.equal(mapSettlementFieldToColumn(['Date', 'Profit/Loss'], 'P/L'), 2)
 
-function makeRes() {
-  return {
-    statusCode: 0,
-    body: null,
-    status(code) {
-      this.statusCode = code
-      return this
-    },
-    json(payload) {
-      this.body = payload
-      return this
+// recalculate-clv and settle-results no longer exist as HTTP endpoints (removed
+// with the Airtable cleanup). Exercise the underlying lib functions directly.
+
+// Fake Airtable master-picks records for recalculateClv (dry run only, so no
+// PATCH traffic is expected).
+const clvAirtableRecords = [
+  { id: 'recCLV1', fields: { Date: '2026-06-09', Pick: 'Mets ML', 'Bet Type': 'Moneyline', Odds: '+150', 'Closing Odds': '+120' } },
+  { id: 'recCLV2', fields: { Date: '2026-06-09', Pick: 'Over 8.5', 'Bet Type': 'Total', 'Closing Number': 8.5, 'Verified Closing Number': 9.5 } },
+  { id: 'recCLV3', fields: { Date: '2026-06-09', Pick: 'No closing data', 'Bet Type': 'Moneyline', Odds: '-110' } },
+  { id: 'recCLV4', fields: { Date: '2026-06-08', Pick: 'Wrong date', 'Bet Type': 'Moneyline', Odds: '+150', 'Closing Odds': '+120' } }
+]
+
+const originalFetch = globalThis.fetch
+globalThis.fetch = async url => {
+  const requestUrl = new URL(String(url))
+  if (requestUrl.hostname === 'api.airtable.com') {
+    return {
+      ok: true,
+      json: async () => ({ records: clvAirtableRecords })
     }
+  }
+  if (requestUrl.hostname === 'statsapi.mlb.com' && requestUrl.pathname === '/api/v1/schedule') {
+    return {
+      ok: true,
+      json: async () => ({
+        dates: [{
+          games: [{
+            gamePk: 12345,
+            teams: {
+              away: { score: 4, team: { name: 'Baltimore Orioles', teamName: 'Orioles' } },
+              home: { score: 2, team: { name: 'Boston Red Sox', teamName: 'Red Sox' } }
+            }
+          }]
+        }]
+      })
+    }
+  }
+  if (requestUrl.hostname === 'statsapi.mlb.com' && requestUrl.pathname === '/api/v1/game/12345/boxscore') {
+    return {
+      ok: true,
+      json: async () => ({ teams: { away: { players: {} }, home: { players: {} } } })
+    }
+  }
+  return {
+    ok: false,
+    status: 404,
+    statusText: 'Not mocked',
+    json: async () => ({})
   }
 }
 
-const clvRes = makeRes()
-await recalculateHandler({ method: 'GET', query: {} }, clvRes)
-assert.equal(clvRes.statusCode, 200)
-assert.equal(clvRes.body.endpoint, 'recalculate-clv')
-assert.match(clvRes.body.confirmUrl, /confirm=CLV/)
-assert.deepEqual(clvRes.body.updates, ['%CLV'])
+// Dummy key: the Airtable HTTP layer is mocked above, so no real traffic happens.
+process.env.AIRTABLE_API_KEY = process.env.AIRTABLE_API_KEY || 'test-key'
 
-const settleRes = makeRes()
-await settleHandler({ method: 'GET', query: {} }, settleRes)
-assert.equal(settleRes.statusCode, 200)
-assert.equal(settleRes.body.endpoint, 'settle-results')
-assert.match(settleRes.body.confirmUrl, /confirm=SETTLE/)
+const clvDryRun = await recalculateClv({ date: '2026-06-09', dryRun: true })
+assert.equal(clvDryRun.success, true)
+assert.equal(clvDryRun.date, '2026-06-09')
+assert.equal(clvDryRun.dryRun, true)
+assert.equal(clvDryRun.scanned, 4)
+assert.equal(clvDryRun.matched, 2)
+assert.equal(clvDryRun.updated, 0)
+assert.equal(clvDryRun.skipped, 1)
+assert.deepEqual(clvDryRun.records[0].fields, { '%CLV': 0.1364 })
+assert.deepEqual(clvDryRun.records[1].fields, { '%CLV': 0.1176 })
+assert.match(clvDryRun.skippedRecords[0].reason, /No line pair/)
 
 function parseSheetRange(range = '') {
   const match = String(range).match(/^'((?:[^']|'')+)'(?:!(.*))?$/)
@@ -401,39 +430,6 @@ function makeParlayFallbackSheets() {
   return { sheets, data, calls }
 }
 
-const originalFetch = globalThis.fetch
-globalThis.fetch = async url => {
-  const requestUrl = new URL(String(url))
-  if (requestUrl.hostname === 'statsapi.mlb.com' && requestUrl.pathname === '/api/v1/schedule') {
-    return {
-      ok: true,
-      json: async () => ({
-        dates: [{
-          games: [{
-            gamePk: 12345,
-            teams: {
-              away: { score: 4, team: { name: 'Baltimore Orioles', teamName: 'Orioles' } },
-              home: { score: 2, team: { name: 'Boston Red Sox', teamName: 'Red Sox' } }
-            }
-          }]
-        }]
-      })
-    }
-  }
-  if (requestUrl.hostname === 'statsapi.mlb.com' && requestUrl.pathname === '/api/v1/game/12345/boxscore') {
-    return {
-      ok: true,
-      json: async () => ({ teams: { away: { players: {} }, home: { players: {} } } })
-    }
-  }
-  return {
-    ok: false,
-    status: 404,
-    statusText: 'Not mocked',
-    json: async () => ({})
-  }
-}
-
 const dryRunSheets = makeFakeSheets()
 const dryRunResult = await settleResults({
   date: '2026-06-09',
@@ -462,38 +458,34 @@ assert.equal(dryRunResult.needsReviewRecords.filter(record => !record.pick).leng
 assert.doesNotMatch(JSON.stringify(dryRunResult), /Airtable|tbl[A-Za-z0-9]{10,}/)
 
 const writeSheets = makeFakeSheets()
-const settleAllRes = makeRes()
-await settleHandler({
-  method: 'GET',
+const settleWriteResult = await settleResults({
+  date: '2026-06-09',
+  settleAll: true,
+  dryRun: false,
   sheets: writeSheets.sheets,
-  spreadsheetId: 'test-spreadsheet',
-  query: {
-    date: '2026-06-09',
-    settleAll: 'true',
-    confirm: 'SETTLE'
-  }
-}, settleAllRes)
-assert.equal(settleAllRes.statusCode, 200)
-assert.equal(settleAllRes.body.settleAll, true)
-assert.equal(settleAllRes.body.source, 'google-sheets')
-assert.equal(settleAllRes.body.sourceOfTruth, 'Google Sheets')
-assert.equal(settleAllRes.body.spreadsheetId, 'test-spreadsheet')
-assert.equal(settleAllRes.body.scanned, 19)
-assert.equal(settleAllRes.body.matched, 1)
-assert.equal(settleAllRes.body.needsReview, 13)
-assert.equal(settleAllRes.body.skipped, 5)
-assert.equal(settleAllRes.body.updated, 14)
-assert.equal(settleAllRes.body.records.length, 1)
-assert.equal(settleAllRes.body.records[0].plannedSettlementStatus, 'Settled')
-assert.equal(settleAllRes.body.records[0].plannedResult, 'Win')
-assert.match(settleAllRes.body.records[0].discoveredSources[0].sourceUrl, /statsapi\.mlb\.com/)
-assert.equal(settleAllRes.body.needsReviewRecords.length, 13)
-assert.equal(settleAllRes.body.skippedRecords.length, 5)
-assert.equal(settleAllRes.body.skippedRecords.filter(record => /Skipped blank row/.test(record.reason)).length, 4)
-assert.equal(settleAllRes.body.skippedRecords.some(record => record.reason === 'Skipped non-official watchlist/pass row.'), true)
+  spreadsheetId: 'test-spreadsheet'
+})
+assert.equal(settleWriteResult.success, true)
+assert.equal(settleWriteResult.settleAll, true)
+assert.equal(settleWriteResult.source, 'google-sheets')
+assert.equal(settleWriteResult.sourceOfTruth, 'Google Sheets')
+assert.equal(settleWriteResult.spreadsheetId, 'test-spreadsheet')
+assert.equal(settleWriteResult.scanned, 19)
+assert.equal(settleWriteResult.matched, 1)
+assert.equal(settleWriteResult.needsReview, 13)
+assert.equal(settleWriteResult.skipped, 5)
+assert.equal(settleWriteResult.updated, 14)
+assert.equal(settleWriteResult.records.length, 1)
+assert.equal(settleWriteResult.records[0].plannedSettlementStatus, 'Settled')
+assert.equal(settleWriteResult.records[0].plannedResult, 'Win')
+assert.match(settleWriteResult.records[0].discoveredSources[0].sourceUrl, /statsapi\.mlb\.com/)
+assert.equal(settleWriteResult.needsReviewRecords.length, 13)
+assert.equal(settleWriteResult.skippedRecords.length, 5)
+assert.equal(settleWriteResult.skippedRecords.filter(record => /Skipped blank row/.test(record.reason)).length, 4)
+assert.equal(settleWriteResult.skippedRecords.some(record => record.reason === 'Skipped non-official watchlist/pass row.'), true)
 assert.equal(writeSheets.calls.headerUpdates, 4)
 assert.equal(writeSheets.calls.batchUpdates, 14)
-assert.doesNotMatch(JSON.stringify(settleAllRes.body), /Airtable|tbl[A-Za-z0-9]{10,}/)
+assert.doesNotMatch(JSON.stringify(settleWriteResult), /Airtable|tbl[A-Za-z0-9]{10,}/)
 
 const masterRows = writeSheets.data.get('Master Picks')
 const masterHeaders = masterRows[0]
