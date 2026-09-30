@@ -36,3 +36,22 @@ User BetRivers Delaware screenshots IMG_1711/1712/1714/1715/1716 show White Sox 
 ## Soccer refresh — September 29, 2026, 8:22 p.m. ET
 
 Mexico XI official announcement at 20:15:04 ET and Peru at 19:55:24 ET located; attached-image player names not exposed by Firecrawl. ESPN lineup endpoint redirects with data unavailable. Fresh ESPN shows 21:00 ET and MEX -265, superseding cached 22:30/-185 display; neither quote is authenticated Circa/BetRivers or a movement sequence. Dropbox `/Circa Sports sheets (1)/Soccer - 2026-9-29.pdf` (id:i73DAJ09gUAAAAAAAAAUoQ) server_modified Sep29 17:55:54Z but extracted text blank; prior audit Sep28 printed timestamp is not refreshed. VSiN sportid=soccer falls back to MLB board. Targeted VSiN and Doc's searches plus current VSiN soccer hub provide no verified named same-market selection. FPF October roster article is dated Oct2 2025 and rejected as irrelevant. No current full three-way/draw market, same-book movement, splits or DE executable offer recovered. No xG retrieved; numerical model is not a newly imposed prerequisite. Full assessment in scan-status and candidates.json; UNGRADED / NO BET 0u.
+
+
+## 2026-09-29T21:24:54-04:00 late pregame refresh — CHC/SD and VAN/EDM
+
+Fresh Firecrawl official lineups/rosters/roles and labeled Circa boards assessed. Both NO BET (65/110 and60/110; F3/10). Complete factor/failure evidence, source links and blockers in scan-status.md; full v1 records preserved in candidates.json histories.
+
+| Source | Changed evidence | Remaining gap |
+|---|---|---|
+| MLB official orders/preview/SD roster | Boyd/King and18hitters confirmed; Musgrove active limited relief; Thielbar off CHC, Cabrera inactive; Adam returns/Estrada absent | Preview's stale Musgrove injury paragraph superseded by specific roster; starter leash not explicit |
+| InsideThePen8:43ET | Last2days individual usage checked; Rea2IP20/Webb1IP10Sep27; no relevant SD reliever workload shownSep27–28 | Tracker blank not medical proof; minor-league/inactive arms filtered with official roster |
+| NWS6pmPDT |75F,W4mph; tonightW~5,low66; Petco open-air | Exact on-field wind unknown; no strong wind edge |
+| Official NHL/Oilers | Jarry confirmed; RNHout, Draisaitl2C,Jonesin,PodkolzinPP1 | Final dressed lineups/scratches not recovered |
+| DailyFaceoff fresh21:22ET | Lankinen remains Likely | Explicit Vancouver starter confirmation missing |
+| Dropbox + labeled VSiN odds | Today's PDFs found, no later return; Circa Under7.5-110 / EDM-285 | DE executable offers unknown; board update clock not exposed |
+| Movement/splits | TotalOPEN7→7.5; EDMmorning-290→-285 | Opening clock/juice/EDMopener and ticket/handle not exposed; no sharp claim |
+| Named Doc's | PunditUnder7.5,SD-126; EDM-305,Under6 | Underjuice absent; AI-v3 unavailable; NHLtotaldifferentmarket |
+| Named VSiN | MakinenhistoricalUnder7; BurkesideSD-126 + Under countercase; DavisEDMparlayleg | No exact standalone EDM endorsement; not source-count bonuses |
+
+See linked source inventory in the report. No wager, published card or current-DE price inferred. Toronto started: previous v2 snapshot frozen.
