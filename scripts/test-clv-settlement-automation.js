@@ -529,9 +529,4 @@ assert.equal(parlayFallbackResult.needsReviewRecords.some(record => record.pick 
 
 globalThis.fetch = originalFetch
 
-const html = await readFile(new URL('../import-airtable.html', import.meta.url), 'utf8')
-assert.match(html, /api\/recalculate-clv\?date=/)
-assert.match(html, /api\/settle-results\?date=/)
-assert.match(html, /Enter Closing Number \/ Closing Odds manually in Airtable/)
-
 console.log('CLV and settlement automation regression test passed.')

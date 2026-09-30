@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex,nofollow" />
-  <title>Micks Picks Entry | Airtable</title>
+  <title>Micks Picks Entry</title>
   <link rel="stylesheet" href="/sportsbook-theme.css?v=20260602" />
   <style>
     :root {
@@ -64,11 +64,11 @@
     <header>
       <div>
         <h1>Micks Picks Entry</h1>
-        <p>Production-safe Airtable entry for <b>mickspicks.us</b>. Uses the same importer as the JSON helper.</p>
+        <p>Production-safe pick entry for <b>mickspicks.us</b>. Saves to Google Sheets. Uses the same importer as the JSON helper.</p>
       </div>
       <nav class="toolbar" aria-label="Admin links">
         <a href="/" rel="noreferrer">Dashboard</a>
-        <a href="/import-airtable.html" rel="noreferrer">JSON Import Helper</a>
+        <a href="/import-helper.html" rel="noreferrer">JSON Import Helper</a>
         <a href="/api/todays-picks" target="_blank" rel="noreferrer">Today’s Feed</a>
       </nav>
     </header>
@@ -81,7 +81,7 @@
       <section class="section">
         <h2>Destination Table</h2>
         <div class="grid">
-          <label class="span-4">Airtable Section <span class="required">required</span>
+          <label class="span-4">Section <span class="required">required</span>
             <select name="table" id="table" required>
               <option value="picks">Master Picks</option>
               <option value="propsLab">Props Lab</option>
@@ -205,7 +205,7 @@
         <h2>Submit</h2>
         <div class="actions">
           <button type="button" id="previewBtn">Preview Payload</button>
-          <button type="submit" class="primary" id="submitPick">Submit to Airtable</button>
+          <button type="submit" class="primary" id="submitPick">Submit Pick</button>
           <button type="reset">Reset</button>
           <button type="button" id="checkFeed">Check Today’s Feed</button>
         </div>
@@ -291,15 +291,15 @@
         submitPick.disabled = true;
         const payload = buildRecord();
         writePreview(payload);
-        show('Submitting to Airtable...');
-        const response = await fetch('/api/import-airtable-records', {
+        show('Submitting pick...');
+        const response = await fetch('/api/import-picks', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)
         });
         const result = await response.json().catch(() => ({}));
         if (!response.ok || result.success === false) throw new Error(result.error || result.message || `Request failed with ${response.status}`);
-        show('Submitted to Airtable successfully. Check Today’s Feed after Vercel/API refresh.', true);
+        show('Submitted successfully. Check Today’s Feed after the site refreshes.', true);
         writePreview(result);
       } catch (error) {
         show(error.message || String(error), false);
