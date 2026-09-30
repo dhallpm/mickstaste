@@ -418,3 +418,19 @@ Scores increased from old v1 32/21 after a fresh rubric assessment, not merely b
 - [VSiN Makinen](https://vsin.com/mlb/steve-makinens-mlb-picks-from-betting-splits-and-systems-for-tuesday-september-29/) supports historical postseason Under systems at7. [Adam Burke](https://vsin.com/mlb/mlb-playoff-picks-today-adam-burkes-best-bets-for-tuesday-september-29/) picks Padres-126 and gives a strong pitching-regression/offense countercase; neither side pick nor series pick is a total endorsement. [Jonathan Davis](https://vsin.com/nhl/nhl-predictions-expert-picks-on-tuesday-september-29/) Vegas/Edmonton ML parlay-115 is a parlay leg, not a standalone-285 release. Source families scored once.
 - Progressive Fade and Favorite Inflation remain UNKNOWN without validated trigger/same-band samples. No standalone points reserved or deducted. Fantasy Life NFL guide and NBA franchise-ranking inputs are not applicable to these markets. AI-v3 not recovered; verified free Doc's picks still assessed without a duplicate missing penalty.
 - Fresh primary evidence: [MLB orders](https://www.mlb.com/starting-lineups/2026-09-29), [official matchup/roles](https://www.mlb.com/news/cubs-vs-padres-wild-card-series-lineups-and-pitching-matchup), [SD postseason roster](https://www.mlb.com/padres/news/padres-2026-nl-wild-card-series-roster), [NHL projected lines](https://www.nhl.com/news/nhl-lineup-projections-2026-27-season), [official Jarry preview](https://www.nhl.com/oilers/news/preview-oilers-vs-canucks-09-29-26). Relief usage: [CHC](https://insidethepen.com/team/CHC-bullpen.html) / [SD](https://insidethepen.com/team/SD-bullpen.html).
+
+
+## 2026-09-29 21:27 ET — newly supplied BetRivers Delaware screenshot offers
+
+User screenshots IMG_3857.png / IMG_3858.png visibly display9:27 and supply these quotes. Logged-out displayed offers, not receipts or authenticated execution. No new player/goalie confirmation inferred. Preserve prior v2 benchmark assessments in JSON history.
+
+| Candidate | Displayed DE offer | Price factor change | Total/grade change | Failure | Decision |
+|---|---|---|---|---|---|
+| CHC–SD Under7.5 | -114 |14→13/20|65→64/110, C/provisional|3/10 provisional unchanged|NO BET0u; inside-115 research limit but below82 and7|
+| Edmonton ML inclOT/shootout | -335 |6→2/20|60→56/110, Pass/provisional|3/10 provisional unchanged|NO BET0u; beyond-250 reconsideration limit|
+
+The Under price improves from historical DE-118, but is worse than the recent labeled Circa-110 reference. Edmonton worsens from historical DE-315 and is substantially more expensive than recent Circa-285; -335 break-even77.01%. These are same-book dated quote comparisons, not sharp-money evidence. Optional splits remain unexposed and only affect their2points. New screenshots fill the displayed-price information gap; execution availability still requires reconfirmation. Mandatory VAN goalie and final dressed-lineup gaps remain. All non-price factor evidence and five Failure dimensions remain from the fresh21:24assessment.
+
+Other displayed prices retained for research, without separate grading: CHC+112/SD-136; CHC+1.5-175/SD-1.5+140; Under7+110,Under8-136,Under8.5-157. NHL VAN+250; EDM-1.5-121,VAN+1.5-108; Over6.5-121/Under6.5-108. Favorable-looking alternate thresholds do not inherit moneyline/total scores or qualify automatically.
+
+No release, wager, published website card or new automation. Historical snapshots and this timestamped update retained.
