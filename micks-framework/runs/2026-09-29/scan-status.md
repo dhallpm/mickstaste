@@ -343,3 +343,78 @@ Mexico's cashing script is sustained possession and pressure against Peru's vuln
 **Missing evidence:** readable both official XI images and starting keepers; injury/availability and substitution/role impacts; current Circa three-way market including draw; exact current BetRivers Delaware settlement and offer; named Doc's and VSiN same-market selections; authenticated same-book opening/current movement and tickets/handle; current weather/pitch and xG if available.
 **Release blockers:** core price and personnel factors null: cannot establish 82/110; Failure Score incomplete: cannot establish 7/10; no exact executable user-book price or supported cutoff.
 No bet, website card or import payload was created. This gate check is delivered despite incomplete release evidence. No additional schedule was created.
+
+
+## 2026-09-29T21:24:54-04:00 — Cubs–Padres and Canucks–Oilers pregame v2 recheck
+
+**Decision: NO BET / 0u for both.** Fresh qualitative assessment using current v2 weights, not multiplied v1 totals. All core factors can be meaningfully assessed; grades are PROVISIONAL because exact execution prices and remaining sport-specific information are separate. Previous v1 rows and complete JSON snapshots are retained. Montreal–Toronto has started and is frozen; no retrospective upgrade. nominal starts 10 p.m. ET; source boards show MLB 10:10 and NHL 10:07.
+
+| Candidate | Fresh v2 | Failure | Grade/status | Best verified reference | Decision / remaining blockers |
+|---|---:|---:|---|---|---|
+| Cubs–Padres Under7.5 | 65/110 | 3/10 provisional | C / provisional | Circa -110 | NO BET: below82 and7; live DE offer unknown |
+| Edmonton ML | 60/110 | 3/10 provisional | C / provisional | Circa -285 | NO BET: below82 and7, price beyond-250 reconsideration limit, Lankinen not confirmed, live DE offer unknown |
+
+Scores increased from old v1 32/21 after a fresh rubric assessment, not merely because information was found. No promise that filling gaps produces82 points. Units are0, no import/release entry, website card or wager.
+
+### Changed player, bullpen and condition evidence
+
+- MLB official batting orders and Boyd/King confirmed. CHC: Crow-Armstrong CF, Bregman DH, Busch1B, Suzuki RF, Happ LF, Hoerner2B, Pedro Ramirez3B, Kelly C, Swanson SS. SD: Tatis RF, Samad Taylor LF, Machado3B, France1B, Merrill CF, Hays DH, Bogaerts SS, Cronenworth2B, Campusano C. Confirmed names do not themselves earn an edge.
+- Official bullpen roles: CHC Palencia fireman, Rolison leverage lefty, Zeferjahn/Webb late options, Assad/Civale/Rea bulk. Thielbar left off and Cabrera inactive. SD Miller closer, Morejon setup, Matsui/Rodriguez middle, Adam returns from shoulder strain, Musgrove active limited relief; Estrada absent. Latest official Musgrove roster article supersedes the preview's stale injury paragraph that still says unavailable. Tracker includes inactive/minor-league arms, so only active relevant arms count.
+- Individual last-two-day usage checked in InsideThePen's8:43pmET tables: Sep28 blank for both teams; Sep27 CHC Rea2IP20pitches and Webb1IP10. SD active relevant relief rows blank Sep27–28. SD most recent older work Sep26 Miller1IP24pitches, Morejon1IP16, Matsui1/3IP4, Rodriguez2IP34, Morgan1IP19; AdamSep25 1IP27. Cubs Palencia lastSep24 1IP15 and Zeferjahn1IP9; RolisonSep25 1/3IP13, Assad2.1IP35, Civale2.1IP38. Blank tracker entries support low recent workload; they are not a medical guarantee. Returned Musgrove has no recent MLB workload and limited recovery/leash evidence.
+- Petco open-air; no roof-status decision. [NWS](https://forecast.weather.gov/MapClick.php?lon=-117.157&lat=32.708) observation6pmPDT:75F/W4mph, tonight W~5mph with low66. [VSiN game board](https://data.vsin.com/mlb/games/?gamedate=2026-09-29)77F/WSW6 and HP Ramon De Jesus11Over/16Under. Umpire listed, not official game-specific reconfirmation; no causal umpire advantage awarded from27outcomes.
+- [Official Edmonton report](https://www.nhl.com/oilers/news/projected-lineup-nugent-hopkins-out-for-tuesday-s-home-opener-vs-canucks): RNH lower-body absence; Draisaitl at second-line center, Jones replacement, Podkolzin PP1. Official preview confirms Jarry. Latest fresh [goalie tracker](https://www.dailyfaceoff.com/starting-goalies) still calls Lankinen **Likely**, not confirmed. Demko/Chytil out; DeBrusk expected available. Below are league projections, not final warmup sheets.
+- EDM F: Howard–McDavid–Hyman; Podkolzin–Draisaitl–Kapanen; Formenton–Dach–Joseph; Jones–Michaels–Frederic. D: Ekholm–Bouchard; Walman–Murphy; Shea–Mukhamadullin. Scratches projected Emberson/Stastney; injuries Andersen/Dickinson/Janmark/RNH/Regula/Savoie.
+- VAN F: DeBrusk–Pettersson–Lekkerimaki; Ohgren–Rossi–Boeser; OConnor–Sasson–Karlsson; Bains–Cotter–Gallagher. D: Buium–Hronek; Oleksiak–Willander; Elias Nils Pettersson–Schenn. Projected scratches Raty/Brisebois/Mancini.
+
+### Cubs–Padres Under7.5 — factor assessment
+
+| Factor | Points | Evidence |
+|---|---:|---|
+| matchup | 19/35 | Two cashing paths: competent starter outings aided by Chicago's elite defense; or early hook into rested leverage arms, especially San Diego's pen. Countercase: Cubs led offense; Padres' second-half hitting and September vs LHP threaten Boyd. Boyd 3.91 ERA/4.65 xERA/4.21 FIP and King 3.21/4.40/4.13 show regression risk; neither is a dominant strikeout shield. |
+| price | 14/20 | Current labeled Circa Under 7.5 -110 is preferable to morning -120 and historical DE -118. Half-run over opening 7 is useful, but strong offenses limit conviction. Research best verified number 7.5 -110; no-bet/reassessment boundary worse than -115 or threshold below 7.5. This is judgment, not an invented fair line or official release. |
+| personnel | 11/15 | Boyd/King and both nine-player batting orders confirmed. Bregman DH and Swanson active. Chicago has Palencia/Rolison/Zeferjahn/Webb and multi-inning relief; Thielbar excluded, Cabrera inactive. SD Miller closer, Morejon setup; Adam returns from shoulder strain, Musgrove active limited relief, Estrada absent. Rested pen supports Under, but full-strength hitters and returnee uncertainty limit points. |
+| situation | 6/10 | Petco is open-air; no retractable-roof decision. NWS 6 p.m. PDT observation 75F, W4mph; tonight W around5mph, low66. VSiN park display77F WSW6. Mild weather does not supply a strong wind edge. Wild Card stakes do not guarantee low scoring. |
+| vsin | 4/10 | Steve Makinen's Sept29 systems include Wild Card Under7 and Cubs postseason Under. Different threshold reconciled to current7.5, without treating the historical system as a model. Adam Burke picks Padres -126, not the total, and highlights low-K starters and potent offenses. Series Padres -120 is separate, not game1 confirmation. Mixed source-family evidence. |
+| docs | 6/10 | Parlay's Pundit Sept28 explicitly selects Under7.5 and SD-126. Same total remains relevant; article provides no Under juice. Rationale based partly on career/season averages predates final relief changes. AI-v3 inaccessible adds no second penalty. |
+| market | 5/10 | Reference4/5: labeled Circa column plus multi-book comparison. Movement1/3: same-board OPEN7 to current7.5, opening quote time/juice not exposed; no sharp-money claim. Splits0/2: headings/pro-pick counts visible but no authenticated ticket/handle percentages. |
+
+| Failure dimension | Points | Reason |
+|---|---:|---|
+| strongest_failure | 1/2 | Both offenses can punish contact; defensive/pitching paths provide only partial protection. |
+| personnel_resilience | 1/2 | Rested active leverage arms help, but early exits/Adam and Musgrove recovery plus Cubs committee leave meaningful risk. |
+| variance_resilience | 0/2 | Total is fragile to clustered hits, homers and late/extra-inning runs. |
+| price_protection | 1/2 | 7.5 offers useful threshold cushion, modest juice helps; no alternate market is independently graded. |
+| contradiction_resolution | 0/2 | ERA-versus-xERA/FIP and potent lineup countercase remains unresolved by historical Under systems. |
+
+**Total65/110, Failure3/10, C/provisional, NO BET0u.** Best verified reference7.5-110; research cutoff worse than-115 or threshold below7.5. Not a release permission. Missing: Exact live BetRivers Delaware full-game total and odds; Authenticated ticket/handle splits; Opening quote timestamp and juice; Official game-specific umpire reconfirmation (VSiN identifies Ramon De Jesus); Explicit starter leash and marginal relief availability, where disclosed. Hard blockers: 65/110 below 82 release threshold; Failure Score 3/10 below 7; Exact executable user-book price unverified.
+
+### Edmonton moneyline — factor assessment
+
+| Factor | Points | Evidence |
+|---|---:|---|
+| matchup | 24/35 | Edmonton's high-end offense/PP and Vancouver's prior weak goal prevention create two paths: sustained top-six five-on-five advantage and special-teams scoring. Vancouver's Lankinen recent .875 SV% supports the matchup if he starts. Countercase: Edmonton's own Jarry .857 SV%/3.86 GAA in 19 Oilers appearances last season permits upsets; small unbeaten preseason sample cannot erase it. |
+| price | 6/20 | Best verified Circa ML -285 demands 74.0% break-even before vig adjustment. Better than morning-290 and historical DE-315, still costly. VSiN's displayed model -251 is outside disagreement, not an invented Micks price or automatic veto. Reconsider only -250 or better; -240 preferred research target, not currently verified and no promise of release. Current -285 exceeds cutoff. |
+| personnel | 10/15 | Official Oilers preview confirms Jarry. RNH out lower-body; Draisaitl moves to second-line center, Jones enters, Podkolzin fills RNH PP1 role. Vancouver Demko/Chytil out, DeBrusk expected available. Lankinen still Likely in fresh goalie tracker; projected combinations, not final dressed warmup sheets. Remaining top-end talent supports cashing, goalie/role resilience limited. |
+| situation | 6/10 | Home opener at Rogers Place; no weather/roof gate and no established rest/travel advantage. Opening-night emotional narrative and preseason4-0 are not durable edges. No validated inflation/fade trigger established. |
+| vsin | 3/10 | Jonathan Davis Sept29 recommends Vegas/Edmonton ML parlay -115 plus McDavid/Draisaitl point parlay and Draisaitl goal. Edmonton is a parlay leg, not a standalone recommendation at -285. No extracted Edmonton-specific ML rationale; limited direction confirmation only. |
+| docs | 6/10 | Parlay's Pundit Sept29 selects Edmonton -305 and Under6. Side rationale uses offensive/PP gap but career goalie averages and predates today's RNH reshuffle. Current-285 is a better same-side number; Under6 is a separate market, not current Under6.5 confirmation. |
+| market | 5/10 | Reference4/5: labeled Circa -285, other books-290 through-310. Movement1/3: dated morning Circa-290 to-285 is five-cent softening, not endorsement; Vancouver OPEN+240/current+250 visible but no exact EDM opener/clock inferred. Splits0/2: public headings alone provide no percentages. |
+
+| Failure dimension | Points | Reason |
+|---|---:|---|
+| strongest_failure | 1/2 | Edmonton's scoring paths can survive some concessions; Jarry's prior form leaves an upset path. |
+| personnel_resilience | 1/2 | McDavid/Draisaitl/Hyman retain scoring role but RNH PP replacement and unconfirmed VAN starter weaken resilience. |
+| variance_resilience | 0/2 | Opening-night goalie variance and special-teams swings remain substantial. |
+| price_protection | 0/2 | -285 exposes expensive loss and exceeds -250 reconsideration cutoff; puck line is not an independently assessed escape. |
+| contradiction_resolution | 1/2 | Offensive/PP gap partly resolves side concern; goalie weakness, outside model price and RNH role change still matter. |
+
+**Total60/110, Failure3/10 provisional, C/provisional, NO BET0u.** Best available verified reference-285. Reconsider only-250orbetter, research preference-240 not currently verified. Missing: Official Lankinen starting confirmation; Both final dressed warmup lineups/scratches and PP roles; Exact live BetRivers Delaware ML incl OT/shootout odds; Authenticated ticket/handle splits; Exact Edmonton opener and opening quote timestamp; Validated same-band Favorite Inflation and Progressive Fade trigger data. Hard blockers: 60/110 below 82 release threshold; Provisional Failure Score 3/10 below 7; Vancouver goalie confirmation remains open; Current -285 exceeds -250 reconsideration cutoff; Exact executable user-book price unverified.
+
+### Market/source audit and scan limits
+
+- Dropbox search found today's MLB/NHL Circa PDFs, both modified17:55:54Z; no later file returned. Existing printed morning snapshots are historical context. Current numbers above use explicitly labeled Circa columns on [MLB line-tracker](https://data.vsin.com/vegas-odds-linetracker/?sportid=mlb) and [NHL line-tracker](https://data.vsin.com/vegas-odds-linetracker/?sportid=nhl), retrieved during21:13–21:22ET; board quote-update clock not exposed. Generic VSiN game-board line is not assumed Circa. Historical BetRiversDE3:05–3:06 screenshots remain offers, not live prices or receipts. Current DE not recovered.
+- Circa total OPEN7→7.5; no opening clock/juice, no sharp-money attribution. Edmonton morning-290→-285 modest softening. NHL OPEN+240/current+250 belongs Vancouver; do not reverse-engineer an exact Edmonton opener. Splits headings and7/2pro-pick counts do not reveal tickets/handle; 0/2 only withheld.
+- [Doc's MLB](https://www.docsports.com/free-picks/baseball/2026/chicago-cubs-vs-san-diego-padres-prediction-9-29-2026-mlb-picks-best-bets-odds.html): Parlay's Pundit Under7.5 and Padres-126; no Underjuice. [Doc's NHL](https://www.docsports.com/free-picks/nhl-hockey/2026/vancouver-canucks-vs-edmonton-oilers-prediction-9-29-2026-nhl-picks-best-bets-odds.html): same author Edmonton-305, Under6. Under6 is not automatic Under6.5 confirmation.
+- [VSiN Makinen](https://vsin.com/mlb/steve-makinens-mlb-picks-from-betting-splits-and-systems-for-tuesday-september-29/) supports historical postseason Under systems at7. [Adam Burke](https://vsin.com/mlb/mlb-playoff-picks-today-adam-burkes-best-bets-for-tuesday-september-29/) picks Padres-126 and gives a strong pitching-regression/offense countercase; neither side pick nor series pick is a total endorsement. [Jonathan Davis](https://vsin.com/nhl/nhl-predictions-expert-picks-on-tuesday-september-29/) Vegas/Edmonton ML parlay-115 is a parlay leg, not a standalone-285 release. Source families scored once.
+- Progressive Fade and Favorite Inflation remain UNKNOWN without validated trigger/same-band samples. No standalone points reserved or deducted. Fantasy Life NFL guide and NBA franchise-ranking inputs are not applicable to these markets. AI-v3 not recovered; verified free Doc's picks still assessed without a duplicate missing penalty.
+- Fresh primary evidence: [MLB orders](https://www.mlb.com/starting-lineups/2026-09-29), [official matchup/roles](https://www.mlb.com/news/cubs-vs-padres-wild-card-series-lineups-and-pitching-matchup), [SD postseason roster](https://www.mlb.com/padres/news/padres-2026-nl-wild-card-series-roster), [NHL projected lines](https://www.nhl.com/news/nhl-lineup-projections-2026-27-season), [official Jarry preview](https://www.nhl.com/oilers/news/preview-oilers-vs-canucks-09-29-26). Relief usage: [CHC](https://insidethepen.com/team/CHC-bullpen.html) / [SD](https://insidethepen.com/team/SD-bullpen.html).
