@@ -1,8 +1,8 @@
 {
   "date": "2026-09-29",
   "timezone": "America/New_York",
-  "snapshot": "2026-09-29T19:54:00-04:00",
-  "status": "PARTIAL / LYNX-LIBERTY 7:45 P.M. GATE V2 RE-GRADED; NO OFFICIAL RELEASE",
+  "snapshot": "2026-09-29T20:22:00-04:00",
+  "status": "PERU–MEXICO PREGAME V2 CHECK; UNGRADED / NO BET",
   "official_releases": [],
   "official_units": 0,
   "import_payload": {
@@ -1087,6 +1087,120 @@
         "https://www.ussoccer.com/competitions/usmnt-friendlies-2026/matches/united-states-vs-chile-tickets-live-score-match-hub-lineups-highlights",
         "https://www.ussoccer.com/stories/2026/09/usmnt/starting-xi-lineup-notes-vs-chile-st-louis"
       ]
+    },
+    {
+      "id": "soccer_mex_per_ml",
+      "sport": "Soccer",
+      "event": "Mexico vs Peru international friendly",
+      "market": "Mexico 90-minute three-way moneyline (screen only)",
+      "scheduled_start": "2026-09-29T21:00:00-04:00",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "grade_as_of": "2026-09-29T20:22:00-04:00",
+      "score_status": "UNGRADED: exact price/settlement and personnel impact incomplete",
+      "score": null,
+      "grade": "UNGRADED",
+      "known_subtotal": 28,
+      "assessed_maximum": 75,
+      "factors": {
+        "matchup": 22,
+        "price": null,
+        "personnel": null,
+        "situation": 5,
+        "vsin": 0,
+        "docs": 0,
+        "market": {
+          "reference": 1,
+          "movement": 0,
+          "splits": 0
+        }
+      },
+      "factor_evidence": {
+        "matchup": "22/35 provisional qualitative assessment: Mexico's possession/pressing path versus Peru's poor recent results and defensive transition provides modest identifiable support. Official Sep28 Marquez comments describe pressure, limiting chances and three woodwork strikes versus Colombia; SI reports Peru lost 4-1 to USA and Mexico won 10/14 in 2026. Countercase: Mexico expected wholesale rotation, debut keeper and finishing uncertainty; Peru can win through counters/set pieces or protect a draw. Do not equate likely winner with value at -265. No verified current xG dataset; numerical xG alone is not a prerequisite.",
+        "price": "null/20: fresh ESPN at ~20:21 ET displays MEX -265 (72.60% break-even if applicable settlement); earlier cached search page -185 and 22:30 is superseded, not authenticated movement. Book identification, all three outcomes, exact settlement, current Circa and BetRivers Delaware unavailable. No justified best playable number/cutoff.",
+        "personnel": "null/15: official Mexico XI announcement posted 20:15:04 ET; Peru announcement 19:55:24 ET. Firecrawl omits player names in attached images; ESPN lineups endpoint redirects to match page and says data unavailable. USA TODAY describes 11 Mexico changes with Garcia, Denzell Garcia, Guzman, Everardo Lopez, Chavez, Vargas, Pineda, Fidalgo, Jeremy Marquez, Berterame, Violante; SI predicts a materially different XI. Neither substitute is treated as confirmed. Cannot assess both actual XI/GK and substitution impacts.",
+        "situation": "5/10: Harrison NJ at Sports Illustrated Stadium, equal three-day recovery; Mexico coach evaluating internal competition ahead of Oct3 USA match. Neutral venue with likely Mexico support, but experimental friendly and substitutions create mixed situational support. Weather/pitch status not verified.",
+        "vsin": "0/10 UNKNOWN: no matching named current Mexico/Peru selection found in targeted search or refreshed soccer hub; no assumed agreement.",
+        "docs": "0/10 UNKNOWN: targeted Doc's search returned historical unrelated tournament articles, not a Sep29 same-market selection.",
+        "market": "1/10: reference1/5 for fresh ESPN scoreboard only with incomplete market detail; VSiN sportid=soccer query returned MLB, so not soccer/Circa confirmation. Movement0/3 UNKNOWN, splits0/2 UNKNOWN. Dropbox Sep29 soccer file fetched but text blank; prior audit printed Sep28 11:45 ET remains historical, not live."
+      },
+      "failure_score": null,
+      "failure_score_status": "INCOMPLETE",
+      "failure_known_subtotal": 1,
+      "failure_assessed_maximum": 8,
+      "failure_dimensions": {
+        "strongest_failure": {
+          "score": 1,
+          "reason": "Peru counter/set-piece or draw path is credible; Mexico pressing and quality offer partial support, rotation reduces protection."
+        },
+        "personnel_resilience": {
+          "score": null,
+          "reason": "Actual XI/GK image names and expected substitutions not recovered, so cashing-path resilience cannot be assessed."
+        },
+        "variance_resilience": {
+          "score": 0,
+          "reason": "Experimental friendly rotations, finishing and draw risk leave favorite cashing path fragile."
+        },
+        "price_protection": {
+          "score": 0,
+          "reason": "No authenticated full three-way price or supported cutoff/alternative protection."
+        },
+        "contradiction_resolution": {
+          "score": 0,
+          "reason": "Competing projected XIs and incomplete actual personnel/price remain unresolved; no independent exact-market confirmation."
+        }
+      },
+      "best_number": null,
+      "no_bet_cutoff": null,
+      "disposition": "NO BET",
+      "units": 0,
+      "missing_evidence": [
+        "readable both official XI images and starting keepers",
+        "injury/availability and substitution/role impacts",
+        "current Circa three-way market including draw",
+        "exact current BetRivers Delaware settlement and offer",
+        "named Doc's and VSiN same-market selections",
+        "authenticated same-book opening/current movement and tickets/handle",
+        "current weather/pitch and xG if available"
+      ],
+      "release_blockers": [
+        "core price and personnel factors null: cannot establish 82/110",
+        "Failure Score incomplete: cannot establish 7/10",
+        "no exact executable user-book price or supported cutoff"
+      ],
+      "market_snapshot": {
+        "as_of": "2026-09-29T20:22:00-04:00",
+        "external_display": "ESPN MEX -265; not verified Circa or Delaware; full settlement/draw not exposed",
+        "historical_search_display": "ESPN MEX -185 with incorrect 22:30 time; cached search content, not opening odds",
+        "circa": "not verified current; Dropbox extraction blank; prior audit sheet printed Sep28"
+      },
+      "official_lineup_announcements": {
+        "mexico": {
+          "url": "https://x.com/miseleccionmx/status/2105089006488658391",
+          "posted_at": "2026-09-29T20:15:04-04:00",
+          "names_verified": false
+        },
+        "peru": {
+          "url": "https://x.com/SeleccionPeru/status/2105084055448637669",
+          "posted_at": "2026-09-29T19:55:24-04:00",
+          "names_verified": false
+        }
+      },
+      "scans": {
+        "progressive_fade": "UNKNOWN: no validated trigger established",
+        "favorite_inflation": "UNKNOWN: favorite status alone does not validate inflation; no authentic open/current series",
+        "guides": "NFL Fantasy Life and NBA franchise rankings not applicable to soccer; no separate relevant soccer guide found in controlling current modules",
+        "xg": "unverified; no standalone model gate added"
+      },
+      "sources": [
+        "https://x.com/miseleccionmx/status/2105089006488658391",
+        "https://x.com/SeleccionPeru/status/2105084055448637669",
+        "https://miseleccion.mx/noticias/6650-Rafa-M%C3%A1rquez:-%E2%80%9CSi-hay-algo-que-quiero-imponer-es-la-competencia-interna%E2%80%9D",
+        "https://www.si.com/soccer/mexico-vs-peru-international-friendly-preview-predictions-lineups-9-29-26",
+        "https://sports.yahoo.com/articles/mexico-projected-lineup-vs-peru-100947126.html",
+        "https://www.espn.com/soccer/match/_/gameId/401903234",
+        "https://vsin.com/soccer/",
+        "https://www.dropbox.com/scl/fi/s3qxehlimld9y7zonq09k"
+      ]
     }
   ],
   "ungraded": [
@@ -1144,10 +1258,10 @@
   "latest_price_check": "2026-09-29T18:17:00-04:00",
   "user_book_disposition": "NO BET",
   "latest_update": {
-    "as_of": "2026-09-29T19:54:00-04:00",
-    "event_group": "MIN-NYL 45-minute gate",
+    "as_of": "2026-09-29T20:22:00-04:00",
+    "event_group": "Peru–Mexico pregame gate",
     "decision": "NO BET 0u",
-    "note": "Liberty +3.5 regraded 75/110 B watchlist, Failure 5/10. Official starters and current BetRivers Delaware quote unavailable."
+    "note": "Official XI announcements located, images unreadable in extraction; exact price/settlement and personnel core incomplete. Known subtotal28/75, not /110; Failure incomplete."
   },
   "grading_note": "A score measures current evidence and Micks judgment, not win probability. Unverified factors stay zero; missing points are not automatic possible upgrades. No official releases.",
   "active_scoring_version": "micks-110-v2-2026-09-29",
