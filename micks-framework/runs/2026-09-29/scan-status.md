@@ -299,3 +299,47 @@ Darren's **IMG_1717.png** shows offered full-game prices **including overtime an
 **Best Number:** Liberty **+3.5 at -110 or better**, research target only. **No-Bet Cutoff:** below **+3**, or worse than **-115 at +3.5**; in every case remain NO BET unless the 82/110, 7/10, lineup and live-price gates clear.
 
 **Missing evidence:** confirmed starting fives; resolution of conflicting player designations; exact live BetRivers Delaware spread/juice; unambiguous tickets and handle; named current VSiN Liberty spread pick. **Release blockers:** 75 < 82; 5 < 7; starters not official; Delaware price not live. The Dropbox scan returned only **WNBA - 2026-9-30.pdf**, so there was no Sept. 29 Circa PDF to substitute for the current VSiN/market references. No wager or active website card was created.
+
+## Peru–Mexico pregame gate — September 29, 2026, 8:22 p.m. ET
+
+**Decision: NO BET, 0u. Mexico 90-minute moneyline is UNGRADED under v2, not a low Pass score.** Best Number and No-Bet Cutoff are unestablished. Core personnel and price remain incomplete; the required 82/110 and Failure 7/10 cannot be established. Earlier started MLB/NHL candidates and all historical v1 snapshots are preserved; no retrospective release.
+
+### Changed evidence
+
+| Item | Refreshed evidence | Decision impact |
+|---|---|---|
+| Official XI announcements | [Mexico](https://x.com/miseleccionmx/status/2105089006488658391) posted 8:15:04 p.m. ET; [Peru](https://x.com/SeleccionPeru/status/2105084055448637669) posted 7:55:24 p.m. ET. Attached-image names were omitted by extraction; ESPN lineup endpoint supplies no XI. | Announcements located; actual names, GKs and role effects still unverified. |
+| Kickoff | Fresh ESPN page and 365Scores display 9 p.m. ET; federation calendar shows 19:00 without timezone, consistent with Mexico time but not independently converted as fact. Cached ESPN search result said 10:30 p.m. | Retain requested 9 p.m. ET; cached result is superseded. |
+| Price | Fresh [ESPN](https://www.espn.com/soccer/match/_/gameId/401903234) shows Mexico -265; cached result showed -185. Full three-way book/settlement/draw prices absent. | Not Circa/Delaware, not verified movement, not a playable release. |
+| Matchup | [Mexico coach Sep28](https://miseleccion.mx/noticias/6650-Rafa-M%C3%A1rquez:-%E2%80%9CSi-hay-algo-que-quiero-imponer-es-la-competencia-interna%E2%80%9D) emphasizes pressure, limiting chances and improving finishing; SI favors Mexico 2-0. | A qualitative Mexico cashing path exists; rotation and draw risk remain. SI prediction is not Doc's/VSiN confirmation. |
+| Circa / cappers / market | Dropbox Sep29 soccer file returned blank text; prior audit had Sep28 printed sheet. VSiN soccer query returned MLB; soccer hub and targeted Doc's/VSiN searches yielded no matching named pick. No movement/splits or live Delaware offer recovered. | Missing support and release information remain explicit. |
+
+### Fresh v2 factor assessment
+
+| Factor | Award | Evidence / limitation |
+|---|---:|---|
+| matchup | 22/35 | 22/35 provisional qualitative assessment: Mexico's possession/pressing path versus Peru's poor recent results and defensive transition provides modest identifiable support. Official Sep28 Marquez comments describe pressure, limiting chances and three woodwork strikes versus Colombia; SI reports Peru lost 4-1 to USA and Mexico won 10/14 in 2026. Countercase: Mexico expected wholesale rotation, debut keeper and finishing uncertainty; Peru can win through counters/set pieces or protect a draw. Do not equate likely winner with value at -265. No verified current xG dataset; numerical xG alone is not a prerequisite. |
+| price | UNKNOWN /20 | null/20: fresh ESPN at ~20:21 ET displays MEX -265 (72.60% break-even if applicable settlement); earlier cached search page -185 and 22:30 is superseded, not authenticated movement. Book identification, all three outcomes, exact settlement, current Circa and BetRivers Delaware unavailable. No justified best playable number/cutoff. |
+| personnel | UNKNOWN /15 | null/15: official Mexico XI announcement posted 20:15:04 ET; Peru announcement 19:55:24 ET. Firecrawl omits player names in attached images; ESPN lineups endpoint redirects to match page and says data unavailable. USA TODAY describes 11 Mexico changes with Garcia, Denzell Garcia, Guzman, Everardo Lopez, Chavez, Vargas, Pineda, Fidalgo, Jeremy Marquez, Berterame, Violante; SI predicts a materially different XI. Neither substitute is treated as confirmed. Cannot assess both actual XI/GK and substitution impacts. |
+| situation | 5/10 | 5/10: Harrison NJ at Sports Illustrated Stadium, equal three-day recovery; Mexico coach evaluating internal competition ahead of Oct3 USA match. Neutral venue with likely Mexico support, but experimental friendly and substitutions create mixed situational support. Weather/pitch status not verified. |
+| vsin | 0/10 | 0/10 UNKNOWN: no matching named current Mexico/Peru selection found in targeted search or refreshed soccer hub; no assumed agreement. |
+| docs | 0/10 | 0/10 UNKNOWN: targeted Doc's search returned historical unrelated tournament articles, not a Sep29 same-market selection. |
+| market | 1/10 | 1/10: reference1/5 for fresh ESPN scoreboard only with incomplete market detail; VSiN sportid=soccer query returned MLB, so not soccer/Circa confirmation. Movement0/3 UNKNOWN, splits0/2 UNKNOWN. Dropbox Sep29 soccer file fetched but text blank; prior audit printed Sep28 11:45 ET remains historical, not live. |
+| Total | **UNGRADED** | Known subtotal **28/75 assessed**, audit only; never rescaled to /110. Personnel and price are null. |
+
+Mexico's cashing script is sustained possession and pressure against Peru's vulnerable defense, with the quality gap producing enough finishing to avoid a draw. The strongest countercase is an extensively changed Mexico side losing continuity, an inexperienced keeper and friendly substitutions allowing Peru to counter or hold a low-event draw. Current numerical xG was not recovered; this is disclosed rather than imposed as a new model requirement. The available qualitative matchup is assessable, but the actual XI/role and exact price work is incomplete. Progressive Fade and Favorite Inflation are UNKNOWN, with no validated trigger or duplicated points. NFL Fantasy Life and NBA franchise rankings are not applicable to this soccer market.
+
+### Failure Score
+
+| Dimension | Award | Reason |
+|---|---:|---|
+| strongest_failure | 1/2 | Peru counter/set-piece or draw path is credible; Mexico pressing and quality offer partial support, rotation reduces protection. |
+| personnel_resilience | UNKNOWN | Actual XI/GK image names and expected substitutions not recovered, so cashing-path resilience cannot be assessed. |
+| variance_resilience | 0/2 | Experimental friendly rotations, finishing and draw risk leave favorite cashing path fragile. |
+| price_protection | 0/2 | No authenticated full three-way price or supported cutoff/alternative protection. |
+| contradiction_resolution | 0/2 | Competing projected XIs and incomplete actual personnel/price remain unresolved; no independent exact-market confirmation. |
+| Total | **INCOMPLETE** | Known subtotal 1/8 assessed; no final /10 score or clearance. |
+
+**Missing evidence:** readable both official XI images and starting keepers; injury/availability and substitution/role impacts; current Circa three-way market including draw; exact current BetRivers Delaware settlement and offer; named Doc's and VSiN same-market selections; authenticated same-book opening/current movement and tickets/handle; current weather/pitch and xG if available.
+**Release blockers:** core price and personnel factors null: cannot establish 82/110; Failure Score incomplete: cannot establish 7/10; no exact executable user-book price or supported cutoff.
+No bet, website card or import payload was created. This gate check is delivered despite incomplete release evidence. No additional schedule was created.
