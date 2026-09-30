@@ -1,8 +1,8 @@
 {
   "date": "2026-09-29",
   "timezone": "America/New_York",
-  "snapshot": "2026-09-29T20:22:00-04:00",
-  "status": "PERU–MEXICO PREGAME V2 CHECK; UNGRADED / NO BET",
+  "snapshot": "2026-09-29T21:24:54-04:00",
+  "status": "CUBS–PADRES / CANUCKS–OILERS FRESH V2 PREGAME CHECK COMPLETED; BOTH NO BET",
   "official_releases": [],
   "official_units": 0,
   "import_payload": {
@@ -96,29 +96,52 @@
       "event": "CHC at SD",
       "market": "Under 7.5 runs",
       "benchmark": {
-        "book": "Circa",
-        "odds": "-120",
-        "as_of": "2026-09-29T09:59:00-04:00"
+        "book": "Circa via labeled VSiN line-tracker",
+        "market": "Under 7.5",
+        "odds": "-110",
+        "observed_during": "2026-09-29 21:13–21:22 ET",
+        "source": "https://data.vsin.com/vegas-odds-linetracker/?sportid=mlb"
       },
       "factors": {
-        "micks": 12,
-        "line": 3,
-        "availability": 4,
-        "situation": 4,
-        "fade": 0,
-        "favorite_inflation": 0,
-        "vsin": 3,
-        "docs": 3,
+        "matchup": {
+          "points": 19,
+          "max": 35,
+          "evidence": "Two cashing paths: competent starter outings aided by Chicago's elite defense; or early hook into rested leverage arms, especially San Diego's pen. Countercase: Cubs led offense; Padres' second-half hitting and September vs LHP threaten Boyd. Boyd 3.91 ERA/4.65 xERA/4.21 FIP and King 3.21/4.40/4.13 show regression risk; neither is a dominant strikeout shield."
+        },
+        "price": {
+          "points": 14,
+          "max": 20,
+          "evidence": "Current labeled Circa Under 7.5 -110 is preferable to morning -120 and historical DE -118. Half-run over opening 7 is useful, but strong offenses limit conviction. Research best verified number 7.5 -110; no-bet/reassessment boundary worse than -115 or threshold below 7.5. This is judgment, not an invented fair line or official release."
+        },
+        "personnel": {
+          "points": 11,
+          "max": 15,
+          "evidence": "Boyd/King and both nine-player batting orders confirmed. Bregman DH and Swanson active. Chicago has Palencia/Rolison/Zeferjahn/Webb and multi-inning relief; Thielbar excluded, Cabrera inactive. SD Miller closer, Morejon setup; Adam returns from shoulder strain, Musgrove active limited relief, Estrada absent. Rested pen supports Under, but full-strength hitters and returnee uncertainty limit points."
+        },
+        "situation": {
+          "points": 6,
+          "max": 10,
+          "evidence": "Petco is open-air; no retractable-roof decision. NWS 6 p.m. PDT observation 75F, W4mph; tonight W around5mph, low66. VSiN park display77F WSW6. Mild weather does not supply a strong wind edge. Wild Card stakes do not guarantee low scoring."
+        },
+        "vsin": {
+          "points": 4,
+          "max": 10,
+          "evidence": "Steve Makinen's Sept29 systems include Wild Card Under7 and Cubs postseason Under. Different threshold reconciled to current7.5, without treating the historical system as a model. Adam Burke picks Padres -126, not the total, and highlights low-K starters and potent offenses. Series Padres -120 is separate, not game1 confirmation. Mixed source-family evidence."
+        },
+        "docs": {
+          "points": 6,
+          "max": 10,
+          "evidence": "Parlay's Pundit Sept28 explicitly selects Under7.5 and SD-126. Same total remains relevant; article provides no Under juice. Rationale based partly on career/season averages predates final relief changes. AI-v3 inaccessible adds no second penalty."
+        },
         "market": {
-          "movement": 0,
-          "splits": 0,
-          "liquidity": 3,
-          "timing": 0
+          "points": 5,
+          "max": 10,
+          "evidence": "Reference4/5: labeled Circa column plus multi-book comparison. Movement1/3: same-board OPEN7 to current7.5, opening quote time/juice not exposed; no sharp-money claim. Splits0/2: headings/pro-pick counts visible but no authenticated ticket/handle percentages."
         }
       },
-      "score": 32,
+      "score": 65,
       "failure_score": 3,
-      "disposition": "PASS",
+      "disposition": "NO BET",
       "units": 0,
       "user_book_offer": {
         "book": "BetRivers Delaware",
@@ -126,9 +149,11 @@
         "odds": "-118",
         "market": "Under 7.5 runs",
         "source_image": "IMG_1712.png",
-        "offered_not_wagered": true
+        "offered_not_wagered": true,
+        "historical": true,
+        "executable_now": false
       },
-      "score_status": "Provisional evidence-based grade with exact BetRivers quote where shown; no release and 0u. Historical v1 assessment; not a v2 grade.",
+      "score_status": "PROVISIONAL: all core factors meaningfully assessed; exact DE price and remaining sport gates separately control release",
       "prior_snapshot": {
         "score": 31,
         "factors": {
@@ -148,12 +173,171 @@
           }
         }
       },
-      "grade": "PASS",
-      "points_to_c": 26,
-      "points_to_recovery_gate": 50,
-      "grade_as_of": "2026-09-29T15:15:00-04:00",
-      "scoring_version": "micks-110-v1",
-      "v2_reassessment_status": "pending_fresh_assessment"
+      "grade": "C / Lean / Watchlist",
+      "points_to_c": 0,
+      "points_to_recovery_gate": 17,
+      "grade_as_of": "2026-09-29T21:24:54-04:00",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "v2_reassessment_status": "fresh assessment completed",
+      "history": [
+        {
+          "preserved_at": "2026-09-29T21:24:54-04:00",
+          "reason": "Preserve complete pre-migration v1 snapshot; fresh v2 assessment, no score multiplication",
+          "snapshot": {
+            "id": "mlb_chc_sd_under",
+            "sport": "MLB",
+            "event": "CHC at SD",
+            "market": "Under 7.5 runs",
+            "benchmark": {
+              "book": "Circa",
+              "odds": "-120",
+              "as_of": "2026-09-29T09:59:00-04:00"
+            },
+            "factors": {
+              "micks": 12,
+              "line": 3,
+              "availability": 4,
+              "situation": 4,
+              "fade": 0,
+              "favorite_inflation": 0,
+              "vsin": 3,
+              "docs": 3,
+              "market": {
+                "movement": 0,
+                "splits": 0,
+                "liquidity": 3,
+                "timing": 0
+              }
+            },
+            "score": 32,
+            "failure_score": 3,
+            "disposition": "PASS",
+            "units": 0,
+            "user_book_offer": {
+              "book": "BetRivers Delaware",
+              "as_of": "2026-09-29T15:05:00-04:00",
+              "odds": "-118",
+              "market": "Under 7.5 runs",
+              "source_image": "IMG_1712.png",
+              "offered_not_wagered": true
+            },
+            "score_status": "Provisional evidence-based grade with exact BetRivers quote where shown; no release and 0u. Historical v1 assessment; not a v2 grade.",
+            "prior_snapshot": {
+              "score": 31,
+              "factors": {
+                "micks": 12,
+                "line": 2,
+                "availability": 4,
+                "situation": 4,
+                "fade": 0,
+                "favorite_inflation": 0,
+                "vsin": 3,
+                "docs": 3,
+                "market": {
+                  "movement": 0,
+                  "splits": 0,
+                  "liquidity": 3,
+                  "timing": 0
+                }
+              }
+            },
+            "grade": "PASS",
+            "points_to_c": 26,
+            "points_to_recovery_gate": 50,
+            "grade_as_of": "2026-09-29T15:15:00-04:00",
+            "scoring_version": "micks-110-v1",
+            "v2_reassessment_status": "pending_fresh_assessment"
+          }
+        }
+      ],
+      "market_subfactors": {
+        "reference": {
+          "points": 4,
+          "max": 5
+        },
+        "movement": {
+          "points": 1,
+          "max": 3
+        },
+        "splits": {
+          "points": 0,
+          "max": 2,
+          "status": "UNKNOWN"
+        }
+      },
+      "failure_score_status": "PROVISIONAL; starter leash and relief returnees retain uncertainty",
+      "failure_dimensions": {
+        "strongest_failure": {
+          "points": 1,
+          "max": 2,
+          "evidence": "Both offenses can punish contact; defensive/pitching paths provide only partial protection."
+        },
+        "personnel_resilience": {
+          "points": 1,
+          "max": 2,
+          "evidence": "Rested active leverage arms help, but early exits/Adam and Musgrove recovery plus Cubs committee leave meaningful risk."
+        },
+        "variance_resilience": {
+          "points": 0,
+          "max": 2,
+          "evidence": "Total is fragile to clustered hits, homers and late/extra-inning runs."
+        },
+        "price_protection": {
+          "points": 1,
+          "max": 2,
+          "evidence": "7.5 offers useful threshold cushion, modest juice helps; no alternate market is independently graded."
+        },
+        "contradiction_resolution": {
+          "points": 0,
+          "max": 2,
+          "evidence": "ERA-versus-xERA/FIP and potent lineup countercase remains unresolved by historical Under systems."
+        }
+      },
+      "best_number": "Under 7.5 -110 (Circa reference; no live DE quote)",
+      "no_bet_cutoff": "Research limit Under 7.5 -115; below 7.5 or worse juice requires reassessment; no release at any price on this check",
+      "missing_evidence": [
+        "Exact live BetRivers Delaware full-game total and odds",
+        "Authenticated ticket/handle splits",
+        "Opening quote timestamp and juice",
+        "Official game-specific umpire reconfirmation (VSiN identifies Ramon De Jesus)",
+        "Explicit starter leash and marginal relief availability, where disclosed"
+      ],
+      "release_blockers": [
+        "65/110 below 82 release threshold",
+        "Failure Score 3/10 below 7",
+        "Exact executable user-book price unverified"
+      ],
+      "sources": [
+        "https://www.mlb.com/starting-lineups/2026-09-29",
+        "https://www.mlb.com/news/cubs-vs-padres-wild-card-series-lineups-and-pitching-matchup",
+        "https://www.mlb.com/padres/news/padres-2026-nl-wild-card-series-roster",
+        "https://forecast.weather.gov/MapClick.php?lon=-117.157&lat=32.708",
+        "https://insidethepen.com/team/CHC-bullpen.html",
+        "https://insidethepen.com/team/SD-bullpen.html",
+        "https://data.vsin.com/mlb/games/?gamedate=2026-09-29",
+        "https://data.vsin.com/vegas-odds-linetracker/?sportid=mlb",
+        "https://vsin.com/mlb/mlb-playoff-picks-today-adam-burkes-best-bets-for-tuesday-september-29/",
+        "https://vsin.com/mlb/steve-makinens-mlb-picks-from-betting-splits-and-systems-for-tuesday-september-29/",
+        "https://www.docsports.com/free-picks/baseball/2026/chicago-cubs-vs-san-diego-padres-prediction-9-29-2026-mlb-picks-best-bets-odds.html"
+      ],
+      "live_user_book_offer": null,
+      "required_scans": {
+        "progressive_fade": {
+          "status": "UNKNOWN",
+          "reason": "No validated trigger data; no independent standalone deduction"
+        },
+        "favorite_inflation": {
+          "status": "UNKNOWN",
+          "reason": "No verified same-band cover sample; not assumed clear"
+        },
+        "nfl_guides": {
+          "status": "NOT APPLICABLE"
+        },
+        "nba_franchise_rankings": {
+          "status": "NOT APPLICABLE"
+        }
+      },
+      "core_assessment_complete": true
     },
     {
       "id": "wnba_lva_spread",
@@ -632,29 +816,52 @@
       "event": "VAN at EDM",
       "market": "Oilers moneyline",
       "benchmark": {
-        "book": "Circa",
-        "odds": "-290",
-        "as_of": "2026-09-29T08:29:00-04:00"
+        "book": "Circa via labeled VSiN line-tracker",
+        "market": "Edmonton ML",
+        "odds": "-285",
+        "observed_during": "2026-09-29 21:13–21:22 ET",
+        "source": "https://data.vsin.com/vegas-odds-linetracker/?sportid=nhl"
       },
       "factors": {
-        "micks": 10,
-        "line": 0,
-        "availability": 4,
-        "situation": 4,
-        "fade": 0,
-        "favorite_inflation": 0,
-        "vsin": 0,
-        "docs": 0,
+        "matchup": {
+          "points": 24,
+          "max": 35,
+          "evidence": "Edmonton's high-end offense/PP and Vancouver's prior weak goal prevention create two paths: sustained top-six five-on-five advantage and special-teams scoring. Vancouver's Lankinen recent .875 SV% supports the matchup if he starts. Countercase: Edmonton's own Jarry .857 SV%/3.86 GAA in 19 Oilers appearances last season permits upsets; small unbeaten preseason sample cannot erase it."
+        },
+        "price": {
+          "points": 6,
+          "max": 20,
+          "evidence": "Best verified Circa ML -285 demands 74.0% break-even before vig adjustment. Better than morning-290 and historical DE-315, still costly. VSiN's displayed model -251 is outside disagreement, not an invented Micks price or automatic veto. Reconsider only -250 or better; -240 preferred research target, not currently verified and no promise of release. Current -285 exceeds cutoff."
+        },
+        "personnel": {
+          "points": 10,
+          "max": 15,
+          "evidence": "Official Oilers preview confirms Jarry. RNH out lower-body; Draisaitl moves to second-line center, Jones enters, Podkolzin fills RNH PP1 role. Vancouver Demko/Chytil out, DeBrusk expected available. Lankinen still Likely in fresh goalie tracker; projected combinations, not final dressed warmup sheets. Remaining top-end talent supports cashing, goalie/role resilience limited."
+        },
+        "situation": {
+          "points": 6,
+          "max": 10,
+          "evidence": "Home opener at Rogers Place; no weather/roof gate and no established rest/travel advantage. Opening-night emotional narrative and preseason4-0 are not durable edges. No validated inflation/fade trigger established."
+        },
+        "vsin": {
+          "points": 3,
+          "max": 10,
+          "evidence": "Jonathan Davis Sept29 recommends Vegas/Edmonton ML parlay -115 plus McDavid/Draisaitl point parlay and Draisaitl goal. Edmonton is a parlay leg, not a standalone recommendation at -285. No extracted Edmonton-specific ML rationale; limited direction confirmation only."
+        },
+        "docs": {
+          "points": 6,
+          "max": 10,
+          "evidence": "Parlay's Pundit Sept29 selects Edmonton -305 and Under6. Side rationale uses offensive/PP gap but career goalie averages and predates today's RNH reshuffle. Current-285 is a better same-side number; Under6 is a separate market, not current Under6.5 confirmation."
+        },
         "market": {
-          "movement": 0,
-          "splits": 0,
-          "liquidity": 3,
-          "timing": 0
+          "points": 5,
+          "max": 10,
+          "evidence": "Reference4/5: labeled Circa -285, other books-290 through-310. Movement1/3: dated morning Circa-290 to-285 is five-cent softening, not endorsement; Vancouver OPEN+240/current+250 visible but no exact EDM opener/clock inferred. Splits0/2: public headings alone provide no percentages."
         }
       },
-      "score": 21,
+      "score": 60,
       "failure_score": 3,
-      "disposition": "PASS",
+      "disposition": "NO BET",
       "units": 0,
       "user_book_offer": {
         "book": "BetRivers Delaware",
@@ -662,9 +869,11 @@
         "odds": "-315",
         "market": "Oilers moneyline",
         "source_image": "IMG_1716.png",
-        "offered_not_wagered": true
+        "offered_not_wagered": true,
+        "historical": true,
+        "executable_now": false
       },
-      "score_status": "Provisional evidence-based grade with exact BetRivers quote where shown; no release and 0u. Historical v1 assessment; not a v2 grade.",
+      "score_status": "PROVISIONAL: all core factors meaningfully assessed; exact DE price and remaining sport gates separately control release",
       "prior_snapshot": {
         "score": 24,
         "factors": {
@@ -684,12 +893,170 @@
           }
         }
       },
-      "grade": "PASS",
-      "points_to_c": 37,
-      "points_to_recovery_gate": 61,
-      "grade_as_of": "2026-09-29T15:15:00-04:00",
-      "scoring_version": "micks-110-v1",
-      "v2_reassessment_status": "pending_fresh_assessment"
+      "grade": "C / Lean / Watchlist",
+      "points_to_c": 0,
+      "points_to_recovery_gate": 22,
+      "grade_as_of": "2026-09-29T21:24:54-04:00",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "v2_reassessment_status": "fresh assessment completed",
+      "history": [
+        {
+          "preserved_at": "2026-09-29T21:24:54-04:00",
+          "reason": "Preserve complete pre-migration v1 snapshot; fresh v2 assessment, no score multiplication",
+          "snapshot": {
+            "id": "nhl_edm_ml",
+            "sport": "NHL",
+            "event": "VAN at EDM",
+            "market": "Oilers moneyline",
+            "benchmark": {
+              "book": "Circa",
+              "odds": "-290",
+              "as_of": "2026-09-29T08:29:00-04:00"
+            },
+            "factors": {
+              "micks": 10,
+              "line": 0,
+              "availability": 4,
+              "situation": 4,
+              "fade": 0,
+              "favorite_inflation": 0,
+              "vsin": 0,
+              "docs": 0,
+              "market": {
+                "movement": 0,
+                "splits": 0,
+                "liquidity": 3,
+                "timing": 0
+              }
+            },
+            "score": 21,
+            "failure_score": 3,
+            "disposition": "PASS",
+            "units": 0,
+            "user_book_offer": {
+              "book": "BetRivers Delaware",
+              "as_of": "2026-09-29T15:05:00-04:00",
+              "odds": "-315",
+              "market": "Oilers moneyline",
+              "source_image": "IMG_1716.png",
+              "offered_not_wagered": true
+            },
+            "score_status": "Provisional evidence-based grade with exact BetRivers quote where shown; no release and 0u. Historical v1 assessment; not a v2 grade.",
+            "prior_snapshot": {
+              "score": 24,
+              "factors": {
+                "micks": 12,
+                "line": 1,
+                "availability": 4,
+                "situation": 4,
+                "fade": 0,
+                "favorite_inflation": 0,
+                "vsin": 0,
+                "docs": 0,
+                "market": {
+                  "movement": 0,
+                  "splits": 0,
+                  "liquidity": 3,
+                  "timing": 0
+                }
+              }
+            },
+            "grade": "PASS",
+            "points_to_c": 37,
+            "points_to_recovery_gate": 61,
+            "grade_as_of": "2026-09-29T15:15:00-04:00",
+            "scoring_version": "micks-110-v1",
+            "v2_reassessment_status": "pending_fresh_assessment"
+          }
+        }
+      ],
+      "market_subfactors": {
+        "reference": {
+          "points": 4,
+          "max": 5
+        },
+        "movement": {
+          "points": 1,
+          "max": 3
+        },
+        "splits": {
+          "points": 0,
+          "max": 2,
+          "status": "UNKNOWN"
+        }
+      },
+      "failure_score_status": "PROVISIONAL; plausible goalie/role alternatives assessed, final goalie gate still open",
+      "failure_dimensions": {
+        "strongest_failure": {
+          "points": 1,
+          "max": 2,
+          "evidence": "Edmonton's scoring paths can survive some concessions; Jarry's prior form leaves an upset path."
+        },
+        "personnel_resilience": {
+          "points": 1,
+          "max": 2,
+          "evidence": "McDavid/Draisaitl/Hyman retain scoring role but RNH PP replacement and unconfirmed VAN starter weaken resilience."
+        },
+        "variance_resilience": {
+          "points": 0,
+          "max": 2,
+          "evidence": "Opening-night goalie variance and special-teams swings remain substantial."
+        },
+        "price_protection": {
+          "points": 0,
+          "max": 2,
+          "evidence": "-285 exposes expensive loss and exceeds -250 reconsideration cutoff; puck line is not an independently assessed escape."
+        },
+        "contradiction_resolution": {
+          "points": 1,
+          "max": 2,
+          "evidence": "Offensive/PP gap partly resolves side concern; goalie weakness, outside model price and RNH role change still matter."
+        }
+      },
+      "best_number": "Edmonton ML -285 (Circa reference; no live DE quote); -240 research preference unavailable",
+      "no_bet_cutoff": "Reconsider only -250 or better; -285 is NO BET; no automatic release even inside cutoff",
+      "missing_evidence": [
+        "Official Lankinen starting confirmation",
+        "Both final dressed warmup lineups/scratches and PP roles",
+        "Exact live BetRivers Delaware ML incl OT/shootout odds",
+        "Authenticated ticket/handle splits",
+        "Exact Edmonton opener and opening quote timestamp",
+        "Validated same-band Favorite Inflation and Progressive Fade trigger data"
+      ],
+      "release_blockers": [
+        "60/110 below 82 release threshold",
+        "Provisional Failure Score 3/10 below 7",
+        "Vancouver goalie confirmation remains open",
+        "Current -285 exceeds -250 reconsideration cutoff",
+        "Exact executable user-book price unverified"
+      ],
+      "sources": [
+        "https://www.nhl.com/news/nhl-lineup-projections-2026-27-season",
+        "https://www.nhl.com/oilers/news/projected-lineup-nugent-hopkins-out-for-tuesday-s-home-opener-vs-canucks",
+        "https://www.nhl.com/oilers/news/preview-oilers-vs-canucks-09-29-26",
+        "https://www.dailyfaceoff.com/starting-goalies",
+        "https://data.vsin.com/vegas-odds-linetracker/?sportid=nhl",
+        "https://vsin.com/nhl/nhl-predictions-expert-picks-on-tuesday-september-29/",
+        "https://www.docsports.com/free-picks/nhl-hockey/2026/vancouver-canucks-vs-edmonton-oilers-prediction-9-29-2026-nhl-picks-best-bets-odds.html"
+      ],
+      "live_user_book_offer": null,
+      "required_scans": {
+        "progressive_fade": {
+          "status": "UNKNOWN",
+          "reason": "No validated trigger data; no independent standalone deduction"
+        },
+        "favorite_inflation": {
+          "status": "UNKNOWN",
+          "reason": "No verified same-band cover sample; not assumed clear"
+        },
+        "nfl_guides": {
+          "status": "NOT APPLICABLE"
+        },
+        "nba_franchise_rankings": {
+          "status": "NOT APPLICABLE"
+        }
+      },
+      "core_assessment_complete": true
     },
     {
       "id": "nhl_vgk_ml",
@@ -1281,5 +1648,19 @@
     "remaining_events": "Fresh v2 assessment at next pregame checkpoint; no mechanical conversion.",
     "already_started_events": "Prior pregame assessment frozen; no retrospective release.",
     "release_thresholds_unchanged": true
-  }
+  },
+  "check_history": [
+    {
+      "as_of": "2026-09-29T21:24:54-04:00",
+      "events": [
+        "CHC at SD",
+        "VAN at EDM"
+      ],
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "decision": "NO BET / 0u for both",
+      "started_toronto_candidate": "Frozen; no retrospective regrade",
+      "published": false,
+      "wagered": false
+    }
+  ]
 }
