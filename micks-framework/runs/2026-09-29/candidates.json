@@ -1,8 +1,8 @@
 {
   "date": "2026-09-29",
   "timezone": "America/New_York",
-  "snapshot": "2026-09-29T21:27:00-04:00",
-  "status": "9:27 ET DE SCREENSHOT PRICE UPDATE: UNDER64/110, EDM56/110; BOTH NO BET",
+  "snapshot": "2026-09-29T21:50:00-04:00",
+  "status": "BLACKHAWKS–GOLDEN KNIGHTS FRESH V2 PREGAME CHECK; NO BET",
   "official_releases": [],
   "official_units": 0,
   "import_payload": {
@@ -1447,31 +1447,29 @@
       "event": "CHI at VGK",
       "market": "Golden Knights moneyline",
       "benchmark": {
-        "book": "Circa",
-        "odds": "-250",
-        "as_of": "2026-09-29T08:29:00-04:00"
+        "book": "Circa via labeled VSiN line tracker",
+        "odds": "-252",
+        "as_of": "2026-09-29T21:50:00-04:00",
+        "market": "Golden Knights ML including OT/shootout"
       },
       "factors": {
-        "micks": 11,
-        "line": 1,
-        "availability": 4,
-        "situation": 4,
-        "fade": 0,
-        "favorite_inflation": 0,
-        "vsin": 0,
+        "matchup": 27,
+        "price": 5,
+        "personnel": 12,
+        "situation": 6,
+        "vsin": 3,
         "docs": 0,
         "market": {
-          "movement": 0,
-          "splits": 0,
-          "liquidity": 3,
-          "timing": 0
+          "reference": 4,
+          "movement": 2,
+          "splits": 0
         }
       },
-      "score": 23,
-      "failure_score": 3,
-      "disposition": "PASS",
+      "score": 59,
+      "failure_score": 2,
+      "disposition": "NO BET",
       "units": 0,
-      "score_status": "Provisional evidence-based grade with exact BetRivers quote where shown; no release and 0u. Historical v1 assessment; not a v2 grade.",
+      "score_status": "PROVISIONAL fresh v2 assessment; core handicap assessed, exact live BetRivers Delaware price and final dressed warmup sheets unavailable",
       "prior_snapshot": {
         "score": 23,
         "factors": {
@@ -1491,12 +1489,165 @@
           }
         }
       },
-      "grade": "PASS",
-      "points_to_c": 35,
-      "points_to_recovery_gate": 59,
-      "grade_as_of": "2026-09-29T15:15:00-04:00",
-      "scoring_version": "micks-110-v1",
-      "v2_reassessment_status": "pending_fresh_assessment"
+      "grade": "C / Lean / Watchlist",
+      "points_to_c": 0,
+      "points_to_recovery_gate": 23,
+      "grade_as_of": "2026-09-29T21:50:00-04:00",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "v2_reassessment_status": "fresh assessment completed",
+      "historical_v1_snapshot": {
+        "id": "nhl_vgk_ml",
+        "sport": "NHL",
+        "event": "CHI at VGK",
+        "market": "Golden Knights moneyline",
+        "benchmark": {
+          "book": "Circa",
+          "odds": "-250",
+          "as_of": "2026-09-29T08:29:00-04:00"
+        },
+        "factors": {
+          "micks": 11,
+          "line": 1,
+          "availability": 4,
+          "situation": 4,
+          "fade": 0,
+          "favorite_inflation": 0,
+          "vsin": 0,
+          "docs": 0,
+          "market": {
+            "movement": 0,
+            "splits": 0,
+            "liquidity": 3,
+            "timing": 0
+          }
+        },
+        "score": 23,
+        "failure_score": 3,
+        "disposition": "PASS",
+        "units": 0,
+        "score_status": "Provisional evidence-based grade with exact BetRivers quote where shown; no release and 0u. Historical v1 assessment; not a v2 grade.",
+        "prior_snapshot": {
+          "score": 23,
+          "factors": {
+            "micks": 11,
+            "line": 1,
+            "availability": 4,
+            "situation": 4,
+            "fade": 0,
+            "favorite_inflation": 0,
+            "vsin": 0,
+            "docs": 0,
+            "market": {
+              "movement": 0,
+              "splits": 0,
+              "liquidity": 3,
+              "timing": 0
+            }
+          }
+        },
+        "grade": "PASS",
+        "points_to_c": 35,
+        "points_to_recovery_gate": 59,
+        "grade_as_of": "2026-09-29T15:15:00-04:00",
+        "scoring_version": "micks-110-v1",
+        "v2_reassessment_status": "pending_fresh_assessment"
+      },
+      "factor_evidence": {
+        "matchup": "Vegas' returning top-six quality, 264 goals and 24.47% PP versus Chicago's 210 goals, 16.95% PP and Bedard absence create a strong home-favorite cashing path. Countercase: Knight posted .902 last season while Hart was .891, so the crease does not justify assuming a routine win.",
+        "price": "Current Circa -252 requires about 71.6% break-even before hold adjustment; VSiN's displayed estimate is -244. That is not enough price cushion for Recovery Mode+. Best research target -220 or better; no-bet cutoff worse than -230, with a fresh regrade still required.",
+        "personnel": "Knight and Hart confirmed. NHL.com projects full lines: Chicago without Bedard through roughly November; Vegas top six includes Eichel, Stone, Marner, Karlsson and Hertl. Teravainen projected scratched; Vegas Lavoie injured. Final warmup dressed sheets were not recovered, so personnel is strong but not perfect.",
+        "situation": "Vegas home opener after a Stanley Cup Final run; Chicago travels without its captain. Opening-night uncertainty and optional Vegas skate are not independent betting edges, and no rest disadvantage was verified.",
+        "vsin": "Jonathan Davis lists Vegas/Edmonton ML parlay -115 for 2u and an Eichel/Stone/Marner points parlay, so Vegas direction is supported only as a parlay leg. It is not a named standalone Vegas ML endorsement at -252.",
+        "docs": "Guy Bruhn explicitly selects Chicago +210. That directly opposes the Vegas moneyline candidate; no support points awarded.",
+        "market": "Reference 4/5: labeled Circa -252 with multi-book -260 to -295 context. Movement 2/3: Chicago Circa opener +209 to current +223 indicates movement toward Vegas, but exact Vegas opening price/time is not exposed. Splits 0/2: headings and two-pro-pick count do not expose ticket/handle percentages."
+      },
+      "failure_dimensions": {
+        "strongest_failure": {
+          "points": 1,
+          "max": 2,
+          "evidence": "Vegas can control play without converting enough, while Knight outperforms Hart; team-quality edge only partly protects."
+        },
+        "personnel_resilience": {
+          "points": 1,
+          "max": 2,
+          "evidence": "Bedard's absence and Vegas top-six depth are durable, but final dressed sheets were not recovered and Hart remains a weak link."
+        },
+        "variance_resilience": {
+          "points": 0,
+          "max": 2,
+          "evidence": "Single-game goalie and special-teams variance remains substantial."
+        },
+        "price_protection": {
+          "points": 0,
+          "max": 2,
+          "evidence": "At -252 one loss costs heavily; puck-line and parlay alternatives were not independently graded."
+        },
+        "contradiction_resolution": {
+          "points": 0,
+          "max": 2,
+          "evidence": "Doc's takes Chicago, VSiN estimate is shorter than market and Hart's recent save rate leaves the core price contradiction unresolved."
+        }
+      },
+      "best_number": "Vegas ML -220 or better research target; must still regrade",
+      "no_bet_cutoff": "Worse than -230; current Circa -252 is NO BET",
+      "missing_evidence": [
+        "Exact current BetRivers Delaware ML including OT/shootout offer",
+        "Final dressed warmup lineups and scratches",
+        "Authenticated ticket/handle splits",
+        "Exact Circa Vegas opener and opening timestamp",
+        "Validated Favorite Inflation same-band sample"
+      ],
+      "release_blockers": [
+        "59/110 below 82 Recovery Mode+ threshold",
+        "Failure Score 2/10 below 7",
+        "Current Circa -252 exceeds -230 cutoff",
+        "Doc's selection opposes candidate",
+        "Exact executable Delaware price unavailable"
+      ],
+      "market_snapshot": {
+        "circa": {
+          "vgk_ml": "-252",
+          "chi_ml": "+223",
+          "vgk_puckline": "-1.5 +102",
+          "total": "6 Under -110"
+        },
+        "opening": {
+          "chi_ml": "+209",
+          "total": "6",
+          "note": "Exact Vegas opener/time not exposed; no reverse calculation"
+        },
+        "vsin_game_board": {
+          "vgk_ml": "-258",
+          "estimated_line": "-244",
+          "estimated_score": "VGK 4.3, CHI 1.8",
+          "pro_picks_count": 2,
+          "splits_percentages_exposed": false
+        }
+      },
+      "sources": [
+        "https://www.nhl.com/news/chicago-blackhawks-vegas-golden-knights-game-preview-september-29-2026",
+        "https://www.dailyfaceoff.com/starting-goalies",
+        "https://data.vsin.com/vegas-odds-linetracker/?sportid=nhl",
+        "https://data.vsin.com/nhl/games/?gamedate=2026-09-29",
+        "https://vsin.com/nhl/nhl-predictions-expert-picks-on-tuesday-september-29/",
+        "https://www.docsports.com/free-picks/nhl-hockey/2026/chicago-blackhawks-vs-vegas-golden-knights-prediction-9-29-2026-nhl-picks-best-bets-odds.html"
+      ],
+      "required_scans": {
+        "progressive_fade": {
+          "status": "UNKNOWN",
+          "reason": "No validated trigger data; no standalone deduction"
+        },
+        "favorite_inflation": {
+          "status": "UNKNOWN",
+          "reason": "No verified same-band sample; favorite price risk handled in matchup/price only"
+        },
+        "nfl_guides": {
+          "status": "NOT APPLICABLE"
+        },
+        "nba_franchise_rankings": {
+          "status": "NOT APPLICABLE"
+        }
+      }
     },
     {
       "id": "nhl_fla_ml",
@@ -2059,6 +2210,16 @@
       ],
       "wagered": false,
       "published": false
+    },
+    {
+      "as_of": "2026-09-29T21:50:00-04:00",
+      "event": "CHI at VGK",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "decision": "NO BET / 0u",
+      "score": 59,
+      "failure_score": 2,
+      "published": false,
+      "wagered": false
     }
   ],
   "displayed_offer_updates": [
