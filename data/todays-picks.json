@@ -2,7 +2,7 @@
   "success": true,
   "source": "published-active-card-static",
   "sourceOfTruth": "Micks Picks publish data",
-  "date": "2026-09-26",
+  "date": "2026-10-01",
   "totalExposure": 0,
   "free": [
     {
@@ -1789,9 +1789,41 @@
       "fullAnalysis": "The full four-leg watch card and failure paths are in VIP. This public notice does not authorize a wager.",
       "homePreview": "Four-game VIP teaser watch; no official release.",
       "notes": "Exact Delaware Teaser card, Sept 24. No wager amount shown."
+    },
+    {
+      "id": "micks-2026-10-01-seven-leg-multi-review",
+      "date": "2026-10-01",
+      "section": "Lotto Parlays",
+      "access": "free",
+      "sport": "Multi-sport",
+      "league": "WNBA / NHL / CFB / NFL",
+      "game": "IND–LV / BUF–CBJ / PHI–NJ / TB–NYR / UNT–Tulsa / EDM–VAN / PIT–CLE",
+      "pick": "Indiana Fever +4.5 / Buffalo Sabres ML / New Jersey Devils ML / Tampa Bay Lightning ML / North Texas ML / Edmonton–Vancouver Over 6.5 / Deshaun Watson Under 187.5 passing yards",
+      "cardTitle": "Seven-Pick Multi-Sport Parlay — Review",
+      "type": "Seven-leg parlay",
+      "market": "Multi-sport parlay",
+      "lineNumber": "Indiana Fever +4.5 / Buffalo Sabres ML / New Jersey Devils ML / Tampa Bay Lightning ML / North Texas ML / Edmonton–Vancouver Over 6.5 / Deshaun Watson Under 187.5 passing yards",
+      "odds": "Combined quote unverified",
+      "sportsbook": "Reference prices; verify BetRivers",
+      "grade": "Provisional",
+      "units": 0,
+      "status": "Watch — Provisional",
+      "officialBet": "No",
+      "hideWagerAmounts": true,
+      "betPlaced": false,
+      "micksScore": "Legs 83 / 76 / 81 / 77 / 67 / 62 / 59 of 110",
+      "failureScore": "Legs 6 / 6 / 5 / 5 / 4 / 3 / 5 of 10",
+      "bestNumber": "Indiana +4.5 -115; BUF BetRivers -121 (user-reported); Circa reference -107; NJ -168; TB -143; UNT -120; EDM/VAN O6.5 -115; Watson U187.5 -113",
+      "playableTo": "Review ceilings: IND -115; BUF -115; NJ -170; TB -145; UNT -125; O6.5 -115; Watson U187.5 -115",
+      "noBetCutoff": "No official release before exact prices, lineup/goalie checks and all applicable score gates.",
+      "legs": "Indiana Fever +4.5; Buffalo Sabres ML; New Jersey Devils ML; Tampa Bay Lightning ML; North Texas ML; Edmonton–Vancouver Over 6.5; Deshaun Watson Under 187.5 passing yards",
+      "writeup": "REVIEW ONLY: the requested seven-pick multi-sport construction is published for inspection, with Indiana Fever +4.5, Buffalo Sabres moneyline, New Jersey Devils moneyline, Tampa Bay Lightning moneyline, North Texas moneyline, Edmonton–Vancouver Over 6.5 and Deshaun Watson Under 187.5 passing yards. These are seven different games across four sports. Indiana +4.5 at -115 is supported by the user-supplied BetRivers screenshot; Buffalo -121 is the user-reported BetRivers quote and exceeds the original -115 review ceiling; remaining numbers are dated reference prices from the 1:26 p.m. assessment, not a verified single-book bet slip. North Texas, the hockey total and Watson's yardage prop remain the weakest legs. The combined payout is unverified. Final medical restrictions, goalies, quarterback roles and exact markets can change the construction. This is a provisional watch ticket; it has not qualified as an official Micks release or been placed.",
+      "fullAnalysis": "Saved assessment: Indiana 83/110 B+, Failure 6/10; Buffalo 76 B, Failure 6; New Jersey 81 B, Failure 5; Tampa Bay 77 B, Failure 5; North Texas 67 B-, Failure 4; EDM/VAN Over 62 C, Failure 3; Watson Under 59 C, Failure 5. Indiana's supporting case is competitive offense and a 1.6-point saved VSiN margin; Wilson-led scoring and Clark/Boston restrictions are counters. Buffalo benefits from Columbus defensive injuries, but the saved VSiN model slightly opposes it. New Jersey has rest/home advantages; Flyers rebound and goaltending can defeat them. Tampa needs goalie confirmation. UNT faces opposing Doc's/model evidence and unresolved Tulsa quarterback news. Edmonton/Vancouver scoring can regress; both goalies need confirmation. Watson Under has a dated quote and secondary/game-script risk. Guide comparisons and named capper disagreements remain recorded in the October 1 midday report. No average leg score is represented as joint ticket strength. No accepted BetRivers quote or ticket exists. User update at approximately 3:14 p.m. ET: Buffalo BetRivers -121 exceeds the original -115 ceiling. Its 76/110 remains the saved score at Circa -107, not a new score at -121. The seven-leg construction is review-only and fails the Buffalo price gate at that offer.",
+      "sourceVerification": "October 1 1:26 p.m. assessment and midday PDF; user BetRivers Indiana screenshots; current VSiN NHL reference. Other six prices not refreshed as a one-book executable slip.",
+      "updatedAt": "2026-10-01T19:14:26.036Z"
     }
   ],
   "longshots": [],
   "gradedAt": "2026-09-22T08:39:43.446738+00:00",
-  "updatedAt": "2026-09-22T08:39:43.446738+00:00"
+  "updatedAt": "2026-10-01T19:14:26.037Z"
 }
