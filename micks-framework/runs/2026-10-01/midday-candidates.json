@@ -1,0 +1,3137 @@
+{
+  "date": "2026-10-01",
+  "timezone": "America/New_York",
+  "assessment_window": "2026-10-01T12:41:56-04:00 to 2026-10-01T13:25:00-04:00",
+  "scoring_version": "micks-110-v2-2026-09-29",
+  "status": "RESEARCH COMPLETED WITH DOCUMENTED DATA GAPS; NO OFFICIAL RELEASE",
+  "official_units": 0,
+  "non_nfl_gates": {
+    "score": 82,
+    "failure_score": 7
+  },
+  "candidates": [
+    {
+      "id": "fever",
+      "sport": "WNBA",
+      "pick": "Indiana +4.5",
+      "start_et": "2026-10-01T21:00:00-04:00",
+      "score_status": "PROVISIONAL",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "handicap_score": 83,
+      "grade": "B+",
+      "official_units": 0,
+      "decision": "WATCH / NO OFFICIAL BET",
+      "quote": {
+        "american_odds": -115,
+        "source": "Circa via VSiN",
+        "observed_time": "13:00 ET",
+        "executable_in_delaware": false
+      },
+      "best_number_and_review_cutoff": "+4.5 at -110 preferred; no worse than -115 at +4.5",
+      "factors": {
+        "matchup": {
+          "score": 27,
+          "max": 35,
+          "evidence": "VSiN estimate LV 92.1–IND 90.5 and TeamRankings powers 5.2/5.0 support the points; IND scored 58 paint points in Game 2, but Wilson's Game 1 38/16 shows the failure path."
+        },
+        "price": {
+          "score": 14,
+          "max": 20,
+          "evidence": "+4.5 versus model margin 1.6 provides a cushion; -115 reduces its value. Exact DE execution absent."
+        },
+        "personnel": {
+          "score": 11,
+          "max": 15,
+          "evidence": "Official preview lists Clark/Mitchell/Hull/Timpson/Boston as probable starters; Clark's final medical status and any restriction remain unverified."
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Series tied 1–1; Indiana's Game 2 execution is relevant, but a road elimination swing and two very different game scripts limit confidence."
+        },
+        "vsin": {
+          "score": 8,
+          "max": 10,
+          "evidence": "Current VSiN matchup model supports IND spread. It is a model, not a named VSiN handicapper selection."
+        },
+        "docs": {
+          "score": 8,
+          "max": 10,
+          "evidence": "Josh Schonwald, Sept 30, IND +4.5; same threshold still available. Opposing Lineups analyst Thom Cunningham favors LV -4.5."
+        },
+        "market": {
+          "score": 8,
+          "max": 10,
+          "evidence": "Reference4 + movement3 (+4 to +4.5) + splits1. DK LV64% handle/50% tickets is opposing context, not proof of sharp action."
+        }
+      },
+      "failure_score": 6,
+      "failure_dimensions": [
+        {
+          "dimension": "strongest_failure_path",
+          "score": 1,
+          "max": 2,
+          "evidence": "The countercase in matchup remains material; this is partial resilience, not a clean failure path."
+        },
+        {
+          "dimension": "personnel_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Personnel assessment is usable, but the listed final availability check can change the cashing path."
+        },
+        {
+          "dimension": "variance_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Game-script or conversion variance remains meaningful; the selection is not robust across all scripts."
+        },
+        {
+          "dimension": "price_protection",
+          "score": 2,
+          "max": 2,
+          "evidence": "The selected threshold/near-pick'em price gives identifiable protection; execution still needs verification."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": 1,
+          "max": 2,
+          "evidence": "Independent evidence partly supports the handicap but does not resolve the strongest opposition."
+        }
+      ],
+      "missing_evidence": [
+        "Final Clark/Boston medical status and restrictions",
+        "confirmed rotations",
+        "exact live BetRivers Delaware offer"
+      ],
+      "release_blockers": [
+        "Final Clark/Boston medical status and restrictions",
+        "confirmed rotations",
+        "exact live BetRivers Delaware offer",
+        "Non-NFL minimum82/110 and Failure7/10 not both satisfied"
+      ],
+      "provisional_only": true
+    },
+    {
+      "id": "devils",
+      "sport": "NHL",
+      "pick": "New Jersey ML",
+      "start_et": "2026-10-01T19:00:00-04:00",
+      "score_status": "PROVISIONAL",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "handicap_score": 81,
+      "grade": "B",
+      "official_units": 0,
+      "decision": "WATCH / NO OFFICIAL BET",
+      "quote": {
+        "american_odds": -168,
+        "source": "Circa via VSiN",
+        "observed_time": "12:45 ET",
+        "executable_in_delaware": false
+      },
+      "best_number_and_review_cutoff": "Prefer -150; review ceiling -170",
+      "factors": {
+        "matchup": {
+          "score": 28,
+          "max": 35,
+          "evidence": "Rested NJ faces PHI after 7–0 loss; official skater projections and PHI 18.5% opening-game 5v5 xGF support NJ. One game is a thin efficiency sample; SI's Flyers pick is the strongest counter."
+        },
+        "price": {
+          "score": 13,
+          "max": 20,
+          "evidence": "VSiN model NJ -176 suggests modest value at -168, not a bargain. Article -140 is no longer available."
+        },
+        "personnel": {
+          "score": 11,
+          "max": 15,
+          "evidence": "Jake Allen confirmed by credentialed beat report through Daily Faceoff; Woll expected for PHI but not confirmed; Brown/Kovacevic out."
+        },
+        "situation": {
+          "score": 8,
+          "max": 10,
+          "evidence": "NJ home opener and PHI back-to-back are concrete advantages; new-line chemistry and possible rebound limit the edge."
+        },
+        "vsin": {
+          "score": 7,
+          "max": 10,
+          "evidence": "VSiN current model favors NJ 3.5–2.1; no verified current named VSiN NHL pick."
+        },
+        "docs": {
+          "score": 5,
+          "max": 10,
+          "evidence": "Guy Bruhn Sept 30 NJ -140. Same side remains relevant, but price deteriorated and prior PHI result context is stale."
+        },
+        "market": {
+          "score": 9,
+          "max": 10,
+          "evidence": "Reference4 + movement3 (PHI +143 to +150) + splits2. DK NJ ML88% handle/80% bets supports direction; no claim of sharp causation."
+        }
+      },
+      "failure_score": 5,
+      "failure_dimensions": [
+        {
+          "dimension": "strongest_failure_path",
+          "score": 1,
+          "max": 2,
+          "evidence": "The countercase in matchup remains material; this is partial resilience, not a clean failure path."
+        },
+        {
+          "dimension": "personnel_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Personnel assessment is usable, but the listed final availability check can change the cashing path."
+        },
+        {
+          "dimension": "variance_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Game-script or conversion variance remains meaningful; the selection is not robust across all scripts."
+        },
+        {
+          "dimension": "price_protection",
+          "score": 1,
+          "max": 2,
+          "evidence": "Limited alternative protection at the stated review price."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": 1,
+          "max": 2,
+          "evidence": "Independent evidence partly supports the handicap but does not resolve the strongest opposition."
+        }
+      ],
+      "missing_evidence": [
+        "Confirm Woll and final scratches",
+        "reconcile Flyers rebound counter",
+        "exact live DE price"
+      ],
+      "release_blockers": [
+        "Confirm Woll and final scratches",
+        "reconcile Flyers rebound counter",
+        "exact live DE price",
+        "Non-NFL minimum82/110 and Failure7/10 not both satisfied"
+      ],
+      "provisional_only": true
+    },
+    {
+      "id": "sabres",
+      "sport": "NHL",
+      "pick": "Buffalo ML",
+      "start_et": "2026-10-01T19:00:00-04:00",
+      "score_status": "PROVISIONAL",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "handicap_score": 76,
+      "grade": "B",
+      "official_units": 0,
+      "decision": "WATCH / NO OFFICIAL BET",
+      "quote": {
+        "american_odds": -107,
+        "source": "Circa via VSiN",
+        "observed_time": "12:45 ET",
+        "executable_in_delaware": false
+      },
+      "best_number_and_review_cutoff": "Prefer -105/-110; review ceiling -115",
+      "factors": {
+        "matchup": {
+          "score": 26,
+          "max": 35,
+          "evidence": "Luukkonen confirmation and CBJ missing Provorov's major minutes help Buffalo. VSiN estimates CBJ 3.0–BUF 2.9, so the matchup edge is contested."
+        },
+        "price": {
+          "score": 16,
+          "max": 20,
+          "evidence": "Near pick'em -107 versus Doc's -105; avoid paying for a large favorite premium."
+        },
+        "personnel": {
+          "score": 11,
+          "max": 15,
+          "evidence": "Luukkonen confirmed; Greaves likely, not confirmed. Provorov week-to-week lower body; Samuelsson expected in; Zellweger out."
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "CBJ opener and substantial roster changes make old-season records less transferable; injury impact is current."
+        },
+        "vsin": {
+          "score": 2,
+          "max": 10,
+          "evidence": "VSiN matchup model opposes Buffalo slightly; two points reflect limited contextual support, not capper agreement."
+        },
+        "docs": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Tony Sink Sept 30 BUF -105; SI Ryan Gilbert Oct1 BUF -108 independently supports the side."
+        },
+        "market": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Reference4 + movement3 (BUF +102 to -107); candidate-specific splits unavailable behind limited public view."
+        }
+      },
+      "failure_score": 6,
+      "failure_dimensions": [
+        {
+          "dimension": "strongest_failure_path",
+          "score": 1,
+          "max": 2,
+          "evidence": "The countercase in matchup remains material; this is partial resilience, not a clean failure path."
+        },
+        {
+          "dimension": "personnel_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Personnel assessment is usable, but the listed final availability check can change the cashing path."
+        },
+        {
+          "dimension": "variance_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Game-script or conversion variance remains meaningful; the selection is not robust across all scripts."
+        },
+        {
+          "dimension": "price_protection",
+          "score": 2,
+          "max": 2,
+          "evidence": "The selected threshold/near-pick'em price gives identifiable protection; execution still needs verification."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": 1,
+          "max": 2,
+          "evidence": "Independent evidence partly supports the handicap but does not resolve the strongest opposition."
+        }
+      ],
+      "missing_evidence": [
+        "Confirm Greaves and skater lineups",
+        "exact DE price",
+        "opposing model remains unresolved"
+      ],
+      "release_blockers": [
+        "Confirm Greaves and skater lineups",
+        "exact DE price",
+        "opposing model remains unresolved",
+        "Non-NFL minimum82/110 and Failure7/10 not both satisfied"
+      ],
+      "provisional_only": true
+    },
+    {
+      "id": "lightning",
+      "sport": "NHL",
+      "pick": "Tampa Bay ML",
+      "start_et": "2026-10-01T19:00:00-04:00",
+      "score_status": "PROVISIONAL",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "handicap_score": 77,
+      "grade": "B",
+      "official_units": 0,
+      "decision": "WATCH / NO OFFICIAL BET",
+      "quote": {
+        "american_odds": -143,
+        "source": "Circa via VSiN",
+        "observed_time": "12:45 ET",
+        "executable_in_delaware": false
+      },
+      "best_number_and_review_cutoff": "Prefer -140; review ceiling -145",
+      "factors": {
+        "matchup": {
+          "score": 26,
+          "max": 35,
+          "evidence": "Point/Kucherov and returning Hedman support Tampa, but NYR's 51.44% 5v5 xGF in its opening loss cautions against fading the scoreboard alone."
+        },
+        "price": {
+          "score": 14,
+          "max": 20,
+          "evidence": "-143 worsened from -138 open and Doc's -135. Remaining value is modest."
+        },
+        "personnel": {
+          "score": 12,
+          "max": 15,
+          "evidence": "Official skater projections available; Shesterkin confirmed, Vasilevskiy likely only; Gourde/James absent."
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "NYR's opening loss can motivate a rebound; Hedman's first game since March requires rust allowance."
+        },
+        "vsin": {
+          "score": 4,
+          "max": 10,
+          "evidence": "VSiN projects TB3.1–NYR2.5, but its implied NYR +113 is less bullish on TB than the -143 market."
+        },
+        "docs": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Josh Schonwald Sept30 TB -135; same side, less attractive current price."
+        },
+        "market": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Reference4 + verified movement3; no exposed TB-specific split row."
+        }
+      },
+      "failure_score": 5,
+      "failure_dimensions": [
+        {
+          "dimension": "strongest_failure_path",
+          "score": 1,
+          "max": 2,
+          "evidence": "The countercase in matchup remains material; this is partial resilience, not a clean failure path."
+        },
+        {
+          "dimension": "personnel_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Personnel assessment is usable, but the listed final availability check can change the cashing path."
+        },
+        {
+          "dimension": "variance_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Game-script or conversion variance remains meaningful; the selection is not robust across all scripts."
+        },
+        {
+          "dimension": "price_protection",
+          "score": 1,
+          "max": 2,
+          "evidence": "Limited alternative protection at the stated review price."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": 1,
+          "max": 2,
+          "evidence": "Independent evidence partly supports the handicap but does not resolve the strongest opposition."
+        }
+      ],
+      "missing_evidence": [
+        "Confirm Vasilevskiy",
+        "final scratches and Hedman deployment",
+        "exact DE price"
+      ],
+      "release_blockers": [
+        "Confirm Vasilevskiy",
+        "final scratches and Hedman deployment",
+        "exact DE price",
+        "Non-NFL minimum82/110 and Failure7/10 not both satisfied"
+      ],
+      "provisional_only": true
+    },
+    {
+      "id": "unt",
+      "sport": "CFB",
+      "pick": "North Texas ML",
+      "start_et": "2026-10-01T21:00:00-04:00",
+      "score_status": "PROVISIONAL",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "handicap_score": 67,
+      "grade": "B-",
+      "official_units": 0,
+      "decision": "WATCH / NO OFFICIAL BET",
+      "quote": {
+        "american_odds": -120,
+        "source": "Circa via VSiN",
+        "observed_time": "13:00 ET",
+        "executable_in_delaware": false
+      },
+      "best_number_and_review_cutoff": "Prefer spread +1.5 at ordinary juice if independently offered; ML ceiling -125",
+      "factors": {
+        "matchup": {
+          "score": 25,
+          "max": 35,
+          "evidence": "Jackson's 74% completions and UNT's 6.47 FBS YPP versus Tulsa 5.24 support offense; UNT allows 6.7 YPP and Tulsa pressure/defense are strong counters."
+        },
+        "price": {
+          "score": 13,
+          "max": 20,
+          "evidence": "Price now ML -120 after opening UNT +2; Burke's +1 is gone at Circa. Delaware +1.5 belongs to a separate fixed-payout ticket."
+        },
+        "personnel": {
+          "score": 9,
+          "max": 15,
+          "evidence": "Jackson's role is established. Tulsa Hayes game-time status versus Dexter Williams remains unknown; both alternatives assessed, final effect unresolved."
+        },
+        "situation": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Tulsa home field and 60% rain/storm possibility complicate offensive projection."
+        },
+        "vsin": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Adam Burke Sept29 UNT +1 and Makinen UNT +1.5 support the side; current matchup model Tulsa30.7–UNT26.7 opposes. One source-family factor only."
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "Guy Bruhn Sept28 Tulsa -1.5 opposes North Texas; zero support, not a missing opinion."
+        },
+        "market": {
+          "score": 8,
+          "max": 10,
+          "evidence": "Reference5 + movement3 (UNT +2 to -1.5); public DK row only exposes WKU/NMSU, not UNT splits."
+        }
+      },
+      "failure_score": 4,
+      "failure_dimensions": [
+        {
+          "dimension": "strongest_failure_path",
+          "score": 1,
+          "max": 2,
+          "evidence": "The countercase in matchup remains material; this is partial resilience, not a clean failure path."
+        },
+        {
+          "dimension": "personnel_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Personnel assessment is usable, but the listed final availability check can change the cashing path."
+        },
+        {
+          "dimension": "variance_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Game-script or conversion variance remains meaningful; the selection is not robust across all scripts."
+        },
+        {
+          "dimension": "price_protection",
+          "score": 1,
+          "max": 2,
+          "evidence": "Limited alternative protection at the stated review price."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": 0,
+          "max": 2,
+          "evidence": "Strong opposing independent evidence remains unresolved."
+        }
+      ],
+      "missing_evidence": [
+        "Hayes versus Williams starter",
+        "weather at kickoff",
+        "resolve Doc's/model counter",
+        "exact DE price"
+      ],
+      "release_blockers": [
+        "Hayes versus Williams starter",
+        "weather at kickoff",
+        "resolve Doc's/model counter",
+        "exact DE price",
+        "Non-NFL minimum82/110 and Failure7/10 not both satisfied"
+      ],
+      "provisional_only": true
+    },
+    {
+      "id": "edmvan-over",
+      "sport": "NHL",
+      "pick": "Edmonton–Vancouver Over 6.5",
+      "start_et": "2026-10-01T22:00:00-04:00",
+      "score_status": "PROVISIONAL",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "handicap_score": 62,
+      "grade": "C",
+      "official_units": 0,
+      "decision": "WATCH / NO OFFICIAL BET",
+      "quote": {
+        "american_odds": -115,
+        "source": "Circa via VSiN",
+        "observed_time": "12:45 ET",
+        "executable_in_delaware": false
+      },
+      "best_number_and_review_cutoff": "Over6.5 at -115 or better; regrade if total or price worsens",
+      "factors": {
+        "matchup": {
+          "score": 25,
+          "max": 35,
+          "evidence": "SI's current over case and offensive ability support goals, but opening-game 11 goals came with combined 5v5 xG only 4.02 and Vancouver's unusually high shooting conversion; repetition is not a projection."
+        },
+        "price": {
+          "score": 14,
+          "max": 20,
+          "evidence": "Exact 6.5 -115 reference is available; no reason to chase a higher total or heavier juice."
+        },
+        "personnel": {
+          "score": 10,
+          "max": 15,
+          "evidence": "Demko absence and Nugent-Hopkins status need refreshed official verification; goalies unconfirmed. Alternative goalie effects are only provisional."
+        },
+        "situation": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Quick rematch supports familiarity but also adjustment; scoring variance is high."
+        },
+        "vsin": {
+          "score": 2,
+          "max": 10,
+          "evidence": "VSiN projected total about6.46 is neutral at6.5; no named over confirmation."
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "Doc's Guy Bruhn favors VAN ML +167, a different market, so no total-confirmation points."
+        },
+        "market": {
+          "score": 5,
+          "max": 10,
+          "evidence": "Reference5; no verified same-total opening price history or candidate split row."
+        }
+      },
+      "failure_score": 3,
+      "failure_dimensions": [
+        {
+          "dimension": "strongest_failure_path",
+          "score": 1,
+          "max": 2,
+          "evidence": "The countercase in matchup remains material; this is partial resilience, not a clean failure path."
+        },
+        {
+          "dimension": "personnel_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Personnel assessment is usable, but the listed final availability check can change the cashing path."
+        },
+        {
+          "dimension": "variance_resilience",
+          "score": 0,
+          "max": 2,
+          "evidence": "Game-script or conversion variance remains meaningful; the total depends too heavily on repeat scoring."
+        },
+        {
+          "dimension": "price_protection",
+          "score": 1,
+          "max": 2,
+          "evidence": "Limited alternative protection at the stated review price."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": 0,
+          "max": 2,
+          "evidence": "Strong opposing independent evidence remains unresolved."
+        }
+      ],
+      "missing_evidence": [
+        "Both confirmed goalies",
+        "Nugent-Hopkins current status and refreshed lines",
+        "regression counter unresolved",
+        "exact DE total"
+      ],
+      "release_blockers": [
+        "Both confirmed goalies",
+        "Nugent-Hopkins current status and refreshed lines",
+        "regression counter unresolved",
+        "exact DE total",
+        "Non-NFL minimum82/110 and Failure7/10 not both satisfied"
+      ],
+      "provisional_only": true
+    },
+    {
+      "id": "watson-under",
+      "sport": "NFL",
+      "pick": "Deshaun Watson Under 187.5 passing yards",
+      "start_et": "2026-10-01T20:15:00-04:00",
+      "score_status": "PROVISIONAL",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "handicap_score": 59,
+      "grade": "C",
+      "official_units": 0,
+      "decision": "WATCH / NO OFFICIAL BET",
+      "quote": {
+        "american_odds": -113,
+        "source": "FanDuel article quote",
+        "observed_time": "Oct1 00:48 ET",
+        "executable_in_delaware": false
+      },
+      "best_number_and_review_cutoff": "U187.5 at -115 or better; do not substitute U180.5",
+      "factors": {
+        "matchup": {
+          "score": 25,
+          "max": 35,
+          "evidence": "Low aDOT6, high off-target rate and 144 yards last game support under; 195.7 season average and PIT allowing211 with11 explosive passes are real counters."
+        },
+        "price": {
+          "score": 13,
+          "max": 20,
+          "evidence": "SportsbookWire overnight quote U187.5 -113 is dated provisional evidence; no current executable DE offer or verified opening trajectory."
+        },
+        "personnel": {
+          "score": 11,
+          "max": 15,
+          "evidence": "Watson expected starter; CLE center Jenkins and guard Jenkins out. PIT Porter out and Ramsey questionable weaken the under; current snap role more useful than preseason Sanders depth chart."
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "NWS showers and modest wind can restrain passing, but rain is not a sufficient handicap by itself."
+        },
+        "vsin": {
+          "score": 0,
+          "max": 10,
+          "evidence": "Cohen's O1.5 passTD +285 is a different stat; it earns no yardage-under agreement."
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No named Doc's Watson yardage-under selection located."
+        },
+        "market": {
+          "score": 3,
+          "max": 10,
+          "evidence": "Reference3 for a clearly identified but dated prop quote; no independent live prop reference, movement or splits."
+        }
+      },
+      "failure_score": 5,
+      "failure_dimensions": [
+        {
+          "dimension": "strongest_failure_path",
+          "score": 1,
+          "max": 2,
+          "evidence": "The countercase in matchup remains material; this is partial resilience, not a clean failure path."
+        },
+        {
+          "dimension": "personnel_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Personnel assessment is usable, but the listed final availability check can change the cashing path."
+        },
+        {
+          "dimension": "variance_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Game-script or conversion variance remains meaningful; the selection is not robust across all scripts."
+        },
+        {
+          "dimension": "price_protection",
+          "score": 1,
+          "max": 2,
+          "evidence": "Limited alternative protection at the stated review price."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": 1,
+          "max": 2,
+          "evidence": "Independent evidence partly supports the handicap but does not resolve the strongest opposition."
+        }
+      ],
+      "missing_evidence": [
+        "Live line and odds",
+        "PIT secondary inactives",
+        "independent threshold projection/distribution",
+        "weather near kickoff"
+      ],
+      "release_blockers": [
+        "Live line and odds",
+        "PIT secondary inactives",
+        "independent threshold projection/distribution",
+        "weather near kickoff",
+        "NFL verification/contradiction gates not cleared"
+      ],
+      "provisional_only": true
+    },
+    {
+      "id": "cleveland",
+      "sport": "NFL",
+      "pick": "Cleveland +3",
+      "start_et": "2026-10-01T20:15:00-04:00",
+      "score_status": "PROVISIONAL",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "handicap_score": 73,
+      "grade": "B-",
+      "official_units": 0,
+      "decision": "WATCH / NO OFFICIAL BET",
+      "quote": {
+        "american_odds": -120,
+        "source": "Circa via VSiN",
+        "observed_time": "12:45 ET",
+        "executable_in_delaware": false
+      },
+      "best_number_and_review_cutoff": "Prefer +3 -110; review ceiling +3 -120; do not replace with +2.5",
+      "factors": {
+        "matchup": {
+          "score": 26,
+          "max": 35,
+          "evidence": "Home dog at key3 and VSiN CLE19.1–PIT18.2 support Cleveland; guide/current power and Fantasy Life PIT21–CLE18 oppose. OL absences and poor CLE rushing efficiency are substantial."
+        },
+        "price": {
+          "score": 15,
+          "max": 20,
+          "evidence": "+3 is better than Delaware +2.5, but -120 costs extra and a push differs from a win; use exact settlement."
+        },
+        "personnel": {
+          "score": 10,
+          "max": 15,
+          "evidence": "Watson/ Rodgers roles current; CLE Jenkins/Jenkins out and PIT Dowdle/Porter out, Ramsey questionable. Final inactives pending."
+        },
+        "situation": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Divisional short week and showers favor a close game but affect both teams."
+        },
+        "vsin": {
+          "score": 8,
+          "max": 10,
+          "evidence": "Zachary Cohen CLE ML+125 Sept30; spread support is directional, not exact-market duplicate confirmation; current model supports CLE."
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "Tony Sink Sept29 PIT -2.5 opposes; zero support."
+        },
+        "market": {
+          "score": 8,
+          "max": 10,
+          "evidence": "Reference4 + movement3 (PIT-2.5 to-3) + splits1: Circa PIT59% spread handle/33% tickets; under91%/39%; opposing current side money limits support."
+        }
+      },
+      "failure_score": 5,
+      "failure_dimensions": [
+        {
+          "dimension": "strongest_failure_path",
+          "score": 1,
+          "max": 2,
+          "evidence": "The countercase in matchup remains material; this is partial resilience, not a clean failure path."
+        },
+        {
+          "dimension": "personnel_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Personnel assessment is usable, but the listed final availability check can change the cashing path."
+        },
+        {
+          "dimension": "variance_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Game-script or conversion variance remains meaningful; the selection is not robust across all scripts."
+        },
+        {
+          "dimension": "price_protection",
+          "score": 2,
+          "max": 2,
+          "evidence": "The selected threshold/near-pick'em price gives identifiable protection; execution still needs verification."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": 0,
+          "max": 2,
+          "evidence": "Strong opposing independent evidence remains unresolved."
+        }
+      ],
+      "missing_evidence": [
+        "Resolve guide/model contradiction",
+        "final inactives",
+        "exact DE +3 price",
+        "weekly magazine numeric deltas missing"
+      ],
+      "release_blockers": [
+        "Resolve guide/model contradiction",
+        "final inactives",
+        "exact DE +3 price",
+        "weekly magazine numeric deltas missing",
+        "NFL verification/contradiction gates not cleared"
+      ],
+      "provisional_only": true
+    },
+    {
+      "id": "wku",
+      "sport": "CFB",
+      "pick": "Western Kentucky +2.5 review",
+      "start_et": "2026-10-01T20:00:00-04:00",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "score_status": "UNGRADED",
+      "handicap_score": null,
+      "grade": null,
+      "factors": {
+        "matchup": {
+          "score": 22,
+          "max": 35,
+          "evidence": "Both teams have material quarterback uncertainty: WKU Tisdale/Glenn and NMSU Hedden/Damante. Guide WKU-7.8 conflicts with current NMSU favorite and VSiN NMSU31.7–WKU24.7. Doc's Tony Sink WKU+2.5 supports threshold; Burke has no play. DK WKU36% spread handle/40% bets opposes slightly."
+        },
+        "price": {
+          "score": 13,
+          "max": 20,
+          "evidence": "Both teams have material quarterback uncertainty: WKU Tisdale/Glenn and NMSU Hedden/Damante. Guide WKU-7.8 conflicts with current NMSU favorite and VSiN NMSU31.7–WKU24.7. Doc's Tony Sink WKU+2.5 supports threshold; Burke has no play. DK WKU36% spread handle/40% bets opposes slightly."
+        },
+        "personnel": {
+          "score": null,
+          "max": 15,
+          "evidence": "Both teams have material quarterback uncertainty: WKU Tisdale/Glenn and NMSU Hedden/Damante. Guide WKU-7.8 conflicts with current NMSU favorite and VSiN NMSU31.7–WKU24.7. Doc's Tony Sink WKU+2.5 supports threshold; Burke has no play. DK WKU36% spread handle/40% bets opposes slightly."
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Both teams have material quarterback uncertainty: WKU Tisdale/Glenn and NMSU Hedden/Damante. Guide WKU-7.8 conflicts with current NMSU favorite and VSiN NMSU31.7–WKU24.7. Doc's Tony Sink WKU+2.5 supports threshold; Burke has no play. DK WKU36% spread handle/40% bets opposes slightly."
+        },
+        "vsin": {
+          "score": 1,
+          "max": 10,
+          "evidence": "Both teams have material quarterback uncertainty: WKU Tisdale/Glenn and NMSU Hedden/Damante. Guide WKU-7.8 conflicts with current NMSU favorite and VSiN NMSU31.7–WKU24.7. Doc's Tony Sink WKU+2.5 supports threshold; Burke has no play. DK WKU36% spread handle/40% bets opposes slightly."
+        },
+        "docs": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Both teams have material quarterback uncertainty: WKU Tisdale/Glenn and NMSU Hedden/Damante. Guide WKU-7.8 conflicts with current NMSU favorite and VSiN NMSU31.7–WKU24.7. Doc's Tony Sink WKU+2.5 supports threshold; Burke has no play. DK WKU36% spread handle/40% bets opposes slightly."
+        },
+        "market": {
+          "score": 8,
+          "max": 10,
+          "evidence": "Both teams have material quarterback uncertainty: WKU Tisdale/Glenn and NMSU Hedden/Damante. Guide WKU-7.8 conflicts with current NMSU favorite and VSiN NMSU31.7–WKU24.7. Doc's Tony Sink WKU+2.5 supports threshold; Burke has no play. DK WKU36% spread handle/40% bets opposes slightly."
+        }
+      },
+      "known_subtotal": 58,
+      "assessed_maximum": 95,
+      "failure_score": null,
+      "failure_dimensions": [
+        {
+          "dimension": "strongest_failure_path",
+          "score": null,
+          "max": 2,
+          "evidence": "Core handicap incomplete; no resilience award inferred."
+        },
+        {
+          "dimension": "personnel_resilience",
+          "score": null,
+          "max": 2,
+          "evidence": "Core handicap incomplete; no resilience award inferred."
+        },
+        {
+          "dimension": "variance_resilience",
+          "score": null,
+          "max": 2,
+          "evidence": "Core handicap incomplete; no resilience award inferred."
+        },
+        {
+          "dimension": "price_protection",
+          "score": null,
+          "max": 2,
+          "evidence": "Core handicap incomplete; no resilience award inferred."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": null,
+          "max": 2,
+          "evidence": "Core handicap incomplete; no resilience award inferred."
+        }
+      ],
+      "missing_evidence": [
+        "Both teams have material quarterback uncertainty: WKU Tisdale/Glenn and NMSU Hedden/Damante. Guide WKU-7.8 conflicts with current NMSU favorite and VSiN NMSU31.7–WKU24.7. Doc's Tony Sink WKU+2.5 supports threshold; Burke has no play. DK WKU36% spread handle/40% bets opposes slightly.",
+        "exact executable DE quote"
+      ],
+      "release_blockers": [
+        "Incomplete core assessment",
+        "Mandatory sport gates",
+        "No official grade"
+      ],
+      "official_units": 0,
+      "decision": "NO BET — UNGRADED"
+    },
+    {
+      "id": "phiatl",
+      "sport": "MLB",
+      "pick": "PHI ML / F3 / HR / NRFI-YRFI / K props",
+      "start_et": "2026-10-01T20:00:00-04:00",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "score_status": "UNGRADED",
+      "handicap_score": null,
+      "grade": null,
+      "factors": {
+        "matchup": {
+          "score": null,
+          "max": 35,
+          "evidence": "MLB probable Nola versus Ray Kerr, but final batting orders, Kerr opener/bulk role and leash, umpire unavailable. Burke has no full-game play; ATL first3 HR YES+280DK and first3 three-way+180FD are speculative different markets. Individual relief workloads verified in report; no fragile full-game total in main parlay."
+        },
+        "price": {
+          "score": 13,
+          "max": 20,
+          "evidence": "MLB probable Nola versus Ray Kerr, but final batting orders, Kerr opener/bulk role and leash, umpire unavailable. Burke has no full-game play; ATL first3 HR YES+280DK and first3 three-way+180FD are speculative different markets. Individual relief workloads verified in report; no fragile full-game total in main parlay."
+        },
+        "personnel": {
+          "score": 9,
+          "max": 15,
+          "evidence": "MLB probable Nola versus Ray Kerr, but final batting orders, Kerr opener/bulk role and leash, umpire unavailable. Burke has no full-game play; ATL first3 HR YES+280DK and first3 three-way+180FD are speculative different markets. Individual relief workloads verified in report; no fragile full-game total in main parlay."
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "MLB probable Nola versus Ray Kerr, but final batting orders, Kerr opener/bulk role and leash, umpire unavailable. Burke has no full-game play; ATL first3 HR YES+280DK and first3 three-way+180FD are speculative different markets. Individual relief workloads verified in report; no fragile full-game total in main parlay."
+        },
+        "vsin": {
+          "score": 3,
+          "max": 10,
+          "evidence": "MLB probable Nola versus Ray Kerr, but final batting orders, Kerr opener/bulk role and leash, umpire unavailable. Burke has no full-game play; ATL first3 HR YES+280DK and first3 three-way+180FD are speculative different markets. Individual relief workloads verified in report; no fragile full-game total in main parlay."
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "MLB probable Nola versus Ray Kerr, but final batting orders, Kerr opener/bulk role and leash, umpire unavailable. Burke has no full-game play; ATL first3 HR YES+280DK and first3 three-way+180FD are speculative different markets. Individual relief workloads verified in report; no fragile full-game total in main parlay."
+        },
+        "market": {
+          "score": 7,
+          "max": 10,
+          "evidence": "MLB probable Nola versus Ray Kerr, but final batting orders, Kerr opener/bulk role and leash, umpire unavailable. Burke has no full-game play; ATL first3 HR YES+280DK and first3 three-way+180FD are speculative different markets. Individual relief workloads verified in report; no fragile full-game total in main parlay."
+        }
+      },
+      "known_subtotal": 39,
+      "assessed_maximum": 75,
+      "failure_score": null,
+      "failure_dimensions": [
+        {
+          "dimension": "strongest_failure_path",
+          "score": null,
+          "max": 2,
+          "evidence": "Core handicap incomplete; no resilience award inferred."
+        },
+        {
+          "dimension": "personnel_resilience",
+          "score": null,
+          "max": 2,
+          "evidence": "Core handicap incomplete; no resilience award inferred."
+        },
+        {
+          "dimension": "variance_resilience",
+          "score": null,
+          "max": 2,
+          "evidence": "Core handicap incomplete; no resilience award inferred."
+        },
+        {
+          "dimension": "price_protection",
+          "score": null,
+          "max": 2,
+          "evidence": "Core handicap incomplete; no resilience award inferred."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": null,
+          "max": 2,
+          "evidence": "Core handicap incomplete; no resilience award inferred."
+        }
+      ],
+      "missing_evidence": [
+        "MLB probable Nola versus Ray Kerr, but final batting orders, Kerr opener/bulk role and leash, umpire unavailable. Burke has no full-game play; ATL first3 HR YES+280DK and first3 three-way+180FD are speculative different markets. Individual relief workloads verified in report; no fragile full-game total in main parlay.",
+        "exact executable DE quote"
+      ],
+      "release_blockers": [
+        "Incomplete core assessment",
+        "Mandatory sport gates",
+        "No official grade"
+      ],
+      "official_units": 0,
+      "decision": "NO BET — UNGRADED"
+    },
+    {
+      "id": "minnsh",
+      "sport": "NHL",
+      "pick": "Minnesota–Nashville",
+      "start_et": "2026-10-01T20:00:00-04:00",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "score_status": "UNGRADED",
+      "handicap_score": null,
+      "grade": null,
+      "factors": {
+        "matchup": {
+          "score": null,
+          "max": 35,
+          "evidence": "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score."
+        },
+        "price": {
+          "score": 10,
+          "max": 20,
+          "evidence": "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score."
+        },
+        "personnel": {
+          "score": null,
+          "max": 15,
+          "evidence": "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score."
+        },
+        "situation": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score."
+        },
+        "vsin": {
+          "score": 3,
+          "max": 10,
+          "evidence": "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score."
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score."
+        },
+        "market": {
+          "score": 5,
+          "max": 10,
+          "evidence": "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score."
+        }
+      },
+      "known_subtotal": 24,
+      "assessed_maximum": 60,
+      "failure_score": null,
+      "failure_dimensions": [
+        {
+          "dimension": "strongest_failure_path",
+          "score": null,
+          "max": 2,
+          "evidence": "Core handicap incomplete; no resilience award inferred."
+        },
+        {
+          "dimension": "personnel_resilience",
+          "score": null,
+          "max": 2,
+          "evidence": "Core handicap incomplete; no resilience award inferred."
+        },
+        {
+          "dimension": "variance_resilience",
+          "score": null,
+          "max": 2,
+          "evidence": "Core handicap incomplete; no resilience award inferred."
+        },
+        {
+          "dimension": "price_protection",
+          "score": null,
+          "max": 2,
+          "evidence": "Core handicap incomplete; no resilience award inferred."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": null,
+          "max": 2,
+          "evidence": "Core handicap incomplete; no resilience award inferred."
+        }
+      ],
+      "missing_evidence": [
+        "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score.",
+        "exact executable DE quote"
+      ],
+      "release_blockers": [
+        "Incomplete core assessment",
+        "Mandatory sport gates",
+        "No official grade"
+      ],
+      "official_units": 0,
+      "decision": "NO BET — UNGRADED"
+    },
+    {
+      "id": "seacgy",
+      "sport": "NHL",
+      "pick": "Seattle–Calgary",
+      "start_et": "2026-10-01T21:00:00-04:00",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "score_status": "UNGRADED",
+      "handicap_score": null,
+      "grade": null,
+      "factors": {
+        "matchup": {
+          "score": null,
+          "max": 35,
+          "evidence": "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score."
+        },
+        "price": {
+          "score": 10,
+          "max": 20,
+          "evidence": "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score."
+        },
+        "personnel": {
+          "score": null,
+          "max": 15,
+          "evidence": "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score."
+        },
+        "situation": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score."
+        },
+        "vsin": {
+          "score": 3,
+          "max": 10,
+          "evidence": "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score."
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score."
+        },
+        "market": {
+          "score": 5,
+          "max": 10,
+          "evidence": "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score."
+        }
+      },
+      "known_subtotal": 24,
+      "assessed_maximum": 60,
+      "failure_score": null,
+      "failure_dimensions": [
+        {
+          "dimension": "strongest_failure_path",
+          "score": null,
+          "max": 2,
+          "evidence": "Core handicap incomplete; no resilience award inferred."
+        },
+        {
+          "dimension": "personnel_resilience",
+          "score": null,
+          "max": 2,
+          "evidence": "Core handicap incomplete; no resilience award inferred."
+        },
+        {
+          "dimension": "variance_resilience",
+          "score": null,
+          "max": 2,
+          "evidence": "Core handicap incomplete; no resilience award inferred."
+        },
+        {
+          "dimension": "price_protection",
+          "score": null,
+          "max": 2,
+          "evidence": "Core handicap incomplete; no resilience award inferred."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": null,
+          "max": 2,
+          "evidence": "Core handicap incomplete; no resilience award inferred."
+        }
+      ],
+      "missing_evidence": [
+        "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score.",
+        "exact executable DE quote"
+      ],
+      "release_blockers": [
+        "Incomplete core assessment",
+        "Mandatory sport gates",
+        "No official grade"
+      ],
+      "official_units": 0,
+      "decision": "NO BET — UNGRADED"
+    },
+    {
+      "id": "chiuta",
+      "sport": "NHL",
+      "pick": "Chicago–Utah",
+      "start_et": "2026-10-01T21:30:00-04:00",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "score_status": "UNGRADED",
+      "handicap_score": null,
+      "grade": null,
+      "factors": {
+        "matchup": {
+          "score": null,
+          "max": 35,
+          "evidence": "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score."
+        },
+        "price": {
+          "score": 10,
+          "max": 20,
+          "evidence": "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score."
+        },
+        "personnel": {
+          "score": null,
+          "max": 15,
+          "evidence": "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score."
+        },
+        "situation": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score."
+        },
+        "vsin": {
+          "score": 3,
+          "max": 10,
+          "evidence": "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score."
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score."
+        },
+        "market": {
+          "score": 5,
+          "max": 10,
+          "evidence": "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score."
+        }
+      },
+      "known_subtotal": 24,
+      "assessed_maximum": 60,
+      "failure_score": null,
+      "failure_dimensions": [
+        {
+          "dimension": "strongest_failure_path",
+          "score": null,
+          "max": 2,
+          "evidence": "Core handicap incomplete; no resilience award inferred."
+        },
+        {
+          "dimension": "personnel_resilience",
+          "score": null,
+          "max": 2,
+          "evidence": "Core handicap incomplete; no resilience award inferred."
+        },
+        {
+          "dimension": "variance_resilience",
+          "score": null,
+          "max": 2,
+          "evidence": "Core handicap incomplete; no resilience award inferred."
+        },
+        {
+          "dimension": "price_protection",
+          "score": null,
+          "max": 2,
+          "evidence": "Core handicap incomplete; no resilience award inferred."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": null,
+          "max": 2,
+          "evidence": "Core handicap incomplete; no resilience award inferred."
+        }
+      ],
+      "missing_evidence": [
+        "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score.",
+        "exact executable DE quote"
+      ],
+      "release_blockers": [
+        "Incomplete core assessment",
+        "Mandatory sport gates",
+        "No official grade"
+      ],
+      "official_units": 0,
+      "decision": "NO BET — UNGRADED"
+    },
+    {
+      "id": "flasj",
+      "sport": "NHL",
+      "pick": "Florida–San Jose",
+      "start_et": "2026-10-01T22:00:00-04:00",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "score_status": "UNGRADED",
+      "handicap_score": null,
+      "grade": null,
+      "factors": {
+        "matchup": {
+          "score": null,
+          "max": 35,
+          "evidence": "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score."
+        },
+        "price": {
+          "score": 10,
+          "max": 20,
+          "evidence": "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score."
+        },
+        "personnel": {
+          "score": null,
+          "max": 15,
+          "evidence": "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score."
+        },
+        "situation": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score."
+        },
+        "vsin": {
+          "score": 3,
+          "max": 10,
+          "evidence": "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score."
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score."
+        },
+        "market": {
+          "score": 5,
+          "max": 10,
+          "evidence": "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score."
+        }
+      },
+      "known_subtotal": 24,
+      "assessed_maximum": 60,
+      "failure_score": null,
+      "failure_dimensions": [
+        {
+          "dimension": "strongest_failure_path",
+          "score": null,
+          "max": 2,
+          "evidence": "Core handicap incomplete; no resilience award inferred."
+        },
+        {
+          "dimension": "personnel_resilience",
+          "score": null,
+          "max": 2,
+          "evidence": "Core handicap incomplete; no resilience award inferred."
+        },
+        {
+          "dimension": "variance_resilience",
+          "score": null,
+          "max": 2,
+          "evidence": "Core handicap incomplete; no resilience award inferred."
+        },
+        {
+          "dimension": "price_protection",
+          "score": null,
+          "max": 2,
+          "evidence": "Core handicap incomplete; no resilience award inferred."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": null,
+          "max": 2,
+          "evidence": "Core handicap incomplete; no resilience award inferred."
+        }
+      ],
+      "missing_evidence": [
+        "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score.",
+        "exact executable DE quote"
+      ],
+      "release_blockers": [
+        "Incomplete core assessment",
+        "Mandatory sport gates",
+        "No official grade"
+      ],
+      "official_units": 0,
+      "decision": "NO BET — UNGRADED"
+    }
+  ],
+  "seven_leg_review": {
+    "status": "REVIEW ONLY / NO BET",
+    "leg_ids": [
+      "fever",
+      "sabres",
+      "devils",
+      "lightning",
+      "unt",
+      "edmvan-over",
+      "watson-under"
+    ],
+    "official_units": 0,
+    "payout": null,
+    "payout_reason": "No single sportsbook executable seven-leg quote; reference prices span Circa and FanDuel and cannot be presented as a BetRivers Delaware ticket.",
+    "correlation": "Seven different events across four sports; no same-game stacking. Independent events do not guarantee independent betting errors."
+  },
+  "lottery_review": {
+    "half": {
+      "ids": [
+        4,
+        6,
+        8
+      ],
+      "legs": [
+        "PIT–CLE Under38.5",
+        "WKU+2.5",
+        "UNT+1.5"
+      ],
+      "net_odds": "11 to2",
+      "minimum_legs": 3,
+      "status": "REVIEW ONLY",
+      "official_units": 0
+    },
+    "teaser": {
+      "ids": [
+        2,
+        6,
+        8
+      ],
+      "legs": [
+        "CLE+6.5",
+        "WKU+6.5",
+        "UNT+6.5"
+      ],
+      "net_odds": "7 to5",
+      "minimum_legs": 3,
+      "status": "REVIEW ONLY",
+      "official_units": 0
+    },
+    "big_teaser": {
+      "status": "NO BET",
+      "reason": "Minimum4 selections; only3 distinct today's football games. Do not add correlated selections to manufacture minimum."
+    },
+    "pleaser": {
+      "status": "NO BET",
+      "reason": "Minimum3 selections; only1 today NFL matchup appears."
+    }
+  },
+  "sources": [
+    {
+      "key": "nfl",
+      "url": "https://vsin.com/nfl/steelers-vs-browns-predictions-week-4-thursday-night-football-odds-picks-and-player-props/",
+      "excerpt": "Predictions for Week 4](https://vsin.com/nfl/nfl-first-touchdown-scorer-predictions-for-week-4/ \"NFL First Touchdown Scorer Predictions for Week 4\") [![Deshaun Watson](<Base64-Image-Removed>)](https://vsin.com/the-vsin-daily/steelers-browns/ \"Steelers-Browns Picks, Plus NFL Week 4 Best Bets\") ### [Steelers-Browns Picks, Plus NFL Week 4 Best Bets](https://vsin.com/the-vsin-daily/steelers-browns/ \"Steelers-Browns Picks, Plus NFL Week 4 Best Bets\") [prev-page](https://vsin.com/nfl/steelers-vs-browns-predictions-week-4-thursday-night-football-odds-picks-and-player-props/#)[next-page](https://vsin.com/nfl/steelers-vs-browns-predictions-week-4-thursday-night-football-odds-picks-and-player-props/#)"
+    },
+    {
+      "key": "untarticle",
+      "url": "https://vsin.com/college-football/college-football-week-5-picks-north-texas-vs-tulsa/",
+      "excerpt": " Betting Splits, Power Ratings and Trends – Week 5\") [![pitt vs. virginia tech penn state vs. northwestern liberty vs. delaware](<Base64-Image-Removed>)](https://vsin.com/college-football/college-football-week-5-picks-pitt-vs-virginia-tech/ \"College Football Week 5 Picks: Pitt vs. Virginia Tech\") ### [College Football Week 5 Picks: Pitt vs. Virginia Tech](https://vsin.com/college-football/college-football-week-5-picks-pitt-vs-virginia-tech/ \"College Football Week 5 Picks: Pitt vs. Virginia Tech\") [prev-page](https://vsin.com/college-football/college-football-week-5-picks-north-texas-vs-tulsa/#)[next-page](https://vsin.com/college-football/college-football-week-5-picks-north-texas-vs-tulsa/#)"
+    },
+    {
+      "key": "docs_nfl",
+      "url": "https://www.docsports.com/free-picks/nfl/2026/pittsburgh-steelers-vs-cleveland-browns-prediction-10-1-2026-nfl-picks-best-bets-odds-week-4.html",
+      "excerpt": "oday/) by the experts, sign up for your [free $60 account with a guarantee.](https://www.docsports.com/picks/82876/free-sports-picks-predictions.html)** **Get all of this Weeks [Free NFL picks](https://www.docsports.com/free-picks/nfl/)** **Get all of this Weeks [Expert NFL Picks](https://www.docsports.com/expert-picks/nfl/)** **Additional Resources:** **[Cleveland Browns](https://www.clevelandbrowns.com/) \\- [Twitter](https://twitter.com/Browns)** **[Pittsburgh Steelers](https://www.steelers.com/) \\- [Twitter](https://twitter.com/steelers/)** One E-mail A Week Is All You Need! Our weekly newsletter is loaded with exclusive free picks,insight and advice from our expert handicappers Subscribe"
+    },
+    {
+      "key": "docs_wku",
+      "url": "https://www.docsports.com/free-picks/football/2026/western-kentucky-hilltoppers-vs-new-mexico-state-aggies-prediction-10-1-2026-college-football-picks-best-bets-odds.html",
+      "excerpt": "with a guarantee.](https://www.docsports.com/picks/82876/free-sports-picks-predictions.html)** **Get all of this Weeks [Free College Football Picks](https://www.docsports.com/free-picks/football/)** **Get all of this Weeks [Expert College Football Picks](https://www.docsports.com/expert-picks/college-football/)** **Additional Resources:** **[New Mexico State Aggies](https://nmstatesports.com/) \\- [Twitter](https://twitter.com/NMStateAggies)** **[Western Kentucky Hilltoppers](https://wkusports.com/) \\- [Twitter](https://twitter.com/wkusports)** One E-mail A Week Is All You Need! Our weekly newsletter is loaded with exclusive free picks,insight and advice from our expert handicappers Subscribe"
+    },
+    {
+      "key": "docs_wnba",
+      "url": "https://www.docsports.com/free-picks/wnba/2026/indiana-fever-vs-las-vegas-aces-prediction-10-1-2026-wnba-pick-tips-and-odds.html",
+      "excerpt": "rts.com/best-bets/today/) by the experts, sign up for your [free $60 account with a guarantee.](https://www.docsports.com/picks/82876/free-sports-picks-predictions.html)** **Get all of Today's [Free WNBA Picks](https://www.docsports.com/free-picks/wnba/)** **Get all of Today's [Expert WNBA Picks](https://www.docsports.com/expert-picks/wnba/)** **Additional Resources:** **[Las Vegas Aces](https://aces.wnba.com/) \\- [Twitter](https://twitter.com/lvaces)** **[Indiana Fever](https://fever.wnba.com/) \\- [Twitter](https://twitter.com/IndianaFever)** One E-mail A Week Is All You Need! Our weekly newsletter is loaded with exclusive free picks,insight and advice from our expert handicappers Subscribe"
+    },
+    {
+      "key": "docs_nj",
+      "url": "https://www.docsports.com/free-picks/nhl-hockey/2026/philadelphia-flyers-vs-new-jersey-devils-prediction-10-1-2026-nhl-picks-best-bets-odds.html",
+      "excerpt": "xperts, sign up for your [free $60 account with a guarantee.](https://www.docsports.com/picks/82876/free-sports-picks-predictions.html)** **Get all of Tonight's [Free NHL Picks](https://www.docsports.com/free-picks/nhl-hockey/).** **Get all of Tonight's [Expert Expert NHL Picks](https://www.docsports.com/expert-picks/nhl/).** **Additional Resources:** **[New Jersey Devils](https://www.nhl.com/devils/) \\- [Twitter](https://twitter.com/njdevils)** **[Philadelphia Fylers](https://www.nhl.com/flyers/) \\- [Twitter](https://twitter.com/NHLFlyers/)** One E-mail A Week Is All You Need! Our weekly newsletter is loaded with exclusive free picks,insight and advice from our expert handicappers Subscribe"
+    },
+    {
+      "key": "docsmin",
+      "url": "https://www.docsports.com/free-picks/nhl-hockey/2026/minnesota-wild-vs-nashville-predators-prediction-10-1-2026-nhl-picks-best-bets-odds.html",
+      "excerpt": " the experts, sign up for your [free $60 account with a guarantee.](https://www.docsports.com/picks/82876/free-sports-picks-predictions.html)** **Get all of Tonight's [Free NHL Picks](https://www.docsports.com/free-picks/nhl-hockey/).** **Get all of Tonight's [Expert Expert NHL Picks](https://www.docsports.com/expert-picks/nhl/).** **Additional Resources:** **[Nashville Predators](https://www.nhl.com/predators/) \\- [Twitter](https://twitter.com/predsnhl)** **[Minnesota Wild](https://www.nhl.com/wild/) \\- [Twitter](https://twitter.com/mnwild)** One E-mail A Week Is All You Need! Our weekly newsletter is loaded with exclusive free picks,insight and advice from our expert handicappers Subscribe"
+    },
+    {
+      "key": "flbetfinal",
+      "url": "https://www.fantasylife.com/articles/betting/steelers-vs-browns-picks-odds-predictions-and-player-props",
+      "excerpt": "afa-374da49b7236-1787239855.png&w=3840&q=75)\\\\ \\\\ Aaron **Rodgers**\\\\ \\\\ QBPIT![PIT](https://cdn.fantasylife-stage.com/assets/PIT_steelers_logo_21662355dd.svg)](https://www.fantasylife.com/nfl/players/302676/Aaron-Rodgers) PPG13.7Proj13.2 Published Oct 1, 2026, 10:15 AM ET ![Advertisement](https://ad.doubleclick.net/ddm/trackimp/N8667.5415713FLNEWSLETTERLLC/B35532063.452283211;dc_trk_aid=642385555;dc_trk_cid=61649687;ord=1790874828568;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;gdpr=$%7BGDPR%7D;gdpr_consent=$%7BGDPR_CONSENT_755%7D;ltd=;dc_tdv=1?)![](https://d.agkn.com/pixel/10690/?che=1790874828568&cmid=35532063&sid=10291409&pid=452283211&cgid=642385555&cid=61649687&aid=4053494)"
+    },
+    {
+      "key": "propfull",
+      "url": "https://sportsbookwire.usatoday.com/story/sports/nfl/2026/10/01/thursday-night-football-steelers-at-browns-best-prop-bets/92033514007/",
+      "excerpt": "%20Football%20in%20Cleveland%2C%20Ohio.%20Here%20are%20the%20best%20prop%20bets%20for%20the%208%3A15%20p.m.%20ET%20game.%0A%0ACheck%20out%20this%20story%20on%20sportsbookwire.usatoday.com%3A%20https%3A%2F%2Fsportsbookwire.usatoday.com%2Fstory%2Fsports%2Fnfl%2F2026%2F10%2F01%2Fthursday-night-football-steelers-at-browns-best-prop-bets%2F92033514007%2F) [We're always working to improve your experience. Let us know what you think.](https://cm.usatoday.com/site-feedback/?platform=Tangent-Desktop&url=https%3A%2F%2Fsportsbookwire.usatoday.com%2Fstory%2Fsports%2Fnfl%2F2026%2F10%2F01%2Fthursday-night-football-steelers-at-browns-best-prop-bets%2F92033514007%2F&marketName=sportsbookwire&cta=Right-Rail)"
+    },
+    {
+      "key": "feverfull",
+      "url": "https://fever.wnba.com/news/game-preview-fever-aces-261001",
+      "excerpt": "om/sites/1611661325/2026/07/GettyImages-2283625828.jpg?im=AspectCrop=(16,%209),xPosition=.5,yPosition=.5)](https://fever.wnba.com/news/game-preview-fever-aces-260705)[2026 Game Preview](https://fever.wnba.com/news/category/2026-game-preview) #### [Game Preview: Fever Tip Off West Coast Trip on Sunday in Vegas](https://fever.wnba.com/news/game-preview-fever-aces-260705) Jul 4, 2026[![](https://cdn.wnba.com/sites/1611661325/2025/07/GettyImages-2224320033.jpg?im=AspectCrop=(16,%209),xPosition=.5,yPosition=.5)](https://fever.wnba.com/news/game-preview-fever-aces-250724) #### [Game Preview: Fever Host Aces on Thursday Night](https://fever.wnba.com/news/game-preview-fever-aces-250724) Jul 23, 2025"
+    },
+    {
+      "key": "nhlstatus",
+      "url": "https://www.nhl.com/news/nhl-status-report-news-and-notes-october-1-2026",
+      "excerpt": " cookies collect information about your online interactions in order to build a profile of your interests and show you relevant ads on third-party sites, including on social media services. If you reject or opt-out of these cookies, you will still receive ads but they may be less personalized. Back Button ### Cookie List Filter Button ConsentLeg.Interest checkbox labellabel checkbox labellabel checkbox labellabel Clear - checkbox labellabel ApplyCancel Confirm My Choices Reject All Non-Essential Cookies Allow All [![Powered by Onetrust](https://cdn.cookielaw.org/logos/static/powered_by_logo.svg)](https://www.onetrust.com/solutions/consent-and-preferences/?utm_source=cmp&utm_medium=cmpbanner)"
+    },
+    {
+      "key": "goalies",
+      "url": "https://www.dailyfaceoff.com/starting-goalies",
+      "excerpt": "tman-keen-hot-for-hockey-romance-series-nhl-news) [Oilers place Savoie, Regula on LTIR; Nugent-Hopkins on IR\\\\ \\\\ Tyler Kuehl\\|2 hours ago](https://www.dailyfaceoff.com/news/edmoton-oilers-place-matthew-savoie-alec-regula-ltir-ryan-nugent-hopkins-ir-nhl-josh-samanski) [Claire Thompson retires from hockey to pursue medical career: report\\\\ \\\\ Hunter Crowther\\|2 hours ago](https://www.dailyfaceoff.com/news/claire-thompson-retires-medical-career-pwhl-canada-olympics-gold-medal) [Sabres’ Olen Zellweger placed on injured reserve; Dennis Gilbert recalled\\\\ \\\\ Ben Steiner\\|2 hours ago](https://www.dailyfaceoff.com/news/buffalo-sabres-olen-zellweger-placed-on-injured-reserve-dennis-gilbert-recalled)"
+    },
+    {
+      "key": "nflcirca",
+      "url": "https://data.vsin.com/vegas-odds-linetracker/?sportid=nfl",
+      "excerpt": " | Stations | South Point | Wynn | | | SPR | ML | TOT | SPR | ML | TOT | SPR | ML | TOT | SPR | ML | TOT | | ▶ 8:15 PM ET ETOPEN | -- | - | - | -- | - | - | -- | - | - | -- | - | - | -- | - | - | -- | - | - | -- | - | - | -- | - | - | | ![](https://data.vsin.com/img/teams/nfl/31.png)[Buffalo Bills](https://data.vsin.com/nfl/teams/?buffalo-bills) | -- | - | -- | -- | - | - | -- | - | - | -- | - | -- | -- | - | - | -- | - | - | -- | - | - | -- | - | - | | ![](https://data.vsin.com/img/teams/nfl/62.png)[Los Angeles Rams](https://data.vsin.com/nfl/teams/?los-angeles-rams) | -- | - | -- | -- | - | - | -- | - | - | -- | - | -- | -- | - | - | -- | - | - | -- | - | - | -- | - | - | GAME LINES× * * *"
+    },
+    {
+      "key": "cfbcircalive",
+      "url": "https://data.vsin.com/vegas-odds-linetracker/?sportid=cfb",
+      "excerpt": "-110 | - | 26.5 | -- | - | - | +1.5-120 | - | 26.5 | | ![](https://data.vsin.com/img/teams/cfb/208.png)[San Jose ST Spartans](https://data.vsin.com/college-football/teams/?san-jose-st-spartans) | -- | - | -- | -- | - | -- | +0.5-110 | +110 | 26.5o-105 | +1.5-115 | +107 | 26.5o+102 | -- | - | - | +0.5-110 | - | 26.5o-110 | -- | - | -- | +1.5-110 | - | 26.5o-110 | | ![](https://data.vsin.com/img/teams/cfb/157.png)[Hawaii Rainbow Warriors](https://data.vsin.com/college-football/teams/?hawaii-rainbow-warriors) | -- | - | -- | -- | - | -- | -0.5-110 | -130 | 26.5u-115 | -1.5-107 | -130 | 26.5u-124 | -- | - | - | -0.5-110 | - | 26.5u-110 | -- | - | -- | -1.5-110 | - | 26.5u-110 | GAME LINES× * * *"
+    },
+    {
+      "key": "wnbacirca",
+      "url": "https://data.vsin.com/vegas-odds-linetracker/?sportid=wnba",
+      "excerpt": "ynn | | | SPR | ML | TOT | SPR | ML | TOT | SPR | ML | TOT | SPR | ML | TOT | | ▶ 3:00 PM ET ETOPEN | -- | - | - | -- | - | - | -- | -10000 | - | -- | - | - | -- | - | - | -- | - | - | -- | - | - | -- | - | - | | ![](https://data.vsin.com/img/teams/wnba/6106.png)[New York Liberty](https://data.vsin.com/wnba/teams/?new-york-liberty) | -- | - | -- | -- | - | - | -- | -10000 | -- | -- | - | -- | -- | - | - | -- | - | -- | -- | - | - | -- | - | -- | | ![](https://data.vsin.com/img/teams/wnba/6100.png)[Atlanta Dream](https://data.vsin.com/wnba/teams/?atlanta-dream) | -- | - | -- | -- | - | - | -- | -10000 | -- | -- | - | -- | -- | - | - | -- | - | -- | -- | - | - | -- | - | -- | GAME LINES× * * *"
+    },
+    {
+      "key": "mlbcircalive",
+      "url": "https://data.vsin.com/vegas-odds-linetracker/?sportid=mlb",
+      "excerpt": "| -- | | ▶ 8:30 PM ET ETOPEN | -- | - | - | -- | - | - | +0.5+115 | +195 | 3.5 | +0.5+117 | +197 | 3.5 | -- | - | - | -- | - | - | -- | - | - | -- | - | - | | ![](https://data.vsin.com/img/teams/mlb/28.png)[San Diego Padres](https://data.vsin.com/mlb/teams/?san-diego-padres) | -- | - | -- | -- | - | -- | +0.5+115 | +195 | 3.5o-115 | +0.5+118 | +197 | 3.5o-115 | -- | - | - | -- | - | -- | -- | - | -- | -- | - | -- | | ![](https://data.vsin.com/img/teams/mlb/22.png)[Milwaukee Brewers](https://data.vsin.com/mlb/teams/?milwaukee-brewers) | -- | - | -- | -- | - | -- | -0.5-150 | -250 | 3.5u-110 | -0.5-148 | -250 | 3.5u-109 | -- | - | - | -- | - | -- | -- | - | -- | -- | - | -- | GAME LINES× * * *"
+    },
+    {
+      "key": "nhlcirca",
+      "url": "https://data.vsin.com/vegas-odds-linetracker/?sportid=nhl",
+      "excerpt": "ers) | -- | - | - | -- | - | - | -- | - | - | -- | - | -- | -- | - | - | -- | - | - | -- | - | - | -- | - | - | | ▶ 8:07 PM ET ETOPEN | -- | - | - | -- | - | - | -- | - | - | -- | - | - | -- | - | - | -- | - | - | -- | - | - | -- | - | - | | ![](https://data.vsin.com/img/teams/nhl/98.png)[Boston Bruins](https://data.vsin.com/nhl/teams/?boston-bruins) | -- | - | - | -- | - | - | -- | - | - | -- | - | -- | -- | - | - | -- | - | - | -- | - | - | -- | - | - | | ![](https://data.vsin.com/img/teams/nhl/116.png)[Minnesota Wild](https://data.vsin.com/nhl/teams/?minnesota-wild) | -- | - | - | -- | - | - | -- | - | - | -- | - | -- | -- | - | - | -- | - | - | -- | - | - | -- | - | - | GAME LINES× * * *"
+    },
+    {
+      "key": "finalsplit0",
+      "url": "https://data.vsin.com/betting-splits/?sport=WNBA",
+      "excerpt": "Included](https://vsin.com/wp-content/uploads/2024/05/accept.png) | | Opta AI Prop Projections | | ![Included](https://vsin.com/wp-content/uploads/2024/05/accept.png) | | Daily Picks Email | | ![Included](https://vsin.com/wp-content/uploads/2024/05/accept.png) | | Pro Betting Guides | | ![Included](https://vsin.com/wp-content/uploads/2024/05/accept.png) | | NFL / NBA Prop Analyzer | | ![Included](https://vsin.com/wp-content/uploads/2024/05/accept.png) | | Live Video Broadcast | | ![Included](https://vsin.com/wp-content/uploads/2024/05/accept.png) | | On Demand Video Replays | | ![Included](https://vsin.com/wp-content/uploads/2024/05/accept.png) | Features comparison between VSiN and VSiN Pro"
+    },
+    {
+      "key": "finalsplit1",
+      "url": "https://data.vsin.com/betting-splits/?sport=CFB",
+      "excerpt": "Included](https://vsin.com/wp-content/uploads/2024/05/accept.png) | | Opta AI Prop Projections | | ![Included](https://vsin.com/wp-content/uploads/2024/05/accept.png) | | Daily Picks Email | | ![Included](https://vsin.com/wp-content/uploads/2024/05/accept.png) | | Pro Betting Guides | | ![Included](https://vsin.com/wp-content/uploads/2024/05/accept.png) | | NFL / NBA Prop Analyzer | | ![Included](https://vsin.com/wp-content/uploads/2024/05/accept.png) | | Live Video Broadcast | | ![Included](https://vsin.com/wp-content/uploads/2024/05/accept.png) | | On Demand Video Replays | | ![Included](https://vsin.com/wp-content/uploads/2024/05/accept.png) | Features comparison between VSiN and VSiN Pro"
+    },
+    {
+      "key": "finalsplit2",
+      "url": "https://data.vsin.com/betting-splits/?sport=NHL",
+      "excerpt": "Included](https://vsin.com/wp-content/uploads/2024/05/accept.png) | | Opta AI Prop Projections | | ![Included](https://vsin.com/wp-content/uploads/2024/05/accept.png) | | Daily Picks Email | | ![Included](https://vsin.com/wp-content/uploads/2024/05/accept.png) | | Pro Betting Guides | | ![Included](https://vsin.com/wp-content/uploads/2024/05/accept.png) | | NFL / NBA Prop Analyzer | | ![Included](https://vsin.com/wp-content/uploads/2024/05/accept.png) | | Live Video Broadcast | | ![Included](https://vsin.com/wp-content/uploads/2024/05/accept.png) | | On Demand Video Replays | | ![Included](https://vsin.com/wp-content/uploads/2024/05/accept.png) | Features comparison between VSiN and VSiN Pro"
+    },
+    {
+      "key": "teamranknfl2",
+      "url": "https://www.teamrankings.com/nfl/",
+      "excerpt": ".1 | 9.9 | 17.4% | 0.1% | | 30 | -6.1 | [Tennessee](https://www.teamrankings.com/nfl/team/tennessee-titans)(0-3) | 4.5 | 12.5 | 3.7% | 0.0% | | 31 | -6.2 | [Arizona](https://www.teamrankings.com/nfl/team/arizona-cardinals)(1-2) | 5.3 | 11.7 | 4.1% | 0.0% | | 32 | -10.1 | [Miami](https://www.teamrankings.com/nfl/team/miami-dolphins)(0-3) | 3.2 | 13.8 | 0.7% | 0.0% | * * * Printed from TeamRankings.com - © 2005-2026 Team Rankings, LLC. All Rights Reserved. ![TeamRankings BetIQ PoolGenius](https://www.teamrankings.com/images/popups/3-logo.png) ### Free Sports Picks NFL, MLB, NCAAF Betting & Pool Picks Free trial — No credit card required #### Ready to see picks now? Yes, I Want Access!No Thanks"
+    },
+    {
+      "key": "teamrankwnba2",
+      "url": "https://www.teamrankings.com/wnba/",
+      "excerpt": ".0 | 0.0% | 0.0% | | 13 | -5.9 | [Seattle](https://www.teamrankings.com/wnba/team/seattle-storm)(8-36) | 8.0 | 36.0 | 0.0% | 0.0% | | 14 | -6.8 | [Toronto](https://www.teamrankings.com/wnba/team/toronto-tempo)(11-33) | 11.0 | 33.0 | 0.0% | 0.0% | | 15 | -8.1 | [Connecticut](https://www.teamrankings.com/wnba/team/connecticut-sun)(11-33) | 11.0 | 33.0 | 0.0% | 0.0% | * * * Printed from TeamRankings.com - © 2005-2026 Team Rankings, LLC. All Rights Reserved. ![TeamRankings BetIQ PoolGenius](https://www.teamrankings.com/images/popups/3-logo.png) ### Free Sports Picks NFL, MLB, NCAAF Betting & Pool Picks Free trial — No credit card required #### Ready to see picks now? Yes, I Want Access!No Thanks"
+    },
+    {
+      "key": "teamrankcfb2",
+      "url": "https://www.teamrankings.com/college-football/",
+      "excerpt": "state-cardinals)(1-3) | 3.1 | 8.9 | 136 | 91 | | 137 | -25.0 | [Bowling Green](https://www.teamrankings.com/college-football/team/bowling-green-falcons)(0-4) | 2.3 | 9.7 | 126 | 120 | | 138 | -25.6 | [UL Monroe](https://www.teamrankings.com/college-football/team/ul-monroe-warhawks)(0-4) | 1.1 | 10.9 | 132 | 133 | [Show All Teams](https://www.teamrankings.com/ncf/#) * * * Printed from TeamRankings.com - © 2005-2026 Team Rankings, LLC. All Rights Reserved. ![TeamRankings BetIQ PoolGenius](https://www.teamrankings.com/images/popups/3-logo.png) ### Free Sports Picks NFL, MLB, NCAAF Betting & Pool Picks Free trial — No credit card required #### Ready to see picks now? Yes, I Want Access!No Thanks"
+    },
+    {
+      "key": "teamranknhl2",
+      "url": "https://www.teamrankings.com/nhl/",
+      "excerpt": " pool players use our premium services to get an edge, and our data is referenced by the country's top sports media outlets. Whether you watch, wager on, or work in sports, TeamRankings provides the numbers you need to get smart about the game. - ESPN - Sports Illustrated - Bleacher Report - New York Times - SB Nation - The Wall Street Journal - The Washington Post * * * Printed from TeamRankings.com - © 2005-2026 Team Rankings, LLC. All Rights Reserved. ![TeamRankings BetIQ PoolGenius](https://www.teamrankings.com/images/popups/3-logo.png) ### Free Sports Picks NFL, MLB, NCAAF Betting & Pool Picks Free trial — No credit card required #### Ready to see picks now? Yes, I Want Access!No Thanks"
+    },
+    {
+      "key": "teamrankmlb2",
+      "url": "https://www.teamrankings.com/mlb/",
+      "excerpt": "| 28 | -0.61 | [LA Angels](https://www.teamrankings.com/mlb/team/la-angels-angels)(62-100) | 62.0 | 100.0 | 0.0% | 0.0% | | 29 | -0.90 | [Sacramento](https://www.teamrankings.com/mlb/team/sacramento-athletics)(64-98) | 64.0 | 98.0 | 0.0% | 0.0% | | 30 | -1.29 | [Colorado](https://www.teamrankings.com/mlb/team/colorado-rockies)(58-104) | 58.0 | 104.0 | 0.0% | 0.0% | * * * Printed from TeamRankings.com - © 2005-2026 Team Rankings, LLC. All Rights Reserved. ![TeamRankings BetIQ PoolGenius](https://www.teamrankings.com/images/popups/3-logo.png) ### Free Sports Picks NFL, MLB, NCAAF Betting & Pool Picks Free trial — No credit card required #### Ready to see picks now? Yes, I Want Access!No Thanks"
+    },
+    {
+      "key": "nst2",
+      "url": "https://www.naturalstattrick.com/teamtable.php",
+      "excerpt": "6.00 | 4 | 0 | 100.00 | 28.57 | 100.00 | 8 | 9 | 47.06 | 5 | 6 | 45.45 | 2 | 0 | 100.00 | 40.00 | 100.00 | 18 | 10 | 64.29 | 9 | 5 | 64.29 | 2 | 0 | 100.00 | 22.22 | 100.00 | 15 | 25 | 37.50 | 8 | 10 | 44.44 | 0 | 1 | 0.00 | 0.00 | 90.00 | 18.18 | 95.83 | 1.140 | | 15 | New York Islanders | 1 | 40:24 | 0 | 1 | 0 | 0 | 0 | 0.000 | 47 | 33 | 58.75 | 36 | 24 | 60.00 | 21 | 18 | 53.85 | 0 | 1 | 0.00 | 1.77 | 1.68 | 51.42 | 18 | 20 | 47.37 | 10 | 12 | 45.45 | 0 | 1 | 0.00 | 0.00 | 91.67 | 9 | 8 | 52.94 | 6 | 4 | 60.00 | 0 | 1 | 0.00 | 0.00 | 75.00 | 9 | 12 | 42.86 | 4 | 8 | 33.33 | 0 | 0 | - | 0.00 | 100.00 | 26 | 20 | 56.52 | 9 | 6 | 60.00 | 0 | 0 | - | 0.00 | 100.00 | 0.00 | 94.44 | 0.944 | A2A"
+    },
+    {
+      "key": "reverifydocs0",
+      "url": "https://www.docsports.com/free-picks/nhl-hockey/2026/buffalo-sabres-vs-columbus-blue-jackets-prediction-10-1-2026-nhl-picks-best-bets-odds.html"
+    },
+    {
+      "key": "reverifydocs1",
+      "url": "https://www.docsports.com/free-picks/nhl-hockey/2026/tampa-bay-lightning-vs-new-york-rangers-prediction-10-1-2026-nhl-picks-best-bets-odds.html"
+    },
+    {
+      "key": "reverifydocs2",
+      "url": "https://www.docsports.com/free-picks/football/2026/north-texas-mean-green-vs-tulsa-golden-hurricane-prediction-10-1-2026-college-football-picks-best-bets-odds.html"
+    }
+  ],
+  "guides": {
+    "NFL": "Original pages52–55 consulted",
+    "FantasyLife": "Original pages119/138 consulted, magazine numeric weekly delta unavailable",
+    "CFB": "Original pages62–63,72–73,202–203,206–207 consulted"
+  },
+  "execution_price": "No exact live BetRivers Delaware offer verified; Sept29 screenshots historical offers and never wagers",
+  "publication": "No active website card or wager",
+  "soccer_inventory": [
+    {
+      "event": "Portugal at Denmark",
+      "start": "2026-10-01T18:45Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Serbia at Germany",
+      "start": "2026-10-01T18:45Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Netherlands at Greece",
+      "start": "2026-10-01T18:45Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Kosovo at Israel",
+      "start": "2026-10-01T18:45Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Gibraltar at Malta",
+      "start": "2026-10-01T18:45Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Austria at Republic of Ireland",
+      "start": "2026-10-01T18:45Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Norway at Wales",
+      "start": "2026-10-01T18:45Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Sporting Kansas City at Seattle Sounders FC",
+      "start": "2026-10-02T01:30Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Real Madrid at Manchester City",
+      "start": "2026-10-01T19:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Oud-Heverlee Leuven at Paris Saint-Germain",
+      "start": "2026-10-01T19:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Montserrat at British Virgin Islands",
+      "start": "2026-10-01T20:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "St. Martin at US Virgin Islands",
+      "start": "2026-10-01T20:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Guyana at Dominica",
+      "start": "2026-10-01T21:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Trinidad and Tobago at Curaçao",
+      "start": "2026-10-01T22:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Antigua and Barbuda at Anguilla",
+      "start": "2026-10-01T23:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Puerto Rico at Cayman Islands",
+      "start": "2026-10-02T00:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Haiti at Dominican Republic",
+      "start": "2026-10-02T00:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Costa Rica at Nicaragua",
+      "start": "2026-10-02T02:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Ceuta at Real Betis",
+      "start": "2026-10-01T18:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Spain U21 at San Marino U21",
+      "start": "2026-10-01T18:15Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Georgia U21 at Northern Ireland U21",
+      "start": "2026-10-01T18:45Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Estudiantes de La Plata at Platense",
+      "start": "2026-10-02T00:15Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Sport at Athletic",
+      "start": "2026-10-01T23:30Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Goiás at Novorizontino",
+      "start": "2026-10-02T00:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Once Caldas at Internacional de Bogotá",
+      "start": "2026-10-02T01:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "GV San José at Bolívar",
+      "start": "2026-10-01T22:30Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Independiente Petrolero at Blooming",
+      "start": "2026-10-02T00:30Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Luis Ángel Firpo at Fuerte San Francisco",
+      "start": "2026-10-01T21:30Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "CD Municipal Limeño at Inca Aruba",
+      "start": "2026-10-02T00:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Stonehill at Central Connecticut",
+      "start": "2026-10-01T22:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Eastern Illinois at Southern Indiana",
+      "start": "2026-10-01T22:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Howard at Chicago State",
+      "start": "2026-10-01T23:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Western Illinois at SIU Edwardsville",
+      "start": "2026-10-01T23:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Houston Christian at UT Rio Grande Valley",
+      "start": "2026-10-01T23:30Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Incarnate Word at Lindenwood",
+      "start": "2026-10-02T00:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Jacksonville State at Missouri State",
+      "start": "2026-10-01T18:30Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Massachusetts at Bowling Green",
+      "start": "2026-10-01T19:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Le Moyne at Stonehill",
+      "start": "2026-10-01T19:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Eastern Michigan at Ball State",
+      "start": "2026-10-01T20:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Central Michigan at Ohio",
+      "start": "2026-10-01T20:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Northern Illinois at Purdue Fort Wayne",
+      "start": "2026-10-01T20:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "East Carolina at Temple",
+      "start": "2026-10-01T20:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Chattanooga at VMI",
+      "start": "2026-10-01T20:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Jacksonville at Queens University",
+      "start": "2026-10-01T21:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Chicago State at Fairleigh Dickinson",
+      "start": "2026-10-01T22:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Delaware at Florida International",
+      "start": "2026-10-01T22:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "New Mexico State at Kennesaw State",
+      "start": "2026-10-01T22:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Bryant at New Hampshire",
+      "start": "2026-10-01T22:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Wagner at New Haven",
+      "start": "2026-10-01T22:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Montana at Southern Utah",
+      "start": "2026-10-01T22:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Vermont at UMass Lowell",
+      "start": "2026-10-01T22:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Tennessee Tech at UNC Greensboro",
+      "start": "2026-10-01T22:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Idaho State at Eastern Washington",
+      "start": "2026-10-01T22:30Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Binghamton at UAlbany",
+      "start": "2026-10-01T22:30Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Tennessee at Auburn",
+      "start": "2026-10-01T23:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Stetson at Bellarmine",
+      "start": "2026-10-01T23:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "IU Indianapolis at Cleveland State",
+      "start": "2026-10-01T23:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Robert Morris at Detroit Mercy",
+      "start": "2026-10-01T23:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "South Florida at Florida Atlantic",
+      "start": "2026-10-01T23:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Utah at Iowa State",
+      "start": "2026-10-01T23:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "App State at James Madison",
+      "start": "2026-10-01T23:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Western Michigan at Kent State",
+      "start": "2026-10-01T23:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Florida Gulf Coast at Lipscomb",
+      "start": "2026-10-01T23:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "The Citadel at Mercer",
+      "start": "2026-10-01T23:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Buffalo at Miami (OH)",
+      "start": "2026-10-01T23:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "UMBC at NJIT",
+      "start": "2026-10-01T23:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Milwaukee at Northern Kentucky",
+      "start": "2026-10-01T23:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Youngstown State at Oakland",
+      "start": "2026-10-01T23:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Wofford at Samford",
+      "start": "2026-10-01T23:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Arkansas-Pine Bluff at Southern",
+      "start": "2026-10-01T23:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "Akron at Toledo",
+      "start": "2026-10-01T23:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    },
+    {
+      "event": "North Florida at West Florida",
+      "start": "2026-10-01T23:00Z",
+      "state": "pre",
+      "candidate_status": "UNGRADED",
+      "reason": "XI, opponent-adjusted xG and executable prices unverified"
+    }
+  ],
+  "source_access_audit": {
+    "registry_probes": [
+      {
+        "url": "https://vsin.com/",
+        "assessment": "INACCESSIBLE",
+        "error": "<urlopen error timed out>"
+      },
+      {
+        "url": "https://vsin.com/tools/vegas-betting-sheets/",
+        "assessment": "INACCESSIBLE",
+        "error": "<urlopen error timed out>"
+      },
+      {
+        "url": "https://www.actionnetwork.com/",
+        "assessment": "INACCESSIBLE",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://www.covers.com/",
+        "http_status": 200,
+        "bytes_sampled": 600000,
+        "assessment": "SUPPORTING ONLY: homepage access does not establish a candidate fact"
+      },
+      {
+        "url": "https://www.teamrankings.com/",
+        "assessment": "INACCESSIBLE",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://www2.teamrankings.com/",
+        "http_status": 200,
+        "bytes_sampled": 363931,
+        "assessment": "SUPPORTING ONLY: homepage access does not establish a candidate fact"
+      },
+      {
+        "url": "https://www.statmuse.com/",
+        "http_status": 200,
+        "bytes_sampled": 600000,
+        "assessment": "SUPPORTING ONLY: homepage access does not establish a candidate fact"
+      },
+      {
+        "url": "https://www.sports-reference.com/",
+        "assessment": "INACCESSIBLE",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://www.baseball-reference.com/",
+        "assessment": "INACCESSIBLE",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://www.basketball-reference.com/",
+        "assessment": "INACCESSIBLE",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://www.pro-football-reference.com/",
+        "assessment": "INACCESSIBLE",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://www.hockey-reference.com/",
+        "assessment": "INACCESSIBLE",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://fbref.com/",
+        "assessment": "INACCESSIBLE",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://www.sports-reference.com/cfb/",
+        "assessment": "INACCESSIBLE",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://www.sports-reference.com/cbb/",
+        "assessment": "INACCESSIBLE",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://www.sports-reference.com/stathead/",
+        "assessment": "INACCESSIBLE",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://www.espn.com/",
+        "http_status": 200,
+        "bytes_sampled": 211638,
+        "assessment": "SUPPORTING ONLY: homepage access does not establish a candidate fact"
+      },
+      {
+        "url": "https://theanalyst.com/",
+        "http_status": 200,
+        "bytes_sampled": 436945,
+        "assessment": "SUPPORTING ONLY: homepage access does not establish a candidate fact"
+      },
+      {
+        "url": "https://nypost.com/sports/",
+        "http_status": 200,
+        "bytes_sampled": 600000,
+        "assessment": "SUPPORTING ONLY: homepage access does not establish a candidate fact"
+      },
+      {
+        "url": "https://www.docsports.com/#freepicks",
+        "http_status": 200,
+        "bytes_sampled": 47453,
+        "assessment": "SUPPORTING ONLY: homepage access does not establish a candidate fact"
+      },
+      {
+        "url": "https://www.docsports.com/statistics/matches.html",
+        "http_status": 200,
+        "bytes_sampled": 19370,
+        "assessment": "SUPPORTING ONLY: homepage access does not establish a candidate fact"
+      },
+      {
+        "url": "https://www.docsports.com/video/free-picks/",
+        "http_status": 200,
+        "bytes_sampled": 71058,
+        "assessment": "SUPPORTING ONLY: homepage access does not establish a candidate fact"
+      },
+      {
+        "url": "https://www.docsports.com/cappers.html?cap_id=88",
+        "http_status": 200,
+        "bytes_sampled": 22796,
+        "assessment": "SUPPORTING ONLY: homepage access does not establish a candidate fact"
+      },
+      {
+        "url": "https://baseballsavant.mlb.com/",
+        "http_status": 200,
+        "bytes_sampled": 289875,
+        "assessment": "SUPPORTING ONLY: homepage access does not establish a candidate fact"
+      },
+      {
+        "url": "https://www.fangraphs.com/",
+        "assessment": "INACCESSIBLE",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://umpscorecards.com/",
+        "http_status": 200,
+        "bytes_sampled": 15048,
+        "assessment": "SUPPORTING ONLY: homepage access does not establish a candidate fact"
+      },
+      {
+        "url": "https://www.mlb.com/",
+        "http_status": 200,
+        "bytes_sampled": 600000,
+        "assessment": "SUPPORTING ONLY: homepage access does not establish a candidate fact"
+      },
+      {
+        "url": "https://www.weather.gov/",
+        "http_status": 200,
+        "bytes_sampled": 122207,
+        "assessment": "SUPPORTING ONLY: homepage access does not establish a candidate fact"
+      },
+      {
+        "url": "https://www.fantasylife.com/",
+        "assessment": "INACCESSIBLE",
+        "error": "<urlopen error timed out>"
+      },
+      {
+        "url": "https://www.nfl.com/",
+        "http_status": 200,
+        "bytes_sampled": 600000,
+        "assessment": "SUPPORTING ONLY: homepage access does not establish a candidate fact"
+      },
+      {
+        "url": "https://www.natesilver.net/p/nba-future-of-the-franchise-rankings-6cb",
+        "http_status": 200,
+        "bytes_sampled": 216554,
+        "assessment": "SUPPORTING ONLY: homepage access does not establish a candidate fact"
+      },
+      {
+        "url": "https://moneypuck.com/",
+        "http_status": 200,
+        "bytes_sampled": 19763,
+        "assessment": "SUPPORTING ONLY: homepage access does not establish a candidate fact"
+      },
+      {
+        "url": "https://www.naturalstattrick.com/",
+        "assessment": "INACCESSIBLE",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://evolving-hockey.com/",
+        "http_status": 200,
+        "bytes_sampled": 48774,
+        "assessment": "SUPPORTING ONLY: homepage access does not establish a candidate fact"
+      },
+      {
+        "url": "https://www.teamrankings.com/nhl/",
+        "assessment": "INACCESSIBLE",
+        "error": "HTTP Error 403: Forbidden"
+      }
+    ],
+    "specific_url_probes": [
+      {
+        "key": "docs_home",
+        "url": "https://www.docsports.com/#freepicks",
+        "status": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "length": 47657,
+        "text_length": 13937,
+        "sample": " \r\n  \r\n \r\n \r\n    \r\n \r\n    \r\n \r\n \r\n \r\n \r\n Free Sports Picks: NFL Picks, NBA Picks, College Basketball"
+      },
+      {
+        "key": "docs_video",
+        "url": "https://www.docsports.com/video/free-picks/",
+        "status": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "length": 70190,
+        "text_length": 39274,
+        "sample": " \r\n \r\n \r\n  \r\n Daily Wager Picks, Best Bets and Prediction Videos \r\n \r\n .youtube{position:relative;di"
+      },
+      {
+        "key": "vsin_home",
+        "url": "https://vsin.com/",
+        "status": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "length": 1241016,
+        "text_length": 913767,
+        "sample": " \r\n        \r\n        \r\n      \r\n \r\n     VSiN Sports Betting Picks, Best Bets, and Vegas Odds \r\n     \r"
+      },
+      {
+        "key": "vsin_sheets",
+        "url": "https://vsin.com/tools/vegas-betting-sheets/",
+        "status": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "length": 396557,
+        "text_length": 234263,
+        "sample": " \r\n        \r\n        \r\n      \r\n \r\n     Vegas Betting Sheets - VSiN \r\n     \r\n     \r\n     \r\n     \r\n\t\t "
+      },
+      {
+        "key": "teamrank_nfl",
+        "url": "https://www.teamrankings.com/nfl/",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "key": "teamrank_cfb",
+        "url": "https://www.teamrankings.com/college-football/",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "key": "teamrank_wnba",
+        "url": "https://www.teamrankings.com/wnba/",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "key": "teamrank_nhl",
+        "url": "https://www.teamrankings.com/nhl/",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "key": "teamrank_mlb",
+        "url": "https://www.teamrankings.com/mlb/",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "key": "statmuse",
+        "url": "https://www.statmuse.com/nfl/ask/harold-fannin-game-log-2026",
+        "status": 200,
+        "content_type": "text/html",
+        "length": 366271,
+        "text_length": 39632,
+        "sample": "        \n      function setTheme(document) {\n        const metaColorScheme = document.querySelector("
+      },
+      {
+        "key": "footballref",
+        "url": "https://www.pro-football-reference.com/years/2026/",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "key": "cfbref",
+        "url": "https://www.sports-reference.com/cfb/years/2026.html",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "key": "basketref",
+        "url": "https://www.basketball-reference.com/wnba/years/2026.html",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "key": "hockeyref",
+        "url": "https://www.hockey-reference.com/leagues/NHL_2027.html",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "key": "baseballref",
+        "url": "https://www.baseball-reference.com/teams/ATL/2026.shtml",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "key": "savant",
+        "url": "https://baseballsavant.mlb.com/savant-player/aaron-nola-605400",
+        "status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "length": 5251088,
+        "text_length": 4086150,
+        "sample": " \n \n     \n         Aaron Nola Stats: Statcast, Visuals & Advanced Metrics | baseballsavant.com \n\n   "
+      },
+      {
+        "key": "fangraphs",
+        "url": "https://www.fangraphs.com/players/aaron-nola/16149/stats",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "key": "umpires",
+        "url": "https://umpscorecards.com/",
+        "status": 200,
+        "content_type": "text/html",
+        "length": 15048,
+        "text_length": 1481,
+        "sample": " \n \n\t \n\t\t \n\t\t \n\t\t \n\t\t \n\t\t\n\t\t \n\t\t \n\t\t                            UmpScorecards | Home \n\t \n\t \n\t  \n\t \n\t"
+      },
+      {
+        "key": "mlb",
+        "url": "https://www.mlb.com/probable-pitchers",
+        "status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "length": 370097,
+        "text_length": 278828,
+        "sample": " \n \n \n     Baseball Probable Pitchers | MLB.com \n     \n     \n     \n     \n     \n     \n     \n     \n   "
+      },
+      {
+        "key": "weather_atl",
+        "url": "https://forecast.weather.gov/MapClick.php?lat=33.891&lon=-84.468",
+        "status": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "length": 51790,
+        "text_length": 26138,
+        "sample": "  \n     \n         \n         \n         \n         National Weather Service \n         \n         \n      "
+      },
+      {
+        "key": "weather_cle",
+        "url": "https://forecast.weather.gov/MapClick.php?lat=41.505&lon=-81.699",
+        "status": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "length": 49305,
+        "text_length": 25156,
+        "sample": "  \n     \n         \n         \n         \n         National Weather Service \n         \n         \n      "
+      },
+      {
+        "key": "weather_tulsa",
+        "url": "https://forecast.weather.gov/MapClick.php?lat=36.149&lon=-95.941",
+        "status": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "length": 50577,
+        "text_length": 25414,
+        "sample": "  \n     \n         \n         \n         \n         National Weather Service \n         \n         \n      "
+      },
+      {
+        "key": "weather_nm",
+        "url": "https://forecast.weather.gov/MapClick.php?lat=32.279&lon=-106.748",
+        "status": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "length": 49671,
+        "text_length": 25032,
+        "sample": "  \n     \n         \n         \n         \n         National Weather Service \n         \n         \n      "
+      },
+      {
+        "key": "moneypuck",
+        "url": "https://moneypuck.com/",
+        "status": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "length": 19763,
+        "text_length": 11002,
+        "sample": "\r\n \r\n     \r\n         \r\n\t\t MoneyPuck.com -NHL Analytics, Playoff Odds, Power Rankings, Player Stats \r"
+      },
+      {
+        "key": "nst",
+        "url": "https://www.naturalstattrick.com/teamtable.php",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "key": "evolving",
+        "url": "https://evolving-hockey.com/",
+        "status": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "length": 48774,
+        "text_length": 25098,
+        "sample": "  \n\t(function()\n\t{\n\t  if( window.localStorage )\n\t  {\n\t    if( !localStorage.getItem('firstLoad') )\n\t"
+      },
+      {
+        "key": "fbref",
+        "url": "https://fbref.com/en/comps/677/UEFA-Nations-League-Stats",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "key": "opta",
+        "url": "https://theanalyst.com/competition/uefa-nations-league",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "key": "nba",
+        "url": "https://www.nba.com/games?date=2026-10-01",
+        "status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "length": 280218,
+        "text_length": 160466,
+        "sample": "           NBA Games - All NBA matchups | NBA.com                 {\"@context\":\"https://schema.org\",\""
+      },
+      {
+        "key": "ufc",
+        "url": "https://www.ufc.com/events",
+        "status": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "length": 360244,
+        "text_length": 77332,
+        "sample": "\n\n\n\n\n\n \n \n   \n     \n \n \n \n \n \n \n \n \n \n (function(d,w){var i='stck-global-code';if(w.stckEmbed||w.__s"
+      },
+      {
+        "key": "cfl",
+        "url": "https://www.cfl.ca/schedule/",
+        "status": 200,
+        "content_type": "text/html;charset=utf-8",
+        "length": 456246,
+        "text_length": 378000,
+        "sample": "      CFL Schedule  {\"imports\":{\"#entry\":\"/_nuxt/IKQ0ik6A.js\"}}      window.dataLayer=window.dataLay"
+      },
+      {
+        "key": "nascar",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "key": "golf",
+        "url": "https://www.pgatour.com/tournaments/2026/bank-of-utah-championship/R2026554/tee-times",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "key": "tennis",
+        "url": "https://www.atptour.com/en/scores/current",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "key": "wta",
+        "url": "https://www.wtatennis.com/tournaments",
+        "status": 200,
+        "content_type": "text/html;charset=utf-8",
+        "length": 319113,
+        "text_length": 111437,
+        "sample": " \n \n \n     \n     \n     \n     \n     \n     \n     \n     \n     \n     \n     \n     \n\n     \n \n \n \n \n \n \n Te"
+      },
+      {
+        "key": "steelers",
+        "url": "https://www.steelers.com/news/week-4-injury-report-browns",
+        "status": 200,
+        "content_type": "text/html",
+        "length": 337361,
+        "text_length": 86841,
+        "sample": "           Updated: Week 4 Injury Report (Browns)                                                 do"
+      },
+      {
+        "key": "fever",
+        "url": "https://fever.wnba.com/news/game-preview-fever-aces-261001",
+        "status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "length": 502224,
+        "text_length": 349404,
+        "sample": "                                                                         Game Preview: Fever at Aces"
+      },
+      {
+        "key": "wnbareport",
+        "url": "https://ak-static.cms.nba.com/referee/injury/wnba/2026-10-01.pdf",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "key": "nflmodel",
+        "url": "https://data.vsin.com/nfl/games/",
+        "status": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "length": 431677,
+        "text_length": 190024,
+        "sample": "\r\n \r\n        \r\n        \r\n      \r\n \r\n \r\n.main-content {\r\n    padding-top: 0px !important;\r\nmin-height"
+      },
+      {
+        "key": "nflprojections",
+        "url": "https://data.vsin.com/projections/nfl/",
+        "status": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "length": 340522,
+        "text_length": 180945,
+        "sample": "\r\n \r\n        \r\n        \r\n      \r\n \r\n \r\n.main-content {\r\npadding-top: 0px !important;\r\nmin-height: 27"
+      },
+      {
+        "key": "nflprops",
+        "url": "https://data.vsin.com/nfl/player-props/",
+        "status": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "length": 340497,
+        "text_length": 180946,
+        "sample": "\r\n \r\n        \r\n        \r\n      \r\n \r\n \r\n.main-content {\r\npadding-top: 0px !important;\r\nmin-height: 27"
+      },
+      {
+        "key": "wr",
+        "url": "https://vsin.com/wr/",
+        "status": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "length": 412891,
+        "text_length": 250044,
+        "sample": " \r\n        \r\n        \r\n      \r\n \r\n     WR/CB Matchup Tool Powered by Fantasy Points - VSiN \r\n     \r\n"
+      },
+      {
+        "key": "nflsystems",
+        "url": "https://vsin.com/nfl/betting-strategies/",
+        "status": 200,
+        "content_type": "text/html; charset=UTF-8",
+        "length": 462972,
+        "text_length": 286823,
+        "sample": " \r\n        \r\n        \r\n      \r\n \r\n     NFL Betting Strategies: Preseason to Super Bowl Tips - VSiN \r"
+      },
+      {
+        "key": "fantasyrank",
+        "url": "https://www.fantasylife.com/tools/nfl-rankings",
+        "status": 200,
+        "content_type": "text/html; charset=utf-8",
+        "length": 158789,
+        "text_length": 62877,
+        "sample": "                                                                                                    "
+      },
+      {
+        "key": "fantasyutil",
+        "url": "https://www.fantasylife.com/articles/nfl/nfl-utilization-report-week-4-2026",
+        "error": "HTTP Error 404: Not Found"
+      }
+    ],
+    "soccer_inventory": [
+      {
+        "event": "Portugal at Denmark",
+        "start": "2026-10-01T18:45Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Serbia at Germany",
+        "start": "2026-10-01T18:45Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Netherlands at Greece",
+        "start": "2026-10-01T18:45Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Kosovo at Israel",
+        "start": "2026-10-01T18:45Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Gibraltar at Malta",
+        "start": "2026-10-01T18:45Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Austria at Republic of Ireland",
+        "start": "2026-10-01T18:45Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Norway at Wales",
+        "start": "2026-10-01T18:45Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Sporting Kansas City at Seattle Sounders FC",
+        "start": "2026-10-02T01:30Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Real Madrid at Manchester City",
+        "start": "2026-10-01T19:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Oud-Heverlee Leuven at Paris Saint-Germain",
+        "start": "2026-10-01T19:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Montserrat at British Virgin Islands",
+        "start": "2026-10-01T20:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "St. Martin at US Virgin Islands",
+        "start": "2026-10-01T20:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Guyana at Dominica",
+        "start": "2026-10-01T21:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Trinidad and Tobago at Curaçao",
+        "start": "2026-10-01T22:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Antigua and Barbuda at Anguilla",
+        "start": "2026-10-01T23:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Puerto Rico at Cayman Islands",
+        "start": "2026-10-02T00:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Haiti at Dominican Republic",
+        "start": "2026-10-02T00:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Costa Rica at Nicaragua",
+        "start": "2026-10-02T02:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Ceuta at Real Betis",
+        "start": "2026-10-01T18:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Spain U21 at San Marino U21",
+        "start": "2026-10-01T18:15Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Georgia U21 at Northern Ireland U21",
+        "start": "2026-10-01T18:45Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Estudiantes de La Plata at Platense",
+        "start": "2026-10-02T00:15Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Sport at Athletic",
+        "start": "2026-10-01T23:30Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Goiás at Novorizontino",
+        "start": "2026-10-02T00:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Once Caldas at Internacional de Bogotá",
+        "start": "2026-10-02T01:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "GV San José at Bolívar",
+        "start": "2026-10-01T22:30Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Independiente Petrolero at Blooming",
+        "start": "2026-10-02T00:30Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Luis Ángel Firpo at Fuerte San Francisco",
+        "start": "2026-10-01T21:30Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "CD Municipal Limeño at Inca Aruba",
+        "start": "2026-10-02T00:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Stonehill at Central Connecticut",
+        "start": "2026-10-01T22:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Eastern Illinois at Southern Indiana",
+        "start": "2026-10-01T22:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Howard at Chicago State",
+        "start": "2026-10-01T23:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Western Illinois at SIU Edwardsville",
+        "start": "2026-10-01T23:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Houston Christian at UT Rio Grande Valley",
+        "start": "2026-10-01T23:30Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Incarnate Word at Lindenwood",
+        "start": "2026-10-02T00:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Jacksonville State at Missouri State",
+        "start": "2026-10-01T18:30Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Massachusetts at Bowling Green",
+        "start": "2026-10-01T19:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Le Moyne at Stonehill",
+        "start": "2026-10-01T19:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Eastern Michigan at Ball State",
+        "start": "2026-10-01T20:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Central Michigan at Ohio",
+        "start": "2026-10-01T20:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Northern Illinois at Purdue Fort Wayne",
+        "start": "2026-10-01T20:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "East Carolina at Temple",
+        "start": "2026-10-01T20:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Chattanooga at VMI",
+        "start": "2026-10-01T20:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Jacksonville at Queens University",
+        "start": "2026-10-01T21:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Chicago State at Fairleigh Dickinson",
+        "start": "2026-10-01T22:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Delaware at Florida International",
+        "start": "2026-10-01T22:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "New Mexico State at Kennesaw State",
+        "start": "2026-10-01T22:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Bryant at New Hampshire",
+        "start": "2026-10-01T22:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Wagner at New Haven",
+        "start": "2026-10-01T22:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Montana at Southern Utah",
+        "start": "2026-10-01T22:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Vermont at UMass Lowell",
+        "start": "2026-10-01T22:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Tennessee Tech at UNC Greensboro",
+        "start": "2026-10-01T22:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Idaho State at Eastern Washington",
+        "start": "2026-10-01T22:30Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Binghamton at UAlbany",
+        "start": "2026-10-01T22:30Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Tennessee at Auburn",
+        "start": "2026-10-01T23:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Stetson at Bellarmine",
+        "start": "2026-10-01T23:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "IU Indianapolis at Cleveland State",
+        "start": "2026-10-01T23:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Robert Morris at Detroit Mercy",
+        "start": "2026-10-01T23:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "South Florida at Florida Atlantic",
+        "start": "2026-10-01T23:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Utah at Iowa State",
+        "start": "2026-10-01T23:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "App State at James Madison",
+        "start": "2026-10-01T23:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Western Michigan at Kent State",
+        "start": "2026-10-01T23:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Florida Gulf Coast at Lipscomb",
+        "start": "2026-10-01T23:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "The Citadel at Mercer",
+        "start": "2026-10-01T23:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Buffalo at Miami (OH)",
+        "start": "2026-10-01T23:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "UMBC at NJIT",
+        "start": "2026-10-01T23:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Milwaukee at Northern Kentucky",
+        "start": "2026-10-01T23:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Youngstown State at Oakland",
+        "start": "2026-10-01T23:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Wofford at Samford",
+        "start": "2026-10-01T23:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Arkansas-Pine Bluff at Southern",
+        "start": "2026-10-01T23:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "Akron at Toledo",
+        "start": "2026-10-01T23:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      },
+      {
+        "event": "North Florida at West Florida",
+        "start": "2026-10-01T23:00Z",
+        "state": "pre",
+        "candidate_status": "UNGRADED",
+        "reason": "XI, opponent-adjusted xG and executable prices unverified"
+      }
+    ]
+  }
+}
