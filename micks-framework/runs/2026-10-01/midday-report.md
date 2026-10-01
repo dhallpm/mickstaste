@@ -482,3 +482,7 @@ See [midday-source-audit.md](./midday-source-audit.md) and [machine record](./mi
 - [teamranknhl2](https://www.teamrankings.com/nhl/)
 - [teamrankmlb2](https://www.teamrankings.com/mlb/)
 - [nst2](https://www.naturalstattrick.com/teamtable.php)
+
+## Confirmed pregame recheck schedule
+
+October1 Eastern:6:15pm (7pm NHL);7:15pm (8pm MLB/CFB/NHL);7:30pm (NFL8:15);8:15pm (9pm WNBA/CFB/NHL);8:45pm (CHI/UTA9:30);9:15pm (10pm NHL). Four grouped tasks cover six checks within the current five-active-task plan limit. Late checks preserve earlier snapshots and rerun only remaining pregame events. Confirmation of a task is not a promise that a data source or play will qualify.
