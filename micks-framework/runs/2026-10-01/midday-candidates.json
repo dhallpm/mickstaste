@@ -3133,5 +3133,50 @@
         "reason": "XI, opponent-adjusted xG and executable prices unverified"
       }
     ]
-  }
+  },
+  "scheduled_rechecks_et": [
+    {
+      "time": "18:15",
+      "scope": "7pmNHL"
+    },
+    {
+      "time": "19:15",
+      "scope": "8pmMLB/CFB/NHL"
+    },
+    {
+      "time": "19:30",
+      "scope": "NFL8:15pm"
+    },
+    {
+      "time": "20:15",
+      "scope": "9pmWNBA/CFB/NHL"
+    },
+    {
+      "time": "20:45",
+      "scope": "Utah9:30pm"
+    },
+    {
+      "time": "21:15",
+      "scope": "10pmNHL"
+    }
+  ],
+  "card_sources": [
+    {
+      "key": "half",
+      "url": "https://delotterywebcontent.blob.core.windows.net/delottery-site-assets/assets/sports/1549c27b-e651-4958-913e-2dd4f374fbd7_Delaware%20-%20Half%20Pt%2010.1.2026.pdf"
+    },
+    {
+      "key": "teaser",
+      "url": "https://delotterywebcontent.blob.core.windows.net/delottery-site-assets/assets/sports/7607f165-15e1-41e7-a960-a7f7346765b0_Delaware%20-%20Teaser%2010.1.2026.pdf"
+    },
+    {
+      "key": "big",
+      "url": "https://delotterywebcontent.blob.core.windows.net/delottery-site-assets/assets/sports/fc620de5-1f17-41d8-8a89-b5f17efd434e_Delaware%20-%20Big%20Teaser%2010.1.2026.pdf"
+    },
+    {
+      "key": "pleaser",
+      "url": "https://delotterywebcontent.blob.core.windows.net/delottery-site-assets/assets/sports/178e6985-2dbd-40d0-8a33-deaad86fbb9a_Delaware%20-%20Pleaser%2010.1.2026.pdf"
+    }
+  ],
+  "recorded_at": "2026-10-01T13:26:00-04:00"
 }
