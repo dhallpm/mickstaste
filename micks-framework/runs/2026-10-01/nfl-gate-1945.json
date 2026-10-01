@@ -1,0 +1,948 @@
+{
+  "date": "2026-10-01",
+  "recorded_at": "2026-10-01T19:45:00-04:00",
+  "timezone": "America/New_York",
+  "event": "Pittsburgh at Cleveland",
+  "kickoff_et": "2026-10-01T20:15:00-04:00",
+  "scoring_version": "micks-110-v2-2026-09-29",
+  "status": "CHECK COMPLETED; NO OFFICIAL BET",
+  "official_units": 0,
+  "rules": {
+    "nfl": "Standard NFL grades: B74+, B-66–73 exception only with completed gates and no material contradiction; maximum exception0.25u. No new universal numerical model gate.",
+    "non_nfl": "Unchanged 82/110 and Failure7/10; not applied to NFL",
+    "unknown": "Incomplete core prop matchup is UNGRADED; known subtotal is not normalized",
+    "snapshot": "New files only; original midday records unchanged"
+  },
+  "candidates": [
+    {
+      "sport": "NFL",
+      "start_et": "2026-10-01T20:15:00-04:00",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "official_units": 0,
+      "decision": "WATCH / NO OFFICIAL BET",
+      "operating_mode": "NFL STANDARD; 82/7 Recovery gates do not apply",
+      "id": "cleveland",
+      "pick": "Cleveland +3",
+      "previous_score": 73,
+      "score_status": "PROVISIONAL",
+      "quote": {
+        "line": 3,
+        "american_odds": -125,
+        "source": "Circa via VSiN",
+        "updated_at": "2026-10-01T19:30:00-04:00",
+        "executable_in_delaware": false
+      },
+      "delaware_alternative": {
+        "line": 2.5,
+        "american_odds": -104,
+        "observed_at": "2026-10-01T19:35:00-04:00",
+        "source": "BetRivers Delaware public display; different threshold, not a substitution"
+      },
+      "best_number": "Prefer +3 at -110",
+      "no_bet_cutoff": "+3 no worse than -120; do not substitute +2.5",
+      "factors": {
+        "matchup": {
+          "score": 25,
+          "max": 35,
+          "evidence": "Two cashing paths: Cleveland's improving defense against poor PIT dropback efficiency; home/key-three protection in a projected close divisional game. Strongest counter: both CLE starting interior linemen out versus Watt/Highsmith pressure, poor rushing efficiency and weak third-down conversion. Original guide road PIT-0.8 is closer than neutral power gap implies; FL21-18, current VSiN19.1-18.2 disagree modestly on winner. Not a clear premium Browns edge."
+        },
+        "price": {
+          "score": 12,
+          "max": 20,
+          "evidence": "Circa +3-125 at19:30 exceeds retained -120 ceiling; +3 still protects a three-point loss with a push, but extra juice reduces value. Current DE +2.5-104 removes that push and requires separate threshold assessment."
+        },
+        "personnel": {
+          "score": 11,
+          "max": 15,
+          "evidence": "Final CLE inactives confirm Elgton/Teven Jenkins and Tylan Wallace out. Ramsey active with broken-wrist protection concern; Echols cleared, Black absent from final inactive list (available, workload unconfirmed). Porter traded today after missing first3 games: no incremental Week3 defensive-loss penalty. Dowdle out means Warren workhorse, which strengthens opposing PIT rushing/YAC cashing path."
+        },
+        "situation": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Home divisional short week gives close-game context, but coaches' Thursday records oppose and are historical priors. NWS8pm78F/S10mph/5%rain: no rain-driven under or Cleveland bonus."
+        },
+        "vsin": {
+          "score": 8,
+          "max": 10,
+          "evidence": "Zachary Cohen Sept30 CLEML+125 supports direction, not exact +3 market. Current model CLE19.1-PIT18.2, estimated CLE-0.9; external forecast is not Micks' own line. Cohen's older sharp-money claim is not transferred to today's changed splits."
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "Tony Sink Sept29 specifically PIT-2.5; known opposing side, zero support. Article re-read, not missing. No listed juice verified."
+        },
+        "market": {
+          "score": 8,
+          "max": 10,
+          "evidence": "Reference4/5: live Circa and exact distinct DE board. Movement2/3: same-book PIT-2.5-110 open to-3+105, ML-140→-147, total37.5→38; chronology/news timing unexposed. Splits2/2 for reliable current observation, not Cleveland edge: Circa CLEspread63%handle/61%tickets, PITML69%/40%; DK PITspread66%/56%. No invented sharp attribution."
+        }
+      },
+      "failure_dimensions": [
+        {
+          "dimension": "strongest_failure_path",
+          "score": 1,
+          "max": 2,
+          "evidence": "PIT pressure and Warren can beat home dog despite defensive improvement."
+        },
+        {
+          "dimension": "personnel_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "QB/active list known; CLE OL replacements and Ramsey wrist still matter."
+        },
+        {
+          "dimension": "variance_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Low scoring helps key3, but turnovers and explosive YAC swing margin."
+        },
+        {
+          "dimension": "price_protection",
+          "score": 0,
+          "max": 2,
+          "evidence": "Current -125 violates ceiling; +2.5 loses key3 protection."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": 1,
+          "max": 2,
+          "evidence": "Original guide location line narrows prior conflict; current winner/OL evidence remains mixed."
+        }
+      ],
+      "missing_evidence": [
+        "Exact current DE +3 offer",
+        "Confirmed CLE replacement OL deployment",
+        "Current independent usage-adjusted Micks numerical line not established; qualitative close-game handicap completed"
+      ],
+      "release_blockers": [
+        "Circa+3-125 beyond retained-120 ceiling",
+        "Exact requested DE+3 not exposed",
+        "B- strength and unresolved trench/game-script concerns do not justify small-play exception"
+      ],
+      "known_subtotal": 70,
+      "assessed_maximum": 110,
+      "handicap_score": 70,
+      "grade": "B-",
+      "failure_score": 4,
+      "failure_known_subtotal": 4,
+      "failure_assessed_maximum": 10,
+      "failure_score_status": "PROVISIONAL"
+    },
+    {
+      "sport": "NFL",
+      "start_et": "2026-10-01T20:15:00-04:00",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "official_units": 0,
+      "decision": "WATCH / NO OFFICIAL BET",
+      "operating_mode": "NFL STANDARD; 82/7 Recovery gates do not apply",
+      "id": "pit-tt-under",
+      "pick": "Pittsburgh team total Under20.5",
+      "score_status": "PROVISIONAL",
+      "quote": {
+        "line": 20.5,
+        "american_odds": -124,
+        "source": "Fantasy Life Oct1 10:15ET article: Caesars; historical article quote",
+        "executable_in_delaware": false
+      },
+      "best_number": "U20.5 at -115 preferred; review only up to -125",
+      "no_bet_cutoff": "Worse than -125 at20.5; any lower threshold requires fresh regrade",
+      "factors": {
+        "matchup": {
+          "score": 26,
+          "max": 35,
+          "evidence": "Two paths: PIT's poor current dropback EPA/third-down conversion reduces sustained scoring; Browns recent defensive EPA/coverage and Mason Graham interior pressure oppose immobile Rodgers. Counter: last week's30 points/292 passing yards, Warren's91.5%snap role and Browns explosive-run allowance; short fields or defensive TDs can break a team under. Qualitative PIT18–21 scoring range is a review band, not an independent calibrated median."
+        },
+        "price": {
+          "score": 14,
+          "max": 20,
+          "evidence": "Identified U20.5-124 Caesars article quote allows provisional comparison but is stale/not DE. VSiN18.2 is below threshold; FL21 is above by0.5. Exact event/OT settlement and current execution quote must be read."
+        },
+        "personnel": {
+          "score": 12,
+          "max": 15,
+          "evidence": "Rodgers active; Dowdle inactive sustains Warren lead role. CLE Campbell/Delpit/Howard no final inactive listing. Dowdle loss is not assumed to destroy rushing production; Warren17rush127 plus3rec31 official totals lastweek."
+        },
+        "situation": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Short week may favor familiar defense but weather mostly dry at kickoff; no automatic rain suppression. Overtime and short fields threaten Under20.5."
+        },
+        "vsin": {
+          "score": 8,
+          "max": 10,
+          "evidence": "Current VSiN PIT18.2 forecast supports20.5 threshold; Cohen's ClevelandML is direction only, not a named team-under recommendation."
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No named Doc's PITTTU20.5 opinion found. PIT-2.5 is a side, not under confirmation."
+        },
+        "market": {
+          "score": 3,
+          "max": 10,
+          "evidence": "Reference3/5 for identifiable article20.5-124 quote; movement0 and splits0 for this exact team-total market. Full-game total history is not team-total movement."
+        }
+      },
+      "failure_dimensions": [
+        {
+          "dimension": "strongest_failure_path",
+          "score": 1,
+          "max": 2,
+          "evidence": "PIT can reach21 through Warren and short fields."
+        },
+        {
+          "dimension": "personnel_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Established Rodgers/Warren role; opponent injury replacements matter."
+        },
+        {
+          "dimension": "variance_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "A single nonoffensive TD or OT can defeat angle."
+        },
+        {
+          "dimension": "price_protection",
+          "score": 1,
+          "max": 2,
+          "evidence": "20.5 is preferable to lower thresholds but dated expensive quote limits protection."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": 0,
+          "max": 2,
+          "evidence": "FL game forecast21 conflicts with own betting under20.5; independent current evidence does not resolve margin confidently."
+        }
+      ],
+      "missing_evidence": [
+        "Exact current DE20.5 price and settlement",
+        "Verified scoring/drive distribution and red-zone opportunity update",
+        "Resolve FL21 versus VSiN18.2 / betting-under counter"
+      ],
+      "release_blockers": [
+        "Exact execution price absent",
+        "Material team-total threshold disagreement remains WATCH",
+        "No reason to use B- exception while verification incomplete"
+      ],
+      "known_subtotal": 69,
+      "assessed_maximum": 110,
+      "handicap_score": 69,
+      "grade": "B-",
+      "failure_score": 4,
+      "failure_known_subtotal": 4,
+      "failure_assessed_maximum": 10,
+      "failure_score_status": "PROVISIONAL"
+    },
+    {
+      "sport": "NFL",
+      "start_et": "2026-10-01T20:15:00-04:00",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "official_units": 0,
+      "decision": "WATCH / NO OFFICIAL BET",
+      "operating_mode": "NFL STANDARD; 82/7 Recovery gates do not apply",
+      "id": "watson-under",
+      "pick": "Deshaun Watson Under187.5 passing yards",
+      "previous_score": 59,
+      "score_status": "UNGRADED",
+      "quote": {
+        "line": 187.5,
+        "american_odds": -113,
+        "source": "Daniel Dobish SportsbookWire Oct1 00:48ET FanDuel article quote; historical",
+        "executable_in_delaware": false
+      },
+      "best_number": "U187.5 at -115 or better",
+      "no_bet_cutoff": "Worse than -115; do not silently replace with U180.5",
+      "factors": {
+        "matchup": {
+          "score": null,
+          "max": 35,
+          "evidence": "Support: shallow6.0aDOT,14.6%off-target, PIT11.8%sack rate rushing<=4, Watson8.7%sack rate and both CLEinterior OL out. Counter:195.7 average is above187.5;238 inWeek2 versus144 Week3, Boston deep role and YAC can overcome short throws. Ramsey active helps coverage but wrist/rookie usage remains. Threshold-specific opportunity×regressed-efficiency median/distribution not established; 14.5fantasy points cannot be converted into passing yards."
+        },
+        "price": {
+          "score": 13,
+          "max": 20,
+          "evidence": "Clearly identified U187.5-113 dated FanDuel article quote; no present Delaware quote. BetRivers WatsonINT U0.5-113 is a different stat and is not the yardage price."
+        },
+        "personnel": {
+          "score": 12,
+          "max": 15,
+          "evidence": "Watson role established; Jenkins/Jenkins inactive; Ramsey active, Echols cleared, Black available per inactive list. Porter no new absence relative toWeek3. Fannin85%snaps and Concepcion95%routes lastweek create short-volume/YAC counter."
+        },
+        "situation": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Mostly dry kickoff replaces broad overnight rain claim; S10mph is modest, not enough alone to forecast187.5under."
+        },
+        "vsin": {
+          "score": 0,
+          "max": 10,
+          "evidence": "Cohen WatsonO1.5TD+285 is a different stat; no yardage-under confirmation. Subscriber prop analyzer inaccessible."
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No relevant named Doc's187.5yard-under selection verified."
+        },
+        "market": {
+          "score": 3,
+          "max": 10,
+          "evidence": "Reference3 for dated exact quote; current independent threshold board, movement and prop splits unavailable."
+        }
+      },
+      "failure_dimensions": [
+        {
+          "dimension": "strongest_failure_path",
+          "score": null,
+          "max": 2,
+          "evidence": "Threshold crossing/tail risk not quantified sufficiently."
+        },
+        {
+          "dimension": "personnel_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Known role and pressure support, but slot/YAC path remains."
+        },
+        {
+          "dimension": "variance_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Trailing scripts add attempts; partial support only."
+        },
+        {
+          "dimension": "price_protection",
+          "score": 1,
+          "max": 2,
+          "evidence": "187.5 better than180.5, but dated quote cannot guarantee access."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": null,
+          "max": 2,
+          "evidence": "Independent threshold contradiction unresolved; no complete resilience score."
+        }
+      ],
+      "missing_evidence": [
+        "Live DE187.5line/price",
+        "Verified opportunity-adjusted passing-yard median and threshold distribution",
+        "Current attempts/scramble/sack projection"
+      ],
+      "release_blockers": [
+        "Core prop threshold assessment incomplete: UNGRADED",
+        "Exact executable price absent"
+      ],
+      "known_subtotal": 34,
+      "assessed_maximum": 75,
+      "handicap_score": null,
+      "grade": "UNGRADED",
+      "failure_score": null,
+      "failure_known_subtotal": 3,
+      "failure_assessed_maximum": 6,
+      "failure_score_status": "PROVISIONAL"
+    },
+    {
+      "sport": "NFL",
+      "start_et": "2026-10-01T20:15:00-04:00",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "official_units": 0,
+      "decision": "WATCH / NO OFFICIAL BET",
+      "operating_mode": "NFL STANDARD; 82/7 Recovery gates do not apply",
+      "id": "rodgers-longest-under",
+      "pick": "Aaron Rodgers longest completion Under34.5 yards",
+      "score_status": "UNGRADED",
+      "quote": {
+        "line": 34.5,
+        "american_odds": -120,
+        "source": "Fantasy Life Oct1 10:15ET DraftKings article; historical",
+        "executable_in_delaware": false
+      },
+      "best_number": "U34.5 at -110 preferred; review ceiling -120",
+      "no_bet_cutoff": "Worse than -120 or threshold below34.5 requires new tail-risk assessment",
+      "factors": {
+        "matchup": {
+          "score": null,
+          "max": 35,
+          "evidence": "FL betting piece says only two explosive plays and weak WR efficiency support under. Official stats counter: Rodgers16.7%20+air-yard rate,15throws10+air lastweek, Washington8.8team TEYPA/58.3%routes and PIT season-high explosives. Need all three games' longest-completion distribution and Browns35+allowance/YAC, not total passing yards or average aDOT. No numerical longest-completion probability invented."
+        },
+        "price": {
+          "score": 14,
+          "max": 20,
+          "evidence": "Identifiable exact34.5-120 DKarticlequote; not present DE offer. Different book/time and threshold must remain explicit."
+        },
+        "personnel": {
+          "score": 12,
+          "max": 15,
+          "evidence": "Rodgers and pass catchers not on inactive list; Pittman return, Metcalf100%routes, Washington/Freiermuth split and Wilson over Bernard current usage considered. CLEcoverage players cleared; explosive target opportunity remains."
+        },
+        "situation": {
+          "score": 6,
+          "max": 10,
+          "evidence": "S10mph/dry kickoff does not remove downfield/YAC tails. One broken tackle can beat under regardless game total."
+        },
+        "vsin": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No exact longest-under named/model confirmation exposed; team score18.2 does not forecast longest completion."
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No exact Rodgerslongest34.5 selection found."
+        },
+        "market": {
+          "score": 3,
+          "max": 10,
+          "evidence": "Reference3 identified dated34.5quote; exact-market movement/splits unavailable."
+        }
+      },
+      "failure_dimensions": [
+        {
+          "dimension": "strongest_failure_path",
+          "score": null,
+          "max": 2,
+          "evidence": "35+completion tail unavailable."
+        },
+        {
+          "dimension": "personnel_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Known roles, but Pittman/TE/YAC can change completion maximum."
+        },
+        {
+          "dimension": "variance_resilience",
+          "score": 0,
+          "max": 2,
+          "evidence": "Single play suffices; variance protection weak."
+        },
+        {
+          "dimension": "price_protection",
+          "score": 1,
+          "max": 2,
+          "evidence": "34.5 threshold identified but execution missing."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": null,
+          "max": 2,
+          "evidence": "Betting-piece explosive claim versus official depth/YAC evidence unresolved."
+        }
+      ],
+      "missing_evidence": [
+        "Exact live DE34.5offer",
+        "Verified longest-completion game logs/35+distribution",
+        "Browns35+coverage and tackle/YAC tail assessment"
+      ],
+      "release_blockers": [
+        "Core tail/threshold matchup incomplete: UNGRADED",
+        "Live execution price absent",
+        "Material deep-pass evidence contradiction unresolved"
+      ],
+      "known_subtotal": 35,
+      "assessed_maximum": 75,
+      "handicap_score": null,
+      "grade": "UNGRADED",
+      "failure_score": null,
+      "failure_known_subtotal": 2,
+      "failure_assessed_maximum": 6,
+      "failure_score_status": "PROVISIONAL"
+    }
+  ],
+  "prior_snapshots": [
+    {
+      "id": "watson-under",
+      "sport": "NFL",
+      "pick": "Deshaun Watson Under 187.5 passing yards",
+      "start_et": "2026-10-01T20:15:00-04:00",
+      "score_status": "PROVISIONAL",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "handicap_score": 59,
+      "grade": "C",
+      "official_units": 0,
+      "decision": "WATCH / NO OFFICIAL BET",
+      "quote": {
+        "american_odds": -113,
+        "source": "FanDuel article quote",
+        "observed_time": "Oct1 00:48 ET",
+        "executable_in_delaware": false
+      },
+      "best_number_and_review_cutoff": "U187.5 at -115 or better; do not substitute U180.5",
+      "factors": {
+        "matchup": {
+          "score": 25,
+          "max": 35,
+          "evidence": "Low aDOT6, high off-target rate and 144 yards last game support under; 195.7 season average and PIT allowing211 with11 explosive passes are real counters."
+        },
+        "price": {
+          "score": 13,
+          "max": 20,
+          "evidence": "SportsbookWire overnight quote U187.5 -113 is dated provisional evidence; no current executable DE offer or verified opening trajectory."
+        },
+        "personnel": {
+          "score": 11,
+          "max": 15,
+          "evidence": "Watson expected starter; CLE center Jenkins and guard Jenkins out. PIT Porter out and Ramsey questionable weaken the under; current snap role more useful than preseason Sanders depth chart."
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "NWS showers and modest wind can restrain passing, but rain is not a sufficient handicap by itself."
+        },
+        "vsin": {
+          "score": 0,
+          "max": 10,
+          "evidence": "Cohen's O1.5 passTD +285 is a different stat; it earns no yardage-under agreement."
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No named Doc's Watson yardage-under selection located."
+        },
+        "market": {
+          "score": 3,
+          "max": 10,
+          "evidence": "Reference3 for a clearly identified but dated prop quote; no independent live prop reference, movement or splits."
+        }
+      },
+      "failure_score": 5,
+      "failure_dimensions": [
+        {
+          "dimension": "strongest_failure_path",
+          "score": 1,
+          "max": 2,
+          "evidence": "The countercase in matchup remains material; this is partial resilience, not a clean failure path."
+        },
+        {
+          "dimension": "personnel_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Personnel assessment is usable, but the listed final availability check can change the cashing path."
+        },
+        {
+          "dimension": "variance_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Game-script or conversion variance remains meaningful; the selection is not robust across all scripts."
+        },
+        {
+          "dimension": "price_protection",
+          "score": 1,
+          "max": 2,
+          "evidence": "Limited alternative protection at the stated review price."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": 1,
+          "max": 2,
+          "evidence": "Independent evidence partly supports the handicap but does not resolve the strongest opposition."
+        }
+      ],
+      "missing_evidence": [
+        "Live line and odds",
+        "PIT secondary inactives",
+        "independent threshold projection/distribution",
+        "weather near kickoff"
+      ],
+      "release_blockers": [
+        "Live line and odds",
+        "PIT secondary inactives",
+        "independent threshold projection/distribution",
+        "weather near kickoff",
+        "NFL verification/contradiction gates not cleared"
+      ],
+      "provisional_only": true
+    },
+    {
+      "id": "cleveland",
+      "sport": "NFL",
+      "pick": "Cleveland +3",
+      "start_et": "2026-10-01T20:15:00-04:00",
+      "score_status": "PROVISIONAL",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "handicap_score": 73,
+      "grade": "B-",
+      "official_units": 0,
+      "decision": "WATCH / NO OFFICIAL BET",
+      "quote": {
+        "american_odds": -120,
+        "source": "Circa via VSiN",
+        "observed_time": "12:45 ET",
+        "executable_in_delaware": false
+      },
+      "best_number_and_review_cutoff": "Prefer +3 -110; review ceiling +3 -120; do not replace with +2.5",
+      "factors": {
+        "matchup": {
+          "score": 26,
+          "max": 35,
+          "evidence": "Home dog at key3 and VSiN CLE19.1–PIT18.2 support Cleveland; guide/current power and Fantasy Life PIT21–CLE18 oppose. OL absences and poor CLE rushing efficiency are substantial."
+        },
+        "price": {
+          "score": 15,
+          "max": 20,
+          "evidence": "+3 is better than Delaware +2.5, but -120 costs extra and a push differs from a win; use exact settlement."
+        },
+        "personnel": {
+          "score": 10,
+          "max": 15,
+          "evidence": "Watson/ Rodgers roles current; CLE Jenkins/Jenkins out and PIT Dowdle/Porter out, Ramsey questionable. Final inactives pending."
+        },
+        "situation": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Divisional short week and showers favor a close game but affect both teams."
+        },
+        "vsin": {
+          "score": 8,
+          "max": 10,
+          "evidence": "Zachary Cohen CLE ML+125 Sept30; spread support is directional, not exact-market duplicate confirmation; current model supports CLE."
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "Tony Sink Sept29 PIT -2.5 opposes; zero support."
+        },
+        "market": {
+          "score": 8,
+          "max": 10,
+          "evidence": "Reference4 + movement3 (PIT-2.5 to-3) + splits1: Circa PIT59% spread handle/33% tickets; under91%/39%; opposing current side money limits support."
+        }
+      },
+      "failure_score": 5,
+      "failure_dimensions": [
+        {
+          "dimension": "strongest_failure_path",
+          "score": 1,
+          "max": 2,
+          "evidence": "The countercase in matchup remains material; this is partial resilience, not a clean failure path."
+        },
+        {
+          "dimension": "personnel_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Personnel assessment is usable, but the listed final availability check can change the cashing path."
+        },
+        {
+          "dimension": "variance_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Game-script or conversion variance remains meaningful; the selection is not robust across all scripts."
+        },
+        {
+          "dimension": "price_protection",
+          "score": 2,
+          "max": 2,
+          "evidence": "The selected threshold/near-pick'em price gives identifiable protection; execution still needs verification."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": 0,
+          "max": 2,
+          "evidence": "Strong opposing independent evidence remains unresolved."
+        }
+      ],
+      "missing_evidence": [
+        "Resolve guide/model contradiction",
+        "final inactives",
+        "exact DE +3 price",
+        "weekly magazine numeric deltas missing"
+      ],
+      "release_blockers": [
+        "Resolve guide/model contradiction",
+        "final inactives",
+        "exact DE +3 price",
+        "weekly magazine numeric deltas missing",
+        "NFL verification/contradiction gates not cleared"
+      ],
+      "provisional_only": true
+    }
+  ],
+  "guide_reconciliation": {
+    "original_vsin": {
+      "file": "2026-VSiN-NFL-Betting-Guide.pdf",
+      "library_id": "libfile_71ff377c663c8191b4c67140c92624c5",
+      "pages": [
+        52,
+        53,
+        54,
+        55
+      ],
+      "status": "Original pages read this gate",
+      "neutral_power": {
+        "pit": 23,
+        "cle": 20.5
+      },
+      "actual_location_adjusted_schedule_line": "PIT-0.8/CLE+0.8; neutral2.5rating difference is not roadspread",
+      "interpretation": "Corrects prior magnitude of guide disagreement; does not alone authorize Browns +3 at -125"
+    },
+    "original_fantasy_life": {
+      "file": "Fantasy Life 2026 original guide",
+      "library_id": "libfile_43149de04398819182cd396d79316f9e",
+      "pages": [
+        119,
+        138
+      ],
+      "status": "Original team pages read this gate",
+      "confirmed": [
+        "Fannin receiving role/talent",
+        "Warren upside with expanded role"
+      ],
+      "overridden": [
+        "Sanders-first QB depth by current Watson starter",
+        "Dowdle/Warren committee for tonight: Dowdle OUT",
+        "Rodgers unsigned spring baseline by current active starter",
+        "Bernard starter expectation by current Wilson deployment"
+      ],
+      "not_comparable": "Original seasonal rankings are not weekly fantasy-point forecasts"
+    },
+    "current_weekly": {
+      "score_forecast": {
+        "pit": 21,
+        "cle": 18
+      },
+      "fantasy_points": {
+        "rodgers": {
+          "midday": 13.2,
+          "current": 12.6
+        },
+        "warren": {
+          "midday": 15.8,
+          "current": 16.6
+        },
+        "metcalf": {
+          "midday": 8.8,
+          "current": 8.3
+        },
+        "watson": {
+          "midday": 14.6,
+          "current": 14.5
+        }
+      },
+      "warning": "Fantasy points are not passing-yard/longest-completion projections; widget refresh clock not exposed"
+    }
+  },
+  "personnel": {
+    "cle_inactive": [
+      "Taylen Green (third QB)",
+      "Tylan Wallace",
+      "Justin Jefferson (LB)",
+      "Elgton Jenkins",
+      "Teven Jenkins"
+    ],
+    "pit_inactive": [
+      "Rico Dowdle",
+      "Drew Allar",
+      "Will Howard (third QB)",
+      "Eli Heidenreich",
+      "Kevin Jobity Jr.",
+      "Gabriel Rubio"
+    ],
+    "ramsey": "Active; wrist protection and effectiveness uncertainty",
+    "black": "Not on final inactive list; availability does not confirm unrestricted workload",
+    "echols": "Cleared of injury designation",
+    "porter": "Traded to Dallas Oct1; had missed all first three games, no added absence penalty versus Week3",
+    "warren": "Week3 17 carries127 plus3 receptions31 =158; reject176 arithmetic inconsistency in secondary text"
+  },
+  "weather": {
+    "forecast_updated_et": "2026-10-01T15:46:00-04:00",
+    "hour20": {
+      "temperature_f": 78,
+      "wind": "S10mph",
+      "precipitation_probability": 5
+    },
+    "hour21": {
+      "temperature_f": 77,
+      "wind": "S10mph",
+      "precipitation_probability": 5
+    },
+    "interpretation": "Mostly dry kickoff; overnight rain is not kickoff rain. No weather-only under bump"
+  },
+  "markets": {
+    "circa": {
+      "updated_et": "2026-10-01T19:30:00-04:00",
+      "pit_spread": "-3+105",
+      "cle_spread": "+3-125",
+      "pit_ml": -147,
+      "cle_ml": 127,
+      "total": 38,
+      "over": -110,
+      "under": -110,
+      "opening_pit_spread": "-2.5-110",
+      "opening_pit_ml": -140,
+      "opening_total": 37.5
+    },
+    "betrivers_delaware": {
+      "server_time_et": "2026-10-01T19:35:00-04:00",
+      "pit_spread": "-2.5-118",
+      "cle_spread": "+2.5-104",
+      "pit_ml": -152,
+      "cle_ml": 125,
+      "total": 38,
+      "over": -109,
+      "under": -112,
+      "requested_props": "Not exposed; do not substitute interception props"
+    },
+    "circa_splits": {
+      "cle_spread_handle": 63,
+      "cle_spread_tickets": 61,
+      "pit_ml_handle": 69,
+      "pit_ml_tickets": 40,
+      "over38_handle": 51,
+      "over38_tickets": 51
+    },
+    "dk_splits": {
+      "pit_spread_threshold": -2.5,
+      "pit_spread_handle": 66,
+      "pit_spread_tickets": 56,
+      "under_threshold": 38.5,
+      "under_handle": 67,
+      "under_tickets": 60
+    },
+    "warning": "Book-specific, timestamped observations; not proof of sharp causation"
+  },
+  "source_access_audit": {
+    "dropbox": "26-entry Circa folder exhausted; Week4-2026 PDF metadata found, fetch text empty. No PDF prices inferred; current Circa verified via VSiN.",
+    "vsin_props": "Subscriber analyzer inaccessible; no numerical prop threshold projection exposed",
+    "fantasy_life_players": "Watson/Rodgers player pages returned generic content, no usable game logs",
+    "docs_hubs": "Matchup data not exposed; video hub no relevant current PIT-CLE named selection; AI-v3 marketing only. Tony Sink opposing side known.",
+    "firecrawl": "Used fresh maxAge0 scrapes",
+    "screenshots": "Sept29 historical quotes excluded from execution"
+  },
+  "other_reviews": [
+    {
+      "pick": "Warren rushing Under73.5",
+      "decision": "REJECT copied role construction",
+      "reason": "Dowdle OUT and workhorse usage directly contradict old committee under; this does not automatically authorize Over"
+    },
+    {
+      "pick": "CLE ML+125",
+      "decision": "WATCH / UNGRADED",
+      "reason": "Current DE quote and Cohen opinion known; do not inherit spread score"
+    },
+    {
+      "pick": "Game Under38-112",
+      "decision": "WATCH / UNGRADED",
+      "reason": "Current DE quote known, VSiN37.3 versus FL39 mixed; no completed independent total handicap"
+    }
+  ],
+  "sources": [
+    {
+      "id": "cle-inactives",
+      "description": "Official Browns final inactives, Oct1 18:45ET",
+      "url": "https://www.clevelandbrowns.com/news/browns-announce-inactives-for-week-4-vs-steelers",
+      "access": "Firecrawl fresh scrape; no inaccessible selection inferred"
+    },
+    {
+      "id": "pit-inactives",
+      "description": "Official Steelers final inactives, Oct1 18:47ET",
+      "url": "https://www.steelers.com/news/steelers-inactives-for-week-4-vs-browns",
+      "access": "Firecrawl fresh scrape; no inaccessible selection inferred"
+    },
+    {
+      "id": "injury",
+      "description": "Steelers injury update, Oct1 12:35ET",
+      "url": "https://www.steelers.com/news/week-4-injury-report-browns",
+      "access": "Firecrawl fresh scrape; no inaccessible selection inferred"
+    },
+    {
+      "id": "porter",
+      "description": "Steelers Porter trade announcement, Oct1 13:00ET",
+      "url": "https://www.steelers.com/news/steelers-acquire-two-draft-picks-from-cowboys",
+      "access": "Firecrawl fresh scrape; no inaccessible selection inferred"
+    },
+    {
+      "id": "stats",
+      "description": "Matt Williamson official Steelers matchup statistics, Sept30",
+      "url": "https://www.steelers.com/news/matt-s-stats-week-4-at-browns",
+      "access": "Firecrawl fresh scrape; no inaccessible selection inferred"
+    },
+    {
+      "id": "weather",
+      "description": "NWS digital hourly, updated Oct1 15:46EDT",
+      "url": "https://forecast.weather.gov/MapClick.php?lat=41.506&lon=-81.699&FcstType=digital",
+      "access": "Firecrawl fresh scrape; no inaccessible selection inferred"
+    },
+    {
+      "id": "circa",
+      "description": "VSiN Circa line tracker, updated Oct1 19:30ET",
+      "url": "https://data.vsin.com/vegas-odds-linetracker/?sportid=nfl",
+      "access": "Firecrawl fresh scrape; no inaccessible selection inferred"
+    },
+    {
+      "id": "circa-splits",
+      "description": "VSiN Circa splits, observed this gate",
+      "url": "https://data.vsin.com/betting-splits/?source=CIRCA&sport=NFL",
+      "access": "Firecrawl fresh scrape; no inaccessible selection inferred"
+    },
+    {
+      "id": "dk-splits",
+      "description": "VSiN DraftKings splits, observed this gate",
+      "url": "https://data.vsin.com/betting-splits/?sport=NFL",
+      "access": "Firecrawl fresh scrape; no inaccessible selection inferred"
+    },
+    {
+      "id": "de",
+      "description": "BetRivers Delaware public board, server19:35ET",
+      "url": "https://delawarepark.betrivers.com/?page=sportsbook",
+      "access": "Firecrawl fresh scrape; no inaccessible selection inferred"
+    },
+    {
+      "id": "vsin-model",
+      "description": "VSiN current NFL games model",
+      "url": "https://data.vsin.com/nfl/games/",
+      "access": "Firecrawl fresh scrape; no inaccessible selection inferred"
+    },
+    {
+      "id": "cohen",
+      "description": "Zachary Cohen VSiN Sept30 selections",
+      "url": "https://vsin.com/nfl/steelers-vs-browns-predictions-week-4-thursday-night-football-odds-picks-and-player-props/",
+      "access": "Firecrawl fresh scrape; no inaccessible selection inferred"
+    },
+    {
+      "id": "docs",
+      "description": "Tony Sink Doc's Sept29 PIT-2.5 selection, freshly reread",
+      "url": "https://www.docsports.com/free-picks/nfl/2026/pittsburgh-steelers-vs-cleveland-browns-prediction-10-1-2026-nfl-picks-best-bets-odds-week-4.html",
+      "access": "Firecrawl fresh scrape; no inaccessible selection inferred"
+    },
+    {
+      "id": "fl-match",
+      "description": "Fantasy Life matchup, Oct1 15:59 published/16:16 updated",
+      "url": "https://www.fantasylife.com/articles/fantasy/pittsburgh-steelers-vs-cleveland-browns-matchup-breakdown",
+      "access": "Firecrawl fresh scrape; no inaccessible selection inferred"
+    },
+    {
+      "id": "fl-bets",
+      "description": "Fantasy Life bets, Oct1 10:15ET; historical prop quotes",
+      "url": "https://www.fantasylife.com/articles/betting/steelers-vs-browns-picks-odds-predictions-and-player-props",
+      "access": "Firecrawl fresh scrape; no inaccessible selection inferred"
+    },
+    {
+      "id": "wire",
+      "description": "Daniel Dobish SportsbookWire, Oct1 00:48ET; historical FanDuel quote",
+      "url": "https://sportsbookwire.usatoday.com/story/sports/nfl/2026/10/01/thursday-night-football-steelers-at-browns-best-prop-bets/92033514007/",
+      "access": "Firecrawl fresh scrape; no inaccessible selection inferred"
+    },
+    {
+      "id": "docs-matches",
+      "description": "Fresh Doc's matchup hub: no usable match data exposed",
+      "url": "https://www.docsports.com/statistics/matches.html",
+      "access": "Firecrawl fresh scrape; no inaccessible selection inferred"
+    },
+    {
+      "id": "docs-video",
+      "description": "Fresh Doc's video hub: no current PIT-CLE named pick exposed",
+      "url": "https://www.docsports.com/video/free-picks/",
+      "access": "Firecrawl fresh scrape; no inaccessible selection inferred"
+    },
+    {
+      "id": "docs-ai",
+      "description": "Fresh Doc's AI-v3: marketing/member access; no actual selection exposed",
+      "url": "https://www.docsports.com/cappers.html?cap_id=88",
+      "access": "Firecrawl fresh scrape; no inaccessible selection inferred"
+    }
+  ],
+  "publication": {
+    "wager_placed": false,
+    "website_card_published": false,
+    "seven_leg_parlay": "Not official; no forced legs or fabricated payout. Same-game correlations require joint assessment.",
+    "delaware_cards": "Fixed-payout football cards remain separate; no card released by this NFL gate"
+  }
+}
