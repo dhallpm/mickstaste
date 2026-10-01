@@ -1,0 +1,1037 @@
+{
+  "date": "2026-10-01",
+  "recorded_at": "2026-10-01T18:29:00-04:00",
+  "timezone": "America/New_York",
+  "scope": "Three 19:00ET NHL pregame events; not a full-slate regrade",
+  "scoring_version": "micks-110-v2-2026-09-29",
+  "assessment_status": "COMPLETED WITH EXPLICIT EVIDENCE GAPS",
+  "decision": "NO NEW OFFICIAL RELEASE",
+  "official_units": 0,
+  "non_nfl_gates": {
+    "minimum_score": 82,
+    "minimum_failure_score": 7,
+    "mandatory_sport_gates": true,
+    "price_cutoffs_preserved": true
+  },
+  "candidates": [
+    {
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "score_status": "PROVISIONAL",
+      "sport": "NHL",
+      "start_et": "2026-10-01T19:00:00-04:00",
+      "official_units": 0,
+      "decision": "WATCH / NO BET",
+      "named_vsin_pick": "NOT VERIFIED: current NHL Pro Picks page is subscriber-only; a displayed pick count does not reveal author or market.",
+      "guide_reconciliation": "Registered VSiN NFL, Fantasy Life NFL and CFB originals are NOT APPLICABLE. No original NHL guide identified in controlling inventory; no cross-sport guide confirmation awarded.",
+      "id": "devils",
+      "pick": "New Jersey ML",
+      "previous_score": 81,
+      "quote": {
+        "american_odds": -168,
+        "source": "Circa via VSiN",
+        "source_updated_at": "2026-10-01T18:15:00-04:00",
+        "executable_in_delaware": false
+      },
+      "best_number": "-150 preferred",
+      "no_bet_cutoff": "Worse than -170; mandatory goalie/lineup and 82/7 gates still apply",
+      "factors": {
+        "matchup": {
+          "score": 28,
+          "max": 35,
+          "evidence": "Two paths: rested home opener against a Flyers back-to-back; NJ top-six/PP attack against PHI's observed opening-game defensive breakdown. Fresh NST PHI 5v5 xGF 0.85/xGA 3.74 (18.50%) supports the latter but is ONE GAME. Woll replaces Vladar and PHI had zero 5v5 shooting percentage: regress the 7-0 result, do not predict another blowout."
+        },
+        "price": {
+          "score": 13,
+          "max": 20,
+          "evidence": "Circa -168 remains inside the -170 review ceiling, but only modest room relative to VSiN NJ estimated -176. DK -180 is a different book and outside ceiling. Doc's -140 is dated, not an available price. Delaware quote absent."
+        },
+        "personnel": {
+          "score": 12,
+          "max": 15,
+          "evidence": "Woll directly confirmed by official Flyers post Oct1 4:24pm; Allen confirmed by coach via Kristy Flannery 11:28am. Official projected top six intact; Brown/Kovacevic out, Noesen on fourth line. Final dressed list and PP roles not obtained; confirming Woll narrows uncertainty without creating an advantage by itself."
+        },
+        "situation": {
+          "score": 8,
+          "max": 10,
+          "evidence": "NJ rested home opener versus PHI after Wednesday loss and travel to Newark; genuine scheduling advantage, moderated by PHI bounce-back and NJ opening-night chemistry."
+        },
+        "vsin": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Fresh matchup page NJ 3.5-PHI 2.1, estimated NJ -176. Model agrees; no named current pick available."
+        },
+        "docs": {
+          "score": 5,
+          "max": 10,
+          "evidence": "Guy Bruhn Sept30 NJ -140, re-read today. Same ML but 28 cents dearer at Circa; article prior-game descriptions predate Wednesday's 7-0 loss. Historical PP comparison (NJ 21.95% versus PHI 15.74%) is a supporting prior, not current-team proof."
+        },
+        "market": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Reference4/5: current Circa with other board quotes. Movement1/3: same-book PHI +143 opener to +150 current, modest; opener clock/news timing unexposed. Splits1/2: current DK NJ ML86% handle/83% tickets (previous88/80), only 3-point divergence; no sharp-causation claim."
+        }
+      },
+      "failure_dimensions": [
+        {
+          "dimension": "strongest_failure_path",
+          "score": 1,
+          "max": 2,
+          "evidence": "Woll rebound and PHI finishing regression remain credible."
+        },
+        {
+          "dimension": "personnel_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Both goalies known but NJ depth absences and final skaters can matter."
+        },
+        {
+          "dimension": "variance_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "One-game PHI defensive sample and NHL finishing remain volatile."
+        },
+        {
+          "dimension": "price_protection",
+          "score": 1,
+          "max": 2,
+          "evidence": "-168 pays substantial favorite premium; regulation/puck line not established as superior."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": 1,
+          "max": 2,
+          "evidence": "VSiN/Doc's favor NJ but cannot resolve PHI goalie-reset and rebound counter."
+        }
+      ],
+      "missing_evidence": [
+        "Final dressed skaters/scratches and PP deployment",
+        "Exact current BetRivers Delaware NJ ML",
+        "Opening move clock and authenticated Circa splits",
+        "Current NHL guide unavailable; Doc's AI-v3/video selections not exposed"
+      ],
+      "release_blockers": [
+        "Below 82/110 and Failure below 7/10",
+        "Final skater verification incomplete",
+        "Exact execution price absent"
+      ],
+      "handicap_score": 79,
+      "grade": "B",
+      "failure_score": 5,
+      "failure_score_status": "PROVISIONAL",
+      "market_components": {
+        "reference": 4,
+        "movement": 1,
+        "splits": 1
+      }
+    },
+    {
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "score_status": "PROVISIONAL",
+      "sport": "NHL",
+      "start_et": "2026-10-01T19:00:00-04:00",
+      "official_units": 0,
+      "decision": "WATCH / NO BET",
+      "named_vsin_pick": "NOT VERIFIED: current NHL Pro Picks page is subscriber-only; a displayed pick count does not reveal author or market.",
+      "guide_reconciliation": "Registered VSiN NFL, Fantasy Life NFL and CFB originals are NOT APPLICABLE. No original NHL guide identified in controlling inventory; no cross-sport guide confirmation awarded.",
+      "id": "lightning",
+      "pick": "Tampa Bay ML",
+      "previous_score": 77,
+      "quote": {
+        "american_odds": -152,
+        "source": "BetRivers Delaware Park public page",
+        "observed_at": "2026-10-01T18:19:00-04:00",
+        "executable_in_delaware": true,
+        "accepted_slip": false,
+        "public_display_only": true,
+        "execution_requires_reconfirmation": true
+      },
+      "reference_quote": {
+        "american_odds": -143,
+        "source": "Circa via VSiN",
+        "source_updated_at": "2026-10-01T18:15:00-04:00"
+      },
+      "best_number": "-140 preferred",
+      "no_bet_cutoff": "Worse than -145; -152 is outside limit",
+      "factors": {
+        "matchup": {
+          "score": 26,
+          "max": 35,
+          "evidence": "Two paths: Point/Kucherov plus Guentzel-Cirelli-Hagel scoring depth; returning Hedman improves defensive/transition options. NYR opening shutout is misleading: fresh NST 5v5 xGF2.49/xGA2.35, xGF51.44%, high-danger chances14-8, zero shooting percentage. Shesterkin rebound is strongest counter, not an automatic fade of NYR."
+        },
+        "price": {
+          "score": 11,
+          "max": 20,
+          "evidence": "Exact public DE -152 is 9 cents worse than Circa -143 and 17 worse than Doc's -135; beyond retained -145 cutoff. No guessed alternative or book-average substitution."
+        },
+        "personnel": {
+          "score": 12,
+          "max": 15,
+          "evidence": "Hedman's return established by official NHL report; projected with D'Astous, not assumed full unrestricted top-pair/PP workload. Shesterkin confirmed by Colin Stephenson; Vasilevskiy still LIKELY/first off ice on DFO, not confirmed. Gourde/James out; final scratches unverified."
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "TB opener versus NYR home opener/rebound; Hedman first game since March19 needs rust/role allowance. Returning-player enthusiasm is not a standalone edge."
+        },
+        "vsin": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Fresh VSiN TB3.1-NYR2.5, estimated NYR+113, less favorable to TB than -152 execution. Scoring direction supports TB; price implication counsels restraint."
+        },
+        "docs": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Josh Schonwald Sept30 TB -135; article re-read. Same side supported by historical 5v5 scoring and penalty kill context, but new quote is 17 cents worse. Not confirmation of an Under or puck line."
+        },
+        "market": {
+          "score": 5,
+          "max": 10,
+          "evidence": "Reference4; movement1: Circa -138 open to -143 current modest; no proof of news timing/respected money. Splits0: candidate rows subscriber-only. BetRivers listed a 13-game puck-line noncover streak: unverified historical tracker, no forced margin bet or certified fade level."
+        }
+      },
+      "failure_dimensions": [
+        {
+          "dimension": "strongest_failure_path",
+          "score": 1,
+          "max": 2,
+          "evidence": "Shesterkin plus NYR shot-quality rebound can defeat favorite."
+        },
+        {
+          "dimension": "personnel_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Vasilevskiy confirmation and Hedman minutes remain open."
+        },
+        {
+          "dimension": "variance_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "NYR zero finishing should regress; tight goalie game can go either way."
+        },
+        {
+          "dimension": "price_protection",
+          "score": 0,
+          "max": 2,
+          "evidence": "DE -152 exceeds -145 cutoff; no price protection."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": 1,
+          "max": 2,
+          "evidence": "Outside side agreement does not resolve VSiN price opposition and goalie counter."
+        }
+      ],
+      "missing_evidence": [
+        "Confirmed Vasilevskiy starter",
+        "Final skaters/scratches, Hedman minutes and PP role",
+        "Candidate splits and historical noncover validation"
+      ],
+      "release_blockers": [
+        "-152 beyond -145 price cutoff",
+        "Below 82/110 and Failure below 7/10",
+        "Vasilevskiy not confirmed",
+        "Final personnel gate incomplete"
+      ],
+      "handicap_score": 72,
+      "grade": "B-",
+      "failure_score": 4,
+      "failure_score_status": "PROVISIONAL",
+      "market_components": {
+        "reference": 4,
+        "movement": 1,
+        "splits": 0
+      }
+    },
+    {
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "score_status": "PROVISIONAL",
+      "sport": "NHL",
+      "start_et": "2026-10-01T19:00:00-04:00",
+      "official_units": 0,
+      "decision": "WATCH / NO BET",
+      "named_vsin_pick": "NOT VERIFIED: current NHL Pro Picks page is subscriber-only; a displayed pick count does not reveal author or market.",
+      "guide_reconciliation": "Registered VSiN NFL, Fantasy Life NFL and CFB originals are NOT APPLICABLE. No original NHL guide identified in controlling inventory; no cross-sport guide confirmation awarded.",
+      "id": "sabres",
+      "pick": "Buffalo ML",
+      "previous_score": 76,
+      "quote": {
+        "american_odds": -107,
+        "source": "Circa via VSiN",
+        "source_updated_at": "2026-10-01T18:15:00-04:00",
+        "executable_in_delaware": false
+      },
+      "best_number": "-105 to -110 preferred",
+      "no_bet_cutoff": "Worse than -115 for analytical release",
+      "factors": {
+        "matchup": {
+          "score": 26,
+          "max": 35,
+          "evidence": "Two paths: Buffalo top-line creation/Norris-Thompson-Doan and Columbus missing Provorov/Fabbro/Severson defensive workload; Samuelsson return improves BUF defensive structure. Fresh official opener preview confirms new Knies/Fantilli/Werenski context and Power-Crevier pairing. New-season personnel shifts limit historical 5v5 and PP priors; VSiN slightly favors CBJ."
+        },
+        "price": {
+          "score": 16,
+          "max": 20,
+          "evidence": "Fresh Circa -107 is near Doc's -105 and inside -115 cutoff. No current DE BUF quote obtained. User's previously selected -121 is separately retained as a dated quote and price scenario, never silently called -107 execution."
+        },
+        "personnel": {
+          "score": 11,
+          "max": 15,
+          "evidence": "Luukkonen confirmed by Paul Hamilton/DFO, official Sabres starter's net corroboration. Samuelsson expected, not final dressed confirmation. Zellweger out, Timmins/Lyon/Zucker injured; Crevier with Power. Provorov/Fabbro/Severson out for CBJ. Greaves still LIKELY on DFO; primary projected page omits CBJ goalie listing."
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Both open their seasons; Buffalo road versus CBJ home crowd. Recent CBJ trade/coach and Buffalo young-center deployment require caution transferring prior-season rates."
+        },
+        "vsin": {
+          "score": 2,
+          "max": 10,
+          "evidence": "Fresh VSiN BUF2.9-CBJ3.0, estimated CBJ -115. Opposition explicitly weighed; no named BUF pick verified."
+        },
+        "docs": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Tony Sink Sept30 BUF -105, re-read. Historical BUF5v5 goals235 vs198 conceded and CBJ PK76.02% support prior; current defensive injuries and roster trades need independent reconciliation. Does not confirm BUF puck line or Over."
+        },
+        "market": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Reference4; movement2: Circa BUF+102 open to -107 current flips favoritism but news chronology unexposed. Splits0: candidate-specific rows unavailable. Different article prices are not treated as movement."
+        }
+      },
+      "failure_dimensions": [
+        {
+          "dimension": "strongest_failure_path",
+          "score": 1,
+          "max": 2,
+          "evidence": "Greaves/Werenski and CBJ home-ice counter remain material."
+        },
+        {
+          "dimension": "personnel_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Samuelsson expected and depth losses leave plausible role fragility."
+        },
+        {
+          "dimension": "variance_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Opening-game finishing and a near coin-flip ML remain volatile."
+        },
+        {
+          "dimension": "price_protection",
+          "score": 2,
+          "max": 2,
+          "evidence": "-107 avoids large premium and stays inside -115; not applicable to user's -121 quote."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": 1,
+          "max": 2,
+          "evidence": "Doc's favors BUF but current VSiN opposes; no resolution invented."
+        }
+      ],
+      "missing_evidence": [
+        "Confirmed Greaves starter",
+        "Samuelsson final dressing, all final skaters/scratches",
+        "Exact current BetRivers Delaware BUF ML",
+        "Candidate splits/current-season 5v5 and PP sample"
+      ],
+      "release_blockers": [
+        "Below 82/110 and Failure below 7/10",
+        "Greaves and final skaters not confirmed",
+        "Exact current DE quote absent"
+      ],
+      "user_selected_price_scenario": {
+        "american_odds": -121,
+        "source": "User-reported earlier Oct1; not rechecked per instruction",
+        "status": "DATED PROVISIONAL SCENARIO",
+        "price_factor": 13,
+        "total_score": 72,
+        "grade": "B-",
+        "failure_score": 5,
+        "no_bet_cutoff_exceeded": true,
+        "scope": "Analytical regrade only; do not change existing user-selected website card, stake or wager record."
+      },
+      "handicap_score": 75,
+      "grade": "B",
+      "failure_score": 6,
+      "failure_score_status": "PROVISIONAL",
+      "market_components": {
+        "reference": 4,
+        "movement": 2,
+        "splits": 0
+      }
+    },
+    {
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "score_status": "PROVISIONAL",
+      "sport": "NHL",
+      "start_et": "2026-10-01T19:00:00-04:00",
+      "official_units": 0,
+      "decision": "WATCH / NO BET",
+      "named_vsin_pick": "NOT VERIFIED: current NHL Pro Picks page is subscriber-only; a displayed pick count does not reveal author or market.",
+      "guide_reconciliation": "Registered VSiN NFL, Fantasy Life NFL and CFB originals are NOT APPLICABLE. No original NHL guide identified in controlling inventory; no cross-sport guide confirmation awarded.",
+      "id": "rangers-alternative",
+      "pick": "New York Rangers ML",
+      "quote": {
+        "american_odds": 123,
+        "source": "BetRivers Delaware Park public page",
+        "observed_at": "2026-10-01T18:19:00-04:00",
+        "executable_in_delaware": true,
+        "public_display_only": true,
+        "accepted_slip": false,
+        "execution_requires_reconfirmation": true
+      },
+      "best_number": "+135 preferred",
+      "no_bet_cutoff": "Below +125 requires regrade; +123 is short of review minimum",
+      "factors": {
+        "matchup": {
+          "score": 22,
+          "max": 35,
+          "evidence": "NYR's opening 51.44%5v5 xGF and14-8 high-danger share give a rebound path; Shesterkin supplies goalie path. TB stronger two-line attack and Hedman's return oppose; one game cannot prove NYR superior."
+        },
+        "price": {
+          "score": 15,
+          "max": 20,
+          "evidence": "DE +123 better than VSiN implied +113, but only modest gap and below chosen +125 review minimum; no independent win probability invented."
+        },
+        "personnel": {
+          "score": 13,
+          "max": 15,
+          "evidence": "Shesterkin confirmed; projected top six/defense present, Garand backup after Korpisalo IR. Final skaters and opposing goalie still pending."
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Home opener/bounce-back supports intensity but motivation is symmetric and not sufficient."
+        },
+        "vsin": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Estimated NYR+113 compared with +123 supports price side; TB higher projected score remains counter."
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "Schonwald specifically selects opposing TB-135; zero invented NYR confirmation."
+        },
+        "market": {
+          "score": 5,
+          "max": 10,
+          "evidence": "Reference4; movement1: Circa TB-138 to -143 opposes NYR side but supplies more underdog return. Splits0 unavailable."
+        }
+      },
+      "failure_dimensions": [
+        {
+          "dimension": "strongest_failure_path",
+          "score": 1,
+          "max": 2,
+          "evidence": "TB elite scoring still credible."
+        },
+        {
+          "dimension": "personnel_resilience",
+          "score": 2,
+          "max": 2,
+          "evidence": "Confirmed Shesterkin gives defensive continuity, despite final-skater gate."
+        },
+        {
+          "dimension": "variance_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Single-game shooting regression not deterministic."
+        },
+        {
+          "dimension": "price_protection",
+          "score": 1,
+          "max": 2,
+          "evidence": "+123 plus-money helps but modest cushion."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": 1,
+          "max": 2,
+          "evidence": "VSiN price support opposes Doc's side; unresolved."
+        }
+      ],
+      "missing_evidence": [
+        "Final skaters and opposing Vasilevskiy confirmation",
+        "Verified recent comparable form beyond one game",
+        "Candidate splits"
+      ],
+      "release_blockers": [
+        "Below 82/110 and Failure7/10",
+        "Final personnel gate",
+        "Below +125 review minimum"
+      ],
+      "handicap_score": 69,
+      "grade": "B-",
+      "failure_score": 6,
+      "failure_score_status": "PROVISIONAL",
+      "market_components": {
+        "reference": 4,
+        "movement": 1,
+        "splits": 0
+      }
+    }
+  ],
+  "alternatives": [
+    {
+      "id": "nj-regulation",
+      "pick": "New Jersey regulation ML",
+      "quote": null,
+      "core_missing": [
+        "Exact regulation offer",
+        "Independent regulation cashing-path assessment"
+      ],
+      "handicap_score": null,
+      "grade": "UNGRADED",
+      "failure_score": null,
+      "official_units": 0,
+      "decision": "NO BET"
+    },
+    {
+      "id": "nj-puck",
+      "pick": "New Jersey -1.5",
+      "quote": {
+        "american_odds": 150,
+        "source": "Circa via VSiN",
+        "source_updated_at": "2026-10-01T18:15:00-04:00"
+      },
+      "core_missing": [
+        "Independent two-goal winning-margin assessment",
+        "Current Delaware offer"
+      ],
+      "handicap_score": null,
+      "grade": "UNGRADED",
+      "failure_score": null,
+      "official_units": 0,
+      "decision": "NO BET"
+    },
+    {
+      "id": "buf-puck",
+      "pick": "Buffalo -1.5",
+      "quote": {
+        "american_odds": 225,
+        "source": "Circa via VSiN",
+        "source_updated_at": "2026-10-01T18:15:00-04:00"
+      },
+      "core_missing": [
+        "Independent two-goal winning-margin assessment",
+        "Greaves/final skaters and Delaware offer"
+      ],
+      "handicap_score": null,
+      "grade": "UNGRADED",
+      "failure_score": null,
+      "official_units": 0,
+      "decision": "NO BET"
+    },
+    {
+      "id": "tb-total",
+      "pick": "Tampa Bay–NY Rangers Under 5.5",
+      "quote": {
+        "american_odds": 106,
+        "source": "BetRivers Delaware Park public display",
+        "observed_at": "2026-10-01T18:19:00-04:00"
+      },
+      "core_missing": [
+        "Independent total assessment",
+        "Confirmed Vasilevskiy and final roles"
+      ],
+      "countercase": "VSiN projected total 5.65 does not confirm Under5.5; Doc's TBML is not a totals pick.",
+      "handicap_score": null,
+      "grade": "UNGRADED",
+      "failure_score": null,
+      "official_units": 0,
+      "decision": "NO BET"
+    }
+  ],
+  "prior_snapshots": [
+    {
+      "id": "devils",
+      "sport": "NHL",
+      "pick": "New Jersey ML",
+      "start_et": "2026-10-01T19:00:00-04:00",
+      "score_status": "PROVISIONAL",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "handicap_score": 81,
+      "grade": "B",
+      "official_units": 0,
+      "decision": "WATCH / NO OFFICIAL BET",
+      "quote": {
+        "american_odds": -168,
+        "source": "Circa via VSiN",
+        "observed_time": "12:45 ET",
+        "executable_in_delaware": false
+      },
+      "best_number_and_review_cutoff": "Prefer -150; review ceiling -170",
+      "factors": {
+        "matchup": {
+          "score": 28,
+          "max": 35,
+          "evidence": "Rested NJ faces PHI after 7–0 loss; official skater projections and PHI 18.5% opening-game 5v5 xGF support NJ. One game is a thin efficiency sample; SI's Flyers pick is the strongest counter."
+        },
+        "price": {
+          "score": 13,
+          "max": 20,
+          "evidence": "VSiN model NJ -176 suggests modest value at -168, not a bargain. Article -140 is no longer available."
+        },
+        "personnel": {
+          "score": 11,
+          "max": 15,
+          "evidence": "Jake Allen confirmed by credentialed beat report through Daily Faceoff; Woll expected for PHI but not confirmed; Brown/Kovacevic out."
+        },
+        "situation": {
+          "score": 8,
+          "max": 10,
+          "evidence": "NJ home opener and PHI back-to-back are concrete advantages; new-line chemistry and possible rebound limit the edge."
+        },
+        "vsin": {
+          "score": 7,
+          "max": 10,
+          "evidence": "VSiN current model favors NJ 3.5–2.1; no verified current named VSiN NHL pick."
+        },
+        "docs": {
+          "score": 5,
+          "max": 10,
+          "evidence": "Guy Bruhn Sept 30 NJ -140. Same side remains relevant, but price deteriorated and prior PHI result context is stale."
+        },
+        "market": {
+          "score": 9,
+          "max": 10,
+          "evidence": "Reference4 + movement3 (PHI +143 to +150) + splits2. DK NJ ML88% handle/80% bets supports direction; no claim of sharp causation."
+        }
+      },
+      "failure_score": 5,
+      "failure_dimensions": [
+        {
+          "dimension": "strongest_failure_path",
+          "score": 1,
+          "max": 2,
+          "evidence": "The countercase in matchup remains material; this is partial resilience, not a clean failure path."
+        },
+        {
+          "dimension": "personnel_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Personnel assessment is usable, but the listed final availability check can change the cashing path."
+        },
+        {
+          "dimension": "variance_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Game-script or conversion variance remains meaningful; the selection is not robust across all scripts."
+        },
+        {
+          "dimension": "price_protection",
+          "score": 1,
+          "max": 2,
+          "evidence": "Limited alternative protection at the stated review price."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": 1,
+          "max": 2,
+          "evidence": "Independent evidence partly supports the handicap but does not resolve the strongest opposition."
+        }
+      ],
+      "missing_evidence": [
+        "Confirm Woll and final scratches",
+        "reconcile Flyers rebound counter",
+        "exact live DE price"
+      ],
+      "release_blockers": [
+        "Confirm Woll and final scratches",
+        "reconcile Flyers rebound counter",
+        "exact live DE price",
+        "Non-NFL minimum82/110 and Failure7/10 not both satisfied"
+      ],
+      "provisional_only": true
+    },
+    {
+      "id": "sabres",
+      "sport": "NHL",
+      "pick": "Buffalo ML",
+      "start_et": "2026-10-01T19:00:00-04:00",
+      "score_status": "PROVISIONAL",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "handicap_score": 76,
+      "grade": "B",
+      "official_units": 0,
+      "decision": "WATCH / NO OFFICIAL BET",
+      "quote": {
+        "american_odds": -107,
+        "source": "Circa via VSiN",
+        "observed_time": "12:45 ET",
+        "executable_in_delaware": false
+      },
+      "best_number_and_review_cutoff": "Prefer -105/-110; review ceiling -115",
+      "factors": {
+        "matchup": {
+          "score": 26,
+          "max": 35,
+          "evidence": "Luukkonen confirmation and CBJ missing Provorov's major minutes help Buffalo. VSiN estimates CBJ 3.0–BUF 2.9, so the matchup edge is contested."
+        },
+        "price": {
+          "score": 16,
+          "max": 20,
+          "evidence": "Near pick'em -107 versus Doc's -105; avoid paying for a large favorite premium."
+        },
+        "personnel": {
+          "score": 11,
+          "max": 15,
+          "evidence": "Luukkonen confirmed; Greaves likely, not confirmed. Provorov week-to-week lower body; Samuelsson expected in; Zellweger out."
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "CBJ opener and substantial roster changes make old-season records less transferable; injury impact is current."
+        },
+        "vsin": {
+          "score": 2,
+          "max": 10,
+          "evidence": "VSiN matchup model opposes Buffalo slightly; two points reflect limited contextual support, not capper agreement."
+        },
+        "docs": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Tony Sink Sept 30 BUF -105; SI Ryan Gilbert Oct1 BUF -108 independently supports the side."
+        },
+        "market": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Reference4 + movement3 (BUF +102 to -107); candidate-specific splits unavailable behind limited public view."
+        }
+      },
+      "failure_score": 6,
+      "failure_dimensions": [
+        {
+          "dimension": "strongest_failure_path",
+          "score": 1,
+          "max": 2,
+          "evidence": "The countercase in matchup remains material; this is partial resilience, not a clean failure path."
+        },
+        {
+          "dimension": "personnel_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Personnel assessment is usable, but the listed final availability check can change the cashing path."
+        },
+        {
+          "dimension": "variance_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Game-script or conversion variance remains meaningful; the selection is not robust across all scripts."
+        },
+        {
+          "dimension": "price_protection",
+          "score": 2,
+          "max": 2,
+          "evidence": "The selected threshold/near-pick'em price gives identifiable protection; execution still needs verification."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": 1,
+          "max": 2,
+          "evidence": "Independent evidence partly supports the handicap but does not resolve the strongest opposition."
+        }
+      ],
+      "missing_evidence": [
+        "Confirm Greaves and skater lineups",
+        "exact DE price",
+        "opposing model remains unresolved"
+      ],
+      "release_blockers": [
+        "Confirm Greaves and skater lineups",
+        "exact DE price",
+        "opposing model remains unresolved",
+        "Non-NFL minimum82/110 and Failure7/10 not both satisfied"
+      ],
+      "provisional_only": true
+    },
+    {
+      "id": "lightning",
+      "sport": "NHL",
+      "pick": "Tampa Bay ML",
+      "start_et": "2026-10-01T19:00:00-04:00",
+      "score_status": "PROVISIONAL",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "handicap_score": 77,
+      "grade": "B",
+      "official_units": 0,
+      "decision": "WATCH / NO OFFICIAL BET",
+      "quote": {
+        "american_odds": -143,
+        "source": "Circa via VSiN",
+        "observed_time": "12:45 ET",
+        "executable_in_delaware": false
+      },
+      "best_number_and_review_cutoff": "Prefer -140; review ceiling -145",
+      "factors": {
+        "matchup": {
+          "score": 26,
+          "max": 35,
+          "evidence": "Point/Kucherov and returning Hedman support Tampa, but NYR's 51.44% 5v5 xGF in its opening loss cautions against fading the scoreboard alone."
+        },
+        "price": {
+          "score": 14,
+          "max": 20,
+          "evidence": "-143 worsened from -138 open and Doc's -135. Remaining value is modest."
+        },
+        "personnel": {
+          "score": 12,
+          "max": 15,
+          "evidence": "Official skater projections available; Shesterkin confirmed, Vasilevskiy likely only; Gourde/James absent."
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "NYR's opening loss can motivate a rebound; Hedman's first game since March requires rust allowance."
+        },
+        "vsin": {
+          "score": 4,
+          "max": 10,
+          "evidence": "VSiN projects TB3.1–NYR2.5, but its implied NYR +113 is less bullish on TB than the -143 market."
+        },
+        "docs": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Josh Schonwald Sept30 TB -135; same side, less attractive current price."
+        },
+        "market": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Reference4 + verified movement3; no exposed TB-specific split row."
+        }
+      },
+      "failure_score": 5,
+      "failure_dimensions": [
+        {
+          "dimension": "strongest_failure_path",
+          "score": 1,
+          "max": 2,
+          "evidence": "The countercase in matchup remains material; this is partial resilience, not a clean failure path."
+        },
+        {
+          "dimension": "personnel_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Personnel assessment is usable, but the listed final availability check can change the cashing path."
+        },
+        {
+          "dimension": "variance_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Game-script or conversion variance remains meaningful; the selection is not robust across all scripts."
+        },
+        {
+          "dimension": "price_protection",
+          "score": 1,
+          "max": 2,
+          "evidence": "Limited alternative protection at the stated review price."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": 1,
+          "max": 2,
+          "evidence": "Independent evidence partly supports the handicap but does not resolve the strongest opposition."
+        }
+      ],
+      "missing_evidence": [
+        "Confirm Vasilevskiy",
+        "final scratches and Hedman deployment",
+        "exact DE price"
+      ],
+      "release_blockers": [
+        "Confirm Vasilevskiy",
+        "final scratches and Hedman deployment",
+        "exact DE price",
+        "Non-NFL minimum82/110 and Failure7/10 not both satisfied"
+      ],
+      "provisional_only": true
+    }
+  ],
+  "source_audit": [
+    {
+      "source": "Dropbox Circa NHL",
+      "status": "STALE / EMPTY EXTRACTION",
+      "detail": "26-file folder exhausted. Latest listed NHL - 2026-9-30.pdf; no Oct1 NHL file found. PDF fetch returned empty text. Oct1 sync timestamp does not prove sheet date.",
+      "path": "ns:1415086529//Circa Sports sheets/NHL - 2026-9-30.pdf"
+    },
+    {
+      "source": "VSiN named NHL Pro Picks",
+      "status": "UNAVAILABLE",
+      "detail": "Subscriber page exposes no verifiable author/exact selection; model scores are separate from named opinions."
+    },
+    {
+      "source": "Doc's AI-v3 / video",
+      "status": "SUPPORTING HUB ONLY",
+      "detail": "Marketing/navigation pages accessible; actual AI-v3 selections and spoken video picks not obtained. Named free picks verified and independently scored."
+    },
+    {
+      "source": "Natural Stat Trick",
+      "status": "CURRENT, ONE-GAME SAMPLE",
+      "detail": "2026–27 5v5 PHI/NYR opening games; no mature current-season BUF/NJ/TB/CBJ sample."
+    },
+    {
+      "source": "MoneyPuck / Hockey Reference",
+      "status": "INACCESSIBLE",
+      "detail": "Public requests returned403; no projections fabricated."
+    },
+    {
+      "source": "Evolving Hockey / TeamRankings NHL",
+      "status": "SUPPORTING ONLY",
+      "detail": "Homepage accessible or general-portal redirect; no current NHL matchup metrics obtained."
+    },
+    {
+      "source": "StatMuse",
+      "status": "NOT RECHECKED",
+      "detail": "No fresh exact current-game evidence added; no points claimed."
+    },
+    {
+      "source": "Progressive Fade / Favorite Inflation",
+      "status": "UNKNOWN",
+      "detail": "Historical5/10/20 market-family records not validated. TB13-game puck noncover display unverified; no automatic ML fade inferred."
+    },
+    {
+      "source": "Original guides",
+      "status": "NOT APPLICABLE / NHL ORIGINAL NOT IDENTIFIED",
+      "detail": "Registered NFL/Fantasy Life/CFB originals do not confirm NHL bets. Applicable controlling NHL research/readiness and v2 modules applied."
+    },
+    {
+      "source": "Market AI shadow",
+      "status": "UNGRADED EXPERIMENTAL",
+      "detail": "Independent fair-probability/dislocation inputs absent; shadow score not invented and not made an extra daily release prerequisite."
+    },
+    {
+      "source": "Final skaters",
+      "status": "PROJECTED ONLY",
+      "detail": "Official NHL page updated15:54ET lists projections/scratches, not verified final dressed lists."
+    }
+  ],
+  "sources": [
+    {
+      "key": "research2",
+      "url": "https://www.nhl.com/news/nhl-lineup-projections-2026-27-season",
+      "status": 200,
+      "observed_on": "2026-10-01",
+      "source_timestamp_note": "Article/confirmation timestamps retained in factor evidence"
+    },
+    {
+      "key": "research3",
+      "url": "https://www.dailyfaceoff.com/starting-goalies",
+      "status": 200,
+      "observed_on": "2026-10-01",
+      "source_timestamp_note": "Article/confirmation timestamps retained in factor evidence"
+    },
+    {
+      "key": "wave1",
+      "url": "https://data.vsin.com/vegas-odds-linetracker/?sportid=nhl",
+      "status": 200,
+      "observed_on": "2026-10-01",
+      "source_timestamp_note": "Board updated18:15ET"
+    },
+    {
+      "key": "wave2",
+      "url": "https://data.vsin.com/betting-splits/?sport=NHL",
+      "status": 200,
+      "observed_on": "2026-10-01",
+      "source_timestamp_note": "Article/confirmation timestamps retained in factor evidence"
+    },
+    {
+      "key": "cap0",
+      "url": "https://data.vsin.com/nhl/games/",
+      "status": 200,
+      "observed_on": "2026-10-01",
+      "source_timestamp_note": "Article/confirmation timestamps retained in factor evidence"
+    },
+    {
+      "key": "cap1",
+      "url": "https://www.docsports.com/free-picks/nhl-hockey/2026/philadelphia-flyers-vs-new-jersey-devils-prediction-10-1-2026-nhl-picks-best-bets-odds.html",
+      "status": 200,
+      "observed_on": "2026-10-01",
+      "source_timestamp_note": "Article dated September30; re-read October1"
+    },
+    {
+      "key": "cap2",
+      "url": "https://www.docsports.com/free-picks/nhl-hockey/2026/tampa-bay-lightning-vs-new-york-rangers-prediction-10-1-2026-nhl-picks-best-bets-odds.html",
+      "status": 200,
+      "observed_on": "2026-10-01",
+      "source_timestamp_note": "Article dated September30; re-read October1"
+    },
+    {
+      "key": "cap3",
+      "url": "https://www.docsports.com/free-picks/nhl-hockey/2026/buffalo-sabres-vs-columbus-blue-jackets-prediction-10-1-2026-nhl-picks-best-bets-odds.html",
+      "status": 200,
+      "observed_on": "2026-10-01",
+      "source_timestamp_note": "Article dated September30; re-read October1"
+    },
+    {
+      "key": "extra0",
+      "url": "https://www.nhl.com/news/nhl-status-report-news-and-notes-october-1-2026",
+      "status": 200,
+      "observed_on": "2026-10-01",
+      "source_timestamp_note": "Article/confirmation timestamps retained in factor evidence"
+    },
+    {
+      "key": "extra1",
+      "url": "https://www.nhl.com/news/victor-hedman-energized-ahead-of-1st-game-back-since-march-19",
+      "status": 200,
+      "observed_on": "2026-10-01",
+      "source_timestamp_note": "Article/confirmation timestamps retained in factor evidence"
+    },
+    {
+      "key": "last1",
+      "url": "https://delawarepark.betrivers.com/?page=sportsbook",
+      "status": 200,
+      "observed_on": "2026-10-01",
+      "source_timestamp_note": "Public page clock18:19ET"
+    },
+    {
+      "key": "metrics3",
+      "url": "https://www.naturalstattrick.com/teamtable.php",
+      "status": 200,
+      "observed_on": "2026-10-01",
+      "source_timestamp_note": "Article/confirmation timestamps retained in factor evidence"
+    },
+    {
+      "key": "finalresearch0",
+      "url": "https://www.nhl.com/sabres/news/how-to-watch-sabres-blue-jackets-opener-lineup",
+      "status": 200,
+      "observed_on": "2026-10-01",
+      "source_timestamp_note": "Article/confirmation timestamps retained in factor evidence"
+    },
+    {
+      "key": "late1",
+      "url": "https://x.com/NHLFlyers/status/2105755755718873494",
+      "status": 200,
+      "observed_on": "2026-10-01",
+      "source_timestamp_note": "Article/confirmation timestamps retained in factor evidence"
+    },
+    {
+      "key": "wrap1",
+      "url": "https://x.com/InStilettos_NHL/status/2105681334316273997",
+      "status": 200,
+      "observed_on": "2026-10-01",
+      "source_timestamp_note": "Article/confirmation timestamps retained in factor evidence"
+    }
+  ],
+  "goalie_last_recheck_at": "2026-10-01T18:28:00-04:00",
+  "goalies": {
+    "Woll": "CONFIRMED",
+    "Allen": "CONFIRMED",
+    "Vasilevskiy": "LIKELY, NOT CONFIRMED",
+    "Shesterkin": "CONFIRMED",
+    "Luukkonen": "CONFIRMED",
+    "Greaves": "LIKELY, NOT CONFIRMED"
+  },
+  "publication": {
+    "website_updated": false,
+    "wager_placed": false,
+    "existing_user_selected_card_changed": false
+  },
+  "seven_leg_review": {
+    "status": "NOT OFFICIAL",
+    "detail": "No qualifying legs forced into seven-leg mixed draft; no combined payout invented. Delaware fixed-payout football cards are distinct and outside this NHL gate."
+  }
+}
