@@ -1,0 +1,1597 @@
+{
+  "title": "Micks Picks - NFL Delaware Lottery Tickets",
+  "date": "2026-10-01",
+  "version": "micks-110-v2-2026-09-29",
+  "status": "PROVISIONAL - WATCH; official units 0",
+  "factors": [
+    "Matchup /35",
+    "Price /20",
+    "Personnel /15",
+    "Situation /10",
+    "VSiN /10",
+    "Doc's /10",
+    "Market /10"
+  ],
+  "teams": [
+    {
+      "key": "LV",
+      "name": "Las Vegas Raiders",
+      "opponent": "Kansas City",
+      "id": 144,
+      "half": 4.5,
+      "big": 12.5,
+      "teaser": 9.5,
+      "circa": "+4.5 -110",
+      "opening": "+4.5",
+      "model": "KC 23.4, LV 22.8; KC by 0.6",
+      "guide": "VSiN preseason LV 19.5 / KC 26. Fantasy Life treated QB transition and Bowers as central. Current 3-0 start and Bowers' return improve the old LV baseline; Chiefs remain stronger in independent power rankings.",
+      "cash": "Two paths: LV's 29.3 points/game and returning receiving centerpiece give it a scoring response; current VSiN forecast has a much tighter game than +4.5. Big +12.5 and Teaser +9.5 tolerate two-score and nine-point losses, respectively.",
+      "counter": "Kansas City's defense allows 16.7 points/game and 278 yards/game. LV's nine takeaways in three games may regress; a Chiefs ground-game lead can overwhelm the cushion.",
+      "personnel": "Jackson Powers-Johnson DNP, groin; Aidan O'Connell DNP, personal. The latter is not evidence that the starting QB is out. Bowers' Week 3 routes 92% and targets 41% support restored receiving role; current article incorrectly names Saints as Week 4 opponent, so use its utilization only.",
+      "vsin": "Dave Tuley: LV +4.5 best bet. Current game forecast favors KC by only 0.6. Preseason guide and independent powers still favor KC.",
+      "docs": "Josh Schonwald, Sept 29: Raiders +4.0. Half +4.5 improves his number. Big and Teaser are separately assessed derivatives, not an endorsed joint ticket.",
+      "halfscore": [
+        28,
+        15,
+        11,
+        8,
+        8,
+        9,
+        8
+      ],
+      "bigscore": [
+        30,
+        17,
+        11,
+        8,
+        6,
+        5,
+        8
+      ],
+      "teaserscore": [
+        29,
+        16,
+        11,
+        8,
+        6,
+        5,
+        8
+      ],
+      "fs": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "key": "TEN",
+      "name": "Tennessee Titans",
+      "opponent": "Baltimore",
+      "id": 132,
+      "half": 11.5,
+      "big": 19.5,
+      "teaser": 16.5,
+      "circa": "+11.5 -110",
+      "opening": "+10.5",
+      "model": "BAL 27.4, TEN 16.0; BAL by 11.4",
+      "guide": "VSiN preseason TEN 20.5 / BAL 28.5. Fantasy Life's Cam Ward development prior is retained modestly; current scoring 12.3/game prevents declaring an offensive turnaround.",
+      "cash": "Two paths: TEN's last two defeats were by four and five; Baltimore has allowed 26 points/game and can permit late scoring. +11.5 is above ten, and Big +19.5 allows a 19-point defeat.",
+      "counter": "Ravens average 30.7 points and 167.3 rushing yards. TEN's low-output offense may not keep pace; the VSiN projected margin is essentially at the Half Point number.",
+      "personnel": "Lamar Jackson limited, back; Zay Flowers limited, hamstring; Ravens offensive-line/secondary limitations. John Franklin-Myers DNP, back for TEN. Jackson's limitation is not an OUT designation.",
+      "vsin": "Dave Tuley: TEN +11.5 best bet. Forecast BAL by 11.4 is neutral at the straight threshold rather than strong model confirmation.",
+      "docs": "Josh Schonwald: TEN +11.5; Jeremy Block's Sept 30 movement report also expects TEN to cover. Both are one Doc's source family.",
+      "halfscore": [
+        25,
+        15,
+        10,
+        7,
+        8,
+        8,
+        8
+      ],
+      "bigscore": [
+        31,
+        17,
+        10,
+        7,
+        6,
+        6,
+        8
+      ],
+      "fs": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "key": "LAR",
+      "name": "Los Angeles Rams",
+      "opponent": "Philadelphia",
+      "id": 119,
+      "half": -2.5,
+      "big": 5.5,
+      "teaser": 2.5,
+      "circa": "-3 -115",
+      "opening": "-2.5",
+      "model": "LAR 23.1, PHI 20.6; LAR by 2.4",
+      "guide": "VSiN preseason LAR 29.5 / PHI 27. Fantasy Life emphasizes Stafford-Nacua-Adams and Williams/Corum. Current independent powers 5.6 vs 0.5 retain a Rams advantage, but 1-2 start and six turnovers weaken the runaway-favorite prior.",
+      "cash": "Two paths: Rams have 1,253 yards through three games and rank third in yards allowed, versus PHI's 302.3 yards/game and zero defensive takeaways. Half -2.5 stays below three; Big +5.5/Teaser +2.5 need competitive play, not a multi-score win.",
+      "counter": "Rams scoring is only 20.3/game despite volume; turnover and red-zone failures can recur. PHI's rushing game can control possession. VSiN margin 2.4 is near the Half threshold.",
+      "personnel": "Aaron Donald DNP, back; Jaylen Watson DNP, shoulder; Josh Wallace limited. PHI Fred Johnson DNP, knee; Jordan Davis and Moro Ojomo limited. Final OL/secondary composition still pending.",
+      "vsin": "Tuley leans LAR but explicitly passes the game; forecast LAR by 2.4 is slight support for competitive-game derivatives, not an emphatic -2.5 cover.",
+      "docs": "Tony Sink: Rams -3.0 on Sept 29. Half -2.5 is better; positive-point derivatives are separately assessed.",
+      "halfscore": [
+        26,
+        16,
+        10,
+        7,
+        6,
+        8,
+        8
+      ],
+      "bigscore": [
+        29,
+        16,
+        10,
+        7,
+        4,
+        4,
+        8
+      ],
+      "fs": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "key": "WAS",
+      "name": "Washington Commanders",
+      "opponent": "Indianapolis (London)",
+      "id": 100,
+      "half": 3.5,
+      "big": 11.5,
+      "teaser": 8.5,
+      "circa": "+4 -110",
+      "opening": "+4.5",
+      "model": "IND 25.2, WAS 20.5; IND by 4.7",
+      "guide": "VSiN preseason both 23. Fantasy Life's Daniels rushing/receiving ceiling is reduced for elbow injury; Mariota's current play overrides a healthy-Daniels assumption. Neutral-site travel replaces a home-field assumption.",
+      "cash": "Two paths: IND has allowed 417.3 yards/game and 30.3 points; WAS has a credible Mariota-led scoring route after beating SEA. +11.5 and +8.5 provide protection beyond the model's IND 4.7 margin.",
+      "counter": "Washington allows 30.7 points/game and 280.3 passing yards; Indianapolis can attack that secondary. Half +3.5 is worse than current Circa +4 and has little model protection.",
+      "personnel": "Jayden Daniels limited, elbow; Sam Cosmi DNP, concussion/throat. Assess both Mariota continuation and Daniels return; neither can be declared Sunday's starter yet.",
+      "vsin": "Tuley passes and prefers IND. Current forecast opposes WAS +3.5; Makinen systems are mixed. Derivative buffer is the Micks judgment.",
+      "docs": "Guy Bruhn and Spencer Toth: WAS +3.5. Jeremy Block also supports WAS, but describes it as home: incorrect for London. Discount that premise.",
+      "halfscore": [
+        24,
+        14,
+        9,
+        6,
+        4,
+        9,
+        8
+      ],
+      "bigscore": [
+        29,
+        16,
+        9,
+        7,
+        4,
+        6,
+        8
+      ],
+      "teaserscore": [
+        27,
+        16,
+        9,
+        7,
+        4,
+        6,
+        8
+      ],
+      "fs": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "key": "JAX",
+      "name": "Jacksonville Jaguars",
+      "opponent": "Cincinnati",
+      "id": 116,
+      "half": 2.5,
+      "big": 9.5,
+      "teaser": 6.5,
+      "circa": "+2.5 -105",
+      "opening": "+2.5",
+      "model": "CIN 26.7, JAX 22.8; CIN by 3.9",
+      "guide": "VSiN preseason JAX/CIN both 24; current independent powers JAX 5.0, CIN 2.9 and JAX defense 12 points/game favor a competitive contest. Fantasy Life's Lawrence/receiving-role prior stays a baseline, not a current projection.",
+      "cash": "Two paths: Jaguars allow 12 points/game and 3.6 yards/rush; their offense scored 27.3/game and dismantled NE. Big +9.5 crosses both three and seven and tolerates a nine-point defeat.",
+      "counter": "Cincinnati's passing offense and a 52-point current total create wider margins. VSiN forecasts CIN by 3.9; Doc's teaser specialist passes JAX because of high-total risk.",
+      "personnel": "JAX Van Lanen knee, Hamilton back and defensive-front players limited; CIN Risner knee and B.J. Hill Achilles DNP. Monitor trench losses before assuming the defensive floor.",
+      "vsin": "Tuley specifically recommends JAX +8.5 teasers; Big +9.5 is better. That is not a straight +2.5 recommendation; model and several Makinen trends favor CIN.",
+      "docs": "Guy Bruhn: JAX +2.5. Jeremy Block's teaser report explicitly passes this leg. Show the disagreement inside one factor.",
+      "halfscore": [
+        25,
+        14,
+        11,
+        7,
+        5,
+        8,
+        8
+      ],
+      "bigscore": [
+        29,
+        16,
+        11,
+        7,
+        7,
+        2,
+        8
+      ],
+      "fs": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "key": "LAC",
+      "name": "Los Angeles Chargers",
+      "opponent": "Seattle",
+      "id": 148,
+      "half": 7.5,
+      "big": 15.5,
+      "teaser": 13.5,
+      "circa": "+7 -105",
+      "opening": "+6.5",
+      "model": "SEA 25.9, LAC 15.2; SEA by 10.8",
+      "guide": "VSiN preseason LAC 24.5 / SEA 29.5. Fantasy Life Herbert-led passing and run-game prior is downweighted: current offense 14.7 points/game and six turnovers. Independent powers also favor SEA.",
+      "cash": "Two paths: Half +7.5 keeps the full touchdown; Tuley and a Makinen system support LAC after competitive losses. A clean turnover game creates a cover route, but current offensive weakness limits conviction.",
+      "counter": "SEA leads the independent power board and allows 16.7 points/game. VSiN margin 10.8 beats the Half cushion; Doc's picks SEA -7. This is the weakest Half ticket leg.",
+      "personnel": "Backup Trey Lance limited, groin; do not mistake that for an injured Herbert designation. SEA Reed foot and Zabel groin limited. Current SEA QB role/final status must be reconciled before release.",
+      "vsin": "Dave Tuley: LAC +7 best, prefers +7.5; Makinen system supports LAC. Current forecast directly opposes +7.5.",
+      "docs": "Guy Bruhn: Seahawks -7.0. Opposing verified selection earns 1/10, not missing-source treatment.",
+      "halfscore": [
+        20,
+        16,
+        9,
+        6,
+        6,
+        1,
+        8
+      ],
+      "fs": [
+        0,
+        1,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "key": "DAL",
+      "name": "Dallas Cowboys",
+      "opponent": "Houston",
+      "id": 108,
+      "half": 2.5,
+      "big": 9.5,
+      "teaser": 6.5,
+      "circa": "+3 -110",
+      "opening": "+3",
+      "model": "HOU 26.0, DAL 23.9; HOU by 2.1",
+      "guide": "VSiN preseason DAL 24 / HOU 24.5. Current independent ratings DAL 1.4/HOU 0.9 and scoring 29.3 vs 18.0 challenge the assumed Houston edge; Dallas defense remains a concern.",
+      "cash": "Two paths: Cowboys have a scoring response against HOU's 25 points/game allowed; HOU's 84.7 rushing yards/game limits its clock-killing path. Big +9.5 exceeds Tuley's +8.5 threshold and passes three/seven.",
+      "counter": "Dallas allows 179.7 rushing yards and 27.3 points/game. Houston's run defense is stronger; a Texans offensive recovery or Nico Collins return can change the game.",
+      "personnel": "DAL Durant and Revel DNP; HOU Trent Brown DNP and multiple rushers limited. Nico Collins return/role remains an explicit check.",
+      "vsin": "Dave Tuley: DAL +8.5 teasers; Big +9.5 qualifies. The regular card's +6.5 fails that threshold.",
+      "docs": "Tony Sink: HOU -2.5, opposing side. Jeremy Block lists Dallas +8.5 as potential but his final two-leg pick is CLE/DEN. These are not full Doc's agreement.",
+      "bigscore": [
+        29,
+        16,
+        10,
+        8,
+        7,
+        3,
+        8
+      ],
+      "fs": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "key": "DEN",
+      "name": "Denver Broncos",
+      "opponent": "San Francisco",
+      "id": 140,
+      "half": 2.5,
+      "big": 9.5,
+      "teaser": 6.5,
+      "circa": "+2.5 +100",
+      "opening": "+1.5",
+      "model": "SF 26.5, DEN 20.8; SF by 5.8",
+      "guide": "VSiN preseason DEN 27 / SF 27.5. Fantasy Life notes Nix rushing and a Dobbins/Harvey committee; current comeback is encouraging, but DEN averages only 20 points/game.",
+      "cash": "Two paths: DEN's defense allows 21 points/game and SF's injured front can improve protection; +9.5 remains above both capper +8.5 thresholds and the forecast's 5.8 margin.",
+      "counter": "SF's Purdy-McCaffrey offense and independent power edge can produce a two-score win. Denver cannot depend on another 16-point comeback; low rushing efficiency can force high-variance passing.",
+      "personnel": "SF Nick Bosa DNP, knee/calf; Trent Williams DNP, rest/neck; additional secondary limitations. Verify actual designations rather than promote DNP to OUT.",
+      "vsin": "Dave Tuley: DEN +8.5 teasers. VSiN forecast SF by 5.8 still leaves Big +9.5 room; regular Teaser +6.5 does not match his recommendation.",
+      "docs": "Jeremy Block's final teaser pick includes DEN +8.5; Tony Sink DEN +3.0. Spencer Toth instead picks SF -2.5. Partial agreement with explicit counterweight.",
+      "bigscore": [
+        30,
+        16,
+        10,
+        7,
+        8,
+        7,
+        8
+      ],
+      "fs": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "key": "ATL",
+      "name": "Atlanta Falcons",
+      "opponent": "New Orleans",
+      "id": 156,
+      "half": 2.5,
+      "big": 9.5,
+      "teaser": 6.5,
+      "circa": "+2.5 -105",
+      "opening": "+2.5",
+      "model": "NO 26.1, ATL 20.9; NO by 5.3",
+      "guide": "VSiN preseason ATL 21.5 / NO 22.5. Fantasy Life Penix/Bijan run-game prior now has support from Penix's return and the win over GB, but not a claim all QB uncertainty is resolved.",
+      "cash": "Two paths: Atlanta averages 173 rushing yards and allows 47.7 rushing yards; a controlled divisional game can stay close. Big +9.5 is above Tuley's +8.5 threshold and forecast NO by 5.3.",
+      "counter": "ATL has eight turnovers and a weak pass defense; Shough and home-field NO can create a margin beyond nine. Monday adds more time for personnel changes.",
+      "personnel": "Penix's current comeback replaces the preseason QB assumption. Monday final injury report is not yet published; verify offensive-line and receiving availability.",
+      "vsin": "Tuley: ATL +8.5 teasers. Regular +6.5 is too short. Current forecast favors NO by 5.3.",
+      "docs": "Tony Sink: NO -3.0. Jeremy Block calls ATL +8.5 playable but hesitant, and omits it from his final teaser pair.",
+      "bigscore": [
+        27,
+        16,
+        10,
+        8,
+        7,
+        3,
+        8
+      ],
+      "fs": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "key": "NE",
+      "name": "New England Patriots",
+      "opponent": "Buffalo",
+      "id": 124,
+      "half": 6.5,
+      "big": 14.5,
+      "teaser": 12.5,
+      "circa": "+6.5 -105",
+      "opening": "+5.5",
+      "model": "BUF 27.7, NE 18.2; BUF by 9.5",
+      "guide": "VSiN preseason NE 27 / BUF 28.5. Fantasy Life Maye/Stevenson/Henderson priors are sharply reduced for six INTs, 12 points/game and current role split; do not assume a Super Bowl offense persists.",
+      "cash": "Two paths: NE defense allows 17 points/game and 278.3 yards/game; +14.5 crosses fourteen, and +12.5 retains twelve. Buffalo's 26 points/game conceded permits a backdoor score.",
+      "counter": "Bills average 33.7 points/game; Maye's turnovers can create short fields and a blowout. VSiN predicts a 9.5-point Bills win, opposing straight +6.5.",
+      "personnel": "NE Barmore, Gonzalez and Moses DNP; BUF Benford DNP and Walker limited. Stevenson has 53% snaps but 29% rush share; rushing committee complicates low-volume offensive recovery.",
+      "vsin": "Tuley NE +6.5; Makinen has both NE support and BUF trends. Model favors BUF by 9.5; derivatives independently judged.",
+      "docs": "Josh Schonwald NE +7.0. This is weaker than current Half +6.5, but Big/Teaser cushion helps after separate analysis. Jeremy Block expects BUF to win by seven.",
+      "bigscore": [
+        28,
+        16,
+        9,
+        7,
+        5,
+        5,
+        8
+      ],
+      "teaserscore": [
+        27,
+        16,
+        9,
+        7,
+        5,
+        5,
+        8
+      ],
+      "fs": [
+        1,
+        1,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "key": "GB",
+      "name": "Green Bay Packers",
+      "opponent": "Tampa Bay",
+      "id": 111,
+      "half": -3.5,
+      "big": 4.5,
+      "teaser": 1.5,
+      "circa": "-3.5 -105",
+      "opening": "-3.5",
+      "model": "GB 21.9, TB 18.3; GB by 3.7",
+      "guide": "VSiN preseason GB 26.5 / TB 23. Current powers -2.0/-2.4 show both weaker than the old baseline. Fantasy Life's Mayfield prior cannot be carried forward unadjusted with thumb injury.",
+      "cash": "Two paths: Big +4.5 lets GB lose by four rather than needing a -3.5 cover; TB's 279.3 yards/game and QB uncertainty limit sustained scoring. Current forecast has GB ahead.",
+      "counter": "GB is allowing 30.3 points/game and averages only 48.7 rushing yards. A healthy Mayfield or surprising Daniels performance defeats a QB-injury fade.",
+      "personnel": "Mayfield DNP, thumb; Jalon Daniels replacement reported but Sunday starter not final. GB Banks and Monk DNP and multiple defensive linemen limited/out of practice.",
+      "vsin": "Tuley passes; Makinen has fades on both sides. Forecast GB by 3.7 supports derivative protection but not a named GB teaser endorsement.",
+      "docs": "Guy Bruhn: TB +3.5. Opposes GB direction; no exact Big +4.5 pick recovered.",
+      "bigscore": [
+        27,
+        16,
+        8,
+        7,
+        4,
+        1,
+        8
+      ],
+      "fs": [
+        1,
+        0,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "key": "SEA",
+      "name": "Seattle Seahawks",
+      "opponent": "Los Angeles Chargers",
+      "id": 147,
+      "half": -7.5,
+      "big": 1.5,
+      "teaser": -3.5,
+      "circa": "-7 -115",
+      "opening": "-6.5",
+      "model": "SEA 25.9, LAC 15.2; SEA by 10.8",
+      "guide": "VSiN preseason SEA 29.5 / LAC 24.5. Current independent power rank first, defense 16.7 points/game and 367.7 offensive yards support Seattle even after a turnover-driven loss.",
+      "cash": "Two paths: defense suppresses an LAC offense at 14.7 points/game; passing attack generated 437 yards against WAS. Big +1.5 tolerates a one-point loss and does not require covering seven.",
+      "counter": "Seattle's QB role must be current, not an automatic healthy-Darnold assumption. LAC can improve turnover discipline; Tuley's straight opinion backs LAC.",
+      "personnel": "Reed foot and Zabel groin limited. Confirm Seattle starting QB and receiving/trench availability; assess Lock continuation if Darnold unavailable.",
+      "vsin": "Forecast SEA by 10.8, but Tuley and one Makinen system select LAC. No exact SEA Big Teaser endorsement.",
+      "docs": "Guy Bruhn SEA -7.0. Direction supports SEA, but +1.5 is a different threshold requiring separate judgment.",
+      "bigscore": [
+        29,
+        16,
+        9,
+        8,
+        4,
+        5,
+        8
+      ],
+      "fs": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "key": "MIN",
+      "name": "Minnesota Vikings",
+      "opponent": "Miami",
+      "id": 135,
+      "half": -10.5,
+      "big": -3.5,
+      "teaser": -6.5,
+      "circa": "-10.5 -110",
+      "opening": "-10.5",
+      "model": "MIN 25.5, MIA 12.5; MIN by 13.0",
+      "guide": "VSiN preseason MIN 23 / MIA 18.5. Fantasy Life explicitly has Kyler Murray in MIN; its Achane-centric Miami prior is obsolete after season-ending ACL injury. New Gordon-led committee is not equivalent.",
+      "cash": "Two paths: MIN defense allows 13.7 points/game and Miami scores 12; Big -3.5 only needs a four-point win against a depleted, low-volume offense.",
+      "counter": "MIN is last in offensive yards at 238.3/game; defensive scores and takeaways can regress. A tight low-possession game makes even -3.5 fragile.",
+      "personnel": "Achane season-ending ACL confirmed in current Fantasy Life report; Gordon 82% Week 3 snaps can split with Wright/Hunter. MIN Demmings DNP, hamstring; Murray/final offensive lineup check remains.",
+      "vsin": "Forecast MIN by 13; Tuley passes and Makinen system supports MIA +10.5. Do not count every VSiN item as confirmation.",
+      "docs": "Guy Bruhn MIA +11.5. A Dolphins eleven-point cover can coexist with MIN -3.5, but that is not a named MIN teaser selection.",
+      "bigscore": [
+        28,
+        16,
+        10,
+        8,
+        5,
+        1,
+        8
+      ],
+      "fs": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "key": "CLE",
+      "name": "Cleveland Browns",
+      "opponent": "Pittsburgh",
+      "id": 2,
+      "half": 2.5,
+      "big": 9.5,
+      "teaser": 6.5,
+      "circa": "+3 -120",
+      "opening": "+2.5",
+      "model": "PIT 18.2, CLE 19.1; CLE by 0.9",
+      "guide": "VSiN preseason CLE 20.5 / PIT 23. Fantasy Life run-game/Watson prior is modified for Jenkins absence and Warren's large Pittsburgh role. Current 2-1 CLE is not automatically stronger than PIT.",
+      "cash": "Two paths: VSiN forecast has CLE winning a low-total home rivalry; current capper support emphasizes defense and competitive divisional scores. Big +9.5 is better than Doc's +8.5; regular +6.5 only protects a six-point loss.",
+      "counter": "Cleveland's missing center/guard Jenkins weakens protection; Pittsburgh can pressure Watson and Warren's increased volume can control possession. Independent powers still favor PIT.",
+      "personnel": "Official team report: Elgton Jenkins OUT, concussion; PIT Dowdle OUT, toe; Ramsey wrist and Echols concussion questionable. Warren Week 3 snaps 91%, rush share 85%; Pittsburgh offense has a real personnel-supported countercase.",
+      "vsin": "Tuley CLE +3. Makinen has conflicting CLE trends. Forecast favors CLE, but straight pick is not an exact +6.5 teaser recommendation.",
+      "docs": "Jeremy Block final teaser pair CLE +8.5 and DEN +8.5. Big +9.5 improves it; regular +6.5 is two points worse and fails that advertised threshold. Ryan Cobbett's Sept 30 TNF report instead takes PIT -2.5 and Under 38.5 on the protection matchup; his questionable labels are superseded by today's official OUT designations.",
+      "bigscore": [
+        28,
+        16,
+        10,
+        8,
+        7,
+        6,
+        8
+      ],
+      "teaserscore": [
+        25,
+        14,
+        10,
+        8,
+        6,
+        2,
+        8
+      ],
+      "fs": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "key": "ARI",
+      "name": "Arizona Cardinals",
+      "opponent": "New York Giants",
+      "id": 104,
+      "half": -1.5,
+      "big": 8.5,
+      "teaser": 5.5,
+      "circa": "-2.5 -115",
+      "opening": "+2.5",
+      "model": "ARI 21.2, NYG 22.1; NYG by 0.9",
+      "guide": "VSiN preseason ARI 17.5 / NYG 22. Fantasy Life's Love committee prior has changed: 63% snaps, 78% carries and a 91 utilization score. Brissett-led offense has outperformed low preseason expectations; Giants QB instability is part of the countercase.",
+      "cash": "Two paths: improved Love rushing role and a competitive 36-30 SF defeat support an offensive response; Big +8.5 crosses three/seven and is larger than either current forecast's small margin.",
+      "counter": "Current independent powers still put NYG above ARI; Skattebo's 78% snaps/65% routes give Giants a credible ground-and-checkdown path. Love's health and goal-line rotation remain unresolved.",
+      "personnel": "Love carries a questionable flag on current player content; Froholdt and Nolen limited. NYG Andrew Thomas DNP, groin. Do not assume Dart or any preseason QB is Sunday's confirmed starter.",
+      "vsin": "Tuley passes; forecast NYG by 0.9 and mixed Makinen trends. No exact ARI +8.5 selection.",
+      "docs": "Josh Schonwald NYG -1.5 in older advance report; this direction conflicts with ARI, and favorite has since flipped. Jeremy Block passes the game.",
+      "bigscore": [
+        27,
+        16,
+        9,
+        7,
+        3,
+        1,
+        8
+      ],
+      "fs": [
+        1,
+        1,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "key": "CAR",
+      "name": "Carolina Panthers",
+      "opponent": "Detroit",
+      "id": 152,
+      "half": 3.5,
+      "big": 11.5,
+      "teaser": 8.5,
+      "circa": "+3.5 -102",
+      "opening": "+3.5",
+      "model": "CAR 27.9, DET 24.8; CAR by 3.1",
+      "guide": "VSiN preseason CAR 22 / DET 26. Current CAR passing 295.7 yards/game and DET 31.7 points/game allowed improve Carolina's competitive path, but Panthers run defense is extremely weak.",
+      "cash": "Two paths: CAR's passing attack can exploit DET's 299.3 passing yards/game conceded; +11.5 permits an eleven-point loss in a game the VSiN forecast gives CAR outright.",
+      "counter": "CAR allows 193.3 rushing yards/game. Gibbs and Detroit's 31 points/game can build a lead, particularly if Carolina's offensive-line injuries force punts.",
+      "personnel": "Monroe Freeling DNP, concussion; G Damien Lewis DNP, elbow. Current Jameson Williams 90% routes but 16% targets/0.4 YAC is a role-efficiency concern, not evidence he is out.",
+      "vsin": "Current forecast favors CAR by 3.1; one Makinen system fades DET. Tuley passes; no exact Big +11.5 endorsement.",
+      "docs": "Josh Schonwald and Spencer Toth select DET -3.5; both are opposing current opinions. Their Detroit rushing path is the strongest countercase.",
+      "bigscore": [
+        28,
+        16,
+        9,
+        7,
+        5,
+        1,
+        8
+      ],
+      "fs": [
+        1,
+        1,
+        1,
+        2,
+        0
+      ]
+    }
+  ],
+  "tickets": [
+    {
+      "key": "HP-A",
+      "name": "Half Point A - preferred 3-pick build",
+      "type": "half",
+      "legs": [
+        "LV",
+        "TEN",
+        "LAR"
+      ],
+      "pay": "11 to 2",
+      "profit": 5.5,
+      "notes": "Best of the two Half Point structures. All three stay on the same side as a named current Doc's selection. Sunday's final injury and guide/current-projection reconciliation still control official release.",
+      "fs": [
+        1,
+        1,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "key": "HP-B",
+      "name": "Half Point B - alternate 3-pick build",
+      "type": "half",
+      "legs": [
+        "WAS",
+        "JAX",
+        "LAC"
+      ],
+      "pay": "11 to 2",
+      "profit": 5.5,
+      "notes": "Lower confidence: LAC is only B- and has both a VSiN forecast and Doc's side against it; WAS +3.5 is worse than current Circa +4. Do not treat this as equal strength to A.",
+      "fs": [
+        0,
+        1,
+        0,
+        2,
+        0
+      ]
+    },
+    {
+      "key": "BT-A",
+      "name": "Big Teaser A - 10 picks",
+      "type": "big",
+      "legs": [
+        "DAL",
+        "JAX",
+        "DEN",
+        "ATL",
+        "LV",
+        "NE",
+        "LAR",
+        "GB",
+        "SEA",
+        "MIN"
+      ],
+      "pay": "13 to 2",
+      "profit": 6.5,
+      "notes": "DAL/JAX/DEN/ATL are at +9.5, exceeding Tuley's +8.5 teaser recommendations. GB is the weakest leg: quarterback uncertainty and poor current run offense. This ticket includes Monday and has no same-game pair.",
+      "fs": [
+        0,
+        1,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "BT-B",
+      "name": "Big Teaser B - 10 picks",
+      "type": "big",
+      "legs": [
+        "CLE",
+        "WAS",
+        "ARI",
+        "TEN",
+        "CAR",
+        "DAL",
+        "JAX",
+        "DEN",
+        "LV",
+        "NE"
+      ],
+      "pay": "13 to 2",
+      "profit": 6.5,
+      "notes": "Five shared legs with A, five distinct replacements. Includes Thursday CLE, so acceptance must precede 8:15 p.m. ET. ARI is the weakest leg, with Giants/Arizona source disagreement. No opposite sides of the same event across the two Big Teasers.",
+      "fs": [
+        0,
+        1,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "T-4",
+      "name": "Teaser - 4 picks",
+      "type": "teaser",
+      "legs": [
+        "CLE",
+        "WAS",
+        "NE",
+        "LV"
+      ],
+      "pay": "5 to 2",
+      "profit": 2.5,
+      "notes": "Four-leg build as requested. CLE +6.5 does not reach Doc's +8.5 standard-teaser recommendation; it is independently assessed and deliberately marked lower confidence. LV/WAS cross seven, NE crosses ten. No blanket claim this is a standard six-point Wong teaser.",
+      "fs": [
+        1,
+        1,
+        0,
+        2,
+        1
+      ]
+    }
+  ],
+  "sourceNotes": [
+    "Research completed October 1, 2026. The current VSiN Circa tracker exposed Full Game followed by 1st Half in one page; only its first, full-game table is used.",
+    "Dropbox NFL Week 4 PDF fetched and visually checked: uploaded Oct 1 at 12:37 p.m. ET, but printed update Sep 28, 8:38 a.m. It is a dated baseline, not today's executable Circa offer.",
+    "All 15 Sunday/Monday Doc's free matchup reports and Ryan Cobbett's Thursday report were read in full; authors and exact selections recorded. Jeremy Block teaser/movement and Spencer Toth opening reports were also read. Paid AI-v3 outputs were not exposed.",
+    "VSiN current game projections, Dave Tuley's Week 4 article and Steve Makinen's Week 4 systems/trends were read. Models, trends and individual capper opinions can conflict and remain one VSiN family.",
+    "Fantasy Life magazine NFL team snapshots were read, plus current Dwain McFarland Week 4 utilization and early Matthew Freedman ranking commentary. Full team-wide weekly projection grid was not exposed; no numerical delta is fabricated.",
+    "Fantasy Life's Bowers early-ranking article mislabels his opponent as Saints; actual card has KC. Its Week 3 utilization is usable; its listed Week 4 matchup boost is excluded.",
+    "Doc's teaser report has duplicated/opposing spread text and stale totals; exact final CLE +8.5/DEN +8.5 recommendations are verified but published totals are not substituted for current Circa.",
+    "Official NFL.com provider yielded 258 practice records dated Sep 30; fresh retrieval does not make them Oct 1 practice. Official CLE team page separately supplies final Thursday designations.",
+    "Current TeamRankings powers supply an independent matchup path. They are ratings, not Micks probabilities or exact fair spreads.",
+    "Public splits/handle were not reliably exposed. Market score is reference 5 + verified opening/current timing 3 + splits 0. Where opening matches current, that proves no observed spread move; it does not establish sharp money.",
+    "Progressive Fade/Favorite Inflation scans considered win/loss streaks, turnover-driven results, ATS direction and guide-current divergences. Partial game histories cannot certify every multi-game trigger; unverified triggers remain UNKNOWN.",
+    "Weekend kickoff weather, final starter/lineup status and full weekly projection deltas remain release blockers. No weather assumption receives a verified-clear label."
+  ],
+  "asOf": "October 1, 2026, 2:52 p.m. ET",
+  "updatedAt": "2026-10-01T14:52:00-04:00",
+  "market_assessments": [
+    {
+      "team": "LV",
+      "market": "half",
+      "selection_id": 144,
+      "line": 4.5,
+      "factor_scores": {
+        "Matchup /35": 28,
+        "Price /20": 15,
+        "Personnel /15": 11,
+        "Situation /10": 8,
+        "VSiN /10": 8,
+        "Doc's /10": 9,
+        "Market /10": 8
+      },
+      "score": 87,
+      "grade": "A-",
+      "failure_score": 6,
+      "failure_dimensions": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "status": "PROVISIONAL / WATCH",
+      "official_units": 0,
+      "best_number": 4.5,
+      "no_bet_cutoff": 4.5,
+      "cutoff_policy": "Do not accept a worse printed threshold on this ticket; changed number requires a new assessment."
+    },
+    {
+      "team": "TEN",
+      "market": "half",
+      "selection_id": 132,
+      "line": 11.5,
+      "factor_scores": {
+        "Matchup /35": 25,
+        "Price /20": 15,
+        "Personnel /15": 10,
+        "Situation /10": 7,
+        "VSiN /10": 8,
+        "Doc's /10": 8,
+        "Market /10": 8
+      },
+      "score": 81,
+      "grade": "B",
+      "failure_score": 6,
+      "failure_dimensions": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "status": "PROVISIONAL / WATCH",
+      "official_units": 0,
+      "best_number": 11.5,
+      "no_bet_cutoff": 11.5,
+      "cutoff_policy": "Do not accept a worse printed threshold on this ticket; changed number requires a new assessment."
+    },
+    {
+      "team": "LAR",
+      "market": "half",
+      "selection_id": 119,
+      "line": -2.5,
+      "factor_scores": {
+        "Matchup /35": 26,
+        "Price /20": 16,
+        "Personnel /15": 10,
+        "Situation /10": 7,
+        "VSiN /10": 6,
+        "Doc's /10": 8,
+        "Market /10": 8
+      },
+      "score": 81,
+      "grade": "B",
+      "failure_score": 6,
+      "failure_dimensions": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "status": "PROVISIONAL / WATCH",
+      "official_units": 0,
+      "best_number": -2.5,
+      "no_bet_cutoff": -2.5,
+      "cutoff_policy": "Do not accept a worse printed threshold on this ticket; changed number requires a new assessment."
+    },
+    {
+      "team": "WAS",
+      "market": "half",
+      "selection_id": 100,
+      "line": 3.5,
+      "factor_scores": {
+        "Matchup /35": 24,
+        "Price /20": 14,
+        "Personnel /15": 9,
+        "Situation /10": 6,
+        "VSiN /10": 4,
+        "Doc's /10": 9,
+        "Market /10": 8
+      },
+      "score": 74,
+      "grade": "B",
+      "failure_score": 6,
+      "failure_dimensions": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "status": "PROVISIONAL / WATCH",
+      "official_units": 0,
+      "best_number": 3.5,
+      "no_bet_cutoff": 3.5,
+      "cutoff_policy": "Do not accept a worse printed threshold on this ticket; changed number requires a new assessment."
+    },
+    {
+      "team": "JAX",
+      "market": "half",
+      "selection_id": 116,
+      "line": 2.5,
+      "factor_scores": {
+        "Matchup /35": 25,
+        "Price /20": 14,
+        "Personnel /15": 11,
+        "Situation /10": 7,
+        "VSiN /10": 5,
+        "Doc's /10": 8,
+        "Market /10": 8
+      },
+      "score": 78,
+      "grade": "B",
+      "failure_score": 6,
+      "failure_dimensions": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "status": "PROVISIONAL / WATCH",
+      "official_units": 0,
+      "best_number": 2.5,
+      "no_bet_cutoff": 2.5,
+      "cutoff_policy": "Do not accept a worse printed threshold on this ticket; changed number requires a new assessment."
+    },
+    {
+      "team": "LAC",
+      "market": "half",
+      "selection_id": 148,
+      "line": 7.5,
+      "factor_scores": {
+        "Matchup /35": 20,
+        "Price /20": 16,
+        "Personnel /15": 9,
+        "Situation /10": 6,
+        "VSiN /10": 6,
+        "Doc's /10": 1,
+        "Market /10": 8
+      },
+      "score": 66,
+      "grade": "B-",
+      "failure_score": 4,
+      "failure_dimensions": [
+        0,
+        1,
+        1,
+        2,
+        0
+      ],
+      "status": "PROVISIONAL / WATCH",
+      "official_units": 0,
+      "best_number": 7.5,
+      "no_bet_cutoff": 7.5,
+      "cutoff_policy": "Do not accept a worse printed threshold on this ticket; changed number requires a new assessment."
+    },
+    {
+      "team": "DAL",
+      "market": "big",
+      "selection_id": 108,
+      "line": 9.5,
+      "factor_scores": {
+        "Matchup /35": 29,
+        "Price /20": 16,
+        "Personnel /15": 10,
+        "Situation /10": 8,
+        "VSiN /10": 7,
+        "Doc's /10": 3,
+        "Market /10": 8
+      },
+      "score": 81,
+      "grade": "B",
+      "failure_score": 6,
+      "failure_dimensions": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "status": "PROVISIONAL / WATCH",
+      "official_units": 0,
+      "best_number": 9.5,
+      "no_bet_cutoff": 9.5,
+      "cutoff_policy": "Do not accept a worse printed threshold on this ticket; changed number requires a new assessment."
+    },
+    {
+      "team": "JAX",
+      "market": "big",
+      "selection_id": 116,
+      "line": 9.5,
+      "factor_scores": {
+        "Matchup /35": 29,
+        "Price /20": 16,
+        "Personnel /15": 11,
+        "Situation /10": 7,
+        "VSiN /10": 7,
+        "Doc's /10": 2,
+        "Market /10": 8
+      },
+      "score": 80,
+      "grade": "B",
+      "failure_score": 6,
+      "failure_dimensions": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "status": "PROVISIONAL / WATCH",
+      "official_units": 0,
+      "best_number": 9.5,
+      "no_bet_cutoff": 9.5,
+      "cutoff_policy": "Do not accept a worse printed threshold on this ticket; changed number requires a new assessment."
+    },
+    {
+      "team": "DEN",
+      "market": "big",
+      "selection_id": 140,
+      "line": 9.5,
+      "factor_scores": {
+        "Matchup /35": 30,
+        "Price /20": 16,
+        "Personnel /15": 10,
+        "Situation /10": 7,
+        "VSiN /10": 8,
+        "Doc's /10": 7,
+        "Market /10": 8
+      },
+      "score": 86,
+      "grade": "A-",
+      "failure_score": 6,
+      "failure_dimensions": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "status": "PROVISIONAL / WATCH",
+      "official_units": 0,
+      "best_number": 9.5,
+      "no_bet_cutoff": 9.5,
+      "cutoff_policy": "Do not accept a worse printed threshold on this ticket; changed number requires a new assessment."
+    },
+    {
+      "team": "ATL",
+      "market": "big",
+      "selection_id": 156,
+      "line": 9.5,
+      "factor_scores": {
+        "Matchup /35": 27,
+        "Price /20": 16,
+        "Personnel /15": 10,
+        "Situation /10": 8,
+        "VSiN /10": 7,
+        "Doc's /10": 3,
+        "Market /10": 8
+      },
+      "score": 79,
+      "grade": "B",
+      "failure_score": 6,
+      "failure_dimensions": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "status": "PROVISIONAL / WATCH",
+      "official_units": 0,
+      "best_number": 9.5,
+      "no_bet_cutoff": 9.5,
+      "cutoff_policy": "Do not accept a worse printed threshold on this ticket; changed number requires a new assessment."
+    },
+    {
+      "team": "LV",
+      "market": "big",
+      "selection_id": 144,
+      "line": 12.5,
+      "factor_scores": {
+        "Matchup /35": 30,
+        "Price /20": 17,
+        "Personnel /15": 11,
+        "Situation /10": 8,
+        "VSiN /10": 6,
+        "Doc's /10": 5,
+        "Market /10": 8
+      },
+      "score": 85,
+      "grade": "B+",
+      "failure_score": 6,
+      "failure_dimensions": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "status": "PROVISIONAL / WATCH",
+      "official_units": 0,
+      "best_number": 12.5,
+      "no_bet_cutoff": 12.5,
+      "cutoff_policy": "Do not accept a worse printed threshold on this ticket; changed number requires a new assessment."
+    },
+    {
+      "team": "NE",
+      "market": "big",
+      "selection_id": 124,
+      "line": 14.5,
+      "factor_scores": {
+        "Matchup /35": 28,
+        "Price /20": 16,
+        "Personnel /15": 9,
+        "Situation /10": 7,
+        "VSiN /10": 5,
+        "Doc's /10": 5,
+        "Market /10": 8
+      },
+      "score": 78,
+      "grade": "B",
+      "failure_score": 5,
+      "failure_dimensions": [
+        1,
+        1,
+        0,
+        2,
+        1
+      ],
+      "status": "PROVISIONAL / WATCH",
+      "official_units": 0,
+      "best_number": 14.5,
+      "no_bet_cutoff": 14.5,
+      "cutoff_policy": "Do not accept a worse printed threshold on this ticket; changed number requires a new assessment."
+    },
+    {
+      "team": "LAR",
+      "market": "big",
+      "selection_id": 119,
+      "line": 5.5,
+      "factor_scores": {
+        "Matchup /35": 29,
+        "Price /20": 16,
+        "Personnel /15": 10,
+        "Situation /10": 7,
+        "VSiN /10": 4,
+        "Doc's /10": 4,
+        "Market /10": 8
+      },
+      "score": 78,
+      "grade": "B",
+      "failure_score": 6,
+      "failure_dimensions": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "status": "PROVISIONAL / WATCH",
+      "official_units": 0,
+      "best_number": 5.5,
+      "no_bet_cutoff": 5.5,
+      "cutoff_policy": "Do not accept a worse printed threshold on this ticket; changed number requires a new assessment."
+    },
+    {
+      "team": "GB",
+      "market": "big",
+      "selection_id": 111,
+      "line": 4.5,
+      "factor_scores": {
+        "Matchup /35": 27,
+        "Price /20": 16,
+        "Personnel /15": 8,
+        "Situation /10": 7,
+        "VSiN /10": 4,
+        "Doc's /10": 1,
+        "Market /10": 8
+      },
+      "score": 71,
+      "grade": "B-",
+      "failure_score": 4,
+      "failure_dimensions": [
+        1,
+        0,
+        1,
+        2,
+        0
+      ],
+      "status": "PROVISIONAL / WATCH",
+      "official_units": 0,
+      "best_number": 4.5,
+      "no_bet_cutoff": 4.5,
+      "cutoff_policy": "Do not accept a worse printed threshold on this ticket; changed number requires a new assessment."
+    },
+    {
+      "team": "SEA",
+      "market": "big",
+      "selection_id": 147,
+      "line": 1.5,
+      "factor_scores": {
+        "Matchup /35": 29,
+        "Price /20": 16,
+        "Personnel /15": 9,
+        "Situation /10": 8,
+        "VSiN /10": 4,
+        "Doc's /10": 5,
+        "Market /10": 8
+      },
+      "score": 79,
+      "grade": "B",
+      "failure_score": 6,
+      "failure_dimensions": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "status": "PROVISIONAL / WATCH",
+      "official_units": 0,
+      "best_number": 1.5,
+      "no_bet_cutoff": 1.5,
+      "cutoff_policy": "Do not accept a worse printed threshold on this ticket; changed number requires a new assessment."
+    },
+    {
+      "team": "MIN",
+      "market": "big",
+      "selection_id": 135,
+      "line": -3.5,
+      "factor_scores": {
+        "Matchup /35": 28,
+        "Price /20": 16,
+        "Personnel /15": 10,
+        "Situation /10": 8,
+        "VSiN /10": 5,
+        "Doc's /10": 1,
+        "Market /10": 8
+      },
+      "score": 76,
+      "grade": "B",
+      "failure_score": 6,
+      "failure_dimensions": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "status": "PROVISIONAL / WATCH",
+      "official_units": 0,
+      "best_number": -3.5,
+      "no_bet_cutoff": -3.5,
+      "cutoff_policy": "Do not accept a worse printed threshold on this ticket; changed number requires a new assessment."
+    },
+    {
+      "team": "CLE",
+      "market": "big",
+      "selection_id": 2,
+      "line": 9.5,
+      "factor_scores": {
+        "Matchup /35": 28,
+        "Price /20": 16,
+        "Personnel /15": 10,
+        "Situation /10": 8,
+        "VSiN /10": 7,
+        "Doc's /10": 6,
+        "Market /10": 8
+      },
+      "score": 83,
+      "grade": "B+",
+      "failure_score": 6,
+      "failure_dimensions": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "status": "PROVISIONAL / WATCH",
+      "official_units": 0,
+      "best_number": 9.5,
+      "no_bet_cutoff": 9.5,
+      "cutoff_policy": "Do not accept a worse printed threshold on this ticket; changed number requires a new assessment."
+    },
+    {
+      "team": "WAS",
+      "market": "big",
+      "selection_id": 100,
+      "line": 11.5,
+      "factor_scores": {
+        "Matchup /35": 29,
+        "Price /20": 16,
+        "Personnel /15": 9,
+        "Situation /10": 7,
+        "VSiN /10": 4,
+        "Doc's /10": 6,
+        "Market /10": 8
+      },
+      "score": 79,
+      "grade": "B",
+      "failure_score": 6,
+      "failure_dimensions": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "status": "PROVISIONAL / WATCH",
+      "official_units": 0,
+      "best_number": 11.5,
+      "no_bet_cutoff": 11.5,
+      "cutoff_policy": "Do not accept a worse printed threshold on this ticket; changed number requires a new assessment."
+    },
+    {
+      "team": "ARI",
+      "market": "big",
+      "selection_id": 104,
+      "line": 8.5,
+      "factor_scores": {
+        "Matchup /35": 27,
+        "Price /20": 16,
+        "Personnel /15": 9,
+        "Situation /10": 7,
+        "VSiN /10": 3,
+        "Doc's /10": 1,
+        "Market /10": 8
+      },
+      "score": 71,
+      "grade": "B-",
+      "failure_score": 5,
+      "failure_dimensions": [
+        1,
+        1,
+        1,
+        2,
+        0
+      ],
+      "status": "PROVISIONAL / WATCH",
+      "official_units": 0,
+      "best_number": 8.5,
+      "no_bet_cutoff": 8.5,
+      "cutoff_policy": "Do not accept a worse printed threshold on this ticket; changed number requires a new assessment."
+    },
+    {
+      "team": "TEN",
+      "market": "big",
+      "selection_id": 132,
+      "line": 19.5,
+      "factor_scores": {
+        "Matchup /35": 31,
+        "Price /20": 17,
+        "Personnel /15": 10,
+        "Situation /10": 7,
+        "VSiN /10": 6,
+        "Doc's /10": 6,
+        "Market /10": 8
+      },
+      "score": 85,
+      "grade": "B+",
+      "failure_score": 6,
+      "failure_dimensions": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "status": "PROVISIONAL / WATCH",
+      "official_units": 0,
+      "best_number": 19.5,
+      "no_bet_cutoff": 19.5,
+      "cutoff_policy": "Do not accept a worse printed threshold on this ticket; changed number requires a new assessment."
+    },
+    {
+      "team": "CAR",
+      "market": "big",
+      "selection_id": 152,
+      "line": 11.5,
+      "factor_scores": {
+        "Matchup /35": 28,
+        "Price /20": 16,
+        "Personnel /15": 9,
+        "Situation /10": 7,
+        "VSiN /10": 5,
+        "Doc's /10": 1,
+        "Market /10": 8
+      },
+      "score": 74,
+      "grade": "B",
+      "failure_score": 5,
+      "failure_dimensions": [
+        1,
+        1,
+        1,
+        2,
+        0
+      ],
+      "status": "PROVISIONAL / WATCH",
+      "official_units": 0,
+      "best_number": 11.5,
+      "no_bet_cutoff": 11.5,
+      "cutoff_policy": "Do not accept a worse printed threshold on this ticket; changed number requires a new assessment."
+    },
+    {
+      "team": "CLE",
+      "market": "teaser",
+      "selection_id": 2,
+      "line": 6.5,
+      "factor_scores": {
+        "Matchup /35": 25,
+        "Price /20": 14,
+        "Personnel /15": 10,
+        "Situation /10": 8,
+        "VSiN /10": 6,
+        "Doc's /10": 2,
+        "Market /10": 8
+      },
+      "score": 73,
+      "grade": "B-",
+      "failure_score": 6,
+      "failure_dimensions": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "status": "PROVISIONAL / WATCH",
+      "official_units": 0,
+      "best_number": 6.5,
+      "no_bet_cutoff": 6.5,
+      "cutoff_policy": "Do not accept a worse printed threshold on this ticket; changed number requires a new assessment."
+    },
+    {
+      "team": "WAS",
+      "market": "teaser",
+      "selection_id": 100,
+      "line": 8.5,
+      "factor_scores": {
+        "Matchup /35": 27,
+        "Price /20": 16,
+        "Personnel /15": 9,
+        "Situation /10": 7,
+        "VSiN /10": 4,
+        "Doc's /10": 6,
+        "Market /10": 8
+      },
+      "score": 77,
+      "grade": "B",
+      "failure_score": 6,
+      "failure_dimensions": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "status": "PROVISIONAL / WATCH",
+      "official_units": 0,
+      "best_number": 8.5,
+      "no_bet_cutoff": 8.5,
+      "cutoff_policy": "Do not accept a worse printed threshold on this ticket; changed number requires a new assessment."
+    },
+    {
+      "team": "NE",
+      "market": "teaser",
+      "selection_id": 124,
+      "line": 12.5,
+      "factor_scores": {
+        "Matchup /35": 27,
+        "Price /20": 16,
+        "Personnel /15": 9,
+        "Situation /10": 7,
+        "VSiN /10": 5,
+        "Doc's /10": 5,
+        "Market /10": 8
+      },
+      "score": 77,
+      "grade": "B",
+      "failure_score": 5,
+      "failure_dimensions": [
+        1,
+        1,
+        0,
+        2,
+        1
+      ],
+      "status": "PROVISIONAL / WATCH",
+      "official_units": 0,
+      "best_number": 12.5,
+      "no_bet_cutoff": 12.5,
+      "cutoff_policy": "Do not accept a worse printed threshold on this ticket; changed number requires a new assessment."
+    },
+    {
+      "team": "LV",
+      "market": "teaser",
+      "selection_id": 144,
+      "line": 9.5,
+      "factor_scores": {
+        "Matchup /35": 29,
+        "Price /20": 16,
+        "Personnel /15": 11,
+        "Situation /10": 8,
+        "VSiN /10": 6,
+        "Doc's /10": 5,
+        "Market /10": 8
+      },
+      "score": 83,
+      "grade": "B+",
+      "failure_score": 6,
+      "failure_dimensions": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "status": "PROVISIONAL / WATCH",
+      "official_units": 0,
+      "best_number": 9.5,
+      "no_bet_cutoff": 9.5,
+      "cutoff_policy": "Do not accept a worse printed threshold on this ticket; changed number requires a new assessment."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Delaware Half Point card",
+      "url": "https://delotterywebcontent.blob.core.windows.net/delottery-site-assets/assets/sports/1549c27b-e651-4958-913e-2dd4f374fbd7_Delaware%20-%20Half%20Pt%2010.1.2026.pdf"
+    },
+    {
+      "label": "Delaware Big Teaser card",
+      "url": "https://delotterywebcontent.blob.core.windows.net/delottery-site-assets/assets/sports/fc620de5-1f17-41d8-8a89-b5f17efd434e_Delaware%20-%20Big%20Teaser%2010.1.2026.pdf"
+    },
+    {
+      "label": "Delaware Teaser card",
+      "url": "https://delotterywebcontent.blob.core.windows.net/delottery-site-assets/assets/sports/7607f165-15e1-41e7-a960-a7f7346765b0_Delaware%20-%20Teaser%2010.1.2026.pdf"
+    },
+    {
+      "label": "Current Circa full-game board via VSiN",
+      "url": "https://data.vsin.com/vegas-odds-linetracker/?sportid=nfl"
+    },
+    {
+      "label": "VSiN current game forecasts",
+      "url": "https://data.vsin.com/nfl/games/"
+    },
+    {
+      "label": "Dave Tuley NFL Week 4",
+      "url": "https://vsin.com/nfl/tuleys-takes-nfl-for-week-4/"
+    },
+    {
+      "label": "Steve Makinen Week 4 systems and trends",
+      "url": "https://vsin.com/nfl/nfl-top-plays-based-on-betting-splits-power-ratings-and-trends-for-week-4/"
+    },
+    {
+      "label": "Doc's full matchup reports and named picks",
+      "url": "https://www.docsports.com/free-picks/nfl/"
+    },
+    {
+      "label": "Jeremy Block teaser report, Sept 30",
+      "url": "https://www.docsports.com/2026/best-nfl-teaser-bets-week-4-basic-strategy-teasers-advice.html"
+    },
+    {
+      "label": "Spencer Toth opening report, Sept 29",
+      "url": "https://www.docsports.com/2026/nfl-betting-predictions-week-4-opening-line-report-best-bets.html"
+    },
+    {
+      "label": "Jeremy Block movement report, Sept 30",
+      "url": "https://www.docsports.com/2026/nfl-week-4-line-movements-point-spread-analysis.html"
+    },
+    {
+      "label": "Ryan Cobbett TNF report, Sept 30",
+      "url": "https://www.docsports.com/2026/thursday-night-football-picks-pittsburgh-steelers-cleveland-browns-best-bets.html"
+    },
+    {
+      "label": "Dwain McFarland current utilization report",
+      "url": "https://www.fantasylife.com/articles/fantasy/fantasy-football-takeaways-jeremiyah-love-utilization-report"
+    },
+    {
+      "label": "Matthew Freedman early Week 4 ranking commentary",
+      "url": "https://www.fantasylife.com/articles/fantasy/week-4-fantasy-football-rankings-early-look-brock-bowers-returns"
+    },
+    {
+      "label": "Official CLE/PIT injury designations",
+      "url": "https://www.clevelandbrowns.com/team/injury-report/"
+    },
+    {
+      "label": "Independent current powers",
+      "url": "https://www.teamrankings.com/nfl/"
+    },
+    {
+      "label": "Dropbox NFL Week 4 sheet - printed Sep 28",
+      "url": "https://www.dropbox.com/preview/Circa%20Sports%20sheets/NFL%20Week%204%20-%202026.pdf"
+    }
+  ]
+}
