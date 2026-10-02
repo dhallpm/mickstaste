@@ -1,0 +1,603 @@
+{
+  "date": "2026-10-01",
+  "recorded_at": "2026-10-01T20:59:00-04:00",
+  "timezone": "America/New_York",
+  "scope": "CHI@UTA only; official9:30pmET. Started8pm games not rescored.",
+  "scoring_version": "micks-110-v2-2026-09-29",
+  "official_units": 0,
+  "status": "CHECK COMPLETED / NO OFFICIAL BET",
+  "candidates": [
+    {
+      "sport": "NHL",
+      "event": "Chicago Blackhawks at Utah Mammoth",
+      "start_et": "2026-10-01T21:30:00-04:00",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "score_status": "PROVISIONAL",
+      "official_units": 0,
+      "decision": "NO BET / WATCH",
+      "operating_mode": "Non-NFL Recovery Mode+: 82/110 and Failure7/10 plus goalie/price gates",
+      "id": "utah-ml",
+      "pick": "Utah moneyline including OT/shootout",
+      "quote": {
+        "source": "Circa via VSiN current first book column",
+        "american_odds": -210,
+        "observed_et": "2026-10-01T20:48:00-04:00",
+        "source_update_time": "Not exposed separately",
+        "executable_delaware": false
+      },
+      "best_number": "Prefer -190 or better",
+      "no_bet_cutoff": "No worse than -200; conditional review only, not an automatic release",
+      "factors": {
+        "matchup": {
+          "score": 26,
+          "max": 35,
+          "evidence": "Independent paths: Utah's forward depth and puck-possession structure can control five-on-five against Chicago's depleted top six; Utah's stronger prior scoring/defensive rates and offensive-zone pressure can create enough chances without requiring a two-goal win. NHL prior GF/GA: Utah3.27/2.93 versus CHI2.56/3.29, contextual not today's forecast. EH Sept28 reports Utah fourth in EV CF% last season. CHI opening-game NST5v5 xGF2.11/xGA2.89,42.21% share, shot share41.51%; single-game observation, strongly regressed. Counter: Knight saves and strong CHI penalty kill keep it close, Kane/Teravainen/rookie skill can score, Utah new-line chemistry/opening-game rust. No invented Micks win probability."
+        },
+        "price": {
+          "score": 9,
+          "max": 20,
+          "evidence": "Circa-210 is more expensive than retained review ceiling-200 and Doc's Sept30-192. MoneyPuck Utah66.6% versus raw -210 break-even67.74% gives no outside-model cushion; VSiN estimated-216 offers only a narrow comparison. Those external models are not Micks' own price. Qualitative depth advantage is substantially priced. Exact DE quote absent; no availability penalty spread across all factors."
+        },
+        "personnel": {
+          "score": 11,
+          "max": 15,
+          "evidence": "League projects Knight/Vejmelka and current skater groups; Bedard shoulder and Mangiapane lower-body OUT, Teravainen returns, Utah Lamoureux shoulder long-term. Utah top two lines intact in projections. DFF Knight unconfirmed, Vejmelka likely(first off ice); MoneyPuck calls same Bagley report confirmed, not independent primary proof. Final dressed lists not exposed. Impact is meaningfully assessable conditionally; goalie gate remains open."
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Utah home opener and no road leg; Chicago traveled Vegas-to-SaltLake after Tuesday loss with a rest day, not a back-to-back. Utah first-game rust/new combinations counter home energy. Indoor hockey, no outdoor-weather adjustment. No unsupported altitude bonus."
+        },
+        "vsin": {
+          "score": 8,
+          "max": 10,
+          "evidence": "Jonathan Davis Oct1 14:00ET favors Utah regulation-140,1.5u, pointing to Bedard absence and Chicago opening loss while acknowledging season-series sweep. Different settlement earns direction support, not full ML exact-market confirmation. Current VSiN Utah4.2–CHI2.0,estimatedML-216 supports favorite but not independent probability."
+        },
+        "docs": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Josh Schonwald Sept30 UtahML-192 is verified same-market support with prior offensive/defensive gap. Current-210 is worse, so reconcile price erosion. Official stats override ambiguous stale paragraphs and rounded goalie-history fields. AI-v3 actual selection not exposed; no second penalty."
+        },
+        "market": {
+          "score": 5,
+          "max": 10,
+          "evidence": "Reference4/5: current Circa row and corroborating DK-218/+180 at20:52 via MoneyPuck; no DE execution. Movement1/3: CircaCHIopen+195→+187; favorite opening ML not exposed in this row, do not invent it. Separate DK chronology Saturday23:04-198/+164→Thursday20:52-218/+180 establishes strengthening favorite, with exact injury-news causation unverified. Splits0/2: game paywalled, no sharp claim."
+        }
+      },
+      "failure_dimensions": [
+        {
+          "dimension": "strongest_failure_path",
+          "score": 1,
+          "max": 2,
+          "evidence": "Knight and Chicago's penalty kill can neutralize a structurally superior home offense."
+        },
+        {
+          "dimension": "personnel_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Utah projected core intact but goalie/start and dressed roster not final."
+        },
+        {
+          "dimension": "variance_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "ML survives a one-goal/OT win, but early-season volatility remains."
+        },
+        {
+          "dimension": "price_protection",
+          "score": 0,
+          "max": 2,
+          "evidence": "-210 outside-200 ceiling, no current DE quote."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": 1,
+          "max": 2,
+          "evidence": "Depth injuries temper Chicago4-0H2H prior, but goalie/special-teams counters and close outside-price comparisons remain."
+        }
+      ],
+      "missing_evidence": [
+        "Primary final goalie confirmation for both teams",
+        "Final dressed skater roster and scratches",
+        "Exact current BetRivers Delaware ML",
+        "Current-season Utah5v5/PP/PK meaningful sample (no regular-season game yet)",
+        "Candidate Circa/DK ticket/handle splits",
+        "Verified comparable5/10/20 closing-price cover sample"
+      ],
+      "release_blockers": [
+        "73/110 below82 non-NFL threshold",
+        "Failure4/10 below7",
+        "Circa-210 exceeds-200 review ceiling",
+        "Confirmed-goalie and exact execution-price gates remain open"
+      ],
+      "handicap_score": 73,
+      "failure_score": 4,
+      "grade": "B-",
+      "assessed_maximum": 110
+    },
+    {
+      "sport": "NHL",
+      "event": "Chicago Blackhawks at Utah Mammoth",
+      "start_et": "2026-10-01T21:30:00-04:00",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "score_status": "PROVISIONAL",
+      "official_units": 0,
+      "decision": "NO BET / WATCH",
+      "operating_mode": "Non-NFL Recovery Mode+: 82/110 and Failure7/10 plus goalie/price gates",
+      "id": "utah-regulation",
+      "pick": "Utah to win in regulation (60-minute result)",
+      "quote": {
+        "source": "Jonathan Davis VSiN Oct1 14:00ET article",
+        "american_odds": -140,
+        "historical": true,
+        "executable_delaware": false
+      },
+      "best_number": "Prefer -125 or better",
+      "no_bet_cutoff": "No worse than -135 for review; reject worse price and verify60-minute settlement",
+      "factors": {
+        "matchup": {
+          "score": 25,
+          "max": 35,
+          "evidence": "Same independent Utah depth/possession and shot-pressure paths, but must lead after60minutes. Chicago's strong penalty kill, Knight matchup history and Utah opener rust increase regulation-draw risk. Removing OT protection is not free value."
+        },
+        "price": {
+          "score": 12,
+          "max": 20,
+          "evidence": "Identified article-140 is historical and worse than proposed-135 review ceiling. Lower stake cost versus ML also purchases narrower outcome coverage. No current Circa/DE60-minute quote, no exact-current executable comparison."
+        },
+        "personnel": {
+          "score": 11,
+          "max": 15,
+          "evidence": "Same meaningful conditional roster-impact assessment; Knight unconfirmed and Vejmelka first-off/likely only, no certified final skaters."
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Home opener and rest-day road opponent context; rust and early emotion oppose a clean60-minute outcome."
+        },
+        "vsin": {
+          "score": 8,
+          "max": 10,
+          "evidence": "Jonathan Davis exact regulation-140,1.5u Oct1 supports market. Confirmed author/time; official9:30start overrides article9pm."
+        },
+        "docs": {
+          "score": 2,
+          "max": 10,
+          "evidence": "Schonwald UtahML-192 supports direction only; OT/shootout-inclusive ML is not a regulation selection."
+        },
+        "market": {
+          "score": 3,
+          "max": 10,
+          "evidence": "Reference3/5 for identifiable historical exact60-minute quote; exact regulation movement0/3 UNKNOWN and splits0/2 UNKNOWN. ML history is disclosed for context but is not regulation movement."
+        }
+      },
+      "failure_dimensions": [
+        {
+          "dimension": "strongest_failure_path",
+          "score": 1,
+          "max": 2,
+          "evidence": "Low-scoring draw defeats regulation despite eventual Utah win."
+        },
+        {
+          "dimension": "personnel_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Projected roster supportive but goalies/final roster open."
+        },
+        {
+          "dimension": "variance_resilience",
+          "score": 0,
+          "max": 2,
+          "evidence": "A tying goal or goalie duel loses60-minute leg; no OT rescue."
+        },
+        {
+          "dimension": "price_protection",
+          "score": 0,
+          "max": 2,
+          "evidence": "Historical-140 outside-135 ceiling, execution unknown."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": 1,
+          "max": 2,
+          "evidence": "Directional source support does not resolve Chicago goalie/H2H/draw case."
+        }
+      ],
+      "missing_evidence": [
+        "Both starting goalie confirmations",
+        "Final skaters/scratches",
+        "Live exact60-minute Circa and BetRivers Delaware quote",
+        "Regulation-specific movement/splits"
+      ],
+      "release_blockers": [
+        "68/110 below82",
+        "Failure3/10 below7",
+        "Article-140 worse than-135 review ceiling",
+        "Mandatory goalie and live-price confirmation absent"
+      ],
+      "handicap_score": 68,
+      "failure_score": 3,
+      "grade": "B-",
+      "assessed_maximum": 110
+    }
+  ],
+  "prior_snapshots": [
+    {
+      "id": "chiuta",
+      "sport": "NHL",
+      "pick": "Chicago–Utah",
+      "start_et": "2026-10-01T21:30:00-04:00",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "score_status": "UNGRADED",
+      "handicap_score": null,
+      "grade": null,
+      "factors": {
+        "matchup": {
+          "score": null,
+          "max": 35,
+          "evidence": "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score."
+        },
+        "price": {
+          "score": 10,
+          "max": 20,
+          "evidence": "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score."
+        },
+        "personnel": {
+          "score": null,
+          "max": 15,
+          "evidence": "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score."
+        },
+        "situation": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score."
+        },
+        "vsin": {
+          "score": 3,
+          "max": 10,
+          "evidence": "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score."
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score."
+        },
+        "market": {
+          "score": 5,
+          "max": 10,
+          "evidence": "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score."
+        }
+      },
+      "known_subtotal": 24,
+      "assessed_maximum": 60,
+      "failure_score": null,
+      "failure_dimensions": [
+        {
+          "dimension": "strongest_failure_path",
+          "score": null,
+          "max": 2,
+          "evidence": "Core handicap incomplete; no resilience award inferred."
+        },
+        {
+          "dimension": "personnel_resilience",
+          "score": null,
+          "max": 2,
+          "evidence": "Core handicap incomplete; no resilience award inferred."
+        },
+        {
+          "dimension": "variance_resilience",
+          "score": null,
+          "max": 2,
+          "evidence": "Core handicap incomplete; no resilience award inferred."
+        },
+        {
+          "dimension": "price_protection",
+          "score": null,
+          "max": 2,
+          "evidence": "Core handicap incomplete; no resilience award inferred."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": null,
+          "max": 2,
+          "evidence": "Core handicap incomplete; no resilience award inferred."
+        }
+      ],
+      "missing_evidence": [
+        "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score.",
+        "exact executable DE quote"
+      ],
+      "release_blockers": [
+        "Incomplete core assessment",
+        "Mandatory sport gates",
+        "No official grade"
+      ],
+      "official_units": 0,
+      "decision": "NO BET — UNGRADED"
+    }
+  ],
+  "personnel": {
+    "primary_final_goalies_confirmed": false,
+    "chicago_goalie": {
+      "name": "Spencer Knight",
+      "status": "Unconfirmed on DFF; NHL projected",
+      "alternative": "Arvid Soderblom"
+    },
+    "utah_goalie": {
+      "name": "Karel Vejmelka",
+      "status": "Likely(first off morning ice)DFF; sameBagley report markedconfirmedbyMoneyPuck; no new primary final confirmation",
+      "alternative": "Sebastian Cossa"
+    },
+    "skater_roster_status": "NHL projected; no certified final dressed roster",
+    "injuries": {
+      "chicago": [
+        "Connor Bedard shoulder",
+        "Andrew Mangiapane lowerbody; at least2games"
+      ],
+      "utah": [
+        "Maveric Lamoureux shoulder;4–6months"
+      ]
+    },
+    "changes": [
+      "Teuvo Teravainen returns after healthy scratchTuesday"
+    ],
+    "projected_scratches": {
+      "chicago": [
+        "Ethan Del Mastro",
+        "Kevin Korchinski"
+      ],
+      "utah": [
+        "Nick DeSimone",
+        "Liam O'Brien",
+        "Kailer Yamamoto"
+      ]
+    },
+    "projected_lines": {
+      "chicago": [
+        "Bertuzzi–Frondell–Kane",
+        "Teravainen–Kantserov–Lardis",
+        "Donato–Nazar–Moore",
+        "Smith–Greene–Greenway"
+      ],
+      "utah": [
+        "Keller–Schmaltz–Trocheck",
+        "Lee–Cooley–Guenther",
+        "Crouse–Hayton–McBain",
+        "But–Stenlund–Carcone"
+      ],
+      "chicago_pairs": [
+        "Vlasic–Byram",
+        "Kaiser–Levshunov",
+        "Cole–Rinzel"
+      ],
+      "utah_pairs": [
+        "Sergachev–Weegar",
+        "Schmidt–Marino",
+        "Peeke–Simashev"
+      ]
+    }
+  },
+  "primary_prior_stats": {
+    "period": "2025-26, season priors only; current personnel overrides",
+    "chicago": {
+      "gf_per_game": 2.56,
+      "ga_per_game": 3.29,
+      "pp_pct": 16.9,
+      "pk_pct": 83.6,
+      "knight_sv_pct": 90.2
+    },
+    "utah": {
+      "gf_per_game": 3.27,
+      "ga_per_game": 2.93,
+      "pp_pct": 20,
+      "pk_pct": 78.1,
+      "vejmelka_sv_pct": 89.7
+    },
+    "warning": "Official gamecenter controls priors; sources round Vejmelka differently. No fabricated current Utah sample."
+  },
+  "markets": {
+    "circa": {
+      "observed_et": "2026-10-01T20:48:00-04:00",
+      "chicago_ml": 187,
+      "utah_ml": -210,
+      "chicago_puck": "+1.5-140",
+      "utah_puck": "-1.5+120",
+      "total": 6,
+      "over": -120,
+      "under": 100,
+      "opening_chicago_ml": 195,
+      "opening_chicago_puck": "+1.5-140",
+      "opening_total": 6,
+      "opening_utah_ml": null
+    },
+    "dk_independent_history": {
+      "source": "MoneyPuck matchup",
+      "opening": {
+        "day": "Saturday",
+        "time_et": "23:04",
+        "utah": -198,
+        "chicago": 164
+      },
+      "current": {
+        "day": "Thursday",
+        "time_et": "20:52",
+        "utah": -218,
+        "chicago": 180
+      }
+    },
+    "execution_de": null,
+    "splits": null
+  },
+  "source_audit": [
+    {
+      "name": "NHL projected lineup",
+      "url": "https://www.nhl.com/news/chicago-blackhawks-utah-mammoth-game-preview-october-1-2026",
+      "status": "Oct1 14:04ET; projected, not dressed"
+    },
+    {
+      "name": "Official Utah preview",
+      "url": "https://www.nhl.com/utah/news/utah-opens-2026-27-season-against-chicago-game-preview-10-1-26",
+      "status": "Oct1 10:45ET; primary season/special-teams context"
+    },
+    {
+      "name": "Official Chicago preview",
+      "url": "https://www.nhl.com/blackhawks/news/preview-blackhawks-continue-season-opening-road-trip-against-mammoth",
+      "status": "Oct1 10:00ET; matchup history"
+    },
+    {
+      "name": "Official Chicago opening recap",
+      "url": "https://www.nhl.com/blackhawks/news/recap-blackhawks-fall-to-golden-knights-in-season-opener",
+      "status": "Sept30; Sept29game; primary role and shots"
+    },
+    {
+      "name": "NHL gamecenter",
+      "url": "https://www.nhl.com/gamecenter/chi-vs-uta/2026/10/01/2026020013",
+      "status": "Current preview; team/player tables explicitly2025-26, not final dressed roster"
+    },
+    {
+      "name": "DFF goalies",
+      "url": "https://www.dailyfaceoff.com/starting-goalies",
+      "status": "Knight unconfirmed; Vejmelka likely Oct1 12:56"
+    },
+    {
+      "name": "DFF Chicago lines",
+      "url": "https://www.dailyfaceoff.com/teams/chicago-blackhawks/line-combinations",
+      "status": "UpdatedSept30 15:39; supporting only"
+    },
+    {
+      "name": "DFF Utah lines",
+      "url": "https://www.dailyfaceoff.com/teams/utah-mammoth/line-combinations",
+      "status": "UpdatedOct1 13:15; projected fourth-line wing order differs from NHL; not a final correction"
+    },
+    {
+      "name": "Circa VSiN",
+      "url": "https://data.vsin.com/vegas-odds-linetracker/?sportid=nhl",
+      "status": "Fresh around20:48ET; firstbook columnCirca; bookupdateclock not exposed"
+    },
+    {
+      "name": "VSiN games model",
+      "url": "https://data.vsin.com/nhl/games/",
+      "status": "Current preview: UTA4.2CHI2.0,estimatedML-216,total6.26; external only"
+    },
+    {
+      "name": "VSiN Jonathan Davis",
+      "url": "https://vsin.com/nhl/nhl-predictions-expert-picks-on-thursday-october-1/",
+      "status": "Oct1 14:00published14:03modified; regulation-1401.5u, points parlay-1051u; article9pm wrong vs official9:30"
+    },
+    {
+      "name": "Doc's Josh Schonwald",
+      "url": "https://www.docsports.com/free-picks/nhl-hockey/2026/chicago-blackhawks-vs-utah-mammoth-prediction-10-1-2026-nhl-picks-best-bets-odds.html",
+      "status": "Sept30UtahML-192; historical quote"
+    },
+    {
+      "name": "MoneyPuck",
+      "url": "https://moneypuck.com/",
+      "status": "CurrentUtah66.6%; goalie source matchesDFF so not independent confirmation"
+    },
+    {
+      "name": "MoneyPuck matchup",
+      "url": "https://moneypuck.com/preview.htm?id=2026020013",
+      "status": "DKlatestThursday20:52-218/+180 vs Saturday23:04-198/+164; ChicagoTBD"
+    },
+    {
+      "name": "Natural Stat Trick",
+      "url": "https://www.naturalstattrick.com/teamtable.php",
+      "status": "Opening5v5 onegameCHI2.11xGF/2.89xGA,42.21%share; Utah not yet played"
+    },
+    {
+      "name": "Evolving Hockey",
+      "url": "https://evolving-hockey.com/blog/2026-2027-team-point-projections/",
+      "status": "Sept28 season prior text: Utah fourth EV CF%; numeric chart not extracted"
+    },
+    {
+      "name": "Sports Reference",
+      "url": "https://www.hockey-reference.com/leagues/NHL_2027.html",
+      "status": "Fresh extraction succeeded after prior403; current tinyseason table supporting only"
+    },
+    {
+      "name": "TeamRankings",
+      "url": "https://www.teamrankings.com/nhl/",
+      "status": "Returned broad mixed-sport portal; no usable NHL candidate power verified"
+    },
+    {
+      "name": "Circa splits",
+      "url": "https://data.vsin.com/betting-splits/?source=CIRCA&sport=NHL",
+      "status": "Chicago/Utah row hidden behind subscription; no split inferred"
+    },
+    {
+      "name": "VSiN matchup",
+      "url": "https://data.vsin.com/nhl/matchups/game/20261001NHL00121",
+      "status": "Subscriber-only details"
+    },
+    {
+      "name": "DE board",
+      "url": "https://delawarepark.betrivers.com/?page=sportsbook",
+      "status": "Server20:48; CHI/UTA offer not exposed"
+    },
+    {
+      "name": "DE NHL group",
+      "url": "https://delawarepark.betrivers.com/?page=sportsbook&group=1000093658",
+      "status": "Server20:51; no selected-event quote exposed"
+    },
+    {
+      "name": "Doc's AI-v3",
+      "url": "https://www.docsports.com/cappers.html?cap_id=88",
+      "status": "Marketing only, no actual current selection"
+    },
+    {
+      "name": "Doc's videos",
+      "url": "https://www.docsports.com/video/free-picks/",
+      "status": "No current Chicago/Utah named selection exposed"
+    },
+    {
+      "name": "Doc's matches",
+      "url": "https://www.docsports.com/statistics/matches.html",
+      "status": "Navigation/shell, no usable match data"
+    },
+    {
+      "name": "Dropbox Circa PDF",
+      "url": "https://www.dropbox.com/scl/fi/86dtbb18b9apeij8tkefr",
+      "status": "NHL-2026-9-30.pdf; extracted text empty; Oct1sync not fresh prices"
+    }
+  ],
+  "guide_reconciliation": {
+    "NHL_original": "No verified separately provided NHL original in controlling guide inventory/midday audit; not claimed consulted",
+    "NFL_FantasyLife_CFB": "NOT APPLICABLE to NHL; not used as hockey confirmation",
+    "EH_season_preview": "Sept28 structural prior consulted; current projected lineups partially confirm core, season numbers not substituted as current full-strength performance"
+  },
+  "fade_inflation": {
+    "status": "UNKNOWN / INSUFFICIENT COMPARABLE SAMPLE",
+    "why": "Utah0gamesCHI1;5/10/20same-band current-roster close/cover histories not verified. 4-0H2H is notATS record. No standalonev2 deduction, automaticfade or assumedclear.",
+    "alternatives": "ML/regulation/CHI+1.5/Under6 reviewed; avoid conversion of costly favorite into forced parlay"
+  },
+  "alternatives": [
+    {
+      "pick": "Chicago+1.5-140 Circa",
+      "status": "REVIEW ONLY / NO BET",
+      "reason": "Knight/PKH2H make competitive path plausible, but depleted scoring and empty-net risk oppose; no completed independent cover assessment. Not official or inheritedMLgrade."
+    },
+    {
+      "pick": "Under6+100 Circa",
+      "status": "REVIEW ONLY / UNGRADED",
+      "reason": "PK/goalie counter supports inquiry, but VSiNtotal6.26 and Utahdepth/new-role uncertainty; no finished total-specific scoring assessment, no finalgoalies. Six pushes, seven loses."
+    },
+    {
+      "pick": "Keller/Trocheck point parlay-105 article",
+      "status": "NO BET / UNGRADED",
+      "reason": "Historical VSiN named opinion only; liveDEthreshold/usage assessment absent and correlated samegame, not a two-source independent leg pair."
+    }
+  ],
+  "publication": {
+    "wager_placed": false,
+    "active_website_card": false,
+    "seven_leg_mixed": "Not official; no forced leg or guessed payout",
+    "delaware_lottery": "Fixed-payout football cards separate and inapplicable to CHI/UTA"
+  },
+  "retrieval_failures": [
+    "Direct officialNHL APIboxscore403",
+    "Attempted UtahliveblogURLresolvednotfound; not treated as evidence",
+    "VSiN detailed matchup/splits subscriberwall",
+    "BetRivers public pages did not expose selectedmatch offer; no login/wager attempt"
+  ],
+  "preservation": "No existing midday file or earliergate overwritten; prior chiuta24/60UNGRADED snapshot embedded"
+}
