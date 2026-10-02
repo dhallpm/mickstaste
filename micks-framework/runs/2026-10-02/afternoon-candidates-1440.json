@@ -1,0 +1,5064 @@
+{
+  "date": "2026-10-02",
+  "timezone": "America/New_York",
+  "assessment_window_et": "14:04-14:40 ET; source refresh14:39",
+  "snapshot_label": "afternoon-1440",
+  "scoring_version": "micks-110-v2-2026-09-29",
+  "status": "SCAN COMPLETED WITH DOCUMENTED GAPS; NO OFFICIAL RELEASE",
+  "scope_limit": "Verified listed sports/events; not a claim of every worldwide league. Other UEFA/qualifier/card matches inventoried, core assessment incomplete.",
+  "official_units": 0,
+  "non_nfl_gates": {
+    "score": 82,
+    "failure_score": 7,
+    "confirmed_goalies_mandatory": true,
+    "exact_executable_price_required": true
+  },
+  "candidates": [
+    {
+      "id": "car-ml",
+      "sport": "NHL",
+      "event": "Washington at Carolina",
+      "start_et": "2026-10-02T19:00:00-04:00",
+      "pick": "Carolina ML",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "quote": {
+        "book": "Circa via VSiN",
+        "american_odds": -136,
+        "market": "Full-game ML includes OT/SO",
+        "observed_et": "2026-10-02 14:04-14:40",
+        "executable_in_delaware": false
+      },
+      "score_status": "PROVISIONAL",
+      "handicap_score": 83,
+      "grade": "B+",
+      "known_subtotal": 83,
+      "assessed_maximum": 110,
+      "factors": {
+        "matchup": {
+          "score": 30,
+          "max": 35,
+          "evidence": "Two distinct paths: sustained CAR territorial pressure (prior 5 v 5 x GF 55.89%, CF 59.78% versus WSH 50.44/49.46) and retained Aho/Ehlers/Svechnikov scoring depth against Washington's reshuffled lines. Prior-season rates tempered for roster changes; Jarvis absence and Thompson quality limit the edge.",
+          "source_refs": [
+            "nhl-car",
+            "nst",
+            "goalies",
+            "circa-nhl",
+            "vsin-nhl",
+            "docs-car",
+            "moneypuck"
+          ]
+        },
+        "price": {
+          "score": 16,
+          "max": 20,
+          "evidence": "Reference-136 is better than Doc's-140 and several peer boards, with plausible value in the pressure advantage. Does not establish a DE executable quote or own numerical fair line.",
+          "source_refs": [
+            "nhl-car",
+            "nst",
+            "goalies",
+            "circa-nhl",
+            "vsin-nhl",
+            "docs-car",
+            "moneypuck"
+          ]
+        },
+        "personnel": {
+          "score": 12,
+          "max": 15,
+          "evidence": "Thompson and Bussi confirmed; projected CAR forward/defense structure known. Jarvis out removes top scoring/PP role. Bussi's opener 19/20 is one game, not stable elite-goalie evidence.",
+          "source_refs": [
+            "nhl-car",
+            "nst",
+            "goalies",
+            "circa-nhl",
+            "vsin-nhl",
+            "docs-car",
+            "moneypuck"
+          ]
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Home and established pressure system support sustained attempts; Washington season opener creates uncertainty rather than a proven rest disadvantage. Indoor conditions.",
+          "source_refs": [
+            "nhl-car",
+            "nst",
+            "goalies",
+            "circa-nhl",
+            "vsin-nhl",
+            "docs-car",
+            "moneypuck"
+          ]
+        },
+        "vsin": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Current VSi N model fair CAR-176 supports direction; model only, no named NHL author pick. External forecast is not Micks.",
+          "source_refs": [
+            "nhl-car",
+            "nst",
+            "goalies",
+            "circa-nhl",
+            "vsin-nhl",
+            "docs-car",
+            "moneypuck"
+          ]
+        },
+        "docs": {
+          "score": 5,
+          "max": 10,
+          "evidence": "Guy Bruhn Oct 1 CAR-140 supports same market, but Kochetkov assumption is stale: Bussi starts. Lower support after reconciliation, not full agreement.",
+          "source_refs": [
+            "nhl-car",
+            "nst",
+            "goalies",
+            "circa-nhl",
+            "vsin-nhl",
+            "docs-car",
+            "moneypuck"
+          ]
+        },
+        "market": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Reference 4+movement 2+splits 0: trustworthy Circa full-game context; WSH opening+121 to+122 is small reciprocal context, not a direct verified opening CAR price or sharp action. No exposed CAR splits.",
+          "source_refs": [
+            "nhl-car",
+            "nst",
+            "goalies",
+            "circa-nhl",
+            "vsin-nhl",
+            "docs-car",
+            "moneypuck"
+          ]
+        }
+      },
+      "market_subfactors": {
+        "reference_context": 4,
+        "movement_timing": 2,
+        "splits": 0
+      },
+      "failure_dimensions": [
+        {
+          "dimension": "failure_path_severity",
+          "score": 1,
+          "max": 2,
+          "evidence": "Thompson can erase the territorial edge and new WSH top line can finish sparse chances."
+        },
+        {
+          "dimension": "personnel_role_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Core pressure remains without Jarvis, but thin Bussi sample and missing scorer retain real risk."
+        },
+        {
+          "dimension": "variance_game_script_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Goalie variance and low-event score could dominate; pressure is meaningful but not variance-proof."
+        },
+        {
+          "dimension": "price_sensitivity_protection",
+          "score": 2,
+          "max": 2,
+          "evidence": "At reference-136 the ML avoids puck-line margin dependence and is less expensive than peer prices; worsening price needs reassessment."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": 2,
+          "max": 2,
+          "evidence": "Prior territorial baseline, current line structure and external checks favor CAR after explicitly reducing stale goalie-based Doc support; WSH counter remains."
+        }
+      ],
+      "failure_score": 7,
+      "known_failure_subtotal": 7,
+      "failure_status": "PROVISIONAL",
+      "micks_thesis": "CAR wins through repeated offensive-zone pressure and multiple scoring lines rather than needing a two-goal win. ML is the cleaner expression than CAR-1.5+180.",
+      "strongest_opposing_case": "Thompson .912 last season, Washington Tuch/Dubois/Wilson and CAR Jarvis absence can flip a close game.",
+      "missing_evidence": [
+        "Final skater scratches",
+        "Current CAR ticket/handle sample",
+        "Fresh DE offer"
+      ],
+      "release_blockers": [
+        "Exact executable BetRivers Delaware offer and justified playable cutoff not verified"
+      ],
+      "best_number_review_target": "Review CAR-135 or better; -140 is a provisional evaluation ceiling, not an authorized cutoff",
+      "no_bet_cutoff": null,
+      "no_bet_cutoff_status": "not established-no bet until regraded",
+      "official_units": 0,
+      "disposition": "WATCH / BLOCKED / NO BET",
+      "source_refs": [
+        "nhl-car",
+        "nst",
+        "goalies",
+        "circa-nhl",
+        "vsin-nhl",
+        "docs-car",
+        "moneypuck"
+      ],
+      "market_ai_shadow": {
+        "score": null,
+        "status": "UNGRADED SHADOW ONLY",
+        "reason": "No independently assessed Micks probability/EV feature inputs; does not impose a new daily-release prerequisite."
+      }
+    },
+    {
+      "id": "pitt-spread",
+      "sport": "CFB",
+      "event": "Pitt at Virginia Tech",
+      "start_et": "2026-10-02T19:00:00-04:00",
+      "pick": "Pitt +2.5",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "quote": {
+        "book": "Circa via VSiN",
+        "american_odds": -115,
+        "line": 2.5,
+        "market": "Full-game spread",
+        "observed_et": "2026-10-02 14:04-14:40",
+        "executable_in_delaware": false
+      },
+      "score_status": "PROVISIONAL",
+      "handicap_score": 81,
+      "grade": "B",
+      "known_subtotal": 81,
+      "assessed_maximum": 110,
+      "factors": {
+        "matchup": {
+          "score": 28,
+          "max": 35,
+          "evidence": "Pitt has both offensive-efficiency and defensive-efficiency paths: Burke FBSYPP 6.4 vs 5.2, defense 4.6 vs 5.6; Team Rankings all-opponent 6.3 vs 5.0, 4.4 vs 5.2 corroborates with different sample. VT weak schedule and weather-distorted prior offense are opposing caveats.",
+          "source_refs": [
+            "circa-cfb",
+            "teamrankings",
+            "pitt-primary",
+            "vt-primary",
+            "burke",
+            "makinen",
+            "action",
+            "docs-pitt",
+            "circa-splits-cfb",
+            "blacksburg-weather"
+          ]
+        },
+        "price": {
+          "score": 14,
+          "max": 20,
+          "evidence": "Opening+4-110 now+2.5-115: key 3 and 4 lost and juice increased. Still a modest directional advantage, materially weaker than named selections; ML+105 is an alternative, not a free upgrade.",
+          "source_refs": [
+            "circa-cfb",
+            "teamrankings",
+            "pitt-primary",
+            "vt-primary",
+            "burke",
+            "makinen",
+            "action",
+            "docs-pitt",
+            "circa-splits-cfb",
+            "blacksburg-weather"
+          ]
+        },
+        "personnel": {
+          "score": 12,
+          "max": 15,
+          "evidence": "Heintschel/Grunkemeyer expected from team previews. Pitt injury-driven skill roles discussed; Turner/Knight final clearance not established. Personnel impact assessable provisionally, not all healthy.",
+          "source_refs": [
+            "circa-cfb",
+            "teamrankings",
+            "pitt-primary",
+            "vt-primary",
+            "burke",
+            "makinen",
+            "action",
+            "docs-pitt",
+            "circa-splits-cfb",
+            "blacksburg-weather"
+          ]
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "First Pitt road game at Lane Stadium counters efficiency advantage. NWS rain mainly after 4 AM does not support a kickoff rain-under.",
+          "source_refs": [
+            "circa-cfb",
+            "teamrankings",
+            "pitt-primary",
+            "vt-primary",
+            "burke",
+            "makinen",
+            "action",
+            "docs-pitt",
+            "circa-splits-cfb",
+            "blacksburg-weather"
+          ]
+        },
+        "vsin": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Adam Burke Sept 29+3.5, Steve Makinen Sept 30+3 support Pitt but today's+2.5 worsens both thresholds; one publisher family.",
+          "source_refs": [
+            "circa-cfb",
+            "teamrankings",
+            "pitt-primary",
+            "vt-primary",
+            "burke",
+            "makinen",
+            "action",
+            "docs-pitt",
+            "circa-splits-cfb",
+            "blacksburg-weather"
+          ]
+        },
+        "docs": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Josh Schonwald Sept 28+4 same side, no longer same number; reduced confirmation. Action VTML counters.",
+          "source_refs": [
+            "circa-cfb",
+            "teamrankings",
+            "pitt-primary",
+            "vt-primary",
+            "burke",
+            "makinen",
+            "action",
+            "docs-pitt",
+            "circa-splits-cfb",
+            "blacksburg-weather"
+          ]
+        },
+        "market": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Reference 4+movement 2+splits 1. Circa Pitt spread 82%handle 50%bets versus DK 27/34: book/sample disagreement and unknown volume; no sharp label.",
+          "source_refs": [
+            "circa-cfb",
+            "teamrankings",
+            "pitt-primary",
+            "vt-primary",
+            "burke",
+            "makinen",
+            "action",
+            "docs-pitt",
+            "circa-splits-cfb",
+            "blacksburg-weather"
+          ]
+        }
+      },
+      "market_subfactors": {
+        "reference_context": 4,
+        "movement_timing": 2,
+        "splits": 1
+      },
+      "failure_dimensions": [
+        {
+          "dimension": "failure_path_severity",
+          "score": 1,
+          "max": 2,
+          "evidence": "Road noise plus VT improvement could overcome Pitt's small spread protection."
+        },
+        {
+          "dimension": "personnel_role_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Injured skill-player replacements create risk; QB/efficiency paths remain assessable."
+        },
+        {
+          "dimension": "variance_game_script_resilience",
+          "score": 2,
+          "max": 2,
+          "evidence": "Both offense and defense paths reduce dependence on a single explosive play, but not eliminate game variance."
+        },
+        {
+          "dimension": "price_sensitivity_protection",
+          "score": 1,
+          "max": 2,
+          "evidence": "Losing key 3 materially weakens price resilience; +3 could change assessment, not automatically authorize."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": 2,
+          "max": 2,
+          "evidence": "Separate team efficiency paths support Pitt; counter schedule/weather/home advantage reduces but does not erase thesis."
+        }
+      ],
+      "failure_score": 7,
+      "known_failure_subtotal": 7,
+      "failure_status": "PROVISIONAL",
+      "micks_thesis": "Pitt can keep possession efficient and limit VT drives; points preferred to ML if a verified +3 returns.",
+      "strongest_opposing_case": "VT home setting, plausible offense rebound and current number below 3.",
+      "missing_evidence": [
+        "Turner/Knight final injury/role status",
+        "Final QB availability",
+        "Kickoff forecast",
+        "Executable price"
+      ],
+      "release_blockers": [
+        "81/110 below82 recovery gate",
+        "Exact executable BetRivers Delaware offer and justified playable cutoff not verified"
+      ],
+      "best_number_review_target": "Pitt+3 at-110 preferred review; current+2.5-115 is below release grade",
+      "no_bet_cutoff": null,
+      "no_bet_cutoff_status": "not established-no bet until regraded",
+      "official_units": 0,
+      "disposition": "PASS FOR OFFICIAL RELEASE / WATCH FOR RECHECK",
+      "source_refs": [
+        "circa-cfb",
+        "teamrankings",
+        "pitt-primary",
+        "vt-primary",
+        "burke",
+        "makinen",
+        "action",
+        "docs-pitt",
+        "circa-splits-cfb",
+        "blacksburg-weather"
+      ],
+      "market_ai_shadow": {
+        "score": null,
+        "status": "UNGRADED SHADOW ONLY",
+        "reason": "No independently assessed Micks probability/EV feature inputs; does not impose a new daily-release prerequisite."
+      }
+    },
+    {
+      "id": "dal-ml",
+      "sport": "NHL",
+      "event": "St Louis at Dallas",
+      "start_et": "2026-10-02T21:00:00-04:00",
+      "pick": "Dallas ML",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "quote": {
+        "book": "Circa via VSiN",
+        "american_odds": -173,
+        "market": "Full-game ML includes OT/SO",
+        "observed_et": "2026-10-02 14:04-14:40",
+        "executable_in_delaware": false
+      },
+      "score_status": "PROVISIONAL",
+      "handicap_score": 80,
+      "grade": "B",
+      "known_subtotal": 80,
+      "assessed_maximum": 110,
+      "factors": {
+        "matchup": {
+          "score": 26,
+          "max": 35,
+          "evidence": "Dallas scoring depth through Robertson/Hintz and Johnston/Rantanen plus Heiskanen puck transition provide two paths. Prior 5 v 5 x GF 50.94% vs STL 49.35% is a small edge, not domination; shooting 10.82% carries regression risk.",
+          "source_refs": [
+            "nhl-dal",
+            "goalies",
+            "nst",
+            "circa-nhl",
+            "vsin-nhl",
+            "docs-dal",
+            "moneypuck"
+          ]
+        },
+        "price": {
+          "score": 15,
+          "max": 20,
+          "evidence": "Current-173 improves substantially on Doc-192. Expensive favorite still needs more than team-quality narrative; compare STL+155 and DAL-1.5+146 separately.",
+          "source_refs": [
+            "nhl-dal",
+            "goalies",
+            "nst",
+            "circa-nhl",
+            "vsin-nhl",
+            "docs-dal",
+            "moneypuck"
+          ]
+        },
+        "personnel": {
+          "score": 12,
+          "max": 15,
+          "evidence": "Hofer/Oettinger confirmed. Duchene out, Seguin ACL return changes second-line/PP role; NHL projected skaters show depth but restrictions unknown.",
+          "source_refs": [
+            "nhl-dal",
+            "goalies",
+            "nst",
+            "circa-nhl",
+            "vsin-nhl",
+            "docs-dal",
+            "moneypuck"
+          ]
+        },
+        "situation": {
+          "score": 8,
+          "max": 10,
+          "evidence": "Home opener and full-day preparation support Dallas. Seguin return positive context, not bonus points for ceremony or motivation.",
+          "source_refs": [
+            "nhl-dal",
+            "goalies",
+            "nst",
+            "circa-nhl",
+            "vsin-nhl",
+            "docs-dal",
+            "moneypuck"
+          ]
+        },
+        "vsin": {
+          "score": 7,
+          "max": 10,
+          "evidence": "VSi Nmodel fair DAL-212 and Money Puck 66.2% support; not own probability or named NHL selection.",
+          "source_refs": [
+            "nhl-dal",
+            "goalies",
+            "nst",
+            "circa-nhl",
+            "vsin-nhl",
+            "docs-dal",
+            "moneypuck"
+          ]
+        },
+        "docs": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Parlays Pundit Oct 1 Dallas-192 AND Under 6; ML support retained at better price but total is a separate component, not automatic evidence for Dallas puck line.",
+          "source_refs": [
+            "nhl-dal",
+            "goalies",
+            "nst",
+            "circa-nhl",
+            "vsin-nhl",
+            "docs-dal",
+            "moneypuck"
+          ]
+        },
+        "market": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Reference 4+movement 2+splits 0. STL+153 open to+155 current small drift; favorite opening ML not exposed; no steam inference.",
+          "source_refs": [
+            "nhl-dal",
+            "goalies",
+            "nst",
+            "circa-nhl",
+            "vsin-nhl",
+            "docs-dal",
+            "moneypuck"
+          ]
+        }
+      },
+      "market_subfactors": {
+        "reference_context": 4,
+        "movement_timing": 2,
+        "splits": 0
+      },
+      "failure_dimensions": [
+        {
+          "dimension": "failure_path_severity",
+          "score": 1,
+          "max": 2,
+          "evidence": "Hofer .909 last season and Blues Thomas/Mc Tavish-centered scoring can neutralize favorite depth."
+        },
+        {
+          "dimension": "personnel_role_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Duchene loss/Seguin return create meaningful uncertainty, though top line and defense core remain."
+        },
+        {
+          "dimension": "variance_game_script_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Goalie variance and elevated Dallas prior shooting make this less robust than a dominant possession mismatch."
+        },
+        {
+          "dimension": "price_sensitivity_protection",
+          "score": 2,
+          "max": 2,
+          "evidence": "ML protects against one-goal win; reference-173 offers better terms than the older Doc recommendation."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": 2,
+          "max": 2,
+          "evidence": "Current lineup and modest baseline support favorite; outside confirmations help but do not settle Hofer counter."
+        }
+      ],
+      "failure_score": 7,
+      "known_failure_subtotal": 7,
+      "failure_status": "PROVISIONAL",
+      "micks_thesis": "Dallas can win through sustained top-six pressure and transition; ML avoids demanding margin.",
+      "strongest_opposing_case": "Hofer can outperform .899 last-season Oettinger; prior Dallas shooting and goalie-save performance can regress independently.",
+      "missing_evidence": [
+        "Final scratches",
+        "Seguin minutes/PP restrictions",
+        "STL/DAL splits",
+        "DE price"
+      ],
+      "release_blockers": [
+        "80/110 below82 recovery gate",
+        "Exact executable BetRivers Delaware offer and justified playable cutoff not verified"
+      ],
+      "best_number_review_target": "DAL-170 or better review; no automatic release at a lower price",
+      "no_bet_cutoff": null,
+      "no_bet_cutoff_status": "not established-no bet until regraded",
+      "official_units": 0,
+      "disposition": "PASS FOR OFFICIAL RELEASE / WATCH FOR RECHECK",
+      "source_refs": [
+        "nhl-dal",
+        "goalies",
+        "nst",
+        "circa-nhl",
+        "vsin-nhl",
+        "docs-dal",
+        "moneypuck"
+      ],
+      "market_ai_shadow": {
+        "score": null,
+        "status": "UNGRADED SHADOW ONLY",
+        "reason": "No independently assessed Micks probability/EV feature inputs; does not impose a new daily-release prerequisite."
+      }
+    },
+    {
+      "id": "bos-ml",
+      "sport": "NHL",
+      "event": "Boston at Winnipeg",
+      "start_et": "2026-10-02T20:00:00-04:00",
+      "pick": "Boston ML",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "quote": {
+        "book": "Circa via VSiN",
+        "american_odds": 108,
+        "market": "Full-game ML includes OT/SO",
+        "observed_et": "2026-10-02 14:04-14:40",
+        "executable_in_delaware": false
+      },
+      "score_status": "PROVISIONAL",
+      "handicap_score": 73,
+      "grade": "B-",
+      "known_subtotal": 73,
+      "assessed_maximum": 110,
+      "factors": {
+        "matchup": {
+          "score": 25,
+          "max": 35,
+          "evidence": "Swayman versus expected Skinner and Winnipeg replacement-heavy lineup support underdog cash path. BOS prior 46.66%x GF is worse than WPG 47.83; Boston skater-quality edge is not established.",
+          "source_refs": [
+            "nhl-bos",
+            "goalies",
+            "nst",
+            "circa-nhl",
+            "vsin-nhl",
+            "docs-bos",
+            "moneypuck"
+          ]
+        },
+        "price": {
+          "score": 15,
+          "max": 20,
+          "evidence": "+108 is better than Doc+102; modest underdog price but prior-season team profile/road venue do not justify high price score.",
+          "source_refs": [
+            "nhl-bos",
+            "goalies",
+            "nst",
+            "circa-nhl",
+            "vsin-nhl",
+            "docs-bos",
+            "moneypuck"
+          ]
+        },
+        "personnel": {
+          "score": 11,
+          "max": 15,
+          "evidence": "Swayman confirmed, Skinner only likely. Hellebuyck suspended/non-reporting; Mc Avoy suspended weakens Boston defense. Scenario handicap assessable, mandatory confirmation still open.",
+          "source_refs": [
+            "nhl-bos",
+            "goalies",
+            "nst",
+            "circa-nhl",
+            "vsin-nhl",
+            "docs-bos",
+            "moneypuck"
+          ]
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Winnipeg home opener offsets Boston goalie thesis; no weather effect indoors. One Swayman shutout not a trend.",
+          "source_refs": [
+            "nhl-bos",
+            "goalies",
+            "nst",
+            "circa-nhl",
+            "vsin-nhl",
+            "docs-bos",
+            "moneypuck"
+          ]
+        },
+        "vsin": {
+          "score": 2,
+          "max": 10,
+          "evidence": "VSi N fair WPG-130 opposes; Money Puck WPG 50.4 near even differs. Low confirmation, not missing opinion penalty.",
+          "source_refs": [
+            "nhl-bos",
+            "goalies",
+            "nst",
+            "circa-nhl",
+            "vsin-nhl",
+            "docs-bos",
+            "moneypuck"
+          ]
+        },
+        "docs": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Josh Schonwald Oct 1 BOS+102 supports current better underdog price; final Winnipeg goalie premise must be checked.",
+          "source_refs": [
+            "nhl-bos",
+            "goalies",
+            "nst",
+            "circa-nhl",
+            "vsin-nhl",
+            "docs-bos",
+            "moneypuck"
+          ]
+        },
+        "market": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Reference 4+movement 2+splits 0; BO Sopen+110 to+108 minor worsening.",
+          "source_refs": [
+            "nhl-bos",
+            "goalies",
+            "nst",
+            "circa-nhl",
+            "vsin-nhl",
+            "docs-bos",
+            "moneypuck"
+          ]
+        }
+      },
+      "market_subfactors": {
+        "reference_context": 4,
+        "movement_timing": 2,
+        "splits": 0
+      },
+      "failure_dimensions": [
+        {
+          "dimension": "failure_path_severity",
+          "score": 1,
+          "max": 2,
+          "evidence": "Winnipeg home scoring and Boston poor possession erase goalie advantage."
+        },
+        {
+          "dimension": "personnel_role_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Skinner change or Boston defense role loss meaningfully affects thesis."
+        },
+        {
+          "dimension": "variance_game_script_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Underdog close-game/goalie path remains high variance."
+        },
+        {
+          "dimension": "price_sensitivity_protection",
+          "score": 2,
+          "max": 2,
+          "evidence": "Plus money and ML protect margin; price still needs review."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": 1,
+          "max": 2,
+          "evidence": "External model opposes; goalie narrative does not resolve all team-level counters."
+        }
+      ],
+      "failure_score": 6,
+      "known_failure_subtotal": 6,
+      "failure_status": "PROVISIONAL",
+      "micks_thesis": "Boston wins if Swayman provides meaningful save differential while replacement Winnipeg structure struggles.",
+      "strongest_opposing_case": "Mc Avoy absence, prior Boston possession and Winnipeg home top line.",
+      "missing_evidence": [
+        "Final Skinner confirmation",
+        "Skater scratches",
+        "DE offer"
+      ],
+      "release_blockers": [
+        "73/110 below82",
+        "Failure6/10 below7",
+        "Both goalies must be confirmed",
+        "Exact executable BetRivers Delaware offer and justified playable cutoff not verified"
+      ],
+      "best_number_review_target": "BOS+115 or better review",
+      "no_bet_cutoff": null,
+      "no_bet_cutoff_status": "not established-no bet until regraded",
+      "official_units": 0,
+      "disposition": "PASS FOR OFFICIAL RELEASE / WATCH FOR RECHECK",
+      "source_refs": [
+        "nhl-bos",
+        "goalies",
+        "nst",
+        "circa-nhl",
+        "vsin-nhl",
+        "docs-bos",
+        "moneypuck"
+      ],
+      "market_ai_shadow": {
+        "score": null,
+        "status": "UNGRADED SHADOW ONLY",
+        "reason": "No independently assessed Micks probability/EV feature inputs; does not impose a new daily-release prerequisite."
+      }
+    },
+    {
+      "id": "wnba-dal-spread",
+      "sport": "WNBA",
+      "event": "Dallas at Golden State",
+      "start_et": "2026-10-02T21:00:00-04:00",
+      "pick": "Dallas +8",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "quote": {
+        "book": "Circa via VSiN",
+        "american_odds": -110,
+        "line": 8,
+        "market": "Full-game spread",
+        "observed_et": "2026-10-02 14:04-14:40",
+        "executable_in_delaware": false
+      },
+      "score_status": "PROVISIONAL",
+      "handicap_score": 76,
+      "grade": "B",
+      "known_subtotal": 76,
+      "assessed_maximum": 110,
+      "factors": {
+        "matchup": {
+          "score": 25,
+          "max": 35,
+          "evidence": "Arike/Bueckers creation and Bueckers 3/13 rebound potential support keeping game competitive. Two wildly different playoff outcomes and Smith absence make margin uncertain; external 5.3 margin gives 2.7 points versus 8, below 4-point WNBA upgrade signal.",
+          "source_refs": [
+            "wnba-injury",
+            "wnba-preview",
+            "circa-wnba",
+            "vsin-wnba",
+            "docs-wnba",
+            "covers-wnba"
+          ]
+        },
+        "price": {
+          "score": 14,
+          "max": 20,
+          "evidence": "+8 improves opener+7.5 but worse than Doc+8.5 and MGM+8.5-115. Half-point value and juice trade-off unresolved execution.",
+          "source_refs": [
+            "wnba-injury",
+            "wnba-preview",
+            "circa-wnba",
+            "vsin-wnba",
+            "docs-wnba",
+            "covers-wnba"
+          ]
+        },
+        "personnel": {
+          "score": 11,
+          "max": 15,
+          "evidence": "Official Kuier probable wrist, Smith out; GSV no injury listing. Final minutes/Kuier restriction unknown; game 2 OT usage is not base rotation.",
+          "source_refs": [
+            "wnba-injury",
+            "wnba-preview",
+            "circa-wnba",
+            "vsin-wnba",
+            "docs-wnba",
+            "covers-wnba"
+          ]
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Series 1-1 road elimination game; game 2 OT distorts raw score/usage. No reliable blanket expansion-team fade trigger.",
+          "source_refs": [
+            "wnba-injury",
+            "wnba-preview",
+            "circa-wnba",
+            "vsin-wnba",
+            "docs-wnba",
+            "covers-wnba"
+          ]
+        },
+        "vsin": {
+          "score": 6,
+          "max": 10,
+          "evidence": "VSi Nprojected 5.3 margin supports DAL points modestly; no named relevant VSi N selection found.",
+          "source_refs": [
+            "wnba-injury",
+            "wnba-preview",
+            "circa-wnba",
+            "vsin-wnba",
+            "docs-wnba",
+            "covers-wnba"
+          ]
+        },
+        "docs": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Tony Sink Oct 1 DAL+8.5; current+8 worse threshold but same core direction. Covers GSV-6.5 is a different-price counter.",
+          "source_refs": [
+            "wnba-injury",
+            "wnba-preview",
+            "circa-wnba",
+            "vsin-wnba",
+            "docs-wnba",
+            "covers-wnba"
+          ]
+        },
+        "market": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Reference 4+movement 2+splits 0; actual Circa+7.5→+8 andtotal 157.5→159.5, no tickets/handle exposed.",
+          "source_refs": [
+            "wnba-injury",
+            "wnba-preview",
+            "circa-wnba",
+            "vsin-wnba",
+            "docs-wnba",
+            "covers-wnba"
+          ]
+        }
+      },
+      "market_subfactors": {
+        "reference_context": 4,
+        "movement_timing": 2,
+        "splits": 0
+      },
+      "failure_dimensions": [
+        {
+          "dimension": "failure_path_severity",
+          "score": 1,
+          "max": 2,
+          "evidence": "GSV repeated 104-80-type home blowout is plausible."
+        },
+        {
+          "dimension": "personnel_role_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Smith loss and uncertain Kuier role reduce interior resilience."
+        },
+        {
+          "dimension": "variance_game_script_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Arike 45 and Gabby 36 are volatile scoring outliers, not stable projections."
+        },
+        {
+          "dimension": "price_sensitivity_protection",
+          "score": 2,
+          "max": 2,
+          "evidence": "+8 gives margin protection, but no exact executable confirmation."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": 1,
+          "max": 2,
+          "evidence": "Two playoff games and opposing spread opinion leave current rotation/quality unresolved."
+        }
+      ],
+      "failure_score": 6,
+      "known_failure_subtotal": 6,
+      "failure_status": "PROVISIONAL",
+      "micks_thesis": "DAL covers by creating enough efficient guard scoring to prevent a repeat GSV home blowout.",
+      "strongest_opposing_case": "Interior availability, GSV depth and two-game volatility; previous OT win cannot define expected pace.",
+      "missing_evidence": [
+        "Kuier final status/minutes",
+        "Confirmed rotation",
+        "Current splits",
+        "DE offer"
+      ],
+      "release_blockers": [
+        "76/110 below82",
+        "Failure6/10 below7",
+        "WNBA upgrade edge/role conditions not satisfied",
+        "Exact executable BetRivers Delaware offer and justified playable cutoff not verified"
+      ],
+      "best_number_review_target": "DAL+8.5-110 review preferred; MGM+8.5-115 reference only",
+      "no_bet_cutoff": null,
+      "no_bet_cutoff_status": "not established-no bet until regraded",
+      "official_units": 0,
+      "disposition": "PASS FOR OFFICIAL RELEASE / WATCH FOR RECHECK",
+      "source_refs": [
+        "wnba-injury",
+        "wnba-preview",
+        "circa-wnba",
+        "vsin-wnba",
+        "docs-wnba",
+        "covers-wnba"
+      ],
+      "market_ai_shadow": {
+        "score": null,
+        "status": "UNGRADED SHADOW ONLY",
+        "reason": "No independently assessed Micks probability/EV feature inputs; does not impose a new daily-release prerequisite."
+      }
+    },
+    {
+      "id": "nw-spread",
+      "sport": "CFB",
+      "event": "Penn State at Northwestern",
+      "start_et": "2026-10-02T20:00:00-04:00",
+      "pick": "Northwestern +3",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "quote": {
+        "book": "Circa via VSiN",
+        "american_odds": -120,
+        "line": 3,
+        "market": "Full-game spread",
+        "observed_et": "2026-10-02 14:04-14:40",
+        "executable_in_delaware": false
+      },
+      "score_status": "PROVISIONAL",
+      "handicap_score": 68,
+      "grade": "B-",
+      "known_subtotal": 68,
+      "assessed_maximum": 110,
+      "factors": {
+        "matchup": {
+          "score": 24,
+          "max": 35,
+          "evidence": "NW Chiles/Chip Kelly offense and PSU modest offensive output give home-underdog path; PSU defensive sample is against weak offenses, but NW defensive concessions are a strong counter.",
+          "source_refs": [
+            "circa-cfb",
+            "vsin-cfb",
+            "docs-psu",
+            "action",
+            "evanston-weather"
+          ]
+        },
+        "price": {
+          "score": 12,
+          "max": 20,
+          "evidence": "Key+3 helps, -120 costs more than peers+3-115. Article PSU-2.5 cannot justify NW threshold automatically.",
+          "source_refs": [
+            "circa-cfb",
+            "vsin-cfb",
+            "docs-psu",
+            "action",
+            "evanston-weather"
+          ]
+        },
+        "personnel": {
+          "score": 11,
+          "max": 15,
+          "evidence": "Becht/Chiles expected from weekly context; final receivers/OL availability unconfirmed. Meaningful provisional role handicap, no invented all-clear.",
+          "source_refs": [
+            "circa-cfb",
+            "vsin-cfb",
+            "docs-psu",
+            "action",
+            "evanston-weather"
+          ]
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Home, clear forecast with NNE 10-15 mph can compress passing margins; unknown wind orientation/actual kickoff limits effect.",
+          "source_refs": [
+            "circa-cfb",
+            "vsin-cfb",
+            "docs-psu",
+            "action",
+            "evanston-weather"
+          ]
+        },
+        "vsin": {
+          "score": 7,
+          "max": 10,
+          "evidence": "VSi Nfair NW-1.2 supports side; model only, no named today NW pick.",
+          "source_refs": [
+            "circa-cfb",
+            "vsin-cfb",
+            "docs-psu",
+            "action",
+            "evanston-weather"
+          ]
+        },
+        "docs": {
+          "score": 1,
+          "max": 10,
+          "evidence": "Guy Bruhn PSU-2.5 opposes; not missing. Action Over 45.5 does not confirm either side.",
+          "source_refs": [
+            "circa-cfb",
+            "vsin-cfb",
+            "docs-psu",
+            "action",
+            "evanston-weather"
+          ]
+        },
+        "market": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Reference 4+movement 2+splits 0; PS Uopen-3-110 now-3+100, pricing drift rather than full spread change.",
+          "source_refs": [
+            "circa-cfb",
+            "vsin-cfb",
+            "docs-psu",
+            "action",
+            "evanston-weather"
+          ]
+        }
+      },
+      "market_subfactors": {
+        "reference_context": 4,
+        "movement_timing": 2,
+        "splits": 0
+      },
+      "failure_dimensions": [
+        {
+          "dimension": "failure_path_severity",
+          "score": 1,
+          "max": 2,
+          "evidence": "PSU run/pressure advantage exposes NW defense."
+        },
+        {
+          "dimension": "personnel_role_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Final offensive availability could affect either team."
+        },
+        {
+          "dimension": "variance_game_script_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Home-underdog pace compression plausible but explosive drives remain."
+        },
+        {
+          "dimension": "price_sensitivity_protection",
+          "score": 1,
+          "max": 2,
+          "evidence": "-120 erodes key-number benefit."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": 1,
+          "max": 2,
+          "evidence": "Model support and Docopposition unresolved."
+        }
+      ],
+      "failure_score": 5,
+      "known_failure_subtotal": 5,
+      "failure_status": "PROVISIONAL",
+      "micks_thesis": "NW sustains offense and keeps one-possession game; +3 is preferable to ML+120 if truly available.",
+      "strongest_opposing_case": "PSU defensive quality and NW recent yardage conceded can outweigh home offense.",
+      "missing_evidence": [
+        "Final availability",
+        "Hour-of-kick wind",
+        "DE price"
+      ],
+      "release_blockers": [
+        "68/110 below82",
+        "Failure5/10 below7",
+        "Exact executable BetRivers Delaware offer and justified playable cutoff not verified"
+      ],
+      "best_number_review_target": "NW+3-110 review; current-120 unattractive",
+      "no_bet_cutoff": null,
+      "no_bet_cutoff_status": "not established-no bet until regraded",
+      "official_units": 0,
+      "disposition": "PASS FOR OFFICIAL RELEASE / WATCH FOR RECHECK",
+      "source_refs": [
+        "circa-cfb",
+        "vsin-cfb",
+        "docs-psu",
+        "action",
+        "evanston-weather"
+      ],
+      "market_ai_shadow": {
+        "score": null,
+        "status": "UNGRADED SHADOW ONLY",
+        "reason": "No independently assessed Micks probability/EV feature inputs; does not impose a new daily-release prerequisite."
+      }
+    },
+    {
+      "id": "psu-nw-under",
+      "sport": "CFB",
+      "event": "Penn State at Northwestern",
+      "start_et": "2026-10-02T20:00:00-04:00",
+      "pick": "Under45.5",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "quote": {
+        "book": "Circa via VSiN",
+        "american_odds": -110,
+        "line": 45.5,
+        "market": "Full-game total",
+        "observed_et": "2026-10-02 14:04-14:40",
+        "executable_in_delaware": false
+      },
+      "score_status": "PROVISIONAL",
+      "handicap_score": 62,
+      "grade": "C",
+      "known_subtotal": 62,
+      "assessed_maximum": 110,
+      "factors": {
+        "matchup": {
+          "score": 22,
+          "max": 35,
+          "evidence": "PSU limited offensive efficiency and 10-15 mph wind give two under mechanisms, but NW's explosive offense/defensive concessions weaken them. No purely weather-driven release.",
+          "source_refs": [
+            "circa-cfb",
+            "vsin-cfb",
+            "action",
+            "evanston-weather"
+          ]
+        },
+        "price": {
+          "score": 12,
+          "max": 20,
+          "evidence": "Open 46→45.5, halfpoint already gone; total may be modestly high against VSi N 44.4 combined projection, too small alone.",
+          "source_refs": [
+            "circa-cfb",
+            "vsin-cfb",
+            "action",
+            "evanston-weather"
+          ]
+        },
+        "personnel": {
+          "score": 11,
+          "max": 15,
+          "evidence": "Expected QBs assessable; no absence-based under assumed. Final offensive availability unknown.",
+          "source_refs": [
+            "circa-cfb",
+            "vsin-cfb",
+            "action",
+            "evanston-weather"
+          ]
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Clear NNE 10-15 mph: moderate context, not severe weather or verified gusts atkickoff.",
+          "source_refs": [
+            "circa-cfb",
+            "vsin-cfb",
+            "action",
+            "evanston-weather"
+          ]
+        },
+        "vsin": {
+          "score": 4,
+          "max": 10,
+          "evidence": "VSi Ncurrent scoreprojection 44.4 only slight support; no named today under pick.",
+          "source_refs": [
+            "circa-cfb",
+            "vsin-cfb",
+            "action",
+            "evanston-weather"
+          ]
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No named Doc's full-game under selection recovered. PSU side recommendation does not count.",
+          "source_refs": [
+            "circa-cfb",
+            "vsin-cfb",
+            "action",
+            "evanston-weather"
+          ]
+        },
+        "market": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Reference 4+movement 2+splits 0; authentic 46→45.5.",
+          "source_refs": [
+            "circa-cfb",
+            "vsin-cfb",
+            "action",
+            "evanston-weather"
+          ]
+        }
+      },
+      "market_subfactors": {
+        "reference_context": 4,
+        "movement_timing": 2,
+        "splits": 0
+      },
+      "failure_dimensions": [
+        {
+          "dimension": "failure_path_severity",
+          "score": 1,
+          "max": 2,
+          "evidence": "Explosive NW passing or weak defense produces quick scores."
+        },
+        {
+          "dimension": "personnel_role_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "No confirmed role reduction supporting lower output."
+        },
+        {
+          "dimension": "variance_game_script_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "One explosive/defensive TD changes cash path."
+        },
+        {
+          "dimension": "price_sensitivity_protection",
+          "score": 1,
+          "max": 2,
+          "evidence": "Already lost halfpoint; under 46 would be preferable."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": 1,
+          "max": 2,
+          "evidence": "Action Over 45.5 conflicts and is not resolved."
+        }
+      ],
+      "failure_score": 5,
+      "known_failure_subtotal": 5,
+      "failure_status": "PROVISIONAL",
+      "micks_thesis": "Longer drives and limited PSU scoring keep total modest; no strong edge demonstrated.",
+      "strongest_opposing_case": "Action Over 45.5 and NW offense/defense volatility.",
+      "missing_evidence": [
+        "Final availability",
+        "Kickoff wind direction",
+        "DE price"
+      ],
+      "release_blockers": [
+        "62/110 below82",
+        "Failure5/10 below7",
+        "Exact executable BetRivers Delaware offer and justified playable cutoff not verified"
+      ],
+      "best_number_review_target": "Under 46-110 review only",
+      "no_bet_cutoff": null,
+      "no_bet_cutoff_status": "not established-no bet until regraded",
+      "official_units": 0,
+      "disposition": "PASS FOR OFFICIAL RELEASE / WATCH FOR RECHECK",
+      "source_refs": [
+        "circa-cfb",
+        "vsin-cfb",
+        "action",
+        "evanston-weather"
+      ],
+      "market_ai_shadow": {
+        "score": null,
+        "status": "UNGRADED SHADOW ONLY",
+        "reason": "No independently assessed Micks probability/EV feature inputs; does not impose a new daily-release prerequisite."
+      }
+    },
+    {
+      "id": "wnba-over",
+      "sport": "WNBA",
+      "event": "Dallas at Golden State",
+      "start_et": "2026-10-02T21:00:00-04:00",
+      "pick": "Over159.5",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "quote": {
+        "book": "Circa via VSiN",
+        "american_odds": -110,
+        "line": 159.5,
+        "market": "Full-game total",
+        "observed_et": "2026-10-02 14:04-14:40",
+        "executable_in_delaware": false
+      },
+      "score_status": "PROVISIONAL",
+      "handicap_score": 59,
+      "grade": "C",
+      "known_subtotal": 59,
+      "assessed_maximum": 110,
+      "factors": {
+        "matchup": {
+          "score": 22,
+          "max": 35,
+          "evidence": "Guard shot creation and two recent high scores support pace/upside; game 2 OT inflated 208 combined and game 1 blowout altered usage. Raw totals are weak baseline.",
+          "source_refs": [
+            "circa-wnba",
+            "vsin-wnba",
+            "wnba-preview",
+            "wnba-injury",
+            "covers-wnba"
+          ]
+        },
+        "price": {
+          "score": 11,
+          "max": 20,
+          "evidence": "Open 157.5→159.5 reduces value; current VSi N 159.2 projects belowline, alternative over 159 elsewhere is different quote.",
+          "source_refs": [
+            "circa-wnba",
+            "vsin-wnba",
+            "wnba-preview",
+            "wnba-injury",
+            "covers-wnba"
+          ]
+        },
+        "personnel": {
+          "score": 11,
+          "max": 15,
+          "evidence": "Smith out/Kuier probable change paint and rotation both ways; final minutes uncertain.",
+          "source_refs": [
+            "circa-wnba",
+            "vsin-wnba",
+            "wnba-preview",
+            "wnba-injury",
+            "covers-wnba"
+          ]
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Elimination rotations may tighten but no assumed pace increase; OT cannot be forecast.",
+          "source_refs": [
+            "circa-wnba",
+            "vsin-wnba",
+            "wnba-preview",
+            "wnba-injury",
+            "covers-wnba"
+          ]
+        },
+        "vsin": {
+          "score": 2,
+          "max": 10,
+          "evidence": "Current VSi Ntotal 159.2 provides negligible over support.",
+          "source_refs": [
+            "circa-wnba",
+            "vsin-wnba",
+            "wnba-preview",
+            "wnba-injury",
+            "covers-wnba"
+          ]
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "Doc's DA Lspread is not an over recommendation; no Doc total retrieved.",
+          "source_refs": [
+            "circa-wnba",
+            "vsin-wnba",
+            "wnba-preview",
+            "wnba-injury",
+            "covers-wnba"
+          ]
+        },
+        "market": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Reference 4+movement 2+splits 0; actualtwo-point move not proof of sharp over.",
+          "source_refs": [
+            "circa-wnba",
+            "vsin-wnba",
+            "wnba-preview",
+            "wnba-injury",
+            "covers-wnba"
+          ]
+        }
+      },
+      "market_subfactors": {
+        "reference_context": 4,
+        "movement_timing": 2,
+        "splits": 0
+      },
+      "failure_dimensions": [
+        {
+          "dimension": "failure_path_severity",
+          "score": 1,
+          "max": 2,
+          "evidence": "Cold shooting and tighter halfcourt game can bury over."
+        },
+        {
+          "dimension": "personnel_role_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Uncertain rotation does not robustly preserve scoring."
+        },
+        {
+          "dimension": "variance_game_script_resilience",
+          "score": 0,
+          "max": 2,
+          "evidence": "OT and outlier individual shooting drive observed narrative."
+        },
+        {
+          "dimension": "price_sensitivity_protection",
+          "score": 1,
+          "max": 2,
+          "evidence": "Move consumed two points; price protection weak."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": 1,
+          "max": 2,
+          "evidence": "Coversover is an outside opinion, not resolution of model/baseline counter."
+        }
+      ],
+      "failure_score": 4,
+      "known_failure_subtotal": 4,
+      "failure_status": "PROVISIONAL",
+      "micks_thesis": "Only a watch for sustained regulation pace, not a pregame release off OT boxscore.",
+      "strongest_opposing_case": "Regression after outlier scoring and current projection near/below market.",
+      "missing_evidence": [
+        "Regulation possession baseline",
+        "Final minutes",
+        "DEprice"
+      ],
+      "release_blockers": [
+        "59/110 below82",
+        "Failure4/10 below7",
+        "Exact executable BetRivers Delaware offer and justified playable cutoff not verified"
+      ],
+      "best_number_review_target": "No playable range established",
+      "no_bet_cutoff": null,
+      "no_bet_cutoff_status": "not established-no bet until regraded",
+      "official_units": 0,
+      "disposition": "PASS FOR OFFICIAL RELEASE / WATCH FOR RECHECK",
+      "source_refs": [
+        "circa-wnba",
+        "vsin-wnba",
+        "wnba-preview",
+        "wnba-injury",
+        "covers-wnba"
+      ],
+      "market_ai_shadow": {
+        "score": null,
+        "status": "UNGRADED SHADOW ONLY",
+        "reason": "No independently assessed Micks probability/EV feature inputs; does not impose a new daily-release prerequisite."
+      }
+    },
+    {
+      "id": "nyr-ml",
+      "sport": "NHL",
+      "event": "New York Rangers at Detroit",
+      "start_et": "2026-10-02T18:30:00-04:00",
+      "pick": "NYR ML",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "quote": {
+        "book": "Circa via VSiN",
+        "american_odds": 111,
+        "market": "Full-game ML OT/SO",
+        "observed_et": "2026-10-02 14:04-14:40",
+        "executable_in_delaware": false
+      },
+      "score_status": "UNGRADED",
+      "handicap_score": null,
+      "grade": null,
+      "known_subtotal": 50,
+      "assessed_maximum": 95,
+      "factors": {
+        "matchup": {
+          "score": 22,
+          "max": 35,
+          "evidence": "Larkin absence removes Detroit's key center and Rangers forward depth offers upset path; comparable prior 5 v 5 x GF 49.11%vs 49.19% does not establish team dominance.",
+          "source_refs": [
+            "nhl-nyr",
+            "goalies",
+            "nst",
+            "circa-nhl",
+            "circa-splits-nhl",
+            "vsin-nhl",
+            "docs-nyr"
+          ]
+        },
+        "price": {
+          "score": 12,
+          "max": 20,
+          "evidence": "+111 is worse than Doc+120; exact price can be evaluated provisionally but goalie ambiguity changes its value.",
+          "source_refs": [
+            "nhl-nyr",
+            "goalies",
+            "nst",
+            "circa-nhl",
+            "circa-splits-nhl",
+            "vsin-nhl",
+            "docs-nyr"
+          ]
+        },
+        "personnel": {
+          "score": null,
+          "max": 15,
+          "evidence": "Core goalie impact unresolved: NH Lpreview Shesterkin, DFF Garandunconfirmed; Gibsononlylikely. Cannot score personnel meaningfully as confirmed.",
+          "source_refs": [
+            "nhl-nyr",
+            "goalies",
+            "nst",
+            "circa-nhl",
+            "circa-splits-nhl",
+            "vsin-nhl",
+            "docs-nyr"
+          ]
+        },
+        "situation": {
+          "score": 4,
+          "max": 10,
+          "evidence": "NYR played Tampa last night; road back-to-back costs preparation/fatigue.",
+          "source_refs": [
+            "nhl-nyr",
+            "goalies",
+            "nst",
+            "circa-nhl",
+            "circa-splits-nhl",
+            "vsin-nhl",
+            "docs-nyr"
+          ]
+        },
+        "vsin": {
+          "score": 1,
+          "max": 10,
+          "evidence": "VSi Nfair DET-133 and Money Puck DET 55.2 oppose.",
+          "source_refs": [
+            "nhl-nyr",
+            "goalies",
+            "nst",
+            "circa-nhl",
+            "circa-splits-nhl",
+            "vsin-nhl",
+            "docs-nyr"
+          ]
+        },
+        "docs": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Tony Sink NYR+120 older better quote and Shesterkin premise not reconciled.",
+          "source_refs": [
+            "nhl-nyr",
+            "goalies",
+            "nst",
+            "circa-nhl",
+            "circa-splits-nhl",
+            "vsin-nhl",
+            "docs-nyr"
+          ]
+        },
+        "market": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Reference 4+movement 2+splits 1: NY Ropen+111 unchanged, Circa DET 96%handle/56%bets vs DKnearbalanced. Samples/bookdiffer.",
+          "source_refs": [
+            "nhl-nyr",
+            "goalies",
+            "nst",
+            "circa-nhl",
+            "circa-splits-nhl",
+            "vsin-nhl",
+            "docs-nyr"
+          ]
+        }
+      },
+      "market_subfactors": {
+        "reference_context": 4,
+        "movement_timing": 2,
+        "splits": 1
+      },
+      "failure_dimensions": [
+        {
+          "dimension": "failure_path_severity",
+          "score": 1,
+          "max": 2,
+          "evidence": "Detroit home/top-line roles plus NYR fatigue are credible loss path."
+        },
+        {
+          "dimension": "personnel_role_resilience",
+          "score": null,
+          "max": 2,
+          "evidence": "Starter identity materially changes goal-prevention assessment."
+        },
+        {
+          "dimension": "variance_game_script_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Both prior possession profiles near even; goal variance dominates."
+        },
+        {
+          "dimension": "price_sensitivity_protection",
+          "score": 1,
+          "max": 2,
+          "evidence": "Worse price than article, little cushion."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": null,
+          "max": 2,
+          "evidence": "Goaltender-source conflict unresolved."
+        }
+      ],
+      "failure_score": null,
+      "known_failure_subtotal": 3,
+      "failure_status": "INCOMPLETE",
+      "micks_thesis": "Rangers' forward depth could exploit Larkin absence, but goalie-dependent handicap is unfinished.",
+      "strongest_opposing_case": "NYR back-to-back and unconfirmed goalie, Detroit home/modeled advantage.",
+      "missing_evidence": [
+        "Both goalies and role impact",
+        "Final skaters",
+        "DEquote"
+      ],
+      "release_blockers": [
+        "Core personnel incomplete",
+        "Mandatory confirmed goalies",
+        "Exact executable BetRivers Delaware offer and justified playable cutoff not verified"
+      ],
+      "best_number_review_target": "Review+120 only after goalie reconciliation",
+      "no_bet_cutoff": null,
+      "no_bet_cutoff_status": "not established-no bet until regraded",
+      "official_units": 0,
+      "disposition": "UNGRADED / NO BET",
+      "source_refs": [
+        "nhl-nyr",
+        "goalies",
+        "nst",
+        "circa-nhl",
+        "circa-splits-nhl",
+        "vsin-nhl",
+        "docs-nyr"
+      ],
+      "market_ai_shadow": {
+        "score": null,
+        "status": "UNGRADED SHADOW ONLY",
+        "reason": "No independently assessed Micks probability/EV feature inputs; does not impose a new daily-release prerequisite."
+      }
+    },
+    {
+      "id": "vgk-ml",
+      "sport": "NHL",
+      "event": "Anaheim at Vegas",
+      "start_et": "2026-10-02T22:00:00-04:00",
+      "pick": "Vegas ML",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "quote": {
+        "book": "Circa via VSiN",
+        "american_odds": -190,
+        "market": "Full-game ML OT/SO",
+        "observed_et": "2026-10-02 14:04-14:40",
+        "executable_in_delaware": false
+      },
+      "score_status": "UNGRADED",
+      "handicap_score": null,
+      "grade": null,
+      "known_subtotal": 50,
+      "assessed_maximum": 95,
+      "factors": {
+        "matchup": {
+          "score": 25,
+          "max": 35,
+          "evidence": "Prior VGK 5 v 5 x GF 54.02%vs ANA 50.77% and Eichel/Stone transition core favor home side; young Anaheim scoring core provides counter.",
+          "source_refs": [
+            "nhl-vegas",
+            "goalies",
+            "nst",
+            "circa-nhl",
+            "vsin-nhl",
+            "docs-ana",
+            "moneypuck"
+          ]
+        },
+        "price": {
+          "score": 10,
+          "max": 20,
+          "evidence": "-190 is more expensive than VSi Nexternalfair-176; not sufficient margin for a high-priced favorite with unsettledgoalie roles.",
+          "source_refs": [
+            "nhl-vegas",
+            "goalies",
+            "nst",
+            "circa-nhl",
+            "vsin-nhl",
+            "docs-ana",
+            "moneypuck"
+          ]
+        },
+        "personnel": {
+          "score": null,
+          "max": 15,
+          "evidence": "Dostallikelyfirstoff at 14:34, Hartunconfirmed; final Anaheim/Vegasroles/skaters not reconciled. Core personnel assessment incomplete.",
+          "source_refs": [
+            "nhl-vegas",
+            "goalies",
+            "nst",
+            "circa-nhl",
+            "vsin-nhl",
+            "docs-ana",
+            "moneypuck"
+          ]
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Vegas home with opening-season coach/rookie roles uncertain; no validated inflation/fade alert.",
+          "source_refs": [
+            "nhl-vegas",
+            "goalies",
+            "nst",
+            "circa-nhl",
+            "vsin-nhl",
+            "docs-ana",
+            "moneypuck"
+          ]
+        },
+        "vsin": {
+          "score": 3,
+          "max": 10,
+          "evidence": "VSi Nfair-176 belowcurrentfavoriteprice; Money Puck 65.2 supports team outcome not automatic bet at-190.",
+          "source_refs": [
+            "nhl-vegas",
+            "goalies",
+            "nst",
+            "circa-nhl",
+            "vsin-nhl",
+            "docs-ana",
+            "moneypuck"
+          ]
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "Guy Bruhn ANA+154 explicitly opposes; zero rather than unknown.",
+          "source_refs": [
+            "nhl-vegas",
+            "goalies",
+            "nst",
+            "circa-nhl",
+            "vsin-nhl",
+            "docs-ana",
+            "moneypuck"
+          ]
+        },
+        "market": {
+          "score": 5,
+          "max": 10,
+          "evidence": "Reference 4+movement 1+splits 0; AN Aopening+170 current+170. Stable reference not edge.",
+          "source_refs": [
+            "nhl-vegas",
+            "goalies",
+            "nst",
+            "circa-nhl",
+            "vsin-nhl",
+            "docs-ana",
+            "moneypuck"
+          ]
+        }
+      },
+      "market_subfactors": {
+        "reference_context": 4,
+        "movement_timing": 1,
+        "splits": 0
+      },
+      "failure_dimensions": [
+        {
+          "dimension": "failure_path_severity",
+          "score": 1,
+          "max": 2,
+          "evidence": "Anaheim Gauthier/Carlsson/Sennecke can finish enough chances."
+        },
+        {
+          "dimension": "personnel_role_resilience",
+          "score": null,
+          "max": 2,
+          "evidence": "Goalieidentity/role impacts unassessed."
+        },
+        {
+          "dimension": "variance_game_script_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Thin opening-season samples and goalie variance."
+        },
+        {
+          "dimension": "price_sensitivity_protection",
+          "score": 0,
+          "max": 2,
+          "evidence": "Expensive favorite leaves little protection."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": 1,
+          "max": 2,
+          "evidence": "Docunderdog and mixedpriceforecast notresolved."
+        }
+      ],
+      "failure_score": null,
+      "known_failure_subtotal": 3,
+      "failure_status": "INCOMPLETE",
+      "micks_thesis": "Vegas' sustained puck/transition edge is plausible, but price and goalies prevent a finished bet assessment.",
+      "strongest_opposing_case": "Anaheim youth offense and uncertain Hart/Dostal; no assumption Vegas wins just from favoritism.",
+      "missing_evidence": [
+        "Goalies",
+        "Final skaters/injuries/roles",
+        "DEquote"
+      ],
+      "release_blockers": [
+        "Core personnel incomplete",
+        "Confirmed goalies",
+        "Exact executable BetRivers Delaware offer and justified playable cutoff not verified"
+      ],
+      "best_number_review_target": "Review VGK-175 orbetter after independent personnel assessment",
+      "no_bet_cutoff": null,
+      "no_bet_cutoff_status": "not established-no bet until regraded",
+      "official_units": 0,
+      "disposition": "UNGRADED / NO BET",
+      "source_refs": [
+        "nhl-vegas",
+        "goalies",
+        "nst",
+        "circa-nhl",
+        "vsin-nhl",
+        "docs-ana",
+        "moneypuck"
+      ],
+      "market_ai_shadow": {
+        "score": null,
+        "status": "UNGRADED SHADOW ONLY",
+        "reason": "No independently assessed Micks probability/EV feature inputs; does not impose a new daily-release prerequisite."
+      }
+    },
+    {
+      "id": "ana-ml",
+      "sport": "NHL",
+      "event": "Anaheim at Vegas",
+      "start_et": "2026-10-02T22:00:00-04:00",
+      "pick": "Anaheim ML",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "quote": {
+        "book": "Circa via VSiN",
+        "american_odds": 170,
+        "market": "Full-game ML OT/SO",
+        "observed_et": "2026-10-02 14:04-14:40",
+        "executable_in_delaware": false
+      },
+      "score_status": "UNGRADED",
+      "handicap_score": null,
+      "grade": null,
+      "known_subtotal": 54,
+      "assessed_maximum": 95,
+      "factors": {
+        "matchup": {
+          "score": 22,
+          "max": 35,
+          "evidence": "Gauthier/Carlsson/Sennecke scoring development and ANA prior 50.77%x GF offer competitive dog path; VGK 54.02% and home top line stronger counter.",
+          "source_refs": [
+            "goalies",
+            "nst",
+            "circa-nhl",
+            "docs-ana",
+            "vsin-nhl"
+          ]
+        },
+        "price": {
+          "score": 14,
+          "max": 20,
+          "evidence": "+170 better than Doc+154; positive price alone not a roster/goalie edge.",
+          "source_refs": [
+            "goalies",
+            "nst",
+            "circa-nhl",
+            "docs-ana",
+            "vsin-nhl"
+          ]
+        },
+        "personnel": {
+          "score": null,
+          "max": 15,
+          "evidence": "Dostal nowlikely, Hartunconfirmed; final match skaters/goalie impact unfinished.",
+          "source_refs": [
+            "goalies",
+            "nst",
+            "circa-nhl",
+            "docs-ana",
+            "vsin-nhl"
+          ]
+        },
+        "situation": {
+          "score": 5,
+          "max": 10,
+          "evidence": "Road versus established favorite, no verified travel edge or fade trigger.",
+          "source_refs": [
+            "goalies",
+            "nst",
+            "circa-nhl",
+            "docs-ana",
+            "vsin-nhl"
+          ]
+        },
+        "vsin": {
+          "score": 2,
+          "max": 10,
+          "evidence": "VSi N/VGK projection favors home; external price comparison alone small support.",
+          "source_refs": [
+            "goalies",
+            "nst",
+            "circa-nhl",
+            "docs-ana",
+            "vsin-nhl"
+          ]
+        },
+        "docs": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Guy Bruhn Oct 1 ANA+154 same side atworseprice, with uncertain goalie/core limits.",
+          "source_refs": [
+            "goalies",
+            "nst",
+            "circa-nhl",
+            "docs-ana",
+            "vsin-nhl"
+          ]
+        },
+        "market": {
+          "score": 5,
+          "max": 10,
+          "evidence": "Reference 4+movement 1+splits 0; ANA+170 unchanged.",
+          "source_refs": [
+            "goalies",
+            "nst",
+            "circa-nhl",
+            "docs-ana",
+            "vsin-nhl"
+          ]
+        }
+      },
+      "market_subfactors": {
+        "reference_context": 4,
+        "movement_timing": 1,
+        "splits": 0
+      },
+      "failure_dimensions": [
+        {
+          "dimension": "failure_path_severity",
+          "score": 1,
+          "max": 2,
+          "evidence": "Vegas territorial edge controls game."
+        },
+        {
+          "dimension": "personnel_role_resilience",
+          "score": null,
+          "max": 2,
+          "evidence": "Goaltender and final roles unresolved."
+        },
+        {
+          "dimension": "variance_game_script_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Underdog requires efficient finishing against pressure."
+        },
+        {
+          "dimension": "price_sensitivity_protection",
+          "score": 1,
+          "max": 2,
+          "evidence": "Plusmoneyhelps but cannot repair unknown personnel."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": 1,
+          "max": 2,
+          "evidence": "Docside does notresolve VG Kqualitycounter."
+        }
+      ],
+      "failure_score": null,
+      "known_failure_subtotal": 4,
+      "failure_status": "INCOMPLETE",
+      "micks_thesis": "Underdog offense can exploit goalie volatility if current roles are verified; still unfinished.",
+      "strongest_opposing_case": "Vegas pressure/top line, Anaheim road role variance.",
+      "missing_evidence": [
+        "Goalies and lineup impact",
+        "DEquote"
+      ],
+      "release_blockers": [
+        "Core personnel incomplete",
+        "Confirmed goalies",
+        "Exact executable BetRivers Delaware offer and justified playable cutoff not verified"
+      ],
+      "best_number_review_target": "ANA+170 orbetter review only",
+      "no_bet_cutoff": null,
+      "no_bet_cutoff_status": "not established-no bet until regraded",
+      "official_units": 0,
+      "disposition": "UNGRADED / NO BET",
+      "source_refs": [
+        "goalies",
+        "nst",
+        "circa-nhl",
+        "docs-ana",
+        "vsin-nhl"
+      ],
+      "market_ai_shadow": {
+        "score": null,
+        "status": "UNGRADED SHADOW ONLY",
+        "reason": "No independently assessed Micks probability/EV feature inputs; does not impose a new daily-release prerequisite."
+      }
+    },
+    {
+      "id": "del-spread",
+      "sport": "CFB",
+      "event": "Liberty at Delaware",
+      "start_et": "2026-10-02T19:00:00-04:00",
+      "pick": "Delaware +6.5",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "quote": {
+        "book": "Circa via VSiN",
+        "american_odds": 100,
+        "line": 6.5,
+        "market": "Full-game spread",
+        "observed_et": "2026-10-02 14:04-14:40",
+        "executable_in_delaware": false
+      },
+      "score_status": "UNGRADED",
+      "handicap_score": null,
+      "grade": null,
+      "known_subtotal": 57,
+      "assessed_maximum": 95,
+      "factors": {
+        "matchup": {
+          "score": 24,
+          "max": 35,
+          "evidence": "Home Delaware can sustain passing/scoring versus Liberty if Minicucci normal; poor replacement passing materially changes that path.",
+          "source_refs": [
+            "del-primary",
+            "del-qb",
+            "docs-del",
+            "burke",
+            "vsin-cfb",
+            "circa-cfb",
+            "newark-weather"
+          ]
+        },
+        "price": {
+          "score": 13,
+          "max": 20,
+          "evidence": "+6.5 even sacrificeskey 7 relative Burke+7 and some peer+7-110. Price assessable, personnel-dependent.",
+          "source_refs": [
+            "del-primary",
+            "del-qb",
+            "docs-del",
+            "burke",
+            "vsin-cfb",
+            "circa-cfb",
+            "newark-weather"
+          ]
+        },
+        "personnel": {
+          "score": null,
+          "max": 15,
+          "evidence": "Minicucci knee status unresolved; primarypreviewseasonstats not clearance. Streeter/Trujillo weak replacements; cannot assume full starter role.",
+          "source_refs": [
+            "del-primary",
+            "del-qb",
+            "docs-del",
+            "burke",
+            "vsin-cfb",
+            "circa-cfb",
+            "newark-weather"
+          ]
+        },
+        "situation": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Sold-out home setting and NW Sthunderstorms 60% before 10 PM introduce delay/ball-security risk, not guaranteed under.",
+          "source_refs": [
+            "del-primary",
+            "del-qb",
+            "docs-del",
+            "burke",
+            "vsin-cfb",
+            "circa-cfb",
+            "newark-weather"
+          ]
+        },
+        "vsin": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Burke Sept 29 Del+7 supports older healthier QB premise; currentmodel Lib-5.8 provides small pointsedgeonly.",
+          "source_refs": [
+            "del-primary",
+            "del-qb",
+            "docs-del",
+            "burke",
+            "vsin-cfb",
+            "circa-cfb",
+            "newark-weather"
+          ]
+        },
+        "docs": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Parlays Pundit Sept 28 Del+6.5 matchesline but stale health context; reduced support.",
+          "source_refs": [
+            "del-primary",
+            "del-qb",
+            "docs-del",
+            "burke",
+            "vsin-cfb",
+            "circa-cfb",
+            "newark-weather"
+          ]
+        },
+        "market": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Reference 4+movement 2+splits 0; Libopen-7 now-6.5, total 49→50 authentic.",
+          "source_refs": [
+            "del-primary",
+            "del-qb",
+            "docs-del",
+            "burke",
+            "vsin-cfb",
+            "circa-cfb",
+            "newark-weather"
+          ]
+        }
+      },
+      "market_subfactors": {
+        "reference_context": 4,
+        "movement_timing": 2,
+        "splits": 0
+      },
+      "failure_dimensions": [
+        {
+          "dimension": "failure_path_severity",
+          "score": 1,
+          "max": 2,
+          "evidence": "Backup QB inefficiency creates three-and-outs and Liberty margin."
+        },
+        {
+          "dimension": "personnel_role_resilience",
+          "score": null,
+          "max": 2,
+          "evidence": "Core QB unknown."
+        },
+        {
+          "dimension": "variance_game_script_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Weather/turnover/script risk."
+        },
+        {
+          "dimension": "price_sensitivity_protection",
+          "score": 1,
+          "max": 2,
+          "evidence": "Missingkey 7 reduces cushion."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": null,
+          "max": 2,
+          "evidence": "Healthcontradiction unresolvableuntilstarterclear."
+        }
+      ],
+      "failure_score": null,
+      "known_failure_subtotal": 3,
+      "failure_status": "INCOMPLETE",
+      "micks_thesis": "Delaware cover depends on viable sustained quarterback offense; no release before clearance/replacement handicap.",
+      "strongest_opposing_case": "Minicucci absence plus Liberty run/field-position superiority.",
+      "missing_evidence": [
+        "Minicucci starter/health",
+        "Backuprole ifout",
+        "Kickoffstorms",
+        "DEquote"
+      ],
+      "release_blockers": [
+        "Core personnel incomplete",
+        "Exact executable BetRivers Delaware offer and justified playable cutoff not verified"
+      ],
+      "best_number_review_target": "Delaware+7-110 review only if QB handicap completed",
+      "no_bet_cutoff": null,
+      "no_bet_cutoff_status": "not established-no bet until regraded",
+      "official_units": 0,
+      "disposition": "UNGRADED / NO BET",
+      "source_refs": [
+        "del-primary",
+        "del-qb",
+        "docs-del",
+        "burke",
+        "vsin-cfb",
+        "circa-cfb",
+        "newark-weather"
+      ],
+      "market_ai_shadow": {
+        "score": null,
+        "status": "UNGRADED SHADOW ONLY",
+        "reason": "No independently assessed Micks probability/EV feature inputs; does not impose a new daily-release prerequisite."
+      }
+    },
+    {
+      "id": "lib-spread",
+      "sport": "CFB",
+      "event": "Liberty at Delaware",
+      "start_et": "2026-10-02T19:00:00-04:00",
+      "pick": "Liberty -6.5",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "quote": {
+        "book": "Circa via VSiN",
+        "american_odds": -120,
+        "line": -6.5,
+        "market": "Full-game spread",
+        "observed_et": "2026-10-02 14:04-14:40",
+        "executable_in_delaware": false
+      },
+      "score_status": "UNGRADED",
+      "handicap_score": null,
+      "grade": null,
+      "known_subtotal": 49,
+      "assessed_maximum": 95,
+      "factors": {
+        "matchup": {
+          "score": 23,
+          "max": 35,
+          "evidence": "Liberty can win field position/run efficiency if Delaware backups start; healthier Minicucci removes principal margin edge. Conditional, not injury rumor bet.",
+          "source_refs": [
+            "circa-cfb",
+            "vsin-cfb",
+            "burke",
+            "docs-del",
+            "del-qb",
+            "newark-weather",
+            "action"
+          ]
+        },
+        "price": {
+          "score": 12,
+          "max": 20,
+          "evidence": "-6.5 crossesbelow 7 but-120 costs substantial vig; model Lib-5.8 does not independently support cover.",
+          "source_refs": [
+            "circa-cfb",
+            "vsin-cfb",
+            "burke",
+            "docs-del",
+            "del-qb",
+            "newark-weather",
+            "action"
+          ]
+        },
+        "personnel": {
+          "score": null,
+          "max": 15,
+          "evidence": "Purdie expected; opposing Minicucci impact unresolved. Do not turn unconfirmed injury into points.",
+          "source_refs": [
+            "circa-cfb",
+            "vsin-cfb",
+            "burke",
+            "docs-del",
+            "del-qb",
+            "newark-weather",
+            "action"
+          ]
+        },
+        "situation": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Roadsold-outvenue, potentialthunderstorms, ballsecuritycounter.",
+          "source_refs": [
+            "circa-cfb",
+            "vsin-cfb",
+            "burke",
+            "docs-del",
+            "del-qb",
+            "newark-weather",
+            "action"
+          ]
+        },
+        "vsin": {
+          "score": 2,
+          "max": 10,
+          "evidence": "Burke Del+7 opposes Liberty and current VSi Nmarginbelowspread.",
+          "source_refs": [
+            "circa-cfb",
+            "vsin-cfb",
+            "burke",
+            "docs-del",
+            "del-qb",
+            "newark-weather",
+            "action"
+          ]
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "Doc's Del+6.5 opposes; zero relevant support.",
+          "source_refs": [
+            "circa-cfb",
+            "vsin-cfb",
+            "burke",
+            "docs-del",
+            "del-qb",
+            "newark-weather",
+            "action"
+          ]
+        },
+        "market": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Reference 4+movement 2+splits 0; actual-7→-6.5 despite QBuncertainty not proofsmartmoney.",
+          "source_refs": [
+            "circa-cfb",
+            "vsin-cfb",
+            "burke",
+            "docs-del",
+            "del-qb",
+            "newark-weather",
+            "action"
+          ]
+        }
+      },
+      "market_subfactors": {
+        "reference_context": 4,
+        "movement_timing": 2,
+        "splits": 0
+      },
+      "failure_dimensions": [
+        {
+          "dimension": "failure_path_severity",
+          "score": 1,
+          "max": 2,
+          "evidence": "Minicucciplayswell and homeoffense stayswithin TD."
+        },
+        {
+          "dimension": "personnel_role_resilience",
+          "score": null,
+          "max": 2,
+          "evidence": "QB unknown changes edge direction."
+        },
+        {
+          "dimension": "variance_game_script_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Storms/turnovers underminemargin."
+        },
+        {
+          "dimension": "price_sensitivity_protection",
+          "score": 1,
+          "max": 2,
+          "evidence": "-120 notcheap despitehalfpoint."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": null,
+          "max": 2,
+          "evidence": "Opposing Delopinions requirefreshhealthreconciliation."
+        }
+      ],
+      "failure_score": null,
+      "known_failure_subtotal": 3,
+      "failure_status": "INCOMPLETE",
+      "micks_thesis": "Possiblefavoritecover through Delbackupoffense failures; strongestdependencyunverified.",
+      "strongest_opposing_case": "Healthy Minicucci and-120 price; backupstatus alone not sufficient.",
+      "missing_evidence": [
+        "OpposingQB",
+        "Final Liberty roles",
+        "Kickoffstorms",
+        "DEquote"
+      ],
+      "release_blockers": [
+        "Core personnel incomplete",
+        "Exact executable BetRivers Delaware offer and justified playable cutoff not verified"
+      ],
+      "best_number_review_target": "Liberty-6.5-110 review after QB confirmation",
+      "no_bet_cutoff": null,
+      "no_bet_cutoff_status": "not established-no bet until regraded",
+      "official_units": 0,
+      "disposition": "UNGRADED / NO BET",
+      "source_refs": [
+        "circa-cfb",
+        "vsin-cfb",
+        "burke",
+        "docs-del",
+        "del-qb",
+        "newark-weather",
+        "action"
+      ],
+      "market_ai_shadow": {
+        "score": null,
+        "status": "UNGRADED SHADOW ONLY",
+        "reason": "No independently assessed Micks probability/EV feature inputs; does not impose a new daily-release prerequisite."
+      }
+    },
+    {
+      "id": "idaho-spread",
+      "sport": "FCS",
+      "event": "Montana State at Idaho",
+      "start_et": "2026-10-02T22:30:00-04:00",
+      "pick": "Idaho +16.5",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "quote": {
+        "book": "Action Network article",
+        "american_odds": null,
+        "line": 16.5,
+        "market": "Full-game spread; article threshold only",
+        "observed_et": "2026-10-02 14:04-14:40",
+        "executable_in_delaware": false
+      },
+      "score_status": "UNGRADED",
+      "handicap_score": null,
+      "grade": null,
+      "known_subtotal": 47,
+      "assessed_maximum": 90,
+      "factors": {
+        "matchup": {
+          "score": 27,
+          "max": 35,
+          "evidence": "Idaho threeone-scorelosses and Wood/Harste productive FCS offense offer closer-gamepath; MSU unbeatenstillqualityfavorite. Bye/home and MS Umissing QB/RB/WR are separate matchup paths, not a copied Article.",
+          "source_refs": [
+            "msu",
+            "action"
+          ]
+        },
+        "price": {
+          "score": null,
+          "max": 20,
+          "evidence": "No current pricedofferverified. Article+16.5 alone not meaningful price/EVassessment.",
+          "source_refs": [
+            "msu",
+            "action"
+          ]
+        },
+        "personnel": {
+          "score": 12,
+          "max": 15,
+          "evidence": "Official MSU Lamson, Taco Dowler, Adam Jones OUT; Duchien/Coon/Dahlke fill. Lastgameproduction onegame notforecast; Dowler/Solano defensefinalstatusunknown.",
+          "source_refs": [
+            "msu",
+            "action"
+          ]
+        },
+        "situation": {
+          "score": 8,
+          "max": 10,
+          "evidence": "Idahobyebeforehome Kibbie Dome supports preparation; indoorweather N/A.",
+          "source_refs": [
+            "msu",
+            "action"
+          ]
+        },
+        "vsin": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No named relevant VSi NFC Sselection retrieved.",
+          "source_refs": [
+            "msu",
+            "action"
+          ]
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No named relevant Doc FC Sselection retrieved.",
+          "source_refs": [
+            "msu",
+            "action"
+          ]
+        },
+        "market": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No trustworthycurrentpricedreference/openingseries/splits retrieved.",
+          "source_refs": [
+            "msu",
+            "action"
+          ]
+        }
+      },
+      "market_subfactors": {
+        "reference_context": 0,
+        "movement_timing": 0,
+        "splits": 0
+      },
+      "failure_dimensions": [
+        {
+          "dimension": "failure_path_severity",
+          "score": 1,
+          "max": 2,
+          "evidence": "MSU depth can repeat strong replacementperformance and winbig."
+        },
+        {
+          "dimension": "personnel_role_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Absencesverifiedbut MSU replacements productive, not a collapseassumption."
+        },
+        {
+          "dimension": "variance_game_script_resilience",
+          "score": 2,
+          "max": 2,
+          "evidence": "Twooffensive/venuepaths support competitiveness."
+        },
+        {
+          "dimension": "price_sensitivity_protection",
+          "score": null,
+          "max": 2,
+          "evidence": "Unpricedthresholdcannot establishprotection."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": 1,
+          "max": 2,
+          "evidence": "MS Uunbeatencounterlimitsconfidence."
+        }
+      ],
+      "failure_score": null,
+      "known_failure_subtotal": 5,
+      "failure_status": "INCOMPLETE",
+      "micks_thesis": "Idaho keeps gamecompetitive through homepreparation and competent QBoffense against missing MS Uskills.",
+      "strongest_opposing_case": "MSU replacements already successful; record/small margins do not establish bettingvalue.",
+      "missing_evidence": [
+        "Pricedcurrentoffer",
+        "Finaldefenseavailability",
+        "DEprice"
+      ],
+      "release_blockers": [
+        "Core price incomplete",
+        "Exact executable BetRivers Delaware offer and justified playable cutoff not verified"
+      ],
+      "best_number_review_target": "Verify Idaho+16.5 atactualodds before anypricegrade",
+      "no_bet_cutoff": null,
+      "no_bet_cutoff_status": "not established-no bet until regraded",
+      "official_units": 0,
+      "disposition": "UNGRADED / NO BET",
+      "source_refs": [
+        "msu",
+        "action"
+      ],
+      "market_ai_shadow": {
+        "score": null,
+        "status": "UNGRADED SHADOW ONLY",
+        "reason": "No independently assessed Micks probability/EV feature inputs; does not impose a new daily-release prerequisite."
+      }
+    },
+    {
+      "id": "ham-spread",
+      "sport": "CFL",
+      "event": "Hamilton at Ottawa",
+      "start_et": "2026-10-02T19:00:00-04:00",
+      "pick": "Hamilton +1.5",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "quote": {
+        "book": "VSiN games reference; Circa unverified",
+        "american_odds": null,
+        "line": 1.5,
+        "market": "Full-game spread, no vig",
+        "observed_et": "2026-10-02 14:04-14:40",
+        "executable_in_delaware": false
+      },
+      "score_status": "UNGRADED",
+      "handicap_score": null,
+      "grade": null,
+      "known_subtotal": 38,
+      "assessed_maximum": 90,
+      "factors": {
+        "matchup": {
+          "score": 20,
+          "max": 35,
+          "evidence": "Hamilton has a close-gamepath but Frost replacing Mitchell materially reduces confidence; Ottawa Bethel-Thompsoncurrent QB context assessed rather than old Doc comparison.",
+          "source_refs": [
+            "cfl-ham",
+            "cfl-injury",
+            "cfl-board",
+            "cfl-tracker",
+            "docs-ham"
+          ]
+        },
+        "price": {
+          "score": null,
+          "max": 20,
+          "evidence": "+1.5 withoutvig cannot assess playableprice.",
+          "source_refs": [
+            "cfl-ham",
+            "cfl-injury",
+            "cfl-board",
+            "cfl-tracker",
+            "docs-ham"
+          ]
+        },
+        "personnel": {
+          "score": 11,
+          "max": 15,
+          "evidence": "Officialdepth PD Fs confirm Frost/Bethel-Thompson; Mitchell injuredreserve. Finalrole/injuryverification stillrecheck.",
+          "source_refs": [
+            "cfl-ham",
+            "cfl-injury",
+            "cfl-board",
+            "cfl-tracker",
+            "docs-ham"
+          ]
+        },
+        "situation": {
+          "score": 5,
+          "max": 10,
+          "evidence": "Ottawahome; weather notverified, no assumedrain/windedge.",
+          "source_refs": [
+            "cfl-ham",
+            "cfl-injury",
+            "cfl-board",
+            "cfl-tracker",
+            "docs-ham"
+          ]
+        },
+        "vsin": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No usable named VSi Nselection/model parsed; mislabeledcells notscores.",
+          "source_refs": [
+            "cfl-ham",
+            "cfl-injury",
+            "cfl-board",
+            "cfl-tracker",
+            "docs-ham"
+          ]
+        },
+        "docs": {
+          "score": 2,
+          "max": 10,
+          "evidence": "Tony Sink Sept 29 HAM-1.5 premise Mitchellstale; currentpluspointsnotautomaticconfirmation.",
+          "source_refs": [
+            "cfl-ham",
+            "cfl-injury",
+            "cfl-board",
+            "cfl-tracker",
+            "docs-ham"
+          ]
+        },
+        "market": {
+          "score": 0,
+          "max": 10,
+          "evidence": "Current Circa CF Ltrackerwrong-sport ML Bredirect; no verifiedmovement/splits.",
+          "source_refs": [
+            "cfl-ham",
+            "cfl-injury",
+            "cfl-board",
+            "cfl-tracker",
+            "docs-ham"
+          ]
+        }
+      },
+      "market_subfactors": {
+        "reference_context": 0,
+        "movement_timing": 0,
+        "splits": 0
+      },
+      "failure_dimensions": [
+        {
+          "dimension": "failure_path_severity",
+          "score": 1,
+          "max": 2,
+          "evidence": "Frostinefficiency/turnovers and Ottawahome drives."
+        },
+        {
+          "dimension": "personnel_role_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Backupstarterknown, butcashpathlessresilient."
+        },
+        {
+          "dimension": "variance_game_script_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "CF Lvolatile latepossessions."
+        },
+        {
+          "dimension": "price_sensitivity_protection",
+          "score": null,
+          "max": 2,
+          "evidence": "Priceunknown."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": 0,
+          "max": 2,
+          "evidence": "Older Doc QBpremisenotresolved bysame-sidepick."
+        }
+      ],
+      "failure_score": null,
+      "known_failure_subtotal": 3,
+      "failure_status": "INCOMPLETE",
+      "micks_thesis": "Only a provisional close-gamewatch with materiallychanged Hamilton QB.",
+      "strongest_opposing_case": "Ottawacurrent QB/home versus Hamiltonreplacement and unpricedline.",
+      "missing_evidence": [
+        "Exactvig/book",
+        "Kickoffweather",
+        "Final availability"
+      ],
+      "release_blockers": [
+        "Core price incomplete",
+        "Exact executable BetRivers Delaware offer and justified playable cutoff not verified"
+      ],
+      "best_number_review_target": "Not established",
+      "no_bet_cutoff": null,
+      "no_bet_cutoff_status": "not established-no bet until regraded",
+      "official_units": 0,
+      "disposition": "UNGRADED / NO BET",
+      "source_refs": [
+        "cfl-ham",
+        "cfl-injury",
+        "cfl-board",
+        "cfl-tracker",
+        "docs-ham"
+      ],
+      "market_ai_shadow": {
+        "score": null,
+        "status": "UNGRADED SHADOW ONLY",
+        "reason": "No independently assessed Micks probability/EV feature inputs; does not impose a new daily-release prerequisite."
+      }
+    },
+    {
+      "id": "cal-spread",
+      "sport": "CFL",
+      "event": "Calgary at Saskatchewan",
+      "start_et": "2026-10-02T21:30:00-04:00",
+      "pick": "Calgary +5.5",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "quote": {
+        "book": "VSiN games reference; Circa unverified",
+        "american_odds": null,
+        "line": 5.5,
+        "market": "Full-game spread, no vig",
+        "observed_et": "2026-10-02 14:04-14:40",
+        "executable_in_delaware": false
+      },
+      "score_status": "UNGRADED",
+      "handicap_score": null,
+      "grade": null,
+      "known_subtotal": 43,
+      "assessed_maximum": 90,
+      "factors": {
+        "matchup": {
+          "score": 25,
+          "max": 35,
+          "evidence": "Adams passing production versus Saskpass-defenseweakness supports keep-withinmargin; Sask Harris/Ouellette offense andhomecounter preventautomaticdogedge.",
+          "source_refs": [
+            "cfl-cal",
+            "cfl-injury",
+            "cfl-board",
+            "cfl-tracker",
+            "docs-ssk"
+          ]
+        },
+        "price": {
+          "score": null,
+          "max": 20,
+          "evidence": "No vig exposed on+5.5; currentmarketprice andalternative+6 unknown.",
+          "source_refs": [
+            "cfl-cal",
+            "cfl-injury",
+            "cfl-board",
+            "cfl-tracker",
+            "docs-ssk"
+          ]
+        },
+        "personnel": {
+          "score": 12,
+          "max": 15,
+          "evidence": "Officialdepth Adams/Harris. Currentinjuryreportconsulted; finalrolesrecheck.",
+          "source_refs": [
+            "cfl-cal",
+            "cfl-injury",
+            "cfl-board",
+            "cfl-tracker",
+            "docs-ssk"
+          ]
+        },
+        "situation": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Saskhome; Reginaweatherunverified, no wind-adjustedforecast.",
+          "source_refs": [
+            "cfl-cal",
+            "cfl-injury",
+            "cfl-board",
+            "cfl-tracker",
+            "docs-ssk"
+          ]
+        },
+        "vsin": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No reliablecurrentnamed VSi Nside/supportingmodelparsed.",
+          "source_refs": [
+            "cfl-cal",
+            "cfl-injury",
+            "cfl-board",
+            "cfl-tracker",
+            "docs-ssk"
+          ]
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "Guy Bruhn Sep 29 SSK-5.5 opposes Calgary, zero support.",
+          "source_refs": [
+            "cfl-cal",
+            "cfl-injury",
+            "cfl-board",
+            "cfl-tracker",
+            "docs-ssk"
+          ]
+        },
+        "market": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No verified Circa CF Lpricedreference/realmovement/splits.",
+          "source_refs": [
+            "cfl-cal",
+            "cfl-injury",
+            "cfl-board",
+            "cfl-tracker",
+            "docs-ssk"
+          ]
+        }
+      },
+      "market_subfactors": {
+        "reference_context": 0,
+        "movement_timing": 0,
+        "splits": 0
+      },
+      "failure_dimensions": [
+        {
+          "dimension": "failure_path_severity",
+          "score": 1,
+          "max": 2,
+          "evidence": "Saskoffensematches Calpassing and winsby TD."
+        },
+        {
+          "dimension": "personnel_role_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Current QBsverifiedbutdepthrolescanchange."
+        },
+        {
+          "dimension": "variance_game_script_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Passheavycompetitivepathvolatile."
+        },
+        {
+          "dimension": "price_sensitivity_protection",
+          "score": null,
+          "max": 2,
+          "evidence": "Priceunknown."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": 1,
+          "max": 2,
+          "evidence": "Docfavoritecounterunresolved."
+        }
+      ],
+      "failure_score": null,
+      "known_failure_subtotal": 4,
+      "failure_status": "INCOMPLETE",
+      "micks_thesis": "Calgarypassingkeepscompetitive ifweatherallows; no executableassessmentyet.",
+      "strongest_opposing_case": "Saskhomeoffense/groundbalance and weather may suppress Calpassing.",
+      "missing_evidence": [
+        "Exactvig/book",
+        "Reginaweather",
+        "Finalroles"
+      ],
+      "release_blockers": [
+        "Core price incomplete",
+        "Exact executable BetRivers Delaware offer and justified playable cutoff not verified"
+      ],
+      "best_number_review_target": "Not established",
+      "no_bet_cutoff": null,
+      "no_bet_cutoff_status": "not established-no bet until regraded",
+      "official_units": 0,
+      "disposition": "UNGRADED / NO BET",
+      "source_refs": [
+        "cfl-cal",
+        "cfl-injury",
+        "cfl-board",
+        "cfl-tracker",
+        "docs-ssk"
+      ],
+      "market_ai_shadow": {
+        "score": null,
+        "status": "UNGRADED SHADOW ONLY",
+        "reason": "No independently assessed Micks probability/EV feature inputs; does not impose a new daily-release prerequisite."
+      }
+    },
+    {
+      "id": "gabby-points",
+      "sport": "WNBA",
+      "event": "Dallas at Golden State",
+      "start_et": "2026-10-02T21:00:00-04:00",
+      "pick": "Gabby Williams Over19.5 points",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "quote": {
+        "book": "Covers threshold / Kalshi context only",
+        "american_odds": null,
+        "line": 19.5,
+        "market": "Player points; no American book quote",
+        "observed_et": "2026-10-02 14:04-14:40",
+        "executable_in_delaware": false
+      },
+      "score_status": "UNGRADED",
+      "handicap_score": null,
+      "grade": null,
+      "known_subtotal": 41,
+      "assessed_maximum": 90,
+      "factors": {
+        "matchup": {
+          "score": 22,
+          "max": 35,
+          "evidence": "Expanded playoffs shots/creation supportroleupside; displayedlast 10 only 3/10 at 20+, versus 2/2 playoff.28 PP Gplayoffaverageincludes 36 in OT, sample 2 notbaseline.",
+          "source_refs": [
+            "gabby-log",
+            "wnba-preview",
+            "wnba-injury",
+            "covers-wnba"
+          ]
+        },
+        "price": {
+          "score": null,
+          "max": 20,
+          "evidence": "Exact Americanoddsandsettlementnotexposed; predictioncontractnotbookquote.",
+          "source_refs": [
+            "gabby-log",
+            "wnba-preview",
+            "wnba-injury",
+            "covers-wnba"
+          ]
+        },
+        "personnel": {
+          "score": 12,
+          "max": 15,
+          "evidence": "Game 1 minutes 27, G 2 minutes 37. Higherplayoff FG Acanpersistbut role/minutesafter OTunknown; GS Vno official injuries.",
+          "source_refs": [
+            "gabby-log",
+            "wnba-preview",
+            "wnba-injury",
+            "covers-wnba"
+          ]
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Homeeliminationgamecouldtightenrotation, not guaranteedscoringincrease.",
+          "source_refs": [
+            "gabby-log",
+            "wnba-preview",
+            "wnba-injury",
+            "covers-wnba"
+          ]
+        },
+        "vsin": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No named relevant VSi Nprop retrieved.",
+          "source_refs": [
+            "gabby-log",
+            "wnba-preview",
+            "wnba-injury",
+            "covers-wnba"
+          ]
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "Doc DA Lspreaddoesnotconfirm Gabbyover.",
+          "source_refs": [
+            "gabby-log",
+            "wnba-preview",
+            "wnba-injury",
+            "covers-wnba"
+          ]
+        },
+        "market": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No actualproppricedreference/opening/currentseries/splits.",
+          "source_refs": [
+            "gabby-log",
+            "wnba-preview",
+            "wnba-injury",
+            "covers-wnba"
+          ]
+        }
+      },
+      "market_subfactors": {
+        "reference_context": 0,
+        "movement_timing": 0,
+        "splits": 0
+      },
+      "failure_dimensions": [
+        {
+          "dimension": "failure_path_severity",
+          "score": 1,
+          "max": 2,
+          "evidence": "Teammatesabsorbscoring, coldshooting orblowoutreducesminutes."
+        },
+        {
+          "dimension": "personnel_role_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Playoffopportunityupsidebuttwo-gamerolesamplethin."
+        },
+        {
+          "dimension": "variance_game_script_resilience",
+          "score": 0,
+          "max": 2,
+          "evidence": "OT/outlier 36 makesrecentmeanfragile."
+        },
+        {
+          "dimension": "price_sensitivity_protection",
+          "score": null,
+          "max": 2,
+          "evidence": "Priceunknown."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": 1,
+          "max": 2,
+          "evidence": "Recenthit-ratecounter unresolvedbyoneoutsidepropselection."
+        }
+      ],
+      "failure_score": null,
+      "known_failure_subtotal": 3,
+      "failure_status": "INCOMPLETE",
+      "micks_thesis": "Investigatehigherplayoffshotrole, but a 36-pointgamealonecannotjustify Over 19.5.",
+      "strongest_opposing_case": "3/10 recent 20+ hits, minutesvariance, overtimeoutlier and unknownjuice.",
+      "missing_evidence": [
+        "Realpropprice/book",
+        "Finalrotation/minutes",
+        "Usage/shotdistribution"
+      ],
+      "release_blockers": [
+        "Core price incomplete",
+        "Failureassessment cannotclear",
+        "Exact executable BetRivers Delaware offer and justified playable cutoff not verified"
+      ],
+      "best_number_review_target": "Not established; do not copy Over 19.5 withoutprice",
+      "no_bet_cutoff": null,
+      "no_bet_cutoff_status": "not established-no bet until regraded",
+      "official_units": 0,
+      "disposition": "UNGRADED / NO BET",
+      "source_refs": [
+        "gabby-log",
+        "wnba-preview",
+        "wnba-injury",
+        "covers-wnba"
+      ],
+      "market_ai_shadow": {
+        "score": null,
+        "status": "UNGRADED SHADOW ONLY",
+        "reason": "No independently assessed Micks probability/EV feature inputs; does not impose a new daily-release prerequisite."
+      }
+    },
+    {
+      "id": "sd-ml",
+      "sport": "NWSL",
+      "event": "San Diego at Orlando",
+      "start_et": "2026-10-02T20:00:00-04:00",
+      "pick": "San Diego ML",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "quote": {
+        "book": "ESPN reference, timestamped provisional quote",
+        "american_odds": -105,
+        "market": "Three-way ML; draw loses",
+        "observed_et": "2026-10-02 14:04-14:40",
+        "executable_in_delaware": false
+      },
+      "score_status": "UNGRADED",
+      "handicap_score": null,
+      "grade": null,
+      "known_subtotal": 41,
+      "assessed_maximum": 95,
+      "factors": {
+        "matchup": {
+          "score": 24,
+          "max": 35,
+          "evidence": "Betterseasonproduction and Paños recentclean-sheets supportawaywinpath, but no currentx G/finished XIrolehandicap.",
+          "source_refs": [
+            "sandiego",
+            "orlando",
+            "fbref"
+          ]
+        },
+        "price": {
+          "score": 11,
+          "max": 20,
+          "evidence": "Listedthree-waypriceidentifiedbutnotexecutable DE; drawriskincluded, no inventedx G/fairprobability.",
+          "source_refs": [
+            "sandiego",
+            "orlando",
+            "fbref"
+          ]
+        },
+        "personnel": {
+          "score": null,
+          "max": 15,
+          "evidence": "Final XI/GK and fullcurrentinjury/rolesunverified, coreimpactunfinished.",
+          "source_refs": [
+            "sandiego",
+            "orlando",
+            "fbref"
+          ]
+        },
+        "situation": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Venue/restknown; kickoffweathernotchecked, no forecastadjustment.",
+          "source_refs": [
+            "sandiego",
+            "orlando",
+            "fbref"
+          ]
+        },
+        "vsin": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No relevantnamed VSi N selectionretrieved.",
+          "source_refs": [
+            "sandiego",
+            "orlando",
+            "fbref"
+          ]
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No relevantnamed Docselectionretrieved.",
+          "source_refs": [
+            "sandiego",
+            "orlando",
+            "fbref"
+          ]
+        },
+        "market": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No authenticatedpriced Circareference/movement/splits.",
+          "source_refs": [
+            "sandiego",
+            "orlando",
+            "fbref"
+          ]
+        }
+      },
+      "market_subfactors": {
+        "reference_context": 0,
+        "movement_timing": 0,
+        "splits": 0
+      },
+      "failure_dimensions": [
+        {
+          "dimension": "failure_path_severity",
+          "score": 1,
+          "max": 2,
+          "evidence": "Draw/opponentqualitycanbreakwinpath."
+        },
+        {
+          "dimension": "personnel_role_resilience",
+          "score": null,
+          "max": 2,
+          "evidence": "Finalroleimpactunknown."
+        },
+        {
+          "dimension": "variance_game_script_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Goalvariance/finishingfragile."
+        },
+        {
+          "dimension": "price_sensitivity_protection",
+          "score": 1,
+          "max": 2,
+          "evidence": "Three-waydrawriskandunverifiedoffer."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": null,
+          "max": 2,
+          "evidence": "Underlyingchancequality/availabilitycounterunfinished."
+        }
+      ],
+      "failure_score": null,
+      "known_failure_subtotal": 3,
+      "failure_status": "INCOMPLETE",
+      "micks_thesis": "Betterseasonproduction and Paños recentclean-sheets supportawaywinpath, but no currentx G/finished XIrolehandicap.",
+      "strongest_opposing_case": "Orlandolastwin 3-1, five H 2 Hunbeaten; opponent/venueadjustmentnotfinished.",
+      "missing_evidence": [
+        "XI/GK/injuries",
+        "CurrentxG/chancequality",
+        "Weather",
+        "DEprice"
+      ],
+      "release_blockers": [
+        "Core personnel incomplete",
+        "Corematchupneedscompletionbefore release",
+        "Exact executable BetRivers Delaware offer and justified playable cutoff not verified"
+      ],
+      "best_number_review_target": "Not established",
+      "no_bet_cutoff": null,
+      "no_bet_cutoff_status": "not established-no bet until regraded",
+      "official_units": 0,
+      "disposition": "UNGRADED / NO BET",
+      "source_refs": [
+        "sandiego",
+        "orlando",
+        "fbref"
+      ],
+      "market_ai_shadow": {
+        "score": null,
+        "status": "UNGRADED SHADOW ONLY",
+        "reason": "No independently assessed Micks probability/EV feature inputs; does not impose a new daily-release prerequisite."
+      }
+    },
+    {
+      "id": "seattle-ml",
+      "sport": "NWSL",
+      "event": "North Carolina at Seattle",
+      "start_et": "2026-10-02T22:00:00-04:00",
+      "pick": "Seattle ML",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "quote": {
+        "book": "ESPN reference, timestamped provisional quote",
+        "american_odds": 135,
+        "market": "Three-way ML; draw loses",
+        "observed_et": "2026-10-02 14:04-14:40",
+        "executable_in_delaware": false
+      },
+      "score_status": "UNGRADED",
+      "handicap_score": null,
+      "grade": null,
+      "known_subtotal": 38,
+      "assessed_maximum": 95,
+      "factors": {
+        "matchup": {
+          "score": 21,
+          "max": 35,
+          "evidence": "Seattlelower GA and homevenueofferupsetpath; goalratesnotcurrentchancequalitymodel.",
+          "source_refs": [
+            "nc",
+            "fbref"
+          ]
+        },
+        "price": {
+          "score": 11,
+          "max": 20,
+          "evidence": "Listedthree-waypriceidentifiedbutnotexecutable DE; drawriskincluded, no inventedx G/fairprobability.",
+          "source_refs": [
+            "nc",
+            "fbref"
+          ]
+        },
+        "personnel": {
+          "score": null,
+          "max": 15,
+          "evidence": "Final XI/GK and fullcurrentinjury/rolesunverified, coreimpactunfinished.",
+          "source_refs": [
+            "nc",
+            "fbref"
+          ]
+        },
+        "situation": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Venue/restknown; kickoffweathernotchecked, no forecastadjustment.",
+          "source_refs": [
+            "nc",
+            "fbref"
+          ]
+        },
+        "vsin": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No relevantnamed VSi N selectionretrieved.",
+          "source_refs": [
+            "nc",
+            "fbref"
+          ]
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No relevantnamed Docselectionretrieved.",
+          "source_refs": [
+            "nc",
+            "fbref"
+          ]
+        },
+        "market": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No authenticatedpriced Circareference/movement/splits.",
+          "source_refs": [
+            "nc",
+            "fbref"
+          ]
+        }
+      },
+      "market_subfactors": {
+        "reference_context": 0,
+        "movement_timing": 0,
+        "splits": 0
+      },
+      "failure_dimensions": [
+        {
+          "dimension": "failure_path_severity",
+          "score": 1,
+          "max": 2,
+          "evidence": "Draw/opponentqualitycanbreakwinpath."
+        },
+        {
+          "dimension": "personnel_role_resilience",
+          "score": null,
+          "max": 2,
+          "evidence": "Finalroleimpactunknown."
+        },
+        {
+          "dimension": "variance_game_script_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Goalvariance/finishingfragile."
+        },
+        {
+          "dimension": "price_sensitivity_protection",
+          "score": 1,
+          "max": 2,
+          "evidence": "Three-waydrawriskandunverifiedoffer."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": null,
+          "max": 2,
+          "evidence": "Underlyingchancequality/availabilitycounterunfinished."
+        }
+      ],
+      "failure_score": null,
+      "known_failure_subtotal": 3,
+      "failure_status": "INCOMPLETE",
+      "micks_thesis": "Seattlelower GA and homevenueofferupsetpath; goalratesnotcurrentchancequalitymodel.",
+      "strongest_opposing_case": "NC 49 GFandprior H 2 Hwin, Riley Jacksonreturn; finalrolesunknown.",
+      "missing_evidence": [
+        "XI/GK/injuries",
+        "CurrentxG/chancequality",
+        "Weather",
+        "DEprice"
+      ],
+      "release_blockers": [
+        "Core personnel incomplete",
+        "Corematchupneedscompletionbefore release",
+        "Exact executable BetRivers Delaware offer and justified playable cutoff not verified"
+      ],
+      "best_number_review_target": "Not established",
+      "no_bet_cutoff": null,
+      "no_bet_cutoff_status": "not established-no bet until regraded",
+      "official_units": 0,
+      "disposition": "UNGRADED / NO BET",
+      "source_refs": [
+        "nc",
+        "fbref"
+      ],
+      "market_ai_shadow": {
+        "score": null,
+        "status": "UNGRADED SHADOW ONLY",
+        "reason": "No independently assessed Micks probability/EV feature inputs; does not impose a new daily-release prerequisite."
+      }
+    },
+    {
+      "id": "france-ml",
+      "sport": "UEFA Nations League",
+      "event": "France vs Italy",
+      "start_et": "2026-10-02T14:45:00-04:00",
+      "pick": "France ML",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "quote": {
+        "book": "ESPN reference",
+        "american_odds": -235,
+        "market": "Three-wayML draw loses",
+        "observed_et": "2026-10-02 14:04-14:40",
+        "executable_in_delaware": false
+      },
+      "score_status": "UNGRADED",
+      "handicap_score": null,
+      "grade": null,
+      "known_subtotal": 29,
+      "assessed_maximum": 75,
+      "factors": {
+        "matchup": {
+          "score": null,
+          "max": 35,
+          "evidence": "Independentcurrentx G/efficiency/opponentadjustment notfinished; teamreputationnotgrade.",
+          "source_refs": [
+            "uefa",
+            "france-xi",
+            "analyst"
+          ]
+        },
+        "price": {
+          "score": 10,
+          "max": 20,
+          "evidence": "Reference-235 identified, expensivefavorite/three-waydrawrisk; not DEoffer.",
+          "source_refs": [
+            "uefa",
+            "france-xi",
+            "analyst"
+          ]
+        },
+        "personnel": {
+          "score": 12,
+          "max": 15,
+          "evidence": "UEFAX Iconfirmed Maignan, Dembélé/Cherki/Olise/Doué; Mbappénonstarter isnotinjuryclaim. Italy Donnarumma/Kean/Pio Esposito.",
+          "source_refs": [
+            "uefa",
+            "france-xi",
+            "analyst"
+          ]
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Kick 14:45 ET; missed 14:00 checkpointbeforeon-demandrun; no retrospectivepregameofficial.",
+          "source_refs": [
+            "uefa",
+            "france-xi",
+            "analyst"
+          ]
+        },
+        "vsin": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No namedrelevant VSi Nselectionretrieved.",
+          "source_refs": [
+            "uefa",
+            "france-xi",
+            "analyst"
+          ]
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No namedrelevant Docselectionretrieved.",
+          "source_refs": [
+            "uefa",
+            "france-xi",
+            "analyst"
+          ]
+        },
+        "market": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No verifiedopeningseries/splits/referencecomparison.",
+          "source_refs": [
+            "uefa",
+            "france-xi",
+            "analyst"
+          ]
+        }
+      },
+      "market_subfactors": {
+        "reference_context": 0,
+        "movement_timing": 0,
+        "splits": 0
+      },
+      "failure_dimensions": [
+        {
+          "dimension": "failure_path_severity",
+          "score": null,
+          "max": 2,
+          "evidence": "Independentfailurepathanalysisunfinished."
+        },
+        {
+          "dimension": "personnel_role_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Known XIbutcomparativeusageimpactlimited."
+        },
+        {
+          "dimension": "variance_game_script_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Draw/finishingvariance."
+        },
+        {
+          "dimension": "price_sensitivity_protection",
+          "score": 0,
+          "max": 2,
+          "evidence": "Expensivefavoriteweakprotection."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": null,
+          "max": 2,
+          "evidence": "Corequalitycounterunfinished."
+        }
+      ],
+      "failure_score": null,
+      "known_failure_subtotal": 2,
+      "failure_status": "INCOMPLETE",
+      "micks_thesis": "Official XIalonecannotestablishstrengthof Francebet.",
+      "strongest_opposing_case": "Italyqualityanddraw, Francewithout Mbappéin XI; corecomparisonunfinished.",
+      "missing_evidence": [
+        "Independentmatchup/xG",
+        "DEprice"
+      ],
+      "release_blockers": [
+        "Core matchup incomplete",
+        "No release after14:45kick",
+        "Exact executable BetRivers Delaware offer and justified playable cutoff not verified"
+      ],
+      "best_number_review_target": "Not established",
+      "no_bet_cutoff": null,
+      "no_bet_cutoff_status": "not established-no bet until regraded",
+      "official_units": 0,
+      "disposition": "UNGRADED / NO BET",
+      "source_refs": [
+        "uefa",
+        "france-xi",
+        "analyst"
+      ],
+      "market_ai_shadow": {
+        "score": null,
+        "status": "UNGRADED SHADOW ONLY",
+        "reason": "No independently assessed Micks probability/EV feature inputs; does not impose a new daily-release prerequisite."
+      }
+    },
+    {
+      "id": "beijing-atp",
+      "sport": "TENNIS",
+      "event": "de Minaur vs Halys",
+      "start_et": "2026-10-02T23:00:00-04:00",
+      "pick": "No selected market",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "quote": {
+        "book": null,
+        "american_odds": null,
+        "market": null,
+        "observed_et": "2026-10-02 14:04-14:40",
+        "executable_in_delaware": false
+      },
+      "score_status": "UNGRADED",
+      "handicap_score": null,
+      "grade": null,
+      "known_subtotal": 0,
+      "assessed_maximum": 40,
+      "factors": {
+        "matchup": {
+          "score": null,
+          "max": 35,
+          "evidence": "ATP official Oct 3 local 11 AM scheduleconfirmslate Oct 2 ETstart; surfacehold/break, fatigue, health andpricecoreunfinished.",
+          "source_refs": [
+            "atp"
+          ]
+        },
+        "price": {
+          "score": null,
+          "max": 20,
+          "evidence": "No currentrealbookoffer, priceassessmentincomplete.",
+          "source_refs": [
+            "atp"
+          ]
+        },
+        "personnel": {
+          "score": null,
+          "max": 15,
+          "evidence": "Health/weigh-ins orfatigue/rolescoreincomplete.",
+          "source_refs": [
+            "atp"
+          ]
+        },
+        "situation": {
+          "score": 0,
+          "max": 10,
+          "evidence": "Venue/dateknownbutedgeconditionsnotassessed; zero supportawarded.",
+          "source_refs": [
+            "atp"
+          ]
+        },
+        "vsin": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No relevantnamed VSi Nselectionretrieved.",
+          "source_refs": [
+            "atp"
+          ]
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No relevantnamed Docselectionretrieved.",
+          "source_refs": [
+            "atp"
+          ]
+        },
+        "market": {
+          "score": 0,
+          "max": 10,
+          "evidence": "Currentcomparison/movement/splitinputsnotexposed.",
+          "source_refs": [
+            "atp"
+          ]
+        }
+      },
+      "market_subfactors": {
+        "reference_context": 0,
+        "movement_timing": 0,
+        "splits": 0
+      },
+      "failure_dimensions": [
+        {
+          "dimension": "failure_path_severity",
+          "score": null,
+          "max": 2,
+          "evidence": "Bout/matchspecificfailurecaseunfinished."
+        },
+        {
+          "dimension": "personnel_role_resilience",
+          "score": null,
+          "max": 2,
+          "evidence": "Corepersonnelunfinished."
+        },
+        {
+          "dimension": "variance_game_script_resilience",
+          "score": null,
+          "max": 2,
+          "evidence": "Varianceunfinished."
+        },
+        {
+          "dimension": "price_sensitivity_protection",
+          "score": null,
+          "max": 2,
+          "evidence": "Unpricedmarket."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": null,
+          "max": 2,
+          "evidence": "No resolvedindependentcounter."
+        }
+      ],
+      "failure_score": null,
+      "known_failure_subtotal": 0,
+      "failure_status": "INCOMPLETE",
+      "micks_thesis": "ATP official Oct 3 local 11 AM scheduleconfirmslate Oct 2 ETstart; surfacehold/break, fatigue, health andpricecoreunfinished.",
+      "strongest_opposing_case": "No reputation/favorite-basedbetwithoutmatch-specifichandicap.",
+      "missing_evidence": [
+        "Corematchup/personnel/price",
+        "Sport-specificconditions",
+        "Exactstartwherepending"
+      ],
+      "release_blockers": [
+        "Core assessment incomplete",
+        "Exact executable BetRivers Delaware offer and justified playable cutoff not verified"
+      ],
+      "best_number_review_target": "Not established",
+      "no_bet_cutoff": null,
+      "no_bet_cutoff_status": "not established-no bet until regraded",
+      "official_units": 0,
+      "disposition": "UNGRADED / NO BET",
+      "source_refs": [
+        "atp"
+      ],
+      "market_ai_shadow": {
+        "score": null,
+        "status": "UNGRADED SHADOW ONLY",
+        "reason": "No independently assessed Micks probability/EV feature inputs; does not impose a new daily-release prerequisite."
+      }
+    },
+    {
+      "id": "beijing-wta",
+      "sport": "TENNIS",
+      "event": "Gauff-Osorio; Volynets-Mertens; Vekic-Zhu; Krueger-Ann Li",
+      "start_et": null,
+      "pick": "No selected market",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "quote": {
+        "book": null,
+        "american_odds": null,
+        "market": null,
+        "observed_et": "2026-10-02 14:04-14:40",
+        "executable_in_delaware": false
+      },
+      "score_status": "UNGRADED",
+      "handicap_score": null,
+      "grade": null,
+      "known_subtotal": 0,
+      "assessed_maximum": 40,
+      "factors": {
+        "matchup": {
+          "score": null,
+          "max": 35,
+          "evidence": "ESPN 11 PME Tlistingconflicts FDmidnightdate; WT Aorderpagegeneric. Verifyprimaryclockbeforepregameanalysis; no pricesexposed.",
+          "source_refs": [
+            "tennis-espn",
+            "wta-oop"
+          ]
+        },
+        "price": {
+          "score": null,
+          "max": 20,
+          "evidence": "No currentrealbookoffer, priceassessmentincomplete.",
+          "source_refs": [
+            "tennis-espn",
+            "wta-oop"
+          ]
+        },
+        "personnel": {
+          "score": null,
+          "max": 15,
+          "evidence": "Health/weigh-ins orfatigue/rolescoreincomplete.",
+          "source_refs": [
+            "tennis-espn",
+            "wta-oop"
+          ]
+        },
+        "situation": {
+          "score": 0,
+          "max": 10,
+          "evidence": "Venue/dateknownbutedgeconditionsnotassessed; zero supportawarded.",
+          "source_refs": [
+            "tennis-espn",
+            "wta-oop"
+          ]
+        },
+        "vsin": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No relevantnamed VSi Nselectionretrieved.",
+          "source_refs": [
+            "tennis-espn",
+            "wta-oop"
+          ]
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No relevantnamed Docselectionretrieved.",
+          "source_refs": [
+            "tennis-espn",
+            "wta-oop"
+          ]
+        },
+        "market": {
+          "score": 0,
+          "max": 10,
+          "evidence": "Currentcomparison/movement/splitinputsnotexposed.",
+          "source_refs": [
+            "tennis-espn",
+            "wta-oop"
+          ]
+        }
+      },
+      "market_subfactors": {
+        "reference_context": 0,
+        "movement_timing": 0,
+        "splits": 0
+      },
+      "failure_dimensions": [
+        {
+          "dimension": "failure_path_severity",
+          "score": null,
+          "max": 2,
+          "evidence": "Bout/matchspecificfailurecaseunfinished."
+        },
+        {
+          "dimension": "personnel_role_resilience",
+          "score": null,
+          "max": 2,
+          "evidence": "Corepersonnelunfinished."
+        },
+        {
+          "dimension": "variance_game_script_resilience",
+          "score": null,
+          "max": 2,
+          "evidence": "Varianceunfinished."
+        },
+        {
+          "dimension": "price_sensitivity_protection",
+          "score": null,
+          "max": 2,
+          "evidence": "Unpricedmarket."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": null,
+          "max": 2,
+          "evidence": "No resolvedindependentcounter."
+        }
+      ],
+      "failure_score": null,
+      "known_failure_subtotal": 0,
+      "failure_status": "INCOMPLETE",
+      "micks_thesis": "ESPN 11 PME Tlistingconflicts FDmidnightdate; WT Aorderpagegeneric. Verifyprimaryclockbeforepregameanalysis; no pricesexposed.",
+      "strongest_opposing_case": "No reputation/favorite-basedbetwithoutmatch-specifichandicap.",
+      "missing_evidence": [
+        "Corematchup/personnel/price",
+        "Sport-specificconditions",
+        "Exactstartwherepending"
+      ],
+      "release_blockers": [
+        "Core assessment incomplete",
+        "Exact executable BetRivers Delaware offer and justified playable cutoff not verified"
+      ],
+      "best_number_review_target": "Not established",
+      "no_bet_cutoff": null,
+      "no_bet_cutoff_status": "not established-no bet until regraded",
+      "official_units": 0,
+      "disposition": "UNGRADED / NO BET",
+      "source_refs": [
+        "tennis-espn",
+        "wta-oop"
+      ],
+      "market_ai_shadow": {
+        "score": null,
+        "status": "UNGRADED SHADOW ONLY",
+        "reason": "No independently assessed Micks probability/EV feature inputs; does not impose a new daily-release prerequisite."
+      }
+    },
+    {
+      "id": "boxing-card",
+      "sport": "BOXING",
+      "event": "Jones-Sanchez Orlando card",
+      "start_et": null,
+      "pick": "No selected market",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "quote": {
+        "book": null,
+        "american_odds": null,
+        "market": null,
+        "observed_et": "2026-10-02 14:04-14:40",
+        "executable_in_delaware": false
+      },
+      "score_status": "UNGRADED",
+      "handicap_score": null,
+      "grade": null,
+      "known_subtotal": 0,
+      "assessed_maximum": 40,
+      "factors": {
+        "matchup": {
+          "score": null,
+          "max": 35,
+          "evidence": "Oct 2 cardverified; weigh-ins, boutlimits/currentroles andrealbookpriceunverified. Orozco-Abrahante, Layne-King, Alvarez-Carmona, Nieves-Hernandez, Shirley-Castillo supportingboutinventory, no forgedmarkets.",
+          "source_refs": [
+            "boxing",
+            "boxing-schedule"
+          ]
+        },
+        "price": {
+          "score": null,
+          "max": 20,
+          "evidence": "No currentrealbookoffer, priceassessmentincomplete.",
+          "source_refs": [
+            "boxing",
+            "boxing-schedule"
+          ]
+        },
+        "personnel": {
+          "score": null,
+          "max": 15,
+          "evidence": "Health/weigh-ins orfatigue/rolescoreincomplete.",
+          "source_refs": [
+            "boxing",
+            "boxing-schedule"
+          ]
+        },
+        "situation": {
+          "score": 0,
+          "max": 10,
+          "evidence": "Venue/dateknownbutedgeconditionsnotassessed; zero supportawarded.",
+          "source_refs": [
+            "boxing",
+            "boxing-schedule"
+          ]
+        },
+        "vsin": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No relevantnamed VSi Nselectionretrieved.",
+          "source_refs": [
+            "boxing",
+            "boxing-schedule"
+          ]
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No relevantnamed Docselectionretrieved.",
+          "source_refs": [
+            "boxing",
+            "boxing-schedule"
+          ]
+        },
+        "market": {
+          "score": 0,
+          "max": 10,
+          "evidence": "Currentcomparison/movement/splitinputsnotexposed.",
+          "source_refs": [
+            "boxing",
+            "boxing-schedule"
+          ]
+        }
+      },
+      "market_subfactors": {
+        "reference_context": 0,
+        "movement_timing": 0,
+        "splits": 0
+      },
+      "failure_dimensions": [
+        {
+          "dimension": "failure_path_severity",
+          "score": null,
+          "max": 2,
+          "evidence": "Bout/matchspecificfailurecaseunfinished."
+        },
+        {
+          "dimension": "personnel_role_resilience",
+          "score": null,
+          "max": 2,
+          "evidence": "Corepersonnelunfinished."
+        },
+        {
+          "dimension": "variance_game_script_resilience",
+          "score": null,
+          "max": 2,
+          "evidence": "Varianceunfinished."
+        },
+        {
+          "dimension": "price_sensitivity_protection",
+          "score": null,
+          "max": 2,
+          "evidence": "Unpricedmarket."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": null,
+          "max": 2,
+          "evidence": "No resolvedindependentcounter."
+        }
+      ],
+      "failure_score": null,
+      "known_failure_subtotal": 0,
+      "failure_status": "INCOMPLETE",
+      "micks_thesis": "Oct 2 cardverified; weigh-ins, boutlimits/currentroles andrealbookpriceunverified. Orozco-Abrahante, Layne-King, Alvarez-Carmona, Nieves-Hernandez, Shirley-Castillo supportingboutinventory, no forgedmarkets.",
+      "strongest_opposing_case": "No reputation/favorite-basedbetwithoutmatch-specifichandicap.",
+      "missing_evidence": [
+        "Corematchup/personnel/price",
+        "Sport-specificconditions",
+        "Exactstartwherepending"
+      ],
+      "release_blockers": [
+        "Core assessment incomplete",
+        "Exact executable BetRivers Delaware offer and justified playable cutoff not verified"
+      ],
+      "best_number_review_target": "Not established",
+      "no_bet_cutoff": null,
+      "no_bet_cutoff_status": "not established-no bet until regraded",
+      "official_units": 0,
+      "disposition": "UNGRADED / NO BET",
+      "source_refs": [
+        "boxing",
+        "boxing-schedule"
+      ],
+      "market_ai_shadow": {
+        "score": null,
+        "status": "UNGRADED SHADOW ONLY",
+        "reason": "No independently assessed Micks probability/EV feature inputs; does not impose a new daily-release prerequisite."
+      }
+    }
+  ],
+  "inventory": [
+    {
+      "sport": "NHL",
+      "events": [
+        "NYR@DET 18:30",
+        "WSH@CAR 19:00",
+        "BOS@WPG 20:00",
+        "STL@DAL 21:00",
+        "ANA@VGK 22:00"
+      ],
+      "status": "Five current games; five distinct checkpoints."
+    },
+    {
+      "sport": "CFB FBS",
+      "events": [
+        "Pitt@VT 19:00",
+        "Liberty@Delaware 19:00",
+        "PSU@NW 20:00"
+      ],
+      "status": "All three scanned; quarterback/skill status and current numbers reconciled."
+    },
+    {
+      "sport": "CFB FCS",
+      "events": [
+        "Montana State@Idaho 22:30"
+      ],
+      "status": "Primary home/away corrected; MSU three offensive starters OUT."
+    },
+    {
+      "sport": "WNBA",
+      "events": [
+        "DAL@GSV 21:00 playoff G 3"
+      ],
+      "status": "Official 14:00 injuryreportread; spread, total and Gabbyprop assessed."
+    },
+    {
+      "sport": "CFL",
+      "events": [
+        "HAM@OTT 19:00",
+        "CGY@SSK 21:30"
+      ],
+      "status": "Four officialdepthchartsread; actualvig/weather unresolved."
+    },
+    {
+      "sport": "Soccer UEFA",
+      "events": [
+        "Kazakhstan-Moldova 10:00",
+        "Cyprus-Armenia 12:00",
+        "Latvia-Montenegro 12:00",
+        "Belgium-Türkiye 14:45",
+        "France-Italy 14:45",
+        "Hungary-Georgia 14:45",
+        "Ukraine-Northern Ireland 14:45",
+        "Bosnia-Sweden 14:45",
+        "Poland-Romania 14:45",
+        "Faroe-Slovakia 14:45"
+      ],
+      "status": "Fixture/XI cross-reference; three early games already started before scan. No candidate released for seven 14:45 games; they must close for pregame purposes atkick. Other six incomplete matchup/personnel/price, UNGRADED."
+    },
+    {
+      "sport": "Soccer NWSL",
+      "events": [
+        "San Diego@Orlando 20:00",
+        "North Carolina@Seattle 22:00"
+      ],
+      "status": "Currentprimarypreviews/injuries/basicstats; final XI/GK andx G unresolved. No Oct 2 MLS/Liga MXfixtureexposed onchecked ESP Nleagueboards; global soccercoveragepartial."
+    },
+    {
+      "sport": "Tennis",
+      "events": [
+        "Beijingde Minaur-Halys 23:00 ET(Oct 3 China)",
+        "WT Afourlistedmatchesclockunconfirmed",
+        "Suzhouqualifiers Shi Han-Chengyiyi Yuan, Yang Yidi-Saigo, Huang-Khamutsianskaya",
+        "Tokyo doubles listing"
+      ],
+      "status": "Late AT Pstartprimaryverified; WT Aclockconflict unresolved, nofinishedserve/break/fatigue/pricehandicap."
+    },
+    {
+      "sport": "Boxing",
+      "events": [
+        "Omari Jones-Alan Sanchez Orlando Oct 2",
+        "Orozco-Abrahante",
+        "Layne-King",
+        "Alvarez-Carmona",
+        "Nieves-Hernandez",
+        "Shirley-Castillo"
+      ],
+      "status": "Maincardverified; currentweigh-ins/exactbroadcaststart/realodds notverified. No automaticboxingrelease."
+    },
+    {
+      "sport": "MMA",
+      "events": [
+        "UFC 332 Oct 3 officialweigh-ins Oct 2"
+      ],
+      "status": "Weigh-in day, noverified Fridayfightcard; Saturdayfuturewatchnotdailyrelease."
+    },
+    {
+      "sport": "Golf",
+      "events": [
+        "Bank Utah Championshipround 2"
+      ],
+      "status": "Inprogress; no freshpre-roundbet orinvented liveprice."
+    },
+    {
+      "sport": "Motorsports",
+      "events": [
+        "Las Vegas NASCAR Fridaypractice",
+        "F 1 Fridaypractice"
+      ],
+      "status": "NASCA Rraces Oct 3/4, F 1 raceremainsfuture; no Fridayracecandidate."
+    },
+    {
+      "sport": "MLB / NBA / NFL",
+      "events": [],
+      "status": "No Oct 2 games oncheckedofficial MLB/NB Aschedules and NFL Week 4 board. No ML Bprops/NRFI/YRFI. Internationalbaseballnotexhaustivelyverified."
+    },
+    {
+      "sport": "CBB / UFL / other leagues",
+      "events": [],
+      "status": "Noverifiedcurrentboard. Not a claimofworldwideexhaustivecoverage."
+    }
+  ],
+  "guides": [
+    {
+      "name": "2026 VSi N NFL annualguide 110 pages",
+      "status": "NOT APPLICABLE",
+      "reason": "No NF Lgame Oct 2; storedoriginalinventoryconsulted, no Friday NFL projection fabricated."
+    },
+    {
+      "name": "Fantasy Life 2026 magazine 148 pages andweekly NF Lforecasts/utilization",
+      "status": "NOT APPLICABLE",
+      "reason": "No NF Ltoday; noannual-to-weeklyconversion orborrowed CF Bconfirmation."
+    },
+    {
+      "name": "Nate Silver NBA Futureofthe Franchise prior",
+      "status": "SUPPORTING ONLY",
+      "reason": "Currentstored Sept 28 moduleconsulted; structuralten-yearprior, not dailygameline/2026-27 titleprobability. No NBA Oct 2 game."
+    },
+    {
+      "name": "Other original sports guides",
+      "status": "UNKNOWN",
+      "reason": "Noadditionalapplicableoriginalguideidentified incurrentinventory; doesnotimplyunusedguideexistsorcontentsread."
+    }
+  ],
+  "scans": [
+    {
+      "name": "Progressive Fade 5/10/20 SUvs ATS",
+      "status": "UNKNOWN",
+      "reason": "Current NH Lseason 0-2 games; priorseasonbaselinecontextonly. Closingline-band/ATS windowsnotavailable acrosscandidateboards. Cannotconfirmorclearfadealert."
+    },
+    {
+      "name": "Favorite Inflation",
+      "status": "UNKNOWN",
+      "reason": "Referencepricescompared, but comparableclosingexpectation/marginseriesnotretrieved. No automaticfadeoffblowouts, fameorbigfavorite."
+    },
+    {
+      "name": "Market Intelligence",
+      "status": "COMPLETED WITH GAPS",
+      "reason": "Fullgame Circaquotes and authenticopens retrieved for NHL/CFB/WNBA; CFB Pitt and NHLNYR/DET Circasplits exposed. Restunknown; reference 4/movement 1-2/splits 0-1 awardsdocumented."
+    },
+    {
+      "name": "Market AI Replica 100",
+      "status": "UNGRADED SHADOW",
+      "reason": "Noindependent Micksprobability/EVfeatures to scoreexperimentalshadow. Not a newdaily-releaseblocker."
+    },
+    {
+      "name": "Futures Lab 100",
+      "status": "NO BET / INCOMPLETE",
+      "reason": "NB Astructuralprior and upcomingraces/UF Ccontextconsulted; actualfuturesquotes/independentseasonprobability/EVnotfinished. No 78+/Failure 7/EV 5%qualifierestablished."
+    },
+    {
+      "name": "A-gradehunt",
+      "status": "NO A-GRADE",
+      "reason": "No candidateat 86+, norcurrentstronguncounteredmultiplatformcashpaths/executableprice. Not a source-countquota."
+    },
+    {
+      "name": "Progressiveknowledge/results/CLV",
+      "status": "NO NEW SETTLEMENT",
+      "reason": "Oct 1 midday andlate NH Lrecords had 0 officialunits. No wagerreceipts, reliablecurrentclosing-series or verifiedsettledofficialledgerread; nofictionalresultor 20/50/100 sample added."
+    }
+  ],
+  "sections": [
+    {
+      "name": "Master Picks",
+      "decision": "NO BET",
+      "official_count": 0,
+      "official_units": 0
+    },
+    {
+      "name": "Props Lab",
+      "decision": "Gabby Over 19.5 UNGRADED/price missing; NH Lshots/scorers and CF Bprops noverifiedthreshold/offer, noofficial",
+      "official_count": 0,
+      "official_units": 0
+    },
+    {
+      "name": "Derivatives",
+      "decision": "CARM Lpreferredto-1.5; Pittspreadpreferredif+3 returns; WNB Aover weak. No F 5/NRFI/YRF Ino MLB",
+      "official_count": 0,
+      "official_units": 0
+    },
+    {
+      "name": "Futures Lab",
+      "decision": "Noofficialposition; structuralprior/futureeventswatchonly",
+      "official_count": 0,
+      "official_units": 0
+    },
+    {
+      "name": "Lotto Parlays",
+      "decision": "Noofficialmainparlay orseven-leg mixed ticket; no qualifying executablelegs, nofabricatedpayout",
+      "official_count": 0,
+      "official_units": 0
+    },
+    {
+      "name": "Longshots",
+      "decision": "BOS/ANA/NWS Lunderdogsremainwatch/UNGRADED, noofficial",
+      "official_count": 0,
+      "official_units": 0
+    },
+    {
+      "name": "Watchlist / Live-only",
+      "decision": "CA Rfirst; Pitt, DA Lnext. Liveprices/gameconditionsmustbefreshlyassessed, none released",
+      "official_count": 0,
+      "official_units": 0
+    },
+    {
+      "name": "Passes",
+      "decision": "Allbelowgate andcore-incompletecandidates excludedfromofficialcard",
+      "official_count": 0,
+      "official_units": 0
+    },
+    {
+      "name": "Pick of the Day",
+      "decision": "NONE; watchcandidateisnot POTD",
+      "official_count": 0,
+      "official_units": 0
+    },
+    {
+      "name": "Delaware fixed-payoutfootballcards",
+      "decision": "Oct 1 PD Fsremainhistoricalspecificcards; no Friday NFL game, noforcedhalf-point/teaser/bigteaser/pleaser ticket",
+      "official_count": 0,
+      "official_units": 0
+    }
+  ],
+  "source_audit": [
+    {
+      "id": "circa-nhl",
+      "url": "https://data.vsin.com/nhl/vegas-odds-linetracker/",
+      "status": "CURRENT",
+      "publication": null,
+      "observed_facts": "Full-game Circa column: NYR+111/DET-124; WSH+122/CAR-136; BOS+108/WPG-120; STL+155/DAL-173; ANA+170/VGK-190. Totals 6, 6, 5.5, 6, 6.5. Refreshed about 14:39 ET. Period markets excluded.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "VSiN - Las Vegas Betting Odds"
+    },
+    {
+      "id": "circa-cfb",
+      "url": "https://data.vsin.com/college-football/vegas-odds-linetracker/",
+      "status": "CURRENT",
+      "publication": null,
+      "observed_facts": "Pitt+2.5-115, VT-2.5-105, total 54.5-110; Liberty-6.5-120, Del+6.5+100, total 50-110; PSU-3+100, NW+3-120, total 45.5-110. Authentic opening Pitt+4/53, Liberty-7/49, PSU-3/46.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "VSiN - Las Vegas Betting Odds"
+    },
+    {
+      "id": "circa-wnba",
+      "url": "https://data.vsin.com/wnba/vegas-odds-linetracker/",
+      "status": "CURRENT",
+      "publication": null,
+      "observed_facts": "DAL+8-110/+280; GSV-8-110/-340; 159.5 both-110. Open DAL+7.5-110/+255, total 157.5. Bet MGM separately DAL+8.5-115.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "VSiN - Las Vegas Betting Odds"
+    },
+    {
+      "id": "goalies",
+      "url": "https://www.dailyfaceoff.com/starting-goalies",
+      "status": "CURRENT",
+      "publication": null,
+      "observed_facts": "Thompson/Bussi, Swayman, Hofer/Oettinger confirmed. Gibson/Skinner likely; Garand/Hart unconfirmed. Dostal upgraded to likely at 14:34 first off ice, not final confirmation.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": " NHL Starting Goalies - October 02, 2026 "
+    },
+    {
+      "id": "nhl-nyr",
+      "url": "https://www.nhl.com/news/new-york-rangers-detroit-red-wings-game-preview-october-2-2026",
+      "status": "CURRENT",
+      "publication": "2026-10-02",
+      "observed_facts": "League preview projects Shesterkin, conflicts Garand listing; DET Larkin/Bernard-Docker out. NYR back-to-back after Tampa win.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "Rangers at Red Wings projected lineups | NHL.com"
+    },
+    {
+      "id": "nhl-car",
+      "url": "https://www.nhl.com/news/washington-capitals-carolina-hurricanes-game-preview-october-2-2026",
+      "status": "CURRENT",
+      "publication": "2026-10-02",
+      "observed_facts": "Jarvis shoulder and Sandin knee out; primary projected skaters and Thompson/Bussi personnel context.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "Capitals at Hurricanes projected lineups | NHL.com"
+    },
+    {
+      "id": "nhl-bos",
+      "url": "https://www.nhl.com/news/boston-bruins-winnipeg-jets-game-preview-october-2-2026",
+      "status": "CURRENT",
+      "publication": "2026-10-02",
+      "observed_facts": "Mc Avoy suspended; Poitras injured. Hellebuyck suspended after non-reporting/trade request, not injury; WPG rookies/replacements.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "Bruins at Jets projected lineups | NHL.com"
+    },
+    {
+      "id": "nhl-dal",
+      "url": "https://www.nhl.com/news/st-louis-blues-dallas-stars-game-preview-october-2-2026",
+      "status": "CURRENT",
+      "publication": "2026-10-02",
+      "observed_facts": "Duchene out; Seguin returns after ACL injury. STL Mailloux/Tucker out; projected top lines and defense pairs.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "Blues at Stars projected lineups | NHL.com"
+    },
+    {
+      "id": "nhl-vegas",
+      "url": "https://www.nhl.com/goldenknights/news/morning-skate-report-oct-2-2026",
+      "status": "SUPPORTING ONLY",
+      "publication": null,
+      "observed_facts": "Morning-skate page consulted; Hart not independently confirmed. Anaheim opening roster available, final match skaters pending.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "Morning Skate Report: Oct. 2, 2026 | Vegas Golden Knights"
+    },
+    {
+      "id": "nst",
+      "url": "https://www.naturalstattrick.com/teamtable.php?fromseason=20252026&thruseason=20252026&stype=2&sit=5v5&score=all&rate=y&team=all&loc=B&gpf=410&fd=&td=",
+      "status": "SUPPORTING ONLY",
+      "publication": null,
+      "observed_facts": "2025-26 full-season 5 v 5 baseline. CAR 55.89%x GF/59.78%CF vs WSH 50.44/49.46; DAL 50.94 vs STL 49.35; BOS 46.66 vs WPG 47.83; VGK 54.02 vs ANA 50.77. Prior rosters, not current-season forecasts.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "Team Season Totals - Natural Stat Trick"
+    },
+    {
+      "id": "moneypuck",
+      "url": "https://moneypuck.com/",
+      "status": "CURRENT",
+      "publication": null,
+      "observed_facts": "External game probabilities DET 55.2%, CAR 61.4%, WPG 50.4%, DAL 66.2%, VGK 65.2. Supporting comparison only; not Micks probabilities.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "MoneyPuck.com -NHL Analytics, Playoff Odds, Power Rankings, Player Stats"
+    },
+    {
+      "id": "vsin-nhl",
+      "url": "https://data.vsin.com/nhl/games/",
+      "status": "CURRENT",
+      "publication": null,
+      "observed_facts": "External projected fair ML: DET-133, CAR-176, WPG-130, DAL-212, VGK-176; relevant support/opposition. No named Oct 2 NHL VSi N selection recovered.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "NHL Hockey - Games - October 2nd, 2026 - News,Stats,Scores,Analysis, & More"
+    },
+    {
+      "id": "vsin-cfb",
+      "url": "https://data.vsin.com/college-football/games/?gamedate=2026-10-02",
+      "status": "CURRENT",
+      "publication": null,
+      "observed_facts": "External projected margin Pitt-1.1, Liberty-5.8, NW-1.2. Not independent Micks forecasts.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "VSiN - College Football - Games for Week 5 - News,Stats,Scores,Analysis, & More"
+    },
+    {
+      "id": "vsin-wnba",
+      "url": "https://data.vsin.com/wnba/games/",
+      "status": "CURRENT",
+      "publication": null,
+      "observed_facts": "External DAL 76.9-GSV 82.3, margin 5.3, total 159.2. Model comparison only; no named relevant VSi N pick recovered.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "WNBA Basketball - Games - October 2nd, 2026 - News,Stats,Scores,Analysis, & More"
+    },
+    {
+      "id": "circa-splits-cfb",
+      "url": "https://data.vsin.com/betting-splits/?source=CIRCA&sport=CFB",
+      "status": "CURRENT",
+      "publication": null,
+      "observed_facts": "Pitt spread 82%handle/50%bets, ML 74/50. O 54.5 handle 47/bets 38. Sample volume unknown; no sharp-action claim.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "VSiN - Betting Splits for NFL, College Football, MLB, NBA and NHL"
+    },
+    {
+      "id": "circa-splits-nhl",
+      "url": "https://data.vsin.com/betting-splits/?source=CIRCA&sport=NHL",
+      "status": "CURRENT",
+      "publication": null,
+      "observed_facts": "Visible NYRML 4%handle 44%bets, DET 96/56; total O 6 83/50. Other games gated. DK different prices/samples not confirmation.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "VSiN - Betting Splits for NFL, College Football, MLB, NBA and NHL"
+    },
+    {
+      "id": "docs-ana",
+      "url": "https://www.docsports.com/free-picks/nhl-hockey/2026/anaheim-ducks-vs-vegas-golden-knights-prediction-10-2-2026-nhl-picks-best-bets-odds.html",
+      "status": "SUPPORTING ONLY",
+      "publication": "2026-10-01",
+      "observed_facts": "Guy Bruhn: ANA+154. Doc's supports underdog; current+170 better price, goalie/core pending.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "Anaheim Ducks vs Vegas Golden Knights Prediction, 10/2/2026 NHL Picks, Best Bets & Odds"
+    },
+    {
+      "id": "docs-bos",
+      "url": "https://www.docsports.com/free-picks/nhl-hockey/2026/boston-bruins-vs-winnipeg-jets-prediction-10-2-2026-nhl-picks-best-bets-odds.html",
+      "status": "SUPPORTING ONLY",
+      "publication": "2026-10-01",
+      "observed_facts": "Josh Schonwald: BOS+102. Same side current+108; opposition VSi N projection and prior possession considered.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "Boston Bruins vs Winnipeg Jets Prediction, 10/2/2026 NHL Picks, Best Bets & Odds"
+    },
+    {
+      "id": "docs-car",
+      "url": "https://www.docsports.com/free-picks/nhl-hockey/2026/washington-capitals-vs-carolina-hurricanes-prediction-10-2-2026-nhl-picks-best-bets-odds.html",
+      "status": "SUPPORTING ONLY",
+      "publication": "2026-10-01",
+      "observed_facts": "Guy Bruhn: CAR-140. Same side current-136; article Kochetkov assumption superseded by Bussi, so reduced weight.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "Washington Capitals vs Carolina Hurricanes Prediction, 10/2/2026 NHL Picks, Best Bets & Odds"
+    },
+    {
+      "id": "docs-nyr",
+      "url": "https://www.docsports.com/free-picks/nhl-hockey/2026/new-york-rangers-vs-detroit-red-wings-prediction-10-2-2026-nhl-picks-best-bets-odds.html",
+      "status": "SUPPORTING ONLY",
+      "publication": "2026-10-01",
+      "observed_facts": "Tony Sink: NYR+120. Current+111 worse; Shesterkin assumption unresolved.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "New York Rangers vs Detroit Red Wings Prediction, 10/2/2026 NHL Picks, Best Bets & Odds"
+    },
+    {
+      "id": "docs-dal",
+      "url": "https://www.docsports.com/free-picks/nhl-hockey/2026/st-louis-blues-vs-dallas-stars-prediction-10-2-2026-nhl-picks-best-bets-odds.html",
+      "status": "SUPPORTING ONLY",
+      "publication": "2026-10-01",
+      "observed_facts": "Parlays Pundit: DAL-192 and Under 6. Two different markets. Dallas current-173 better; under assessed separately, not agreement with every Dallas expression.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "St. Louis Blues vs Dallas Stars Prediction, 10/2/2026 NHL Picks, Best Bets & Odds"
+    },
+    {
+      "id": "docs-pitt",
+      "url": "https://www.docsports.com/free-picks/football/2026/pittsburgh-panthers-vs-virginia-tech-hokies-prediction-10-2-2026-college-football-picks-best-bets-odds.html",
+      "status": "SUPPORTING ONLY",
+      "publication": "2026-09-28",
+      "observed_facts": "Josh Schonwald: Pitt+4. Current+2.5 loses 3 and 4; same direction but reduced threshold relevance.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "Pittsburgh Panthers vs Virginia Tech Hokies Prediction, 10/2/2026 College Football Picks, Best Bets  & Odds"
+    },
+    {
+      "id": "docs-psu",
+      "url": "https://www.docsports.com/free-picks/football/2026/penn-state-nittany-lions-vs-northwestern-wildcats-prediction-10-2-2026-college-football-picks-best-bets-odds.html",
+      "status": "SUPPORTING ONLY",
+      "publication": "2026-09-28",
+      "observed_facts": "Guy Bruhn: PSU-2.5. Opposes NW+3; PSU-3 is worse than article threshold.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "Penn State Nittany Lions vs Northwestern Wildcats Prediction, 10/2/2026 College Football Picks, Best Bets  & Odds"
+    },
+    {
+      "id": "docs-del",
+      "url": "https://www.docsports.com/free-picks/football/2026/liberty-flames-vs-delaware-blue-hens-prediction-10-2-2026-college-football-picks-best-bets-odds.html",
+      "status": "SUPPORTING ONLY",
+      "publication": "2026-09-28",
+      "observed_facts": "Parlays Pundit: Del+6.5. Minicucci health assumption not current clearance.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "Liberty Flames vs Delaware Blue Hens Prediction, 10/2/2026 College Football Picks, Best Bets  & Odds"
+    },
+    {
+      "id": "docs-wnba",
+      "url": "https://www.docsports.com/free-picks/wnba/2026/dallas-wings-vs-golden-state-valkyries-prediction-10-2-2026-wnba-pick-tips-and-odds.html",
+      "status": "SUPPORTING ONLY",
+      "publication": "2026-10-01",
+      "observed_facts": "Tony Sink Oct 1 DAL+8.5; current Circa+8 loseshalfpoint. Current injury/roles override article.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "Dallas Wings vs Golden State Valkyries Prediction, 10/2/2026 WNBA Pick, Tips and Odds"
+    },
+    {
+      "id": "burke",
+      "url": "https://vsin.com/college-football/college-football-week-5-picks-pitt-vs-virginia-tech/",
+      "status": "SUPPORTING ONLY",
+      "publication": "2026-09-29",
+      "observed_facts": "Adam Burke Sept 29 Pitt+3.5 and Delaware+7. Pitt FBS YPP 6.4 vs VT 5.2; defense 4.6 vs 5.6. No PSU/NW pick; Minicucci injury requires guide-era opinion reconciliation.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "Pitt vs. Virginia Tech Prediction: Week 5 College Football Odds"
+    },
+    {
+      "id": "makinen",
+      "url": "https://vsin.com/college-football/steve-makinen-college-football-week-5-best-bets-and-predictions/",
+      "status": "SUPPORTING ONLY",
+      "publication": "2026-09-30",
+      "observed_facts": "Steve Makinen Sept 30 Pitt+3. Historical systems supporting, not automatically independent sources or a Micks fair line.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "Week 5 College Football Expert Picks"
+    },
+    {
+      "id": "action",
+      "url": "https://www.actionnetwork.com/ncaaf/friday-college-football-picks-predictions-best-bets-northwestern-vs-penn-state-virginia-tech-vs-pitt-more-oct-2",
+      "status": "SUPPORTING ONLY",
+      "publication": "2026-10-02",
+      "observed_facts": "Counter selections VT ML, Liberty-7, PSU/NW Over 45.5; Idaho+16.5 support. Article prices not verified executable Delaware prices.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "Friday College Football Picks, Predictions: Best Bets for Northwestern vs Penn State, Virginia Tech vs Pitt"
+    },
+    {
+      "id": "pitt-primary",
+      "url": "https://pittsburghpanthers.com/news/2026/9/28/football-narduzzi-notebook-hitting-the-road-for-virginia-tech",
+      "status": "SUPPORTING ONLY",
+      "publication": "2026-09-28",
+      "observed_facts": "Weekly role discussion, freshmen stepping up after injury losses; Turner/Knight final status not confirmed.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "Narduzzi Notebook: Hitting The Road for Virginia Tech - Pitt Panthers #H2P"
+    },
+    {
+      "id": "vt-primary",
+      "url": "https://hokiesports.com/news/2026/09/28/virginia-tech-football-first-look-virginia-tech-vs-pitt-2026",
+      "status": "SUPPORTING ONLY",
+      "publication": "2026-09-28",
+      "observed_facts": "Expected Heintschel/Grunkemeyer matchup; weekly preview not final inactive report.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "First Look: Virginia Tech vs. Pitt - Virginia Tech Athletics"
+    },
+    {
+      "id": "del-primary",
+      "url": "https://bluehens.com/news/2026/9/30/football-hosts-liberty-on-friday-for-sold-out-parents-family-weekend-game",
+      "status": "SUPPORTING ONLY",
+      "publication": "2026-09-30",
+      "observed_facts": "Minicucci season statistics do not establish clearance after Sept 26 knee injury. Replacement quality could change both spread directions.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "Football Hosts Liberty on Friday for Sold-Out Parents & Family Weekend Game - University of Delaware Athletics"
+    },
+    {
+      "id": "del-qb",
+      "url": "https://www.wdel.com/sports/delaware-opens-conference-play-against-liberty-but-who-will-be-the-qb/article_f9bad309-81e9-4571-9114-7e73b51f9b2d.html",
+      "status": "CURRENT",
+      "publication": "2026-09-30",
+      "observed_facts": "Sept 30 reporting: coach declined injury specifics, all quarterbacks prepared. Minicucci status unresolved; Streeter 2/16 for 9 with 2 INT, Trujillo 1/3 for 38 after injury.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": null
+    },
+    {
+      "id": "teamrankings",
+      "url": "https://www.teamrankings.com/college-football/matchup/panthers-hokies-week-5-2026",
+      "status": "CURRENT",
+      "publication": null,
+      "observed_facts": "All-opponent YPP Pitt 6.3/VT 5.0, defense 4.4/5.2, distinct from Burke FBS sample. Injuries page no reported injuries is not clearance when primary news conflicts.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "2026 Week 5 College FB Games: Panthers Hokies Overview - TeamRankings.com"
+    },
+    {
+      "id": "msu",
+      "url": "https://msubobcats.com/news/2026/10/1/football-game-6-bobcats-head-to-idaho-for-friday-night-showdown",
+      "status": "CURRENT",
+      "publication": "2026-10-01",
+      "observed_facts": "Lamson, Taco Dowler, Adam Jones out. Duchien, Coon, Dahlke replace. Idaho Wood/Harste offensive threats; MSU away at Idaho 10:30 ET, Kibbie Dome.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "GAME #6: Bobcats Head to Idaho for Friday Night Showdown - Montana State University Athletics"
+    },
+    {
+      "id": "wnba-injury",
+      "url": "https://ak-static.cms.nba.com/referee/wnba_injury/Injury-Report_2026-10-02_02_00PM.pdf",
+      "status": "CURRENT",
+      "publication": "2026-10-02 14:00 ET",
+      "observed_facts": "Official Oct 2 14:00 ET: DAL Awak Kuier probable(rightwrist), Alanna Smith out(lowerleftleg); GSV no listed injuries.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": null
+    },
+    {
+      "id": "wnba-preview",
+      "url": "https://www.wnba.com/game/1042600113",
+      "status": "CURRENT",
+      "publication": null,
+      "observed_facts": "Series 1-1. GSV 104-80 G 1, DAL 108-100 OTG 2; Arike 45, Gabby 36, Bueckers 10 on 3/13. Do not treat OT totals as normal regulation expectation.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "Dallas Wings vs Golden State Valkyries Oct 2, 2026 Game Summary | WNBA.com"
+    },
+    {
+      "id": "gabby-log",
+      "url": "https://www.statmuse.com/wnba/ask/gabby-williams-last-10-games",
+      "status": "CURRENT",
+      "publication": null,
+      "observed_facts": "Displayed recent 10 mixed regular/playoff games 23, 10, 2, 15, 9, 16, 17, 14, 20, 36: 3/10 at 20+. Playoffs 2/2, minutes 27/37; two games not sufficient stable new points baseline.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "Gabby Williams Last 10 Games | StatMuse"
+    },
+    {
+      "id": "covers-wnba",
+      "url": "https://www.covers.com/wnba/wings-vs-valkyries-prediction-picks-friday-oct-2-2026",
+      "status": "SUPPORTING ONLY",
+      "publication": "2026-10-02 08:46 ET",
+      "observed_facts": "Zak Hanshew Oct 2 Gabby Over 19.5, GSV-6.5, Over 159.5. Kalshi contracts not an American-odds sportsbook quote; opposing spread and high-variance total retained as counters.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": null
+    },
+    {
+      "id": "cfl-ham",
+      "url": "https://cfl.ca/article/3-keys-to-victory-for-hamilton-ottawa-in-week-18",
+      "status": "CURRENT",
+      "publication": null,
+      "observed_facts": "Hamilton Frost replacing Mitchell; Ottawa Bethel-Thompson. Official depthcharts read. Older Doc's Mitchell rationale stale.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "3 keys to victory for Hamilton, Ottawa in Week 18"
+    },
+    {
+      "id": "cfl-cal",
+      "url": "https://cfl.ca/article/3-keys-to-victory-for-calgary-saskatchewan-in-week-18",
+      "status": "CURRENT",
+      "publication": null,
+      "observed_facts": "Vernon Adams versus Trevor Harris. Passing strength versus Saskatchewan pass-defense weakness; exact +5.5 price/forecast missing.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "3 keys to victory for Calgary, Saskatchewan in Week 18"
+    },
+    {
+      "id": "cfl-injury",
+      "url": "https://cfl.ca/article/cfl-injury-reports-week-18",
+      "status": "CURRENT",
+      "publication": null,
+      "observed_facts": "Current CFL injury/depth-chart audit consulted; all four official PDF starter charts read.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "CFL Injury Reports: Week 18"
+    },
+    {
+      "id": "cfl-board",
+      "url": "https://data.vsin.com/cfl/games/",
+      "status": "SUPPORTING ONLY",
+      "publication": null,
+      "observed_facts": "HAM+1.5/OTT-1.5, total 60.5; CGY+5.5/SSK-5.5, total 63.5. No vig exposed; mislabeled model cells not used.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "VSiN - CFL Football - Games for Week 18 - News,Stats,Scores,Analysis, & More"
+    },
+    {
+      "id": "cfl-tracker",
+      "url": "https://data.vsin.com/cfl/vegas-odds-linetracker/",
+      "status": "INACCESSIBLE",
+      "publication": null,
+      "observed_facts": "Redirect returned MLB board; rejected as wrong sport, not a verified CFL price.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "VSiN - Las Vegas Betting Odds"
+    },
+    {
+      "id": "docs-ham",
+      "url": "https://www.docsports.com/free-picks/cfl/2026/hamilton-tiger-cats-vs-ottawa-redblacks-prediction-10-2-2026-cfl-pick-tips-and-odds.html",
+      "status": "SUPPORTING ONLY",
+      "publication": "2026-09-29",
+      "observed_facts": "Tony Sink Sept 29 HAM-1.5; current+1.5 but QB premise Mitchell outdated.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "Hamilton Tiger-Cats vs Ottawa Redblacks Prediction, 10/2/2026 CFL Pick, Tips and Odds"
+    },
+    {
+      "id": "docs-ssk",
+      "url": "https://www.docsports.com/free-picks/cfl/2026/calgary-stampeders-vs-saskatchewan-roughriders-prediction-10-2-2026-cfl-pick-tips-and-odds.html",
+      "status": "SUPPORTING ONLY",
+      "publication": "2026-09-29",
+      "observed_facts": "Guy Bruhn Sept 29 SSK-5.5, opposes CGY+5.5.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "Calgary Stampeders vs Saskatchewan Roughriders Prediction, 10/2/2026 CFL Pick, Tips and Odds"
+    },
+    {
+      "id": "uefa",
+      "url": "https://www.uefa.com/uefanationsleague/news/02a2-1fea18abbcbc-456e846509e7-1000--2026-27-uefa-nations-league-all-the-league-phase-fixtures-a/",
+      "status": "CURRENT",
+      "publication": null,
+      "observed_facts": "Oct 2 ten matches: three already closed, seven 14:45 ET. France/Belgium official XI pages consulted. No re-release after kick.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "2026/27 UEFA Nations League: All the league phase fixtures and results | UEFA Nations League | UEFA.com"
+    },
+    {
+      "id": "france-xi",
+      "url": "https://www.uefa.com/uefanationsleague/match/2047960--france-vs-italy/",
+      "status": "CURRENT",
+      "publication": null,
+      "observed_facts": "France Maignan and attack Dembele/Cherki/Olise/Doue, Mbappe not in XI. Italy Donnarumma/Kean/Pio Esposito. No unsupported injury diagnosis.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "France-Italy line-ups | UEFA Nations League 2027 | UEFA.com"
+    },
+    {
+      "id": "belgium-xi",
+      "url": "https://www.uefa.com/uefanationsleague/match/2047961--belgium-vs-turkiye/",
+      "status": "CURRENT",
+      "publication": null,
+      "observed_facts": "Official match XI page consulted; independent x G/role handicap unfinished, no automatic pick.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "Belgium-Türki̇ye line-ups | UEFA Nations League 2027 | UEFA.com"
+    },
+    {
+      "id": "orlando",
+      "url": "https://www.orlandocitysc.com/pride/news/player-availability-report-presented-by-orlando-health-jewett-orthopedic-institute-orlando-pride-vs-san-diego-wave",
+      "status": "CURRENT",
+      "publication": "2026-10-02 08:00 ET",
+      "observed_facts": "Kylie Nadaner out maternity; no questionable/international-duty names. Final XI/GK pending.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "Player availability report, presented by Orlando Health Jewett Orthopedic Institute: Orlando Pride vs San Diego Wave | Orlando Pride"
+    },
+    {
+      "id": "sandiego",
+      "url": "https://sandiegowavefc.com/match-preview-san-diego-wave-fc-travels-to-orlando-for-friday-night-match-against-the-pride/",
+      "status": "SUPPORTING ONLY",
+      "publication": "2026-09-30",
+      "observed_facts": "SD 48 points versus ORL 33; Paños two consecutive clean sheets; Orlando five unbeaten H 2 H counter, not automatic trend bet.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "Match Preview: San Diego Wave FC Travels to Orlando for Friday Night Match Against the Pride - San Diego Wave Fútbol Club"
+    },
+    {
+      "id": "nc",
+      "url": "https://www.nccourage.com/news/match-preview-courage-face-seattle-reign-in-final-match-before-international-break",
+      "status": "CURRENT",
+      "publication": "2026-10-01",
+      "observed_facts": "Riley Jackson returned from foot injury; NC won first meeting; final availability/roles/XI/GK pending.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "MATCH PREVIEW: COURAGE FACE SEATTLE REIGN IN FINAL MATCH BEFORE INTERNATIONAL BREAK | News - NC Courage"
+    },
+    {
+      "id": "fbref",
+      "url": "https://fbref.com/en/comps/182/NWSL-Stats",
+      "status": "SUPPORTING ONLY",
+      "publication": null,
+      "observed_facts": "Basic season GF/GA and records available; current underlying x G not verified. Reign 33 GF 31 GA, Courage 49 GF 39 GA.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "NWSL Stats | FBref.com"
+    },
+    {
+      "id": "atp",
+      "url": "https://www.atptour.com/en/scores/current/beijing/747/daily-schedule",
+      "status": "CURRENT",
+      "publication": null,
+      "observed_facts": "Oct 3 local 11 AM de Minaur-Halys equals Oct 2 23:00 ET. Surface hold/break/fatigue/quote not completed.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "Beijing | Daily Schedule | ATP Tour | Tennis"
+    },
+    {
+      "id": "tennis-espn",
+      "url": "https://www.espn.com/tennis/dailyResults?date=20261002",
+      "status": "SUPPORTING ONLY",
+      "publication": null,
+      "observed_facts": "Reported 11 PMET Gauff-Osorio, Volynets-Mertens, Vekic-Zhu, Krueger-Ann Li plus Suzhuo qualifiers/doubles. WTA primary clock conflict remains.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "Tennis ATP & WTA Live Scores - ESPN"
+    },
+    {
+      "id": "wta-oop",
+      "url": "https://www.wtatennis.com/tournaments/1020/beijing/2026/order-of-play",
+      "status": "INACCESSIBLE",
+      "publication": null,
+      "observed_facts": "Generic tournament index did not expose actual order; midnight vs 11 PM conflict not resolved.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "China Open 2026 Order of Play | WTA Official"
+    },
+    {
+      "id": "boxing",
+      "url": "https://www.matchroomboxing.com/events/jones-vs-sanchez/",
+      "status": "CURRENT",
+      "publication": null,
+      "observed_facts": "Omari Jones-Alan Sanchez Orlando card Oct 2 verified; exact primary start/weigh-ins/real odds unverified. Prediction contracts rejected as sportsbook prices.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "Jones vs Sanchez - Matchroom Boxing"
+    },
+    {
+      "id": "boxing-schedule",
+      "url": "https://www.espn.com/boxing/story/_/id/12508267/boxing-schedule",
+      "status": "SUPPORTING ONLY",
+      "publication": null,
+      "observed_facts": "Card/bouts cross-reference. No sportwide finished win-probability or wager claimed.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "Boxing schedule - ESPN"
+    },
+    {
+      "id": "nascar",
+      "url": "https://www.nascar.com/weekend-schedule/weekend-schedule-for-2026-las-vegas-motor-speedway-chase-race/",
+      "status": "CURRENT",
+      "publication": null,
+      "observed_facts": "Friday practice; OReilly race Oct 3, Cup Oct 4. No Friday race candidate.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "Weekend schedule for 2026 Las Vegas Chase race | NASCAR"
+    },
+    {
+      "id": "mlb",
+      "url": "https://www.mlb.com/schedule/2026-10-02",
+      "status": "CURRENT",
+      "publication": null,
+      "observed_facts": "No Oct 2 MLB games on official schedule; no NRFI/YRFI/F 5 release.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "MLB Schedule 2026: Baseball Games Today  | MLB Schedule | MLB.com"
+    },
+    {
+      "id": "nba",
+      "url": "https://www.nba.com/games?date=2026-10-02",
+      "status": "CURRENT",
+      "publication": null,
+      "observed_facts": "No Oct 2 NBA games exposed; structural Nate Silver FOTF prior consulted separately, no daily pick.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "NBA Games - All NBA matchups | NBA.com"
+    },
+    {
+      "id": "nfl",
+      "url": "https://www.espn.com/nfl/schedule/_/week/4/year/2026/seasontype/2",
+      "status": "CURRENT",
+      "publication": null,
+      "observed_facts": "Thursday Oct 1/Sunday Oct 4/Monday Oct 5; no Friday Oct 2. NFL original guides N/A today.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "NFL Schedule - Week 4 Regular Season, 2026 - ESPN"
+    },
+    {
+      "id": "blacksburg-weather",
+      "url": "https://forecast.weather.gov/MapClick.php?lat=37.23&lon=-80.42",
+      "status": "CURRENT",
+      "publication": null,
+      "observed_facts": "Tonight showers mainly after 4 AM, 30%; kickoff not assumed wet; light wind, latefog.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "7-Day Forecast 37.24N 80.41W"
+    },
+    {
+      "id": "newark-weather",
+      "url": "https://forecast.weather.gov/MapClick.php?lat=39.68&lon=-75.75",
+      "status": "CURRENT",
+      "publication": null,
+      "observed_facts": "Showers/thunderstorms before 10 PM, 60%, northwind 5; delay/ballhandling risk, hour-of-kick check still required.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "7-Day Forecast 39.69N 75.76W"
+    },
+    {
+      "id": "evanston-weather",
+      "url": "https://forecast.weather.gov/MapClick.php?lat=42.07&lon=-87.68",
+      "status": "CURRENT",
+      "publication": null,
+      "observed_facts": "Clear tonight, NNE 10-15 mph; afternoongust 20 not asserted at kickoff. Under context not sole bet thesis.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "7-Day Forecast 42.08N 87.69W"
+    },
+    {
+      "id": "betrivers",
+      "url": "https://de.betrivers.com/",
+      "status": "INACCESSIBLE",
+      "publication": null,
+      "observed_facts": "No actual Delaware event offer exposed; location-selection landing only. Alternate Delaware Park address failed. Exact executable price UNKNOWN.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "BetRivers Sportsbook & Casino"
+    },
+    {
+      "id": "docs-ai",
+      "url": "https://www.docsports.com/cappers.html?cap_id=88",
+      "status": "INACCESSIBLE",
+      "publication": "2026-10-02",
+      "observed_facts": "Oct 2 AIv 3 marketing/status page, actual selections not exposed; free named picks used without second penalty.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "Doc's Sports AI-v3 - NFL, NBA College Football Basketball MLB"
+    },
+    {
+      "id": "docs-stat",
+      "url": "https://www.docsports.com/statistics/matches.html",
+      "status": "INACCESSIBLE",
+      "publication": null,
+      "observed_facts": "Interactive shell did not expose match metrics; not treated as a statistical confirmation.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "Stats Test"
+    },
+    {
+      "id": "docs-video",
+      "url": "https://www.docsports.com/video/free-picks/",
+      "status": "STALE",
+      "publication": null,
+      "observed_facts": "Visible Sep 29/27 videos, no verified Oct 2 relevant video selection.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "Daily Wager Picks, Best Bets and Prediction Videos"
+    },
+    {
+      "id": "vsin-hub",
+      "url": "https://vsin.com/",
+      "status": "CURRENT",
+      "publication": null,
+      "observed_facts": "Hub/odds/betting-sheet endpoints scanned; no hidden subscriber contents inferred.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "VSiN Sports Betting Picks, Best Bets, and Vegas Odds"
+    },
+    {
+      "id": "betting-sheets",
+      "url": "https://vsin.com/tools/vegas-betting-sheets/",
+      "status": "INACCESSIBLE",
+      "publication": null,
+      "observed_facts": "Page consulted but no downloadable complete current sheet accessed; line trackers/model rows used as lawful alternatives.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "Vegas Betting Sheets - VSiN"
+    },
+    {
+      "id": "evolving",
+      "url": "https://evolving-hockey.com/",
+      "status": "INACCESSIBLE",
+      "publication": null,
+      "observed_facts": "Public shell/current models not exposed; NST/official lineups/goalies substitute accessible inputs.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "Evolving-Hockey"
+    },
+    {
+      "id": "teamrankings-nhl",
+      "url": "https://www.teamrankings.com/nhl/",
+      "status": "INACCESSIBLE",
+      "publication": null,
+      "observed_facts": "Redirected general landing, not genuine NHL metrics.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "TeamRankings.com: Sports Predictions, Rankings & Stats"
+    },
+    {
+      "id": "nypost",
+      "url": "https://nypost.com/sports/",
+      "status": "INACCESSIBLE",
+      "publication": null,
+      "observed_facts": "Page did not yield usable current relevant selections.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": null
+    },
+    {
+      "id": "analyst",
+      "url": "https://theanalyst.com/",
+      "status": "SUPPORTING ONLY",
+      "publication": null,
+      "observed_facts": "General site consulted; no usable current national-team x G comparison exposed.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "page_title": "Opta Analyst | Data-Driven Storytelling"
+    },
+    {
+      "id": "dropbox-circa",
+      "url": "Dropbox /Circa Sports sheets",
+      "status": "STALE",
+      "publication": "NHL/WNBA Sep30;CFBWeek5Sep28;CFLWeek18Sep29",
+      "retrieval_window_et": "2026-10-02 14:04-14:25",
+      "observed_facts": "Both top-level and nested folders checked. Nested folder PD Fs April 2026 despite Oct 2 server modification; metadata not odds timestamp. NHL/WNBA contents not extracted; CFB/CFL text blank. No verified Oct 2 Dropbox sheet; live VSi N Circa alternative used."
+    },
+    {
+      "id": "hockey-reference",
+      "url": "https://www.hockey-reference.com/leagues/NHL_2027.html",
+      "status": "CURRENT",
+      "observed_facts": "Current league schedule/statistics checked; tiny new-season sample, no early save/finishing-rate forecast.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "publication": null
+    },
+    {
+      "id": "basketball-reference",
+      "url": "https://www.basketball-reference.com/wnba/years/2026.html",
+      "status": "CURRENT",
+      "observed_facts": "WNBA season context checked; distribution-specific props rely on actual game log, not raw average.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "publication": null
+    },
+    {
+      "id": "cfb-reference",
+      "url": "https://www.sports-reference.com/cfb/years/2026.html",
+      "status": "CURRENT",
+      "observed_facts": "College football historical/current context checked; team previews and TeamRankings used for present roles and efficiency.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "publication": null
+    },
+    {
+      "id": "stathead",
+      "url": "https://www.sports-reference.com/stathead/",
+      "status": "INACCESSIBLE",
+      "observed_facts": "Subscription historical queries not exposed; no claim of Stathead-based trend.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "publication": null
+    },
+    {
+      "id": "football-nfl-prop-tools",
+      "url": "https://data.vsin.com/nfl/player-props/",
+      "status": "NOT APPLICABLE",
+      "observed_facts": "No NFL Oct2 game. Fantasy Life, VSiN annual priors and NFL reconciliation not applied to CFB.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "publication": null
+    },
+    {
+      "id": "mlb-stack",
+      "url": "https://baseballsavant.mlb.com/",
+      "status": "NOT APPLICABLE",
+      "observed_facts": "No MLB games; Savant/FanGraphs/umpire/individual bullpen verification N/A for today's MLB card, not claimed as completed active-game research.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "publication": null
+    },
+    {
+      "id": "golf-f1",
+      "url": "Official PGA Tour / Formula1 search results",
+      "status": "SUPPORTING ONLY",
+      "observed_facts": "Date/status discovery only: Friday practice/round already underway. No completed outright/round handicap or current sportsbook price.",
+      "retrieval_window_et": "2026-10-02 14:04-14:40",
+      "publication": null
+    }
+  ],
+  "scheduled_checks": [
+    {
+      "id": "6abffab37d7c8191ab05cacf45e8033c",
+      "times_et": [
+        "17:45",
+        "20:45"
+      ],
+      "scopes": [
+        "NYR at DET NHL (6:30 p.m. ET): resolve Garand/Shesterkin and Gibson starter status, Larkin absence and final skaters.",
+        "Calgary at Saskatchewan CFL (9:30 p.m. ET). Confirm Vernon Adams/Trevor Harris and final availability, weather, exact +5.5 vig, Doc's opposing Sask selection."
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "6abffab4a2248191a712baf3706da060",
+      "times_et": [
+        "18:15",
+        "21:15"
+      ],
+      "scopes": [
+        "WSH at CAR NHL; Pitt at Virginia Tech and Liberty at Delaware CFB; Hamilton at Ottawa CFL (7 p.m. ET). CAR ML provisional83/110 Failure7: Thompson/Bussi confirmed, Jarvis out, exact execution missing. Recheck Minicucci knee/QB replacement, Pitt Turner/Knight and weather, CFL Frost/Bethel-Thompson depth charts. Also verify Jones-Sanchez boxing start/weigh-ins; do not call this a 45-minute boxing check until start is confirmed.",
+        "Anaheim at Vegas NHL and North Carolina at Seattle NWSL (10 p.m. ET). Dostal likely/Hart unconfirmed; confirm both, skaters and goalie sensitivity. NWSL XI/keepers, Riley Jackson role and availability."
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "6abffab57c708191b09a1c968e143b72",
+      "times_et": [
+        "19:15",
+        "21:45"
+      ],
+      "scopes": [
+        "BOS at WPG NHL; Penn State at Northwestern CFB; San Diego at Orlando NWSL (8 p.m. ET). Skinner remains likely; verify final confirmation, McAvoy suspension, Becht/Chiles availability and 10-15 mph wind, NWSL XI/keeper/injuries.",
+        "Montana State at Idaho FCS (10:30 p.m. ET). Lamson, Taco Dowler and Adam Jones out; replacements Duchien/Coon/Dahlke; verify final availability, Idaho Wood/Harste, +16.5 actual current price, indoor Kibbie Dome."
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "6abffab65fa48191b7741de2ae54bbd8",
+      "times_et": [
+        "20:15",
+        "22:15"
+      ],
+      "scopes": [
+        "STL at DAL NHL and Dallas at Golden State WNBA (9 p.m. ET). Recheck Hofer/Oettinger, Duchene out/Seguin return; WNBA official Kuier probable/Smith out, final minutes/rotation, Gabby points19.5 real book price and 3/10 last10 hits versus two playoff outliers.",
+        "Beijing tennis: ATP de Minaur vs Halys at 11 p.m. ET (Oct3 11 a.m. China on ATP order). Verify actual order and status first. WTA ESPN-reported11p.m. Gauff/Osorio, Volynets/Mertens, Vekic/Zhu, Krueger/Ann Li have a midnight date conflict; confirm primary time and reschedule if necessary rather than assuming. Verify surface hold/break, fatigue, health, actual book prices; other contemporaneous qualifiers/doubles only if primary start verified."
+      ],
+      "confirmed": true
+    }
+  ],
+  "historical_screenshots": "Sept29 offers are notOct2pricesor receipts",
+  "previous_snapshots": "NoOct2directoryexisted; priorOct1/Sept29 untouched",
+  "units_policy": "No wager inferred or placed; candidate review targets do not authorize release.",
+  "release_price_policy": "No-Bet Cutoff for every blocked row: not established-no bet until regraded. Price changes alone are not earned factor points.",
+  "report_generated_et": "2026-10-02 14:50 ET",
+  "pregame_closed_events_policy": "UEFA14:45 events were scanned before kickoff but no bet released; now excluded from pregame release. No automated retroactive regrade."
+}
