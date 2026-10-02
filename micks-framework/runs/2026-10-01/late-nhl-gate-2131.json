@@ -1,0 +1,838 @@
+{
+  "date": "2026-10-01",
+  "recorded_at": "2026-10-01T21:31:57-04:00",
+  "timezone": "America/New_York",
+  "scope": [
+    "Edmonton at Vancouver NHL, 10 p.m. ET",
+    "Florida at San Jose NHL, 10 p.m. ET"
+  ],
+  "started_games_reassessed": false,
+  "scoring_version": "micks-110-v2-2026-09-29",
+  "status": "COMPLETED CHECK: NO BET",
+  "official_units": 0,
+  "non_nfl_gates": {
+    "handicap": 82,
+    "failure": 7,
+    "confirmed_goalies_required": true,
+    "exact_executable_price_required": true
+  },
+  "candidates": [
+    {
+      "id": "edmvan-over",
+      "sport": "NHL",
+      "event": "Edmonton Oilers at Vancouver Canucks",
+      "start_et": "2026-10-01T22:00:00-04:00",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "score_status": "PROVISIONAL",
+      "handicap_score": 55,
+      "assessed_maximum": 110,
+      "grade": "Pass",
+      "pick": "Over 6.5 goals, including OT/shootout",
+      "factors": {
+        "matchup": {
+          "score": 21,
+          "max": 35,
+          "evidence": "Edmonton's elite shot creators and power play offer one scoring path against Vancouver's vulnerable goalie/PK prior; Vancouver's forwards against Levi and Edmonton's defensive uncertainty offer another. The opener produced 37 EDM shots and 23 VAN shots. Five-on-five: 7 actual goals against 4.02 xG. All strengths: 11 actual goals against 5.67 xG. Vancouver's 26.09% all-strength shooting, Edmonton's depleted secondary offense and strong one-game regression limit support. No numerical Micks total is invented."
+        },
+        "price": {
+          "score": 9,
+          "max": 20,
+          "evidence": "Circa Over 6.5 -125 is worse than midday -115 and the retained -115 ceiling. Raw break-even rises from 53.49% to 55.56% with no threshold improvement. VSiN's 6.46 estimate supplies no clear cushion. Exact Delaware execution is unknown."
+        },
+        "personnel": {
+          "score": 9,
+          "max": 15,
+          "evidence": "Levi is confirmed; Lankinen remains likely. Demko is out following hip surgery, Nugent-Hopkins is on IR and Hyman is out. McDavid and Draisaitl are reunited with Podkolzin, concentrating scoring; Hyman's net-front/PP and RNH's secondary-center contributions are missing. Formenton is projected on the third line, overriding Davis's earlier McDavid-line premise."
+        },
+        "situation": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Both teams had a rest day and traveled Edmonton to Vancouver. Neither is on a back-to-back. Vancouver's home opener and EDM's response to the loss are context; defensive adjustments/new coaching can also slow the rematch. Indoor venue: weather not applicable."
+        },
+        "vsin": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Jonathan Davis, Oct. 1, 2 p.m. ET, expects goals but selects EDM regulation -135 and team-total Over 3.5 -142, not full-game Over 6.5. VSiN model total 6.46 is neutral. SI's Ryan Gilbert, 7:09 a.m. ET, selects exact Over 6.5 -115; that supports synthesis but earns no VSiN-family points. Davis's Formenton role is superseded."
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "Guy Bruhn, Sept. 30, selects VAN ML +167. This is a different market, so full-game-over confirmation is UNKNOWN and receives zero unsupported points. His Jarry starter premise is overridden by Levi. This is not an opposing total selection."
+        },
+        "market": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Reference 5/5: current exact Circa, BetMGM and Caesars comparisons. Movement 1/3: Circa midday 6.5 -115 to current 6.5 -125; opening over juice and causal timing are unknown. Splits 0/2: subscriber-restricted. EDM ML -195 to -220 is disclosed separately and never counted as total movement."
+        }
+      },
+      "failure_score": 2,
+      "failure_dimensions": [
+        {
+          "dimension": "strongest_failure_path",
+          "score": 1,
+          "max": 2,
+          "evidence": "Edmonton's elite shot creators preserve some cashing path, but conversion regression and depleted secondary offense can leave the total short."
+        },
+        {
+          "dimension": "personnel_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Levi is known and roster impact assessed, but Lankinen's final start and redistributed roles remain material."
+        },
+        {
+          "dimension": "variance_resilience",
+          "score": 0,
+          "max": 2,
+          "evidence": "Seven goals are required; repeat conversion spikes, shorthanded scoring and overtime are fragile predictors."
+        },
+        {
+          "dimension": "price_protection",
+          "score": 0,
+          "max": 2,
+          "evidence": "-125 breaches the retained -115 ceiling; exact Delaware execution is absent."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": 0,
+          "max": 2,
+          "evidence": "SI/Davis scoring optimism does not resolve the independent regression and injury counter."
+        }
+      ],
+      "quote": {
+        "source": "Circa via VSiN firstbook column",
+        "line": 6.5,
+        "american_odds": -125,
+        "observed_et": "2026-10-01T21:18:00-04:00",
+        "book_update_clock": null,
+        "executable_delaware": false
+      },
+      "best_number": "Over 6.5 at -110 preferred",
+      "no_bet_cutoff": "Over 6.5 no worse than -115; regrade at 7 or heavier juice",
+      "missing_evidence": [
+        "Final Lankinen start confirmation",
+        "Certified final skaters and PP deployment",
+        "Exact current BetRivers Delaware offer",
+        "Total-specific opening juice and movement chronology",
+        "Candidate Circa/DraftKings splits"
+      ],
+      "release_blockers": [
+        "55/110 below 82",
+        "Failure 2/10 below 7",
+        "Circa -125 exceeds retained -115 cutoff",
+        "Final goalie and executable-price gates unresolved"
+      ],
+      "decision": "NO BET",
+      "official_units": 0
+    },
+    {
+      "id": "florida-ml",
+      "sport": "NHL",
+      "event": "Florida Panthers at San Jose Sharks",
+      "start_et": "2026-10-01T22:00:00-04:00",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "score_status": "PROVISIONAL",
+      "handicap_score": 66,
+      "assessed_maximum": 110,
+      "grade": "B-",
+      "pick": "Florida moneyline including OT/shootout",
+      "factors": {
+        "matchup": {
+          "score": 24,
+          "max": 35,
+          "evidence": "Florida's Barkov-led top six/forecheck and slot-defense/PK structure supply two cashing paths. Opening five-on-five share was 70.48% xG (0.82/0.34), with 11/6 chances and 5/1 high-danger chances, but only one game. Counter: all-strength share 45.21% (1.74/2.11), 0-for-7 PP, Celebrini's rush threat, new SJ defenders and potential Askarov improvement. Prior GF/GA: FL 3.00/3.34, SJ 3.04/3.54. This is a conditional structural edge, not championship reputation or a Micks win-probability estimate."
+        },
+        "price": {
+          "score": 11,
+          "max": 20,
+          "evidence": "Circa -145 is above the documented -135 review ceiling; prefer -125. Doc's -139 is historical. Raw -145 break-even 59.18% exceeds MoneyPuck's outside 56.6%; VSiN estimated SJ +114 also implies narrower favoritism. Outside models inform price sensitivity without becoming an automatic veto or Micks fair line. Exact DE quote absent."
+        },
+        "personnel": {
+          "score": 12,
+          "max": 15,
+          "evidence": "Schmid and Askarov are confirmed through primary Panthers reporting and credentialed reports. Schmid replaces Markstrom: Tuesday's 15-save shutout was Markstrom's performance. Brady Tkachuk is expected after missing Wednesday practice, not finally cleared/dressed. Marchand/Gadjovich and SJ Gaudette are out; Stenberg makes his debut. Final dressed groups remain unverified, while personnel impact is meaningfully assessable."
+        },
+        "situation": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Florida has a rested road leg from Carolina to San Jose, not a back-to-back. San Jose's home opener adds energy and rest; first-game rust and new defensive chemistry counter it. Indoor weather is not applicable."
+        },
+        "vsin": {
+          "score": 3,
+          "max": 10,
+          "evidence": "VSiN projects FL 3.5/SJ 2.8, estimated SJ ML +114: directional FL support at a lighter price. Jonathan Davis is bullish on Celebrini/SJ scoring and cites the Sharks' two wins last season; he does not select FL ML. His Celebrini points-versus-shots inconsistency blocks copying that prop, and the article's SJ minus-price header conflicts with today's positive quote."
+        },
+        "docs": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Tony Sink, Sept. 30, selects FL ML -139. Same-market support remains relevant, but his Markstrom starter assumption is superseded by Schmid and official NHL prior PK 81% controls over the article's conflicting field. Award 4/10 for reconciled but limited confirmation. Unexposed AI-v3 adds no second penalty."
+        },
+        "market": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Reference 5/5: Circa -145/+130 and independently timed DK -148/+124 at 9:21 p.m. ET. Movement 1/3: Circa -143 open to -145, modest; DK separately -135/+114 Saturday 11:04 p.m. to Thursday 9:21 p.m. -148/+124. News causation unknown. Splits 0/2: paywalled."
+        }
+      },
+      "failure_score": 4,
+      "failure_dimensions": [
+        {
+          "dimension": "strongest_failure_path",
+          "score": 1,
+          "max": 2,
+          "evidence": "Florida's slot defense and PK partly counter Celebrini, but San Jose transition scoring and improved defense remain material."
+        },
+        {
+          "dimension": "personnel_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Confirmed goalies help; Brady's final status and Marchand's absence limit full-strength resilience."
+        },
+        {
+          "dimension": "variance_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "ML includes OT/shootout and can survive a tying goal, but finishing and early-season variance remain."
+        },
+        {
+          "dimension": "price_protection",
+          "score": 0,
+          "max": 2,
+          "evidence": "-145 exceeds the -135 review ceiling; no exact Delaware offer."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": 1,
+          "max": 2,
+          "evidence": "Florida's opening five-on-five pressure supports direction, but all-strength xG and price/goalie counterevidence remain."
+        }
+      ],
+      "quote": {
+        "source": "Circa via VSiN firstbook column",
+        "american_odds": -145,
+        "observed_et": "2026-10-01T21:18:00-04:00",
+        "book_update_clock": null,
+        "executable_delaware": false
+      },
+      "best_number": "Prefer -125 or better",
+      "no_bet_cutoff": "No worse than -135 for conditional review, not automatic release",
+      "missing_evidence": [
+        "Brady Tkachuk final dressing/medical status",
+        "Certified final skaters/scratches",
+        "Exact current BetRivers Delaware ML",
+        "San Jose current-season sample: this is its opener",
+        "Comparable 5/10/20-game closing-price-band cover data",
+        "Candidate Circa/DraftKings splits"
+      ],
+      "release_blockers": [
+        "66/110 below 82",
+        "Failure 4/10 below 7",
+        "Circa -145 exceeds -135 review ceiling",
+        "Final material availability and executable-price gates unresolved"
+      ],
+      "decision": "NO BET",
+      "official_units": 0
+    }
+  ],
+  "prior_snapshots": [
+    {
+      "id": "edmvan-over",
+      "sport": "NHL",
+      "pick": "Edmonton–Vancouver Over 6.5",
+      "start_et": "2026-10-01T22:00:00-04:00",
+      "score_status": "PROVISIONAL",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "handicap_score": 62,
+      "grade": "C",
+      "official_units": 0,
+      "decision": "WATCH / NO OFFICIAL BET",
+      "quote": {
+        "american_odds": -115,
+        "source": "Circa via VSiN",
+        "observed_time": "12:45 ET",
+        "executable_in_delaware": false
+      },
+      "best_number_and_review_cutoff": "Over6.5 at -115 or better; regrade if total or price worsens",
+      "factors": {
+        "matchup": {
+          "score": 25,
+          "max": 35,
+          "evidence": "SI's current over case and offensive ability support goals, but opening-game 11 goals came with combined 5v5 xG only 4.02 and Vancouver's unusually high shooting conversion; repetition is not a projection."
+        },
+        "price": {
+          "score": 14,
+          "max": 20,
+          "evidence": "Exact 6.5 -115 reference is available; no reason to chase a higher total or heavier juice."
+        },
+        "personnel": {
+          "score": 10,
+          "max": 15,
+          "evidence": "Demko absence and Nugent-Hopkins status need refreshed official verification; goalies unconfirmed. Alternative goalie effects are only provisional."
+        },
+        "situation": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Quick rematch supports familiarity but also adjustment; scoring variance is high."
+        },
+        "vsin": {
+          "score": 2,
+          "max": 10,
+          "evidence": "VSiN projected total about6.46 is neutral at6.5; no named over confirmation."
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "Doc's Guy Bruhn favors VAN ML +167, a different market, so no total-confirmation points."
+        },
+        "market": {
+          "score": 5,
+          "max": 10,
+          "evidence": "Reference5; no verified same-total opening price history or candidate split row."
+        }
+      },
+      "failure_score": 3,
+      "failure_dimensions": [
+        {
+          "dimension": "strongest_failure_path",
+          "score": 1,
+          "max": 2,
+          "evidence": "The countercase in matchup remains material; this is partial resilience, not a clean failure path."
+        },
+        {
+          "dimension": "personnel_resilience",
+          "score": 1,
+          "max": 2,
+          "evidence": "Personnel assessment is usable, but the listed final availability check can change the cashing path."
+        },
+        {
+          "dimension": "variance_resilience",
+          "score": 0,
+          "max": 2,
+          "evidence": "Game-script or conversion variance remains meaningful; the total depends too heavily on repeat scoring."
+        },
+        {
+          "dimension": "price_protection",
+          "score": 1,
+          "max": 2,
+          "evidence": "Limited alternative protection at the stated review price."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": 0,
+          "max": 2,
+          "evidence": "Strong opposing independent evidence remains unresolved."
+        }
+      ],
+      "missing_evidence": [
+        "Both confirmed goalies",
+        "Nugent-Hopkins current status and refreshed lines",
+        "regression counter unresolved",
+        "exact DE total"
+      ],
+      "release_blockers": [
+        "Both confirmed goalies",
+        "Nugent-Hopkins current status and refreshed lines",
+        "regression counter unresolved",
+        "exact DE total",
+        "Non-NFL minimum82/110 and Failure7/10 not both satisfied"
+      ],
+      "provisional_only": true
+    },
+    {
+      "id": "flasj",
+      "sport": "NHL",
+      "pick": "Florida–San Jose",
+      "start_et": "2026-10-01T22:00:00-04:00",
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "score_status": "UNGRADED",
+      "handicap_score": null,
+      "grade": null,
+      "factors": {
+        "matchup": {
+          "score": null,
+          "max": 35,
+          "evidence": "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score."
+        },
+        "price": {
+          "score": 10,
+          "max": 20,
+          "evidence": "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score."
+        },
+        "personnel": {
+          "score": null,
+          "max": 15,
+          "evidence": "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score."
+        },
+        "situation": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score."
+        },
+        "vsin": {
+          "score": 3,
+          "max": 10,
+          "evidence": "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score."
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score."
+        },
+        "market": {
+          "score": 5,
+          "max": 10,
+          "evidence": "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score."
+        }
+      },
+      "known_subtotal": 24,
+      "assessed_maximum": 60,
+      "failure_score": null,
+      "failure_dimensions": [
+        {
+          "dimension": "strongest_failure_path",
+          "score": null,
+          "max": 2,
+          "evidence": "Core handicap incomplete; no resilience award inferred."
+        },
+        {
+          "dimension": "personnel_resilience",
+          "score": null,
+          "max": 2,
+          "evidence": "Core handicap incomplete; no resilience award inferred."
+        },
+        {
+          "dimension": "variance_resilience",
+          "score": null,
+          "max": 2,
+          "evidence": "Core handicap incomplete; no resilience award inferred."
+        },
+        {
+          "dimension": "price_protection",
+          "score": null,
+          "max": 2,
+          "evidence": "Core handicap incomplete; no resilience award inferred."
+        },
+        {
+          "dimension": "contradiction_resolution",
+          "score": null,
+          "max": 2,
+          "evidence": "Core handicap incomplete; no resilience award inferred."
+        }
+      ],
+      "missing_evidence": [
+        "Current Circa/model and goalie board checked, but an independent two-path candidate handicap and mandatory final goalie/line assessment remain incomplete. Do not manufacture a low Pass score.",
+        "exact executable DE quote"
+      ],
+      "release_blockers": [
+        "Incomplete core assessment",
+        "Mandatory sport gates",
+        "No official grade"
+      ],
+      "official_units": 0,
+      "decision": "NO BET — UNGRADED"
+    }
+  ],
+  "market": {
+    "circa_observed_et": "2026-10-01T21:18:00-04:00",
+    "edmvan": {
+      "edmonton_ml": -220,
+      "vancouver_ml": 195,
+      "edmonton_puck": "-1.5 +100",
+      "vancouver_puck": "+1.5 -120",
+      "total": 6.5,
+      "over": -125,
+      "under": 105,
+      "opening_edmonton_ml": -195,
+      "opening_total": 6.5,
+      "opening_over_price": null,
+      "midday_over": -115
+    },
+    "flasj": {
+      "florida_ml": -145,
+      "san_jose_ml": 130,
+      "florida_puck": "-1.5 +160",
+      "san_jose_puck": "+1.5 -185",
+      "total": 6.5,
+      "over": -105,
+      "under": -115,
+      "opening_florida_ml": -143,
+      "opening_total": 6.5,
+      "opening_total_price": null
+    },
+    "dk_flasj": {
+      "opening": {
+        "day": "Saturday",
+        "time_et": "23:04",
+        "florida": -135,
+        "san_jose": 114
+      },
+      "current": {
+        "day": "Thursday",
+        "time_et": "21:21",
+        "florida": -148,
+        "san_jose": 124
+      }
+    },
+    "exact_betrivers_delaware": null,
+    "candidate_splits": null,
+    "sharp_causation": "NOT ESTABLISHED"
+  },
+  "personnel": {
+    "last_goalie_board_check_et": "2026-10-01T21:23:00-04:00",
+    "levi": {
+      "status": "Confirmed",
+      "report_et": "14:40",
+      "underlying": "Jason Gregor; league says Oilers debut"
+    },
+    "lankinen": {
+      "status": "Likely, not finally confirmed",
+      "report_et": "13:54",
+      "underlying": "Ben Kuzma 13:38 expected start, independently read; MoneyPuck uses same source so no second confirmation"
+    },
+    "schmid": {
+      "status": "Confirmed",
+      "report_et": "15:09",
+      "underlying": "Florida Panthers team and primary preview"
+    },
+    "askarov": {
+      "status": "Confirmed",
+      "report_et": "13:49",
+      "underlying": "Sheng Peng; primary Panthers preview also names opening-night start"
+    },
+    "skater_status": "NHL projected lineups, no certified final dressed rosters",
+    "injuries": {
+      "edmonton": [
+        "Nugent-Hopkins lower body, IR Sept. 30",
+        "Hyman upper body, OUT Oct. 1, coach suggests about two weeks",
+        "Andersen undisclosed",
+        "Dickinson undisclosed",
+        "Janmark undisclosed",
+        "Regula undisclosed",
+        "Savoie undisclosed"
+      ],
+      "vancouver": [
+        "Demko hip surgery recovery, no firm return date; hoped before Christmas",
+        "Chytil shoulder"
+      ],
+      "florida": [
+        "Marchand lower body",
+        "Gadjovich upper body"
+      ],
+      "san_jose": [
+        "Gaudette upper body"
+      ]
+    },
+    "material_roles": [
+      "McDavid-Draisaitl reunited with Podkolzin",
+      "Formenton now projected third line, superseding VSiN earlier top-line premise",
+      "Samanski emergency recall after Nugent-Hopkins IR",
+      "Brady Tkachuk expected to play despite Wednesday practice absence, not final medical/dressed confirmation",
+      "Stenberg NHL debut"
+    ],
+    "projected_lineups": {
+      "edmvan": "[Skip to Main Content](https://www.nhl.com/news/edmonton-oilers-vancouver-canucks-game-preview-october-1-2026#main-content)\n\n# Oilers at Canucks projected lineups\n\n![lineups-FY25-2568x1444 cloned 12/3/25](https://media.d3.nhle.com/image/private/t_ratio16_9-size20/f_auto/prd/ikorjbzzs8duluosfdxc.jpg)\n\nByNHL.com\n\n[@NHLMedia](https://www.x.com/NHLMedia)\n\n3:57 PM\n\n- Link copied\n\n## OILERS (0-0-1) at CANUCKS (1-0-0)\n\n**10 p.m. ET; SN1, SNP**\n\n**Oilers projected lineup**\n\nVasily Podkolzin -- Connor McDavid -- Leon Draisaitl\n\nMax Jones -- Colton Dach -- Kasperi Kapanen\n\nAlex Formenton -- Owen Michaels -- Mathieu Joseph\n\nIsaac Howard -- Josh Samanski -- Trent Frederic\n\nMattias Ekholm -- Evan Bouchard\n\nRyan Shea -- Connor Murphy\n\nJake Walman -- Shakir Mukhamadullin\n\nDevon Levi\n\nTristan Jarry\n\n**_Scratched:_** _Ty Emberson, Spencer Stastney_\n\n**_Injured:_** _Zach Hyman (upper body), Frederik Andersen (undisclosed), Jason Dickinson (undisclosed), Mattias Janmark (undisclosed), Ryan Nugent-Hopkins (lower body), Alec Regula (undisclosed), Matt Savoie (undisclosed)_\n\n**Canucks projected lineup**\n\nJake DeBrusk -- Elias Pettersson -- Jonathan Lekkerimaki\n\nLiam Ohgren -- Marco Rossi -- Brock Boeser\n\nDrew O'Connor -- Max Sasson -- Linus Karlsson\n\nArshdeep Bains -- Paul Cotter -- Brendan Gallagher\n\nZeev Buium -- Filip Hronek\n\nJamie Oleksiak -- Tom Willander\n\nElias Pettersson -- Luke Schenn\n\nKevin Lankinen\n\nLeevi Merilainen\n\n**_Scratched:_** _Aatu Raty, Guillaume Brisebois, Victor Mancini_\n\n**_Injured:_** _Thatcher Demko (hip), Filip Chytil (shoulder)_\n\n**Status report**\n\nHyman is listed as day to day, but Oilers coach Mike Babcock said, “I think that means two weeks.” Babcock said the forward was injured during the final preseason game against the Calgary Flames but played through it in a season-opening 6-5 overtime loss to the Canucks on Tuesday. … Nugent-Hopkins, a center who was injured at the end of practice Monday, was placed on injured reserve Wednesday and Samanski was recalled from Bakersfield of the American Hockey League. … McDavid and Draisaitl, who played most of the preseason together, were reunited during the morning skate after starting the season opener on separate lines following the injury to Nugent-Hopkins. … Levi will make his Oilers debut. … The Canucks are expected to dress the same lineup they used Tuesday.\n\n",
+      "flasj": "[Skip to Main Content](https://www.nhl.com/news/florida-panthers-san-jose-sharks-game-preview-october-1-2026#main-content)\n\n# Panthers at Sharks projected lineups\n\n![lineups-FY25-2568x1444](https://media.d3.nhle.com/image/private/t_ratio16_9-size20/f_auto/v1730403928/prd/aurnqouhfqizkuxylfkw.jpg)\n\nByNHL.com\n\n[@NHLMedia](https://www.x.com/NHLMedia)\n\n3:54 PM\n\n- Link copied\n\n**PANTHERS (1-0-0) at SHARKS (0-0-0)**\n\n**10 p.m. ET; SCRIPPS, NBCSCA, TVAS**\n\n**Panthers projected lineup**\n\nBrady Tkachuk -- Aleksander Barkov -- Sam Reinhart\n\nCarter Verhaeghe -- Sam Bennett -- Matthew Tkachuk\n\nEetu Luostarinen -- Anton Lundell -- Sandis Vilmanis\n\nBokondji Imama -- Lars Eller -- Garnet Hathaway\n\nGustav Forsling -- Aaron Ekblad\n\nNiko Mikkola -- Seth Jones\n\nDmitry Kulikov -- Radko Gudas\n\nAkira Schmid\n\nJacob Markstrom\n\n**_Scratched:_** _Uvis Balinskis_\n\n**_Injured:_** _Brad Marchand (lower body), Jonah Gadjovich (upper body)_\n\n**Sharks projected lineup**\n\nMason Marchment -- Macklin Celebrini -- Will Smith\n\nIvar Stenberg -- Alexander Wennberg -- Collin Graf\n\nIgor Chernyshov -- Michael Misa -- Tyler Toffoli\n\nBarclay Goodrow -- Zack Ostapchuk -- Kiefer Sherwood\n\nDarnell Nurse -- Michael Kesselring\n\nNolan Allan -- Jacob Trouba\n\nDmitry Orlov -- Luca Cagnoni\n\nYaroslav Askarov\n\nAlex Nedeljkovic\n\n**_Scratched:_** _Ty Dellandrea, Brett Leason, Sam Dickinson_\n\n**_Injured:_** _Adam Gaudette (upper body)_\n\n**Status report**\n\nThe Panthers held an optional morning skate. ... Brady Tkachuk did not practice Wednesday but is expected to play. ... Marchand participated in practice Wednesday; Panthers coach Paul Maurice said Wednesday the forward could return sometime \"closer than the end of the month.\" ... Stenberg will make his NHL debut. ... Gaudette hasn't skated fully with the team since Sept. 18 but the forward joined the extras after the official portion of the morning skate ended.\n\n"
+    }
+  },
+  "metrics": {
+    "source": "Natural Stat Trick fresh five-on-five and explicitly all-strength views",
+    "sample_games": {
+      "edmonton": 1,
+      "vancouver": 1,
+      "florida": 1,
+      "san_jose": 0
+    },
+    "edmvan_5v5": {
+      "edmonton_xgf": 2.93,
+      "vancouver_xgf": 1.09,
+      "combined_xg": 4.02,
+      "edmonton_goals": 4,
+      "vancouver_goals": 3,
+      "combined_goals": 7
+    },
+    "edmvan_all_strengths": {
+      "edmonton_xgf": 4.02,
+      "vancouver_xgf": 1.65,
+      "combined_xg": 5.67,
+      "combined_goals": 11,
+      "vancouver_shooting_percent": 26.09
+    },
+    "florida_5v5": {
+      "xgf": 0.82,
+      "xga": 0.34,
+      "xg_share_percent": 70.48,
+      "scf": 11,
+      "sca": 6,
+      "hdcf": 5,
+      "hdca": 1
+    },
+    "florida_all_strengths": {
+      "xgf": 1.74,
+      "xga": 2.11,
+      "xg_share_percent": 45.21
+    },
+    "interpretation": "Strong regression required; different strength states not mixed; no own numerical probability invented"
+  },
+  "guide_reconciliation": {
+    "original_nhl_guide": "No separately provided original NHL guide verified in current controlling inventory",
+    "NFL_VSiN_FantasyLife_CFB": "NOT APPLICABLE to this NHL-only check",
+    "season_context": "Fresh Evolving Hockey Sept. 28 structural preview and NHL Sharks season preview consulted; current injuries/projected lines override old roles; numerical charts not extracted as Micks forecast"
+  },
+  "fade_inflation": {
+    "status": "UNKNOWN / INSUFFICIENT COMPARABLE SAMPLE",
+    "reason": "One current game each EDM/VAN/FL and zero SJ games; no verified 5/10/20 closing-price-band ATS/puck-line sample. SU/H2H not used as cover evidence.",
+    "standalone_points": 0
+  },
+  "alternatives": [
+    {
+      "pick": "Edmonton team total Over 3.5",
+      "quote": "Davis historical -142, Oct. 1 2 p.m. ET",
+      "status": "REVIEW ONLY / UNGRADED",
+      "reason": "Avoids needing Vancouver goals but Hyman/RNH absent; exact current executable TT, role deployment and standalone factor assessment not completed. Do not inherit full-game score."
+    },
+    {
+      "pick": "Vancouver ML +195 Circa",
+      "status": "REVIEW ONLY / UNGRADED",
+      "reason": "Better than Bruhn historical +167; goalie/price resilience and own upset handicap not completed. No total agreement inferred."
+    },
+    {
+      "pick": "San Jose ML +130 Circa",
+      "status": "REVIEW ONLY / UNGRADED",
+      "reason": "Celebrini/home-opener path plausible, MoneyPuck 43.4% near raw +130 break-even43.48%; no completed independent seven-factor side assessment."
+    },
+    {
+      "pick": "San Jose +1.5 -185 / Florida -1.5 +160",
+      "status": "REVIEW ONLY / NO BET",
+      "reason": "Heavy protection cost versus two-goal/empty-net margin risk; no verified cover-band history. Not graded by inheriting ML score."
+    },
+    {
+      "pick": "Florida-San Jose total6.5 (O-105/U-115)",
+      "status": "REVIEW ONLY / UNGRADED",
+      "reason": "FL slot control versus SJ rush skill/new goalie matchup; separate total cashing paths and price assessment not finished."
+    },
+    {
+      "pick": "VSiN Formenton / Celebrini props and shot parlay",
+      "status": "NO BET / UNGRADED",
+      "reason": "Formenton role changed; Celebrini points narrative and shots bullet inconsistent; no exact DE thresholds/prices or specialist opportunity assessment. Already-started cross-game shot-parlay legs excluded."
+    }
+  ],
+  "source_audit": [
+    {
+      "title": "Oilers at Canucks projected lineups | NHL.com",
+      "url": "https://www.nhl.com/news/edmonton-oilers-vancouver-canucks-game-preview-october-1-2026",
+      "status": "Retrieved; candidate-specific limitations described in report",
+      "http_status": 200
+    },
+    {
+      "title": "Panthers at Sharks projected lineups | NHL.com",
+      "url": "https://www.nhl.com/news/florida-panthers-san-jose-sharks-game-preview-october-1-2026",
+      "status": "Retrieved; candidate-specific limitations described in report",
+      "http_status": 200
+    },
+    {
+      "title": " NHL Starting Goalies - October 01, 2026 ",
+      "url": "https://www.dailyfaceoff.com/starting-goalies",
+      "status": "Retrieved; candidate-specific limitations described in report",
+      "http_status": 200
+    },
+    {
+      "title": "VSiN - Las Vegas Betting Odds",
+      "url": "https://data.vsin.com/vegas-odds-linetracker/?sportid=nhl",
+      "status": "Retrieved; candidate-specific limitations described in report",
+      "http_status": 200
+    },
+    {
+      "title": "NHL Hockey - Games - October 1st, 2026 - News,Stats,Scores,Analysis, & More",
+      "url": "https://data.vsin.com/nhl/games/",
+      "status": "Retrieved; candidate-specific limitations described in report",
+      "http_status": 200
+    },
+    {
+      "title": "Florida Panthers vs San Jose Sharks Prediction, 10/1/2026 NHL Picks, Best Bets & Odds",
+      "url": "https://www.docsports.com/free-picks/nhl-hockey/2026/florida-panthers-vs-san-jose-sharks-prediction-10-1-2026-nhl-picks-best-bets-odds.html",
+      "status": "Retrieved; candidate-specific limitations described in report",
+      "http_status": 200
+    },
+    {
+      "title": "Edmonton Oilers vs Vancouver Canucks Prediction, 10/1/2026 NHL Picks, Best Bets & Odds",
+      "url": "https://www.docsports.com/free-picks/nhl-hockey/2026/edmonton-oilers-vs-vancouver-canucks-prediction-10-1-2026-nhl-picks-best-bets-odds.html",
+      "status": "Retrieved; candidate-specific limitations described in report",
+      "http_status": 200
+    },
+    {
+      "title": "Top Shelf Picks: NHL Best Bets Today (Predictions for Sabres-Blue Jackets, Flyers-Devils, Oilers-Canucks)",
+      "url": "https://www.si.com/betting/nhl-best-bets-today-predictions-for-sabres-blue-jackets-flyers-devils-oilers-canucks-2026",
+      "status": "Retrieved; candidate-specific limitations described in report",
+      "http_status": 200
+    },
+    {
+      "title": "NHL Predictions: Expert Picks on Thursday, October 1 - VSiN",
+      "url": "https://vsin.com/nhl/nhl-predictions-expert-picks-on-thursday-october-1/",
+      "status": "Retrieved; candidate-specific limitations described in report",
+      "http_status": 200
+    },
+    {
+      "title": "PREVIEW: Schmid starts as Panthers continue road trip vs. San Jose | Florida Panthers",
+      "url": "https://www.nhl.com/panthers/news/preview-schmid-starts-as-panthers-continue-road-trip-vs-san-jose",
+      "status": "Retrieved; candidate-specific limitations described in report",
+      "http_status": 200
+    },
+    {
+      "title": "Team Season Totals - Natural Stat Trick",
+      "url": "https://www.naturalstattrick.com/teamtable.php",
+      "status": "Retrieved; candidate-specific limitations described in report",
+      "http_status": 200
+    },
+    {
+      "title": "MoneyPuck.com -NHL Analytics, Playoff Odds, Power Rankings, Player Stats",
+      "url": "https://moneypuck.com/",
+      "status": "Retrieved; candidate-specific limitations described in report",
+      "http_status": 200
+    },
+    {
+      "title": "NFL Betting & More @ BetRivers at Delaware Park Casino & Racing",
+      "url": "https://delawarepark.betrivers.com/?page=sportsbook&group=1000093658",
+      "status": "Retrieved; candidate-specific limitations described in report",
+      "http_status": 200
+    },
+    {
+      "title": "VSiN - Betting Splits for NFL, College Football, MLB, NBA and NHL",
+      "url": "https://data.vsin.com/betting-splits/?source=CIRCA&sport=NHL",
+      "status": "Retrieved; candidate-specific limitations described in report",
+      "http_status": 200
+    },
+    {
+      "title": "Edmonton Oilers - Vancouver Canucks - Oct 1, 2026 | NHL.com",
+      "url": "https://www.nhl.com/gamecenter/edm-vs-van/2026/10/01/2026020015",
+      "status": "Retrieved; candidate-specific limitations described in report",
+      "http_status": 200
+    },
+    {
+      "title": "Florida Panthers - San Jose Sharks - Oct 1, 2026 | NHL.com",
+      "url": "https://www.nhl.com/gamecenter/fla-vs-sjs/2026/10/01/2026020016",
+      "status": "Retrieved; candidate-specific limitations described in report",
+      "http_status": 200
+    },
+    {
+      "title": "Team Season Totals - Natural Stat Trick",
+      "url": "https://www.naturalstattrick.com/teamtable.php?fromseason=20262027&thruseason=20262027&stype=2&sit=all&score=all&stdoi=std&rate=n&team=all&loc=B&gpf=410",
+      "status": "Retrieved; candidate-specific limitations described in report",
+      "http_status": 200
+    },
+    {
+      "title": "Official Vancouver Canucks Website | Vancouver Canucks",
+      "url": "https://www.nhl.com/canucks/news",
+      "status": "Retrieved; candidate-specific limitations described in report",
+      "http_status": 200
+    },
+    {
+      "title": "Official San Jose Sharks Website | San Jose Sharks",
+      "url": "https://www.nhl.com/sharks/news",
+      "status": "Retrieved; candidate-specific limitations described in report",
+      "http_status": 200
+    },
+    {
+      "title": "https://x.com/benkuzma/status/2105714025283903905",
+      "url": "https://x.com/benkuzma/status/2105714025283903905",
+      "status": "Retrieved; candidate-specific limitations described in report",
+      "http_status": 200
+    },
+    {
+      "title": " Edmonton Oilers Line Combinations ",
+      "url": "https://www.dailyfaceoff.com/teams/edmonton-oilers/line-combinations",
+      "status": "Retrieved; candidate-specific limitations described in report",
+      "http_status": 200
+    },
+    {
+      "title": " Vancouver Canucks Line Combinations ",
+      "url": "https://www.dailyfaceoff.com/teams/vancouver-canucks/line-combinations",
+      "status": "Retrieved; candidate-specific limitations described in report",
+      "http_status": 200
+    },
+    {
+      "title": "Florida Panthers vs. San Jose Sharks 10:00 pm October 1, 2026 Preview",
+      "url": "https://moneypuck.com/preview.htm?id=2026020016",
+      "status": "Retrieved; candidate-specific limitations described in report",
+      "http_status": 200
+    },
+    {
+      "title": "Doc's Sports AI-v3 - NFL, NBA College Football Basketball MLB",
+      "url": "https://www.docsports.com/cappers.html?cap_id=88",
+      "status": "Retrieved; candidate-specific limitations described in report",
+      "http_status": 200
+    },
+    {
+      "title": "Game Notes: Canucks vs. Oilers | Vancouver Canucks",
+      "url": "https://www.nhl.com/canucks/news/game-notes-canucks-vs-oilers-100126",
+      "status": "Retrieved; candidate-specific limitations described in report",
+      "http_status": 200
+    },
+    {
+      "title": "Canucks Host Oilers in Home Opener at Rogers Arena on Thursday Night | Vancouver Canucks",
+      "url": "https://www.nhl.com/canucks/news/canucks-host-oilers-in-home-opener-at-rogers-arena-on-thursday-night",
+      "status": "Retrieved; candidate-specific limitations described in report",
+      "http_status": 200
+    },
+    {
+      "title": "Sharks season preview: Celebrini, young core seek to end playoff drought | San Jose Sharks",
+      "url": "https://www.nhl.com/sharks/news/topic/season-previews/san-jose-sharks-season-preview-2026-27-x2570",
+      "status": "Retrieved; candidate-specific limitations described in report",
+      "http_status": 200
+    },
+    {
+      "title": "Hyman out for Oilers against Canucks with upper-body injury  | NHL.com",
+      "url": "https://www.nhl.com/news/edmonton-oilers-zach-hyman-injury-status-update-october-1-2026",
+      "status": "Retrieved; candidate-specific limitations described in report",
+      "http_status": 200
+    },
+    {
+      "title": "NHL Status Report: Provorov week to week for Blue Jackets | NHL.com",
+      "url": "https://www.nhl.com/news/nhl-status-report-news-and-notes-october-1-2026",
+      "status": "Retrieved; candidate-specific limitations described in report",
+      "http_status": 200
+    },
+    {
+      "title": "2026-27 NHL Summary | Hockey-Reference.com",
+      "url": "https://www.hockey-reference.com/leagues/NHL_2027.html",
+      "status": "Retrieved; candidate-specific limitations described in report",
+      "http_status": 200
+    },
+    {
+      "title": "Evolving-Hockey",
+      "url": "https://evolving-hockey.com/blog/2026-2027-team-point-projections/",
+      "status": "Retrieved; candidate-specific limitations described in report",
+      "http_status": 200
+    },
+    {
+      "title": "TeamRankings.com: Sports Predictions, Rankings & Stats",
+      "url": "https://www.teamrankings.com/nhl/",
+      "status": "Retrieved; candidate-specific limitations described in report",
+      "http_status": 200
+    },
+    {
+      "title": "Canucks hope to have Demko back ‘before Christmas,’ Henrik Sedin says | NHL.com",
+      "url": "https://www.nhl.com/news/vancouver-canucks-hope-to-have-thatcher-demko-back-before-christmas",
+      "status": "Sept. 28 primary recovery report; current Oct. 1 lineup still lists Demko out"
+    },
+    {
+      "title": "Dropbox NHL - 2026-9-30.pdf",
+      "url": "https://www.dropbox.com/scl/fi/86dtbb18b9apeij8tkefr",
+      "status": "409971 bytes; client modified Sept. 27; server sync Oct. 1 12:37 ET; extracted text empty. No live quote inferred."
+    }
+  ],
+  "access_limitations": [
+    "Selected BetRivers Delaware event offers not exposed in public NHL-group page",
+    "Candidate Circa/DK splits subscriber-only",
+    "Dropbox dated PDF extracted no usable text; sync date not quote freshness",
+    "Doc's AI-v3 marketing only, no actual selected-event picks",
+    "Doc's video index returned no usable current selection",
+    "TeamRankings NHL returned mixed-sport portal without usable candidate NHL data"
+  ],
+  "publication": {
+    "wager_placed": false,
+    "active_card_published": false,
+    "parlay_forced": false,
+    "combined_payout_invented": false,
+    "historical_screenshots": "Not used as current quotes or receipts",
+    "delaware_fixed_payout_football_cards": "Different product, not involved in this NHL gate"
+  },
+  "preservation": "Prior midday snapshots embedded; no old dated file replaced; no score multiplication"
+}
