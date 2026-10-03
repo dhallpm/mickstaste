@@ -1,0 +1,220 @@
+{
+  "assessed_at_et": "2026-10-02T21:17:00-04:00",
+  "scoring_version": "micks-110-v2-2026-09-29",
+  "recovery_mode": {
+    "score_gate": 82,
+    "failure_gate": 7
+  },
+  "excluded_started_events": true,
+  "candidates": [
+    {
+      "id": "vgk-ml-2117",
+      "event": "Anaheim at Vegas",
+      "sport": "NHL",
+      "selection": "Vegas ML",
+      "prior_snapshot": {
+        "status": "UNGRADED",
+        "known_points": 50,
+        "assessed_maximum": 95,
+        "preserved": true
+      },
+      "quote": {
+        "circa": -200,
+        "vsin_board": -205,
+        "consensus": -207,
+        "bet_rivers_delaware": null
+      },
+      "factors": {
+        "matchup": 28,
+        "price": 7,
+        "personnel": 13,
+        "situation": 7,
+        "vsin": 3,
+        "docs": 0,
+        "market": {
+          "total": 7,
+          "reference": 5,
+          "movement": 2,
+          "splits": 0
+        }
+      },
+      "score_status": "FINAL",
+      "score": 65,
+      "grade": "C / Watchlist",
+      "failure": {
+        "strongest_path": 1,
+        "personnel_resilience": 2,
+        "variance": 1,
+        "price_protection": 0,
+        "contradiction_resolution": 0,
+        "total": 4
+      },
+      "best_number_review_target": "Vegas -180 or better",
+      "no_bet_cutoff": "not established — no bet until regraded",
+      "decision": "NO BET",
+      "units": 0,
+      "blockers": [
+        "score below 82",
+        "Failure Score below 7",
+        "current price worse than VSiN estimated line",
+        "Doc's opposes",
+        "exact BetRivers Delaware price unavailable"
+      ]
+    },
+    {
+      "id": "ana-ml-2117",
+      "event": "Anaheim at Vegas",
+      "sport": "NHL",
+      "selection": "Anaheim ML",
+      "prior_snapshot": {
+        "status": "UNGRADED",
+        "known_points": 54,
+        "assessed_maximum": 95,
+        "preserved": true
+      },
+      "quote": {
+        "circa": 178,
+        "vsin_board": 170,
+        "docs": 154,
+        "bet_rivers_delaware": null
+      },
+      "factors": {
+        "matchup": 22,
+        "price": 13,
+        "personnel": 10,
+        "situation": 5,
+        "vsin": 2,
+        "docs": 6,
+        "market": {
+          "total": 7,
+          "reference": 5,
+          "movement": 2,
+          "splits": 0
+        }
+      },
+      "score_status": "FINAL",
+      "score": 65,
+      "grade": "C / Watchlist",
+      "failure": {
+        "strongest_path": 1,
+        "personnel_resilience": 1,
+        "variance": 1,
+        "price_protection": 1,
+        "contradiction_resolution": 1,
+        "total": 5
+      },
+      "best_number_review_target": "Anaheim +175 or better",
+      "no_bet_cutoff": "not established — no bet until regraded",
+      "decision": "NO BET",
+      "units": 0,
+      "blockers": [
+        "score below 82",
+        "Failure Score below 7",
+        "strong Vegas matchup counter",
+        "VSiN model opposes",
+        "exact BetRivers Delaware price unavailable"
+      ]
+    },
+    {
+      "id": "seattle-ml-2117",
+      "event": "North Carolina at Seattle",
+      "sport": "NWSL",
+      "selection": "Seattle three-way ML",
+      "prior_snapshot": {
+        "status": "UNGRADED",
+        "known_points": 38,
+        "assessed_maximum": 95,
+        "preserved": true
+      },
+      "quote": {
+        "oddschecker_best": 151,
+        "afternoon_espn": 135,
+        "draw": 260,
+        "north_carolina": 160,
+        "seattle_dnb": -116,
+        "bet_rivers_delaware": null
+      },
+      "factors": {
+        "matchup": 27,
+        "price": 12,
+        "personnel": null,
+        "situation": 7,
+        "vsin": 0,
+        "docs": 0,
+        "market": {
+          "total": 4,
+          "reference": 3,
+          "movement": 1,
+          "splits": 0
+        }
+      },
+      "score_status": "UNGRADED",
+      "known_points": 50,
+      "assessed_maximum": 95,
+      "grade": null,
+      "failure": {
+        "strongest_path": 1,
+        "personnel_resilience": null,
+        "variance": 1,
+        "price_protection": 1,
+        "contradiction_resolution": 1,
+        "known_total": 4,
+        "assessed_maximum": 8,
+        "status": "INCOMPLETE"
+      },
+      "best_number_review_target": "Seattle +150 or better",
+      "no_bet_cutoff": "not established — no bet until regraded",
+      "decision": "NO BET",
+      "units": 0,
+      "missing": [
+        "official starting XIs",
+        "both starting keepers",
+        "Natalie Jacobs final status",
+        "exact BetRivers Delaware price",
+        "Circa line",
+        "current xG comparison",
+        "splits"
+      ],
+      "blockers": [
+        "core personnel incomplete",
+        "score incomplete",
+        "Failure Score incomplete",
+        "exact executable price unavailable"
+      ]
+    }
+  ],
+  "confirmed": {
+    "nhl_goalies": [
+      "Lukas Dostal",
+      "Carter Hart"
+    ],
+    "anaheim_injured": [
+      "Troy Terry",
+      "Drew Helleson",
+      "Ian Moore"
+    ],
+    "vegas_injured": [],
+    "nwsl": {
+      "riley_jackson": "available; returned previous match and absent from injury list",
+      "seattle_out": [
+        "Lynn Biyendolo"
+      ],
+      "north_carolina_out": [
+        "Maycee Bell",
+        "Payton Crawford",
+        "Ally Schlegel",
+        "Sydney Schmidt",
+        "Lauryn Thompson"
+      ],
+      "north_carolina_questionable": [
+        "Natalie Jacobs"
+      ],
+      "official_lineups_posted": false
+    }
+  },
+  "audit": {
+    "wager_placed": false,
+    "website_card_published": false,
+    "third_party_contacted": false
+  }
+}
