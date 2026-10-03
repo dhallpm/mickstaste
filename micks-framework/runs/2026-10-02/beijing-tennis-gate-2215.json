@@ -1,0 +1,199 @@
+{
+  "date": "2026-10-02",
+  "timezone": "America/New_York",
+  "checked_at": "2026-10-02T22:14:27-04:00",
+  "snapshot_label": "beijing-gate-2215",
+  "scoring_version": "micks-110-v2-2026-09-29",
+  "official_order": {
+    "release_local": "2026-10-02 20:53 Asia/Shanghai",
+    "start_local": "2026-10-03T11:00:00+08:00",
+    "start_et": "2026-10-02T23:00:00-04:00",
+    "status": "CONFIRMED",
+    "date_conflict_resolved": true
+  },
+  "gates": {
+    "score": 82,
+    "failure_score": 7,
+    "exact_executable_price_required": true
+  },
+  "candidates": [
+    {
+      "id": "deminaur-spread",
+      "event": "Alex de Minaur vs Quentin Halys",
+      "pick": "de Minaur -3.5 games",
+      "reference": {
+        "line": -3.5,
+        "odds": -123,
+        "book": "BetUS comparison",
+        "executable_in_delaware": false
+      },
+      "factors": {
+        "matchup": 28,
+        "price": 12,
+        "personnel": 13,
+        "situation": 8,
+        "vsin": 0,
+        "docs": 0,
+        "market": 4
+      },
+      "total": 65,
+      "grade": "C",
+      "failure": [
+        1,
+        2,
+        1,
+        1,
+        1
+      ],
+      "failure_total": 6,
+      "decision": "NO BET",
+      "review_target": "-3.5 at -115 or better",
+      "cutoff": null
+    },
+    {
+      "id": "gauff-ml",
+      "event": "Coco Gauff vs Camila Osorio",
+      "pick": "Gauff ML",
+      "reference": {
+        "odds": -1600,
+        "book": "FanDuel comparison",
+        "executable_in_delaware": false
+      },
+      "factors": {
+        "matchup": 31,
+        "price": 2,
+        "personnel": 13,
+        "situation": 8,
+        "vsin": 0,
+        "docs": 0,
+        "market": 4
+      },
+      "total": 58,
+      "grade": "C",
+      "failure": [
+        1,
+        2,
+        1,
+        0,
+        2
+      ],
+      "failure_total": 6,
+      "decision": "NO BET",
+      "review_target": null,
+      "cutoff": "Reject four-digit ML"
+    },
+    {
+      "id": "mertens-ml",
+      "event": "Katie Volynets vs Elise Mertens",
+      "pick": "Mertens ML",
+      "reference": {
+        "odds": -124,
+        "book": "market comparison",
+        "executable_in_delaware": false
+      },
+      "factors": {
+        "matchup": 20,
+        "price": 11,
+        "personnel": 12,
+        "situation": 7,
+        "vsin": 0,
+        "docs": 0,
+        "market": 5
+      },
+      "total": 55,
+      "grade": "Pass",
+      "failure": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "failure_total": 5,
+      "decision": "NO BET",
+      "review_target": null,
+      "cutoff": null
+    },
+    {
+      "id": "vekic-ml",
+      "event": "Donna Vekic vs Lin Zhu",
+      "pick": "Vekic ML",
+      "reference": {
+        "odds_range": [
+          -177,
+          -200
+        ],
+        "book": "market comparisons",
+        "executable_in_delaware": false
+      },
+      "factors": {
+        "matchup": 25,
+        "price": 8,
+        "personnel": 11,
+        "situation": 7,
+        "vsin": 0,
+        "docs": 0,
+        "market": 5
+      },
+      "total": 56,
+      "grade": "Pass",
+      "failure": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "failure_total": 5,
+      "decision": "NO BET",
+      "review_target": "-150 or better",
+      "cutoff": null
+    },
+    {
+      "id": "li-ml",
+      "event": "Ashlyn Krueger vs Ann Li",
+      "pick": "Ann Li ML",
+      "reference": {
+        "odds": -134,
+        "book": "FanDuel comparison",
+        "executable_in_delaware": false
+      },
+      "factors": {
+        "matchup": 19,
+        "price": 10,
+        "personnel": 11,
+        "situation": 7,
+        "vsin": 0,
+        "docs": 0,
+        "market": 5
+      },
+      "total": 52,
+      "grade": "Pass",
+      "failure": [
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "failure_total": 4,
+      "decision": "NO BET",
+      "review_target": null,
+      "cutoff": null
+    }
+  ],
+  "global_missing": [
+    "Current BetRivers Delaware prices",
+    "Current Circa tennis sheet",
+    "Verified market movement and splits",
+    "Named VSiN same-market selections",
+    "Named Doc's same-market selections",
+    "Complete outdoor-hard hold/break tables",
+    "Formal medical disclosures"
+  ],
+  "official_units": 0,
+  "status": "NO BET",
+  "prior_snapshot_preserved": true,
+  "wager_placed": false,
+  "published": false
+}
