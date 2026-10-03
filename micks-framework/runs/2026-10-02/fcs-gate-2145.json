@@ -1,0 +1,105 @@
+{
+  "schema": "micks-110-v2-2026-09-29",
+  "checked_at": "2026-10-02T21:45:33-04:00",
+  "event": {
+    "sport": "FCS",
+    "away": "Montana State",
+    "home": "Idaho",
+    "start_et": "2026-10-02T22:30:00-04:00",
+    "venue": "P1FCU Kibbie Dome",
+    "indoor": true
+  },
+  "candidate": {
+    "market": "spread",
+    "side": "Idaho",
+    "current_reference": {
+      "line": 14.5,
+      "odds": -110,
+      "sources": [
+        "Action Network",
+        "FanDuel",
+        "ESPN"
+      ],
+      "executable_in_delaware": false
+    },
+    "review_threshold": {
+      "line": 16.5,
+      "odds": -110
+    }
+  },
+  "personnel": {
+    "confirmed_out": [
+      "Justin Lamson",
+      "Taco Dowler",
+      "Adam Jones",
+      "Josaiah Asuega",
+      "Hunter Sharbono"
+    ],
+    "confirmed_roles": [
+      "Patrick Duchien second straight start",
+      "Colson Coon elevated RB",
+      "Carter Dahlke elevated WR",
+      "Joshua Wood Idaho QB/core",
+      "Tony Harste Idaho explosive WR"
+    ],
+    "game_time_decision": [
+      "Parker Mady"
+    ]
+  },
+  "scoring": {
+    "matchup": 29,
+    "price": 11,
+    "personnel": 14,
+    "situation": 9,
+    "vsin": 0,
+    "docs": 0,
+    "market": {
+      "reference": 5,
+      "movement": 3,
+      "splits": 0,
+      "total": 8
+    },
+    "total": 71,
+    "grade": "C+"
+  },
+  "failure_score": {
+    "path": 2,
+    "personnel_certainty": 2,
+    "variance_control": 1,
+    "price_execution": 1,
+    "contradiction_control": 1,
+    "total": 7
+  },
+  "gates": {
+    "required_score": 82,
+    "required_failure": 7,
+    "score_pass": false,
+    "failure_pass": true,
+    "price_execution_pass": false
+  },
+  "missing_information": [
+    "Authenticated Circa row from image-only Dropbox PDF",
+    "Exact live BetRivers Delaware price",
+    "Named VSiN same-market selection",
+    "Named Doc's same-market selection",
+    "Public money split"
+  ],
+  "release_blockers": [
+    "110-point score below 82",
+    "No authenticated Delaware executable price",
+    "Review threshold +16.5 -110 not currently verified"
+  ],
+  "decision": {
+    "status": "NO BET",
+    "units": 0
+  },
+  "prior_snapshot_preserved": true,
+  "sources": [
+    "https://msubobcats.com/news/2026/10/2/football-bobcat-game-day-notebook-6-patrick-duchien-ready-for-second-start",
+    "https://msubobcats.com/news/2026/10/1/football-game-6-bobcats-head-to-idaho-for-friday-night-showdown",
+    "https://govandals.com/news/2026/9/20/football-late-turnovers-doom-vandals-in-shootout-w-wildcats.aspx",
+    "https://www.actionnetwork.com/ncaaf-game/montana-state-idaho-score-odds-october-2-2026/289350",
+    "https://www.espn.com/college-football/game/_/gameId/401868094/montana-st-idaho",
+    "https://www.dropbox.com/scl/fi/hnw0zer0vbn1v7z798i25"
+  ]
+}
