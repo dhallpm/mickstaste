@@ -1,0 +1,138 @@
+{
+  "event": "Calgary Stampeders at Saskatchewan Roughriders",
+  "sport": "CFL",
+  "start_time_et": "2026-10-02T21:30:00-04:00",
+  "assessed_at_et": "2026-10-02T20:49:00-04:00",
+  "scoring_version": "micks-110-v2-2026-09-29",
+  "prior_snapshot": {
+    "id": "cal-spread",
+    "status": "UNGRADED",
+    "known_points": 43,
+    "assessed_maximum": 90,
+    "preserved": true
+  },
+  "candidate": {
+    "market": "spread",
+    "selection": "Calgary +4.5",
+    "reference_price": "-110",
+    "reference_price_source": "Covers BetRivers-branded comparison; not authenticated Delaware-localized execution",
+    "best_observed_number": "Calgary +5.5 -115",
+    "best_number_target": "Calgary +5.5 -115 or better",
+    "no_bet_cutoff": "not established — no bet until a new qualifying regrade"
+  },
+  "factors": {
+    "matchup": {
+      "score": 27,
+      "max": 35
+    },
+    "price": {
+      "score": 12,
+      "max": 20
+    },
+    "personnel": {
+      "score": 13,
+      "max": 15
+    },
+    "situation": {
+      "score": 7,
+      "max": 10
+    },
+    "vsin": {
+      "score": 0,
+      "max": 10,
+      "reason": "No named current VSiN selection; current board only"
+    },
+    "docs": {
+      "score": 0,
+      "max": 10,
+      "reason": "Guy Bruhn selected Saskatchewan -5.5"
+    },
+    "market": {
+      "score": 8,
+      "max": 10,
+      "components": {
+        "reference": 5,
+        "movement": 2,
+        "splits": 1
+      }
+    }
+  },
+  "total_score": 67,
+  "grade": "B-",
+  "score_status": "FINAL",
+  "failure_score": {
+    "strongest_failure_path": 1,
+    "personnel_role_resilience": 2,
+    "variance_game_script": 1,
+    "price_protection": 1,
+    "contradiction_resolution": 1,
+    "total": 6
+  },
+  "recovery_mode_gates": {
+    "minimum_score": 82,
+    "minimum_failure_score": 7,
+    "score_pass": false,
+    "failure_pass": false
+  },
+  "decision": "NO BET",
+  "units": 0,
+  "confirmed": {
+    "quarterbacks": [
+      "Calgary: Vernon Adams Jr.",
+      "Saskatchewan: Trevor Harris"
+    ],
+    "weather": "Kickoff forecast 12 C, mainly cloudy, 0% precipitation, SE wind 20 km/h",
+    "injuries": [
+      "CGY Begelton AVAILABLE",
+      "CGY Ajou Ajou OUT",
+      "CGY Elijah Hills OUT",
+      "CGY Preston Nichols QUESTIONABLE",
+      "SSK Harris AVAILABLE",
+      "SSK Hardrick AVAILABLE",
+      "SSK Letcher Jr OUT",
+      "SSK Derick Roberson OUT",
+      "SSK DaMarcus Fields GTD"
+    ]
+  },
+  "missing_evidence": [
+    "Authenticated BetRivers Delaware event quote",
+    "Readable current Circa CFL price",
+    "Named current VSiN Calgary spread selection",
+    "Handle split",
+    "Verified closing-band history for fade/inflation trigger"
+  ],
+  "release_blockers": [
+    "67/110 below 82",
+    "Failure Score 6/10 below 7",
+    "Exact BetRivers Delaware price unverified",
+    "Current +4.5 worse than earlier +5.5",
+    "Doc's opposes Calgary"
+  ],
+  "market_context": {
+    "comparison_books": "+5.5 -115 at BetMGM/bet365; most other books +4.5",
+    "betrivers_comparison": "Calgary +4.5 -110",
+    "tickets": {
+      "calgary_pct": 43,
+      "saskatchewan_pct": 57,
+      "calgary_count": 225,
+      "saskatchewan_count": 298
+    },
+    "handle": null,
+    "movement": "Split market with most books at +4.5 after earlier +5.5; precise opener sequence not fully verified",
+    "progressive_fade": "UNKNOWN",
+    "favorite_inflation": "UNKNOWN"
+  },
+  "sources": [
+    "https://www.cfl.ca/article/cfl-injury-reports-week-18",
+    "https://www.cfl.ca/article/3-keys-to-victory-for-calgary-saskatchewan-in-week-18",
+    "https://weather.gc.ca/en/forecast/hourly/index.html?coords=50.45,-104.617",
+    "https://data.vsin.com/cfl/games/",
+    "https://www.docsports.com/free-picks/cfl/2026/calgary-stampeders-vs-saskatchewan-roughriders-prediction-10-2-2026-cfl-pick-tips-and-odds.html",
+    "https://www.covers.com/sport/football/cfl/matchup/374303/picks",
+    "https://www.sportsbookreview.com/betting-odds/cfl-football/"
+  ],
+  "audit": {
+    "wager_placed": false,
+    "website_card_published": false
+  }
+}
