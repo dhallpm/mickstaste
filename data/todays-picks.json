@@ -2,8 +2,8 @@
   "success": true,
   "source": "published-active-card-static",
   "sourceOfTruth": "Micks Picks publish data",
-  "date": "2026-10-01",
-  "totalExposure": 0,
+  "date": "2026-10-04",
+  "totalExposure": 20,
   "free": [
     {
       "date": "2026-09-15",
@@ -2193,9 +2193,696 @@
       "P/L": "No wager",
       "PL": "No wager",
       "recordScope": "Posted user-selected ticket graded for card-performance tracking; betPlaced=false, so excluded from the official betting record and unit P/L."
+    },
+    {
+      "id": "micks-2026-10-04-pdf-ticket-01",
+      "date": "2026-10-04",
+      "Date": "2026-10-04",
+      "section": "Lotto Parlays",
+      "Section": "Lotto Parlays",
+      "access": "free",
+      "Access": "Free",
+      "sport": "NFL",
+      "league": "NFL",
+      "game": "Sunday NFL — Earlier Half-Point A",
+      "pick": "Earlier Half-Point A",
+      "cardTitle": "Earlier Half-Point A — 2u",
+      "type": "3-leg Half-Point parlay",
+      "market": "Delaware fixed-payout football card",
+      "lineNumber": "#107 HOU -2.5; #115 CIN -2.5 [R]; #124 NE +6.5",
+      "Line": "#107 HOU -2.5; #115 CIN -2.5 [R]; #124 NE +6.5",
+      "legs": "#107 HOU -2.5; #115 CIN -2.5 [R]; #124 NE +6.5",
+      "legSelections": [
+        {
+          "box": 107,
+          "selection": "HOU -2.5"
+        },
+        {
+          "box": 115,
+          "selection": "CIN -2.5 [R]"
+        },
+        {
+          "box": 124,
+          "selection": "NE +6.5"
+        }
+      ],
+      "odds": "11-to-2 fixed profit",
+      "sportsbook": "Delaware Sports Lottery — Oct1 printed card",
+      "grade": "User-selected",
+      "units": 2,
+      "Units": 2,
+      "status": "Published — User-selected",
+      "Status": "Published — User-selected",
+      "officialBet": "Yes",
+      "Official Bet": "Yes",
+      "betPlaced": false,
+      "frameworkQualified": false,
+      "publicationBasis": "User-directed publication and 2u per ticket; no analytical upgrade or wager receipt inferred",
+      "hideWagerAmounts": false,
+      "writeup": "User-selected ticket, 2 units. Houston needs efficient drives despite protection risks. Cincinnati needs Burrow-led scoring against Jacksonville. New England needs to avoid turnover-driven separation. Every listed leg must win. Use the exact printed Delaware card selections, already adjusted; confirm these boxes remain accepted. Shared games create correlated exposure across tickets. Asterisks retain public-review notes; [R] marks a replacement for the removed Rams–Eagles game. The 2-unit size is user-directed. No wager receipt has been recorded. This construction retains the requested leg count instead of adding extra outcomes for a larger return. A single losing leg defeats the entire ticket. Confirm relevant high-usage player limitations before accepting the card.",
+      "fullAnalysis": "User-selected ticket, 2 units. Houston needs efficient drives despite protection risks. Cincinnati needs Burrow-led scoring against Jacksonville. New England needs to avoid turnover-driven separation. Every listed leg must win. Use the exact printed Delaware card selections, already adjusted; confirm these boxes remain accepted. Shared games create correlated exposure across tickets. Asterisks retain public-review notes; [R] marks a replacement for the removed Rams–Eagles game. The 2-unit size is user-directed. No wager receipt has been recorded. Exact selections: #107 HOU -2.5; #115 CIN -2.5 [R]; #124 NE +6.5. Earlier ticket scores remain dated; replacement legs and mixed-ticket prices are not asserted to have a fresh joint-ticket grade. Material usage changes and accepted numbers remain relevant. Earlier Half-Point A/B now share Cincinnati; Sunday Half-Point A/B share Carolina; Sunday Big Teaser A/B share Tennessee +19.5. Several alternate team sides share games across cards, but no individual ticket uses opposing team sides. The earlier Chicago total and Cincinnati/Jacksonville under retain their prior counters.",
+      "bestNumber": "#107 HOU -2.5; #115 CIN -2.5 [R]; #124 NE +6.5",
+      "playableTo": "Only the listed selections and limits",
+      "noBetCutoff": "Pass/rescore if any required card box is unavailable or any mixed-ticket price exceeds its listed limit",
+      "risk": "Every leg must clear; overlapping game outcomes can defeat multiple tickets",
+      "sourceVerification": "Micks-All-Tickets-October-4-No-Rams-Eagles.pdf, Oct4 10:54 a.m. ET; Oct1 Delaware printed cards; morning Action Pro recording. Publication/sizing authorized Oct4 12:31 p.m. ET.",
+      "updatedAt": "2026-10-04T16:34:54.166255+00:00",
+      "postedAt": "2026-10-04T16:34:54.166255+00:00"
+    },
+    {
+      "id": "micks-2026-10-04-pdf-ticket-02",
+      "date": "2026-10-04",
+      "Date": "2026-10-04",
+      "section": "Lotto Parlays",
+      "Section": "Lotto Parlays",
+      "access": "free",
+      "Access": "Free",
+      "sport": "NFL",
+      "league": "NFL",
+      "game": "Sunday NFL — Earlier Half-Point B",
+      "pick": "Earlier Half-Point B",
+      "cardTitle": "Earlier Half-Point B — 2u",
+      "type": "3-leg Half-Point parlay",
+      "market": "Delaware fixed-payout football card",
+      "lineNumber": "#115 CIN -2.5; #114 GB/TB U39.5*; #130 CHI/NYJ U42.5",
+      "Line": "#115 CIN -2.5; #114 GB/TB U39.5*; #130 CHI/NYJ U42.5",
+      "legs": "#115 CIN -2.5; #114 GB/TB U39.5*; #130 CHI/NYJ U42.5",
+      "legSelections": [
+        {
+          "box": 115,
+          "selection": "CIN -2.5"
+        },
+        {
+          "box": 114,
+          "selection": "GB/TB U39.5*"
+        },
+        {
+          "box": 130,
+          "selection": "CHI/NYJ U42.5"
+        }
+      ],
+      "odds": "11-to-2 fixed profit",
+      "sportsbook": "Delaware Sports Lottery — Oct1 printed card",
+      "grade": "User-selected",
+      "units": 2,
+      "Units": 2,
+      "status": "Published — User-selected",
+      "Status": "Published — User-selected",
+      "officialBet": "Yes",
+      "Official Bet": "Yes",
+      "betPlaced": false,
+      "frameworkQualified": false,
+      "publicationBasis": "User-directed publication and 2u per ticket; no analytical upgrade or wager receipt inferred",
+      "hideWagerAmounts": false,
+      "writeup": "User-selected ticket, 2 units. Cincinnati needs Burrow-led scoring against Jacksonville. The Green Bay–Tampa under needs limited sustained scoring. The Chicago–Jets under needs restrained backup-quarterback production. Every listed leg must win. Use the exact printed Delaware card selections, already adjusted; confirm these boxes remain accepted. Shared games create correlated exposure across tickets. Asterisks retain public-review notes; [R] marks a replacement for the removed Rams–Eagles game. The 2-unit size is user-directed. No wager receipt has been recorded. This construction retains the requested leg count instead of adding extra outcomes for a larger return. A single losing leg defeats the entire ticket. Confirm relevant high-usage player limitations before accepting the card.",
+      "fullAnalysis": "User-selected ticket, 2 units. Cincinnati needs Burrow-led scoring against Jacksonville. The Green Bay–Tampa under needs limited sustained scoring. The Chicago–Jets under needs restrained backup-quarterback production. Every listed leg must win. Use the exact printed Delaware card selections, already adjusted; confirm these boxes remain accepted. Shared games create correlated exposure across tickets. Asterisks retain public-review notes; [R] marks a replacement for the removed Rams–Eagles game. The 2-unit size is user-directed. No wager receipt has been recorded. Exact selections: #115 CIN -2.5; #114 GB/TB U39.5*; #130 CHI/NYJ U42.5. Earlier ticket scores remain dated; replacement legs and mixed-ticket prices are not asserted to have a fresh joint-ticket grade. Material usage changes and accepted numbers remain relevant. Earlier Half-Point A/B now share Cincinnati; Sunday Half-Point A/B share Carolina; Sunday Big Teaser A/B share Tennessee +19.5. Several alternate team sides share games across cards, but no individual ticket uses opposing team sides. The earlier Chicago total and Cincinnati/Jacksonville under retain their prior counters.",
+      "bestNumber": "#115 CIN -2.5; #114 GB/TB U39.5*; #130 CHI/NYJ U42.5",
+      "playableTo": "Only the listed selections and limits",
+      "noBetCutoff": "Pass/rescore if any required card box is unavailable or any mixed-ticket price exceeds its listed limit",
+      "risk": "Every leg must clear; overlapping game outcomes can defeat multiple tickets",
+      "sourceVerification": "Micks-All-Tickets-October-4-No-Rams-Eagles.pdf, Oct4 10:54 a.m. ET; Oct1 Delaware printed cards; morning Action Pro recording. Publication/sizing authorized Oct4 12:31 p.m. ET.",
+      "updatedAt": "2026-10-04T16:34:54.166255+00:00",
+      "postedAt": "2026-10-04T16:34:54.166255+00:00"
+    },
+    {
+      "id": "micks-2026-10-04-pdf-ticket-03",
+      "date": "2026-10-04",
+      "Date": "2026-10-04",
+      "section": "Lotto Parlays",
+      "Section": "Lotto Parlays",
+      "access": "free",
+      "Access": "Free",
+      "sport": "NFL",
+      "league": "NFL",
+      "game": "Sunday NFL — Earlier Big Teaser A",
+      "pick": "Earlier Big Teaser A",
+      "cardTitle": "Earlier Big Teaser A — 2u",
+      "type": "10-leg Big Teaser",
+      "market": "Delaware fixed-payout football card",
+      "lineNumber": "#107 HOU +5.5; #139 SF +5.5 [R]; #124 NE +14.5; #115 CIN +5.5; #130 CHI/NYJ U49.5; #114 GB/TB U46.5*; #132 TEN +19.5*; #118 CIN/JAX U58.5; #109 HOU/DAL O40.5; #104 ARI +8.5",
+      "Line": "#107 HOU +5.5; #139 SF +5.5 [R]; #124 NE +14.5; #115 CIN +5.5; #130 CHI/NYJ U49.5; #114 GB/TB U46.5*; #132 TEN +19.5*; #118 CIN/JAX U58.5; #109 HOU/DAL O40.5; #104 ARI +8.5",
+      "legs": "#107 HOU +5.5; #139 SF +5.5 [R]; #124 NE +14.5; #115 CIN +5.5; #130 CHI/NYJ U49.5; #114 GB/TB U46.5*; #132 TEN +19.5*; #118 CIN/JAX U58.5; #109 HOU/DAL O40.5; #104 ARI +8.5",
+      "legSelections": [
+        {
+          "box": 107,
+          "selection": "HOU +5.5"
+        },
+        {
+          "box": 139,
+          "selection": "SF +5.5 [R]"
+        },
+        {
+          "box": 124,
+          "selection": "NE +14.5"
+        },
+        {
+          "box": 115,
+          "selection": "CIN +5.5"
+        },
+        {
+          "box": 130,
+          "selection": "CHI/NYJ U49.5"
+        },
+        {
+          "box": 114,
+          "selection": "GB/TB U46.5*"
+        },
+        {
+          "box": 132,
+          "selection": "TEN +19.5*"
+        },
+        {
+          "box": 118,
+          "selection": "CIN/JAX U58.5"
+        },
+        {
+          "box": 109,
+          "selection": "HOU/DAL O40.5"
+        },
+        {
+          "box": 104,
+          "selection": "ARI +8.5"
+        }
+      ],
+      "odds": "13-to-2 fixed profit",
+      "sportsbook": "Delaware Sports Lottery — Oct1 printed card",
+      "grade": "User-selected",
+      "units": 2,
+      "Units": 2,
+      "status": "Published — User-selected",
+      "Status": "Published — User-selected",
+      "officialBet": "Yes",
+      "Official Bet": "Yes",
+      "betPlaced": false,
+      "frameworkQualified": false,
+      "publicationBasis": "User-directed publication and 2u per ticket; no analytical upgrade or wager receipt inferred",
+      "hideWagerAmounts": false,
+      "writeup": "User-selected ticket, 2 units. Houston needs efficient drives despite protection risks. San Francisco needs offensive efficiency despite defensive absences. New England needs to avoid turnover-driven separation. Cincinnati needs Burrow-led scoring against Jacksonville. The Chicago–Jets under needs restrained backup-quarterback production. The Green Bay–Tampa under needs limited sustained scoring. Tennessee needs competitive drives against Baltimore's scoring ceiling. The Cincinnati–Jacksonville under must survive both passing attacks. The Houston–Dallas total needs the printed scoring window. Arizona needs Love and McBride to sustain drives. Every listed leg must win. Alternate points provide margin protection, but a blowout can still bust the card. Use the exact printed Delaware card selections, already adjusted; confirm these boxes remain accepted. Shared games create correlated exposure across tickets. Asterisks retain public-review notes; [R] marks a replacement for the removed Rams–Eagles game. The 2-unit size is user-directed. No wager receipt has been recorded.",
+      "fullAnalysis": "User-selected ticket, 2 units. Houston needs efficient drives despite protection risks. San Francisco needs offensive efficiency despite defensive absences. New England needs to avoid turnover-driven separation. Cincinnati needs Burrow-led scoring against Jacksonville. The Chicago–Jets under needs restrained backup-quarterback production. The Green Bay–Tampa under needs limited sustained scoring. Tennessee needs competitive drives against Baltimore's scoring ceiling. The Cincinnati–Jacksonville under must survive both passing attacks. The Houston–Dallas total needs the printed scoring window. Arizona needs Love and McBride to sustain drives. Every listed leg must win. Alternate points provide margin protection, but a blowout can still bust the card. Use the exact printed Delaware card selections, already adjusted; confirm these boxes remain accepted. Shared games create correlated exposure across tickets. Asterisks retain public-review notes; [R] marks a replacement for the removed Rams–Eagles game. The 2-unit size is user-directed. No wager receipt has been recorded. Exact selections: #107 HOU +5.5; #139 SF +5.5 [R]; #124 NE +14.5; #115 CIN +5.5; #130 CHI/NYJ U49.5; #114 GB/TB U46.5*; #132 TEN +19.5*; #118 CIN/JAX U58.5; #109 HOU/DAL O40.5; #104 ARI +8.5. Earlier ticket scores remain dated; replacement legs and mixed-ticket prices are not asserted to have a fresh joint-ticket grade. Material usage changes and accepted numbers remain relevant. Earlier Half-Point A/B now share Cincinnati; Sunday Half-Point A/B share Carolina; Sunday Big Teaser A/B share Tennessee +19.5. Several alternate team sides share games across cards, but no individual ticket uses opposing team sides. The earlier Chicago total and Cincinnati/Jacksonville under retain their prior counters.",
+      "bestNumber": "#107 HOU +5.5; #139 SF +5.5 [R]; #124 NE +14.5; #115 CIN +5.5; #130 CHI/NYJ U49.5; #114 GB/TB U46.5*; #132 TEN +19.5*; #118 CIN/JAX U58.5; #109 HOU/DAL O40.5; #104 ARI +8.5",
+      "playableTo": "Only the listed selections and limits",
+      "noBetCutoff": "Pass/rescore if any required card box is unavailable or any mixed-ticket price exceeds its listed limit",
+      "risk": "Every leg must clear; overlapping game outcomes can defeat multiple tickets",
+      "sourceVerification": "Micks-All-Tickets-October-4-No-Rams-Eagles.pdf, Oct4 10:54 a.m. ET; Oct1 Delaware printed cards; morning Action Pro recording. Publication/sizing authorized Oct4 12:31 p.m. ET.",
+      "updatedAt": "2026-10-04T16:34:54.166255+00:00",
+      "postedAt": "2026-10-04T16:34:54.166255+00:00"
+    },
+    {
+      "id": "micks-2026-10-04-pdf-ticket-04",
+      "date": "2026-10-04",
+      "Date": "2026-10-04",
+      "section": "Lotto Parlays",
+      "Section": "Lotto Parlays",
+      "access": "free",
+      "Access": "Free",
+      "sport": "NFL",
+      "league": "NFL",
+      "game": "Sunday NFL — Earlier Big Teaser B",
+      "pick": "Earlier Big Teaser B",
+      "cardTitle": "Earlier Big Teaser B — 2u",
+      "type": "10-leg Big Teaser",
+      "market": "Delaware fixed-payout football card",
+      "lineNumber": "#152 CAR +11.5 [R]; #130 CHI/NYJ U49.5; #114 GB/TB U46.5*; #116 JAX +9.5; #131 BAL -3.5*; #123 BUF +1.5*; #108 DAL +9.5; #104 ARI +8.5; #110 HOU/DAL U54.5; #139 SF +5.5 [R]",
+      "Line": "#152 CAR +11.5 [R]; #130 CHI/NYJ U49.5; #114 GB/TB U46.5*; #116 JAX +9.5; #131 BAL -3.5*; #123 BUF +1.5*; #108 DAL +9.5; #104 ARI +8.5; #110 HOU/DAL U54.5; #139 SF +5.5 [R]",
+      "legs": "#152 CAR +11.5 [R]; #130 CHI/NYJ U49.5; #114 GB/TB U46.5*; #116 JAX +9.5; #131 BAL -3.5*; #123 BUF +1.5*; #108 DAL +9.5; #104 ARI +8.5; #110 HOU/DAL U54.5; #139 SF +5.5 [R]",
+      "legSelections": [
+        {
+          "box": 152,
+          "selection": "CAR +11.5 [R]"
+        },
+        {
+          "box": 130,
+          "selection": "CHI/NYJ U49.5"
+        },
+        {
+          "box": 114,
+          "selection": "GB/TB U46.5*"
+        },
+        {
+          "box": 116,
+          "selection": "JAX +9.5"
+        },
+        {
+          "box": 131,
+          "selection": "BAL -3.5*"
+        },
+        {
+          "box": 123,
+          "selection": "BUF +1.5*"
+        },
+        {
+          "box": 108,
+          "selection": "DAL +9.5"
+        },
+        {
+          "box": 104,
+          "selection": "ARI +8.5"
+        },
+        {
+          "box": 110,
+          "selection": "HOU/DAL U54.5"
+        },
+        {
+          "box": 139,
+          "selection": "SF +5.5 [R]"
+        }
+      ],
+      "odds": "13-to-2 fixed profit",
+      "sportsbook": "Delaware Sports Lottery — Oct1 printed card",
+      "grade": "User-selected",
+      "units": 2,
+      "Units": 2,
+      "status": "Published — User-selected",
+      "Status": "Published — User-selected",
+      "officialBet": "Yes",
+      "Official Bet": "Yes",
+      "betPlaced": false,
+      "frameworkQualified": false,
+      "publicationBasis": "User-directed publication and 2u per ticket; no analytical upgrade or wager receipt inferred",
+      "hideWagerAmounts": false,
+      "writeup": "User-selected ticket, 2 units. Carolina needs Young-led offense to offset Detroit's rushing threat. The Chicago–Jets under needs restrained backup-quarterback production. The Green Bay–Tampa under needs limited sustained scoring. Jacksonville needs its passing attack to keep the margin manageable. Baltimore needs Jackson-led separation. Buffalo needs Allen and Cook to control the game. Dallas needs Prescott-led offense to keep it close. Arizona needs Love and McBride to sustain drives. The Houston–Dallas total needs the printed scoring window. San Francisco needs offensive efficiency despite defensive absences. Every listed leg must win. Alternate points provide margin protection, but a blowout can still bust the card. Use the exact printed Delaware card selections, already adjusted; confirm these boxes remain accepted. Shared games create correlated exposure across tickets. Asterisks retain public-review notes; [R] marks a replacement for the removed Rams–Eagles game. The 2-unit size is user-directed. No wager receipt has been recorded.",
+      "fullAnalysis": "User-selected ticket, 2 units. Carolina needs Young-led offense to offset Detroit's rushing threat. The Chicago–Jets under needs restrained backup-quarterback production. The Green Bay–Tampa under needs limited sustained scoring. Jacksonville needs its passing attack to keep the margin manageable. Baltimore needs Jackson-led separation. Buffalo needs Allen and Cook to control the game. Dallas needs Prescott-led offense to keep it close. Arizona needs Love and McBride to sustain drives. The Houston–Dallas total needs the printed scoring window. San Francisco needs offensive efficiency despite defensive absences. Every listed leg must win. Alternate points provide margin protection, but a blowout can still bust the card. Use the exact printed Delaware card selections, already adjusted; confirm these boxes remain accepted. Shared games create correlated exposure across tickets. Asterisks retain public-review notes; [R] marks a replacement for the removed Rams–Eagles game. The 2-unit size is user-directed. No wager receipt has been recorded. Exact selections: #152 CAR +11.5 [R]; #130 CHI/NYJ U49.5; #114 GB/TB U46.5*; #116 JAX +9.5; #131 BAL -3.5*; #123 BUF +1.5*; #108 DAL +9.5; #104 ARI +8.5; #110 HOU/DAL U54.5; #139 SF +5.5 [R]. Earlier ticket scores remain dated; replacement legs and mixed-ticket prices are not asserted to have a fresh joint-ticket grade. Material usage changes and accepted numbers remain relevant. Earlier Half-Point A/B now share Cincinnati; Sunday Half-Point A/B share Carolina; Sunday Big Teaser A/B share Tennessee +19.5. Several alternate team sides share games across cards, but no individual ticket uses opposing team sides. The earlier Chicago total and Cincinnati/Jacksonville under retain their prior counters.",
+      "bestNumber": "#152 CAR +11.5 [R]; #130 CHI/NYJ U49.5; #114 GB/TB U46.5*; #116 JAX +9.5; #131 BAL -3.5*; #123 BUF +1.5*; #108 DAL +9.5; #104 ARI +8.5; #110 HOU/DAL U54.5; #139 SF +5.5 [R]",
+      "playableTo": "Only the listed selections and limits",
+      "noBetCutoff": "Pass/rescore if any required card box is unavailable or any mixed-ticket price exceeds its listed limit",
+      "risk": "Every leg must clear; overlapping game outcomes can defeat multiple tickets",
+      "sourceVerification": "Micks-All-Tickets-October-4-No-Rams-Eagles.pdf, Oct4 10:54 a.m. ET; Oct1 Delaware printed cards; morning Action Pro recording. Publication/sizing authorized Oct4 12:31 p.m. ET.",
+      "updatedAt": "2026-10-04T16:34:54.166255+00:00",
+      "postedAt": "2026-10-04T16:34:54.166255+00:00"
+    },
+    {
+      "id": "micks-2026-10-04-pdf-ticket-05",
+      "date": "2026-10-04",
+      "Date": "2026-10-04",
+      "section": "Lotto Parlays",
+      "Section": "Lotto Parlays",
+      "access": "free",
+      "Access": "Free",
+      "sport": "NFL",
+      "league": "NFL",
+      "game": "Sunday NFL — Sunday Half-Point A",
+      "pick": "Sunday Half-Point A",
+      "cardTitle": "Sunday Half-Point A — 2u",
+      "type": "3-leg Half-Point parlay",
+      "market": "Delaware fixed-payout football card",
+      "lineNumber": "#152 CAR +3.5 [R]; #107 HOU -2.5; #124 NE +6.5",
+      "Line": "#152 CAR +3.5 [R]; #107 HOU -2.5; #124 NE +6.5",
+      "legs": "#152 CAR +3.5 [R]; #107 HOU -2.5; #124 NE +6.5",
+      "legSelections": [
+        {
+          "box": 152,
+          "selection": "CAR +3.5 [R]"
+        },
+        {
+          "box": 107,
+          "selection": "HOU -2.5"
+        },
+        {
+          "box": 124,
+          "selection": "NE +6.5"
+        }
+      ],
+      "odds": "11-to-2 fixed profit",
+      "sportsbook": "Delaware Sports Lottery — Oct1 printed card",
+      "grade": "User-selected",
+      "units": 2,
+      "Units": 2,
+      "status": "Published — User-selected",
+      "Status": "Published — User-selected",
+      "officialBet": "Yes",
+      "Official Bet": "Yes",
+      "betPlaced": false,
+      "frameworkQualified": false,
+      "publicationBasis": "User-directed publication and 2u per ticket; no analytical upgrade or wager receipt inferred",
+      "hideWagerAmounts": false,
+      "writeup": "User-selected ticket, 2 units. Carolina needs Young-led offense to offset Detroit's rushing threat. Houston needs efficient drives despite protection risks. New England needs to avoid turnover-driven separation. Every listed leg must win. Use the exact printed Delaware card selections, already adjusted; confirm these boxes remain accepted. Shared games create correlated exposure across tickets. Asterisks retain public-review notes; [R] marks a replacement for the removed Rams–Eagles game. The 2-unit size is user-directed. No wager receipt has been recorded. This construction retains the requested leg count instead of adding extra outcomes for a larger return. A single losing leg defeats the entire ticket. Confirm relevant high-usage player limitations before accepting the card.",
+      "fullAnalysis": "User-selected ticket, 2 units. Carolina needs Young-led offense to offset Detroit's rushing threat. Houston needs efficient drives despite protection risks. New England needs to avoid turnover-driven separation. Every listed leg must win. Use the exact printed Delaware card selections, already adjusted; confirm these boxes remain accepted. Shared games create correlated exposure across tickets. Asterisks retain public-review notes; [R] marks a replacement for the removed Rams–Eagles game. The 2-unit size is user-directed. No wager receipt has been recorded. Exact selections: #152 CAR +3.5 [R]; #107 HOU -2.5; #124 NE +6.5. Earlier ticket scores remain dated; replacement legs and mixed-ticket prices are not asserted to have a fresh joint-ticket grade. Material usage changes and accepted numbers remain relevant. Earlier Half-Point A/B now share Cincinnati; Sunday Half-Point A/B share Carolina; Sunday Big Teaser A/B share Tennessee +19.5. Several alternate team sides share games across cards, but no individual ticket uses opposing team sides. The earlier Chicago total and Cincinnati/Jacksonville under retain their prior counters.",
+      "bestNumber": "#152 CAR +3.5 [R]; #107 HOU -2.5; #124 NE +6.5",
+      "playableTo": "Only the listed selections and limits",
+      "noBetCutoff": "Pass/rescore if any required card box is unavailable or any mixed-ticket price exceeds its listed limit",
+      "risk": "Every leg must clear; overlapping game outcomes can defeat multiple tickets",
+      "sourceVerification": "Micks-All-Tickets-October-4-No-Rams-Eagles.pdf, Oct4 10:54 a.m. ET; Oct1 Delaware printed cards; morning Action Pro recording. Publication/sizing authorized Oct4 12:31 p.m. ET.",
+      "updatedAt": "2026-10-04T16:34:54.166255+00:00",
+      "postedAt": "2026-10-04T16:34:54.166255+00:00"
+    },
+    {
+      "id": "micks-2026-10-04-pdf-ticket-06",
+      "date": "2026-10-04",
+      "Date": "2026-10-04",
+      "section": "Lotto Parlays",
+      "Section": "Lotto Parlays",
+      "access": "free",
+      "Access": "Free",
+      "sport": "NFL",
+      "league": "NFL",
+      "game": "Sunday NFL — Sunday Half-Point B",
+      "pick": "Sunday Half-Point B",
+      "cardTitle": "Sunday Half-Point B — 2u",
+      "type": "3-leg Half-Point parlay",
+      "market": "Delaware fixed-payout football card",
+      "lineNumber": "#152 CAR +3.5; #139 SF -2.5; #146 KC/LV U47.5*",
+      "Line": "#152 CAR +3.5; #139 SF -2.5; #146 KC/LV U47.5*",
+      "legs": "#152 CAR +3.5; #139 SF -2.5; #146 KC/LV U47.5*",
+      "legSelections": [
+        {
+          "box": 152,
+          "selection": "CAR +3.5"
+        },
+        {
+          "box": 139,
+          "selection": "SF -2.5"
+        },
+        {
+          "box": 146,
+          "selection": "KC/LV U47.5*"
+        }
+      ],
+      "odds": "11-to-2 fixed profit",
+      "sportsbook": "Delaware Sports Lottery — Oct1 printed card",
+      "grade": "User-selected",
+      "units": 2,
+      "Units": 2,
+      "status": "Published — User-selected",
+      "Status": "Published — User-selected",
+      "officialBet": "Yes",
+      "Official Bet": "Yes",
+      "betPlaced": false,
+      "frameworkQualified": false,
+      "publicationBasis": "User-directed publication and 2u per ticket; no analytical upgrade or wager receipt inferred",
+      "hideWagerAmounts": false,
+      "writeup": "User-selected ticket, 2 units. Carolina needs Young-led offense to offset Detroit's rushing threat. San Francisco needs offensive efficiency despite defensive absences. The Kansas City–Las Vegas under needs fewer explosive scores. Every listed leg must win. Use the exact printed Delaware card selections, already adjusted; confirm these boxes remain accepted. Shared games create correlated exposure across tickets. Asterisks retain public-review notes; [R] marks a replacement for the removed Rams–Eagles game. The 2-unit size is user-directed. No wager receipt has been recorded. This construction retains the requested leg count instead of adding extra outcomes for a larger return. A single losing leg defeats the entire ticket. Confirm relevant high-usage player limitations before accepting the card.",
+      "fullAnalysis": "User-selected ticket, 2 units. Carolina needs Young-led offense to offset Detroit's rushing threat. San Francisco needs offensive efficiency despite defensive absences. The Kansas City–Las Vegas under needs fewer explosive scores. Every listed leg must win. Use the exact printed Delaware card selections, already adjusted; confirm these boxes remain accepted. Shared games create correlated exposure across tickets. Asterisks retain public-review notes; [R] marks a replacement for the removed Rams–Eagles game. The 2-unit size is user-directed. No wager receipt has been recorded. Exact selections: #152 CAR +3.5; #139 SF -2.5; #146 KC/LV U47.5*. Earlier ticket scores remain dated; replacement legs and mixed-ticket prices are not asserted to have a fresh joint-ticket grade. Material usage changes and accepted numbers remain relevant. Earlier Half-Point A/B now share Cincinnati; Sunday Half-Point A/B share Carolina; Sunday Big Teaser A/B share Tennessee +19.5. Several alternate team sides share games across cards, but no individual ticket uses opposing team sides. The earlier Chicago total and Cincinnati/Jacksonville under retain their prior counters.",
+      "bestNumber": "#152 CAR +3.5; #139 SF -2.5; #146 KC/LV U47.5*",
+      "playableTo": "Only the listed selections and limits",
+      "noBetCutoff": "Pass/rescore if any required card box is unavailable or any mixed-ticket price exceeds its listed limit",
+      "risk": "Every leg must clear; overlapping game outcomes can defeat multiple tickets",
+      "sourceVerification": "Micks-All-Tickets-October-4-No-Rams-Eagles.pdf, Oct4 10:54 a.m. ET; Oct1 Delaware printed cards; morning Action Pro recording. Publication/sizing authorized Oct4 12:31 p.m. ET.",
+      "updatedAt": "2026-10-04T16:34:54.166255+00:00",
+      "postedAt": "2026-10-04T16:34:54.166255+00:00"
+    },
+    {
+      "id": "micks-2026-10-04-pdf-ticket-07",
+      "date": "2026-10-04",
+      "Date": "2026-10-04",
+      "section": "Lotto Parlays",
+      "Section": "Lotto Parlays",
+      "access": "free",
+      "Access": "Free",
+      "sport": "NFL",
+      "league": "NFL",
+      "game": "Sunday NFL — Sunday Regular Teaser (5)",
+      "pick": "Sunday Regular Teaser (5)",
+      "cardTitle": "Sunday Regular Teaser (5) — 2u",
+      "type": "5-leg Teaser",
+      "market": "Delaware fixed-payout football card",
+      "lineNumber": "#107 HOU +2.5; #132 TEN +16.5* [R]; #124 NE +12.5; #139 SF +2.5; #152 CAR +8.5",
+      "Line": "#107 HOU +2.5; #132 TEN +16.5* [R]; #124 NE +12.5; #139 SF +2.5; #152 CAR +8.5",
+      "legs": "#107 HOU +2.5; #132 TEN +16.5* [R]; #124 NE +12.5; #139 SF +2.5; #152 CAR +8.5",
+      "legSelections": [
+        {
+          "box": 107,
+          "selection": "HOU +2.5"
+        },
+        {
+          "box": 132,
+          "selection": "TEN +16.5* [R]"
+        },
+        {
+          "box": 124,
+          "selection": "NE +12.5"
+        },
+        {
+          "box": 139,
+          "selection": "SF +2.5"
+        },
+        {
+          "box": 152,
+          "selection": "CAR +8.5"
+        }
+      ],
+      "odds": "7-to-2 fixed profit",
+      "sportsbook": "Delaware Sports Lottery — Oct1 printed card",
+      "grade": "User-selected",
+      "units": 2,
+      "Units": 2,
+      "status": "Published — User-selected",
+      "Status": "Published — User-selected",
+      "officialBet": "Yes",
+      "Official Bet": "Yes",
+      "betPlaced": false,
+      "frameworkQualified": false,
+      "publicationBasis": "User-directed publication and 2u per ticket; no analytical upgrade or wager receipt inferred",
+      "hideWagerAmounts": false,
+      "writeup": "User-selected ticket, 2 units. Houston needs efficient drives despite protection risks. Tennessee needs competitive drives against Baltimore's scoring ceiling. New England needs to avoid turnover-driven separation. San Francisco needs offensive efficiency despite defensive absences. Carolina needs Young-led offense to offset Detroit's rushing threat. Every listed leg must win. Use the exact printed Delaware card selections, already adjusted; confirm these boxes remain accepted. Shared games create correlated exposure across tickets. Asterisks retain public-review notes; [R] marks a replacement for the removed Rams–Eagles game. The 2-unit size is user-directed. No wager receipt has been recorded. This construction retains the requested leg count instead of adding extra outcomes for a larger return. A single losing leg defeats the entire ticket. Confirm relevant high-usage player limitations before accepting the card.",
+      "fullAnalysis": "User-selected ticket, 2 units. Houston needs efficient drives despite protection risks. Tennessee needs competitive drives against Baltimore's scoring ceiling. New England needs to avoid turnover-driven separation. San Francisco needs offensive efficiency despite defensive absences. Carolina needs Young-led offense to offset Detroit's rushing threat. Every listed leg must win. Use the exact printed Delaware card selections, already adjusted; confirm these boxes remain accepted. Shared games create correlated exposure across tickets. Asterisks retain public-review notes; [R] marks a replacement for the removed Rams–Eagles game. The 2-unit size is user-directed. No wager receipt has been recorded. Exact selections: #107 HOU +2.5; #132 TEN +16.5* [R]; #124 NE +12.5; #139 SF +2.5; #152 CAR +8.5. Earlier ticket scores remain dated; replacement legs and mixed-ticket prices are not asserted to have a fresh joint-ticket grade. Material usage changes and accepted numbers remain relevant. Earlier Half-Point A/B now share Cincinnati; Sunday Half-Point A/B share Carolina; Sunday Big Teaser A/B share Tennessee +19.5. Several alternate team sides share games across cards, but no individual ticket uses opposing team sides. The earlier Chicago total and Cincinnati/Jacksonville under retain their prior counters.",
+      "bestNumber": "#107 HOU +2.5; #132 TEN +16.5* [R]; #124 NE +12.5; #139 SF +2.5; #152 CAR +8.5",
+      "playableTo": "Only the listed selections and limits",
+      "noBetCutoff": "Pass/rescore if any required card box is unavailable or any mixed-ticket price exceeds its listed limit",
+      "risk": "Every leg must clear; overlapping game outcomes can defeat multiple tickets",
+      "sourceVerification": "Micks-All-Tickets-October-4-No-Rams-Eagles.pdf, Oct4 10:54 a.m. ET; Oct1 Delaware printed cards; morning Action Pro recording. Publication/sizing authorized Oct4 12:31 p.m. ET.",
+      "updatedAt": "2026-10-04T16:34:54.166255+00:00",
+      "postedAt": "2026-10-04T16:34:54.166255+00:00"
+    },
+    {
+      "id": "micks-2026-10-04-pdf-ticket-08",
+      "date": "2026-10-04",
+      "Date": "2026-10-04",
+      "section": "Lotto Parlays",
+      "Section": "Lotto Parlays",
+      "access": "free",
+      "Access": "Free",
+      "sport": "NFL",
+      "league": "NFL",
+      "game": "Sunday NFL — Sunday Big Teaser A (10)",
+      "pick": "Sunday Big Teaser A (10)",
+      "cardTitle": "Sunday Big Teaser A (10) — 2u",
+      "type": "10-leg Big Teaser",
+      "market": "Delaware fixed-payout football card",
+      "lineNumber": "#132 TEN +19.5* [R]; #107 HOU +5.5; #124 NE +14.5; #152 CAR +11.5; #139 SF +5.5; #136 MIA +19.5*; #115 CIN +5.5; #146 KC/LV U54.5*; #143 KC +3.5; #103 NYG +6.5",
+      "Line": "#132 TEN +19.5* [R]; #107 HOU +5.5; #124 NE +14.5; #152 CAR +11.5; #139 SF +5.5; #136 MIA +19.5*; #115 CIN +5.5; #146 KC/LV U54.5*; #143 KC +3.5; #103 NYG +6.5",
+      "legs": "#132 TEN +19.5* [R]; #107 HOU +5.5; #124 NE +14.5; #152 CAR +11.5; #139 SF +5.5; #136 MIA +19.5*; #115 CIN +5.5; #146 KC/LV U54.5*; #143 KC +3.5; #103 NYG +6.5",
+      "legSelections": [
+        {
+          "box": 132,
+          "selection": "TEN +19.5* [R]"
+        },
+        {
+          "box": 107,
+          "selection": "HOU +5.5"
+        },
+        {
+          "box": 124,
+          "selection": "NE +14.5"
+        },
+        {
+          "box": 152,
+          "selection": "CAR +11.5"
+        },
+        {
+          "box": 139,
+          "selection": "SF +5.5"
+        },
+        {
+          "box": 136,
+          "selection": "MIA +19.5*"
+        },
+        {
+          "box": 115,
+          "selection": "CIN +5.5"
+        },
+        {
+          "box": 146,
+          "selection": "KC/LV U54.5*"
+        },
+        {
+          "box": 143,
+          "selection": "KC +3.5"
+        },
+        {
+          "box": 103,
+          "selection": "NYG +6.5"
+        }
+      ],
+      "odds": "13-to-2 fixed profit",
+      "sportsbook": "Delaware Sports Lottery — Oct1 printed card",
+      "grade": "User-selected",
+      "units": 2,
+      "Units": 2,
+      "status": "Published — User-selected",
+      "Status": "Published — User-selected",
+      "officialBet": "Yes",
+      "Official Bet": "Yes",
+      "betPlaced": false,
+      "frameworkQualified": false,
+      "publicationBasis": "User-directed publication and 2u per ticket; no analytical upgrade or wager receipt inferred",
+      "hideWagerAmounts": false,
+      "writeup": "User-selected ticket, 2 units. Tennessee needs competitive drives against Baltimore's scoring ceiling. Houston needs efficient drives despite protection risks. New England needs to avoid turnover-driven separation. Carolina needs Young-led offense to offset Detroit's rushing threat. San Francisco needs offensive efficiency despite defensive absences. Miami needs enough production to avoid a Minnesota blowout. Cincinnati needs Burrow-led scoring against Jacksonville. The Kansas City–Las Vegas under needs fewer explosive scores. Kansas City needs to prevent a decisive Raiders upset. New York needs steady quarterback play and limited mistakes. Every listed leg must win. Alternate points provide margin protection, but a blowout can still bust the card. Use the exact printed Delaware card selections, already adjusted; confirm these boxes remain accepted. Shared games create correlated exposure across tickets. Asterisks retain public-review notes; [R] marks a replacement for the removed Rams–Eagles game. The 2-unit size is user-directed. No wager receipt has been recorded.",
+      "fullAnalysis": "User-selected ticket, 2 units. Tennessee needs competitive drives against Baltimore's scoring ceiling. Houston needs efficient drives despite protection risks. New England needs to avoid turnover-driven separation. Carolina needs Young-led offense to offset Detroit's rushing threat. San Francisco needs offensive efficiency despite defensive absences. Miami needs enough production to avoid a Minnesota blowout. Cincinnati needs Burrow-led scoring against Jacksonville. The Kansas City–Las Vegas under needs fewer explosive scores. Kansas City needs to prevent a decisive Raiders upset. New York needs steady quarterback play and limited mistakes. Every listed leg must win. Alternate points provide margin protection, but a blowout can still bust the card. Use the exact printed Delaware card selections, already adjusted; confirm these boxes remain accepted. Shared games create correlated exposure across tickets. Asterisks retain public-review notes; [R] marks a replacement for the removed Rams–Eagles game. The 2-unit size is user-directed. No wager receipt has been recorded. Exact selections: #132 TEN +19.5* [R]; #107 HOU +5.5; #124 NE +14.5; #152 CAR +11.5; #139 SF +5.5; #136 MIA +19.5*; #115 CIN +5.5; #146 KC/LV U54.5*; #143 KC +3.5; #103 NYG +6.5. Earlier ticket scores remain dated; replacement legs and mixed-ticket prices are not asserted to have a fresh joint-ticket grade. Material usage changes and accepted numbers remain relevant. Earlier Half-Point A/B now share Cincinnati; Sunday Half-Point A/B share Carolina; Sunday Big Teaser A/B share Tennessee +19.5. Several alternate team sides share games across cards, but no individual ticket uses opposing team sides. The earlier Chicago total and Cincinnati/Jacksonville under retain their prior counters.",
+      "bestNumber": "#132 TEN +19.5* [R]; #107 HOU +5.5; #124 NE +14.5; #152 CAR +11.5; #139 SF +5.5; #136 MIA +19.5*; #115 CIN +5.5; #146 KC/LV U54.5*; #143 KC +3.5; #103 NYG +6.5",
+      "playableTo": "Only the listed selections and limits",
+      "noBetCutoff": "Pass/rescore if any required card box is unavailable or any mixed-ticket price exceeds its listed limit",
+      "risk": "Every leg must clear; overlapping game outcomes can defeat multiple tickets",
+      "sourceVerification": "Micks-All-Tickets-October-4-No-Rams-Eagles.pdf, Oct4 10:54 a.m. ET; Oct1 Delaware printed cards; morning Action Pro recording. Publication/sizing authorized Oct4 12:31 p.m. ET.",
+      "updatedAt": "2026-10-04T16:34:54.166255+00:00",
+      "postedAt": "2026-10-04T16:34:54.166255+00:00"
+    },
+    {
+      "id": "micks-2026-10-04-pdf-ticket-09",
+      "date": "2026-10-04",
+      "Date": "2026-10-04",
+      "section": "Lotto Parlays",
+      "Section": "Lotto Parlays",
+      "access": "free",
+      "Access": "Free",
+      "sport": "NFL",
+      "league": "NFL",
+      "game": "Sunday NFL — Sunday Big Teaser B (10)",
+      "pick": "Sunday Big Teaser B (10)",
+      "cardTitle": "Sunday Big Teaser B (10) — 2u",
+      "type": "10-leg Big Teaser",
+      "market": "Delaware fixed-payout football card",
+      "lineNumber": "#144 LV +12.5; #116 JAX +9.5; #151 DET +4.5; #132 TEN +19.5*; #108 DAL +9.5; #123 BUF +1.5*; #148 LAC +15.5*; #111 GB +4.5; #114 GB/TB U46.5*; #141 SF/DEN O39.5",
+      "Line": "#144 LV +12.5; #116 JAX +9.5; #151 DET +4.5; #132 TEN +19.5*; #108 DAL +9.5; #123 BUF +1.5*; #148 LAC +15.5*; #111 GB +4.5; #114 GB/TB U46.5*; #141 SF/DEN O39.5",
+      "legs": "#144 LV +12.5; #116 JAX +9.5; #151 DET +4.5; #132 TEN +19.5*; #108 DAL +9.5; #123 BUF +1.5*; #148 LAC +15.5*; #111 GB +4.5; #114 GB/TB U46.5*; #141 SF/DEN O39.5",
+      "legSelections": [
+        {
+          "box": 144,
+          "selection": "LV +12.5"
+        },
+        {
+          "box": 116,
+          "selection": "JAX +9.5"
+        },
+        {
+          "box": 151,
+          "selection": "DET +4.5"
+        },
+        {
+          "box": 132,
+          "selection": "TEN +19.5*"
+        },
+        {
+          "box": 108,
+          "selection": "DAL +9.5"
+        },
+        {
+          "box": 123,
+          "selection": "BUF +1.5*"
+        },
+        {
+          "box": 148,
+          "selection": "LAC +15.5*"
+        },
+        {
+          "box": 111,
+          "selection": "GB +4.5"
+        },
+        {
+          "box": 114,
+          "selection": "GB/TB U46.5*"
+        },
+        {
+          "box": 141,
+          "selection": "SF/DEN O39.5"
+        }
+      ],
+      "odds": "13-to-2 fixed profit",
+      "sportsbook": "Delaware Sports Lottery — Oct1 printed card",
+      "grade": "User-selected",
+      "units": 2,
+      "Units": 2,
+      "status": "Published — User-selected",
+      "Status": "Published — User-selected",
+      "officialBet": "Yes",
+      "Official Bet": "Yes",
+      "betPlaced": false,
+      "frameworkQualified": false,
+      "publicationBasis": "User-directed publication and 2u per ticket; no analytical upgrade or wager receipt inferred",
+      "hideWagerAmounts": false,
+      "writeup": "User-selected ticket, 2 units. Las Vegas needs competitive possessions against Kansas City. Jacksonville needs its passing attack to keep the margin manageable. Detroit needs Gibbs-led efficiency. Tennessee needs competitive drives against Baltimore's scoring ceiling. Dallas needs Prescott-led offense to keep it close. Buffalo needs Allen and Cook to control the game. Los Angeles needs productive drives despite role uncertainty. Green Bay needs stable offensive production. The Green Bay–Tampa under needs limited sustained scoring. The San Francisco–Denver over needs both offenses contributing. Every listed leg must win. Alternate points provide margin protection, but a blowout can still bust the card. Use the exact printed Delaware card selections, already adjusted; confirm these boxes remain accepted. Shared games create correlated exposure across tickets. Asterisks retain public-review notes; [R] marks a replacement for the removed Rams–Eagles game. The 2-unit size is user-directed. No wager receipt has been recorded.",
+      "fullAnalysis": "User-selected ticket, 2 units. Las Vegas needs competitive possessions against Kansas City. Jacksonville needs its passing attack to keep the margin manageable. Detroit needs Gibbs-led efficiency. Tennessee needs competitive drives against Baltimore's scoring ceiling. Dallas needs Prescott-led offense to keep it close. Buffalo needs Allen and Cook to control the game. Los Angeles needs productive drives despite role uncertainty. Green Bay needs stable offensive production. The Green Bay–Tampa under needs limited sustained scoring. The San Francisco–Denver over needs both offenses contributing. Every listed leg must win. Alternate points provide margin protection, but a blowout can still bust the card. Use the exact printed Delaware card selections, already adjusted; confirm these boxes remain accepted. Shared games create correlated exposure across tickets. Asterisks retain public-review notes; [R] marks a replacement for the removed Rams–Eagles game. The 2-unit size is user-directed. No wager receipt has been recorded. Exact selections: #144 LV +12.5; #116 JAX +9.5; #151 DET +4.5; #132 TEN +19.5*; #108 DAL +9.5; #123 BUF +1.5*; #148 LAC +15.5*; #111 GB +4.5; #114 GB/TB U46.5*; #141 SF/DEN O39.5. Earlier ticket scores remain dated; replacement legs and mixed-ticket prices are not asserted to have a fresh joint-ticket grade. Material usage changes and accepted numbers remain relevant. Earlier Half-Point A/B now share Cincinnati; Sunday Half-Point A/B share Carolina; Sunday Big Teaser A/B share Tennessee +19.5. Several alternate team sides share games across cards, but no individual ticket uses opposing team sides. The earlier Chicago total and Cincinnati/Jacksonville under retain their prior counters.",
+      "bestNumber": "#144 LV +12.5; #116 JAX +9.5; #151 DET +4.5; #132 TEN +19.5*; #108 DAL +9.5; #123 BUF +1.5*; #148 LAC +15.5*; #111 GB +4.5; #114 GB/TB U46.5*; #141 SF/DEN O39.5",
+      "playableTo": "Only the listed selections and limits",
+      "noBetCutoff": "Pass/rescore if any required card box is unavailable or any mixed-ticket price exceeds its listed limit",
+      "risk": "Every leg must clear; overlapping game outcomes can defeat multiple tickets",
+      "sourceVerification": "Micks-All-Tickets-October-4-No-Rams-Eagles.pdf, Oct4 10:54 a.m. ET; Oct1 Delaware printed cards; morning Action Pro recording. Publication/sizing authorized Oct4 12:31 p.m. ET.",
+      "updatedAt": "2026-10-04T16:34:54.166255+00:00",
+      "postedAt": "2026-10-04T16:34:54.166255+00:00"
+    },
+    {
+      "id": "micks-2026-10-04-pdf-ticket-10",
+      "date": "2026-10-04",
+      "Date": "2026-10-04",
+      "section": "Lotto Parlays",
+      "Section": "Lotto Parlays",
+      "access": "free",
+      "Access": "Free",
+      "sport": "NFL",
+      "league": "NFL",
+      "game": "Sunday NFL — Sunday Mixed NFL (7)",
+      "pick": "Sunday Mixed NFL (7)",
+      "cardTitle": "Sunday Mixed NFL (7) — 2u",
+      "type": "7-leg mixed parlay",
+      "market": "NFL mixed parlay",
+      "lineNumber": "HOU ML: target -145 / max -155; TEN +11.5*: max -115 [R]; NE +7: max -120; CAR +4: max -115; SF ML: target -140 / max -145; GB/TB U39.5*: max -115; KC/LV U48*: max -115",
+      "Line": "HOU ML: target -145 / max -155; TEN +11.5*: max -115 [R]; NE +7: max -120; CAR +4: max -115; SF ML: target -140 / max -145; GB/TB U39.5*: max -115; KC/LV U48*: max -115",
+      "legs": "HOU ML: target -145 / max -155; TEN +11.5*: max -115 [R]; NE +7: max -120; CAR +4: max -115; SF ML: target -140 / max -145; GB/TB U39.5*: max -115; KC/LV U48*: max -115",
+      "legSelections": [
+        {
+          "box": null,
+          "selection": "HOU ML: target -145 / max -155"
+        },
+        {
+          "box": null,
+          "selection": "TEN +11.5*: max -115 [R]"
+        },
+        {
+          "box": null,
+          "selection": "NE +7: max -120"
+        },
+        {
+          "box": null,
+          "selection": "CAR +4: max -115"
+        },
+        {
+          "box": null,
+          "selection": "SF ML: target -140 / max -145"
+        },
+        {
+          "box": null,
+          "selection": "GB/TB U39.5*: max -115"
+        },
+        {
+          "box": null,
+          "selection": "KC/LV U48*: max -115"
+        }
+      ],
+      "odds": "Combined quote unverified",
+      "sportsbook": "BetRivers Delaware — price targets",
+      "grade": "User-selected",
+      "units": 2,
+      "Units": 2,
+      "status": "Published — User-selected",
+      "Status": "Published — User-selected",
+      "officialBet": "Yes",
+      "Official Bet": "Yes",
+      "betPlaced": false,
+      "frameworkQualified": false,
+      "publicationBasis": "User-directed publication and 2u per ticket; no analytical upgrade or wager receipt inferred",
+      "hideWagerAmounts": false,
+      "writeup": "User-selected ticket, 2 units. Houston needs efficient drives despite protection risks. Tennessee needs competitive drives against Baltimore's scoring ceiling. New England needs to avoid turnover-driven separation. Carolina needs Young-led offense to offset Detroit's rushing threat. San Francisco needs offensive efficiency despite defensive absences. The Green Bay–Tampa under needs limited sustained scoring. The Kansas City–Las Vegas under needs fewer explosive scores. Every listed leg must win. Displayed odds are requested limits, not verified live BetRivers offers; combined payout is unknown. Shared games create correlated exposure across tickets. Asterisks retain public-review notes; [R] marks a replacement for the removed Rams–Eagles game. The 2-unit size is user-directed. No wager receipt has been recorded.",
+      "fullAnalysis": "User-selected ticket, 2 units. Houston needs efficient drives despite protection risks. Tennessee needs competitive drives against Baltimore's scoring ceiling. New England needs to avoid turnover-driven separation. Carolina needs Young-led offense to offset Detroit's rushing threat. San Francisco needs offensive efficiency despite defensive absences. The Green Bay–Tampa under needs limited sustained scoring. The Kansas City–Las Vegas under needs fewer explosive scores. Every listed leg must win. Displayed odds are requested limits, not verified live BetRivers offers; combined payout is unknown. Shared games create correlated exposure across tickets. Asterisks retain public-review notes; [R] marks a replacement for the removed Rams–Eagles game. The 2-unit size is user-directed. No wager receipt has been recorded. Exact selections: HOU ML: target -145 / max -155; TEN +11.5*: max -115 [R]; NE +7: max -120; CAR +4: max -115; SF ML: target -140 / max -145; GB/TB U39.5*: max -115; KC/LV U48*: max -115. Earlier ticket scores remain dated; replacement legs and mixed-ticket prices are not asserted to have a fresh joint-ticket grade. Material usage changes and accepted numbers remain relevant. Earlier Half-Point A/B now share Cincinnati; Sunday Half-Point A/B share Carolina; Sunday Big Teaser A/B share Tennessee +19.5. Several alternate team sides share games across cards, but no individual ticket uses opposing team sides. The earlier Chicago total and Cincinnati/Jacksonville under retain their prior counters.",
+      "bestNumber": "HOU ML: target -145 / max -155; TEN +11.5*: max -115 [R]; NE +7: max -120; CAR +4: max -115; SF ML: target -140 / max -145; GB/TB U39.5*: max -115; KC/LV U48*: max -115",
+      "playableTo": "Only the listed selections and limits",
+      "noBetCutoff": "Pass/rescore if any required card box is unavailable or any mixed-ticket price exceeds its listed limit",
+      "risk": "Every leg must clear; overlapping game outcomes can defeat multiple tickets",
+      "sourceVerification": "Micks-All-Tickets-October-4-No-Rams-Eagles.pdf, Oct4 10:54 a.m. ET; Oct1 Delaware printed cards; morning Action Pro recording. Publication/sizing authorized Oct4 12:31 p.m. ET.",
+      "updatedAt": "2026-10-04T16:34:54.166255+00:00",
+      "postedAt": "2026-10-04T16:34:54.166255+00:00"
     }
   ],
   "longshots": [],
   "gradedAt": "2026-10-04T03:27:10.451Z",
-  "updatedAt": "2026-10-04T03:27:10.451Z"
+  "updatedAt": "2026-10-04T16:34:54.166255+00:00",
+  "publicationNotes": "Ten PDF tickets published at user-directed 2u each; frameworkQualified=false; betPlaced=false."
 }
