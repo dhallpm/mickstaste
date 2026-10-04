@@ -1807,7 +1807,7 @@
       "sportsbook": "Reference prices; verify BetRivers",
       "grade": "Provisional",
       "units": 0,
-      "status": "Watch — User-selected",
+      "status": "Graded",
       "officialBet": "No",
       "hideWagerAmounts": true,
       "betPlaced": false,
@@ -1820,7 +1820,85 @@
       "writeup": "USER-SELECTED TICKET: the requested seven-pick multi-sport construction is published for inspection, with Indiana Fever +4.5, Buffalo Sabres moneyline, New Jersey Devils moneyline, Tampa Bay Lightning moneyline, North Texas moneyline, Edmonton–Vancouver Over 6.5 and Deshaun Watson Under 187.5 passing yards. These are seven different games across four sports. Indiana +4.5 at -115 is supported by the user-supplied BetRivers screenshot; Buffalo -121 is the user-reported BetRivers quote and exceeds the original -115 review ceiling; remaining numbers are dated reference prices from the 1:26 p.m. assessment, not a verified single-book bet slip. North Texas, the hockey total and Watson's yardage prop remain the weakest legs. The combined payout is unverified. Final medical restrictions, goalies, quarterback roles and exact markets can change the construction. This is a provisional watch ticket; it has not qualified as an official Micks release or been placed.",
       "fullAnalysis": "Saved assessment: Indiana 83/110 B+, Failure 6/10; Buffalo 76 B, Failure 6; New Jersey 81 B, Failure 5; Tampa Bay 77 B, Failure 5; North Texas 67 B-, Failure 4; EDM/VAN Over 62 C, Failure 3; Watson Under 59 C, Failure 5. Indiana's supporting case is competitive offense and a 1.6-point saved VSiN margin; Wilson-led scoring and Clark/Boston restrictions are counters. Buffalo benefits from Columbus defensive injuries, but the saved VSiN model slightly opposes it. New Jersey has rest/home advantages; Flyers rebound and goaltending can defeat them. Tampa needs goalie confirmation. UNT faces opposing Doc's/model evidence and unresolved Tulsa quarterback news. Edmonton/Vancouver scoring can regress; both goalies need confirmation. Watson Under has a dated quote and secondary/game-script risk. Guide comparisons and named capper disagreements remain recorded in the October 1 midday report. No average leg score is represented as joint ticket strength. No accepted BetRivers quote or ticket exists. User update at approximately 3:14 p.m. ET: Buffalo BetRivers -121 exceeds the original -115 ceiling. Its 76/110 remains the saved score at Circa -107, not a new score at -121. The seven-leg construction is review-only and uses the user's selected Buffalo -121 despite the earlier -115 analytical ceiling.",
       "sourceVerification": "October 1 1:26 p.m. assessment and midday PDF; user BetRivers Indiana screenshots; current VSiN NHL reference. Other six prices not refreshed as a one-book executable slip.",
-      "updatedAt": "2026-10-01T19:14:26.036Z"
+      "updatedAt": "2026-10-04T03:23:42.393Z",
+      "Status": "Graded",
+      "result": "Loss",
+      "Result": "Loss",
+      "Outcome": "Loss",
+      "legGrades": [
+        {
+          "pick": "Indiana Fever +4.5",
+          "result": "Loss",
+          "final": "Las Vegas 94, Indiana 83",
+          "gradingDetail": "Indiana lost by 11; +4.5 failed by 6.5 points.",
+          "sourceUrl": "https://www.basketball-reference.com/wnba/boxscores/202610010LVA.html"
+        },
+        {
+          "pick": "Buffalo Sabres ML",
+          "result": "Loss",
+          "final": "Columbus 6, Buffalo 3",
+          "gradingDetail": "Buffalo lost outright.",
+          "sourceUrl": "https://www.nhl.com/scores/htmlreports/20262027/GS020011.HTM"
+        },
+        {
+          "pick": "New Jersey Devils ML",
+          "result": "Win",
+          "final": "New Jersey 3, Philadelphia 2 (OT)",
+          "gradingDetail": "New Jersey won in overtime.",
+          "sourceUrl": "https://frontend.d3.nhle.com/news/philadelphia-flyers-new-jersey-devils-game-recap-october-1-2026"
+        },
+        {
+          "pick": "Tampa Bay Lightning ML",
+          "result": "Loss",
+          "final": "NY Rangers 5, Tampa Bay 1",
+          "gradingDetail": "Tampa Bay lost outright.",
+          "sourceUrl": "https://www.nhl.com/lightning/news/recap-new-york-rangers-5-tampa-bay-lightning-1-x6525"
+        },
+        {
+          "pick": "North Texas ML",
+          "result": "Win",
+          "final": "North Texas 45, Tulsa 44 (OT)",
+          "gradingDetail": "North Texas won in overtime.",
+          "sourceUrl": "https://meangreensports.com/sports/football/stats/2026/tulsa/boxscore/7202"
+        },
+        {
+          "pick": "Edmonton–Vancouver Over 6.5",
+          "result": "Win",
+          "final": "Edmonton 9, Vancouver 7 (16 total)",
+          "gradingDetail": "16 total goals cleared 6.5.",
+          "sourceUrl": "https://www.reuters.com/sports/nhl/evan-bouchard-connor-mcdavid-make-waves-oilers-beat-canucks-9-7--flm-2026-10-02/"
+        },
+        {
+          "pick": "Deshaun Watson Under 187.5 passing yards",
+          "result": "Loss",
+          "final": "Watson 268 passing yards",
+          "gradingDetail": "268 exceeded 187.5 by 80.5 yards.",
+          "sourceUrl": "https://www.nfl.com/players/deshaun-watson/stats/logs/"
+        }
+      ],
+      "legRecord": "3-4",
+      "settlementCheckedAt": "2026-10-04T03:23:42.393Z",
+      "settledAt": "2026-10-04T03:23:42.393Z",
+      "settlementStatus": "Settled",
+      "settlementSource": "Official/primary box scores and verified game recaps",
+      "settlementSources": [
+        "https://www.basketball-reference.com/wnba/boxscores/202610010LVA.html",
+        "https://www.nhl.com/scores/htmlreports/20262027/GS020011.HTM",
+        "https://frontend.d3.nhle.com/news/philadelphia-flyers-new-jersey-devils-game-recap-october-1-2026",
+        "https://www.nhl.com/lightning/news/recap-new-york-rangers-5-tampa-bay-lightning-1-x6525",
+        "https://meangreensports.com/sports/football/stats/2026/tulsa/boxscore/7202",
+        "https://www.reuters.com/sports/nhl/evan-bouchard-connor-mcdavid-make-waves-oilers-beat-canucks-9-7--flm-2026-10-02/",
+        "https://www.nfl.com/players/deshaun-watson/stats/logs/"
+      ],
+      "settlementNotes": "LOSS. Leg record 3-4. Wins: New Jersey ML, North Texas ML, Edmonton–Vancouver Over 6.5. Losses: Indiana +4.5, Buffalo ML, Tampa Bay ML, Deshaun Watson Under 187.5. Ticket was recorded as not placed, so no unit P/L is charged.",
+      "finalScore": "Indiana Fever +4.5 — Loss: Las Vegas 94, Indiana 83\nBuffalo Sabres ML — Loss: Columbus 6, Buffalo 3\nNew Jersey Devils ML — Win: New Jersey 3, Philadelphia 2 (OT)\nTampa Bay Lightning ML — Loss: NY Rangers 5, Tampa Bay 1\nNorth Texas ML — Win: North Texas 45, Tulsa 44 (OT)\nEdmonton–Vancouver Over 6.5 — Win: Edmonton 9, Vancouver 7 (16 total)\nDeshaun Watson Under 187.5 passing yards — Loss: Watson 268 passing yards",
+      "excludeFromRecord": true,
+      "unitProfitLossKnown": false,
+      "profitLoss": "No wager",
+      "Profit/Loss": "No wager",
+      "P/L": "No wager",
+      "PL": "No wager",
+      "recordScope": "Posted user-selected ticket graded for card-performance tracking; betPlaced=false, so excluded from the official betting record and unit P/L."
     },
     {
       "id": "micks-2026-10-01-two-leg-user-selected",
@@ -1838,7 +1916,7 @@
       "lineNumber": "Indiana +4.5 -115 / Buffalo Sabres ML -121",
       "odds": "Approx. +241 calculated; slip quote unverified",
       "grade": "User-selected",
-      "status": "Watch — User-selected",
+      "status": "Graded",
       "officialBet": "No",
       "hideWagerAmounts": false,
       "betPlaced": false,
@@ -1852,10 +1930,48 @@
       "writeup": "USER-SELECTED — 2 UNITS: Indiana Fever +4.5 at -115 paired with Buffalo Sabres moneyline at -121, using the user's BetRivers Delaware prices. The individual prices multiply to approximately +241 before boosts; the accepted combined slip price has not been verified. Indiana can win or lose by four points, while Buffalo must win its selected full-game moneyline. The two games provide separate basketball and hockey outcomes. The saved report graded Indiana 83/110 B+ and Buffalo 76/110 B at the earlier -107 reference, with Failure Scores 6/10 each. Buffalo -121 exceeds the earlier analytical -115 ceiling; the user explicitly requested publication at -121, without a Pass label. Final Clark/Boston availability, hockey goalies and scratches remain relevant. This is a user-selected published ticket, not an asserted framework-qualified official bet or proof of a wager.",
       "fullAnalysis": "Indiana case: saved VSiN LV 92.1–IND 90.5 and closely matched TeamRankings powers support a competitive game; Game 2 interior scoring supplies a second path. Strongest counter: Wilson-led Las Vegas scoring, road elimination variance and any Clark/Boston restrictions. Current public reports list Clark and Boston probable, not final unrestricted confirmations. Buffalo case: Columbus defensive injuries and Luukkonen's projected starting role support the Sabres; Samuelsson is expected in. Strongest counter: Columbus goalie/home-ice rebound and saved VSiN CBJ 3.0–BUF 2.9 opposing margin. Indiana -115 is shown in user screenshot; Buffalo -121 is explicitly supplied verbally by the user. Decimal arithmetic: (1+100/115)*(1+100/121)=3.4147, approx. +241, 29.29% joint break-even; no predicted joint win probability is asserted. Saved Buffalo score is historical at -107 and is not a fresh grade at -121. Publication is authorized at the user's prices; no stake or wager amount is posted. User-directed sizing: 2 units on this two-pick ticket only. No dollar stake supplied; no wager placed.",
       "sourceVerification": "October 1 midday PDF (1:26 p.m. scores); Indiana BetRivers screenshots; user Buffalo BetRivers -121 quote; current public lineup/price checks.",
-      "updatedAt": "2026-10-01T19:16:24.163Z"
+      "updatedAt": "2026-10-04T03:23:42.393Z",
+      "Status": "Graded",
+      "result": "Loss",
+      "Result": "Loss",
+      "Outcome": "Loss",
+      "legGrades": [
+        {
+          "pick": "Indiana Fever +4.5",
+          "result": "Loss",
+          "final": "Las Vegas 94, Indiana 83",
+          "gradingDetail": "Indiana lost by 11; +4.5 failed by 6.5 points.",
+          "sourceUrl": "https://www.basketball-reference.com/wnba/boxscores/202610010LVA.html"
+        },
+        {
+          "pick": "Buffalo Sabres ML",
+          "result": "Loss",
+          "final": "Columbus 6, Buffalo 3",
+          "gradingDetail": "Buffalo lost outright.",
+          "sourceUrl": "https://www.nhl.com/scores/htmlreports/20262027/GS020011.HTM"
+        }
+      ],
+      "legRecord": "0-2",
+      "settlementCheckedAt": "2026-10-04T03:23:42.393Z",
+      "settledAt": "2026-10-04T03:23:42.393Z",
+      "settlementStatus": "Settled",
+      "settlementSource": "Official/primary box scores and verified game recaps",
+      "settlementSources": [
+        "https://www.basketball-reference.com/wnba/boxscores/202610010LVA.html",
+        "https://www.nhl.com/scores/htmlreports/20262027/GS020011.HTM"
+      ],
+      "settlementNotes": "LOSS. Indiana +4.5 and Buffalo ML both lost. Ticket carried a planned 2-unit size but was recorded as not placed, so no official unit loss is charged.",
+      "finalScore": "Indiana Fever +4.5 — Loss: Las Vegas 94, Indiana 83\nBuffalo Sabres ML — Loss: Columbus 6, Buffalo 3",
+      "excludeFromRecord": true,
+      "unitProfitLossKnown": false,
+      "profitLoss": "No wager",
+      "Profit/Loss": "No wager",
+      "P/L": "No wager",
+      "PL": "No wager",
+      "recordScope": "Posted user-selected ticket graded for card-performance tracking; betPlaced=false, so excluded from the official betting record and unit P/L."
     }
   ],
   "longshots": [],
-  "gradedAt": "2026-09-22T08:39:43.446738+00:00",
-  "updatedAt": "2026-10-01T19:14:26.037Z"
+  "gradedAt": "2026-10-04T03:23:42.393Z",
+  "updatedAt": "2026-10-04T03:23:42.393Z"
 }
