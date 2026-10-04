@@ -1,0 +1,1826 @@
+{
+  "timestamp": "2026-10-04T10:27:38.633351-04:00",
+  "rubric": "micks-110-v2-2026-09-29",
+  "official_units": 0,
+  "tickets": {
+    "halfA": [
+      {
+        "scoring_version": "micks-110-v2-2026-09-29",
+        "score_status": "PROVISIONAL",
+        "raw_factor_sum": 81,
+        "guide_cap": 81,
+        "missing_evidence": [
+          "Final high-role inactives/limits",
+          "Kick-hour weather/roof",
+          "Authentic same-book timed movement"
+        ],
+        "release_blockers": [
+          "Accepted printed card verification",
+          "Final material personnel and guide reconciliation"
+        ],
+        "factor_explanations": {
+          "matchup": "See game-specific capsule in report",
+          "price": "Exact printed threshold compared with dated Circa and Action reference; larger cushion does not prove ticket EV",
+          "personnel": "Usage weighted magazine/current role reconciliation; final relevant limitations pending",
+          "situation": "Modest venue/schedule credit; no weather edge",
+          "VSiN": "Named game capsule; alternate markets receive partial credit only",
+          "Docs": "Named game capsule; opposed picks low and absent opinion zero",
+          "market": "Reference3/5 plus fresh same-game spread snapshot1/2 when available; movement0/3"
+        },
+        "failure_explanations": [
+          "Strongest failure path remains meaningful;1 is partial resilience",
+          "2 only for relative core role stability;1 for meaningful current role risks",
+          "Game script remains sensitive;1 reflects partial protection",
+          "2 for large alternate cushion;1 for narrower threshold",
+          "0 unresolved strong dispute;1 only partial independent resolution"
+        ],
+        "key": "LAR",
+        "box": 119,
+        "pick": "Rams -2.5",
+        "factors": [
+          28,
+          17,
+          10,
+          6,
+          8,
+          8,
+          4
+        ],
+        "total": 81,
+        "grade": "B",
+        "failure_dimensions": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "failure": 5,
+        "status": "WATCH - draft, 0 official units",
+        "cutoff": "Exact printed threshold only; deterioration requires regrade"
+      },
+      {
+        "scoring_version": "micks-110-v2-2026-09-29",
+        "score_status": "PROVISIONAL",
+        "raw_factor_sum": 80,
+        "guide_cap": null,
+        "missing_evidence": [
+          "Final high-role inactives/limits",
+          "Kick-hour weather/roof",
+          "Authentic same-book timed movement"
+        ],
+        "release_blockers": [
+          "Accepted printed card verification",
+          "Final material personnel and guide reconciliation"
+        ],
+        "factor_explanations": {
+          "matchup": "See game-specific capsule in report",
+          "price": "Exact printed threshold compared with dated Circa and Action reference; larger cushion does not prove ticket EV",
+          "personnel": "Usage weighted magazine/current role reconciliation; final relevant limitations pending",
+          "situation": "Modest venue/schedule credit; no weather edge",
+          "VSiN": "Named game capsule; alternate markets receive partial credit only",
+          "Docs": "Named game capsule; opposed picks low and absent opinion zero",
+          "market": "Reference3/5 plus fresh same-game spread snapshot1/2 when available; movement0/3"
+        },
+        "failure_explanations": [
+          "Strongest failure path remains meaningful;1 is partial resilience",
+          "2 only for relative core role stability;1 for meaningful current role risks",
+          "Game script remains sensitive;1 reflects partial protection",
+          "2 for large alternate cushion;1 for narrower threshold",
+          "0 unresolved strong dispute;1 only partial independent resolution"
+        ],
+        "key": "HOU",
+        "box": 107,
+        "pick": "Texans -2.5",
+        "factors": [
+          27,
+          16,
+          11,
+          6,
+          9,
+          8,
+          3
+        ],
+        "total": 80,
+        "grade": "B",
+        "failure_dimensions": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "failure": 5,
+        "status": "WATCH - draft, 0 official units",
+        "cutoff": "Exact printed threshold only; deterioration requires regrade"
+      },
+      {
+        "scoring_version": "micks-110-v2-2026-09-29",
+        "score_status": "PROVISIONAL",
+        "raw_factor_sum": 75,
+        "guide_cap": null,
+        "missing_evidence": [
+          "Final high-role inactives/limits",
+          "Kick-hour weather/roof",
+          "Authentic same-book timed movement"
+        ],
+        "release_blockers": [
+          "Accepted printed card verification",
+          "Final material personnel and guide reconciliation"
+        ],
+        "factor_explanations": {
+          "matchup": "See game-specific capsule in report",
+          "price": "Exact printed threshold compared with dated Circa and Action reference; larger cushion does not prove ticket EV",
+          "personnel": "Usage weighted magazine/current role reconciliation; final relevant limitations pending",
+          "situation": "Modest venue/schedule credit; no weather edge",
+          "VSiN": "Named game capsule; alternate markets receive partial credit only",
+          "Docs": "Named game capsule; opposed picks low and absent opinion zero",
+          "market": "Reference3/5 plus fresh same-game spread snapshot1/2 when available; movement0/3"
+        },
+        "failure_explanations": [
+          "Strongest failure path remains meaningful;1 is partial resilience",
+          "2 only for relative core role stability;1 for meaningful current role risks",
+          "Game script remains sensitive;1 reflects partial protection",
+          "2 for large alternate cushion;1 for narrower threshold",
+          "0 unresolved strong dispute;1 only partial independent resolution"
+        ],
+        "key": "NE",
+        "box": 124,
+        "pick": "Patriots +6.5",
+        "factors": [
+          25,
+          14,
+          10,
+          5,
+          9,
+          8,
+          4
+        ],
+        "total": 75,
+        "grade": "B",
+        "failure_dimensions": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "failure": 5,
+        "status": "WATCH - draft, 0 official units",
+        "cutoff": "Exact printed threshold only; deterioration requires regrade"
+      }
+    ],
+    "halfB": [
+      {
+        "scoring_version": "micks-110-v2-2026-09-29",
+        "score_status": "PROVISIONAL",
+        "raw_factor_sum": 71,
+        "guide_cap": null,
+        "missing_evidence": [
+          "Final high-role inactives/limits",
+          "Kick-hour weather/roof",
+          "Authentic same-book timed movement"
+        ],
+        "release_blockers": [
+          "Accepted printed card verification",
+          "Final material personnel and guide reconciliation"
+        ],
+        "factor_explanations": {
+          "matchup": "See game-specific capsule in report",
+          "price": "Exact printed threshold compared with dated Circa and Action reference; larger cushion does not prove ticket EV",
+          "personnel": "Usage weighted magazine/current role reconciliation; final relevant limitations pending",
+          "situation": "Modest venue/schedule credit; no weather edge",
+          "VSiN": "Named game capsule; alternate markets receive partial credit only",
+          "Docs": "Named game capsule; opposed picks low and absent opinion zero",
+          "market": "Reference3/5 plus fresh same-game spread snapshot1/2 when available; movement0/3"
+        },
+        "failure_explanations": [
+          "Strongest failure path remains meaningful;1 is partial resilience",
+          "2 only for relative core role stability;1 for meaningful current role risks",
+          "Game script remains sensitive;1 reflects partial protection",
+          "2 for large alternate cushion;1 for narrower threshold",
+          "0 unresolved strong dispute;1 only partial independent resolution"
+        ],
+        "key": "CAR",
+        "box": 152,
+        "pick": "Panthers +3.5",
+        "factors": [
+          26,
+          15,
+          10,
+          6,
+          8,
+          2,
+          4
+        ],
+        "total": 71,
+        "grade": "B-",
+        "failure_dimensions": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "failure": 5,
+        "status": "WATCH - draft, 0 official units",
+        "cutoff": "Exact printed threshold only; deterioration requires regrade"
+      },
+      {
+        "scoring_version": "micks-110-v2-2026-09-29",
+        "score_status": "PROVISIONAL",
+        "raw_factor_sum": 71,
+        "guide_cap": null,
+        "missing_evidence": [
+          "Final high-role inactives/limits",
+          "Kick-hour weather/roof",
+          "Authentic same-book timed movement"
+        ],
+        "release_blockers": [
+          "Accepted printed card verification",
+          "Final material personnel and guide reconciliation"
+        ],
+        "factor_explanations": {
+          "matchup": "See game-specific capsule in report",
+          "price": "Exact printed threshold compared with dated Circa and Action reference; larger cushion does not prove ticket EV",
+          "personnel": "Usage weighted magazine/current role reconciliation; final relevant limitations pending",
+          "situation": "Modest venue/schedule credit; no weather edge",
+          "VSiN": "Named game capsule; alternate markets receive partial credit only",
+          "Docs": "Named game capsule; opposed picks low and absent opinion zero",
+          "market": "Reference3/5 plus fresh same-game spread snapshot1/2 when available; movement0/3"
+        },
+        "failure_explanations": [
+          "Strongest failure path remains meaningful;1 is partial resilience",
+          "2 only for relative core role stability;1 for meaningful current role risks",
+          "Game script remains sensitive;1 reflects partial protection",
+          "2 for large alternate cushion;1 for narrower threshold",
+          "0 unresolved strong dispute;1 only partial independent resolution"
+        ],
+        "key": "SF",
+        "box": 139,
+        "pick": "49ers -2.5",
+        "factors": [
+          27,
+          14,
+          10,
+          6,
+          9,
+          2,
+          3
+        ],
+        "total": 71,
+        "grade": "B-",
+        "failure_dimensions": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "failure": 5,
+        "status": "WATCH - draft, 0 official units",
+        "cutoff": "Exact printed threshold only; deterioration requires regrade"
+      },
+      {
+        "scoring_version": "micks-110-v2-2026-09-29",
+        "score_status": "PROVISIONAL",
+        "raw_factor_sum": 66,
+        "guide_cap": null,
+        "missing_evidence": [
+          "Final high-role inactives/limits",
+          "Kick-hour weather/roof",
+          "Authentic same-book timed movement"
+        ],
+        "release_blockers": [
+          "Accepted printed card verification",
+          "Final material personnel and guide reconciliation"
+        ],
+        "factor_explanations": {
+          "matchup": "See game-specific capsule in report",
+          "price": "Exact printed threshold compared with dated Circa and Action reference; larger cushion does not prove ticket EV",
+          "personnel": "Usage weighted magazine/current role reconciliation; final relevant limitations pending",
+          "situation": "Modest venue/schedule credit; no weather edge",
+          "VSiN": "Named game capsule; alternate markets receive partial credit only",
+          "Docs": "Named game capsule; opposed picks low and absent opinion zero",
+          "market": "Reference3/5 plus fresh same-game spread snapshot1/2 when available; movement0/3"
+        },
+        "failure_explanations": [
+          "Strongest failure path remains meaningful;1 is partial resilience",
+          "2 only for relative core role stability;1 for meaningful current role risks",
+          "Game script remains sensitive;1 reflects partial protection",
+          "2 for large alternate cushion;1 for narrower threshold",
+          "0 unresolved strong dispute;1 only partial independent resolution"
+        ],
+        "key": "KCU",
+        "box": 146,
+        "pick": "KC/LV UNDER 47.5* [dated total flag]",
+        "factors": [
+          25,
+          12,
+          12,
+          5,
+          9,
+          0,
+          3
+        ],
+        "total": 66,
+        "grade": "B-",
+        "failure_dimensions": [
+          1,
+          2,
+          1,
+          1,
+          1
+        ],
+        "failure": 6,
+        "status": "WATCH - draft, 0 official units",
+        "cutoff": "Exact printed threshold only; deterioration requires regrade"
+      }
+    ],
+    "teaser": [
+      {
+        "scoring_version": "micks-110-v2-2026-09-29",
+        "score_status": "PROVISIONAL",
+        "raw_factor_sum": 82,
+        "guide_cap": null,
+        "missing_evidence": [
+          "Final high-role inactives/limits",
+          "Kick-hour weather/roof",
+          "Authentic same-book timed movement"
+        ],
+        "release_blockers": [
+          "Accepted printed card verification",
+          "Final material personnel and guide reconciliation"
+        ],
+        "factor_explanations": {
+          "matchup": "See game-specific capsule in report",
+          "price": "Exact printed threshold compared with dated Circa and Action reference; larger cushion does not prove ticket EV",
+          "personnel": "Usage weighted magazine/current role reconciliation; final relevant limitations pending",
+          "situation": "Modest venue/schedule credit; no weather edge",
+          "VSiN": "Named game capsule; alternate markets receive partial credit only",
+          "Docs": "Named game capsule; opposed picks low and absent opinion zero",
+          "market": "Reference3/5 plus fresh same-game spread snapshot1/2 when available; movement0/3"
+        },
+        "failure_explanations": [
+          "Strongest failure path remains meaningful;1 is partial resilience",
+          "2 only for relative core role stability;1 for meaningful current role risks",
+          "Game script remains sensitive;1 reflects partial protection",
+          "2 for large alternate cushion;1 for narrower threshold",
+          "0 unresolved strong dispute;1 only partial independent resolution"
+        ],
+        "key": "HOU",
+        "box": 107,
+        "pick": "Texans +2.5",
+        "factors": [
+          27,
+          18,
+          11,
+          6,
+          9,
+          8,
+          3
+        ],
+        "total": 82,
+        "grade": "B+",
+        "failure_dimensions": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "failure": 5,
+        "status": "WATCH - draft, 0 official units",
+        "cutoff": "Exact printed threshold only; deterioration requires regrade"
+      },
+      {
+        "scoring_version": "micks-110-v2-2026-09-29",
+        "score_status": "PROVISIONAL",
+        "raw_factor_sum": 82,
+        "guide_cap": 81,
+        "missing_evidence": [
+          "Final high-role inactives/limits",
+          "Kick-hour weather/roof",
+          "Authentic same-book timed movement"
+        ],
+        "release_blockers": [
+          "Accepted printed card verification",
+          "Final material personnel and guide reconciliation"
+        ],
+        "factor_explanations": {
+          "matchup": "See game-specific capsule in report",
+          "price": "Exact printed threshold compared with dated Circa and Action reference; larger cushion does not prove ticket EV",
+          "personnel": "Usage weighted magazine/current role reconciliation; final relevant limitations pending",
+          "situation": "Modest venue/schedule credit; no weather edge",
+          "VSiN": "Named game capsule; alternate markets receive partial credit only",
+          "Docs": "Named game capsule; opposed picks low and absent opinion zero",
+          "market": "Reference3/5 plus fresh same-game spread snapshot1/2 when available; movement0/3"
+        },
+        "failure_explanations": [
+          "Strongest failure path remains meaningful;1 is partial resilience",
+          "2 only for relative core role stability;1 for meaningful current role risks",
+          "Game script remains sensitive;1 reflects partial protection",
+          "2 for large alternate cushion;1 for narrower threshold",
+          "0 unresolved strong dispute;1 only partial independent resolution"
+        ],
+        "key": "LAR",
+        "box": 119,
+        "pick": "Rams +2.5",
+        "factors": [
+          28,
+          18,
+          10,
+          6,
+          8,
+          8,
+          4
+        ],
+        "total": 81,
+        "grade": "B",
+        "failure_dimensions": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "failure": 5,
+        "status": "WATCH - draft, 0 official units",
+        "cutoff": "Exact printed threshold only; deterioration requires regrade"
+      },
+      {
+        "scoring_version": "micks-110-v2-2026-09-29",
+        "score_status": "PROVISIONAL",
+        "raw_factor_sum": 79,
+        "guide_cap": null,
+        "missing_evidence": [
+          "Final high-role inactives/limits",
+          "Kick-hour weather/roof",
+          "Authentic same-book timed movement"
+        ],
+        "release_blockers": [
+          "Accepted printed card verification",
+          "Final material personnel and guide reconciliation"
+        ],
+        "factor_explanations": {
+          "matchup": "See game-specific capsule in report",
+          "price": "Exact printed threshold compared with dated Circa and Action reference; larger cushion does not prove ticket EV",
+          "personnel": "Usage weighted magazine/current role reconciliation; final relevant limitations pending",
+          "situation": "Modest venue/schedule credit; no weather edge",
+          "VSiN": "Named game capsule; alternate markets receive partial credit only",
+          "Docs": "Named game capsule; opposed picks low and absent opinion zero",
+          "market": "Reference3/5 plus fresh same-game spread snapshot1/2 when available; movement0/3"
+        },
+        "failure_explanations": [
+          "Strongest failure path remains meaningful;1 is partial resilience",
+          "2 only for relative core role stability;1 for meaningful current role risks",
+          "Game script remains sensitive;1 reflects partial protection",
+          "2 for large alternate cushion;1 for narrower threshold",
+          "0 unresolved strong dispute;1 only partial independent resolution"
+        ],
+        "key": "NE",
+        "box": 124,
+        "pick": "Patriots +12.5",
+        "factors": [
+          25,
+          18,
+          10,
+          5,
+          9,
+          8,
+          4
+        ],
+        "total": 79,
+        "grade": "B",
+        "failure_dimensions": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "failure": 5,
+        "status": "WATCH - draft, 0 official units",
+        "cutoff": "Exact printed threshold only; deterioration requires regrade"
+      },
+      {
+        "scoring_version": "micks-110-v2-2026-09-29",
+        "score_status": "PROVISIONAL",
+        "raw_factor_sum": 75,
+        "guide_cap": null,
+        "missing_evidence": [
+          "Final high-role inactives/limits",
+          "Kick-hour weather/roof",
+          "Authentic same-book timed movement"
+        ],
+        "release_blockers": [
+          "Accepted printed card verification",
+          "Final material personnel and guide reconciliation"
+        ],
+        "factor_explanations": {
+          "matchup": "See game-specific capsule in report",
+          "price": "Exact printed threshold compared with dated Circa and Action reference; larger cushion does not prove ticket EV",
+          "personnel": "Usage weighted magazine/current role reconciliation; final relevant limitations pending",
+          "situation": "Modest venue/schedule credit; no weather edge",
+          "VSiN": "Named game capsule; alternate markets receive partial credit only",
+          "Docs": "Named game capsule; opposed picks low and absent opinion zero",
+          "market": "Reference3/5 plus fresh same-game spread snapshot1/2 when available; movement0/3"
+        },
+        "failure_explanations": [
+          "Strongest failure path remains meaningful;1 is partial resilience",
+          "2 only for relative core role stability;1 for meaningful current role risks",
+          "Game script remains sensitive;1 reflects partial protection",
+          "2 for large alternate cushion;1 for narrower threshold",
+          "0 unresolved strong dispute;1 only partial independent resolution"
+        ],
+        "key": "SF",
+        "box": 139,
+        "pick": "49ers +2.5",
+        "factors": [
+          27,
+          18,
+          10,
+          6,
+          9,
+          2,
+          3
+        ],
+        "total": 75,
+        "grade": "B",
+        "failure_dimensions": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "failure": 5,
+        "status": "WATCH - draft, 0 official units",
+        "cutoff": "Exact printed threshold only; deterioration requires regrade"
+      },
+      {
+        "scoring_version": "micks-110-v2-2026-09-29",
+        "score_status": "PROVISIONAL",
+        "raw_factor_sum": 74,
+        "guide_cap": null,
+        "missing_evidence": [
+          "Final high-role inactives/limits",
+          "Kick-hour weather/roof",
+          "Authentic same-book timed movement"
+        ],
+        "release_blockers": [
+          "Accepted printed card verification",
+          "Final material personnel and guide reconciliation"
+        ],
+        "factor_explanations": {
+          "matchup": "See game-specific capsule in report",
+          "price": "Exact printed threshold compared with dated Circa and Action reference; larger cushion does not prove ticket EV",
+          "personnel": "Usage weighted magazine/current role reconciliation; final relevant limitations pending",
+          "situation": "Modest venue/schedule credit; no weather edge",
+          "VSiN": "Named game capsule; alternate markets receive partial credit only",
+          "Docs": "Named game capsule; opposed picks low and absent opinion zero",
+          "market": "Reference3/5 plus fresh same-game spread snapshot1/2 when available; movement0/3"
+        },
+        "failure_explanations": [
+          "Strongest failure path remains meaningful;1 is partial resilience",
+          "2 only for relative core role stability;1 for meaningful current role risks",
+          "Game script remains sensitive;1 reflects partial protection",
+          "2 for large alternate cushion;1 for narrower threshold",
+          "0 unresolved strong dispute;1 only partial independent resolution"
+        ],
+        "key": "CAR",
+        "box": 152,
+        "pick": "Panthers +8.5",
+        "factors": [
+          26,
+          18,
+          10,
+          6,
+          8,
+          2,
+          4
+        ],
+        "total": 74,
+        "grade": "B",
+        "failure_dimensions": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "failure": 5,
+        "status": "WATCH - draft, 0 official units",
+        "cutoff": "Exact printed threshold only; deterioration requires regrade"
+      }
+    ],
+    "bigA": [
+      {
+        "scoring_version": "micks-110-v2-2026-09-29",
+        "score_status": "PROVISIONAL",
+        "raw_factor_sum": 78,
+        "guide_cap": 81,
+        "missing_evidence": [
+          "Final high-role inactives/limits",
+          "Kick-hour weather/roof",
+          "Authentic same-book timed movement"
+        ],
+        "release_blockers": [
+          "Accepted printed card verification",
+          "Final material personnel and guide reconciliation"
+        ],
+        "factor_explanations": {
+          "matchup": "See game-specific capsule in report",
+          "price": "Exact printed threshold compared with dated Circa and Action reference; larger cushion does not prove ticket EV",
+          "personnel": "Usage weighted magazine/current role reconciliation; final relevant limitations pending",
+          "situation": "Modest venue/schedule credit; no weather edge",
+          "VSiN": "Named game capsule; alternate markets receive partial credit only",
+          "Docs": "Named game capsule; opposed picks low and absent opinion zero",
+          "market": "Reference3/5 plus fresh same-game spread snapshot1/2 when available; movement0/3"
+        },
+        "failure_explanations": [
+          "Strongest failure path remains meaningful;1 is partial resilience",
+          "2 only for relative core role stability;1 for meaningful current role risks",
+          "Game script remains sensitive;1 reflects partial protection",
+          "2 for large alternate cushion;1 for narrower threshold",
+          "0 unresolved strong dispute;1 only partial independent resolution"
+        ],
+        "key": "LAR",
+        "box": 119,
+        "pick": "Rams +5.5",
+        "factors": [
+          28,
+          18,
+          10,
+          6,
+          6,
+          6,
+          4
+        ],
+        "total": 78,
+        "grade": "B",
+        "failure_dimensions": [
+          1,
+          1,
+          1,
+          2,
+          1
+        ],
+        "failure": 6,
+        "status": "WATCH - draft, 0 official units",
+        "cutoff": "Exact printed threshold only; deterioration requires regrade"
+      },
+      {
+        "scoring_version": "micks-110-v2-2026-09-29",
+        "score_status": "PROVISIONAL",
+        "raw_factor_sum": 77,
+        "guide_cap": null,
+        "missing_evidence": [
+          "Final high-role inactives/limits",
+          "Kick-hour weather/roof",
+          "Authentic same-book timed movement"
+        ],
+        "release_blockers": [
+          "Accepted printed card verification",
+          "Final material personnel and guide reconciliation"
+        ],
+        "factor_explanations": {
+          "matchup": "See game-specific capsule in report",
+          "price": "Exact printed threshold compared with dated Circa and Action reference; larger cushion does not prove ticket EV",
+          "personnel": "Usage weighted magazine/current role reconciliation; final relevant limitations pending",
+          "situation": "Modest venue/schedule credit; no weather edge",
+          "VSiN": "Named game capsule; alternate markets receive partial credit only",
+          "Docs": "Named game capsule; opposed picks low and absent opinion zero",
+          "market": "Reference3/5 plus fresh same-game spread snapshot1/2 when available; movement0/3"
+        },
+        "failure_explanations": [
+          "Strongest failure path remains meaningful;1 is partial resilience",
+          "2 only for relative core role stability;1 for meaningful current role risks",
+          "Game script remains sensitive;1 reflects partial protection",
+          "2 for large alternate cushion;1 for narrower threshold",
+          "0 unresolved strong dispute;1 only partial independent resolution"
+        ],
+        "key": "HOU",
+        "box": 107,
+        "pick": "Texans +5.5",
+        "factors": [
+          27,
+          18,
+          11,
+          6,
+          6,
+          6,
+          3
+        ],
+        "total": 77,
+        "grade": "B",
+        "failure_dimensions": [
+          1,
+          1,
+          1,
+          2,
+          1
+        ],
+        "failure": 6,
+        "status": "WATCH - draft, 0 official units",
+        "cutoff": "Exact printed threshold only; deterioration requires regrade"
+      },
+      {
+        "scoring_version": "micks-110-v2-2026-09-29",
+        "score_status": "PROVISIONAL",
+        "raw_factor_sum": 74,
+        "guide_cap": null,
+        "missing_evidence": [
+          "Final high-role inactives/limits",
+          "Kick-hour weather/roof",
+          "Authentic same-book timed movement"
+        ],
+        "release_blockers": [
+          "Accepted printed card verification",
+          "Final material personnel and guide reconciliation"
+        ],
+        "factor_explanations": {
+          "matchup": "See game-specific capsule in report",
+          "price": "Exact printed threshold compared with dated Circa and Action reference; larger cushion does not prove ticket EV",
+          "personnel": "Usage weighted magazine/current role reconciliation; final relevant limitations pending",
+          "situation": "Modest venue/schedule credit; no weather edge",
+          "VSiN": "Named game capsule; alternate markets receive partial credit only",
+          "Docs": "Named game capsule; opposed picks low and absent opinion zero",
+          "market": "Reference3/5 plus fresh same-game spread snapshot1/2 when available; movement0/3"
+        },
+        "failure_explanations": [
+          "Strongest failure path remains meaningful;1 is partial resilience",
+          "2 only for relative core role stability;1 for meaningful current role risks",
+          "Game script remains sensitive;1 reflects partial protection",
+          "2 for large alternate cushion;1 for narrower threshold",
+          "0 unresolved strong dispute;1 only partial independent resolution"
+        ],
+        "key": "NE",
+        "box": 124,
+        "pick": "Patriots +14.5",
+        "factors": [
+          25,
+          18,
+          10,
+          5,
+          6,
+          6,
+          4
+        ],
+        "total": 74,
+        "grade": "B",
+        "failure_dimensions": [
+          1,
+          1,
+          1,
+          2,
+          1
+        ],
+        "failure": 6,
+        "status": "WATCH - draft, 0 official units",
+        "cutoff": "Exact printed threshold only; deterioration requires regrade"
+      },
+      {
+        "scoring_version": "micks-110-v2-2026-09-29",
+        "score_status": "PROVISIONAL",
+        "raw_factor_sum": 72,
+        "guide_cap": null,
+        "missing_evidence": [
+          "Final high-role inactives/limits",
+          "Kick-hour weather/roof",
+          "Authentic same-book timed movement"
+        ],
+        "release_blockers": [
+          "Accepted printed card verification",
+          "Final material personnel and guide reconciliation"
+        ],
+        "factor_explanations": {
+          "matchup": "See game-specific capsule in report",
+          "price": "Exact printed threshold compared with dated Circa and Action reference; larger cushion does not prove ticket EV",
+          "personnel": "Usage weighted magazine/current role reconciliation; final relevant limitations pending",
+          "situation": "Modest venue/schedule credit; no weather edge",
+          "VSiN": "Named game capsule; alternate markets receive partial credit only",
+          "Docs": "Named game capsule; opposed picks low and absent opinion zero",
+          "market": "Reference3/5 plus fresh same-game spread snapshot1/2 when available; movement0/3"
+        },
+        "failure_explanations": [
+          "Strongest failure path remains meaningful;1 is partial resilience",
+          "2 only for relative core role stability;1 for meaningful current role risks",
+          "Game script remains sensitive;1 reflects partial protection",
+          "2 for large alternate cushion;1 for narrower threshold",
+          "0 unresolved strong dispute;1 only partial independent resolution"
+        ],
+        "key": "CAR",
+        "box": 152,
+        "pick": "Panthers +11.5",
+        "factors": [
+          26,
+          18,
+          10,
+          6,
+          6,
+          2,
+          4
+        ],
+        "total": 72,
+        "grade": "B-",
+        "failure_dimensions": [
+          1,
+          1,
+          1,
+          2,
+          1
+        ],
+        "failure": 6,
+        "status": "WATCH - draft, 0 official units",
+        "cutoff": "Exact printed threshold only; deterioration requires regrade"
+      },
+      {
+        "scoring_version": "micks-110-v2-2026-09-29",
+        "score_status": "PROVISIONAL",
+        "raw_factor_sum": 72,
+        "guide_cap": null,
+        "missing_evidence": [
+          "Final high-role inactives/limits",
+          "Kick-hour weather/roof",
+          "Authentic same-book timed movement"
+        ],
+        "release_blockers": [
+          "Accepted printed card verification",
+          "Final material personnel and guide reconciliation"
+        ],
+        "factor_explanations": {
+          "matchup": "See game-specific capsule in report",
+          "price": "Exact printed threshold compared with dated Circa and Action reference; larger cushion does not prove ticket EV",
+          "personnel": "Usage weighted magazine/current role reconciliation; final relevant limitations pending",
+          "situation": "Modest venue/schedule credit; no weather edge",
+          "VSiN": "Named game capsule; alternate markets receive partial credit only",
+          "Docs": "Named game capsule; opposed picks low and absent opinion zero",
+          "market": "Reference3/5 plus fresh same-game spread snapshot1/2 when available; movement0/3"
+        },
+        "failure_explanations": [
+          "Strongest failure path remains meaningful;1 is partial resilience",
+          "2 only for relative core role stability;1 for meaningful current role risks",
+          "Game script remains sensitive;1 reflects partial protection",
+          "2 for large alternate cushion;1 for narrower threshold",
+          "0 unresolved strong dispute;1 only partial independent resolution"
+        ],
+        "key": "SF",
+        "box": 139,
+        "pick": "49ers +5.5",
+        "factors": [
+          27,
+          18,
+          10,
+          6,
+          6,
+          2,
+          3
+        ],
+        "total": 72,
+        "grade": "B-",
+        "failure_dimensions": [
+          1,
+          1,
+          1,
+          2,
+          1
+        ],
+        "failure": 6,
+        "status": "WATCH - draft, 0 official units",
+        "cutoff": "Exact printed threshold only; deterioration requires regrade"
+      },
+      {
+        "scoring_version": "micks-110-v2-2026-09-29",
+        "score_status": "PROVISIONAL",
+        "raw_factor_sum": 72,
+        "guide_cap": null,
+        "missing_evidence": [
+          "Final high-role inactives/limits",
+          "Kick-hour weather/roof",
+          "Authentic same-book timed movement"
+        ],
+        "release_blockers": [
+          "Accepted printed card verification",
+          "Final material personnel and guide reconciliation"
+        ],
+        "factor_explanations": {
+          "matchup": "See game-specific capsule in report",
+          "price": "Exact printed threshold compared with dated Circa and Action reference; larger cushion does not prove ticket EV",
+          "personnel": "Usage weighted magazine/current role reconciliation; final relevant limitations pending",
+          "situation": "Modest venue/schedule credit; no weather edge",
+          "VSiN": "Named game capsule; alternate markets receive partial credit only",
+          "Docs": "Named game capsule; opposed picks low and absent opinion zero",
+          "market": "Reference3/5 plus fresh same-game spread snapshot1/2 when available; movement0/3"
+        },
+        "failure_explanations": [
+          "Strongest failure path remains meaningful;1 is partial resilience",
+          "2 only for relative core role stability;1 for meaningful current role risks",
+          "Game script remains sensitive;1 reflects partial protection",
+          "2 for large alternate cushion;1 for narrower threshold",
+          "0 unresolved strong dispute;1 only partial independent resolution"
+        ],
+        "key": "MIA",
+        "box": 136,
+        "pick": "Dolphins +19.5*",
+        "factors": [
+          23,
+          18,
+          10,
+          5,
+          6,
+          6,
+          4
+        ],
+        "total": 72,
+        "grade": "B-",
+        "failure_dimensions": [
+          1,
+          1,
+          1,
+          2,
+          1
+        ],
+        "failure": 6,
+        "status": "WATCH - draft, 0 official units",
+        "cutoff": "Exact printed threshold only; deterioration requires regrade"
+      },
+      {
+        "scoring_version": "micks-110-v2-2026-09-29",
+        "score_status": "PROVISIONAL",
+        "raw_factor_sum": 70,
+        "guide_cap": null,
+        "missing_evidence": [
+          "Final high-role inactives/limits",
+          "Kick-hour weather/roof",
+          "Authentic same-book timed movement"
+        ],
+        "release_blockers": [
+          "Accepted printed card verification",
+          "Final material personnel and guide reconciliation"
+        ],
+        "factor_explanations": {
+          "matchup": "See game-specific capsule in report",
+          "price": "Exact printed threshold compared with dated Circa and Action reference; larger cushion does not prove ticket EV",
+          "personnel": "Usage weighted magazine/current role reconciliation; final relevant limitations pending",
+          "situation": "Modest venue/schedule credit; no weather edge",
+          "VSiN": "Named game capsule; alternate markets receive partial credit only",
+          "Docs": "Named game capsule; opposed picks low and absent opinion zero",
+          "market": "Reference3/5 plus fresh same-game spread snapshot1/2 when available; movement0/3"
+        },
+        "failure_explanations": [
+          "Strongest failure path remains meaningful;1 is partial resilience",
+          "2 only for relative core role stability;1 for meaningful current role risks",
+          "Game script remains sensitive;1 reflects partial protection",
+          "2 for large alternate cushion;1 for narrower threshold",
+          "0 unresolved strong dispute;1 only partial independent resolution"
+        ],
+        "key": "CIN",
+        "box": 115,
+        "pick": "Bengals +5.5",
+        "factors": [
+          24,
+          18,
+          12,
+          5,
+          6,
+          2,
+          3
+        ],
+        "total": 70,
+        "grade": "B-",
+        "failure_dimensions": [
+          1,
+          2,
+          1,
+          2,
+          0
+        ],
+        "failure": 6,
+        "status": "WATCH - draft, 0 official units",
+        "cutoff": "Exact printed threshold only; deterioration requires regrade"
+      },
+      {
+        "scoring_version": "micks-110-v2-2026-09-29",
+        "score_status": "PROVISIONAL",
+        "raw_factor_sum": 69,
+        "guide_cap": null,
+        "missing_evidence": [
+          "Final high-role inactives/limits",
+          "Kick-hour weather/roof",
+          "Authentic same-book timed movement"
+        ],
+        "release_blockers": [
+          "Accepted printed card verification",
+          "Final material personnel and guide reconciliation"
+        ],
+        "factor_explanations": {
+          "matchup": "See game-specific capsule in report",
+          "price": "Exact printed threshold compared with dated Circa and Action reference; larger cushion does not prove ticket EV",
+          "personnel": "Usage weighted magazine/current role reconciliation; final relevant limitations pending",
+          "situation": "Modest venue/schedule credit; no weather edge",
+          "VSiN": "Named game capsule; alternate markets receive partial credit only",
+          "Docs": "Named game capsule; opposed picks low and absent opinion zero",
+          "market": "Reference3/5 plus fresh same-game spread snapshot1/2 when available; movement0/3"
+        },
+        "failure_explanations": [
+          "Strongest failure path remains meaningful;1 is partial resilience",
+          "2 only for relative core role stability;1 for meaningful current role risks",
+          "Game script remains sensitive;1 reflects partial protection",
+          "2 for large alternate cushion;1 for narrower threshold",
+          "0 unresolved strong dispute;1 only partial independent resolution"
+        ],
+        "key": "KCU",
+        "box": 146,
+        "pick": "KC/LV UNDER 54.5* [dated total flag]",
+        "factors": [
+          25,
+          18,
+          12,
+          5,
+          6,
+          0,
+          3
+        ],
+        "total": 69,
+        "grade": "B-",
+        "failure_dimensions": [
+          1,
+          2,
+          1,
+          2,
+          1
+        ],
+        "failure": 7,
+        "status": "WATCH - draft, 0 official units",
+        "cutoff": "Exact printed threshold only; deterioration requires regrade"
+      },
+      {
+        "scoring_version": "micks-110-v2-2026-09-29",
+        "score_status": "PROVISIONAL",
+        "raw_factor_sum": 68,
+        "guide_cap": null,
+        "missing_evidence": [
+          "Final high-role inactives/limits",
+          "Kick-hour weather/roof",
+          "Authentic same-book timed movement"
+        ],
+        "release_blockers": [
+          "Accepted printed card verification",
+          "Final material personnel and guide reconciliation"
+        ],
+        "factor_explanations": {
+          "matchup": "See game-specific capsule in report",
+          "price": "Exact printed threshold compared with dated Circa and Action reference; larger cushion does not prove ticket EV",
+          "personnel": "Usage weighted magazine/current role reconciliation; final relevant limitations pending",
+          "situation": "Modest venue/schedule credit; no weather edge",
+          "VSiN": "Named game capsule; alternate markets receive partial credit only",
+          "Docs": "Named game capsule; opposed picks low and absent opinion zero",
+          "market": "Reference3/5 plus fresh same-game spread snapshot1/2 when available; movement0/3"
+        },
+        "failure_explanations": [
+          "Strongest failure path remains meaningful;1 is partial resilience",
+          "2 only for relative core role stability;1 for meaningful current role risks",
+          "Game script remains sensitive;1 reflects partial protection",
+          "2 for large alternate cushion;1 for narrower threshold",
+          "0 unresolved strong dispute;1 only partial independent resolution"
+        ],
+        "key": "KC",
+        "box": 143,
+        "pick": "Chiefs +3.5",
+        "factors": [
+          25,
+          18,
+          11,
+          5,
+          3,
+          2,
+          4
+        ],
+        "total": 68,
+        "grade": "B-",
+        "failure_dimensions": [
+          1,
+          1,
+          1,
+          2,
+          1
+        ],
+        "failure": 6,
+        "status": "WATCH - draft, 0 official units",
+        "cutoff": "Exact printed threshold only; deterioration requires regrade"
+      },
+      {
+        "scoring_version": "micks-110-v2-2026-09-29",
+        "score_status": "PROVISIONAL",
+        "raw_factor_sum": 67,
+        "guide_cap": null,
+        "missing_evidence": [
+          "Final high-role inactives/limits",
+          "Kick-hour weather/roof",
+          "Authentic same-book timed movement"
+        ],
+        "release_blockers": [
+          "Accepted printed card verification",
+          "Final material personnel and guide reconciliation"
+        ],
+        "factor_explanations": {
+          "matchup": "See game-specific capsule in report",
+          "price": "Exact printed threshold compared with dated Circa and Action reference; larger cushion does not prove ticket EV",
+          "personnel": "Usage weighted magazine/current role reconciliation; final relevant limitations pending",
+          "situation": "Modest venue/schedule credit; no weather edge",
+          "VSiN": "Named game capsule; alternate markets receive partial credit only",
+          "Docs": "Named game capsule; opposed picks low and absent opinion zero",
+          "market": "Reference3/5 plus fresh same-game spread snapshot1/2 when available; movement0/3"
+        },
+        "failure_explanations": [
+          "Strongest failure path remains meaningful;1 is partial resilience",
+          "2 only for relative core role stability;1 for meaningful current role risks",
+          "Game script remains sensitive;1 reflects partial protection",
+          "2 for large alternate cushion;1 for narrower threshold",
+          "0 unresolved strong dispute;1 only partial independent resolution"
+        ],
+        "key": "NYG",
+        "box": 103,
+        "pick": "Giants +6.5",
+        "factors": [
+          24,
+          18,
+          11,
+          5,
+          6,
+          0,
+          3
+        ],
+        "total": 67,
+        "grade": "B-",
+        "failure_dimensions": [
+          1,
+          1,
+          1,
+          2,
+          1
+        ],
+        "failure": 6,
+        "status": "WATCH - draft, 0 official units",
+        "cutoff": "Exact printed threshold only; deterioration requires regrade"
+      }
+    ],
+    "bigB": [
+      {
+        "scoring_version": "micks-110-v2-2026-09-29",
+        "score_status": "PROVISIONAL",
+        "raw_factor_sum": 75,
+        "guide_cap": null,
+        "missing_evidence": [
+          "Final high-role inactives/limits",
+          "Kick-hour weather/roof",
+          "Authentic same-book timed movement"
+        ],
+        "release_blockers": [
+          "Accepted printed card verification",
+          "Final material personnel and guide reconciliation"
+        ],
+        "factor_explanations": {
+          "matchup": "See game-specific capsule in report",
+          "price": "Exact printed threshold compared with dated Circa and Action reference; larger cushion does not prove ticket EV",
+          "personnel": "Usage weighted magazine/current role reconciliation; final relevant limitations pending",
+          "situation": "Modest venue/schedule credit; no weather edge",
+          "VSiN": "Named game capsule; alternate markets receive partial credit only",
+          "Docs": "Named game capsule; opposed picks low and absent opinion zero",
+          "market": "Reference3/5 plus fresh same-game spread snapshot1/2 when available; movement0/3"
+        },
+        "failure_explanations": [
+          "Strongest failure path remains meaningful;1 is partial resilience",
+          "2 only for relative core role stability;1 for meaningful current role risks",
+          "Game script remains sensitive;1 reflects partial protection",
+          "2 for large alternate cushion;1 for narrower threshold",
+          "0 unresolved strong dispute;1 only partial independent resolution"
+        ],
+        "key": "LV",
+        "box": 144,
+        "pick": "Raiders +12.5",
+        "factors": [
+          24,
+          18,
+          12,
+          5,
+          6,
+          6,
+          4
+        ],
+        "total": 75,
+        "grade": "B",
+        "failure_dimensions": [
+          1,
+          2,
+          1,
+          2,
+          1
+        ],
+        "failure": 7,
+        "status": "WATCH - draft, 0 official units",
+        "cutoff": "Exact printed threshold only; deterioration requires regrade"
+      },
+      {
+        "scoring_version": "micks-110-v2-2026-09-29",
+        "score_status": "PROVISIONAL",
+        "raw_factor_sum": 74,
+        "guide_cap": null,
+        "missing_evidence": [
+          "Final high-role inactives/limits",
+          "Kick-hour weather/roof",
+          "Authentic same-book timed movement"
+        ],
+        "release_blockers": [
+          "Accepted printed card verification",
+          "Final material personnel and guide reconciliation"
+        ],
+        "factor_explanations": {
+          "matchup": "See game-specific capsule in report",
+          "price": "Exact printed threshold compared with dated Circa and Action reference; larger cushion does not prove ticket EV",
+          "personnel": "Usage weighted magazine/current role reconciliation; final relevant limitations pending",
+          "situation": "Modest venue/schedule credit; no weather edge",
+          "VSiN": "Named game capsule; alternate markets receive partial credit only",
+          "Docs": "Named game capsule; opposed picks low and absent opinion zero",
+          "market": "Reference3/5 plus fresh same-game spread snapshot1/2 when available; movement0/3"
+        },
+        "failure_explanations": [
+          "Strongest failure path remains meaningful;1 is partial resilience",
+          "2 only for relative core role stability;1 for meaningful current role risks",
+          "Game script remains sensitive;1 reflects partial protection",
+          "2 for large alternate cushion;1 for narrower threshold",
+          "0 unresolved strong dispute;1 only partial independent resolution"
+        ],
+        "key": "JAX",
+        "box": 116,
+        "pick": "Jaguars +9.5",
+        "factors": [
+          25,
+          18,
+          12,
+          5,
+          5,
+          6,
+          3
+        ],
+        "total": 74,
+        "grade": "B",
+        "failure_dimensions": [
+          1,
+          2,
+          1,
+          2,
+          1
+        ],
+        "failure": 7,
+        "status": "WATCH - draft, 0 official units",
+        "cutoff": "Exact printed threshold only; deterioration requires regrade"
+      },
+      {
+        "scoring_version": "micks-110-v2-2026-09-29",
+        "score_status": "PROVISIONAL",
+        "raw_factor_sum": 73,
+        "guide_cap": null,
+        "missing_evidence": [
+          "Final high-role inactives/limits",
+          "Kick-hour weather/roof",
+          "Authentic same-book timed movement"
+        ],
+        "release_blockers": [
+          "Accepted printed card verification",
+          "Final material personnel and guide reconciliation"
+        ],
+        "factor_explanations": {
+          "matchup": "See game-specific capsule in report",
+          "price": "Exact printed threshold compared with dated Circa and Action reference; larger cushion does not prove ticket EV",
+          "personnel": "Usage weighted magazine/current role reconciliation; final relevant limitations pending",
+          "situation": "Modest venue/schedule credit; no weather edge",
+          "VSiN": "Named game capsule; alternate markets receive partial credit only",
+          "Docs": "Named game capsule; opposed picks low and absent opinion zero",
+          "market": "Reference3/5 plus fresh same-game spread snapshot1/2 when available; movement0/3"
+        },
+        "failure_explanations": [
+          "Strongest failure path remains meaningful;1 is partial resilience",
+          "2 only for relative core role stability;1 for meaningful current role risks",
+          "Game script remains sensitive;1 reflects partial protection",
+          "2 for large alternate cushion;1 for narrower threshold",
+          "0 unresolved strong dispute;1 only partial independent resolution"
+        ],
+        "key": "DET",
+        "box": 151,
+        "pick": "Lions +4.5",
+        "factors": [
+          25,
+          18,
+          12,
+          5,
+          3,
+          6,
+          4
+        ],
+        "total": 73,
+        "grade": "B-",
+        "failure_dimensions": [
+          1,
+          2,
+          1,
+          2,
+          1
+        ],
+        "failure": 7,
+        "status": "WATCH - draft, 0 official units",
+        "cutoff": "Exact printed threshold only; deterioration requires regrade"
+      },
+      {
+        "scoring_version": "micks-110-v2-2026-09-29",
+        "score_status": "PROVISIONAL",
+        "raw_factor_sum": 72,
+        "guide_cap": null,
+        "missing_evidence": [
+          "Final high-role inactives/limits",
+          "Kick-hour weather/roof",
+          "Authentic same-book timed movement"
+        ],
+        "release_blockers": [
+          "Accepted printed card verification",
+          "Final material personnel and guide reconciliation"
+        ],
+        "factor_explanations": {
+          "matchup": "See game-specific capsule in report",
+          "price": "Exact printed threshold compared with dated Circa and Action reference; larger cushion does not prove ticket EV",
+          "personnel": "Usage weighted magazine/current role reconciliation; final relevant limitations pending",
+          "situation": "Modest venue/schedule credit; no weather edge",
+          "VSiN": "Named game capsule; alternate markets receive partial credit only",
+          "Docs": "Named game capsule; opposed picks low and absent opinion zero",
+          "market": "Reference3/5 plus fresh same-game spread snapshot1/2 when available; movement0/3"
+        },
+        "failure_explanations": [
+          "Strongest failure path remains meaningful;1 is partial resilience",
+          "2 only for relative core role stability;1 for meaningful current role risks",
+          "Game script remains sensitive;1 reflects partial protection",
+          "2 for large alternate cushion;1 for narrower threshold",
+          "0 unresolved strong dispute;1 only partial independent resolution"
+        ],
+        "key": "TEN",
+        "box": 132,
+        "pick": "Titans +19.5* [dated spread flag]",
+        "factors": [
+          24,
+          18,
+          10,
+          5,
+          6,
+          6,
+          3
+        ],
+        "total": 72,
+        "grade": "B-",
+        "failure_dimensions": [
+          1,
+          1,
+          1,
+          2,
+          1
+        ],
+        "failure": 6,
+        "status": "WATCH - draft, 0 official units",
+        "cutoff": "Exact printed threshold only; deterioration requires regrade"
+      },
+      {
+        "scoring_version": "micks-110-v2-2026-09-29",
+        "score_status": "PROVISIONAL",
+        "raw_factor_sum": 69,
+        "guide_cap": null,
+        "missing_evidence": [
+          "Final high-role inactives/limits",
+          "Kick-hour weather/roof",
+          "Authentic same-book timed movement"
+        ],
+        "release_blockers": [
+          "Accepted printed card verification",
+          "Final material personnel and guide reconciliation"
+        ],
+        "factor_explanations": {
+          "matchup": "See game-specific capsule in report",
+          "price": "Exact printed threshold compared with dated Circa and Action reference; larger cushion does not prove ticket EV",
+          "personnel": "Usage weighted magazine/current role reconciliation; final relevant limitations pending",
+          "situation": "Modest venue/schedule credit; no weather edge",
+          "VSiN": "Named game capsule; alternate markets receive partial credit only",
+          "Docs": "Named game capsule; opposed picks low and absent opinion zero",
+          "market": "Reference3/5 plus fresh same-game spread snapshot1/2 when available; movement0/3"
+        },
+        "failure_explanations": [
+          "Strongest failure path remains meaningful;1 is partial resilience",
+          "2 only for relative core role stability;1 for meaningful current role risks",
+          "Game script remains sensitive;1 reflects partial protection",
+          "2 for large alternate cushion;1 for narrower threshold",
+          "0 unresolved strong dispute;1 only partial independent resolution"
+        ],
+        "key": "DAL",
+        "box": 108,
+        "pick": "Cowboys +9.5",
+        "factors": [
+          23,
+          18,
+          12,
+          5,
+          6,
+          2,
+          3
+        ],
+        "total": 69,
+        "grade": "B-",
+        "failure_dimensions": [
+          1,
+          2,
+          1,
+          2,
+          1
+        ],
+        "failure": 7,
+        "status": "WATCH - draft, 0 official units",
+        "cutoff": "Exact printed threshold only; deterioration requires regrade"
+      },
+      {
+        "scoring_version": "micks-110-v2-2026-09-29",
+        "score_status": "PROVISIONAL",
+        "raw_factor_sum": 68,
+        "guide_cap": null,
+        "missing_evidence": [
+          "Final high-role inactives/limits",
+          "Kick-hour weather/roof",
+          "Authentic same-book timed movement"
+        ],
+        "release_blockers": [
+          "Accepted printed card verification",
+          "Final material personnel and guide reconciliation"
+        ],
+        "factor_explanations": {
+          "matchup": "See game-specific capsule in report",
+          "price": "Exact printed threshold compared with dated Circa and Action reference; larger cushion does not prove ticket EV",
+          "personnel": "Usage weighted magazine/current role reconciliation; final relevant limitations pending",
+          "situation": "Modest venue/schedule credit; no weather edge",
+          "VSiN": "Named game capsule; alternate markets receive partial credit only",
+          "Docs": "Named game capsule; opposed picks low and absent opinion zero",
+          "market": "Reference3/5 plus fresh same-game spread snapshot1/2 when available; movement0/3"
+        },
+        "failure_explanations": [
+          "Strongest failure path remains meaningful;1 is partial resilience",
+          "2 only for relative core role stability;1 for meaningful current role risks",
+          "Game script remains sensitive;1 reflects partial protection",
+          "2 for large alternate cushion;1 for narrower threshold",
+          "0 unresolved strong dispute;1 only partial independent resolution"
+        ],
+        "key": "BUF",
+        "box": 123,
+        "pick": "Bills +1.5* [dated ML context]",
+        "factors": [
+          25,
+          17,
+          12,
+          5,
+          3,
+          2,
+          4
+        ],
+        "total": 68,
+        "grade": "B-",
+        "failure_dimensions": [
+          1,
+          2,
+          1,
+          2,
+          1
+        ],
+        "failure": 7,
+        "status": "WATCH - draft, 0 official units",
+        "cutoff": "Exact printed threshold only; deterioration requires regrade"
+      },
+      {
+        "scoring_version": "micks-110-v2-2026-09-29",
+        "score_status": "PROVISIONAL",
+        "raw_factor_sum": 68,
+        "guide_cap": null,
+        "missing_evidence": [
+          "Final high-role inactives/limits",
+          "Kick-hour weather/roof",
+          "Authentic same-book timed movement"
+        ],
+        "release_blockers": [
+          "Accepted printed card verification",
+          "Final material personnel and guide reconciliation"
+        ],
+        "factor_explanations": {
+          "matchup": "See game-specific capsule in report",
+          "price": "Exact printed threshold compared with dated Circa and Action reference; larger cushion does not prove ticket EV",
+          "personnel": "Usage weighted magazine/current role reconciliation; final relevant limitations pending",
+          "situation": "Modest venue/schedule credit; no weather edge",
+          "VSiN": "Named game capsule; alternate markets receive partial credit only",
+          "Docs": "Named game capsule; opposed picks low and absent opinion zero",
+          "market": "Reference3/5 plus fresh same-game spread snapshot1/2 when available; movement0/3"
+        },
+        "failure_explanations": [
+          "Strongest failure path remains meaningful;1 is partial resilience",
+          "2 only for relative core role stability;1 for meaningful current role risks",
+          "Game script remains sensitive;1 reflects partial protection",
+          "2 for large alternate cushion;1 for narrower threshold",
+          "0 unresolved strong dispute;1 only partial independent resolution"
+        ],
+        "key": "LAC",
+        "box": 148,
+        "pick": "Chargers +15.5* [dated DK context]",
+        "factors": [
+          24,
+          18,
+          9,
+          5,
+          6,
+          2,
+          4
+        ],
+        "total": 68,
+        "grade": "B-",
+        "failure_dimensions": [
+          1,
+          1,
+          1,
+          2,
+          1
+        ],
+        "failure": 6,
+        "status": "WATCH - draft, 0 official units",
+        "cutoff": "Exact printed threshold only; deterioration requires regrade"
+      },
+      {
+        "scoring_version": "micks-110-v2-2026-09-29",
+        "score_status": "PROVISIONAL",
+        "raw_factor_sum": 66,
+        "guide_cap": null,
+        "missing_evidence": [
+          "Final high-role inactives/limits",
+          "Kick-hour weather/roof",
+          "Authentic same-book timed movement"
+        ],
+        "release_blockers": [
+          "Accepted printed card verification",
+          "Final material personnel and guide reconciliation"
+        ],
+        "factor_explanations": {
+          "matchup": "See game-specific capsule in report",
+          "price": "Exact printed threshold compared with dated Circa and Action reference; larger cushion does not prove ticket EV",
+          "personnel": "Usage weighted magazine/current role reconciliation; final relevant limitations pending",
+          "situation": "Modest venue/schedule credit; no weather edge",
+          "VSiN": "Named game capsule; alternate markets receive partial credit only",
+          "Docs": "Named game capsule; opposed picks low and absent opinion zero",
+          "market": "Reference3/5 plus fresh same-game spread snapshot1/2 when available; movement0/3"
+        },
+        "failure_explanations": [
+          "Strongest failure path remains meaningful;1 is partial resilience",
+          "2 only for relative core role stability;1 for meaningful current role risks",
+          "Game script remains sensitive;1 reflects partial protection",
+          "2 for large alternate cushion;1 for narrower threshold",
+          "0 unresolved strong dispute;1 only partial independent resolution"
+        ],
+        "key": "GB",
+        "box": 111,
+        "pick": "Packers +4.5",
+        "factors": [
+          24,
+          18,
+          10,
+          5,
+          4,
+          2,
+          3
+        ],
+        "total": 66,
+        "grade": "B-",
+        "failure_dimensions": [
+          1,
+          1,
+          1,
+          2,
+          1
+        ],
+        "failure": 6,
+        "status": "WATCH - draft, 0 official units",
+        "cutoff": "Exact printed threshold only; deterioration requires regrade"
+      },
+      {
+        "scoring_version": "micks-110-v2-2026-09-29",
+        "score_status": "PROVISIONAL",
+        "raw_factor_sum": 63,
+        "guide_cap": null,
+        "missing_evidence": [
+          "Final high-role inactives/limits",
+          "Kick-hour weather/roof",
+          "Authentic same-book timed movement"
+        ],
+        "release_blockers": [
+          "Accepted printed card verification",
+          "Final material personnel and guide reconciliation"
+        ],
+        "factor_explanations": {
+          "matchup": "See game-specific capsule in report",
+          "price": "Exact printed threshold compared with dated Circa and Action reference; larger cushion does not prove ticket EV",
+          "personnel": "Usage weighted magazine/current role reconciliation; final relevant limitations pending",
+          "situation": "Modest venue/schedule credit; no weather edge",
+          "VSiN": "Named game capsule; alternate markets receive partial credit only",
+          "Docs": "Named game capsule; opposed picks low and absent opinion zero",
+          "market": "Reference3/5 plus fresh same-game spread snapshot1/2 when available; movement0/3"
+        },
+        "failure_explanations": [
+          "Strongest failure path remains meaningful;1 is partial resilience",
+          "2 only for relative core role stability;1 for meaningful current role risks",
+          "Game script remains sensitive;1 reflects partial protection",
+          "2 for large alternate cushion;1 for narrower threshold",
+          "0 unresolved strong dispute;1 only partial independent resolution"
+        ],
+        "key": "GBU",
+        "box": 114,
+        "pick": "GB/TB UNDER 46.5* [dated total flag]",
+        "factors": [
+          26,
+          18,
+          11,
+          5,
+          0,
+          0,
+          3
+        ],
+        "total": 63,
+        "grade": "C",
+        "failure_dimensions": [
+          1,
+          1,
+          1,
+          2,
+          1
+        ],
+        "failure": 6,
+        "status": "WATCH - draft, 0 official units",
+        "cutoff": "Exact printed threshold only; deterioration requires regrade"
+      },
+      {
+        "scoring_version": "micks-110-v2-2026-09-29",
+        "score_status": "PROVISIONAL",
+        "raw_factor_sum": 59,
+        "guide_cap": null,
+        "missing_evidence": [
+          "Final high-role inactives/limits",
+          "Kick-hour weather/roof",
+          "Authentic same-book timed movement"
+        ],
+        "release_blockers": [
+          "Accepted printed card verification",
+          "Final material personnel and guide reconciliation"
+        ],
+        "factor_explanations": {
+          "matchup": "See game-specific capsule in report",
+          "price": "Exact printed threshold compared with dated Circa and Action reference; larger cushion does not prove ticket EV",
+          "personnel": "Usage weighted magazine/current role reconciliation; final relevant limitations pending",
+          "situation": "Modest venue/schedule credit; no weather edge",
+          "VSiN": "Named game capsule; alternate markets receive partial credit only",
+          "Docs": "Named game capsule; opposed picks low and absent opinion zero",
+          "market": "Reference3/5 plus fresh same-game spread snapshot1/2 when available; movement0/3"
+        },
+        "failure_explanations": [
+          "Strongest failure path remains meaningful;1 is partial resilience",
+          "2 only for relative core role stability;1 for meaningful current role risks",
+          "Game script remains sensitive;1 reflects partial protection",
+          "2 for large alternate cushion;1 for narrower threshold",
+          "0 unresolved strong dispute;1 only partial independent resolution"
+        ],
+        "key": "SFO",
+        "box": 141,
+        "pick": "SF/DEN OVER 39.5",
+        "factors": [
+          23,
+          18,
+          10,
+          5,
+          0,
+          0,
+          3
+        ],
+        "total": 59,
+        "grade": "C",
+        "failure_dimensions": [
+          1,
+          1,
+          1,
+          2,
+          0
+        ],
+        "failure": 5,
+        "status": "WATCH - draft, 0 official units",
+        "cutoff": "Exact printed threshold only; deterioration requires regrade"
+      }
+    ]
+  },
+  "mixed": {
+    "status": "UNGRADED - executable price missing",
+    "legs": [
+      [
+        "1",
+        "Texans ML",
+        "Target -145; maximum -155",
+        "Reynolds ML support; Dallas passing and HOU OL counter"
+      ],
+      [
+        "2",
+        "Rams -2.5",
+        "Maximum -120; no -3.5 substitution",
+        "Printed half-card edge differs from current -3.5"
+      ],
+      [
+        "3",
+        "Patriots +7",
+        "Maximum -120; no +6 substitution",
+        "Multiple named supports; Maye turnovers counter"
+      ],
+      [
+        "4",
+        "Panthers +4",
+        "Maximum -115; no +3 substitution",
+        "Cohen +4; Doc's Detroit and Gibbs counter"
+      ],
+      [
+        "5",
+        "49ers ML",
+        "Target -140; maximum -145",
+        "Youmans/Makinen side support; Doc's Denver counter"
+      ],
+      [
+        "6",
+        "GB/TB UNDER 39.5*",
+        "Maximum -115; minimum total38.5",
+        "LaMarca under; Action40.5 projection opposes"
+      ],
+      [
+        "7",
+        "KC/LV UNDER 48*",
+        "Maximum -115; minimum total47.5",
+        "Makinen/Reynolds under; short fields/explosives counter"
+      ]
+    ]
+  },
+  "pleaser": "NO BET",
+  "prior_snapshots_preserved": true,
+  "source_audit": "See PDF: full private/model/weather/final-inactive inputs not obtained",
+  "sources": [
+    [
+      "Official statuses",
+      "https://amp.nfl.com/news/nfl-week-4-injury-report-player-statuses-for-all-16-games"
+    ],
+    [
+      "FL current usage and availability",
+      "https://sst.fantasylife.com/articles/fantasy/last-minute-week-4-fantasy-football-lineup-advice"
+    ],
+    [
+      "FL role updates",
+      "https://sst.fantasylife.com/articles/fantasy/fantasy-football-rankings-updates-for-week-4-emanuel-wilson"
+    ],
+    [
+      "FL totals / LaMarca",
+      "https://sst.fantasylife.com/articles/betting/nfl-total-over-under-picks-for-week-4"
+    ],
+    [
+      "VSiN Youmans",
+      "https://vsin.com/nfl/matt-youmans-week-4-nfl-best-bets/"
+    ],
+    [
+      "VSiN Reynolds",
+      "https://vsin.com/nfl/wes-reynolds-nfl-week-4-best-bets-and-predictions/"
+    ],
+    [
+      "VSiN Makinen",
+      "https://vsin.com/nfl/steve-makinen-week-4-nfl-best-bets/"
+    ],
+    [
+      "VSiN Tuley",
+      "https://vsin.com/nfl/tuleys-takes-nfl-for-week-4/"
+    ],
+    [
+      "VSiN Cohen CAR/DET",
+      "https://vsin.com/nfl/lions-vs-panthers-predictions-week-4-sunday-night-football-odds-picks-and-player-props/"
+    ],
+    [
+      "Doc's free NFL writeups",
+      "https://www.docsports.com/free-picks/nfl/"
+    ],
+    [
+      "Covers independent counters",
+      "https://www.covers.com/nfl/ai-predictions-week-4-2026"
+    ],
+    [
+      "TeamRankings",
+      "https://www.teamrankings.com/nfl/"
+    ],
+    [
+      "StatMuse reference only",
+      "https://www.statmuse.com/nfl/ask/nfl-favorites"
+    ]
+  ]
+}
