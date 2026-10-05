@@ -1,0 +1,102 @@
+{
+  "as_of": "2026-10-05T18:25:00-04:00",
+  "scope": [
+    "PHI@TBL NHL",
+    "MEM@ATL NBA preseason",
+    "PHX@DET NBA preseason",
+    "NYK@PHI NBA preseason"
+  ],
+  "official_picks": [],
+  "official_units": 0,
+  "decisions": [
+    {
+      "candidate": "TBL ML",
+      "flag": "EXTREME public tickets*",
+      "total": null,
+      "known": "50/95",
+      "failure": null,
+      "known_failure": "4/8",
+      "status": "UNGRADED",
+      "units": 0,
+      "reference": "-218 Daily Faceoff",
+      "blockers": [
+        "Vasilevskiy not confirmed",
+        "price inflated",
+        "exact BetRivers unavailable",
+        "score and Failure gates unverifiable"
+      ]
+    },
+    {
+      "candidate": "PHX 1H +1.5",
+      "total": null,
+      "known": "44/95",
+      "failure": null,
+      "known_failure": "4/8",
+      "status": "UNGRADED",
+      "units": 0,
+      "reference": "-110 FanDuel via Action",
+      "blockers": [
+        "preseason minutes unconfirmed",
+        "Mark Williams status/center rotation",
+        "exact BetRivers unavailable"
+      ]
+    },
+    {
+      "candidate": "NYK +1.5",
+      "total": null,
+      "known": "46/95",
+      "failure": null,
+      "known_failure": "4/8",
+      "status": "UNGRADED",
+      "units": 0,
+      "reference": "-110 FanDuel via Action",
+      "blockers": [
+        "Knicks minutes unconfirmed",
+        "Seven Sixers out changes bench distribution",
+        "exact BetRivers unavailable"
+      ]
+    },
+    {
+      "candidate": "MEM@ATL",
+      "total": null,
+      "known": "24/75",
+      "failure": null,
+      "status": "UNGRADED",
+      "units": 0,
+      "reference": null,
+      "blockers": [
+        "price unknown",
+        "starting groups/minutes unknown",
+        "Memphis availability unresolved"
+      ]
+    }
+  ],
+  "action_flags": [
+    {
+      "market": "TBL ML",
+      "bets_pct": 92,
+      "money_pct": null,
+      "flag": "EXTREME tickets",
+      "replacement": "PHI ML +191 or better research-only; not released"
+    },
+    {
+      "market": "PHX@DET public",
+      "bets_pct": 50,
+      "money_pct": 50,
+      "flag": null,
+      "note": "placeholder; no flag"
+    },
+    {
+      "market": "NYK@PHI public",
+      "bets_pct": 50,
+      "money_pct": 50,
+      "flag": null,
+      "note": "placeholder; no flag"
+    }
+  ],
+  "circa": "Dropbox search no result",
+  "betrivers": "unavailable",
+  "firecrawl": "402 insufficient credits on initial Oct5 scan",
+  "wager_placed": false,
+  "website_published": false
+}
