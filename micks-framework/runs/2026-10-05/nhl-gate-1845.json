@@ -1,0 +1,103 @@
+{
+  "as_of": "2026-10-05T18:54:00-04:00",
+  "events": [
+    "WPG@PIT",
+    "OTT@BOS"
+  ],
+  "official_picks": [],
+  "official_units": 0,
+  "candidates": [
+    {
+      "pick": "WPG ML",
+      "flag": "CONTRARIAN*",
+      "prior": "UNGRADED 55/95 known",
+      "score": 74,
+      "grade": "B",
+      "failure": 6,
+      "units": 0,
+      "references": {
+        "action": "+150",
+        "dailyfaceoff": "+157",
+        "docs": "+143"
+      },
+      "best_number": "+157 or better",
+      "cutoff": "below +145",
+      "factors": {
+        "matchup": 25,
+        "price": 16,
+        "personnel": 11,
+        "situation": 5,
+        "vsin": 0,
+        "docs": 8,
+        "market": 9
+      },
+      "goalies": [
+        "Clay Stevenson confirmed",
+        "Sergei Murashov confirmed"
+      ],
+      "decision": "NO BET",
+      "blockers": [
+        "below82",
+        "Failure below7",
+        "back-to-back",
+        "both goalies season debut",
+        "BetRivers unverified"
+      ]
+    },
+    {
+      "pick": "BOS ML",
+      "flag": null,
+      "prior": "UNGRADED 50/95 known",
+      "score": 73,
+      "grade": "B-",
+      "failure": 7,
+      "units": 0,
+      "references": {
+        "action": "-105",
+        "dailyfaceoff": "+105",
+        "docs": "-106"
+      },
+      "best_number": "+105 or better",
+      "cutoff": "worse than -105",
+      "factors": {
+        "matchup": 25,
+        "price": 17,
+        "personnel": 11,
+        "situation": 7,
+        "vsin": 0,
+        "docs": 8,
+        "market": 5
+      },
+      "goalies": [
+        "Linus Ullmark confirmed",
+        "Jeremy Swayman confirmed"
+      ],
+      "decision": "NO BET",
+      "blockers": [
+        "below82",
+        "Ottawa top-six counter",
+        "Boston special teams",
+        "McAvoy absent",
+        "BetRivers unverified"
+      ]
+    }
+  ],
+  "action_flags": [
+    {
+      "market": "PIT ML",
+      "snapshot": "88% tickets / 92% money earlier authenticated public table",
+      "status": "EXTREME",
+      "treatment": "Winnipeg contrarian asterisk retained; no automatic flip"
+    },
+    {
+      "market": "OTT/BOS ML",
+      "snapshot": "45/55 displayed",
+      "status": "NO FLAG"
+    }
+  ],
+  "circa": "Dropbox no result",
+  "betrivers": "unverified",
+  "firecrawl": "402 insufficient credits",
+  "wager_placed": false,
+  "website_published": false
+}
