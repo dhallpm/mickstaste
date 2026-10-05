@@ -1,0 +1,184 @@
+{
+  "as_of": "2026-10-05T19:32:00-04:00",
+  "event": "Atlanta Falcons at New Orleans Saints",
+  "start_et": "20:15",
+  "scoring_version": "micks-110-v2-2026-09-29",
+  "prior_snapshot": {
+    "pick": "ATL +1.5*",
+    "total": 75,
+    "failure": 5,
+    "status": "WATCH",
+    "source": "scan-candidates-1340.json"
+  },
+  "official_picks": [],
+  "official_units": 0,
+  "candidates": [
+    {
+      "pick": "ATL +1.5*",
+      "status": "WATCH",
+      "grade": "B",
+      "total": 79,
+      "units": 0,
+      "reference": "+1.5 -105 Action",
+      "best_number": "+2.5 -110 or better",
+      "cutoff": "below +1 or worse than -110 at +1.5",
+      "factors": {
+        "matchup": 28,
+        "price": 13,
+        "personnel": 14,
+        "situation": 8,
+        "VSiN": 7,
+        "Docs": 0,
+        "market": {
+          "total": 9,
+          "reference": 5,
+          "movement": 3,
+          "splits": 1
+        }
+      },
+      "failure": {
+        "severity": 1,
+        "personnel_role_resilience": 2,
+        "variance_game_script": 1,
+        "price_protection": 1,
+        "counter_resolution": 0,
+        "total": 5
+      },
+      "action_flag": {
+        "source": "Action",
+        "market": "spread",
+        "bets_pct": 58,
+        "money_pct": 74,
+        "bets_sample": 152264,
+        "label": "HEAVY HANDLE; WITH Atlanta"
+      },
+      "movement": {
+        "open": "ATL +2.5",
+        "current": "ATL +1.5 -105"
+      },
+      "inactives": {
+        "ATL": [
+          "Cooper Rush (emergency QB)",
+          "Jack Strand",
+          "Malcom Dewalt IV",
+          "Roger Longerbeam",
+          "Jared Ivey",
+          "Ethan Onianwa"
+        ],
+        "NO": [
+          "Zach Wilson (third QB)",
+          "Decamerion Richardson",
+          "Anfernee Jennings",
+          "Christen Miller",
+          "Kaden Elliss",
+          "Noah Fant",
+          "Carl Granderson"
+        ]
+      },
+      "active_updates": [
+        "Divine Deablo",
+        "Samson Ebukam",
+        "Pete Werner"
+      ],
+      "missing": [
+        "exact BetRivers Delaware price",
+        "current Circa"
+      ],
+      "release_blockers": [
+        "material Fantasy Life contradiction",
+        "Doc's directly opposes",
+        "exact execution unavailable"
+      ]
+    },
+    {
+      "pick": "ATL–NO Under 47.5*",
+      "status": "RESEARCH ONLY",
+      "grade": "B-",
+      "total": 66,
+      "units": 0,
+      "reference": "47.5 VSiN/DraftKings split reference",
+      "best_number": "Under 47.5 -110 or better",
+      "cutoff": "46.5 or lower",
+      "factors": {
+        "matchup": 25,
+        "price": 12,
+        "personnel": 13,
+        "situation": 8,
+        "VSiN": 0,
+        "Docs": 0,
+        "market": {
+          "total": 8,
+          "reference": 4,
+          "movement": 2,
+          "splits": 2
+        }
+      },
+      "failure": {
+        "severity": 1,
+        "personnel_role_resilience": 1,
+        "variance_game_script": 1,
+        "price_protection": 1,
+        "counter_resolution": 1,
+        "total": 5
+      },
+      "replacement_rank": 1,
+      "flag": {
+        "source": "VSiN/DraftKings",
+        "market": "total",
+        "public_side": "Over 47.5",
+        "bets_pct": 73,
+        "money_pct": 93,
+        "label": "EXTREME OVER HANDLE; Under contrarian"
+      }
+    },
+    {
+      "pick": "Drake London Over 76.5",
+      "status": "WATCH",
+      "grade": "B-",
+      "total": 67,
+      "units": 0,
+      "reference": "-117 dated VSiN lean",
+      "best_number": null,
+      "cutoff": null,
+      "factors": {
+        "matchup": 26,
+        "price": 11,
+        "personnel": 13,
+        "situation": 8,
+        "VSiN": 5,
+        "Docs": 0,
+        "market": 4
+      },
+      "failure": {
+        "severity": 1,
+        "personnel_role_resilience": 1,
+        "variance_game_script": 1,
+        "price_protection": 1,
+        "counter_resolution": 1,
+        "total": 5
+      },
+      "replacement_rank": 2,
+      "missing": [
+        "current executable prop price",
+        "current threshold confirmation"
+      ]
+    }
+  ],
+  "guide_reconciliation": {
+    "fantasy_life_model": "NO 24 ATL 21",
+    "fantasy_life_headline": "Atlanta wins",
+    "status": "material contradiction unresolved",
+    "original_atl_qb_assumption": "obsolete Tua/Penix recovery baseline; current Penix supersedes",
+    "atl_roles": "Bijan lead RB, London WR1 confirmed",
+    "saints_rb_assumption": "Etienne lead assumption obsolete; do not invent lost workhorse volume",
+    "docs": "Tony Sink NO -3 opposes",
+    "vsin": "Zachary Cohen ATL +3/ML supports direction at better dated numbers"
+  },
+  "source_status": {
+    "dropbox": "no Oct 5 Circa/VSiN result",
+    "firecrawl": "unavailable: negative authenticated balance",
+    "betrivers_delaware": "exact localized offer unavailable"
+  },
+  "no_wager": true,
+  "no_publish": true
+}
