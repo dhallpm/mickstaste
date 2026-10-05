@@ -1,0 +1,425 @@
+{
+  "as_of": "2026-10-05T19:17:00-04:00",
+  "scoring_version": "micks-110-v2-2026-09-29",
+  "official_picks": [],
+  "official_units": 0,
+  "prior_snapshot_preserved": "scan-candidates-1340.json",
+  "candidates": [
+    {
+      "pick": "TB ML*",
+      "sport": "MLB",
+      "status": "BLOCKED",
+      "total": 83,
+      "grade": "B+",
+      "units": 0,
+      "quote": "+111 Action; +109 Doc's",
+      "best_number": "+111",
+      "cutoff": "+100 or better",
+      "factors": {
+        "matchup": 27,
+        "price": 15,
+        "personnel": 13,
+        "situation": 8,
+        "VSiN": 7,
+        "Docs": 7,
+        "market": {
+          "total": 6,
+          "reference": 4,
+          "movement": 2,
+          "splits": 0
+        }
+      },
+      "failure": {
+        "severity": 1,
+        "personnel_role_resilience": 2,
+        "variance_game_script": 1,
+        "price_protection": 1,
+        "counter_resolution": 1,
+        "total": 6
+      },
+      "flag": {
+        "source": "Action",
+        "market": "moneyline",
+        "public_side": "NYY",
+        "bets_pct": 76,
+        "money_pct": null,
+        "meaning": "TB contrarian; retain, not automatic release"
+      },
+      "missing": [
+        "exact BetRivers Delaware price",
+        "current Circa",
+        "MLB-posted Yankees order",
+        "umpire"
+      ],
+      "release_blockers": [
+        "Failure below 7/10",
+        "exact execution unavailable"
+      ]
+    },
+    {
+      "pick": "NYY–TB Under 6.5",
+      "sport": "MLB",
+      "status": "WATCH",
+      "total": 78,
+      "grade": "B",
+      "units": 0,
+      "quote": "-105 Action; -107 VSiN",
+      "best_number": "-105",
+      "cutoff": "worse than -115",
+      "factors": {
+        "matchup": 29,
+        "price": 13,
+        "personnel": 13,
+        "situation": 9,
+        "VSiN": 8,
+        "Docs": 0,
+        "market": {
+          "total": 6,
+          "reference": 4,
+          "movement": 2,
+          "splits": 0
+        }
+      },
+      "failure": {
+        "severity": 1,
+        "personnel_role_resilience": 2,
+        "variance_game_script": 1,
+        "price_protection": 1,
+        "counter_resolution": 1,
+        "total": 6
+      },
+      "missing": [
+        "exact BetRivers Delaware price",
+        "current Circa",
+        "umpire",
+        "authenticated total movement/splits"
+      ],
+      "release_blockers": [
+        "below 82/110",
+        "below Failure 7/10",
+        "exact execution unavailable"
+      ]
+    },
+    {
+      "pick": "DAL ML*",
+      "sport": "NHL",
+      "status": "UNGRADED",
+      "total": null,
+      "assessed_subtotal": 48,
+      "assessed_max": 95,
+      "units": 0,
+      "quote": "-178 Action",
+      "cutoff": null,
+      "factors": {
+        "matchup": 19,
+        "price": 9,
+        "personnel": null,
+        "situation": 6,
+        "VSiN": 0,
+        "Docs": 7,
+        "market": {
+          "total": 7,
+          "reference": 4,
+          "movement": 2,
+          "splits": 1
+        }
+      },
+      "failure": {
+        "severity": 0,
+        "personnel_role_resilience": null,
+        "variance_game_script": 1,
+        "price_protection": 0,
+        "counter_resolution": 1,
+        "total": null,
+        "known_subtotal": 2,
+        "known_max": 8
+      },
+      "flag": {
+        "source": "Action",
+        "market": "moneyline",
+        "public_side": "DAL",
+        "bets_pct": 83,
+        "money_pct": null,
+        "meaning": "extreme public"
+      },
+      "missing": [
+        "final confirmed goalies",
+        "exact BetRivers Delaware price",
+        "current Circa"
+      ],
+      "release_blockers": [
+        "mandatory goalie gate",
+        "core personnel incomplete",
+        "exact execution unavailable"
+      ]
+    },
+    {
+      "pick": "SJS ML*",
+      "sport": "NHL",
+      "status": "UNGRADED",
+      "total": null,
+      "assessed_subtotal": 57,
+      "assessed_max": 95,
+      "units": 0,
+      "quote": "+178 Action",
+      "cutoff": null,
+      "factors": {
+        "matchup": 25,
+        "price": 17,
+        "personnel": null,
+        "situation": 7,
+        "VSiN": 0,
+        "Docs": 0,
+        "market": {
+          "total": 8,
+          "reference": 5,
+          "movement": 2,
+          "splits": 1
+        }
+      },
+      "failure": {
+        "severity": 1,
+        "personnel_role_resilience": null,
+        "variance_game_script": 1,
+        "price_protection": 2,
+        "counter_resolution": 1,
+        "total": null,
+        "known_subtotal": 5,
+        "known_max": 8
+      },
+      "flag": {
+        "source": "Action",
+        "market": "moneyline",
+        "public_side": "DAL",
+        "bets_pct": 83,
+        "money_pct": null,
+        "meaning": "ranked contrarian alternative"
+      },
+      "missing": [
+        "final confirmed goalies",
+        "exact BetRivers Delaware price",
+        "current Circa"
+      ],
+      "release_blockers": [
+        "mandatory goalie gate",
+        "core personnel incomplete",
+        "exact execution unavailable"
+      ]
+    },
+    {
+      "pick": "MIN -5*",
+      "sport": "NBA preseason",
+      "status": "UNGRADED",
+      "total": null,
+      "assessed_subtotal": 47,
+      "assessed_max": 95,
+      "units": 0,
+      "quote": "-5 -105 Action",
+      "cutoff": null,
+      "factors": {
+        "matchup": 24,
+        "price": 12,
+        "personnel": null,
+        "situation": 7,
+        "VSiN": 0,
+        "Docs": 0,
+        "market": {
+          "total": 4,
+          "reference": 3,
+          "movement": 1,
+          "splits": 0
+        }
+      },
+      "failure": {
+        "severity": 1,
+        "personnel_role_resilience": null,
+        "variance_game_script": 0,
+        "price_protection": 1,
+        "counter_resolution": 1,
+        "total": null,
+        "known_subtotal": 3,
+        "known_max": 8
+      },
+      "flag": {
+        "source": "Action",
+        "market": "spread",
+        "public_side": "MIN",
+        "bets_pct": 78,
+        "money_pct": null,
+        "meaning": "heavy public"
+      },
+      "missing": [
+        "starter minutes and full rotation",
+        "exact BetRivers Delaware price",
+        "current Circa"
+      ],
+      "release_blockers": [
+        "core personnel incomplete",
+        "exact execution unavailable"
+      ]
+    },
+    {
+      "pick": "MIN–MIL Under 232.5",
+      "sport": "NBA preseason",
+      "status": "UNGRADED",
+      "total": null,
+      "assessed_subtotal": 54,
+      "assessed_max": 95,
+      "units": 0,
+      "quote": "-108 DraftKings via Action",
+      "cutoff": null,
+      "factors": {
+        "matchup": 27,
+        "price": 13,
+        "personnel": null,
+        "situation": 8,
+        "VSiN": 0,
+        "Docs": 0,
+        "market": {
+          "total": 6,
+          "reference": 4,
+          "movement": 1,
+          "splits": 1
+        }
+      },
+      "failure": {
+        "severity": 1,
+        "personnel_role_resilience": null,
+        "variance_game_script": 1,
+        "price_protection": 1,
+        "counter_resolution": 1,
+        "total": null,
+        "known_subtotal": 4,
+        "known_max": 8
+      },
+      "replacement_rank": 1,
+      "missing": [
+        "starter minutes and full rotation",
+        "exact BetRivers Delaware price",
+        "current Circa"
+      ],
+      "release_blockers": [
+        "core personnel incomplete",
+        "exact execution unavailable"
+      ]
+    },
+    {
+      "pick": null,
+      "event": "Barbados–Bermuda",
+      "sport": "soccer",
+      "status": "UNGRADED",
+      "total": null,
+      "assessed_subtotal": 5,
+      "assessed_max": 40,
+      "units": 0,
+      "cutoff": null,
+      "factors": {
+        "matchup": null,
+        "price": null,
+        "personnel": null,
+        "situation": 5,
+        "VSiN": 0,
+        "Docs": 0,
+        "market": 0
+      },
+      "failure": {
+        "total": null
+      },
+      "missing": [
+        "official XI and keeper",
+        "opponent-adjusted xG",
+        "high-usage availability",
+        "exact price",
+        "movement/splits"
+      ],
+      "release_blockers": [
+        "core matchup/personnel/price incomplete",
+        "exact execution unavailable"
+      ]
+    },
+    {
+      "pick": null,
+      "event": "Bonaire–Grenada",
+      "sport": "soccer",
+      "status": "UNGRADED",
+      "total": null,
+      "assessed_subtotal": 5,
+      "assessed_max": 40,
+      "units": 0,
+      "cutoff": null,
+      "factors": {
+        "matchup": null,
+        "price": null,
+        "personnel": null,
+        "situation": 5,
+        "VSiN": 0,
+        "Docs": 0,
+        "market": 0
+      },
+      "failure": {
+        "total": null
+      },
+      "missing": [
+        "official XI and keeper",
+        "opponent-adjusted xG",
+        "high-usage availability",
+        "exact price",
+        "movement/splits"
+      ],
+      "release_blockers": [
+        "core matchup/personnel/price incomplete",
+        "exact execution unavailable"
+      ]
+    },
+    {
+      "pick": null,
+      "event": "Suriname–Guatemala",
+      "sport": "soccer",
+      "status": "UNGRADED",
+      "total": null,
+      "assessed_subtotal": 8,
+      "assessed_max": 40,
+      "units": 0,
+      "cutoff": null,
+      "factors": {
+        "matchup": null,
+        "price": null,
+        "personnel": null,
+        "situation": 8,
+        "VSiN": 0,
+        "Docs": 0,
+        "market": 0
+      },
+      "failure": {
+        "total": null
+      },
+      "missing": [
+        "official XI and keeper",
+        "opponent-adjusted xG",
+        "high-usage availability",
+        "exact price",
+        "movement/splits"
+      ],
+      "release_blockers": [
+        "core matchup/personnel/price incomplete",
+        "exact execution unavailable"
+      ]
+    }
+  ],
+  "sources": [
+    "https://www.mlb.com/starting-lineups",
+    "https://www.actionnetwork.com/mlb/public-betting",
+    "https://www.nhl.com/news/san-jose-sharks-dallas-stars-game-preview-october-5-2026",
+    "https://www.actionnetwork.com/nhl/public-betting",
+    "https://www.actionnetwork.com/nba/public-betting",
+    "https://www.actionnetwork.com/nba/timberwolves-vs-bucks-prediction-pick-odds-for-nba-preseason-on-monday-october-5",
+    "https://fedefutguate.gt/"
+  ],
+  "source_limits": {
+    "firecrawl": "unavailable: authenticated balance -1000",
+    "dropbox": "no Oct 5 Circa/VSiN result",
+    "betrivers_delaware": "exact localized offer unavailable"
+  },
+  "no_wager": true,
+  "no_publish": true
+}
