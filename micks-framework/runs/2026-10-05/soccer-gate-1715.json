@@ -1,0 +1,96 @@
+{
+  "as_of": "2026-10-05T17:24:00-04:00",
+  "event": "Martinique vs El Salvador",
+  "start_et": "18:00",
+  "rubric": "micks-110-v2-2026-09-29",
+  "candidate": "Martinique pk",
+  "reference_price": "-130 BetUS comparison",
+  "total": null,
+  "assessed_subtotal": 52,
+  "assessed_max": 95,
+  "status": "UNGRADED",
+  "grade": null,
+  "units": 0,
+  "decision": "NO BET",
+  "factors": {
+    "matchup": {
+      "score": 25,
+      "max": 35
+    },
+    "price": {
+      "score": 14,
+      "max": 20
+    },
+    "personnel": {
+      "score": null,
+      "max": 15
+    },
+    "situation": {
+      "score": 8,
+      "max": 10
+    },
+    "vsin": {
+      "score": 0,
+      "max": 10
+    },
+    "docs": {
+      "score": 0,
+      "max": 10
+    },
+    "market": {
+      "score": 5,
+      "max": 10
+    }
+  },
+  "failure": {
+    "personnel_role_resilience": null,
+    "severity": 1,
+    "variance_game_script": 1,
+    "price_protection": 1,
+    "counter_resolution": 1,
+    "total": null,
+    "known_subtotal": 4,
+    "known_max": 8
+  },
+  "action_flag": null,
+  "best_number": null,
+  "no_bet_cutoff": null,
+  "missing": [
+    "official XIs and keepers",
+    "Clavel replacement/tactical effect",
+    "current Circa",
+    "exact BetRivers Delaware offer",
+    "named VSiN/Docs same-market selections",
+    "authentic movement and Action splits",
+    "current xG comparison"
+  ],
+  "release_blockers": [
+    "essential personnel incomplete",
+    "82/110 cannot be calculated",
+    "Failure7/10 cannot be verified",
+    "executable price unavailable",
+    "cutoff not established"
+  ],
+  "sources": [
+    {
+      "name": "VAVEL live",
+      "url": "https://www.vavel.com/en-us/soccer/2026/10/05/1274053-martinique-vs-el-salvador-live-score-concacaf-nations-league.html"
+    },
+    {
+      "name": "BetUS board",
+      "url": "https://www.betus.com.pa/sportsbook/concacaf-nations-league/martinique-vs-el-salvador/"
+    },
+    {
+      "name": "El Salvador local preview",
+      "url": "https://www.elsalvador.com/deportes/futbol/-martinica-vs-el-salvador-hora-donde-ver/1296782/2026/"
+    },
+    {
+      "name": "Clavel status",
+      "url": "https://www.elgrafico.com/selecciones/ocho-jugadores-sobreviven-en-seleccion-desde-la-derrota-de-2023-en-martinica-20261005-0004.html"
+    }
+  ],
+  "firecrawl": "402 insufficient credits",
+  "dropbox_circa": "no result",
+  "wager_placed": false,
+  "website_published": false
+}
