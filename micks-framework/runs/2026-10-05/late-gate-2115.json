@@ -1,0 +1,164 @@
+{
+  "run_date": "2026-10-05",
+  "timestamp_et": "2026-10-05T21:15:00-04:00",
+  "scoring_version": "micks-110-v2-2026-09-29",
+  "decision": "NO OFFICIAL BET",
+  "units": 0,
+  "events": [
+    {
+      "event": "LAL at SAC",
+      "start_et": "22:00",
+      "candidates": [
+        {
+          "market": "LAL -5.5",
+          "action_flag": true,
+          "status": "UNGRADED",
+          "known_points": 47,
+          "assessed_max": 95,
+          "failure_known": 4,
+          "failure_assessed_max": 8,
+          "decision": "NO BET",
+          "factors": {
+            "matchup": 22,
+            "price": 12,
+            "personnel": null,
+            "situation": 6,
+            "vsin": 0,
+            "docs": 0,
+            "market": 7
+          },
+          "missing": [
+            "official active lists/starters",
+            "minutes commitments",
+            "exact BetRivers Delaware",
+            "current Circa/VSiN"
+          ],
+          "blockers": [
+            "core personnel incomplete",
+            "execution unavailable"
+          ]
+        },
+        {
+          "market": "SAC +6.5 -110 (dated Action expert quote)",
+          "action_flag": false,
+          "contrarian_replacement_for": "LAL spread*",
+          "status": "UNGRADED",
+          "known_points": 53,
+          "assessed_max": 95,
+          "failure_known": 5,
+          "failure_assessed_max": 8,
+          "decision": "NO BET",
+          "factors": {
+            "matchup": 25,
+            "price": 14,
+            "personnel": null,
+            "situation": 6,
+            "vsin": 0,
+            "docs": 0,
+            "market": 8
+          }
+        },
+        {
+          "market": "1H Under 118.5 -108 (dated Action quote)",
+          "status": "UNGRADED",
+          "known_points": 57,
+          "assessed_max": 95,
+          "failure_known": 5,
+          "failure_assessed_max": 8,
+          "decision": "NO BET",
+          "factors": {
+            "matchup": 29,
+            "price": 13,
+            "personnel": null,
+            "situation": 8,
+            "vsin": 0,
+            "docs": 0,
+            "market": 7
+          }
+        }
+      ],
+      "action": {
+        "spread_bets_pct": {
+          "LAL": 76,
+          "SAC": 24
+        },
+        "money_pct": null,
+        "flag_threshold": 70
+      }
+    },
+    {
+      "event": "Honduras vs Jamaica",
+      "start_et": "22:00",
+      "official_xi_confirmed": true,
+      "candidates": [
+        {
+          "market": "Honduras ML",
+          "reference_price": "-106 bet365 article",
+          "status": "GRADED",
+          "score": 67,
+          "grade": "B-",
+          "failure": 6,
+          "decision": "NO BET",
+          "units": 0,
+          "best_number": "-105 or better",
+          "cutoff": "pass worse than -115",
+          "factors": {
+            "matchup": 27,
+            "price": 14,
+            "personnel": 13,
+            "situation": 8,
+            "vsin": 0,
+            "docs": 0,
+            "market": 5
+          },
+          "failure_dimensions": {
+            "severity": 1,
+            "personnel": 2,
+            "variance": 1,
+            "price": 1,
+            "counter": 1
+          }
+        },
+        {
+          "market": "Under 2.5",
+          "reference_price": "about -175 comparison",
+          "status": "GRADED",
+          "score": 61,
+          "grade": "C",
+          "failure": 6,
+          "decision": "NO BET",
+          "units": 0,
+          "best_number": "-145 or better",
+          "cutoff": "pass worse than -155",
+          "factors": {
+            "matchup": 28,
+            "price": 8,
+            "personnel": 13,
+            "situation": 8,
+            "vsin": 0,
+            "docs": 0,
+            "market": 4
+          },
+          "failure_dimensions": {
+            "severity": 1,
+            "personnel": 2,
+            "variance": 1,
+            "price": 1,
+            "counter": 1
+          }
+        }
+      ]
+    }
+  ],
+  "source_status": {
+    "dropbox_circa_vsin": "no Oct 5 match",
+    "firecrawl": "402 insufficient credits",
+    "betrivers_delaware": "unavailable",
+    "vsin_named_picks": "none found",
+    "docs_named_picks": "none found"
+  },
+  "actions": {
+    "wager_placed": false,
+    "website_published": false
+  }
+}
