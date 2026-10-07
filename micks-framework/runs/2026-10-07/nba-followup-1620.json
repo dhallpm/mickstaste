@@ -1,0 +1,265 @@
+{
+  "date": "2026-10-07",
+  "scope": "Fresh NBA follow-up to16:15 request; three named Actionopinions retrieved, five-game rotation/market reconciliation",
+  "rows": [
+    {
+      "event": "MIN at IND",
+      "start_et": "19:00",
+      "angle": "Indiana +3.5",
+      "status": "WATCH / UNGRADED",
+      "capper": {
+        "name": "Michael Crosson",
+        "source": "Action Network",
+        "pick": "IND+3.5-110",
+        "book": "FanDuel article quote",
+        "updated_et": "2026-10-07 15:28"
+      },
+      "market_reference": {
+        "source": "Action public spread aggregate",
+        "line": "IND+2.5+104 / MIN-2.5-108",
+        "as_of": "retrieved during 16:15 follow-up",
+        "executable_user_book": false
+      },
+      "crowd": {
+        "market": "spread",
+        "side": "MIN",
+        "bets": 71,
+        "money": 65,
+        "tickets": 853,
+        "asterisk": true,
+        "dual_heavy": false
+      },
+      "case": "Haliburton return and a short spread create a credible home/neutral-site dog research angle; preseason second-half depth matters more than regular-season win totals.",
+      "counter": "Edwards/Ball/Gobert core can dominate early; McConnell/Nance secondary rotation availability and actual minutes are unresolved. Article's minimum+4 system does not directly qualify+3.5.",
+      "blockers": [
+        "Actual+3.5vig",
+        "Official high-usage availability and minutes/second-half rotation",
+        "Independent cashing and Failure assessment"
+      ],
+      "units": 0,
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "score": null,
+      "grade": "UNGRADED",
+      "failure_score": null,
+      "factors": {
+        "matchup": null,
+        "price": null,
+        "personnel": null,
+        "situation": null,
+        "vsin": 0,
+        "docs": 0,
+        "market": null
+      },
+      "failure_dimensions": {
+        "severity": null,
+        "personnel": null,
+        "variance": null,
+        "price": null,
+        "contradiction": null
+      }
+    },
+    {
+      "event": "PHX at CHI",
+      "start_et": "20:00",
+      "angle": "Chicago ML",
+      "status": "WATCH / UNGRADED",
+      "capper": {
+        "name": "Michael Crosson",
+        "source": "Action Network",
+        "pick": "CHI ML+114",
+        "book": "DraftKings article quote",
+        "updated_et": "2026-10-07 15:25"
+      },
+      "market_reference": {
+        "source": "Action public spread aggregate",
+        "line": "PHX-2-110 / CHI+2.5+100",
+        "executable_user_book": false
+      },
+      "crowd": {
+        "market": "spread",
+        "side": "PHX",
+        "bets": 74,
+        "money": 67,
+        "tickets": 671,
+        "asterisk": true,
+        "dual_heavy": false
+      },
+      "case": "Home dog and an uptempo secondary-unit thesis. Crosson picksML, notspread. Crowded Suns spread is context only.",
+      "counter": "Phoenix has a prior preseason outing; Chicago new coach and uncertain centers undermine assumptions about pace and depth. Last-year pace is not confirmed current coach behavior.",
+      "blockers": [
+        "CurrentMLquote",
+        "Final role/minutes and coach change reconciliation",
+        "Total-movement system trigger not independently verified"
+      ],
+      "units": 0,
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "score": null,
+      "grade": "UNGRADED",
+      "failure_score": null,
+      "factors": {
+        "matchup": null,
+        "price": null,
+        "personnel": null,
+        "situation": null,
+        "vsin": 0,
+        "docs": 0,
+        "market": null
+      },
+      "failure_dimensions": {
+        "severity": null,
+        "personnel": null,
+        "variance": null,
+        "price": null,
+        "contradiction": null
+      }
+    },
+    {
+      "event": "GSW at POR",
+      "start_et": "22:00",
+      "angle": "Under215.5",
+      "status": "WATCH / UNGRADED",
+      "capper": {
+        "name": "Michael Crosson",
+        "source": "Action Network",
+        "pick": "U215.5-106",
+        "book": "FanDuel article quote",
+        "updated_et": "2026-10-07 13:43"
+      },
+      "market_reference": {
+        "source": "RotoWire reference",
+        "line": "total216.5,juice not exposed; priorCirca214.5",
+        "executable_user_book": false
+      },
+      "crowd": {
+        "market": "total",
+        "bets": null,
+        "money": null,
+        "asterisk": false
+      },
+      "case": "Team-official-attributed reporting says Golden State leaves much of its key rotation home on a back-to-back. Reduced shot creation gives a realunder mechanism.",
+      "counter": "A depleted defense can concede easy Portland points; inexperienced benches can foul or accelerate. Portland's scorer workloads and independent total threshold remain unresolved.",
+      "blockers": [
+        "Current exact total/juice",
+        "Final POR scoring-role minutes and GSW travel roster reconciliation",
+        "Independent threshold and five Failure dimensions"
+      ],
+      "units": 0,
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "score": null,
+      "grade": "UNGRADED",
+      "failure_score": null,
+      "factors": {
+        "matchup": null,
+        "price": null,
+        "personnel": null,
+        "situation": null,
+        "vsin": 0,
+        "docs": 0,
+        "market": null
+      },
+      "failure_dimensions": {
+        "severity": null,
+        "personnel": null,
+        "variance": null,
+        "price": null,
+        "contradiction": null
+      }
+    },
+    {
+      "event": "ORL at MEM",
+      "start_et": "20:00",
+      "angle": "NO BET",
+      "status": "UNGRADED",
+      "market_reference": {
+        "source": "Action public spread aggregate",
+        "line": "ORL-1.5-115 / MEM+2.5-108",
+        "executable_user_book": false
+      },
+      "crowd": {
+        "market": "spread",
+        "side": "ORL",
+        "bets": 58,
+        "money": null,
+        "asterisk": false
+      },
+      "case": "Orlando has a plausible top-unit talent advantage; official team page confirms8ET game, not minutes.",
+      "counter": "Suggs/Black and Memphis center roles remain unsettled; a roster-quality edge need not survive bench minutes.",
+      "blockers": [
+        "Official meaningful availability/rotation",
+        "Preseason core matchup and price assessment"
+      ],
+      "units": 0,
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "score": null,
+      "grade": "UNGRADED",
+      "failure_score": null,
+      "factors": {
+        "matchup": null,
+        "price": null,
+        "personnel": null,
+        "situation": null,
+        "vsin": 0,
+        "docs": 0,
+        "market": null
+      },
+      "failure_dimensions": {
+        "severity": null,
+        "personnel": null,
+        "variance": null,
+        "price": null,
+        "contradiction": null
+      }
+    },
+    {
+      "event": "MIL at OKC",
+      "start_et": "20:00",
+      "angle": "NO BET",
+      "status": "UNGRADED",
+      "market_reference": {
+        "source": "Action public spread aggregate",
+        "line": "MIL+14.5-108 / OKC-13.5+100",
+        "executable_user_book": false
+      },
+      "crowd": {
+        "market": "spread",
+        "side": "MIL",
+        "bets": 51,
+        "money": null,
+        "asterisk": false
+      },
+      "case": "Large spread; OKC rotation on a back-to-back must be resolved before treating roster hierarchy as anedge.",
+      "counter": "Projected OKC primary lineup has multiplequestionables; coach rotation comments are not specific guaranteed minutes.",
+      "blockers": [
+        "OKCstarters and duration",
+        "Both second-half groups",
+        "Independent fullgame spread and Failure assessment"
+      ],
+      "units": 0,
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "score": null,
+      "grade": "UNGRADED",
+      "failure_score": null,
+      "factors": {
+        "matchup": null,
+        "price": null,
+        "personnel": null,
+        "situation": null,
+        "vsin": 0,
+        "docs": 0,
+        "market": null
+      },
+      "failure_dimensions": {
+        "severity": null,
+        "personnel": null,
+        "variance": null,
+        "price": null,
+        "contradiction": null
+      }
+    }
+  ],
+  "official_units": 0,
+  "docs_status": "FreeNBApage stillJuneFinals; no current relevant selectionverified",
+  "vsin_status": "NBAhub consulted; no current game-specific named selectionverified",
+  "website_published": false,
+  "wagers_placed": false
+}
