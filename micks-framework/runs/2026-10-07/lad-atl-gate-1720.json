@@ -1,0 +1,163 @@
+{
+  "run_date": "2026-10-07",
+  "checked_at_et": "2026-10-07T17:20:00-04:00",
+  "event": "Los Angeles Dodgers at Atlanta Braves",
+  "start_et": "2026-10-07T18:00:00-04:00",
+  "rubric": "micks-110-v2-2026-09-29",
+  "user_threshold_override": {
+    "consider_above": 70,
+    "minimum_integer": 71,
+    "failure_required": 7
+  },
+  "prior_snapshot": {
+    "pick": "Dodgers ML",
+    "score": 64,
+    "failure_score": 5,
+    "grade": "C",
+    "reference": "Circa -145",
+    "disposition": "PASS / LOWER RANK",
+    "official_units": 0
+  },
+  "candidate": {
+    "pick": "Dodgers ML",
+    "public_flag": {
+      "asterisk": true,
+      "market": "moneyline",
+      "crowded_side": "LAD",
+      "bets_percent": 75,
+      "money_percent": null,
+      "replacement": "Atlanta +128 — optional only, not approved"
+    },
+    "factors": {
+      "matchup": {
+        "score": 26,
+        "max": 35,
+        "evidence": "Glasnow whiff/FIP profile and Dodgers lineup depth create the stronger path; Mahle's Atlanta form, splitter and ground-ball plan keep the edge modest."
+      },
+      "price": {
+        "score": 12,
+        "max": 20,
+        "evidence": "Action -143 and Circa -145 are beyond the research comfort zone; no independent fair price establishes an edge and VSiN declines the price."
+      },
+      "personnel": {
+        "score": 13,
+        "max": 15,
+        "evidence": "Glasnow/Mahle and both orders confirmed; Ohtani and Acuna active, but Glasnow's 13-day layoff and ceiling remain material."
+      },
+      "situation": {
+        "score": 7,
+        "max": 10,
+        "evidence": "Dodgers clinch opportunity, Braves elimination game, clean weather; both leverage groups worked Tuesday without confirmed unavailability."
+      },
+      "vsin": {
+        "score": 0,
+        "max": 10,
+        "evidence": "Adam Burke leans Dodgers but explicitly has no bet because of price and Glasnow's layoff."
+      },
+      "docs": {
+        "score": 7,
+        "max": 10,
+        "evidence": "Josh Schonwald selected Dodgers ML at historical -115; current price is about 28-30 cents worse."
+      },
+      "market": {
+        "score": 6,
+        "max": 10,
+        "components": {
+          "reference": 4,
+          "movement": 1,
+          "splits": 1
+        },
+        "evidence": "Action open -140/current -143; Circa -145; 75% LAD tickets and money unavailable."
+      }
+    },
+    "score": 71,
+    "grade": "B-",
+    "failure_dimensions": [
+      {"name": "severity_resilience", "score": 1, "max": 2},
+      {"name": "personnel_resilience", "score": 2, "max": 2},
+      {"name": "variance_script", "score": 1, "max": 2},
+      {"name": "price_protection", "score": 1, "max": 2},
+      {"name": "contradiction_resolution", "score": 1, "max": 2}
+    ],
+    "failure_score": 6,
+    "best_observed": {
+      "action_aggregate": "LAD -143 / ATL +128",
+      "circa": "LAD -145",
+      "betrivers_delaware": null
+    },
+    "research_trigger": "Dodgers -130 or better requires fresh regrade",
+    "no_bet_cutoff": "Worse than -140",
+    "disposition": "PLAY CONSIDERATION / NO BET",
+    "official_units": 0
+  },
+  "alternatives": [
+    {
+      "pick": "Atlanta ML +128",
+      "role": "ranked optional contrarian replacement only",
+      "status": "PASS",
+      "official_units": 0
+    },
+    {
+      "pick": "Tyler Glasnow over 6.5 strikeouts",
+      "reference": "Earlier Circa +110",
+      "status": "UNGRADED / NO BET",
+      "blockers": ["Current executable price unavailable", "Pitch ceiling after September 24 layoff not verified"],
+      "official_units": 0
+    },
+    {
+      "pick": "NRFI",
+      "reference": "Earlier Circa -130",
+      "status": "UNGRADED / NO BET",
+      "blockers": ["Current executable price unavailable", "Glasnow workload uncertainty", "No independent first-inning fair price"],
+      "official_units": 0
+    }
+  ],
+  "verified": {
+    "starters": ["Tyler Glasnow", "Tyler Mahle"],
+    "lineups_confirmed": true,
+    "dodgers_order": ["Mookie Betts", "Freddie Freeman", "Will Smith", "Shohei Ohtani", "Teoscar Hernandez", "Max Muncy", "Enrique Hernandez", "Kyle Tucker", "Andy Pages"],
+    "braves_order": ["Michael Harris II", "Ronald Acuna Jr.", "Matt Olson", "Ozzie Albies", "Drake Baldwin", "Mike Yastrzemski", "Mauricio Dubon", "Austin Riley", "Sean Murphy"],
+    "weather": "About 76 F and mostly sunny at first pitch; no precipitation threat identified",
+    "umpire": "Tripp Gibson projected; Covers 8.70 HP runs/game",
+    "previous_day_bullpen": {
+      "dodgers": ["Tanner Scott 1.0 IP", "Edwin Diaz 1.0 IP"],
+      "braves": ["Dylan Dodd 1.0 IP", "Dylan Lee 1.0 IP", "Brent Suter 1.0 IP", "Raisel Iglesias 1.0 IP"]
+    }
+  },
+  "missing_information": [
+    "Exact BetRivers Delaware offer",
+    "Action money percentage",
+    "Glasnow final pitch ceiling",
+    "Official umpire confirmation",
+    "Current executable Glasnow strikeout and NRFI prices"
+  ],
+  "release_blockers": [
+    "Failure Score 6 below required 7",
+    "Current -143/-145 beyond -140 cutoff",
+    "Exact BetRivers Delaware execution unavailable",
+    "Glasnow workload ceiling unresolved"
+  ],
+  "source_status": {
+    "dropbox_circa": {
+      "path": "/Circa Sports sheets/MLB - 2026-10-7.pdf",
+      "client_modified_utc": "2026-10-07T18:11:11Z",
+      "line": "LAD -145"
+    },
+    "action": {
+      "url": "https://www.actionnetwork.com/mlb/public-betting/",
+      "open": "LAD -140 / ATL +115",
+      "current": "LAD -143 / ATL +128",
+      "bets": "75% LAD / 25% ATL",
+      "money": null
+    },
+    "vsin": "https://vsin.com/mlb/mlb-playoff-picks-today-adam-burkes-best-bets-for-wednesday-october-7/",
+    "docs": "https://www.docsports.com/free-picks/baseball/2026/los-angeles-dodgers-vs-atlanta-braves-prediction-10-7-2026-mlb-picks-best-bets-odds.html",
+    "firecrawl": "HTTP 402 insufficient credits; web fallback used",
+    "betrivers_delaware": "Site Unavailable in direct public browser access"
+  },
+  "actions": {
+    "wager_placed": false,
+    "website_published": false,
+    "third_party_contacted": false
+  }
+}
