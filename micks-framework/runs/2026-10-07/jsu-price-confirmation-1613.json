@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-07",
+  "as_of_et": "2026-10-07 16:13",
+  "event": "Jacksonville State at Kennesaw State",
+  "pick": "Jacksonville State -3",
+  "odds": -109,
+  "source": "User-entered main-line quote following BetRivers Delaware screenshot",
+  "independently_refreshed": false,
+  "quote_is_receipt": false,
+  "scoring_version": "micks-110-v2-2026-09-29",
+  "score": 76,
+  "grade": "B",
+  "score_status": "PROVISIONAL",
+  "failure_score": 6,
+  "price_target": "-3 at -110 or better",
+  "price_target_met": true,
+  "missing_price_blocker_resolved": true,
+  "release_blockers": [
+    "Final material QB/skill role availability",
+    "Independent Failure assessment remains6/10, below7"
+  ],
+  "status": "WATCH",
+  "official_units": 0,
+  "conditional_units": null,
+  "prior_snapshot": "jsu-betrivers-screenshot-1610.json",
+  "opposite_side_recommended": false,
+  "website_published": false,
+  "wager_inferred": false
+}
