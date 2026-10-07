@@ -1,3 +1,9 @@
+## User direction — October 7, 2026
+
+Darren requests that every candidate scoring **above 70/110 (71+ for integer scores)** be considered a play across today's sports slate. Apply this user direction over the legacy 82-point score gate: 82 is not a score-only exclusion under this instruction. This does not make a 71+ row automatically official: independently assess Failure Score (non-NFL minimum7/10), material role/usage, sport-specific confirmation, exact available market and justified cutoff, correlation and units. Incomplete core remains UNGRADED. Preserve the existing factor weights and grade ladder; never inflate a score to reach71.
+
+Use dated Circa sheets from Dropbox and Action Network market numbers when available; distinguish their as-of/reference quotes from a current executable user-book offer. Mark market-specific bets or money concentration >=70% with an asterisk, >=80% as extreme. Retain flagged picks; state whether with/against the crowd and provide a ranked optional replacement only when independently assessed. Hidden handles/totals remain UNKNOWN; never transfer ML splits onto totals. Weight injuries by material verified role/usage rather than player counts. Record all factor evidence, source gaps and release blockers separately.
+
 User-directed method restoration (September 18, 2026): research-readiness.md controls. Use the established sources, scans, guides and 110-point handicap. No new standalone win-probability, numerical EV or model-validation prerequisite for daily picks.
 
 # Micks Picks Candidate Scoring and Premium Writeup Standard
