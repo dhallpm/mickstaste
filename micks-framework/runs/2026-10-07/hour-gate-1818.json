@@ -1,0 +1,112 @@
+{
+  "run_date": "2026-10-07",
+  "gate_et": "18:15",
+  "generated_et": "2026-10-07 18:18",
+  "scoring_version": "micks-110-v2-2026-09-29",
+  "consideration_threshold": 71,
+  "release_failure_minimum": 7,
+  "scope": ["Jacksonville State at Kennesaw State", "Minnesota at Indiana"],
+  "candidates": [
+    {
+      "event": "Jacksonville State at Kennesaw State",
+      "sport": "CFB",
+      "start_et": "19:00",
+      "pick": "Jacksonville State -3",
+      "reference_quote": {
+        "betrivers_de_user_confirmed": "-3 -110",
+        "circa": "JSU -3; ML -145; total 51",
+        "circa_server_modified_utc": "2026-10-07T18:19:12Z"
+      },
+      "factors": {
+        "matchup": {"score": 28, "max": 35},
+        "price": {"score": 17, "max": 20},
+        "personnel": {"score": 12, "max": 15},
+        "situation": {"score": 5, "max": 10},
+        "vsin": {"score": 8, "max": 10, "evidence": "Adam Burke JSU -3"},
+        "docs": {"score": 0, "max": 10, "evidence": "Guy Bruhn Kennesaw +2.5 opposes"},
+        "market": {"score": 6, "max": 10, "components": {"reference": 4, "movement": 0, "splits": 2}}
+      },
+      "score": 76,
+      "grade": "B",
+      "failure_dimensions": {
+        "severity_resilience": 1,
+        "personnel_resilience": 1,
+        "variance_script": 1,
+        "price_protection": 2,
+        "contradiction_resolution": 1
+      },
+      "failure_score": 6,
+      "considered_play": true,
+      "missing_information": [
+        "authoritative final high-usage availability/depth chart",
+        "authentic opening-to-current movement",
+        "refreshed Action split timestamp"
+      ],
+      "release_blockers": ["Failure Score below 7", "final personnel unconfirmed"],
+      "best_number": "-3 -110 or better",
+      "cutoff": "no bet at -3.5",
+      "public_flag": null,
+      "decision": "NO BET",
+      "official_units": 0
+    },
+    {
+      "event": "Minnesota at Indiana",
+      "sport": "NBA preseason",
+      "start_et": "19:00",
+      "pick": "Indiana +3.5 research angle",
+      "reference_quote": {
+        "circa": "MIN -6; MIN ML -190 / IND +165; total 240.5",
+        "circa_server_modified_utc": "2026-10-07T18:19:12Z",
+        "action_published": "IND +3.5 -110 FanDuel",
+        "betrivers_de": null
+      },
+      "factors": {
+        "matchup": {"score": null, "max": 35},
+        "price": {"score": null, "max": 20},
+        "personnel": {"score": null, "max": 15},
+        "situation": {"score": 0, "max": 10},
+        "vsin": {"score": 0, "max": 10},
+        "docs": {"score": 0, "max": 10},
+        "market": {"score": null, "max": 10}
+      },
+      "score": null,
+      "grade": "UNGRADED",
+      "failure_dimensions": {
+        "severity_resilience": null,
+        "personnel_resilience": null,
+        "variance_script": null,
+        "price_protection": null,
+        "contradiction_resolution": null
+      },
+      "failure_score": null,
+      "personnel_update": "Tyrese Haliburton reported 100% healthy with no restrictions; exact minutes and full rotations still unknown",
+      "system_reconciliation": "Action article's stated dog system requires +4 or more; +3.5 does not qualify",
+      "missing_information": [
+        "official minutes/stagger plan",
+        "finalized active rotations",
+        "exact BetRivers Delaware spread and juice",
+        "authentic opening/current movement",
+        "refreshed same-market Action splits"
+      ],
+      "release_blockers": ["incomplete core matchup/personnel/price", "no Failure Score", "no executable BetRivers quote"],
+      "public_flag": {
+        "market": "Minnesota spread only",
+        "bets_pct": 71,
+        "money_pct": 65,
+        "tickets": 853,
+        "asterisk": true,
+        "replacement": "Indiana +3.5 or better, research only"
+      },
+      "best_number": null,
+      "cutoff": null,
+      "decision": "NO BET",
+      "official_units": 0
+    }
+  ],
+  "actions": {
+    "wager_placed": false,
+    "website_published": false,
+    "third_party_contacted": false
+  }
+}
+
