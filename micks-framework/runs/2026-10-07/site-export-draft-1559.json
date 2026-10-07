@@ -1,0 +1,1119 @@
+{
+  "date": "2026-10-07",
+  "research_cutoff_et": "2026-10-07 15:59",
+  "revision": "One decision per event; all retrievable supporting and opposing opinions",
+  "scope": "Reconciles afternoon scan; targeted new source retrieval, not a completed fresh scan of all remaining events",
+  "preserved": [
+    "scan-candidates-1500.json",
+    "cle-final-recheck-1547.json"
+  ],
+  "decisions": [
+    {
+      "event": "CLE at CWS",
+      "id": "cle-ml",
+      "decision": "Cleveland ML only; preserved pregame conditional recommendation",
+      "score": 76,
+      "grade": "B",
+      "failure": 7,
+      "units": 0,
+      "conditional_units": 0.25,
+      "best": "+110 or better",
+      "cutoff": "+100 minimum; no actual offer means no execution release",
+      "writeup": "Cleveland is the single Micks preference for this game, with a small 0.25-unit price-conditional recommendation preserved from the 3:47 p.m. recheck. The thesis is pitching flexibility at a plus-money number, rather than an automatic fade of Chicago's public backing. The official orders and Espino/Newcomb listings were confirmed. Individual October 5 usage showed Newcomb at 40 pitches, while Cleveland's key relief arms had comparatively manageable workloads and both teams rested October 6. This supports availability; it does not prove Chicago's bullpen is exhausted.\n\nTony Sink's Doc's selection supports Cleveland +100. Adam Burke explicitly favors Chicago -121 because Cleveland's offense has struggled and Chicago has managed its matchups effectively. Nick Martin identifies an early pitching advantage but selects three-way first-five Cleveland +134, a different settlement that receives no full-game agreement credit. The Micks preference remains Cleveland because the possible opener/bulk advantage plus price can compensate for a weaker offense; the margin is narrow and bulk deployment remains manager-dependent.\n\nThe cashing path is competitive early pitching followed by clean leverage innings, with enough timely contact to win outright. The failure path is walks from Cantillo, Chicago's superior offensive production, or Venable routing around the vulnerable bulk matchup. Grade B, 76/110; Failure 7/10. Prefer +110; conditional minimum +100. Unknown actual available price or a worse number means no executable release. No F5, total or opposite-side ticket is added.",
+      "status": "CONDITIONAL / EXECUTION UNVERIFIED",
+      "expires": "2026-10-07T16:00:00-04:00"
+    },
+    {
+      "event": "JSU at KSU",
+      "id": "jsu-spread",
+      "decision": "JSU -3 preferred; WATCH",
+      "score": 76,
+      "grade": "B",
+      "failure": 6,
+      "units": 0,
+      "best": "-3 at -110 or better, watch target",
+      "cutoff": "Not finalized; no bet until regraded",
+      "writeup": "Jacksonville State -3 is the single preferred side in this matchup; Kennesaw State is the opposing case, not a second Micks ticket. The clearest mechanism is Creel's dual-threat workload against a defense that has allowed substantial gains even after setting aside the Tennessee mismatch. Burke's VSiN writeup reports Jacksonville State allowing slightly more than five yards per play against its FBS opponents, versus 6.4 for Kennesaw against Georgia State and Arkansas State. That comparison is useful but schedule-sensitive, not a universal opponent-adjusted rating.\n\nBurke selects JSU -3 and supplies his own -4.5 line. That projection remains attributed to him; it is not an invented Micks forecast. Guy Bruhn's Doc's pick is Kennesaw +2.5, and Action's Road ToCFB position also favors the home underdog at +3. The Micks resolution favors JSU's offensive mechanism and defensive comparison over a generic home-underdog case, but the opposing rushing and turnover paths remain meaningful.\n\nA cover requires efficient Creel possessions and enough defensive stops to separate by more than a field goal. Concentrated quarterback rushing, turnovers and a close possession game are the principal failure paths. The key-number requirement is -3 at -110 or better as a watch target; -3.5 needs a new assessment. Score 76/110 B, Failure 6/10. Final high-usage availability and the unresolved resilience assessment keep this WATCH, 0 units. The numerical score alone does not release it.",
+      "status": "WATCH"
+    },
+    {
+      "event": "EDM at ANA",
+      "id": "ana-ml",
+      "decision": "Anaheim ML preferred; WATCH",
+      "score": 71,
+      "grade": "B-",
+      "failure": 7,
+      "units": 0,
+      "proposed_units": 0.25,
+      "best": "+120 preferred",
+      "cutoff": "+115 provisional only; no bet until final regrade",
+      "writeup": "Anaheim moneyline is the single preferred expression for Edmonton at Anaheim. The matchup case combines the reported absence of two important Edmonton forwards with the home team's starting-goalie setup and a plus-money number. Dostal and Levi were confirmed in the earlier goalie scan; final skaters and power-play assignments still need reconciliation. Nick Griffith's Action analysis favors Anaheim +112 and highlights Levi's difficult start, but the extremely small sample cannot establish a permanent goalie disadvantage.\n\nJosh Schonwald's Doc's selection backs Edmonton -121, providing a direct counter rather than missing confirmation. Edmonton's elite remaining offensive talent and power-play ceiling can overwhelm the proposed dog edge. There is no verified current named VSiN selection for this candidate. The independent Micks cashing path is a competitive goaltending performance, manageable penalties and contributions against a depleted opposing rotation. It does not require assuming Edmonton will continue conceding at its early-season rate.\n\nThe failure path is finishing regression in Edmonton's favor, Anaheim generating too few quality chances, or the opposing stars controlling special teams. Reported injuries matter through actual top-six and power-play opportunity, not through a count of unavailable players. Score 71/110 B-minus, Failure 7/10, both provisional pending final roles. Target +120; +115 minimum remains conditional on the final regrade. Units are 0 now, with a proposed 0.25-unit stake only after the remaining gates clear. Griffith's over and point prop are separate, correlated markets and are not extra Micks plays.",
+      "status": "WATCH"
+    },
+    {
+      "event": "PIT at WSH",
+      "id": "wsh-ml",
+      "decision": "PASS on crowded Washington; Pittsburgh not qualified",
+      "score": 75,
+      "grade": "B",
+      "failure": 6,
+      "units": 0,
+      "best": "None released",
+      "cutoff": "No bet",
+      "writeup": "Washington's goaltending baseline and Guy Bruhn's Doc's WSH-160 opinion support the original lean. Pittsburgh's offense, Rust's pending role and incomplete independent matchup evidence remain material. Washington has extreme ticket concentration, with handle unavailable. Under the user's crowded-side instruction this is excluded, and Pittsburgh is not promoted without its own qualified handicap. Failure6 also prevents release. No side is exported as an active pick.",
+      "status": "PASS"
+    },
+    {
+      "event": "NY Liberty at ATL Dream",
+      "id": "atl-ml",
+      "decision": "Atlanta ML preferred; WATCH",
+      "score": 73,
+      "grade": "B-",
+      "failure": 6,
+      "units": 0,
+      "best": "-125 or better watch target",
+      "cutoff": "Not finalized",
+      "writeup": "Atlanta's pressure, paint and transition mechanisms support the preference; high-usage Allisha Gray's absence directly weakens it. Tyler Shoemaker's Action ATLML-122 opinion supports the selected market; Tony Sink's Doc's NY+3.5 opinion is an opposing spread, not an opposite ML confirmation. Replacement minutes and the New York ball-security/three-point counter have not been sufficiently resolved. Failure6 means0u; Liberty is retained only as a countercase.",
+      "status": "WATCH"
+    },
+    {
+      "event": "LAD at ATL Braves",
+      "id": "lad-ml",
+      "decision": "PASS; newly retrieved Doc's opinion insufficient at worse price",
+      "score": 70,
+      "grade": "B-",
+      "failure": 5,
+      "units": 0,
+      "best": "None released",
+      "cutoff": "No bet",
+      "writeup": "Josh Schonwald's Doc's LAD-115 selection is now verified. The fresh Action reference was-150, substantially worse. The updated assessment is matchup26,price13,personnel12,situation7,VSiN0,Docs6,market6=70/110. Confirmed batting orders remove a personnel uncertainty but do not create an advantage. Mahle's current form, Glasnow's layoff and pitching leash remain counters. Failure stays5. No Braves fade is forced, and strikeout/NRFI derivatives remain ungraded until their separate threshold work is complete.",
+      "status": "PASS"
+    },
+    {
+      "event": "TB at NYY",
+      "id": "tb-ml",
+      "decision": "PASS",
+      "score": 65,
+      "grade": "C",
+      "failure": 6,
+      "units": 0,
+      "best": "None released",
+      "cutoff": "No bet",
+      "writeup": "Tampa Bay's dog quote does not compensate for the incomplete final-lineup and independent matchup assessment at a qualifying strength. Guy Bruhn's Doc's NYY-162 selection opposes the original TB lean. Yankees ticket concentration is context only, and55%money is not heavy money backing. No automatic baseball fade or opposite replacement.",
+      "status": "PASS"
+    },
+    {
+      "event": "Jacksonville State at Kennesaw State",
+      "decision": "NO BET — core assessment incomplete",
+      "score": null,
+      "grade": "UNGRADED",
+      "failure": null,
+      "units": 0,
+      "best": "None released",
+      "cutoff": "Not established; no bet until regraded",
+      "writeup": "Jacksonville State -3: Failure6 below7; final personnel and current offer\nKennesaw State +3: Failure6; current+3 price not established; mutually exclusive with JSU",
+      "status": "UNGRADED"
+    },
+    {
+      "event": "NY Liberty at Atlanta Dream",
+      "decision": "NO BET — core assessment incomplete",
+      "score": null,
+      "grade": "UNGRADED",
+      "failure": null,
+      "units": 0,
+      "best": "None released",
+      "cutoff": "Not established; no bet until regraded",
+      "writeup": "Atlanta ML: Failure6 below7; replacement-rotation uncertainty and current price",
+      "status": "UNGRADED"
+    },
+    {
+      "event": "LAD at ATL",
+      "decision": "NO BET — core assessment incomplete",
+      "score": null,
+      "grade": "UNGRADED",
+      "failure": null,
+      "units": 0,
+      "best": "None released",
+      "cutoff": "Not established; no bet until regraded",
+      "writeup": "Dodgers ML: Below71 and incomplete final gates\nGlasnow Over6.5 strikeouts: Final Atlanta K/contact batting order; playoff pitch ceiling/layoff; independent threshold sensitivity\nNRFI: Confirmed first3 hitters; first-inning pitch distribution; no merely generic starter ERA",
+      "status": "UNGRADED"
+    },
+    {
+      "event": "MIL at SD",
+      "decision": "NO BET — core assessment incomplete",
+      "score": null,
+      "grade": "UNGRADED",
+      "failure": null,
+      "units": 0,
+      "best": "None released",
+      "cutoff": "Not established; no bet until regraded",
+      "writeup": "Milwaukee ML: Milwaukee official starter/opener-bulk absent from MLB API; Gasser in Doc's cannot substitute.; Both batting orders and umpire; relief availability Morejon/Miller; core pitcher matchup\nUnder7.5: Starter/bulk identity; exact innings/leash; umpire and lineups; hot Petco weather counter; Doc's Under7 is different threshold",
+      "status": "UNGRADED"
+    },
+    {
+      "event": "COL at WPG",
+      "decision": "NO BET — core assessment incomplete",
+      "score": null,
+      "grade": "UNGRADED",
+      "failure": null,
+      "units": 0,
+      "best": "None released",
+      "cutoff": "Not established; no bet until regraded",
+      "writeup": "Colorado ML: Blackwood likely not confirmed; Skinner unconfirmed; final lines; COL90%tickets extreme; Doc'sCOL-170 supports",
+      "status": "UNGRADED"
+    },
+    {
+      "event": "LVA at GS",
+      "decision": "NO BET — core assessment incomplete",
+      "score": null,
+      "grade": "UNGRADED",
+      "failure": null,
+      "units": 0,
+      "best": "None released",
+      "cutoff": "Not established; no bet until regraded",
+      "writeup": "Golden State ML: Talbot/Evans questionable, Loyd doubtful; actual replacements/minutes vsA'ja; Doc'sGS-1.5 not identical ML",
+      "status": "UNGRADED"
+    },
+    {
+      "event": "NMSU at FIU",
+      "decision": "NO BET — core assessment incomplete",
+      "score": null,
+      "grade": "UNGRADED",
+      "failure": null,
+      "units": 0,
+      "best": "None released",
+      "cutoff": "Not established; no bet until regraded",
+      "writeup": "FIU-6.5: Kohl knee/starter availability; Damante confirmed prior start but final personnel; Miami thunderstorm delays; movement3.5to6.5 price inflation; Doc'sNMSUopposes",
+      "status": "UNGRADED"
+    },
+    {
+      "event": "MIN at IND",
+      "decision": "NO BET — core assessment incomplete",
+      "score": null,
+      "grade": "UNGRADED",
+      "failure": null,
+      "units": 0,
+      "best": "None released",
+      "cutoff": "Not established; no bet until regraded",
+      "writeup": "Sides/totals: Both coaches' starter minutes/second-half rotations; usage and preseason-specific matchups; printed spread/totaljuice missing; NateSilver decade franchise ranks only background",
+      "status": "UNGRADED"
+    },
+    {
+      "event": "ORL at MEM",
+      "decision": "NO BET — core assessment incomplete",
+      "score": null,
+      "grade": "UNGRADED",
+      "failure": null,
+      "units": 0,
+      "best": "None released",
+      "cutoff": "Not established; no bet until regraded",
+      "writeup": "Sides/totals: Both coaches' starter minutes/second-half rotations; usage and preseason-specific matchups; printed spread/totaljuice missing; NateSilver decade franchise ranks only background",
+      "status": "UNGRADED"
+    },
+    {
+      "event": "PHX at CHI",
+      "decision": "NO BET — core assessment incomplete",
+      "score": null,
+      "grade": "UNGRADED",
+      "failure": null,
+      "units": 0,
+      "best": "None released",
+      "cutoff": "Not established; no bet until regraded",
+      "writeup": "Sides/totals: Both coaches' starter minutes/second-half rotations; usage and preseason-specific matchups; printed spread/totaljuice missing; NateSilver decade franchise ranks only background",
+      "status": "UNGRADED"
+    },
+    {
+      "event": "MIL at OKC",
+      "decision": "NO BET — core assessment incomplete",
+      "score": null,
+      "grade": "UNGRADED",
+      "failure": null,
+      "units": 0,
+      "best": "None released",
+      "cutoff": "Not established; no bet until regraded",
+      "writeup": "Sides/totals: Both coaches' starter minutes/second-half rotations; usage and preseason-specific matchups; printed spread/totaljuice missing; NateSilver decade franchise ranks only background",
+      "status": "UNGRADED"
+    },
+    {
+      "event": "GSW at POR",
+      "decision": "NO BET — core assessment incomplete",
+      "score": null,
+      "grade": "UNGRADED",
+      "failure": null,
+      "units": 0,
+      "best": "None released",
+      "cutoff": "Not established; no bet until regraded",
+      "writeup": "Sides/totals: Both coaches' starter minutes/second-half rotations; usage and preseason-specific matchups; printed spread/totaljuice missing; NateSilver decade franchise ranks only background",
+      "status": "UNGRADED"
+    }
+  ],
+  "handicapper_ledger": [
+    {
+      "event": "CLE–CWS",
+      "author": "Tony Sink",
+      "selection": "CLE+100",
+      "publication": "Oct6",
+      "reconciliation": "Burke CWS-121 disagreement"
+    },
+    {
+      "event": "LAD–ATL",
+      "author": "Josh Schonwald",
+      "selection": "LAD-115",
+      "publication": "Oct6",
+      "reconciliation": "Retrieved successfully in rebuild; current-150 substantially worse; PASS"
+    },
+    {
+      "event": "TB–NYY",
+      "author": "Guy Bruhn",
+      "selection": "NYY-162",
+      "publication": "Oct6",
+      "reconciliation": "OpposesTBcandidate; historicalquote"
+    },
+    {
+      "event": "MIL–SD",
+      "author": "Parlay’sPundit",
+      "selection": "SD-138 /Under7",
+      "publication": "Oct6",
+      "reconciliation": "StarterdataGasserandprice stale; reconcileofficialunknownMILstarter"
+    },
+    {
+      "event": "COL–WPG",
+      "author": "Tony Sink",
+      "selection": "COL-170",
+      "publication": "Oct6",
+      "reconciliation": "Goaliesprojected,notconfirmation"
+    },
+    {
+      "event": "PIT–WSH",
+      "author": "Guy Bruhn",
+      "selection": "WSH-160",
+      "publication": "Oct6",
+      "reconciliation": "SupportsWSHbutolderprice"
+    },
+    {
+      "event": "EDM–ANA",
+      "author": "Josh Schonwald",
+      "selection": "EDM-121",
+      "publication": "Oct6",
+      "reconciliation": "OpposesANAML; differentfromOver"
+    },
+    {
+      "event": "JSU–KSU",
+      "author": "Guy Bruhn",
+      "selection": "KSU+2.5",
+      "publication": "Oct6",
+      "reconciliation": "OpposesBurkeJSU-3"
+    },
+    {
+      "event": "NMSU–FIU",
+      "author": "Josh Schonwald",
+      "selection": "NMSU+6.5",
+      "publication": "Oct6",
+      "reconciliation": "OpposesActionJoshuaNunnFIU-6.5"
+    },
+    {
+      "event": "NY–ATL",
+      "author": "Tony Sink",
+      "selection": "NY+3.5",
+      "publication": "Oct5",
+      "reconciliation": "BetterthanCirca+2; differentfromATLML"
+    },
+    {
+      "event": "LVA–GS",
+      "author": "Guy Bruhn",
+      "selection": "GS-1.5",
+      "publication": "Oct5",
+      "reconciliation": "NotidenticaltoGSML"
+    }
+  ],
+  "site_export_draft": [
+    {
+      "Access": "Free",
+      "Section": "Watchlist/Live Only",
+      "Sport": "MLB",
+      "League": "MLB",
+      "Matchup": "CLE at CWS",
+      "Pick": "Cleveland ML only; preserved pregame conditional recommendation",
+      "Line": "+112",
+      "Odds": null,
+      "Grade": "B",
+      "Units": 0,
+      "Status": "DRAFT",
+      "Writeup": "Cleveland is the single Micks preference for this game, with a small 0.25-unit price-conditional recommendation preserved from the 3:47 p.m. recheck. The thesis is pitching flexibility at a plus-money number, rather than an automatic fade of Chicago's public backing. The official orders and Espino/Newcomb listings were confirmed. Individual October 5 usage showed Newcomb at 40 pitches, while Cleveland's key relief arms had comparatively manageable workloads and both teams rested October 6. This supports availability; it does not prove Chicago's bullpen is exhausted.\n\nTony Sink's Doc's selection supports Cleveland +100. Adam Burke explicitly favors Chicago -121 because Cleveland's offense has struggled and Chicago has managed its matchups effectively. Nick Martin identifies an early pitching advantage but selects three-way first-five Cleveland +134, a different settlement that receives no full-game agreement credit. The Micks preference remains Cleveland because the possible opener/bulk advantage plus price can compensate for a weaker offense; the margin is narrow and bulk deployment remains manager-dependent.\n\nThe cashing path is competitive early pitching followed by clean leverage innings, with enough timely contact to win outright. The failure path is walks from Cantillo, Chicago's superior offensive production, or Venable routing around the vulnerable bulk matchup. Grade B, 76/110; Failure 7/10. Prefer +110; conditional minimum +100. Unknown actual available price or a worse number means no executable release. No F5, total or opposite-side ticket is added.",
+      "Full Analysis": {
+        "score": 76,
+        "failure": 7,
+        "original_factors": {
+          "matchup": {
+            "score": 25,
+            "max": 35,
+            "evidence": "Contrarian preference: Cantillo relief form and rested leverage arms can offset Newcomb/Martin; Cleveland's poor series contact and CWS home offense limit the advantage."
+          },
+          "price": {
+            "score": 17,
+            "max": 20,
+            "evidence": "Plus-money benchmark preferable to CWS favorite; +105 opener to +110 Action aggregate has no guaranteed same-book series."
+          },
+          "personnel": {
+            "score": 13,
+            "max": 15,
+            "evidence": "Espino/Newcomb and both orders confirmed in MLB API; Newcomb threw 40 pitches October 5; Martin bulk role reported with substantial layoff risk."
+          },
+          "situation": {
+            "score": 7,
+            "max": 10,
+            "evidence": "Rest day October 6; clear 74F forecast at first pitch, NNE 10mph; wind effect not independently quantified."
+          },
+          "vsin": {
+            "score": 0,
+            "max": 10,
+            "evidence": "Adam Burke CWS -121 opposes; Makinen Cleveland system is conditional, not a second independent analyst."
+          },
+          "docs": {
+            "score": 8,
+            "max": 10,
+            "evidence": "Tony Sink Cleveland +100 supports same ML, at different historical price."
+          },
+          "market": {
+            "score": 6,
+            "max": 10,
+            "evidence": "Reference4/movement0/splits2: genuine dual public/handle concentration on opponent; no sharp inference."
+          }
+        },
+        "decision_status": "CONDITIONAL / EXECUTION UNVERIFIED",
+        "source_audit": "scan-source-audit-1500.md"
+      },
+      "Best Number": "+110 or better",
+      "No-Bet Cutoff": "+100 minimum; no actual offer means no execution release",
+      "Official Bet": false,
+      "active": false,
+      "conditional_units": 0.25,
+      "proposed_units": null,
+      "expires_at": "2026-10-07T16:00:00-04:00"
+    },
+    {
+      "Access": "Free",
+      "Section": "Watchlist/Live Only",
+      "Sport": "UNKNOWN",
+      "League": "UNKNOWN",
+      "Matchup": "JSU at KSU",
+      "Pick": "JSU -3 preferred; WATCH",
+      "Line": "-3 -108",
+      "Odds": null,
+      "Grade": "B",
+      "Units": 0,
+      "Status": "DRAFT",
+      "Writeup": "Jacksonville State -3 is the single preferred side in this matchup; Kennesaw State is the opposing case, not a second Micks ticket. The clearest mechanism is Creel's dual-threat workload against a defense that has allowed substantial gains even after setting aside the Tennessee mismatch. Burke's VSiN writeup reports Jacksonville State allowing slightly more than five yards per play against its FBS opponents, versus 6.4 for Kennesaw against Georgia State and Arkansas State. That comparison is useful but schedule-sensitive, not a universal opponent-adjusted rating.\n\nBurke selects JSU -3 and supplies his own -4.5 line. That projection remains attributed to him; it is not an invented Micks forecast. Guy Bruhn's Doc's pick is Kennesaw +2.5, and Action's Road ToCFB position also favors the home underdog at +3. The Micks resolution favors JSU's offensive mechanism and defensive comparison over a generic home-underdog case, but the opposing rushing and turnover paths remain meaningful.\n\nA cover requires efficient Creel possessions and enough defensive stops to separate by more than a field goal. Concentrated quarterback rushing, turnovers and a close possession game are the principal failure paths. The key-number requirement is -3 at -110 or better as a watch target; -3.5 needs a new assessment. Score 76/110 B, Failure 6/10. Final high-usage availability and the unresolved resilience assessment keep this WATCH, 0 units. The numerical score alone does not release it.",
+      "Full Analysis": {
+        "score": 76,
+        "failure": 6,
+        "original_factors": {
+          "matchup": {
+            "score": 28,
+            "max": 35,
+            "evidence": "Run efficiency and stronger opponent-adjusted defense favor JSU; Creel's heavy rushing role also exposes the offense to turnovers."
+          },
+          "price": {
+            "score": 17,
+            "max": 20,
+            "evidence": "Burke fair -4.5 outside projection; -3 retains key-number protection. Prefer -3 at -110 or better."
+          },
+          "personnel": {
+            "score": 12,
+            "max": 15,
+            "evidence": "Creel central to passing/rushing; KSU two productive backs; final QB/skill availability still needs pregame check."
+          },
+          "situation": {
+            "score": 5,
+            "max": 10,
+            "evidence": "Short regional trip; clear roughly75F calm first-hour forecast; road favorite rematch counter remains."
+          },
+          "vsin": {
+            "score": 8,
+            "max": 10,
+            "evidence": "Adam Burke JSU -3 explicit selection."
+          },
+          "docs": {
+            "score": 0,
+            "max": 10,
+            "evidence": "Guy Bruhn KSU +2.5 opposes; Road ToCFB KSU +3 also opposes and is Action, not Doc's."
+          },
+          "market": {
+            "score": 6,
+            "max": 10,
+            "evidence": "Reference4/movement0/splits2: JSU58% bets66%money, below flag threshold."
+          }
+        },
+        "decision_status": "WATCH",
+        "source_audit": "scan-source-audit-1500.md"
+      },
+      "Best Number": "-3 at -110 or better, watch target",
+      "No-Bet Cutoff": "Not finalized; no bet until regraded",
+      "Official Bet": false,
+      "active": false,
+      "conditional_units": null,
+      "proposed_units": null,
+      "expires_at": null
+    },
+    {
+      "Access": "Free",
+      "Section": "Watchlist/Live Only",
+      "Sport": "NHL",
+      "League": "NHL",
+      "Matchup": "EDM at ANA",
+      "Pick": "Anaheim ML preferred; WATCH",
+      "Line": "+119",
+      "Odds": null,
+      "Grade": "B-",
+      "Units": 0,
+      "Status": "DRAFT",
+      "Writeup": "Anaheim moneyline is the single preferred expression for Edmonton at Anaheim. The matchup case combines the reported absence of two important Edmonton forwards with the home team's starting-goalie setup and a plus-money number. Dostal and Levi were confirmed in the earlier goalie scan; final skaters and power-play assignments still need reconciliation. Nick Griffith's Action analysis favors Anaheim +112 and highlights Levi's difficult start, but the extremely small sample cannot establish a permanent goalie disadvantage.\n\nJosh Schonwald's Doc's selection backs Edmonton -121, providing a direct counter rather than missing confirmation. Edmonton's elite remaining offensive talent and power-play ceiling can overwhelm the proposed dog edge. There is no verified current named VSiN selection for this candidate. The independent Micks cashing path is a competitive goaltending performance, manageable penalties and contributions against a depleted opposing rotation. It does not require assuming Edmonton will continue conceding at its early-season rate.\n\nThe failure path is finishing regression in Edmonton's favor, Anaheim generating too few quality chances, or the opposing stars controlling special teams. Reported injuries matter through actual top-six and power-play opportunity, not through a count of unavailable players. Score 71/110 B-minus, Failure 7/10, both provisional pending final roles. Target +120; +115 minimum remains conditional on the final regrade. Units are 0 now, with a proposed 0.25-unit stake only after the remaining gates clear. Griffith's over and point prop are separate, correlated markets and are not extra Micks plays.",
+      "Full Analysis": {
+        "score": 71,
+        "failure": 7,
+        "original_factors": {
+          "matchup": {
+            "score": 27,
+            "max": 35,
+            "evidence": "Dostal versus Levi and Edmonton top-six absences support the home dog; Edmonton elite first-line/PP talent is strongest counter. Two-game goalie/PP results carry limited weight."
+          },
+          "price": {
+            "score": 17,
+            "max": 20,
+            "evidence": "Circa+119/Action+122 aggregate offer a useful dog price; demand +115 or better pending current roster."
+          },
+          "personnel": {
+            "score": 13,
+            "max": 15,
+            "evidence": "Levi and Dostal confirmed by DFO; Hyman/RNH absences reported, refreshed Edmonton lines and actual PP roles still need final check."
+          },
+          "situation": {
+            "score": 7,
+            "max": 10,
+            "evidence": "Anaheim rested since Sunday; no automatic fade of Edmonton winning record."
+          },
+          "vsin": {
+            "score": 0,
+            "max": 10,
+            "evidence": "No current Oct7 named VSiN opinion established."
+          },
+          "docs": {
+            "score": 0,
+            "max": 10,
+            "evidence": "Josh Schonwald Edmonton -121 opposes same ML; Nick Griffith Action Anaheim+112 supports but earns no VSiN/Doc's points."
+          },
+          "market": {
+            "score": 7,
+            "max": 10,
+            "evidence": "Reference4/movement1/splits2: EDM77%tickets; openerEDM-156 vsaggregate-127 favors ANA context, not demonstrated sharp action."
+          }
+        },
+        "decision_status": "WATCH",
+        "source_audit": "scan-source-audit-1500.md"
+      },
+      "Best Number": "+120 preferred",
+      "No-Bet Cutoff": "+115 provisional only; no bet until final regrade",
+      "Official Bet": false,
+      "active": false,
+      "conditional_units": null,
+      "proposed_units": 0.25,
+      "expires_at": null
+    },
+    {
+      "Access": "Free",
+      "Section": "Passes",
+      "Sport": "NHL",
+      "League": "NHL",
+      "Matchup": "PIT at WSH",
+      "Pick": "PASS on crowded Washington; Pittsburgh not qualified",
+      "Line": "-144 aggregate best; Circa -160 at10:28ET",
+      "Odds": null,
+      "Grade": "B",
+      "Units": 0,
+      "Status": "DRAFT",
+      "Writeup": "Washington's goaltending baseline and Guy Bruhn's Doc's WSH-160 opinion support the original lean. Pittsburgh's offense, Rust's pending role and incomplete independent matchup evidence remain material. Washington has extreme ticket concentration, with handle unavailable. Under the user's crowded-side instruction this is excluded, and Pittsburgh is not promoted without its own qualified handicap. Failure6 also prevents release. No side is exported as an active pick.",
+      "Full Analysis": {
+        "score": 75,
+        "failure": 6,
+        "original_factors": {
+          "matchup": {
+            "score": 26,
+            "max": 35,
+            "evidence": "Thompson's established workload and goaltending baseline support Washington; Pittsburgh offense/Crosby power play remains the primary counter."
+          },
+          "price": {
+            "score": 16,
+            "max": 20,
+            "evidence": "-144 is materially preferable to -160 sheet; crowding does not justify paying any price."
+          },
+          "personnel": {
+            "score": 12,
+            "max": 15,
+            "evidence": "Silovs and Thompson confirmed by DFO citing beat reporters; Rust GTD affects Pittsburgh top-six/PP; final scratches not settled."
+          },
+          "situation": {
+            "score": 7,
+            "max": 10,
+            "evidence": "Home advantage; no evidence sufficient to call Pittsburgh scoring streak an automatic progressive fade."
+          },
+          "vsin": {
+            "score": 0,
+            "max": 10,
+            "evidence": "No current named Oct7 VSiN NHL pick established: zero."
+          },
+          "docs": {
+            "score": 8,
+            "max": 10,
+            "evidence": "Guy Bruhn Washington -160 supports same ML; do not treat older price as current."
+          },
+          "market": {
+            "score": 6,
+            "max": 10,
+            "evidence": "Reference4/movement1/splits1: displayed Washington -171 opener/-144 aggregate current amid85% tickets; cross-book timing not sharp proof."
+          }
+        },
+        "decision_status": "PASS",
+        "source_audit": "scan-source-audit-1500.md"
+      },
+      "Best Number": "None released",
+      "No-Bet Cutoff": "No bet",
+      "Official Bet": false,
+      "active": false,
+      "conditional_units": null,
+      "proposed_units": null,
+      "expires_at": null
+    },
+    {
+      "Access": "Free",
+      "Section": "Watchlist/Live Only",
+      "Sport": "UNKNOWN",
+      "League": "UNKNOWN",
+      "Matchup": "NY Liberty at ATL Dream",
+      "Pick": "Atlanta ML preferred; WATCH",
+      "Line": "-130",
+      "Odds": null,
+      "Grade": "B-",
+      "Units": 0,
+      "Status": "DRAFT",
+      "Writeup": "Atlanta's pressure, paint and transition mechanisms support the preference; high-usage Allisha Gray's absence directly weakens it. Tyler Shoemaker's Action ATLML-122 opinion supports the selected market; Tony Sink's Doc's NY+3.5 opinion is an opposing spread, not an opposite ML confirmation. Replacement minutes and the New York ball-security/three-point counter have not been sufficiently resolved. Failure6 means0u; Liberty is retained only as a countercase.",
+      "Full Analysis": {
+        "score": 73,
+        "failure": 6,
+        "original_factors": {
+          "matchup": {
+            "score": 29,
+            "max": 35,
+            "evidence": "Pressure, paint and transition matchup favors Dream; New York ball security, Jonquel Jones involvement and three-point variance can reverse it."
+          },
+          "price": {
+            "score": 17,
+            "max": 20,
+            "evidence": "ML avoids winning-margin requirement; Shoemaker published -122 and projection Atlanta -4 without Gray, not an independent Micks probability."
+          },
+          "personnel": {
+            "score": 12,
+            "max": 15,
+            "evidence": "High-usage scorer Allisha Gray OUT is material; Bonner replacement reporting differs from RotoWire expected lineup; Sabally absence and NY rotation require confirmation."
+          },
+          "situation": {
+            "score": 9,
+            "max": 10,
+            "evidence": "Home playoff Game2; no generic must-win bonus for either side."
+          },
+          "vsin": {
+            "score": 0,
+            "max": 10,
+            "evidence": "No current named VSiN selection established."
+          },
+          "docs": {
+            "score": 0,
+            "max": 10,
+            "evidence": "Tony Sink Liberty +3.5 opposes spread, not identical ML; current NY+2 is weaker than his +3.5."
+          },
+          "market": {
+            "score": 6,
+            "max": 10,
+            "evidence": "Reference4/movement1/splits1: spread ATL67%tickets below70, money hidden; no ML concentration verified."
+          }
+        },
+        "decision_status": "WATCH",
+        "source_audit": "scan-source-audit-1500.md"
+      },
+      "Best Number": "-125 or better watch target",
+      "No-Bet Cutoff": "Not finalized",
+      "Official Bet": false,
+      "active": false,
+      "conditional_units": null,
+      "proposed_units": null,
+      "expires_at": null
+    },
+    {
+      "Access": "Free",
+      "Section": "Passes",
+      "Sport": "UNKNOWN",
+      "League": "UNKNOWN",
+      "Matchup": "LAD at ATL Braves",
+      "Pick": "PASS; newly retrieved Doc's opinion insufficient at worse price",
+      "Line": "-145",
+      "Odds": null,
+      "Grade": "B-",
+      "Units": 0,
+      "Status": "DRAFT",
+      "Writeup": "Josh Schonwald's Doc's LAD-115 selection is now verified. The fresh Action reference was-150, substantially worse. The updated assessment is matchup26,price13,personnel12,situation7,VSiN0,Docs6,market6=70/110. Confirmed batting orders remove a personnel uncertainty but do not create an advantage. Mahle's current form, Glasnow's layoff and pitching leash remain counters. Failure stays5. No Braves fade is forced, and strikeout/NRFI derivatives remain ungraded until their separate threshold work is complete.",
+      "Full Analysis": {
+        "score": 70,
+        "failure": 5,
+        "original_factors": {
+          "matchup": {
+            "score": 26,
+            "max": 35,
+            "evidence": "Glasnow whiff ability/lineup depth favorable; Mahle splitter and Glasnow layoff cut margin."
+          },
+          "price": {
+            "score": 14,
+            "max": 20,
+            "evidence": "-145 lower than some published prices but no independent fair-price margin established."
+          },
+          "personnel": {
+            "score": 11,
+            "max": 15,
+            "evidence": "Glasnow/Mahle confirmed probable; batting orders and leash not final."
+          },
+          "situation": {
+            "score": 7,
+            "max": 10,
+            "evidence": "Atlanta clear77F calm; LAD closerScott/Diaz19pitches each yesterday."
+          },
+          "vsin": {
+            "score": 0,
+            "max": 10,
+            "evidence": "Burke lean not an explicit wager: no selection points."
+          },
+          "docs": {
+            "score": 0,
+            "max": 10,
+            "evidence": "Article selection not extractable after repeated access errors: unknown, not inferred."
+          },
+          "market": {
+            "score": 6,
+            "max": 10,
+            "evidence": "Reference4/movement1/splits1; LAD77%MLtickets, handles hidden."
+          }
+        },
+        "decision_status": "PASS",
+        "source_audit": "scan-source-audit-1500.md"
+      },
+      "Best Number": "None released",
+      "No-Bet Cutoff": "No bet",
+      "Official Bet": false,
+      "active": false,
+      "conditional_units": null,
+      "proposed_units": null,
+      "expires_at": null
+    },
+    {
+      "Access": "Free",
+      "Section": "Passes",
+      "Sport": "MLB",
+      "League": "MLB",
+      "Matchup": "TB at NYY",
+      "Pick": "PASS",
+      "Line": "+148",
+      "Odds": null,
+      "Grade": "C",
+      "Units": 0,
+      "Status": "DRAFT",
+      "Writeup": "Tampa Bay's dog quote does not compensate for the incomplete final-lineup and independent matchup assessment at a qualifying strength. Guy Bruhn's Doc's NYY-162 selection opposes the original TB lean. Yankees ticket concentration is context only, and55%money is not heavy money backing. No automatic baseball fade or opposite replacement.",
+      "Full Analysis": {
+        "score": 65,
+        "failure": 6,
+        "original_factors": {
+          "matchup": {
+            "score": 25,
+            "max": 35,
+            "evidence": "Martinez reverse-platoon route and Yankees missing Judge support dog; TB low output versus LHP/Fried is strong counter."
+          },
+          "price": {
+            "score": 17,
+            "max": 20,
+            "evidence": "+148 useful but not sufficient to overturn starter counter."
+          },
+          "personnel": {
+            "score": 11,
+            "max": 15,
+            "evidence": "Martinez/Fried probable; final Judge/lineup status not independently finalized."
+          },
+          "situation": {
+            "score": 6,
+            "max": 10,
+            "evidence": "October5 bullpen logs obtained; NY61F8mphS game-hour forecast."
+          },
+          "vsin": {
+            "score": 0,
+            "max": 10,
+            "evidence": "Makinen ratings support dog; no direct Burke wager."
+          },
+          "docs": {
+            "score": 0,
+            "max": 10,
+            "evidence": "Guy Bruhn NYY-162 opposes."
+          },
+          "market": {
+            "score": 6,
+            "max": 10,
+            "evidence": "Reference4/movement1/splits1; NYY71%bets55%money = public-only, not dual concentration."
+          }
+        },
+        "decision_status": "PASS",
+        "source_audit": "scan-source-audit-1500.md"
+      },
+      "Best Number": "None released",
+      "No-Bet Cutoff": "No bet",
+      "Official Bet": false,
+      "active": false,
+      "conditional_units": null,
+      "proposed_units": null,
+      "expires_at": null
+    },
+    {
+      "Access": "Free",
+      "Section": "Passes",
+      "Sport": "CFB",
+      "League": "CFB",
+      "Matchup": "Jacksonville State at Kennesaw State",
+      "Pick": "NO BET — core assessment incomplete",
+      "Line": null,
+      "Odds": null,
+      "Grade": "UNGRADED",
+      "Units": 0,
+      "Status": "DRAFT",
+      "Writeup": "Jacksonville State -3: Failure6 below7; final personnel and current offer\nKennesaw State +3: Failure6; current+3 price not established; mutually exclusive with JSU",
+      "Full Analysis": {
+        "score": null,
+        "failure": null,
+        "original_factors": null,
+        "decision_status": "UNGRADED",
+        "source_audit": "scan-source-audit-1500.md"
+      },
+      "Best Number": "None released",
+      "No-Bet Cutoff": "Not established; no bet until regraded",
+      "Official Bet": false,
+      "active": false,
+      "conditional_units": null,
+      "proposed_units": null,
+      "expires_at": null
+    },
+    {
+      "Access": "Free",
+      "Section": "Passes",
+      "Sport": "WNBA",
+      "League": "WNBA",
+      "Matchup": "NY Liberty at Atlanta Dream",
+      "Pick": "NO BET — core assessment incomplete",
+      "Line": null,
+      "Odds": null,
+      "Grade": "UNGRADED",
+      "Units": 0,
+      "Status": "DRAFT",
+      "Writeup": "Atlanta ML: Failure6 below7; replacement-rotation uncertainty and current price",
+      "Full Analysis": {
+        "score": null,
+        "failure": null,
+        "original_factors": null,
+        "decision_status": "UNGRADED",
+        "source_audit": "scan-source-audit-1500.md"
+      },
+      "Best Number": "None released",
+      "No-Bet Cutoff": "Not established; no bet until regraded",
+      "Official Bet": false,
+      "active": false,
+      "conditional_units": null,
+      "proposed_units": null,
+      "expires_at": null
+    },
+    {
+      "Access": "Free",
+      "Section": "Passes",
+      "Sport": "MLB",
+      "League": "MLB",
+      "Matchup": "LAD at ATL",
+      "Pick": "NO BET — core assessment incomplete",
+      "Line": null,
+      "Odds": null,
+      "Grade": "UNGRADED",
+      "Units": 0,
+      "Status": "DRAFT",
+      "Writeup": "Dodgers ML: Below71 and incomplete final gates\nGlasnow Over6.5 strikeouts: Final Atlanta K/contact batting order; playoff pitch ceiling/layoff; independent threshold sensitivity\nNRFI: Confirmed first3 hitters; first-inning pitch distribution; no merely generic starter ERA",
+      "Full Analysis": {
+        "score": null,
+        "failure": null,
+        "original_factors": null,
+        "decision_status": "UNGRADED",
+        "source_audit": "scan-source-audit-1500.md"
+      },
+      "Best Number": "None released",
+      "No-Bet Cutoff": "Not established; no bet until regraded",
+      "Official Bet": false,
+      "active": false,
+      "conditional_units": null,
+      "proposed_units": null,
+      "expires_at": null
+    },
+    {
+      "Access": "Free",
+      "Section": "Passes",
+      "Sport": "MLB",
+      "League": "MLB",
+      "Matchup": "MIL at SD",
+      "Pick": "NO BET — core assessment incomplete",
+      "Line": null,
+      "Odds": null,
+      "Grade": "UNGRADED",
+      "Units": 0,
+      "Status": "DRAFT",
+      "Writeup": "Milwaukee ML: Milwaukee official starter/opener-bulk absent from MLB API; Gasser in Doc's cannot substitute.; Both batting orders and umpire; relief availability Morejon/Miller; core pitcher matchup\nUnder7.5: Starter/bulk identity; exact innings/leash; umpire and lineups; hot Petco weather counter; Doc's Under7 is different threshold",
+      "Full Analysis": {
+        "score": null,
+        "failure": null,
+        "original_factors": null,
+        "decision_status": "UNGRADED",
+        "source_audit": "scan-source-audit-1500.md"
+      },
+      "Best Number": "None released",
+      "No-Bet Cutoff": "Not established; no bet until regraded",
+      "Official Bet": false,
+      "active": false,
+      "conditional_units": null,
+      "proposed_units": null,
+      "expires_at": null
+    },
+    {
+      "Access": "Free",
+      "Section": "Passes",
+      "Sport": "NHL",
+      "League": "NHL",
+      "Matchup": "COL at WPG",
+      "Pick": "NO BET — core assessment incomplete",
+      "Line": null,
+      "Odds": null,
+      "Grade": "UNGRADED",
+      "Units": 0,
+      "Status": "DRAFT",
+      "Writeup": "Colorado ML: Blackwood likely not confirmed; Skinner unconfirmed; final lines; COL90%tickets extreme; Doc'sCOL-170 supports",
+      "Full Analysis": {
+        "score": null,
+        "failure": null,
+        "original_factors": null,
+        "decision_status": "UNGRADED",
+        "source_audit": "scan-source-audit-1500.md"
+      },
+      "Best Number": "None released",
+      "No-Bet Cutoff": "Not established; no bet until regraded",
+      "Official Bet": false,
+      "active": false,
+      "conditional_units": null,
+      "proposed_units": null,
+      "expires_at": null
+    },
+    {
+      "Access": "Free",
+      "Section": "Passes",
+      "Sport": "WNBA",
+      "League": "WNBA",
+      "Matchup": "LVA at GS",
+      "Pick": "NO BET — core assessment incomplete",
+      "Line": null,
+      "Odds": null,
+      "Grade": "UNGRADED",
+      "Units": 0,
+      "Status": "DRAFT",
+      "Writeup": "Golden State ML: Talbot/Evans questionable, Loyd doubtful; actual replacements/minutes vsA'ja; Doc'sGS-1.5 not identical ML",
+      "Full Analysis": {
+        "score": null,
+        "failure": null,
+        "original_factors": null,
+        "decision_status": "UNGRADED",
+        "source_audit": "scan-source-audit-1500.md"
+      },
+      "Best Number": "None released",
+      "No-Bet Cutoff": "Not established; no bet until regraded",
+      "Official Bet": false,
+      "active": false,
+      "conditional_units": null,
+      "proposed_units": null,
+      "expires_at": null
+    },
+    {
+      "Access": "Free",
+      "Section": "Passes",
+      "Sport": "CFB",
+      "League": "CFB",
+      "Matchup": "NMSU at FIU",
+      "Pick": "NO BET — core assessment incomplete",
+      "Line": null,
+      "Odds": null,
+      "Grade": "UNGRADED",
+      "Units": 0,
+      "Status": "DRAFT",
+      "Writeup": "FIU-6.5: Kohl knee/starter availability; Damante confirmed prior start but final personnel; Miami thunderstorm delays; movement3.5to6.5 price inflation; Doc'sNMSUopposes",
+      "Full Analysis": {
+        "score": null,
+        "failure": null,
+        "original_factors": null,
+        "decision_status": "UNGRADED",
+        "source_audit": "scan-source-audit-1500.md"
+      },
+      "Best Number": "None released",
+      "No-Bet Cutoff": "Not established; no bet until regraded",
+      "Official Bet": false,
+      "active": false,
+      "conditional_units": null,
+      "proposed_units": null,
+      "expires_at": null
+    },
+    {
+      "Access": "Free",
+      "Section": "Passes",
+      "Sport": "NBA preseason",
+      "League": "NBA preseason",
+      "Matchup": "MIN at IND",
+      "Pick": "NO BET — core assessment incomplete",
+      "Line": null,
+      "Odds": null,
+      "Grade": "UNGRADED",
+      "Units": 0,
+      "Status": "DRAFT",
+      "Writeup": "Sides/totals: Both coaches' starter minutes/second-half rotations; usage and preseason-specific matchups; printed spread/totaljuice missing; NateSilver decade franchise ranks only background",
+      "Full Analysis": {
+        "score": null,
+        "failure": null,
+        "original_factors": null,
+        "decision_status": "UNGRADED",
+        "source_audit": "scan-source-audit-1500.md"
+      },
+      "Best Number": "None released",
+      "No-Bet Cutoff": "Not established; no bet until regraded",
+      "Official Bet": false,
+      "active": false,
+      "conditional_units": null,
+      "proposed_units": null,
+      "expires_at": null
+    },
+    {
+      "Access": "Free",
+      "Section": "Passes",
+      "Sport": "NBA preseason",
+      "League": "NBA preseason",
+      "Matchup": "ORL at MEM",
+      "Pick": "NO BET — core assessment incomplete",
+      "Line": null,
+      "Odds": null,
+      "Grade": "UNGRADED",
+      "Units": 0,
+      "Status": "DRAFT",
+      "Writeup": "Sides/totals: Both coaches' starter minutes/second-half rotations; usage and preseason-specific matchups; printed spread/totaljuice missing; NateSilver decade franchise ranks only background",
+      "Full Analysis": {
+        "score": null,
+        "failure": null,
+        "original_factors": null,
+        "decision_status": "UNGRADED",
+        "source_audit": "scan-source-audit-1500.md"
+      },
+      "Best Number": "None released",
+      "No-Bet Cutoff": "Not established; no bet until regraded",
+      "Official Bet": false,
+      "active": false,
+      "conditional_units": null,
+      "proposed_units": null,
+      "expires_at": null
+    },
+    {
+      "Access": "Free",
+      "Section": "Passes",
+      "Sport": "NBA preseason",
+      "League": "NBA preseason",
+      "Matchup": "PHX at CHI",
+      "Pick": "NO BET — core assessment incomplete",
+      "Line": null,
+      "Odds": null,
+      "Grade": "UNGRADED",
+      "Units": 0,
+      "Status": "DRAFT",
+      "Writeup": "Sides/totals: Both coaches' starter minutes/second-half rotations; usage and preseason-specific matchups; printed spread/totaljuice missing; NateSilver decade franchise ranks only background",
+      "Full Analysis": {
+        "score": null,
+        "failure": null,
+        "original_factors": null,
+        "decision_status": "UNGRADED",
+        "source_audit": "scan-source-audit-1500.md"
+      },
+      "Best Number": "None released",
+      "No-Bet Cutoff": "Not established; no bet until regraded",
+      "Official Bet": false,
+      "active": false,
+      "conditional_units": null,
+      "proposed_units": null,
+      "expires_at": null
+    },
+    {
+      "Access": "Free",
+      "Section": "Passes",
+      "Sport": "NBA preseason",
+      "League": "NBA preseason",
+      "Matchup": "MIL at OKC",
+      "Pick": "NO BET — core assessment incomplete",
+      "Line": null,
+      "Odds": null,
+      "Grade": "UNGRADED",
+      "Units": 0,
+      "Status": "DRAFT",
+      "Writeup": "Sides/totals: Both coaches' starter minutes/second-half rotations; usage and preseason-specific matchups; printed spread/totaljuice missing; NateSilver decade franchise ranks only background",
+      "Full Analysis": {
+        "score": null,
+        "failure": null,
+        "original_factors": null,
+        "decision_status": "UNGRADED",
+        "source_audit": "scan-source-audit-1500.md"
+      },
+      "Best Number": "None released",
+      "No-Bet Cutoff": "Not established; no bet until regraded",
+      "Official Bet": false,
+      "active": false,
+      "conditional_units": null,
+      "proposed_units": null,
+      "expires_at": null
+    },
+    {
+      "Access": "Free",
+      "Section": "Passes",
+      "Sport": "NBA preseason",
+      "League": "NBA preseason",
+      "Matchup": "GSW at POR",
+      "Pick": "NO BET — core assessment incomplete",
+      "Line": null,
+      "Odds": null,
+      "Grade": "UNGRADED",
+      "Units": 0,
+      "Status": "DRAFT",
+      "Writeup": "Sides/totals: Both coaches' starter minutes/second-half rotations; usage and preseason-specific matchups; printed spread/totaljuice missing; NateSilver decade franchise ranks only background",
+      "Full Analysis": {
+        "score": null,
+        "failure": null,
+        "original_factors": null,
+        "decision_status": "UNGRADED",
+        "source_audit": "scan-source-audit-1500.md"
+      },
+      "Best Number": "None released",
+      "No-Bet Cutoff": "Not established; no bet until regraded",
+      "Official Bet": false,
+      "active": false,
+      "conditional_units": null,
+      "proposed_units": null,
+      "expires_at": null
+    }
+  ],
+  "official_exposure_units": 0,
+  "active_import_payload": [],
+  "website_published": false,
+  "wagers_placed": false
+}
