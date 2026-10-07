@@ -1,0 +1,110 @@
+{
+  "run_date": "2026-10-07",
+  "gate_et": "19:15",
+  "generated_et": "2026-10-07 19:18",
+  "scoring_version": "micks-110-v2-2026-09-29",
+  "consideration_threshold": 71,
+  "release_failure_minimum": 7,
+  "candidates": [
+    {
+      "event": "Tampa Bay Rays at New York Yankees",
+      "sport": "MLB",
+      "start_et": "20:00",
+      "pick": "Tampa Bay ML",
+      "reference_quote": {
+        "circa": "+148",
+        "action_best": "+142",
+        "betrivers_de": null,
+        "circa_total": "7 (Over -120 / Under even)",
+        "circa_f5": "TB +150 / NYY -170; total 4 Over even / Under -120"
+      },
+      "confirmed": {
+        "starters": "Nick Martinez vs Max Fried",
+        "orders": true,
+        "judge_alds_roster": false,
+        "umpire": "Dan Bellino",
+        "weather": "clear about 60-63F; minimal rain; modest cross/out-to-left wind"
+      },
+      "factors": {
+        "matchup": {"score": 26, "max": 35},
+        "price": {"score": 18, "max": 20},
+        "personnel": {"score": 14, "max": 15},
+        "situation": {"score": 8, "max": 10},
+        "vsin": {"score": 0, "max": 10},
+        "docs": {"score": 0, "max": 10, "evidence": "Guy Bruhn Yankees -162 opposes"},
+        "market": {"score": 8, "max": 10, "components": {"reference": 5, "movement": 1, "splits": 2}}
+      },
+      "score": 74,
+      "grade": "B",
+      "failure_dimensions": {
+        "severity_resilience": 1,
+        "personnel_resilience": 2,
+        "variance_script": 1,
+        "price_protection": 2,
+        "contradiction_resolution": 1
+      },
+      "failure_score": 7,
+      "action_moneyline": {
+        "open": "TB +135 / NYY -160",
+        "current": "TB +142 / NYY -162",
+        "tb_bets_pct": 31,
+        "tb_money_pct": 49,
+        "bets": 9340,
+        "public_flag": null
+      },
+      "best_number": "+145 or better",
+      "cutoff": "pass below +135",
+      "release_blockers": ["exact executable BetRivers Delaware price unavailable"],
+      "decision": "NO BET",
+      "official_units": 0
+    },
+    {
+      "event": "Orlando Magic at Memphis Grizzlies",
+      "sport": "NBA preseason",
+      "start_et": "20:00",
+      "pick": null,
+      "reference_quote": {"circa": "ORL -2.5; ORL ML -135 / MEM +115; total 234.5", "betrivers_de": null},
+      "factors": {"matchup": null, "price": null, "personnel": null, "situation": 0, "vsin": 0, "docs": 0, "market": 0},
+      "score": null,
+      "grade": "UNGRADED",
+      "failure_score": null,
+      "public_flag": null,
+      "missing_information": ["final active lists/starters", "both minutes and second-half rotations", "execution price", "movement and splits"],
+      "decision": "NO BET",
+      "official_units": 0
+    },
+    {
+      "event": "Phoenix Suns at Chicago Bulls",
+      "sport": "NBA preseason",
+      "start_et": "20:00",
+      "pick": "Chicago ML research angle",
+      "reference_quote": {"circa": "PHX -2.5; PHX ML -135 / CHI +115; total 229.5", "action_article": "CHI ML +114", "betrivers_de": null},
+      "factors": {"matchup": null, "price": null, "personnel": null, "situation": 0, "vsin": 0, "docs": 0, "market": null},
+      "score": null,
+      "grade": "UNGRADED",
+      "failure_score": null,
+      "public_flag": {"market": "Phoenix spread only", "bets_pct": 74, "money_pct": 67, "asterisk": true, "replacement": "Chicago ML +115 research only"},
+      "missing_information": ["final center availability", "starter minutes and second-half rotations", "execution price", "authentic movement"],
+      "decision": "NO BET",
+      "official_units": 0
+    },
+    {
+      "event": "Milwaukee Bucks at Oklahoma City Thunder",
+      "sport": "NBA preseason",
+      "start_et": "20:00",
+      "pick": null,
+      "reference_quote": {"circa": "OKC -15; OKC ML -670 / MIL +500; total 218.5", "betrivers_de": null},
+      "factors": {"matchup": null, "price": null, "personnel": null, "situation": 0, "vsin": 0, "docs": 0, "market": 0},
+      "score": null,
+      "grade": "UNGRADED",
+      "failure_score": null,
+      "public_flag": null,
+      "missing_information": ["official actives/starters", "both rotation duration plans", "execution price", "authentic movement and splits"],
+      "decision": "NO BET",
+      "official_units": 0
+    }
+  ],
+  "actions": {"wager_placed": false, "website_published": false, "third_party_contacted": false},
+  "firecrawl": {"attempted": true, "status": "HTTP 402 insufficient credits"}
+}
+
