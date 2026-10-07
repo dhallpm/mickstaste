@@ -1,0 +1,117 @@
+{
+  "date": "2026-10-07",
+  "source": "User screenshot IMG_1777.png",
+  "displayed_time": "16:10",
+  "book": "BetRivers Delaware",
+  "event": "Jacksonville State at Kennesaw State",
+  "date_inferred_from_session": true,
+  "quote_type": "Displayed offer; not a wager receipt; not independently live refreshed",
+  "quotes": [
+    {
+      "jsu_line": 3,
+      "jsu_odds": -225,
+      "ksu_line": -3,
+      "ksu_odds": 165
+    },
+    {
+      "jsu_line": 2.5,
+      "jsu_odds": -190,
+      "ksu_line": -2.5,
+      "ksu_odds": 145
+    },
+    {
+      "jsu_line": 2,
+      "jsu_odds": -182,
+      "ksu_line": -2,
+      "ksu_odds": 143
+    },
+    {
+      "jsu_line": 1.5,
+      "jsu_odds": -167,
+      "ksu_line": -1.5,
+      "ksu_odds": 132
+    },
+    {
+      "jsu_line": 1,
+      "jsu_odds": -162,
+      "ksu_line": -1,
+      "ksu_odds": 128
+    },
+    {
+      "jsu_line": 0.5,
+      "jsu_odds": -150,
+      "ksu_line": -0.5,
+      "ksu_odds": 118
+    },
+    {
+      "jsu_line": 0,
+      "jsu_odds": -150,
+      "ksu_line": 0,
+      "ksu_odds": 118
+    },
+    {
+      "jsu_line": -0.5,
+      "jsu_odds": -150,
+      "ksu_line": 0.5,
+      "ksu_odds": 118
+    },
+    {
+      "jsu_line": -1,
+      "jsu_odds": -143,
+      "ksu_line": 1,
+      "ksu_odds": 112
+    },
+    {
+      "jsu_line": -1.5,
+      "jsu_odds": -134,
+      "ksu_line": 1.5,
+      "ksu_odds": 105
+    },
+    {
+      "jsu_line": -2,
+      "jsu_odds": -129,
+      "ksu_line": 2,
+      "ksu_odds": 102
+    },
+    {
+      "jsu_line": -2.5,
+      "jsu_odds": -122,
+      "ksu_line": 2.5,
+      "ksu_odds": -104
+    },
+    {
+      "jsu_line": -3.5,
+      "jsu_odds": 102,
+      "ksu_line": 3.5,
+      "ksu_odds": -130
+    },
+    {
+      "jsu_line": -4,
+      "jsu_odds": 108,
+      "ksu_line": 4,
+      "ksu_odds": -137
+    }
+  ],
+  "jsu_minus3_quote": null,
+  "assessment": {
+    "preferred_side": "Jacksonville State only; Kennesaw quotes remain countercase/alternatives audit",
+    "existing_minus3_score": 76,
+    "existing_failure": 6,
+    "score_status": "Original -3 provisional; alternate thresholds require separate price regrade",
+    "official_units": 0,
+    "status": "WATCH",
+    "remaining_blockers": [
+      "Final material QB/skill availability",
+      "Failure6 below7",
+      "Exact -3 offer not visible, or independent alternate price assessment needed"
+    ],
+    "price_notes": [
+      "JSU-2.5-122 wins if JSU wins by3; breakeven54.95% without push",
+      "JSU-3.5+102 loses if JSU wins by3; breakeven49.50% without push",
+      "Neither breakeven is a projected win probability",
+      "Do not copy a -3 grade onto -2.5/-3.5 or infer missing -3 price"
+    ]
+  },
+  "website_published": false,
+  "wagers_placed": false
+}
