@@ -1,3 +1,9 @@
+## User direction — October 7, 2026, report and export correction
+
+Present one final Micks side/market recommendation or PASS per event; never list mutually exclusive handicapper angles as two card picks. Preserve opposing candidates in the research audit/countercase only. Include every retrievable relevant named handicapper selection and writeup from the registered website scan paths, with author, date, exact market, price, rationale, agreement/disagreement and the Micks resolution. Do not claim inaccessible paid/video/model selections were read. Same-family repetitions are not independent confirmations; derivative opinions do not become full-game agreement.
+
+The crowd asterisk marks the heavily backed side/market, not the opposing contrarian candidate. Record bets/money separately; missing handle is UNKNOWN. User does not want crowded-side selections on the ticket and wants the opposing angle researched; never manufacture an opposite play. In baseball, public concentration alone is not a handicapping edge. Prepare site export writeups with one conclusion, substantive matchup rationale, strongest counter, score, Failure, units, Best Number and cutoff. Preparation alone does not authorize active publication. Preserve historical scorecards.
+
 ## User direction — October 7, 2026
 
 Darren requests that every candidate scoring **above 70/110 (71+ for integer scores)** be considered a play across today's sports slate. Apply this user direction over the legacy 82-point score gate: 82 is not a score-only exclusion under this instruction. This does not make a 71+ row automatically official: independently assess Failure Score (non-NFL minimum7/10), material role/usage, sport-specific confirmation, exact available market and justified cutoff, correlation and units. Incomplete core remains UNGRADED. Preserve the existing factor weights and grade ladder; never inflate a score to reach71.
