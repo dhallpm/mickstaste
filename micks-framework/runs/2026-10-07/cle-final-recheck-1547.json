@@ -1,0 +1,164 @@
+{
+  "date": "2026-10-07",
+  "as_of_et": "2026-10-07 15:47",
+  "scope": "CLE at CWS final pregame recheck",
+  "preserves_snapshot": "scan-candidates-1500.json",
+  "threshold": {
+    "minimum_considered": 71,
+    "old82_not_used_as_consideration_blocker": true,
+    "failure_release_minimum": 7,
+    "other_sport_and_execution_gates_retained": true
+  },
+  "candidates": [
+    {
+      "id": "cle-ml",
+      "sport": "MLB",
+      "event": "CLE at CWS",
+      "start_et": "16:00",
+      "pick": "Cleveland ML",
+      "reference_quote": {
+        "source": "Action Network public MLB moneyline table",
+        "line": "+112",
+        "retrieved_et": "2026-10-07 15:47",
+        "named_sportsbook": null,
+        "executable_betrivers_de": false,
+        "circa_prior": {
+          "line": "+112",
+          "printed_et": "2026-10-07 14:09"
+        }
+      },
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "user_threshold_override": {
+        "consider_above": 70,
+        "minimum_integer": 71,
+        "date": "2026-10-07"
+      },
+      "factors": {
+        "matchup": {
+          "score": 25,
+          "max": 35,
+          "evidence": "Contrarian preference: Cantillo relief form and rested leverage arms can offset Newcomb/Martin; Cleveland's poor series contact and CWS home offense limit the advantage."
+        },
+        "price": {
+          "score": 17,
+          "max": 20,
+          "evidence": "Fresh Action aggregate +112 matches prior Circa +112. Preferred +110; conditional recommendation requires +100 or better. No same-book movement series or independently calibrated fair probability established."
+        },
+        "personnel": {
+          "score": 13,
+          "max": 15,
+          "evidence": "Espino/Newcomb and both orders confirmed in MLB API; Newcomb threw 40 pitches October 5; Martin bulk role reported with substantial layoff risk."
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Rest day October 6; clear 74F forecast at first pitch, NNE 10mph; wind effect not independently quantified."
+        },
+        "vsin": {
+          "score": 0,
+          "max": 10,
+          "evidence": "Adam Burke CWS -121 opposes; Makinen Cleveland system is conditional, not a second independent analyst."
+        },
+        "docs": {
+          "score": 8,
+          "max": 10,
+          "evidence": "Tony Sink Cleveland +100 supports same ML, at different historical price."
+        },
+        "market": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Reference4/movement0/splits2: fresh CWS 77% bets/71% money, 25,238 tickets. CLE23%/29%. Opposing concentration supports contrarian notation, not proof of sharp action."
+        }
+      },
+      "score": 76,
+      "failure_dimensions": [
+        {
+          "name": "severity_resilience",
+          "score": 1,
+          "max": 2
+        },
+        {
+          "name": "personnel_resilience",
+          "score": 2,
+          "max": 2
+        },
+        {
+          "name": "variance_script",
+          "score": 1,
+          "max": 2
+        },
+        {
+          "name": "price_protection",
+          "score": 2,
+          "max": 2
+        },
+        {
+          "name": "contradiction_resolution",
+          "score": 1,
+          "max": 2
+        }
+      ],
+      "failure_score": 7,
+      "missing_information": [
+        "MLB command/velocity update; Tichenor umpire profile; fresh sportsbook quote"
+      ],
+      "release_blockers": [
+        "Exact available sportsbook quote at +100 or better remains unverified"
+      ],
+      "public_flag": {
+        "market": "moneyline",
+        "crowded_side": "CWS",
+        "bets": 77,
+        "money": 71,
+        "relation": "CONTRARIAN",
+        "replacement": "Keep CLE; do not automatically reverse to CWS"
+      },
+      "conditional_price_target": [
+        "+110 preferred",
+        "+100 minimum"
+      ],
+      "no_bet_cutoff": "Below +100: NO BET. Unknown actual available quote: no executable release.",
+      "official_units": 0,
+      "disposition": "CONDITIONAL RECOMMENDATION / EXECUTION UNVERIFIED",
+      "grade": "B",
+      "known_subtotal": 76,
+      "considered_play": true,
+      "failure_notes": [
+        "Strong opponent/bulk or shot-variance counter still material",
+        "Known roles support cashing path",
+        "Narrow scoring/turnover/finishing script remains",
+        "Key number/plus price protects edge",
+        "Outside opposition remains, partly addressed by matchup"
+      ],
+      "conditional_recommendation_units": 0.25
+    }
+  ],
+  "new_evidence": {
+    "status": "Pre-Game; 16:00 ET scheduled",
+    "starters": "Daniel Espino / Sean Newcomb",
+    "batting_orders": "Both reverified unchanged in official MLB game849833 boxscore",
+    "home_plate_umpire": "Todd Tichenor",
+    "action_ml": {
+      "cle": 112,
+      "cws": -120,
+      "cle_bets": 23,
+      "cws_bets": 77,
+      "cle_money": 29,
+      "cws_money": 71,
+      "tickets": 25238
+    }
+  },
+  "official_exposure_units": 0,
+  "conditional_exposure_units": 0.25,
+  "wagers_placed": false,
+  "website_publication": false,
+  "sources": [
+    "https://www.actionnetwork.com/mlb/public-betting",
+    "https://statsapi.mlb.com/api/v1/game/849833/boxscore"
+  ],
+  "limitations": [
+    "Action best-price aggregate is not a verified BetRivers Delaware executable quote",
+    "VSiN and Doc's opinions carried from earlier October7 verified source audit; no new successful VSiN refresh",
+    "No unsupported score boost from confirming unchanged evidence"
+  ]
+}
