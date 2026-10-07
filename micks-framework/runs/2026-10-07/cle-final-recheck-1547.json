@@ -111,7 +111,10 @@
         "bets": 77,
         "money": 71,
         "relation": "CONTRARIAN",
-        "replacement": "Keep CLE; do not automatically reverse to CWS"
+        "replacement": "Keep CLE; do not automatically reverse to CWS",
+        "asterisk_applies_to": "CWS",
+        "candidate_asterisk": false,
+        "notation_rule": "Mark the crowded side, not the opposing contrarian candidate"
       },
       "conditional_price_target": [
         "+110 preferred",
@@ -160,5 +163,6 @@
     "Action best-price aggregate is not a verified BetRivers Delaware executable quote",
     "VSiN and Doc's opinions carried from earlier October7 verified source audit; no new successful VSiN refresh",
     "No unsupported score boost from confirming unchanged evidence"
-  ]
+  ],
+  "notation_correction_et": "2026-10-07 15:50"
 }
