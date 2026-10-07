@@ -5,15 +5,12 @@ Research reconciliation cutoff3:59p.m.ET. This replaces the misleading front-pag
 | Event | Micks conclusion | Score / grade | Failure | Units |
 |---|---|---|---|---|
 | CLE at CWS | Cleveland ML only; preserved pregame conditional recommendation | 76 / B | 7 | 0.25 conditional |
-| JSU at KSU | JSU -3 preferred; WATCH | 76 / B | 6 | 0 |
+| Jacksonville State at Kennesaw State | JSU -3 preferred; WATCH | 76 / B | 6 | 0 |
 | EDM at ANA | Anaheim ML preferred; WATCH | 71 / B- | 7 | 0 now;0.25 proposed |
 | PIT at WSH | PASS on crowded Washington; Pittsburgh not qualified | 75 / B | 6 | 0 |
-| NY Liberty at ATL Dream | Atlanta ML preferred; WATCH | 73 / B- | 6 | 0 |
-| LAD at ATL Braves | PASS; newly retrieved Doc's opinion insufficient at worse price | 70 / B- | 5 | 0 |
+| NY Liberty at Atlanta Dream | Atlanta ML preferred; WATCH | 73 / B- | 6 | 0 |
+| LAD at ATL | PASS; newly retrieved Doc's opinion insufficient at worse price | 70 / B- | 5 | 0 |
 | TB at NYY | PASS | 65 / C | 6 | 0 |
-| Jacksonville State at Kennesaw State | NO BET — core assessment incomplete | — / UNGRADED | — | 0 |
-| NY Liberty at Atlanta Dream | NO BET — core assessment incomplete | — / UNGRADED | — | 0 |
-| LAD at ATL | NO BET — core assessment incomplete | — / UNGRADED | — | 0 |
 | MIL at SD | NO BET — core assessment incomplete | — / UNGRADED | — | 0 |
 | COL at WPG | NO BET — core assessment incomplete | — / UNGRADED | — | 0 |
 | LVA at GS | NO BET — core assessment incomplete | — / UNGRADED | — | 0 |
@@ -37,7 +34,7 @@ The cashing path is competitive early pitching followed by clean leverage inning
 
 **Verdict:** CONDITIONAL / EXECUTION UNVERIFIED. Best number: +110 or better. Cutoff: +100 minimum; no actual offer means no execution release. Official units:0.
 
-### JSU at KSU
+### Jacksonville State at Kennesaw State
 
 Jacksonville State -3 is the single preferred side in this matchup; Kennesaw State is the opposing case, not a second Micks ticket. The clearest mechanism is Creel's dual-threat workload against a defense that has allowed substantial gains even after setting aside the Tennessee mismatch. Burke's VSiN writeup reports Jacksonville State allowing slightly more than five yards per play against its FBS opponents, versus 6.4 for Kennesaw against Georgia State and Arkansas State. That comparison is useful but schedule-sensitive, not a universal opponent-adjusted rating.
 
@@ -63,13 +60,13 @@ Washington's goaltending baseline and Guy Bruhn's Doc's WSH-160 opinion support 
 
 **Verdict:** PASS. Best number: None released. Cutoff: No bet. Official units:0.
 
-### NY Liberty at ATL Dream
+### NY Liberty at Atlanta Dream
 
 Atlanta's pressure, paint and transition mechanisms support the preference; high-usage Allisha Gray's absence directly weakens it. Tyler Shoemaker's Action ATLML-122 opinion supports the selected market; Tony Sink's Doc's NY+3.5 opinion is an opposing spread, not an opposite ML confirmation. Replacement minutes and the New York ball-security/three-point counter have not been sufficiently resolved. Failure6 means0u; Liberty is retained only as a countercase.
 
 **Verdict:** WATCH. Best number: -125 or better watch target. Cutoff: Not finalized. Official units:0.
 
-### LAD at ATL Braves
+### LAD at ATL
 
 Josh Schonwald's Doc's LAD-115 selection is now verified. The fresh Action reference was-150, substantially worse. The updated assessment is matchup26,price13,personnel12,situation7,VSiN0,Docs6,market6=70/110. Confirmed batting orders remove a personnel uncertainty but do not create an advantage. Mahle's current form, Glasnow's layoff and pitching leash remain counters. Failure stays5. No Braves fade is forced, and strikeout/NRFI derivatives remain ungraded until their separate threshold work is complete.
 
@@ -80,27 +77,6 @@ Josh Schonwald's Doc's LAD-115 selection is now verified. The fresh Action refer
 Tampa Bay's dog quote does not compensate for the incomplete final-lineup and independent matchup assessment at a qualifying strength. Guy Bruhn's Doc's NYY-162 selection opposes the original TB lean. Yankees ticket concentration is context only, and55%money is not heavy money backing. No automatic baseball fade or opposite replacement.
 
 **Verdict:** PASS. Best number: None released. Cutoff: No bet. Official units:0.
-
-### Jacksonville State at Kennesaw State
-
-Jacksonville State -3: Failure6 below7; final personnel and current offer
-Kennesaw State +3: Failure6; current+3 price not established; mutually exclusive with JSU
-
-**Verdict:** UNGRADED. Best number: None released. Cutoff: Not established; no bet until regraded. Official units:0.
-
-### NY Liberty at Atlanta Dream
-
-Atlanta ML: Failure6 below7; replacement-rotation uncertainty and current price
-
-**Verdict:** UNGRADED. Best number: None released. Cutoff: Not established; no bet until regraded. Official units:0.
-
-### LAD at ATL
-
-Dodgers ML: Below71 and incomplete final gates
-Glasnow Over6.5 strikeouts: Final Atlanta K/contact batting order; playoff pitch ceiling/layoff; independent threshold sensitivity
-NRFI: Confirmed first3 hitters; first-inning pitch distribution; no merely generic starter ERA
-
-**Verdict:** UNGRADED. Best number: None released. Cutoff: Not established; no bet until regraded. Official units:0.
 
 ### MIL at SD
 
@@ -156,7 +132,6 @@ Sides/totals: Both coaches' starter minutes/second-half rotations; usage and pre
 Sides/totals: Both coaches' starter minutes/second-half rotations; usage and preseason-specific matchups; printed spread/totaljuice missing; NateSilver decade franchise ranks only background
 
 **Verdict:** UNGRADED. Best number: None released. Cutoff: Not established; no bet until regraded. Official units:0.
-
 
 ## Named handicapper reconciliation
 | Event | Author | Selection / publication | How used |
