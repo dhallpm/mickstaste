@@ -1,14 +1,14 @@
 # Cleveland final pregame decision — October 7, 2026, 3:47 p.m. ET
 
-**Conditional recommendation: Cleveland ML* 0.25 unit at +100 or better; +110 preferred.** Action currently displays +112, an aggregate reference rather than a verified BetRivers Delaware offer. Pass below +100. No executable official release while the actual available quote remains unknown.
+**Conditional recommendation: Cleveland ML 0.25 unit at +100 or better; +110 preferred.** Action currently displays +112, an aggregate reference rather than a verified BetRivers Delaware offer. Pass below +100. No executable official release while the actual available quote remains unknown.
 
 | Candidate | Grade | Failure | Latest reference | Conditional units | Official units |
 |---|---|---|---|---|---|
-| Cleveland ML* | 76/110 B | 7/10 | Action +112; earlier Circa +112 at2:09ET |0.25 at +100 or better|0 pending exact execution quote|
+| Cleveland ML | 76/110 B | 7/10 | Action +112; earlier Circa +112 at2:09ET |0.25 at +100 or better|0 pending exact execution quote|
 
 ## Evidence changes
 Both batting orders and Espino/Newcomb starter listings reverified unchanged in official MLB game849833 boxscore; game remained pregame,4p.m.ET scheduled. Todd Tichenor is home plate umpire; no verified umpire tendency adjustment.
-Action CWS moneyline concentration now77% bets/71% money across25,238 tickets, versus prior76%/71%. CLE23%/29%. Keep Cleveland with contrarian asterisk. No automatic switch to the crowded opponent and no unsupported sharp-money inference.
+Action CWS moneyline concentration now77% bets/71% money across25,238 tickets, versus prior76%/71%. CLE23%/29%. Mark White Sox* as the crowded side; Cleveland is the opposing contrarian candidate and receives no crowd asterisk. No automatic switch to the crowded opponent and no unsupported sharp-money inference.
 
 ## Independent assessment
 Cleveland's relief-role form and rested leverage arms support the narrow dog preference. Newcomb's40-pitch October5 workload and Martin's bulk-role layoff are relevant; neither makes Chicago's pitching automatically ineffective. The strongest opposing case is Cleveland's poor series offense and Chicago's home lineup. Prior verified October7 Tony Sink Doc's CLE+100 supports the ML; Adam Burke VSiN CWS-121 directly opposes. Those opinions have not been represented as newly refreshed. A limited B-grade edge calls for0.25u, not a larger urgent stake.
@@ -37,3 +37,5 @@ The user-authorized71+ consideration threshold applies; legacy82 does not exclud
 Missing optional information: fresh command/velocity evidence and verified umpire profile. Release blocker: exact available quote. Previous snapshots remain unchanged. No wager or website publication.
 
 Sources: [Action MLB moneylines](https://www.actionnetwork.com/mlb/public-betting), [official MLB boxscore](https://statsapi.mlb.com/api/v1/game/849833/boxscore); prior opinions/weather/relief evidence in scan-source-audit-1500.md and scan-candidates-1500.json.
+
+Notation correction at3:50p.m.ET: The asterisk belongs to the heavily backed side: White Sox*77%bets/71%money. Cleveland23%/29% is the opposing candidate. Do not recommend the crowded side solely on popularity; contrarian consideration still requires an independent handicap and price gates.
