@@ -1,0 +1,84 @@
+{
+  "run_date": "2026-10-07",
+  "gate_et": "20:45",
+  "generated_at_et": "2026-10-07 20:49",
+  "scoring_version": "micks-110-v2-2026-09-29",
+  "user_threshold_override": {
+    "consider_above": 70,
+    "minimum_integer": 71,
+    "failure_minimum": 7
+  },
+  "preserved_snapshot": {
+    "source": "scan-candidates-1500.json",
+    "candidate": "Golden State ML",
+    "score": null,
+    "failure_score": null,
+    "disposition": "UNGRADED",
+    "reference_quote": "Circa -125"
+  },
+  "candidates": [
+    {
+      "id": "gsv-ml-2049",
+      "sport": "WNBA",
+      "event": "Las Vegas Aces at Golden State Valkyries",
+      "start_et": "21:30",
+      "pick": "Golden State ML",
+      "reference_quote": {
+        "source": "Circa Dropbox printed board",
+        "line": "-125",
+        "spread": "Golden State -1.5",
+        "total": "157",
+        "sheet_modified_utc": "2026-10-07T18:19:12Z",
+        "sheet_printed_update": "2026-10-07 07:42",
+        "executable_betrivers_de": false
+      },
+      "factors": {
+        "matchup": {"score": 29, "max": 35, "evidence": "Golden State won Game 1 71-60 with a 52-25 rebound edge, 27-7 bench edge and Stokes holding Wilson to 8-for-21; Aces regular-season sweep and star core are the counter."},
+        "price": {"score": 16, "max": 20, "evidence": "Circa ML -125 and spread -1.5; Action comparisons approximately -122 spread and -132 ML. Playable at -125, pass worse than -135; exact BetRivers Delaware quote unavailable."},
+        "personnel": {"score": 13, "max": 15, "evidence": "Loyd officially out but in an 8.0-PPG role; Evans probable; Talbot questionable. Golden State high-usage core and Game 1 rotation are established; final starters unavailable."},
+        "situation": {"score": 7, "max": 10, "evidence": "Golden State home up 1-0; Las Vegas urgency and prior 0-1 semifinal recoveries are meaningful counters."},
+        "vsin": {"score": 0, "max": 10, "evidence": "No accessible named VSiN same-market selection found."},
+        "docs": {"score": 7, "max": 10, "evidence": "Guy Bruhn explicitly picked Golden State -1.5; adjacent team market, not identical ML."},
+        "market": {"score": 7, "max": 10, "subscores": {"reference": 5, "movement": 1, "splits": 1}, "evidence": "Circa reference verified; mild favorite pressure only; Action spread tickets 67% Golden State with money hidden, below flag threshold and not transferred to ML."}
+      },
+      "score": 79,
+      "grade": "B+",
+      "considered_play": true,
+      "failure_dimensions": [
+        {"name": "severity_resilience", "score": 1, "max": 2},
+        {"name": "personnel_resilience", "score": 2, "max": 2},
+        {"name": "variance_script", "score": 1, "max": 2},
+        {"name": "price_protection", "score": 1, "max": 2},
+        {"name": "contradiction_resolution", "score": 2, "max": 2}
+      ],
+      "failure_score": 7,
+      "best_number": "Golden State ML -125 or better",
+      "no_bet_cutoff": "worse than -135",
+      "public_flag": null,
+      "action_split": {"market": "spread", "golden_state_bet_percent": 67, "money_percent": null, "flagged": false},
+      "missing_information": [
+        "Stephanie Talbot final status",
+        "Official starting lineups",
+        "Action money percentage and bet count",
+        "Named VSiN same-market selection"
+      ],
+      "release_blockers": [
+        "Exact executable BetRivers Delaware full-game moneyline quote unavailable"
+      ],
+      "official_units": 0,
+      "disposition": "PLAY_CONSIDERATION_NO_BET"
+    }
+  ],
+  "actions": {"wager_placed": false, "website_published": false, "third_party_contacted": false},
+  "source_notes": {
+    "firecrawl": "attempted; HTTP 402 insufficient credits",
+    "dropbox": "/Circa Sports sheets/WNBA - 2026-10-7.pdf",
+    "sources": [
+      "Reuters injury report",
+      "Golden State official Game 2 preview",
+      "Las Vegas official Game 1 recap",
+      "Doc's Sports Guy Bruhn selection",
+      "Action Network WNBA public betting table"
+    ]
+  }
+}
