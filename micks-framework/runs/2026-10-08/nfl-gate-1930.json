@@ -1,0 +1,85 @@
+{
+  "run_date": "2026-10-08",
+  "timestamp_et": "2026-10-08T19:30:00-04:00",
+  "scope": ["TB@DAL NFL 20:15 ET"],
+  "scoring_version": "micks-110-v2-2026-09-29",
+  "user_consideration_threshold": 71,
+  "prior_snapshot_reference": "betrivers-candidates-1130.json#tb-spread",
+  "candidate": {
+    "id": "tb-spread-1930",
+    "sport": "NFL",
+    "game": "Tampa Bay at Dallas",
+    "start_et": "20:15",
+    "candidate": "Tampa Bay +8.5",
+    "reference_quote": {
+      "line": "+8.5",
+      "american_odds": -110,
+      "source": "User BetRivers Delaware screenshot captured 2026-10-08 11:13 ET",
+      "current_executable_verified": false,
+      "note": "Historical captured offer, not a receipt; public current cross-book page showed +8.5 to +9.5 but no exact live BetRivers quote"
+    },
+    "factors": {
+      "matchup": {"score": 25, "max": 35, "evidence": "Dallas allows 6.4 yards/play and ranks 31st in EPA/play allowed; weak pass rush plus Porter out help Daniels. Dallas offense versus depleted Tampa coverage and Fantasy Life DAL by 12 are the counter."},
+      "price": {"score": 15, "max": 20, "evidence": "+8.5 clears seven but is inferior to +9/+9.5 references and captured -110 misses target."},
+      "personnel": {"score": 11, "max": 15, "evidence": "Porter out helps Tampa. Tyler Smith active and Lamb/Javonte roles help Dallas. Mayfield, Winfield, Morrison and Dennis remain out."},
+      "situation": {"score": 7, "max": 10, "evidence": "Short-rest Dallas ATS concern; roof status unconfirmed but open-roof weather benign."},
+      "vsin": {"score": 8, "max": 10, "evidence": "Cohen and Makinen publish Tampa +8.5; Tuley passes; Ross takes Dallas -8. Same family counted once."},
+      "docs": {"score": 4, "max": 10, "evidence": "Tony Sink Tampa +9 supports; Strike Point Dallas -8.5 opposes."},
+      "market": {"score": 8, "max": 10, "components": {"reference": 4, "movement": 2, "splits": 2}, "evidence": "Circa opened DAL -9.5 and was -7.5 Wednesday with TB 33% tickets/92% money. Current Dropbox sheet modified 10:37 ET but image quote unreadable. Supplied Action exact-market flags retained."}
+    },
+    "score": 78,
+    "grade": "B",
+    "score_status": "FINAL_ASSESSMENT_BLOCKED_RELEASE",
+    "considered_play": true,
+    "failure_dimensions": {
+      "failure_severity": {"score": 1, "max": 2, "evidence": "Daniels turnovers plus Dallas scoring bursts can create a two-score loss."},
+      "personnel_resilience": {"score": 1, "max": 2, "evidence": "Porter absence helps, but rookie QB and Tampa defensive absences remain."},
+      "script_variance": {"score": 1, "max": 2, "evidence": "Tampa must avoid short fields and remain within backdoor range."},
+      "price_protection": {"score": 1, "max": 2, "evidence": "+8.5 misses preferred +9/+9.5 protection."},
+      "contradiction_resolution": {"score": 1, "max": 2, "evidence": "VSiN/Doc support and Porter out narrow but do not resolve Fantasy Life DAL30-TB18."}
+    },
+    "failure_score": 5,
+    "best_number": "+9.5 -112 cross-book research reference; not verified BetRivers",
+    "price_target": "+9 or better at -115 or better",
+    "no_bet_cutoff": "+8.5 worse than -105",
+    "official_units": 0,
+    "disposition": "WATCH / NO BET",
+    "release_blockers": [
+      "Material Fantasy Life DAL30-TB18 contradiction remains unresolved",
+      "Captured BetRivers +8.5 -110 misses target",
+      "No fresh exact executable BetRivers Delaware quote"
+    ],
+    "missing_evidence": [
+      "Readable numeric quote from current image-only Dropbox Circa sheet",
+      "Fresh authenticated Action Pro refresh",
+      "Confirmed AT&T Stadium roof status"
+    ]
+  },
+  "availability": {
+    "tampa_inactive": ["Baker Mayfield", "Antoine Winfield Jr.", "Benjamin Morrison", "SirVocea Dennis", "DeMonte Capehart", "Billy Schrauth", "Luke Haggard"],
+    "tampa_returning": ["Rueben Bain Jr.", "Ko Kieft"],
+    "dallas_inactive": ["Joey Porter Jr.", "DeMarvion Overshown", "Cobie Durant", "James Houston", "Ajani Cornelius", "Drew Shelton", "Camden Brown"],
+    "dallas_active_material": ["Tyler Smith", "CeeDee Lamb"]
+  },
+  "action_contrarian": {
+    "contest_bets": 64200,
+    "qualifies_over_50000": true,
+    "source": "user-supplied Action Pro snapshot",
+    "refreshed_at_gate": false,
+    "markets": [
+      {"market": "Dallas spread", "tickets_pct": 72, "money_pct": 69, "flag": "* heavy tickets", "active_card": false},
+      {"market": "Dallas moneyline", "tickets_pct": 94, "money_pct": 89, "flag": "* extreme both", "active_card": false},
+      {"market": "Over 48.5", "tickets_pct": 73, "money_pct": 82, "flag": "* heavy tickets / extreme money", "active_card": false}
+    ]
+  },
+  "screened_markets": [
+    {"candidate": "Under 48 -112", "score": 67, "failure_score": 5, "units": 0, "decision": "PASS", "reason": "Fantasy Life lands 48 exactly, Makinen edge only 0.7 at 47.5, and Dallas offense/Porter absence oppose."},
+    {"candidate": "Chris Godwin Over 27.5 receiving -114", "score": 70, "failure_score": 5, "units": 0, "decision": "WATCH / NO BET", "reason": "VSiN lean and role/matchup support, but no current BetRivers quote and Daniels stability risk."},
+    {"candidate": "Jalon Daniels Under 182.5 passing -112", "score": 61, "failure_score": 4, "units": 0, "decision": "PASS", "reason": "Poor Dallas pass defense, Porter out and negative script oppose the Under."},
+    {"candidate": "Javonte Williams props", "score": null, "units": 0, "decision": "UNGRADED / NO BET", "reason": "Concentrated role verified but no exact current Delaware threshold and Tampa run-defense counter."}
+  ],
+  "official_card": [],
+  "official_exposure_units": 0,
+  "website_publish": false,
+  "wager_placed": false
+}
