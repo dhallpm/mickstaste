@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-08",
+  "timezone": "America/New_York",
+  "registered": true,
+  "check_times": [
+    "18:15",
+    "18:45",
+    "19:15",
+    "19:30",
+    "20:15",
+    "21:15",
+    "21:45"
+  ],
+  "report": "scan-report-1101.md",
+  "source_audit": "scan-source-audit-1101.md",
+  "candidates": "scan-candidates-1101.json",
+  "note": "Scheduled event-specific regrades; not continuous monitoring. Exact executable quote and mandatory sport confirmations remain open. No wager or active publication."
+}
