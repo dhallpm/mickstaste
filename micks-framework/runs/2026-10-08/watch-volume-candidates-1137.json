@@ -1,0 +1,3093 @@
+{
+  "date": "2026-10-08",
+  "research_window_et": "User captures 11:13–11:17 ET; attachment review after 11:18 ET",
+  "snapshot_id": "watch-volume-candidates-1137",
+  "scoring_version": "micks-110-v2-2026-09-29",
+  "score_consideration_threshold": 71,
+  "nfl_mode": "standard; material guide contradiction WATCH",
+  "non_nfl_failure_gate": 7,
+  "score_only_82_exclusion": false,
+  "official_releases": [],
+  "official_total_units": 0,
+  "candidates": [
+    {
+      "id": "utsa-spread",
+      "sport": "CFB",
+      "game": "South Florida at UTSA",
+      "start_et": "19:30",
+      "candidate": "UTSA -7",
+      "reference_quote": {
+        "line": "-7",
+        "american_odds": -108,
+        "source": "User BetRivers Delaware IMG_1783.png",
+        "as_of": "2026-10-08 11:12 ET capture",
+        "executable_at_betrivers_delaware": true,
+        "note": "Observed offer, not receipt; refresh before release"
+      },
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "score": 26,
+          "max": 35,
+          "evidence": "Two paths: USF's recent offensive slowdown and UTSA's established home-conference advantage. Counter: USF's better defensive yards/play and close-game risk. Action Pro fair-spread-8.2 offers modest outside support, not a new Micks fair line."
+        },
+        "price": {
+          "score": 14,
+          "max": 20,
+          "evidence": "Directly observed BetRivers -7-108 matches Action reference; 14/20 unchanged, no source-access bonus."
+        },
+        "personnel": {
+          "score": 11,
+          "max": 15,
+          "evidence": "Official preview identifies McCown and Van Buren with current production. No assumed prior-year Byrum Brown role. Final material availability remains to be checked."
+        },
+        "situation": {
+          "score": 8,
+          "max": 10,
+          "evidence": "Alamodome reduces weather risk; both teams played Saturday, limiting rest asymmetry. UTSA stays in-state."
+        },
+        "vsin": {
+          "score": 8,
+          "max": 10,
+          "evidence": "Adam Burke -7; Steve Makinen -7 and play-by-play edge. One VSiN factor, not two independent publications."
+        },
+        "docs": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Josh Schonwald -7.5; relevant direction with current -7 improving the threshold. Outside agreement is supporting only."
+        },
+        "market": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Reference3/movement2/splits1. Read Circa datedOct5-7; Action opener-6.5/current-7 and source-attributed one sharp signal. Current Pro percentages unseen; prior public reading not promoted to fresh Pro."
+        }
+      },
+      "score": 80,
+      "known_subtotal": 80,
+      "assessed_maximum": 110,
+      "score_status": "PROVISIONAL",
+      "grade": "B",
+      "considered_play": true,
+      "failure_dimensions": {
+        "failure_severity": {
+          "score": 1,
+          "max": 2,
+          "evidence": "USF can suppress drives and cover late."
+        },
+        "personnel_resilience": {
+          "score": 2,
+          "max": 2,
+          "evidence": "Current named QB paths are documented, not injury-count dependent."
+        },
+        "script_variance": {
+          "score": 1,
+          "max": 2,
+          "evidence": "One-score game and backdoor remain material."
+        },
+        "price_protection": {
+          "score": 2,
+          "max": 2,
+          "evidence": "Whole 7 is preferable to 7.5; worsening threshold defeats protection."
+        },
+        "contradiction_resolution": {
+          "score": 1,
+          "max": 2,
+          "evidence": "Support favors UTSA, but USF defense remains a real counter."
+        }
+      },
+      "failure_score": 7,
+      "missing_evidence": [
+        "Comparable closing-band 5/10/20 ATS data for inflation/fade scan",
+        "Fresh Circa refresh beyond Oct5 sheet",
+        "Current Pro spread ticket/handle percentages"
+      ],
+      "release_blockers": [
+        "Final material role/availability recheck and fresh executable quote at release"
+      ],
+      "official_units": 0,
+      "disposition": "WATCH / NO BET",
+      "best_number": null,
+      "no_bet_cutoff": "not established—no bet until regraded",
+      "rank": 1,
+      "research_price_target": "-7 at -110 or better; prefer -6.5. Target is not a release cutoff.",
+      "planned_units_if_fresh_regrade_clears": 0.5,
+      "prior_snapshot_reference": "scan-candidates-1101.json#utsa-spread",
+      "action_pro_model": "UTSA-8.2 external C-; no conversion to Micks grade"
+    },
+    {
+      "id": "tb-spread",
+      "sport": "NFL",
+      "game": "Tampa Bay at Dallas",
+      "start_et": "20:15",
+      "candidate": "Tampa Bay +9",
+      "reference_quote": {
+        "line": "+9",
+        "american_odds": -114,
+        "source": "User BetRivers Delaware screenshot IMG_1789.png",
+        "as_of": "2026-10-08 11:13ET capture",
+        "executable_at_betrivers_delaware": true,
+        "note": "Captured offer; availability must be rechecked before wager"
+      },
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "score": 24,
+          "max": 35,
+          "evidence": "TB cover path: Dallas defensive weakness and limited pass rush let Daniels extend drives. Counter: Dallas scoring strength against depleted TB coverage. Action DAL-8.8 forecast is close to market; it does not resolve Fantasy Life DAL by12."
+        },
+        "price": {
+          "score": 15,
+          "max": 20,
+          "evidence": "+9-114 captured user-book offer; better cushion than prior+8.5-105 but higher juice. +9.5-118 and+10-130 alternatives do not remove failure risk."
+        },
+        "personnel": {
+          "score": 10,
+          "max": 15,
+          "evidence": "Mayfield out changes the QB baseline. Winfield/Dennis/Morrison absences matter by role; Lamb's workload and Dallas OL return remain material."
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Short week after compressed Dallas schedule; AT&T roof status not confirmed, no invented weather edge."
+        },
+        "vsin": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Zach Cohen +8.5 -108 supports; Dave Tuley passes full spread. Teaser Dallas -2 is a different market."
+        },
+        "docs": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Tony Sink +9 supports at better threshold; Strike Point Dallas -8.5 opposes; Rickenbach first-half pick is separate."
+        },
+        "market": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Reference4/movement1/splits2. Circa datedOct7 DAL-8; Action Pro current DAL72tickets69money, DALML94/89, Over48.5 73/82. Separate markets and book samples."
+        }
+      },
+      "score": 74,
+      "known_subtotal": 74,
+      "assessed_maximum": 110,
+      "score_status": "PROVISIONAL",
+      "grade": "B",
+      "considered_play": true,
+      "failure_dimensions": {
+        "failure_severity": {
+          "score": 1,
+          "max": 2,
+          "evidence": "Turnovers can create a two-score loss."
+        },
+        "personnel_resilience": {
+          "score": 1,
+          "max": 2,
+          "evidence": "Rookie QB and coverage changes weaken robustness."
+        },
+        "script_variance": {
+          "score": 1,
+          "max": 2,
+          "evidence": "Dallas scoring bursts threaten backdoor cover."
+        },
+        "price_protection": {
+          "score": 1,
+          "max": 2,
+          "evidence": "8.5 helps but +9 was better."
+        },
+        "contradiction_resolution": {
+          "score": 0,
+          "max": 2,
+          "evidence": "Fantasy Life DAL30/TB18 materially opposes the spread; unresolved."
+        }
+      },
+      "failure_score": 4,
+      "missing_evidence": [
+        "Comparable closing-band 5/10/20 ATS data for inflation/fade scan",
+        "Final inactives and Tyler Smith status",
+        "Weekly game-model disagreement reconciliation",
+        "Fresh Circa refresh"
+      ],
+      "release_blockers": [
+        "Material NFL guide/current forecast contradiction requires WATCH",
+        "Final availability and quote refresh"
+      ],
+      "official_units": 0,
+      "disposition": "WATCH / NO BET",
+      "best_number": null,
+      "no_bet_cutoff": "not established—no bet until regraded",
+      "rank": 2,
+      "research_price_target": "+9-114 captured; cutoff not established until contradiction regraded",
+      "planned_units_if_fresh_regrade_clears": null,
+      "prior_snapshot_reference": "scan-candidates-1101.json#tb-spread"
+    },
+    {
+      "id": "most-spread",
+      "sport": "CFB",
+      "game": "Missouri State at Western Kentucky",
+      "start_et": "19:00",
+      "candidate": "Missouri State +1.5",
+      "reference_quote": {
+        "line": "+1.5",
+        "american_odds": -113,
+        "source": "User BetRivers Delaware IMG_1785.png",
+        "as_of": "2026-10-08 11:13 ET capture",
+        "executable_at_betrivers_delaware": true,
+        "note": "Observed offer, not receipt; refresh before release"
+      },
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "score": 23,
+          "max": 35,
+          "evidence": "WKU defensive vulnerability creates a Missouri State scoring path; opposing case is Missouri State's weak defense and WKU home advantage. Action Pro WKU-4.3 is a material opposing model, contrasted with Makinen's Missouri State support; not averaged away."
+        },
+        "price": {
+          "score": 11,
+          "max": 20,
+          "evidence": "Directly observed BetRivers +1.5-113, one cent worse than Action; 11/20 unchanged. Article support at+2.5 has more cushion."
+        },
+        "personnel": {
+          "score": null,
+          "max": 15,
+          "evidence": "Locklear is projected, but reported injury and WKU QB role are not conclusively reconciled; core personnel unassessable."
+        },
+        "situation": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Bowling Green Thursday-night NWS forecast clear/light wind; exact kickoff temperature unknown."
+        },
+        "vsin": {
+          "score": 8,
+          "max": 10,
+          "evidence": "Makinen +2.5 and Burke lean +2.5 support at older number, not full-price confirmation."
+        },
+        "docs": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Guy Bruhn +2.5; reconcile narrower current cushion."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Reference3/movement1/splits0. Oct5CircaMOST+2.5, currentAction+1.5; different sources are not a Circa movement series. Both sides0% display invalid, not real split."
+        }
+      },
+      "score": null,
+      "known_subtotal": 59,
+      "assessed_maximum": 95,
+      "score_status": "UNGRADED",
+      "grade": null,
+      "considered_play": false,
+      "failure_dimensions": {
+        "failure_severity": {
+          "score": 1,
+          "max": 2,
+          "evidence": "Both defenses introduce shootout risk."
+        },
+        "personnel_resilience": {
+          "score": null,
+          "max": 2,
+          "evidence": "Locklear health and WKU starter not resolved."
+        },
+        "script_variance": {
+          "score": 1,
+          "max": 2,
+          "evidence": "Late possessions can determine short spread."
+        },
+        "price_protection": {
+          "score": 1,
+          "max": 2,
+          "evidence": "1.5 loses cushion versus article 2.5."
+        },
+        "contradiction_resolution": {
+          "score": 1,
+          "max": 2,
+          "evidence": "Independent handicap supports dog but role question persists."
+        }
+      },
+      "failure_score": null,
+      "missing_evidence": [
+        "Readable current Circa quote",
+        "Comparable closing-band 5/10/20 ATS data for inflation/fade scan",
+        "Locklear health/final starter",
+        "WKU Tisdale/Glenn role",
+        "Current spread bets/money"
+      ],
+      "release_blockers": [
+        "Core personnel incomplete"
+      ],
+      "official_units": 0,
+      "disposition": "WATCH / NO BET",
+      "best_number": null,
+      "no_bet_cutoff": "not established—no bet until regraded",
+      "rank": 3,
+      "research_price_target": "+2.5 preferred; no bet until QB regrade",
+      "prior_snapshot_reference": "scan-candidates-1101.json#most-spread",
+      "action_pro_model": "WKU-4.3, external A-; Micks remains UNGRADED"
+    },
+    {
+      "id": "shsu-lib-under",
+      "sport": "CFB",
+      "game": "Sam Houston at Liberty",
+      "start_et": "19:00",
+      "candidate": "Under 52.5",
+      "reference_quote": {
+        "line": "52.5 Under",
+        "american_odds": -110,
+        "source": "DraftKings article, Dan Johnson Oct8",
+        "as_of": "2026-10-08 morning retrieval; exact upstream update unknown",
+        "executable_at_betrivers_delaware": false
+      },
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "score": 24,
+          "max": 35,
+          "evidence": "Run-heavy Liberty and SHSU offensive-line issues can limit possessions; explosive runs and short fields threaten the Under."
+        },
+        "price": {
+          "score": 14,
+          "max": 20,
+          "evidence": "Action recording confirms52.5-110 reference; CircaOct5total52.5; Delaware execution absent."
+        },
+        "personnel": {
+          "score": 10,
+          "max": 15,
+          "evidence": "Team run/blocking evidence supports path; final QB/OL availability still pending."
+        },
+        "situation": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Outdoor Lynchburg; current kick forecast inaccessible, so no weather suppression assumed."
+        },
+        "vsin": {
+          "score": 8,
+          "max": 10,
+          "evidence": "Adam Burke Under52.5 is directly relevant."
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "Parlays Pundit Liberty -13.5 is a side, not Under confirmation; zero total agreement points."
+        },
+        "market": {
+          "score": 3,
+          "max": 10,
+          "evidence": "Reference2/movement1/splits0; Action opening50.5/current52.5 verified in recording. Move is against Under; no actual Pro money seen."
+        }
+      },
+      "score": 65,
+      "known_subtotal": 65,
+      "assessed_maximum": 110,
+      "score_status": "PROVISIONAL",
+      "grade": "C",
+      "considered_play": false,
+      "failure_dimensions": {
+        "failure_severity": {
+          "score": 1,
+          "max": 2,
+          "evidence": "Explosive rushing can defeat low-possession logic."
+        },
+        "personnel_resilience": {
+          "score": 1,
+          "max": 2,
+          "evidence": "OL and ball-security changes remain."
+        },
+        "script_variance": {
+          "score": 1,
+          "max": 2,
+          "evidence": "Turnovers and late scoring remain."
+        },
+        "price_protection": {
+          "score": 1,
+          "max": 2,
+          "evidence": "52.5 reference only."
+        },
+        "contradiction_resolution": {
+          "score": 1,
+          "max": 2,
+          "evidence": "Side capper agreement cannot resolve total risk."
+        }
+      },
+      "failure_score": 5,
+      "missing_evidence": [
+        "Readable current Circa quote",
+        "Exact BetRivers Delaware offer",
+        "Comparable closing-band 5/10/20 ATS data for inflation/fade scan",
+        "Lynchburg kickoff weather",
+        "Total splits",
+        "Final OL/QB availability"
+      ],
+      "release_blockers": [
+        "Weak score; no release"
+      ],
+      "official_units": 0,
+      "disposition": "PASS",
+      "best_number": null,
+      "no_bet_cutoff": "not established—no bet until regraded",
+      "research_price_target": "52.5 or higher at ordinary juice, for re-evaluation only",
+      "prior_snapshot_reference": "scan-candidates-1101.json#shsu-lib-under"
+    },
+    {
+      "id": "usa-arst-under",
+      "sport": "CFB",
+      "game": "South Alabama at Arkansas State",
+      "start_et": "19:30",
+      "candidate": "Under 60.5",
+      "reference_quote": {
+        "line": "60.5 Under",
+        "american_odds": null,
+        "source": "User Action recording",
+        "as_of": "11:15ET",
+        "executable_at_betrivers_delaware": false
+      },
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "score": 20,
+          "max": 35,
+          "evidence": "Prior series and small-home-favorite Under systems support a screen, not sufficient current efficiency proof."
+        },
+        "price": {
+          "score": null,
+          "max": 20,
+          "evidence": "Current total60.5 visible, but Under juice obscured. Old58.5 is not current."
+        },
+        "personnel": {
+          "score": null,
+          "max": 15,
+          "evidence": "Current QB/OL/leash roles not sufficiently verified."
+        },
+        "situation": {
+          "score": 5,
+          "max": 10,
+          "evidence": "Jonesboro kickoff weather not verified."
+        },
+        "vsin": {
+          "score": 7,
+          "max": 10,
+          "evidence": "MakinenUnder58.5 is directionally favorable at higher threshold, but current-role/current-price gates remain."
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "Tony Sink South Alabama+1.5 is a different market, not total agreement."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "DatedCircaPK/58 versus ActionARST-3/60.5; Action opener-1.5/57.5. Not same-book Circa history."
+        }
+      },
+      "score": null,
+      "known_subtotal": 36,
+      "assessed_maximum": 75,
+      "score_status": "UNGRADED",
+      "grade": null,
+      "considered_play": false,
+      "failure_dimensions": {
+        "failure_severity": {
+          "score": 1,
+          "max": 2,
+          "evidence": "Current offenses may differ from historical series."
+        },
+        "personnel_resilience": {
+          "score": null,
+          "max": 2,
+          "evidence": "Core roles unknown."
+        },
+        "script_variance": {
+          "score": 1,
+          "max": 2,
+          "evidence": "Explosive scoring counter unresolved."
+        },
+        "price_protection": {
+          "score": null,
+          "max": 2,
+          "evidence": "Unpriced total."
+        },
+        "contradiction_resolution": {
+          "score": 0,
+          "max": 2,
+          "evidence": "No independent current-total confirmation."
+        }
+      },
+      "failure_score": null,
+      "missing_evidence": [
+        "Readable current Circa quote",
+        "Exact BetRivers Delaware offer",
+        "Comparable closing-band 5/10/20 ATS data for inflation/fade scan",
+        "QB/OL confirmation",
+        "Current total vig",
+        "Jonesboro weather"
+      ],
+      "release_blockers": [
+        "Core personnel and price incomplete"
+      ],
+      "official_units": 0,
+      "disposition": "WATCH / NO BET",
+      "best_number": null,
+      "no_bet_cutoff": "not established—no bet until regraded",
+      "prior_snapshot_reference": "scan-candidates-1101.json#usa-arst-under"
+    },
+    {
+      "id": "cle-ml",
+      "sport": "MLB",
+      "game": "Cleveland at Chicago White Sox",
+      "start_et": "20:00",
+      "candidate": "Cleveland ML",
+      "reference_quote": {
+        "line": "ML",
+        "american_odds": -110,
+        "source": "https://www.actionnetwork.com/mlb/public-betting",
+        "as_of": "2026-10-08 morning retrieval; exact upstream update unknown",
+        "executable_at_betrivers_delaware": false
+      },
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "score": null,
+          "max": 35,
+          "evidence": "Messick/Smith alone does not complete a full-game edge; Smith opener/bulk length and current contact/whiff profiles require reconciliation."
+        },
+        "price": {
+          "score": 11,
+          "max": 20,
+          "evidence": "Identified -110 comparison; no full-game justified cutoff."
+        },
+        "personnel": {
+          "score": null,
+          "max": 15,
+          "evidence": "Cade Smith threw two innings and Herrin one on Oct7; individual pitch counts, Chicago relief usage, batting orders and Hagen Smith leash incomplete."
+        },
+        "situation": {
+          "score": null,
+          "max": 10,
+          "evidence": "NWS Chicago retrievals conflict in freshness; no current directional wind assumed. Umpire unknown."
+        },
+        "vsin": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No verified current like-market selection."
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No verified current like-market selection; marketing expert plays do not count."
+        },
+        "market": {
+          "score": 3,
+          "max": 10,
+          "evidence": "Reference2/5, movement0/3, splits1/2. Action42/58 tickets; hidden money. No automatic baseball fade."
+        }
+      },
+      "score": null,
+      "known_subtotal": 14,
+      "assessed_maximum": 50,
+      "score_status": "UNGRADED",
+      "grade": null,
+      "considered_play": false,
+      "failure_dimensions": {
+        "failure_severity": {
+          "score": null,
+          "max": 2,
+          "evidence": "Core bullpen/starter-length assessment incomplete."
+        },
+        "personnel_resilience": {
+          "score": null,
+          "max": 2,
+          "evidence": "Relief and batting orders not complete."
+        },
+        "script_variance": {
+          "score": 1,
+          "max": 2,
+          "evidence": "Bullpen game and scoring variance material."
+        },
+        "price_protection": {
+          "score": 1,
+          "max": 2,
+          "evidence": "Near-even reference reduces price burden, not proof of edge."
+        },
+        "contradiction_resolution": {
+          "score": null,
+          "max": 2,
+          "evidence": "Conflicting pitching interpretations unresolved."
+        }
+      },
+      "failure_score": null,
+      "missing_evidence": [
+        "Readable current Circa quote",
+        "Exact BetRivers Delaware offer",
+        "Comparable closing-band 5/10/20 ATS data for inflation/fade scan",
+        "Batting orders",
+        "Smith opener/bulk role",
+        "Oct6/7 individual bullpen pitch counts",
+        "Current NWS hour wind",
+        "Umpire assignment/profile",
+        "Starter whiff/contact and command"
+      ],
+      "release_blockers": [
+        "Core matchup/personnel/situation incomplete"
+      ],
+      "official_units": 0,
+      "disposition": "WATCH / NO BET",
+      "best_number": null,
+      "no_bet_cutoff": "not established—no bet until regraded",
+      "prior_snapshot_reference": "scan-candidates-1101.json#cle-ml"
+    },
+    {
+      "id": "MIN-TB",
+      "sport": "NHL",
+      "game": "Minnesota at Tampa Bay",
+      "start_et": "19:00",
+      "candidate": "TB ML",
+      "reference_quote": {
+        "line": "ML",
+        "american_odds": -144,
+        "source": "https://www.actionnetwork.com/nhl/public-betting",
+        "as_of": "2026-10-08 morning retrieval; exact upstream update unknown",
+        "executable_at_betrivers_delaware": false
+      },
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "score": null,
+          "max": 35,
+          "evidence": "Crowded TB; MIN opposite is not independently established. Two independent current matchup paths not yet verified."
+        },
+        "price": {
+          "score": 12,
+          "max": 20,
+          "evidence": "Identified reference versus dated Doc's price; no established playable range."
+        },
+        "personnel": {
+          "score": null,
+          "max": 15,
+          "evidence": "Goalie board: Wallstedt/Vasilevskiy. None confirmed in morning snapshot; final skaters/PP roles incomplete."
+        },
+        "situation": {
+          "score": 5,
+          "max": 10,
+          "evidence": "Home/away venue identified; no assumed rest or travel edge."
+        },
+        "vsin": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No verified current like-market VSiN daily selection."
+        },
+        "docs": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Guy Bruhn -146 from Oct7 article audit; supporting only, not Micks recommendation."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Reference3/movement0/splits1. Read datedOct7 Circa overnight quote. Comparison with Action is cross-source, not verified same-book movement."
+        }
+      },
+      "score": null,
+      "known_subtotal": 27,
+      "assessed_maximum": 60,
+      "score_status": "UNGRADED",
+      "grade": null,
+      "considered_play": false,
+      "failure_dimensions": {
+        "failure_severity": {
+          "score": null,
+          "max": 2,
+          "evidence": "Unfinished current 5v5/special-teams handicap."
+        },
+        "personnel_resilience": {
+          "score": null,
+          "max": 2,
+          "evidence": "Goaltender and skater dependencies unresolved."
+        },
+        "script_variance": {
+          "score": 1,
+          "max": 2,
+          "evidence": "Hockey conversion variance remains."
+        },
+        "price_protection": {
+          "score": 1,
+          "max": 2,
+          "evidence": "Identified reference only."
+        },
+        "contradiction_resolution": {
+          "score": null,
+          "max": 2,
+          "evidence": "Outside pick does not resolve current countercase."
+        }
+      },
+      "failure_score": null,
+      "missing_evidence": [
+        "Exact BetRivers Delaware offer",
+        "Comparable closing-band 5/10/20 ATS data for inflation/fade scan",
+        "Confirmed goalies",
+        "Final skaters/scratches and material usage",
+        "Current 5v5 xG/shot-quality/special teams",
+        "Same-book opener/current",
+        "Fresh Circa update after Oct7 overnight"
+      ],
+      "release_blockers": [
+        "Core matchup and personnel incomplete",
+        "Mandatory goalie confirmation",
+        "No exact execution"
+      ],
+      "official_units": 0,
+      "disposition": "WATCH / NO BET",
+      "best_number": null,
+      "no_bet_cutoff": "not established—no bet until regraded",
+      "action_candidate_bets_pct": 85,
+      "action_candidate_money_pct": 76,
+      "action_crowded_side_bets_pct": 85,
+      "goalie_snapshot": "Wallstedt/Vasilevskiy",
+      "crowd_note": "Crowded TB; MIN opposite is not independently established.",
+      "prior_snapshot_reference": "scan-candidates-1101.json#MIN-TB"
+    },
+    {
+      "id": "UTA-BOS",
+      "sport": "NHL",
+      "game": "Utah at Boston",
+      "start_et": "19:00",
+      "candidate": "UTA ML",
+      "reference_quote": {
+        "line": "ML",
+        "american_odds": -122,
+        "source": "https://www.actionnetwork.com/nhl/public-betting",
+        "as_of": "2026-10-08 morning retrieval; exact upstream update unknown",
+        "executable_at_betrivers_delaware": false
+      },
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "score": null,
+          "max": 35,
+          "evidence": "Utah offensive start supports a screen; price worse than article, Boston rebound counter. Two independent current matchup paths not yet verified."
+        },
+        "price": {
+          "score": 12,
+          "max": 20,
+          "evidence": "Identified reference versus dated Doc's price; no established playable range."
+        },
+        "personnel": {
+          "score": null,
+          "max": 15,
+          "evidence": "Goalie board: Vejmelka/Swayman. None confirmed in morning snapshot; final skaters/PP roles incomplete."
+        },
+        "situation": {
+          "score": 5,
+          "max": 10,
+          "evidence": "Home/away venue identified; no assumed rest or travel edge."
+        },
+        "vsin": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No verified current like-market VSiN daily selection."
+        },
+        "docs": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Guy Bruhn -115 from Oct7 article audit; supporting only, not Micks recommendation."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Reference3/movement0/splits1. Read datedOct7 Circa overnight quote. Comparison with Action is cross-source, not verified same-book movement."
+        }
+      },
+      "score": null,
+      "known_subtotal": 27,
+      "assessed_maximum": 60,
+      "score_status": "UNGRADED",
+      "grade": null,
+      "considered_play": false,
+      "failure_dimensions": {
+        "failure_severity": {
+          "score": null,
+          "max": 2,
+          "evidence": "Unfinished current 5v5/special-teams handicap."
+        },
+        "personnel_resilience": {
+          "score": null,
+          "max": 2,
+          "evidence": "Goaltender and skater dependencies unresolved."
+        },
+        "script_variance": {
+          "score": 1,
+          "max": 2,
+          "evidence": "Hockey conversion variance remains."
+        },
+        "price_protection": {
+          "score": 1,
+          "max": 2,
+          "evidence": "Identified reference only."
+        },
+        "contradiction_resolution": {
+          "score": null,
+          "max": 2,
+          "evidence": "Outside pick does not resolve current countercase."
+        }
+      },
+      "failure_score": null,
+      "missing_evidence": [
+        "Exact BetRivers Delaware offer",
+        "Comparable closing-band 5/10/20 ATS data for inflation/fade scan",
+        "Confirmed goalies",
+        "Final skaters/scratches and material usage",
+        "Current 5v5 xG/shot-quality/special teams",
+        "Same-book opener/current",
+        "Fresh Circa update after Oct7 overnight"
+      ],
+      "release_blockers": [
+        "Core matchup and personnel incomplete",
+        "Mandatory goalie confirmation",
+        "No exact execution"
+      ],
+      "official_units": 0,
+      "disposition": "WATCH / NO BET",
+      "best_number": null,
+      "no_bet_cutoff": "not established—no bet until regraded",
+      "action_candidate_bets_pct": 68,
+      "action_candidate_money_pct": null,
+      "action_crowded_side_bets_pct": 68,
+      "goalie_snapshot": "Vejmelka/Swayman",
+      "crowd_note": "Utah offensive start supports a screen; price worse than article, Boston rebound counter.",
+      "prior_snapshot_reference": "scan-candidates-1101.json#UTA-BOS"
+    },
+    {
+      "id": "VAN-CAR",
+      "sport": "NHL",
+      "game": "Vancouver at Carolina",
+      "start_et": "19:00",
+      "candidate": "CAR ML",
+      "reference_quote": {
+        "line": "ML",
+        "american_odds": -317,
+        "source": "https://www.actionnetwork.com/nhl/public-betting",
+        "as_of": "2026-10-08 morning retrieval; exact upstream update unknown",
+        "executable_at_betrivers_delaware": false
+      },
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "score": null,
+          "max": 35,
+          "evidence": "High price and extreme tickets; VAN counter requires a real handicap. Two independent current matchup paths not yet verified."
+        },
+        "price": {
+          "score": 12,
+          "max": 20,
+          "evidence": "Identified reference versus dated Doc's price; no established playable range."
+        },
+        "personnel": {
+          "score": null,
+          "max": 15,
+          "evidence": "Goalie board: Lankinen/Kochetkov (likely). None confirmed in morning snapshot; final skaters/PP roles incomplete."
+        },
+        "situation": {
+          "score": 5,
+          "max": 10,
+          "evidence": "Home/away venue identified; no assumed rest or travel edge."
+        },
+        "vsin": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No verified current like-market VSiN daily selection."
+        },
+        "docs": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Josh Schonwald -320 from Oct7 article audit; supporting only, not Micks recommendation."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Reference3/movement0/splits1. Read datedOct7 Circa overnight quote. Comparison with Action is cross-source, not verified same-book movement."
+        }
+      },
+      "score": null,
+      "known_subtotal": 27,
+      "assessed_maximum": 60,
+      "score_status": "UNGRADED",
+      "grade": null,
+      "considered_play": false,
+      "failure_dimensions": {
+        "failure_severity": {
+          "score": null,
+          "max": 2,
+          "evidence": "Unfinished current 5v5/special-teams handicap."
+        },
+        "personnel_resilience": {
+          "score": null,
+          "max": 2,
+          "evidence": "Goaltender and skater dependencies unresolved."
+        },
+        "script_variance": {
+          "score": 1,
+          "max": 2,
+          "evidence": "Hockey conversion variance remains."
+        },
+        "price_protection": {
+          "score": 1,
+          "max": 2,
+          "evidence": "Identified reference only."
+        },
+        "contradiction_resolution": {
+          "score": null,
+          "max": 2,
+          "evidence": "Outside pick does not resolve current countercase."
+        }
+      },
+      "failure_score": null,
+      "missing_evidence": [
+        "Exact BetRivers Delaware offer",
+        "Comparable closing-band 5/10/20 ATS data for inflation/fade scan",
+        "Confirmed goalies",
+        "Final skaters/scratches and material usage",
+        "Current 5v5 xG/shot-quality/special teams",
+        "Same-book opener/current",
+        "Fresh Circa update after Oct7 overnight"
+      ],
+      "release_blockers": [
+        "Core matchup and personnel incomplete",
+        "Mandatory goalie confirmation",
+        "No exact execution"
+      ],
+      "official_units": 0,
+      "disposition": "WATCH / NO BET",
+      "best_number": null,
+      "no_bet_cutoff": "not established—no bet until regraded",
+      "action_candidate_bets_pct": 95,
+      "action_candidate_money_pct": null,
+      "action_crowded_side_bets_pct": 95,
+      "goalie_snapshot": "Lankinen/Kochetkov (likely)",
+      "crowd_note": "High price and extreme tickets; VAN counter requires a real handicap.",
+      "prior_snapshot_reference": "scan-candidates-1101.json#VAN-CAR"
+    },
+    {
+      "id": "DAL-BUF",
+      "sport": "NHL",
+      "game": "Dallas at Buffalo",
+      "start_et": "19:00",
+      "candidate": "DAL ML",
+      "reference_quote": {
+        "line": "ML",
+        "american_odds": -108,
+        "source": "https://www.actionnetwork.com/nhl/public-betting",
+        "as_of": "2026-10-08 morning retrieval; exact upstream update unknown",
+        "executable_at_betrivers_delaware": false
+      },
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "score": null,
+          "max": 35,
+          "evidence": "Dallas opener strength is a small sample; Buffalo likely goalie is not confirmed. Two independent current matchup paths not yet verified."
+        },
+        "price": {
+          "score": 12,
+          "max": 20,
+          "evidence": "Identified reference versus dated Doc's price; no established playable range."
+        },
+        "personnel": {
+          "score": null,
+          "max": 15,
+          "evidence": "Goalie board: Oettinger/Luukkonen (likely). None confirmed in morning snapshot; final skaters/PP roles incomplete."
+        },
+        "situation": {
+          "score": 5,
+          "max": 10,
+          "evidence": "Home/away venue identified; no assumed rest or travel edge."
+        },
+        "vsin": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No verified current like-market VSiN daily selection."
+        },
+        "docs": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Tony Sink -110 from Oct7 article audit; supporting only, not Micks recommendation."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Reference3/movement0/splits1. Read datedOct7 Circa overnight quote. Comparison with Action is cross-source, not verified same-book movement."
+        }
+      },
+      "score": null,
+      "known_subtotal": 27,
+      "assessed_maximum": 60,
+      "score_status": "UNGRADED",
+      "grade": null,
+      "considered_play": false,
+      "failure_dimensions": {
+        "failure_severity": {
+          "score": null,
+          "max": 2,
+          "evidence": "Unfinished current 5v5/special-teams handicap."
+        },
+        "personnel_resilience": {
+          "score": null,
+          "max": 2,
+          "evidence": "Goaltender and skater dependencies unresolved."
+        },
+        "script_variance": {
+          "score": 1,
+          "max": 2,
+          "evidence": "Hockey conversion variance remains."
+        },
+        "price_protection": {
+          "score": 1,
+          "max": 2,
+          "evidence": "Identified reference only."
+        },
+        "contradiction_resolution": {
+          "score": null,
+          "max": 2,
+          "evidence": "Outside pick does not resolve current countercase."
+        }
+      },
+      "failure_score": null,
+      "missing_evidence": [
+        "Exact BetRivers Delaware offer",
+        "Comparable closing-band 5/10/20 ATS data for inflation/fade scan",
+        "Confirmed goalies",
+        "Final skaters/scratches and material usage",
+        "Current 5v5 xG/shot-quality/special teams",
+        "Same-book opener/current",
+        "Fresh Circa update after Oct7 overnight"
+      ],
+      "release_blockers": [
+        "Core matchup and personnel incomplete",
+        "Mandatory goalie confirmation",
+        "No exact execution"
+      ],
+      "official_units": 0,
+      "disposition": "WATCH / NO BET",
+      "best_number": null,
+      "no_bet_cutoff": "not established—no bet until regraded",
+      "action_candidate_bets_pct": 63,
+      "action_candidate_money_pct": null,
+      "action_crowded_side_bets_pct": 63,
+      "goalie_snapshot": "Oettinger/Luukkonen (likely)",
+      "crowd_note": "Dallas opener strength is a small sample; Buffalo likely goalie is not confirmed.",
+      "prior_snapshot_reference": "scan-candidates-1101.json#DAL-BUF"
+    },
+    {
+      "id": "PHI-OTT",
+      "sport": "NHL",
+      "game": "Philadelphia at Ottawa",
+      "start_et": "19:00",
+      "candidate": "OTT ML",
+      "reference_quote": {
+        "line": "ML",
+        "american_odds": -155,
+        "source": "https://www.actionnetwork.com/nhl/public-betting",
+        "as_of": "2026-10-08 morning retrieval; exact upstream update unknown",
+        "executable_at_betrivers_delaware": false
+      },
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "score": null,
+          "max": 35,
+          "evidence": "Price worsened versus support; Ottawa Under5.5 is separate and unpriced. Two independent current matchup paths not yet verified."
+        },
+        "price": {
+          "score": 12,
+          "max": 20,
+          "evidence": "Identified reference versus dated Doc's price; no established playable range."
+        },
+        "personnel": {
+          "score": null,
+          "max": 15,
+          "evidence": "Goalie board: Woll/Ullmark. None confirmed in morning snapshot; final skaters/PP roles incomplete."
+        },
+        "situation": {
+          "score": 5,
+          "max": 10,
+          "evidence": "Home/away venue identified; no assumed rest or travel edge."
+        },
+        "vsin": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No verified current like-market VSiN daily selection."
+        },
+        "docs": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Parlays Pundit -135 from Oct7 article audit; supporting only, not Micks recommendation."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Reference3/movement0/splits1. Read datedOct7 Circa overnight quote. Comparison with Action is cross-source, not verified same-book movement."
+        }
+      },
+      "score": null,
+      "known_subtotal": 27,
+      "assessed_maximum": 60,
+      "score_status": "UNGRADED",
+      "grade": null,
+      "considered_play": false,
+      "failure_dimensions": {
+        "failure_severity": {
+          "score": null,
+          "max": 2,
+          "evidence": "Unfinished current 5v5/special-teams handicap."
+        },
+        "personnel_resilience": {
+          "score": null,
+          "max": 2,
+          "evidence": "Goaltender and skater dependencies unresolved."
+        },
+        "script_variance": {
+          "score": 1,
+          "max": 2,
+          "evidence": "Hockey conversion variance remains."
+        },
+        "price_protection": {
+          "score": 1,
+          "max": 2,
+          "evidence": "Identified reference only."
+        },
+        "contradiction_resolution": {
+          "score": null,
+          "max": 2,
+          "evidence": "Outside pick does not resolve current countercase."
+        }
+      },
+      "failure_score": null,
+      "missing_evidence": [
+        "Exact BetRivers Delaware offer",
+        "Comparable closing-band 5/10/20 ATS data for inflation/fade scan",
+        "Confirmed goalies",
+        "Final skaters/scratches and material usage",
+        "Current 5v5 xG/shot-quality/special teams",
+        "Same-book opener/current",
+        "Fresh Circa update after Oct7 overnight"
+      ],
+      "release_blockers": [
+        "Core matchup and personnel incomplete",
+        "Mandatory goalie confirmation",
+        "No exact execution"
+      ],
+      "official_units": 0,
+      "disposition": "WATCH / NO BET",
+      "best_number": null,
+      "no_bet_cutoff": "not established—no bet until regraded",
+      "action_candidate_bets_pct": 83,
+      "action_candidate_money_pct": null,
+      "action_crowded_side_bets_pct": 83,
+      "goalie_snapshot": "Woll/Ullmark",
+      "crowd_note": "Price worsened versus support; Ottawa Under5.5 is separate and unpriced.",
+      "prior_snapshot_reference": "scan-candidates-1101.json#PHI-OTT"
+    },
+    {
+      "id": "NSH-MTL",
+      "sport": "NHL",
+      "game": "Nashville at Montreal",
+      "start_et": "19:00",
+      "candidate": "NSH ML",
+      "reference_quote": {
+        "line": "ML",
+        "american_odds": 163,
+        "source": "https://www.actionnetwork.com/nhl/public-betting",
+        "as_of": "2026-10-08 morning retrieval; exact upstream update unknown",
+        "executable_at_betrivers_delaware": false
+      },
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "score": null,
+          "max": 35,
+          "evidence": "Against Montreal ticket crowd; goalie/5v5 evidence needed, not an automatic fade. Two independent current matchup paths not yet verified."
+        },
+        "price": {
+          "score": 12,
+          "max": 20,
+          "evidence": "Identified reference versus dated Doc's price; no established playable range."
+        },
+        "personnel": {
+          "score": null,
+          "max": 15,
+          "evidence": "Goalie board: Saros/Dobes. None confirmed in morning snapshot; final skaters/PP roles incomplete."
+        },
+        "situation": {
+          "score": 5,
+          "max": 10,
+          "evidence": "Home/away venue identified; no assumed rest or travel edge."
+        },
+        "vsin": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No verified current like-market VSiN daily selection."
+        },
+        "docs": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Josh Schonwald +154 from Oct7 article audit; supporting only, not Micks recommendation."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Reference3/movement0/splits1. Read datedOct7 Circa overnight quote. Comparison with Action is cross-source, not verified same-book movement."
+        }
+      },
+      "score": null,
+      "known_subtotal": 27,
+      "assessed_maximum": 60,
+      "score_status": "UNGRADED",
+      "grade": null,
+      "considered_play": false,
+      "failure_dimensions": {
+        "failure_severity": {
+          "score": null,
+          "max": 2,
+          "evidence": "Unfinished current 5v5/special-teams handicap."
+        },
+        "personnel_resilience": {
+          "score": null,
+          "max": 2,
+          "evidence": "Goaltender and skater dependencies unresolved."
+        },
+        "script_variance": {
+          "score": 1,
+          "max": 2,
+          "evidence": "Hockey conversion variance remains."
+        },
+        "price_protection": {
+          "score": 1,
+          "max": 2,
+          "evidence": "Identified reference only."
+        },
+        "contradiction_resolution": {
+          "score": null,
+          "max": 2,
+          "evidence": "Outside pick does not resolve current countercase."
+        }
+      },
+      "failure_score": null,
+      "missing_evidence": [
+        "Exact BetRivers Delaware offer",
+        "Comparable closing-band 5/10/20 ATS data for inflation/fade scan",
+        "Confirmed goalies",
+        "Final skaters/scratches and material usage",
+        "Current 5v5 xG/shot-quality/special teams",
+        "Same-book opener/current",
+        "Fresh Circa update after Oct7 overnight"
+      ],
+      "release_blockers": [
+        "Core matchup and personnel incomplete",
+        "Mandatory goalie confirmation",
+        "No exact execution"
+      ],
+      "official_units": 0,
+      "disposition": "WATCH / NO BET",
+      "best_number": null,
+      "no_bet_cutoff": "not established—no bet until regraded",
+      "action_candidate_bets_pct": 7,
+      "action_candidate_money_pct": null,
+      "action_crowded_side_bets_pct": 93,
+      "goalie_snapshot": "Saros/Dobes",
+      "crowd_note": "Against Montreal ticket crowd; goalie/5v5 evidence needed, not an automatic fade.",
+      "prior_snapshot_reference": "scan-candidates-1101.json#NSH-MTL"
+    },
+    {
+      "id": "CHI-NYI",
+      "sport": "NHL",
+      "game": "Chicago at NY Islanders",
+      "start_et": "19:30",
+      "candidate": "CHI ML",
+      "reference_quote": {
+        "line": "ML",
+        "american_odds": 165,
+        "source": "https://www.actionnetwork.com/nhl/public-betting",
+        "as_of": "2026-10-08 morning retrieval; exact upstream update unknown",
+        "executable_at_betrivers_delaware": false
+      },
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "score": null,
+          "max": 35,
+          "evidence": "Against NYI crowd; Teravainen absence and Sorokin strength challenge Chicago momentum. Two independent current matchup paths not yet verified."
+        },
+        "price": {
+          "score": 12,
+          "max": 20,
+          "evidence": "Identified reference versus dated Doc's price; no established playable range."
+        },
+        "personnel": {
+          "score": null,
+          "max": 15,
+          "evidence": "Goalie board: Knight/Sorokin (likely). None confirmed in morning snapshot; final skaters/PP roles incomplete."
+        },
+        "situation": {
+          "score": 5,
+          "max": 10,
+          "evidence": "Home/away venue identified; no assumed rest or travel edge."
+        },
+        "vsin": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No verified current like-market VSiN daily selection."
+        },
+        "docs": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Tony Sink +170 from Oct7 article audit; supporting only, not Micks recommendation."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Reference3/movement0/splits1. Read datedOct7 Circa overnight quote. Comparison with Action is cross-source, not verified same-book movement."
+        }
+      },
+      "score": null,
+      "known_subtotal": 27,
+      "assessed_maximum": 60,
+      "score_status": "UNGRADED",
+      "grade": null,
+      "considered_play": false,
+      "failure_dimensions": {
+        "failure_severity": {
+          "score": null,
+          "max": 2,
+          "evidence": "Unfinished current 5v5/special-teams handicap."
+        },
+        "personnel_resilience": {
+          "score": null,
+          "max": 2,
+          "evidence": "Goaltender and skater dependencies unresolved."
+        },
+        "script_variance": {
+          "score": 1,
+          "max": 2,
+          "evidence": "Hockey conversion variance remains."
+        },
+        "price_protection": {
+          "score": 1,
+          "max": 2,
+          "evidence": "Identified reference only."
+        },
+        "contradiction_resolution": {
+          "score": null,
+          "max": 2,
+          "evidence": "Outside pick does not resolve current countercase."
+        }
+      },
+      "failure_score": null,
+      "missing_evidence": [
+        "Exact BetRivers Delaware offer",
+        "Comparable closing-band 5/10/20 ATS data for inflation/fade scan",
+        "Confirmed goalies",
+        "Final skaters/scratches and material usage",
+        "Current 5v5 xG/shot-quality/special teams",
+        "Same-book opener/current",
+        "Fresh Circa update after Oct7 overnight"
+      ],
+      "release_blockers": [
+        "Core matchup and personnel incomplete",
+        "Mandatory goalie confirmation",
+        "No exact execution"
+      ],
+      "official_units": 0,
+      "disposition": "WATCH / NO BET",
+      "best_number": null,
+      "no_bet_cutoff": "not established—no bet until regraded",
+      "action_candidate_bets_pct": 8,
+      "action_candidate_money_pct": null,
+      "action_crowded_side_bets_pct": 92,
+      "goalie_snapshot": "Knight/Sorokin (likely)",
+      "crowd_note": "Against NYI crowd; Teravainen absence and Sorokin strength challenge Chicago momentum.",
+      "prior_snapshot_reference": "scan-candidates-1101.json#CHI-NYI"
+    },
+    {
+      "id": "SJ-STL",
+      "sport": "NHL",
+      "game": "San Jose at St. Louis",
+      "start_et": "20:00",
+      "candidate": "STL ML",
+      "reference_quote": {
+        "line": "ML",
+        "american_odds": -138,
+        "source": "https://www.actionnetwork.com/nhl/public-betting",
+        "as_of": "2026-10-08 morning retrieval; exact upstream update unknown",
+        "executable_at_betrivers_delaware": false
+      },
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "score": null,
+          "max": 35,
+          "evidence": "Crowded favorite now costs more than article; fresh underlying metrics needed. Two independent current matchup paths not yet verified."
+        },
+        "price": {
+          "score": 12,
+          "max": 20,
+          "evidence": "Identified reference versus dated Doc's price; no established playable range."
+        },
+        "personnel": {
+          "score": null,
+          "max": 15,
+          "evidence": "Goalie board: Askarov/Hofer. None confirmed in morning snapshot; final skaters/PP roles incomplete."
+        },
+        "situation": {
+          "score": 5,
+          "max": 10,
+          "evidence": "Home/away venue identified; no assumed rest or travel edge."
+        },
+        "vsin": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No verified current like-market VSiN daily selection."
+        },
+        "docs": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Guy Bruhn -120 from Oct7 article audit; supporting only, not Micks recommendation."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Reference3/movement0/splits1. Read datedOct7 Circa overnight quote. Comparison with Action is cross-source, not verified same-book movement."
+        }
+      },
+      "score": null,
+      "known_subtotal": 27,
+      "assessed_maximum": 60,
+      "score_status": "UNGRADED",
+      "grade": null,
+      "considered_play": false,
+      "failure_dimensions": {
+        "failure_severity": {
+          "score": null,
+          "max": 2,
+          "evidence": "Unfinished current 5v5/special-teams handicap."
+        },
+        "personnel_resilience": {
+          "score": null,
+          "max": 2,
+          "evidence": "Goaltender and skater dependencies unresolved."
+        },
+        "script_variance": {
+          "score": 1,
+          "max": 2,
+          "evidence": "Hockey conversion variance remains."
+        },
+        "price_protection": {
+          "score": 1,
+          "max": 2,
+          "evidence": "Identified reference only."
+        },
+        "contradiction_resolution": {
+          "score": null,
+          "max": 2,
+          "evidence": "Outside pick does not resolve current countercase."
+        }
+      },
+      "failure_score": null,
+      "missing_evidence": [
+        "Exact BetRivers Delaware offer",
+        "Comparable closing-band 5/10/20 ATS data for inflation/fade scan",
+        "Confirmed goalies",
+        "Final skaters/scratches and material usage",
+        "Current 5v5 xG/shot-quality/special teams",
+        "Same-book opener/current",
+        "Fresh Circa update after Oct7 overnight"
+      ],
+      "release_blockers": [
+        "Core matchup and personnel incomplete",
+        "Mandatory goalie confirmation",
+        "No exact execution"
+      ],
+      "official_units": 0,
+      "disposition": "WATCH / NO BET",
+      "best_number": null,
+      "no_bet_cutoff": "not established—no bet until regraded",
+      "action_candidate_bets_pct": 71,
+      "action_candidate_money_pct": null,
+      "action_crowded_side_bets_pct": 71,
+      "goalie_snapshot": "Askarov/Hofer",
+      "crowd_note": "Crowded favorite now costs more than article; fresh underlying metrics needed.",
+      "prior_snapshot_reference": "scan-candidates-1101.json#SJ-STL"
+    },
+    {
+      "id": "COL-CGY",
+      "sport": "NHL",
+      "game": "Colorado at Calgary",
+      "start_et": "21:00",
+      "candidate": "COL ML",
+      "reference_quote": {
+        "line": "ML",
+        "american_odds": -212,
+        "source": "https://www.actionnetwork.com/nhl/public-betting",
+        "as_of": "2026-10-08 morning retrieval; exact upstream update unknown",
+        "executable_at_betrivers_delaware": false
+      },
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "score": null,
+          "max": 35,
+          "evidence": "Extreme money/tickets; underlying edge and goalie sensitivity not established. Two independent current matchup paths not yet verified."
+        },
+        "price": {
+          "score": 12,
+          "max": 20,
+          "evidence": "Identified reference versus dated Doc's price; no established playable range."
+        },
+        "personnel": {
+          "score": null,
+          "max": 15,
+          "evidence": "Goalie board: Wedgewood/Cooley. None confirmed in morning snapshot; final skaters/PP roles incomplete."
+        },
+        "situation": {
+          "score": 5,
+          "max": 10,
+          "evidence": "Home/away venue identified; no assumed rest or travel edge."
+        },
+        "vsin": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No verified current like-market VSiN daily selection."
+        },
+        "docs": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Josh Schonwald -218 from Oct7 article audit; supporting only, not Micks recommendation."
+        },
+        "market": {
+          "score": 3,
+          "max": 10,
+          "evidence": "Action reference and prior public splits remain; Circa COL/CGY row is blank. No invented sheet number."
+        }
+      },
+      "score": null,
+      "known_subtotal": 26,
+      "assessed_maximum": 60,
+      "score_status": "UNGRADED",
+      "grade": null,
+      "considered_play": false,
+      "failure_dimensions": {
+        "failure_severity": {
+          "score": null,
+          "max": 2,
+          "evidence": "Unfinished current 5v5/special-teams handicap."
+        },
+        "personnel_resilience": {
+          "score": null,
+          "max": 2,
+          "evidence": "Goaltender and skater dependencies unresolved."
+        },
+        "script_variance": {
+          "score": 1,
+          "max": 2,
+          "evidence": "Hockey conversion variance remains."
+        },
+        "price_protection": {
+          "score": 1,
+          "max": 2,
+          "evidence": "Identified reference only."
+        },
+        "contradiction_resolution": {
+          "score": null,
+          "max": 2,
+          "evidence": "Outside pick does not resolve current countercase."
+        }
+      },
+      "failure_score": null,
+      "missing_evidence": [
+        "Exact BetRivers Delaware offer",
+        "Comparable closing-band 5/10/20 ATS data for inflation/fade scan",
+        "Confirmed goalies",
+        "Final skaters/scratches and material usage",
+        "Current 5v5 xG/shot-quality/special teams",
+        "Same-book opener/current",
+        "Circa COL/CGY blank row requires priced refresh"
+      ],
+      "release_blockers": [
+        "Core matchup and personnel incomplete",
+        "Mandatory goalie confirmation",
+        "No exact execution"
+      ],
+      "official_units": 0,
+      "disposition": "WATCH / NO BET",
+      "best_number": null,
+      "no_bet_cutoff": "not established—no bet until regraded",
+      "action_candidate_bets_pct": 93,
+      "action_candidate_money_pct": 99,
+      "action_crowded_side_bets_pct": 93,
+      "goalie_snapshot": "Wedgewood/Cooley",
+      "crowd_note": "Extreme money/tickets; underlying edge and goalie sensitivity not established.",
+      "prior_snapshot_reference": "scan-candidates-1101.json#COL-CGY"
+    },
+    {
+      "id": "TOR-VGK",
+      "sport": "NHL",
+      "game": "Toronto at Vegas",
+      "start_et": "22:00",
+      "candidate": "VGK ML",
+      "reference_quote": {
+        "line": "ML",
+        "american_odds": -163,
+        "source": "https://www.actionnetwork.com/nhl/public-betting",
+        "as_of": "2026-10-08 morning retrieval; exact upstream update unknown",
+        "executable_at_betrivers_delaware": false
+      },
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "score": null,
+          "max": 35,
+          "evidence": "Extreme tickets; unconfirmed goalie pair prevents final assessment. Two independent current matchup paths not yet verified."
+        },
+        "price": {
+          "score": 12,
+          "max": 20,
+          "evidence": "Identified reference versus dated Doc's price; no established playable range."
+        },
+        "personnel": {
+          "score": null,
+          "max": 15,
+          "evidence": "Goalie board: Bobrovsky/Hart. None confirmed in morning snapshot; final skaters/PP roles incomplete."
+        },
+        "situation": {
+          "score": 5,
+          "max": 10,
+          "evidence": "Home/away venue identified; no assumed rest or travel edge."
+        },
+        "vsin": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No verified current like-market VSiN daily selection."
+        },
+        "docs": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Tony Sink -162 from Oct7 article audit; supporting only, not Micks recommendation."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Reference3/movement0/splits1. Read datedOct7 Circa overnight quote. Comparison with Action is cross-source, not verified same-book movement."
+        }
+      },
+      "score": null,
+      "known_subtotal": 27,
+      "assessed_maximum": 60,
+      "score_status": "UNGRADED",
+      "grade": null,
+      "considered_play": false,
+      "failure_dimensions": {
+        "failure_severity": {
+          "score": null,
+          "max": 2,
+          "evidence": "Unfinished current 5v5/special-teams handicap."
+        },
+        "personnel_resilience": {
+          "score": null,
+          "max": 2,
+          "evidence": "Goaltender and skater dependencies unresolved."
+        },
+        "script_variance": {
+          "score": 1,
+          "max": 2,
+          "evidence": "Hockey conversion variance remains."
+        },
+        "price_protection": {
+          "score": 1,
+          "max": 2,
+          "evidence": "Identified reference only."
+        },
+        "contradiction_resolution": {
+          "score": null,
+          "max": 2,
+          "evidence": "Outside pick does not resolve current countercase."
+        }
+      },
+      "failure_score": null,
+      "missing_evidence": [
+        "Exact BetRivers Delaware offer",
+        "Comparable closing-band 5/10/20 ATS data for inflation/fade scan",
+        "Confirmed goalies",
+        "Final skaters/scratches and material usage",
+        "Current 5v5 xG/shot-quality/special teams",
+        "Same-book opener/current",
+        "Fresh Circa update after Oct7 overnight"
+      ],
+      "release_blockers": [
+        "Core matchup and personnel incomplete",
+        "Mandatory goalie confirmation",
+        "No exact execution"
+      ],
+      "official_units": 0,
+      "disposition": "WATCH / NO BET",
+      "best_number": null,
+      "no_bet_cutoff": "not established—no bet until regraded",
+      "action_candidate_bets_pct": 92,
+      "action_candidate_money_pct": null,
+      "action_crowded_side_bets_pct": 92,
+      "goalie_snapshot": "Bobrovsky/Hart",
+      "crowd_note": "Extreme tickets; unconfirmed goalie pair prevents final assessment.",
+      "prior_snapshot_reference": "scan-candidates-1101.json#TOR-VGK"
+    },
+    {
+      "id": "BOS-CLE",
+      "sport": "NBA preseason",
+      "game": "Boston at Cleveland",
+      "start_et": "19:00",
+      "candidate": "No selected side",
+      "reference_quote": {
+        "line": "BOS -3.5",
+        "american_odds": null,
+        "source": "RotoWire expected lineup board",
+        "as_of": "2026-10-08 morning retrieval; exact upstream update unknown",
+        "executable_at_betrivers_delaware": false
+      },
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "score": null,
+          "max": 35,
+          "evidence": "Season/future strength is not a preseason possession or minutes edge."
+        },
+        "price": {
+          "score": null,
+          "max": 20,
+          "evidence": "Action best-offer thresholds conflict; no independently justified selected-market price."
+        },
+        "personnel": {
+          "score": null,
+          "max": 15,
+          "evidence": "Atkinson experimentation and staggered Harden/Mitchell; preseason minutes not established."
+        },
+        "situation": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Preseason experimentation increases uncertainty; no supported rest/travel advantage."
+        },
+        "vsin": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No verified current game-specific opinion; daily preseason check found no relevant selection."
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "Current futures article is not daily preseason agreement."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Reference3/movement0/splits1. Oct8Circa readable paired thresholds; exact spread vig not printed. No Pro daily NBA splits supplied."
+        }
+      },
+      "score": null,
+      "known_subtotal": 8,
+      "assessed_maximum": 40,
+      "score_status": "UNGRADED",
+      "grade": null,
+      "considered_play": false,
+      "failure_dimensions": {
+        "failure_severity": {
+          "score": null,
+          "max": 2,
+          "evidence": "No established cashing path."
+        },
+        "personnel_resilience": {
+          "score": null,
+          "max": 2,
+          "evidence": "Minutes and starters not confirmed."
+        },
+        "script_variance": {
+          "score": null,
+          "max": 2,
+          "evidence": "Bench/experimental script unassessed."
+        },
+        "price_protection": {
+          "score": null,
+          "max": 2,
+          "evidence": "No selected market/cutoff."
+        },
+        "contradiction_resolution": {
+          "score": null,
+          "max": 2,
+          "evidence": "No independent preseason handicap."
+        }
+      },
+      "failure_score": null,
+      "missing_evidence": [
+        "Exact BetRivers Delaware offer",
+        "Comparable closing-band 5/10/20 ATS data for inflation/fade scan",
+        "Coach minutes/rotation plans",
+        "Final active/rest status",
+        "Exact same-threshold spread and total offers"
+      ],
+      "release_blockers": [
+        "Core matchup/personnel/price incomplete"
+      ],
+      "official_units": 0,
+      "disposition": "WATCH / NO BET",
+      "best_number": null,
+      "no_bet_cutoff": "not established—no bet until regraded",
+      "action_displayed_favored_side_bets_pct": 55,
+      "action_displayed_favored_side_money_pct": 57,
+      "prior_snapshot_reference": "scan-candidates-1101.json#BOS-CLE"
+    },
+    {
+      "id": "NOP-MIA",
+      "sport": "NBA preseason",
+      "game": "New Orleans at Miami",
+      "start_et": "19:30",
+      "candidate": "No selected side",
+      "reference_quote": {
+        "line": "MIA -8.5",
+        "american_odds": null,
+        "source": "RotoWire expected lineup board",
+        "as_of": "2026-10-08 morning retrieval; exact upstream update unknown",
+        "executable_at_betrivers_delaware": false
+      },
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "score": null,
+          "max": 35,
+          "evidence": "Season/future strength is not a preseason possession or minutes edge."
+        },
+        "price": {
+          "score": null,
+          "max": 20,
+          "evidence": "Action best-offer thresholds conflict; no independently justified selected-market price."
+        },
+        "personnel": {
+          "score": null,
+          "max": 15,
+          "evidence": "Wiggins uncertain; role and rotation impact require current coach evidence."
+        },
+        "situation": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Preseason experimentation increases uncertainty; no supported rest/travel advantage."
+        },
+        "vsin": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No verified current game-specific opinion; daily preseason check found no relevant selection."
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "Current futures article is not daily preseason agreement."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Reference3/movement0/splits1. Oct8Circa readable paired thresholds; exact spread vig not printed. No Pro daily NBA splits supplied."
+        }
+      },
+      "score": null,
+      "known_subtotal": 8,
+      "assessed_maximum": 40,
+      "score_status": "UNGRADED",
+      "grade": null,
+      "considered_play": false,
+      "failure_dimensions": {
+        "failure_severity": {
+          "score": null,
+          "max": 2,
+          "evidence": "No established cashing path."
+        },
+        "personnel_resilience": {
+          "score": null,
+          "max": 2,
+          "evidence": "Minutes and starters not confirmed."
+        },
+        "script_variance": {
+          "score": null,
+          "max": 2,
+          "evidence": "Bench/experimental script unassessed."
+        },
+        "price_protection": {
+          "score": null,
+          "max": 2,
+          "evidence": "No selected market/cutoff."
+        },
+        "contradiction_resolution": {
+          "score": null,
+          "max": 2,
+          "evidence": "No independent preseason handicap."
+        }
+      },
+      "failure_score": null,
+      "missing_evidence": [
+        "Exact BetRivers Delaware offer",
+        "Comparable closing-band 5/10/20 ATS data for inflation/fade scan",
+        "Coach minutes/rotation plans",
+        "Final active/rest status",
+        "Exact same-threshold spread and total offers"
+      ],
+      "release_blockers": [
+        "Core matchup/personnel/price incomplete"
+      ],
+      "official_units": 0,
+      "disposition": "WATCH / NO BET",
+      "best_number": null,
+      "no_bet_cutoff": "not established—no bet until regraded",
+      "action_displayed_favored_side_bets_pct": 68,
+      "action_displayed_favored_side_money_pct": 52,
+      "prior_snapshot_reference": "scan-candidates-1101.json#NOP-MIA"
+    },
+    {
+      "id": "PHI-BKN",
+      "sport": "NBA preseason",
+      "game": "Philadelphia at Brooklyn",
+      "start_et": "19:30",
+      "candidate": "No selected side",
+      "reference_quote": {
+        "line": "PHI -7.5",
+        "american_odds": null,
+        "source": "RotoWire expected lineup board",
+        "as_of": "2026-10-08 morning retrieval; exact upstream update unknown",
+        "executable_at_betrivers_delaware": false
+      },
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "score": null,
+          "max": 35,
+          "evidence": "Season/future strength is not a preseason possession or minutes edge."
+        },
+        "price": {
+          "score": null,
+          "max": 20,
+          "evidence": "Action best-offer thresholds conflict; no independently justified selected-market price."
+        },
+        "personnel": {
+          "score": null,
+          "max": 15,
+          "evidence": "Maxey/LeBron/Embiid questionable; Jaylen Brown role and resting plan not settled."
+        },
+        "situation": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Preseason experimentation increases uncertainty; no supported rest/travel advantage."
+        },
+        "vsin": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No verified current game-specific opinion; daily preseason check found no relevant selection."
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "Current futures article is not daily preseason agreement."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Reference3/movement0/splits1. Oct8Circa readable paired thresholds; exact spread vig not printed. No Pro daily NBA splits supplied."
+        }
+      },
+      "score": null,
+      "known_subtotal": 8,
+      "assessed_maximum": 40,
+      "score_status": "UNGRADED",
+      "grade": null,
+      "considered_play": false,
+      "failure_dimensions": {
+        "failure_severity": {
+          "score": null,
+          "max": 2,
+          "evidence": "No established cashing path."
+        },
+        "personnel_resilience": {
+          "score": null,
+          "max": 2,
+          "evidence": "Minutes and starters not confirmed."
+        },
+        "script_variance": {
+          "score": null,
+          "max": 2,
+          "evidence": "Bench/experimental script unassessed."
+        },
+        "price_protection": {
+          "score": null,
+          "max": 2,
+          "evidence": "No selected market/cutoff."
+        },
+        "contradiction_resolution": {
+          "score": null,
+          "max": 2,
+          "evidence": "No independent preseason handicap."
+        }
+      },
+      "failure_score": null,
+      "missing_evidence": [
+        "Exact BetRivers Delaware offer",
+        "Comparable closing-band 5/10/20 ATS data for inflation/fade scan",
+        "Coach minutes/rotation plans",
+        "Final active/rest status",
+        "Exact same-threshold spread and total offers"
+      ],
+      "release_blockers": [
+        "Core matchup/personnel/price incomplete"
+      ],
+      "official_units": 0,
+      "disposition": "WATCH / NO BET",
+      "best_number": null,
+      "no_bet_cutoff": "not established—no bet until regraded",
+      "action_displayed_favored_side_bets_pct": 71,
+      "action_displayed_favored_side_money_pct": null,
+      "prior_snapshot_reference": "scan-candidates-1101.json#PHI-BKN"
+    },
+    {
+      "id": "WAS-NYK",
+      "sport": "NBA preseason",
+      "game": "Washington at New York",
+      "start_et": "19:30",
+      "candidate": "No selected side",
+      "reference_quote": {
+        "line": "NYK -6.5",
+        "american_odds": null,
+        "source": "RotoWire expected lineup board",
+        "as_of": "2026-10-08 morning retrieval; exact upstream update unknown",
+        "executable_at_betrivers_delaware": false
+      },
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "score": null,
+          "max": 35,
+          "evidence": "Season/future strength is not a preseason possession or minutes edge."
+        },
+        "price": {
+          "score": null,
+          "max": 20,
+          "evidence": "Action best-offer thresholds conflict; no independently justified selected-market price."
+        },
+        "personnel": {
+          "score": null,
+          "max": 15,
+          "evidence": "Sarr and Alvarado uncertain; projected rosters do not establish minutes."
+        },
+        "situation": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Preseason experimentation increases uncertainty; no supported rest/travel advantage."
+        },
+        "vsin": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No verified current game-specific opinion; daily preseason check found no relevant selection."
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "Current futures article is not daily preseason agreement."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Reference3/movement0/splits1. Oct8Circa readable paired thresholds; exact spread vig not printed. No Pro daily NBA splits supplied."
+        }
+      },
+      "score": null,
+      "known_subtotal": 8,
+      "assessed_maximum": 40,
+      "score_status": "UNGRADED",
+      "grade": null,
+      "considered_play": false,
+      "failure_dimensions": {
+        "failure_severity": {
+          "score": null,
+          "max": 2,
+          "evidence": "No established cashing path."
+        },
+        "personnel_resilience": {
+          "score": null,
+          "max": 2,
+          "evidence": "Minutes and starters not confirmed."
+        },
+        "script_variance": {
+          "score": null,
+          "max": 2,
+          "evidence": "Bench/experimental script unassessed."
+        },
+        "price_protection": {
+          "score": null,
+          "max": 2,
+          "evidence": "No selected market/cutoff."
+        },
+        "contradiction_resolution": {
+          "score": null,
+          "max": 2,
+          "evidence": "No independent preseason handicap."
+        }
+      },
+      "failure_score": null,
+      "missing_evidence": [
+        "Exact BetRivers Delaware offer",
+        "Comparable closing-band 5/10/20 ATS data for inflation/fade scan",
+        "Coach minutes/rotation plans",
+        "Final active/rest status",
+        "Exact same-threshold spread and total offers"
+      ],
+      "release_blockers": [
+        "Core matchup/personnel/price incomplete"
+      ],
+      "official_units": 0,
+      "disposition": "WATCH / NO BET",
+      "best_number": null,
+      "no_bet_cutoff": "not established—no bet until regraded",
+      "action_displayed_favored_side_bets_pct": 64,
+      "action_displayed_favored_side_money_pct": null,
+      "prior_snapshot_reference": "scan-candidates-1101.json#WAS-NYK"
+    },
+    {
+      "id": "ATL-SAS",
+      "sport": "NBA preseason",
+      "game": "Atlanta at San Antonio",
+      "start_et": "20:00",
+      "candidate": "No selected side",
+      "reference_quote": {
+        "line": "SAS -8.5",
+        "american_odds": null,
+        "source": "RotoWire expected lineup board",
+        "as_of": "2026-10-08 morning retrieval; exact upstream update unknown",
+        "executable_at_betrivers_delaware": false
+      },
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "score": null,
+          "max": 35,
+          "evidence": "Season/future strength is not a preseason possession or minutes edge."
+        },
+        "price": {
+          "score": null,
+          "max": 20,
+          "evidence": "Action best-offer thresholds conflict; no independently justified selected-market price."
+        },
+        "personnel": {
+          "score": null,
+          "max": 15,
+          "evidence": "McCollum uncertain; Wembanyama/Fox minutes need evidence, not franchise ranking."
+        },
+        "situation": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Preseason experimentation increases uncertainty; no supported rest/travel advantage."
+        },
+        "vsin": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No verified current game-specific opinion; daily preseason check found no relevant selection."
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "Current futures article is not daily preseason agreement."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Reference3/movement0/splits1. Oct8Circa readable paired thresholds; exact spread vig not printed. No Pro daily NBA splits supplied."
+        }
+      },
+      "score": null,
+      "known_subtotal": 8,
+      "assessed_maximum": 40,
+      "score_status": "UNGRADED",
+      "grade": null,
+      "considered_play": false,
+      "failure_dimensions": {
+        "failure_severity": {
+          "score": null,
+          "max": 2,
+          "evidence": "No established cashing path."
+        },
+        "personnel_resilience": {
+          "score": null,
+          "max": 2,
+          "evidence": "Minutes and starters not confirmed."
+        },
+        "script_variance": {
+          "score": null,
+          "max": 2,
+          "evidence": "Bench/experimental script unassessed."
+        },
+        "price_protection": {
+          "score": null,
+          "max": 2,
+          "evidence": "No selected market/cutoff."
+        },
+        "contradiction_resolution": {
+          "score": null,
+          "max": 2,
+          "evidence": "No independent preseason handicap."
+        }
+      },
+      "failure_score": null,
+      "missing_evidence": [
+        "Exact BetRivers Delaware offer",
+        "Comparable closing-band 5/10/20 ATS data for inflation/fade scan",
+        "Coach minutes/rotation plans",
+        "Final active/rest status",
+        "Exact same-threshold spread and total offers"
+      ],
+      "release_blockers": [
+        "Core matchup/personnel/price incomplete"
+      ],
+      "official_units": 0,
+      "disposition": "WATCH / NO BET",
+      "best_number": null,
+      "no_bet_cutoff": "not established—no bet until regraded",
+      "action_displayed_favored_side_bets_pct": 67,
+      "action_displayed_favored_side_money_pct": null,
+      "prior_snapshot_reference": "scan-candidates-1101.json#ATL-SAS"
+    },
+    {
+      "id": "SAC-LAL",
+      "sport": "NBA preseason",
+      "game": "Sacramento at LA Lakers",
+      "start_et": "22:30",
+      "candidate": "No selected side",
+      "reference_quote": {
+        "line": "LAL -12.5",
+        "american_odds": null,
+        "source": "RotoWire expected lineup board",
+        "as_of": "2026-10-08 morning retrieval; exact upstream update unknown",
+        "executable_at_betrivers_delaware": false
+      },
+      "scoring_version": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "score": null,
+          "max": 35,
+          "evidence": "Season/future strength is not a preseason possession or minutes edge."
+        },
+        "price": {
+          "score": null,
+          "max": 20,
+          "evidence": "Action best-offer thresholds conflict; no independently justified selected-market price."
+        },
+        "personnel": {
+          "score": null,
+          "max": 15,
+          "evidence": "Doncic/Reaves/Kessler uncertain; large favorite gate and resting ambiguity."
+        },
+        "situation": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Preseason experimentation increases uncertainty; no supported rest/travel advantage."
+        },
+        "vsin": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No verified current game-specific opinion; daily preseason check found no relevant selection."
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "Current futures article is not daily preseason agreement."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Reference3/movement0/splits1. Oct8Circa readable paired thresholds; exact spread vig not printed. No Pro daily NBA splits supplied."
+        }
+      },
+      "score": null,
+      "known_subtotal": 8,
+      "assessed_maximum": 40,
+      "score_status": "UNGRADED",
+      "grade": null,
+      "considered_play": false,
+      "failure_dimensions": {
+        "failure_severity": {
+          "score": null,
+          "max": 2,
+          "evidence": "No established cashing path."
+        },
+        "personnel_resilience": {
+          "score": null,
+          "max": 2,
+          "evidence": "Minutes and starters not confirmed."
+        },
+        "script_variance": {
+          "score": null,
+          "max": 2,
+          "evidence": "Bench/experimental script unassessed."
+        },
+        "price_protection": {
+          "score": null,
+          "max": 2,
+          "evidence": "No selected market/cutoff."
+        },
+        "contradiction_resolution": {
+          "score": null,
+          "max": 2,
+          "evidence": "No independent preseason handicap."
+        }
+      },
+      "failure_score": null,
+      "missing_evidence": [
+        "Exact BetRivers Delaware offer",
+        "Comparable closing-band 5/10/20 ATS data for inflation/fade scan",
+        "Coach minutes/rotation plans",
+        "Final active/rest status",
+        "Exact same-threshold spread and total offers"
+      ],
+      "release_blockers": [
+        "Core matchup/personnel/price incomplete"
+      ],
+      "official_units": 0,
+      "disposition": "WATCH / NO BET",
+      "best_number": null,
+      "no_bet_cutoff": "not established—no bet until regraded",
+      "action_displayed_favored_side_bets_pct": 52,
+      "action_displayed_favored_side_money_pct": null,
+      "prior_snapshot_reference": "scan-candidates-1101.json#SAC-LAL"
+    }
+  ],
+  "historical_preserved": [
+    "article-scan-0623.md",
+    "article-scan-0623.json"
+  ],
+  "coverage": {
+    "major_us_events": 22,
+    "counts": {
+      "NHL": 10,
+      "NBA_preseason": 6,
+      "CFB": 4,
+      "NFL": 1,
+      "MLB": 1
+    },
+    "worldwide_complete": false,
+    "other_lanes": {
+      "soccer": "No verified executable current candidate; fixture coverage incomplete",
+      "tennis": "Asia morning matches already started/completed; next order/ET date not verified",
+      "golf": "Baycurrent round1 underway; no pre-event release",
+      "WNBA_CFL_combat_motorsports_college_basketball": "No verified current executable event from checked board; not proof of no worldwide events"
+    }
+  },
+  "action_access": "User-provided Action Pro screenshots and recording visually read; no independent authenticated session operated.",
+  "circa_access": "Readable user screenshots received; actual footer dates retained. Dated sheet is not necessarily a live Circa quote.",
+  "betrivers_access": "TB/DAL alternate spread offers verified in user screenshot at11:13; other execution offers remain unavailable.",
+  "firecrawl_access": "HTTP402 insufficient credits; accessible web fallback used",
+  "source_audit_file": "betrivers-report-1130.md",
+  "action_splits": {
+    "NFL": {
+      "historical_public": {
+        "spread": {
+          "TB": {
+            "bets": 35,
+            "money": 42
+          },
+          "DAL": {
+            "bets": 65,
+            "money": 58
+          }
+        },
+        "source": "https://www.actionnetwork.com/nfl/public-betting"
+      },
+      "current_user_Pro": {
+        "spread": {
+          "TB": {
+            "line": 8.5,
+            "odds": -112,
+            "bets": 28,
+            "money": 31
+          },
+          "DAL": {
+            "line": -8.5,
+            "odds": -108,
+            "bets": 72,
+            "money": 69,
+            "flag": "heavy tickets only; money69 below threshold"
+          }
+        },
+        "total": {
+          "Over": {
+            "line": 48.5,
+            "odds": -110,
+            "bets": 73,
+            "money": 82,
+            "flag": "heavy tickets/extreme money"
+          },
+          "Under": {
+            "line": 48.5,
+            "odds": -110,
+            "bets": 27,
+            "money": 18
+          }
+        },
+        "moneyline": {
+          "TB": {
+            "odds": 360,
+            "bets": 6,
+            "money": 11
+          },
+          "DAL": {
+            "odds": -475,
+            "bets": 94,
+            "money": 89,
+            "flag": "extreme both"
+          }
+        },
+        "pro_model": {
+          "DAL_spread": -8.8,
+          "consensus_spread": -8.5,
+          "external_grade": "D+"
+        }
+      }
+    },
+    "CFB": {
+      "LIB_spread": {
+        "bets": 57,
+        "money": 69
+      },
+      "UTSA_spread": {
+        "bets": 37,
+        "money": null
+      },
+      "ARST_spread": {
+        "bets": 36,
+        "money": null
+      },
+      "MOST_spread": {
+        "bets": null,
+        "money": null
+      },
+      "source": "https://www.actionnetwork.com/ncaaf/public-betting"
+    },
+    "MLB": {
+      "CLE_ML": {
+        "bets": 42,
+        "money": null
+      },
+      "CWS_ML": {
+        "bets": 58,
+        "money": null
+      },
+      "source": "https://www.actionnetwork.com/mlb/public-betting"
+    },
+    "NHL": "See candidate-specific fields; opposing percentage complements ticket counts, unknown money stays unknown",
+    "NBA": "See per-row favorite ticket/money fields"
+  },
+  "separate_dk_snapshot": {
+    "source": "https://data.vsin.com/betting-splits/?source=DK&sport=NFL",
+    "DAL_spread": {
+      "line": -8.5,
+      "bets": 70,
+      "money": 83
+    },
+    "DAL_ML": {
+      "odds": -470,
+      "bets": 82,
+      "money": 60
+    },
+    "total_48_5": {
+      "first_row_bets": 79,
+      "first_row_handle": 99,
+      "second_row_bets": 21,
+      "second_row_handle": 1,
+      "direction": "First row convention appears Over; retrieved text has no explicit O/U labels—verify labels before actionable total flag"
+    }
+  },
+  "shadow_replica": {
+    "score": null,
+    "status": "UNASSESSED; probability/dislocation and closing samples not reconstructable; no invented EV; not a daily release prerequisite"
+  },
+  "sections": {
+    "master_picks": [],
+    "props_lab": [],
+    "derivatives": [],
+    "nrfi_yrfi": [],
+    "futures_lab": [],
+    "lotto_parlays": [],
+    "longshots": [],
+    "pick_of_the_day": null
+  },
+  "needed_from_user": [
+    "Action Big Money tickets/money for UTSA and Missouri State spread/total",
+    "BetRivers UTSA total/odds for independent total screen",
+    "Fresh Circa refresh if available; existing dated sheets already read"
+  ],
+  "source_urls": [
+    "https://www.actionnetwork.com/ncaaf/public-betting",
+    "https://www.actionnetwork.com/nfl/public-betting",
+    "https://www.actionnetwork.com/nba/public-betting",
+    "https://www.actionnetwork.com/nhl/public-betting",
+    "https://www.actionnetwork.com/mlb/public-betting",
+    "https://www.dailyfaceoff.com/starting-goalies/2026-10-08",
+    "https://www.rotowire.com/basketball/nba-lineups.php"
+  ],
+  "publication_status": "REPORT ONLY; no wager, active card or third-party email",
+  "parent_snapshot": "betrivers-candidates-1130.json",
+  "attachments": [
+    {
+      "file": "IMG_1788.png",
+      "type": "BetRivers Delaware alternate spreads",
+      "capture_clock": "11:13"
+    },
+    {
+      "file": "IMG_1789.png",
+      "type": "BetRivers Delaware alternate spreads",
+      "capture_clock": "11:13"
+    },
+    {
+      "file": "IMG_1791.png",
+      "type": "Action Pro NFL total",
+      "capture_clock": "11:15"
+    },
+    {
+      "file": "IMG_1792.png",
+      "type": "Action Pro NFL spread",
+      "capture_clock": "11:16"
+    },
+    {
+      "file": "IMG_1793.png",
+      "type": "Action Pro NFL ML",
+      "capture_clock": "11:16"
+    },
+    {
+      "file": "IMG_1794.png",
+      "type": "Circa NBA Oct8 sheet",
+      "capture_clock": "11:16",
+      "sheet_update_time": "not visible"
+    },
+    {
+      "file": "IMG_1795.png",
+      "type": "Circa NFL Week5",
+      "capture_clock": "11:16",
+      "sheet_update_time": "10/7/26 1:23PM, zone not printed"
+    },
+    {
+      "file": "IMG_1796.jpeg",
+      "type": "Circa CFB Week6",
+      "capture_clock": "11:17",
+      "sheet_update_time": "10/5/26 10:07AM, zone not printed"
+    },
+    {
+      "file": "IMG_1797.png",
+      "type": "Circa NHL Oct8 overnights",
+      "capture_clock": "11:17",
+      "sheet_update_time": "10/7/26 5:47PM, zone not printed"
+    },
+    {
+      "file": "ScreenRecording_10-08-2026 11-14-35_1.mp4",
+      "type": "Action CFB Pro and consensus board",
+      "capture_clock": "11:14–11:15",
+      "duration_seconds": 55.966667
+    },
+    "IMG_1783.png",
+    "IMG_1784.png",
+    "IMG_1785.png",
+    "IMG_1786.png",
+    "IMG_1787.png"
+  ],
+  "action_pro_snapshot": {
+    "TB_DAL": {
+      "spread": {
+        "TB": {
+          "line": 8.5,
+          "odds": -112,
+          "bets": 28,
+          "money": 31
+        },
+        "DAL": {
+          "line": -8.5,
+          "odds": -108,
+          "bets": 72,
+          "money": 69,
+          "flag": "heavy tickets only; money69 below threshold"
+        }
+      },
+      "total": {
+        "Over": {
+          "line": 48.5,
+          "odds": -110,
+          "bets": 73,
+          "money": 82,
+          "flag": "heavy tickets/extreme money"
+        },
+        "Under": {
+          "line": 48.5,
+          "odds": -110,
+          "bets": 27,
+          "money": 18
+        }
+      },
+      "moneyline": {
+        "TB": {
+          "odds": 360,
+          "bets": 6,
+          "money": 11
+        },
+        "DAL": {
+          "odds": -475,
+          "bets": 94,
+          "money": 89,
+          "flag": "extreme both"
+        }
+      },
+      "pro_model": {
+        "DAL_spread": -8.8,
+        "consensus_spread": -8.5,
+        "external_grade": "D+"
+      }
+    },
+    "CFB": {
+      "MOST_WKU": {
+        "spread": {
+          "MOST": {
+            "line": 1.5,
+            "odds": -112
+          },
+          "WKU": {
+            "line": -1.5,
+            "odds": -111
+          }
+        },
+        "ML": {
+          "MOST": -102,
+          "WKU": -119
+        },
+        "displayed_percentages": "0% on BOTH sides; unusable/missing data, NOT valid splits",
+        "total": 56.5,
+        "pro_model": {
+          "WKU_spread": -4.3,
+          "external_grade": "A-"
+        }
+      },
+      "USF_UTSA": {
+        "spread": {
+          "USF": {
+            "line": 7,
+            "odds": -118
+          },
+          "UTSA": {
+            "line": -7,
+            "odds": -108
+          }
+        },
+        "total": {
+          "Over": {
+            "line": 50.5,
+            "odds": -104
+          },
+          "Under": {
+            "line": 50.5,
+            "odds": -114
+          }
+        },
+        "opener_display": {
+          "UTSA_spread": -6.5,
+          "total": 57.5
+        },
+        "sharp_action_attributed_to_Action": {
+          "UTSA_spread": 1,
+          "Under50_5": 12
+        },
+        "pro_model": {
+          "UTSA_spread": -8.2,
+          "external_grade": "C-"
+        },
+        "current_percentages": "not opened/read; remain unknown"
+      },
+      "SHSU_LIB": {
+        "spread": {
+          "SHSU": {
+            "line": 13.5,
+            "odds": -110
+          },
+          "LIB": {
+            "line": -13.5,
+            "odds": -110
+          }
+        },
+        "total": 52.5,
+        "opener_total": 50.5
+      },
+      "USA_ARST": {
+        "spread": {
+          "USA": {
+            "line": 3,
+            "odds": -117
+          },
+          "ARST": {
+            "line": -3,
+            "odds": -108
+          }
+        },
+        "total": 60.5,
+        "over_odds": -108,
+        "under_odds": null,
+        "opener_spread_ARST": -1.5,
+        "opener_total": 57.5
+      }
+    }
+  },
+  "circa_sheet_snapshot": {
+    "NFL": {
+      "date": "Week5",
+      "updated": "10/7/26 1:23PM",
+      "TB_DAL": {
+        "DAL_spread": -8,
+        "total": 47.5,
+        "TB_ML": 390,
+        "DAL_ML": -495,
+        "first_half": {
+          "DAL_spread": -5.5,
+          "DAL_spread_odds": -120,
+          "total": 24,
+          "over_odds": 100,
+          "under_odds": -120,
+          "TB_ML": 235,
+          "DAL_ML": -280
+        }
+      },
+      "spread_vig": "not printed for full-game DAL-8; do not assume"
+    },
+    "CFB": {
+      "updated": "10/5/26 10:07AM",
+      "SHSU_LIB": {
+        "LIB_spread": -13,
+        "total": 52.5,
+        "SHSU_ML": 425,
+        "LIB_ML": -550
+      },
+      "MOST_WKU": {
+        "WKU_spread": -2.5,
+        "total": 56,
+        "MOST_ML": 115,
+        "WKU_ML": -135
+      },
+      "USA_ARST": {
+        "spread": "PK",
+        "total": 58
+      },
+      "USF_UTSA": {
+        "UTSA_spread": -7,
+        "total": 51,
+        "USF_ML": 230,
+        "UTSA_ML": -270
+      }
+    },
+    "NBA": {
+      "sheet_date": "Oct8",
+      "BOS_CLE": {
+        "BOS_spread": -4,
+        "total": 222,
+        "BOS_ML": -155,
+        "CLE_ML": 135
+      },
+      "NOP_MIA": {
+        "MIA_spread": -7.5,
+        "total": 233.5,
+        "NOP_ML": 245,
+        "MIA_ML": -290
+      },
+      "PHI_BKN": {
+        "PHI_spread": -7.5,
+        "total": 218,
+        "PHI_ML": -260,
+        "BKN_ML": 220
+      },
+      "WAS_NYK": {
+        "NYK_spread": -6,
+        "total": 227.5,
+        "WAS_ML": 205,
+        "NYK_ML": -240
+      },
+      "ATL_SAS": {
+        "SAS_spread": -9.5,
+        "total": 223.5,
+        "ATL_ML": 260,
+        "SAS_ML": -310
+      },
+      "SAC_LAL": {
+        "LAL_spread": -12,
+        "total": 229.5,
+        "SAC_ML": 325,
+        "LAL_ML": -400
+      }
+    },
+    "NHL": {
+      "updated": "10/7/26 5:47PM",
+      "MIN_TB": {
+        "MIN": 132,
+        "TB": -147,
+        "total": 6
+      },
+      "DAL_BUF": {
+        "DAL": -113,
+        "BUF": 101,
+        "total": 6
+      },
+      "VAN_CAR": {
+        "VAN": 269,
+        "CAR": -308,
+        "total": 6.5
+      },
+      "NSH_MTL": {
+        "NSH": 152,
+        "MTL": -170,
+        "total": 6
+      },
+      "UTA_BOS": {
+        "UTA": -120,
+        "BOS": 108,
+        "total": 6
+      },
+      "PHI_OTT": {
+        "PHI": 126,
+        "OTT": -140,
+        "total": 5.5
+      },
+      "CHI_NYI": {
+        "CHI": 155,
+        "NYI": -173,
+        "total": 5.5
+      },
+      "SJ_STL": {
+        "SJ": 143,
+        "STL": -160,
+        "total": 5.5
+      },
+      "COL_CGY": {
+        "prices": null,
+        "note": "row blank"
+      },
+      "TOR_VGK": {
+        "TOR": 142,
+        "VGK": -158,
+        "total": 6.5
+      }
+    }
+  },
+  "betrivers_snapshot": {
+    "capture_clock": "11:13",
+    "book": "BetRivers Delaware",
+    "TB_spreads": [
+      {
+        "line": 21.5,
+        "odds": -835
+      },
+      {
+        "line": 21,
+        "odds": -770
+      },
+      {
+        "line": 20.5,
+        "odds": -625
+      },
+      {
+        "line": 20,
+        "odds": -590
+      },
+      {
+        "line": 19.5,
+        "odds": -500
+      },
+      {
+        "line": 19,
+        "odds": -500
+      },
+      {
+        "line": 18.5,
+        "odds": -455
+      },
+      {
+        "line": 18,
+        "odds": -435
+      },
+      {
+        "line": 17.5,
+        "odds": -375
+      },
+      {
+        "line": 17,
+        "odds": -360
+      },
+      {
+        "line": 16.5,
+        "odds": -305
+      },
+      {
+        "line": 16,
+        "odds": -295
+      },
+      {
+        "line": 15.5,
+        "odds": -275
+      },
+      {
+        "line": 15,
+        "odds": -265
+      },
+      {
+        "line": 14.5,
+        "odds": -245
+      },
+      {
+        "line": 12.5,
+        "odds": -175
+      },
+      {
+        "line": 12,
+        "odds": -167
+      },
+      {
+        "line": 11.5,
+        "odds": -159
+      },
+      {
+        "line": 11,
+        "odds": -152
+      },
+      {
+        "line": 10.5,
+        "odds": -143
+      },
+      {
+        "line": 10,
+        "odds": -130
+      },
+      {
+        "line": 9.5,
+        "odds": -118
+      },
+      {
+        "line": 9,
+        "odds": -114
+      },
+      {
+        "line": 8,
+        "odds": -104
+      },
+      {
+        "line": 7.5,
+        "odds": 102
+      },
+      {
+        "line": 7,
+        "odds": 118
+      },
+      {
+        "line": 6.5,
+        "odds": 132
+      },
+      {
+        "line": 6,
+        "odds": 145
+      },
+      {
+        "line": 5.5,
+        "odds": 155
+      },
+      {
+        "line": 5,
+        "odds": 163
+      }
+    ],
+    "selected_dallas_comparisons": [
+      {
+        "line": -9.5,
+        "odds": -104
+      },
+      {
+        "line": -9,
+        "odds": -107
+      },
+      {
+        "line": -8,
+        "odds": -118
+      },
+      {
+        "line": -7.5,
+        "odds": -125
+      }
+    ],
+    "TB_plus8_5": {
+      "line": 8.5,
+      "odds": -110,
+      "source": "IMG_1787.png"
+    },
+    "total": {
+      "line": 48,
+      "over_odds": -109,
+      "under_odds": -112,
+      "source": "IMG_1787.png"
+    },
+    "wager_receipt": false,
+    "standard_ml": {
+      "TB": 380,
+      "DAL": -500
+    },
+    "early_win_14UP_ml": {
+      "TB": 305,
+      "DAL": -670,
+      "note": "Separate promotional market"
+    },
+    "UTSA": {
+      "spread": -7,
+      "odds": -108,
+      "alternative_minus6_5": -122
+    },
+    "MOST": {
+      "spread": 1.5,
+      "odds": -113,
+      "alternative_plus2": -120,
+      "alternative_plus2_5": -127
+    }
+  },
+  "new_market_screens": [
+    {
+      "game": "USF at UTSA",
+      "candidate": "Under50.5-114",
+      "status": "WATCH research screen; not independently graded/released",
+      "official_units": 0,
+      "evidence": "Action explicitly reports12Under sharp signals; current total50.5, opener57.5. USF defensive/offensive slowdown supportive; UTSA home offensive upside opposes.",
+      "limits": "No total-specific VSiN/Doc confirmation or Delaware offer; do not transfer UTSA-spread agreement into total.",
+      "no_bet_cutoff": "not established—no bet until independently graded"
+    },
+    {
+      "game": "TB at DAL",
+      "candidate": "Under48-112 BetRivers Delaware",
+      "status": "Contrarian research screen only",
+      "official_units": 0,
+      "evidence": "ActionProOver73tickets82money supports market-specific asterisk; Under27/18. Not proof of an Under edge.",
+      "limits": "Book threshold48 differs from Action48.5 splits. No crowd-only edge; FantasyLife combined48 and Dallas scoring counter remain.",
+      "no_bet_cutoff": "not established—no bet until independently graded"
+    }
+  ],
+  "contrarian_volume_rule": {
+    "scope": "Watched contests only",
+    "minimum_bets_exclusive": 50000,
+    "heavy_pct": 70,
+    "extreme_pct": 80,
+    "count_scope": "Contest-level Action header, not per-market count",
+    "verified": {
+      "TB_DAL": {
+        "display": "64.2k bets",
+        "qualifies": true,
+        "source": "IMG_1791-1793.png"
+      },
+      "USF_UTSA": {
+        "display": "9.6k bets",
+        "qualifies": false,
+        "source": "Oct8 recording matchup header"
+      },
+      "MOST_WKU": {
+        "display": "8k bets",
+        "qualifies": false,
+        "source": "Oct8 recording matchup header"
+      }
+    }
+  }
+}
