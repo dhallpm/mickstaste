@@ -1,0 +1,285 @@
+{
+  "completed_at": "2026-10-08T10:23:43Z",
+  "scope": "Public VSiN and Doc's article scan; no full candidate regrade",
+  "official_units": 0,
+  "price_status": "All listed prices are article quotes, not executable current prices",
+  "records": [
+    {
+      "site": "VSiN",
+      "author": "Zachary Cohen",
+      "date": "2026-10-07",
+      "url": "https://vsin.com/nfl/buccaneers-vs-cowboys-predictions-week-5-thursday-night-football-odds-picks-and-player-props/",
+      "selections": [
+        "TB +8.5 (-108)"
+      ],
+      "leans": [
+        "Godwin receiving Over 27.5 (-114); explicitly not a prop wager"
+      ],
+      "basis": "TB defense and Dallas pass-rush weakness.",
+      "historical_split": "Dallas spread 70% Circa tickets, Oct 6 22:30 ET; money unavailable; not current Action data"
+    },
+    {
+      "site": "VSiN",
+      "author": "Dave Tuley",
+      "date": "2026-10-07",
+      "url": "https://vsin.com/nfl/tuleys-takes-for-nfl-week-5/",
+      "selections": [
+        "PHI +7.5 or better",
+        "MIA +7; pass +6.5",
+        "LV +3.5",
+        "NYG +3.5",
+        "TEN +7.5",
+        "LAC +3.5",
+        "BAL +3.5"
+      ],
+      "teasers": [
+        "Dallas -2",
+        "Indianapolis +8.5",
+        "Cleveland +7.5",
+        "Green Bay +8.5",
+        "Buffalo +9; possible paired Over 48.5 teaser"
+      ],
+      "passes": [
+        "TB full spread",
+        "MIN/NO",
+        "SF/SEA at +3",
+        "DET/ARI",
+        "BUF full spread +3"
+      ],
+      "basis": "Underdog value and perceived injury/market overreaction; price-specific."
+    },
+    {
+      "site": "VSiN",
+      "author": "Steve Makinen",
+      "date": "2026-10-07",
+      "url": "https://vsin.com/nfl/nfl-top-plays-based-on-betting-splits-power-ratings-and-trends-for-week-5/",
+      "type": "Qualifying systems, not personal wager consensus",
+      "selections": [
+        "SEA -2.5",
+        "MIA +6.5 and CIN -6.5 conflicting systems",
+        "TEN +7.5",
+        "DET -5.5"
+      ],
+      "fades": [
+        "JAX -7",
+        "CLE +1.5",
+        "MIN -1.5",
+        "LAR -3"
+      ]
+    },
+    {
+      "site": "Doc's",
+      "author": "Jeremy Block",
+      "date": "2026-10-07",
+      "url": "https://www.docsports.com/2026/best-nfl-teaser-bets-week-5-basic-strategy-teasers-advice.html",
+      "selections": [
+        "Six-point two-team: CLE +8.5 / SF +8.5"
+      ],
+      "basis": "Cross key numbers 3 and 7, starting +2.5. Suggested two-team price no worse than -120. Not Delaware fixed-payout card."
+    },
+    {
+      "site": "Doc's",
+      "author": "Jeremy Block",
+      "date": "2026-10-07",
+      "url": "https://www.docsports.com/2026/nfl-week-5-line-movements-point-spread-analysis.html",
+      "selections": [
+        "ATL -3.5 only if Jackson out; pass if active",
+        "HOU -7",
+        "GB +3",
+        "JAX -5.5"
+      ],
+      "basis": "Article describes opener/current moves; independent timestamped movement not verified."
+    },
+    {
+      "site": "Doc's",
+      "author": "Tony Sink",
+      "date": "2026-10-06",
+      "url": "https://www.docsports.com/free-picks/nfl/2026/tampa-bay-buccaneers-vs-dallas-cowboys-prediction-10-8-2026-nfl-picks-best-bets-odds-week-5.html",
+      "selections": [
+        "TB +9"
+      ],
+      "basis": "TB defensive profile versus Dallas offense; 47.5 is listed total, not a total pick."
+    },
+    {
+      "site": "Doc's",
+      "author": "Newsletter named experts",
+      "date": "2026-10-07",
+      "url": "https://www.docsports.com/newsletter/2026/free-sports-picks-docs-college-football-nfl-october-7-11.html",
+      "selections": [
+        "Strike Point Sports DAL -8.5",
+        "Scott Rickenbach DAL first half -5.5",
+        "Doc's Tulane/Army Under 47.5",
+        "Robert Ferringo Maryland/Ohio State Over 56.5",
+        "Doc's Philadelphia Union -1.5 (+100)",
+        "Raphael Esparza JAX -6.5",
+        "Nick Menken JAX -6.5",
+        "Jason Sharpe DET -4.5",
+        "Griffin Murphy FLA -1.5 vs CBJ Oct13"
+      ],
+      "basis": "DAL offense/early scoring, JAX London injury advantage, DET bounceback; same-family opinions are not independent confirmations.",
+      "warning": "DET row says Sunday Oct10; weekday/date conflict needs official schedule verification."
+    },
+    {
+      "site": "VSiN",
+      "author": "Adam Burke",
+      "date": "2026-10-07",
+      "url": "https://vsin.com/college-football/college-football-week-6-picks-south-florida-vs-utsa/",
+      "selections": [
+        "UTSA -7",
+        "Sam Houston/Liberty Under 52.5"
+      ],
+      "leans": [
+        "Sam Houston +13",
+        "Missouri State +2.5"
+      ],
+      "basis": "UTSA stronger opponent schedule; low-scoring Liberty matchup. Article Circa prices dated Oct6."
+    },
+    {
+      "site": "Doc's",
+      "author": "Spencer Toth",
+      "date": "2026-10-07",
+      "url": "https://www.docsports.com/2026/los-angeles-lakers-predictions-best-bets-odds-win-nba-championship.html",
+      "selections": [
+        "Lakers exact West sixth +600",
+        "Lakers NBA Cup +2500"
+      ],
+      "type": "Season futures, not preseason game selection",
+      "basis": "Roster fit/chemistry outlook; verify roster and current future prices separately."
+    },
+    {
+      "site": "Doc's",
+      "date": "2026-10-07",
+      "event_date": "2026-10-08",
+      "author": "Tony Sink",
+      "event": "Toronto Maple Leafs vs Vegas Golden Knights",
+      "selections": [
+        "Vegas ML -162"
+      ],
+      "url": "https://www.docsports.com/free-picks/nhl-hockey/2026/toronto-maple-leafs-vs-vegas-golden-knights-prediction-10-8-2026-nhl-picks-best-bets-odds.html",
+      "status": "Article quote; goalies are projections, not official confirmations"
+    },
+    {
+      "site": "Doc's",
+      "date": "2026-10-07",
+      "event_date": "2026-10-08",
+      "author": "Josh Schonwald",
+      "event": "Vancouver Canucks vs Carolina Hurricanes",
+      "selections": [
+        "Carolina ML -320"
+      ],
+      "url": "https://www.docsports.com/free-picks/nhl-hockey/2026/vancouver-canucks-vs-carolina-hurricanes-prediction-10-8-2026-nhl-picks-best-bets-odds.html",
+      "status": "Article quote; goalies are projections, not official confirmations"
+    },
+    {
+      "site": "Doc's",
+      "date": "2026-10-07",
+      "event_date": "2026-10-08",
+      "author": "Guy Bruhn",
+      "event": "San Jose Sharks vs St. Louis Blues",
+      "selections": [
+        "St. Louis ML -120"
+      ],
+      "url": "https://www.docsports.com/free-picks/nhl-hockey/2026/san-jose-sharks-vs-st.-louis-blues-prediction-10-8-2026-nhl-picks-best-bets-odds.html",
+      "status": "Article quote; goalies are projections, not official confirmations"
+    },
+    {
+      "site": "Doc's",
+      "date": "2026-10-07",
+      "event_date": "2026-10-08",
+      "author": "Josh Schonwald",
+      "event": "Colorado Avalanche vs Calgary Flames",
+      "selections": [
+        "Colorado ML -218"
+      ],
+      "url": "https://www.docsports.com/free-picks/nhl-hockey/2026/colorado-avalanche-vs-calgary-flames-prediction-10-8-2026-nhl-picks-best-bets-odds.html",
+      "status": "Article quote; goalies are projections, not official confirmations"
+    },
+    {
+      "site": "Doc's",
+      "date": "2026-10-07",
+      "event_date": "2026-10-08",
+      "author": "Parlays Pundit",
+      "event": "Philadelphia Flyers vs Ottawa Senators",
+      "selections": [
+        "Ottawa ML -135; Under 5.5 (vig not stated)"
+      ],
+      "url": "https://www.docsports.com/free-picks/nhl-hockey/2026/philadelphia-flyers-vs-ottawa-senators-prediction-10-8-2026-nhl-picks-best-bets-odds.html",
+      "status": "Article quote; goalies are projections, not official confirmations"
+    },
+    {
+      "site": "Doc's",
+      "date": "2026-10-07",
+      "event_date": "2026-10-08",
+      "author": "Tony Sink",
+      "event": "Chicago Blackhawks vs New York Islanders",
+      "selections": [
+        "Chicago ML +170"
+      ],
+      "url": "https://www.docsports.com/free-picks/nhl-hockey/2026/chicago-blackhawks-vs-new-york-islanders-prediction-10-8-2026-nhl-picks-best-bets-odds.html",
+      "status": "Article quote; goalies are projections, not official confirmations"
+    },
+    {
+      "site": "Doc's",
+      "date": "2026-10-07",
+      "event_date": "2026-10-08",
+      "author": "Guy Bruhn",
+      "event": "Utah Mammoth vs Boston Bruins",
+      "selections": [
+        "Utah ML -115"
+      ],
+      "url": "https://www.docsports.com/free-picks/nhl-hockey/2026/utah-mammoth-vs-boston-bruins-prediction-10-8-2026-nhl-picks-best-bets-odds.html",
+      "status": "Article quote; goalies are projections, not official confirmations"
+    },
+    {
+      "site": "Doc's",
+      "date": "2026-10-07",
+      "event_date": "2026-10-08",
+      "author": "Josh Schonwald",
+      "event": "Nashville Predators vs Montreal Canadiens",
+      "selections": [
+        "Nashville ML +154"
+      ],
+      "url": "https://www.docsports.com/free-picks/nhl-hockey/2026/nashville-predators-vs-montreal-canadiens-prediction-10-8-2026-nhl-picks-best-bets-odds.html",
+      "status": "Article quote; goalies are projections, not official confirmations"
+    },
+    {
+      "site": "Doc's",
+      "date": "2026-10-07",
+      "event_date": "2026-10-08",
+      "author": "Guy Bruhn",
+      "event": "Minnesota Wild vs Tampa Bay Lightning",
+      "selections": [
+        "Tampa Bay ML -146"
+      ],
+      "url": "https://www.docsports.com/free-picks/nhl-hockey/2026/minnesota-wild-vs-tampa-bay-lightning-prediction-10-8-2026-nhl-picks-best-bets-odds.html",
+      "status": "Article quote; goalies are projections, not official confirmations"
+    },
+    {
+      "site": "Doc's",
+      "date": "2026-10-07",
+      "event_date": "2026-10-08",
+      "author": "Tony Sink",
+      "event": "Dallas Stars vs Buffalo Sabres",
+      "selections": [
+        "Dallas ML -110"
+      ],
+      "url": "https://www.docsports.com/free-picks/nhl-hockey/2026/dallas-stars-vs-buffalo-sabres-prediction-10-8-2026-nhl-picks-best-bets-odds.html",
+      "status": "Article quote; goalies are projections, not official confirmations"
+    }
+  ],
+  "conflicts": [
+    "TB vs DAL: Cohen and Sink TB; newsletter DAL; Tuley full-spread pass",
+    "PHI/JAX: Tuley PHI vs Block/Esparza/Menken JAX",
+    "HOU/TEN: Tuley/Makinen TEN vs Block HOU",
+    "Cleveland: teaser support versus Makinen straight-spread fade; different markets"
+  ],
+  "coverage_limits": [
+    "Firecrawl HTTP402 insufficient credits; accessible web fallback completed",
+    "Doc's AI-v3 public page has no current free selection",
+    "Doc's latest USF/UTSA video selection unverified without transcript",
+    "No fresh Oct8 NBA preseason game selection found on checked NBA indexes",
+    "Latest checked VSiN NHL/MLB indexes still Oct7; no Oct8 opinion inferred",
+    "Current Action splits, Circa sheet and BetRivers execution not part of completed article scan"
+  ],
+  "release_status": "Supporting research only; no official pick or units assigned"
+}
