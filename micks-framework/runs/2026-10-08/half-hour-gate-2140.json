@@ -1,0 +1,101 @@
+{
+  "schema": "micks-event-gate-v2",
+  "run_date": "2026-10-08",
+  "checked_at_et": "2026-10-08T21:40:39-04:00",
+  "scope": ["SAC-LAL"],
+  "threshold": 71,
+  "failure_gate": 7,
+  "candidate": {
+    "id": "SAC-LAL-LAL-SPREAD",
+    "sport": "NBA preseason",
+    "game": "Sacramento Kings at Los Angeles Lakers",
+    "start_et": "22:30",
+    "selection": "Los Angeles Lakers -10.5",
+    "indicative_price": -105,
+    "price_source": "Action consensus screen",
+    "betrivers_delaware_executable": false,
+    "best_number": "LAL -10.5 at -110 or better",
+    "no_bet_cutoff": "LAL -11.5 or worse",
+    "factors": {
+      "matchup": {"score": 26, "max": 35},
+      "price": {"score": 12, "max": 20},
+      "personnel": {"score": 9, "max": 15},
+      "situation": {"score": 4, "max": 10},
+      "vsin": {"score": 0, "max": 10},
+      "docs": {"score": 0, "max": 10},
+      "market": {
+        "score": 6,
+        "max": 10,
+        "reference": {"score": 4, "max": 5},
+        "movement": {"score": 1, "max": 3},
+        "splits": {"score": 1, "max": 2}
+      }
+    },
+    "score": 57,
+    "failure_dimensions": {
+      "data_completeness": 1,
+      "price_integrity": 1,
+      "personnel_certainty": 1,
+      "cross_source_confirmation": 1,
+      "execution_safety": 1
+    },
+    "failure_score": 5,
+    "official_units": 0,
+    "disposition": "NO BET",
+    "contrarian_asterisk": false,
+    "contrarian_reason": "No verified 50000-plus watched-contest count; displayed split below 70 percent and side mapping not sufficiently clear.",
+    "release_blockers": [
+      "Score below 71",
+      "Failure Score below 7",
+      "No direct live BetRivers Delaware spread quote",
+      "No reliable expected-minutes plan"
+    ],
+    "prior_snapshot_reference": "betrivers-candidates-1130.json#SAC-LAL"
+  },
+  "market": {
+    "circa_reference": {
+      "source": "/Circa Sports sheets/NBAx - 2026-10-8.pdf",
+      "modified_at": "2026-10-08T14:37:46Z",
+      "lakers_spread": -12,
+      "total": 229.5,
+      "kings_moneyline": 325,
+      "lakers_moneyline": -400
+    },
+    "action_current": {
+      "lakers_spread": -10.5,
+      "lakers_spread_price": -105,
+      "kings_spread": 10.5,
+      "kings_spread_price": -115,
+      "total": 231.5,
+      "over_price": -110,
+      "under_price": -110,
+      "kings_moneyline": 310,
+      "lakers_moneyline": -395,
+      "displayed_bets_pct": 51,
+      "displayed_money_pct": 49,
+      "side_mapping_verified": false
+    },
+    "action_named_pick": "Kings moneyline +370",
+    "watched_contest_bet_count": null
+  },
+  "personnel": {
+    "kings_out_or_resting": ["Domantas Sabonis", "Keegan Murray", "Malik Monk", "Ben Simmons"],
+    "lakers": {
+      "Austin Reaves": "expected preseason debut",
+      "Walker Kessler": "out",
+      "exact_starters": "unverified",
+      "expected_minutes": "unverified"
+    }
+  },
+  "alternatives": [
+    {"selection": "Kings +10.5 -115", "score": 52, "failure_score": 4, "official_units": 0, "disposition": "NO BET"},
+    {"selection": "Kings ML +310", "score": 49, "failure_score": 4, "official_units": 0, "disposition": "NO BET"},
+    {"selection": "Over 231.5 -110", "score": 50, "failure_score": 4, "official_units": 0, "disposition": "NO BET"},
+    {"selection": "Under 231.5 -110", "score": 48, "failure_score": 4, "official_units": 0, "disposition": "NO BET"}
+  ],
+  "actions": {
+    "wager_placed": false,
+    "website_card_published": false,
+    "third_party_contacted": false
+  }
+}
