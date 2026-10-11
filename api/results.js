@@ -1,8 +1,7 @@
 
-import { createRequire } from 'node:module'
-const localResults = createRequire(import.meta.url)('../data/results.json')
+import verifiedTickets from '../data/results-2026-10-11.js'
 function mergeVerifiedTickets(payload) {
-  const added = (localResults.results || []).filter(r => String(r.id || '').startsWith('micks-2026-10-11-pdf-ticket-'))
+  const added = verifiedTickets
   const ids = new Set(added.map(r => r.id))
   const original = payload.results || payload.rows || payload.records || []
   const rows = [...added, ...original.filter(r => !ids.has(r.id))]
@@ -20,7 +19,7 @@ function mergeVerifiedTickets(payload) {
   const group = name => rows.filter(r => section(r) === name)
   const overall = stats(rows), lotto = group('Lotto Parlays')
   const summary = {...payload.summary,overall,lottoParlays:stats(lotto)}
-  const result = {...payload,date:'2026-10-11',summary,stats:overall,record:overall.record,overallRecord:overall.record,units:overall.units,totalUnits:overall.units,overallUnits:overall.units,profitLoss:overall.profitLoss,winRate:overall.winRate,lotto,parlayRecord:summary.lottoParlays.record,lottoRecord:summary.lottoParlays.record}
+  const result = {...payload,date:rows.reduce((latest,r)=>String(r.date||r.Date||'').slice(0,10)>latest?String(r.date||r.Date||'').slice(0,10):latest,''),summary,stats:overall,record:overall.record,overallRecord:overall.record,units:overall.units,totalUnits:overall.units,overallUnits:overall.units,profitLoss:overall.profitLoss,winRate:overall.winRate,lotto,parlayRecord:summary.lottoParlays.record,lottoRecord:summary.lottoParlays.record}
   for (const key of ['results','rows','records','resultRows','weeklyResults','archive','resultsArchive','gradedPicks','settledPicks','recentResults','latestResults','allRows']) result[key] = rows
   if (result.breakdown) result.breakdown = {...result.breakdown,overall,lotto:summary.lottoParlays,parlays:summary.lottoParlays}
   if (result.metrics) result.metrics = overall
