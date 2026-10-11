@@ -1,30 +1,3 @@
-
-import verifiedTickets from '../data/results-2026-10-11.js'
-function mergeVerifiedTickets(payload) {
-  const added = verifiedTickets
-  const ids = new Set(added.map(r => r.id))
-  const original = payload.results || payload.rows || payload.records || []
-  const rows = [...added, ...original.filter(r => !ids.has(r.id))]
-  const stats = list => {
-    const eligible = list.filter(r => r.excludeFromRecord !== true)
-    const number = v => Number(String(v ?? '').replace(/u$/i, '')) || 0
-    const wins = eligible.filter(r => /^win$/i.test(r.result || r.Result)).length
-    const losses = eligible.filter(r => /^loss$/i.test(r.result || r.Result)).length
-    const pushes = eligible.filter(r => /^(push|void)$/i.test(r.result || r.Result)).length
-    const netUnits = Number(eligible.reduce((s,r) => s + number(r.profitLoss ?? r['Profit/Loss']), 0).toFixed(2))
-    const unitsRisked = Number(eligible.reduce((s,r) => s + number(r.units ?? r.Units), 0).toFixed(2))
-    return {wins,losses,pushes,record:`${wins}-${losses}${pushes ? '-'+pushes : ''}`,netUnits,unitsRisked,units:`${netUnits>=0?'+':''}${netUnits.toFixed(2)}u`,profitLoss:`${netUnits>=0?'+':''}${netUnits.toFixed(2)}u`,winRate:wins+losses?(wins/(wins+losses)*100).toFixed(1)+'%':'--',roi:unitsRisked?Number((netUnits/unitsRisked*100).toFixed(1)):0}
-  }
-  const section = r => r.section || r.Section
-  const group = name => rows.filter(r => section(r) === name)
-  const overall = stats(rows), lotto = group('Lotto Parlays')
-  const summary = {...payload.summary,overall,lottoParlays:stats(lotto)}
-  const result = {...payload,date:rows.reduce((latest,r)=>String(r.date||r.Date||'').slice(0,10)>latest?String(r.date||r.Date||'').slice(0,10):latest,''),summary,stats:overall,record:overall.record,overallRecord:overall.record,units:overall.units,totalUnits:overall.units,overallUnits:overall.units,profitLoss:overall.profitLoss,winRate:overall.winRate,lotto,parlayRecord:summary.lottoParlays.record,lottoRecord:summary.lottoParlays.record}
-  for (const key of ['results','rows','records','resultRows','weeklyResults','archive','resultsArchive','gradedPicks','settledPicks','recentResults','latestResults','allRows']) result[key] = rows
-  if (result.breakdown) result.breakdown = {...result.breakdown,overall,lotto:summary.lottoParlays,parlays:summary.lottoParlays}
-  if (result.metrics) result.metrics = overall
-  return result
-}
 const DEFAULT_RESULTS_UPSTREAM = 'https://mickspicks-vip.vercel.app/api/results'
 
 function boundedDays(value) {
@@ -51,7 +24,7 @@ export default async function handler(req, res) {
 
     if (!response.ok) throw new Error(`Results upstream returned ${response.status}`)
 
-    const payload = mergeVerifiedTickets(await response.json())
+    const payload = await response.json()
     res.status(200).json({
       ...payload,
       success: payload.success !== false,
