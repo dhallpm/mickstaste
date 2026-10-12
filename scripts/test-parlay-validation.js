@@ -1,0 +1,18 @@
+import assert from 'node:assert/strict'
+import {validateParlay,guardParlayRelease,assertParlayImportable} from '../lib/parlayValidation.js'
+const ticket=legs=>({type:'Half-point parlay',sportsbook:'Delaware',units:2,status:'Published',legSelections:legs})
+const conflict=ticket([{box:130,selection:'NO +2.5'},{box:129,selection:'MIN -2.5'},{box:116,selection:'CLE/NYJ Under39.5'}])
+assert.equal(validateParlay(conflict).valid,false)
+assert.throws(()=>assertParlayImportable(conflict),/Impossible opposing spreads/)
+const held=guardParlayRelease(conflict);assert.equal(held.units,0);assert.equal(held.officialBet,'No')
+assert.equal(validateParlay(ticket([{box:130,selection:'NO +10.5'},{box:129,selection:'MIN +5.5'}])).valid,true)
+assert.equal(validateParlay(ticket([{box:115,selection:'CLE/NYJ Over39.5'},{box:116,selection:'CLE/NYJ Under39.5'}])).valid,false)
+assert.equal(validateParlay(ticket([{box:115,selection:'CLE/NYJ Over39.5'},{box:116,selection:'CLE/NYJ Under40.5'}])).valid,true)
+assert.equal(validateParlay(ticket([{box:134,selection:'NYG +3.5'},{box:118,selection:'TEN +7.5'}])).valid,true)
+assert.equal(validateParlay({...ticket([{box:134,selection:'NYG +3.5'}]),requestedLegCount:3}).valid,false)
+assert.equal(validateParlay(ticket([{box:134,selection:'NYG +3.5'},{box:134,selection:'NYG +3.5'}])).valid,false)
+assert.equal(guardParlayRelease({...ticket([{box:134,selection:'NYG +3.5'}]),grade:'UNGRADED'}).units,0)
+assert.equal(guardParlayRelease({...conflict,status:'Graded',result:'Loss'}).units,2)
+const different=ticket([{game:'NO-MIN',selection:'NO +2.5'},{game:'MIN-CHI',selection:'MIN -2.5'}]);assert.equal(validateParlay(different).valid,true)
+const missing=ticket([{selection:'NO +2.5'},{selection:'MIN -2.5'}]);assert.equal(validateParlay(missing).warnings.length,2)
+console.log('PASS: opposing spread/total conflicts, real middles, duplicate/count gates, HOLD, historical preservation and game identity')
