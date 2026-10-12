@@ -1,41 +1,17 @@
-const DEFAULT_RESULTS_UPSTREAM = 'https://mickspicks-vip.vercel.app/api/results'
-
-function boundedDays(value) {
-  return Math.min(Math.max(Number(value || 180), 1), 3650)
-}
-
-function upstreamUrl(req) {
-  const target = new URL(process.env.RESULTS_API_URL || DEFAULT_RESULTS_UPSTREAM)
-  target.searchParams.set('days', String(boundedDays(req.query?.days)))
-  target.searchParams.set('cache', String(Date.now()))
-  return target
-}
-
-export default async function handler(req, res) {
-  res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0')
-  res.setHeader('Pragma', 'no-cache')
-  res.setHeader('Expires', '0')
-
+const CANONICAL_RESULTS = 'https://www.mickspicks.us/data/results.json'
+export default async function handler(req,res) {
+  res.setHeader('Content-Type','application/json')
+  res.setHeader('Cache-Control','no-store, no-cache, must-revalidate, max-age=0')
   try {
-    const response = await fetch(upstreamUrl(req), {
-      cache: 'no-store',
-      headers: { Accept: 'application/json' }
-    })
-
-    if (!response.ok) throw new Error(`Results upstream returned ${response.status}`)
-
+    const url = new URL(process.env.RESULTS_CANONICAL_URL || CANONICAL_RESULTS)
+    url.searchParams.set('cache',String(Date.now()))
+    const response = await fetch(url,{cache:'no-store',headers:{Accept:'application/json'}})
+    if(!response.ok) throw new Error('Canonical archive unavailable')
     const payload = await response.json()
-    res.status(200).json({
-      ...payload,
-      success: payload.success !== false,
-      proxiedBy: 'mickstaste-public-results-strict-sections'
-    })
-  } catch (error) {
-    console.error('Public results proxy failed:', error)
-    res.status(502).json({
-      success: false,
-      source: 'results-upstream',
-      error: 'Results feed is temporarily unavailable.'
-    })
+    if(payload.success===false || !Array.isArray(payload.results)) throw new Error('Invalid canonical archive')
+    res.status(200).json({...payload,source:'canonical-verified-results',mirroredBy:'mickstaste'})
+  } catch(error) {
+    console.error('Canonical results feed failed:',error.message)
+    res.status(502).json({success:false,error:'Results feed is temporarily unavailable.',results:[]})
   }
 }
