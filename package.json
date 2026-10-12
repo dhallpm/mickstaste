@@ -21,7 +21,8 @@
     "test:repair-may30": "node scripts/test-repair-may30-airtable.js",
     "test:google-sheets-pick-store": "node scripts/test-google-sheets-pick-store.js",
     "test:needs-settlement": "node scripts/test-needs-settlement.js",
-    "test:archive-closed-bets": "node scripts/test-archive-closed-bets.js"
+    "test:archive-closed-bets": "node scripts/test-archive-closed-bets.js",
+    "test:ticket-integrity": "node scripts/test-parlay-validation.js && node scripts/test-parlay-import.js && node scripts/test-ticket-release-feed.js && node scripts/test-canonical-results.js"
   },
   "dependencies": {
     "googleapis": "^144.0.0"
