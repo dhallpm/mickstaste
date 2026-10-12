@@ -1,3 +1,4 @@
+import { guardParlayRelease } from '../lib/parlayValidation.js'
 import { createRequire } from 'node:module'
 
 const require = createRequire(import.meta.url)
@@ -48,6 +49,7 @@ function section(row = {}) {
 }
 
 function normalize(row = {}, cardDate = '') {
+  row = guardParlayRelease(row)
   const sec = section(row)
   const matchup = text(row.Matchup || row.matchup || row.Game || row.game)
   const sport = text(row.Sport || row.sport || row.League || row.league)
