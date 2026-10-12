@@ -170,3 +170,8 @@ Never describe generic line movement as “sharp money” without evidence.
 ## Publication
 
 Lineup and exact live-price confirmation are advisory only when the sport-specific framework permits it; any mandatory sport-specific confirmation remains a blocker. Every official card carries a Best Number, No-Bet Cutoff and relevant availability note so the bettor can make the final pass decision.
+
+
+## Mandatory ticket preflight — October12,2026
+
+Before preparing a final PDF, importing, or publishing any parlay: run the ticket-integrity checks (`npm run test:ticket-integrity`), validate exact event identity/period and printed cells, requested leg count, duplicate or impossible opposing selections, final dates/start windows, material usage/health, exact number/cutoff and per-leg research state. Known HOLD/UNGRADED or unfilled positions block framework release. Imported live batches are validated before writes; the active feed exposes invalid prospective rows as zero-unit Watchlist rather than official bets. User-selected publication must remain explicitly distinct from analytical qualification and execution receipts. Include exact-leg and game-level overlap tables; replacement legs require their own assessment. The canonical results archive controls both page/API/VIP statistics, and PDF/JSON revisions must match final selected or settled records. See progressive-knowledge.md PK-011 throughPK-016. Existing71+ consideration override, NFL mode, sport gates and scoring weights are unchanged.
