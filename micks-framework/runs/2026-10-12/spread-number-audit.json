@@ -1,0 +1,888 @@
+{
+  "scope": "Recovered posted NFL parlay legs across all recovered ticket types,not every printed Lottery selection or actual wager",
+  "asOf": "2026-10-12T06:38:57.106278+00:00",
+  "weeksObserved": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "uniqueSpreadLegs": 70,
+  "missingGrades": [],
+  "numbers": [
+    {
+      "spread": 5.5,
+      "wins": 5,
+      "losses": 0,
+      "pushes": 0,
+      "weeks": [
+        4,
+        5
+      ],
+      "observations": [
+        {
+          "eventDate": "2026-10-11",
+          "team": "PIT",
+          "spread": 5.5,
+          "result": "Win",
+          "pick": "PIT +5.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872985"
+        },
+        {
+          "eventDate": "2026-10-11",
+          "team": "NYJ",
+          "spread": 5.5,
+          "result": "Win",
+          "pick": "NYJ +5.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872983"
+        },
+        {
+          "eventDate": "2026-10-04",
+          "team": "HOU",
+          "spread": 5.5,
+          "result": "Win",
+          "pick": "HOU +5.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872967"
+        },
+        {
+          "eventDate": "2026-10-04",
+          "team": "SF",
+          "spread": 5.5,
+          "result": "Win",
+          "pick": "SF +5.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872975"
+        },
+        {
+          "eventDate": "2026-10-04",
+          "team": "CIN",
+          "spread": 5.5,
+          "result": "Win",
+          "pick": "CIN +5.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872969"
+        }
+      ],
+      "every_week_1_to_5": false
+    },
+    {
+      "spread": 12.5,
+      "wins": 5,
+      "losses": 0,
+      "pushes": 0,
+      "weeks": [
+        2,
+        4
+      ],
+      "observations": [
+        {
+          "eventDate": "2026-09-20",
+          "team": "TEN",
+          "spread": 12.5,
+          "result": "Win",
+          "pick": "Titans +12.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872939"
+        },
+        {
+          "eventDate": "2026-09-20",
+          "team": "IND",
+          "spread": 12.5,
+          "result": "Win",
+          "pick": "Colts +12.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872945"
+        },
+        {
+          "eventDate": "2026-09-20",
+          "team": "LV",
+          "spread": 12.5,
+          "result": "Win",
+          "pick": "Raiders +12.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872941"
+        },
+        {
+          "eventDate": "2026-10-04",
+          "team": "NE",
+          "spread": 12.5,
+          "result": "Win",
+          "pick": "NE +12.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872971"
+        },
+        {
+          "eventDate": "2026-10-04",
+          "team": "LV",
+          "spread": 12.5,
+          "result": "Win",
+          "pick": "LV +12.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872976"
+        }
+      ],
+      "every_week_1_to_5": false
+    },
+    {
+      "spread": 11.5,
+      "wins": 3,
+      "losses": 0,
+      "pushes": 0,
+      "weeks": [
+        4,
+        5
+      ],
+      "observations": [
+        {
+          "eventDate": "2026-10-11",
+          "team": "NYG",
+          "spread": 11.5,
+          "result": "Win",
+          "pick": "NYG +11.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872988"
+        },
+        {
+          "eventDate": "2026-10-04",
+          "team": "CAR",
+          "spread": 11.5,
+          "result": "Win",
+          "pick": "CAR +11.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872978"
+        },
+        {
+          "eventDate": "2026-10-04",
+          "team": "TEN",
+          "spread": 11.5,
+          "result": "Win",
+          "pick": "TEN +11.5*: max -115 [R]",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872973"
+        }
+      ],
+      "every_week_1_to_5": false
+    },
+    {
+      "spread": 6.5,
+      "wins": 2,
+      "losses": 0,
+      "pushes": 0,
+      "weeks": [
+        4
+      ],
+      "observations": [
+        {
+          "eventDate": "2026-10-04",
+          "team": "NE",
+          "spread": 6.5,
+          "result": "Win",
+          "pick": "NE +6.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872971"
+        },
+        {
+          "eventDate": "2026-10-04",
+          "team": "NYG",
+          "spread": 6.5,
+          "result": "Win",
+          "pick": "NYG +6.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872966"
+        }
+      ],
+      "every_week_1_to_5": false
+    },
+    {
+      "spread": 19.5,
+      "wins": 2,
+      "losses": 0,
+      "pushes": 0,
+      "weeks": [
+        4
+      ],
+      "observations": [
+        {
+          "eventDate": "2026-10-04",
+          "team": "TEN",
+          "spread": 19.5,
+          "result": "Win",
+          "pick": "TEN +19.5*",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872973"
+        },
+        {
+          "eventDate": "2026-10-04",
+          "team": "MIA",
+          "spread": 19.5,
+          "result": "Win",
+          "pick": "MIA +19.5*",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872974"
+        }
+      ],
+      "every_week_1_to_5": false
+    },
+    {
+      "spread": -5.5,
+      "wins": 1,
+      "losses": 0,
+      "pushes": 0,
+      "weeks": [
+        2
+      ],
+      "observations": [
+        {
+          "eventDate": "2026-09-20",
+          "team": "SF",
+          "spread": -5.5,
+          "result": "Win",
+          "pick": "49ers -5.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872942"
+        }
+      ],
+      "every_week_1_to_5": false
+    },
+    {
+      "spread": -3.5,
+      "wins": 1,
+      "losses": 0,
+      "pushes": 0,
+      "weeks": [
+        4
+      ],
+      "observations": [
+        {
+          "eventDate": "2026-10-04",
+          "team": "BAL",
+          "spread": -3.5,
+          "result": "Win",
+          "pick": "BAL -3.5*",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872973"
+        }
+      ],
+      "every_week_1_to_5": false
+    },
+    {
+      "spread": 16.5,
+      "wins": 1,
+      "losses": 0,
+      "pushes": 0,
+      "weeks": [
+        4
+      ],
+      "observations": [
+        {
+          "eventDate": "2026-10-04",
+          "team": "TEN",
+          "spread": 16.5,
+          "result": "Win",
+          "pick": "TEN +16.5* [R]",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872973"
+        }
+      ],
+      "every_week_1_to_5": false
+    },
+    {
+      "spread": 7.0,
+      "wins": 1,
+      "losses": 0,
+      "pushes": 0,
+      "weeks": [
+        4
+      ],
+      "observations": [
+        {
+          "eventDate": "2026-10-04",
+          "team": "NE",
+          "spread": 7.0,
+          "result": "Win",
+          "pick": "NE +7: max -120",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872971"
+        }
+      ],
+      "every_week_1_to_5": false
+    },
+    {
+      "spread": 4.0,
+      "wins": 1,
+      "losses": 0,
+      "pushes": 0,
+      "weeks": [
+        4
+      ],
+      "observations": [
+        {
+          "eventDate": "2026-10-04",
+          "team": "CAR",
+          "spread": 4.0,
+          "result": "Win",
+          "pick": "CAR +4: max -115",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872978"
+        }
+      ],
+      "every_week_1_to_5": false
+    },
+    {
+      "spread": 3.5,
+      "wins": 4,
+      "losses": 1,
+      "pushes": 0,
+      "weeks": [
+        2,
+        4,
+        5
+      ],
+      "observations": [
+        {
+          "eventDate": "2026-10-11",
+          "team": "NYG",
+          "spread": 3.5,
+          "result": "Win",
+          "pick": "NY Giants+3.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872988"
+        },
+        {
+          "eventDate": "2026-10-11",
+          "team": "LAC",
+          "spread": 3.5,
+          "result": "Loss",
+          "pick": "LA Chargers+3.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872989"
+        },
+        {
+          "eventDate": "2026-09-20",
+          "team": "SEA",
+          "spread": 3.5,
+          "result": "Win",
+          "pick": "Seahawks +3.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872943"
+        },
+        {
+          "eventDate": "2026-10-04",
+          "team": "CAR",
+          "spread": 3.5,
+          "result": "Win",
+          "pick": "CAR +3.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872978"
+        },
+        {
+          "eventDate": "2026-10-04",
+          "team": "KC",
+          "spread": 3.5,
+          "result": "Win",
+          "pick": "KC +3.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872976"
+        }
+      ],
+      "every_week_1_to_5": false
+    },
+    {
+      "spread": 4.5,
+      "wins": 4,
+      "losses": 1,
+      "pushes": 0,
+      "weeks": [
+        2,
+        4,
+        5
+      ],
+      "observations": [
+        {
+          "eventDate": "2026-10-11",
+          "team": "NE",
+          "spread": 4.5,
+          "result": "Win",
+          "pick": "NE +4.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872986"
+        },
+        {
+          "eventDate": "2026-09-20",
+          "team": "GB",
+          "spread": 4.5,
+          "result": "Win",
+          "pick": "Packers +4.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872936"
+        },
+        {
+          "eventDate": "2026-09-20",
+          "team": "DAL",
+          "spread": 4.5,
+          "result": "Win",
+          "pick": "Cowboys +4.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872944"
+        },
+        {
+          "eventDate": "2026-10-04",
+          "team": "DET",
+          "spread": 4.5,
+          "result": "Loss",
+          "pick": "DET +4.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872978"
+        },
+        {
+          "eventDate": "2026-10-04",
+          "team": "GB",
+          "spread": 4.5,
+          "result": "Win",
+          "pick": "GB +4.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872968"
+        }
+      ],
+      "every_week_1_to_5": false
+    },
+    {
+      "spread": -1.5,
+      "wins": 4,
+      "losses": 1,
+      "pushes": 0,
+      "weeks": [
+        1,
+        2,
+        3
+      ],
+      "observations": [
+        {
+          "eventDate": "2026-09-27",
+          "team": "BUF",
+          "spread": -1.5,
+          "result": "Win",
+          "pick": "Buffalo Bills -1.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872953"
+        },
+        {
+          "eventDate": "2026-09-27",
+          "team": "DET",
+          "spread": -1.5,
+          "result": "Win",
+          "pick": "Detroit Lions -1.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872954"
+        },
+        {
+          "eventDate": "2026-09-27",
+          "team": "SEA",
+          "spread": -1.5,
+          "result": "Loss",
+          "pick": "Seattle Seahawks -1.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872955"
+        },
+        {
+          "eventDate": "2026-09-20",
+          "team": "PHI",
+          "spread": -1.5,
+          "result": "Win",
+          "pick": "Eagles -1.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872939"
+        },
+        {
+          "eventDate": "2026-09-13",
+          "team": "MIN",
+          "spread": -1.5,
+          "result": "Win",
+          "pick": "Vikings -1.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872927"
+        }
+      ],
+      "every_week_1_to_5": false
+    },
+    {
+      "spread": 15.5,
+      "wins": 2,
+      "losses": 1,
+      "pushes": 0,
+      "weeks": [
+        2,
+        4,
+        5
+      ],
+      "observations": [
+        {
+          "eventDate": "2026-10-11",
+          "team": "MIA",
+          "spread": 15.5,
+          "result": "Win",
+          "pick": "MIA +15.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872982"
+        },
+        {
+          "eventDate": "2026-09-21",
+          "team": "NYG",
+          "spread": 15.5,
+          "result": "Loss",
+          "pick": "Giants +15.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872947"
+        },
+        {
+          "eventDate": "2026-10-04",
+          "team": "LAC",
+          "spread": 15.5,
+          "result": "Win",
+          "pick": "LAC +15.5*",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872977"
+        }
+      ],
+      "every_week_1_to_5": false
+    },
+    {
+      "spread": 1.5,
+      "wins": 2,
+      "losses": 2,
+      "pushes": 0,
+      "weeks": [
+        1,
+        2,
+        4
+      ],
+      "observations": [
+        {
+          "eventDate": "2026-09-20",
+          "team": "PHI",
+          "spread": 1.5,
+          "result": "Win",
+          "pick": "Eagles +1.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872939"
+        },
+        {
+          "eventDate": "2026-09-20",
+          "team": "LAC",
+          "spread": 1.5,
+          "result": "Loss",
+          "pick": "Chargers +1.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872941"
+        },
+        {
+          "eventDate": "2026-09-13",
+          "team": "NYJ",
+          "spread": 1.5,
+          "result": "Win",
+          "pick": "Jets +1.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872924"
+        },
+        {
+          "eventDate": "2026-10-04",
+          "team": "BUF",
+          "spread": 1.5,
+          "result": "Loss",
+          "pick": "BUF +1.5*",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872971"
+        }
+      ],
+      "every_week_1_to_5": false
+    },
+    {
+      "spread": -2.5,
+      "wins": 3,
+      "losses": 3,
+      "pushes": 0,
+      "weeks": [
+        4,
+        5
+      ],
+      "observations": [
+        {
+          "eventDate": "2026-10-11",
+          "team": "PIT",
+          "spread": -2.5,
+          "result": "Win",
+          "pick": "Pittsburgh-2.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872985"
+        },
+        {
+          "eventDate": "2026-10-11",
+          "team": "MIN",
+          "spread": -2.5,
+          "result": "Win",
+          "pick": "MIN -2.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872987"
+        },
+        {
+          "eventDate": "2026-10-11",
+          "team": "SEA",
+          "spread": -2.5,
+          "result": "Loss",
+          "pick": "Seattle-2.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872992"
+        },
+        {
+          "eventDate": "2026-10-04",
+          "team": "HOU",
+          "spread": -2.5,
+          "result": "Loss",
+          "pick": "HOU -2.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872967"
+        },
+        {
+          "eventDate": "2026-10-04",
+          "team": "CIN",
+          "spread": -2.5,
+          "result": "Loss",
+          "pick": "CIN -2.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872969"
+        },
+        {
+          "eventDate": "2026-10-04",
+          "team": "SF",
+          "spread": -2.5,
+          "result": "Win",
+          "pick": "SF -2.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872975"
+        }
+      ],
+      "every_week_1_to_5": false
+    },
+    {
+      "spread": 9.5,
+      "wins": 3,
+      "losses": 1,
+      "pushes": 0,
+      "weeks": [
+        2,
+        4
+      ],
+      "observations": [
+        {
+          "eventDate": "2026-09-20",
+          "team": "ATL",
+          "spread": 9.5,
+          "result": "Loss",
+          "pick": "Falcons +9.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872933"
+        },
+        {
+          "eventDate": "2026-09-20",
+          "team": "CIN",
+          "spread": 9.5,
+          "result": "Win",
+          "pick": "Bengals +9.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872934"
+        },
+        {
+          "eventDate": "2026-10-04",
+          "team": "JAX",
+          "spread": 9.5,
+          "result": "Win",
+          "pick": "JAX +9.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872969"
+        },
+        {
+          "eventDate": "2026-10-04",
+          "team": "DAL",
+          "spread": 9.5,
+          "result": "Win",
+          "pick": "DAL +9.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872967"
+        }
+      ],
+      "every_week_1_to_5": false
+    },
+    {
+      "spread": 10.5,
+      "wins": 2,
+      "losses": 1,
+      "pushes": 0,
+      "weeks": [
+        2,
+        5
+      ],
+      "observations": [
+        {
+          "eventDate": "2026-10-11",
+          "team": "GB",
+          "spread": 10.5,
+          "result": "Win",
+          "pick": "GB +10.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872990"
+        },
+        {
+          "eventDate": "2026-10-11",
+          "team": "NO",
+          "spread": 10.5,
+          "result": "Win",
+          "pick": "NO +10.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872987"
+        },
+        {
+          "eventDate": "2026-09-20",
+          "team": "PIT",
+          "spread": 10.5,
+          "result": "Loss",
+          "pick": "Steelers +10.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872946"
+        }
+      ],
+      "every_week_1_to_5": false
+    },
+    {
+      "spread": 8.5,
+      "wins": 2,
+      "losses": 1,
+      "pushes": 0,
+      "weeks": [
+        2,
+        4
+      ],
+      "observations": [
+        {
+          "eventDate": "2026-09-20",
+          "team": "NYJ",
+          "spread": 8.5,
+          "result": "Win",
+          "pick": "Jets +8.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872936"
+        },
+        {
+          "eventDate": "2026-10-04",
+          "team": "ARI",
+          "spread": 8.5,
+          "result": "Loss",
+          "pick": "ARI +8.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872966"
+        },
+        {
+          "eventDate": "2026-10-04",
+          "team": "CAR",
+          "spread": 8.5,
+          "result": "Win",
+          "pick": "CAR +8.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872978"
+        }
+      ],
+      "every_week_1_to_5": false
+    },
+    {
+      "spread": 2.5,
+      "wins": 1,
+      "losses": 2,
+      "pushes": 0,
+      "weeks": [
+        4,
+        5
+      ],
+      "observations": [
+        {
+          "eventDate": "2026-10-11",
+          "team": "NO",
+          "spread": 2.5,
+          "result": "Loss",
+          "pick": "New Orleans+2.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872987"
+        },
+        {
+          "eventDate": "2026-10-04",
+          "team": "HOU",
+          "spread": 2.5,
+          "result": "Loss",
+          "pick": "HOU +2.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872967"
+        },
+        {
+          "eventDate": "2026-10-04",
+          "team": "SF",
+          "spread": 2.5,
+          "result": "Win",
+          "pick": "SF +2.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872975"
+        }
+      ],
+      "every_week_1_to_5": false
+    },
+    {
+      "spread": 14.5,
+      "wins": 1,
+      "losses": 1,
+      "pushes": 0,
+      "weeks": [
+        4,
+        5
+      ],
+      "observations": [
+        {
+          "eventDate": "2026-10-11",
+          "team": "TEN",
+          "spread": 14.5,
+          "result": "Loss",
+          "pick": "TEN +14.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872984"
+        },
+        {
+          "eventDate": "2026-10-04",
+          "team": "NE",
+          "spread": 14.5,
+          "result": "Win",
+          "pick": "NE +14.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872971"
+        }
+      ],
+      "every_week_1_to_5": false
+    },
+    {
+      "spread": 7.5,
+      "wins": 0,
+      "losses": 2,
+      "pushes": 0,
+      "weeks": [
+        2,
+        5
+      ],
+      "observations": [
+        {
+          "eventDate": "2026-10-11",
+          "team": "TEN",
+          "spread": 7.5,
+          "result": "Loss",
+          "pick": "Tennessee+7.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872984"
+        },
+        {
+          "eventDate": "2026-09-21",
+          "team": "NYG",
+          "spread": 7.5,
+          "result": "Loss",
+          "pick": "Giants +7.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872947"
+        }
+      ],
+      "every_week_1_to_5": false
+    },
+    {
+      "spread": 13.5,
+      "wins": 0,
+      "losses": 2,
+      "pushes": 0,
+      "weeks": [
+        2
+      ],
+      "observations": [
+        {
+          "eventDate": "2026-09-21",
+          "team": "NYG",
+          "spread": 13.5,
+          "result": "Loss",
+          "pick": "Giants +13.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872947"
+        },
+        {
+          "eventDate": "2026-09-20",
+          "team": "PIT",
+          "spread": 13.5,
+          "result": "Loss",
+          "pick": "Steelers +13.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872946"
+        }
+      ],
+      "every_week_1_to_5": false
+    },
+    {
+      "spread": -0.5,
+      "wins": 0,
+      "losses": 1,
+      "pushes": 0,
+      "weeks": [
+        2
+      ],
+      "observations": [
+        {
+          "eventDate": "2026-09-20",
+          "team": "TB",
+          "spread": -0.5,
+          "result": "Loss",
+          "pick": "Buccaneers -0.5",
+          "sourceUrl": "https://www.espn.com/nfl/game/_/gameId/401872935"
+        }
+      ],
+      "every_week_1_to_5": false
+    }
+  ],
+  "undefeatedEveryWeek": [],
+  "fullPrintedCardAuditComplete": false,
+  "missingPrintedCards": [
+    "Week1/Week3 full historical card sets; complete all-type historical cards are not recovered"
+  ]
+}
