@@ -203,6 +203,11 @@
 
       <section class="section">
         <h2>Submit</h2>
+        <div class="grid">
+          <label class="span-6">Sync Secret
+            <input type="password" id="syncSecret" placeholder="Required to submit picks" autocomplete="off" />
+          </label>
+        </div>
         <div class="actions">
           <button type="button" id="previewBtn">Preview Payload</button>
           <button type="submit" class="primary" id="submitPick">Submit Pick</button>
@@ -223,6 +228,8 @@
     const submitPick = document.getElementById('submitPick');
     const previewBtn = document.getElementById('previewBtn');
     const checkFeed = document.getElementById('checkFeed');
+    const syncSecretInput = document.getElementById('syncSecret');
+    syncSecretInput.value = localStorage.getItem('micksSyncSecret') || '';
 
     const safeFields = {
       picks: ['Date','Sport','League','Game','Pick','Bet Type','Odds','Sportsbook','Grade','Units','Best Number','No Bet Cutoff','Confidence','Status','Access','Writeup','Market Notes','Injury Notes','Source Verification','Full Analysis'],
@@ -292,11 +299,15 @@
         const payload = buildRecord();
         writePreview(payload);
         show('Submitting pick...');
+        const secret = syncSecretInput.value.trim();
+        if (!secret) throw new Error('Enter your sync secret to submit.');
+        localStorage.setItem('micksSyncSecret', secret);
         const response = await fetch('/api/import-picks', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          headers: { 'Content-Type': 'application/json', 'x-sync-secret': secret },
           body: JSON.stringify(payload)
         });
+        if (response.status === 401) throw new Error('Sync secret was rejected (401). Check the secret and try again.');
         const result = await response.json().catch(() => ({}));
         if (!response.ok || result.success === false) throw new Error(result.error || result.message || `Request failed with ${response.status}`);
         show('Submitted successfully. Check Today’s Feed after the site refreshes.', true);
