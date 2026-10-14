@@ -1,4 +1,5 @@
 import { googleSheetsBatchAppend, resolveGoogleSheetsPickTab } from '../lib/googleSheetsPickStore.js'
+import { assertSyncAuthorized } from '../lib/syncAuth.js'
 
 const SMOKE_TEST_ROW = {
   Pick: 'Google Sheets Smoke Test',
@@ -102,6 +103,10 @@ export default async function handler(req, res) {
       return
     }
 
+    // All POSTs (imports, smoke tests, dry runs) require the sync secret,
+    // sent as the x-sync-secret header or Authorization: Bearer <secret>.
+    assertSyncAuthorized(req)
+
     const body = parseBody(req)
     const dryRun = truthy(req.query?.dryRun) || truthy(req.query?.preview) || truthy(body.dryRun) || truthy(body.preview)
 
@@ -161,7 +166,7 @@ export default async function handler(req, res) {
     res.status(summary.ok ? 200 : 207).json(summary)
   } catch (error) {
     console.error(error)
-    res.status(500).json({
+    res.status(error?.statusCode || 500).json({
       ok: false,
       success: false,
       destination: 'Google Sheets',
