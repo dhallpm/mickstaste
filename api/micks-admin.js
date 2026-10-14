@@ -263,9 +263,11 @@ export default async function handler(req, res) {
   let action = ''
   try {
     assertSyncAuthorized(req)
-    const isCron = req.headers?.['x-vercel-cron'] ||
-      String(req.headers?.['user-agent'] || '').toLowerCase().includes('vercel-cron')
-    action = String(param(req, 'action') || (isCron ? 'run-sync' : '')).trim()
+    // Vercel cron sends `Authorization: Bearer <CRON_SECRET>` on scheduled requests.
+    // With CRON_SECRET set to the SYNC_SECRET value, cron passes the check above.
+    // The scheduled job calls this path with no action param, so default to run-sync.
+    // (Auth is enforced first, so the default cannot be abused by unauthenticated callers.)
+    action = String(param(req, 'action') || 'run-sync').trim()
     const runAction = ACTIONS[action]
 
     if (!runAction) {
