@@ -1,0 +1,3950 @@
+{
+  "as_of": "2026-10-15T14:06:51.446706-04:00",
+  "scoring_version": "micks-110-v2-2026-09-29",
+  "scan_coverage": "PARTIAL - paid/current execution and some sport evidence unavailable",
+  "score_consideration_threshold": 71,
+  "official_units": 0,
+  "planned_ticket_units": 8,
+  "parents": {
+    "JAX": {
+      "game": "Houston vs Jacksonville",
+      "league": "NFL",
+      "date": "2026-10-18",
+      "time_et": "09:30",
+      "thesis": "Jacksonville has the more efficient scoring operation: 0.420 points per play versus Houston 0.347, with better third-down conversion. Staying in London removes a second transatlantic trip. Receiving points is preferable to requiring a multi-score win.",
+      "counter": "Houston allows only 5.0 yards per play; Stroud and the newly reported Harrison addition can keep this close. Turnover and red-zone advantages can regress.",
+      "roles": "Lawrence and Stroud remain the working quarterback plans. Tuten leads Jacksonville rushing; Houston receiving integration and both protection units need a fresh availability review.",
+      "situation": "Neutral Wembley venue; Jacksonville second consecutive London game. Sunday wind is a forecast, not final game weather.",
+      "vsin": "Cohen: JAX -2.5 +100; Tuley prefers Houston only with teaser protection. VSiN estimated score was tied, limiting confirmation.",
+      "docs": "Spencer Toth favors JAX -2.5. His margin forecast is supporting opinion, not a Micks forecast.",
+      "guide": "VSiN pp61-62: continuity but turnover/schedule regression risk. FL pp124/126: Stroud/Lawrence priors. Current observed roles retain both QBs; do not assume preseason RB shares. FL weekly rounded scores HOU20/JAX22; more cautious than Toth. PARTIALLY CURRENT.",
+      "source_ids": [
+        "TR-JAX",
+        "VC",
+        "VT",
+        "DO",
+        "FL",
+        "G"
+      ]
+    },
+    "CLE": {
+      "game": "Baltimore at Cleveland",
+      "league": "NFL",
+      "date": "2026-10-18",
+      "time_et": "13:00",
+      "thesis": "The fixed +6.5 is a full point above the dated Circa contest number. Cleveland allows 5.2 yards per play and a 42.86% red-zone touchdown rate, giving a home divisional dog a credible resistance path.",
+      "counter": "Baltimore offense is substantially stronger: 6.4 yards per play versus 4.7. A healthy Jackson and a compromised Cleveland line could produce the blowout the points cannot cover.",
+      "roles": "Watson is the current starter; the magazine Sanders-first depth chart is overridden. Jackson ankle readiness, Cleveland line combinations and Judkins/Sampson availability are material. Jackson DNP is not a final out.",
+      "situation": "Home divisional game. Forecast rain requires a fresh wind/field check; no weather-only Under inference.",
+      "vsin": "Tuley takes CLE +5; Cohen uses CLE alt +10.5 in a parlay. Neither is an exact +6.5 standalone endorsement.",
+      "docs": "Toth takes BAL -4.5: genuine opposition, stronger card number does not erase the trench mismatch.",
+      "guide": "VSiN pp48/52: BAL offensive ceiling, CLE quarterback uncertainty. FL pp114/119: BAL run tilt, CLE OL grade D. Watson starting overrides the magazine QB order. FL weekly rounded BAL21/CLE19 supports dog protection but injury assumptions remain unresolved. PARTIALLY CURRENT/WATCH.",
+      "source_ids": [
+        "TR-CLE",
+        "VC",
+        "VT",
+        "DO",
+        "FL",
+        "G",
+        "CLE-P"
+      ]
+    },
+    "CAR": {
+      "game": "Carolina at Philadelphia",
+      "league": "NFL",
+      "date": "2026-10-18",
+      "time_et": "13:00",
+      "thesis": "Carolina produces 6.1 yards per play versus Philadelphia 4.5. The Panthers return from their bye while Philadelphia returns from London, and the fixed card still gives Carolina points despite the Circa contest making it a short favorite.",
+      "counter": "Philadelphia allows fewer yards and points per play. Rest does not cure Carolina defensive weaknesses; a healthier Eagles offense can reverse the apparent passing edge.",
+      "roles": "Young/McMillan remain the central passing path. Barkley and DeVonta Smith availability affects Philadelphia scoring materially; a practice absence alone is not an out.",
+      "situation": "Carolina bye advantage; Eagles overseas travel without the immediate bye. Philadelphia weather must be refreshed.",
+      "vsin": "Cohen backs CAR ML -115. Tuley leans Carolina but passes. Those positions receive different weight.",
+      "docs": "Toth prefers PHI -1.5: opposing side, not confirmation. Fixed CAR +0.5 is assessed independently.",
+      "guide": "VSiN pp79/95: Eagles season-quality prior versus improving Carolina. FL pp116/137: Young and Barkley-centered roles; Eagles Brown listing is stale after trade. Current efficiency/travel and weekly rounded CAR21/PHI20 explain the directional update. PARTIALLY CURRENT.",
+      "source_ids": [
+        "TR-CAR",
+        "VC",
+        "VT",
+        "DO",
+        "FL",
+        "G"
+      ]
+    },
+    "ATL": {
+      "game": "Chicago at Atlanta",
+      "league": "NFL",
+      "date": "2026-10-18",
+      "time_et": "13:00",
+      "thesis": "Atlanta gains 5.8 yards per play to Chicago 5.4 and allows 5.0 to Chicago 6.2. The printed +2.5 is useful protection against a game Circa lists pickem; Bijan and London provide two ways to sustain drives.",
+      "counter": "Williams returning could restore an offense suppressed by backup play. The newest Fantasy Life article specifically supports that rebound; Penix rib limitations could remove the Atlanta edge.",
+      "roles": "Penix expected to start, not final clearance. Williams return and Monangai/Swift deployment must be rechecked. No assumed full workload for either returning quarterback.",
+      "situation": "Atlanta home venue; roof determination remains unverified. Do not use outdoor wind as an indoor scoring adjustment.",
+      "vsin": "Cohen ATL ML +140 supports direction; Tuley passes because of quarterback uncertainty. Makinen includes a Chicago fade screen, not a guarantee.",
+      "docs": "Toth takes ATL +3. Card +2.5 loses the field-goal push, reducing its price appeal.",
+      "guide": "VSiN p84 highlights Chicago offense and comeback regression; p93 new Atlanta regime. FL pp113/117: Tua/Penix recovery and high Chicago play volume. Penix now playing overrides Tua-first baseline. Weekly rounded CHI25/ATL24 is close; Williams rebound is a material counter, so WATCH.",
+      "source_ids": [
+        "TR-ATL",
+        "VC",
+        "VT",
+        "DO",
+        "FL",
+        "FL-M",
+        "G",
+        "PENIX"
+      ]
+    },
+    "NYG": {
+      "game": "New Orleans at NY Giants",
+      "league": "NFL",
+      "date": "2026-10-18",
+      "time_et": "13:00",
+      "thesis": "The Giants concede 0.363 points per play versus New Orleans 0.478. The Saints depleted backfield and protection make sustaining drives harder, while Winston has kept New York competitive. Take protection rather than demand a wide victory.",
+      "counter": "Winston turnovers, missed kicks and an impaired Giants line are credible failure paths. Makinen has a Giants fade/Saints system; this is not unanimous support.",
+      "roles": "Winston replaces the season-lost Dart. Saints backfield replacement work and Olave availability matter more than raw injury totals. Giants tackle availability remains a key review.",
+      "situation": "Giants at home after overtime tie; fatigue and kicking reliability temper the home-field case.",
+      "vsin": "Tuley passes; Makinen systems oppose NYG. Cohen Winston TD prop is a different market and does not earn side agreement points.",
+      "docs": "Toth favors NYG +1.5. Block also prefers protected Giants in his standard teaser, a relevant but different threshold.",
+      "guide": "VSiN pp77/97: Giants rebuild/health risk, Saints developmental offense. FL pp134/135: Dart rushing and Etienne/Kamara roles are stale for this matchup. Winston and Miller succession override those priors. FL weekly rounded 23-23; current Saints losses support dog protection, not an assumed dominant Giants offense. OVERRIDDEN roles.",
+      "source_ids": [
+        "TR-NYG",
+        "VT",
+        "VM",
+        "DO",
+        "DT",
+        "FL",
+        "FL-M",
+        "G",
+        "NYG-P"
+      ]
+    },
+    "NYJ": {
+      "game": "NY Jets at New England",
+      "league": "NFL",
+      "date": "2026-10-18",
+      "time_et": "13:00",
+      "thesis": "The Jets defense permits 4.6 yards per play versus New England 5.2. At +15.5, New York can lose by two touchdowns. Allen offers a replacement rushing path if Hall remains absent.",
+      "counter": "New England offense is stronger and a turnover-led rout can repeat last week. Maye and a healthier receiving group could turn protection into a false comfort.",
+      "roles": "Hall week-to-week; Allen replacement role is supported by current Fantasy Life reporting. Henderson status changes New England backfield concentration. Verify Smith/Wilson and both lines.",
+      "situation": "Road division game. Explicit inflation check after New England 45-17 win; do not assume a missing closing ATS band.",
+      "vsin": "Tuley likes NYJ +7; Cohen pairs Patriots ML with protected Cleveland. Supporting opinions conflict at the base side.",
+      "docs": "Toth NYJ +7.5 versus Block Patriots -1.5 standard teaser. Both can win; these are different thresholds.",
+      "guide": "VSiN pp43/45 and FL pp133/136 establish Maye/Smith and committee priors. Allen replacing Hall and Stevenson conditional volume update those priors. FL weekly rounded NYJ18/NE26; the +15.5 request tolerates that forecast. PARTIALLY CURRENT.",
+      "source_ids": [
+        "TR-NYJ",
+        "VC",
+        "VT",
+        "DO",
+        "DT",
+        "FL",
+        "FL-R",
+        "G"
+      ]
+    },
+    "PIT": {
+      "game": "Pittsburgh at Tampa Bay",
+      "league": "NFL",
+      "date": "2026-10-18",
+      "time_et": "13:00",
+      "thesis": "Prefer the protected Under 47.5 to choosing a close side. Neither offense reaches 0.37 points per play; Pittsburgh converts only 32.79% of third downs. This ticket can survive a competitive low-40s game.",
+      "counter": "Warren and Irving create explosive scoring paths, and short fields or defensive touchdowns can defeat an Under. Toth forecasts a 53-point game; that counter prevents a premium grade.",
+      "roles": "Mayfield baseline is replaced by the Daniels scenario while availability is unresolved. Warren leads Pittsburgh rushing and receiving in the current preview; no copied Warren rush Under. Dowdle and Tampa receiving availability remain material.",
+      "situation": "Tampa extra rest after Thursday game; outdoor heat and wind need a current check. No assumed suppressive weather.",
+      "vsin": "VSiN model total 40.7 is derivative support, not a named Under bet. Cohen Irving TD is an opposing scoring risk.",
+      "docs": "No verified named Under selection. Toth backs TB +2.5 and his score forecast is an explicit Under counter.",
+      "guide": "VSiN pp54/99 and FL pp138/141: veteran PIT passer, Warren/Dowdle split, Mayfield-led Tampa prior. Daniels and current Warren opportunity override stale role assumptions. FL current total38.9 supports protection but does not resolve explosive/script risk. PARTIALLY CURRENT.",
+      "source_ids": [
+        "TR-PIT",
+        "VC",
+        "DO",
+        "FL",
+        "G"
+      ]
+    },
+    "IND": {
+      "game": "Tennessee at Indianapolis",
+      "league": "NFL",
+      "date": "2026-10-18",
+      "time_et": "13:00",
+      "thesis": "Indianapolis +1.5 removes the need to lay a touchdown. Tennessee scores only 0.212 points per play to Indianapolis 0.385; Taylor and the home passing game give the Colts a reasonable win path.",
+      "counter": "The Colts defense allows 6.2 yards per play. A modest Tennessee recovery could be enough to win outright; last week single result cannot establish a permanent Titans fade.",
+      "roles": "Jones is playing, overriding the injured preseason listing. Taylor workload and line health need confirmation; Ward/Tate remain Tennessee pass-volume focal points.",
+      "situation": "Lucas Oil roof/weather status pending. Indianapolis returned from London without an immediate bye; fatigue is a counter.",
+      "vsin": "Tuley TEN +7 opposes the base favorite, but a Colts win by1-6 cashes both his angle and this protected leg.",
+      "docs": "Toth IND -6.5 supports direction. Do not carry his wide margin into the Micks forecast.",
+      "guide": "VSiN p59 middling Colts prior; FL pp125/142 Jones injury, Taylor role and Tennessee poor line. Jones current return updates the prior. FL weekly rounded IND26/TEN19 favors Colts; market and weak Colts defense discourage laying6.5. PARTIALLY CURRENT.",
+      "source_ids": [
+        "TR-IND",
+        "VT",
+        "DO",
+        "FL",
+        "G"
+      ]
+    },
+    "LAR": {
+      "game": "Arizona at LA Rams",
+      "league": "NFL",
+      "date": "2026-10-18",
+      "time_et": "16:05",
+      "thesis": "Rams -4.5 is selected over Arizona protection because the trench/efficiency gap is large: LA gains6.0 and allows4.9 yards per play; Arizona gains4.5 and allows6.2. This is a matchup case, not a reputation favorite.",
+      "counter": "The Rams have failed to translate yardage into points consistently. Turnovers, special teams and a late Arizona score can produce a narrow win. Both featured ATS writers take Arizona at the much larger base spread.",
+      "roles": "Stafford/Brissett are the working QB plans. Love and Arizona protection require review. Harrison is no longer assumed in Arizona after reported Houston move; Rams line/receiver availability matters.",
+      "situation": "Division game; LA short turnaround after Monday. SoFi conditions do not justify invented wind/roof adjustments.",
+      "vsin": "Tuley ARI +12.5 is an opposing base-spread selection, compatible with some Rams winning margins. No named Rams -4.5 endorsement read.",
+      "docs": "Toth ARI +12.5 also opposes base favorite. His forecast is not treated as an actual Rams bet.",
+      "guide": "VSiN pp102/104: Arizona rebuild and Rams quality; FL pp112/130: Brissett/Stafford plus Arizona high pass rate. The current efficiency comparison supports the favorite but not automatic12.5 cover. FL rounded LAR32/ARI19; protection to4.5 is material. PARTIALLY CURRENT.",
+      "source_ids": [
+        "TR-LAR",
+        "VT",
+        "DO",
+        "FL",
+        "G"
+      ]
+    },
+    "LAC": {
+      "game": "LA Chargers at Kansas City",
+      "league": "NFL",
+      "date": "2026-10-18",
+      "time_et": "16:25",
+      "thesis": "The +16.5 threshold survives a two-touchdown defeat. The Chargers allow5.0 yards per play, matching Kansas City; the strongest path is defensive resistance and avoiding an early turnover cascade.",
+      "counter": "Kansas City offense gains6.5 yards per play versus Chargers4.8 and has a bye advantage. Herbert seven interceptions and protection injuries can turn a losing season into a multi-score rout.",
+      "roles": "Herbert current play overrides optimistic preseason health expectations; Alt, receiving availability and defensive leaders need review. Mahomes has returned from the magazine injury assumption.",
+      "situation": "Chiefs rested at home. Pre-bye Chargers system is supporting context; not independent proof of a cover.",
+      "vsin": "Tuley LAC +8 and Makinen pre-bye/streak systems support taking points at the base spread.",
+      "docs": "Toth LAC +8.5 supports direction; this card affords more protection, at the fixed ten-leg payout cost.",
+      "guide": "VSiN pp68/72: Chiefs rebound and Chargers optimism. FL pp127/129: Mahomes injury and Herbert/OL upside. Current KC strength and LAC0-5 override preseason rankings. FL rounded KC24/LAC16 fits +16.5; no claim Chargers are the better team. OVERRIDDEN team ranking.",
+      "source_ids": [
+        "TR-LAC",
+        "VT",
+        "VM",
+        "DO",
+        "FL",
+        "G"
+      ]
+    },
+    "BUF": {
+      "game": "Buffalo at Las Vegas",
+      "league": "NFL",
+      "date": "2026-10-18",
+      "time_et": "16:25",
+      "thesis": "The best protected market is Over46.5. Buffalo gains6.7 yards per play; both defenses permit more than0.40 points per play. Allen/Cook sustain drives and Bowers/Jeanty supply the home scoring response.",
+      "counter": "Buffalo control of the clock, empty red-zone trips or a quiet Raiders offense can hold this below47. A Buffalo spread at-4.5 is less attractive because the current FL margin is only about4.",
+      "roles": "Allen/Cook lead Buffalo opportunity. Cousins remains the observed Las Vegas passer; do not substitute rookie Mendoza because of preseason depth order. Bowers health, Moore and line availability need review.",
+      "situation": "Buffalo short rest after Monday plus cross-country travel. Allegiant roof/indoor environment; no unsupported adverse-weather points.",
+      "vsin": "Tuley passes the spread. No verified named Over46.5 selection; model/reference totals are context, not an expert endorsement.",
+      "docs": "Toth BUF -5.5 supports the half-point direction only. No verified named Over pick, so no total-selection confirmation points.",
+      "guide": "VSiN p39 Buffalo winning baseline versus p70 Raiders transition; FL pp115/128 Cook/Allen and Jeanty/Bowers role priors. Current Cousins and poor Bills defense update expectations. FL rounded BUF28/LV24; LaMarca identifies scoring/role support. PARTIALLY CURRENT.",
+      "source_ids": [
+        "TR-BUF",
+        "VT",
+        "DO",
+        "FL",
+        "FL-M",
+        "G"
+      ]
+    },
+    "GB": {
+      "game": "Dallas at Green Bay",
+      "league": "NFL",
+      "date": "2026-10-18",
+      "time_et": "20:20",
+      "thesis": "Green Bay +6.5 is preferred to demanding a straight spread cover. The Packers allow4.7 yards per play versus Dallas6.4; Love can attack that weakness while a home dog cushion protects a close finish.",
+      "counter": "Dallas offense is more efficient and can exploit red-zone leakage. A close market does not rule out a shootout that separates late; a healthy Lamb is a meaningful counter.",
+      "roles": "Love/Prescott and Lamb remain central. Lloyd opportunity has grown; do not keep full Jacobs workload from the magazine. Packers pass-rush availability and both lines remain material.",
+      "situation": "Sunday night Lambeau; hourly wind/temperature still need refresh. No generic cold-weather Under assumption.",
+      "vsin": "Cohen Lloyd props support role only; Makinen has both GB support and opposing Dallas trends. Not unanimous side confirmation.",
+      "docs": "Toth DAL +1.5 opposes base Green Bay direction; Block passes Dallas protection. Different market intervals can both cash.",
+      "guide": "VSiN pp75/88: Dallas offensive upside and Green Bay ceiling. FL pp120/123: Lamb and Jacobs/Love baseline. Lloyd current role and defensive data update those priors. Weekly rounded GB27/DAL24 supports protection; Toth is the main opposing opinion. PARTIALLY CURRENT.",
+      "source_ids": [
+        "TR-GB",
+        "VC",
+        "VM",
+        "DO",
+        "DT",
+        "FL",
+        "FL-R",
+        "G"
+      ]
+    },
+    "SF": {
+      "game": "Washington at San Francisco",
+      "league": "NFL",
+      "date": "2026-10-19",
+      "time_et": "20:15",
+      "thesis": "San Francisco +0.5 asks for a win or tie. The 49ers gain6.4 yards per play to Washington5.1 and allow4.7 to Washington5.5. Better third-down execution supports winning without paying the base7.5 margin.",
+      "counter": "Washington can exploit a fragile defense if the 49ers lose key personnel, and red-zone conversion is unlikely to remain perfect indefinitely. An underdog upset still loses this leg.",
+      "roles": "Purdy/McCaffrey are central. Daniels and Washington receivers, plus San Francisco protection and Kittle/Evans status, need the Monday availability update.",
+      "situation": "Monday home conference game; no presumption that a primetime favorite automatically covers.",
+      "vsin": "Tuley uses SF -1.5 in a standard teaser. Makinen has simultaneous favorite fades and SF support; this is a win requirement rather than-7.5.",
+      "docs": "Toth WAS +7.5 opposes a wide SF cover, compatible with a narrow SF win. No exact +0.5 Doc bet read.",
+      "guide": "VSiN pp81/106 and FL pp139/143: Purdy/CMC continuity versus Daniels health. Current SF efficiency takes priority over season priors. FL rounded SF30/WAS21 supports protected favorite; final Washington/SF roles are still future information. PARTIALLY CURRENT.",
+      "source_ids": [
+        "TR-SF",
+        "VT",
+        "VM",
+        "DO",
+        "FL",
+        "G"
+      ]
+    },
+    "IU": {
+      "game": "Ohio State at Indiana",
+      "league": "CFB",
+      "date": "2026-10-17",
+      "time_et": "12:00",
+      "thesis": "Indiana can trade efficient possessions:7.6 yards per play against Ohio State7.1. Hoover and the receiving group provide an offensive answer at home; the protected number can survive a normal competitive defeat.",
+      "counter": "Ohio State explosive passing is the main failure path. Indiana pass defense is less dominant than its run defense, and unbeaten results are not the same as covering inflated spreads.",
+      "roles": "Hoover17TD/0INT in the current ESPN preview, with Richard and Becker leading volume. Sayin/Smith are Ohio State focal points. Conference availability must be refreshed.",
+      "situation": "Home top-five matchup. No automatic fade from last week narrow escape and no unsupported closing-band trigger.",
+      "vsin": "Cohen IU +3.5 and ML +150; VSiN rating margin slightly favors OSU. Resolve that conflict through protection, not source-count voting.",
+      "docs": "Guy Bruhn IU +3.5 agrees at the Half-Point number.",
+      "guide": "NFL guides NOT APPLICABLE. Indiana official Week7 notes and current statistics replace historical matchup narratives. The0INT offense faces strong competition; touchdown streaks are not a separate bonus.",
+      "source_ids": [
+        "TR-IU",
+        "CC",
+        "D-IU",
+        "IU-P"
+      ]
+    },
+    "TEX": {
+      "game": "Florida at Texas",
+      "league": "CFB",
+      "date": "2026-10-17",
+      "time_et": "12:00",
+      "thesis": "Texas -2.5 is a protected home-win angle. Its defense allows16 points per game and limits rushing; Florida has conceded substantial passing production. Manning/Coleman offer a matchup path without requiring an11-point cover.",
+      "counter": "Texas offense has struggled to create separation against better opposition. Baugh and Philo can sustain Florida scoring; turnover regression does not guarantee a clean Manning game.",
+      "roles": "Manning and Coleman remain the working passing core; Smothers leads observed rushing. Philo/Baugh lead Florida. Final SEC availability is pending.",
+      "situation": "Texas home after neutral-site Oklahoma defeat. Bounce-back is context, not the edge itself.",
+      "vsin": "No verified named Texas selection was retrieved. Zero unsupported confirmation points.",
+      "docs": "Tony Sink TEX -11.5 agrees directionally, at a tougher margin. Reconciled rather than copied.",
+      "guide": "NFL guides NOT APPLICABLE. Texas official game center confirms Saturday noon ET and current leaders. No separate original college guide was supplied in this run.",
+      "source_ids": [
+        "D-TEX",
+        "TEX-P"
+      ]
+    },
+    "NU": {
+      "game": "Northwestern at Michigan State",
+      "league": "CFB",
+      "date": "2026-10-17",
+      "time_et": "12:00",
+      "thesis": "Northwestern +0.5 reduces a touchdown favorite to a win-or-tie leg. Chiles has elevated the offense, and Michigan State struggles to sustain production. The home side turnover/linebacker concerns offer a second path.",
+      "counter": "Northwestern defensive yardage is less dominant than its scoring average, and schedule quality can flatter the record. Chiles familiarity with East Lansing is not a betting edge by itself.",
+      "roles": "Chiles is Northwestern QB, not Michigan State QB. Milivojevic leads MSU. Verify final linebacker/secondary reports and protect against a new starting-QB change.",
+      "situation": "Road game with familiar personnel on both sides. No revenge-based points awarded.",
+      "vsin": "Cohen Northwestern ML parlay supports direction; VSiN rating margin9.5 supports protected win.",
+      "docs": "Guy Bruhn NU -7 supports direction at a harder margin.",
+      "guide": "NFL guides NOT APPLICABLE. Northwestern current official Chiles feature verifies role; Michigan State availability is not inferred from last season roster.",
+      "source_ids": [
+        "CC",
+        "D-NU",
+        "NU-P"
+      ]
+    },
+    "ARMY": {
+      "game": "Florida Atlantic at Army",
+      "league": "CFB",
+      "date": "2026-10-17",
+      "time_et": "12:00",
+      "thesis": "Army +5.5 fits a possession-control path. Hellums rushing and Army81% run-play share can shorten exposure to FAU passing; protection covers a narrow defeat.",
+      "counter": "Veltkamp/Valsin can punish explosive pass defense and force Army to chase. A rushing system does not automatically make a safe teaser leg.",
+      "roles": "Hellums leads passing and rushing; his availability is indispensable. Current FAU passing leaders verified in preview; final role/health update remains pending.",
+      "situation": "Michie home setting; forecast wind requires refresh. No invented severe-weather benefit.",
+      "vsin": "VSiN model Army by6.3 is supporting context, not a named bet.",
+      "docs": "Guy Bruhn FAU +2.5 opposes the base favorite. Army win by1-2 can cash both opinions.",
+      "guide": "NFL guides NOT APPLICABLE. Current Army game center confirms Hellums and noon kickoff. Option-system volume is verified, not an assumed transfer from a previous season.",
+      "source_ids": [
+        "TR-ARMY",
+        "D-ARMY",
+        "ARMY-P"
+      ]
+    },
+    "UNC": {
+      "game": "North Carolina at Duke",
+      "league": "CFB",
+      "date": "2026-10-17",
+      "time_et": "15:30",
+      "thesis": "UNC +11.5 can survive a two-score rivalry loss by10. The defense allows19 points per game, supporting resistance while Edwards supplies enough passing to avoid a one-dimensional chase.",
+      "counter": "Duke rushing strength directly challenges this thesis. UNC run production is weak and Duke defensive efficiency can create repeated empty possessions. This is one of the weaker ten-leg slots.",
+      "roles": "Edwards/Shipp are the UNC passing core; Eget/Sheppard drive Duke. Final availability and backfield deployment need recheck.",
+      "situation": "Road rivalry; home field stays in the Duke counter. No rivalry-based automatic cover.",
+      "vsin": "Cohen UNC +4.5 supports direction, with an explicit run-defense plan.",
+      "docs": "Tony Sink Duke -4 opposes the base spread. The protected margin may survive that pick, but does not resolve the matchup weakness.",
+      "guide": "NFL guides NOT APPLICABLE. Official UNC game center verifies Edwards and Saturday3:30 ET. Without new contrary evidence this is conditional, not a released non-NFL leg.",
+      "source_ids": [
+        "CC",
+        "D-UNC",
+        "UNC-P"
+      ]
+    },
+    "PUR": {
+      "game": "Washington at Purdue",
+      "league": "CFB",
+      "date": "2026-10-16",
+      "time_et": "20:00",
+      "thesis": "Purdue +4.5 protects the improved home offense. Browne and Ijeboi have produced consecutive conference wins, with the line allowing no sacks in those two games. The leg tolerates a field-goal loss.",
+      "counter": "Two improved games do not erase a31.3-point defensive allowance. A healthier Washington quarterback or an explosive passing game can invalidate the recent run-defense improvement.",
+      "roles": "Browne and Ijeboi roles verified by Purdue. Current reporting has Brown taking first-team work with Williams doubtful from a rib injury. This supports a Brown-led PROVISIONAL assessment; official game starter and limitations remain unconfirmed.",
+      "situation": "FRIDAY, not Saturday. Purdue official preview confirms8pm ET; cannot be placed on the Sunday-only ticket.",
+      "vsin": "Cohen Purdue -3.5 supports direction but incorrectly describes the day in the article body; primary schedule controls.",
+      "docs": "Josh Schonwald Washington +3.5 is opposition. Do not award agreement just because both protected sides could cover.",
+      "guide": "NFL guides NOT APPLICABLE. Primary Purdue preview supersedes date error and verifies current QB1. Do not fill missing Washington starter information with a favorable assumption.",
+      "source_ids": [
+        "CC",
+        "D-PUR",
+        "PUR-P",
+        "UW-P",
+        "UW-QB",
+        "UW-P",
+        "UW-QB",
+        "UW-P",
+        "UW-QB",
+        "UW-P",
+        "UW-QB"
+      ]
+    },
+    "WAKE": {
+      "game": "Wake Forest at California",
+      "league": "CFB",
+      "date": "2026-10-17",
+      "time_et": "22:30",
+      "thesis": "Wake -1.5 seeks a road win by2 rather than a near-double-digit cover. Lopez/Hernandez sustain passing while Wake run defense can make California one-dimensional.",
+      "counter": "Cal passing attacks Wake softer coverage. Brousseau just led a win over Virginia Tech, contradicting the older secondary last-game narrative. Travel and a one-point Wake win are further risks.",
+      "roles": "Primary Cal preview overrides season-leader shortcut: Brousseau started the latest game and improved protection. Lopez/Hernandez remain Wake focal points. Final starter/line roles require refresh.",
+      "situation": "Card prints10:15pm ET; current ESPN lists10:30pm ET. Primary Cal announcement confirms10:30pm ET. Use the earlier printed time as submission deadline.",
+      "vsin": "Cohen Wake ML parlay supports direction, not exact-1.5 price.",
+      "docs": "Tony Sink Wake -9.5 agrees directionally, but his last-game narrative is stale versus primary Cal. Confirmation is downgraded.",
+      "guide": "NFL guides NOT APPLICABLE. Primary Cal preview updates QB and last-game opponent; stale secondary narrative is not used to inflate the grade. This is a weak conditional slot, not a non-NFL release.",
+      "source_ids": [
+        "CC",
+        "D-WAKE",
+        "CAL-P",
+        "CAL-T",
+        "CAL-P",
+        "CAL-T",
+        "CAL-P",
+        "CAL-T",
+        "CAL-P",
+        "CAL-T"
+      ]
+    }
+  },
+  "candidates": [
+    {
+      "id": "H1",
+      "parent": "CLE",
+      "box": 114,
+      "selection": "CLE +6.5",
+      "card": "Half Point",
+      "game": "Baltimore at Cleveland",
+      "league": "NFL",
+      "date": "2026-10-18",
+      "time_et": "13:00",
+      "factors": {
+        "matchup": {
+          "score": 25,
+          "max": 35,
+          "evidence": "The fixed +6.5 is a full point above the dated Circa contest number. Cleveland allows 5.2 yards per play and a 42.86% red-zone touchdown rate, giving a home divisional dog a credible resistance path."
+        },
+        "price": {
+          "score": 16,
+          "max": 20,
+          "evidence": "Card+6.5 versus Circa contest+5.5; protects6-point defeat but not a touchdown. Cleveland line/backs and Jackson scenario prevent release cutoff."
+        },
+        "personnel": {
+          "score": 8,
+          "max": 15,
+          "evidence": "Watson is the current starter; the magazine Sanders-first depth chart is overridden. Jackson ankle readiness, Cleveland line combinations and Judkins/Sampson availability are material. Jackson DNP is not a final out."
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Home divisional game. Forecast rain requires a fresh wind/field check; no weather-only Under inference."
+        },
+        "vsin": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Tuley takes CLE +5; Cohen uses CLE alt +10.5 in a parlay. Neither is an exact +6.5 standalone endorsement."
+        },
+        "docs": {
+          "score": 1,
+          "max": 10,
+          "evidence": "Toth takes BAL -4.5: genuine opposition, stronger card number does not erase the trench mismatch."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Dated reference/card compared. Authentic same-book opener/current and Action market counts/handle remain unverified; no movement or split points invented."
+        }
+      },
+      "total": 68,
+      "grade": "B-",
+      "score_status": "PROVISIONAL",
+      "known_subtotal": 68,
+      "assessed_max": 110,
+      "failure": {
+        "failure_path": {
+          "score": 1,
+          "evidence": "Baltimore offense is substantially stronger: 6.4 yards per play versus 4.7. A healthy Jackson and a compromised Cleveland line could produce the blowout the points cannot cover."
+        },
+        "personnel_resilience": {
+          "score": 0,
+          "evidence": "Watson is the current starter; the magazine Sanders-first depth chart is overridden. Jackson ankle readiness, Cleveland line combinations and Judkins/Sampson availability are material. Jackson DNP is not a final out."
+        },
+        "variance": {
+          "score": 1,
+          "evidence": "Protection does not remove turnover, explosive-score or adverse game-script risk."
+        },
+        "price_protection": {
+          "score": 2,
+          "evidence": "Card+6.5 versus Circa contest+5.5; protects6-point defeat but not a touchdown. Cleveland line/backs and Jackson scenario prevent release cutoff."
+        },
+        "contradiction_resolution": {
+          "score": 1,
+          "evidence": "Independent current matchup evidence is weighed against: Tuley takes CLE +5; Cohen uses CLE alt +10.5 in a parlay. Neither is an exact +6.5 standalone endorsement. Toth takes BAL -4.5: genuine opposition, stronger card number does not erase the trench mismatch."
+        }
+      },
+      "failure_total": 5,
+      "official_units": 0,
+      "planned_ticket_units": 2,
+      "best_number": "CLE +6.5",
+      "no_bet_cutoff": null,
+      "cutoff_status": "Not established for release while blocked; preserve this exact static card cell, no silent substitution.",
+      "missing": [
+        "Current Action contest count and market-specific money/tickets",
+        "Current same-book movement",
+        "Unexposed paid/video picks",
+        "Final material role/availability and weather updates"
+      ],
+      "release_blockers": [
+        "Material future availability/role review not cleared; no final framework release.",
+        "Current printed selection/withdrawal status must be checked before committing; no accepted receipt is claimed."
+      ],
+      "source_ids": [
+        "TR-CLE",
+        "VC",
+        "VT",
+        "DO",
+        "FL",
+        "G",
+        "CLE-P"
+      ]
+    },
+    {
+      "id": "H2",
+      "parent": "CAR",
+      "box": 118,
+      "selection": "CAR +0.5",
+      "card": "Half Point",
+      "game": "Carolina at Philadelphia",
+      "league": "NFL",
+      "date": "2026-10-18",
+      "time_et": "13:00",
+      "factors": {
+        "matchup": {
+          "score": 28,
+          "max": 35,
+          "evidence": "Carolina produces 6.1 yards per play versus Philadelphia 4.5. The Panthers return from their bye while Philadelphia returns from London, and the fixed card still gives Carolina points despite the Circa contest making it a short favorite."
+        },
+        "price": {
+          "score": 16,
+          "max": 20,
+          "evidence": "Static CAR+0.5 versus Circa contest CAR-1 and TeamRankings-1.5. Better threshold; still needs an outright win/tie."
+        },
+        "personnel": {
+          "score": 10,
+          "max": 15,
+          "evidence": "Young/McMillan remain the central passing path. Barkley and DeVonta Smith availability affects Philadelphia scoring materially; a practice absence alone is not an out."
+        },
+        "situation": {
+          "score": 8,
+          "max": 10,
+          "evidence": "Carolina bye advantage; Eagles overseas travel without the immediate bye. Philadelphia weather must be refreshed."
+        },
+        "vsin": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Cohen backs CAR ML -115. Tuley leans Carolina but passes. Those positions receive different weight."
+        },
+        "docs": {
+          "score": 1,
+          "max": 10,
+          "evidence": "Toth prefers PHI -1.5: opposing side, not confirmation. Fixed CAR +0.5 is assessed independently."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Dated reference/card compared. Authentic same-book opener/current and Action market counts/handle remain unverified; no movement or split points invented."
+        }
+      },
+      "total": 74,
+      "grade": "B",
+      "score_status": "PROVISIONAL",
+      "known_subtotal": 74,
+      "assessed_max": 110,
+      "failure": {
+        "failure_path": {
+          "score": 1,
+          "evidence": "Philadelphia allows fewer yards and points per play. Rest does not cure Carolina defensive weaknesses; a healthier Eagles offense can reverse the apparent passing edge."
+        },
+        "personnel_resilience": {
+          "score": 1,
+          "evidence": "Young/McMillan remain the central passing path. Barkley and DeVonta Smith availability affects Philadelphia scoring materially; a practice absence alone is not an out."
+        },
+        "variance": {
+          "score": 1,
+          "evidence": "Protection does not remove turnover, explosive-score or adverse game-script risk."
+        },
+        "price_protection": {
+          "score": 1,
+          "evidence": "Static CAR+0.5 versus Circa contest CAR-1 and TeamRankings-1.5. Better threshold; still needs an outright win/tie."
+        },
+        "contradiction_resolution": {
+          "score": 1,
+          "evidence": "Independent current matchup evidence is weighed against: Cohen backs CAR ML -115. Tuley leans Carolina but passes. Those positions receive different weight. Toth prefers PHI -1.5: opposing side, not confirmation. Fixed CAR +0.5 is assessed independently."
+        }
+      },
+      "failure_total": 5,
+      "official_units": 0,
+      "planned_ticket_units": 2,
+      "best_number": "CAR +0.5",
+      "no_bet_cutoff": null,
+      "cutoff_status": "Not established for release while blocked; preserve this exact static card cell, no silent substitution.",
+      "missing": [
+        "Current Action contest count and market-specific money/tickets",
+        "Current same-book movement",
+        "Unexposed paid/video picks",
+        "Final material role/availability and weather updates"
+      ],
+      "release_blockers": [
+        "Material future availability/role review not cleared; no final framework release.",
+        "Current printed selection/withdrawal status must be checked before committing; no accepted receipt is claimed."
+      ],
+      "source_ids": [
+        "TR-CAR",
+        "VC",
+        "VT",
+        "DO",
+        "FL",
+        "G"
+      ]
+    },
+    {
+      "id": "H3",
+      "parent": "IU",
+      "box": 32,
+      "selection": "Indiana +3.5",
+      "card": "Half Point",
+      "game": "Ohio State at Indiana",
+      "league": "CFB",
+      "date": "2026-10-17",
+      "time_et": "12:00",
+      "factors": {
+        "matchup": {
+          "score": 28,
+          "max": 35,
+          "evidence": "Indiana can trade efficient possessions:7.6 yards per play against Ohio State7.1. Hoover and the receiving group provide an offensive answer at home; the protected number can survive a normal competitive defeat."
+        },
+        "price": {
+          "score": 15,
+          "max": 20,
+          "evidence": "The hook protects a3-point loss; exact Bruhn/Cohen number. Rating counter slightly favors OSU bymore; no full-model consensus claimed."
+        },
+        "personnel": {
+          "score": 11,
+          "max": 15,
+          "evidence": "Hoover17TD/0INT in the current ESPN preview, with Richard and Becker leading volume. Sayin/Smith are Ohio State focal points. Conference availability must be refreshed."
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Home top-five matchup. No automatic fade from last week narrow escape and no unsupported closing-band trigger."
+        },
+        "vsin": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Cohen IU +3.5 and ML +150; VSiN rating margin slightly favors OSU. Resolve that conflict through protection, not source-count voting."
+        },
+        "docs": {
+          "score": 8,
+          "max": 10,
+          "evidence": "Guy Bruhn IU +3.5 agrees at the Half-Point number."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Dated reference/card compared. Authentic same-book opener/current and Action market counts/handle remain unverified; no movement or split points invented."
+        }
+      },
+      "total": 80,
+      "grade": "B",
+      "score_status": "PROVISIONAL",
+      "known_subtotal": 80,
+      "assessed_max": 110,
+      "failure": {
+        "failure_path": {
+          "score": 1,
+          "evidence": "Ohio State explosive passing is the main failure path. Indiana pass defense is less dominant than its run defense, and unbeaten results are not the same as covering inflated spreads."
+        },
+        "personnel_resilience": {
+          "score": 1,
+          "evidence": "Hoover17TD/0INT in the current ESPN preview, with Richard and Becker leading volume. Sayin/Smith are Ohio State focal points. Conference availability must be refreshed."
+        },
+        "variance": {
+          "score": 1,
+          "evidence": "Protection does not remove turnover, explosive-score or adverse game-script risk."
+        },
+        "price_protection": {
+          "score": 2,
+          "evidence": "The hook protects a3-point loss; exact Bruhn/Cohen number. Rating counter slightly favors OSU bymore; no full-model consensus claimed."
+        },
+        "contradiction_resolution": {
+          "score": 1,
+          "evidence": "Independent current matchup evidence is weighed against: Cohen IU +3.5 and ML +150; VSiN rating margin slightly favors OSU. Resolve that conflict through protection, not source-count voting. Guy Bruhn IU +3.5 agrees at the Half-Point number."
+        }
+      },
+      "failure_total": 6,
+      "official_units": 0,
+      "planned_ticket_units": 2,
+      "best_number": "Indiana +3.5",
+      "no_bet_cutoff": null,
+      "cutoff_status": "Not established for release while blocked; preserve this exact static card cell, no silent substitution.",
+      "missing": [
+        "Current Action contest count and market-specific money/tickets",
+        "Current same-book movement",
+        "Unexposed paid/video picks",
+        "Final material role/availability and weather updates"
+      ],
+      "release_blockers": [
+        "Material future availability/role review not cleared; no final framework release.",
+        "Current printed selection/withdrawal status must be checked before committing; no accepted receipt is claimed.",
+        "Non-NFL Failure7 gate not cleared."
+      ],
+      "source_ids": [
+        "TR-IU",
+        "CC",
+        "D-IU",
+        "IU-P"
+      ]
+    },
+    {
+      "id": "H4",
+      "parent": "ATL",
+      "box": 122,
+      "selection": "ATL +2.5",
+      "card": "Half Point",
+      "game": "Chicago at Atlanta",
+      "league": "NFL",
+      "date": "2026-10-18",
+      "time_et": "13:00",
+      "factors": {
+        "matchup": {
+          "score": 27,
+          "max": 35,
+          "evidence": "Atlanta gains 5.8 yards per play to Chicago 5.4 and allows 5.0 to Chicago 6.2. The printed +2.5 is useful protection against a game Circa lists pickem; Bijan and London provide two ways to sustain drives."
+        },
+        "price": {
+          "score": 16,
+          "max": 20,
+          "evidence": "Card+2.5 versus Circa PK; worse than Toth+3 because a3-point loss loses. Quarterback scenario remains unresolved."
+        },
+        "personnel": {
+          "score": 8,
+          "max": 15,
+          "evidence": "Penix expected to start, not final clearance. Williams return and Monangai/Swift deployment must be rechecked. No assumed full workload for either returning quarterback."
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Atlanta home venue; roof determination remains unverified. Do not use outdoor wind as an indoor scoring adjustment."
+        },
+        "vsin": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Cohen ATL ML +140 supports direction; Tuley passes because of quarterback uncertainty. Makinen includes a Chicago fade screen, not a guarantee."
+        },
+        "docs": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Toth takes ATL +3. Card +2.5 loses the field-goal push, reducing its price appeal."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Dated reference/card compared. Authentic same-book opener/current and Action market counts/handle remain unverified; no movement or split points invented."
+        }
+      },
+      "total": 76,
+      "grade": "B",
+      "score_status": "PROVISIONAL",
+      "known_subtotal": 76,
+      "assessed_max": 110,
+      "failure": {
+        "failure_path": {
+          "score": 1,
+          "evidence": "Williams returning could restore an offense suppressed by backup play. The newest Fantasy Life article specifically supports that rebound; Penix rib limitations could remove the Atlanta edge."
+        },
+        "personnel_resilience": {
+          "score": 0,
+          "evidence": "Penix expected to start, not final clearance. Williams return and Monangai/Swift deployment must be rechecked. No assumed full workload for either returning quarterback."
+        },
+        "variance": {
+          "score": 1,
+          "evidence": "Protection does not remove turnover, explosive-score or adverse game-script risk."
+        },
+        "price_protection": {
+          "score": 1,
+          "evidence": "Card+2.5 versus Circa PK; worse than Toth+3 because a3-point loss loses. Quarterback scenario remains unresolved."
+        },
+        "contradiction_resolution": {
+          "score": 1,
+          "evidence": "Independent current matchup evidence is weighed against: Cohen ATL ML +140 supports direction; Tuley passes because of quarterback uncertainty. Makinen includes a Chicago fade screen, not a guarantee. Toth takes ATL +3. Card +2.5 loses the field-goal push, reducing its price appeal."
+        }
+      },
+      "failure_total": 4,
+      "official_units": 0,
+      "planned_ticket_units": 2,
+      "best_number": "ATL +2.5",
+      "no_bet_cutoff": null,
+      "cutoff_status": "Not established for release while blocked; preserve this exact static card cell, no silent substitution.",
+      "missing": [
+        "Current Action contest count and market-specific money/tickets",
+        "Current same-book movement",
+        "Unexposed paid/video picks",
+        "Final material role/availability and weather updates"
+      ],
+      "release_blockers": [
+        "Material future availability/role review not cleared; no final framework release.",
+        "Current printed selection/withdrawal status must be checked before committing; no accepted receipt is claimed."
+      ],
+      "source_ids": [
+        "TR-ATL",
+        "VC",
+        "VT",
+        "DO",
+        "FL",
+        "FL-M",
+        "G",
+        "PENIX"
+      ]
+    },
+    {
+      "id": "H5",
+      "parent": "NYG",
+      "box": 126,
+      "selection": "NYG +1.5",
+      "card": "Half Point",
+      "game": "New Orleans at NY Giants",
+      "league": "NFL",
+      "date": "2026-10-18",
+      "time_et": "13:00",
+      "factors": {
+        "matchup": {
+          "score": 26,
+          "max": 35,
+          "evidence": "The Giants concede 0.363 points per play versus New Orleans 0.478. The Saints depleted backfield and protection make sustaining drives harder, while Winston has kept New York competitive. Take protection rather than demand a wide victory."
+        },
+        "price": {
+          "score": 14,
+          "max": 20,
+          "evidence": "Card+1.5 versus Circa+1; useful only in a very close finish. Current systems oppose; no premium price grade."
+        },
+        "personnel": {
+          "score": 10,
+          "max": 15,
+          "evidence": "Winston replaces the season-lost Dart. Saints backfield replacement work and Olave availability matter more than raw injury totals. Giants tackle availability remains a key review."
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Giants at home after overtime tie; fatigue and kicking reliability temper the home-field case."
+        },
+        "vsin": {
+          "score": 2,
+          "max": 10,
+          "evidence": "Tuley passes; Makinen systems oppose NYG. Cohen Winston TD prop is a different market and does not earn side agreement points."
+        },
+        "docs": {
+          "score": 8,
+          "max": 10,
+          "evidence": "Toth favors NYG +1.5. Block also prefers protected Giants in his standard teaser, a relevant but different threshold."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Dated reference/card compared. Authentic same-book opener/current and Action market counts/handle remain unverified; no movement or split points invented."
+        }
+      },
+      "total": 71,
+      "grade": "B-",
+      "score_status": "PROVISIONAL",
+      "known_subtotal": 71,
+      "assessed_max": 110,
+      "failure": {
+        "failure_path": {
+          "score": 1,
+          "evidence": "Winston turnovers, missed kicks and an impaired Giants line are credible failure paths. Makinen has a Giants fade/Saints system; this is not unanimous support."
+        },
+        "personnel_resilience": {
+          "score": 1,
+          "evidence": "Winston replaces the season-lost Dart. Saints backfield replacement work and Olave availability matter more than raw injury totals. Giants tackle availability remains a key review."
+        },
+        "variance": {
+          "score": 1,
+          "evidence": "Protection does not remove turnover, explosive-score or adverse game-script risk."
+        },
+        "price_protection": {
+          "score": 1,
+          "evidence": "Card+1.5 versus Circa+1; useful only in a very close finish. Current systems oppose; no premium price grade."
+        },
+        "contradiction_resolution": {
+          "score": 1,
+          "evidence": "Independent current matchup evidence is weighed against: Tuley passes; Makinen systems oppose NYG. Cohen Winston TD prop is a different market and does not earn side agreement points. Toth favors NYG +1.5. Block also prefers protected Giants in his standard teaser, a relevant but different threshold."
+        }
+      },
+      "failure_total": 5,
+      "official_units": 0,
+      "planned_ticket_units": 2,
+      "best_number": "NYG +1.5",
+      "no_bet_cutoff": null,
+      "cutoff_status": "Not established for release while blocked; preserve this exact static card cell, no silent substitution.",
+      "missing": [
+        "Current Action contest count and market-specific money/tickets",
+        "Current same-book movement",
+        "Unexposed paid/video picks",
+        "Final material role/availability and weather updates"
+      ],
+      "release_blockers": [
+        "Material future availability/role review not cleared; no final framework release.",
+        "Current printed selection/withdrawal status must be checked before committing; no accepted receipt is claimed."
+      ],
+      "source_ids": [
+        "TR-NYG",
+        "VT",
+        "VM",
+        "DO",
+        "DT",
+        "FL",
+        "FL-M",
+        "G",
+        "NYG-P"
+      ]
+    },
+    {
+      "id": "H6",
+      "parent": "BUF",
+      "box": 145,
+      "selection": "BUF -4.5",
+      "card": "Half Point",
+      "game": "Buffalo at Las Vegas",
+      "league": "NFL",
+      "date": "2026-10-18",
+      "time_et": "16:25",
+      "factors": {
+        "matchup": {
+          "score": 27,
+          "max": 35,
+          "evidence": "The best protected market is Over46.5. Buffalo gains6.7 yards per play; both defenses permit more than0.40 points per play. Allen/Cook sustain drives and Bowers/Jeanty supply the home scoring response."
+        },
+        "price": {
+          "score": 13,
+          "max": 20,
+          "evidence": "Matches Circa-4.5 and improves Toth-5.5, but FL rounded margin4 is not a compelling edge. Weakest half-point draft slot; review first for replacement."
+        },
+        "personnel": {
+          "score": 10,
+          "max": 15,
+          "evidence": "Allen/Cook lead Buffalo opportunity. Cousins remains the observed Las Vegas passer; do not substitute rookie Mendoza because of preseason depth order. Bowers health, Moore and line availability need review."
+        },
+        "situation": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Buffalo short rest after Monday plus cross-country travel. Allegiant roof/indoor environment; no unsupported adverse-weather points."
+        },
+        "vsin": {
+          "score": 3,
+          "max": 10,
+          "evidence": "Tuley passes the spread. No verified named Over46.5 selection; model/reference totals are context, not an expert endorsement."
+        },
+        "docs": {
+          "score": 8,
+          "max": 10,
+          "evidence": "Toth BUF -5.5 supports the half-point direction only. No verified named Over pick, so no total-selection confirmation points."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Dated reference/card compared. Authentic same-book opener/current and Action market counts/handle remain unverified; no movement or split points invented."
+        }
+      },
+      "total": 71,
+      "grade": "B-",
+      "score_status": "PROVISIONAL",
+      "known_subtotal": 71,
+      "assessed_max": 110,
+      "failure": {
+        "failure_path": {
+          "score": 1,
+          "evidence": "Buffalo control of the clock, empty red-zone trips or a quiet Raiders offense can hold this below47. A Buffalo spread at-4.5 is less attractive because the current FL margin is only about4."
+        },
+        "personnel_resilience": {
+          "score": 1,
+          "evidence": "Allen/Cook lead Buffalo opportunity. Cousins remains the observed Las Vegas passer; do not substitute rookie Mendoza because of preseason depth order. Bowers health, Moore and line availability need review."
+        },
+        "variance": {
+          "score": 1,
+          "evidence": "Protection does not remove turnover, explosive-score or adverse game-script risk."
+        },
+        "price_protection": {
+          "score": 1,
+          "evidence": "Matches Circa-4.5 and improves Toth-5.5, but FL rounded margin4 is not a compelling edge. Weakest half-point draft slot; review first for replacement."
+        },
+        "contradiction_resolution": {
+          "score": 1,
+          "evidence": "Independent current matchup evidence is weighed against: Tuley passes the spread. No verified named Over46.5 selection; model/reference totals are context, not an expert endorsement. Toth BUF -5.5 supports the half-point direction only. No verified named Over pick, so no total-selection confirmation points."
+        }
+      },
+      "failure_total": 5,
+      "official_units": 0,
+      "planned_ticket_units": 2,
+      "best_number": "BUF -4.5",
+      "no_bet_cutoff": null,
+      "cutoff_status": "Not established for release while blocked; preserve this exact static card cell, no silent substitution.",
+      "missing": [
+        "Current Action contest count and market-specific money/tickets",
+        "Current same-book movement",
+        "Unexposed paid/video picks",
+        "Final material role/availability and weather updates"
+      ],
+      "release_blockers": [
+        "Material future availability/role review not cleared; no final framework release.",
+        "Current printed selection/withdrawal status must be checked before committing; no accepted receipt is claimed."
+      ],
+      "source_ids": [
+        "TR-BUF",
+        "VT",
+        "DO",
+        "FL",
+        "FL-M",
+        "G"
+      ]
+    },
+    {
+      "id": "H7",
+      "parent": "NYJ",
+      "box": 130,
+      "selection": "NYJ +7.5",
+      "card": "Half Point",
+      "game": "NY Jets at New England",
+      "league": "NFL",
+      "date": "2026-10-18",
+      "time_et": "13:00",
+      "factors": {
+        "matchup": {
+          "score": 26,
+          "max": 35,
+          "evidence": "The Jets defense permits 4.6 yards per play versus New England 5.2. At +15.5, New York can lose by two touchdowns. Allen offers a replacement rushing path if Hall remains absent."
+        },
+        "price": {
+          "score": 13,
+          "max": 20,
+          "evidence": "Card+7.5 versus Circa contest+7 protects the whole-touchdown loss. FL margin8 is a real counter; the Jets defensive efficiency supports only a modest dog lean."
+        },
+        "personnel": {
+          "score": 10,
+          "max": 15,
+          "evidence": "Hall week-to-week; Allen replacement role is supported by current Fantasy Life reporting. Henderson status changes New England backfield concentration. Verify Smith/Wilson and both lines."
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Road division game. Explicit inflation check after New England 45-17 win; do not assume a missing closing ATS band."
+        },
+        "vsin": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Tuley likes NYJ +7; Cohen pairs Patriots ML with protected Cleveland. Supporting opinions conflict at the base side."
+        },
+        "docs": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Toth NYJ +7.5 versus Block Patriots -1.5 standard teaser. Both can win; these are different thresholds."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Dated reference/card compared. Authentic same-book opener/current and Action market counts/handle remain unverified; no movement or split points invented."
+        }
+      },
+      "total": 73,
+      "grade": "B-",
+      "score_status": "PROVISIONAL",
+      "known_subtotal": 73,
+      "assessed_max": 110,
+      "failure": {
+        "failure_path": {
+          "score": 1,
+          "evidence": "New England offense is stronger and a turnover-led rout can repeat last week. Maye and a healthier receiving group could turn protection into a false comfort."
+        },
+        "personnel_resilience": {
+          "score": 1,
+          "evidence": "Hall week-to-week; Allen replacement role is supported by current Fantasy Life reporting. Henderson status changes New England backfield concentration. Verify Smith/Wilson and both lines."
+        },
+        "variance": {
+          "score": 1,
+          "evidence": "Protection does not remove turnover, explosive-score or adverse game-script risk."
+        },
+        "price_protection": {
+          "score": 2,
+          "evidence": "Card+7.5 versus Circa contest+7 protects the whole-touchdown loss. FL margin8 is a real counter; the Jets defensive efficiency supports only a modest dog lean."
+        },
+        "contradiction_resolution": {
+          "score": 1,
+          "evidence": "Independent current matchup evidence is weighed against: Tuley likes NYJ +7; Cohen pairs Patriots ML with protected Cleveland. Supporting opinions conflict at the base side. Toth NYJ +7.5 versus Block Patriots -1.5 standard teaser. Both can win; these are different thresholds."
+        }
+      },
+      "failure_total": 6,
+      "official_units": 0,
+      "planned_ticket_units": 2,
+      "best_number": "NYJ +7.5",
+      "no_bet_cutoff": null,
+      "cutoff_status": "Not established for release while blocked; preserve this exact static card cell, no silent substitution.",
+      "missing": [
+        "Current Action contest count and market-specific money/tickets",
+        "Current same-book movement",
+        "Unexposed paid/video picks",
+        "Final material role/availability and weather updates"
+      ],
+      "release_blockers": [
+        "Material future availability/role review not cleared; no final framework release.",
+        "Current printed selection/withdrawal status must be checked before committing; no accepted receipt is claimed."
+      ],
+      "source_ids": [
+        "TR-NYJ",
+        "VC",
+        "VT",
+        "DO",
+        "DT",
+        "FL",
+        "FL-R",
+        "G"
+      ]
+    },
+    {
+      "id": "A1",
+      "parent": "JAX",
+      "box": 109,
+      "selection": "JAX +5.5",
+      "card": "Big Teaser",
+      "game": "Houston vs Jacksonville",
+      "league": "NFL",
+      "date": "2026-10-18",
+      "time_et": "09:30",
+      "factors": {
+        "matchup": {
+          "score": 28,
+          "max": 35,
+          "evidence": "Jacksonville has the more efficient scoring operation: 0.420 points per play versus Houston 0.347, with better third-down conversion. Staying in London removes a second transatlantic trip. Receiving points is preferable to requiring a multi-score win."
+        },
+        "price": {
+          "score": 18,
+          "max": 20,
+          "evidence": "Printed+5.5 vs Circa-2.5; crossing3 meaningfully protects a short favorite. Ten-leg6.5-to1 payout is the cost, not free points."
+        },
+        "personnel": {
+          "score": 10,
+          "max": 15,
+          "evidence": "Lawrence and Stroud remain the working quarterback plans. Tuten leads Jacksonville rushing; Houston receiving integration and both protection units need a fresh availability review."
+        },
+        "situation": {
+          "score": 8,
+          "max": 10,
+          "evidence": "Neutral Wembley venue; Jacksonville second consecutive London game. Sunday wind is a forecast, not final game weather."
+        },
+        "vsin": {
+          "score": 5,
+          "max": 10,
+          "evidence": "Cohen: JAX -2.5 +100; Tuley prefers Houston only with teaser protection. VSiN estimated score was tied, limiting confirmation."
+        },
+        "docs": {
+          "score": 8,
+          "max": 10,
+          "evidence": "Spencer Toth favors JAX -2.5. His margin forecast is supporting opinion, not a Micks forecast."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Dated reference/card compared. Authentic same-book opener/current and Action market counts/handle remain unverified; no movement or split points invented."
+        }
+      },
+      "total": 81,
+      "grade": "B",
+      "score_status": "PROVISIONAL",
+      "known_subtotal": 81,
+      "assessed_max": 110,
+      "failure": {
+        "failure_path": {
+          "score": 1,
+          "evidence": "Houston allows only 5.0 yards per play; Stroud and the newly reported Harrison addition can keep this close. Turnover and red-zone advantages can regress."
+        },
+        "personnel_resilience": {
+          "score": 1,
+          "evidence": "Lawrence and Stroud remain the working quarterback plans. Tuten leads Jacksonville rushing; Houston receiving integration and both protection units need a fresh availability review."
+        },
+        "variance": {
+          "score": 1,
+          "evidence": "Protection does not remove turnover, explosive-score or adverse game-script risk."
+        },
+        "price_protection": {
+          "score": 2,
+          "evidence": "Printed+5.5 vs Circa-2.5; crossing3 meaningfully protects a short favorite. Ten-leg6.5-to1 payout is the cost, not free points."
+        },
+        "contradiction_resolution": {
+          "score": 1,
+          "evidence": "Independent current matchup evidence is weighed against: Cohen: JAX -2.5 +100; Tuley prefers Houston only with teaser protection. VSiN estimated score was tied, limiting confirmation. Spencer Toth favors JAX -2.5. His margin forecast is supporting opinion, not a Micks forecast."
+        }
+      },
+      "failure_total": 6,
+      "official_units": 0,
+      "planned_ticket_units": 2,
+      "best_number": "JAX +5.5",
+      "no_bet_cutoff": null,
+      "cutoff_status": "Not established for release while blocked; preserve this exact static card cell, no silent substitution.",
+      "missing": [
+        "Current Action contest count and market-specific money/tickets",
+        "Current same-book movement",
+        "Unexposed paid/video picks",
+        "Final material role/availability and weather updates"
+      ],
+      "release_blockers": [
+        "Material future availability/role review not cleared; no final framework release.",
+        "Current printed selection/withdrawal status must be checked before committing; no accepted receipt is claimed."
+      ],
+      "source_ids": [
+        "TR-JAX",
+        "VC",
+        "VT",
+        "DO",
+        "FL",
+        "G"
+      ]
+    },
+    {
+      "id": "A2",
+      "parent": "CLE",
+      "box": 114,
+      "selection": "CLE +12.5",
+      "card": "Big Teaser",
+      "game": "Baltimore at Cleveland",
+      "league": "NFL",
+      "date": "2026-10-18",
+      "time_et": "13:00",
+      "factors": {
+        "matchup": {
+          "score": 26,
+          "max": 35,
+          "evidence": "The fixed +6.5 is a full point above the dated Circa contest number. Cleveland allows 5.2 yards per play and a 42.86% red-zone touchdown rate, giving a home divisional dog a credible resistance path."
+        },
+        "price": {
+          "score": 18,
+          "max": 20,
+          "evidence": "Printed+12.5 vs Circa+5.5 covers a12-point defeat. No assumption that a compromised offense cannot lose by13+."
+        },
+        "personnel": {
+          "score": 8,
+          "max": 15,
+          "evidence": "Watson is the current starter; the magazine Sanders-first depth chart is overridden. Jackson ankle readiness, Cleveland line combinations and Judkins/Sampson availability are material. Jackson DNP is not a final out."
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Home divisional game. Forecast rain requires a fresh wind/field check; no weather-only Under inference."
+        },
+        "vsin": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Tuley takes CLE +5; Cohen uses CLE alt +10.5 in a parlay. Neither is an exact +6.5 standalone endorsement."
+        },
+        "docs": {
+          "score": 2,
+          "max": 10,
+          "evidence": "Toth takes BAL -4.5: genuine opposition, stronger card number does not erase the trench mismatch."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Dated reference/card compared. Authentic same-book opener/current and Action market counts/handle remain unverified; no movement or split points invented."
+        }
+      },
+      "total": 72,
+      "grade": "B-",
+      "score_status": "PROVISIONAL",
+      "known_subtotal": 72,
+      "assessed_max": 110,
+      "failure": {
+        "failure_path": {
+          "score": 1,
+          "evidence": "Baltimore offense is substantially stronger: 6.4 yards per play versus 4.7. A healthy Jackson and a compromised Cleveland line could produce the blowout the points cannot cover."
+        },
+        "personnel_resilience": {
+          "score": 0,
+          "evidence": "Watson is the current starter; the magazine Sanders-first depth chart is overridden. Jackson ankle readiness, Cleveland line combinations and Judkins/Sampson availability are material. Jackson DNP is not a final out."
+        },
+        "variance": {
+          "score": 1,
+          "evidence": "Protection does not remove turnover, explosive-score or adverse game-script risk."
+        },
+        "price_protection": {
+          "score": 2,
+          "evidence": "Printed+12.5 vs Circa+5.5 covers a12-point defeat. No assumption that a compromised offense cannot lose by13+."
+        },
+        "contradiction_resolution": {
+          "score": 1,
+          "evidence": "Independent current matchup evidence is weighed against: Tuley takes CLE +5; Cohen uses CLE alt +10.5 in a parlay. Neither is an exact +6.5 standalone endorsement. Toth takes BAL -4.5: genuine opposition, stronger card number does not erase the trench mismatch."
+        }
+      },
+      "failure_total": 5,
+      "official_units": 0,
+      "planned_ticket_units": 2,
+      "best_number": "CLE +12.5",
+      "no_bet_cutoff": null,
+      "cutoff_status": "Not established for release while blocked; preserve this exact static card cell, no silent substitution.",
+      "missing": [
+        "Current Action contest count and market-specific money/tickets",
+        "Current same-book movement",
+        "Unexposed paid/video picks",
+        "Final material role/availability and weather updates"
+      ],
+      "release_blockers": [
+        "Material future availability/role review not cleared; no final framework release.",
+        "Current printed selection/withdrawal status must be checked before committing; no accepted receipt is claimed."
+      ],
+      "source_ids": [
+        "TR-CLE",
+        "VC",
+        "VT",
+        "DO",
+        "FL",
+        "G",
+        "CLE-P"
+      ]
+    },
+    {
+      "id": "A3",
+      "parent": "CAR",
+      "box": 118,
+      "selection": "CAR +9.5",
+      "card": "Big Teaser",
+      "game": "Carolina at Philadelphia",
+      "league": "NFL",
+      "date": "2026-10-18",
+      "time_et": "13:00",
+      "factors": {
+        "matchup": {
+          "score": 29,
+          "max": 35,
+          "evidence": "Carolina produces 6.1 yards per play versus Philadelphia 4.5. The Panthers return from their bye while Philadelphia returns from London, and the fixed card still gives Carolina points despite the Circa contest making it a short favorite."
+        },
+        "price": {
+          "score": 18,
+          "max": 20,
+          "evidence": "Use printed+9.5 exactly; not generic HalfPoint+8 arithmetic. Circa makes Carolina the short favorite; blowout reversal remains risk."
+        },
+        "personnel": {
+          "score": 10,
+          "max": 15,
+          "evidence": "Young/McMillan remain the central passing path. Barkley and DeVonta Smith availability affects Philadelphia scoring materially; a practice absence alone is not an out."
+        },
+        "situation": {
+          "score": 8,
+          "max": 10,
+          "evidence": "Carolina bye advantage; Eagles overseas travel without the immediate bye. Philadelphia weather must be refreshed."
+        },
+        "vsin": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Cohen backs CAR ML -115. Tuley leans Carolina but passes. Those positions receive different weight."
+        },
+        "docs": {
+          "score": 3,
+          "max": 10,
+          "evidence": "Toth prefers PHI -1.5: opposing side, not confirmation. Fixed CAR +0.5 is assessed independently."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Dated reference/card compared. Authentic same-book opener/current and Action market counts/handle remain unverified; no movement or split points invented."
+        }
+      },
+      "total": 79,
+      "grade": "B",
+      "score_status": "PROVISIONAL",
+      "known_subtotal": 79,
+      "assessed_max": 110,
+      "failure": {
+        "failure_path": {
+          "score": 1,
+          "evidence": "Philadelphia allows fewer yards and points per play. Rest does not cure Carolina defensive weaknesses; a healthier Eagles offense can reverse the apparent passing edge."
+        },
+        "personnel_resilience": {
+          "score": 1,
+          "evidence": "Young/McMillan remain the central passing path. Barkley and DeVonta Smith availability affects Philadelphia scoring materially; a practice absence alone is not an out."
+        },
+        "variance": {
+          "score": 1,
+          "evidence": "Protection does not remove turnover, explosive-score or adverse game-script risk."
+        },
+        "price_protection": {
+          "score": 2,
+          "evidence": "Use printed+9.5 exactly; not generic HalfPoint+8 arithmetic. Circa makes Carolina the short favorite; blowout reversal remains risk."
+        },
+        "contradiction_resolution": {
+          "score": 1,
+          "evidence": "Independent current matchup evidence is weighed against: Cohen backs CAR ML -115. Tuley leans Carolina but passes. Those positions receive different weight. Toth prefers PHI -1.5: opposing side, not confirmation. Fixed CAR +0.5 is assessed independently."
+        }
+      },
+      "failure_total": 6,
+      "official_units": 0,
+      "planned_ticket_units": 2,
+      "best_number": "CAR +9.5",
+      "no_bet_cutoff": null,
+      "cutoff_status": "Not established for release while blocked; preserve this exact static card cell, no silent substitution.",
+      "missing": [
+        "Current Action contest count and market-specific money/tickets",
+        "Current same-book movement",
+        "Unexposed paid/video picks",
+        "Final material role/availability and weather updates"
+      ],
+      "release_blockers": [
+        "Material future availability/role review not cleared; no final framework release.",
+        "Current printed selection/withdrawal status must be checked before committing; no accepted receipt is claimed."
+      ],
+      "source_ids": [
+        "TR-CAR",
+        "VC",
+        "VT",
+        "DO",
+        "FL",
+        "G"
+      ]
+    },
+    {
+      "id": "A4",
+      "parent": "ATL",
+      "box": 122,
+      "selection": "ATL +11.5",
+      "card": "Big Teaser",
+      "game": "Chicago at Atlanta",
+      "league": "NFL",
+      "date": "2026-10-18",
+      "time_et": "13:00",
+      "factors": {
+        "matchup": {
+          "score": 28,
+          "max": 35,
+          "evidence": "Atlanta gains 5.8 yards per play to Chicago 5.4 and allows 5.0 to Chicago 6.2. The printed +2.5 is useful protection against a game Circa lists pickem; Bijan and London provide two ways to sustain drives."
+        },
+        "price": {
+          "score": 18,
+          "max": 20,
+          "evidence": "Printed+11.5 vs Circa PK; protects losses through11. Williams/Penix uncertainty remains a gate despite cushion."
+        },
+        "personnel": {
+          "score": 8,
+          "max": 15,
+          "evidence": "Penix expected to start, not final clearance. Williams return and Monangai/Swift deployment must be rechecked. No assumed full workload for either returning quarterback."
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Atlanta home venue; roof determination remains unverified. Do not use outdoor wind as an indoor scoring adjustment."
+        },
+        "vsin": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Cohen ATL ML +140 supports direction; Tuley passes because of quarterback uncertainty. Makinen includes a Chicago fade screen, not a guarantee."
+        },
+        "docs": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Toth takes ATL +3. Card +2.5 loses the field-goal push, reducing its price appeal."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Dated reference/card compared. Authentic same-book opener/current and Action market counts/handle remain unverified; no movement or split points invented."
+        }
+      },
+      "total": 79,
+      "grade": "B",
+      "score_status": "PROVISIONAL",
+      "known_subtotal": 79,
+      "assessed_max": 110,
+      "failure": {
+        "failure_path": {
+          "score": 1,
+          "evidence": "Williams returning could restore an offense suppressed by backup play. The newest Fantasy Life article specifically supports that rebound; Penix rib limitations could remove the Atlanta edge."
+        },
+        "personnel_resilience": {
+          "score": 0,
+          "evidence": "Penix expected to start, not final clearance. Williams return and Monangai/Swift deployment must be rechecked. No assumed full workload for either returning quarterback."
+        },
+        "variance": {
+          "score": 1,
+          "evidence": "Protection does not remove turnover, explosive-score or adverse game-script risk."
+        },
+        "price_protection": {
+          "score": 2,
+          "evidence": "Printed+11.5 vs Circa PK; protects losses through11. Williams/Penix uncertainty remains a gate despite cushion."
+        },
+        "contradiction_resolution": {
+          "score": 1,
+          "evidence": "Independent current matchup evidence is weighed against: Cohen ATL ML +140 supports direction; Tuley passes because of quarterback uncertainty. Makinen includes a Chicago fade screen, not a guarantee. Toth takes ATL +3. Card +2.5 loses the field-goal push, reducing its price appeal."
+        }
+      },
+      "failure_total": 5,
+      "official_units": 0,
+      "planned_ticket_units": 2,
+      "best_number": "ATL +11.5",
+      "no_bet_cutoff": null,
+      "cutoff_status": "Not established for release while blocked; preserve this exact static card cell, no silent substitution.",
+      "missing": [
+        "Current Action contest count and market-specific money/tickets",
+        "Current same-book movement",
+        "Unexposed paid/video picks",
+        "Final material role/availability and weather updates"
+      ],
+      "release_blockers": [
+        "Material future availability/role review not cleared; no final framework release.",
+        "Current printed selection/withdrawal status must be checked before committing; no accepted receipt is claimed."
+      ],
+      "source_ids": [
+        "TR-ATL",
+        "VC",
+        "VT",
+        "DO",
+        "FL",
+        "FL-M",
+        "G",
+        "PENIX"
+      ]
+    },
+    {
+      "id": "A5",
+      "parent": "NYG",
+      "box": 126,
+      "selection": "NYG +9.5",
+      "card": "Big Teaser",
+      "game": "New Orleans at NY Giants",
+      "league": "NFL",
+      "date": "2026-10-18",
+      "time_et": "13:00",
+      "factors": {
+        "matchup": {
+          "score": 27,
+          "max": 35,
+          "evidence": "The Giants concede 0.363 points per play versus New Orleans 0.478. The Saints depleted backfield and protection make sustaining drives harder, while Winston has kept New York competitive. Take protection rather than demand a wide victory."
+        },
+        "price": {
+          "score": 18,
+          "max": 20,
+          "evidence": "Printed+9.5 vs Circa+1. Protects one-score defeat; Winston/line and Saints counter still preclude a safe label."
+        },
+        "personnel": {
+          "score": 10,
+          "max": 15,
+          "evidence": "Winston replaces the season-lost Dart. Saints backfield replacement work and Olave availability matter more than raw injury totals. Giants tackle availability remains a key review."
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Giants at home after overtime tie; fatigue and kicking reliability temper the home-field case."
+        },
+        "vsin": {
+          "score": 3,
+          "max": 10,
+          "evidence": "Tuley passes; Makinen systems oppose NYG. Cohen Winston TD prop is a different market and does not earn side agreement points."
+        },
+        "docs": {
+          "score": 8,
+          "max": 10,
+          "evidence": "Toth favors NYG +1.5. Block also prefers protected Giants in his standard teaser, a relevant but different threshold."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Dated reference/card compared. Authentic same-book opener/current and Action market counts/handle remain unverified; no movement or split points invented."
+        }
+      },
+      "total": 77,
+      "grade": "B",
+      "score_status": "PROVISIONAL",
+      "known_subtotal": 77,
+      "assessed_max": 110,
+      "failure": {
+        "failure_path": {
+          "score": 1,
+          "evidence": "Winston turnovers, missed kicks and an impaired Giants line are credible failure paths. Makinen has a Giants fade/Saints system; this is not unanimous support."
+        },
+        "personnel_resilience": {
+          "score": 1,
+          "evidence": "Winston replaces the season-lost Dart. Saints backfield replacement work and Olave availability matter more than raw injury totals. Giants tackle availability remains a key review."
+        },
+        "variance": {
+          "score": 1,
+          "evidence": "Protection does not remove turnover, explosive-score or adverse game-script risk."
+        },
+        "price_protection": {
+          "score": 2,
+          "evidence": "Printed+9.5 vs Circa+1. Protects one-score defeat; Winston/line and Saints counter still preclude a safe label."
+        },
+        "contradiction_resolution": {
+          "score": 1,
+          "evidence": "Independent current matchup evidence is weighed against: Tuley passes; Makinen systems oppose NYG. Cohen Winston TD prop is a different market and does not earn side agreement points. Toth favors NYG +1.5. Block also prefers protected Giants in his standard teaser, a relevant but different threshold."
+        }
+      },
+      "failure_total": 6,
+      "official_units": 0,
+      "planned_ticket_units": 2,
+      "best_number": "NYG +9.5",
+      "no_bet_cutoff": null,
+      "cutoff_status": "Not established for release while blocked; preserve this exact static card cell, no silent substitution.",
+      "missing": [
+        "Current Action contest count and market-specific money/tickets",
+        "Current same-book movement",
+        "Unexposed paid/video picks",
+        "Final material role/availability and weather updates"
+      ],
+      "release_blockers": [
+        "Material future availability/role review not cleared; no final framework release.",
+        "Current printed selection/withdrawal status must be checked before committing; no accepted receipt is claimed."
+      ],
+      "source_ids": [
+        "TR-NYG",
+        "VT",
+        "VM",
+        "DO",
+        "DT",
+        "FL",
+        "FL-M",
+        "G",
+        "NYG-P"
+      ]
+    },
+    {
+      "id": "A6",
+      "parent": "NYJ",
+      "box": 130,
+      "selection": "NYJ +15.5",
+      "card": "Big Teaser",
+      "game": "NY Jets at New England",
+      "league": "NFL",
+      "date": "2026-10-18",
+      "time_et": "13:00",
+      "factors": {
+        "matchup": {
+          "score": 27,
+          "max": 35,
+          "evidence": "The Jets defense permits 4.6 yards per play versus New England 5.2. At +15.5, New York can lose by two touchdowns. Allen offers a replacement rushing path if Hall remains absent."
+        },
+        "price": {
+          "score": 18,
+          "max": 20,
+          "evidence": "Printed+15.5 vs Circa+7 covers14-point loss. Conditional backfield replacement and Maye explosive/turnover risk remain."
+        },
+        "personnel": {
+          "score": 10,
+          "max": 15,
+          "evidence": "Hall week-to-week; Allen replacement role is supported by current Fantasy Life reporting. Henderson status changes New England backfield concentration. Verify Smith/Wilson and both lines."
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Road division game. Explicit inflation check after New England 45-17 win; do not assume a missing closing ATS band."
+        },
+        "vsin": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Tuley likes NYJ +7; Cohen pairs Patriots ML with protected Cleveland. Supporting opinions conflict at the base side."
+        },
+        "docs": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Toth NYJ +7.5 versus Block Patriots -1.5 standard teaser. Both can win; these are different thresholds."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Dated reference/card compared. Authentic same-book opener/current and Action market counts/handle remain unverified; no movement or split points invented."
+        }
+      },
+      "total": 79,
+      "grade": "B",
+      "score_status": "PROVISIONAL",
+      "known_subtotal": 79,
+      "assessed_max": 110,
+      "failure": {
+        "failure_path": {
+          "score": 1,
+          "evidence": "New England offense is stronger and a turnover-led rout can repeat last week. Maye and a healthier receiving group could turn protection into a false comfort."
+        },
+        "personnel_resilience": {
+          "score": 1,
+          "evidence": "Hall week-to-week; Allen replacement role is supported by current Fantasy Life reporting. Henderson status changes New England backfield concentration. Verify Smith/Wilson and both lines."
+        },
+        "variance": {
+          "score": 1,
+          "evidence": "Protection does not remove turnover, explosive-score or adverse game-script risk."
+        },
+        "price_protection": {
+          "score": 2,
+          "evidence": "Printed+15.5 vs Circa+7 covers14-point loss. Conditional backfield replacement and Maye explosive/turnover risk remain."
+        },
+        "contradiction_resolution": {
+          "score": 1,
+          "evidence": "Independent current matchup evidence is weighed against: Tuley likes NYJ +7; Cohen pairs Patriots ML with protected Cleveland. Supporting opinions conflict at the base side. Toth NYJ +7.5 versus Block Patriots -1.5 standard teaser. Both can win; these are different thresholds."
+        }
+      },
+      "failure_total": 6,
+      "official_units": 0,
+      "planned_ticket_units": 2,
+      "best_number": "NYJ +15.5",
+      "no_bet_cutoff": null,
+      "cutoff_status": "Not established for release while blocked; preserve this exact static card cell, no silent substitution.",
+      "missing": [
+        "Current Action contest count and market-specific money/tickets",
+        "Current same-book movement",
+        "Unexposed paid/video picks",
+        "Final material role/availability and weather updates"
+      ],
+      "release_blockers": [
+        "Material future availability/role review not cleared; no final framework release.",
+        "Current printed selection/withdrawal status must be checked before committing; no accepted receipt is claimed."
+      ],
+      "source_ids": [
+        "TR-NYJ",
+        "VC",
+        "VT",
+        "DO",
+        "DT",
+        "FL",
+        "FL-R",
+        "G"
+      ]
+    },
+    {
+      "id": "A7",
+      "parent": "PIT",
+      "box": 136,
+      "selection": "PIT/TB Under 47.5",
+      "card": "Big Teaser",
+      "game": "Pittsburgh at Tampa Bay",
+      "league": "NFL",
+      "date": "2026-10-18",
+      "time_et": "13:00",
+      "factors": {
+        "matchup": {
+          "score": 28,
+          "max": 35,
+          "evidence": "Prefer the protected Under 47.5 to choosing a close side. Neither offense reaches 0.37 points per play; Pittsburgh converts only 32.79% of third downs. This ticket can survive a competitive low-40s game."
+        },
+        "price": {
+          "score": 18,
+          "max": 20,
+          "evidence": "Printed47.5 against base39.5; FL38.9 and VSiN40.7 are supporting projections, not assured scores. No named Doc Under points."
+        },
+        "personnel": {
+          "score": 9,
+          "max": 15,
+          "evidence": "Mayfield baseline is replaced by the Daniels scenario while availability is unresolved. Warren leads Pittsburgh rushing and receiving in the current preview; no copied Warren rush Under. Dowdle and Tampa receiving availability remain material."
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Tampa extra rest after Thursday game; outdoor heat and wind need a current check. No assumed suppressive weather."
+        },
+        "vsin": {
+          "score": 5,
+          "max": 10,
+          "evidence": "VSiN model total 40.7 is derivative support, not a named Under bet. Cohen Irving TD is an opposing scoring risk."
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No verified named Under selection. Toth backs TB +2.5 and his score forecast is an explicit Under counter."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Dated reference/card compared. Authentic same-book opener/current and Action market counts/handle remain unverified; no movement or split points invented."
+        }
+      },
+      "total": 71,
+      "grade": "B-",
+      "score_status": "PROVISIONAL",
+      "known_subtotal": 71,
+      "assessed_max": 110,
+      "failure": {
+        "failure_path": {
+          "score": 1,
+          "evidence": "Warren and Irving create explosive scoring paths, and short fields or defensive touchdowns can defeat an Under. Toth forecasts a 53-point game; that counter prevents a premium grade."
+        },
+        "personnel_resilience": {
+          "score": 0,
+          "evidence": "Mayfield baseline is replaced by the Daniels scenario while availability is unresolved. Warren leads Pittsburgh rushing and receiving in the current preview; no copied Warren rush Under. Dowdle and Tampa receiving availability remain material."
+        },
+        "variance": {
+          "score": 1,
+          "evidence": "Protection does not remove turnover, explosive-score or adverse game-script risk."
+        },
+        "price_protection": {
+          "score": 2,
+          "evidence": "Printed47.5 against base39.5; FL38.9 and VSiN40.7 are supporting projections, not assured scores. No named Doc Under points."
+        },
+        "contradiction_resolution": {
+          "score": 1,
+          "evidence": "Independent current matchup evidence is weighed against: VSiN model total 40.7 is derivative support, not a named Under bet. Cohen Irving TD is an opposing scoring risk. No verified named Under selection. Toth backs TB +2.5 and his score forecast is an explicit Under counter."
+        }
+      },
+      "failure_total": 5,
+      "official_units": 0,
+      "planned_ticket_units": 2,
+      "best_number": "PIT/TB Under 47.5",
+      "no_bet_cutoff": null,
+      "cutoff_status": "Not established for release while blocked; preserve this exact static card cell, no silent substitution.",
+      "missing": [
+        "Current Action contest count and market-specific money/tickets",
+        "Current same-book movement",
+        "Unexposed paid/video picks",
+        "Final material role/availability and weather updates"
+      ],
+      "release_blockers": [
+        "Material future availability/role review not cleared; no final framework release.",
+        "Current printed selection/withdrawal status must be checked before committing; no accepted receipt is claimed."
+      ],
+      "source_ids": [
+        "TR-PIT",
+        "VC",
+        "DO",
+        "FL",
+        "G"
+      ]
+    },
+    {
+      "id": "A8",
+      "parent": "IND",
+      "box": 137,
+      "selection": "IND +1.5",
+      "card": "Big Teaser",
+      "game": "Tennessee at Indianapolis",
+      "league": "NFL",
+      "date": "2026-10-18",
+      "time_et": "13:00",
+      "factors": {
+        "matchup": {
+          "score": 27,
+          "max": 35,
+          "evidence": "Indianapolis +1.5 removes the need to lay a touchdown. Tennessee scores only 0.212 points per play to Indianapolis 0.385; Taylor and the home passing game give the Colts a reasonable win path."
+        },
+        "price": {
+          "score": 18,
+          "max": 20,
+          "evidence": "Printed+1.5 vs Circa IND-7; tolerates one-point loss. Choose this instead of hoping a struggling Titans offense survives another rout."
+        },
+        "personnel": {
+          "score": 10,
+          "max": 15,
+          "evidence": "Jones is playing, overriding the injured preseason listing. Taylor workload and line health need confirmation; Ward/Tate remain Tennessee pass-volume focal points."
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Lucas Oil roof/weather status pending. Indianapolis returned from London without an immediate bye; fatigue is a counter."
+        },
+        "vsin": {
+          "score": 3,
+          "max": 10,
+          "evidence": "Tuley TEN +7 opposes the base favorite, but a Colts win by1-6 cashes both his angle and this protected leg."
+        },
+        "docs": {
+          "score": 8,
+          "max": 10,
+          "evidence": "Toth IND -6.5 supports direction. Do not carry his wide margin into the Micks forecast."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Dated reference/card compared. Authentic same-book opener/current and Action market counts/handle remain unverified; no movement or split points invented."
+        }
+      },
+      "total": 77,
+      "grade": "B",
+      "score_status": "PROVISIONAL",
+      "known_subtotal": 77,
+      "assessed_max": 110,
+      "failure": {
+        "failure_path": {
+          "score": 1,
+          "evidence": "The Colts defense allows 6.2 yards per play. A modest Tennessee recovery could be enough to win outright; last week single result cannot establish a permanent Titans fade."
+        },
+        "personnel_resilience": {
+          "score": 1,
+          "evidence": "Jones is playing, overriding the injured preseason listing. Taylor workload and line health need confirmation; Ward/Tate remain Tennessee pass-volume focal points."
+        },
+        "variance": {
+          "score": 1,
+          "evidence": "Protection does not remove turnover, explosive-score or adverse game-script risk."
+        },
+        "price_protection": {
+          "score": 2,
+          "evidence": "Printed+1.5 vs Circa IND-7; tolerates one-point loss. Choose this instead of hoping a struggling Titans offense survives another rout."
+        },
+        "contradiction_resolution": {
+          "score": 1,
+          "evidence": "Independent current matchup evidence is weighed against: Tuley TEN +7 opposes the base favorite, but a Colts win by1-6 cashes both his angle and this protected leg. Toth IND -6.5 supports direction. Do not carry his wide margin into the Micks forecast."
+        }
+      },
+      "failure_total": 6,
+      "official_units": 0,
+      "planned_ticket_units": 2,
+      "best_number": "IND +1.5",
+      "no_bet_cutoff": null,
+      "cutoff_status": "Not established for release while blocked; preserve this exact static card cell, no silent substitution.",
+      "missing": [
+        "Current Action contest count and market-specific money/tickets",
+        "Current same-book movement",
+        "Unexposed paid/video picks",
+        "Final material role/availability and weather updates"
+      ],
+      "release_blockers": [
+        "Material future availability/role review not cleared; no final framework release.",
+        "Current printed selection/withdrawal status must be checked before committing; no accepted receipt is claimed."
+      ],
+      "source_ids": [
+        "TR-IND",
+        "VT",
+        "DO",
+        "FL",
+        "G"
+      ]
+    },
+    {
+      "id": "A9",
+      "parent": "LAR",
+      "box": 141,
+      "selection": "LAR -4.5",
+      "card": "Big Teaser",
+      "game": "Arizona at LA Rams",
+      "league": "NFL",
+      "date": "2026-10-18",
+      "time_et": "16:05",
+      "factors": {
+        "matchup": {
+          "score": 29,
+          "max": 35,
+          "evidence": "Rams -4.5 is selected over Arizona protection because the trench/efficiency gap is large: LA gains6.0 and allows4.9 yards per play; Arizona gains4.5 and allows6.2. This is a matchup case, not a reputation favorite."
+        },
+        "price": {
+          "score": 18,
+          "max": 20,
+          "evidence": "Printed-4.5 vs Circa-12.5. Removes much of margin requirement but not need to win by5. Outside Arizona support is not erased."
+        },
+        "personnel": {
+          "score": 10,
+          "max": 15,
+          "evidence": "Stafford/Brissett are the working QB plans. Love and Arizona protection require review. Harrison is no longer assumed in Arizona after reported Houston move; Rams line/receiver availability matters."
+        },
+        "situation": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Division game; LA short turnaround after Monday. SoFi conditions do not justify invented wind/roof adjustments."
+        },
+        "vsin": {
+          "score": 3,
+          "max": 10,
+          "evidence": "Tuley ARI +12.5 is an opposing base-spread selection, compatible with some Rams winning margins. No named Rams -4.5 endorsement read."
+        },
+        "docs": {
+          "score": 2,
+          "max": 10,
+          "evidence": "Toth ARI +12.5 also opposes base favorite. His forecast is not treated as an actual Rams bet."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Dated reference/card compared. Authentic same-book opener/current and Action market counts/handle remain unverified; no movement or split points invented."
+        }
+      },
+      "total": 72,
+      "grade": "B-",
+      "score_status": "PROVISIONAL",
+      "known_subtotal": 72,
+      "assessed_max": 110,
+      "failure": {
+        "failure_path": {
+          "score": 1,
+          "evidence": "The Rams have failed to translate yardage into points consistently. Turnovers, special teams and a late Arizona score can produce a narrow win. Both featured ATS writers take Arizona at the much larger base spread."
+        },
+        "personnel_resilience": {
+          "score": 1,
+          "evidence": "Stafford/Brissett are the working QB plans. Love and Arizona protection require review. Harrison is no longer assumed in Arizona after reported Houston move; Rams line/receiver availability matters."
+        },
+        "variance": {
+          "score": 1,
+          "evidence": "Protection does not remove turnover, explosive-score or adverse game-script risk."
+        },
+        "price_protection": {
+          "score": 2,
+          "evidence": "Printed-4.5 vs Circa-12.5. Removes much of margin requirement but not need to win by5. Outside Arizona support is not erased."
+        },
+        "contradiction_resolution": {
+          "score": 1,
+          "evidence": "Independent current matchup evidence is weighed against: Tuley ARI +12.5 is an opposing base-spread selection, compatible with some Rams winning margins. No named Rams -4.5 endorsement read. Toth ARI +12.5 also opposes base favorite. His forecast is not treated as an actual Rams bet."
+        }
+      },
+      "failure_total": 6,
+      "official_units": 0,
+      "planned_ticket_units": 2,
+      "best_number": "LAR -4.5",
+      "no_bet_cutoff": null,
+      "cutoff_status": "Not established for release while blocked; preserve this exact static card cell, no silent substitution.",
+      "missing": [
+        "Current Action contest count and market-specific money/tickets",
+        "Current same-book movement",
+        "Unexposed paid/video picks",
+        "Final material role/availability and weather updates"
+      ],
+      "release_blockers": [
+        "Material future availability/role review not cleared; no final framework release.",
+        "Current printed selection/withdrawal status must be checked before committing; no accepted receipt is claimed."
+      ],
+      "source_ids": [
+        "TR-LAR",
+        "VT",
+        "DO",
+        "FL",
+        "G"
+      ]
+    },
+    {
+      "id": "A10",
+      "parent": "LAC",
+      "box": 150,
+      "selection": "LAC +16.5",
+      "card": "Big Teaser",
+      "game": "LA Chargers at Kansas City",
+      "league": "NFL",
+      "date": "2026-10-18",
+      "time_et": "16:25",
+      "factors": {
+        "matchup": {
+          "score": 26,
+          "max": 35,
+          "evidence": "The +16.5 threshold survives a two-touchdown defeat. The Chargers allow5.0 yards per play, matching Kansas City; the strongest path is defensive resistance and avoiding an early turnover cascade."
+        },
+        "price": {
+          "score": 18,
+          "max": 20,
+          "evidence": "Printed+16.5 vs Circa+8. Protects two-touchdown loss, but QB/protection and rested Chiefs limit resilience."
+        },
+        "personnel": {
+          "score": 9,
+          "max": 15,
+          "evidence": "Herbert current play overrides optimistic preseason health expectations; Alt, receiving availability and defensive leaders need review. Mahomes has returned from the magazine injury assumption."
+        },
+        "situation": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Chiefs rested at home. Pre-bye Chargers system is supporting context; not independent proof of a cover."
+        },
+        "vsin": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Tuley LAC +8 and Makinen pre-bye/streak systems support taking points at the base spread."
+        },
+        "docs": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Toth LAC +8.5 supports direction; this card affords more protection, at the fixed ten-leg payout cost."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Dated reference/card compared. Authentic same-book opener/current and Action market counts/handle remain unverified; no movement or split points invented."
+        }
+      },
+      "total": 77,
+      "grade": "B",
+      "score_status": "PROVISIONAL",
+      "known_subtotal": 77,
+      "assessed_max": 110,
+      "failure": {
+        "failure_path": {
+          "score": 1,
+          "evidence": "Kansas City offense gains6.5 yards per play versus Chargers4.8 and has a bye advantage. Herbert seven interceptions and protection injuries can turn a losing season into a multi-score rout."
+        },
+        "personnel_resilience": {
+          "score": 0,
+          "evidence": "Herbert current play overrides optimistic preseason health expectations; Alt, receiving availability and defensive leaders need review. Mahomes has returned from the magazine injury assumption."
+        },
+        "variance": {
+          "score": 1,
+          "evidence": "Protection does not remove turnover, explosive-score or adverse game-script risk."
+        },
+        "price_protection": {
+          "score": 2,
+          "evidence": "Printed+16.5 vs Circa+8. Protects two-touchdown loss, but QB/protection and rested Chiefs limit resilience."
+        },
+        "contradiction_resolution": {
+          "score": 1,
+          "evidence": "Independent current matchup evidence is weighed against: Tuley LAC +8 and Makinen pre-bye/streak systems support taking points at the base spread. Toth LAC +8.5 supports direction; this card affords more protection, at the fixed ten-leg payout cost."
+        }
+      },
+      "failure_total": 5,
+      "official_units": 0,
+      "planned_ticket_units": 2,
+      "best_number": "LAC +16.5",
+      "no_bet_cutoff": null,
+      "cutoff_status": "Not established for release while blocked; preserve this exact static card cell, no silent substitution.",
+      "missing": [
+        "Current Action contest count and market-specific money/tickets",
+        "Current same-book movement",
+        "Unexposed paid/video picks",
+        "Final material role/availability and weather updates"
+      ],
+      "release_blockers": [
+        "Material future availability/role review not cleared; no final framework release.",
+        "Current printed selection/withdrawal status must be checked before committing; no accepted receipt is claimed."
+      ],
+      "source_ids": [
+        "TR-LAC",
+        "VT",
+        "VM",
+        "DO",
+        "FL",
+        "G"
+      ]
+    },
+    {
+      "id": "B1",
+      "parent": "PUR",
+      "box": 15,
+      "selection": "Purdue +4.5",
+      "card": "Big Teaser",
+      "game": "Washington at Purdue",
+      "league": "CFB",
+      "date": "2026-10-16",
+      "time_et": "20:00",
+      "factors": {
+        "matchup": {
+          "score": 27,
+          "max": 35,
+          "evidence": "Purdue +4.5 protects the improved home offense. Browne and Ijeboi have produced consecutive conference wins, with the line allowing no sacks in those two games. The leg tolerates a field-goal loss."
+        },
+        "price": {
+          "score": 18,
+          "max": 20,
+          "evidence": "Exact printed+4.5; Brown-led provisional scenario now assessed; starter confirmation remains a release blocker. Not an official filler."
+        },
+        "personnel": {
+          "score": 9,
+          "max": 15,
+          "evidence": "Browne and Ijeboi roles verified by Purdue. Current reporting has Brown taking first-team work with Williams doubtful from a rib injury. This supports a Brown-led PROVISIONAL assessment; official game starter and limitations remain unconfirmed."
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "FRIDAY, not Saturday. Purdue official preview confirms8pm ET; cannot be placed on the Sunday-only ticket."
+        },
+        "vsin": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Cohen Purdue -3.5 supports direction but incorrectly describes the day in the article body; primary schedule controls."
+        },
+        "docs": {
+          "score": 1,
+          "max": 10,
+          "evidence": "Josh Schonwald Washington +3.5 is opposition. Do not award agreement just because both protected sides could cover."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Dated reference/card compared. Authentic same-book opener/current and Action market counts/handle remain unverified; no movement or split points invented."
+        }
+      },
+      "total": 73,
+      "grade": "B-",
+      "score_status": "PROVISIONAL",
+      "known_subtotal": 73,
+      "assessed_max": 110,
+      "failure": {
+        "failure_path": {
+          "score": 1,
+          "evidence": "Two improved games do not erase a31.3-point defensive allowance. A healthier Washington quarterback or an explosive passing game can invalidate the recent run-defense improvement."
+        },
+        "personnel_resilience": {
+          "score": 1,
+          "evidence": "Browne and Ijeboi roles verified by Purdue. Current reporting has Brown taking first-team work with Williams doubtful from a rib injury. This supports a Brown-led PROVISIONAL assessment; official game starter and limitations remain unconfirmed."
+        },
+        "variance": {
+          "score": 1,
+          "evidence": "Protection does not remove turnover, explosive-score or adverse game-script risk."
+        },
+        "price_protection": {
+          "score": 2,
+          "evidence": "Exact printed+4.5; Brown-led provisional scenario now assessed; starter confirmation remains a release blocker. Not an official filler."
+        },
+        "contradiction_resolution": {
+          "score": 1,
+          "evidence": "Independent current matchup evidence is weighed against: Cohen Purdue -3.5 supports direction but incorrectly describes the day in the article body; primary schedule controls. Josh Schonwald Washington +3.5 is opposition. Do not award agreement just because both protected sides could cover."
+        }
+      },
+      "failure_total": 6,
+      "official_units": 0,
+      "planned_ticket_units": 2,
+      "best_number": "Purdue +4.5",
+      "no_bet_cutoff": null,
+      "cutoff_status": "Not established for release while blocked; preserve this exact static card cell, no silent substitution.",
+      "missing": [
+        "Current Action contest count and market-specific money/tickets",
+        "Current same-book movement",
+        "Unexposed paid/video picks",
+        "Final material role/availability and weather updates"
+      ],
+      "release_blockers": [
+        "Washington Brown expected/Williams doubtful: final starter and material limits not confirmed.",
+        "Material future availability/role review not cleared; no final framework release.",
+        "Current printed selection/withdrawal status must be checked before committing; no accepted receipt is claimed.",
+        "Non-NFL Failure7 gate not cleared."
+      ],
+      "source_ids": [
+        "CC",
+        "D-PUR",
+        "PUR-P",
+        "UW-P",
+        "UW-QB",
+        "UW-P",
+        "UW-QB",
+        "UW-P",
+        "UW-QB",
+        "UW-P",
+        "UW-QB"
+      ]
+    },
+    {
+      "id": "B2",
+      "parent": "IU",
+      "box": 32,
+      "selection": "Indiana +11.5",
+      "card": "Big Teaser",
+      "game": "Ohio State at Indiana",
+      "league": "CFB",
+      "date": "2026-10-17",
+      "time_et": "12:00",
+      "factors": {
+        "matchup": {
+          "score": 29,
+          "max": 35,
+          "evidence": "Indiana can trade efficient possessions:7.6 yards per play against Ohio State7.1. Hoover and the receiving group provide an offensive answer at home; the protected number can survive a normal competitive defeat."
+        },
+        "price": {
+          "score": 18,
+          "max": 20,
+          "evidence": "Printed+11.5 survives11-point loss; base+3.5. Strong offense plus home resistance, not a generic undefeated-team shortcut."
+        },
+        "personnel": {
+          "score": 11,
+          "max": 15,
+          "evidence": "Hoover17TD/0INT in the current ESPN preview, with Richard and Becker leading volume. Sayin/Smith are Ohio State focal points. Conference availability must be refreshed."
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Home top-five matchup. No automatic fade from last week narrow escape and no unsupported closing-band trigger."
+        },
+        "vsin": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Cohen IU +3.5 and ML +150; VSiN rating margin slightly favors OSU. Resolve that conflict through protection, not source-count voting."
+        },
+        "docs": {
+          "score": 8,
+          "max": 10,
+          "evidence": "Guy Bruhn IU +3.5 agrees at the Half-Point number."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Dated reference/card compared. Authentic same-book opener/current and Action market counts/handle remain unverified; no movement or split points invented."
+        }
+      },
+      "total": 84,
+      "grade": "B+",
+      "score_status": "PROVISIONAL",
+      "known_subtotal": 84,
+      "assessed_max": 110,
+      "failure": {
+        "failure_path": {
+          "score": 1,
+          "evidence": "Ohio State explosive passing is the main failure path. Indiana pass defense is less dominant than its run defense, and unbeaten results are not the same as covering inflated spreads."
+        },
+        "personnel_resilience": {
+          "score": 1,
+          "evidence": "Hoover17TD/0INT in the current ESPN preview, with Richard and Becker leading volume. Sayin/Smith are Ohio State focal points. Conference availability must be refreshed."
+        },
+        "variance": {
+          "score": 1,
+          "evidence": "Protection does not remove turnover, explosive-score or adverse game-script risk."
+        },
+        "price_protection": {
+          "score": 2,
+          "evidence": "Printed+11.5 survives11-point loss; base+3.5. Strong offense plus home resistance, not a generic undefeated-team shortcut."
+        },
+        "contradiction_resolution": {
+          "score": 2,
+          "evidence": "Independent current matchup evidence is weighed against: Cohen IU +3.5 and ML +150; VSiN rating margin slightly favors OSU. Resolve that conflict through protection, not source-count voting. Guy Bruhn IU +3.5 agrees at the Half-Point number."
+        }
+      },
+      "failure_total": 7,
+      "official_units": 0,
+      "planned_ticket_units": 2,
+      "best_number": "Indiana +11.5",
+      "no_bet_cutoff": null,
+      "cutoff_status": "Not established for release while blocked; preserve this exact static card cell, no silent substitution.",
+      "missing": [
+        "Current Action contest count and market-specific money/tickets",
+        "Current same-book movement",
+        "Unexposed paid/video picks",
+        "Final material role/availability and weather updates"
+      ],
+      "release_blockers": [
+        "Material future availability/role review not cleared; no final framework release.",
+        "Current printed selection/withdrawal status must be checked before committing; no accepted receipt is claimed."
+      ],
+      "source_ids": [
+        "TR-IU",
+        "CC",
+        "D-IU",
+        "IU-P"
+      ]
+    },
+    {
+      "id": "B3",
+      "parent": "TEX",
+      "box": 21,
+      "selection": "Texas -2.5",
+      "card": "Big Teaser",
+      "game": "Florida at Texas",
+      "league": "CFB",
+      "date": "2026-10-17",
+      "time_et": "12:00",
+      "factors": {
+        "matchup": {
+          "score": 28,
+          "max": 35,
+          "evidence": "Texas -2.5 is a protected home-win angle. Its defense allows16 points per game and limits rushing; Florida has conceded substantial passing production. Manning/Coleman offer a matchup path without requiring an11-point cover."
+        },
+        "price": {
+          "score": 18,
+          "max": 20,
+          "evidence": "Printed-2.5 vs half-10.5; win by3 required. Missing VSiN Texas selection earns0, without redistributed points."
+        },
+        "personnel": {
+          "score": 11,
+          "max": 15,
+          "evidence": "Manning and Coleman remain the working passing core; Smothers leads observed rushing. Philo/Baugh lead Florida. Final SEC availability is pending."
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Texas home after neutral-site Oklahoma defeat. Bounce-back is context, not the edge itself."
+        },
+        "vsin": {
+          "score": 0,
+          "max": 10,
+          "evidence": "No verified named Texas selection was retrieved. Zero unsupported confirmation points."
+        },
+        "docs": {
+          "score": 8,
+          "max": 10,
+          "evidence": "Tony Sink TEX -11.5 agrees directionally, at a tougher margin. Reconciled rather than copied."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Dated reference/card compared. Authentic same-book opener/current and Action market counts/handle remain unverified; no movement or split points invented."
+        }
+      },
+      "total": 76,
+      "grade": "B",
+      "score_status": "PROVISIONAL",
+      "known_subtotal": 76,
+      "assessed_max": 110,
+      "failure": {
+        "failure_path": {
+          "score": 1,
+          "evidence": "Texas offense has struggled to create separation against better opposition. Baugh and Philo can sustain Florida scoring; turnover regression does not guarantee a clean Manning game."
+        },
+        "personnel_resilience": {
+          "score": 1,
+          "evidence": "Manning and Coleman remain the working passing core; Smothers leads observed rushing. Philo/Baugh lead Florida. Final SEC availability is pending."
+        },
+        "variance": {
+          "score": 1,
+          "evidence": "Protection does not remove turnover, explosive-score or adverse game-script risk."
+        },
+        "price_protection": {
+          "score": 2,
+          "evidence": "Printed-2.5 vs half-10.5; win by3 required. Missing VSiN Texas selection earns0, without redistributed points."
+        },
+        "contradiction_resolution": {
+          "score": 1,
+          "evidence": "Independent current matchup evidence is weighed against: No verified named Texas selection was retrieved. Zero unsupported confirmation points. Tony Sink TEX -11.5 agrees directionally, at a tougher margin. Reconciled rather than copied."
+        }
+      },
+      "failure_total": 6,
+      "official_units": 0,
+      "planned_ticket_units": 2,
+      "best_number": "Texas -2.5",
+      "no_bet_cutoff": null,
+      "cutoff_status": "Not established for release while blocked; preserve this exact static card cell, no silent substitution.",
+      "missing": [
+        "Current Action contest count and market-specific money/tickets",
+        "Current same-book movement",
+        "Unexposed paid/video picks",
+        "Final material role/availability and weather updates"
+      ],
+      "release_blockers": [
+        "Material future availability/role review not cleared; no final framework release.",
+        "Current printed selection/withdrawal status must be checked before committing; no accepted receipt is claimed.",
+        "Non-NFL Failure7 gate not cleared."
+      ],
+      "source_ids": [
+        "D-TEX",
+        "TEX-P"
+      ]
+    },
+    {
+      "id": "B4",
+      "parent": "NU",
+      "box": 29,
+      "selection": "Northwestern +0.5",
+      "card": "Big Teaser",
+      "game": "Northwestern at Michigan State",
+      "league": "CFB",
+      "date": "2026-10-17",
+      "time_et": "12:00",
+      "factors": {
+        "matchup": {
+          "score": 29,
+          "max": 35,
+          "evidence": "Northwestern +0.5 reduces a touchdown favorite to a win-or-tie leg. Chiles has elevated the offense, and Michigan State struggles to sustain production. The home side turnover/linebacker concerns offer a second path."
+        },
+        "price": {
+          "score": 18,
+          "max": 20,
+          "evidence": "Printed+0.5 vs half-7.5 and VSiN model favorite9.5. Win/tie requirement removes favorite margin demand."
+        },
+        "personnel": {
+          "score": 11,
+          "max": 15,
+          "evidence": "Chiles is Northwestern QB, not Michigan State QB. Milivojevic leads MSU. Verify final linebacker/secondary reports and protect against a new starting-QB change."
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Road game with familiar personnel on both sides. No revenge-based points awarded."
+        },
+        "vsin": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Cohen Northwestern ML parlay supports direction; VSiN rating margin9.5 supports protected win."
+        },
+        "docs": {
+          "score": 8,
+          "max": 10,
+          "evidence": "Guy Bruhn NU -7 supports direction at a harder margin."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Dated reference/card compared. Authentic same-book opener/current and Action market counts/handle remain unverified; no movement or split points invented."
+        }
+      },
+      "total": 83,
+      "grade": "B+",
+      "score_status": "PROVISIONAL",
+      "known_subtotal": 83,
+      "assessed_max": 110,
+      "failure": {
+        "failure_path": {
+          "score": 1,
+          "evidence": "Northwestern defensive yardage is less dominant than its scoring average, and schedule quality can flatter the record. Chiles familiarity with East Lansing is not a betting edge by itself."
+        },
+        "personnel_resilience": {
+          "score": 1,
+          "evidence": "Chiles is Northwestern QB, not Michigan State QB. Milivojevic leads MSU. Verify final linebacker/secondary reports and protect against a new starting-QB change."
+        },
+        "variance": {
+          "score": 1,
+          "evidence": "Protection does not remove turnover, explosive-score or adverse game-script risk."
+        },
+        "price_protection": {
+          "score": 2,
+          "evidence": "Printed+0.5 vs half-7.5 and VSiN model favorite9.5. Win/tie requirement removes favorite margin demand."
+        },
+        "contradiction_resolution": {
+          "score": 2,
+          "evidence": "Independent current matchup evidence is weighed against: Cohen Northwestern ML parlay supports direction; VSiN rating margin9.5 supports protected win. Guy Bruhn NU -7 supports direction at a harder margin."
+        }
+      },
+      "failure_total": 7,
+      "official_units": 0,
+      "planned_ticket_units": 2,
+      "best_number": "Northwestern +0.5",
+      "no_bet_cutoff": null,
+      "cutoff_status": "Not established for release while blocked; preserve this exact static card cell, no silent substitution.",
+      "missing": [
+        "Current Action contest count and market-specific money/tickets",
+        "Current same-book movement",
+        "Unexposed paid/video picks",
+        "Final material role/availability and weather updates"
+      ],
+      "release_blockers": [
+        "Material future availability/role review not cleared; no final framework release.",
+        "Current printed selection/withdrawal status must be checked before committing; no accepted receipt is claimed."
+      ],
+      "source_ids": [
+        "CC",
+        "D-NU",
+        "NU-P"
+      ]
+    },
+    {
+      "id": "B5",
+      "parent": "ARMY",
+      "box": 19,
+      "selection": "Army +5.5",
+      "card": "Big Teaser",
+      "game": "Florida Atlantic at Army",
+      "league": "CFB",
+      "date": "2026-10-17",
+      "time_et": "12:00",
+      "factors": {
+        "matchup": {
+          "score": 26,
+          "max": 35,
+          "evidence": "Army +5.5 fits a possession-control path. Hellums rushing and Army81% run-play share can shorten exposure to FAU passing; protection covers a narrow defeat."
+        },
+        "price": {
+          "score": 18,
+          "max": 20,
+          "evidence": "Printed+5.5 vs half-2.5; option possession control is useful but FAU passing prevents high contradiction-resolution credit."
+        },
+        "personnel": {
+          "score": 11,
+          "max": 15,
+          "evidence": "Hellums leads passing and rushing; his availability is indispensable. Current FAU passing leaders verified in preview; final role/health update remains pending."
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Michie home setting; forecast wind requires refresh. No invented severe-weather benefit."
+        },
+        "vsin": {
+          "score": 6,
+          "max": 10,
+          "evidence": "VSiN model Army by6.3 is supporting context, not a named bet."
+        },
+        "docs": {
+          "score": 1,
+          "max": 10,
+          "evidence": "Guy Bruhn FAU +2.5 opposes the base favorite. Army win by1-2 can cash both opinions."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Dated reference/card compared. Authentic same-book opener/current and Action market counts/handle remain unverified; no movement or split points invented."
+        }
+      },
+      "total": 73,
+      "grade": "B-",
+      "score_status": "PROVISIONAL",
+      "known_subtotal": 73,
+      "assessed_max": 110,
+      "failure": {
+        "failure_path": {
+          "score": 1,
+          "evidence": "Veltkamp/Valsin can punish explosive pass defense and force Army to chase. A rushing system does not automatically make a safe teaser leg."
+        },
+        "personnel_resilience": {
+          "score": 1,
+          "evidence": "Hellums leads passing and rushing; his availability is indispensable. Current FAU passing leaders verified in preview; final role/health update remains pending."
+        },
+        "variance": {
+          "score": 1,
+          "evidence": "Protection does not remove turnover, explosive-score or adverse game-script risk."
+        },
+        "price_protection": {
+          "score": 2,
+          "evidence": "Printed+5.5 vs half-2.5; option possession control is useful but FAU passing prevents high contradiction-resolution credit."
+        },
+        "contradiction_resolution": {
+          "score": 1,
+          "evidence": "Independent current matchup evidence is weighed against: VSiN model Army by6.3 is supporting context, not a named bet. Guy Bruhn FAU +2.5 opposes the base favorite. Army win by1-2 can cash both opinions."
+        }
+      },
+      "failure_total": 6,
+      "official_units": 0,
+      "planned_ticket_units": 2,
+      "best_number": "Army +5.5",
+      "no_bet_cutoff": null,
+      "cutoff_status": "Not established for release while blocked; preserve this exact static card cell, no silent substitution.",
+      "missing": [
+        "Current Action contest count and market-specific money/tickets",
+        "Current same-book movement",
+        "Unexposed paid/video picks",
+        "Final material role/availability and weather updates"
+      ],
+      "release_blockers": [
+        "Material future availability/role review not cleared; no final framework release.",
+        "Current printed selection/withdrawal status must be checked before committing; no accepted receipt is claimed.",
+        "Non-NFL Failure7 gate not cleared."
+      ],
+      "source_ids": [
+        "TR-ARMY",
+        "D-ARMY",
+        "ARMY-P"
+      ]
+    },
+    {
+      "id": "B6",
+      "parent": "UNC",
+      "box": 56,
+      "selection": "UNC +11.5",
+      "card": "Big Teaser",
+      "game": "North Carolina at Duke",
+      "league": "CFB",
+      "date": "2026-10-17",
+      "time_et": "15:30",
+      "factors": {
+        "matchup": {
+          "score": 25,
+          "max": 35,
+          "evidence": "UNC +11.5 can survive a two-score rivalry loss by10. The defense allows19 points per game, supporting resistance while Edwards supplies enough passing to avoid a one-dimensional chase."
+        },
+        "price": {
+          "score": 18,
+          "max": 20,
+          "evidence": "Printed+11.5 vs half+4.5. Can survive10-point defeat, but Duke rushing edge and weak UNC run offense remain unresolved."
+        },
+        "personnel": {
+          "score": 10,
+          "max": 15,
+          "evidence": "Edwards/Shipp are the UNC passing core; Eget/Sheppard drive Duke. Final availability and backfield deployment need recheck."
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Road rivalry; home field stays in the Duke counter. No rivalry-based automatic cover."
+        },
+        "vsin": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Cohen UNC +4.5 supports direction, with an explicit run-defense plan."
+        },
+        "docs": {
+          "score": 2,
+          "max": 10,
+          "evidence": "Tony Sink Duke -4 opposes the base spread. The protected margin may survive that pick, but does not resolve the matchup weakness."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Dated reference/card compared. Authentic same-book opener/current and Action market counts/handle remain unverified; no movement or split points invented."
+        }
+      },
+      "total": 73,
+      "grade": "B-",
+      "score_status": "PROVISIONAL",
+      "known_subtotal": 73,
+      "assessed_max": 110,
+      "failure": {
+        "failure_path": {
+          "score": 1,
+          "evidence": "Duke rushing strength directly challenges this thesis. UNC run production is weak and Duke defensive efficiency can create repeated empty possessions. This is one of the weaker ten-leg slots."
+        },
+        "personnel_resilience": {
+          "score": 1,
+          "evidence": "Edwards/Shipp are the UNC passing core; Eget/Sheppard drive Duke. Final availability and backfield deployment need recheck."
+        },
+        "variance": {
+          "score": 1,
+          "evidence": "Protection does not remove turnover, explosive-score or adverse game-script risk."
+        },
+        "price_protection": {
+          "score": 2,
+          "evidence": "Printed+11.5 vs half+4.5. Can survive10-point defeat, but Duke rushing edge and weak UNC run offense remain unresolved."
+        },
+        "contradiction_resolution": {
+          "score": 1,
+          "evidence": "Independent current matchup evidence is weighed against: Cohen UNC +4.5 supports direction, with an explicit run-defense plan. Tony Sink Duke -4 opposes the base spread. The protected margin may survive that pick, but does not resolve the matchup weakness."
+        }
+      },
+      "failure_total": 6,
+      "official_units": 0,
+      "planned_ticket_units": 2,
+      "best_number": "UNC +11.5",
+      "no_bet_cutoff": null,
+      "cutoff_status": "Not established for release while blocked; preserve this exact static card cell, no silent substitution.",
+      "missing": [
+        "Current Action contest count and market-specific money/tickets",
+        "Current same-book movement",
+        "Unexposed paid/video picks",
+        "Final material role/availability and weather updates"
+      ],
+      "release_blockers": [
+        "Material future availability/role review not cleared; no final framework release.",
+        "Current printed selection/withdrawal status must be checked before committing; no accepted receipt is claimed.",
+        "Non-NFL Failure7 gate not cleared."
+      ],
+      "source_ids": [
+        "CC",
+        "D-UNC",
+        "UNC-P"
+      ]
+    },
+    {
+      "id": "B7",
+      "parent": "WAKE",
+      "box": 101,
+      "selection": "Wake Forest -1.5",
+      "card": "Big Teaser",
+      "game": "Wake Forest at California",
+      "league": "CFB",
+      "date": "2026-10-17",
+      "time_et": "22:30",
+      "factors": {
+        "matchup": {
+          "score": 25,
+          "max": 35,
+          "evidence": "Wake -1.5 seeks a road win by2 rather than a near-double-digit cover. Lopez/Hernandez sustain passing while Wake run defense can make California one-dimensional."
+        },
+        "price": {
+          "score": 18,
+          "max": 20,
+          "evidence": "Printed-1.5 vs half-9.5. Need2-point road win; travel and start-time discrepancy remain review items."
+        },
+        "personnel": {
+          "score": 9,
+          "max": 15,
+          "evidence": "Primary Cal preview overrides season-leader shortcut: Brousseau started the latest game and improved protection. Lopez/Hernandez remain Wake focal points. Final starter/line roles require refresh."
+        },
+        "situation": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Card prints10:15pm ET; current ESPN lists10:30pm ET. Primary Cal announcement confirms10:30pm ET. Use the earlier printed time as submission deadline."
+        },
+        "vsin": {
+          "score": 6,
+          "max": 10,
+          "evidence": "Cohen Wake ML parlay supports direction, not exact-1.5 price."
+        },
+        "docs": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Tony Sink Wake -9.5 agrees directionally, but his last-game narrative is stale versus primary Cal. Confirmation is downgraded."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Dated reference/card compared. Authentic same-book opener/current and Action market counts/handle remain unverified; no movement or split points invented."
+        }
+      },
+      "total": 72,
+      "grade": "B-",
+      "score_status": "PROVISIONAL",
+      "known_subtotal": 72,
+      "assessed_max": 110,
+      "failure": {
+        "failure_path": {
+          "score": 1,
+          "evidence": "Cal passing attacks Wake softer coverage. Brousseau just led a win over Virginia Tech, contradicting the older secondary last-game narrative. Travel and a one-point Wake win are further risks."
+        },
+        "personnel_resilience": {
+          "score": 1,
+          "evidence": "Primary Cal preview overrides season-leader shortcut: Brousseau started the latest game and improved protection. Lopez/Hernandez remain Wake focal points. Final starter/line roles require refresh."
+        },
+        "variance": {
+          "score": 1,
+          "evidence": "Protection does not remove turnover, explosive-score or adverse game-script risk."
+        },
+        "price_protection": {
+          "score": 2,
+          "evidence": "Printed-1.5 vs half-9.5. Need2-point road win; travel and start-time discrepancy remain review items."
+        },
+        "contradiction_resolution": {
+          "score": 0,
+          "evidence": "Independent current matchup evidence is weighed against: Cohen Wake ML parlay supports direction, not exact-1.5 price. Tony Sink Wake -9.5 agrees directionally, but his last-game narrative is stale versus primary Cal. Confirmation is downgraded."
+        }
+      },
+      "failure_total": 5,
+      "official_units": 0,
+      "planned_ticket_units": 2,
+      "best_number": "Wake Forest -1.5",
+      "no_bet_cutoff": null,
+      "cutoff_status": "Not established for release while blocked; preserve this exact static card cell, no silent substitution.",
+      "missing": [
+        "Current Action contest count and market-specific money/tickets",
+        "Current same-book movement",
+        "Unexposed paid/video picks",
+        "Final material role/availability and weather updates"
+      ],
+      "release_blockers": [
+        "Material future availability/role review not cleared; no final framework release.",
+        "Current printed selection/withdrawal status must be checked before committing; no accepted receipt is claimed.",
+        "Non-NFL Failure7 gate not cleared.",
+        "Primary Cal schedule confirms10:30pm ET; card prints10:15. Submit before earlier printed deadline."
+      ],
+      "source_ids": [
+        "CC",
+        "D-WAKE",
+        "CAL-P",
+        "CAL-T",
+        "CAL-P",
+        "CAL-T",
+        "CAL-P",
+        "CAL-T",
+        "CAL-P",
+        "CAL-T"
+      ]
+    },
+    {
+      "id": "B8",
+      "parent": "BUF",
+      "box": 147,
+      "selection": "BUF/LV Over 46.5",
+      "card": "Big Teaser",
+      "game": "Buffalo at Las Vegas",
+      "league": "NFL",
+      "date": "2026-10-18",
+      "time_et": "16:25",
+      "factors": {
+        "matchup": {
+          "score": 29,
+          "max": 35,
+          "evidence": "The best protected market is Over46.5. Buffalo gains6.7 yards per play; both defenses permit more than0.40 points per play. Allen/Cook sustain drives and Bowers/Jeanty supply the home scoring response."
+        },
+        "price": {
+          "score": 18,
+          "max": 20,
+          "evidence": "Printed46.5 vs base53.5. Independent offense/defense case and FL52.2 total support protection; no invented Doc Over or split confirmation."
+        },
+        "personnel": {
+          "score": 10,
+          "max": 15,
+          "evidence": "Allen/Cook lead Buffalo opportunity. Cousins remains the observed Las Vegas passer; do not substitute rookie Mendoza because of preseason depth order. Bowers health, Moore and line availability need review."
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Buffalo short rest after Monday plus cross-country travel. Allegiant roof/indoor environment; no unsupported adverse-weather points."
+        },
+        "vsin": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Tuley passes the spread. No verified named Over46.5 selection; model/reference totals are context, not an expert endorsement."
+        },
+        "docs": {
+          "score": 0,
+          "max": 10,
+          "evidence": "Toth BUF -5.5 supports the half-point direction only. No verified named Over pick, so no total-selection confirmation points."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Dated reference/card compared. Authentic same-book opener/current and Action market counts/handle remain unverified; no movement or split points invented."
+        }
+      },
+      "total": 72,
+      "grade": "B-",
+      "score_status": "PROVISIONAL",
+      "known_subtotal": 72,
+      "assessed_max": 110,
+      "failure": {
+        "failure_path": {
+          "score": 1,
+          "evidence": "Buffalo control of the clock, empty red-zone trips or a quiet Raiders offense can hold this below47. A Buffalo spread at-4.5 is less attractive because the current FL margin is only about4."
+        },
+        "personnel_resilience": {
+          "score": 1,
+          "evidence": "Allen/Cook lead Buffalo opportunity. Cousins remains the observed Las Vegas passer; do not substitute rookie Mendoza because of preseason depth order. Bowers health, Moore and line availability need review."
+        },
+        "variance": {
+          "score": 1,
+          "evidence": "Protection does not remove turnover, explosive-score or adverse game-script risk."
+        },
+        "price_protection": {
+          "score": 2,
+          "evidence": "Printed46.5 vs base53.5. Independent offense/defense case and FL52.2 total support protection; no invented Doc Over or split confirmation."
+        },
+        "contradiction_resolution": {
+          "score": 1,
+          "evidence": "Independent current matchup evidence is weighed against: Tuley passes the spread. No verified named Over46.5 selection; model/reference totals are context, not an expert endorsement. Toth BUF -5.5 supports the half-point direction only. No verified named Over pick, so no total-selection confirmation points."
+        }
+      },
+      "failure_total": 6,
+      "official_units": 0,
+      "planned_ticket_units": 2,
+      "best_number": "BUF/LV Over 46.5",
+      "no_bet_cutoff": null,
+      "cutoff_status": "Not established for release while blocked; preserve this exact static card cell, no silent substitution.",
+      "missing": [
+        "Current Action contest count and market-specific money/tickets",
+        "Current same-book movement",
+        "Unexposed paid/video picks",
+        "Final material role/availability and weather updates"
+      ],
+      "release_blockers": [
+        "Material future availability/role review not cleared; no final framework release.",
+        "Current printed selection/withdrawal status must be checked before committing; no accepted receipt is claimed."
+      ],
+      "source_ids": [
+        "TR-BUF",
+        "VT",
+        "DO",
+        "FL",
+        "FL-M",
+        "G"
+      ]
+    },
+    {
+      "id": "B9",
+      "parent": "GB",
+      "box": 153,
+      "selection": "GB +6.5",
+      "card": "Big Teaser",
+      "game": "Dallas at Green Bay",
+      "league": "NFL",
+      "date": "2026-10-18",
+      "time_et": "20:20",
+      "factors": {
+        "matchup": {
+          "score": 28,
+          "max": 35,
+          "evidence": "Green Bay +6.5 is preferred to demanding a straight spread cover. The Packers allow4.7 yards per play versus Dallas6.4; Love can attack that weakness while a home dog cushion protects a close finish."
+        },
+        "price": {
+          "score": 18,
+          "max": 20,
+          "evidence": "Printed+6.5 vs Circa GB-1. Protects losses through6, not7; Toth Dallas opposition remains visible."
+        },
+        "personnel": {
+          "score": 10,
+          "max": 15,
+          "evidence": "Love/Prescott and Lamb remain central. Lloyd opportunity has grown; do not keep full Jacobs workload from the magazine. Packers pass-rush availability and both lines remain material."
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Sunday night Lambeau; hourly wind/temperature still need refresh. No generic cold-weather Under assumption."
+        },
+        "vsin": {
+          "score": 5,
+          "max": 10,
+          "evidence": "Cohen Lloyd props support role only; Makinen has both GB support and opposing Dallas trends. Not unanimous side confirmation."
+        },
+        "docs": {
+          "score": 2,
+          "max": 10,
+          "evidence": "Toth DAL +1.5 opposes base Green Bay direction; Block passes Dallas protection. Different market intervals can both cash."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Dated reference/card compared. Authentic same-book opener/current and Action market counts/handle remain unverified; no movement or split points invented."
+        }
+      },
+      "total": 74,
+      "grade": "B",
+      "score_status": "PROVISIONAL",
+      "known_subtotal": 74,
+      "assessed_max": 110,
+      "failure": {
+        "failure_path": {
+          "score": 1,
+          "evidence": "Dallas offense is more efficient and can exploit red-zone leakage. A close market does not rule out a shootout that separates late; a healthy Lamb is a meaningful counter."
+        },
+        "personnel_resilience": {
+          "score": 1,
+          "evidence": "Love/Prescott and Lamb remain central. Lloyd opportunity has grown; do not keep full Jacobs workload from the magazine. Packers pass-rush availability and both lines remain material."
+        },
+        "variance": {
+          "score": 1,
+          "evidence": "Protection does not remove turnover, explosive-score or adverse game-script risk."
+        },
+        "price_protection": {
+          "score": 2,
+          "evidence": "Printed+6.5 vs Circa GB-1. Protects losses through6, not7; Toth Dallas opposition remains visible."
+        },
+        "contradiction_resolution": {
+          "score": 1,
+          "evidence": "Independent current matchup evidence is weighed against: Cohen Lloyd props support role only; Makinen has both GB support and opposing Dallas trends. Not unanimous side confirmation. Toth DAL +1.5 opposes base Green Bay direction; Block passes Dallas protection. Different market intervals can both cash."
+        }
+      },
+      "failure_total": 6,
+      "official_units": 0,
+      "planned_ticket_units": 2,
+      "best_number": "GB +6.5",
+      "no_bet_cutoff": null,
+      "cutoff_status": "Not established for release while blocked; preserve this exact static card cell, no silent substitution.",
+      "missing": [
+        "Current Action contest count and market-specific money/tickets",
+        "Current same-book movement",
+        "Unexposed paid/video picks",
+        "Final material role/availability and weather updates"
+      ],
+      "release_blockers": [
+        "Material future availability/role review not cleared; no final framework release.",
+        "Current printed selection/withdrawal status must be checked before committing; no accepted receipt is claimed."
+      ],
+      "source_ids": [
+        "TR-GB",
+        "VC",
+        "VM",
+        "DO",
+        "DT",
+        "FL",
+        "FL-R",
+        "G"
+      ]
+    },
+    {
+      "id": "B10",
+      "parent": "SF",
+      "box": 157,
+      "selection": "SF +0.5",
+      "card": "Big Teaser",
+      "game": "Washington at San Francisco",
+      "league": "NFL",
+      "date": "2026-10-19",
+      "time_et": "20:15",
+      "factors": {
+        "matchup": {
+          "score": 30,
+          "max": 35,
+          "evidence": "San Francisco +0.5 asks for a win or tie. The 49ers gain6.4 yards per play to Washington5.1 and allow4.7 to Washington5.5. Better third-down execution supports winning without paying the base7.5 margin."
+        },
+        "price": {
+          "score": 18,
+          "max": 20,
+          "evidence": "Printed+0.5 vs Circa-7.5; win or tie suffices. Monday injuries must be revisited; current5-0 record alone is not the edge."
+        },
+        "personnel": {
+          "score": 11,
+          "max": 15,
+          "evidence": "Purdy/McCaffrey are central. Daniels and Washington receivers, plus San Francisco protection and Kittle/Evans status, need the Monday availability update."
+        },
+        "situation": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Monday home conference game; no presumption that a primetime favorite automatically covers."
+        },
+        "vsin": {
+          "score": 7,
+          "max": 10,
+          "evidence": "Tuley uses SF -1.5 in a standard teaser. Makinen has simultaneous favorite fades and SF support; this is a win requirement rather than-7.5."
+        },
+        "docs": {
+          "score": 3,
+          "max": 10,
+          "evidence": "Toth WAS +7.5 opposes a wide SF cover, compatible with a narrow SF win. No exact +0.5 Doc bet read."
+        },
+        "market": {
+          "score": 4,
+          "max": 10,
+          "evidence": "Dated reference/card compared. Authentic same-book opener/current and Action market counts/handle remain unverified; no movement or split points invented."
+        }
+      },
+      "total": 80,
+      "grade": "B",
+      "score_status": "PROVISIONAL",
+      "known_subtotal": 80,
+      "assessed_max": 110,
+      "failure": {
+        "failure_path": {
+          "score": 1,
+          "evidence": "Washington can exploit a fragile defense if the 49ers lose key personnel, and red-zone conversion is unlikely to remain perfect indefinitely. An underdog upset still loses this leg."
+        },
+        "personnel_resilience": {
+          "score": 1,
+          "evidence": "Purdy/McCaffrey are central. Daniels and Washington receivers, plus San Francisco protection and Kittle/Evans status, need the Monday availability update."
+        },
+        "variance": {
+          "score": 1,
+          "evidence": "Protection does not remove turnover, explosive-score or adverse game-script risk."
+        },
+        "price_protection": {
+          "score": 2,
+          "evidence": "Printed+0.5 vs Circa-7.5; win or tie suffices. Monday injuries must be revisited; current5-0 record alone is not the edge."
+        },
+        "contradiction_resolution": {
+          "score": 2,
+          "evidence": "Independent current matchup evidence is weighed against: Tuley uses SF -1.5 in a standard teaser. Makinen has simultaneous favorite fades and SF support; this is a win requirement rather than-7.5. Toth WAS +7.5 opposes a wide SF cover, compatible with a narrow SF win. No exact +0.5 Doc bet read."
+        }
+      },
+      "failure_total": 7,
+      "official_units": 0,
+      "planned_ticket_units": 2,
+      "best_number": "SF +0.5",
+      "no_bet_cutoff": null,
+      "cutoff_status": "Not established for release while blocked; preserve this exact static card cell, no silent substitution.",
+      "missing": [
+        "Current Action contest count and market-specific money/tickets",
+        "Current same-book movement",
+        "Unexposed paid/video picks",
+        "Final material role/availability and weather updates"
+      ],
+      "release_blockers": [
+        "Material future availability/role review not cleared; no final framework release.",
+        "Current printed selection/withdrawal status must be checked before committing; no accepted receipt is claimed."
+      ],
+      "source_ids": [
+        "TR-SF",
+        "VT",
+        "VM",
+        "DO",
+        "FL",
+        "G"
+      ]
+    }
+  ],
+  "tickets": [
+    {
+      "name": "Half-Point 3 A",
+      "requestedLegCount": 3,
+      "leg_ids": [
+        "H7",
+        "H2",
+        "H3"
+      ],
+      "legSelections": [
+        {
+          "box": 130,
+          "selection": "NYJ +7.5",
+          "game": "NY Jets at New England",
+          "date": "2026-10-18",
+          "start_et": "13:00",
+          "score_status": "PROVISIONAL",
+          "release_status": "WATCH",
+          "official_units": 0
+        },
+        {
+          "box": 118,
+          "selection": "CAR +0.5",
+          "game": "Carolina at Philadelphia",
+          "date": "2026-10-18",
+          "start_et": "13:00",
+          "score_status": "PROVISIONAL",
+          "release_status": "WATCH",
+          "official_units": 0
+        },
+        {
+          "box": 32,
+          "selection": "Indiana +3.5",
+          "game": "Ohio State at Indiana",
+          "date": "2026-10-17",
+          "start_et": "12:00",
+          "score_status": "PROVISIONAL",
+          "release_status": "WATCH",
+          "official_units": 0
+        }
+      ],
+      "status": "Draft - NOT RELEASED",
+      "planned_units": 2,
+      "official_units": 0,
+      "profit_odds_to_1": 5.5,
+      "net_if_all_win_units": 11.0,
+      "total_return_if_all_win_units": 13.0
+    },
+    {
+      "name": "Half-Point 3 B",
+      "requestedLegCount": 3,
+      "leg_ids": [
+        "H4",
+        "H5",
+        "H6"
+      ],
+      "legSelections": [
+        {
+          "box": 122,
+          "selection": "ATL +2.5",
+          "game": "Chicago at Atlanta",
+          "date": "2026-10-18",
+          "start_et": "13:00",
+          "score_status": "PROVISIONAL",
+          "release_status": "WATCH",
+          "official_units": 0
+        },
+        {
+          "box": 126,
+          "selection": "NYG +1.5",
+          "game": "New Orleans at NY Giants",
+          "date": "2026-10-18",
+          "start_et": "13:00",
+          "score_status": "PROVISIONAL",
+          "release_status": "WATCH",
+          "official_units": 0
+        },
+        {
+          "box": 145,
+          "selection": "BUF -4.5",
+          "game": "Buffalo at Las Vegas",
+          "date": "2026-10-18",
+          "start_et": "16:25",
+          "score_status": "PROVISIONAL",
+          "release_status": "WATCH",
+          "official_units": 0
+        }
+      ],
+      "status": "Draft - NOT RELEASED",
+      "planned_units": 2,
+      "official_units": 0,
+      "profit_odds_to_1": 5.5,
+      "net_if_all_win_units": 11.0,
+      "total_return_if_all_win_units": 13.0
+    },
+    {
+      "name": "Super Teaser 10 A - Sunday before5pm",
+      "requestedLegCount": 10,
+      "leg_ids": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9",
+        "A10"
+      ],
+      "legSelections": [
+        {
+          "box": 109,
+          "selection": "JAX +5.5",
+          "game": "Houston vs Jacksonville",
+          "date": "2026-10-18",
+          "start_et": "09:30",
+          "score_status": "PROVISIONAL",
+          "release_status": "WATCH",
+          "official_units": 0
+        },
+        {
+          "box": 114,
+          "selection": "CLE +12.5",
+          "game": "Baltimore at Cleveland",
+          "date": "2026-10-18",
+          "start_et": "13:00",
+          "score_status": "PROVISIONAL",
+          "release_status": "WATCH",
+          "official_units": 0
+        },
+        {
+          "box": 118,
+          "selection": "CAR +9.5",
+          "game": "Carolina at Philadelphia",
+          "date": "2026-10-18",
+          "start_et": "13:00",
+          "score_status": "PROVISIONAL",
+          "release_status": "WATCH",
+          "official_units": 0
+        },
+        {
+          "box": 122,
+          "selection": "ATL +11.5",
+          "game": "Chicago at Atlanta",
+          "date": "2026-10-18",
+          "start_et": "13:00",
+          "score_status": "PROVISIONAL",
+          "release_status": "WATCH",
+          "official_units": 0
+        },
+        {
+          "box": 126,
+          "selection": "NYG +9.5",
+          "game": "New Orleans at NY Giants",
+          "date": "2026-10-18",
+          "start_et": "13:00",
+          "score_status": "PROVISIONAL",
+          "release_status": "WATCH",
+          "official_units": 0
+        },
+        {
+          "box": 130,
+          "selection": "NYJ +15.5",
+          "game": "NY Jets at New England",
+          "date": "2026-10-18",
+          "start_et": "13:00",
+          "score_status": "PROVISIONAL",
+          "release_status": "WATCH",
+          "official_units": 0
+        },
+        {
+          "box": 136,
+          "selection": "PIT/TB Under 47.5",
+          "game": "Pittsburgh at Tampa Bay",
+          "date": "2026-10-18",
+          "start_et": "13:00",
+          "score_status": "PROVISIONAL",
+          "release_status": "WATCH",
+          "official_units": 0
+        },
+        {
+          "box": 137,
+          "selection": "IND +1.5",
+          "game": "Tennessee at Indianapolis",
+          "date": "2026-10-18",
+          "start_et": "13:00",
+          "score_status": "PROVISIONAL",
+          "release_status": "WATCH",
+          "official_units": 0
+        },
+        {
+          "box": 141,
+          "selection": "LAR -4.5",
+          "game": "Arizona at LA Rams",
+          "date": "2026-10-18",
+          "start_et": "16:05",
+          "score_status": "PROVISIONAL",
+          "release_status": "WATCH",
+          "official_units": 0
+        },
+        {
+          "box": 150,
+          "selection": "LAC +16.5",
+          "game": "LA Chargers at Kansas City",
+          "date": "2026-10-18",
+          "start_et": "16:25",
+          "score_status": "PROVISIONAL",
+          "release_status": "WATCH",
+          "official_units": 0
+        }
+      ],
+      "status": "Draft - NOT RELEASED",
+      "planned_units": 2,
+      "official_units": 0,
+      "profit_odds_to_1": 6.5,
+      "net_if_all_win_units": 13.0,
+      "total_return_if_all_win_units": 15.0
+    },
+    {
+      "name": "Super Teaser 10 B - Friday/college/later NFL",
+      "requestedLegCount": 10,
+      "leg_ids": [
+        "B1",
+        "B2",
+        "B3",
+        "B4",
+        "B5",
+        "B6",
+        "B7",
+        "B8",
+        "B9",
+        "B10"
+      ],
+      "legSelections": [
+        {
+          "box": 15,
+          "selection": "Purdue +4.5",
+          "game": "Washington at Purdue",
+          "date": "2026-10-16",
+          "start_et": "20:00",
+          "score_status": "PROVISIONAL",
+          "release_status": "WATCH",
+          "official_units": 0
+        },
+        {
+          "box": 32,
+          "selection": "Indiana +11.5",
+          "game": "Ohio State at Indiana",
+          "date": "2026-10-17",
+          "start_et": "12:00",
+          "score_status": "PROVISIONAL",
+          "release_status": "WATCH",
+          "official_units": 0
+        },
+        {
+          "box": 21,
+          "selection": "Texas -2.5",
+          "game": "Florida at Texas",
+          "date": "2026-10-17",
+          "start_et": "12:00",
+          "score_status": "PROVISIONAL",
+          "release_status": "WATCH",
+          "official_units": 0
+        },
+        {
+          "box": 29,
+          "selection": "Northwestern +0.5",
+          "game": "Northwestern at Michigan State",
+          "date": "2026-10-17",
+          "start_et": "12:00",
+          "score_status": "PROVISIONAL",
+          "release_status": "WATCH",
+          "official_units": 0
+        },
+        {
+          "box": 19,
+          "selection": "Army +5.5",
+          "game": "Florida Atlantic at Army",
+          "date": "2026-10-17",
+          "start_et": "12:00",
+          "score_status": "PROVISIONAL",
+          "release_status": "WATCH",
+          "official_units": 0
+        },
+        {
+          "box": 56,
+          "selection": "UNC +11.5",
+          "game": "North Carolina at Duke",
+          "date": "2026-10-17",
+          "start_et": "15:30",
+          "score_status": "PROVISIONAL",
+          "release_status": "WATCH",
+          "official_units": 0
+        },
+        {
+          "box": 101,
+          "selection": "Wake Forest -1.5",
+          "game": "Wake Forest at California",
+          "date": "2026-10-17",
+          "start_et": "22:30",
+          "score_status": "PROVISIONAL",
+          "release_status": "WATCH",
+          "official_units": 0
+        },
+        {
+          "box": 147,
+          "selection": "BUF/LV Over 46.5",
+          "game": "Buffalo at Las Vegas",
+          "date": "2026-10-18",
+          "start_et": "16:25",
+          "score_status": "PROVISIONAL",
+          "release_status": "WATCH",
+          "official_units": 0
+        },
+        {
+          "box": 153,
+          "selection": "GB +6.5",
+          "game": "Dallas at Green Bay",
+          "date": "2026-10-18",
+          "start_et": "20:20",
+          "score_status": "PROVISIONAL",
+          "release_status": "WATCH",
+          "official_units": 0
+        },
+        {
+          "box": 157,
+          "selection": "SF +0.5",
+          "game": "Washington at San Francisco",
+          "date": "2026-10-19",
+          "start_et": "20:15",
+          "score_status": "PROVISIONAL",
+          "release_status": "WATCH",
+          "official_units": 0
+        }
+      ],
+      "status": "Draft - NOT RELEASED",
+      "planned_units": 2,
+      "official_units": 0,
+      "profit_odds_to_1": 6.5,
+      "net_if_all_win_units": 13.0,
+      "total_return_if_all_win_units": 15.0
+    }
+  ],
+  "reverse_ticket": {
+    "status": "NO BET - not built",
+    "units": 0,
+    "reason": "No verified watched-contest Action counts/splits plus no independently cleared three-leg Pleaser margin set. Opposing popular sides automatically is not a handicap."
+  },
+  "game_exposure": {
+    "NYJ": [
+      "Half-Point 3 A",
+      "Super Teaser 10 A - Sunday before5pm"
+    ],
+    "CAR": [
+      "Half-Point 3 A",
+      "Super Teaser 10 A - Sunday before5pm"
+    ],
+    "IU": [
+      "Half-Point 3 A",
+      "Super Teaser 10 B - Friday/college/later NFL"
+    ],
+    "ATL": [
+      "Half-Point 3 B",
+      "Super Teaser 10 A - Sunday before5pm"
+    ],
+    "NYG": [
+      "Half-Point 3 B",
+      "Super Teaser 10 A - Sunday before5pm"
+    ],
+    "BUF": [
+      "Half-Point 3 B",
+      "Super Teaser 10 B - Friday/college/later NFL"
+    ],
+    "JAX": [
+      "Super Teaser 10 A - Sunday before5pm"
+    ],
+    "CLE": [
+      "Super Teaser 10 A - Sunday before5pm"
+    ],
+    "PIT": [
+      "Super Teaser 10 A - Sunday before5pm"
+    ],
+    "IND": [
+      "Super Teaser 10 A - Sunday before5pm"
+    ],
+    "LAR": [
+      "Super Teaser 10 A - Sunday before5pm"
+    ],
+    "LAC": [
+      "Super Teaser 10 A - Sunday before5pm"
+    ],
+    "PUR": [
+      "Super Teaser 10 B - Friday/college/later NFL"
+    ],
+    "TEX": [
+      "Super Teaser 10 B - Friday/college/later NFL"
+    ],
+    "NU": [
+      "Super Teaser 10 B - Friday/college/later NFL"
+    ],
+    "ARMY": [
+      "Super Teaser 10 B - Friday/college/later NFL"
+    ],
+    "UNC": [
+      "Super Teaser 10 B - Friday/college/later NFL"
+    ],
+    "WAKE": [
+      "Super Teaser 10 B - Friday/college/later NFL"
+    ],
+    "GB": [
+      "Super Teaser 10 B - Friday/college/later NFL"
+    ],
+    "SF": [
+      "Super Teaser 10 B - Friday/college/later NFL"
+    ]
+  },
+  "validation": {
+    "leg_counts": [
+      3,
+      3,
+      10,
+      10
+    ],
+    "same_game_conflicts": 0,
+    "exact_leg_repeats": 0,
+    "big_ticket_shared_games": 0,
+    "max_game_ticket_count": 2,
+    "sunday_before_5pm": true,
+    "framework_release": false
+  },
+  "missing_user_inputs": [
+    "Muse findings referenced but not included",
+    "Current Action watch-list screenshots/video showing contest bet count, spread/total/ML tickets and money separately"
+  ],
+  "coverage_notes": [
+    "Official cards are football-only. Other sports cannot be put on these fixed-payout cards.",
+    "No placed wager, current BetRivers execution, active website publication or guaranteed win is implied.",
+    "Circa sheet is a dated contest-reference board, not executable sportsbook odds.",
+    "Purdue was initially UNGRADED; fresh Brown first-team reporting permits a provisional73, Failure6. Non-NFL Failure gaps keep SuperB blocked.",
+    "HalfPointA Indiana Failure6 also not cleared; NFL Failure values remain diagnostics, not the non-NFL hard gate.",
+    "Optional missing splits/movement earn no invented points. Muse absence is disclosed, not silently treated as read."
+  ],
+  "sources": {
+    "VC": {
+      "title": "Zachary Cohen, VSiN Week6 picks, Oct14",
+      "url": "https://vsin.com/nfl/expert-nfl-picks-week-6-best-bets-predictions-and-player-props-from-zachary-cohen/",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "VT": {
+      "title": "Dave Tuley, VSiN Week6 takes, Oct14/15",
+      "url": "https://vsin.com/nfl/tuleys-takes-for-nfl-week-6/",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "VM": {
+      "title": "Steve Makinen, VSiN Week6 systems, Oct14",
+      "url": "https://vsin.com/nfl/nfl-top-plays-based-on-betting-splits-power-ratings-and-trends-for-week-6/",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "DO": {
+      "title": "Spencer Toth, Doc's Week6 ATS, Oct14",
+      "url": "https://www.docsports.com/2026/nfl-office-pool-picks-week-6-ats-predictions-every-game.html",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "DT": {
+      "title": "Jeremy Block, Doc's Week6 teaser strategy, Oct14",
+      "url": "https://www.docsports.com/2026/best-nfl-teaser-bets-week-6-basic-strategy-teasers-advice.html",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "FL": {
+      "title": "Fantasy Life current game model; rounded forecasts, retrieved Oct15",
+      "url": "https://www.fantasylife.com/tools/nfl-betting-game-model",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "FL-M": {
+      "title": "Matt LaMarca, Fantasy Life weekly market/role update, Oct15",
+      "url": "https://www.fantasylife.com/articles/fantasy/fantasy-football-predictions-using-week-6-betting-market-data",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "FL-R": {
+      "title": "Tipp Major, Fantasy Life Week6 RB opportunities, Oct13",
+      "url": "https://sst.fantasylife.com/articles/fantasy/bell-cow-updates-RB-touch-leaders-largest-projected-workloads-week-6",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "G": {
+      "title": "Original2026 VSiN guide and Fantasy Life magazine; page references in audit",
+      "url": "",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "CC": {
+      "title": "Zachary Cohen, VSiN Week7 college picks, Oct14",
+      "url": "https://vsin.com/college-football/expert-college-football-picks-week-7-best-bets-and-predictions-from-zachary-cohen/",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "IU-P": {
+      "title": "Indiana official Week7 game notes, Oct12",
+      "url": "https://iuhoosiers.com/news/2026/10/12/football-football-gameday-ohio-state-week-7",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "TEX-P": {
+      "title": "Texas official Florida game center",
+      "url": "https://texaslonghorns.com/game-center/22499",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "NU-P": {
+      "title": "Northwestern official Chiles role report, Oct14",
+      "url": "https://nusports.com/news/2026/10/14/behind-newfound-confidence-aidan-chiles-leads-nus-offense-to-historic-start",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "ARMY-P": {
+      "title": "Army official FAU game center",
+      "url": "https://goarmywestpoint.com/game-center/20138",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "UNC-P": {
+      "title": "North Carolina official Duke game center",
+      "url": "https://goheels.com/game-center/26881",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "PUR-P": {
+      "title": "Purdue official Washington preview, Oct13",
+      "url": "https://purduesports.com/news/2026/10/13/game-7-prep-purdue-squares-off-with-washington-in-ross-ade-on-friday",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "UW-P": {
+      "title": "Washington official Purdue preview, Oct12",
+      "url": "https://gohuskies.com/news/2026/10/12/football-dawgs-headed-to-purdue-for-second-straight-friday-game",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "UW-QB": {
+      "title": "Curtis Crabtree, coach-reporting on Williams/Brown, Oct12",
+      "url": "https://www.fox13seattle.com/sports/washington-qb-demond-williams-jr-unlikely-play-purdue",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "CAL-P": {
+      "title": "Cal official Wake preview, Oct13: Brousseau/current opponent",
+      "url": "https://calbears.com/news/2026/10/13/football-cal-to-host-no-21-wake-forest-in-berkeley",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "CAL-T": {
+      "title": "Cal official kickoff announcement, Oct5",
+      "url": "https://calbears.com/news/2026/10/5/football-game-time-against-wake-forest-set",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "CLE-P": {
+      "title": "Cleveland official Ravens game center/current depth chart",
+      "url": "https://www.clevelandbrowns.com/game-day/2026/reg-week6/browns-vs-ravens/",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "NYG-P": {
+      "title": "Giants official Dart injury/Winston starter announcement",
+      "url": "https://www.giants.com/news/jaxson-dart-to-miss-rest-of-regular-season-jameis-winston-to-start-quarterback-injury-john-harbaugh",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "PENIX": {
+      "title": "NFL official Penix expected-start report",
+      "url": "https://amp.nfl.com/news/falcons-qb-michael-penix-jr-ribs-expected-to-start-week-6-vs-bears",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "NFL-I": {
+      "title": "NFL Week6 practice report; not final Sunday inactives",
+      "url": "https://www.nfl.com/injuries/league/2026/reg6",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "CIRCA": {
+      "title": "Circa Million VIII Week6 contest board, Dropbox modified Oct15 1:39pm ET",
+      "url": "https://www.dropbox.com/preview/Circa%20Sports%20sheets/Circa%20Sports%20Million%20VIII%20Contest%20Point%20Spreads%20-%20Week%206.pdf",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "SPLITS": {
+      "title": "VSiN DraftKings visible splits snapshot; not Action",
+      "url": "https://data.vsin.com/betting-splits/?source=DK&sport=NFL",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "ACTION": {
+      "title": "Action NFL public betting; access limited/403",
+      "url": "https://www.actionnetwork.com/nfl/public-betting",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "MLB-V": {
+      "title": "Adam Burke, Brewers-Dodgers Game4 preview, Oct15",
+      "url": "https://vsin.com/mlb/brewers-vs-dodgers-game-4-nlcs-prediction-and-preview/",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "TEN-V": {
+      "title": "Zachary Cohen, Oct15/16 tennis picks",
+      "url": "https://vsin.com/tennis/tennis-best-bets-overnight-picks-and-predictions-for-october-15-and-16/",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "SOCCER-V": {
+      "title": "Nigel Seeley, weekend EPL scan, Oct15",
+      "url": "https://vsin.com/soccer/epl-best-bets-and-predictions-october-17-18/",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "TR-JAX": {
+      "title": "TeamRankings current Week6 matchup: texans-jaguars",
+      "url": "https://www.teamrankings.com/nfl/matchup/texans-jaguars-week-6-2026",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "TR-CLE": {
+      "title": "TeamRankings current Week6 matchup: ravens-browns",
+      "url": "https://www.teamrankings.com/nfl/matchup/ravens-browns-week-6-2026",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "TR-CAR": {
+      "title": "TeamRankings current Week6 matchup: panthers-eagles",
+      "url": "https://www.teamrankings.com/nfl/matchup/panthers-eagles-week-6-2026",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "TR-ATL": {
+      "title": "TeamRankings current Week6 matchup: bears-falcons",
+      "url": "https://www.teamrankings.com/nfl/matchup/bears-falcons-week-6-2026",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "TR-NYG": {
+      "title": "TeamRankings current Week6 matchup: saints-giants",
+      "url": "https://www.teamrankings.com/nfl/matchup/saints-giants-week-6-2026",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "TR-NYJ": {
+      "title": "TeamRankings current Week6 matchup: jets-patriots",
+      "url": "https://www.teamrankings.com/nfl/matchup/jets-patriots-week-6-2026",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "TR-PIT": {
+      "title": "TeamRankings current Week6 matchup: steelers-buccaneers",
+      "url": "https://www.teamrankings.com/nfl/matchup/steelers-buccaneers-week-6-2026",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "TR-IND": {
+      "title": "TeamRankings current Week6 matchup: titans-colts",
+      "url": "https://www.teamrankings.com/nfl/matchup/titans-colts-week-6-2026",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "TR-LAR": {
+      "title": "TeamRankings current Week6 matchup: cardinals-rams",
+      "url": "https://www.teamrankings.com/nfl/matchup/cardinals-rams-week-6-2026",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "TR-LAC": {
+      "title": "TeamRankings current Week6 matchup: chargers-chiefs",
+      "url": "https://www.teamrankings.com/nfl/matchup/chargers-chiefs-week-6-2026",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "TR-BUF": {
+      "title": "TeamRankings current Week6 matchup: bills-raiders",
+      "url": "https://www.teamrankings.com/nfl/matchup/bills-raiders-week-6-2026",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "TR-GB": {
+      "title": "TeamRankings current Week6 matchup: cowboys-packers",
+      "url": "https://www.teamrankings.com/nfl/matchup/cowboys-packers-week-6-2026",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "TR-SF": {
+      "title": "TeamRankings current Week6 matchup: commanders-49ers",
+      "url": "https://www.teamrankings.com/nfl/matchup/commanders-49ers-week-6-2026",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "TR-IU": {
+      "title": "TeamRankings current Week7 matchup",
+      "url": "https://www.teamrankings.com/college-football/matchup/buckeyes-hoosiers-week-7-2026",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "TR-ARMY": {
+      "title": "TeamRankings current Week7 matchup",
+      "url": "https://www.teamrankings.com/college-football/matchup/owls-black-knights-week-7-2026",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "D-IU": {
+      "title": "Guy Bruhn, Doc's individual college preview, Oct12",
+      "url": "https://www.docsports.com/free-picks/football/2026/ohio-state-buckeyes-vs-indiana-hoosiers-prediction-10-17-2026-college-football-picks-best-bets-odds.html",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "D-TEX": {
+      "title": "Tony Sink, Doc's individual college preview, Oct12",
+      "url": "https://www.docsports.com/free-picks/football/2026/florida-gators-vs-texas-longhorns-prediction-10-17-2026-college-football-picks-best-bets-odds.html",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "D-NU": {
+      "title": "Guy Bruhn, Doc's individual college preview, Oct12",
+      "url": "https://www.docsports.com/free-picks/football/2026/northwestern-wildcats-vs-michigan-state-spartans-prediction-10-17-2026-college-football-picks-best-bets-odds.html",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "D-ARMY": {
+      "title": "Guy Bruhn, Doc's individual college preview, Oct12",
+      "url": "https://www.docsports.com/free-picks/football/2026/florida-atlantic-owls-vs-army-black-knights-prediction-10-17-2026-college-football-picks-best-bets-odds.html",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "D-UNC": {
+      "title": "Tony Sink, Doc's individual college preview, Oct12",
+      "url": "https://www.docsports.com/free-picks/football/2026/north-carolina-tar-heels-vs-duke-blue-devils-prediction-10-17-2026-college-football-picks-best-bets-odds.html",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "D-PUR": {
+      "title": "Josh Schonwald, Doc's individual college preview, Oct12",
+      "url": "https://www.docsports.com/free-picks/football/2026/washington-huskies-vs-purdue-boilermakers-prediction-10-16-2026-college-football-picks-best-bets-odds.html",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "D-WAKE": {
+      "title": "Tony Sink, Doc's individual college preview, Oct12",
+      "url": "https://www.docsports.com/free-picks/football/2026/wake-forest-demon-deacons-vs-california-golden-bears-prediction-10-17-2026-college-football-picks-best-bets-odds.html",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "CARD-half": {
+      "title": "Official Delaware half card, dated Oct15",
+      "url": "https://delotterywebcontent.blob.core.windows.net/delottery-site-assets/assets/sports/48f877e7-accc-4643-84bf-de519009ec0b_Delaware%20-%20Half%20Pt%2010.15.2026.pdf",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "CARD-teaser": {
+      "title": "Official Delaware teaser card, dated Oct15",
+      "url": "https://delotterywebcontent.blob.core.windows.net/delottery-site-assets/assets/sports/79836d5d-27ba-4394-adb6-04e7cffc766a_Delaware%20-%20Teaser%2010.15.2026.pdf",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "CARD-big": {
+      "title": "Official Delaware big card, dated Oct15",
+      "url": "https://delotterywebcontent.blob.core.windows.net/delottery-site-assets/assets/sports/3daf73f5-a8ea-4bcd-89c2-03fe82f075b1_Delaware%20-%20Big%20Teaser%2010.15.2026.pdf",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    },
+    "CARD-pleaser": {
+      "title": "Official Delaware pleaser card, dated Oct15",
+      "url": "https://delotterywebcontent.blob.core.windows.net/delottery-site-assets/assets/sports/0c764754-5501-41b5-ac16-6d92257aaefb_Delaware%20-%20Pleaser%2010.15.2026.pdf",
+      "accessed": "2026-10-15T14:06:51.446706-04:00"
+    }
+  },
+  "assessment_updates": [
+    {
+      "candidate": "H1",
+      "decision": "Excluded from tickets at68/110; H7 NYJ+7.5 selected instead. No score inflation."
+    },
+    {
+      "candidate": "B1",
+      "previous_status": "UNGRADED",
+      "current_status": "PROVISIONAL",
+      "score": 73,
+      "reason": "Current coach reporting establishes Brown first-team/expected scenario; final confirmation is still pending."
+    },
+    {
+      "candidate": "B7",
+      "previous_provisional_score": 81,
+      "current_provisional_score": 72,
+      "reason": "Cal primary confirms Brousseau and latest VT win; stale secondary narrative downgraded."
+    }
+  ],
+  "all_sports_inventory": [
+    {
+      "league": "NFL",
+      "scope": "SEA-DEN tonight; Sunday/Monday card games",
+      "status": "Football tickets assessed; SEA-DEN crowd reference only"
+    },
+    {
+      "league": "CFB",
+      "scope": "ECU-UAB, GSO-ODU, CSU-TexasState today; card through Saturday",
+      "status": "Ticket candidates assessed; no forced Thursday filler"
+    },
+    {
+      "league": "MLB",
+      "scope": "TB-CLE started; MIL-LAD8pm ET",
+      "status": "TB-CLE excluded; MIL-LAD UNGRADED: starter/bulk, bullpen, lineups and execution not fully verified"
+    },
+    {
+      "league": "NBA preseason",
+      "scope": "TOR-NYK7:30pm; OKC-HOU8:30pm ET",
+      "status": "UNGRADED: current minutes/rotation and executable market not established"
+    },
+    {
+      "league": "NHL",
+      "scope": "11 games listed in source inventory",
+      "status": "UNGRADED: no completed independent goalie/skater/price assessment; no guessed releases"
+    },
+    {
+      "league": "Soccer",
+      "scope": "EPL/MLS no events in queried Oct15 feeds; broader leagues not exhausted; weekend EPL article read",
+      "status": "Coverage limited; no worldwide no-game claim"
+    },
+    {
+      "league": "Tennis",
+      "scope": "Shanghai/Wuhan source scan",
+      "status": "Ruud +125 outside opinion watched; actual start, hold/break, health and price not cleared"
+    },
+    {
+      "league": "WNBA",
+      "scope": "No event returned by Oct15 feed",
+      "status": "Not certified worldwide/no-schedule from API alone"
+    },
+    {
+      "league": "Golf/CFL/motorsport/combat/other",
+      "scope": "API access errors/limited board",
+      "status": "Coverage unavailable; no invented no-event claim"
+    }
+  ],
+  "source_audit": [
+    {
+      "source": "Firecrawl",
+      "state": "402 credits exhausted; accessible web fallback used"
+    },
+    {
+      "source": "Circa Dropbox",
+      "state": "Image-only PDF; visually read Week6 contest spreads. One-point Chicago/Card comparison and differing Panthers favorite recorded. Reference, not live sportsbook."
+    },
+    {
+      "source": "Action Pro",
+      "state": "Public-betting fetch403; individual pages partially readable but market/count mapping incomplete. No exact qualifying contrarian flags claimed."
+    },
+    {
+      "source": "VSiN",
+      "state": "Main, NFL/CFB hubs, Cohen/Tuley/Makinen, games/models, splits and VegasSheets checked. Paid all-pick grid not fully exposed."
+    },
+    {
+      "source": "Docs",
+      "state": "Main/free picks, statistics/matches, videos and dynamic AI-v3 paths checked. Named readable picks attributed; unexposed selections not inferred."
+    },
+    {
+      "source": "Fantasy Life",
+      "state": "Original relevant NFL magazine pages and current game model plus LaMarca/TippMajor read. Full weekly game-by-game utilization tables not accessible; exact current shares remain unknown."
+    },
+    {
+      "source": "TeamRankings/StatMuse/SportsReference",
+      "state": "Readable TeamRankings matchups and selected StatMuse role/game logs reviewed; direct SportsReference403. No paid model claimed."
+    },
+    {
+      "source": "Availability/weather",
+      "state": "Official schedule/QB reports and current practices checked. Sunday/Monday material availability and hourly NWS weather/roof checks remain incomplete."
+    },
+    {
+      "source": "Other sports",
+      "state": "Inventory and supporting article intake completed; core handicaps not complete for non-ticket sports. Full all-sports scan is NOT certified complete."
+    }
+  ]
+}
