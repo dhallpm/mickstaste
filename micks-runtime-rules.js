@@ -94,7 +94,12 @@
     const result = getValue(row, 'result');
     if (FINAL_RE.test(status) || FINAL_RE.test(result)) return false;
     if (text(result) && !/\bpending\b/i.test(result)) return false;
-    return !status || OPEN_RE.test(status);
+    // Planned lotto constructions are displayable without becoming official bets.
+    // This runtime overrides index.html's isActive after its async boot starts.
+    const section = getValue(row, 'section') || row?.__section;
+    const plannedLotto = /^planned\b/i.test(getValue(row, 'status')) &&
+      /^(?:lotto\s*parlays?)$/i.test(text(section));
+    return !status || OPEN_RE.test(status) || plannedLotto;
   }
 
   function isTruePlayerProp(row) {
