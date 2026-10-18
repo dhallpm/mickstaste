@@ -1,0 +1,2472 @@
+{
+  "as_of": "2026-10-18T11:41:00-04:00",
+  "prior_snapshot": "sunday-tickets-candidates-1117.json",
+  "scope": "Video reconciliation and final early inactive scan; late final status not invented",
+  "action_video_rows": [
+    [
+      "CHI/ATL",
+      64400,
+      "CHI ML",
+      56,
+      71,
+      "8s",
+      "Heavy; ML only, no spread flag"
+    ],
+    [
+      "BAL/CLE",
+      50100,
+      "Over39.5",
+      79,
+      74,
+      "18s",
+      "Heavy; avoid Over direction"
+    ],
+    [
+      "PIT/TB",
+      59000,
+      "PIT ML",
+      84,
+      87,
+      "30s",
+      "Extreme; ML only"
+    ],
+    [
+      "PIT/TB",
+      59000,
+      "Over38.5",
+      78,
+      74,
+      "28s",
+      "Heavy; avoid Over direction"
+    ],
+    [
+      "NYJ/NE",
+      56600,
+      "NE-7.5",
+      75,
+      71,
+      "36s",
+      "Heavy; avoid NE side"
+    ],
+    [
+      "NO/NYG",
+      60600,
+      "Over45.5",
+      69,
+      81,
+      "46s",
+      "Extreme; avoid Over direction"
+    ],
+    [
+      "CAR/PHI",
+      58400,
+      "Over39",
+      76,
+      76,
+      "54s",
+      "Heavy; avoid Over direction"
+    ],
+    [
+      "TEN/IND",
+      52000,
+      "IND-6.5",
+      77,
+      82,
+      "62s",
+      "Extreme; avoid IND side"
+    ],
+    [
+      "TEN/IND",
+      52000,
+      "Over43.5",
+      67,
+      72,
+      "64s",
+      "Heavy; avoid Over direction"
+    ],
+    [
+      "BUF/LV",
+      59200,
+      "Over53.5",
+      73,
+      81,
+      "82s",
+      "Extreme; avoid Over direction"
+    ],
+    [
+      "DAL/GB",
+      58500,
+      "Over53.5",
+      65,
+      80,
+      "98s",
+      "Extreme; avoid Over direction"
+    ],
+    [
+      "ARI/LAR",
+      48000,
+      "LAR-12.5",
+      75,
+      75,
+      "72s",
+      "Below50k: no formal flag"
+    ],
+    [
+      "ARI/LAR",
+      48000,
+      "Over51.5",
+      65,
+      76,
+      "74s",
+      "Below50k: no formal flag"
+    ]
+  ],
+  "injury_updates": {
+    "CLE": "Official11:30: Judkins, Graham and Hall inactive; Schwesinger is not inactive. Backup rushing depth and interior run defense weaken the Browns cover case; Henry remains the main blowout risk. Sampson is absent from the official list despite an earlier secondary report; do not assume his workload from that report.",
+    "CAR": "Official11:30-11:33: McKee starts; Barkley out; Smith, Greenard and Kendall active. Carolina Freeling inactive; Moton returns, plus Wharton and Etienne. Protection is improved by Moton but Philadelphia is healthier at receiver/edge than a blanket injury fade implies.",
+    "NYJ": "Official11:30-11:32: NE Brown, Campbell, Henderson and Gonzalez active; Brown snap ramp unknown. NYJ Hall/Mitchell/Parham out; Cooper returns. Better NE protection and coverage weaken the Jets base spread; protected cushion still matters.",
+    "IND": "Official11:32: Tyler Warren inactive; Jones/Downs/Taylor not inactive. Tennessee Spears not inactive; Singleton, Alontae Taylor and Kevin Winston inactive. Warren loss matters to middle-field/red-zone usage; Titans secondary absences oppose a blind Tennessee upgrade.",
+    "TB": "Official11:30-11:31: Mayfield, Winfield, Morrison and Tucker inactive; Trotter/Dennis active. Pittsburgh Dowdle active, Metcalf/Freiermuth/Ramsey not inactive. Wilson/Pittman on IR. Warren still matters but do not assume exclusive work after Dowdle return.",
+    "ATL": "Official Falcons11:31 confirms both Penix and Caleb Williams in lineup; ZaDar ius Smith cleared, C.J.Henderson inactive with Terrell on IR. Both quarterbacks returning supports the protected Over; Atlanta coverage remains the strongest opposing case to its side.",
+    "NYG": "Official Saints10:34CT/11:34ET: Shough, Olave and Kamara not inactive; Elliss, Shepherd and Ridgeway inactive. Active does not establish full workload or healed non-throwing hand. Giants final list not independently retrieved."
+  },
+  "candidates": [
+    {
+      "id": "H114",
+      "family": "H",
+      "number": 114,
+      "game": "CLE",
+      "pick": "Browns +6.5",
+      "start": "2026-10-18T17:00Z",
+      "time_et": "1:00 PM",
+      "score": 80,
+      "grade": "B",
+      "score_status": "REFRESHED - not a new full source scan",
+      "factors": {
+        "matchup": 24,
+        "price": 18,
+        "personnel": 8,
+        "situation": 7,
+        "vsin": 7,
+        "docs": 7,
+        "market": 9
+      },
+      "failure_dimensions": {
+        "Strongest loss path": 1,
+        "Personnel resilience": 1,
+        "Script / variance": 1,
+        "Price protection": 2,
+        "Countercase resolution": 1
+      },
+      "failure_score": 6,
+      "thesis": "Home divisional resistance plus a materially stale fixed spread after Jackson was ruled out.",
+      "price_assessment": "Card+6.5 versus current+3; retain the hook above6. No automatic BAL-6.5 replacement.",
+      "opinion_reconciliation": "",
+      "official_units": 0,
+      "missing_evidence": [
+        "Unshown Action markets remain unknown; current live Circa unavailable."
+      ],
+      "release_blockers": [
+        "Retailer acceptance of exact printed cell; no substitute lines."
+      ],
+      "best_number": "Browns +6.5",
+      "no_bet_cutoff": "Not established for official release while material pregame checks remain; exact printed selection only after regrade.",
+      "status": "WATCH - planned ticket leg, not an official release",
+      "factor_evidence": {
+        "matchup": "Home divisional resistance plus a materially stale fixed spread after Jackson was ruled out. Strongest counter: Henry against depleted Cleveland defensive tackles is the clearest failure path. Cleveland gains only 4.7 yards/play, converts 30.65% of third downs and can give Baltimore short fields. Jackson being out does not mean the Ravens cannot win comfortably.",
+        "price": "Card+6.5 versus current+3; retain the hook above6. No automatic BAL-6.5 replacement. Fixed card payout is assessed as a whole ticket, not as -110 for each leg.",
+        "personnel": "Official11:30: Judkins, Graham and Hall inactive; Schwesinger is not inactive. Backup rushing depth and interior run defense weaken the Browns cover case; Henry remains the main blowout risk. Sampson is absent from the official list despite an earlier secondary report; do not assume his workload from that report.",
+        "situation": "NWS kickoff-area forecast: 57F, south8mph, sunny. Weather supports neither an extreme adjustment nor a weather-only Under.",
+        "vsin": "Tuley CLE+5; Cohen protected CLE+10.5 parlay. Makinen BAL-4.5 was explicitly Jackson-dependent: now PASS, not live opposition. Partial credit only for the relevant direction/threshold; no source-count bonus.",
+        "docs": "Parlays Pundit CLE+4.5 supports direction. Toth BAL-4.5 assumed Jackson: stale personnel premise, not current confirmation. Agreement and opposition are reconciled; stale assumptions and other thresholds receive reduced weight.",
+        "market": "Prior reference5/movement2 retained. Splits2 now earned for directly readable same-market evidence in user recording. This measures evidence quality, not agreement with the crowd; alternate thresholds do not inherit the displayed percentages."
+      },
+      "failure_evidence": {
+        "Strongest loss path": "Henry against depleted Cleveland defensive tackles is the clearest failure path. Cleveland gains only 4.7 yards/play, converts 30.65% of third downs and can give Baltimore short fields. Jackson being out does not mean the Ravens cannot win comfortably.",
+        "Personnel resilience": "Official11:30: Judkins, Graham and Hall inactive; Schwesinger is not inactive. Backup rushing depth and interior run defense weaken the Browns cover case; Henry remains the main blowout risk. Sampson is absent from the official list despite an earlier secondary report; do not assume his workload from that report.",
+        "Script / variance": "Cashing condition: Browns +6.5. Turnovers and late scores can defeat even a protected side.",
+        "Price protection": "Card+6.5 versus current+3; retain the hook above6. No automatic BAL-6.5 replacement.",
+        "Countercase resolution": "Tuley CLE+5; Cohen protected CLE+10.5 parlay. Makinen BAL-4.5 was explicitly Jackson-dependent: now PASS, not live opposition. Parlays Pundit CLE+4.5 supports direction. Toth BAL-4.5 assumed Jackson: stale personnel premise, not current confirmation."
+      },
+      "previous_score": 80,
+      "update_evidence": "Official11:30: Judkins, Graham and Hall inactive; Schwesinger is not inactive. Backup rushing depth and interior run defense weaken the Browns cover case; Henry remains the main blowout risk. Sampson is absent from the official list despite an earlier secondary report; do not assume his workload from that report."
+    },
+    {
+      "id": "H118",
+      "family": "H",
+      "number": 118,
+      "game": "CAR",
+      "pick": "Panthers +0.5",
+      "start": "2026-10-18T17:00Z",
+      "time_et": "1:00 PM",
+      "score": 84,
+      "grade": "B+",
+      "score_status": "REFRESHED - not a new full source scan",
+      "factors": {
+        "matchup": 28,
+        "price": 18,
+        "personnel": 12,
+        "situation": 8,
+        "vsin": 7,
+        "docs": 2,
+        "market": 9
+      },
+      "failure_dimensions": {
+        "Strongest loss path": 1,
+        "Personnel resilience": 1,
+        "Script / variance": 1,
+        "Price protection": 2,
+        "Countercase resolution": 2
+      },
+      "failure_score": 7,
+      "thesis": "Current offense, rest and McKee transition support Carolina at a printed underdog number.",
+      "price_assessment": "Card+0.5 versus currentCAR-3 is a substantial directional number advantage.",
+      "opinion_reconciliation": "Older Eagles selections are stale after Hurts news; current weekly forecast supports Carolina.",
+      "official_units": 0,
+      "missing_evidence": [
+        "Unshown Action markets remain unknown; current live Circa unavailable."
+      ],
+      "release_blockers": [
+        "Retailer acceptance of exact printed cell; no substitute lines."
+      ],
+      "best_number": "Panthers +0.5",
+      "no_bet_cutoff": "Not established for official release while material pregame checks remain; exact printed selection only after regrade.",
+      "status": "WATCH - planned ticket leg, not an official release",
+      "factor_evidence": {
+        "matchup": "Current offense, rest and McKee transition support Carolina at a printed underdog number. Strongest counter: Philadelphia still has a credible defense, Smith returns, and McKee can distribute accurately. Carolina protection injuries could reduce its offensive advantage; a backup quarterback is not an automatic team fade.",
+        "price": "Card+0.5 versus currentCAR-3 is a substantial directional number advantage. Fixed card payout is assessed as a whole ticket, not as -110 for each leg.",
+        "personnel": "Official11:30-11:33: McKee starts; Barkley out; Smith, Greenard and Kendall active. Carolina Freeling inactive; Moton returns, plus Wharton and Etienne. Protection is improved by Moton but Philadelphia is healthier at receiver/edge than a blanket injury fade implies.",
+        "situation": "NWS Philadelphia area at kickoff:55F, north5mph, sunny. No adverse-weather total deduction.",
+        "vsin": "Cohen CAR ML-115 supports direction; Tuley leaned Carolina but passed. Those are different conviction levels. Partial credit only for the relevant direction/threshold; no source-count bonus.",
+        "docs": "Bruhn PHI-1.5 and Toth PHI-1.5 predate the quarterback change; downgraded as stale. Block liked protected Carolina at a different teaser number. Agreement and opposition are reconciled; stale assumptions and other thresholds receive reduced weight.",
+        "market": "Prior reference5/movement2 retained. Splits2 now earned for directly readable same-market evidence in user recording. This measures evidence quality, not agreement with the crowd; alternate thresholds do not inherit the displayed percentages."
+      },
+      "failure_evidence": {
+        "Strongest loss path": "Philadelphia still has a credible defense, Smith returns, and McKee can distribute accurately. Carolina protection injuries could reduce its offensive advantage; a backup quarterback is not an automatic team fade.",
+        "Personnel resilience": "Official11:30-11:33: McKee starts; Barkley out; Smith, Greenard and Kendall active. Carolina Freeling inactive; Moton returns, plus Wharton and Etienne. Protection is improved by Moton but Philadelphia is healthier at receiver/edge than a blanket injury fade implies.",
+        "Script / variance": "Cashing condition: Panthers +0.5. Turnovers and late scores can defeat even a protected side.",
+        "Price protection": "Card+0.5 versus currentCAR-3 is a substantial directional number advantage.",
+        "Countercase resolution": "Older Eagles selections are stale after Hurts news; current weekly forecast supports Carolina."
+      },
+      "previous_score": 82,
+      "update_evidence": "Official11:30-11:33: McKee starts; Barkley out; Smith, Greenard and Kendall active. Carolina Freeling inactive; Moton returns, plus Wharton and Etienne. Protection is improved by Moton but Philadelphia is healthier at receiver/edge than a blanket injury fade implies."
+    },
+    {
+      "id": "H130",
+      "family": "H",
+      "number": 130,
+      "game": "NYJ",
+      "pick": "Jets +7.5",
+      "start": "2026-10-18T17:00Z",
+      "time_et": "1:00 PM",
+      "score": 77,
+      "grade": "B",
+      "score_status": "REFRESHED - not a new full source scan",
+      "factors": {
+        "matchup": 24,
+        "price": 14,
+        "personnel": 9,
+        "situation": 7,
+        "vsin": 8,
+        "docs": 6,
+        "market": 9
+      },
+      "failure_dimensions": {
+        "Strongest loss path": 1,
+        "Personnel resilience": 1,
+        "Script / variance": 1,
+        "Price protection": 2,
+        "Countercase resolution": 1
+      },
+      "failure_score": 6,
+      "thesis": "Defensive resistance and the hook are preferable to chasing New England after45 points.",
+      "price_assessment": "Exact+7.5 retains a touchdown hook. Brown activation prevents upgrading solely from old injury fades.",
+      "opinion_reconciliation": "",
+      "official_units": 0,
+      "missing_evidence": [
+        "Unshown Action markets remain unknown; current live Circa unavailable."
+      ],
+      "release_blockers": [
+        "Retailer acceptance of exact printed cell; no substitute lines."
+      ],
+      "best_number": "Jets +7.5",
+      "no_bet_cutoff": "Not established for official release while material pregame checks remain; exact printed selection only after regrade.",
+      "status": "WATCH - planned ticket leg, not an official release",
+      "factor_evidence": {
+        "matchup": "Defensive resistance and the hook are preferable to chasing New England after45 points. Strongest counter: Maye can beat this cushion with explosives and short fields. Brown's activation is fresh evidence against older Patriots injury fades; Gonzalez returning also makes Wilson's task harder.",
+        "price": "Exact+7.5 retains a touchdown hook. Brown activation prevents upgrading solely from old injury fades. Fixed card payout is assessed as a whole ticket, not as -110 for each leg.",
+        "personnel": "Official11:30-11:32: NE Brown, Campbell, Henderson and Gonzalez active; Brown snap ramp unknown. NYJ Hall/Mitchell/Parham out; Cooper returns. Better NE protection and coverage weaken the Jets base spread; protected cushion still matters.",
+        "situation": "NWS Foxborough area:52F, north3mph, sunny. Under50.5 depends on defense/pace, not wind.",
+        "vsin": "Tuley NYJ+7; Reynolds NYJ+7.5-115, but his injury rationale is partly stale. Cohen Patriots ML can coexist with a Jets spread cover. Partial credit only for the relevant direction/threshold; no source-count bonus.",
+        "docs": "Toth NYJ+7.5 versus Schonwald NE-7.5. Block's NE-1.5 is a different teaser threshold. Mixed support receives partial credit. Agreement and opposition are reconciled; stale assumptions and other thresholds receive reduced weight.",
+        "market": "Prior reference5/movement2 retained. Splits2 now earned for directly readable same-market evidence in user recording. This measures evidence quality, not agreement with the crowd; alternate thresholds do not inherit the displayed percentages."
+      },
+      "failure_evidence": {
+        "Strongest loss path": "Maye can beat this cushion with explosives and short fields. Brown's activation is fresh evidence against older Patriots injury fades; Gonzalez returning also makes Wilson's task harder.",
+        "Personnel resilience": "Official11:30-11:32: NE Brown, Campbell, Henderson and Gonzalez active; Brown snap ramp unknown. NYJ Hall/Mitchell/Parham out; Cooper returns. Better NE protection and coverage weaken the Jets base spread; protected cushion still matters.",
+        "Script / variance": "Cashing condition: Jets +7.5. Turnovers and late scores can defeat even a protected side.",
+        "Price protection": "Exact+7.5 retains a touchdown hook. Brown activation prevents upgrading solely from old injury fades.",
+        "Countercase resolution": "Tuley NYJ+7; Reynolds NYJ+7.5-115, but his injury rationale is partly stale. Cohen Patriots ML can coexist with a Jets spread cover. Toth NYJ+7.5 versus Schonwald NE-7.5. Block's NE-1.5 is a different teaser threshold. Mixed support receives partial credit."
+      },
+      "previous_score": 77,
+      "update_evidence": "Official11:30-11:32: NE Brown, Campbell, Henderson and Gonzalez active; Brown snap ramp unknown. NYJ Hall/Mitchell/Parham out; Cooper returns. Better NE protection and coverage weaken the Jets base spread; protected cushion still matters."
+    },
+    {
+      "id": "H122",
+      "family": "H",
+      "number": 122,
+      "game": "ATL",
+      "pick": "Falcons +2.5",
+      "start": "2026-10-18T17:00Z",
+      "time_et": "1:00 PM",
+      "score": 78,
+      "grade": "B",
+      "score_status": "REFRESHED - not a new full source scan",
+      "factors": {
+        "matchup": 24,
+        "price": 15,
+        "personnel": 10,
+        "situation": 8,
+        "vsin": 7,
+        "docs": 5,
+        "market": 9
+      },
+      "failure_dimensions": {
+        "Strongest loss path": 1,
+        "Personnel resilience": 1,
+        "Script / variance": 1,
+        "Price protection": 1,
+        "Countercase resolution": 1
+      },
+      "failure_score": 5,
+      "thesis": "Home protection in a near coin-flip, with Penix available and two distinct scoring paths.",
+      "price_assessment": "Card+2.5 versus current+1.5; it is still worse than the+3 Toth opinion.",
+      "opinion_reconciliation": "",
+      "official_units": 0,
+      "missing_evidence": [
+        "Unshown Action markets remain unknown; current live Circa unavailable."
+      ],
+      "release_blockers": [
+        "Retailer acceptance of exact printed cell; no substitute lines."
+      ],
+      "best_number": "Falcons +2.5",
+      "no_bet_cutoff": "Not established for official release while material pregame checks remain; exact printed selection only after regrade.",
+      "status": "WATCH - planned ticket leg, not an official release",
+      "factor_evidence": {
+        "matchup": "Home protection in a near coin-flip, with Penix available and two distinct scoring paths. Strongest counter: Williams can restore the offense suppressed by backup starts, and Atlanta's thin secondary is a real problem. Both teams run frequently; long drives and field goals can still frustrate the Over.",
+        "price": "Card+2.5 versus current+1.5; it is still worse than the+3 Toth opinion. Fixed card payout is assessed as a whole ticket, not as -110 for each leg.",
+        "personnel": "Official Falcons11:31 confirms both Penix and Caleb Williams in lineup; ZaDar ius Smith cleared, C.J.Henderson inactive with Terrell on IR. Both quarterbacks returning supports the protected Over; Atlanta coverage remains the strongest opposing case to its side.",
+        "situation": "Mercedes-Benz venue; roof setting not verified. Do not apply Atlanta outdoor wind to an assumed indoor field.",
+        "vsin": "Cohen ATL ML+140 and Youmans ATL+1.5 support the dog; Tuley passes. Partial credit only for the relevant direction/threshold; no source-count bonus.",
+        "docs": "Toth ATL+3 supports direction at a better threshold; Schonwald CHI-3 is genuine opposition. Card+2.5 loses the field-goal push. Agreement and opposition are reconciled; stale assumptions and other thresholds receive reduced weight.",
+        "market": "Prior reference5/movement2 retained. Splits2 now earned for directly readable same-market evidence in user recording. This measures evidence quality, not agreement with the crowd; alternate thresholds do not inherit the displayed percentages."
+      },
+      "failure_evidence": {
+        "Strongest loss path": "Williams can restore the offense suppressed by backup starts, and Atlanta's thin secondary is a real problem. Both teams run frequently; long drives and field goals can still frustrate the Over.",
+        "Personnel resilience": "Official Falcons11:31 confirms both Penix and Caleb Williams in lineup; ZaDar ius Smith cleared, C.J.Henderson inactive with Terrell on IR. Both quarterbacks returning supports the protected Over; Atlanta coverage remains the strongest opposing case to its side.",
+        "Script / variance": "Cashing condition: Falcons +2.5. Turnovers and late scores can defeat even a protected side.",
+        "Price protection": "Card+2.5 versus current+1.5; it is still worse than the+3 Toth opinion.",
+        "Countercase resolution": "Cohen ATL ML+140 and Youmans ATL+1.5 support the dog; Tuley passes. Toth ATL+3 supports direction at a better threshold; Schonwald CHI-3 is genuine opposition. Card+2.5 loses the field-goal push."
+      },
+      "previous_score": 76,
+      "update_evidence": "Official Falcons11:31 confirms both Penix and Caleb Williams in lineup; ZaDar ius Smith cleared, C.J.Henderson inactive with Terrell on IR. Both quarterbacks returning supports the protected Over; Atlanta coverage remains the strongest opposing case to its side."
+    },
+    {
+      "id": "H134",
+      "family": "H",
+      "number": 134,
+      "game": "TB",
+      "pick": "Buccaneers +2.5",
+      "start": "2026-10-18T17:00Z",
+      "time_et": "1:00 PM",
+      "score": 77,
+      "grade": "B",
+      "score_status": "REFRESHED - not a new full source scan",
+      "factors": {
+        "matchup": 24,
+        "price": 14,
+        "personnel": 11,
+        "situation": 8,
+        "vsin": 6,
+        "docs": 5,
+        "market": 9
+      },
+      "failure_dimensions": {
+        "Strongest loss path": 1,
+        "Personnel resilience": 1,
+        "Script / variance": 1,
+        "Price protection": 1,
+        "Countercase resolution": 1
+      },
+      "failure_score": 5,
+      "thesis": "Run defense and rest create a live home-dog path against inconsistent road Pittsburgh.",
+      "price_assessment": "Card+2.5 matches the reference spread; no exceptional price edge is claimed.",
+      "opinion_reconciliation": "",
+      "official_units": 0,
+      "missing_evidence": [
+        "Unshown Action markets remain unknown; current live Circa unavailable."
+      ],
+      "release_blockers": [
+        "Retailer acceptance of exact printed cell; no substitute lines."
+      ],
+      "best_number": "Buccaneers +2.5",
+      "no_bet_cutoff": "Not established for official release while material pregame checks remain; exact printed selection only after regrade.",
+      "status": "WATCH - planned ticket leg, not an official release",
+      "factor_evidence": {
+        "matchup": "Run defense and rest create a live home-dog path against inconsistent road Pittsburgh. Strongest counter: Daniels has a small sample and can create short fields for either team. Warren/Irving can generate explosive scores; Winfield's absence weakens the secondary. This is not a claim that every injury favors the Under.",
+        "price": "Card+2.5 matches the reference spread; no exceptional price edge is claimed. Fixed card payout is assessed as a whole ticket, not as -110 for each leg.",
+        "personnel": "Official11:30-11:31: Mayfield, Winfield, Morrison and Tucker inactive; Trotter/Dennis active. Pittsburgh Dowdle active, Metcalf/Freiermuth/Ramsey not inactive. Wilson/Pittman on IR. Warren still matters but do not assume exclusive work after Dowdle return.",
+        "situation": "NWS Tampa area:77F, northeast15mph, sunny. Wind adds modest passing/kicking risk, not a guaranteed low total.",
+        "vsin": "Makinen TB+2.5; Tuley and Reynolds like TB+8.5 teasers. The printed standard teaser+6.5 does not cross7; it is weaker protection. Partial credit only for the relevant direction/threshold; no source-count bonus.",
+        "docs": "Toth TB+2.5 but his53-point forecast is an Under counter. Block was cautious about TB even at+8.5; do not label unanimous. Agreement and opposition are reconciled; stale assumptions and other thresholds receive reduced weight.",
+        "market": "Prior reference5/movement2 retained. Splits2 now earned for directly readable same-market evidence in user recording. This measures evidence quality, not agreement with the crowd; alternate thresholds do not inherit the displayed percentages."
+      },
+      "failure_evidence": {
+        "Strongest loss path": "Daniels has a small sample and can create short fields for either team. Warren/Irving can generate explosive scores; Winfield's absence weakens the secondary. This is not a claim that every injury favors the Under.",
+        "Personnel resilience": "Official11:30-11:31: Mayfield, Winfield, Morrison and Tucker inactive; Trotter/Dennis active. Pittsburgh Dowdle active, Metcalf/Freiermuth/Ramsey not inactive. Wilson/Pittman on IR. Warren still matters but do not assume exclusive work after Dowdle return.",
+        "Script / variance": "Cashing condition: Buccaneers +2.5. Turnovers and late scores can defeat even a protected side.",
+        "Price protection": "Card+2.5 matches the reference spread; no exceptional price edge is claimed.",
+        "Countercase resolution": "Makinen TB+2.5; Tuley and Reynolds like TB+8.5 teasers. The printed standard teaser+6.5 does not cross7; it is weaker protection. Toth TB+2.5 but his53-point forecast is an Under counter. Block was cautious about TB even at+8.5; do not label unanimous."
+      },
+      "previous_score": 75,
+      "update_evidence": "Official11:30-11:31: Mayfield, Winfield, Morrison and Tucker inactive; Trotter/Dennis active. Pittsburgh Dowdle active, Metcalf/Freiermuth/Ramsey not inactive. Wilson/Pittman on IR. Warren still matters but do not assume exclusive work after Dowdle return."
+    },
+    {
+      "id": "H116",
+      "family": "H",
+      "number": 116,
+      "game": "CLE",
+      "pick": "BAL/CLE Under 42.5",
+      "start": "2026-10-18T17:00Z",
+      "time_et": "1:00 PM",
+      "score": 72,
+      "grade": "B-",
+      "score_status": "REFRESHED - not a new full source scan",
+      "factors": {
+        "matchup": 27,
+        "price": 18,
+        "personnel": 11,
+        "situation": 7,
+        "vsin": 0,
+        "docs": 0,
+        "market": 9
+      },
+      "failure_dimensions": {
+        "Strongest loss path": 1,
+        "Personnel resilience": 1,
+        "Script / variance": 1,
+        "Price protection": 2,
+        "Countercase resolution": 1
+      },
+      "failure_score": 6,
+      "thesis": "Huntley instead of Jackson, Cleveland protection risk and the lower current total support this threshold.",
+      "price_assessment": "Card42.5 versus current39.5 supplies3 points. Defensive scores and a Henry breakout remain risks.",
+      "opinion_reconciliation": "",
+      "official_units": 0,
+      "missing_evidence": [
+        "Unshown Action markets remain unknown; current live Circa unavailable."
+      ],
+      "release_blockers": [
+        "Retailer acceptance of exact printed cell; no substitute lines."
+      ],
+      "best_number": "BAL/CLE Under 42.5",
+      "no_bet_cutoff": "Not established for official release while material pregame checks remain; exact printed selection only after regrade.",
+      "status": "WATCH - planned ticket leg, not an official release",
+      "factor_evidence": {
+        "matchup": "Huntley instead of Jackson, Cleveland protection risk and the lower current total support this threshold. Strongest counter: Henry against depleted Cleveland defensive tackles is the clearest failure path. Cleveland gains only 4.7 yards/play, converts 30.65% of third downs and can give Baltimore short fields. Jackson being out does not mean the Ravens cannot win comfortably.",
+        "price": "Card42.5 versus current39.5 supplies3 points. Defensive scores and a Henry breakout remain risks. Fixed card payout is assessed as a whole ticket, not as -110 for each leg.",
+        "personnel": "Official11:30: Judkins, Graham and Hall inactive; Schwesinger is not inactive. Backup rushing depth and interior run defense weaken the Browns cover case; Henry remains the main blowout risk. Sampson is absent from the official list despite an earlier secondary report; do not assume his workload from that report.",
+        "situation": "NWS kickoff-area forecast: 57F, south8mph, sunny. Weather supports neither an extreme adjustment nor a weather-only Under.",
+        "vsin": "Tuley CLE+5; Cohen protected CLE+10.5 parlay. Makinen BAL-4.5 was explicitly Jackson-dependent: now PASS, not live opposition. No exact relevant total selection verified;0 points.",
+        "docs": "Parlays Pundit CLE+4.5 supports direction. Toth BAL-4.5 assumed Jackson: stale personnel premise, not current confirmation. No verified named selection for this candidate market;0 points.",
+        "market": "Prior reference5/movement2 retained. Splits2 now earned for directly readable same-market evidence in user recording. This measures evidence quality, not agreement with the crowd; alternate thresholds do not inherit the displayed percentages."
+      },
+      "failure_evidence": {
+        "Strongest loss path": "Henry against depleted Cleveland defensive tackles is the clearest failure path. Cleveland gains only 4.7 yards/play, converts 30.65% of third downs and can give Baltimore short fields. Jackson being out does not mean the Ravens cannot win comfortably.",
+        "Personnel resilience": "Official11:30: Judkins, Graham and Hall inactive; Schwesinger is not inactive. Backup rushing depth and interior run defense weaken the Browns cover case; Henry remains the main blowout risk. Sampson is absent from the official list despite an earlier secondary report; do not assume his workload from that report.",
+        "Script / variance": "Cashing condition: BAL/CLE Under 42.5. Explosives, short fields and overtime can defeat a total.",
+        "Price protection": "Card42.5 versus current39.5 supplies3 points. Defensive scores and a Henry breakout remain risks.",
+        "Countercase resolution": "Tuley CLE+5; Cohen protected CLE+10.5 parlay. Makinen BAL-4.5 was explicitly Jackson-dependent: now PASS, not live opposition. Parlays Pundit CLE+4.5 supports direction. Toth BAL-4.5 assumed Jackson: stale personnel premise, not current confirmation."
+      },
+      "previous_score": 72,
+      "update_evidence": "Official11:30: Judkins, Graham and Hall inactive; Schwesinger is not inactive. Backup rushing depth and interior run defense weaken the Browns cover case; Henry remains the main blowout risk. Sampson is absent from the official list despite an earlier secondary report; do not assume his workload from that report."
+    },
+    {
+      "id": "H150",
+      "family": "H",
+      "number": 150,
+      "game": "LAC",
+      "pick": "Chargers +7.5",
+      "start": "2026-10-18T20:25Z",
+      "time_et": "4:25 PM",
+      "score": 76,
+      "grade": "B",
+      "score_status": "REFRESHED - not a new full source scan",
+      "factors": {
+        "matchup": 24,
+        "price": 13,
+        "personnel": 10,
+        "situation": 6,
+        "vsin": 7,
+        "docs": 7,
+        "market": 9
+      },
+      "failure_dimensions": {
+        "Strongest loss path": 1,
+        "Personnel resilience": 1,
+        "Script / variance": 1,
+        "Price protection": 2,
+        "Countercase resolution": 1
+      },
+      "failure_score": 6,
+      "thesis": "Division resistance and Chiefs receiver losses justify considering the touchdown hook.",
+      "price_assessment": "Card+7.5 matches reference; inferior to+8/+8.5 outside picks. Do not present their price as available here.",
+      "opinion_reconciliation": "",
+      "official_units": 0,
+      "missing_evidence": [
+        "Unshown Action markets remain unknown; current live Circa unavailable."
+      ],
+      "release_blockers": [
+        "Retailer acceptance of exact printed cell; no substitute lines.",
+        "Late/evening final availability remains outstanding."
+      ],
+      "best_number": "Chargers +7.5",
+      "no_bet_cutoff": "Not established for official release while material pregame checks remain; exact printed selection only after regrade.",
+      "status": "WATCH - planned ticket leg, not an official release",
+      "factor_evidence": {
+        "matchup": "Division resistance and Chiefs receiver losses justify considering the touchdown hook. Strongest counter: Herbert turnovers and severe line depletion can create a runaway against a rested Chiefs side. A defensive score can hurt the side and Under together. Returning Chargers receivers help, but do not restore the line.",
+        "price": "Card+7.5 matches reference; inferior to+8/+8.5 outside picks. Do not present their price as available here. Fixed card payout is assessed as a whole ticket, not as -110 for each leg.",
+        "personnel": "Rice/Simmons and Alt/James are out in current reports; other LAC line losses remain relevant. Herbert/Mahomes start. Hampton's three-man committee is not an every-down workload. Outstanding: Confirm McConkey/Johnston/Harris roles and any new line absences at late inactives. Herbert turnover risk remains even if all receivers play.",
+        "situation": "NWS Arrowhead area near kickoff:67F, south12mph, sunny. Modest passing/kicking sensitivity; Chiefs off bye is a side counter.",
+        "vsin": "Tuley/Reynolds LAC+8; Youmans LAC+7.5. Same direction at different numbers; stronger protection has a lower fixed-card return. Partial credit only for the relevant direction/threshold; no source-count bonus.",
+        "docs": "Bruhn LAC+8.5 and Toth LAC+8.5 support direction. No exact Under49.5 Doc's wager was read. Agreement and opposition are reconciled; stale assumptions and other thresholds receive reduced weight.",
+        "market": "Prior reference5/movement2 retained. Splits2 now earned for directly readable same-market evidence in user recording. This measures evidence quality, not agreement with the crowd; alternate thresholds do not inherit the displayed percentages."
+      },
+      "failure_evidence": {
+        "Strongest loss path": "Herbert turnovers and severe line depletion can create a runaway against a rested Chiefs side. A defensive score can hurt the side and Under together. Returning Chargers receivers help, but do not restore the line.",
+        "Personnel resilience": "Late/evening final inactives not yet due; retain prior assessed scenario.",
+        "Script / variance": "Cashing condition: Chargers +7.5. Turnovers and late scores can defeat even a protected side.",
+        "Price protection": "Card+7.5 matches reference; inferior to+8/+8.5 outside picks. Do not present their price as available here.",
+        "Countercase resolution": "Tuley/Reynolds LAC+8; Youmans LAC+7.5. Same direction at different numbers; stronger protection has a lower fixed-card return. Bruhn LAC+8.5 and Toth LAC+8.5 support direction. No exact Under49.5 Doc's wager was read."
+      },
+      "previous_score": 74,
+      "update_evidence": "Late/evening final inactives not yet due; retain prior assessed scenario."
+    },
+    {
+      "id": "H146",
+      "family": "H",
+      "number": 146,
+      "game": "LV",
+      "pick": "Raiders +4.5",
+      "start": "2026-10-18T20:25Z",
+      "time_et": "4:25 PM",
+      "score": 74,
+      "grade": "B",
+      "score_status": "REFRESHED - not a new full source scan",
+      "factors": {
+        "matchup": 24,
+        "price": 12,
+        "personnel": 11,
+        "situation": 8,
+        "vsin": 7,
+        "docs": 5,
+        "market": 7
+      },
+      "failure_dimensions": {
+        "Strongest loss path": 1,
+        "Personnel resilience": 1,
+        "Script / variance": 1,
+        "Price protection": 1,
+        "Countercase resolution": 1
+      },
+      "failure_score": 5,
+      "thesis": "Buffalo defensive weakness and overtime load support the home dog, despite Allen upside.",
+      "price_assessment": "Printed+4.5 is a point worse than current+5.5. That loss of value keeps this behind the protected version.",
+      "opinion_reconciliation": "",
+      "official_units": 0,
+      "missing_evidence": [
+        "Unshown Action markets remain unknown; current live Circa unavailable."
+      ],
+      "release_blockers": [
+        "Retailer acceptance of exact printed cell; no substitute lines.",
+        "Late/evening final availability remains outstanding."
+      ],
+      "best_number": "Raiders +4.5",
+      "no_bet_cutoff": "Not established for official release while material pregame checks remain; exact printed selection only after regrade.",
+      "status": "WATCH - planned ticket leg, not an official release",
+      "factor_evidence": {
+        "matchup": "Buffalo defensive weakness and overtime load support the home dog, despite Allen upside. Strongest counter: Allen/Cook can build a large lead if the Raiders line fails. Jeanty's poor rushing efficiency and possible in-game QB change add variance. An Over can fail if Buffalo controls possession while Las Vegas stalls.",
+        "price": "Printed+4.5 is a point worse than current+5.5. That loss of value keeps this behind the protected version. Fixed card payout is assessed as a whole ticket, not as -110 for each leg.",
+        "personnel": "Cousins remains the working starter; a future Mendoza switch is a scenario, not a confirmed start. Bowers is the passing focal point. Cook85% opportunity and goal-line work matter; Moore's limited routes are not assumed fully restored. Outstanding: Confirm Raiders starter and Bowers/Jeanty workload; Buffalo receiver/line availability at late inactives. Do not release on a guessed Mendoza assumption.",
+        "situation": "Allegiant indoor venue. No weather points are awarded for an outdoor Las Vegas forecast; short rest/travel is the relevant issue.",
+        "vsin": "Youmans/Reynolds LV+4.5 versus Makinen BUF-5.5; Tuley passes. This is real disagreement. Protected LV is the Micks resolution. Partial credit only for the relevant direction/threshold; no source-count bonus.",
+        "docs": "Schonwald LV+4.5 versus Toth BUF-5.5. Directional support is strongest for protected LV; no named Doc's Over46.5 read. Agreement and opposition are reconciled; stale assumptions and other thresholds receive reduced weight.",
+        "market": "Reference5 + movement2 + splits0 =7. Identified Circa contest reference and ESPN/DraftKings open/current fields; movement timing is incomplete. No sharp-money inference."
+      },
+      "failure_evidence": {
+        "Strongest loss path": "Allen/Cook can build a large lead if the Raiders line fails. Jeanty's poor rushing efficiency and possible in-game QB change add variance. An Over can fail if Buffalo controls possession while Las Vegas stalls.",
+        "Personnel resilience": "Late/evening final inactives not yet due; retain prior assessed scenario.",
+        "Script / variance": "Cashing condition: Raiders +4.5. Turnovers and late scores can defeat even a protected side.",
+        "Price protection": "Printed+4.5 is a point worse than current+5.5. That loss of value keeps this behind the protected version.",
+        "Countercase resolution": "Youmans/Reynolds LV+4.5 versus Makinen BUF-5.5; Tuley passes. This is real disagreement. Protected LV is the Micks resolution. Schonwald LV+4.5 versus Toth BUF-5.5. Directional support is strongest for protected LV; no named Doc's Over46.5 read."
+      },
+      "previous_score": 74,
+      "update_evidence": "Late/evening final inactives not yet due; retain prior assessed scenario."
+    },
+    {
+      "id": "H153",
+      "family": "H",
+      "number": 153,
+      "game": "GB",
+      "pick": "Packers -1.5",
+      "start": "2026-10-19T00:20Z",
+      "time_et": "8:20 PM",
+      "score": 77,
+      "grade": "B",
+      "score_status": "REFRESHED - not a new full source scan",
+      "factors": {
+        "matchup": 24,
+        "price": 14,
+        "personnel": 11,
+        "situation": 7,
+        "vsin": 8,
+        "docs": 4,
+        "market": 9
+      },
+      "failure_dimensions": {
+        "Strongest loss path": 1,
+        "Personnel resilience": 1,
+        "Script / variance": 1,
+        "Price protection": 1,
+        "Countercase resolution": 1
+      },
+      "failure_score": 5,
+      "thesis": "Home passing matchup supports a narrow win, with a serious Dallas offense counter.",
+      "price_assessment": "Card-1.5 matches reference; no claimed fair-price windfall.",
+      "opinion_reconciliation": "",
+      "official_units": 0,
+      "missing_evidence": [
+        "Unshown Action markets remain unknown; current live Circa unavailable."
+      ],
+      "release_blockers": [
+        "Retailer acceptance of exact printed cell; no substitute lines.",
+        "Late/evening final availability remains outstanding."
+      ],
+      "best_number": "Packers -1.5",
+      "no_bet_cutoff": "Not established for official release while material pregame checks remain; exact printed selection only after regrade.",
+      "status": "WATCH - planned ticket leg, not an official release",
+      "factor_evidence": {
+        "matchup": "Home passing matchup supports a narrow win, with a serious Dallas offense counter. Strongest counter: Prescott/Lamb and a concentrated Javonte role can attack Green Bay front-seven losses. Green Bay's own protection injuries and evening wind can slow a game widely expected to score.",
+        "price": "Card-1.5 matches reference; no claimed fair-price windfall. Fixed card payout is assessed as a whole ticket, not as -110 for each leg.",
+        "personnel": "Love/Prescott are the QB plans. Javonte77% snaps/rush share and all goal-line carries in the reported window identify a material Dallas role. Lloyd expanded opportunity replaces a stale full-Jacobs assumption. Outstanding: Evening inactives and Lamb/OL usage not yet final; inspect again before buying an all-day ticket dependent on them.",
+        "situation": "NWS Lambeau area near kickoff:57F, south-southwest12mph, clear. Do not call this a cold-weather Under or guarantee a shootout.",
+        "vsin": "Makinen GB-1.5; Youmans Over53; Tuley passes. They support different markets and are not interchangeable. Partial credit only for the relevant direction/threshold; no source-count bonus.",
+        "docs": "Cobbett GB-1.5/Over52.5 versus Sink/Toth DAL+1.5. The big teaser protects a close home loss; it does not erase Dallas upside. Agreement and opposition are reconciled; stale assumptions and other thresholds receive reduced weight.",
+        "market": "Prior reference5/movement2 retained. Splits2 now earned for directly readable same-market evidence in user recording. This measures evidence quality, not agreement with the crowd; alternate thresholds do not inherit the displayed percentages."
+      },
+      "failure_evidence": {
+        "Strongest loss path": "Prescott/Lamb and a concentrated Javonte role can attack Green Bay front-seven losses. Green Bay's own protection injuries and evening wind can slow a game widely expected to score.",
+        "Personnel resilience": "Late/evening final inactives not yet due; retain prior assessed scenario.",
+        "Script / variance": "Cashing condition: Packers -1.5. Turnovers and late scores can defeat even a protected side.",
+        "Price protection": "Card-1.5 matches reference; no claimed fair-price windfall.",
+        "Countercase resolution": "Makinen GB-1.5; Youmans Over53; Tuley passes. They support different markets and are not interchangeable. Cobbett GB-1.5/Over52.5 versus Sink/Toth DAL+1.5. The big teaser protects a close home loss; it does not erase Dallas upside."
+      },
+      "previous_score": 75,
+      "update_evidence": "Late/evening final inactives not yet due; retain prior assessed scenario."
+    },
+    {
+      "id": "B114",
+      "family": "B",
+      "number": 114,
+      "game": "CLE",
+      "pick": "Browns +12.5",
+      "start": "2026-10-18T17:00Z",
+      "time_et": "1:00 PM",
+      "score": 84,
+      "grade": "B+",
+      "score_status": "REFRESHED - not a new full source scan",
+      "factors": {
+        "matchup": 26,
+        "price": 19,
+        "personnel": 10,
+        "situation": 7,
+        "vsin": 6,
+        "docs": 7,
+        "market": 9
+      },
+      "failure_dimensions": {
+        "Strongest loss path": 1,
+        "Personnel resilience": 1,
+        "Script / variance": 2,
+        "Price protection": 2,
+        "Countercase resolution": 1
+      },
+      "failure_score": 7,
+      "thesis": "Two-score protection against a backup-QB divisional favorite.",
+      "price_assessment": "Card+12.5 versus current+3; can lose by12. Henry/short-field blowout remains possible.",
+      "opinion_reconciliation": "",
+      "official_units": 0,
+      "missing_evidence": [
+        "Unshown Action markets remain unknown; current live Circa unavailable."
+      ],
+      "release_blockers": [
+        "Retailer acceptance of exact printed cell; no substitute lines."
+      ],
+      "best_number": "Browns +12.5",
+      "no_bet_cutoff": "Not established for official release while material pregame checks remain; exact printed selection only after regrade.",
+      "status": "WATCH - planned ticket leg, not an official release",
+      "factor_evidence": {
+        "matchup": "Two-score protection against a backup-QB divisional favorite. Strongest counter: Henry against depleted Cleveland defensive tackles is the clearest failure path. Cleveland gains only 4.7 yards/play, converts 30.65% of third downs and can give Baltimore short fields. Jackson being out does not mean the Ravens cannot win comfortably.",
+        "price": "Card+12.5 versus current+3; can lose by12. Henry/short-field blowout remains possible. Fixed card payout is assessed as a whole ticket, not as -110 for each leg.",
+        "personnel": "Official11:30: Judkins, Graham and Hall inactive; Schwesinger is not inactive. Backup rushing depth and interior run defense weaken the Browns cover case; Henry remains the main blowout risk. Sampson is absent from the official list despite an earlier secondary report; do not assume his workload from that report.",
+        "situation": "NWS kickoff-area forecast: 57F, south8mph, sunny. Weather supports neither an extreme adjustment nor a weather-only Under.",
+        "vsin": "Tuley CLE+5; Cohen protected CLE+10.5 parlay. Makinen BAL-4.5 was explicitly Jackson-dependent: now PASS, not live opposition. Partial credit only for the relevant direction/threshold; no source-count bonus.",
+        "docs": "Parlays Pundit CLE+4.5 supports direction. Toth BAL-4.5 assumed Jackson: stale personnel premise, not current confirmation. Agreement and opposition are reconciled; stale assumptions and other thresholds receive reduced weight.",
+        "market": "Prior reference5/movement2 retained. Splits2 now earned for directly readable same-market evidence in user recording. This measures evidence quality, not agreement with the crowd; alternate thresholds do not inherit the displayed percentages."
+      },
+      "failure_evidence": {
+        "Strongest loss path": "Henry against depleted Cleveland defensive tackles is the clearest failure path. Cleveland gains only 4.7 yards/play, converts 30.65% of third downs and can give Baltimore short fields. Jackson being out does not mean the Ravens cannot win comfortably.",
+        "Personnel resilience": "Official11:30: Judkins, Graham and Hall inactive; Schwesinger is not inactive. Backup rushing depth and interior run defense weaken the Browns cover case; Henry remains the main blowout risk. Sampson is absent from the official list despite an earlier secondary report; do not assume his workload from that report.",
+        "Script / variance": "Cashing condition: Browns +12.5. Turnovers and late scores can defeat even a protected side.",
+        "Price protection": "Card+12.5 versus current+3; can lose by12. Henry/short-field blowout remains possible.",
+        "Countercase resolution": "Tuley CLE+5; Cohen protected CLE+10.5 parlay. Makinen BAL-4.5 was explicitly Jackson-dependent: now PASS, not live opposition. Parlays Pundit CLE+4.5 supports direction. Toth BAL-4.5 assumed Jackson: stale personnel premise, not current confirmation."
+      },
+      "previous_score": 84,
+      "update_evidence": "Official11:30: Judkins, Graham and Hall inactive; Schwesinger is not inactive. Backup rushing depth and interior run defense weaken the Browns cover case; Henry remains the main blowout risk. Sampson is absent from the official list despite an earlier secondary report; do not assume his workload from that report."
+    },
+    {
+      "id": "B118",
+      "family": "B",
+      "number": 118,
+      "game": "CAR",
+      "pick": "Panthers +9.5",
+      "start": "2026-10-18T17:00Z",
+      "time_et": "1:00 PM",
+      "score": 87,
+      "grade": "A-",
+      "score_status": "REFRESHED - not a new full source scan",
+      "factors": {
+        "matchup": 29,
+        "price": 19,
+        "personnel": 12,
+        "situation": 8,
+        "vsin": 7,
+        "docs": 3,
+        "market": 9
+      },
+      "failure_dimensions": {
+        "Strongest loss path": 2,
+        "Personnel resilience": 1,
+        "Script / variance": 2,
+        "Price protection": 2,
+        "Countercase resolution": 1
+      },
+      "failure_score": 8,
+      "thesis": "Take the offensive/rest edge with room for an upset loss.",
+      "price_assessment": "Card+9.5 versus currentCAR-3. Winning as favorite is not required.",
+      "opinion_reconciliation": "",
+      "official_units": 0,
+      "missing_evidence": [
+        "Unshown Action markets remain unknown; current live Circa unavailable."
+      ],
+      "release_blockers": [
+        "Retailer acceptance of exact printed cell; no substitute lines."
+      ],
+      "best_number": "Panthers +9.5",
+      "no_bet_cutoff": "Not established for official release while material pregame checks remain; exact printed selection only after regrade.",
+      "status": "WATCH - planned ticket leg, not an official release",
+      "factor_evidence": {
+        "matchup": "Take the offensive/rest edge with room for an upset loss. Strongest counter: Philadelphia still has a credible defense, Smith returns, and McKee can distribute accurately. Carolina protection injuries could reduce its offensive advantage; a backup quarterback is not an automatic team fade.",
+        "price": "Card+9.5 versus currentCAR-3. Winning as favorite is not required. Fixed card payout is assessed as a whole ticket, not as -110 for each leg.",
+        "personnel": "Official11:30-11:33: McKee starts; Barkley out; Smith, Greenard and Kendall active. Carolina Freeling inactive; Moton returns, plus Wharton and Etienne. Protection is improved by Moton but Philadelphia is healthier at receiver/edge than a blanket injury fade implies.",
+        "situation": "NWS Philadelphia area at kickoff:55F, north5mph, sunny. No adverse-weather total deduction.",
+        "vsin": "Cohen CAR ML-115 supports direction; Tuley leaned Carolina but passed. Those are different conviction levels. Partial credit only for the relevant direction/threshold; no source-count bonus.",
+        "docs": "Bruhn PHI-1.5 and Toth PHI-1.5 predate the quarterback change; downgraded as stale. Block liked protected Carolina at a different teaser number. Agreement and opposition are reconciled; stale assumptions and other thresholds receive reduced weight.",
+        "market": "Prior reference5/movement2 retained. Splits2 now earned for directly readable same-market evidence in user recording. This measures evidence quality, not agreement with the crowd; alternate thresholds do not inherit the displayed percentages."
+      },
+      "failure_evidence": {
+        "Strongest loss path": "Philadelphia still has a credible defense, Smith returns, and McKee can distribute accurately. Carolina protection injuries could reduce its offensive advantage; a backup quarterback is not an automatic team fade.",
+        "Personnel resilience": "Official11:30-11:33: McKee starts; Barkley out; Smith, Greenard and Kendall active. Carolina Freeling inactive; Moton returns, plus Wharton and Etienne. Protection is improved by Moton but Philadelphia is healthier at receiver/edge than a blanket injury fade implies.",
+        "Script / variance": "Cashing condition: Panthers +9.5. Turnovers and late scores can defeat even a protected side.",
+        "Price protection": "Card+9.5 versus currentCAR-3. Winning as favorite is not required.",
+        "Countercase resolution": "Cohen CAR ML-115 supports direction; Tuley leaned Carolina but passed. Those are different conviction levels. Bruhn PHI-1.5 and Toth PHI-1.5 predate the quarterback change; downgraded as stale. Block liked protected Carolina at a different teaser number."
+      },
+      "previous_score": 85,
+      "update_evidence": "Official11:30-11:33: McKee starts; Barkley out; Smith, Greenard and Kendall active. Carolina Freeling inactive; Moton returns, plus Wharton and Etienne. Protection is improved by Moton but Philadelphia is healthier at receiver/edge than a blanket injury fade implies."
+    },
+    {
+      "id": "B122",
+      "family": "B",
+      "number": 122,
+      "game": "ATL",
+      "pick": "Falcons +11.5",
+      "start": "2026-10-18T17:00Z",
+      "time_et": "1:00 PM",
+      "score": 85,
+      "grade": "B+",
+      "score_status": "REFRESHED - not a new full source scan",
+      "factors": {
+        "matchup": 28,
+        "price": 19,
+        "personnel": 11,
+        "situation": 8,
+        "vsin": 6,
+        "docs": 4,
+        "market": 9
+      },
+      "failure_dimensions": {
+        "Strongest loss path": 1,
+        "Personnel resilience": 1,
+        "Script / variance": 2,
+        "Price protection": 2,
+        "Countercase resolution": 1
+      },
+      "failure_score": 7,
+      "thesis": "Penix-led scoring paths plus double-digit protection in a close market.",
+      "price_assessment": "Card+11.5 versus current+1.5. A hamstring-driven Chicago rebound still matters.",
+      "opinion_reconciliation": "",
+      "official_units": 0,
+      "missing_evidence": [
+        "Unshown Action markets remain unknown; current live Circa unavailable."
+      ],
+      "release_blockers": [
+        "Retailer acceptance of exact printed cell; no substitute lines."
+      ],
+      "best_number": "Falcons +11.5",
+      "no_bet_cutoff": "Not established for official release while material pregame checks remain; exact printed selection only after regrade.",
+      "status": "WATCH - planned ticket leg, not an official release",
+      "factor_evidence": {
+        "matchup": "Penix-led scoring paths plus double-digit protection in a close market. Strongest counter: Williams can restore the offense suppressed by backup starts, and Atlanta's thin secondary is a real problem. Both teams run frequently; long drives and field goals can still frustrate the Over.",
+        "price": "Card+11.5 versus current+1.5. A hamstring-driven Chicago rebound still matters. Fixed card payout is assessed as a whole ticket, not as -110 for each leg.",
+        "personnel": "Official Falcons11:31 confirms both Penix and Caleb Williams in lineup; ZaDar ius Smith cleared, C.J.Henderson inactive with Terrell on IR. Both quarterbacks returning supports the protected Over; Atlanta coverage remains the strongest opposing case to its side.",
+        "situation": "Mercedes-Benz venue; roof setting not verified. Do not apply Atlanta outdoor wind to an assumed indoor field.",
+        "vsin": "Cohen ATL ML+140 and Youmans ATL+1.5 support the dog; Tuley passes. Partial credit only for the relevant direction/threshold; no source-count bonus.",
+        "docs": "Toth ATL+3 supports direction at a better threshold; Schonwald CHI-3 is genuine opposition. Card+2.5 loses the field-goal push. Agreement and opposition are reconciled; stale assumptions and other thresholds receive reduced weight.",
+        "market": "Prior reference5/movement2 retained. Splits2 now earned for directly readable same-market evidence in user recording. This measures evidence quality, not agreement with the crowd; alternate thresholds do not inherit the displayed percentages."
+      },
+      "failure_evidence": {
+        "Strongest loss path": "Williams can restore the offense suppressed by backup starts, and Atlanta's thin secondary is a real problem. Both teams run frequently; long drives and field goals can still frustrate the Over.",
+        "Personnel resilience": "Official Falcons11:31 confirms both Penix and Caleb Williams in lineup; ZaDar ius Smith cleared, C.J.Henderson inactive with Terrell on IR. Both quarterbacks returning supports the protected Over; Atlanta coverage remains the strongest opposing case to its side.",
+        "Script / variance": "Cashing condition: Falcons +11.5. Turnovers and late scores can defeat even a protected side.",
+        "Price protection": "Card+11.5 versus current+1.5. A hamstring-driven Chicago rebound still matters.",
+        "Countercase resolution": "Cohen ATL ML+140 and Youmans ATL+1.5 support the dog; Tuley passes. Toth ATL+3 supports direction at a better threshold; Schonwald CHI-3 is genuine opposition. Card+2.5 loses the field-goal push."
+      },
+      "previous_score": 83,
+      "update_evidence": "Official Falcons11:31 confirms both Penix and Caleb Williams in lineup; ZaDar ius Smith cleared, C.J.Henderson inactive with Terrell on IR. Both quarterbacks returning supports the protected Over; Atlanta coverage remains the strongest opposing case to its side."
+    },
+    {
+      "id": "B126",
+      "family": "B",
+      "number": 126,
+      "game": "NYG",
+      "pick": "Giants +9.5",
+      "start": "2026-10-18T17:00Z",
+      "time_et": "1:00 PM",
+      "score": 79,
+      "grade": "B",
+      "score_status": "REFRESHED - not a new full source scan",
+      "factors": {
+        "matchup": 25,
+        "price": 18,
+        "personnel": 10,
+        "situation": 7,
+        "vsin": 4,
+        "docs": 6,
+        "market": 9
+      },
+      "failure_dimensions": {
+        "Strongest loss path": 1,
+        "Personnel resilience": 1,
+        "Script / variance": 1,
+        "Price protection": 2,
+        "Countercase resolution": 1
+      },
+      "failure_score": 6,
+      "thesis": "Protection rather than a confident outright call amid conflicting Saints/Giants evidence.",
+      "price_assessment": "Card+9.5 versus current+1.5. Winston turnovers remain the losing tail.",
+      "opinion_reconciliation": "",
+      "official_units": 0,
+      "missing_evidence": [
+        "Unshown Action markets remain unknown; current live Circa unavailable."
+      ],
+      "release_blockers": [
+        "Retailer acceptance of exact printed cell; no substitute lines.",
+        "Giants final inactive list not independently retrieved."
+      ],
+      "best_number": "Giants +9.5",
+      "no_bet_cutoff": "Not established for official release while material pregame checks remain; exact printed selection only after regrade.",
+      "status": "WATCH - planned ticket leg, not an official release",
+      "factor_evidence": {
+        "matchup": "Protection rather than a confident outright call amid conflicting Saints/Giants evidence. Strongest counter: The Giants' recent record contains late escapes; Saints zone coverage can bait Winston into interceptions. Shough's non-throwing hand and Olave illness can lower total scoring. This is the least robust early side/Over pairing.",
+        "price": "Card+9.5 versus current+1.5. Winston turnovers remain the losing tail. Fixed card payout is assessed as a whole ticket, not as -110 for each leg.",
+        "personnel": "Official Saints10:34CT/11:34ET: Shough, Olave and Kamara not inactive; Elliss, Shepherd and Ridgeway inactive. Active does not establish full workload or healed non-throwing hand. Giants final list not independently retrieved.",
+        "situation": "NWS East Rutherford area:55F, north6mph, sunny. No weather excuse to ignore quarterback/receiver uncertainty.",
+        "vsin": "Makinen NO-1.5 and Reynolds NO PK oppose the base Giants side. Tuley passes. Cohen Winston TD prop is not Giants ATS agreement. Partial credit only for the relevant direction/threshold; no source-count bonus.",
+        "docs": "Toth NYG+1.5 and Block protected NYG support protection; Sink NO+1 opposes at the base spread. Keep the disagreement explicit. Agreement and opposition are reconciled; stale assumptions and other thresholds receive reduced weight.",
+        "market": "Prior reference5/movement2 retained. Splits2 now earned for directly readable same-market evidence in user recording. This measures evidence quality, not agreement with the crowd; alternate thresholds do not inherit the displayed percentages."
+      },
+      "failure_evidence": {
+        "Strongest loss path": "The Giants' recent record contains late escapes; Saints zone coverage can bait Winston into interceptions. Shough's non-throwing hand and Olave illness can lower total scoring. This is the least robust early side/Over pairing.",
+        "Personnel resilience": "Official Saints10:34CT/11:34ET: Shough, Olave and Kamara not inactive; Elliss, Shepherd and Ridgeway inactive. Active does not establish full workload or healed non-throwing hand. Giants final list not independently retrieved.",
+        "Script / variance": "Cashing condition: Giants +9.5. Turnovers and late scores can defeat even a protected side.",
+        "Price protection": "Card+9.5 versus current+1.5. Winston turnovers remain the losing tail.",
+        "Countercase resolution": "Makinen NO-1.5 and Reynolds NO PK oppose the base Giants side. Tuley passes. Cohen Winston TD prop is not Giants ATS agreement. Toth NYG+1.5 and Block protected NYG support protection; Sink NO+1 opposes at the base spread. Keep the disagreement explicit."
+      },
+      "previous_score": 77,
+      "update_evidence": "Official Saints10:34CT/11:34ET: Shough, Olave and Kamara not inactive; Elliss, Shepherd and Ridgeway inactive. Active does not establish full workload or healed non-throwing hand. Giants final list not independently retrieved."
+    },
+    {
+      "id": "B130",
+      "family": "B",
+      "number": 130,
+      "game": "NYJ",
+      "pick": "Jets +15.5",
+      "start": "2026-10-18T17:00Z",
+      "time_et": "1:00 PM",
+      "score": 84,
+      "grade": "B+",
+      "score_status": "REFRESHED - not a new full source scan",
+      "factors": {
+        "matchup": 27,
+        "price": 19,
+        "personnel": 10,
+        "situation": 7,
+        "vsin": 6,
+        "docs": 6,
+        "market": 9
+      },
+      "failure_dimensions": {
+        "Strongest loss path": 1,
+        "Personnel resilience": 1,
+        "Script / variance": 2,
+        "Price protection": 2,
+        "Countercase resolution": 1
+      },
+      "failure_score": 7,
+      "thesis": "Good defensive resistance with room to lose by two touchdowns.",
+      "price_assessment": "Card+15.5 versus current+7.5; Brown/Campbell/Henderson improvements are included as counters.",
+      "opinion_reconciliation": "",
+      "official_units": 0,
+      "missing_evidence": [
+        "Unshown Action markets remain unknown; current live Circa unavailable."
+      ],
+      "release_blockers": [
+        "Retailer acceptance of exact printed cell; no substitute lines."
+      ],
+      "best_number": "Jets +15.5",
+      "no_bet_cutoff": "Not established for official release while material pregame checks remain; exact printed selection only after regrade.",
+      "status": "WATCH - planned ticket leg, not an official release",
+      "factor_evidence": {
+        "matchup": "Good defensive resistance with room to lose by two touchdowns. Strongest counter: Maye can beat this cushion with explosives and short fields. Brown's activation is fresh evidence against older Patriots injury fades; Gonzalez returning also makes Wilson's task harder.",
+        "price": "Card+15.5 versus current+7.5; Brown/Campbell/Henderson improvements are included as counters. Fixed card payout is assessed as a whole ticket, not as -110 for each leg.",
+        "personnel": "Official11:30-11:32: NE Brown, Campbell, Henderson and Gonzalez active; Brown snap ramp unknown. NYJ Hall/Mitchell/Parham out; Cooper returns. Better NE protection and coverage weaken the Jets base spread; protected cushion still matters.",
+        "situation": "NWS Foxborough area:52F, north3mph, sunny. Under50.5 depends on defense/pace, not wind.",
+        "vsin": "Tuley NYJ+7; Reynolds NYJ+7.5-115, but his injury rationale is partly stale. Cohen Patriots ML can coexist with a Jets spread cover. Partial credit only for the relevant direction/threshold; no source-count bonus.",
+        "docs": "Toth NYJ+7.5 versus Schonwald NE-7.5. Block's NE-1.5 is a different teaser threshold. Mixed support receives partial credit. Agreement and opposition are reconciled; stale assumptions and other thresholds receive reduced weight.",
+        "market": "Prior reference5/movement2 retained. Splits2 now earned for directly readable same-market evidence in user recording. This measures evidence quality, not agreement with the crowd; alternate thresholds do not inherit the displayed percentages."
+      },
+      "failure_evidence": {
+        "Strongest loss path": "Maye can beat this cushion with explosives and short fields. Brown's activation is fresh evidence against older Patriots injury fades; Gonzalez returning also makes Wilson's task harder.",
+        "Personnel resilience": "Official11:30-11:32: NE Brown, Campbell, Henderson and Gonzalez active; Brown snap ramp unknown. NYJ Hall/Mitchell/Parham out; Cooper returns. Better NE protection and coverage weaken the Jets base spread; protected cushion still matters.",
+        "Script / variance": "Cashing condition: Jets +15.5. Turnovers and late scores can defeat even a protected side.",
+        "Price protection": "Card+15.5 versus current+7.5; Brown/Campbell/Henderson improvements are included as counters.",
+        "Countercase resolution": "Tuley NYJ+7; Reynolds NYJ+7.5-115, but his injury rationale is partly stale. Cohen Patriots ML can coexist with a Jets spread cover. Toth NYJ+7.5 versus Schonwald NE-7.5. Block's NE-1.5 is a different teaser threshold. Mixed support receives partial credit."
+      },
+      "previous_score": 84,
+      "update_evidence": "Official11:30-11:32: NE Brown, Campbell, Henderson and Gonzalez active; Brown snap ramp unknown. NYJ Hall/Mitchell/Parham out; Cooper returns. Better NE protection and coverage weaken the Jets base spread; protected cushion still matters."
+    },
+    {
+      "id": "B134",
+      "family": "B",
+      "number": 134,
+      "game": "TB",
+      "pick": "Buccaneers +10.5",
+      "start": "2026-10-18T17:00Z",
+      "time_et": "1:00 PM",
+      "score": 85,
+      "grade": "B+",
+      "score_status": "REFRESHED - not a new full source scan",
+      "factors": {
+        "matchup": 28,
+        "price": 19,
+        "personnel": 11,
+        "situation": 8,
+        "vsin": 6,
+        "docs": 4,
+        "market": 9
+      },
+      "failure_dimensions": {
+        "Strongest loss path": 1,
+        "Personnel resilience": 1,
+        "Script / variance": 2,
+        "Price protection": 2,
+        "Countercase resolution": 1
+      },
+      "failure_score": 7,
+      "thesis": "Run resistance and extra rest with protection over both7 and10.",
+      "price_assessment": "Card+10.5 versus current+2.5; better protection than the standard+6.5.",
+      "opinion_reconciliation": "",
+      "official_units": 0,
+      "missing_evidence": [
+        "Unshown Action markets remain unknown; current live Circa unavailable."
+      ],
+      "release_blockers": [
+        "Retailer acceptance of exact printed cell; no substitute lines."
+      ],
+      "best_number": "Buccaneers +10.5",
+      "no_bet_cutoff": "Not established for official release while material pregame checks remain; exact printed selection only after regrade.",
+      "status": "WATCH - planned ticket leg, not an official release",
+      "factor_evidence": {
+        "matchup": "Run resistance and extra rest with protection over both7 and10. Strongest counter: Daniels has a small sample and can create short fields for either team. Warren/Irving can generate explosive scores; Winfield's absence weakens the secondary. This is not a claim that every injury favors the Under.",
+        "price": "Card+10.5 versus current+2.5; better protection than the standard+6.5. Fixed card payout is assessed as a whole ticket, not as -110 for each leg.",
+        "personnel": "Official11:30-11:31: Mayfield, Winfield, Morrison and Tucker inactive; Trotter/Dennis active. Pittsburgh Dowdle active, Metcalf/Freiermuth/Ramsey not inactive. Wilson/Pittman on IR. Warren still matters but do not assume exclusive work after Dowdle return.",
+        "situation": "NWS Tampa area:77F, northeast15mph, sunny. Wind adds modest passing/kicking risk, not a guaranteed low total.",
+        "vsin": "Makinen TB+2.5; Tuley and Reynolds like TB+8.5 teasers. The printed standard teaser+6.5 does not cross7; it is weaker protection. Partial credit only for the relevant direction/threshold; no source-count bonus.",
+        "docs": "Toth TB+2.5 but his53-point forecast is an Under counter. Block was cautious about TB even at+8.5; do not label unanimous. Agreement and opposition are reconciled; stale assumptions and other thresholds receive reduced weight.",
+        "market": "Prior reference5/movement2 retained. Splits2 now earned for directly readable same-market evidence in user recording. This measures evidence quality, not agreement with the crowd; alternate thresholds do not inherit the displayed percentages."
+      },
+      "failure_evidence": {
+        "Strongest loss path": "Daniels has a small sample and can create short fields for either team. Warren/Irving can generate explosive scores; Winfield's absence weakens the secondary. This is not a claim that every injury favors the Under.",
+        "Personnel resilience": "Official11:30-11:31: Mayfield, Winfield, Morrison and Tucker inactive; Trotter/Dennis active. Pittsburgh Dowdle active, Metcalf/Freiermuth/Ramsey not inactive. Wilson/Pittman on IR. Warren still matters but do not assume exclusive work after Dowdle return.",
+        "Script / variance": "Cashing condition: Buccaneers +10.5. Turnovers and late scores can defeat even a protected side.",
+        "Price protection": "Card+10.5 versus current+2.5; better protection than the standard+6.5.",
+        "Countercase resolution": "Makinen TB+2.5; Tuley and Reynolds like TB+8.5 teasers. The printed standard teaser+6.5 does not cross7; it is weaker protection. Toth TB+2.5 but his53-point forecast is an Under counter. Block was cautious about TB even at+8.5; do not label unanimous."
+      },
+      "previous_score": 83,
+      "update_evidence": "Official11:30-11:31: Mayfield, Winfield, Morrison and Tucker inactive; Trotter/Dennis active. Pittsburgh Dowdle active, Metcalf/Freiermuth/Ramsey not inactive. Wilson/Pittman on IR. Warren still matters but do not assume exclusive work after Dowdle return."
+    },
+    {
+      "id": "B137",
+      "family": "B",
+      "number": 137,
+      "game": "IND",
+      "pick": "Colts +1.5",
+      "start": "2026-10-18T17:00Z",
+      "time_et": "1:00 PM",
+      "score": 82,
+      "grade": "B+",
+      "score_status": "REFRESHED - not a new full source scan",
+      "factors": {
+        "matchup": 28,
+        "price": 19,
+        "personnel": 11,
+        "situation": 6,
+        "vsin": 3,
+        "docs": 6,
+        "market": 9
+      },
+      "failure_dimensions": {
+        "Strongest loss path": 1,
+        "Personnel resilience": 1,
+        "Script / variance": 1,
+        "Price protection": 2,
+        "Countercase resolution": 1
+      },
+      "failure_score": 6,
+      "thesis": "Require competitiveness rather than a touchdown cover against a weak offense.",
+      "price_assessment": "Card+1.5 versus currentIND-6.5; a one-point Colts loss can still cash.",
+      "opinion_reconciliation": "Tuley TEN+7 can coexist with this leg. A large IND cover is not assumed.",
+      "official_units": 0,
+      "missing_evidence": [
+        "Unshown Action markets remain unknown; current live Circa unavailable."
+      ],
+      "release_blockers": [
+        "Retailer acceptance of exact printed cell; no substitute lines."
+      ],
+      "best_number": "Colts +1.5",
+      "no_bet_cutoff": "Not established for official release while material pregame checks remain; exact printed selection only after regrade.",
+      "status": "EXCLUDED by user crowd-avoidance rule",
+      "factor_evidence": {
+        "matchup": "Require competitiveness rather than a touchdown cover against a weak offense. Strongest counter: Indianapolis permits6.2 yards/play and can allow Ward a passing rebound. Warren's late groin issue and London return travel add uncertainty. A low season scoring average alone is not an Under bet.",
+        "price": "Card+1.5 versus currentIND-6.5; a one-point Colts loss can still cash. Fixed card payout is assessed as a whole ticket, not as -110 for each leg.",
+        "personnel": "Official11:32: Tyler Warren inactive; Jones/Downs/Taylor not inactive. Tennessee Spears not inactive; Singleton, Alontae Taylor and Kevin Winston inactive. Warren loss matters to middle-field/red-zone usage; Titans secondary absences oppose a blind Tennessee upgrade.",
+        "situation": "Lucas Oil retractable roof: setting UNKNOWN. Do not turn outside temperature into an indoor-weather advantage.",
+        "vsin": "Tuley TEN+7 versus Reynolds Over44.5. Youmans used IND in Survivor, which is win support rather than an ATS endorsement. Partial credit only for the relevant direction/threshold; no source-count bonus.",
+        "docs": "Toth IND-6.5 versus Bruhn TEN+8. Both fit an IND win by1-6. No exact Doc's Under51.5 selection was read. Agreement and opposition are reconciled; stale assumptions and other thresholds receive reduced weight.",
+        "market": "Prior reference5/movement2 retained. Splits2 now earned for directly readable same-market evidence in user recording. This measures evidence quality, not agreement with the crowd; alternate thresholds do not inherit the displayed percentages."
+      },
+      "failure_evidence": {
+        "Strongest loss path": "Indianapolis permits6.2 yards/play and can allow Ward a passing rebound. Warren's late groin issue and London return travel add uncertainty. A low season scoring average alone is not an Under bet.",
+        "Personnel resilience": "Official11:32: Tyler Warren inactive; Jones/Downs/Taylor not inactive. Tennessee Spears not inactive; Singleton, Alontae Taylor and Kevin Winston inactive. Warren loss matters to middle-field/red-zone usage; Titans secondary absences oppose a blind Tennessee upgrade.",
+        "Script / variance": "Cashing condition: Colts +1.5. Turnovers and late scores can defeat even a protected side.",
+        "Price protection": "Card+1.5 versus currentIND-6.5; a one-point Colts loss can still cash.",
+        "Countercase resolution": "Tuley TEN+7 can coexist with this leg. A large IND cover is not assumed."
+      },
+      "previous_score": 80,
+      "update_evidence": "Official11:32: Tyler Warren inactive; Jones/Downs/Taylor not inactive. Tennessee Spears not inactive; Singleton, Alontae Taylor and Kevin Winston inactive. Warren loss matters to middle-field/red-zone usage; Titans secondary absences oppose a blind Tennessee upgrade."
+    },
+    {
+      "id": "B141",
+      "family": "B",
+      "number": 141,
+      "game": "LAR",
+      "pick": "Rams -4.5",
+      "start": "2026-10-18T20:05Z",
+      "time_et": "4:05 PM",
+      "score": 79,
+      "grade": "B",
+      "score_status": "REFRESHED - not a new full source scan",
+      "factors": {
+        "matchup": 29,
+        "price": 19,
+        "personnel": 12,
+        "situation": 7,
+        "vsin": 0,
+        "docs": 5,
+        "market": 7
+      },
+      "failure_dimensions": {
+        "Strongest loss path": 1,
+        "Personnel resilience": 1,
+        "Script / variance": 2,
+        "Price protection": 2,
+        "Countercase resolution": 1
+      },
+      "failure_score": 7,
+      "thesis": "Efficiency and pass-protection mismatch support a more modest Rams winning margin.",
+      "price_assessment": "Card-4.5 versus current-12.5. Must win by5; special teams and late Arizona scoring are live risks.",
+      "opinion_reconciliation": "",
+      "official_units": 0,
+      "missing_evidence": [
+        "Unshown Action markets remain unknown; current live Circa unavailable."
+      ],
+      "release_blockers": [
+        "Retailer acceptance of exact printed cell; no substitute lines.",
+        "Late/evening final availability remains outstanding."
+      ],
+      "best_number": "Rams -4.5",
+      "no_bet_cutoff": "Not established for official release while material pregame checks remain; exact printed selection only after regrade.",
+      "status": "WATCH - planned ticket leg, not an official release",
+      "factor_evidence": {
+        "matchup": "Efficiency and pass-protection mismatch support a more modest Rams winning margin. Strongest counter: LA's poor field-goal conversion and short rest after overtime can leave a backdoor. Arizona has been more competitive in some divisional games than its record suggests.",
+        "price": "Card-4.5 versus current-12.5. Must win by5; special teams and late Arizona scoring are live risks. Fixed card payout is assessed as a whole ticket, not as -110 for each leg.",
+        "personnel": "Stafford/Brissett are the quarterback plans. Arizona RB Jeremiyah Love is expected out, with Allgeier succeeding him; this is the Love referenced on the old sheet, not Green Bay's Jordan. Rams target roles and Arizona protection losses are material. Outstanding: Verify Stafford/Puka availability, Rams line and Arizona secondary at late inactives. Love replacement plan is not a reason to invent an Allgeier prop.",
+        "situation": "SoFi sheltered field; do not apply Los Angeles outdoor wind to this handicap. Second home game helps; Monday OT remains a rest counter.",
+        "vsin": "Tuley ARI+12.5 is the base-spread counter. No verified named Rams-4.5 wager;0 VSiN confirmation points. No exact relevant total selection verified;0 points.",
+        "docs": "Sink LAR-13.5 supports direction; Toth ARI+12.5 opposes the large spread. A Rams win by5-12 can satisfy both analytical views. Agreement and opposition are reconciled; stale assumptions and other thresholds receive reduced weight.",
+        "market": "Reference5 + movement2 + splits0 =7. Identified Circa contest reference and ESPN/DraftKings open/current fields; movement timing is incomplete. No sharp-money inference."
+      },
+      "failure_evidence": {
+        "Strongest loss path": "LA's poor field-goal conversion and short rest after overtime can leave a backdoor. Arizona has been more competitive in some divisional games than its record suggests.",
+        "Personnel resilience": "Late/evening final inactives not yet due; retain prior assessed scenario.",
+        "Script / variance": "Cashing condition: Rams -4.5. Turnovers and late scores can defeat even a protected side.",
+        "Price protection": "Card-4.5 versus current-12.5. Must win by5; special teams and late Arizona scoring are live risks.",
+        "Countercase resolution": "Tuley ARI+12.5 is the base-spread counter. No verified named Rams-4.5 wager;0 VSiN confirmation points. Sink LAR-13.5 supports direction; Toth ARI+12.5 opposes the large spread. A Rams win by5-12 can satisfy both analytical views."
+      },
+      "previous_score": 79,
+      "update_evidence": "Late/evening final inactives not yet due; retain prior assessed scenario."
+    },
+    {
+      "id": "B150",
+      "family": "B",
+      "number": 150,
+      "game": "LAC",
+      "pick": "Chargers +16.5",
+      "start": "2026-10-18T20:25Z",
+      "time_et": "4:25 PM",
+      "score": 84,
+      "grade": "B+",
+      "score_status": "REFRESHED - not a new full source scan",
+      "factors": {
+        "matchup": 27,
+        "price": 19,
+        "personnel": 10,
+        "situation": 6,
+        "vsin": 7,
+        "docs": 6,
+        "market": 9
+      },
+      "failure_dimensions": {
+        "Strongest loss path": 1,
+        "Personnel resilience": 1,
+        "Script / variance": 2,
+        "Price protection": 2,
+        "Countercase resolution": 1
+      },
+      "failure_score": 7,
+      "thesis": "Protect the winless division dog rather than claim restored offensive quality.",
+      "price_assessment": "Card+16.5 versus current+7.5; a two-touchdown loss still wins the leg.",
+      "opinion_reconciliation": "",
+      "official_units": 0,
+      "missing_evidence": [
+        "Unshown Action markets remain unknown; current live Circa unavailable."
+      ],
+      "release_blockers": [
+        "Retailer acceptance of exact printed cell; no substitute lines.",
+        "Late/evening final availability remains outstanding."
+      ],
+      "best_number": "Chargers +16.5",
+      "no_bet_cutoff": "Not established for official release while material pregame checks remain; exact printed selection only after regrade.",
+      "status": "WATCH - planned ticket leg, not an official release",
+      "factor_evidence": {
+        "matchup": "Protect the winless division dog rather than claim restored offensive quality. Strongest counter: Herbert turnovers and severe line depletion can create a runaway against a rested Chiefs side. A defensive score can hurt the side and Under together. Returning Chargers receivers help, but do not restore the line.",
+        "price": "Card+16.5 versus current+7.5; a two-touchdown loss still wins the leg. Fixed card payout is assessed as a whole ticket, not as -110 for each leg.",
+        "personnel": "Rice/Simmons and Alt/James are out in current reports; other LAC line losses remain relevant. Herbert/Mahomes start. Hampton's three-man committee is not an every-down workload. Outstanding: Confirm McConkey/Johnston/Harris roles and any new line absences at late inactives. Herbert turnover risk remains even if all receivers play.",
+        "situation": "NWS Arrowhead area near kickoff:67F, south12mph, sunny. Modest passing/kicking sensitivity; Chiefs off bye is a side counter.",
+        "vsin": "Tuley/Reynolds LAC+8; Youmans LAC+7.5. Same direction at different numbers; stronger protection has a lower fixed-card return. Partial credit only for the relevant direction/threshold; no source-count bonus.",
+        "docs": "Bruhn LAC+8.5 and Toth LAC+8.5 support direction. No exact Under49.5 Doc's wager was read. Agreement and opposition are reconciled; stale assumptions and other thresholds receive reduced weight.",
+        "market": "Prior reference5/movement2 retained. Splits2 now earned for directly readable same-market evidence in user recording. This measures evidence quality, not agreement with the crowd; alternate thresholds do not inherit the displayed percentages."
+      },
+      "failure_evidence": {
+        "Strongest loss path": "Herbert turnovers and severe line depletion can create a runaway against a rested Chiefs side. A defensive score can hurt the side and Under together. Returning Chargers receivers help, but do not restore the line.",
+        "Personnel resilience": "Late/evening final inactives not yet due; retain prior assessed scenario.",
+        "Script / variance": "Cashing condition: Chargers +16.5. Turnovers and late scores can defeat even a protected side.",
+        "Price protection": "Card+16.5 versus current+7.5; a two-touchdown loss still wins the leg.",
+        "Countercase resolution": "Tuley/Reynolds LAC+8; Youmans LAC+7.5. Same direction at different numbers; stronger protection has a lower fixed-card return. Bruhn LAC+8.5 and Toth LAC+8.5 support direction. No exact Under49.5 Doc's wager was read."
+      },
+      "previous_score": 82,
+      "update_evidence": "Late/evening final inactives not yet due; retain prior assessed scenario."
+    },
+    {
+      "id": "B146",
+      "family": "B",
+      "number": 146,
+      "game": "LV",
+      "pick": "Raiders +12.5",
+      "start": "2026-10-18T20:25Z",
+      "time_et": "4:25 PM",
+      "score": 85,
+      "grade": "B+",
+      "score_status": "REFRESHED - not a new full source scan",
+      "factors": {
+        "matchup": 28,
+        "price": 19,
+        "personnel": 11,
+        "situation": 8,
+        "vsin": 7,
+        "docs": 5,
+        "market": 7
+      },
+      "failure_dimensions": {
+        "Strongest loss path": 1,
+        "Personnel resilience": 1,
+        "Script / variance": 2,
+        "Price protection": 2,
+        "Countercase resolution": 1
+      },
+      "failure_score": 7,
+      "thesis": "Home response against tired Buffalo defense with meaningful margin protection.",
+      "price_assessment": "Card+12.5 versus current+5.5. Buffalo offensive avalanche is still the tail risk.",
+      "opinion_reconciliation": "",
+      "official_units": 0,
+      "missing_evidence": [
+        "Unshown Action markets remain unknown; current live Circa unavailable."
+      ],
+      "release_blockers": [
+        "Retailer acceptance of exact printed cell; no substitute lines.",
+        "Late/evening final availability remains outstanding."
+      ],
+      "best_number": "Raiders +12.5",
+      "no_bet_cutoff": "Not established for official release while material pregame checks remain; exact printed selection only after regrade.",
+      "status": "WATCH - planned ticket leg, not an official release",
+      "factor_evidence": {
+        "matchup": "Home response against tired Buffalo defense with meaningful margin protection. Strongest counter: Allen/Cook can build a large lead if the Raiders line fails. Jeanty's poor rushing efficiency and possible in-game QB change add variance. An Over can fail if Buffalo controls possession while Las Vegas stalls.",
+        "price": "Card+12.5 versus current+5.5. Buffalo offensive avalanche is still the tail risk. Fixed card payout is assessed as a whole ticket, not as -110 for each leg.",
+        "personnel": "Cousins remains the working starter; a future Mendoza switch is a scenario, not a confirmed start. Bowers is the passing focal point. Cook85% opportunity and goal-line work matter; Moore's limited routes are not assumed fully restored. Outstanding: Confirm Raiders starter and Bowers/Jeanty workload; Buffalo receiver/line availability at late inactives. Do not release on a guessed Mendoza assumption.",
+        "situation": "Allegiant indoor venue. No weather points are awarded for an outdoor Las Vegas forecast; short rest/travel is the relevant issue.",
+        "vsin": "Youmans/Reynolds LV+4.5 versus Makinen BUF-5.5; Tuley passes. This is real disagreement. Protected LV is the Micks resolution. Partial credit only for the relevant direction/threshold; no source-count bonus.",
+        "docs": "Schonwald LV+4.5 versus Toth BUF-5.5. Directional support is strongest for protected LV; no named Doc's Over46.5 read. Agreement and opposition are reconciled; stale assumptions and other thresholds receive reduced weight.",
+        "market": "Reference5 + movement2 + splits0 =7. Identified Circa contest reference and ESPN/DraftKings open/current fields; movement timing is incomplete. No sharp-money inference."
+      },
+      "failure_evidence": {
+        "Strongest loss path": "Allen/Cook can build a large lead if the Raiders line fails. Jeanty's poor rushing efficiency and possible in-game QB change add variance. An Over can fail if Buffalo controls possession while Las Vegas stalls.",
+        "Personnel resilience": "Late/evening final inactives not yet due; retain prior assessed scenario.",
+        "Script / variance": "Cashing condition: Raiders +12.5. Turnovers and late scores can defeat even a protected side.",
+        "Price protection": "Card+12.5 versus current+5.5. Buffalo offensive avalanche is still the tail risk.",
+        "Countercase resolution": "Youmans/Reynolds LV+4.5 versus Makinen BUF-5.5; Tuley passes. This is real disagreement. Protected LV is the Micks resolution. Schonwald LV+4.5 versus Toth BUF-5.5. Directional support is strongest for protected LV; no named Doc's Over46.5 read."
+      },
+      "previous_score": 85,
+      "update_evidence": "Late/evening final inactives not yet due; retain prior assessed scenario."
+    },
+    {
+      "id": "B153",
+      "family": "B",
+      "number": 153,
+      "game": "GB",
+      "pick": "Packers +6.5",
+      "start": "2026-10-19T00:20Z",
+      "time_et": "8:20 PM",
+      "score": 86,
+      "grade": "A-",
+      "score_status": "REFRESHED - not a new full source scan",
+      "factors": {
+        "matchup": 28,
+        "price": 19,
+        "personnel": 11,
+        "situation": 7,
+        "vsin": 7,
+        "docs": 5,
+        "market": 9
+      },
+      "failure_dimensions": {
+        "Strongest loss path": 1,
+        "Personnel resilience": 1,
+        "Script / variance": 2,
+        "Price protection": 2,
+        "Countercase resolution": 1
+      },
+      "failure_score": 7,
+      "thesis": "Home passing matchup with room for a close Dallas win.",
+      "price_assessment": "Card+6.5 versus currentGB-1.5; crossing through0 is not the standard Wong teaser template.",
+      "opinion_reconciliation": "",
+      "official_units": 0,
+      "missing_evidence": [
+        "Unshown Action markets remain unknown; current live Circa unavailable."
+      ],
+      "release_blockers": [
+        "Retailer acceptance of exact printed cell; no substitute lines.",
+        "Late/evening final availability remains outstanding."
+      ],
+      "best_number": "Packers +6.5",
+      "no_bet_cutoff": "Not established for official release while material pregame checks remain; exact printed selection only after regrade.",
+      "status": "WATCH - planned ticket leg, not an official release",
+      "factor_evidence": {
+        "matchup": "Home passing matchup with room for a close Dallas win. Strongest counter: Prescott/Lamb and a concentrated Javonte role can attack Green Bay front-seven losses. Green Bay's own protection injuries and evening wind can slow a game widely expected to score.",
+        "price": "Card+6.5 versus currentGB-1.5; crossing through0 is not the standard Wong teaser template. Fixed card payout is assessed as a whole ticket, not as -110 for each leg.",
+        "personnel": "Love/Prescott are the QB plans. Javonte77% snaps/rush share and all goal-line carries in the reported window identify a material Dallas role. Lloyd expanded opportunity replaces a stale full-Jacobs assumption. Outstanding: Evening inactives and Lamb/OL usage not yet final; inspect again before buying an all-day ticket dependent on them.",
+        "situation": "NWS Lambeau area near kickoff:57F, south-southwest12mph, clear. Do not call this a cold-weather Under or guarantee a shootout.",
+        "vsin": "Makinen GB-1.5; Youmans Over53; Tuley passes. They support different markets and are not interchangeable. Partial credit only for the relevant direction/threshold; no source-count bonus.",
+        "docs": "Cobbett GB-1.5/Over52.5 versus Sink/Toth DAL+1.5. The big teaser protects a close home loss; it does not erase Dallas upside. Agreement and opposition are reconciled; stale assumptions and other thresholds receive reduced weight.",
+        "market": "Prior reference5/movement2 retained. Splits2 now earned for directly readable same-market evidence in user recording. This measures evidence quality, not agreement with the crowd; alternate thresholds do not inherit the displayed percentages."
+      },
+      "failure_evidence": {
+        "Strongest loss path": "Prescott/Lamb and a concentrated Javonte role can attack Green Bay front-seven losses. Green Bay's own protection injuries and evening wind can slow a game widely expected to score.",
+        "Personnel resilience": "Late/evening final inactives not yet due; retain prior assessed scenario.",
+        "Script / variance": "Cashing condition: Packers +6.5. Turnovers and late scores can defeat even a protected side.",
+        "Price protection": "Card+6.5 versus currentGB-1.5; crossing through0 is not the standard Wong teaser template.",
+        "Countercase resolution": "Makinen GB-1.5; Youmans Over53; Tuley passes. They support different markets and are not interchangeable. Cobbett GB-1.5/Over52.5 versus Sink/Toth DAL+1.5. The big teaser protects a close home loss; it does not erase Dallas upside."
+      },
+      "previous_score": 84,
+      "update_evidence": "Late/evening final inactives not yet due; retain prior assessed scenario."
+    },
+    {
+      "id": "B116",
+      "family": "B",
+      "number": 116,
+      "game": "CLE",
+      "pick": "BAL/CLE Under 48.5",
+      "start": "2026-10-18T17:00Z",
+      "time_et": "1:00 PM",
+      "score": 74,
+      "grade": "B",
+      "score_status": "REFRESHED - not a new full source scan",
+      "factors": {
+        "matchup": 27,
+        "price": 19,
+        "personnel": 11,
+        "situation": 8,
+        "vsin": 0,
+        "docs": 0,
+        "market": 9
+      },
+      "failure_dimensions": {
+        "Strongest loss path": 1,
+        "Personnel resilience": 1,
+        "Script / variance": 2,
+        "Price protection": 2,
+        "Countercase resolution": 1
+      },
+      "failure_score": 7,
+      "thesis": "Lower QB ceiling and poor Cleveland conversion with a very high protected ceiling.",
+      "price_assessment": "Card48.5 versus current39.5; nine-point protection is not a standalone expert Under endorsement.",
+      "opinion_reconciliation": "",
+      "official_units": 0,
+      "missing_evidence": [
+        "Unshown Action markets remain unknown; current live Circa unavailable."
+      ],
+      "release_blockers": [
+        "Retailer acceptance of exact printed cell; no substitute lines."
+      ],
+      "best_number": "BAL/CLE Under 48.5",
+      "no_bet_cutoff": "Not established for official release while material pregame checks remain; exact printed selection only after regrade.",
+      "status": "WATCH - planned ticket leg, not an official release",
+      "factor_evidence": {
+        "matchup": "Lower QB ceiling and poor Cleveland conversion with a very high protected ceiling. Strongest counter: Henry against depleted Cleveland defensive tackles is the clearest failure path. Cleveland gains only 4.7 yards/play, converts 30.65% of third downs and can give Baltimore short fields. Jackson being out does not mean the Ravens cannot win comfortably.",
+        "price": "Card48.5 versus current39.5; nine-point protection is not a standalone expert Under endorsement. Fixed card payout is assessed as a whole ticket, not as -110 for each leg.",
+        "personnel": "Official11:30: Judkins, Graham and Hall inactive; Schwesinger is not inactive. Backup rushing depth and interior run defense weaken the Browns cover case; Henry remains the main blowout risk. Sampson is absent from the official list despite an earlier secondary report; do not assume his workload from that report.",
+        "situation": "NWS kickoff-area forecast: 57F, south8mph, sunny. Weather supports neither an extreme adjustment nor a weather-only Under.",
+        "vsin": "Tuley CLE+5; Cohen protected CLE+10.5 parlay. Makinen BAL-4.5 was explicitly Jackson-dependent: now PASS, not live opposition. No exact relevant total selection verified;0 points.",
+        "docs": "Parlays Pundit CLE+4.5 supports direction. Toth BAL-4.5 assumed Jackson: stale personnel premise, not current confirmation. No verified named selection for this candidate market;0 points.",
+        "market": "Prior reference5/movement2 retained. Splits2 now earned for directly readable same-market evidence in user recording. This measures evidence quality, not agreement with the crowd; alternate thresholds do not inherit the displayed percentages."
+      },
+      "failure_evidence": {
+        "Strongest loss path": "Henry against depleted Cleveland defensive tackles is the clearest failure path. Cleveland gains only 4.7 yards/play, converts 30.65% of third downs and can give Baltimore short fields. Jackson being out does not mean the Ravens cannot win comfortably.",
+        "Personnel resilience": "Official11:30: Judkins, Graham and Hall inactive; Schwesinger is not inactive. Backup rushing depth and interior run defense weaken the Browns cover case; Henry remains the main blowout risk. Sampson is absent from the official list despite an earlier secondary report; do not assume his workload from that report.",
+        "Script / variance": "Cashing condition: BAL/CLE Under 48.5. Explosives, short fields and overtime can defeat a total.",
+        "Price protection": "Card48.5 versus current39.5; nine-point protection is not a standalone expert Under endorsement.",
+        "Countercase resolution": "Tuley CLE+5; Cohen protected CLE+10.5 parlay. Makinen BAL-4.5 was explicitly Jackson-dependent: now PASS, not live opposition. Parlays Pundit CLE+4.5 supports direction. Toth BAL-4.5 assumed Jackson: stale personnel premise, not current confirmation."
+      },
+      "previous_score": 74,
+      "update_evidence": "Official11:30: Judkins, Graham and Hall inactive; Schwesinger is not inactive. Backup rushing depth and interior run defense weaken the Browns cover case; Henry remains the main blowout risk. Sampson is absent from the official list despite an earlier secondary report; do not assume his workload from that report."
+    },
+    {
+      "id": "B123",
+      "family": "B",
+      "number": 123,
+      "game": "ATL",
+      "pick": "CHI/ATL Over 42.5",
+      "start": "2026-10-18T17:00Z",
+      "time_et": "1:00 PM",
+      "score": 79,
+      "grade": "B",
+      "score_status": "REFRESHED - not a new full source scan",
+      "factors": {
+        "matchup": 30,
+        "price": 19,
+        "personnel": 12,
+        "situation": 9,
+        "vsin": 0,
+        "docs": 0,
+        "market": 9
+      },
+      "failure_dimensions": {
+        "Strongest loss path": 1,
+        "Personnel resilience": 1,
+        "Script / variance": 1,
+        "Price protection": 2,
+        "Countercase resolution": 1
+      },
+      "failure_score": 6,
+      "thesis": "Returning quarterback competence and weakened cover/pass-rush groups provide two scoring routes.",
+      "price_assessment": "Card42.5 versus reference51.5; can survive a total well below the market.",
+      "opinion_reconciliation": "Two run-heavy offenses and quarterback re-aggravation are the strongest counters.",
+      "official_units": 0,
+      "missing_evidence": [
+        "Unshown Action markets remain unknown; current live Circa unavailable."
+      ],
+      "release_blockers": [
+        "Retailer acceptance of exact printed cell; no substitute lines."
+      ],
+      "best_number": "CHI/ATL Over 42.5",
+      "no_bet_cutoff": "Not established for official release while material pregame checks remain; exact printed selection only after regrade.",
+      "status": "WATCH - planned ticket leg, not an official release",
+      "factor_evidence": {
+        "matchup": "Returning quarterback competence and weakened cover/pass-rush groups provide two scoring routes. Strongest counter: Williams can restore the offense suppressed by backup starts, and Atlanta's thin secondary is a real problem. Both teams run frequently; long drives and field goals can still frustrate the Over.",
+        "price": "Card42.5 versus reference51.5; can survive a total well below the market. Fixed card payout is assessed as a whole ticket, not as -110 for each leg.",
+        "personnel": "Official Falcons11:31 confirms both Penix and Caleb Williams in lineup; ZaDar ius Smith cleared, C.J.Henderson inactive with Terrell on IR. Both quarterbacks returning supports the protected Over; Atlanta coverage remains the strongest opposing case to its side.",
+        "situation": "Mercedes-Benz venue; roof setting not verified. Do not apply Atlanta outdoor wind to an assumed indoor field.",
+        "vsin": "Cohen ATL ML+140 and Youmans ATL+1.5 support the dog; Tuley passes. No exact relevant total selection verified;0 points.",
+        "docs": "Toth ATL+3 supports direction at a better threshold; Schonwald CHI-3 is genuine opposition. Card+2.5 loses the field-goal push. No verified named selection for this candidate market;0 points.",
+        "market": "Prior reference5/movement2 retained. Splits2 now earned for directly readable same-market evidence in user recording. This measures evidence quality, not agreement with the crowd; alternate thresholds do not inherit the displayed percentages."
+      },
+      "failure_evidence": {
+        "Strongest loss path": "Williams can restore the offense suppressed by backup starts, and Atlanta's thin secondary is a real problem. Both teams run frequently; long drives and field goals can still frustrate the Over.",
+        "Personnel resilience": "Official Falcons11:31 confirms both Penix and Caleb Williams in lineup; ZaDar ius Smith cleared, C.J.Henderson inactive with Terrell on IR. Both quarterbacks returning supports the protected Over; Atlanta coverage remains the strongest opposing case to its side.",
+        "Script / variance": "Cashing condition: CHI/ATL Over 42.5. Explosives, short fields and overtime can defeat a total.",
+        "Price protection": "Card42.5 versus reference51.5; can survive a total well below the market.",
+        "Countercase resolution": "Two run-heavy offenses and quarterback re-aggravation are the strongest counters."
+      },
+      "previous_score": 76,
+      "update_evidence": "Official Falcons11:31 confirms both Penix and Caleb Williams in lineup; ZaDar ius Smith cleared, C.J.Henderson inactive with Terrell on IR. Both quarterbacks returning supports the protected Over; Atlanta coverage remains the strongest opposing case to its side."
+    },
+    {
+      "id": "B140",
+      "family": "B",
+      "number": 140,
+      "game": "IND",
+      "pick": "TEN/IND Under 51.5",
+      "start": "2026-10-18T17:00Z",
+      "time_et": "1:00 PM",
+      "score": 74,
+      "grade": "B",
+      "score_status": "REFRESHED - not a new full source scan",
+      "factors": {
+        "matchup": 28,
+        "price": 19,
+        "personnel": 11,
+        "situation": 7,
+        "vsin": 0,
+        "docs": 0,
+        "market": 9
+      },
+      "failure_dimensions": {
+        "Strongest loss path": 1,
+        "Personnel resilience": 1,
+        "Script / variance": 1,
+        "Price protection": 2,
+        "Countercase resolution": 1
+      },
+      "failure_score": 6,
+      "thesis": "Tennessee inefficient volume and Taylor-led clock control with room above a normal scoring outcome.",
+      "price_assessment": "Card51.5 versus current43.5; the late Warren issue can change the mix.",
+      "opinion_reconciliation": "Reynolds Over44.5 is a genuine lower-threshold counter;45-51 would satisfy both.",
+      "official_units": 0,
+      "missing_evidence": [
+        "Unshown Action markets remain unknown; current live Circa unavailable."
+      ],
+      "release_blockers": [
+        "Retailer acceptance of exact printed cell; no substitute lines."
+      ],
+      "best_number": "TEN/IND Under 51.5",
+      "no_bet_cutoff": "Not established for official release while material pregame checks remain; exact printed selection only after regrade.",
+      "status": "WATCH - planned ticket leg, not an official release",
+      "factor_evidence": {
+        "matchup": "Tennessee inefficient volume and Taylor-led clock control with room above a normal scoring outcome. Strongest counter: Indianapolis permits6.2 yards/play and can allow Ward a passing rebound. Warren's late groin issue and London return travel add uncertainty. A low season scoring average alone is not an Under bet.",
+        "price": "Card51.5 versus current43.5; the late Warren issue can change the mix. Fixed card payout is assessed as a whole ticket, not as -110 for each leg.",
+        "personnel": "Official11:32: Tyler Warren inactive; Jones/Downs/Taylor not inactive. Tennessee Spears not inactive; Singleton, Alontae Taylor and Kevin Winston inactive. Warren loss matters to middle-field/red-zone usage; Titans secondary absences oppose a blind Tennessee upgrade.",
+        "situation": "Lucas Oil retractable roof: setting UNKNOWN. Do not turn outside temperature into an indoor-weather advantage.",
+        "vsin": "Tuley TEN+7 versus Reynolds Over44.5. Youmans used IND in Survivor, which is win support rather than an ATS endorsement. No exact relevant total selection verified;0 points.",
+        "docs": "Toth IND-6.5 versus Bruhn TEN+8. Both fit an IND win by1-6. No exact Doc's Under51.5 selection was read. No verified named selection for this candidate market;0 points.",
+        "market": "Prior reference5/movement2 retained. Splits2 now earned for directly readable same-market evidence in user recording. This measures evidence quality, not agreement with the crowd; alternate thresholds do not inherit the displayed percentages."
+      },
+      "failure_evidence": {
+        "Strongest loss path": "Indianapolis permits6.2 yards/play and can allow Ward a passing rebound. Warren's late groin issue and London return travel add uncertainty. A low season scoring average alone is not an Under bet.",
+        "Personnel resilience": "Official11:32: Tyler Warren inactive; Jones/Downs/Taylor not inactive. Tennessee Spears not inactive; Singleton, Alontae Taylor and Kevin Winston inactive. Warren loss matters to middle-field/red-zone usage; Titans secondary absences oppose a blind Tennessee upgrade.",
+        "Script / variance": "Cashing condition: TEN/IND Under 51.5. Explosives, short fields and overtime can defeat a total.",
+        "Price protection": "Card51.5 versus current43.5; the late Warren issue can change the mix.",
+        "Countercase resolution": "Reynolds Over44.5 is a genuine lower-threshold counter;45-51 would satisfy both."
+      },
+      "previous_score": 72,
+      "update_evidence": "Official11:32: Tyler Warren inactive; Jones/Downs/Taylor not inactive. Tennessee Spears not inactive; Singleton, Alontae Taylor and Kevin Winston inactive. Warren loss matters to middle-field/red-zone usage; Titans secondary absences oppose a blind Tennessee upgrade."
+    },
+    {
+      "id": "B120",
+      "family": "B",
+      "number": 120,
+      "game": "CAR",
+      "pick": "PHI/CAR Under 47.5",
+      "start": "2026-10-18T17:00Z",
+      "time_et": "1:00 PM",
+      "score": 75,
+      "grade": "B",
+      "score_status": "REFRESHED - not a new full source scan",
+      "factors": {
+        "matchup": 28,
+        "price": 19,
+        "personnel": 11,
+        "situation": 8,
+        "vsin": 0,
+        "docs": 0,
+        "market": 9
+      },
+      "failure_dimensions": {
+        "Strongest loss path": 1,
+        "Personnel resilience": 1,
+        "Script / variance": 2,
+        "Price protection": 2,
+        "Countercase resolution": 1
+      },
+      "failure_score": 7,
+      "thesis": "Eagles offensive transition and protection problems, with a ceiling well above the new market.",
+      "price_assessment": "Card47.5 versus current39.5; Smith return and Carolina explosive passes are retained.",
+      "opinion_reconciliation": "",
+      "official_units": 0,
+      "missing_evidence": [
+        "Unshown Action markets remain unknown; current live Circa unavailable."
+      ],
+      "release_blockers": [
+        "Retailer acceptance of exact printed cell; no substitute lines."
+      ],
+      "best_number": "PHI/CAR Under 47.5",
+      "no_bet_cutoff": "Not established for official release while material pregame checks remain; exact printed selection only after regrade.",
+      "status": "WATCH - planned ticket leg, not an official release",
+      "factor_evidence": {
+        "matchup": "Eagles offensive transition and protection problems, with a ceiling well above the new market. Strongest counter: Philadelphia still has a credible defense, Smith returns, and McKee can distribute accurately. Carolina protection injuries could reduce its offensive advantage; a backup quarterback is not an automatic team fade.",
+        "price": "Card47.5 versus current39.5; Smith return and Carolina explosive passes are retained. Fixed card payout is assessed as a whole ticket, not as -110 for each leg.",
+        "personnel": "Official11:30-11:33: McKee starts; Barkley out; Smith, Greenard and Kendall active. Carolina Freeling inactive; Moton returns, plus Wharton and Etienne. Protection is improved by Moton but Philadelphia is healthier at receiver/edge than a blanket injury fade implies.",
+        "situation": "NWS Philadelphia area at kickoff:55F, north5mph, sunny. No adverse-weather total deduction.",
+        "vsin": "Cohen CAR ML-115 supports direction; Tuley leaned Carolina but passed. Those are different conviction levels. No exact relevant total selection verified;0 points.",
+        "docs": "Bruhn PHI-1.5 and Toth PHI-1.5 predate the quarterback change; downgraded as stale. Block liked protected Carolina at a different teaser number. No verified named selection for this candidate market;0 points.",
+        "market": "Prior reference5/movement2 retained. Splits2 now earned for directly readable same-market evidence in user recording. This measures evidence quality, not agreement with the crowd; alternate thresholds do not inherit the displayed percentages."
+      },
+      "failure_evidence": {
+        "Strongest loss path": "Philadelphia still has a credible defense, Smith returns, and McKee can distribute accurately. Carolina protection injuries could reduce its offensive advantage; a backup quarterback is not an automatic team fade.",
+        "Personnel resilience": "Official11:30-11:33: McKee starts; Barkley out; Smith, Greenard and Kendall active. Carolina Freeling inactive; Moton returns, plus Wharton and Etienne. Protection is improved by Moton but Philadelphia is healthier at receiver/edge than a blanket injury fade implies.",
+        "Script / variance": "Cashing condition: PHI/CAR Under 47.5. Explosives, short fields and overtime can defeat a total.",
+        "Price protection": "Card47.5 versus current39.5; Smith return and Carolina explosive passes are retained.",
+        "Countercase resolution": "Cohen CAR ML-115 supports direction; Tuley leaned Carolina but passed. Those are different conviction levels. Bruhn PHI-1.5 and Toth PHI-1.5 predate the quarterback change; downgraded as stale. Block liked protected Carolina at a different teaser number."
+      },
+      "previous_score": 73,
+      "update_evidence": "Official11:30-11:33: McKee starts; Barkley out; Smith, Greenard and Kendall active. Carolina Freeling inactive; Moton returns, plus Wharton and Etienne. Protection is improved by Moton but Philadelphia is healthier at receiver/edge than a blanket injury fade implies."
+    },
+    {
+      "id": "B132",
+      "family": "B",
+      "number": 132,
+      "game": "NYJ",
+      "pick": "NYJ/NE Under 50.5",
+      "start": "2026-10-18T17:00Z",
+      "time_et": "1:00 PM",
+      "score": 74,
+      "grade": "B",
+      "score_status": "REFRESHED - not a new full source scan",
+      "factors": {
+        "matchup": 27,
+        "price": 19,
+        "personnel": 12,
+        "situation": 7,
+        "vsin": 0,
+        "docs": 0,
+        "market": 9
+      },
+      "failure_dimensions": {
+        "Strongest loss path": 1,
+        "Personnel resilience": 1,
+        "Script / variance": 1,
+        "Price protection": 2,
+        "Countercase resolution": 1
+      },
+      "failure_score": 6,
+      "thesis": "Jets defense and limited passing support can hold the game below an elevated alternate ceiling.",
+      "price_assessment": "Card50.5 versus current43.5; Maye/Brown explosiveness prevents a premium grade.",
+      "opinion_reconciliation": "",
+      "official_units": 0,
+      "missing_evidence": [
+        "Unshown Action markets remain unknown; current live Circa unavailable."
+      ],
+      "release_blockers": [
+        "Retailer acceptance of exact printed cell; no substitute lines."
+      ],
+      "best_number": "NYJ/NE Under 50.5",
+      "no_bet_cutoff": "Not established for official release while material pregame checks remain; exact printed selection only after regrade.",
+      "status": "WATCH - planned ticket leg, not an official release",
+      "factor_evidence": {
+        "matchup": "Jets defense and limited passing support can hold the game below an elevated alternate ceiling. Strongest counter: Maye can beat this cushion with explosives and short fields. Brown's activation is fresh evidence against older Patriots injury fades; Gonzalez returning also makes Wilson's task harder.",
+        "price": "Card50.5 versus current43.5; Maye/Brown explosiveness prevents a premium grade. Fixed card payout is assessed as a whole ticket, not as -110 for each leg.",
+        "personnel": "Official11:30-11:32: NE Brown, Campbell, Henderson and Gonzalez active; Brown snap ramp unknown. NYJ Hall/Mitchell/Parham out; Cooper returns. Better NE protection and coverage weaken the Jets base spread; protected cushion still matters.",
+        "situation": "NWS Foxborough area:52F, north3mph, sunny. Under50.5 depends on defense/pace, not wind.",
+        "vsin": "Tuley NYJ+7; Reynolds NYJ+7.5-115, but his injury rationale is partly stale. Cohen Patriots ML can coexist with a Jets spread cover. No exact relevant total selection verified;0 points.",
+        "docs": "Toth NYJ+7.5 versus Schonwald NE-7.5. Block's NE-1.5 is a different teaser threshold. Mixed support receives partial credit. No verified named selection for this candidate market;0 points.",
+        "market": "Prior reference5/movement2 retained. Splits2 now earned for directly readable same-market evidence in user recording. This measures evidence quality, not agreement with the crowd; alternate thresholds do not inherit the displayed percentages."
+      },
+      "failure_evidence": {
+        "Strongest loss path": "Maye can beat this cushion with explosives and short fields. Brown's activation is fresh evidence against older Patriots injury fades; Gonzalez returning also makes Wilson's task harder.",
+        "Personnel resilience": "Official11:30-11:32: NE Brown, Campbell, Henderson and Gonzalez active; Brown snap ramp unknown. NYJ Hall/Mitchell/Parham out; Cooper returns. Better NE protection and coverage weaken the Jets base spread; protected cushion still matters.",
+        "Script / variance": "Cashing condition: NYJ/NE Under 50.5. Explosives, short fields and overtime can defeat a total.",
+        "Price protection": "Card50.5 versus current43.5; Maye/Brown explosiveness prevents a premium grade.",
+        "Countercase resolution": "Tuley NYJ+7; Reynolds NYJ+7.5-115, but his injury rationale is partly stale. Cohen Patriots ML can coexist with a Jets spread cover. Toth NYJ+7.5 versus Schonwald NE-7.5. Block's NE-1.5 is a different teaser threshold. Mixed support receives partial credit."
+      },
+      "previous_score": 72,
+      "update_evidence": "Official11:30-11:32: NE Brown, Campbell, Henderson and Gonzalez active; Brown snap ramp unknown. NYJ Hall/Mitchell/Parham out; Cooper returns. Better NE protection and coverage weaken the Jets base spread; protected cushion still matters."
+    },
+    {
+      "id": "B127",
+      "family": "B",
+      "number": 127,
+      "game": "NYG",
+      "pick": "NO/NYG Over 38.5",
+      "start": "2026-10-18T17:00Z",
+      "time_et": "1:00 PM",
+      "score": 77,
+      "grade": "B",
+      "score_status": "REFRESHED - not a new full source scan",
+      "factors": {
+        "matchup": 29,
+        "price": 19,
+        "personnel": 12,
+        "situation": 8,
+        "vsin": 0,
+        "docs": 0,
+        "market": 9
+      },
+      "failure_dimensions": {
+        "Strongest loss path": 1,
+        "Personnel resilience": 0,
+        "Script / variance": 1,
+        "Price protection": 2,
+        "Countercase resolution": 1
+      },
+      "failure_score": 5,
+      "thesis": "Pass volume and downfield New York targets can reach39 without a full market-total shootout.",
+      "price_assessment": "Card38.5 versus current46.5. Material Shough/Olave changes are a HOLD, not a free injury-based upgrade.",
+      "opinion_reconciliation": "",
+      "official_units": 0,
+      "missing_evidence": [
+        "Unshown Action markets remain unknown; current live Circa unavailable."
+      ],
+      "release_blockers": [
+        "Retailer acceptance of exact printed cell; no substitute lines.",
+        "Giants final inactive list not independently retrieved."
+      ],
+      "best_number": "NO/NYG Over 38.5",
+      "no_bet_cutoff": "Not established for official release while material pregame checks remain; exact printed selection only after regrade.",
+      "status": "EXCLUDED by user crowd-avoidance rule",
+      "factor_evidence": {
+        "matchup": "Pass volume and downfield New York targets can reach39 without a full market-total shootout. Strongest counter: The Giants' recent record contains late escapes; Saints zone coverage can bait Winston into interceptions. Shough's non-throwing hand and Olave illness can lower total scoring. This is the least robust early side/Over pairing.",
+        "price": "Card38.5 versus current46.5. Material Shough/Olave changes are a HOLD, not a free injury-based upgrade. Fixed card payout is assessed as a whole ticket, not as -110 for each leg.",
+        "personnel": "Official Saints10:34CT/11:34ET: Shough, Olave and Kamara not inactive; Elliss, Shepherd and Ridgeway inactive. Active does not establish full workload or healed non-throwing hand. Giants final list not independently retrieved.",
+        "situation": "NWS East Rutherford area:55F, north6mph, sunny. No weather excuse to ignore quarterback/receiver uncertainty.",
+        "vsin": "Makinen NO-1.5 and Reynolds NO PK oppose the base Giants side. Tuley passes. Cohen Winston TD prop is not Giants ATS agreement. No exact relevant total selection verified;0 points.",
+        "docs": "Toth NYG+1.5 and Block protected NYG support protection; Sink NO+1 opposes at the base spread. Keep the disagreement explicit. No verified named selection for this candidate market;0 points.",
+        "market": "Prior reference5/movement2 retained. Splits2 now earned for directly readable same-market evidence in user recording. This measures evidence quality, not agreement with the crowd; alternate thresholds do not inherit the displayed percentages."
+      },
+      "failure_evidence": {
+        "Strongest loss path": "The Giants' recent record contains late escapes; Saints zone coverage can bait Winston into interceptions. Shough's non-throwing hand and Olave illness can lower total scoring. This is the least robust early side/Over pairing.",
+        "Personnel resilience": "Official Saints10:34CT/11:34ET: Shough, Olave and Kamara not inactive; Elliss, Shepherd and Ridgeway inactive. Active does not establish full workload or healed non-throwing hand. Giants final list not independently retrieved.",
+        "Script / variance": "Cashing condition: NO/NYG Over 38.5. Explosives, short fields and overtime can defeat a total.",
+        "Price protection": "Card38.5 versus current46.5. Material Shough/Olave changes are a HOLD, not a free injury-based upgrade.",
+        "Countercase resolution": "Makinen NO-1.5 and Reynolds NO PK oppose the base Giants side. Tuley passes. Cohen Winston TD prop is not Giants ATS agreement. Toth NYG+1.5 and Block protected NYG support protection; Sink NO+1 opposes at the base spread. Keep the disagreement explicit."
+      },
+      "previous_score": 75,
+      "update_evidence": "Official Saints10:34CT/11:34ET: Shough, Olave and Kamara not inactive; Elliss, Shepherd and Ridgeway inactive. Active does not establish full workload or healed non-throwing hand. Giants final list not independently retrieved."
+    },
+    {
+      "id": "B136",
+      "family": "B",
+      "number": 136,
+      "game": "TB",
+      "pick": "PIT/TB Under 47.5",
+      "start": "2026-10-18T17:00Z",
+      "time_et": "1:00 PM",
+      "score": 75,
+      "grade": "B",
+      "score_status": "REFRESHED - not a new full source scan",
+      "factors": {
+        "matchup": 28,
+        "price": 19,
+        "personnel": 12,
+        "situation": 7,
+        "vsin": 0,
+        "docs": 0,
+        "market": 9
+      },
+      "failure_dimensions": {
+        "Strongest loss path": 1,
+        "Personnel resilience": 1,
+        "Script / variance": 1,
+        "Price protection": 2,
+        "Countercase resolution": 1
+      },
+      "failure_score": 6,
+      "thesis": "Daniels starting plus a difficult rushing matchup creates a plausible low-40s ceiling path.",
+      "price_assessment": "Card47.5 versus current38.5. Short fields and explosive backs remain the principal failure.",
+      "opinion_reconciliation": "Toth's53-point forecast remains opposition; no named current Under bet was verified.",
+      "official_units": 0,
+      "missing_evidence": [
+        "Unshown Action markets remain unknown; current live Circa unavailable."
+      ],
+      "release_blockers": [
+        "Retailer acceptance of exact printed cell; no substitute lines."
+      ],
+      "best_number": "PIT/TB Under 47.5",
+      "no_bet_cutoff": "Not established for official release while material pregame checks remain; exact printed selection only after regrade.",
+      "status": "WATCH - planned ticket leg, not an official release",
+      "factor_evidence": {
+        "matchup": "Daniels starting plus a difficult rushing matchup creates a plausible low-40s ceiling path. Strongest counter: Daniels has a small sample and can create short fields for either team. Warren/Irving can generate explosive scores; Winfield's absence weakens the secondary. This is not a claim that every injury favors the Under.",
+        "price": "Card47.5 versus current38.5. Short fields and explosive backs remain the principal failure. Fixed card payout is assessed as a whole ticket, not as -110 for each leg.",
+        "personnel": "Official11:30-11:31: Mayfield, Winfield, Morrison and Tucker inactive; Trotter/Dennis active. Pittsburgh Dowdle active, Metcalf/Freiermuth/Ramsey not inactive. Wilson/Pittman on IR. Warren still matters but do not assume exclusive work after Dowdle return.",
+        "situation": "NWS Tampa area:77F, northeast15mph, sunny. Wind adds modest passing/kicking risk, not a guaranteed low total.",
+        "vsin": "Makinen TB+2.5; Tuley and Reynolds like TB+8.5 teasers. The printed standard teaser+6.5 does not cross7; it is weaker protection. No exact relevant total selection verified;0 points.",
+        "docs": "Toth TB+2.5 but his53-point forecast is an Under counter. Block was cautious about TB even at+8.5; do not label unanimous. No verified named selection for this candidate market;0 points.",
+        "market": "Prior reference5/movement2 retained. Splits2 now earned for directly readable same-market evidence in user recording. This measures evidence quality, not agreement with the crowd; alternate thresholds do not inherit the displayed percentages."
+      },
+      "failure_evidence": {
+        "Strongest loss path": "Daniels has a small sample and can create short fields for either team. Warren/Irving can generate explosive scores; Winfield's absence weakens the secondary. This is not a claim that every injury favors the Under.",
+        "Personnel resilience": "Official11:30-11:31: Mayfield, Winfield, Morrison and Tucker inactive; Trotter/Dennis active. Pittsburgh Dowdle active, Metcalf/Freiermuth/Ramsey not inactive. Wilson/Pittman on IR. Warren still matters but do not assume exclusive work after Dowdle return.",
+        "Script / variance": "Cashing condition: PIT/TB Under 47.5. Explosives, short fields and overtime can defeat a total.",
+        "Price protection": "Card47.5 versus current38.5. Short fields and explosive backs remain the principal failure.",
+        "Countercase resolution": "Toth's53-point forecast remains opposition; no named current Under bet was verified."
+      },
+      "previous_score": 73,
+      "update_evidence": "Official11:30-11:31: Mayfield, Winfield, Morrison and Tucker inactive; Trotter/Dennis active. Pittsburgh Dowdle active, Metcalf/Freiermuth/Ramsey not inactive. Wilson/Pittman on IR. Warren still matters but do not assume exclusive work after Dowdle return."
+    },
+    {
+      "id": "B155",
+      "family": "B",
+      "number": 155,
+      "game": "GB",
+      "pick": "GB/DAL Over 45.5",
+      "start": "2026-10-19T00:20Z",
+      "time_et": "8:20 PM",
+      "score": 88,
+      "grade": "A-",
+      "score_status": "REFRESHED - not a new full source scan",
+      "factors": {
+        "matchup": 29,
+        "price": 19,
+        "personnel": 12,
+        "situation": 6,
+        "vsin": 7,
+        "docs": 6,
+        "market": 9
+      },
+      "failure_dimensions": {
+        "Strongest loss path": 1,
+        "Personnel resilience": 1,
+        "Script / variance": 1,
+        "Price protection": 2,
+        "Countercase resolution": 1
+      },
+      "failure_score": 6,
+      "thesis": "Both quarterbacks face exploitable defensive personnel; the lower threshold needs moderate efficiency.",
+      "price_assessment": "Card45.5 versus current53.5. Evening wind and line injuries reduce confidence.",
+      "opinion_reconciliation": "",
+      "official_units": 0,
+      "missing_evidence": [
+        "Unshown Action markets remain unknown; current live Circa unavailable."
+      ],
+      "release_blockers": [
+        "Retailer acceptance of exact printed cell; no substitute lines.",
+        "Late/evening final availability remains outstanding."
+      ],
+      "best_number": "GB/DAL Over 45.5",
+      "no_bet_cutoff": "Not established for official release while material pregame checks remain; exact printed selection only after regrade.",
+      "status": "EXCLUDED by user crowd-avoidance rule",
+      "factor_evidence": {
+        "matchup": "Both quarterbacks face exploitable defensive personnel; the lower threshold needs moderate efficiency. Strongest counter: Prescott/Lamb and a concentrated Javonte role can attack Green Bay front-seven losses. Green Bay's own protection injuries and evening wind can slow a game widely expected to score.",
+        "price": "Card45.5 versus current53.5. Evening wind and line injuries reduce confidence. Fixed card payout is assessed as a whole ticket, not as -110 for each leg.",
+        "personnel": "Love/Prescott are the QB plans. Javonte77% snaps/rush share and all goal-line carries in the reported window identify a material Dallas role. Lloyd expanded opportunity replaces a stale full-Jacobs assumption. Outstanding: Evening inactives and Lamb/OL usage not yet final; inspect again before buying an all-day ticket dependent on them.",
+        "situation": "NWS Lambeau area near kickoff:57F, south-southwest12mph, clear. Do not call this a cold-weather Under or guarantee a shootout.",
+        "vsin": "Makinen GB-1.5; Youmans Over53; Tuley passes. They support different markets and are not interchangeable. Partial credit only for the relevant direction/threshold; no source-count bonus.",
+        "docs": "Cobbett GB-1.5/Over52.5 versus Sink/Toth DAL+1.5. The big teaser protects a close home loss; it does not erase Dallas upside. Agreement and opposition are reconciled; stale assumptions and other thresholds receive reduced weight.",
+        "market": "Prior reference5/movement2 retained. Splits2 now earned for directly readable same-market evidence in user recording. This measures evidence quality, not agreement with the crowd; alternate thresholds do not inherit the displayed percentages."
+      },
+      "failure_evidence": {
+        "Strongest loss path": "Prescott/Lamb and a concentrated Javonte role can attack Green Bay front-seven losses. Green Bay's own protection injuries and evening wind can slow a game widely expected to score.",
+        "Personnel resilience": "Late/evening final inactives not yet due; retain prior assessed scenario.",
+        "Script / variance": "Cashing condition: GB/DAL Over 45.5. Explosives, short fields and overtime can defeat a total.",
+        "Price protection": "Card45.5 versus current53.5. Evening wind and line injuries reduce confidence.",
+        "Countercase resolution": "Makinen GB-1.5; Youmans Over53; Tuley passes. They support different markets and are not interchangeable. Cobbett GB-1.5/Over52.5 versus Sink/Toth DAL+1.5. The big teaser protects a close home loss; it does not erase Dallas upside."
+      },
+      "previous_score": 86,
+      "update_evidence": "Late/evening final inactives not yet due; retain prior assessed scenario."
+    },
+    {
+      "id": "B152",
+      "family": "B",
+      "number": 152,
+      "game": "LAC",
+      "pick": "KC/LAC Under 49.5",
+      "start": "2026-10-18T20:25Z",
+      "time_et": "4:25 PM",
+      "score": 74,
+      "grade": "B",
+      "score_status": "REFRESHED - not a new full source scan",
+      "factors": {
+        "matchup": 27,
+        "price": 19,
+        "personnel": 12,
+        "situation": 7,
+        "vsin": 0,
+        "docs": 0,
+        "market": 9
+      },
+      "failure_dimensions": {
+        "Strongest loss path": 1,
+        "Personnel resilience": 1,
+        "Script / variance": 2,
+        "Price protection": 2,
+        "Countercase resolution": 1
+      },
+      "failure_score": 7,
+      "thesis": "Offensive line/receiver losses and a division matchup support a protected low-40s outcome.",
+      "price_assessment": "Card49.5 versus current41.5. A Herbert turnover cascade can still defeat the Under.",
+      "opinion_reconciliation": "",
+      "official_units": 0,
+      "missing_evidence": [
+        "Unshown Action markets remain unknown; current live Circa unavailable."
+      ],
+      "release_blockers": [
+        "Retailer acceptance of exact printed cell; no substitute lines.",
+        "Late/evening final availability remains outstanding."
+      ],
+      "best_number": "KC/LAC Under 49.5",
+      "no_bet_cutoff": "Not established for official release while material pregame checks remain; exact printed selection only after regrade.",
+      "status": "WATCH - planned ticket leg, not an official release",
+      "factor_evidence": {
+        "matchup": "Offensive line/receiver losses and a division matchup support a protected low-40s outcome. Strongest counter: Herbert turnovers and severe line depletion can create a runaway against a rested Chiefs side. A defensive score can hurt the side and Under together. Returning Chargers receivers help, but do not restore the line.",
+        "price": "Card49.5 versus current41.5. A Herbert turnover cascade can still defeat the Under. Fixed card payout is assessed as a whole ticket, not as -110 for each leg.",
+        "personnel": "Rice/Simmons and Alt/James are out in current reports; other LAC line losses remain relevant. Herbert/Mahomes start. Hampton's three-man committee is not an every-down workload. Outstanding: Confirm McConkey/Johnston/Harris roles and any new line absences at late inactives. Herbert turnover risk remains even if all receivers play.",
+        "situation": "NWS Arrowhead area near kickoff:67F, south12mph, sunny. Modest passing/kicking sensitivity; Chiefs off bye is a side counter.",
+        "vsin": "Tuley/Reynolds LAC+8; Youmans LAC+7.5. Same direction at different numbers; stronger protection has a lower fixed-card return. No exact relevant total selection verified;0 points.",
+        "docs": "Bruhn LAC+8.5 and Toth LAC+8.5 support direction. No exact Under49.5 Doc's wager was read. No verified named selection for this candidate market;0 points.",
+        "market": "Prior reference5/movement2 retained. Splits2 now earned for directly readable same-market evidence in user recording. This measures evidence quality, not agreement with the crowd; alternate thresholds do not inherit the displayed percentages."
+      },
+      "failure_evidence": {
+        "Strongest loss path": "Herbert turnovers and severe line depletion can create a runaway against a rested Chiefs side. A defensive score can hurt the side and Under together. Returning Chargers receivers help, but do not restore the line.",
+        "Personnel resilience": "Late/evening final inactives not yet due; retain prior assessed scenario.",
+        "Script / variance": "Cashing condition: KC/LAC Under 49.5. Explosives, short fields and overtime can defeat a total.",
+        "Price protection": "Card49.5 versus current41.5. A Herbert turnover cascade can still defeat the Under.",
+        "Countercase resolution": "Tuley/Reynolds LAC+8; Youmans LAC+7.5. Same direction at different numbers; stronger protection has a lower fixed-card return. Bruhn LAC+8.5 and Toth LAC+8.5 support direction. No exact Under49.5 Doc's wager was read."
+      },
+      "previous_score": 72,
+      "update_evidence": "Late/evening final inactives not yet due; retain prior assessed scenario."
+    },
+    {
+      "id": "T118",
+      "family": "T",
+      "number": 118,
+      "game": "CAR",
+      "pick": "Panthers +6.5",
+      "start": "2026-10-18T17:00Z",
+      "time_et": "1:00 PM",
+      "score": 86,
+      "grade": "A-",
+      "score_status": "REFRESHED - not a new full source scan",
+      "factors": {
+        "matchup": 28,
+        "price": 19,
+        "personnel": 12,
+        "situation": 8,
+        "vsin": 7,
+        "docs": 3,
+        "market": 9
+      },
+      "failure_dimensions": {
+        "Strongest loss path": 1,
+        "Personnel resilience": 1,
+        "Script / variance": 2,
+        "Price protection": 2,
+        "Countercase resolution": 1
+      },
+      "failure_score": 7,
+      "thesis": "Current Carolina edge with additional room for a close Philadelphia win.",
+      "price_assessment": "Exact standard-card+6.5, NOT a calculated+7.5; compare with currentCAR-3.",
+      "opinion_reconciliation": "",
+      "official_units": 0,
+      "missing_evidence": [
+        "Unshown Action markets remain unknown; current live Circa unavailable."
+      ],
+      "release_blockers": [
+        "Retailer acceptance of exact printed cell; no substitute lines."
+      ],
+      "best_number": "Panthers +6.5",
+      "no_bet_cutoff": "Not established for official release while material pregame checks remain; exact printed selection only after regrade.",
+      "status": "WATCH - planned ticket leg, not an official release",
+      "factor_evidence": {
+        "matchup": "Current Carolina edge with additional room for a close Philadelphia win. Strongest counter: Philadelphia still has a credible defense, Smith returns, and McKee can distribute accurately. Carolina protection injuries could reduce its offensive advantage; a backup quarterback is not an automatic team fade.",
+        "price": "Exact standard-card+6.5, NOT a calculated+7.5; compare with currentCAR-3. Fixed card payout is assessed as a whole ticket, not as -110 for each leg.",
+        "personnel": "Official11:30-11:33: McKee starts; Barkley out; Smith, Greenard and Kendall active. Carolina Freeling inactive; Moton returns, plus Wharton and Etienne. Protection is improved by Moton but Philadelphia is healthier at receiver/edge than a blanket injury fade implies.",
+        "situation": "NWS Philadelphia area at kickoff:55F, north5mph, sunny. No adverse-weather total deduction.",
+        "vsin": "Cohen CAR ML-115 supports direction; Tuley leaned Carolina but passed. Those are different conviction levels. Partial credit only for the relevant direction/threshold; no source-count bonus.",
+        "docs": "Bruhn PHI-1.5 and Toth PHI-1.5 predate the quarterback change; downgraded as stale. Block liked protected Carolina at a different teaser number. Agreement and opposition are reconciled; stale assumptions and other thresholds receive reduced weight.",
+        "market": "Prior reference5/movement2 retained. Splits2 now earned for directly readable same-market evidence in user recording. This measures evidence quality, not agreement with the crowd; alternate thresholds do not inherit the displayed percentages."
+      },
+      "failure_evidence": {
+        "Strongest loss path": "Philadelphia still has a credible defense, Smith returns, and McKee can distribute accurately. Carolina protection injuries could reduce its offensive advantage; a backup quarterback is not an automatic team fade.",
+        "Personnel resilience": "Official11:30-11:33: McKee starts; Barkley out; Smith, Greenard and Kendall active. Carolina Freeling inactive; Moton returns, plus Wharton and Etienne. Protection is improved by Moton but Philadelphia is healthier at receiver/edge than a blanket injury fade implies.",
+        "Script / variance": "Cashing condition: Panthers +6.5. Turnovers and late scores can defeat even a protected side.",
+        "Price protection": "Exact standard-card+6.5, NOT a calculated+7.5; compare with currentCAR-3.",
+        "Countercase resolution": "Cohen CAR ML-115 supports direction; Tuley leaned Carolina but passed. Those are different conviction levels. Bruhn PHI-1.5 and Toth PHI-1.5 predate the quarterback change; downgraded as stale. Block liked protected Carolina at a different teaser number."
+      },
+      "previous_score": 84,
+      "update_evidence": "Official11:30-11:33: McKee starts; Barkley out; Smith, Greenard and Kendall active. Carolina Freeling inactive; Moton returns, plus Wharton and Etienne. Protection is improved by Moton but Philadelphia is healthier at receiver/edge than a blanket injury fade implies."
+    },
+    {
+      "id": "T114",
+      "family": "T",
+      "number": 114,
+      "game": "CLE",
+      "pick": "Browns +9.5",
+      "start": "2026-10-18T17:00Z",
+      "time_et": "1:00 PM",
+      "score": 82,
+      "grade": "B+",
+      "score_status": "REFRESHED - not a new full source scan",
+      "factors": {
+        "matchup": 26,
+        "price": 19,
+        "personnel": 9,
+        "situation": 7,
+        "vsin": 6,
+        "docs": 6,
+        "market": 9
+      },
+      "failure_dimensions": {
+        "Strongest loss path": 1,
+        "Personnel resilience": 1,
+        "Script / variance": 2,
+        "Price protection": 2,
+        "Countercase resolution": 1
+      },
+      "failure_score": 7,
+      "thesis": "Home resistance with protection through7.",
+      "price_assessment": "Exact standard-card+9.5 versus current+3; no use of big-card+12.5.",
+      "opinion_reconciliation": "",
+      "official_units": 0,
+      "missing_evidence": [
+        "Unshown Action markets remain unknown; current live Circa unavailable."
+      ],
+      "release_blockers": [
+        "Retailer acceptance of exact printed cell; no substitute lines."
+      ],
+      "best_number": "Browns +9.5",
+      "no_bet_cutoff": "Not established for official release while material pregame checks remain; exact printed selection only after regrade.",
+      "status": "WATCH - planned ticket leg, not an official release",
+      "factor_evidence": {
+        "matchup": "Home resistance with protection through7. Strongest counter: Henry against depleted Cleveland defensive tackles is the clearest failure path. Cleveland gains only 4.7 yards/play, converts 30.65% of third downs and can give Baltimore short fields. Jackson being out does not mean the Ravens cannot win comfortably.",
+        "price": "Exact standard-card+9.5 versus current+3; no use of big-card+12.5. Fixed card payout is assessed as a whole ticket, not as -110 for each leg.",
+        "personnel": "Official11:30: Judkins, Graham and Hall inactive; Schwesinger is not inactive. Backup rushing depth and interior run defense weaken the Browns cover case; Henry remains the main blowout risk. Sampson is absent from the official list despite an earlier secondary report; do not assume his workload from that report.",
+        "situation": "NWS kickoff-area forecast: 57F, south8mph, sunny. Weather supports neither an extreme adjustment nor a weather-only Under.",
+        "vsin": "Tuley CLE+5; Cohen protected CLE+10.5 parlay. Makinen BAL-4.5 was explicitly Jackson-dependent: now PASS, not live opposition. Partial credit only for the relevant direction/threshold; no source-count bonus.",
+        "docs": "Parlays Pundit CLE+4.5 supports direction. Toth BAL-4.5 assumed Jackson: stale personnel premise, not current confirmation. Agreement and opposition are reconciled; stale assumptions and other thresholds receive reduced weight.",
+        "market": "Prior reference5/movement2 retained. Splits2 now earned for directly readable same-market evidence in user recording. This measures evidence quality, not agreement with the crowd; alternate thresholds do not inherit the displayed percentages."
+      },
+      "failure_evidence": {
+        "Strongest loss path": "Henry against depleted Cleveland defensive tackles is the clearest failure path. Cleveland gains only 4.7 yards/play, converts 30.65% of third downs and can give Baltimore short fields. Jackson being out does not mean the Ravens cannot win comfortably.",
+        "Personnel resilience": "Official11:30: Judkins, Graham and Hall inactive; Schwesinger is not inactive. Backup rushing depth and interior run defense weaken the Browns cover case; Henry remains the main blowout risk. Sampson is absent from the official list despite an earlier secondary report; do not assume his workload from that report.",
+        "Script / variance": "Cashing condition: Browns +9.5. Turnovers and late scores can defeat even a protected side.",
+        "Price protection": "Exact standard-card+9.5 versus current+3; no use of big-card+12.5.",
+        "Countercase resolution": "Tuley CLE+5; Cohen protected CLE+10.5 parlay. Makinen BAL-4.5 was explicitly Jackson-dependent: now PASS, not live opposition. Parlays Pundit CLE+4.5 supports direction. Toth BAL-4.5 assumed Jackson: stale personnel premise, not current confirmation."
+      },
+      "previous_score": 82,
+      "update_evidence": "Official11:30: Judkins, Graham and Hall inactive; Schwesinger is not inactive. Backup rushing depth and interior run defense weaken the Browns cover case; Henry remains the main blowout risk. Sampson is absent from the official list despite an earlier secondary report; do not assume his workload from that report."
+    },
+    {
+      "id": "T130",
+      "family": "T",
+      "number": 130,
+      "game": "NYJ",
+      "pick": "Jets +12.5",
+      "start": "2026-10-18T17:00Z",
+      "time_et": "1:00 PM",
+      "score": 82,
+      "grade": "B+",
+      "score_status": "REFRESHED - not a new full source scan",
+      "factors": {
+        "matchup": 26,
+        "price": 19,
+        "personnel": 10,
+        "situation": 7,
+        "vsin": 6,
+        "docs": 5,
+        "market": 9
+      },
+      "failure_dimensions": {
+        "Strongest loss path": 1,
+        "Personnel resilience": 1,
+        "Script / variance": 2,
+        "Price protection": 2,
+        "Countercase resolution": 1
+      },
+      "failure_score": 7,
+      "thesis": "Defense and divisional resistance with a double-digit cushion.",
+      "price_assessment": "Exact standard-card+12.5; no claim the market offers this as a straight at ordinary juice.",
+      "opinion_reconciliation": "",
+      "official_units": 0,
+      "missing_evidence": [
+        "Unshown Action markets remain unknown; current live Circa unavailable."
+      ],
+      "release_blockers": [
+        "Retailer acceptance of exact printed cell; no substitute lines."
+      ],
+      "best_number": "Jets +12.5",
+      "no_bet_cutoff": "Not established for official release while material pregame checks remain; exact printed selection only after regrade.",
+      "status": "WATCH - planned ticket leg, not an official release",
+      "factor_evidence": {
+        "matchup": "Defense and divisional resistance with a double-digit cushion. Strongest counter: Maye can beat this cushion with explosives and short fields. Brown's activation is fresh evidence against older Patriots injury fades; Gonzalez returning also makes Wilson's task harder.",
+        "price": "Exact standard-card+12.5; no claim the market offers this as a straight at ordinary juice. Fixed card payout is assessed as a whole ticket, not as -110 for each leg.",
+        "personnel": "Official11:30-11:32: NE Brown, Campbell, Henderson and Gonzalez active; Brown snap ramp unknown. NYJ Hall/Mitchell/Parham out; Cooper returns. Better NE protection and coverage weaken the Jets base spread; protected cushion still matters.",
+        "situation": "NWS Foxborough area:52F, north3mph, sunny. Under50.5 depends on defense/pace, not wind.",
+        "vsin": "Tuley NYJ+7; Reynolds NYJ+7.5-115, but his injury rationale is partly stale. Cohen Patriots ML can coexist with a Jets spread cover. Partial credit only for the relevant direction/threshold; no source-count bonus.",
+        "docs": "Toth NYJ+7.5 versus Schonwald NE-7.5. Block's NE-1.5 is a different teaser threshold. Mixed support receives partial credit. Agreement and opposition are reconciled; stale assumptions and other thresholds receive reduced weight.",
+        "market": "Prior reference5/movement2 retained. Splits2 now earned for directly readable same-market evidence in user recording. This measures evidence quality, not agreement with the crowd; alternate thresholds do not inherit the displayed percentages."
+      },
+      "failure_evidence": {
+        "Strongest loss path": "Maye can beat this cushion with explosives and short fields. Brown's activation is fresh evidence against older Patriots injury fades; Gonzalez returning also makes Wilson's task harder.",
+        "Personnel resilience": "Official11:30-11:32: NE Brown, Campbell, Henderson and Gonzalez active; Brown snap ramp unknown. NYJ Hall/Mitchell/Parham out; Cooper returns. Better NE protection and coverage weaken the Jets base spread; protected cushion still matters.",
+        "Script / variance": "Cashing condition: Jets +12.5. Turnovers and late scores can defeat even a protected side.",
+        "Price protection": "Exact standard-card+12.5; no claim the market offers this as a straight at ordinary juice.",
+        "Countercase resolution": "Tuley NYJ+7; Reynolds NYJ+7.5-115, but his injury rationale is partly stale. Cohen Patriots ML can coexist with a Jets spread cover. Toth NYJ+7.5 versus Schonwald NE-7.5. Block's NE-1.5 is a different teaser threshold. Mixed support receives partial credit."
+      },
+      "previous_score": 82,
+      "update_evidence": "Official11:30-11:32: NE Brown, Campbell, Henderson and Gonzalez active; Brown snap ramp unknown. NYJ Hall/Mitchell/Parham out; Cooper returns. Better NE protection and coverage weaken the Jets base spread; protected cushion still matters."
+    },
+    {
+      "id": "T134",
+      "family": "T",
+      "number": 134,
+      "game": "TB",
+      "pick": "Buccaneers +6.5",
+      "start": "2026-10-18T17:00Z",
+      "time_et": "1:00 PM",
+      "score": 80,
+      "grade": "B",
+      "score_status": "REFRESHED - not a new full source scan",
+      "factors": {
+        "matchup": 26,
+        "price": 17,
+        "personnel": 11,
+        "situation": 8,
+        "vsin": 6,
+        "docs": 3,
+        "market": 9
+      },
+      "failure_dimensions": {
+        "Strongest loss path": 1,
+        "Personnel resilience": 1,
+        "Script / variance": 1,
+        "Price protection": 1,
+        "Countercase resolution": 1
+      },
+      "failure_score": 5,
+      "thesis": "Home run defense/rest path with less protection than the big teaser.",
+      "price_assessment": "Exact standard-card+6.5 fails to cover a7-point defeat; outside+8.5 teaser opinions are better numbers.",
+      "opinion_reconciliation": "",
+      "official_units": 0,
+      "missing_evidence": [
+        "Unshown Action markets remain unknown; current live Circa unavailable."
+      ],
+      "release_blockers": [
+        "Retailer acceptance of exact printed cell; no substitute lines."
+      ],
+      "best_number": "Buccaneers +6.5",
+      "no_bet_cutoff": "Not established for official release while material pregame checks remain; exact printed selection only after regrade.",
+      "status": "WATCH - planned ticket leg, not an official release",
+      "factor_evidence": {
+        "matchup": "Home run defense/rest path with less protection than the big teaser. Strongest counter: Daniels has a small sample and can create short fields for either team. Warren/Irving can generate explosive scores; Winfield's absence weakens the secondary. This is not a claim that every injury favors the Under.",
+        "price": "Exact standard-card+6.5 fails to cover a7-point defeat; outside+8.5 teaser opinions are better numbers. Fixed card payout is assessed as a whole ticket, not as -110 for each leg.",
+        "personnel": "Official11:30-11:31: Mayfield, Winfield, Morrison and Tucker inactive; Trotter/Dennis active. Pittsburgh Dowdle active, Metcalf/Freiermuth/Ramsey not inactive. Wilson/Pittman on IR. Warren still matters but do not assume exclusive work after Dowdle return.",
+        "situation": "NWS Tampa area:77F, northeast15mph, sunny. Wind adds modest passing/kicking risk, not a guaranteed low total.",
+        "vsin": "Makinen TB+2.5; Tuley and Reynolds like TB+8.5 teasers. The printed standard teaser+6.5 does not cross7; it is weaker protection. Partial credit only for the relevant direction/threshold; no source-count bonus.",
+        "docs": "Toth TB+2.5 but his53-point forecast is an Under counter. Block was cautious about TB even at+8.5; do not label unanimous. Agreement and opposition are reconciled; stale assumptions and other thresholds receive reduced weight.",
+        "market": "Prior reference5/movement2 retained. Splits2 now earned for directly readable same-market evidence in user recording. This measures evidence quality, not agreement with the crowd; alternate thresholds do not inherit the displayed percentages."
+      },
+      "failure_evidence": {
+        "Strongest loss path": "Daniels has a small sample and can create short fields for either team. Warren/Irving can generate explosive scores; Winfield's absence weakens the secondary. This is not a claim that every injury favors the Under.",
+        "Personnel resilience": "Official11:30-11:31: Mayfield, Winfield, Morrison and Tucker inactive; Trotter/Dennis active. Pittsburgh Dowdle active, Metcalf/Freiermuth/Ramsey not inactive. Wilson/Pittman on IR. Warren still matters but do not assume exclusive work after Dowdle return.",
+        "Script / variance": "Cashing condition: Buccaneers +6.5. Turnovers and late scores can defeat even a protected side.",
+        "Price protection": "Exact standard-card+6.5 fails to cover a7-point defeat; outside+8.5 teaser opinions are better numbers.",
+        "Countercase resolution": "Makinen TB+2.5; Tuley and Reynolds like TB+8.5 teasers. The printed standard teaser+6.5 does not cross7; it is weaker protection. Toth TB+2.5 but his53-point forecast is an Under counter. Block was cautious about TB even at+8.5; do not label unanimous."
+      },
+      "previous_score": 78,
+      "update_evidence": "Official11:30-11:31: Mayfield, Winfield, Morrison and Tucker inactive; Trotter/Dennis active. Pittsburgh Dowdle active, Metcalf/Freiermuth/Ramsey not inactive. Wilson/Pittman on IR. Warren still matters but do not assume exclusive work after Dowdle return."
+    },
+    {
+      "id": "B138",
+      "family": "B",
+      "number": 138,
+      "game": "IND",
+      "pick": "Titans +14.5",
+      "start": "2026-10-18T17:00Z",
+      "time_et": "1:00 PM",
+      "score": 82,
+      "grade": "B+",
+      "score_status": "REFRESHED - not a new full source scan",
+      "factors": {
+        "matchup": 25,
+        "price": 19,
+        "personnel": 11,
+        "situation": 6,
+        "vsin": 7,
+        "docs": 5,
+        "market": 9
+      },
+      "failure_dimensions": {
+        "Strongest loss path": 1,
+        "Personnel resilience": 1,
+        "Script / variance": 2,
+        "Price protection": 2,
+        "Countercase resolution": 1
+      },
+      "failure_score": 7,
+      "thesis": "A two-touchdown cushion against a Colts offense now missing its high-usage TE. Tennessee can lose by14 and still cash. Its poor offensive efficiency and damaged secondary remain strong counters. Tuley TEN+7 and Doc Bruhn TEN+8 support direction; Toth Colts opposes. This is not an automatic public fade.",
+      "price_assessment": "Printed+14.5 versus video+6.5; protected margin, no claim of a high straight win probability.",
+      "opinion_reconciliation": "Reynolds Over44.5 is a genuine lower-threshold counter;45-51 would satisfy both.",
+      "official_units": 0,
+      "missing_evidence": [
+        "Unshown Action markets remain unknown; current live Circa unavailable."
+      ],
+      "release_blockers": [
+        "Exact retailer acceptance; do not use a different card family."
+      ],
+      "best_number": "TEN/IND Under 51.5",
+      "no_bet_cutoff": "Not established for official release while material pregame checks remain; exact printed selection only after regrade.",
+      "status": "REPLACEMENT CANDIDATE - 0 official units",
+      "factor_evidence": {
+        "matchup": "A two-touchdown cushion against a Colts offense now missing its high-usage TE. Tennessee can lose by14 and still cash. Its poor offensive efficiency and damaged secondary remain strong counters. Tuley TEN+7 and Doc Bruhn TEN+8 support direction; Toth Colts opposes. This is not an automatic public fade.",
+        "price": "Printed+14.5 versus video+6.5; protected margin, no claim of a high straight win probability.",
+        "personnel": "Official11:32: Tyler Warren inactive; Jones/Downs/Taylor not inactive. Tennessee Spears not inactive; Singleton, Alontae Taylor and Kevin Winston inactive. Warren loss matters to middle-field/red-zone usage; Titans secondary absences oppose a blind Tennessee upgrade.",
+        "situation": "Lucas Oil retractable roof: setting UNKNOWN. Do not turn outside temperature into an indoor-weather advantage.",
+        "vsin": "Tuley TEN+7 versus Reynolds Over44.5. Youmans used IND in Survivor, which is win support rather than an ATS endorsement.",
+        "docs": "Toth IND-6.5 versus Bruhn TEN+8. Both fit an IND win by1-6. No exact Doc's Under51.5 selection was read.",
+        "market": "Reference5+movement2+splits2=9; video source marked by market. No sharp inference."
+      },
+      "failure_evidence": {
+        "Strongest loss path": "A two-touchdown cushion against a Colts offense now missing its high-usage TE. Tennessee can lose by14 and still cash. Its poor offensive efficiency and damaged secondary remain strong counters. Tuley TEN+7 and Doc Bruhn TEN+8 support direction; Toth Colts opposes. This is not an automatic public fade.",
+        "Personnel resilience": "Official11:32: Tyler Warren inactive; Jones/Downs/Taylor not inactive. Tennessee Spears not inactive; Singleton, Alontae Taylor and Kevin Winston inactive. Warren loss matters to middle-field/red-zone usage; Titans secondary absences oppose a blind Tennessee upgrade.",
+        "Script / variance": "Turnovers/late scores can defeat the cushion; a protected line is not immunity.",
+        "Price protection": "Printed+14.5 versus video+6.5; protected margin, no claim of a high straight win probability.",
+        "Countercase resolution": "Opposition explicitly retained; no crowd-only reverse."
+      },
+      "previous_score": null,
+      "update_evidence": "Official11:32: Tyler Warren inactive; Jones/Downs/Taylor not inactive. Tennessee Spears not inactive; Singleton, Alontae Taylor and Kevin Winston inactive. Warren loss matters to middle-field/red-zone usage; Titans secondary absences oppose a blind Tennessee upgrade."
+    },
+    {
+      "id": "B124",
+      "family": "B",
+      "number": 124,
+      "game": "ATL",
+      "pick": "CHI/ATL Under 56.5",
+      "start": "2026-10-18T17:00Z",
+      "time_et": "1:00 PM",
+      "score": 72,
+      "grade": "B-",
+      "score_status": "REFRESHED - not a new full source scan",
+      "factors": {
+        "matchup": 27,
+        "price": 19,
+        "personnel": 10,
+        "situation": 7,
+        "vsin": 0,
+        "docs": 0,
+        "market": 9
+      },
+      "failure_dimensions": {
+        "Strongest loss path": 1,
+        "Personnel resilience": 1,
+        "Script / variance": 1,
+        "Price protection": 2,
+        "Countercase resolution": 1
+      },
+      "failure_score": 6,
+      "thesis": "The previous independent48-52 scoring range fits below56.5; both run-oriented offenses can sustain drives without a shootout. Returning quarterbacks and Atlanta secondary losses are serious Over counters. No named Under agreement receives points.",
+      "price_assessment": "Printed56.5 versus video51.5; five-point room. Rank below the protected Over, used only on a separate ticket.",
+      "opinion_reconciliation": "Reynolds Over44.5 is a genuine lower-threshold counter;45-51 would satisfy both.",
+      "official_units": 0,
+      "missing_evidence": [
+        "Unshown Action markets remain unknown; current live Circa unavailable."
+      ],
+      "release_blockers": [
+        "Exact retailer acceptance; do not use a different card family."
+      ],
+      "best_number": "TEN/IND Under 51.5",
+      "no_bet_cutoff": "Not established for official release while material pregame checks remain; exact printed selection only after regrade.",
+      "status": "REPLACEMENT CANDIDATE - 0 official units",
+      "factor_evidence": {
+        "matchup": "The previous independent48-52 scoring range fits below56.5; both run-oriented offenses can sustain drives without a shootout. Returning quarterbacks and Atlanta secondary losses are serious Over counters. No named Under agreement receives points.",
+        "price": "Printed56.5 versus video51.5; five-point room. Rank below the protected Over, used only on a separate ticket.",
+        "personnel": "Official Falcons11:31 confirms both Penix and Caleb Williams in lineup; ZaDar ius Smith cleared, C.J.Henderson inactive with Terrell on IR. Both quarterbacks returning supports the protected Over; Atlanta coverage remains the strongest opposing case to its side.",
+        "situation": "Mercedes-Benz venue; roof setting not verified. Do not apply Atlanta outdoor wind to an assumed indoor field.",
+        "vsin": "No verified named same-direction total opinion:0.",
+        "docs": "No verified named same-direction total opinion:0.",
+        "market": "Reference5+movement2+splits2=9; video source marked by market. No sharp inference."
+      },
+      "failure_evidence": {
+        "Strongest loss path": "The previous independent48-52 scoring range fits below56.5; both run-oriented offenses can sustain drives without a shootout. Returning quarterbacks and Atlanta secondary losses are serious Over counters. No named Under agreement receives points.",
+        "Personnel resilience": "Official Falcons11:31 confirms both Penix and Caleb Williams in lineup; ZaDar ius Smith cleared, C.J.Henderson inactive with Terrell on IR. Both quarterbacks returning supports the protected Over; Atlanta coverage remains the strongest opposing case to its side.",
+        "Script / variance": "Turnovers/late scores can defeat the cushion; a protected line is not immunity.",
+        "Price protection": "Printed56.5 versus video51.5; five-point room. Rank below the protected Over, used only on a separate ticket.",
+        "Countercase resolution": "Opposition explicitly retained; no crowd-only reverse."
+      },
+      "previous_score": null,
+      "update_evidence": "Official Falcons11:31 confirms both Penix and Caleb Williams in lineup; ZaDar ius Smith cleared, C.J.Henderson inactive with Terrell on IR. Both quarterbacks returning supports the protected Over; Atlanta coverage remains the strongest opposing case to its side."
+    }
+  ],
+  "tickets": [
+    {
+      "id": "EB1",
+      "title": "Big Teaser - Early A",
+      "candidate_ids": [
+        "B114",
+        "B118",
+        "B122",
+        "B126",
+        "B130",
+        "B134",
+        "B138",
+        "B116",
+        "B123",
+        "B140"
+      ],
+      "early": true,
+      "kind": "Big teaser",
+      "planned_units": 2,
+      "official_units": 0,
+      "net_profit_units_if_win": 13.0,
+      "total_return_units_if_win": 15.0,
+      "payout": "6.5 to1",
+      "weakest_leg_score": 74,
+      "weakest_leg_failure": 6,
+      "status": "UPDATED CONSTRUCTION / 0 official units",
+      "note": "Exact printed numbers;2u planned only if selected and accepted. Same-game side/total correlation remains."
+    },
+    {
+      "id": "EB2",
+      "title": "Big Teaser - Early B",
+      "candidate_ids": [
+        "B114",
+        "B118",
+        "B122",
+        "B130",
+        "B134",
+        "B138",
+        "B120",
+        "B132",
+        "B124",
+        "B136"
+      ],
+      "early": true,
+      "kind": "Big teaser",
+      "planned_units": 2,
+      "official_units": 0,
+      "net_profit_units_if_win": 13.0,
+      "total_return_units_if_win": 15.0,
+      "payout": "6.5 to1",
+      "weakest_leg_score": 72,
+      "weakest_leg_failure": 6,
+      "status": "UPDATED CONSTRUCTION / 0 official units",
+      "note": "Exact printed numbers;2u planned only if selected and accepted. Same-game side/total correlation remains."
+    },
+    {
+      "id": "DB1",
+      "title": "Big Teaser - All Day A",
+      "candidate_ids": [
+        "B114",
+        "B118",
+        "B130",
+        "B134",
+        "B138",
+        "B141",
+        "B150",
+        "B146",
+        "B153",
+        "B123"
+      ],
+      "early": false,
+      "kind": "Big teaser",
+      "planned_units": 2,
+      "official_units": 0,
+      "net_profit_units_if_win": 13.0,
+      "total_return_units_if_win": 15.0,
+      "payout": "6.5 to1",
+      "weakest_leg_score": 79,
+      "weakest_leg_failure": 6,
+      "status": "UPDATED CONSTRUCTION / 0 official units",
+      "note": "Exact printed numbers;2u planned only if selected and accepted. Same-game side/total correlation remains."
+    },
+    {
+      "id": "DB2",
+      "title": "Big Teaser - All Day B",
+      "candidate_ids": [
+        "B122",
+        "B126",
+        "B141",
+        "B146",
+        "B153",
+        "B152",
+        "B120",
+        "B116",
+        "B140",
+        "B132"
+      ],
+      "early": false,
+      "kind": "Big teaser",
+      "planned_units": 2,
+      "official_units": 0,
+      "net_profit_units_if_win": 13.0,
+      "total_return_units_if_win": 15.0,
+      "payout": "6.5 to1",
+      "weakest_leg_score": 74,
+      "weakest_leg_failure": 6,
+      "status": "UPDATED CONSTRUCTION / 0 official units",
+      "note": "Exact printed numbers;2u planned only if selected and accepted. Same-game side/total correlation remains."
+    },
+    {
+      "id": "EP1",
+      "title": "Half-Point - Early A",
+      "candidate_ids": [
+        "H118",
+        "H114",
+        "H130"
+      ],
+      "early": true,
+      "kind": "Half-point",
+      "planned_units": 2,
+      "official_units": 0,
+      "net_profit_units_if_win": 11.0,
+      "total_return_units_if_win": 13.0,
+      "payout": "5.5 to1",
+      "weakest_leg_score": 77,
+      "weakest_leg_failure": 6,
+      "status": "UPDATED CONSTRUCTION / 0 official units",
+      "note": "Exact printed numbers;2u planned only if selected and accepted. Same-game side/total correlation remains."
+    },
+    {
+      "id": "EP2",
+      "title": "Half-Point - Early B",
+      "candidate_ids": [
+        "H122",
+        "H134",
+        "H116"
+      ],
+      "early": true,
+      "kind": "Half-point",
+      "planned_units": 2,
+      "official_units": 0,
+      "net_profit_units_if_win": 11.0,
+      "total_return_units_if_win": 13.0,
+      "payout": "5.5 to1",
+      "weakest_leg_score": 72,
+      "weakest_leg_failure": 5,
+      "status": "UPDATED CONSTRUCTION / 0 official units",
+      "note": "Exact printed numbers;2u planned only if selected and accepted. Same-game side/total correlation remains."
+    },
+    {
+      "id": "DP1",
+      "title": "Half-Point - All Day A",
+      "candidate_ids": [
+        "H118",
+        "H150",
+        "H146"
+      ],
+      "early": false,
+      "kind": "Half-point",
+      "planned_units": 2,
+      "official_units": 0,
+      "net_profit_units_if_win": 11.0,
+      "total_return_units_if_win": 13.0,
+      "payout": "5.5 to1",
+      "weakest_leg_score": 74,
+      "weakest_leg_failure": 5,
+      "status": "UPDATED CONSTRUCTION / 0 official units",
+      "note": "Exact printed numbers;2u planned only if selected and accepted. Same-game side/total correlation remains."
+    },
+    {
+      "id": "DP2",
+      "title": "Half-Point - All Day B",
+      "candidate_ids": [
+        "H130",
+        "H122",
+        "H153"
+      ],
+      "early": false,
+      "kind": "Half-point",
+      "planned_units": 2,
+      "official_units": 0,
+      "net_profit_units_if_win": 11.0,
+      "total_return_units_if_win": 13.0,
+      "payout": "5.5 to1",
+      "weakest_leg_score": 77,
+      "weakest_leg_failure": 5,
+      "status": "UPDATED CONSTRUCTION / 0 official units",
+      "note": "Exact printed numbers;2u planned only if selected and accepted. Same-game side/total correlation remains."
+    },
+    {
+      "id": "ET1",
+      "title": "Standard Teaser - Early",
+      "candidate_ids": [
+        "T118",
+        "T114",
+        "T130",
+        "T134"
+      ],
+      "early": true,
+      "kind": "Standard teaser",
+      "planned_units": 2,
+      "official_units": 0,
+      "net_profit_units_if_win": 5.0,
+      "total_return_units_if_win": 7.0,
+      "payout": "2.5 to1",
+      "weakest_leg_score": 80,
+      "weakest_leg_failure": 5,
+      "status": "UPDATED CONSTRUCTION / 0 official units",
+      "note": "Exact printed numbers;2u planned only if selected and accepted. Same-game side/total correlation remains."
+    }
+  ],
+  "official_units": 0,
+  "planned_units_each": 2,
+  "sources": {
+    "CLE": "https://www.clevelandbrowns.com/news/browns-announce-inactives-for-week-6-vs-the-ravens",
+    "PHI": "https://www.philadelphiaeagles.com/news/panthers-vs-eagles-inactives-2026-week-6-nfl-crucial-catch-saquon-barkley-jalen-hurts",
+    "IND": "https://www.colts.com/news/colts-announce-5-inactive-players-for-week-6-vs-titans",
+    "NO": "https://www.neworleanssaints.com/news/new-orleans-saints-inactives-new-york-giants-2026-nfl-week-6-gameday",
+    "NE": "https://www.patriots.com/news/inactives-analysis-a-j-brown-will-campbell-treveyon-henderson-officially-active-for-week-6-matchup-vs-the-jets",
+    "CAR": "https://www.panthers.com/news/week-6-inactives-at-philadelphia-monroe-freeling-out-this-week",
+    "TB": "https://www.buccaneers.com/news/steelers-bucs-inactives-sean-tucker-out-josiah-trotter-in",
+    "PIT": "https://www.steelers.com/news/steelers-inactives-for-week-6-at-buccaneers",
+    "ATL": "https://www.atlantafalcons.com/news/atlanta-falcons-inactive-players-chicago-bears",
+    "NYJ": "https://www.newyorkjets.com/news/jets-vs-patriots-game-inactives-10-18-2026",
+    "TEN": "https://www.tennesseetitans.com/news/game-inactives-week-6-titans-at-colts"
+  }
+}
