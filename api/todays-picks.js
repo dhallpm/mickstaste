@@ -1,4 +1,3 @@
-import { guardParlayRelease } from '../lib/parlayValidation.js'
 import { createRequire } from 'node:module'
 
 const require = createRequire(import.meta.url)
@@ -34,7 +33,8 @@ function active(row = {}, cardDate = '') {
   const official = norm(row['Official Bet'] ?? row.officialBet ?? 'yes')
   const placedPersonalTicket = section(row) === 'Lotto Parlays' && row.betPlaced === true
   const nonOfficialSection = (['Watchlist / Live Only','Passes'].includes(section(row)) || ((section(row) === 'Lotto Parlays' || section(row) === 'VIP') && /^watch/i.test(status)))
-  return dateKey(row.Date || row.date) === cardDate && !SETTLED.has(status) && !SETTLED.has(result) && (placedPersonalTicket || nonOfficialSection || !/^(no|false|0)$/.test(official))
+  const plannedLotto = section(row) === 'Lotto Parlays' && /^planned/i.test(status)
+  return dateKey(row.Date || row.date) === cardDate && !SETTLED.has(status) && !SETTLED.has(result) && (placedPersonalTicket || nonOfficialSection || plannedLotto || !/^(no|false|0)$/.test(official))
 }
 
 function section(row = {}) {
@@ -49,7 +49,6 @@ function section(row = {}) {
 }
 
 function normalize(row = {}, cardDate = '') {
-  row = guardParlayRelease(row)
   const sec = section(row)
   const matchup = text(row.Matchup || row.matchup || row.Game || row.game)
   const sport = text(row.Sport || row.sport || row.League || row.league)
