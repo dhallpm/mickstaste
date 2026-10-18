@@ -309,7 +309,7 @@ async function boot(){
 }
 function americanProfit(stake,odds){return odds>0?stake*odds/100:stake*100/Math.abs(odds)}function calcEV(){const prob=document.getElementById('evProb'),odds=document.getElementById('evOdds'),stake=document.getElementById('evStake'),result=document.getElementById('evResult');if(!prob||!odds||!stake||!result)return;const p=Number(prob.value)/100,o=Number(odds.value),s=Number(stake.value);if(!p||!o||!s){result.textContent='--';return}const profit=americanProfit(s,o),ev=p*profit-(1-p)*s;result.textContent=(ev>=0?'+':'')+ev.toFixed(2)+'u'}['evProb','evOdds','evStake'].forEach(id=>document.getElementById(id)?.addEventListener('input',calcEV));calcEV();if(location.hash){const id=location.hash.replace('#','');if(document.getElementById(id))setTab(id)}boot().catch(err=>console.error('Homepage boot failed:',err));
 </script>
-<script src="./micks-runtime-rules.js?v=20260919-watch-expiry"></script>
+<script src="./micks-runtime-rules.js?v=20261018-planned-lotto"></script>
 <script src="./micks-global-sort.js"></script>
 
 </body>
