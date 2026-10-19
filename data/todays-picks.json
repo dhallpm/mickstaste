@@ -1949,8 +1949,8 @@
       "units": 2,
       "Units": 2,
       "unitStatus": "2u planned per selected ticket / 0 official units",
-      "status": "Planned",
-      "Status": "Planned",
+      "status": "Lost",
+      "Status": "Lost",
       "officialBet": "No",
       "Official Bet": "No",
       "betPlaced": false,
@@ -1962,7 +1962,10 @@
       "fullAnalysis": "All Day A combines five protected early underdogs with the Rams, Chargers, Raiders and Packers, then adds Chicago/Atlanta Over 42.5. That protected Over replaces the removed New Orleans/Giants Over direction. Both returning quarterbacks support the scoring case, while the low printed threshold leaves room for a game that never becomes a full shootout. Tennessee +14.5 also replaces the earlier Colts-side exposure. The Packers leg extends this ticket into Sunday night.",
       "notes": "Daybreak 11:41am ET revision, Oct 18, 2026. Supersedes earlier reconciled and 11:17 constructions.",
       "ticketCode": "DB1",
-      "ticketName": "Big Teaser-All Day A"
+      "ticketName": "Big Teaser-All Day A",
+      "result": "Loss",
+      "Result": "Loss",
+      "settlementNotes": "Lost. #141 Rams -4.5 failed \u2014 Rams lost outright 18-16 to Arizona at SoFi. All six 1 PM legs had won."
     },
     {
       "id": "planned-db2-2026-10-18",
@@ -2005,8 +2008,8 @@
       "units": 2,
       "Units": 2,
       "unitStatus": "2u planned per selected ticket / 0 official units",
-      "status": "Planned",
-      "Status": "Planned",
+      "status": "Lost",
+      "Status": "Lost",
       "officialBet": "No",
       "Official Bet": "No",
       "betPlaced": false,
@@ -2018,7 +2021,10 @@
       "fullAnalysis": "All Day B uses Atlanta and the Giants early, then the Rams, Raiders and Packers, alongside five protected Unders. Packers +6.5 replaces the crowded Dallas/Green Bay Over direction; that change preserves late exposure without retaining the excluded total. Baltimore/Cleveland Under 48.5, Philadelphia/Carolina Under 47.5, Tennessee/Indianapolis Under 51.5 and Jets/Patriots Under 50.5 join Kansas City/Chargers Under 49.5. The Packers leg means this card runs into Sunday night.",
       "notes": "Daybreak 11:41am ET revision, Oct 18, 2026. Supersedes earlier reconciled and 11:17 constructions.",
       "ticketCode": "DB2",
-      "ticketName": "Big Teaser-All Day B"
+      "ticketName": "Big Teaser-All Day B",
+      "result": "Loss",
+      "Result": "Loss",
+      "settlementNotes": "Lost. #141 Rams -4.5 failed \u2014 Rams lost outright 18-16 to Arizona at SoFi. All six 1 PM legs had won."
     },
     {
       "id": "planned-ep1-2026-10-18",
