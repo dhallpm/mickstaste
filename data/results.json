@@ -3,20 +3,20 @@
  "source": "published-results-static",
  "sourceOfTruth": "Archived Micks Picks results plus verified reconstructed and current graded results",
  "date": "2026-09-22",
- "syncedAt": "2026-10-19T12:45:00-04:00",
+ "syncedAt": "2026-10-19T13:00:00-04:00",
  "summary": {
   "overall": {
-   "wins": 50,
-   "losses": 48,
+   "wins": 52,
+   "losses": 52,
    "pushes": 1,
-   "record": "50-48-1",
-   "units": "+0.59u",
-   "profitLoss": "+0.59u",
-   "netUnits": 0.59,
-   "unitsRisked": 60.15,
-   "winRate": "51.0%",
+   "record": "52-52-1",
+   "units": "+14.59u",
+   "profitLoss": "+14.59u",
+   "netUnits": 14.59,
+   "unitsRisked": 72.15,
+   "winRate": "49.5%",
    "incompleteUnitRows": 0,
-   "roi": 1
+   "roi": 20.2
   },
   "officialStraight": {
    "wins": 23,
@@ -58,17 +58,17 @@
    "roi": 16.5
   },
   "lottoParlays": {
-   "wins": 5,
-   "losses": 9,
+   "wins": 7,
+   "losses": 13,
    "pushes": 0,
-   "record": "5-9",
-   "units": "+2.54u",
-   "profitLoss": "+2.54u",
-   "netUnits": 2.54,
-   "unitsRisked": 4.6,
-   "winRate": "35.7%",
+   "record": "7-13",
+   "units": "+16.54u",
+   "profitLoss": "+16.54u",
+   "netUnits": 16.54,
+   "unitsRisked": 16.6,
+   "winRate": "35.0%",
    "incompleteUnitRows": 0,
-   "roi": 55.2
+   "roi": 99.6
   },
   "longshots": {
    "wins": 1,
@@ -107,7 +107,7 @@
    "odds": "Delaware Sports Lottery payout",
    "sportsbook": "Delaware Sports Lottery",
    "grade": "Win",
-   "units": "",
+   "units": "2",
    "status": "Graded",
    "Status": "Graded",
    "officialBet": "No",
@@ -122,7 +122,11 @@
    "ticketCode": "EB1",
    "settlementNotes": "Won 10/10 legs. Browns +12.5, Panthers +9.5, Falcons +11.5, Giants +9.5, Jets +15.5, Buccaneers +10.5, Titans +14.5, BAL/CLE Under 48.5, CHI/ATL Over 42.5, TEN/IND Under 51.5 all cashed. Paid $130 on $20 ticket. $130 on $20 ticket.",
    "writeup": "WON. Won 10/10 legs. Browns +12.5, Panthers +9.5, Falcons +11.5, Giants +9.5, Jets +15.5, Buccaneers +10.5, Titans +14.5, BAL/CLE Under 48.5, CHI/ATL Over 42.5, TEN/IND Under 51.5 all cashed. Paid $130 on $20 ticket. Paid $130 on $20 ticket.",
-   "fullAnalysis": "WON. Won 10/10 legs. Browns +12.5, Panthers +9.5, Falcons +11.5, Giants +9.5, Jets +15.5, Buccaneers +10.5, Titans +14.5, BAL/CLE Under 48.5, CHI/ATL Over 42.5, TEN/IND Under 51.5 all cashed. Paid $130 on $20 ticket. Paid $130 on $20 ticket.\n\nTicket: EB1 (Big Teaser-Early A). Purchased Oct 18, 2026 at Mike's Food Mart ($20)."
+   "fullAnalysis": "WON. Won 10/10 legs. Browns +12.5, Panthers +9.5, Falcons +11.5, Giants +9.5, Jets +15.5, Buccaneers +10.5, Titans +14.5, BAL/CLE Under 48.5, CHI/ATL Over 42.5, TEN/IND Under 51.5 all cashed. Paid $130 on $20 ticket. Paid $130 on $20 ticket.\n\nTicket: EB1 (Big Teaser-Early A). Purchased Oct 18, 2026 at Mike's Food Mart ($20).",
+   "Units": "2",
+   "profitLoss": "+11u",
+   "netUnits": 11.0,
+   "unitsRisked": 2.0
   },
   {
    "id": "result-eb2-2026-10-18",
@@ -146,7 +150,7 @@
    "odds": "Delaware Sports Lottery payout",
    "sportsbook": "Delaware Sports Lottery",
    "grade": "Win",
-   "units": "",
+   "units": "2",
    "status": "Graded",
    "Status": "Graded",
    "officialBet": "No",
@@ -161,7 +165,11 @@
    "ticketCode": "EB2",
    "settlementNotes": "Won 10/10 legs. Browns +12.5, Panthers +9.5, Jets +15.5, Buccaneers +10.5, Titans +14.5, PHI/CAR Under 47.5, NYJ/NE Under 50.5, CHI/ATL Under 56.5, PIT/TB Under 47.5 all cashed. Paid $130 on $20 ticket. $130 on $20 ticket.",
    "writeup": "WON. Won 10/10 legs. Browns +12.5, Panthers +9.5, Jets +15.5, Buccaneers +10.5, Titans +14.5, PHI/CAR Under 47.5, NYJ/NE Under 50.5, CHI/ATL Under 56.5, PIT/TB Under 47.5 all cashed. Paid $130 on $20 ticket. Paid $130 on $20 ticket.",
-   "fullAnalysis": "WON. Won 10/10 legs. Browns +12.5, Panthers +9.5, Jets +15.5, Buccaneers +10.5, Titans +14.5, PHI/CAR Under 47.5, NYJ/NE Under 50.5, CHI/ATL Under 56.5, PIT/TB Under 47.5 all cashed. Paid $130 on $20 ticket. Paid $130 on $20 ticket.\n\nTicket: EB2 (Big Teaser-Early B). Purchased Oct 18, 2026 at Mike's Food Mart ($20)."
+   "fullAnalysis": "WON. Won 10/10 legs. Browns +12.5, Panthers +9.5, Jets +15.5, Buccaneers +10.5, Titans +14.5, PHI/CAR Under 47.5, NYJ/NE Under 50.5, CHI/ATL Under 56.5, PIT/TB Under 47.5 all cashed. Paid $130 on $20 ticket. Paid $130 on $20 ticket.\n\nTicket: EB2 (Big Teaser-Early B). Purchased Oct 18, 2026 at Mike's Food Mart ($20).",
+   "Units": "2",
+   "profitLoss": "+11u",
+   "netUnits": 11.0,
+   "unitsRisked": 2.0
   },
   {
    "id": "result-db1-2026-10-18",
@@ -185,7 +193,7 @@
    "odds": "Delaware Sports Lottery payout",
    "sportsbook": "Delaware Sports Lottery",
    "grade": "Loss",
-   "units": "",
+   "units": "2",
    "status": "Graded",
    "Status": "Graded",
    "officialBet": "No",
@@ -200,7 +208,11 @@
    "ticketCode": "DB1",
    "settlementNotes": "Lost. #141 Rams -4.5 failed — Rams lost outright 18-16 to Arizona at SoFi. All six 1 PM legs had won.",
    "writeup": "LOST. Lost. #141 Rams -4.5 failed — Rams lost outright 18-16 to Arizona at SoFi. All six 1 PM legs had won.",
-   "fullAnalysis": "LOST. Lost. #141 Rams -4.5 failed — Rams lost outright 18-16 to Arizona at SoFi. All six 1 PM legs had won.\n\nTicket: DB1 (Big Teaser-All Day A). Purchased Oct 18, 2026 at Mike's Food Mart ($20)."
+   "fullAnalysis": "LOST. Lost. #141 Rams -4.5 failed — Rams lost outright 18-16 to Arizona at SoFi. All six 1 PM legs had won.\n\nTicket: DB1 (Big Teaser-All Day A). Purchased Oct 18, 2026 at Mike's Food Mart ($20).",
+   "Units": "2",
+   "profitLoss": "-2u",
+   "netUnits": -2.0,
+   "unitsRisked": 2.0
   },
   {
    "id": "result-db2-2026-10-18",
@@ -224,7 +236,7 @@
    "odds": "Delaware Sports Lottery payout",
    "sportsbook": "Delaware Sports Lottery",
    "grade": "Loss",
-   "units": "",
+   "units": "2",
    "status": "Graded",
    "Status": "Graded",
    "officialBet": "No",
@@ -239,7 +251,11 @@
    "ticketCode": "DB2",
    "settlementNotes": "Lost. #141 Rams -4.5 failed — Rams lost outright 18-16 to Arizona at SoFi. All six 1 PM legs had won.",
    "writeup": "LOST. Lost. #141 Rams -4.5 failed — Rams lost outright 18-16 to Arizona at SoFi. All six 1 PM legs had won.",
-   "fullAnalysis": "LOST. Lost. #141 Rams -4.5 failed — Rams lost outright 18-16 to Arizona at SoFi. All six 1 PM legs had won.\n\nTicket: DB2 (Big Teaser-All Day B). Purchased Oct 18, 2026 at Mike's Food Mart ($20)."
+   "fullAnalysis": "LOST. Lost. #141 Rams -4.5 failed — Rams lost outright 18-16 to Arizona at SoFi. All six 1 PM legs had won.\n\nTicket: DB2 (Big Teaser-All Day B). Purchased Oct 18, 2026 at Mike's Food Mart ($20).",
+   "Units": "2",
+   "profitLoss": "-2u",
+   "netUnits": -2.0,
+   "unitsRisked": 2.0
   },
   {
    "id": "result-et1-2026-10-18",
@@ -263,7 +279,7 @@
    "odds": "Delaware Sports Lottery payout",
    "sportsbook": "Delaware Sports Lottery",
    "grade": "Loss",
-   "units": "",
+   "units": "2",
    "status": "Graded",
    "Status": "Graded",
    "officialBet": "No",
@@ -278,7 +294,11 @@
    "ticketCode": "ET1",
    "settlementNotes": "Lost 3/4. Browns +9.5, Panthers +6.5, Jets +12.5 cashed. Buccaneers +6.5 missed by half a point (Steelers won 26-19 in OT, Bucs lost by 7).",
    "writeup": "LOST. Lost 3/4. Browns +9.5, Panthers +6.5, Jets +12.5 cashed. Buccaneers +6.5 missed by half a point (Steelers won 26-19 in OT, Bucs lost by 7).",
-   "fullAnalysis": "LOST. Lost 3/4. Browns +9.5, Panthers +6.5, Jets +12.5 cashed. Buccaneers +6.5 missed by half a point (Steelers won 26-19 in OT, Bucs lost by 7).\n\nTicket: ET1 (Standard Teaser-Early). Purchased Oct 18, 2026 at Mike's Food Mart ($20)."
+   "fullAnalysis": "LOST. Lost 3/4. Browns +9.5, Panthers +6.5, Jets +12.5 cashed. Buccaneers +6.5 missed by half a point (Steelers won 26-19 in OT, Bucs lost by 7).\n\nTicket: ET1 (Standard Teaser-Early). Purchased Oct 18, 2026 at Mike's Food Mart ($20).",
+   "Units": "2",
+   "profitLoss": "-2u",
+   "netUnits": -2.0,
+   "unitsRisked": 2.0
   },
   {
    "id": "result-dp2-2026-10-18",
@@ -302,7 +322,7 @@
    "odds": "Delaware Sports Lottery payout",
    "sportsbook": "Delaware Sports Lottery",
    "grade": "Loss",
-   "units": "",
+   "units": "2",
    "status": "Graded",
    "Status": "Graded",
    "officialBet": "No",
@@ -317,7 +337,11 @@
    "ticketCode": "DP2",
    "settlementNotes": "Lost. Falcons +2.5 failed (Bears won big), Jets +7.5 failed (Patriots won 26-16, Jets lost by 10).",
    "writeup": "LOST. Lost. Falcons +2.5 failed (Bears won big), Jets +7.5 failed (Patriots won 26-16, Jets lost by 10).",
-   "fullAnalysis": "LOST. Lost. Falcons +2.5 failed (Bears won big), Jets +7.5 failed (Patriots won 26-16, Jets lost by 10).\n\nTicket: DP2 (Half-Point-All Day B). Purchased Oct 18, 2026 at Mike's Food Mart ($20)."
+   "fullAnalysis": "LOST. Lost. Falcons +2.5 failed (Bears won big), Jets +7.5 failed (Patriots won 26-16, Jets lost by 10).\n\nTicket: DP2 (Half-Point-All Day B). Purchased Oct 18, 2026 at Mike's Food Mart ($20).",
+   "Units": "2",
+   "profitLoss": "-2u",
+   "netUnits": -2.0,
+   "unitsRisked": 2.0
   },
   {
    "id": "placed-teaser-2026-09-20-min-phi-jax-nyg",
