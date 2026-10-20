@@ -44,3 +44,7 @@ From NFL Week 2 forward, no NFL candidate may be scored before completing the Gu
 4. ChatGPT conversation memory as temporary support only
 
 ChatGPT memory should not be the only permanent place where framework rules live.
+
+## NBA guide addition - October 20, 2026
+
+Every NBA candidate and NBA parlay leg requires the [2026-27 VSiN NBA reference module](current/nba-2026-27-vsin-reference.md) and its [30-team index](current/nba-2026-27-vsin-reference.json). Complete page-specific guide/current-evidence reconciliation; missing or materially unresolved checks block release. The generator includes this context in core, compact/fallback and props paths and retains the audit on candidate records. Original PDF remains in Library; guide priors do not override current facts or create bonus points.

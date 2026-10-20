@@ -79,3 +79,7 @@ Micks Picks is a sports betting analysis framework focused on identifying value,
 - Do not include teams that do not play today.
 - Require final sportsbook confirmation before betting.
 - Keep straight bets, props, longshots, and lotto cards routed to their proper feeds.
+
+## Required NBA guide resource - October 20, 2026
+
+Every NBA pick/leg must cross-reference `micks-framework/current/nba-2026-27-vsin-reference.md/.json` (user-supplied 2026-27 VSiN NBA guide, 44 pages). Record relevant PDF pages, specific baseline, current verification sources/time, freshness, influence and strongest countercase in `NBA Guide Check`. No release with missing reconciliation or unresolved material conflict. Current data outrank guide assumptions. The source remains one VSiN family; no bonus points, changed scoring weights or new standalone probability/EV prerequisite.

@@ -127,3 +127,7 @@ No single source can make a play B+ during Recovery Mode or A-range after Recove
 15. Release only candidates that clear threshold; do not force a Top 5.
 16. Display the scored candidate chart/table on every full run or rerun.
 17. After settlement, grade, archive, update rolling performance, and modify the framework only when a recurring process error is identified.
+
+## Required NBA guide resource - October 20, 2026
+
+Every NBA pick/leg must cross-reference `micks-framework/current/nba-2026-27-vsin-reference.md/.json` (user-supplied 2026-27 VSiN NBA guide, 44 pages). Record relevant PDF pages, specific baseline, current verification sources/time, freshness, influence and strongest countercase in `NBA Guide Check`. No release with missing reconciliation or unresolved material conflict. Current data outrank guide assumptions. The source remains one VSiN family; no bonus points, changed scoring weights or new standalone probability/EV prerequisite.

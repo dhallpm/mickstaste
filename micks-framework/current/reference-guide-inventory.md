@@ -1,7 +1,7 @@
 # Micks Picks Reference Guide Inventory
 
 Status: Controlling inventory
-Effective date: 2026-09-18
+Effective date: 2026-10-20
 
 ## Repository inventory audit
 
@@ -24,6 +24,14 @@ No PDF betting-guide files are currently stored in either repository.
    - Storage form: extracted baseline knowledge in `micks-framework/current/nfl-2026-reference-module.md` and `.json`
    - Uses: player projections, depth-chart assumptions, expected roles, routes/targets/carries, fantasy-derived usage baselines.
    - Freshness: preseason baseline only. Current role and health always override. Beginning with Week 2, compare every applicable magazine projection with Fantasy Life's current weekly projection, rankings and utilization evidence.
+
+3. **2026-27 VSiN NBA Betting Guide**
+   - Received: 2026-10-20; original filename `2026-VSiN-NBA-Betting-Guide-1.pdf`, 44 pages.
+   - Original: ChatGPT Library attachment `libfile_bb2094e48f748191b680720265ff735f`; not copied to a public repository.
+   - Notes/index: `nba-2026-27-vsin-reference.md/.json` (30 teams; page-specific power ratings, win-total opinions and verification focuses).
+   - Required for EVERY NBA candidate and NBA parlay leg, including props, derivatives, futures, awards and watch/pass records; not WNBA.
+   - Record `NBA Guide Check` with actual page access basis, premise, current sources/time, freshness state, influence and countercase. Missing reconciliation or unresolved material conflict blocks release.
+   - Preseason structural baseline only. Confirm current roster/coaching/role, health/minutes, applicable rules, efficiency and executable price. Author/threshold differences are preserved, not averaged away. VSiN remains one family.
 
 ## Mandatory guide usage policy
 
@@ -78,7 +86,7 @@ An unresolved material contradiction between the stored guide, verified role/hea
 
 ## Audit conclusion — updated 2026-09-17
 
-At audit time, the only identifiable stored guide-derived knowledge in the repositories is the NFL 2026 reference module based on the VSiN 2026 NFL Betting Guide and Fantasy Life Fantasy Football 2026. No separate MLB, WNBA/NBA, NHL, soccer, UFC/boxing, tennis, NASCAR, college football or college basketball guide files/modules were found in the repository trees.
+Historical September audit only (superseded for NBA by the October 20 ingestion above): At audit time, the only identifiable stored guide-derived knowledge in the repositories is the NFL 2026 reference module based on the VSiN 2026 NFL Betting Guide and Fantasy Life Fantasy Football 2026. No separate MLB, WNBA/NBA, NHL, soccer, UFC/boxing, tennis, NASCAR, college football or college basketball guide files/modules were found in the repository trees.
 
 The stored guides are now wired to the active post-Week 1 reconciliation module. Current Fantasy Life and VSiN weekly forecasts must be checked as live layers rather than treated as interchangeable with the preseason publications.
 
@@ -93,4 +101,4 @@ The persistent folder `Micks Picks/Reference Guides` contains both originals, de
 
 Both were stored July 24, 2026. Page references are original-PDF page references. The September 18 slate has no NFL game, so these are inventoried season priors, not inputs that can validate an MLB, WNBA or college-football release. Other team pages and current weekly projections must be read when their NFL candidates are evaluated. Sunday's existing teaser remains a separate future-day watch item and has not been re-released by this audit.
 
-No additional original sport guide was found in this folder or the audited repository guide trees. Do not describe either original NFL guide as missing. The folder is the retrieval location; only notes and rules belong in this repository unless separately authorized.
+Historical September 18 finding: No additional original sport guide was found in that folder or the audited repository guide trees at that time. The October 20 NBA attachment above is a later addition and has not been claimed to be in that folder. Do not describe either original NFL guide as missing. The folder is the retrieval location; only notes and rules belong in this repository unless separately authorized.

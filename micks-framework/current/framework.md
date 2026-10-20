@@ -331,6 +331,8 @@ Pitcher props: confirm starter, pitch count stability, opponent profile, and sof
 
 ## NBA framework
 
+- Mandatory on every NBA candidate/leg: [2026-27 VSiN NBA guide reference](nba-2026-27-vsin-reference.md) and [structured 30-team index](nba-2026-27-vsin-reference.json). Complete `NBA Guide Check` with pages, guide premise, verified current evidence/time, freshness state, influence and countercase before release. Read relevant original pages where available; label digest-only access honestly. Missing reconciliation or unresolved material conflict means WATCH/BLOCKED. Current evidence overrides stored guide assumptions; VSiN remains one family and no extra points are added.
+
 - Consult the dated Silver Bulletin NBA franchise outlook in [nba-fotf-2026-prior.md](nba-fotf-2026-prior.md) and its structured [JSON](nba-fotf-2026-prior.json) for NBA preseason and Futures Lab structural context. Its ten-season title horizon cannot be converted directly to a game line, season-win number or current title probability. Verify roster/role changes and follow source-registry.md and futures-lab.md gates.
 - Prefer spread protection over ML when close-game script is likely.
 - Favor role-stable props such as rebounds, assists, usage, and minutes.

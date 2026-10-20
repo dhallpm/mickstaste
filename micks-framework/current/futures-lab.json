@@ -76,6 +76,19 @@
     "trackCurrentPrice": true,
     "trackMarkToMarket": true,
     "trackClosingPriceWhenComparable": true,
-    "clvLabels": ["Beat Close", "Neutral", "Lost Close", "Unavailable"]
+    "clvLabels": [
+      "Beat Close",
+      "Neutral",
+      "Lost Close",
+      "Unavailable"
+    ]
+  },
+  "nbaGuideReference": {
+    "required": true,
+    "module": "nba-2026-27-vsin-reference.json",
+    "record": "NBA Guide Check",
+    "role": "dated single-season prior; current eligibility/roster/price and Futures Lab gates still control",
+    "sourceFamily": "VSiN",
+    "bonusPoints": 0
   }
 }

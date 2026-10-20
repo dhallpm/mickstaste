@@ -159,3 +159,7 @@ Futures remain active until the market is closed/graded and use their own lifecy
 - `framework.json` — machine-readable framework/config
 - `perplexity-master-prompt.txt` — research-agent prompt
 - `codex-maintenance-prompt.md` — site/framework maintenance prompt
+
+## NBA guide addition - October 20, 2026
+
+Every NBA candidate and NBA parlay leg requires the [2026-27 VSiN NBA reference module](nba-2026-27-vsin-reference.md) and its [30-team index](nba-2026-27-vsin-reference.json). Complete page-specific guide/current-evidence reconciliation; missing or materially unresolved checks block release. The generator includes this context in core, compact/fallback and props paths and retains the audit on candidate records. Original PDF remains in Library; guide priors do not override current facts or create bonus points.

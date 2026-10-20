@@ -385,10 +385,26 @@
     },
     "NBA": {
       "rules": [
+        "Consult 2026-27 VSiN NBA guide; preserve page-specific priors and reconcile every candidate with current evidence",
         "Prefer spread protection over ML when close-game script is likely",
         "Check injuries, minutes, foul trouble, pace, and late-game path",
         "Role-stable props preferred"
-      ]
+      ],
+      "required_reference_modules": [
+        "nba-2026-27-vsin-reference.md",
+        "nba-2026-27-vsin-reference.json"
+      ],
+      "guide_cross_reference": {
+        "required_for_every_candidate": true,
+        "required_for_each_nba_parlay_leg": true,
+        "scope": "NBA only, including sides, totals, props, derivatives, futures, awards, watch/pass",
+        "audit_field": "NBA Guide Check",
+        "current_verified_data_overrides": true,
+        "missing_or_unresolved_material_check": "WATCH/BLOCKED",
+        "source_family": "VSiN",
+        "bonus_points": 0,
+        "original_pdf_in_public_repo": false
+      }
     },
     "NHL": {
       "rules": [
@@ -468,7 +484,9 @@
       "current_health_role_overrides_prior": true,
       "publisher_family_deduplication": true,
       "unrelated_guides": "NOT APPLICABLE",
-      "missing_guide": "disclose; never invent"
+      "missing_guide": "disclose; never invent",
+      "NBA_every_candidate_reconciliation_required": true,
+      "NBA_reference_module": "nba-2026-27-vsin-reference.json"
     },
     "evidence_policy": {
       "essential_unknown_blocks_release": true,

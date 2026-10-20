@@ -1,0 +1,1047 @@
+{
+  "id": "vsin-nba-2026-27-guide",
+  "title": "2026-27 VSiN NBA Betting Guide",
+  "publisher": "VSiN",
+  "sourceFamily": "VSiN",
+  "season": "2026-27",
+  "receivedDate": "2026-10-20",
+  "pdfPages": 44,
+  "filename": "2026-VSiN-NBA-Betting-Guide-1.pdf",
+  "libraryFileId": "libfile_bb2094e48f748191b680720265ff735f",
+  "sha256": "5dd8b9bc1ce17eedb5c435ff25ab105399b0abb1ffff519abb8646cadc8fbed3",
+  "status": "SUPPORTING_BASELINE_REQUIRED_FOR_EVERY_NBA_CANDIDATE",
+  "originalStorage": "User-provided ChatGPT Library attachment; do not publish the original PDF in this public repository",
+  "sourceTimeContext": "PDF creation metadata: 2026-10-09T16:37:16Z; this is file metadata, not a verified publication date. Guide says 2026-27; prior stats are labeled 2025-26.",
+  "usePolicy": {
+    "scope": [
+      "sides",
+      "moneylines",
+      "totals",
+      "team totals",
+      "halves/quarters/live derivatives",
+      "player props",
+      "every NBA parlay leg",
+      "futures",
+      "awards",
+      "watch/pass candidates"
+    ],
+    "crossReferenceRequired": true,
+    "currentDataOverrides": true,
+    "guideIsLiveQuote": false,
+    "independentConfirmationFamilies": 1,
+    "scoreBonus": 0,
+    "originalPagesPreferred": true,
+    "extractedBaselineMustBeLabeled": true,
+    "missingOrUnresolvedMaterialCheck": "WATCH/BLOCKED; do not claim guide consulted",
+    "wnbaIncluded": false
+  },
+  "sectionPages": {
+    "bestBets": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "mostImprovedPlayer": [
+      10,
+      11
+    ],
+    "lotteryIncentives": [
+      12
+    ],
+    "powerRatings": [
+      13
+    ],
+    "teamPreviews": [
+      14,
+      43
+    ]
+  },
+  "teams": [
+    {
+      "code": "ATL",
+      "team": "Atlanta Hawks",
+      "pdfPage": 14,
+      "powerRating": 99.0,
+      "powerRatingPage": 13,
+      "previewAuthor": "Zachary Cohen",
+      "winTotalOpinion": {
+        "direction": "under",
+        "line": 43.5,
+        "currentExecutablePrice": false
+      },
+      "verificationFocus": "Defense after a creator change; check half-court creation and spacing, especially Daniels/Dort lineups.",
+      "baselineState": "UNVERIFIED_PRIOR",
+      "historicalAdjustedRatings": {
+        "seasonLabel": "2025-26",
+        "metricsAsPrinted": {
+          "net": 2.2,
+          "offense": 115.1,
+          "defense": 113.0
+        },
+        "methodologyAndSampleDates": "not independently established by ingestion"
+      }
+    },
+    {
+      "code": "BOS",
+      "team": "Boston Celtics",
+      "pdfPage": 15,
+      "powerRating": 101.0,
+      "powerRatingPage": 13,
+      "previewAuthor": "Zachary Cohen",
+      "winTotalOpinion": {
+        "direction": "over",
+        "line": 50.5,
+        "currentExecutablePrice": false
+      },
+      "verificationFocus": "Tatum health and workload; Pritchard creation; George/Robinson availability and frontcourt rotation.",
+      "baselineState": "UNVERIFIED_PRIOR",
+      "historicalAdjustedRatings": {
+        "seasonLabel": "2025-26",
+        "metricsAsPrinted": {
+          "net": 7.6,
+          "offense": 119.9,
+          "defense": 112.3
+        },
+        "methodologyAndSampleDates": "not independently established by ingestion"
+      }
+    },
+    {
+      "code": "BKN",
+      "team": "Brooklyn Nets",
+      "pdfPage": 16,
+      "powerRating": 93.0,
+      "powerRatingPage": 13,
+      "previewAuthor": "Zachary Cohen",
+      "winTotalOpinion": {
+        "direction": "over",
+        "line": 23.5,
+        "currentExecutablePrice": false
+      },
+      "verificationFocus": "Young-guard development, Porter/Randle roles and possible trades; distinguish offensive improvement from defensive depth.",
+      "baselineState": "UNVERIFIED_PRIOR",
+      "historicalAdjustedRatings": {
+        "seasonLabel": "2025-26",
+        "metricsAsPrinted": {
+          "net": -9.7,
+          "offense": 108.5,
+          "defense": 118.2
+        },
+        "methodologyAndSampleDates": "not independently established by ingestion"
+      }
+    },
+    {
+      "code": "CHA",
+      "team": "Charlotte Hornets",
+      "pdfPage": 17,
+      "powerRating": 97.0,
+      "powerRatingPage": 13,
+      "previewAuthor": "Zachary Cohen",
+      "winTotalOpinion": {
+        "direction": "under",
+        "line": 39.5,
+        "currentExecutablePrice": false
+      },
+      "verificationFocus": "Creation after the assumed Ball departure; Miller/Reid opportunity; defensive cost of changed personnel.",
+      "baselineState": "UNVERIFIED_PRIOR",
+      "historicalAdjustedRatings": {
+        "seasonLabel": "2025-26",
+        "metricsAsPrinted": {
+          "net": 3.9,
+          "offense": 118.1,
+          "defense": 114.2
+        },
+        "methodologyAndSampleDates": "not independently established by ingestion"
+      }
+    },
+    {
+      "code": "CHI",
+      "team": "Chicago Bulls",
+      "pdfPage": 18,
+      "powerRating": 93.0,
+      "powerRatingPage": 13,
+      "previewAuthor": "Zachary Cohen",
+      "winTotalOpinion": {
+        "direction": "over",
+        "line": 28.5,
+        "currentExecutablePrice": false
+      },
+      "verificationFocus": "Giddey/Buzelis/Wilson development, Powell spacing, Claxton rim protection and thin bench.",
+      "baselineState": "UNVERIFIED_PRIOR",
+      "historicalAdjustedRatings": {
+        "seasonLabel": "2025-26",
+        "metricsAsPrinted": {
+          "net": -5.2,
+          "offense": 112.3,
+          "defense": 117.5
+        },
+        "methodologyAndSampleDates": "not independently established by ingestion"
+      }
+    },
+    {
+      "code": "CLE",
+      "team": "Cleveland Cavaliers",
+      "pdfPage": 19,
+      "powerRating": 100.5,
+      "powerRatingPage": 13,
+      "previewAuthor": "Zachary Cohen",
+      "winTotalOpinion": {
+        "direction": "over",
+        "line": 47.5,
+        "currentExecutablePrice": false
+      },
+      "verificationFocus": "Mitchell/Harden creation, Mobley shooting, Watson fit and reserve depth; strong SU does not imply ATS value.",
+      "baselineState": "UNVERIFIED_PRIOR",
+      "historicalAdjustedRatings": {
+        "seasonLabel": "2025-26",
+        "metricsAsPrinted": {
+          "net": 3.7,
+          "offense": 118.3,
+          "defense": 114.6
+        },
+        "methodologyAndSampleDates": "not independently established by ingestion"
+      }
+    },
+    {
+      "code": "DAL",
+      "team": "Dallas Mavericks",
+      "pdfPage": 20,
+      "powerRating": 95.0,
+      "powerRatingPage": 13,
+      "previewAuthor": "Jonathan Von Tobel",
+      "winTotalOpinion": {
+        "direction": "over",
+        "line": 35.5,
+        "currentExecutablePrice": false
+      },
+      "verificationFocus": "Irving recovery and creation load, Flagg growth and new-coach pace/shot-profile translation.",
+      "baselineState": "UNVERIFIED_PRIOR",
+      "historicalAdjustedRatings": {
+        "seasonLabel": "2025-26",
+        "metricsAsPrinted": {
+          "net": -4.9,
+          "offense": 110.4,
+          "defense": 115.3
+        },
+        "methodologyAndSampleDates": "not independently established by ingestion"
+      }
+    },
+    {
+      "code": "DEN",
+      "team": "Denver Nuggets",
+      "pdfPage": 21,
+      "powerRating": 101.0,
+      "powerRatingPage": 13,
+      "previewAuthor": "Jonathan Von Tobel",
+      "winTotalOpinion": {
+        "direction": "under",
+        "line": 49.5,
+        "currentExecutablePrice": false
+      },
+      "verificationFocus": "Top-heavy roster, aging-core availability and shooting-guard spacing; separate elite offense from depth resilience.",
+      "baselineState": "UNVERIFIED_PRIOR",
+      "historicalAdjustedRatings": {
+        "seasonLabel": "2025-26",
+        "metricsAsPrinted": {
+          "net": 4.9,
+          "offense": 121.3,
+          "defense": 116.4
+        },
+        "methodologyAndSampleDates": "not independently established by ingestion"
+      }
+    },
+    {
+      "code": "DET",
+      "team": "Detroit Pistons",
+      "pdfPage": 22,
+      "powerRating": 101.0,
+      "powerRatingPage": 13,
+      "previewAuthor": "Zachary Cohen",
+      "winTotalOpinion": {
+        "direction": "under",
+        "line": 49.5,
+        "currentExecutablePrice": false
+      },
+      "verificationFocus": "Duren response and role, secondary scoring, loss of defensive depth and regression from prior regular-season success.",
+      "baselineState": "UNVERIFIED_PRIOR",
+      "historicalAdjustedRatings": {
+        "seasonLabel": "2025-26",
+        "metricsAsPrinted": {
+          "net": 7.6,
+          "offense": 117.1,
+          "defense": 109.5
+        },
+        "methodologyAndSampleDates": "not independently established by ingestion"
+      }
+    },
+    {
+      "code": "GSW",
+      "team": "Golden State Warriors",
+      "pdfPage": 23,
+      "powerRating": 97.5,
+      "powerRatingPage": 13,
+      "previewAuthor": "Jonathan Von Tobel",
+      "winTotalOpinion": {
+        "direction": "under",
+        "line": 39.5,
+        "currentExecutablePrice": false
+      },
+      "verificationFocus": "Curry availability and knee context; verify new offensive system and supporting-shot-creation depth.",
+      "baselineState": "UNVERIFIED_PRIOR",
+      "historicalAdjustedRatings": {
+        "seasonLabel": "2025-26",
+        "metricsAsPrinted": {
+          "net": -0.2,
+          "offense": 114.1,
+          "defense": 114.3
+        },
+        "methodologyAndSampleDates": "not independently established by ingestion"
+      }
+    },
+    {
+      "code": "HOU",
+      "team": "Houston Rockets",
+      "pdfPage": 24,
+      "powerRating": 100.0,
+      "powerRatingPage": 13,
+      "previewAuthor": "Jonathan Von Tobel",
+      "winTotalOpinion": {
+        "direction": "over",
+        "line": 46.5,
+        "currentExecutablePrice": false
+      },
+      "verificationFocus": "VanVleet/Adams availability, half-court creation versus offensive-rebound dependence; Thompson/Sheppard roles.",
+      "baselineState": "UNVERIFIED_PRIOR",
+      "historicalAdjustedRatings": {
+        "seasonLabel": "2025-26",
+        "metricsAsPrinted": {
+          "net": 5.0,
+          "offense": 117.4,
+          "defense": 112.4
+        },
+        "methodologyAndSampleDates": "not independently established by ingestion"
+      }
+    },
+    {
+      "code": "IND",
+      "team": "Indiana Pacers",
+      "pdfPage": 25,
+      "powerRating": 99.0,
+      "powerRatingPage": 13,
+      "previewAuthor": "Zachary Cohen",
+      "winTotalOpinion": {
+        "direction": "over",
+        "line": 43.5,
+        "currentExecutablePrice": false
+      },
+      "verificationFocus": "Haliburton recovery/ramp and Zubac fit; returning-core continuity may change pace, spacing and rebounding.",
+      "baselineState": "UNVERIFIED_PRIOR",
+      "historicalAdjustedRatings": {
+        "seasonLabel": "2025-26",
+        "metricsAsPrinted": {
+          "net": -7.4,
+          "offense": 110.4,
+          "defense": 117.8
+        },
+        "methodologyAndSampleDates": "not independently established by ingestion"
+      }
+    },
+    {
+      "code": "LAC",
+      "team": "Los Angeles Clippers",
+      "pdfPage": 26,
+      "powerRating": 94.5,
+      "powerRatingPage": 13,
+      "previewAuthor": "Jonathan Von Tobel",
+      "winTotalOpinion": {
+        "direction": "under",
+        "line": 30.5,
+        "currentExecutablePrice": false
+      },
+      "verificationFocus": "Garland workload, Ingram availability, rookie Wagler development; do not reuse departed-star priors.",
+      "baselineState": "UNVERIFIED_PRIOR",
+      "historicalAdjustedRatings": {
+        "seasonLabel": "2025-26",
+        "metricsAsPrinted": {
+          "net": 1.0,
+          "offense": 116.5,
+          "defense": 115.5
+        },
+        "methodologyAndSampleDates": "not independently established by ingestion"
+      }
+    },
+    {
+      "code": "LAL",
+      "team": "Los Angeles Lakers",
+      "pdfPage": 27,
+      "powerRating": 100.5,
+      "powerRatingPage": 13,
+      "previewAuthor": "Jonathan Von Tobel",
+      "winTotalOpinion": {
+        "direction": "over",
+        "line": 45.5,
+        "currentExecutablePrice": false
+      },
+      "verificationFocus": "Doncic/Reaves shared and staggered creation, Kessler rim role, perimeter-defense and depth questions.",
+      "baselineState": "UNVERIFIED_PRIOR",
+      "historicalAdjustedRatings": {
+        "seasonLabel": "2025-26",
+        "metricsAsPrinted": {
+          "net": 1.4,
+          "offense": 117.1,
+          "defense": 115.7
+        },
+        "methodologyAndSampleDates": "not independently established by ingestion"
+      }
+    },
+    {
+      "code": "MEM",
+      "team": "Memphis Grizzlies",
+      "pdfPage": 28,
+      "powerRating": 95.2,
+      "powerRatingPage": 13,
+      "previewAuthor": "Jonathan Von Tobel",
+      "winTotalOpinion": {
+        "direction": "over",
+        "line": 28.5,
+        "currentExecutablePrice": false
+      },
+      "verificationFocus": "Young-core development and Iisalo tempo/rotation; Boozer/Edey/Coward opportunity must be verified.",
+      "baselineState": "UNVERIFIED_PRIOR",
+      "historicalAdjustedRatings": {
+        "seasonLabel": "2025-26",
+        "metricsAsPrinted": {
+          "net": -5.7,
+          "offense": 112.6,
+          "defense": 118.3
+        },
+        "methodologyAndSampleDates": "not independently established by ingestion"
+      }
+    },
+    {
+      "code": "MIA",
+      "team": "Miami Heat",
+      "pdfPage": 29,
+      "powerRating": 99.0,
+      "powerRatingPage": 13,
+      "previewAuthor": "Zachary Cohen",
+      "winTotalOpinion": {
+        "direction": "over",
+        "line": 45.5,
+        "currentExecutablePrice": false
+      },
+      "verificationFocus": "Assumed Giannis/Bam frontcourt: test spacing, shooting support and defense before translating star additions to wins.",
+      "baselineState": "UNVERIFIED_PRIOR",
+      "historicalAdjustedRatings": {
+        "seasonLabel": "2025-26",
+        "metricsAsPrinted": {
+          "net": 2.0,
+          "offense": 115.8,
+          "defense": 113.9
+        },
+        "methodologyAndSampleDates": "not independently established by ingestion"
+      }
+    },
+    {
+      "code": "MIL",
+      "team": "Milwaukee Bucks",
+      "pdfPage": 30,
+      "powerRating": 91.5,
+      "powerRatingPage": 13,
+      "previewAuthor": "Zachary Cohen",
+      "winTotalOpinion": {
+        "direction": "under",
+        "line": 25.5,
+        "currentExecutablePrice": false
+      },
+      "verificationFocus": "Development versus veteran minutes, Turner efficiency and trade-deadline departures; refresh usage after transactions.",
+      "baselineState": "UNVERIFIED_PRIOR",
+      "historicalAdjustedRatings": {
+        "seasonLabel": "2025-26",
+        "metricsAsPrinted": {
+          "net": -5.9,
+          "offense": 112.4,
+          "defense": 118.4
+        },
+        "methodologyAndSampleDates": "not independently established by ingestion"
+      }
+    },
+    {
+      "code": "MIN",
+      "team": "Minnesota Timberwolves",
+      "pdfPage": 31,
+      "powerRating": 101.0,
+      "powerRatingPage": 13,
+      "previewAuthor": "Jonathan Von Tobel",
+      "winTotalOpinion": {
+        "direction": "over",
+        "line": 47.5,
+        "currentExecutablePrice": false
+      },
+      "verificationFocus": "Assumed Ball addition changes Edwards creation and catch-and-shoot opportunities; smaller lineup defensive trade-off.",
+      "baselineState": "UNVERIFIED_PRIOR",
+      "historicalAdjustedRatings": {
+        "seasonLabel": "2025-26",
+        "metricsAsPrinted": {
+          "net": 2.7,
+          "offense": 115.5,
+          "defense": 112.8
+        },
+        "methodologyAndSampleDates": "not independently established by ingestion"
+      }
+    },
+    {
+      "code": "NOP",
+      "team": "New Orleans Pelicans",
+      "pdfPage": 32,
+      "powerRating": 93.0,
+      "powerRatingPage": 13,
+      "previewAuthor": "Jonathan Von Tobel",
+      "winTotalOpinion": {
+        "direction": "under",
+        "line": 29.5,
+        "currentExecutablePrice": false
+      },
+      "verificationFocus": "Mosley coaching effects, Fears/Queen development, Murray recovery and Williamson availability; guide contributors disagree.",
+      "baselineState": "UNVERIFIED_PRIOR",
+      "historicalAdjustedRatings": {
+        "seasonLabel": "2025-26",
+        "metricsAsPrinted": {
+          "net": -4.2,
+          "offense": 113.4,
+          "defense": 117.6
+        },
+        "methodologyAndSampleDates": "not independently established by ingestion"
+      }
+    },
+    {
+      "code": "NYK",
+      "team": "New York Knicks",
+      "pdfPage": 33,
+      "powerRating": 103.0,
+      "powerRatingPage": 13,
+      "previewAuthor": "Zachary Cohen",
+      "winTotalOpinion": {
+        "direction": "under",
+        "line": 52.5,
+        "currentExecutablePrice": false
+      },
+      "verificationFocus": "Continuity and repeat-season workload; backup-center rebounding after assumed Robinson departure; price defending-champion narratives.",
+      "baselineState": "UNVERIFIED_PRIOR",
+      "historicalAdjustedRatings": {
+        "seasonLabel": "2025-26",
+        "metricsAsPrinted": {
+          "net": 6.1,
+          "offense": 118.8,
+          "defense": 112.7
+        },
+        "methodologyAndSampleDates": "not independently established by ingestion"
+      }
+    },
+    {
+      "code": "OKC",
+      "team": "Oklahoma City Thunder",
+      "pdfPage": 34,
+      "powerRating": 104.0,
+      "powerRatingPage": 13,
+      "previewAuthor": "Jonathan Von Tobel",
+      "winTotalOpinion": {
+        "direction": "over",
+        "line": 61.5,
+        "currentExecutablePrice": false
+      },
+      "verificationFocus": "Elite defensive baseline versus shooting and depth losses; Holmgren and reserve promotions must be reassessed.",
+      "baselineState": "UNVERIFIED_PRIOR",
+      "historicalAdjustedRatings": {
+        "seasonLabel": "2025-26",
+        "metricsAsPrinted": {
+          "net": 10.8,
+          "offense": 117.5,
+          "defense": 106.7
+        },
+        "methodologyAndSampleDates": "not independently established by ingestion"
+      }
+    },
+    {
+      "code": "ORL",
+      "team": "Orlando Magic",
+      "pdfPage": 35,
+      "powerRating": 98.5,
+      "powerRatingPage": 13,
+      "previewAuthor": "Zachary Cohen",
+      "winTotalOpinion": {
+        "direction": "over",
+        "line": 43.5,
+        "currentExecutablePrice": false
+      },
+      "verificationFocus": "Sweeney coaching transition, Wagner/Suggs health, Banchero/Wagner fit and Black development.",
+      "baselineState": "UNVERIFIED_PRIOR",
+      "historicalAdjustedRatings": {
+        "seasonLabel": "2025-26",
+        "metricsAsPrinted": {
+          "net": 1.0,
+          "offense": 114.4,
+          "defense": 113.4
+        },
+        "methodologyAndSampleDates": "not independently established by ingestion"
+      }
+    },
+    {
+      "code": "PHI",
+      "team": "Philadelphia 76ers",
+      "pdfPage": 36,
+      "powerRating": 101.5,
+      "powerRatingPage": 13,
+      "previewAuthor": "Zachary Cohen",
+      "winTotalOpinion": {
+        "direction": "under",
+        "line": 51.5,
+        "currentExecutablePrice": false
+      },
+      "verificationFocus": "Assumed star additions: Embiid health/load, usage redistribution, lineup spacing and defensive personnel; no automatic talent-to-wins conversion.",
+      "baselineState": "UNVERIFIED_PRIOR",
+      "historicalAdjustedRatings": {
+        "seasonLabel": "2025-26",
+        "metricsAsPrinted": {
+          "net": 0.0,
+          "offense": 114.4,
+          "defense": 114.4
+        },
+        "methodologyAndSampleDates": "not independently established by ingestion"
+      }
+    },
+    {
+      "code": "PHX",
+      "team": "Phoenix Suns",
+      "pdfPage": 37,
+      "powerRating": 97.0,
+      "powerRatingPage": 13,
+      "previewAuthor": "Jonathan Von Tobel",
+      "winTotalOpinion": {
+        "direction": "under",
+        "line": 40.5,
+        "currentExecutablePrice": false
+      },
+      "verificationFocus": "Green efficiency, Bridges fit and young-player minutes; distinguish added scoring from defensive or shooting improvement.",
+      "baselineState": "UNVERIFIED_PRIOR",
+      "historicalAdjustedRatings": {
+        "seasonLabel": "2025-26",
+        "metricsAsPrinted": {
+          "net": 1.4,
+          "offense": 114.5,
+          "defense": 113.1
+        },
+        "methodologyAndSampleDates": "not independently established by ingestion"
+      }
+    },
+    {
+      "code": "POR",
+      "team": "Portland Trail Blazers",
+      "pdfPage": 38,
+      "powerRating": 97.0,
+      "powerRatingPage": 13,
+      "previewAuthor": "Jonathan Von Tobel",
+      "winTotalOpinion": {
+        "direction": "over",
+        "line": 41.5,
+        "currentExecutablePrice": false
+      },
+      "verificationFocus": "Guard-minute congestion and creation hierarchy under Nori, Avdija development and defensive continuity.",
+      "baselineState": "UNVERIFIED_PRIOR",
+      "historicalAdjustedRatings": {
+        "seasonLabel": "2025-26",
+        "metricsAsPrinted": {
+          "net": -0.3,
+          "offense": 113.2,
+          "defense": 113.5
+        },
+        "methodologyAndSampleDates": "not independently established by ingestion"
+      }
+    },
+    {
+      "code": "SAC",
+      "team": "Sacramento Kings",
+      "pdfPage": 39,
+      "powerRating": 90.5,
+      "powerRatingPage": 13,
+      "previewAuthor": "Jonathan Von Tobel",
+      "winTotalOpinion": {
+        "direction": "under",
+        "line": 21.5,
+        "currentExecutablePrice": false
+      },
+      "verificationFocus": "Acuff opportunity versus veteran usage; deadline changes and development incentives make static late-season forecasts fragile.",
+      "baselineState": "UNVERIFIED_PRIOR",
+      "historicalAdjustedRatings": {
+        "seasonLabel": "2025-26",
+        "metricsAsPrinted": {
+          "net": -9.2,
+          "offense": 110.9,
+          "defense": 120.1
+        },
+        "methodologyAndSampleDates": "not independently established by ingestion"
+      }
+    },
+    {
+      "code": "SAS",
+      "team": "San Antonio Spurs",
+      "pdfPage": 40,
+      "powerRating": 103.5,
+      "powerRatingPage": 13,
+      "previewAuthor": "Jonathan Von Tobel",
+      "winTotalOpinion": {
+        "direction": "over",
+        "line": 59.5,
+        "currentExecutablePrice": false
+      },
+      "verificationFocus": "Wembanyama minutes/health, Fox/Harper pecking order and secondary scoring after a long postseason.",
+      "baselineState": "UNVERIFIED_PRIOR",
+      "historicalAdjustedRatings": {
+        "seasonLabel": "2025-26",
+        "metricsAsPrinted": {
+          "net": 8.0,
+          "offense": 118.8,
+          "defense": 110.8
+        },
+        "methodologyAndSampleDates": "not independently established by ingestion"
+      }
+    },
+    {
+      "code": "TOR",
+      "team": "Toronto Raptors",
+      "pdfPage": 41,
+      "powerRating": 100.0,
+      "powerRatingPage": 13,
+      "previewAuthor": "Zachary Cohen",
+      "winTotalOpinion": {
+        "direction": "under",
+        "line": 46.5,
+        "currentExecutablePrice": false
+      },
+      "verificationFocus": "Assumed Leonard return: managed availability, Quickley creation, Murray-Boyles growth and center rotation.",
+      "baselineState": "UNVERIFIED_PRIOR",
+      "historicalAdjustedRatings": {
+        "seasonLabel": "2025-26",
+        "metricsAsPrinted": {
+          "net": 2.4,
+          "offense": 114.9,
+          "defense": 112.4
+        },
+        "methodologyAndSampleDates": "not independently established by ingestion"
+      }
+    },
+    {
+      "code": "UTA",
+      "team": "Utah Jazz",
+      "pdfPage": 42,
+      "powerRating": 97.0,
+      "powerRatingPage": 13,
+      "previewAuthor": "Jonathan Von Tobel",
+      "winTotalOpinion": {
+        "direction": "over",
+        "line": 36.5,
+        "currentExecutablePrice": false
+      },
+      "verificationFocus": "George/Peterson/Bailey opportunity; size and shooting versus interior-defense loss and thin center depth.",
+      "baselineState": "UNVERIFIED_PRIOR",
+      "historicalAdjustedRatings": {
+        "seasonLabel": "2025-26",
+        "metricsAsPrinted": {
+          "net": -7.6,
+          "offense": 113.1,
+          "defense": 120.6
+        },
+        "methodologyAndSampleDates": "not independently established by ingestion"
+      }
+    },
+    {
+      "code": "WAS",
+      "team": "Washington Wizards",
+      "pdfPage": 43,
+      "powerRating": 95.5,
+      "powerRatingPage": 13,
+      "previewAuthor": "Zachary Cohen",
+      "winTotalOpinion": {
+        "direction": "over",
+        "line": 33.5,
+        "currentExecutablePrice": false
+      },
+      "verificationFocus": "Assumed Young/Davis additions and Dybantsa usage: availability, coaching and transition from development to winning.",
+      "baselineState": "UNVERIFIED_PRIOR",
+      "historicalAdjustedRatings": {
+        "seasonLabel": "2025-26",
+        "metricsAsPrinted": {
+          "net": -11.3,
+          "offense": 110.1,
+          "defense": 121.4
+        },
+        "methodologyAndSampleDates": "not independently established by ingestion"
+      }
+    }
+  ],
+  "internalDifferences": [
+    {
+      "team": "DAL",
+      "pages": [
+        8,
+        20
+      ],
+      "detail": "Whalen Over 33.5 versus preview Over 35.5; preserve separate author/number."
+    },
+    {
+      "team": "DEN",
+      "pages": [
+        4,
+        21
+      ],
+      "detail": "Von Tobel held Under 48.5 versus preview Under 49.5; not the same threshold."
+    },
+    {
+      "team": "HOU",
+      "pages": [
+        4,
+        5,
+        24
+      ],
+      "detail": "Best-bet Over 47.5 versus preview Over 46.5; do not silently substitute."
+    },
+    {
+      "team": "NOP",
+      "pages": [
+        5,
+        6,
+        32
+      ],
+      "detail": "Cohen Over 27.5 versus Von Tobel preview Under 29.5; competing theses at different numbers, not consensus."
+    },
+    {
+      "team": "PHI",
+      "pages": [
+        6,
+        36
+      ],
+      "detail": "Tuley Under 50 versus preview Under 51.5; retain integer versus half-point settlement."
+    },
+    {
+      "team": "WAS",
+      "pages": [
+        12,
+        43
+      ],
+      "detail": "Lottery article mentions 35.5 while team preview uses 33.5; resolve source context before reuse."
+    },
+    {
+      "team": "CHA",
+      "pages": [
+        8,
+        11
+      ],
+      "detail": "Whalen Miller MIP 13-1 versus Bydlon discussion at 12-1; author/price context differs."
+    }
+  ],
+  "crossReferenceFields": [
+    "guideId",
+    "pages",
+    "basis",
+    "guideFinding",
+    "currentFinding",
+    "currentSources",
+    "checkedAt",
+    "state",
+    "influence",
+    "countercase",
+    "materialConflictResolved"
+  ],
+  "freshnessStates": [
+    "CURRENT",
+    "PARTIALLY_CURRENT",
+    "STALE",
+    "OVERRIDDEN"
+  ],
+  "methodAdditions": [
+    "Use source power ratings as a dated comparison baseline, not a direct current point spread or calibrated win probability.",
+    "Reconcile pace, half-court creation, rim/three-point shot mix, offensive rebounding, turnovers and foul/free-throw environment; separate shooting variance from opportunity.",
+    "Confirm current roster/coaching/starting lineup, minutes ramp, usage redistribution and rest/travel; active does not mean unrestricted.",
+    "Treat 2025-26 adjusted metrics as historical snapshots; the guide does not establish the exact filters or sample dates. Printed SU/ATS/O-U records can include postseason games.",
+    "Preserve each author and exact threshold for win totals/futures. A published lean is not proof of an executed position.",
+    "For incentive scenarios, verify applicable official lottery rules and actual team incentives; never adopt alleged rule changes or allegations as confirmed facts from the guide alone.",
+    "For awards, evaluate role/minutes, plausible improvement, voter narratives and current official eligibility; age/experience patterns are heuristics, not hard exclusions.",
+    "Reconcile Silver Bulletin ten-season franchise priors separately from one-season VSiN views; never average incompatible horizons.",
+    "Keep v2 110-point weights and current NBA release modes. Guides inform existing factors without bonus points or new standalone probability/EV prerequisites."
+  ],
+  "futuresAndAwardsOpinions": [
+    {
+      "pages": [
+        4
+      ],
+      "author": "Jonathan Von Tobel",
+      "market": "Anthony Edwards first-team All-NBA",
+      "price": "+165",
+      "status": "HISTORICAL_AUTHOR_OPINION_NOT_A_MICKS_RELEASE"
+    },
+    {
+      "pages": [
+        4
+      ],
+      "author": "Jonathan Von Tobel",
+      "market": "Ace Bailey Sixth Man of the Year",
+      "price": "30-1",
+      "status": "HISTORICAL_AUTHOR_OPINION_NOT_A_MICKS_RELEASE"
+    },
+    {
+      "pages": [
+        4
+      ],
+      "author": "Jonathan Von Tobel",
+      "market": "Utah Western Conference winner",
+      "price": "150-1",
+      "status": "HISTORICAL_AUTHOR_OPINION_NOT_A_MICKS_RELEASE"
+    },
+    {
+      "pages": [
+        5
+      ],
+      "author": "Kelley Bydlon",
+      "market": "Houston Southwest Division winner",
+      "price": "+750",
+      "status": "HISTORICAL_AUTHOR_OPINION_NOT_A_MICKS_RELEASE"
+    },
+    {
+      "pages": [
+        5
+      ],
+      "author": "Kelley Bydlon",
+      "market": "Chicago 35+ wins",
+      "price": "+400",
+      "status": "HISTORICAL_AUTHOR_OPINION_NOT_A_MICKS_RELEASE"
+    },
+    {
+      "pages": [
+        5
+      ],
+      "author": "Zachary Cohen",
+      "market": "Boston title",
+      "price": "14-1",
+      "status": "HISTORICAL_AUTHOR_OPINION_NOT_A_MICKS_RELEASE"
+    },
+    {
+      "pages": [
+        5
+      ],
+      "author": "Zachary Cohen",
+      "market": "Houston title",
+      "price": "60-1",
+      "status": "HISTORICAL_AUTHOR_OPINION_NOT_A_MICKS_RELEASE"
+    },
+    {
+      "pages": [
+        5
+      ],
+      "author": "Zachary Cohen",
+      "market": "Boston 55+ wins",
+      "price": "+225",
+      "status": "HISTORICAL_AUTHOR_OPINION_NOT_A_MICKS_RELEASE"
+    },
+    {
+      "pages": [
+        5
+      ],
+      "author": "Zachary Cohen",
+      "market": "Boston most regular-season wins",
+      "price": "30-1",
+      "status": "HISTORICAL_AUTHOR_OPINION_NOT_A_MICKS_RELEASE"
+    },
+    {
+      "pages": [
+        6
+      ],
+      "author": "Zachary Cohen",
+      "market": "Sean Sweeney Coach of the Year",
+      "price": "15-1",
+      "status": "HISTORICAL_AUTHOR_OPINION_NOT_A_MICKS_RELEASE"
+    },
+    {
+      "pages": [
+        7
+      ],
+      "author": "Aaron Moore",
+      "market": "AJ Dybantsa over Darryn Peterson in PPG H2H",
+      "price": "+135 Dybantsa / -160 Peterson",
+      "status": "HISTORICAL_AUTHOR_OPINION_NOT_A_MICKS_RELEASE"
+    },
+    {
+      "pages": [
+        7
+      ],
+      "author": "Aaron Moore",
+      "market": "LeBron James 4+ regular-season triple-doubles",
+      "price": "+125",
+      "status": "HISTORICAL_AUTHOR_OPINION_NOT_A_MICKS_RELEASE"
+    },
+    {
+      "pages": [
+        7
+      ],
+      "author": "Aaron Moore",
+      "market": "Jaylen Brown 15+ rebounds in any regular-season game",
+      "price": "+200",
+      "status": "HISTORICAL_AUTHOR_OPINION_NOT_A_MICKS_RELEASE"
+    },
+    {
+      "pages": [
+        7
+      ],
+      "author": "Aaron Moore",
+      "market": "Houston more regular-season wins than Lakers",
+      "price": "-130 Houston / +105 Lakers",
+      "status": "HISTORICAL_AUTHOR_OPINION_NOT_A_MICKS_RELEASE"
+    },
+    {
+      "pages": [
+        8
+      ],
+      "author": "Nick Whalen",
+      "market": "Brandon Miller Most Improved Player",
+      "price": "13-1",
+      "status": "HISTORICAL_AUTHOR_OPINION_NOT_A_MICKS_RELEASE"
+    },
+    {
+      "pages": [
+        8
+      ],
+      "author": "Nick Whalen",
+      "market": "Cleveland Central Division winner",
+      "price": "+160",
+      "status": "HISTORICAL_AUTHOR_OPINION_NOT_A_MICKS_RELEASE"
+    },
+    {
+      "pages": [
+        9
+      ],
+      "author": "Wes Reynolds",
+      "market": "Payton Pritchard Most Improved Player",
+      "price": "15-1",
+      "status": "HISTORICAL_AUTHOR_OPINION_NOT_A_MICKS_RELEASE"
+    },
+    {
+      "pages": [
+        9
+      ],
+      "author": "Dustin Swedelson",
+      "market": "Anthony Edwards MVP",
+      "price": "20-1",
+      "status": "HISTORICAL_AUTHOR_OPINION_NOT_A_MICKS_RELEASE"
+    },
+    {
+      "pages": [
+        11
+      ],
+      "author": "Kelley Bydlon",
+      "market": "Matas Buzelis Most Improved Player",
+      "price": "40-1",
+      "status": "HISTORICAL_AUTHOR_OPINION_NOT_A_MICKS_RELEASE"
+    }
+  ]
+}

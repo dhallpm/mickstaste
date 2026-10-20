@@ -45,7 +45,10 @@
     "current_health_role_overrides_prior": true,
     "publisher_family_deduplication": true,
     "unrelated_guides": "NOT APPLICABLE",
-    "missing_guide": "disclose; never invent"
+    "missing_guide": "disclose; never invent",
+    "NBA_every_candidate_reconciliation_required": true,
+    "NBA_reference_module": "nba-2026-27-vsin-reference.json",
+    "NBA_audit_field": "NBA Guide Check"
   },
   "evidence_policy": {
     "essential_unknown_blocks_release": true,
@@ -73,7 +76,8 @@
     "official releases or explicit NO BET",
     "best numbers/playable ranges/no-bet cutoffs when established",
     "first alternates and missing gates",
-    "section and complete import payloads"
+    "section and complete import payloads",
+    "NBA Guide Reconciliation Table and per-candidate NBA Guide Check when NBA is active"
   ],
   "report_directory": "micks-framework/runs/YYYY-MM-DD/",
   "publishing": "Follow explicit session authorization; a research command alone must not replace the active card.",

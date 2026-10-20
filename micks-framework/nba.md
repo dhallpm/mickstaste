@@ -1,5 +1,9 @@
 # Micks Picks NBA Framework
 
+## Mandatory VSiN NBA guide cross-reference - 2026-10-20
+
+Every NBA candidate, including every NBA parlay leg, must use [the 2026-27 VSiN module](current/nba-2026-27-vsin-reference.md) and its [30-team index](current/nba-2026-27-vsin-reference.json). Record the exact PDF pages, specific guide premise, current source URLs/time, CURRENT/PARTIALLY_CURRENT/STALE/OVERRIDDEN state, influence and strongest contradiction in `NBA Guide Check`. Missing reconciliation or an unresolved material conflict blocks release. Current verified roster/health/role and executable price override the dated guide. The guide is one VSiN source family, not bonus points or a live price. This applies to NBA only, not WNBA. Keep existing scoring and release modes; no new standalone probability/EV prerequisite.
+
 ## Card Standard
 - NBA cards must start with the market price, the best available number, and an estimated true probability.
 - Do not publish an NBA pick unless the play has a clear edge, a verified book price, and current injury/news context.

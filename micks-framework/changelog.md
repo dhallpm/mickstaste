@@ -101,3 +101,9 @@ Separated missing evidence from verified zero-point factors; withdrew incomplete
 
 ## 2026-09-18 — user-directed restoration
 Restored source/scan/guide handicapping and established score-based decisions. Removed the newly introduced readiness/probability helper and its new release gates. Preserved historical reports as records, not operative rules; preserved the user-requested NFL Recovery exemption.
+
+## 2026-10-20 - Required VSiN NBA 2026-27 cross-reference
+
+Ingested the user-supplied 44-page guide as a required NBA baseline resource; original retained in Library, not publicly redistributed. Added 30-team page/ratings/win-total index, team verification prompts, source discrepancies, freshness and source-family rules. Wired guide context into core and props acquisition even in compact/fallback modes, added structured per-candidate reconciliation, blocked unaudited candidates from executable routing, and retained audits on records/derived parlay legs. Existing picks, results, scoring weights and operating modes are unchanged.
+
+Integration validation also exposed an existing Set/Array mismatch in the tag serializer on candidate routing; the serializer now accepts its existing Set caller as well as arrays. Regression tests exercise both complete and blocked NBA candidates without source calls or publishing picks.

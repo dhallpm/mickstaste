@@ -51,6 +51,14 @@ Required checks:
 - public-versus-respected-money gaps
 - line movement relative to splits
 
+## VSiN NBA season guide - mandatory for every NBA candidate
+
+- User-supplied `2026-VSiN-NBA-Betting-Guide-1.pdf`, season 2026-27, received October 20, 2026; original in ChatGPT Library.
+- Required module: [NBA reference and application rules](nba-2026-27-vsin-reference.md) plus [30-team page/ratings index](nba-2026-27-vsin-reference.json).
+- Required on every NBA side, total, prop, derivative, futures/award candidate and each NBA parlay leg. Record page-specific guide assumptions, current-source checks, freshness, influence and contradictions; unavailable material context blocks release.
+- Original pages and stored digest are different access bases. Do not claim to have read originals from a summary alone.
+- Guide data are historical priors/opinions. Verify current rosters, coaching, health, roles, rules and exact prices. All VSiN outputs remain one source family, with no bonus confirmation points.
+
 ## Circa Sports
 
 Use current Circa numbers obtained through the VSiN Vegas Betting Sheets or other verified Circa market source when available.
