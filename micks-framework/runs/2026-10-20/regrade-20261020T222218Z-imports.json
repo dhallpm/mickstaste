@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-20",
+  "snapshotAt": "2026-10-20T22:22:18.102Z",
+  "applyToActiveFeed": false,
+  "officialReleases": [],
+  "batches": [
+    {
+      "table": "picks",
+      "records": []
+    },
+    {
+      "table": "propsLab",
+      "records": []
+    },
+    {
+      "table": "lottoParlays",
+      "records": []
+    },
+    {
+      "table": "longshots",
+      "records": []
+    }
+  ],
+  "warning": "Research only; never apply empty payload to clear active rows."
+}

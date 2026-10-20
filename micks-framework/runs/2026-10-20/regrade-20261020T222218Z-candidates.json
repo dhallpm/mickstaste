@@ -1,0 +1,1488 @@
+{
+  "date": "2026-10-20",
+  "snapshotAt": "2026-10-20T22:22:18.102Z",
+  "timezone": "America/New_York",
+  "status": "PARTIAL scoped regrade — NO BET",
+  "officialReleases": [],
+  "officialExposureUnits": 0,
+  "actualWagersUnknown": true,
+  "policy": {
+    "weights": [
+      35,
+      20,
+      15,
+      10,
+      10,
+      10,
+      10
+    ],
+    "considerIntegerScoreAtLeast": 71,
+    "legacy82Veto": false,
+    "nonNFLFailureMinimum": 7,
+    "newProbabilityOrEVGate": false,
+    "maxTeamSideTicketsAcrossAllCardTypes": 2
+  },
+  "candidates": [
+    {
+      "id": "nba-brown",
+      "date": "2026-10-20",
+      "sport": "NBA",
+      "event": "PHI@NYK",
+      "startTime": "2026-10-20T19:00:00-04:00",
+      "market": "Jaylen Brown under21.5 points",
+      "lineAndOddsAsArticle": {
+        "market": "Jaylen Brown under21.5 points",
+        "americanOdds": -122,
+        "source": "DK Network, Alex Hunter",
+        "retrievedAt": "2026-10-20T16:57:30.919Z",
+        "executionVerified": false,
+        "asOf": "publication date or dated reference only; no live offer timestamp"
+      },
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "points": 24,
+          "max": 35,
+          "rationale": "Reduced usage beside multiple creators supports the under thesis; Philadelphia bench injuries could move minutes and touches back toward Brown."
+        },
+        "price": {
+          "points": 13,
+          "max": 20,
+          "rationale": "Provisional judgment at the explicitly identified article threshold only; the quote is not an executable offer, opening-to-current series or established live cutoff. Price advantage is limited by the listed risk and unverified current alternatives."
+        },
+        "personnel": {
+          "points": null,
+          "max": 15,
+          "rationale": "Material quarterback, goalie, bench availability or rotation impact remains unresolved; no inferred points."
+        },
+        "situation": {
+          "points": 5,
+          "max": 10,
+          "rationale": "Opening-night venue and preseason/last-season pace context only; no proven current-season trend or rest advantage. Detroit home court counters Boston-side angles."
+        },
+        "vsin": {
+          "points": 0,
+          "max": 10,
+          "rationale": "No usable exact-market current VSiN confirming selection verified; absent support stays UNKNOWN with no points. For Holmgren, unresolved model/table quality means no confirmation points."
+        },
+        "docs": {
+          "points": 0,
+          "max": 10,
+          "rationale": "No exact-market confirming Doc's selection verified; UNKNOWN, no invented points."
+        },
+        "market": {
+          "points": 1,
+          "max": 10,
+          "rationale": "Small contextual credit only for dated identified reference(s). Movement/timing and ticket/handle subfactors remain0/UNKNOWN; no sharp-money or public asterisk inference."
+        }
+      },
+      "handicapScore": null,
+      "scoreStatus": "UNGRADED",
+      "knownSubtotal": {
+        "points": 43,
+        "assessedMaximum": 95,
+        "normalizedTo110": false
+      },
+      "grade": null,
+      "failure": {
+        "dimensions": {
+          "lossPathResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Reduced usage beside multiple creators supports the under thesis; Philadelphia bench injuries could move minutes and touches back toward Brown."
+          },
+          "personnelResilience": {
+            "points": null,
+            "max": 2,
+            "rationale": "Essential role/availability sensitivity not yet assessable."
+          },
+          "scriptVariance": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Scoring/shooting variance or turnover/game-script sensitivity remains a meaningful loss path; no robust2-point claim."
+          },
+          "numberProtection": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Dated threshold supplies only partial protection; no current alternative/cutoff validated."
+          },
+          "countercaseResolution": {
+            "points": 0,
+            "max": 2,
+            "rationale": "Material matchup, sample, price or projection contradiction remains unresolved."
+          }
+        },
+        "score": null,
+        "knownSubtotal": 3,
+        "assessedMaximum": 8,
+        "state": "PROVISIONAL"
+      },
+      "micksThesisAndCountercase": "Reduced usage beside multiple creators supports the under thesis; Philadelphia bench injuries could move minutes and touches back toward Brown.",
+      "missingEvidence": "Final Wade/Simons/Bona and Embiid status; current lineup and role; current DK offer and distribution.; current refresh did not establish final primary health/role confirmation.",
+      "releaseBlockers": [
+        "No current executable DK offer validated",
+        "Failure minimum7/10 not cleared",
+        "Unassessed core factor"
+      ],
+      "disposition": "WATCH/BLOCKED — NO BET",
+      "officialBet": false,
+      "betPlaced": false,
+      "units": 0,
+      "bestNumber": "not established—no bet until regraded",
+      "noBetCutoff": "not established—no bet until regraded",
+      "sources": [
+        "https://dknetwork.draftkings.com/2026/10/20/best-jaylen-brown-prop-bet-for-76ers-at-knicks-on-tuesday-10-20-26/",
+        "https://dknetwork.draftkings.com/2026/10/19/dean-wade-headlines-nba-injury-report-tuesday-10-20-26/"
+      ],
+      "reviewedAt": "2026-10-20T22:22:18.102Z",
+      "crowdStatus": {
+        "tickets": null,
+        "money": null,
+        "contestBetCount": null,
+        "volumeScreenedFlag": null
+      },
+      "fadeAndInflation": {
+        "state": "UNKNOWN",
+        "reason": "Comparable historical closing-expectation5/10/20 windows not obtained; SU records do not clear an ATS trigger."
+      },
+      "NBA Guide Check": {
+        "guideId": "vsin-nba-2026-27-guide",
+        "pages": [
+          13,
+          33,
+          36
+        ],
+        "basis": "ORIGINAL_PAGES reread locally: PDF13,33,36",
+        "guideFinding": "Knicks continuity versus Philadelphia's redistributed usage, Embiid durability and defensive uncertainty. Guide ratings NYK103/PHI101.5.",
+        "currentFinding": "Cohen retains NYK-4.5 lean, wants below-4; Barnard opposes with PHI+4.5-112. Official18:00 injury PDF inaccessible; final Wade/Simons/Bona and Brown workload unresolved.",
+        "currentSources": [
+          "https://dknetwork.draftkings.com/2026/10/19/dean-wade-headlines-nba-injury-report-tuesday-10-20-26/",
+          "https://dknetwork.draftkings.com/2026/10/20/best-jaylen-brown-prop-bet-for-76ers-at-knicks-on-tuesday-10-20-26/",
+          "https://www.teamrankings.com/nba/matchup/76ers-knicks-2026-10-20",
+          "https://vsin.com/nba/nba-best-bets-today-picks-and-predictions-for-tuesday-october-20/",
+          "https://dknetwork.draftkings.com/2026/10/20/philadelphia-76ers-vs-new-york-knicks-prediction-pick-for-tuesday-10-20-26/"
+        ],
+        "checkedAt": "2026-10-20T22:22:18.102Z",
+        "state": "PARTIALLY_CURRENT",
+        "influence": "Baseline informs qualitative matchup and personnel only; no extra VSiN confirmation points.",
+        "countercase": "Absences could increase Brown scoring/minutes; new offensive talent makes old team aggregates less representative.",
+        "materialConflictResolved": false
+      },
+      "previousSnapshot": {
+        "at": "2026-10-20T16:57:30.919Z",
+        "score": null,
+        "knownSubtotal": {
+          "points": 43,
+          "assessedMaximum": 95,
+          "normalizedTo110": false
+        },
+        "failure": {
+          "dimensions": {
+            "lossPathResilience": {
+              "points": 1,
+              "max": 2,
+              "rationale": "Reduced usage beside multiple creators supports the under thesis; Philadelphia bench injuries could move minutes and touches back toward Brown."
+            },
+            "personnelResilience": {
+              "points": null,
+              "max": 2,
+              "rationale": "Essential role/availability sensitivity not yet assessable."
+            },
+            "scriptVariance": {
+              "points": 1,
+              "max": 2,
+              "rationale": "Scoring/shooting variance or turnover/game-script sensitivity remains a meaningful loss path; no robust2-point claim."
+            },
+            "numberProtection": {
+              "points": 1,
+              "max": 2,
+              "rationale": "Dated threshold supplies only partial protection; no current alternative/cutoff validated."
+            },
+            "countercaseResolution": {
+              "points": 0,
+              "max": 2,
+              "rationale": "Material matchup, sample, price or projection contradiction remains unresolved."
+            }
+          },
+          "score": null,
+          "knownSubtotal": 3,
+          "assessedMaximum": 8,
+          "state": "PROVISIONAL"
+        }
+      },
+      "checkTiming": "45-minute cohort review performed after18:15; not an exact45-minute observation",
+      "weather": "Indoor; no outdoor weather gate"
+    },
+    {
+      "id": "nba-nyk",
+      "date": "2026-10-20",
+      "sport": "NBA",
+      "event": "PHI@NYK",
+      "startTime": "2026-10-20T19:00:00-04:00",
+      "market": "New York -4.5",
+      "lineAndOddsAsArticle": {
+        "market": "New York -4.5",
+        "americanOdds": null,
+        "source": "DK Network and TeamRankings references",
+        "retrievedAt": "2026-10-20T16:57:30.919Z",
+        "executionVerified": false,
+        "asOf": "publication date or dated reference only; no live offer timestamp"
+      },
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "points": 24,
+          "max": 35,
+          "rationale": "Continuity/home-court defense is preferable to mechanically projecting last year's Philadelphia roster. Visitor talent and bench uncertainty remain substantial."
+        },
+        "price": {
+          "points": 12,
+          "max": 20,
+          "rationale": "Provisional judgment at the explicitly identified article threshold only; the quote is not an executable offer, opening-to-current series or established live cutoff. Price advantage is limited by the listed risk and unverified current alternatives."
+        },
+        "personnel": {
+          "points": null,
+          "max": 15,
+          "rationale": "Material quarterback, goalie, bench availability or rotation impact remains unresolved; no inferred points."
+        },
+        "situation": {
+          "points": 6,
+          "max": 10,
+          "rationale": "Opening-night venue and preseason/last-season pace context only; no proven current-season trend or rest advantage. Detroit home court counters Boston-side angles."
+        },
+        "vsin": {
+          "points": 6,
+          "max": 10,
+          "rationale": "Cohen NYK-4.5-110 is a LEAN, not his bet; continuity and bench-center thesis support partly. His own preferred threshold below-4 limits support; same guide family no bonus."
+        },
+        "docs": {
+          "points": 6,
+          "max": 10,
+          "rationale": "The corresponding named Doc's selection in sources supports the side. Different article thresholds are retained and older-roster generic recaps limit conviction."
+        },
+        "market": {
+          "points": 2,
+          "max": 10,
+          "rationale": "Small contextual credit only for dated identified reference(s). Movement/timing and ticket/handle subfactors remain0/UNKNOWN; no sharp-money or public asterisk inference."
+        }
+      },
+      "handicapScore": null,
+      "scoreStatus": "UNGRADED",
+      "knownSubtotal": {
+        "points": 56,
+        "assessedMaximum": 95,
+        "normalizedTo110": false
+      },
+      "grade": null,
+      "failure": {
+        "dimensions": {
+          "lossPathResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Continuity/home-court defense is preferable to mechanically projecting last year's Philadelphia roster. Visitor talent and bench uncertainty remain substantial."
+          },
+          "personnelResilience": {
+            "points": null,
+            "max": 2,
+            "rationale": "Essential role/availability sensitivity not yet assessable."
+          },
+          "scriptVariance": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Scoring/shooting variance or turnover/game-script sensitivity remains a meaningful loss path; no robust2-point claim."
+          },
+          "numberProtection": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Dated threshold supplies only partial protection; no current alternative/cutoff validated."
+          },
+          "countercaseResolution": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Independent context addresses part of the opposing case, but does not remove it."
+          }
+        },
+        "score": null,
+        "knownSubtotal": 4,
+        "assessedMaximum": 8,
+        "state": "PROVISIONAL"
+      },
+      "micksThesisAndCountercase": "Continuity/home-court defense is preferable to mechanically projecting last year's Philadelphia roster. Visitor talent and bench uncertainty remain substantial.",
+      "missingEvidence": "Executable spread/juice and material personnel; Doc's -5.5 article has a better current threshold but needs rationale reconciliation.; current refresh did not establish final primary health/role confirmation.",
+      "releaseBlockers": [
+        "No current executable DK offer validated",
+        "Failure minimum7/10 not cleared",
+        "Unassessed core factor"
+      ],
+      "disposition": "WATCH/BLOCKED — NO BET",
+      "officialBet": false,
+      "betPlaced": false,
+      "units": 0,
+      "bestNumber": "not established—no bet until regraded",
+      "noBetCutoff": "not established—no bet until regraded",
+      "sources": [
+        "https://dknetwork.draftkings.com/2026/10/20/best-jaylen-brown-prop-bet-for-76ers-at-knicks-on-tuesday-10-20-26/",
+        "https://www.teamrankings.com/nba/matchup/76ers-knicks-2026-10-20",
+        "https://www.docsports.com/free-picks/nba/2026/philadelphia-76ers-vs-new-york-knicks-prediction-10-20-2026-preview-and-pick.html"
+      ],
+      "reviewedAt": "2026-10-20T22:22:18.102Z",
+      "crowdStatus": {
+        "tickets": null,
+        "money": null,
+        "contestBetCount": null,
+        "volumeScreenedFlag": null
+      },
+      "fadeAndInflation": {
+        "state": "UNKNOWN",
+        "reason": "Comparable historical closing-expectation5/10/20 windows not obtained; SU records do not clear an ATS trigger."
+      },
+      "NBA Guide Check": {
+        "guideId": "vsin-nba-2026-27-guide",
+        "pages": [
+          13,
+          33,
+          36
+        ],
+        "basis": "ORIGINAL_PAGES reread locally: PDF13,33,36",
+        "guideFinding": "Knicks continuity versus Philadelphia's redistributed usage, Embiid durability and defensive uncertainty. Guide ratings NYK103/PHI101.5.",
+        "currentFinding": "Cohen retains NYK-4.5 lean, wants below-4; Barnard opposes with PHI+4.5-112. Official18:00 injury PDF inaccessible; final Wade/Simons/Bona and Brown workload unresolved.",
+        "currentSources": [
+          "https://dknetwork.draftkings.com/2026/10/19/dean-wade-headlines-nba-injury-report-tuesday-10-20-26/",
+          "https://dknetwork.draftkings.com/2026/10/20/best-jaylen-brown-prop-bet-for-76ers-at-knicks-on-tuesday-10-20-26/",
+          "https://www.teamrankings.com/nba/matchup/76ers-knicks-2026-10-20",
+          "https://vsin.com/nba/nba-best-bets-today-picks-and-predictions-for-tuesday-october-20/",
+          "https://dknetwork.draftkings.com/2026/10/20/philadelphia-76ers-vs-new-york-knicks-prediction-pick-for-tuesday-10-20-26/"
+        ],
+        "checkedAt": "2026-10-20T22:22:18.102Z",
+        "state": "PARTIALLY_CURRENT",
+        "influence": "Baseline informs qualitative matchup and personnel only; no extra VSiN confirmation points.",
+        "countercase": "Absences could increase Brown scoring/minutes; new offensive talent makes old team aggregates less representative.",
+        "materialConflictResolved": false
+      },
+      "previousSnapshot": {
+        "at": "2026-10-20T16:57:30.919Z",
+        "score": null,
+        "knownSubtotal": {
+          "points": 56,
+          "assessedMaximum": 95,
+          "normalizedTo110": false
+        },
+        "failure": {
+          "dimensions": {
+            "lossPathResilience": {
+              "points": 1,
+              "max": 2,
+              "rationale": "Continuity/home-court defense is preferable to mechanically projecting last year's Philadelphia roster. Visitor talent and bench uncertainty remain substantial."
+            },
+            "personnelResilience": {
+              "points": null,
+              "max": 2,
+              "rationale": "Essential role/availability sensitivity not yet assessable."
+            },
+            "scriptVariance": {
+              "points": 1,
+              "max": 2,
+              "rationale": "Scoring/shooting variance or turnover/game-script sensitivity remains a meaningful loss path; no robust2-point claim."
+            },
+            "numberProtection": {
+              "points": 1,
+              "max": 2,
+              "rationale": "Dated threshold supplies only partial protection; no current alternative/cutoff validated."
+            },
+            "countercaseResolution": {
+              "points": 1,
+              "max": 2,
+              "rationale": "Independent context addresses part of the opposing case, but does not remove it."
+            }
+          },
+          "score": null,
+          "knownSubtotal": 4,
+          "assessedMaximum": 8,
+          "state": "PROVISIONAL"
+        }
+      },
+      "checkTiming": "45-minute cohort review performed after18:15; not an exact45-minute observation",
+      "weather": "Indoor; no outdoor weather gate"
+    },
+    {
+      "id": "cfb-usa",
+      "date": "2026-10-20",
+      "sport": "CFB",
+      "event": "South Alabama@Marshall",
+      "startTime": "2026-10-20T19:30:00-04:00",
+      "market": "South Alabama -3",
+      "lineAndOddsAsArticle": {
+        "market": "South Alabama -3",
+        "americanOdds": null,
+        "source": "Circa reference Oct19 10:30ET via VSiN; not live DK",
+        "retrievedAt": "2026-10-20T16:57:30.919Z",
+        "executionVerified": false,
+        "asOf": "publication date or dated reference only; no live offer timestamp"
+      },
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "points": 26,
+          "max": 35,
+          "rationale": "Rushing strength against Marshall's run defense is the independent cashing path; South Alabama's own poor defense makes a shootout/upset a real risk."
+        },
+        "price": {
+          "points": 13,
+          "max": 20,
+          "rationale": "Provisional judgment at the explicitly identified article threshold only; the quote is not an executable offer, opening-to-current series or established live cutoff. Price advantage is limited by the listed risk and unverified current alternatives."
+        },
+        "personnel": {
+          "points": null,
+          "max": 15,
+          "rationale": "Material quarterback, goalie, bench availability or rotation impact remains unresolved; no inferred points."
+        },
+        "situation": {
+          "points": 6,
+          "max": 10,
+          "rationale": "Venue/preparation and style context give limited support; current game-time weather still unconfirmed."
+        },
+        "vsin": {
+          "points": 8,
+          "max": 10,
+          "rationale": "Burke explicitly selects SouthAlabama-3, identifying rushing offense versus poor run defense while acknowledging poor Jaguar defense."
+        },
+        "docs": {
+          "points": 7,
+          "max": 10,
+          "rationale": "The corresponding named Doc's selection in sources supports the side. Different article thresholds are retained and older-roster generic recaps limit conviction."
+        },
+        "market": {
+          "points": 2,
+          "max": 10,
+          "rationale": "Small contextual credit only for dated identified reference(s). Movement/timing and ticket/handle subfactors remain0/UNKNOWN; no sharp-money or public asterisk inference."
+        }
+      },
+      "handicapScore": null,
+      "scoreStatus": "UNGRADED",
+      "knownSubtotal": {
+        "points": 62,
+        "assessedMaximum": 95,
+        "normalizedTo110": false
+      },
+      "grade": null,
+      "failure": {
+        "dimensions": {
+          "lossPathResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Rushing strength against Marshall's run defense is the independent cashing path; South Alabama's own poor defense makes a shootout/upset a real risk."
+          },
+          "personnelResilience": {
+            "points": null,
+            "max": 2,
+            "rationale": "Essential role/availability sensitivity not yet assessable."
+          },
+          "scriptVariance": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Scoring/shooting variance or turnover/game-script sensitivity remains a meaningful loss path; no robust2-point claim."
+          },
+          "numberProtection": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Dated threshold supplies only partial protection; no current alternative/cutoff validated."
+          },
+          "countercaseResolution": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Independent context addresses part of the opposing case, but does not remove it."
+          }
+        },
+        "score": null,
+        "knownSubtotal": 4,
+        "assessedMaximum": 8,
+        "state": "PROVISIONAL"
+      },
+      "micksThesisAndCountercase": "Rushing strength against Marshall's run defense is the independent cashing path; South Alabama's own poor defense makes a shootout/upset a real risk.",
+      "missingEvidence": "Confirm Marshall QB/rotation, South Alabama availability, current weather and exact executable DK number. Doc's -2.5 is materially preferable to -3.; current refresh did not establish final primary health/role confirmation.",
+      "releaseBlockers": [
+        "No current executable DK offer validated",
+        "Failure minimum7/10 not cleared",
+        "Unassessed core factor"
+      ],
+      "disposition": "WATCH/BLOCKED — NO BET",
+      "officialBet": false,
+      "betPlaced": false,
+      "units": 0,
+      "bestNumber": "not established—no bet until regraded",
+      "noBetCutoff": "not established—no bet until regraded",
+      "sources": [
+        "https://vsin.com/college-football/college-football-week-8-picks-south-alabama-vs-marshall/",
+        "https://www.docsports.com/free-picks/football/2026/south-alabama-jaguars-vs-marshall-thundering-herd-prediction-10-20-2026-college-football-picks-best-bets-odds.html",
+        "https://usajaguars.com/news/2026/10/17/football-jags-head-to-marshall-for-tuesday-night-game.aspx"
+      ],
+      "reviewedAt": "2026-10-20T22:22:18.102Z",
+      "crowdStatus": {
+        "tickets": null,
+        "money": null,
+        "contestBetCount": null,
+        "volumeScreenedFlag": null
+      },
+      "fadeAndInflation": {
+        "state": "UNKNOWN",
+        "reason": "Comparable historical closing-expectation5/10/20 windows not obtained; SU records do not clear an ATS trigger."
+      },
+      "previousSnapshot": {
+        "at": "2026-10-20T16:57:30.919Z",
+        "score": null,
+        "knownSubtotal": {
+          "points": 62,
+          "assessedMaximum": 95,
+          "normalizedTo110": false
+        },
+        "failure": {
+          "dimensions": {
+            "lossPathResilience": {
+              "points": 1,
+              "max": 2,
+              "rationale": "Rushing strength against Marshall's run defense is the independent cashing path; South Alabama's own poor defense makes a shootout/upset a real risk."
+            },
+            "personnelResilience": {
+              "points": null,
+              "max": 2,
+              "rationale": "Essential role/availability sensitivity not yet assessable."
+            },
+            "scriptVariance": {
+              "points": 1,
+              "max": 2,
+              "rationale": "Scoring/shooting variance or turnover/game-script sensitivity remains a meaningful loss path; no robust2-point claim."
+            },
+            "numberProtection": {
+              "points": 1,
+              "max": 2,
+              "rationale": "Dated threshold supplies only partial protection; no current alternative/cutoff validated."
+            },
+            "countercaseResolution": {
+              "points": 1,
+              "max": 2,
+              "rationale": "Independent context addresses part of the opposing case, but does not remove it."
+            }
+          },
+          "score": null,
+          "knownSubtotal": 4,
+          "assessedMaximum": 8,
+          "state": "PROVISIONAL"
+        }
+      },
+      "checkTiming": "EARLY REVIEW: 19:30 start; exact45 checkpoint18:45 not covered",
+      "weather": "Huntington mostly clear69F19:00/65F20:00; wind unverified"
+    },
+    {
+      "id": "cfb-fiu",
+      "date": "2026-10-20",
+      "sport": "CFB",
+      "event": "MTSU@FIU",
+      "startTime": "2026-10-20T19:00:00-04:00",
+      "market": "FIU -9.5",
+      "lineAndOddsAsArticle": {
+        "market": "FIU -9.5",
+        "americanOdds": -126,
+        "source": "DK Network, Bryan Armetta",
+        "retrievedAt": "2026-10-20T16:57:30.919Z",
+        "executionVerified": false,
+        "asOf": "publication date or dated reference only; no live offer timestamp"
+      },
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "points": 23,
+          "max": 35,
+          "rationale": "FIU defense and possession control help; turnover-prone quarterback and weak rushing efficiency undermine a two-score margin."
+        },
+        "price": {
+          "points": 10,
+          "max": 20,
+          "rationale": "Provisional judgment at the explicitly identified article threshold only; the quote is not an executable offer, opening-to-current series or established live cutoff. Price advantage is limited by the listed risk and unverified current alternatives."
+        },
+        "personnel": {
+          "points": 10,
+          "max": 15,
+          "rationale": "Known FIU defensive role and offensive quarterback/rushing limitations give only modest support; final news remains outstanding."
+        },
+        "situation": {
+          "points": 5,
+          "max": 10,
+          "rationale": "Venue/preparation and style context give limited support; current game-time weather still unconfirmed."
+        },
+        "vsin": {
+          "points": 0,
+          "max": 10,
+          "rationale": "No usable exact-market current VSiN confirming selection verified; absent support stays UNKNOWN with no points. For Holmgren, unresolved model/table quality means no confirmation points."
+        },
+        "docs": {
+          "points": 0,
+          "max": 10,
+          "rationale": "Tony Sink takes the opponent MTSU+10.5; actual disagreement, not missing data."
+        },
+        "market": {
+          "points": 3,
+          "max": 10,
+          "rationale": "VSiN DK-labelled board shows FIU-10, spread58% bets/63%money. Identified reference and observable neutral splits provide limited context; no verified movement. ML81%/85% does not transfer. Contest count absent."
+        }
+      },
+      "handicapScore": 51,
+      "scoreStatus": "PROVISIONAL",
+      "knownSubtotal": {
+        "points": 51,
+        "assessedMaximum": 110,
+        "normalizedTo110": false
+      },
+      "grade": "Pass",
+      "failure": {
+        "dimensions": {
+          "lossPathResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "FIU defense and possession control help; turnover-prone quarterback and weak rushing efficiency undermine a two-score margin."
+          },
+          "personnelResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "A healthy baseline exists, but plausible closing-minutes and touches changes are not stress-tested; partial resilience only."
+          },
+          "scriptVariance": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Scoring/shooting variance or turnover/game-script sensitivity remains a meaningful loss path; no robust2-point claim."
+          },
+          "numberProtection": {
+            "points": 0,
+            "max": 2,
+            "rationale": "Laying9.5 at-126 provides weak protection; double-digit margin and price risk unresolved."
+          },
+          "countercaseResolution": {
+            "points": 0,
+            "max": 2,
+            "rationale": "Material matchup, sample, price or projection contradiction remains unresolved."
+          }
+        },
+        "score": 3,
+        "knownSubtotal": 3,
+        "assessedMaximum": 10,
+        "state": "PROVISIONAL"
+      },
+      "micksThesisAndCountercase": "FIU defense and possession control help; turnover-prone quarterback and weak rushing efficiency undermine a two-score margin.",
+      "missingEvidence": "Resolve the price/laying-points problem, current health/weather; Doc's takes MTSU+10.5 and Burke passes. No opposite-side automatic play.; current refresh did not establish final primary health/role confirmation.",
+      "releaseBlockers": [
+        "No current executable DK offer validated",
+        "Failure minimum7/10 not cleared"
+      ],
+      "disposition": "WATCH/BLOCKED — NO BET",
+      "officialBet": false,
+      "betPlaced": false,
+      "units": 0,
+      "bestNumber": "not established—no bet until regraded",
+      "noBetCutoff": "not established—no bet until regraded",
+      "sources": [
+        "https://dknetwork.draftkings.com/2026/10/20/middle-tennessee-blue-raiders-vs-fiu-panthers-pick-prediction-for-college-football-week-8-on-tuesday-10-20-26/",
+        "https://www.docsports.com/free-picks/football/2026/mtsu-blue-raiders-vs-fiu-panthers-prediction-10-20-2026-college-football-picks-best-bets-odds.html",
+        "https://vsin.com/college-football/college-football-week-8-picks-south-alabama-vs-marshall/"
+      ],
+      "reviewedAt": "2026-10-20T22:22:18.102Z",
+      "crowdStatus": {
+        "spread": {
+          "line": -10,
+          "bets": 58,
+          "money": 63
+        },
+        "moneyline": {
+          "odds": -410,
+          "bets": 81,
+          "money": 85
+        },
+        "contestBetCount": null,
+        "volumeScreenedFlag": null
+      },
+      "fadeAndInflation": {
+        "state": "UNKNOWN",
+        "reason": "Comparable historical closing-expectation5/10/20 windows not obtained; SU records do not clear an ATS trigger."
+      },
+      "previousSnapshot": {
+        "at": "2026-10-20T16:57:30.919Z",
+        "score": 49,
+        "knownSubtotal": {
+          "points": 51,
+          "assessedMaximum": 110,
+          "normalizedTo110": false
+        },
+        "failure": {
+          "dimensions": {
+            "lossPathResilience": {
+              "points": 1,
+              "max": 2,
+              "rationale": "FIU defense and possession control help; turnover-prone quarterback and weak rushing efficiency undermine a two-score margin."
+            },
+            "personnelResilience": {
+              "points": 1,
+              "max": 2,
+              "rationale": "A healthy baseline exists, but plausible closing-minutes and touches changes are not stress-tested; partial resilience only."
+            },
+            "scriptVariance": {
+              "points": 1,
+              "max": 2,
+              "rationale": "Scoring/shooting variance or turnover/game-script sensitivity remains a meaningful loss path; no robust2-point claim."
+            },
+            "numberProtection": {
+              "points": 0,
+              "max": 2,
+              "rationale": "Laying9.5 at-126 provides weak protection; double-digit margin and price risk unresolved."
+            },
+            "countercaseResolution": {
+              "points": 0,
+              "max": 2,
+              "rationale": "Material matchup, sample, price or projection contradiction remains unresolved."
+            }
+          },
+          "score": 3,
+          "knownSubtotal": 3,
+          "assessedMaximum": 10,
+          "state": "PROVISIONAL"
+        }
+      },
+      "checkTiming": "45-minute cohort review performed after18:15; not an exact45-minute observation",
+      "change": "49→51 provisional, market context only; still Failure3/10; no release.",
+      "weather": "Miami showers79F19:00 then mostlyclear78F20:00; wind/lightning radar unverified"
+    },
+    {
+      "id": "cfb-del",
+      "date": "2026-10-20",
+      "sport": "CFB",
+      "event": "Missouri State@Delaware",
+      "startTime": "2026-10-20T19:00:00-04:00",
+      "market": "Delaware -3.5",
+      "lineAndOddsAsArticle": {
+        "market": "Delaware -3.5",
+        "americanOdds": null,
+        "source": "Doc's article; book unspecified",
+        "retrievedAt": "2026-10-20T16:57:30.919Z",
+        "executionVerified": false,
+        "asOf": "publication date or dated reference only; no live offer timestamp"
+      },
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "points": 18,
+          "max": 35,
+          "rationale": "Home offense is a possible path, but uncertain quarterback identities on both sides prevent a reliable personnel handicap."
+        },
+        "price": {
+          "points": 10,
+          "max": 20,
+          "rationale": "Provisional judgment at the explicitly identified article threshold only; the quote is not an executable offer, opening-to-current series or established live cutoff. Price advantage is limited by the listed risk and unverified current alternatives."
+        },
+        "personnel": {
+          "points": null,
+          "max": 15,
+          "rationale": "Material quarterback, goalie, bench availability or rotation impact remains unresolved; no inferred points."
+        },
+        "situation": {
+          "points": 5,
+          "max": 10,
+          "rationale": "Venue/preparation and style context give limited support; current game-time weather still unconfirmed."
+        },
+        "vsin": {
+          "points": 0,
+          "max": 10,
+          "rationale": "No usable exact-market current VSiN confirming selection verified; absent support stays UNKNOWN with no points. For Holmgren, unresolved model/table quality means no confirmation points."
+        },
+        "docs": {
+          "points": 6,
+          "max": 10,
+          "rationale": "The corresponding named Doc's selection in sources supports the side. Different article thresholds are retained and older-roster generic recaps limit conviction."
+        },
+        "market": {
+          "points": 1,
+          "max": 10,
+          "rationale": "Small contextual credit only for dated identified reference(s). Movement/timing and ticket/handle subfactors remain0/UNKNOWN; no sharp-money or public asterisk inference."
+        }
+      },
+      "handicapScore": null,
+      "scoreStatus": "UNGRADED",
+      "knownSubtotal": {
+        "points": 40,
+        "assessedMaximum": 95,
+        "normalizedTo110": false
+      },
+      "grade": null,
+      "failure": {
+        "dimensions": {
+          "lossPathResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Home offense is a possible path, but uncertain quarterback identities on both sides prevent a reliable personnel handicap."
+          },
+          "personnelResilience": {
+            "points": null,
+            "max": 2,
+            "rationale": "Essential role/availability sensitivity not yet assessable."
+          },
+          "scriptVariance": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Scoring/shooting variance or turnover/game-script sensitivity remains a meaningful loss path; no robust2-point claim."
+          },
+          "numberProtection": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Dated threshold supplies only partial protection; no current alternative/cutoff validated."
+          },
+          "countercaseResolution": {
+            "points": 0,
+            "max": 2,
+            "rationale": "Material matchup, sample, price or projection contradiction remains unresolved."
+          }
+        },
+        "score": null,
+        "knownSubtotal": 3,
+        "assessedMaximum": 8,
+        "state": "PROVISIONAL"
+      },
+      "micksThesisAndCountercase": "Home offense is a possible path, but uncertain quarterback identities on both sides prevent a reliable personnel handicap.",
+      "missingEvidence": "Confirm quarterbacks and availability, current DK market and weather; Burke has no bet.; current refresh did not establish final primary health/role confirmation.",
+      "releaseBlockers": [
+        "No current executable DK offer validated",
+        "Failure minimum7/10 not cleared",
+        "Unassessed core factor"
+      ],
+      "disposition": "WATCH/BLOCKED — NO BET",
+      "officialBet": false,
+      "betPlaced": false,
+      "units": 0,
+      "bestNumber": "not established—no bet until regraded",
+      "noBetCutoff": "not established—no bet until regraded",
+      "sources": [
+        "https://www.docsports.com/free-picks/football/2026/missouri-state-bears-vs-delaware-blue-hens-prediction-10-20-2026-college-football-picks-best-bets-odds.html",
+        "https://vsin.com/college-football/college-football-week-8-picks-south-alabama-vs-marshall/"
+      ],
+      "reviewedAt": "2026-10-20T22:22:18.102Z",
+      "crowdStatus": {
+        "tickets": null,
+        "money": null,
+        "contestBetCount": null,
+        "volumeScreenedFlag": null
+      },
+      "fadeAndInflation": {
+        "state": "UNKNOWN",
+        "reason": "Comparable historical closing-expectation5/10/20 windows not obtained; SU records do not clear an ATS trigger."
+      },
+      "previousSnapshot": {
+        "at": "2026-10-20T16:57:30.919Z",
+        "score": null,
+        "knownSubtotal": {
+          "points": 40,
+          "assessedMaximum": 95,
+          "normalizedTo110": false
+        },
+        "failure": {
+          "dimensions": {
+            "lossPathResilience": {
+              "points": 1,
+              "max": 2,
+              "rationale": "Home offense is a possible path, but uncertain quarterback identities on both sides prevent a reliable personnel handicap."
+            },
+            "personnelResilience": {
+              "points": null,
+              "max": 2,
+              "rationale": "Essential role/availability sensitivity not yet assessable."
+            },
+            "scriptVariance": {
+              "points": 1,
+              "max": 2,
+              "rationale": "Scoring/shooting variance or turnover/game-script sensitivity remains a meaningful loss path; no robust2-point claim."
+            },
+            "numberProtection": {
+              "points": 1,
+              "max": 2,
+              "rationale": "Dated threshold supplies only partial protection; no current alternative/cutoff validated."
+            },
+            "countercaseResolution": {
+              "points": 0,
+              "max": 2,
+              "rationale": "Material matchup, sample, price or projection contradiction remains unresolved."
+            }
+          },
+          "score": null,
+          "knownSubtotal": 3,
+          "assessedMaximum": 8,
+          "state": "PROVISIONAL"
+        }
+      },
+      "checkTiming": "45-minute cohort review performed after18:15; not an exact45-minute observation",
+      "weather": "Newark mostly clear62F19:00/60F20:00; wind unverified"
+    },
+    {
+      "id": "nhl-sjs-ml",
+      "sport": "NHL",
+      "event": "SJS@MTL",
+      "startTime": "2026-10-20T19:00:00-04:00",
+      "reviewedAt": "2026-10-20T22:22:18.102Z",
+      "checkTiming": "45-minute cohort; performed after18:15, not exact45-minute observation",
+      "market": "San Jose ML",
+      "referenceOffer": {
+        "americanOdds": 170,
+        "source": "https://www.dailyfaceoff.com/starting-goalies/10-20-2026",
+        "executionVerified": false,
+        "asOf": "Dated commentary snapshot; exact current DK offer unknown"
+      },
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "points": 23,
+          "max": 35,
+          "rationale": "Goalie contrast makes underdog worth examining; Montreal scoring and Sharks fatigue oppose. Head-to-head records are weak current predictors."
+        },
+        "price": {
+          "points": 12,
+          "max": 20,
+          "rationale": "Dated reference permits provisional assessment only; no proven DK executable advantage."
+        },
+        "personnel": {
+          "points": 11,
+          "max": 15,
+          "rationale": "Nedeljkovic/Dobes confirmed by dated DFO; modest SJS crease support, limited early sample."
+        },
+        "situation": {
+          "points": 3,
+          "max": 10,
+          "rationale": "SJS back-to-back and third-in-four downside."
+        },
+        "vsin": {
+          "points": 7,
+          "max": 10,
+          "rationale": "Davis explicitly SJS+170; stale matchup-based props are not new Micks legs."
+        },
+        "docs": {
+          "points": 0,
+          "max": 10,
+          "rationale": "Exact Doc's article inaccessible; no invented selection."
+        },
+        "market": {
+          "points": 2,
+          "max": 10,
+          "rationale": "Reference context2/5; movement0/3 and splits0/2 unknown."
+        }
+      },
+      "handicapScore": 58,
+      "scoreStatus": "PROVISIONAL",
+      "knownSubtotal": {
+        "points": 58,
+        "assessedMaximum": 110,
+        "normalizedTo110": false
+      },
+      "failure": {
+        "dimensions": {
+          "lossPathResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "MTL offense can overwhelm goalie thesis."
+          },
+          "personnelResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Small goalie sample; no robust role-change stress test."
+          },
+          "scriptVariance": {
+            "points": 0,
+            "max": 2,
+            "rationale": "Fatigue/penalties amplify volatility."
+          },
+          "numberProtection": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Underdog cushion is price only; cutoff absent."
+          },
+          "countercaseResolution": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Rest and current metrics contradiction partly unresolved."
+          }
+        },
+        "score": 4
+      },
+      "goalies": "Nedeljkovic CONFIRMED; Dobes CONFIRMED",
+      "disposition": "NO BET",
+      "officialBet": false,
+      "betPlaced": false,
+      "units": 0,
+      "bestNumber": "not established—no bet until regraded",
+      "noBetCutoff": "not established—no bet until regraded",
+      "missingEvidence": [
+        "Exact executable DraftKings selection/juice",
+        "Current advanced5v5/special-teams verification incomplete",
+        "Authentic opening-current series and fade/inflation windows unavailable",
+        "Market-specific volume-screened crowd status unknown"
+      ],
+      "releaseBlockers": [
+        "Failure7/10 not cleared",
+        "Mandatory current market verification incomplete"
+      ],
+      "sources": [
+        "https://www.dailyfaceoff.com/starting-goalies/10-20-2026",
+        "https://vsin.com/nhl/nhl-predictions-expert-picks-on-tuesday-october-20/"
+      ],
+      "NBA Guide Check": null
+    },
+    {
+      "id": "nhl-col-ml",
+      "sport": "NHL",
+      "event": "COL@NJD",
+      "startTime": "2026-10-20T19:00:00-04:00",
+      "reviewedAt": "2026-10-20T22:22:18.102Z",
+      "checkTiming": "45-minute cohort; performed after18:15, not exact45-minute observation",
+      "market": "Colorado ML",
+      "referenceOffer": {
+        "americanOdds": -110,
+        "source": "https://www.dailyfaceoff.com/starting-goalies/10-20-2026",
+        "executionVerified": false,
+        "asOf": "Dated commentary snapshot; exact current DK offer unknown"
+      },
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "points": 24,
+          "max": 35,
+          "rationale": "Colorado attack versus Devils goal prevention is a plausible path; NJD shot creation and rest oppose."
+        },
+        "price": {
+          "points": 11,
+          "max": 20,
+          "rationale": "Dated reference permits provisional assessment only; no proven DK executable advantage."
+        },
+        "personnel": {
+          "points": 11,
+          "max": 15,
+          "rationale": "DFO confirms Wedgewood/Allen; Blackwood narrative rejected."
+        },
+        "situation": {
+          "points": 3,
+          "max": 10,
+          "rationale": "COL road back-to-back adverse."
+        },
+        "vsin": {
+          "points": 2,
+          "max": 10,
+          "rationale": "Davis COL-110 depends partly on wrong Blackwood premise; only residual offensive argument credited."
+        },
+        "docs": {
+          "points": 0,
+          "max": 10,
+          "rationale": "Bruhn takes NJD-105, opposing; do not claim agreement."
+        },
+        "market": {
+          "points": 2,
+          "max": 10,
+          "rationale": "Reference context2/5; movement0/3 and splits0/2 unknown."
+        }
+      },
+      "handicapScore": 53,
+      "scoreStatus": "PROVISIONAL",
+      "knownSubtotal": {
+        "points": 53,
+        "assessedMaximum": 110,
+        "normalizedTo110": false
+      },
+      "failure": {
+        "dimensions": {
+          "lossPathResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Allen vulnerability not decisive."
+          },
+          "personnelResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Confirmed goalie but reduced premise strength."
+          },
+          "scriptVariance": {
+            "points": 0,
+            "max": 2,
+            "rationale": "Road fatigue and finishing variance."
+          },
+          "numberProtection": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Pickem still sensitive; no executable cutoff."
+          },
+          "countercaseResolution": {
+            "points": 0,
+            "max": 2,
+            "rationale": "Wrong-goalie claim and opposing Doc's unresolved."
+          }
+        },
+        "score": 3
+      },
+      "goalies": "Wedgewood CONFIRMED; Allen CONFIRMED",
+      "disposition": "NO BET",
+      "officialBet": false,
+      "betPlaced": false,
+      "units": 0,
+      "bestNumber": "not established—no bet until regraded",
+      "noBetCutoff": "not established—no bet until regraded",
+      "missingEvidence": [
+        "Exact executable DraftKings selection/juice",
+        "Current advanced5v5/special-teams verification incomplete",
+        "Authentic opening-current series and fade/inflation windows unavailable",
+        "Market-specific volume-screened crowd status unknown"
+      ],
+      "releaseBlockers": [
+        "Failure7/10 not cleared",
+        "Mandatory current market verification incomplete"
+      ],
+      "sources": [
+        "https://www.dailyfaceoff.com/starting-goalies/10-20-2026",
+        "https://vsin.com/nhl/nhl-predictions-expert-picks-on-tuesday-october-20/"
+      ],
+      "NBA Guide Check": null
+    },
+    {
+      "id": "nhl-nyi-ml",
+      "sport": "NHL",
+      "event": "ANA@NYI",
+      "startTime": "2026-10-20T19:00:00-04:00",
+      "reviewedAt": "2026-10-20T22:22:18.102Z",
+      "checkTiming": "45-minute cohort; performed after18:15, not exact45-minute observation",
+      "market": "Islanders ML",
+      "referenceOffer": {
+        "americanOdds": -149,
+        "source": "https://www.dailyfaceoff.com/starting-goalies/10-20-2026",
+        "executionVerified": false,
+        "asOf": "Dated commentary snapshot; exact current DK offer unknown"
+      },
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "points": 23,
+          "max": 35,
+          "rationale": "Sorokin plus rest supplies modest home thesis; depleted NYI attack and favorite price limit conviction."
+        },
+        "price": {
+          "points": 11,
+          "max": 20,
+          "rationale": "Dated reference permits provisional assessment only; no proven DK executable advantage."
+        },
+        "personnel": {
+          "points": 11,
+          "max": 15,
+          "rationale": "Dostal/Sorokin confirmed; no automatic lineup-completeness credit."
+        },
+        "situation": {
+          "points": 7,
+          "max": 10,
+          "rationale": "Anaheim back-to-back adverse to Ducks."
+        },
+        "vsin": {
+          "points": 0,
+          "max": 10,
+          "rationale": "Davis section has Rangers/Islanders label mismatch; not side confirmation."
+        },
+        "docs": {
+          "points": 0,
+          "max": 10,
+          "rationale": "Sink ANA+140 opposes; Husso premise stale versus confirmed Dostal."
+        },
+        "market": {
+          "points": 2,
+          "max": 10,
+          "rationale": "Reference context2/5; movement0/3 and splits0/2 unknown."
+        }
+      },
+      "handicapScore": 54,
+      "scoreStatus": "PROVISIONAL",
+      "knownSubtotal": {
+        "points": 54,
+        "assessedMaximum": 110,
+        "normalizedTo110": false
+      },
+      "failure": {
+        "dimensions": {
+          "lossPathResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Goalie advantage may not produce enough goals."
+          },
+          "personnelResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Missing roster pieces prevent robust resilience."
+          },
+          "scriptVariance": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Low-event contest vulnerable to one bounce."
+          },
+          "numberProtection": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Laying price narrows protection."
+          },
+          "countercaseResolution": {
+            "points": 0,
+            "max": 2,
+            "rationale": "Opponent goalie correction and opposing case not resolved."
+          }
+        },
+        "score": 4
+      },
+      "goalies": "Dostal CONFIRMED; Sorokin CONFIRMED",
+      "disposition": "NO BET",
+      "officialBet": false,
+      "betPlaced": false,
+      "units": 0,
+      "bestNumber": "not established—no bet until regraded",
+      "noBetCutoff": "not established—no bet until regraded",
+      "missingEvidence": [
+        "Exact executable DraftKings selection/juice",
+        "Current advanced5v5/special-teams verification incomplete",
+        "Authentic opening-current series and fade/inflation windows unavailable",
+        "Market-specific volume-screened crowd status unknown"
+      ],
+      "releaseBlockers": [
+        "Failure7/10 not cleared",
+        "Mandatory current market verification incomplete"
+      ],
+      "sources": [
+        "https://www.dailyfaceoff.com/starting-goalies/10-20-2026",
+        "https://vsin.com/nhl/nhl-predictions-expert-picks-on-tuesday-october-20/"
+      ],
+      "NBA Guide Check": null
+    },
+    {
+      "id": "nhl-wsh-ml",
+      "sport": "NHL",
+      "event": "LAK@WSH",
+      "startTime": "2026-10-20T19:00:00-04:00",
+      "reviewedAt": "2026-10-20T22:22:18.102Z",
+      "checkTiming": "45-minute cohort; performed after18:15, not exact45-minute observation",
+      "market": "Washington ML",
+      "referenceOffer": {
+        "americanOdds": -154,
+        "source": "https://www.dailyfaceoff.com/starting-goalies/10-20-2026",
+        "executionVerified": false,
+        "asOf": "Dated commentary snapshot; exact current DK offer unknown"
+      },
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "points": 24,
+          "max": 35,
+          "rationale": "Kings scoring difficulties support home investigation; small sample and rebound risk matter."
+        },
+        "price": {
+          "points": 12,
+          "max": 20,
+          "rationale": "Dated reference permits provisional assessment only; no proven DK executable advantage."
+        },
+        "personnel": {
+          "points": null,
+          "max": 15,
+          "rationale": "Thompson confirmed; Kuemper only likely; material goalie factor remains unknown."
+        },
+        "situation": {
+          "points": 6,
+          "max": 10,
+          "rationale": "Home venue supports partly; no evidence of special sandwich-system edge."
+        },
+        "vsin": {
+          "points": 0,
+          "max": 10,
+          "rationale": "Davis pick is WSH-1.5+156, a distinct settlement; no ML confirmation points."
+        },
+        "docs": {
+          "points": 0,
+          "max": 10,
+          "rationale": "Exact Doc's selection inaccessible."
+        },
+        "market": {
+          "points": 2,
+          "max": 10,
+          "rationale": "Reference context2/5; movement0/3 and splits0/2 unknown."
+        }
+      },
+      "handicapScore": null,
+      "scoreStatus": "UNGRADED",
+      "knownSubtotal": {
+        "points": 44,
+        "assessedMaximum": 95,
+        "normalizedTo110": false
+      },
+      "failure": {
+        "dimensions": {
+          "lossPathResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "LA scoring rebound remains credible."
+          },
+          "personnelResilience": {
+            "points": null,
+            "max": 2,
+            "rationale": "Opposing goalie unconfirmed."
+          },
+          "scriptVariance": {
+            "points": 1,
+            "max": 2,
+            "rationale": "One-goal/OT path not stress-tested."
+          },
+          "numberProtection": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Reference only; no verified alternative."
+          },
+          "countercaseResolution": {
+            "points": 0,
+            "max": 2,
+            "rationale": "Current advanced matchup unresolved."
+          }
+        },
+        "score": null
+      },
+      "goalies": "Kuemper LIKELY; Thompson CONFIRMED",
+      "disposition": "NO BET",
+      "officialBet": false,
+      "betPlaced": false,
+      "units": 0,
+      "bestNumber": "not established—no bet until regraded",
+      "noBetCutoff": "not established—no bet until regraded",
+      "missingEvidence": [
+        "Exact executable DraftKings selection/juice",
+        "Current advanced5v5/special-teams verification incomplete",
+        "Authentic opening-current series and fade/inflation windows unavailable",
+        "Market-specific volume-screened crowd status unknown"
+      ],
+      "releaseBlockers": [
+        "Failure7/10 not cleared",
+        "Mandatory current market verification incomplete"
+      ],
+      "sources": [
+        "https://www.dailyfaceoff.com/starting-goalies/10-20-2026",
+        "https://vsin.com/nhl/nhl-predictions-expert-picks-on-tuesday-october-20/"
+      ],
+      "NBA Guide Check": null
+    },
+    {
+      "id": "nhl-tor-ml",
+      "sport": "NHL",
+      "event": "TOR@CBJ",
+      "startTime": "2026-10-20T19:00:00-04:00",
+      "reviewedAt": "2026-10-20T22:22:18.102Z",
+      "checkTiming": "45-minute cohort; performed after18:15, not exact45-minute observation",
+      "market": "Toronto ML",
+      "referenceOffer": {
+        "americanOdds": 133,
+        "source": "https://www.dailyfaceoff.com/starting-goalies/10-20-2026",
+        "executionVerified": false,
+        "asOf": "Dated commentary snapshot; exact current DK offer unknown"
+      },
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "points": 21,
+          "max": 35,
+          "rationale": "TOR special-teams argument meets weak Columbus offense, but Stolarz and travel downside counter."
+        },
+        "price": {
+          "points": 12,
+          "max": 20,
+          "rationale": "Dated reference permits provisional assessment only; no proven DK executable advantage."
+        },
+        "personnel": {
+          "points": 10,
+          "max": 15,
+          "rationale": "Stolarz/Greaves confirmed; TOR crease form limits advantage."
+        },
+        "situation": {
+          "points": 3,
+          "max": 10,
+          "rationale": "Toronto back-to-back adverse."
+        },
+        "vsin": {
+          "points": 0,
+          "max": 10,
+          "rationale": "Davis player props are not Toronto ML agreement."
+        },
+        "docs": {
+          "points": 6,
+          "max": 10,
+          "rationale": "Bruhn TOR+124; +133 is nominally better reference, but no verified price series or current executable offer."
+        },
+        "market": {
+          "points": 2,
+          "max": 10,
+          "rationale": "Reference context2/5; movement0/3 and splits0/2 unknown."
+        }
+      },
+      "handicapScore": 54,
+      "scoreStatus": "PROVISIONAL",
+      "knownSubtotal": {
+        "points": 54,
+        "assessedMaximum": 110,
+        "normalizedTo110": false
+      },
+      "failure": {
+        "dimensions": {
+          "lossPathResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Columbus can exploit Toronto goalie form."
+          },
+          "personnelResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Starter confirmation does not establish resilience."
+          },
+          "scriptVariance": {
+            "points": 0,
+            "max": 2,
+            "rationale": "Road fatigue and special teams volatility."
+          },
+          "numberProtection": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Plus-price limited protection."
+          },
+          "countercaseResolution": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Offense/crease conflict partly addressed only."
+          }
+        },
+        "score": 4
+      },
+      "goalies": "Stolarz CONFIRMED; Greaves CONFIRMED",
+      "disposition": "NO BET",
+      "officialBet": false,
+      "betPlaced": false,
+      "units": 0,
+      "bestNumber": "not established—no bet until regraded",
+      "noBetCutoff": "not established—no bet until regraded",
+      "missingEvidence": [
+        "Exact executable DraftKings selection/juice",
+        "Current advanced5v5/special-teams verification incomplete",
+        "Authentic opening-current series and fade/inflation windows unavailable",
+        "Market-specific volume-screened crowd status unknown"
+      ],
+      "releaseBlockers": [
+        "Failure7/10 not cleared",
+        "Mandatory current market verification incomplete"
+      ],
+      "sources": [
+        "https://www.dailyfaceoff.com/starting-goalies/10-20-2026",
+        "https://vsin.com/nhl/nhl-predictions-expert-picks-on-tuesday-october-20/"
+      ],
+      "NBA Guide Check": null
+    }
+  ],
+  "excludedStarted": [
+    "BOS@DET scheduled15:00",
+    "15:00 Champions League cohort; no pregame regrade"
+  ],
+  "earlyReview": [
+    "South Alabama@Marshall19:30; actual18:45 checkpoint not executed by this hourly run"
+  ],
+  "laterOccurrencesPreserved": true,
+  "activePublication": false
+}

@@ -1,0 +1,139 @@
+{
+  "checkedAt": "2026-10-20T22:22:18.102Z",
+  "checks": [
+    {
+      "source": "Original NBA guide PDF13,33,36",
+      "state": "SUPPORTING ONLY",
+      "finding": "Locally reread original pages; NYK continuity/backup center and PHI usage/health priors. No daily spread conversion or bonus confirmation."
+    },
+    {
+      "url": "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-20_06_00PM.pdf",
+      "state": "INACCESSIBLE",
+      "finding": "Failed retrieval; final18:00 health not confirmed."
+    },
+    {
+      "url": "https://www.statmuse.com/nba/ask/jaylen-brown-game-log-2025-26",
+      "state": "INACCESSIBLE",
+      "finding": "Explicit2025-26 full-page game log failed; no hit-rate inferred from snippets."
+    },
+    {
+      "url": "https://www.statmuse.com/cfb/ask/south-alabama-game-log-2026",
+      "state": "INACCESSIBLE",
+      "finding": "Full-page retrieval failed; no distribution confirmation."
+    },
+    {
+      "url": "https://www.dailyfaceoff.com/starting-goalies/10-20-2026",
+      "state": "CURRENT",
+      "finding": "Dated full-page read; nine of ten relevant goalies marked confirmed, Kuemper likely. Commentary prices not executable DK."
+    },
+    {
+      "url": "https://www.nhl.com/news/nhl-lineup-projections-2026-27-season",
+      "state": "CURRENT",
+      "finding": "Five NHL matchups scheduled19:00ET. McTavish belongs to later WPG@STL cohort."
+    },
+    {
+      "url": "https://vsin.com/nhl/nhl-predictions-expert-picks-on-tuesday-october-20/",
+      "state": "PARTIALLY_CURRENT",
+      "finding": "Davis SJS+170, COL-110, WSH-1.5+156. COL Blackwood premise conflicts with Wedgewood; Anaheim section opponent mismatch. Props not auto-promoted."
+    },
+    {
+      "url": "https://vsin.com/nba/nba-best-bets-today-picks-and-predictions-for-tuesday-october-20/",
+      "state": "CURRENT",
+      "finding": "Cohen NYK-4.5-110 lean only; wants below-4 for bet."
+    },
+    {
+      "url": "https://dknetwork.draftkings.com/2026/10/20/philadelphia-76ers-vs-new-york-knicks-prediction-pick-for-tuesday-10-20-26/",
+      "state": "SUPPORTING ONLY",
+      "finding": "Sean Barnard PHI+4.5-112 opposes Knicks; article quotation not live DK verification."
+    },
+    {
+      "url": "https://vsin.com/college-football/college-football-week-8-picks-south-alabama-vs-marshall/",
+      "state": "SUPPORTING ONLY",
+      "finding": "Burke USA-3; no bet other two. Circa quote Oct19 07:30PT: USA-3/64.5, FIU-10/46.5, Delaware-3/52. Historical dated benchmark."
+    },
+    {
+      "url": "https://data.vsin.com/betting-splits/",
+      "state": "CURRENT_PARTIAL",
+      "finding": "DK-labelled FIU spread-10 bets58/money63; ML-410 bets81/money85. No contest count. Other games gated; no fabricated splits/movement."
+    },
+    {
+      "url": "https://vsin.com/tools/vegas-betting-sheets/",
+      "state": "INCOMPLETE",
+      "finding": "Dropbox linked folder opened blank; current dated sheet not verified."
+    },
+    {
+      "url": "https://sportsbook.draftkings.com/leagues/basketball/nba",
+      "state": "INCOMPLETE",
+      "finding": "Navigation/education content only; no executable selections rendered."
+    },
+    {
+      "url": "https://sportsbook.draftkings.com/leagues/hockey/nhl",
+      "state": "INCOMPLETE",
+      "finding": "Navigation/education content only; no executable selections rendered."
+    },
+    {
+      "url": "https://sportsbook.draftkings.com/leagues/football/ncaaf",
+      "state": "INCOMPLETE",
+      "finding": "Navigation/education content only; no executable selections rendered."
+    },
+    {
+      "url": "https://www.docsports.com/",
+      "state": "CHECKED_PARTIAL",
+      "finding": "Required path opened. Marketing/statistics headers and video titles do not establish selections. AI-v3 updated Oct20 06:00CST but current paid selection unavailable."
+    },
+    {
+      "url": "https://www.docsports.com/statistics/matches.html",
+      "state": "CHECKED_PARTIAL",
+      "finding": "Required path opened. Marketing/statistics headers and video titles do not establish selections. AI-v3 updated Oct20 06:00CST but current paid selection unavailable."
+    },
+    {
+      "url": "https://www.docsports.com/video/free-picks/",
+      "state": "CHECKED_PARTIAL",
+      "finding": "Required path opened. Marketing/statistics headers and video titles do not establish selections. AI-v3 updated Oct20 06:00CST but current paid selection unavailable."
+    },
+    {
+      "url": "https://www.docsports.com/cappers.html?cap_id=88",
+      "state": "CHECKED_PARTIAL",
+      "finding": "Required path opened. Marketing/statistics headers and video titles do not establish selections. AI-v3 updated Oct20 06:00CST but current paid selection unavailable."
+    },
+    {
+      "url": "https://moneypuck.com/predictions.htm",
+      "state": "INCOMPLETE",
+      "finding": "Playoff page headings only; no current game model read."
+    },
+    {
+      "url": "https://www.naturalstattrick.com/",
+      "state": "INACCESSIBLE",
+      "finding": "Explicit20262027 5v5 teamtable failed."
+    }
+  ],
+  "notCompleted": [
+    "Evolving-Hockey current matchup tables",
+    "SportsReference current distributions",
+    "Full final CFB QB/OL and health confirmations",
+    "NBA final lineups and minutes",
+    "Authoritative live event-status endpoint; published start windows verified but no continuous live monitoring",
+    "Complete5/10/20 SU/ATS closing-expectation fade and inflation windows",
+    "Raw VSiN under/over model inconsistency remains unresolved; no credit"
+  ],
+  "weather": {
+    "retrievedAt": "2026-10-20T22:22:18.102Z",
+    "Huntington": "Mostly clear69F19:00,65F20:00",
+    "Miami": "Showers79F19:00, mostlyclear78F20:00",
+    "NewarkDE": "Mostlyclear62F19:00,60F20:00",
+    "wind": "UNKNOWN",
+    "lightningRadar": "NOT VERIFIED"
+  },
+  "docsSelections": {
+    "NYK": "Guy Bruhn Oct19 NYK-5.5; same side nominally worse line; old-roster stats caution",
+    "FIU": "Tony Sink Oct19 MTSU+10.5 opposes",
+    "Delaware": "Guy Bruhn Oct19 Delaware-3.5",
+    "SouthAlabama": "Schonwald Oct19 USA-2.5",
+    "TOR": "Guy Bruhn Oct19 TOR+124",
+    "COL": "Guy Bruhn Oct19 NJD-105 opposes",
+    "ANA": "Tony Sink Oct19 ANA+140; Husso premise stale",
+    "SJS": "Exact page inaccessible",
+    "LAK": "Exact page inaccessible"
+  },
+  "preservation": "All prior snapshots and remaining regrades retained; no wagers, active publication or results changes."
+}
