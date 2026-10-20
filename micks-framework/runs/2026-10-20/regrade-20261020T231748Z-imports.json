@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-20",
+  "snapshotAt": "2026-10-20T23:17:48.184Z",
+  "applyToActiveFeed": false,
+  "batches": [
+    {
+      "table": "picks",
+      "records": []
+    },
+    {
+      "table": "propsLab",
+      "records": []
+    },
+    {
+      "table": "lottoParlays",
+      "records": []
+    },
+    {
+      "table": "longshots",
+      "records": []
+    }
+  ]
+}

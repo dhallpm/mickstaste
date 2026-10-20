@@ -1,0 +1,871 @@
+{
+  "snapshotAt": "2026-10-20T23:17:48.184Z",
+  "date": "2026-10-20",
+  "timezone": "America/New_York",
+  "status": "PARTIAL scoped regrade — NO BET",
+  "officialExposureUnits": 0,
+  "officialReleases": [],
+  "actualWagersUnknown": true,
+  "weights": [
+    35,
+    20,
+    15,
+    10,
+    10,
+    10,
+    10
+  ],
+  "considerationMinimum": 71,
+  "nonNFLFailureMinimum": 7,
+  "legacy82Veto": false,
+  "newDailyProbabilityEVGate": false,
+  "candidates": [
+    {
+      "id": "nhl-mct-point",
+      "event": "WPG@STL",
+      "sport": "NHL",
+      "startTime": "2026-10-20T20:00:00-04:00",
+      "reviewedAt": "2026-10-20T23:17:48.184Z",
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "market": "Mason McTavish 1+ point",
+      "referenceOdds": -125,
+      "referenceExecutionVerified": false,
+      "scoreStatus": "PROVISIONAL",
+      "handicapScore": 54,
+      "knownSubtotal": {
+        "points": 54,
+        "assessedMaximum": 110,
+        "normalizedTo110": false
+      },
+      "factors": {
+        "matchup": {
+          "points": 24,
+          "max": 35,
+          "rationale": "Verified7/8 current-season point games and9points; encouraging production, small sample and finishing dependence limit confidence."
+        },
+        "price": {
+          "points": 12,
+          "max": 20,
+          "rationale": "Identified Oct20 article/reference permits a provisional number assessment only; not a live user-book offer or closing line."
+        },
+        "personnel": {
+          "points": 11,
+          "max": 15,
+          "rationale": "Top-six projection and observed14–19minute range allow opportunity assessment; exact PP/closing deployment not final."
+        },
+        "situation": {
+          "points": 5,
+          "max": 10,
+          "rationale": "Home ice; no demonstrated special rest advantage."
+        },
+        "vsin": {
+          "points": 0,
+          "max": 10,
+          "rationale": "No exact-market confirming selection verified; UNKNOWN,0 points."
+        },
+        "docs": {
+          "points": 0,
+          "max": 10,
+          "rationale": "No exact-market confirming selection verified; UNKNOWN,0 points."
+        },
+        "market": {
+          "points": 2,
+          "max": 10,
+          "rationale": "Article price reconfirmed and explicit-season logs verified; no prop splits/movement."
+        }
+      },
+      "failure": {
+        "score": 5,
+        "dimensions": {
+          "lossPathResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "One quiet conversion game loses despite attempts."
+          },
+          "personnelResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Minutes vary; PP role not final."
+          },
+          "scriptVariance": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Assist/finishing variance remains."
+          },
+          "numberProtection": {
+            "points": 1,
+            "max": 2,
+            "rationale": "One-point threshold, dated-125 only."
+          },
+          "countercaseResolution": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Independent logs resolve sample claim but not matchup conversion risk."
+          }
+        }
+      },
+      "sources": [
+        "https://dknetwork.draftkings.com/2026/10/20/best-nhl-player-props-today-for-tuesday-10-20-26/",
+        "https://www.statmuse.com/nhl/player/mason-mctavish-14955/game-log?seasonYear=2027",
+        "https://www.dailyfaceoff.com/starting-goalies/10-20-2026"
+      ],
+      "units": 0,
+      "officialBet": false,
+      "betPlaced": false,
+      "disposition": "NO BET",
+      "bestNumber": "not established—no bet until regraded",
+      "noBetCutoff": "not established—no bet until regraded",
+      "NBA Guide Check": {
+        "state": "NOT APPLICABLE",
+        "reason": "NHL candidate"
+      },
+      "missingEvidence": [
+        "Exact executable DK line/odds",
+        "Final role/PP confirmation where material",
+        "Independent current5v5/xG and closing-expectation audit incomplete",
+        "Dated current Circa sheet not verified",
+        "Authentic movement and volume-screened splits not complete"
+      ],
+      "releaseBlockers": [
+        "Score71+ not earned",
+        "Failure7/10 not cleared",
+        "Execution market not verified"
+      ],
+      "fadeAndInflation": {
+        "state": "UNKNOWN",
+        "reason": "5/10/20 comparable closing-line windows unavailable; SU streak is not an ATS trigger."
+      },
+      "previousSnapshot": {
+        "at": "2026-10-20T16:57:30.919Z",
+        "handicapScore": null,
+        "knownSubtotal": {
+          "points": 41,
+          "assessedMaximum": 95,
+          "normalizedTo110": false
+        },
+        "failure": {
+          "dimensions": {
+            "lossPathResilience": {
+              "points": 1,
+              "max": 2,
+              "rationale": "Top-six opportunity and early-season production suggest a research lead; a point needs finishing/conversion and verified deployment."
+            },
+            "personnelResilience": {
+              "points": null,
+              "max": 2,
+              "rationale": "Essential role/availability sensitivity not yet assessable."
+            },
+            "scriptVariance": {
+              "points": 1,
+              "max": 2,
+              "rationale": "Scoring/shooting variance or turnover/game-script sensitivity remains a meaningful loss path; no robust2-point claim."
+            },
+            "numberProtection": {
+              "points": 1,
+              "max": 2,
+              "rationale": "Dated threshold supplies only partial protection; no current alternative/cutoff validated."
+            },
+            "countercaseResolution": {
+              "points": 0,
+              "max": 2,
+              "rationale": "Material matchup, sample, price or projection contradiction remains unresolved."
+            }
+          },
+          "score": null,
+          "knownSubtotal": 3,
+          "assessedMaximum": 8,
+          "state": "PROVISIONAL"
+        }
+      }
+    },
+    {
+      "id": "nhl-mct-shot",
+      "event": "WPG@STL",
+      "sport": "NHL",
+      "startTime": "2026-10-20T20:00:00-04:00",
+      "reviewedAt": "2026-10-20T23:17:48.184Z",
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "market": "Mason McTavish over2.5 shots",
+      "referenceOdds": 105,
+      "referenceExecutionVerified": false,
+      "scoreStatus": "PROVISIONAL",
+      "handicapScore": 57,
+      "knownSubtotal": {
+        "points": 57,
+        "assessedMaximum": 110,
+        "normalizedTo110": false
+      },
+      "factors": {
+        "matchup": {
+          "points": 26,
+          "max": 35,
+          "rationale": "Verified6/8 at3+shots,29total; shot generation less conversion-dependent than points. Only8games; latest game2shots."
+        },
+        "price": {
+          "points": 13,
+          "max": 20,
+          "rationale": "Identified Oct20 article/reference permits a provisional number assessment only; not a live user-book offer or closing line."
+        },
+        "personnel": {
+          "points": 11,
+          "max": 15,
+          "rationale": "Top-six projection and actual ice-time history support modest role stability; final PP work not verified."
+        },
+        "situation": {
+          "points": 5,
+          "max": 10,
+          "rationale": "Home setting modest; no automatic volume increase."
+        },
+        "vsin": {
+          "points": 0,
+          "max": 10,
+          "rationale": "No exact-market confirming selection verified; UNKNOWN,0 points."
+        },
+        "docs": {
+          "points": 0,
+          "max": 10,
+          "rationale": "No exact-market confirming selection verified; UNKNOWN,0 points."
+        },
+        "market": {
+          "points": 2,
+          "max": 10,
+          "rationale": "Dated+105 article and verified logs, no current prop board confirmation."
+        }
+      },
+      "failure": {
+        "score": 5,
+        "dimensions": {
+          "lossPathResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Two of8 fail; low-volume game credible."
+          },
+          "personnelResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "14:29–18:36 observed time; no20minute assumption."
+          },
+          "scriptVariance": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Shot-on-goal classification/block/miss variance."
+          },
+          "numberProtection": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Plus price reference but no executable cutoff."
+          },
+          "countercaseResolution": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Full-season sample verifies thesis, opponent suppression audit incomplete."
+          }
+        }
+      },
+      "sources": [
+        "https://dknetwork.draftkings.com/2026/10/20/best-nhl-player-props-today-for-tuesday-10-20-26/",
+        "https://www.statmuse.com/nhl/player/mason-mctavish-14955/game-log?seasonYear=2027",
+        "https://www.dailyfaceoff.com/starting-goalies/10-20-2026"
+      ],
+      "units": 0,
+      "officialBet": false,
+      "betPlaced": false,
+      "disposition": "NO BET",
+      "bestNumber": "not established—no bet until regraded",
+      "noBetCutoff": "not established—no bet until regraded",
+      "NBA Guide Check": {
+        "state": "NOT APPLICABLE",
+        "reason": "NHL candidate"
+      },
+      "missingEvidence": [
+        "Exact executable DK line/odds",
+        "Final role/PP confirmation where material",
+        "Independent current5v5/xG and closing-expectation audit incomplete",
+        "Dated current Circa sheet not verified",
+        "Authentic movement and volume-screened splits not complete"
+      ],
+      "releaseBlockers": [
+        "Score71+ not earned",
+        "Failure7/10 not cleared",
+        "Execution market not verified"
+      ],
+      "fadeAndInflation": {
+        "state": "UNKNOWN",
+        "reason": "5/10/20 comparable closing-line windows unavailable; SU streak is not an ATS trigger."
+      },
+      "previousSnapshot": {
+        "at": "2026-10-20T16:57:30.919Z",
+        "handicapScore": null,
+        "knownSubtotal": {
+          "points": 43,
+          "assessedMaximum": 95,
+          "normalizedTo110": false
+        },
+        "failure": {
+          "dimensions": {
+            "lossPathResilience": {
+              "points": 1,
+              "max": 2,
+              "rationale": "Shots are more directly tied to individual attempts than points; article reports6/8 clearing but that remains attributed, not independently audited."
+            },
+            "personnelResilience": {
+              "points": null,
+              "max": 2,
+              "rationale": "Essential role/availability sensitivity not yet assessable."
+            },
+            "scriptVariance": {
+              "points": 1,
+              "max": 2,
+              "rationale": "Scoring/shooting variance or turnover/game-script sensitivity remains a meaningful loss path; no robust2-point claim."
+            },
+            "numberProtection": {
+              "points": 1,
+              "max": 2,
+              "rationale": "Dated threshold supplies only partial protection; no current alternative/cutoff validated."
+            },
+            "countercaseResolution": {
+              "points": 0,
+              "max": 2,
+              "rationale": "Material matchup, sample, price or projection contradiction remains unresolved."
+            }
+          },
+          "score": null,
+          "knownSubtotal": 3,
+          "assessedMaximum": 8,
+          "state": "PROVISIONAL"
+        }
+      }
+    },
+    {
+      "id": "nhl-bos-dal-under",
+      "event": "BOS@DAL",
+      "sport": "NHL",
+      "startTime": "2026-10-20T20:00:00-04:00",
+      "reviewedAt": "2026-10-20T23:17:48.184Z",
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "market": "Under5.5 goals",
+      "referenceOdds": -102,
+      "referenceExecutionVerified": false,
+      "scoreStatus": "PROVISIONAL",
+      "handicapScore": 67,
+      "knownSubtotal": {
+        "points": 67,
+        "assessedMaximum": 110,
+        "normalizedTo110": false
+      },
+      "factors": {
+        "matchup": {
+          "points": 28,
+          "max": 35,
+          "rationale": "Confirmed strong goalies and low shot-volume context supply two modest under paths; Boston finishing/PP and empty-net risk oppose."
+        },
+        "price": {
+          "points": 13,
+          "max": 20,
+          "rationale": "Identified Oct20 article/reference permits a provisional number assessment only; not a live user-book offer or closing line."
+        },
+        "personnel": {
+          "points": 12,
+          "max": 15,
+          "rationale": "Swayman/Oettinger confirmed; current form supports but hot goalie rates can regress."
+        },
+        "situation": {
+          "points": 6,
+          "max": 10,
+          "rationale": "Boston completes road trip; no automatic fatigue-under claim."
+        },
+        "vsin": {
+          "points": 5,
+          "max": 10,
+          "rationale": "Davis actually choseUnder6.5 as a parlay leg, notUnder5.5. Same direction, materially different threshold; partial support only."
+        },
+        "docs": {
+          "points": 0,
+          "max": 10,
+          "rationale": "SchonwaldDAL-170 is not total confirmation."
+        },
+        "market": {
+          "points": 3,
+          "max": 10,
+          "rationale": "Dated reference context2/5, no verified movement0/3; article snapshot splits reliability limited1/2. No sharp-money inference."
+        }
+      },
+      "failure": {
+        "score": 6,
+        "dimensions": {
+          "lossPathResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "5.5 loses on six; high Boston shooting can persist."
+          },
+          "personnelResilience": {
+            "points": 2,
+            "max": 2,
+            "rationale": "Both starting goalies confirmed; no assumed backups."
+          },
+          "scriptVariance": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Special teams and empty net can add late goals."
+          },
+          "numberProtection": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Loses cushion versus6.5; no verified live price."
+          },
+          "countercaseResolution": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Independent current shot context helps, no complete xG audit."
+          }
+        }
+      },
+      "sources": [
+        "https://www.dailyfaceoff.com/starting-goalies/10-20-2026",
+        "https://www.actionnetwork.com/nhl/nhl-predictions-tonight-expert-picks-best-bets-trades-tuesday-october-20",
+        "https://vsin.com/nhl/nhl-predictions-expert-picks-on-tuesday-october-20/",
+        "https://dknetwork.draftkings.com/2026/10/20/nhl-public-betting-trends-tuesday-october-20/"
+      ],
+      "units": 0,
+      "officialBet": false,
+      "betPlaced": false,
+      "disposition": "NO BET",
+      "bestNumber": "not established—no bet until regraded",
+      "noBetCutoff": "not established—no bet until regraded",
+      "NBA Guide Check": {
+        "state": "NOT APPLICABLE",
+        "reason": "NHL candidate"
+      },
+      "missingEvidence": [
+        "Exact executable DK line/odds",
+        "Final role/PP confirmation where material",
+        "Independent current5v5/xG and closing-expectation audit incomplete",
+        "Dated current Circa sheet not verified",
+        "Authentic movement and volume-screened splits not complete"
+      ],
+      "releaseBlockers": [
+        "Score71+ not earned",
+        "Failure7/10 not cleared",
+        "Execution market not verified"
+      ],
+      "fadeAndInflation": {
+        "state": "UNKNOWN",
+        "reason": "5/10/20 comparable closing-line windows unavailable; SU streak is not an ATS trigger."
+      }
+    },
+    {
+      "id": "nhl-wpg-stl-under",
+      "event": "WPG@STL",
+      "sport": "NHL",
+      "startTime": "2026-10-20T20:00:00-04:00",
+      "reviewedAt": "2026-10-20T23:17:48.184Z",
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "market": "Under5.5 goals",
+      "referenceOdds": 105,
+      "referenceExecutionVerified": false,
+      "scoreStatus": "PROVISIONAL",
+      "handicapScore": 53,
+      "knownSubtotal": {
+        "points": 53,
+        "assessedMaximum": 110,
+        "normalizedTo110": false
+      },
+      "factors": {
+        "matchup": {
+          "points": 23,
+          "max": 35,
+          "rationale": "Sartori's low-shot/finishing-regression thesis is plausible; STL defensive leakage and Winnipeg PP offset."
+        },
+        "price": {
+          "points": 11,
+          "max": 20,
+          "rationale": "Identified Oct20 article/reference permits a provisional number assessment only; not a live user-book offer or closing line."
+        },
+        "personnel": {
+          "points": 11,
+          "max": 15,
+          "rationale": "Skinner/Hofer confirmed but neither establishes a dominant suppression edge."
+        },
+        "situation": {
+          "points": 5,
+          "max": 10,
+          "rationale": "Both had scheduled rest; no unique under situation."
+        },
+        "vsin": {
+          "points": 0,
+          "max": 10,
+          "rationale": "No exact-market confirming selection verified; UNKNOWN,0 points."
+        },
+        "docs": {
+          "points": 0,
+          "max": 10,
+          "rationale": "SinkWPG+121 is side, not total confirmation."
+        },
+        "market": {
+          "points": 3,
+          "max": 10,
+          "rationale": "Dated reference context2/5, no verified movement0/3; article snapshot splits reliability limited1/2. No sharp-money inference."
+        }
+      },
+      "failure": {
+        "score": 4,
+        "dimensions": {
+          "lossPathResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Both defenses permit credible scoring paths."
+          },
+          "personnelResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Confirmed starters, middling performance and variance."
+          },
+          "scriptVariance": {
+            "points": 0,
+            "max": 2,
+            "rationale": "Special teams/finishing/empty-net expose5.5."
+          },
+          "numberProtection": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Plus-money article reference, no final cutoff."
+          },
+          "countercaseResolution": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Regression case partly supported, not decisive."
+          }
+        }
+      },
+      "sources": [
+        "https://www.dailyfaceoff.com/starting-goalies/10-20-2026",
+        "https://www.actionnetwork.com/nhl/nhl-predictions-tonight-expert-picks-best-bets-trades-tuesday-october-20",
+        "https://dknetwork.draftkings.com/2026/10/20/nhl-public-betting-trends-tuesday-october-20/"
+      ],
+      "units": 0,
+      "officialBet": false,
+      "betPlaced": false,
+      "disposition": "NO BET",
+      "bestNumber": "not established—no bet until regraded",
+      "noBetCutoff": "not established—no bet until regraded",
+      "NBA Guide Check": {
+        "state": "NOT APPLICABLE",
+        "reason": "NHL candidate"
+      },
+      "missingEvidence": [
+        "Exact executable DK line/odds",
+        "Final role/PP confirmation where material",
+        "Independent current5v5/xG and closing-expectation audit incomplete",
+        "Dated current Circa sheet not verified",
+        "Authentic movement and volume-screened splits not complete"
+      ],
+      "releaseBlockers": [
+        "Score71+ not earned",
+        "Failure7/10 not cleared",
+        "Execution market not verified"
+      ],
+      "fadeAndInflation": {
+        "state": "UNKNOWN",
+        "reason": "5/10/20 comparable closing-line windows unavailable; SU streak is not an ATS trigger."
+      }
+    },
+    {
+      "id": "nhl-wpg-side",
+      "event": "WPG@STL",
+      "sport": "NHL",
+      "startTime": "2026-10-20T20:00:00-04:00",
+      "reviewedAt": "2026-10-20T23:17:48.184Z",
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "market": "Winnipeg ML",
+      "referenceOdds": 124,
+      "referenceExecutionVerified": false,
+      "scoreStatus": "PROVISIONAL",
+      "handicapScore": 59,
+      "knownSubtotal": {
+        "points": 59,
+        "assessedMaximum": 110,
+        "normalizedTo110": false
+      },
+      "factors": {
+        "matchup": {
+          "points": 23,
+          "max": 35,
+          "rationale": "Underdog and power-play path versus Blues defensive weakness; STL home attack and Jets depleted defense oppose."
+        },
+        "price": {
+          "points": 12,
+          "max": 20,
+          "rationale": "Identified Oct20 article/reference permits a provisional number assessment only; not a live user-book offer or closing line."
+        },
+        "personnel": {
+          "points": 10,
+          "max": 15,
+          "rationale": "Skinner confirmed; do not substitute Hellebuyck. No clear large crease edge."
+        },
+        "situation": {
+          "points": 5,
+          "max": 10,
+          "rationale": "Rested away side; home ice counters."
+        },
+        "vsin": {
+          "points": 0,
+          "max": 10,
+          "rationale": "No exact-market confirming selection verified; UNKNOWN,0 points."
+        },
+        "docs": {
+          "points": 6,
+          "max": 10,
+          "rationale": "TonySink Oct19WPG+121. Modest relevant same-side support; different price, no claim of market move."
+        },
+        "market": {
+          "points": 3,
+          "max": 10,
+          "rationale": "Dated reference context2/5, no verified movement0/3; article snapshot splits reliability limited1/2. No sharp-money inference."
+        }
+      },
+      "failure": {
+        "score": 5,
+        "dimensions": {
+          "lossPathResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "STL conversion can overwhelm Jets."
+          },
+          "personnelResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "NoHellebuyck assumption; defensive depth vulnerable."
+          },
+          "scriptVariance": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Special-teams/OT variance."
+          },
+          "numberProtection": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Plus price only partial protection."
+          },
+          "countercaseResolution": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Opposing offense not fully neutralized."
+          }
+        }
+      },
+      "sources": [
+        "https://www.dailyfaceoff.com/starting-goalies/10-20-2026",
+        "https://dknetwork.draftkings.com/2026/10/20/nhl-public-betting-trends-tuesday-october-20/",
+        "https://www.docsports.com/free-picks/nhl-hockey/2026/winnipeg-jets-vs-st-louis-blues-prediction-10-20-2026-nhl-picks-best-bets-odds.html"
+      ],
+      "units": 0,
+      "officialBet": false,
+      "betPlaced": false,
+      "disposition": "NO BET",
+      "bestNumber": "not established—no bet until regraded",
+      "noBetCutoff": "not established—no bet until regraded",
+      "NBA Guide Check": {
+        "state": "NOT APPLICABLE",
+        "reason": "NHL candidate"
+      },
+      "missingEvidence": [
+        "Exact executable DK line/odds",
+        "Final role/PP confirmation where material",
+        "Independent current5v5/xG and closing-expectation audit incomplete",
+        "Dated current Circa sheet not verified",
+        "Authentic movement and volume-screened splits not complete"
+      ],
+      "releaseBlockers": [
+        "Score71+ not earned",
+        "Failure7/10 not cleared",
+        "Execution market not verified"
+      ],
+      "fadeAndInflation": {
+        "state": "UNKNOWN",
+        "reason": "5/10/20 comparable closing-line windows unavailable; SU streak is not an ATS trigger."
+      }
+    },
+    {
+      "id": "nhl-dal-side",
+      "event": "BOS@DAL",
+      "sport": "NHL",
+      "startTime": "2026-10-20T20:00:00-04:00",
+      "reviewedAt": "2026-10-20T23:17:48.184Z",
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "market": "Dallas ML",
+      "referenceOdds": -170,
+      "referenceExecutionVerified": false,
+      "scoreStatus": "PROVISIONAL",
+      "handicapScore": 60,
+      "knownSubtotal": {
+        "points": 60,
+        "assessedMaximum": 110,
+        "normalizedTo110": false
+      },
+      "factors": {
+        "matchup": {
+          "points": 24,
+          "max": 35,
+          "rationale": "Goal prevention and home ice support Dallas; Boston offense and Swayman make-170 demanding."
+        },
+        "price": {
+          "points": 10,
+          "max": 20,
+          "rationale": "Identified Oct20 article/reference permits a provisional number assessment only; not a live user-book offer or closing line."
+        },
+        "personnel": {
+          "points": 11,
+          "max": 15,
+          "rationale": "Oettinger confirmed; opponent goalie also strong. Current skater health limits depth assumptions."
+        },
+        "situation": {
+          "points": 6,
+          "max": 10,
+          "rationale": "Home advantage vsBoston trip end, modest not deterministic."
+        },
+        "vsin": {
+          "points": 0,
+          "max": 10,
+          "rationale": "Davis saysDallas-170 too expensive; actual opposition,0 support."
+        },
+        "docs": {
+          "points": 6,
+          "max": 10,
+          "rationale": "JoshSchonwald Oct19DAL-170, same market; quantified daily edge not established."
+        },
+        "market": {
+          "points": 3,
+          "max": 10,
+          "rationale": "Dated reference context2/5, no verified movement0/3; article snapshot splits reliability limited1/2. No sharp-money inference."
+        }
+      },
+      "failure": {
+        "score": 5,
+        "dimensions": {
+          "lossPathResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Boston can win low-event tight game."
+          },
+          "personnelResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Strong opposing crease limits resilience."
+          },
+          "scriptVariance": {
+            "points": 1,
+            "max": 2,
+            "rationale": "OT and one-goal volatility."
+          },
+          "numberProtection": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Expensive favorite offers limited margin."
+          },
+          "countercaseResolution": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Davis price objection not resolved."
+          }
+        }
+      },
+      "sources": [
+        "https://www.dailyfaceoff.com/starting-goalies/10-20-2026",
+        "https://vsin.com/nhl/nhl-predictions-expert-picks-on-tuesday-october-20/",
+        "https://dknetwork.draftkings.com/2026/10/20/nhl-public-betting-trends-tuesday-october-20/",
+        "https://www.docsports.com/free-picks/nhl-hockey/2026/boston-bruins-vs-dallas-stars-prediction-10-20-2026-nhl-picks-best-bets-odds.html"
+      ],
+      "units": 0,
+      "officialBet": false,
+      "betPlaced": false,
+      "disposition": "NO BET",
+      "bestNumber": "not established—no bet until regraded",
+      "noBetCutoff": "not established—no bet until regraded",
+      "NBA Guide Check": {
+        "state": "NOT APPLICABLE",
+        "reason": "NHL candidate"
+      },
+      "missingEvidence": [
+        "Exact executable DK line/odds",
+        "Final role/PP confirmation where material",
+        "Independent current5v5/xG and closing-expectation audit incomplete",
+        "Dated current Circa sheet not verified",
+        "Authentic movement and volume-screened splits not complete"
+      ],
+      "releaseBlockers": [
+        "Score71+ not earned",
+        "Failure7/10 not cleared",
+        "Execution market not verified"
+      ],
+      "fadeAndInflation": {
+        "state": "UNKNOWN",
+        "reason": "5/10/20 comparable closing-line windows unavailable; SU streak is not an ATS trigger."
+      }
+    }
+  ],
+  "timing": {
+    "cohortTarget": "19:15ET for20:00 starts",
+    "actualStarted": "19:15:37ET",
+    "exact45MinuteObservation": false,
+    "earlyReview": false,
+    "startTimesVerified": "20:00ET, NHL/DFO schedules",
+    "startedEventsExcluded": "Earlier15:00/19:00 cohorts; not regraded pregame",
+    "laterOccurrencesPreserved": true
+  },
+  "distribution": {
+    "season": "2026-27 regular season",
+    "through": "2026-10-17",
+    "source": "https://www.statmuse.com/nhl/player/mason-mctavish-14955/game-log?seasonYear=2027",
+    "fullPageVerified": true,
+    "order": "newest first",
+    "shots": [
+      2,
+      4,
+      6,
+      4,
+      5,
+      2,
+      3,
+      3
+    ],
+    "points": [
+      1,
+      1,
+      3,
+      1,
+      1,
+      1,
+      0,
+      1
+    ],
+    "iceTime": [
+      "18:36",
+      "14:36",
+      "15:29",
+      "18:08",
+      "14:29",
+      "17:20",
+      "14:57",
+      "14:36"
+    ],
+    "meanShots": 3.625,
+    "shotHits": 6,
+    "pointHits": 7,
+    "n": 8,
+    "meanIceTimeMinutes": 16.022916666666667,
+    "warning": "Historical sample, not forecast or calibrated success probability"
+  },
+  "eventDecisions": [
+    {
+      "event": "WPG@STL",
+      "decision": "NO BET"
+    },
+    {
+      "event": "BOS@DAL",
+      "decision": "NO BET"
+    }
+  ],
+  "newTickets": 0,
+  "maxSameTeamSideTicketsAcrossCardTypes": 2,
+  "activePublication": false
+}
