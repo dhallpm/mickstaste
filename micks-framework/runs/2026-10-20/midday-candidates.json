@@ -1,0 +1,1958 @@
+{
+  "date": "2026-10-20",
+  "timezone": "America/New_York",
+  "researchStartedAt": "2026-10-20T16:46:50Z",
+  "snapshotAt": "2026-10-20T16:57:30.919Z",
+  "status": "PARTIAL — material execution, statistical and sport-specific checks unresolved",
+  "scope": "All-sports discovery and candidate triage; not exhaustive verified worldwide sportsbook coverage",
+  "releasePolicy": {
+    "dailyScoreConsiderationMinimumExclusive": 70,
+    "legacy82ScoreOnlyVeto": false,
+    "nonNFLFailureMinimum": 7,
+    "NFLMode": "standard",
+    "nonNFLMode": "Recovery Mode+ with October7 score override",
+    "scoreWeights": [
+      35,
+      20,
+      15,
+      10,
+      10,
+      10,
+      10
+    ]
+  },
+  "officialReleases": [],
+  "officialExposureUnits": 0,
+  "actualWagersUnknown": true,
+  "candidates": [
+    {
+      "id": "nba-bos-side",
+      "date": "2026-10-20",
+      "sport": "NBA",
+      "event": "BOS@DET",
+      "startTime": "2026-10-20T15:00:00-04:00",
+      "market": "Boston -1.5",
+      "lineAndOddsAsArticle": {
+        "market": "Boston -1.5",
+        "americanOdds": null,
+        "source": "DK Network article; no live executable quote",
+        "retrievedAt": "2026-10-20T16:57:30.919Z",
+        "executionVerified": false,
+        "asOf": "publication date or dated reference only; no live offer timestamp"
+      },
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "points": 26,
+          "max": 35,
+          "rationale": "Boston rim protection/ball security and creation versus Detroit's home defense. Detroit transition and second chances are the principal loss path."
+        },
+        "price": {
+          "points": 13,
+          "max": 20,
+          "rationale": "Provisional judgment at the explicitly identified article threshold only; the quote is not an executable offer, opening-to-current series or established live cutoff. Price advantage is limited by the listed risk and unverified current alternatives."
+        },
+        "personnel": {
+          "points": 12,
+          "max": 15,
+          "rationale": "Boston near-full-health beat report and the role-specific guide/analyst context permit a modest opportunity assessment; bench/closing minutes and Tatum-led shot redistribution remain risks."
+        },
+        "situation": {
+          "points": 5,
+          "max": 10,
+          "rationale": "Opening-night venue and preseason/last-season pace context only; no proven current-season trend or rest advantage. Detroit home court counters Boston-side angles."
+        },
+        "vsin": {
+          "points": 0,
+          "max": 10,
+          "rationale": "No usable exact-market current VSiN confirming selection verified; absent support stays UNKNOWN with no points. For Holmgren, unresolved model/table quality means no confirmation points."
+        },
+        "docs": {
+          "points": 6,
+          "max": 10,
+          "rationale": "The corresponding named Doc's selection in sources supports the side. Different article thresholds are retained and older-roster generic recaps limit conviction."
+        },
+        "market": {
+          "points": 2,
+          "max": 10,
+          "rationale": "Small contextual credit only for dated identified reference(s). Movement/timing and ticket/handle subfactors remain0/UNKNOWN; no sharp-money or public asterisk inference."
+        }
+      },
+      "handicapScore": 64,
+      "scoreStatus": "PROVISIONAL",
+      "knownSubtotal": {
+        "points": 64,
+        "assessedMaximum": 110,
+        "normalizedTo110": false
+      },
+      "grade": "C",
+      "failure": {
+        "dimensions": {
+          "lossPathResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Boston rim protection/ball security and creation versus Detroit's home defense. Detroit transition and second chances are the principal loss path."
+          },
+          "personnelResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "A healthy baseline exists, but plausible closing-minutes and touches changes are not stress-tested; partial resilience only."
+          },
+          "scriptVariance": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Scoring/shooting variance or turnover/game-script sensitivity remains a meaningful loss path; no robust2-point claim."
+          },
+          "numberProtection": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Dated threshold supplies only partial protection; no current alternative/cutoff validated."
+          },
+          "countercaseResolution": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Independent context addresses part of the opposing case, but does not remove it."
+          }
+        },
+        "score": 5,
+        "knownSubtotal": 5,
+        "assessedMaximum": 10,
+        "state": "PROVISIONAL"
+      },
+      "micksThesisAndCountercase": "Boston rim protection/ball security and creation versus Detroit's home defense. Detroit transition and second chances are the principal loss path.",
+      "missingEvidence": "Current exact DK spread juice; final lineup; authentic closing-expectation windows; total disagreement must not be turned into movement.",
+      "releaseBlockers": [
+        "No current executable DK offer validated",
+        "Failure minimum7/10 not cleared"
+      ],
+      "disposition": "WATCH/BLOCKED — NO BET",
+      "officialBet": false,
+      "betPlaced": false,
+      "units": 0,
+      "bestNumber": "not established—no bet until regraded",
+      "noBetCutoff": "not established—no bet until regraded",
+      "sources": [
+        "https://dknetwork.draftkings.com/2026/10/20/boston-celtics-vs-detroit-pistons-prediction-pick-for-tuesday-10-20-26/",
+        "https://www.docsports.com/free-picks/nba/2026/boston-celtics-vs-detroit-pistons-prediction-10-20-2026-preview-and-pick.html",
+        "https://www.teamrankings.com/nba/matchup/celtics-pistons-2026-10-20"
+      ],
+      "reviewedAt": "2026-10-20T16:57:30.919Z",
+      "crowdStatus": {
+        "tickets": null,
+        "money": null,
+        "contestBetCount": null,
+        "volumeScreenedFlag": null
+      },
+      "fadeAndInflation": {
+        "state": "UNKNOWN",
+        "reason": "Comparable historical closing-expectation5/10/20 windows not obtained; SU records do not clear an ATS trigger."
+      },
+      "NBA Guide Check": {
+        "guideId": "vsin-nba-2026-27-guide",
+        "pages": [
+          13,
+          15,
+          22
+        ],
+        "basis": "ORIGINAL_PAGES",
+        "guideFinding": "Boston's Tatum-led creation, Pritchard opportunity and Robinson/Queta depth versus Detroit's halfcourt creation and rebounding. Both guide power ratings101; not a daily fair spread.",
+        "currentFinding": "Boston beat report indicates near-full health except Devin Carter; anticipated bench role for Pritchard. TeamRankings context is explicitly last-season data. Full correct-season prop distributions not verified.",
+        "currentSources": [
+          "https://www.celticsblog.com/boston-celtics-news/148052/celtics-pistons-opening-day-injury-report",
+          "https://dknetwork.draftkings.com/2026/10/19/dean-wade-headlines-nba-injury-report-tuesday-10-20-26/",
+          "https://www.teamrankings.com/nba/matchup/celtics-pistons-2026-10-20"
+        ],
+        "checkedAt": "2026-10-20T16:57:30.919Z",
+        "state": "PARTIALLY_CURRENT",
+        "influence": "Baseline informs qualitative matchup and personnel only; no extra VSiN confirmation points.",
+        "countercase": "Detroit home court, interior scoring and defense; Boston role redistribution does not guarantee individual overs.",
+        "materialConflictResolved": true
+      }
+    },
+    {
+      "id": "nba-pritchard",
+      "date": "2026-10-20",
+      "sport": "NBA",
+      "event": "BOS@DET",
+      "startTime": "2026-10-20T15:00:00-04:00",
+      "market": "Payton Pritchard over15.5 points",
+      "lineAndOddsAsArticle": {
+        "market": "Payton Pritchard over15.5 points",
+        "americanOdds": -120,
+        "source": "DK Network, Julian Edlow",
+        "retrievedAt": "2026-10-20T16:57:30.919Z",
+        "executionVerified": false,
+        "asOf": "publication date or dated reference only; no live offer timestamp"
+      },
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "points": 26,
+          "max": 35,
+          "rationale": "Guide opportunity thesis and role reporting support investigation; scoring must come from real minutes and attempts. Cold threes or a reduced closing role defeats it."
+        },
+        "price": {
+          "points": 14,
+          "max": 20,
+          "rationale": "Provisional judgment at the explicitly identified article threshold only; the quote is not an executable offer, opening-to-current series or established live cutoff. Price advantage is limited by the listed risk and unverified current alternatives."
+        },
+        "personnel": {
+          "points": 11,
+          "max": 15,
+          "rationale": "Boston near-full-health beat report and the role-specific guide/analyst context permit a modest opportunity assessment; bench/closing minutes and Tatum-led shot redistribution remain risks."
+        },
+        "situation": {
+          "points": 6,
+          "max": 10,
+          "rationale": "Opening-night venue and preseason/last-season pace context only; no proven current-season trend or rest advantage. Detroit home court counters Boston-side angles."
+        },
+        "vsin": {
+          "points": 0,
+          "max": 10,
+          "rationale": "No usable exact-market current VSiN confirming selection verified; absent support stays UNKNOWN with no points. For Holmgren, unresolved model/table quality means no confirmation points."
+        },
+        "docs": {
+          "points": 0,
+          "max": 10,
+          "rationale": "No exact-market confirming Doc's selection verified; UNKNOWN, no invented points."
+        },
+        "market": {
+          "points": 1,
+          "max": 10,
+          "rationale": "Small contextual credit only for dated identified reference(s). Movement/timing and ticket/handle subfactors remain0/UNKNOWN; no sharp-money or public asterisk inference."
+        }
+      },
+      "handicapScore": 58,
+      "scoreStatus": "PROVISIONAL",
+      "knownSubtotal": {
+        "points": 58,
+        "assessedMaximum": 110,
+        "normalizedTo110": false
+      },
+      "grade": "C",
+      "failure": {
+        "dimensions": {
+          "lossPathResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Guide opportunity thesis and role reporting support investigation; scoring must come from real minutes and attempts. Cold threes or a reduced closing role defeats it."
+          },
+          "personnelResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "A healthy baseline exists, but plausible closing-minutes and touches changes are not stress-tested; partial resilience only."
+          },
+          "scriptVariance": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Scoring/shooting variance or turnover/game-script sensitivity remains a meaningful loss path; no robust2-point claim."
+          },
+          "numberProtection": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Dated threshold supplies only partial protection; no current alternative/cutoff validated."
+          },
+          "countercaseResolution": {
+            "points": 0,
+            "max": 2,
+            "rationale": "Material matchup, sample, price or projection contradiction remains unresolved."
+          }
+        },
+        "score": 4,
+        "knownSubtotal": 4,
+        "assessedMaximum": 10,
+        "state": "PROVISIONAL"
+      },
+      "micksThesisAndCountercase": "Guide opportunity thesis and role reporting support investigation; scoring must come from real minutes and attempts. Cold threes or a reduced closing role defeats it.",
+      "missingEvidence": "Explicit2025-26 no-Brown game-log distribution; today's minutes/closing role; live15.5 price. StatMuse snippets not accepted as verified ten-game evidence.",
+      "releaseBlockers": [
+        "No current executable DK offer validated",
+        "Failure minimum7/10 not cleared"
+      ],
+      "disposition": "WATCH/BLOCKED — NO BET",
+      "officialBet": false,
+      "betPlaced": false,
+      "units": 0,
+      "bestNumber": "not established—no bet until regraded",
+      "noBetCutoff": "not established—no bet until regraded",
+      "sources": [
+        "https://dknetwork.draftkings.com/2026/10/20/payton-pritchard-points-prop-pick-for-celtics-vs-pistons/",
+        "https://www.celticsblog.com/boston-celtics-news/148052/celtics-pistons-opening-day-injury-report",
+        "https://dknetwork.draftkings.com/2026/10/19/fantasy-basketball-picks-top-draftkings-nba-dfs-targets-values-for-tuesday-10-20-26-2/"
+      ],
+      "reviewedAt": "2026-10-20T16:57:30.919Z",
+      "crowdStatus": {
+        "tickets": null,
+        "money": null,
+        "contestBetCount": null,
+        "volumeScreenedFlag": null
+      },
+      "fadeAndInflation": {
+        "state": "UNKNOWN",
+        "reason": "Comparable historical closing-expectation5/10/20 windows not obtained; SU records do not clear an ATS trigger."
+      },
+      "NBA Guide Check": {
+        "guideId": "vsin-nba-2026-27-guide",
+        "pages": [
+          13,
+          15,
+          22
+        ],
+        "basis": "ORIGINAL_PAGES",
+        "guideFinding": "Boston's Tatum-led creation, Pritchard opportunity and Robinson/Queta depth versus Detroit's halfcourt creation and rebounding. Both guide power ratings101; not a daily fair spread.",
+        "currentFinding": "Boston beat report indicates near-full health except Devin Carter; anticipated bench role for Pritchard. TeamRankings context is explicitly last-season data. Full correct-season prop distributions not verified.",
+        "currentSources": [
+          "https://www.celticsblog.com/boston-celtics-news/148052/celtics-pistons-opening-day-injury-report",
+          "https://dknetwork.draftkings.com/2026/10/19/dean-wade-headlines-nba-injury-report-tuesday-10-20-26/",
+          "https://www.teamrankings.com/nba/matchup/celtics-pistons-2026-10-20"
+        ],
+        "checkedAt": "2026-10-20T16:57:30.919Z",
+        "state": "PARTIALLY_CURRENT",
+        "influence": "Baseline informs qualitative matchup and personnel only; no extra VSiN confirmation points.",
+        "countercase": "Detroit home court, interior scoring and defense; Boston role redistribution does not guarantee individual overs.",
+        "materialConflictResolved": true
+      }
+    },
+    {
+      "id": "nba-white",
+      "date": "2026-10-20",
+      "sport": "NBA",
+      "event": "BOS@DET",
+      "startTime": "2026-10-20T15:00:00-04:00",
+      "market": "Derrick White over15.5 points",
+      "lineAndOddsAsArticle": {
+        "market": "Derrick White over15.5 points",
+        "americanOdds": -110,
+        "source": "VSiN article, book not verified",
+        "retrievedAt": "2026-10-20T16:57:30.919Z",
+        "executionVerified": false,
+        "asOf": "publication date or dated reference only; no live offer timestamp"
+      },
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "points": 24,
+          "max": 35,
+          "rationale": "Off-ball shooting against attention on Tatum is plausible; current Cohen selection is exact-market support. Boston shot distribution and shooting variance limit resilience."
+        },
+        "price": {
+          "points": 13,
+          "max": 20,
+          "rationale": "Provisional judgment at the explicitly identified article threshold only; the quote is not an executable offer, opening-to-current series or established live cutoff. Price advantage is limited by the listed risk and unverified current alternatives."
+        },
+        "personnel": {
+          "points": 11,
+          "max": 15,
+          "rationale": "Boston near-full-health beat report and the role-specific guide/analyst context permit a modest opportunity assessment; bench/closing minutes and Tatum-led shot redistribution remain risks."
+        },
+        "situation": {
+          "points": 6,
+          "max": 10,
+          "rationale": "Opening-night venue and preseason/last-season pace context only; no proven current-season trend or rest advantage. Detroit home court counters Boston-side angles."
+        },
+        "vsin": {
+          "points": 8,
+          "max": 10,
+          "rationale": "Cohen explicitly selects White over15.5 at-110 and explains off-ball scoring. Same-family guide provides no second confirmation."
+        },
+        "docs": {
+          "points": 0,
+          "max": 10,
+          "rationale": "No exact-market confirming Doc's selection verified; UNKNOWN, no invented points."
+        },
+        "market": {
+          "points": 1,
+          "max": 10,
+          "rationale": "Small contextual credit only for dated identified reference(s). Movement/timing and ticket/handle subfactors remain0/UNKNOWN; no sharp-money or public asterisk inference."
+        }
+      },
+      "handicapScore": 63,
+      "scoreStatus": "PROVISIONAL",
+      "knownSubtotal": {
+        "points": 63,
+        "assessedMaximum": 110,
+        "normalizedTo110": false
+      },
+      "grade": "C",
+      "failure": {
+        "dimensions": {
+          "lossPathResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Off-ball shooting against attention on Tatum is plausible; current Cohen selection is exact-market support. Boston shot distribution and shooting variance limit resilience."
+          },
+          "personnelResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "A healthy baseline exists, but plausible closing-minutes and touches changes are not stress-tested; partial resilience only."
+          },
+          "scriptVariance": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Scoring/shooting variance or turnover/game-script sensitivity remains a meaningful loss path; no robust2-point claim."
+          },
+          "numberProtection": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Dated threshold supplies only partial protection; no current alternative/cutoff validated."
+          },
+          "countercaseResolution": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Independent context addresses part of the opposing case, but does not remove it."
+          }
+        },
+        "score": 5,
+        "knownSubtotal": 5,
+        "assessedMaximum": 10,
+        "state": "PROVISIONAL"
+      },
+      "micksThesisAndCountercase": "Off-ball shooting against attention on Tatum is plausible; current Cohen selection is exact-market support. Boston shot distribution and shooting variance limit resilience.",
+      "missingEvidence": "Live DK offer, threshold game-log distribution and final rotation. Outside quote is not proof of user-book availability.",
+      "releaseBlockers": [
+        "No current executable DK offer validated",
+        "Failure minimum7/10 not cleared"
+      ],
+      "disposition": "WATCH/BLOCKED — NO BET",
+      "officialBet": false,
+      "betPlaced": false,
+      "units": 0,
+      "bestNumber": "not established—no bet until regraded",
+      "noBetCutoff": "not established—no bet until regraded",
+      "sources": [
+        "https://vsin.com/nba/nba-player-props-today-top-picks-for-tuesday-october-20/",
+        "https://www.celticsblog.com/boston-celtics-news/148052/celtics-pistons-opening-day-injury-report"
+      ],
+      "reviewedAt": "2026-10-20T16:57:30.919Z",
+      "crowdStatus": {
+        "tickets": null,
+        "money": null,
+        "contestBetCount": null,
+        "volumeScreenedFlag": null
+      },
+      "fadeAndInflation": {
+        "state": "UNKNOWN",
+        "reason": "Comparable historical closing-expectation5/10/20 windows not obtained; SU records do not clear an ATS trigger."
+      },
+      "NBA Guide Check": {
+        "guideId": "vsin-nba-2026-27-guide",
+        "pages": [
+          13,
+          15,
+          22
+        ],
+        "basis": "ORIGINAL_PAGES",
+        "guideFinding": "Boston's Tatum-led creation, Pritchard opportunity and Robinson/Queta depth versus Detroit's halfcourt creation and rebounding. Both guide power ratings101; not a daily fair spread.",
+        "currentFinding": "Boston beat report indicates near-full health except Devin Carter; anticipated bench role for Pritchard. TeamRankings context is explicitly last-season data. Full correct-season prop distributions not verified.",
+        "currentSources": [
+          "https://www.celticsblog.com/boston-celtics-news/148052/celtics-pistons-opening-day-injury-report",
+          "https://dknetwork.draftkings.com/2026/10/19/dean-wade-headlines-nba-injury-report-tuesday-10-20-26/",
+          "https://www.teamrankings.com/nba/matchup/celtics-pistons-2026-10-20"
+        ],
+        "checkedAt": "2026-10-20T16:57:30.919Z",
+        "state": "PARTIALLY_CURRENT",
+        "influence": "Baseline informs qualitative matchup and personnel only; no extra VSiN confirmation points.",
+        "countercase": "Detroit home court, interior scoring and defense; Boston role redistribution does not guarantee individual overs.",
+        "materialConflictResolved": true
+      }
+    },
+    {
+      "id": "nba-tatum",
+      "date": "2026-10-20",
+      "sport": "NBA",
+      "event": "BOS@DET",
+      "startTime": "2026-10-20T15:00:00-04:00",
+      "market": "Jayson Tatum 6+ assists",
+      "lineAndOddsAsArticle": {
+        "market": "Jayson Tatum 6+ assists",
+        "americanOdds": -125,
+        "source": "DK Network, Julian Edlow",
+        "retrievedAt": "2026-10-20T16:57:30.919Z",
+        "executionVerified": false,
+        "asOf": "publication date or dated reference only; no live offer timestamp"
+      },
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "points": 24,
+          "max": 35,
+          "rationale": "A hub-and-shooters offense creates passes to shooters/lob finishers. Teammate conversion and individual scoring can suppress assists."
+        },
+        "price": {
+          "points": 13,
+          "max": 20,
+          "rationale": "Provisional judgment at the explicitly identified article threshold only; the quote is not an executable offer, opening-to-current series or established live cutoff. Price advantage is limited by the listed risk and unverified current alternatives."
+        },
+        "personnel": {
+          "points": 11,
+          "max": 15,
+          "rationale": "Boston near-full-health beat report and the role-specific guide/analyst context permit a modest opportunity assessment; bench/closing minutes and Tatum-led shot redistribution remain risks."
+        },
+        "situation": {
+          "points": 6,
+          "max": 10,
+          "rationale": "Opening-night venue and preseason/last-season pace context only; no proven current-season trend or rest advantage. Detroit home court counters Boston-side angles."
+        },
+        "vsin": {
+          "points": 0,
+          "max": 10,
+          "rationale": "No usable exact-market current VSiN confirming selection verified; absent support stays UNKNOWN with no points. For Holmgren, unresolved model/table quality means no confirmation points."
+        },
+        "docs": {
+          "points": 0,
+          "max": 10,
+          "rationale": "No exact-market confirming Doc's selection verified; UNKNOWN, no invented points."
+        },
+        "market": {
+          "points": 1,
+          "max": 10,
+          "rationale": "Small contextual credit only for dated identified reference(s). Movement/timing and ticket/handle subfactors remain0/UNKNOWN; no sharp-money or public asterisk inference."
+        }
+      },
+      "handicapScore": 55,
+      "scoreStatus": "PROVISIONAL",
+      "knownSubtotal": {
+        "points": 55,
+        "assessedMaximum": 110,
+        "normalizedTo110": false
+      },
+      "grade": "Pass",
+      "failure": {
+        "dimensions": {
+          "lossPathResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "A hub-and-shooters offense creates passes to shooters/lob finishers. Teammate conversion and individual scoring can suppress assists."
+          },
+          "personnelResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "A healthy baseline exists, but plausible closing-minutes and touches changes are not stress-tested; partial resilience only."
+          },
+          "scriptVariance": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Scoring/shooting variance or turnover/game-script sensitivity remains a meaningful loss path; no robust2-point claim."
+          },
+          "numberProtection": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Dated threshold supplies only partial protection; no current alternative/cutoff validated."
+          },
+          "countercaseResolution": {
+            "points": 0,
+            "max": 2,
+            "rationale": "Material matchup, sample, price or projection contradiction remains unresolved."
+          }
+        },
+        "score": 4,
+        "knownSubtotal": 4,
+        "assessedMaximum": 10,
+        "state": "PROVISIONAL"
+      },
+      "micksThesisAndCountercase": "A hub-and-shooters offense creates passes to shooters/lob finishers. Teammate conversion and individual scoring can suppress assists.",
+      "missingEvidence": "Current assists quote; correct-season distribution and opportunity data; tiny no-Brown sample cannot establish hit probability.",
+      "releaseBlockers": [
+        "No current executable DK offer validated",
+        "Failure minimum7/10 not cleared"
+      ],
+      "disposition": "WATCH/BLOCKED — NO BET",
+      "officialBet": false,
+      "betPlaced": false,
+      "units": 0,
+      "bestNumber": "not established—no bet until regraded",
+      "noBetCutoff": "not established—no bet until regraded",
+      "sources": [
+        "https://dknetwork.draftkings.com/2026/10/20/jayson-tatum-player-prop-pick-for-celtics-vs-pistons/",
+        "https://www.celticsblog.com/boston-celtics-news/148052/celtics-pistons-opening-day-injury-report"
+      ],
+      "reviewedAt": "2026-10-20T16:57:30.919Z",
+      "crowdStatus": {
+        "tickets": null,
+        "money": null,
+        "contestBetCount": null,
+        "volumeScreenedFlag": null
+      },
+      "fadeAndInflation": {
+        "state": "UNKNOWN",
+        "reason": "Comparable historical closing-expectation5/10/20 windows not obtained; SU records do not clear an ATS trigger."
+      },
+      "NBA Guide Check": {
+        "guideId": "vsin-nba-2026-27-guide",
+        "pages": [
+          13,
+          15,
+          22
+        ],
+        "basis": "ORIGINAL_PAGES",
+        "guideFinding": "Boston's Tatum-led creation, Pritchard opportunity and Robinson/Queta depth versus Detroit's halfcourt creation and rebounding. Both guide power ratings101; not a daily fair spread.",
+        "currentFinding": "Boston beat report indicates near-full health except Devin Carter; anticipated bench role for Pritchard. TeamRankings context is explicitly last-season data. Full correct-season prop distributions not verified.",
+        "currentSources": [
+          "https://www.celticsblog.com/boston-celtics-news/148052/celtics-pistons-opening-day-injury-report",
+          "https://dknetwork.draftkings.com/2026/10/19/dean-wade-headlines-nba-injury-report-tuesday-10-20-26/",
+          "https://www.teamrankings.com/nba/matchup/celtics-pistons-2026-10-20"
+        ],
+        "checkedAt": "2026-10-20T16:57:30.919Z",
+        "state": "PARTIALLY_CURRENT",
+        "influence": "Baseline informs qualitative matchup and personnel only; no extra VSiN confirmation points.",
+        "countercase": "Detroit home court, interior scoring and defense; Boston role redistribution does not guarantee individual overs.",
+        "materialConflictResolved": true
+      }
+    },
+    {
+      "id": "nba-brown",
+      "date": "2026-10-20",
+      "sport": "NBA",
+      "event": "PHI@NYK",
+      "startTime": "2026-10-20T19:00:00-04:00",
+      "market": "Jaylen Brown under21.5 points",
+      "lineAndOddsAsArticle": {
+        "market": "Jaylen Brown under21.5 points",
+        "americanOdds": -122,
+        "source": "DK Network, Alex Hunter",
+        "retrievedAt": "2026-10-20T16:57:30.919Z",
+        "executionVerified": false,
+        "asOf": "publication date or dated reference only; no live offer timestamp"
+      },
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "points": 24,
+          "max": 35,
+          "rationale": "Reduced usage beside multiple creators supports the under thesis; Philadelphia bench injuries could move minutes and touches back toward Brown."
+        },
+        "price": {
+          "points": 13,
+          "max": 20,
+          "rationale": "Provisional judgment at the explicitly identified article threshold only; the quote is not an executable offer, opening-to-current series or established live cutoff. Price advantage is limited by the listed risk and unverified current alternatives."
+        },
+        "personnel": {
+          "points": null,
+          "max": 15,
+          "rationale": "Material quarterback, goalie, bench availability or rotation impact remains unresolved; no inferred points."
+        },
+        "situation": {
+          "points": 5,
+          "max": 10,
+          "rationale": "Opening-night venue and preseason/last-season pace context only; no proven current-season trend or rest advantage. Detroit home court counters Boston-side angles."
+        },
+        "vsin": {
+          "points": 0,
+          "max": 10,
+          "rationale": "No usable exact-market current VSiN confirming selection verified; absent support stays UNKNOWN with no points. For Holmgren, unresolved model/table quality means no confirmation points."
+        },
+        "docs": {
+          "points": 0,
+          "max": 10,
+          "rationale": "No exact-market confirming Doc's selection verified; UNKNOWN, no invented points."
+        },
+        "market": {
+          "points": 1,
+          "max": 10,
+          "rationale": "Small contextual credit only for dated identified reference(s). Movement/timing and ticket/handle subfactors remain0/UNKNOWN; no sharp-money or public asterisk inference."
+        }
+      },
+      "handicapScore": null,
+      "scoreStatus": "UNGRADED",
+      "knownSubtotal": {
+        "points": 43,
+        "assessedMaximum": 95,
+        "normalizedTo110": false
+      },
+      "grade": null,
+      "failure": {
+        "dimensions": {
+          "lossPathResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Reduced usage beside multiple creators supports the under thesis; Philadelphia bench injuries could move minutes and touches back toward Brown."
+          },
+          "personnelResilience": {
+            "points": null,
+            "max": 2,
+            "rationale": "Essential role/availability sensitivity not yet assessable."
+          },
+          "scriptVariance": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Scoring/shooting variance or turnover/game-script sensitivity remains a meaningful loss path; no robust2-point claim."
+          },
+          "numberProtection": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Dated threshold supplies only partial protection; no current alternative/cutoff validated."
+          },
+          "countercaseResolution": {
+            "points": 0,
+            "max": 2,
+            "rationale": "Material matchup, sample, price or projection contradiction remains unresolved."
+          }
+        },
+        "score": null,
+        "knownSubtotal": 3,
+        "assessedMaximum": 8,
+        "state": "PROVISIONAL"
+      },
+      "micksThesisAndCountercase": "Reduced usage beside multiple creators supports the under thesis; Philadelphia bench injuries could move minutes and touches back toward Brown.",
+      "missingEvidence": "Final Wade/Simons/Bona and Embiid status; current lineup and role; current DK offer and distribution.",
+      "releaseBlockers": [
+        "No current executable DK offer validated",
+        "Failure minimum7/10 not cleared",
+        "Unassessed core factor"
+      ],
+      "disposition": "WATCH/BLOCKED — NO BET",
+      "officialBet": false,
+      "betPlaced": false,
+      "units": 0,
+      "bestNumber": "not established—no bet until regraded",
+      "noBetCutoff": "not established—no bet until regraded",
+      "sources": [
+        "https://dknetwork.draftkings.com/2026/10/20/best-jaylen-brown-prop-bet-for-76ers-at-knicks-on-tuesday-10-20-26/",
+        "https://dknetwork.draftkings.com/2026/10/19/dean-wade-headlines-nba-injury-report-tuesday-10-20-26/"
+      ],
+      "reviewedAt": "2026-10-20T16:57:30.919Z",
+      "crowdStatus": {
+        "tickets": null,
+        "money": null,
+        "contestBetCount": null,
+        "volumeScreenedFlag": null
+      },
+      "fadeAndInflation": {
+        "state": "UNKNOWN",
+        "reason": "Comparable historical closing-expectation5/10/20 windows not obtained; SU records do not clear an ATS trigger."
+      },
+      "NBA Guide Check": {
+        "guideId": "vsin-nba-2026-27-guide",
+        "pages": [
+          13,
+          33,
+          36
+        ],
+        "basis": "ORIGINAL_PAGES",
+        "guideFinding": "Knicks continuity versus Philadelphia's redistributed usage, Embiid durability and defensive uncertainty. Guide ratings NYK103/PHI101.5.",
+        "currentFinding": "DK injury page lists Wade/Simons/Bona questionable and Barlow out; final Philadelphia bench availability not confirmed. Brown's new usage estimate is an outside opinion.",
+        "currentSources": [
+          "https://dknetwork.draftkings.com/2026/10/19/dean-wade-headlines-nba-injury-report-tuesday-10-20-26/",
+          "https://dknetwork.draftkings.com/2026/10/20/best-jaylen-brown-prop-bet-for-76ers-at-knicks-on-tuesday-10-20-26/",
+          "https://www.teamrankings.com/nba/matchup/76ers-knicks-2026-10-20"
+        ],
+        "checkedAt": "2026-10-20T16:57:30.919Z",
+        "state": "PARTIALLY_CURRENT",
+        "influence": "Baseline informs qualitative matchup and personnel only; no extra VSiN confirmation points.",
+        "countercase": "Absences could increase Brown scoring/minutes; new offensive talent makes old team aggregates less representative.",
+        "materialConflictResolved": true
+      }
+    },
+    {
+      "id": "nba-nyk",
+      "date": "2026-10-20",
+      "sport": "NBA",
+      "event": "PHI@NYK",
+      "startTime": "2026-10-20T19:00:00-04:00",
+      "market": "New York -4.5",
+      "lineAndOddsAsArticle": {
+        "market": "New York -4.5",
+        "americanOdds": null,
+        "source": "DK Network and TeamRankings references",
+        "retrievedAt": "2026-10-20T16:57:30.919Z",
+        "executionVerified": false,
+        "asOf": "publication date or dated reference only; no live offer timestamp"
+      },
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "points": 24,
+          "max": 35,
+          "rationale": "Continuity/home-court defense is preferable to mechanically projecting last year's Philadelphia roster. Visitor talent and bench uncertainty remain substantial."
+        },
+        "price": {
+          "points": 12,
+          "max": 20,
+          "rationale": "Provisional judgment at the explicitly identified article threshold only; the quote is not an executable offer, opening-to-current series or established live cutoff. Price advantage is limited by the listed risk and unverified current alternatives."
+        },
+        "personnel": {
+          "points": null,
+          "max": 15,
+          "rationale": "Material quarterback, goalie, bench availability or rotation impact remains unresolved; no inferred points."
+        },
+        "situation": {
+          "points": 6,
+          "max": 10,
+          "rationale": "Opening-night venue and preseason/last-season pace context only; no proven current-season trend or rest advantage. Detroit home court counters Boston-side angles."
+        },
+        "vsin": {
+          "points": 0,
+          "max": 10,
+          "rationale": "No usable exact-market current VSiN confirming selection verified; absent support stays UNKNOWN with no points. For Holmgren, unresolved model/table quality means no confirmation points."
+        },
+        "docs": {
+          "points": 6,
+          "max": 10,
+          "rationale": "The corresponding named Doc's selection in sources supports the side. Different article thresholds are retained and older-roster generic recaps limit conviction."
+        },
+        "market": {
+          "points": 2,
+          "max": 10,
+          "rationale": "Small contextual credit only for dated identified reference(s). Movement/timing and ticket/handle subfactors remain0/UNKNOWN; no sharp-money or public asterisk inference."
+        }
+      },
+      "handicapScore": null,
+      "scoreStatus": "UNGRADED",
+      "knownSubtotal": {
+        "points": 50,
+        "assessedMaximum": 95,
+        "normalizedTo110": false
+      },
+      "grade": null,
+      "failure": {
+        "dimensions": {
+          "lossPathResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Continuity/home-court defense is preferable to mechanically projecting last year's Philadelphia roster. Visitor talent and bench uncertainty remain substantial."
+          },
+          "personnelResilience": {
+            "points": null,
+            "max": 2,
+            "rationale": "Essential role/availability sensitivity not yet assessable."
+          },
+          "scriptVariance": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Scoring/shooting variance or turnover/game-script sensitivity remains a meaningful loss path; no robust2-point claim."
+          },
+          "numberProtection": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Dated threshold supplies only partial protection; no current alternative/cutoff validated."
+          },
+          "countercaseResolution": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Independent context addresses part of the opposing case, but does not remove it."
+          }
+        },
+        "score": null,
+        "knownSubtotal": 4,
+        "assessedMaximum": 8,
+        "state": "PROVISIONAL"
+      },
+      "micksThesisAndCountercase": "Continuity/home-court defense is preferable to mechanically projecting last year's Philadelphia roster. Visitor talent and bench uncertainty remain substantial.",
+      "missingEvidence": "Executable spread/juice and material personnel; Doc's -5.5 article has a better current threshold but needs rationale reconciliation.",
+      "releaseBlockers": [
+        "No current executable DK offer validated",
+        "Failure minimum7/10 not cleared",
+        "Unassessed core factor"
+      ],
+      "disposition": "WATCH/BLOCKED — NO BET",
+      "officialBet": false,
+      "betPlaced": false,
+      "units": 0,
+      "bestNumber": "not established—no bet until regraded",
+      "noBetCutoff": "not established—no bet until regraded",
+      "sources": [
+        "https://dknetwork.draftkings.com/2026/10/20/best-jaylen-brown-prop-bet-for-76ers-at-knicks-on-tuesday-10-20-26/",
+        "https://www.teamrankings.com/nba/matchup/76ers-knicks-2026-10-20",
+        "https://www.docsports.com/free-picks/nba/2026/philadelphia-76ers-vs-new-york-knicks-prediction-10-20-2026-preview-and-pick.html"
+      ],
+      "reviewedAt": "2026-10-20T16:57:30.919Z",
+      "crowdStatus": {
+        "tickets": null,
+        "money": null,
+        "contestBetCount": null,
+        "volumeScreenedFlag": null
+      },
+      "fadeAndInflation": {
+        "state": "UNKNOWN",
+        "reason": "Comparable historical closing-expectation5/10/20 windows not obtained; SU records do not clear an ATS trigger."
+      },
+      "NBA Guide Check": {
+        "guideId": "vsin-nba-2026-27-guide",
+        "pages": [
+          13,
+          33,
+          36
+        ],
+        "basis": "ORIGINAL_PAGES",
+        "guideFinding": "Knicks continuity versus Philadelphia's redistributed usage, Embiid durability and defensive uncertainty. Guide ratings NYK103/PHI101.5.",
+        "currentFinding": "DK injury page lists Wade/Simons/Bona questionable and Barlow out; final Philadelphia bench availability not confirmed. Brown's new usage estimate is an outside opinion.",
+        "currentSources": [
+          "https://dknetwork.draftkings.com/2026/10/19/dean-wade-headlines-nba-injury-report-tuesday-10-20-26/",
+          "https://dknetwork.draftkings.com/2026/10/20/best-jaylen-brown-prop-bet-for-76ers-at-knicks-on-tuesday-10-20-26/",
+          "https://www.teamrankings.com/nba/matchup/76ers-knicks-2026-10-20"
+        ],
+        "checkedAt": "2026-10-20T16:57:30.919Z",
+        "state": "PARTIALLY_CURRENT",
+        "influence": "Baseline informs qualitative matchup and personnel only; no extra VSiN confirmation points.",
+        "countercase": "Absences could increase Brown scoring/minutes; new offensive talent makes old team aggregates less representative.",
+        "materialConflictResolved": true
+      }
+    },
+    {
+      "id": "nba-okc",
+      "date": "2026-10-20",
+      "sport": "NBA",
+      "event": "OKC@SAS",
+      "startTime": "2026-10-20T21:30:00-04:00",
+      "market": "Oklahoma City +1.5",
+      "lineAndOddsAsArticle": {
+        "market": "Oklahoma City +1.5",
+        "americanOdds": null,
+        "source": "TeamRankings reference; not verified DK offer",
+        "retrievedAt": "2026-10-20T16:57:30.919Z",
+        "executionVerified": false,
+        "asOf": "publication date or dated reference only; no live offer timestamp"
+      },
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "points": 24,
+          "max": 35,
+          "rationale": "A small underdog with high structural strength is worth examining; depth/shooting losses and Harris-related Spurs rotation changes prevent a settled matchup judgment."
+        },
+        "price": {
+          "points": 12,
+          "max": 20,
+          "rationale": "Provisional judgment at the explicitly identified article threshold only; the quote is not an executable offer, opening-to-current series or established live cutoff. Price advantage is limited by the listed risk and unverified current alternatives."
+        },
+        "personnel": {
+          "points": null,
+          "max": 15,
+          "rationale": "Material quarterback, goalie, bench availability or rotation impact remains unresolved; no inferred points."
+        },
+        "situation": {
+          "points": 5,
+          "max": 10,
+          "rationale": "Opening-night venue and preseason/last-season pace context only; no proven current-season trend or rest advantage. Detroit home court counters Boston-side angles."
+        },
+        "vsin": {
+          "points": 0,
+          "max": 10,
+          "rationale": "No usable exact-market current VSiN confirming selection verified; absent support stays UNKNOWN with no points. For Holmgren, unresolved model/table quality means no confirmation points."
+        },
+        "docs": {
+          "points": 6,
+          "max": 10,
+          "rationale": "The corresponding named Doc's selection in sources supports the side. Different article thresholds are retained and older-roster generic recaps limit conviction."
+        },
+        "market": {
+          "points": 2,
+          "max": 10,
+          "rationale": "Small contextual credit only for dated identified reference(s). Movement/timing and ticket/handle subfactors remain0/UNKNOWN; no sharp-money or public asterisk inference."
+        }
+      },
+      "handicapScore": null,
+      "scoreStatus": "UNGRADED",
+      "knownSubtotal": {
+        "points": 49,
+        "assessedMaximum": 95,
+        "normalizedTo110": false
+      },
+      "grade": null,
+      "failure": {
+        "dimensions": {
+          "lossPathResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "A small underdog with high structural strength is worth examining; depth/shooting losses and Harris-related Spurs rotation changes prevent a settled matchup judgment."
+          },
+          "personnelResilience": {
+            "points": null,
+            "max": 2,
+            "rationale": "Essential role/availability sensitivity not yet assessable."
+          },
+          "scriptVariance": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Scoring/shooting variance or turnover/game-script sensitivity remains a meaningful loss path; no robust2-point claim."
+          },
+          "numberProtection": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Dated threshold supplies only partial protection; no current alternative/cutoff validated."
+          },
+          "countercaseResolution": {
+            "points": 0,
+            "max": 2,
+            "rationale": "Material matchup, sample, price or projection contradiction remains unresolved."
+          }
+        },
+        "score": null,
+        "knownSubtotal": 3,
+        "assessedMaximum": 8,
+        "state": "PROVISIONAL"
+      },
+      "micksThesisAndCountercase": "A small underdog with high structural strength is worth examining; depth/shooting losses and Harris-related Spurs rotation changes prevent a settled matchup judgment.",
+      "missingEvidence": "Exact current DK spread/odds, official rotations; do not treat Doc's +2.5 as the same number as +1.5.",
+      "releaseBlockers": [
+        "No current executable DK offer validated",
+        "Failure minimum7/10 not cleared",
+        "Unassessed core factor"
+      ],
+      "disposition": "WATCH/BLOCKED — NO BET",
+      "officialBet": false,
+      "betPlaced": false,
+      "units": 0,
+      "bestNumber": "not established—no bet until regraded",
+      "noBetCutoff": "not established—no bet until regraded",
+      "sources": [
+        "https://www.teamrankings.com/nba/matchup/thunder-spurs-2026-10-20",
+        "https://www.docsports.com/free-picks/nba/2026/oklahoma-city-thunder-vs-san-antonio-spurs-prediction-10-20-2026-preview-and-pick.html",
+        "https://www.poundingtherock.com/spurs-game-previews/108548/game-preview-san-antonio-spurs-vs-oklahoma-city-thunder"
+      ],
+      "reviewedAt": "2026-10-20T16:57:30.919Z",
+      "crowdStatus": {
+        "tickets": null,
+        "money": null,
+        "contestBetCount": null,
+        "volumeScreenedFlag": null
+      },
+      "fadeAndInflation": {
+        "state": "UNKNOWN",
+        "reason": "Comparable historical closing-expectation5/10/20 windows not obtained; SU records do not clear an ATS trigger."
+      },
+      "NBA Guide Check": {
+        "guideId": "vsin-nba-2026-27-guide",
+        "pages": [
+          13,
+          34,
+          40
+        ],
+        "basis": "ORIGINAL_PAGES",
+        "guideFinding": "OKC shooting/depth changes, Holmgren playoff scoring difficulty and Spurs guard-minute allocation; guide ratings OKC104/SAS103.5.",
+        "currentFinding": "Current Spurs preview and DK injury page report Harris out, changing the guide's added-scorer premise. DK DFS writer expects Harper around30minutes and Williams near32.4minutes; estimates, not confirmed rotations.",
+        "currentSources": [
+          "https://www.poundingtherock.com/spurs-game-previews/108548/game-preview-san-antonio-spurs-vs-oklahoma-city-thunder",
+          "https://dknetwork.draftkings.com/2026/10/19/dean-wade-headlines-nba-injury-report-tuesday-10-20-26/",
+          "https://dknetwork.draftkings.com/2026/10/19/fantasy-basketball-picks-top-draftkings-nba-dfs-targets-values-for-tuesday-10-20-26-2/",
+          "https://www.teamrankings.com/nba/matchup/thunder-spurs-2026-10-20"
+        ],
+        "checkedAt": "2026-10-20T16:57:30.919Z",
+        "state": "OVERRIDDEN",
+        "influence": "Baseline informs qualitative matchup and personnel only; no extra VSiN confirmation points.",
+        "countercase": "Harris absence changes perimeter assignments; Holmgren season baseline conflicts with his weak Spurs playoff series; current Opta heading/edge direction conflicts need resolution.",
+        "materialConflictResolved": false
+      }
+    },
+    {
+      "id": "nba-chet",
+      "date": "2026-10-20",
+      "sport": "NBA",
+      "event": "OKC@SAS",
+      "startTime": "2026-10-20T21:30:00-04:00",
+      "market": "Chet Holmgren over12.5 points",
+      "lineAndOddsAsArticle": {
+        "market": "Chet Holmgren over12.5 points",
+        "americanOdds": -120,
+        "source": "VSiN Opta table, book unspecified",
+        "retrievedAt": "2026-10-20T16:57:30.919Z",
+        "executionVerified": false,
+        "asOf": "publication date or dated reference only; no live offer timestamp"
+      },
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "points": null,
+          "max": 35,
+          "rationale": "Conflicting guide/current-model matchup cannot be assessed reliably yet."
+        },
+        "price": {
+          "points": 12,
+          "max": 20,
+          "rationale": "Provisional judgment at the explicitly identified article threshold only; the quote is not an executable offer, opening-to-current series or established live cutoff. Price advantage is limited by the listed risk and unverified current alternatives."
+        },
+        "personnel": {
+          "points": null,
+          "max": 15,
+          "rationale": "Material quarterback, goalie, bench availability or rotation impact remains unresolved; no inferred points."
+        },
+        "situation": {
+          "points": 5,
+          "max": 10,
+          "rationale": "Opening-night venue and preseason/last-season pace context only; no proven current-season trend or rest advantage. Detroit home court counters Boston-side angles."
+        },
+        "vsin": {
+          "points": 0,
+          "max": 10,
+          "rationale": "No usable exact-market current VSiN confirming selection verified; absent support stays UNKNOWN with no points. For Holmgren, unresolved model/table quality means no confirmation points."
+        },
+        "docs": {
+          "points": 0,
+          "max": 10,
+          "rationale": "No exact-market confirming Doc's selection verified; UNKNOWN, no invented points."
+        },
+        "market": {
+          "points": 1,
+          "max": 10,
+          "rationale": "Small contextual credit only for dated identified reference(s). Movement/timing and ticket/handle subfactors remain0/UNKNOWN; no sharp-money or public asterisk inference."
+        }
+      },
+      "handicapScore": null,
+      "scoreStatus": "UNGRADED",
+      "knownSubtotal": {
+        "points": 18,
+        "assessedMaximum": 60,
+        "normalizedTo110": false
+      },
+      "grade": null,
+      "failure": {
+        "dimensions": {
+          "lossPathResilience": {
+            "points": 0,
+            "max": 2,
+            "rationale": "Opta prints18.13points, but guide documents a difficult Spurs playoff scoring matchup. The table's other rows have inconsistent direction labels; model outputs require checking."
+          },
+          "personnelResilience": {
+            "points": null,
+            "max": 2,
+            "rationale": "Essential role/availability sensitivity not yet assessable."
+          },
+          "scriptVariance": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Scoring/shooting variance or turnover/game-script sensitivity remains a meaningful loss path; no robust2-point claim."
+          },
+          "numberProtection": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Dated threshold supplies only partial protection; no current alternative/cutoff validated."
+          },
+          "countercaseResolution": {
+            "points": 0,
+            "max": 2,
+            "rationale": "Material matchup, sample, price or projection contradiction remains unresolved."
+          }
+        },
+        "score": null,
+        "knownSubtotal": 2,
+        "assessedMaximum": 8,
+        "state": "PROVISIONAL"
+      },
+      "micksThesisAndCountercase": "Opta prints18.13points, but guide documents a difficult Spurs playoff scoring matchup. The table's other rows have inconsistent direction labels; model outputs require checking.",
+      "missingEvidence": "Validate exact Opta output/market and current DK threshold; verify role/defensive assignment and reconcile guide countercase.",
+      "releaseBlockers": [
+        "No current executable DK offer validated",
+        "Failure minimum7/10 not cleared",
+        "Unassessed core factor"
+      ],
+      "disposition": "WATCH/BLOCKED — NO BET",
+      "officialBet": false,
+      "betPlaced": false,
+      "units": 0,
+      "bestNumber": "not established—no bet until regraded",
+      "noBetCutoff": "not established—no bet until regraded",
+      "sources": [
+        "https://vsin.com/nba/nba-player-props-today-top-picks-for-tuesday-october-20/",
+        "https://www.teamrankings.com/nba/matchup/thunder-spurs-2026-10-20"
+      ],
+      "reviewedAt": "2026-10-20T16:57:30.919Z",
+      "crowdStatus": {
+        "tickets": null,
+        "money": null,
+        "contestBetCount": null,
+        "volumeScreenedFlag": null
+      },
+      "fadeAndInflation": {
+        "state": "UNKNOWN",
+        "reason": "Comparable historical closing-expectation5/10/20 windows not obtained; SU records do not clear an ATS trigger."
+      },
+      "NBA Guide Check": {
+        "guideId": "vsin-nba-2026-27-guide",
+        "pages": [
+          13,
+          34,
+          40
+        ],
+        "basis": "ORIGINAL_PAGES",
+        "guideFinding": "OKC shooting/depth changes, Holmgren playoff scoring difficulty and Spurs guard-minute allocation; guide ratings OKC104/SAS103.5.",
+        "currentFinding": "Current Spurs preview and DK injury page report Harris out, changing the guide's added-scorer premise. DK DFS writer expects Harper around30minutes and Williams near32.4minutes; estimates, not confirmed rotations.",
+        "currentSources": [
+          "https://www.poundingtherock.com/spurs-game-previews/108548/game-preview-san-antonio-spurs-vs-oklahoma-city-thunder",
+          "https://dknetwork.draftkings.com/2026/10/19/dean-wade-headlines-nba-injury-report-tuesday-10-20-26/",
+          "https://dknetwork.draftkings.com/2026/10/19/fantasy-basketball-picks-top-draftkings-nba-dfs-targets-values-for-tuesday-10-20-26-2/",
+          "https://www.teamrankings.com/nba/matchup/thunder-spurs-2026-10-20"
+        ],
+        "checkedAt": "2026-10-20T16:57:30.919Z",
+        "state": "OVERRIDDEN",
+        "influence": "Baseline informs qualitative matchup and personnel only; no extra VSiN confirmation points.",
+        "countercase": "Harris absence changes perimeter assignments; Holmgren season baseline conflicts with his weak Spurs playoff series; current Opta heading/edge direction conflicts need resolution.",
+        "materialConflictResolved": false
+      }
+    },
+    {
+      "id": "cfb-usa",
+      "date": "2026-10-20",
+      "sport": "CFB",
+      "event": "South Alabama@Marshall",
+      "startTime": "2026-10-20T19:30:00-04:00",
+      "market": "South Alabama -3",
+      "lineAndOddsAsArticle": {
+        "market": "South Alabama -3",
+        "americanOdds": null,
+        "source": "Circa reference Oct19 10:30ET via VSiN; not live DK",
+        "retrievedAt": "2026-10-20T16:57:30.919Z",
+        "executionVerified": false,
+        "asOf": "publication date or dated reference only; no live offer timestamp"
+      },
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "points": 26,
+          "max": 35,
+          "rationale": "Rushing strength against Marshall's run defense is the independent cashing path; South Alabama's own poor defense makes a shootout/upset a real risk."
+        },
+        "price": {
+          "points": 13,
+          "max": 20,
+          "rationale": "Provisional judgment at the explicitly identified article threshold only; the quote is not an executable offer, opening-to-current series or established live cutoff. Price advantage is limited by the listed risk and unverified current alternatives."
+        },
+        "personnel": {
+          "points": null,
+          "max": 15,
+          "rationale": "Material quarterback, goalie, bench availability or rotation impact remains unresolved; no inferred points."
+        },
+        "situation": {
+          "points": 6,
+          "max": 10,
+          "rationale": "Venue/preparation and style context give limited support; current game-time weather still unconfirmed."
+        },
+        "vsin": {
+          "points": 8,
+          "max": 10,
+          "rationale": "Burke explicitly selects SouthAlabama-3, identifying rushing offense versus poor run defense while acknowledging poor Jaguar defense."
+        },
+        "docs": {
+          "points": 7,
+          "max": 10,
+          "rationale": "The corresponding named Doc's selection in sources supports the side. Different article thresholds are retained and older-roster generic recaps limit conviction."
+        },
+        "market": {
+          "points": 2,
+          "max": 10,
+          "rationale": "Small contextual credit only for dated identified reference(s). Movement/timing and ticket/handle subfactors remain0/UNKNOWN; no sharp-money or public asterisk inference."
+        }
+      },
+      "handicapScore": null,
+      "scoreStatus": "UNGRADED",
+      "knownSubtotal": {
+        "points": 62,
+        "assessedMaximum": 95,
+        "normalizedTo110": false
+      },
+      "grade": null,
+      "failure": {
+        "dimensions": {
+          "lossPathResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Rushing strength against Marshall's run defense is the independent cashing path; South Alabama's own poor defense makes a shootout/upset a real risk."
+          },
+          "personnelResilience": {
+            "points": null,
+            "max": 2,
+            "rationale": "Essential role/availability sensitivity not yet assessable."
+          },
+          "scriptVariance": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Scoring/shooting variance or turnover/game-script sensitivity remains a meaningful loss path; no robust2-point claim."
+          },
+          "numberProtection": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Dated threshold supplies only partial protection; no current alternative/cutoff validated."
+          },
+          "countercaseResolution": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Independent context addresses part of the opposing case, but does not remove it."
+          }
+        },
+        "score": null,
+        "knownSubtotal": 4,
+        "assessedMaximum": 8,
+        "state": "PROVISIONAL"
+      },
+      "micksThesisAndCountercase": "Rushing strength against Marshall's run defense is the independent cashing path; South Alabama's own poor defense makes a shootout/upset a real risk.",
+      "missingEvidence": "Confirm Marshall QB/rotation, South Alabama availability, current weather and exact executable DK number. Doc's -2.5 is materially preferable to -3.",
+      "releaseBlockers": [
+        "No current executable DK offer validated",
+        "Failure minimum7/10 not cleared",
+        "Unassessed core factor"
+      ],
+      "disposition": "WATCH/BLOCKED — NO BET",
+      "officialBet": false,
+      "betPlaced": false,
+      "units": 0,
+      "bestNumber": "not established—no bet until regraded",
+      "noBetCutoff": "not established—no bet until regraded",
+      "sources": [
+        "https://vsin.com/college-football/college-football-week-8-picks-south-alabama-vs-marshall/",
+        "https://www.docsports.com/free-picks/football/2026/south-alabama-jaguars-vs-marshall-thundering-herd-prediction-10-20-2026-college-football-picks-best-bets-odds.html",
+        "https://usajaguars.com/news/2026/10/17/football-jags-head-to-marshall-for-tuesday-night-game.aspx"
+      ],
+      "reviewedAt": "2026-10-20T16:57:30.919Z",
+      "crowdStatus": {
+        "tickets": null,
+        "money": null,
+        "contestBetCount": null,
+        "volumeScreenedFlag": null
+      },
+      "fadeAndInflation": {
+        "state": "UNKNOWN",
+        "reason": "Comparable historical closing-expectation5/10/20 windows not obtained; SU records do not clear an ATS trigger."
+      }
+    },
+    {
+      "id": "cfb-fiu",
+      "date": "2026-10-20",
+      "sport": "CFB",
+      "event": "MTSU@FIU",
+      "startTime": "2026-10-20T19:00:00-04:00",
+      "market": "FIU -9.5",
+      "lineAndOddsAsArticle": {
+        "market": "FIU -9.5",
+        "americanOdds": -126,
+        "source": "DK Network, Bryan Armetta",
+        "retrievedAt": "2026-10-20T16:57:30.919Z",
+        "executionVerified": false,
+        "asOf": "publication date or dated reference only; no live offer timestamp"
+      },
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "points": 23,
+          "max": 35,
+          "rationale": "FIU defense and possession control help; turnover-prone quarterback and weak rushing efficiency undermine a two-score margin."
+        },
+        "price": {
+          "points": 10,
+          "max": 20,
+          "rationale": "Provisional judgment at the explicitly identified article threshold only; the quote is not an executable offer, opening-to-current series or established live cutoff. Price advantage is limited by the listed risk and unverified current alternatives."
+        },
+        "personnel": {
+          "points": 10,
+          "max": 15,
+          "rationale": "Known FIU defensive role and offensive quarterback/rushing limitations give only modest support; final news remains outstanding."
+        },
+        "situation": {
+          "points": 5,
+          "max": 10,
+          "rationale": "Venue/preparation and style context give limited support; current game-time weather still unconfirmed."
+        },
+        "vsin": {
+          "points": 0,
+          "max": 10,
+          "rationale": "No usable exact-market current VSiN confirming selection verified; absent support stays UNKNOWN with no points. For Holmgren, unresolved model/table quality means no confirmation points."
+        },
+        "docs": {
+          "points": 0,
+          "max": 10,
+          "rationale": "Tony Sink takes the opponent MTSU+10.5; actual disagreement, not missing data."
+        },
+        "market": {
+          "points": 1,
+          "max": 10,
+          "rationale": "Small contextual credit only for dated identified reference(s). Movement/timing and ticket/handle subfactors remain0/UNKNOWN; no sharp-money or public asterisk inference."
+        }
+      },
+      "handicapScore": 49,
+      "scoreStatus": "PROVISIONAL",
+      "knownSubtotal": {
+        "points": 49,
+        "assessedMaximum": 110,
+        "normalizedTo110": false
+      },
+      "grade": "Pass",
+      "failure": {
+        "dimensions": {
+          "lossPathResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "FIU defense and possession control help; turnover-prone quarterback and weak rushing efficiency undermine a two-score margin."
+          },
+          "personnelResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "A healthy baseline exists, but plausible closing-minutes and touches changes are not stress-tested; partial resilience only."
+          },
+          "scriptVariance": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Scoring/shooting variance or turnover/game-script sensitivity remains a meaningful loss path; no robust2-point claim."
+          },
+          "numberProtection": {
+            "points": 0,
+            "max": 2,
+            "rationale": "Laying9.5 at-126 provides weak protection; double-digit margin and price risk unresolved."
+          },
+          "countercaseResolution": {
+            "points": 0,
+            "max": 2,
+            "rationale": "Material matchup, sample, price or projection contradiction remains unresolved."
+          }
+        },
+        "score": 3,
+        "knownSubtotal": 3,
+        "assessedMaximum": 10,
+        "state": "PROVISIONAL"
+      },
+      "micksThesisAndCountercase": "FIU defense and possession control help; turnover-prone quarterback and weak rushing efficiency undermine a two-score margin.",
+      "missingEvidence": "Resolve the price/laying-points problem, current health/weather; Doc's takes MTSU+10.5 and Burke passes. No opposite-side automatic play.",
+      "releaseBlockers": [
+        "No current executable DK offer validated",
+        "Failure minimum7/10 not cleared"
+      ],
+      "disposition": "WATCH/BLOCKED — NO BET",
+      "officialBet": false,
+      "betPlaced": false,
+      "units": 0,
+      "bestNumber": "not established—no bet until regraded",
+      "noBetCutoff": "not established—no bet until regraded",
+      "sources": [
+        "https://dknetwork.draftkings.com/2026/10/20/middle-tennessee-blue-raiders-vs-fiu-panthers-pick-prediction-for-college-football-week-8-on-tuesday-10-20-26/",
+        "https://www.docsports.com/free-picks/football/2026/mtsu-blue-raiders-vs-fiu-panthers-prediction-10-20-2026-college-football-picks-best-bets-odds.html",
+        "https://vsin.com/college-football/college-football-week-8-picks-south-alabama-vs-marshall/"
+      ],
+      "reviewedAt": "2026-10-20T16:57:30.919Z",
+      "crowdStatus": {
+        "tickets": null,
+        "money": null,
+        "contestBetCount": null,
+        "volumeScreenedFlag": null
+      },
+      "fadeAndInflation": {
+        "state": "UNKNOWN",
+        "reason": "Comparable historical closing-expectation5/10/20 windows not obtained; SU records do not clear an ATS trigger."
+      }
+    },
+    {
+      "id": "cfb-del",
+      "date": "2026-10-20",
+      "sport": "CFB",
+      "event": "Missouri State@Delaware",
+      "startTime": "2026-10-20T19:00:00-04:00",
+      "market": "Delaware -3.5",
+      "lineAndOddsAsArticle": {
+        "market": "Delaware -3.5",
+        "americanOdds": null,
+        "source": "Doc's article; book unspecified",
+        "retrievedAt": "2026-10-20T16:57:30.919Z",
+        "executionVerified": false,
+        "asOf": "publication date or dated reference only; no live offer timestamp"
+      },
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "points": 18,
+          "max": 35,
+          "rationale": "Home offense is a possible path, but uncertain quarterback identities on both sides prevent a reliable personnel handicap."
+        },
+        "price": {
+          "points": 10,
+          "max": 20,
+          "rationale": "Provisional judgment at the explicitly identified article threshold only; the quote is not an executable offer, opening-to-current series or established live cutoff. Price advantage is limited by the listed risk and unverified current alternatives."
+        },
+        "personnel": {
+          "points": null,
+          "max": 15,
+          "rationale": "Material quarterback, goalie, bench availability or rotation impact remains unresolved; no inferred points."
+        },
+        "situation": {
+          "points": 5,
+          "max": 10,
+          "rationale": "Venue/preparation and style context give limited support; current game-time weather still unconfirmed."
+        },
+        "vsin": {
+          "points": 0,
+          "max": 10,
+          "rationale": "No usable exact-market current VSiN confirming selection verified; absent support stays UNKNOWN with no points. For Holmgren, unresolved model/table quality means no confirmation points."
+        },
+        "docs": {
+          "points": 6,
+          "max": 10,
+          "rationale": "The corresponding named Doc's selection in sources supports the side. Different article thresholds are retained and older-roster generic recaps limit conviction."
+        },
+        "market": {
+          "points": 1,
+          "max": 10,
+          "rationale": "Small contextual credit only for dated identified reference(s). Movement/timing and ticket/handle subfactors remain0/UNKNOWN; no sharp-money or public asterisk inference."
+        }
+      },
+      "handicapScore": null,
+      "scoreStatus": "UNGRADED",
+      "knownSubtotal": {
+        "points": 40,
+        "assessedMaximum": 95,
+        "normalizedTo110": false
+      },
+      "grade": null,
+      "failure": {
+        "dimensions": {
+          "lossPathResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Home offense is a possible path, but uncertain quarterback identities on both sides prevent a reliable personnel handicap."
+          },
+          "personnelResilience": {
+            "points": null,
+            "max": 2,
+            "rationale": "Essential role/availability sensitivity not yet assessable."
+          },
+          "scriptVariance": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Scoring/shooting variance or turnover/game-script sensitivity remains a meaningful loss path; no robust2-point claim."
+          },
+          "numberProtection": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Dated threshold supplies only partial protection; no current alternative/cutoff validated."
+          },
+          "countercaseResolution": {
+            "points": 0,
+            "max": 2,
+            "rationale": "Material matchup, sample, price or projection contradiction remains unresolved."
+          }
+        },
+        "score": null,
+        "knownSubtotal": 3,
+        "assessedMaximum": 8,
+        "state": "PROVISIONAL"
+      },
+      "micksThesisAndCountercase": "Home offense is a possible path, but uncertain quarterback identities on both sides prevent a reliable personnel handicap.",
+      "missingEvidence": "Confirm quarterbacks and availability, current DK market and weather; Burke has no bet.",
+      "releaseBlockers": [
+        "No current executable DK offer validated",
+        "Failure minimum7/10 not cleared",
+        "Unassessed core factor"
+      ],
+      "disposition": "WATCH/BLOCKED — NO BET",
+      "officialBet": false,
+      "betPlaced": false,
+      "units": 0,
+      "bestNumber": "not established—no bet until regraded",
+      "noBetCutoff": "not established—no bet until regraded",
+      "sources": [
+        "https://www.docsports.com/free-picks/football/2026/missouri-state-bears-vs-delaware-blue-hens-prediction-10-20-2026-college-football-picks-best-bets-odds.html",
+        "https://vsin.com/college-football/college-football-week-8-picks-south-alabama-vs-marshall/"
+      ],
+      "reviewedAt": "2026-10-20T16:57:30.919Z",
+      "crowdStatus": {
+        "tickets": null,
+        "money": null,
+        "contestBetCount": null,
+        "volumeScreenedFlag": null
+      },
+      "fadeAndInflation": {
+        "state": "UNKNOWN",
+        "reason": "Comparable historical closing-expectation5/10/20 windows not obtained; SU records do not clear an ATS trigger."
+      }
+    },
+    {
+      "id": "nhl-mct-point",
+      "date": "2026-10-20",
+      "sport": "NHL",
+      "event": "Winnipeg@St. Louis",
+      "startTime": "2026-10-20T20:00:00-04:00",
+      "market": "Mason McTavish 1+ point",
+      "lineAndOddsAsArticle": {
+        "market": "Mason McTavish 1+ point",
+        "americanOdds": -125,
+        "source": "DK Network, Hunter Skoczylas",
+        "retrievedAt": "2026-10-20T16:57:30.919Z",
+        "executionVerified": false,
+        "asOf": "publication date or dated reference only; no live offer timestamp"
+      },
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "points": 23,
+          "max": 35,
+          "rationale": "Top-six opportunity and early-season production suggest a research lead; a point needs finishing/conversion and verified deployment."
+        },
+        "price": {
+          "points": 12,
+          "max": 20,
+          "rationale": "Provisional judgment at the explicitly identified article threshold only; the quote is not an executable offer, opening-to-current series or established live cutoff. Price advantage is limited by the listed risk and unverified current alternatives."
+        },
+        "personnel": {
+          "points": null,
+          "max": 15,
+          "rationale": "Material quarterback, goalie, bench availability or rotation impact remains unresolved; no inferred points."
+        },
+        "situation": {
+          "points": 5,
+          "max": 10,
+          "rationale": "Venue/rest and opponent style provide limited context; deployment and current shot-quality verification remain open."
+        },
+        "vsin": {
+          "points": 0,
+          "max": 10,
+          "rationale": "No usable exact-market current VSiN confirming selection verified; absent support stays UNKNOWN with no points. For Holmgren, unresolved model/table quality means no confirmation points."
+        },
+        "docs": {
+          "points": 0,
+          "max": 10,
+          "rationale": "No exact-market confirming Doc's selection verified; UNKNOWN, no invented points."
+        },
+        "market": {
+          "points": 1,
+          "max": 10,
+          "rationale": "Small contextual credit only for dated identified reference(s). Movement/timing and ticket/handle subfactors remain0/UNKNOWN; no sharp-money or public asterisk inference."
+        }
+      },
+      "handicapScore": null,
+      "scoreStatus": "UNGRADED",
+      "knownSubtotal": {
+        "points": 41,
+        "assessedMaximum": 95,
+        "normalizedTo110": false
+      },
+      "grade": null,
+      "failure": {
+        "dimensions": {
+          "lossPathResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Top-six opportunity and early-season production suggest a research lead; a point needs finishing/conversion and verified deployment."
+          },
+          "personnelResilience": {
+            "points": null,
+            "max": 2,
+            "rationale": "Essential role/availability sensitivity not yet assessable."
+          },
+          "scriptVariance": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Scoring/shooting variance or turnover/game-script sensitivity remains a meaningful loss path; no robust2-point claim."
+          },
+          "numberProtection": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Dated threshold supplies only partial protection; no current alternative/cutoff validated."
+          },
+          "countercaseResolution": {
+            "points": 0,
+            "max": 2,
+            "rationale": "Material matchup, sample, price or projection contradiction remains unresolved."
+          }
+        },
+        "score": null,
+        "knownSubtotal": 3,
+        "assessedMaximum": 8,
+        "state": "PROVISIONAL"
+      },
+      "micksThesisAndCountercase": "Top-six opportunity and early-season production suggest a research lead; a point needs finishing/conversion and verified deployment.",
+      "missingEvidence": "Current line/PP role, Winnipeg goalie, independent current game-log distribution and current DK offer.",
+      "releaseBlockers": [
+        "No current executable DK offer validated",
+        "Failure minimum7/10 not cleared",
+        "Unassessed core factor"
+      ],
+      "disposition": "WATCH/BLOCKED — NO BET",
+      "officialBet": false,
+      "betPlaced": false,
+      "units": 0,
+      "bestNumber": "not established—no bet until regraded",
+      "noBetCutoff": "not established—no bet until regraded",
+      "sources": [
+        "https://dknetwork.draftkings.com/2026/10/20/best-nhl-player-props-today-for-tuesday-10-20-26/",
+        "https://www.statmuse.com/nhl/ask/mctavish-faceoffs"
+      ],
+      "reviewedAt": "2026-10-20T16:57:30.919Z",
+      "crowdStatus": {
+        "tickets": null,
+        "money": null,
+        "contestBetCount": null,
+        "volumeScreenedFlag": null
+      },
+      "fadeAndInflation": {
+        "state": "UNKNOWN",
+        "reason": "Comparable historical closing-expectation5/10/20 windows not obtained; SU records do not clear an ATS trigger."
+      }
+    },
+    {
+      "id": "nhl-mct-shot",
+      "date": "2026-10-20",
+      "sport": "NHL",
+      "event": "Winnipeg@St. Louis",
+      "startTime": "2026-10-20T20:00:00-04:00",
+      "market": "Mason McTavish over2.5 shots on goal",
+      "lineAndOddsAsArticle": {
+        "market": "Mason McTavish over2.5 shots on goal",
+        "americanOdds": 105,
+        "source": "DK Network, Hunter Skoczylas",
+        "retrievedAt": "2026-10-20T16:57:30.919Z",
+        "executionVerified": false,
+        "asOf": "publication date or dated reference only; no live offer timestamp"
+      },
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "points": 24,
+          "max": 35,
+          "rationale": "Shots are more directly tied to individual attempts than points; article reports6/8 clearing but that remains attributed, not independently audited."
+        },
+        "price": {
+          "points": 13,
+          "max": 20,
+          "rationale": "Provisional judgment at the explicitly identified article threshold only; the quote is not an executable offer, opening-to-current series or established live cutoff. Price advantage is limited by the listed risk and unverified current alternatives."
+        },
+        "personnel": {
+          "points": null,
+          "max": 15,
+          "rationale": "Material quarterback, goalie, bench availability or rotation impact remains unresolved; no inferred points."
+        },
+        "situation": {
+          "points": 5,
+          "max": 10,
+          "rationale": "Venue/rest and opponent style provide limited context; deployment and current shot-quality verification remain open."
+        },
+        "vsin": {
+          "points": 0,
+          "max": 10,
+          "rationale": "No usable exact-market current VSiN confirming selection verified; absent support stays UNKNOWN with no points. For Holmgren, unresolved model/table quality means no confirmation points."
+        },
+        "docs": {
+          "points": 0,
+          "max": 10,
+          "rationale": "No exact-market confirming Doc's selection verified; UNKNOWN, no invented points."
+        },
+        "market": {
+          "points": 1,
+          "max": 10,
+          "rationale": "Small contextual credit only for dated identified reference(s). Movement/timing and ticket/handle subfactors remain0/UNKNOWN; no sharp-money or public asterisk inference."
+        }
+      },
+      "handicapScore": null,
+      "scoreStatus": "UNGRADED",
+      "knownSubtotal": {
+        "points": 43,
+        "assessedMaximum": 95,
+        "normalizedTo110": false
+      },
+      "grade": null,
+      "failure": {
+        "dimensions": {
+          "lossPathResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Shots are more directly tied to individual attempts than points; article reports6/8 clearing but that remains attributed, not independently audited."
+          },
+          "personnelResilience": {
+            "points": null,
+            "max": 2,
+            "rationale": "Essential role/availability sensitivity not yet assessable."
+          },
+          "scriptVariance": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Scoring/shooting variance or turnover/game-script sensitivity remains a meaningful loss path; no robust2-point claim."
+          },
+          "numberProtection": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Dated threshold supplies only partial protection; no current alternative/cutoff validated."
+          },
+          "countercaseResolution": {
+            "points": 0,
+            "max": 2,
+            "rationale": "Material matchup, sample, price or projection contradiction remains unresolved."
+          }
+        },
+        "score": null,
+        "knownSubtotal": 3,
+        "assessedMaximum": 8,
+        "state": "PROVISIONAL"
+      },
+      "micksThesisAndCountercase": "Shots are more directly tied to individual attempts than points; article reports6/8 clearing but that remains attributed, not independently audited.",
+      "missingEvidence": "Verify8-game shot log, current line/PP role, ice time and executable odds. Alternative to the points angle, not an additional official pick.",
+      "releaseBlockers": [
+        "No current executable DK offer validated",
+        "Failure minimum7/10 not cleared",
+        "Unassessed core factor"
+      ],
+      "disposition": "WATCH/BLOCKED — NO BET",
+      "officialBet": false,
+      "betPlaced": false,
+      "units": 0,
+      "bestNumber": "not established—no bet until regraded",
+      "noBetCutoff": "not established—no bet until regraded",
+      "sources": [
+        "https://dknetwork.draftkings.com/2026/10/20/best-nhl-player-props-today-for-tuesday-10-20-26/"
+      ],
+      "reviewedAt": "2026-10-20T16:57:30.919Z",
+      "crowdStatus": {
+        "tickets": null,
+        "money": null,
+        "contestBetCount": null,
+        "volumeScreenedFlag": null
+      },
+      "fadeAndInflation": {
+        "state": "UNKNOWN",
+        "reason": "Comparable historical closing-expectation5/10/20 windows not obtained; SU records do not clear an ATS trigger."
+      }
+    },
+    {
+      "id": "nhl-hagel",
+      "date": "2026-10-20",
+      "sport": "NHL",
+      "event": "Tampa Bay@Vegas",
+      "startTime": "2026-10-20T22:30:00-04:00",
+      "market": "Brandon Hagel 3+ shots on goal",
+      "lineAndOddsAsArticle": {
+        "market": "Brandon Hagel 3+ shots on goal",
+        "americanOdds": -130,
+        "source": "DK Network, Hunter Skoczylas",
+        "retrievedAt": "2026-10-20T16:57:30.919Z",
+        "executionVerified": false,
+        "asOf": "publication date or dated reference only; no live offer timestamp"
+      },
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "points": 21,
+          "max": 35,
+          "rationale": "Shot volume supports investigation; Vegas shot suppression is the strongest matchup counter, and three historical meetings are a small sample."
+        },
+        "price": {
+          "points": 11,
+          "max": 20,
+          "rationale": "Provisional judgment at the explicitly identified article threshold only; the quote is not an executable offer, opening-to-current series or established live cutoff. Price advantage is limited by the listed risk and unverified current alternatives."
+        },
+        "personnel": {
+          "points": null,
+          "max": 15,
+          "rationale": "Material quarterback, goalie, bench availability or rotation impact remains unresolved; no inferred points."
+        },
+        "situation": {
+          "points": 5,
+          "max": 10,
+          "rationale": "Venue/rest and opponent style provide limited context; deployment and current shot-quality verification remain open."
+        },
+        "vsin": {
+          "points": 0,
+          "max": 10,
+          "rationale": "No usable exact-market current VSiN confirming selection verified; absent support stays UNKNOWN with no points. For Holmgren, unresolved model/table quality means no confirmation points."
+        },
+        "docs": {
+          "points": 0,
+          "max": 10,
+          "rationale": "No exact-market confirming Doc's selection verified; UNKNOWN, no invented points."
+        },
+        "market": {
+          "points": 1,
+          "max": 10,
+          "rationale": "Small contextual credit only for dated identified reference(s). Movement/timing and ticket/handle subfactors remain0/UNKNOWN; no sharp-money or public asterisk inference."
+        }
+      },
+      "handicapScore": null,
+      "scoreStatus": "UNGRADED",
+      "knownSubtotal": {
+        "points": 38,
+        "assessedMaximum": 95,
+        "normalizedTo110": false
+      },
+      "grade": null,
+      "failure": {
+        "dimensions": {
+          "lossPathResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Shot volume supports investigation; Vegas shot suppression is the strongest matchup counter, and three historical meetings are a small sample."
+          },
+          "personnelResilience": {
+            "points": null,
+            "max": 2,
+            "rationale": "Essential role/availability sensitivity not yet assessable."
+          },
+          "scriptVariance": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Scoring/shooting variance or turnover/game-script sensitivity remains a meaningful loss path; no robust2-point claim."
+          },
+          "numberProtection": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Dated threshold supplies only partial protection; no current alternative/cutoff validated."
+          },
+          "countercaseResolution": {
+            "points": 0,
+            "max": 2,
+            "rationale": "Material matchup, sample, price or projection contradiction remains unresolved."
+          }
+        },
+        "score": null,
+        "knownSubtotal": 3,
+        "assessedMaximum": 8,
+        "state": "PROVISIONAL"
+      },
+      "micksThesisAndCountercase": "Shot volume supports investigation; Vegas shot suppression is the strongest matchup counter, and three historical meetings are a small sample.",
+      "missingEvidence": "Current deployment, individual shot distribution, final skaters/goalies and exact DK offer.",
+      "releaseBlockers": [
+        "No current executable DK offer validated",
+        "Failure minimum7/10 not cleared",
+        "Unassessed core factor"
+      ],
+      "disposition": "WATCH/BLOCKED — NO BET",
+      "officialBet": false,
+      "betPlaced": false,
+      "units": 0,
+      "bestNumber": "not established—no bet until regraded",
+      "noBetCutoff": "not established—no bet until regraded",
+      "sources": [
+        "https://dknetwork.draftkings.com/2026/10/20/best-nhl-player-props-today-for-tuesday-10-20-26/"
+      ],
+      "reviewedAt": "2026-10-20T16:57:30.919Z",
+      "crowdStatus": {
+        "tickets": null,
+        "money": null,
+        "contestBetCount": null,
+        "volumeScreenedFlag": null
+      },
+      "fadeAndInflation": {
+        "state": "UNKNOWN",
+        "reason": "Comparable historical closing-expectation5/10/20 windows not obtained; SU records do not clear an ATS trigger."
+      }
+    }
+  ],
+  "sections": {
+    "masterPicks": "NO BET",
+    "propsLab": "WATCH ONLY",
+    "derivatives": "NO RELEASE",
+    "nrfiYrfi": "MLB no game today; foreign baseball unverified",
+    "futures": "RESEARCH ONLY; separate100-point and EV/portfolio gates not cleared",
+    "lottoParlays": "NONE — no qualified legs",
+    "longshots": "NONE",
+    "pickOfDay": "NONE"
+  },
+  "coverageLimitations": [
+    "No usable local runtime; no local PDF/tests generated",
+    "Firecrawl out of credits; alternate web retrieval used",
+    "Wrong-season StatMuse page content contradicts search summaries",
+    "Current book-offer verification unavailable",
+    "Full sport-specific metric/news and authentic movement/splits checks incomplete",
+    "No current original Circa multi-sport board found; Dropbox NFLWeek6PDF extraction blank and not applicable"
+  ],
+  "regradeAutomation": {
+    "id": "6ad79cd142cc81919f92092b40ab6e04",
+    "created": true,
+    "localTimes": [
+      "14:15",
+      "18:15",
+      "19:15",
+      "20:15",
+      "21:15"
+    ],
+    "all45MinuteSlotsCovered": false,
+    "omittedExactCheckpointTimes": [
+      "18:45",
+      "20:45",
+      "20:55",
+      "21:45"
+    ],
+    "reason": "Scheduler rejects less than one-hour intervals; later events receive earlier preliminary review only."
+  },
+  "activePublication": false
+}

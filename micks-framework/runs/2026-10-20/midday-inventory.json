@@ -1,0 +1,191 @@
+{
+  "date": "2026-10-20",
+  "timezone": "America/New_York",
+  "snapshotAt": "2026-10-20T16:57:30.919Z",
+  "inventory": {
+    "NBA": {
+      "status": "ACTIVE — 3 games",
+      "events": [
+        [
+          "BOS@DET",
+          "15:00"
+        ],
+        [
+          "PHI@NYK",
+          "19:00"
+        ],
+        [
+          "OKC@SAS",
+          "21:30"
+        ]
+      ],
+      "eventDecision": "PASS pending regrade; no official market selected",
+      "source": "https://www.teamrankings.com/nba/"
+    },
+    "NHL": {
+      "status": "ACTIVE — 11 games; individual matchup coverage partial",
+      "events": [
+        [
+          "SJS@MTL",
+          "19:00"
+        ],
+        [
+          "COL@NJD",
+          "19:00"
+        ],
+        [
+          "ANA@NYI",
+          "19:00"
+        ],
+        [
+          "LAK@WSH",
+          "19:00"
+        ],
+        [
+          "TOR@CBJ",
+          "19:00"
+        ],
+        [
+          "WPG@STL",
+          "20:00"
+        ],
+        [
+          "BOS@DAL",
+          "20:00"
+        ],
+        [
+          "MIN@EDM",
+          "21:00"
+        ],
+        [
+          "DET@SEA",
+          "21:40"
+        ],
+        [
+          "CAR@VAN",
+          "22:00"
+        ],
+        [
+          "TBL@VGK",
+          "22:30"
+        ]
+      ],
+      "eventDecision": "PASS for every event at this snapshot; McTavish/Hagel research alternatives only",
+      "source": "https://www.nhl-schedules.com/season/2026-2027/10/20/"
+    },
+    "CFB": {
+      "status": "ACTIVE — 3 games",
+      "events": [
+        [
+          "MTSU@FIU",
+          "19:00"
+        ],
+        [
+          "MissouriState@Delaware",
+          "19:00"
+        ],
+        [
+          "SouthAlabama@Marshall",
+          "19:30"
+        ]
+      ],
+      "eventDecision": "PASS pending availability and price checks",
+      "source": "https://vsin.com/college-football/college-football-week-8-picks-south-alabama-vs-marshall/"
+    },
+    "soccer": {
+      "status": "ACTIVE — Champions League discovery; other competitions not exhaustively verified",
+      "events": [
+        [
+          "Fenerbahce-SlaviaPraha",
+          "12:45 expected; started-status check needed"
+        ],
+        [
+          "Sabah-Dortmund",
+          "12:45 expected; started-status check needed"
+        ],
+        [
+          "Roma-SlovanBratislava",
+          "15:00"
+        ],
+        [
+          "Porto-PSV",
+          "15:00"
+        ],
+        [
+          "Liverpool-Villarreal",
+          "15:00"
+        ],
+        [
+          "ManCity-AEKAthens",
+          "15:00"
+        ],
+        [
+          "PSG-Barcelona",
+          "15:00"
+        ],
+        [
+          "Napoli-BodoGlimt",
+          "15:00"
+        ],
+        [
+          "Stuttgart-Atletico",
+          "15:00"
+        ]
+      ],
+      "eventDecision": "PASS; exclude started early kickoffs; no executable DK market/XI/xG handicap established",
+      "source": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-champions-league-all-the-league-phase-fixtures-a/"
+    },
+    "tennis": {
+      "status": "ACTIVE — ATP Almaty/Brussels/Lyon and WTA Osaka/Ningbo surfaced; many matches already started",
+      "eventDecision": "PASS; individual DK offers, surface-specific matchup/fatigue and exact match status not fully verified",
+      "source": "https://livetennis.io/today/"
+    },
+    "MLB": {
+      "status": "NO SCHEDULED MLB GAME — official dated scoreboard",
+      "eventDecision": "NO BET; NRFI/YRFI/F5/player props not applicable to MLB today",
+      "source": "https://www.mlb.com/scores/2026-10-20"
+    },
+    "NFL": {
+      "status": "No October20 game verified; Week7 games are future events",
+      "eventDecision": "NO TODAY RELEASE; NFL guide reconciliation not applicable without a current NFL candidate",
+      "source": "https://www.nfl.com/schedules/2026/reg7/"
+    },
+    "WNBA": {
+      "status": "No October20 game surfaced; October19 Finals game is prior-day",
+      "eventDecision": "NO TODAY RELEASE; no NBA guide substitution for WNBA",
+      "source": "https://www.wnba.com/game/atl-vs-gsv-1042600302"
+    },
+    "foreignBaseball": {
+      "status": "KBO Kia-LG listing surfaced; status and current board not verified",
+      "eventDecision": "NO PREGAME RELEASE; do not treat MLB off-day as worldwide baseball off-day",
+      "source": "https://www.docsports.com/free-picks/"
+    },
+    "collegeBasketball": {
+      "status": "Exhibition listing surfaced; actual bettable market/status not verified",
+      "eventDecision": "COVERAGE UNAVAILABLE — no release"
+    },
+    "combat": {
+      "status": "No current active UFC/DWCS/boxing card verified; UFC primary schedule inaccessible",
+      "eventDecision": "COVERAGE UNAVAILABLE — no release",
+      "source": "https://www.ufc.com/events"
+    },
+    "golf": {
+      "status": "College/LPGA broadcast listings surfaced; actual current DK board not verified; PGA/LPGA primary schedules inaccessible",
+      "eventDecision": "COVERAGE UNAVAILABLE — no release",
+      "sources": [
+        "https://www.pgatour.com/schedule",
+        "https://www.lpga.com/schedule"
+      ]
+    },
+    "motorsports": {
+      "status": "NASCAR listings include broadcasts/replays; no verified current live race/market",
+      "eventDecision": "NO RELEASE; replay is not a new race",
+      "source": "https://www.nascar.com/news-media/2026/10/18/nascar-tv-guide/"
+    },
+    "CFL_UFL_other": {
+      "status": "No current active event verified; CFL primary schedule inaccessible; other leagues not exhaustively covered",
+      "eventDecision": "COVERAGE UNAVAILABLE — no release",
+      "source": "https://www.cfl.ca/schedule/2026/"
+    }
+  }
+}
