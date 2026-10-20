@@ -1,0 +1,533 @@
+{
+  "event": "Oklahoma City Thunder at San Antonio Spurs",
+  "date": "2026-10-20",
+  "tipoff": "2026-10-20T21:30:00-04:00",
+  "snapshotAt": "2026-10-20T17:07:39.034Z",
+  "scoringVersion": "micks-110-v2-2026-09-29",
+  "factorOrder": [
+    "matchup35",
+    "price20",
+    "personnel15",
+    "situation10",
+    "vsin10",
+    "docs10",
+    "market10"
+  ],
+  "dailyConsiderationThreshold": 71,
+  "nonNFLFailureMinimum": 7,
+  "decision": "NO BET; OKC+2.5 preferred research expression if still offered; regrade required",
+  "markets": [
+    {
+      "market": "OKC +2.5",
+      "quote": "DK via SI +2.5(-112), older article quote; no live offer verified",
+      "points": [
+        25,
+        14,
+        12,
+        5,
+        6,
+        7,
+        3
+      ],
+      "failure": [
+        1,
+        2,
+        1,
+        1,
+        1
+      ],
+      "rationale": [
+        "Healthy second creator and strong turnover defense counter SA interior/rebounding; guide depth changes temper advantage.",
+        "The extra point is useful in a close game; dated -112 only.",
+        "Current reporting supports primary OKC unit, while final injury/rotation remains a check.",
+        "Road venue and no known rest edge; motivation is not quantified.",
+        "Cohen leans OKC, but actual +10.5 parlay leg is a different market; partial credit only.",
+        "Schonwald explicitly takes+2.5; generic recap limits conviction.",
+        "Timestamped reference history obtained; no verified money/ticket volume or sharp attribution."
+      ],
+      "score": 72,
+      "failureScore": 6,
+      "scoreState": "PROVISIONAL",
+      "units": 0,
+      "official": false,
+      "NBA Guide Check": {
+        "guideId": "vsin-nba-2026-27-guide",
+        "pages": [
+          13,
+          34,
+          40
+        ],
+        "basis": "ORIGINAL_PAGES",
+        "guideFinding": "Near-equal guide ratings OKC104/SAS103.5; OKC shooting/depth and Holmgren-Spurs scoring concerns; Spurs guard allocation/Harris scoring premise.",
+        "currentFinding": "Harris reported out, Harper starter; OKC creators expected available. Current personnel supersedes historical series.",
+        "currentSources": [
+          "https://www.expressnews.com/sports/spurs/article/spurs-open-season-tobias-harris-22483480.php",
+          "https://www.rotowire.com/betting/nba/game/spurs-vs-thunder-odds-2026-10-20-3015426",
+          "https://www.actionnetwork.com/nba/thunder-vs-spurs-prediction-pick-nba-odds-for-tuesday-october-20/embed"
+        ],
+        "checkedAt": "2026-10-20T17:07:39.034Z",
+        "state": "OVERRIDDEN",
+        "influence": "Qualitative matchup and personnel priors only; no extra VSiN points.",
+        "countercase": "OKC creators now healthier than late conference finals; SA guard-heavy lineup may alter boards and defensive assignments.",
+        "materialConflictResolved": true
+      }
+    },
+    {
+      "market": "OKC +1.5",
+      "quote": "TeamRankings12:58ET reference; FanDuel-112 on Dimers, not DK",
+      "points": [
+        25,
+        12,
+        12,
+        5,
+        6,
+        6,
+        3
+      ],
+      "failure": [
+        1,
+        2,
+        1,
+        1,
+        1
+      ],
+      "rationale": [
+        "Same matchup, thinner cushion.",
+        "Worse threshold than+2.5, no price cherry-pick.",
+        "Primary creators expected available; final check still needed.",
+        "Road venue/no rest edge.",
+        "Lean only; no standard spread release by Cohen.",
+        "Article+2.5 is a better threshold, so reduced support.",
+        "Verified reference series, not executable user-book quote."
+      ],
+      "score": 69,
+      "failureScore": 6,
+      "scoreState": "PROVISIONAL",
+      "units": 0,
+      "official": false,
+      "NBA Guide Check": {
+        "guideId": "vsin-nba-2026-27-guide",
+        "pages": [
+          13,
+          34,
+          40
+        ],
+        "basis": "ORIGINAL_PAGES",
+        "guideFinding": "Near-equal guide ratings OKC104/SAS103.5; OKC shooting/depth and Holmgren-Spurs scoring concerns; Spurs guard allocation/Harris scoring premise.",
+        "currentFinding": "Harris reported out, Harper starter; OKC creators expected available. Current personnel supersedes historical series.",
+        "currentSources": [
+          "https://www.expressnews.com/sports/spurs/article/spurs-open-season-tobias-harris-22483480.php",
+          "https://www.rotowire.com/betting/nba/game/spurs-vs-thunder-odds-2026-10-20-3015426",
+          "https://www.actionnetwork.com/nba/thunder-vs-spurs-prediction-pick-nba-odds-for-tuesday-october-20/embed"
+        ],
+        "checkedAt": "2026-10-20T17:07:39.034Z",
+        "state": "OVERRIDDEN",
+        "influence": "Qualitative matchup and personnel priors only; no extra VSiN points.",
+        "countercase": "OKC creators now healthier than late conference finals; SA guard-heavy lineup may alter boards and defensive assignments.",
+        "materialConflictResolved": true
+      }
+    },
+    {
+      "market": "Spurs moneyline -110",
+      "quote": "Fanatics via Dimers12:37ET, not DK",
+      "points": [
+        26,
+        14,
+        12,
+        7,
+        0,
+        0,
+        3
+      ],
+      "failure": [
+        1,
+        2,
+        1,
+        1,
+        1
+      ],
+      "rationale": [
+        "Wembanyama/rim defense and rebounding plus home court support narrow win; OKC creators and turnover pressure counter.",
+        "The price is preferable to -135; independent large edge not established.",
+        "Harris absence known; core available in reporting, guard allocation remains uncertain.",
+        "Home court favors SA, no quantified revenge bonus.",
+        "Current Cohen leans other side.",
+        "Schonwald takes opponent spread; do not invent ML agreement.",
+        "Dated labeled alternative-book reference and spread history; splits unknown."
+      ],
+      "score": 62,
+      "failureScore": 6,
+      "scoreState": "PROVISIONAL",
+      "units": 0,
+      "official": false,
+      "NBA Guide Check": {
+        "guideId": "vsin-nba-2026-27-guide",
+        "pages": [
+          13,
+          34,
+          40
+        ],
+        "basis": "ORIGINAL_PAGES",
+        "guideFinding": "Near-equal guide ratings OKC104/SAS103.5; OKC shooting/depth and Holmgren-Spurs scoring concerns; Spurs guard allocation/Harris scoring premise.",
+        "currentFinding": "Harris reported out, Harper starter; OKC creators expected available. Current personnel supersedes historical series.",
+        "currentSources": [
+          "https://www.expressnews.com/sports/spurs/article/spurs-open-season-tobias-harris-22483480.php",
+          "https://www.rotowire.com/betting/nba/game/spurs-vs-thunder-odds-2026-10-20-3015426",
+          "https://www.actionnetwork.com/nba/thunder-vs-spurs-prediction-pick-nba-odds-for-tuesday-october-20/embed"
+        ],
+        "checkedAt": "2026-10-20T17:07:39.034Z",
+        "state": "OVERRIDDEN",
+        "influence": "Qualitative matchup and personnel priors only; no extra VSiN points.",
+        "countercase": "OKC creators now healthier than late conference finals; SA guard-heavy lineup may alter boards and defensive assignments.",
+        "materialConflictResolved": true
+      }
+    },
+    {
+      "market": "Under231.5",
+      "quote": "DK via SI under-108 older quote; current other-book totals230.5/231.5",
+      "points": [
+        25,
+        13,
+        12,
+        6,
+        0,
+        0,
+        3
+      ],
+      "failure": [
+        1,
+        2,
+        1,
+        1,
+        0
+      ],
+      "rationale": [
+        "Both defenses strong but pace not automatically slow; turnover transition and free throws counter.",
+        "231.5 better than230.5 forunder; overnight233.5 was better still.",
+        "Main defensive stars expected available; final update needed.",
+        "Opening night and tactical game context only; no automatic slow pace.",
+        "No exact current under selection verified.",
+        "No exact under selection verified.",
+        "Actual timestamped total history read; not a sharp-money claim."
+      ],
+      "score": 59,
+      "failureScore": 5,
+      "scoreState": "PROVISIONAL",
+      "units": 0,
+      "official": false,
+      "NBA Guide Check": {
+        "guideId": "vsin-nba-2026-27-guide",
+        "pages": [
+          13,
+          34,
+          40
+        ],
+        "basis": "ORIGINAL_PAGES",
+        "guideFinding": "Near-equal guide ratings OKC104/SAS103.5; OKC shooting/depth and Holmgren-Spurs scoring concerns; Spurs guard allocation/Harris scoring premise.",
+        "currentFinding": "Harris reported out, Harper starter; OKC creators expected available. Current personnel supersedes historical series.",
+        "currentSources": [
+          "https://www.expressnews.com/sports/spurs/article/spurs-open-season-tobias-harris-22483480.php",
+          "https://www.rotowire.com/betting/nba/game/spurs-vs-thunder-odds-2026-10-20-3015426",
+          "https://www.actionnetwork.com/nba/thunder-vs-spurs-prediction-pick-nba-odds-for-tuesday-october-20/embed"
+        ],
+        "checkedAt": "2026-10-20T17:07:39.034Z",
+        "state": "OVERRIDDEN",
+        "influence": "Qualitative matchup and personnel priors only; no extra VSiN points.",
+        "countercase": "OKC creators now healthier than late conference finals; SA guard-heavy lineup may alter boards and defensive assignments.",
+        "materialConflictResolved": true
+      }
+    },
+    {
+      "market": "Holmgren under12.5 points",
+      "quote": "DK Pick6 less-than12.5; single-bet sportsbook odds not verified",
+      "points": [
+        25,
+        null,
+        12,
+        6,
+        0,
+        0,
+        2
+      ],
+      "failure": [
+        1,
+        2,
+        1,
+        null,
+        0
+      ],
+      "rationale": [
+        "Guide and DK matchup thesis support research; Opta18.13points forecasts the other direction.",
+        "Pick6 entry is not a sportsbook under price; no usable exact single-bet offer.",
+        "Likely primary role available, shot attempts depend on creators/spacing.",
+        "Wembanyama matchup and potential low touches; old series is not today's role.",
+        "Opta current output opposes under; no supporting points.",
+        "No matching current Doc's prop opinion.",
+        "Market threshold from separate product only."
+      ],
+      "score": null,
+      "failureScore": null,
+      "scoreState": "UNGRADED",
+      "units": 0,
+      "official": false,
+      "NBA Guide Check": {
+        "guideId": "vsin-nba-2026-27-guide",
+        "pages": [
+          13,
+          34,
+          40
+        ],
+        "basis": "ORIGINAL_PAGES",
+        "guideFinding": "Near-equal guide ratings OKC104/SAS103.5; OKC shooting/depth and Holmgren-Spurs scoring concerns; Spurs guard allocation/Harris scoring premise.",
+        "currentFinding": "Harris reported out, Harper starter; OKC creators expected available. Current personnel supersedes historical series.",
+        "currentSources": [
+          "https://www.expressnews.com/sports/spurs/article/spurs-open-season-tobias-harris-22483480.php",
+          "https://www.rotowire.com/betting/nba/game/spurs-vs-thunder-odds-2026-10-20-3015426",
+          "https://www.actionnetwork.com/nba/thunder-vs-spurs-prediction-pick-nba-odds-for-tuesday-october-20/embed"
+        ],
+        "checkedAt": "2026-10-20T17:07:39.034Z",
+        "state": "OVERRIDDEN",
+        "influence": "Qualitative matchup and personnel priors only; no extra VSiN points.",
+        "countercase": "OKC creators now healthier than late conference finals; SA guard-heavy lineup may alter boards and defensive assignments.",
+        "materialConflictResolved": false
+      }
+    },
+    {
+      "market": "Harper over14.5 points",
+      "quote": "DK via SI-121 dated reference",
+      "points": [
+        17,
+        10,
+        12,
+        6,
+        0,
+        0,
+        2
+      ],
+      "failure": [
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "rationale": [
+        "Starter increase supports role, but exact opponent log2/7 clears and workload sensitivity weaken edge.",
+        "14.5 at-121 requires more than starter narrative.",
+        "Reported starter; exact closing minutes unconfirmed.",
+        "Home court and Harris absence can expand work; top opponent defense counters.",
+        "No exact prop confirmation.",
+        "No exact prop confirmation.",
+        "Dated labeled quote only; no current movement/splits."
+      ],
+      "score": 47,
+      "failureScore": 4,
+      "scoreState": "PROVISIONAL",
+      "units": 0,
+      "official": false,
+      "NBA Guide Check": {
+        "guideId": "vsin-nba-2026-27-guide",
+        "pages": [
+          13,
+          34,
+          40
+        ],
+        "basis": "ORIGINAL_PAGES",
+        "guideFinding": "Near-equal guide ratings OKC104/SAS103.5; OKC shooting/depth and Holmgren-Spurs scoring concerns; Spurs guard allocation/Harris scoring premise.",
+        "currentFinding": "Harris reported out, Harper starter; OKC creators expected available. Current personnel supersedes historical series.",
+        "currentSources": [
+          "https://www.expressnews.com/sports/spurs/article/spurs-open-season-tobias-harris-22483480.php",
+          "https://www.rotowire.com/betting/nba/game/spurs-vs-thunder-odds-2026-10-20-3015426",
+          "https://www.actionnetwork.com/nba/thunder-vs-spurs-prediction-pick-nba-odds-for-tuesday-october-20/embed"
+        ],
+        "checkedAt": "2026-10-20T17:07:39.034Z",
+        "state": "OVERRIDDEN",
+        "influence": "Qualitative matchup and personnel priors only; no extra VSiN points.",
+        "countercase": "OKC creators now healthier than late conference finals; SA guard-heavy lineup may alter boards and defensive assignments.",
+        "materialConflictResolved": true
+      }
+    },
+    {
+      "market": "Harper over24.5 PRA",
+      "quote": "FanDuel-115 via Action10:10ET, not DK",
+      "points": [
+        18,
+        12,
+        12,
+        6,
+        0,
+        0,
+        2
+      ],
+      "failure": [
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "rationale": [
+        "Diversified counting stats help; exact-opponent log2/7 clears and minute scenarios hover near line.",
+        "More balanced than points expression, but price lacks independent strong advantage.",
+        "Starter opportunity real; three handlers compete for creation.",
+        "Harris absence/home context, balanced by OKC turnover pressure.",
+        "No exact confirmation.",
+        "No exact confirmation.",
+        "Labeled older FanDuel quote, not DK."
+      ],
+      "score": 50,
+      "failureScore": 4,
+      "scoreState": "PROVISIONAL",
+      "units": 0,
+      "official": false,
+      "NBA Guide Check": {
+        "guideId": "vsin-nba-2026-27-guide",
+        "pages": [
+          13,
+          34,
+          40
+        ],
+        "basis": "ORIGINAL_PAGES",
+        "guideFinding": "Near-equal guide ratings OKC104/SAS103.5; OKC shooting/depth and Holmgren-Spurs scoring concerns; Spurs guard allocation/Harris scoring premise.",
+        "currentFinding": "Harris reported out, Harper starter; OKC creators expected available. Current personnel supersedes historical series.",
+        "currentSources": [
+          "https://www.expressnews.com/sports/spurs/article/spurs-open-season-tobias-harris-22483480.php",
+          "https://www.rotowire.com/betting/nba/game/spurs-vs-thunder-odds-2026-10-20-3015426",
+          "https://www.actionnetwork.com/nba/thunder-vs-spurs-prediction-pick-nba-odds-for-tuesday-october-20/embed"
+        ],
+        "checkedAt": "2026-10-20T17:07:39.034Z",
+        "state": "OVERRIDDEN",
+        "influence": "Qualitative matchup and personnel priors only; no extra VSiN points.",
+        "countercase": "OKC creators now healthier than late conference finals; SA guard-heavy lineup may alter boards and defensive assignments.",
+        "materialConflictResolved": true
+      }
+    }
+  ],
+  "harperOpponentLog": {
+    "source": "https://www.statmuse.com/nba/ask/dylan-harper-game-log-western-conference-finals",
+    "season": "2025-26 conference finals",
+    "rows": [
+      {
+        "date": "2026-05-18",
+        "minutes": 47,
+        "points": 24,
+        "rebounds": 11,
+        "assists": 6,
+        "PRA": 41
+      },
+      {
+        "date": "2026-05-20",
+        "minutes": 25,
+        "points": 12,
+        "rebounds": 2,
+        "assists": 3,
+        "PRA": 17
+      },
+      {
+        "date": "2026-05-22",
+        "minutes": 17,
+        "points": 6,
+        "rebounds": 3,
+        "assists": 2,
+        "PRA": 11
+      },
+      {
+        "date": "2026-05-24",
+        "minutes": 21,
+        "points": 7,
+        "rebounds": 5,
+        "assists": 2,
+        "PRA": 14
+      },
+      {
+        "date": "2026-05-26",
+        "minutes": 25,
+        "points": 5,
+        "rebounds": 6,
+        "assists": 3,
+        "PRA": 14
+      },
+      {
+        "date": "2026-05-28",
+        "minutes": 22,
+        "points": 18,
+        "rebounds": 6,
+        "assists": 4,
+        "PRA": 28
+      },
+      {
+        "date": "2026-05-30",
+        "minutes": 27,
+        "points": 12,
+        "rebounds": 7,
+        "assists": 3,
+        "PRA": 22
+      }
+    ],
+    "calculations": {
+      "games": 7,
+      "totalMinutes": 184,
+      "points": 12,
+      "PRA": 21,
+      "minutes": 26.285714285714285,
+      "pointsOver14_5": 2,
+      "PRAOver24_5": 2,
+      "rateIllustrations": [
+        {
+          "minutes": 30,
+          "points": 13.695652173913043,
+          "PRA": 23.967391304347824
+        },
+        {
+          "minutes": 32,
+          "points": 14.608695652173912,
+          "PRA": 25.565217391304348
+        }
+      ],
+      "exFirstGame": {
+        "totalMinutes": 137,
+        "totalPoints": 60,
+        "totalPRA": 106
+      }
+    },
+    "limitations": [
+      "Seven games only",
+      "Rounded minutes",
+      "First game included double overtime",
+      "Old bench role and injured OKC creators differ from opener",
+      "Rate scaling is scenario arithmetic, not a forecast or probability"
+    ]
+  },
+  "currentPriceState": "Exact executable DraftKings offer not verified",
+  "guideCheckPages": [
+    13,
+    34,
+    40
+  ],
+  "sources": {
+    "guide": "User original 2026-VSiN-NBA-Betting-Guide-1.pdf pages13,34,40; read earlier this run",
+    "stats": "https://www.teamrankings.com/nba/matchup/thunder-spurs-2026-10-20/efficiency",
+    "spread": "https://www.teamrankings.com/nba/matchup/thunder-spurs-2026-10-20/spread-movement",
+    "total": "https://www.teamrankings.com/nba/matchup/thunder-spurs-2026-10-20/over-under-movement",
+    "harper": "https://www.statmuse.com/nba/ask/dylan-harper-game-log-western-conference-finals",
+    "vsin": "https://vsin.com/nba/nba-best-bets-today-picks-and-predictions-for-tuesday-october-20/",
+    "dk": "https://dknetwork.draftkings.com/2026/10/20/draftkings-nba-pick6-fantasy-basketball-picks-today-top-picks-for-10-20-26/",
+    "si": "https://www.si.com/betting/thunder-vs-spurs-prediction-odds-and-best-prop-bets-for-nba-season-opener-2026",
+    "action": "https://www.actionnetwork.com/nba/thunder-vs-spurs-prediction-pick-nba-odds-for-tuesday-october-20/embed",
+    "covers": "https://www.covers.com/nba/thunder-vs-spurs-prediction-picks-odds-oct-20-2026",
+    "dimers": "https://www.dimers.com/nba/news/oklahoma-city-thunder-vs-san-antonio-spurs-prediction-10-20-2026-ac",
+    "rotowire": "https://www.rotowire.com/betting/nba/game/spurs-vs-thunder-odds-2026-10-20-3015426",
+    "docs": "https://www.docsports.com/free-picks/nba/2026/oklahoma-city-thunder-vs-san-antonio-spurs-prediction-10-20-2026-preview-and-pick.html",
+    "spurs": "https://www.expressnews.com/sports/spurs/article/spurs-open-season-tobias-harris-22483480.php"
+  },
+  "unresolved": [
+    "Final injury update and closing rotations",
+    "Current user-book price and period",
+    "Current verified high-volume Action Network splits",
+    "Holmgren model versus matchup contradiction",
+    "Exact prop and derivative prices",
+    "Comparable closing-expectation fade/inflation windows"
+  ],
+  "officialExposure": 0,
+  "activePublication": false
+}
