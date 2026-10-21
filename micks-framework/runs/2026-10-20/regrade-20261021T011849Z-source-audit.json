@@ -1,0 +1,53 @@
+{
+  "snapshotAt": "2026-10-21T01:18:49.391Z",
+  "scope": "CAR@VAN45-minutecohortlate;TBL@VGKearly",
+  "sources": [
+    {
+      "url": "https://www.statmuse.com/nhl/player/brandon-hagel-8010/game-log?seasonYear=2027",
+      "state": "CURRENT",
+      "season": "2026-27",
+      "fullPageVerified": true
+    },
+    {
+      "url": "https://www.dailyfaceoff.com/starting-goalies/10-20-2026",
+      "state": "CURRENT",
+      "finding": "Kochetkov/HartCONFIRMED;Merilainen/VasilevskiyLIKELY"
+    },
+    {
+      "url": "https://dknetwork.draftkings.com/2026/10/20/best-nhl-player-props-today-for-tuesday-10-20-26/",
+      "state": "CURRENT_REFERENCE",
+      "finding": "SkoczylasHagel3+-130;notexecution"
+    },
+    {
+      "url": "https://www.actionnetwork.com/content/carolina-hurricanes-vs-vancouver-canucks-prediction-picks-nhl-odds-tuesday-october-20/embed",
+      "state": "CONFLICT",
+      "finding": "CAR-1.5pickvsfadefavoriteprose;pick/tablejuice-122/-130"
+    },
+    {
+      "url": "https://sportsbook.draftkings.com/leagues/hockey/nhl",
+      "state": "INACCESSIBLE",
+      "finding": "403"
+    },
+    {
+      "url": "https://vsin.com/tools/vegas-betting-sheets/",
+      "state": "INCOMPLETE",
+      "finding": "Dropboxblank"
+    },
+    {
+      "url": "https://dknetwork.draftkings.com/draftkings-sportsbook-betting-splits/",
+      "state": "INCOMPLETE",
+      "finding": "NoCAR/TBLreadablemarketsverified"
+    }
+  ],
+  "otherGaps": [
+    "Current5v5/xGreplication",
+    "Finalgoalies/PP",
+    "ExactexecutableDKprice",
+    "CurrentCircasheet",
+    "5/10/20closing-expectationfade/inflation",
+    "Volume-screenedcontestcount"
+  ],
+  "NBAguide": "NOTAPPLICABLE—NHLcohort",
+  "weather": "IndoorNOTAPPLICABLE",
+  "preserveRemainingOccurrences": true
+}

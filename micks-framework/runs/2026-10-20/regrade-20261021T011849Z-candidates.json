@@ -1,0 +1,576 @@
+{
+  "date": "2026-10-20",
+  "snapshotAt": "2026-10-21T01:18:49.391Z",
+  "timezone": "America/New_York",
+  "status": "PARTIAL scoped regrade — NO BET",
+  "weights": [
+    35,
+    20,
+    15,
+    10,
+    10,
+    10,
+    10
+  ],
+  "considerIntegerScoreAtLeast": 71,
+  "legacy82ScoreOnlyVeto": false,
+  "nonNFLFailureMinimum": 7,
+  "newDailyProbabilityEVGate": false,
+  "candidates": [
+    {
+      "id": "nhl-hagel",
+      "event": "TBL@VGK",
+      "sport": "NHL",
+      "startTime": "2026-10-20T22:30:00-04:00",
+      "reviewedAt": "2026-10-21T01:18:49.391Z",
+      "market": "Brandon Hagel 3+ shots",
+      "referenceQuote": "DKNetwork Oct20-130; no live selection verified",
+      "executionVerified": false,
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "points": 27,
+          "max": 35,
+          "rationale": "Full2026-27 log7/8clears and38shots show strong recent generation; Vegas suppression and one1-shotgame counter."
+        },
+        "price": {
+          "points": 13,
+          "max": 20,
+          "rationale": "Dated-130 assessment only; no established current cutoff."
+        },
+        "personnel": {
+          "points": 13,
+          "max": 15,
+          "rationale": "Projectedtopline and20:10–23:40observedTOI support stable opportunity; finalPP/11F7Drole check open."
+        },
+        "situation": {
+          "points": 5,
+          "max": 10,
+          "rationale": "Roadvenue; no specialrestedge proven."
+        },
+        "vsin": {
+          "points": 0,
+          "max": 10,
+          "rationale": "No matching currentVSiNselection verified."
+        },
+        "docs": {
+          "points": 0,
+          "max": 10,
+          "rationale": "SchonwaldTBLML is notHagelprop support."
+        },
+        "market": {
+          "points": 2,
+          "max": 10,
+          "rationale": "Datedquote+independentlog context; movement/splitsunknown."
+        }
+      },
+      "handicapScore": 60,
+      "knownSubtotal": {
+        "points": 60,
+        "assessedMaximum": 110,
+        "normalizedTo110": false
+      },
+      "scoreStatus": "PROVISIONAL",
+      "failure": {
+        "score": 6,
+        "dimensions": {
+          "lossPathResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Vegas canreducevolume;NYR1-shotexample."
+          },
+          "personnelResilience": {
+            "points": 2,
+            "max": 2,
+            "rationale": "Observedworkload robust across8games, projectedtopline supports; finalPP gate remains."
+          },
+          "scriptVariance": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Shots miss/block variance."
+          },
+          "numberProtection": {
+            "points": 1,
+            "max": 2,
+            "rationale": "3+threshold anddatedjuice givepartialprotection."
+          },
+          "countercaseResolution": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Logverifiesrolethesis; opponentadvancedaudit incomplete."
+          }
+        }
+      },
+      "sources": [
+        "https://www.statmuse.com/nhl/player/brandon-hagel-8010/game-log?seasonYear=2027",
+        "https://dknetwork.draftkings.com/2026/10/20/best-nhl-player-props-today-for-tuesday-10-20-26/",
+        "https://www.dailyfaceoff.com/starting-goalies/10-20-2026"
+      ],
+      "units": 0,
+      "officialBet": false,
+      "betPlaced": false,
+      "disposition": "NO BET",
+      "bestNumber": "not established—no bet until regraded",
+      "noBetCutoff": "not established—no bet until regraded",
+      "NBA Guide Check": {
+        "state": "NOT APPLICABLE",
+        "reason": "NHL candidate only"
+      },
+      "releaseBlockers": [
+        "Executable DK price not verified",
+        "Failure7/10 not cleared",
+        "Mandatory final sport/role confirmations incomplete"
+      ],
+      "fadeAndInflation": {
+        "state": "UNKNOWN",
+        "reason": "5/10/20 comparable closing-expectation windows unavailable; no SU-streak-only trigger."
+      },
+      "crowdStatus": {
+        "bets": null,
+        "money": null,
+        "contestBetCount": null,
+        "volumeScreenedFlag": null
+      },
+      "timing": "EARLY REVIEW;22:30start,21:45exact45 not performed",
+      "previousSnapshot": {
+        "at": "2026-10-20T16:57:30.919Z",
+        "handicapScore": null,
+        "knownSubtotal": {
+          "points": 38,
+          "assessedMaximum": 95,
+          "normalizedTo110": false
+        },
+        "failure": {
+          "dimensions": {
+            "lossPathResilience": {
+              "points": 1,
+              "max": 2,
+              "rationale": "Shot volume supports investigation; Vegas shot suppression is the strongest matchup counter, and three historical meetings are a small sample."
+            },
+            "personnelResilience": {
+              "points": null,
+              "max": 2,
+              "rationale": "Essential role/availability sensitivity not yet assessable."
+            },
+            "scriptVariance": {
+              "points": 1,
+              "max": 2,
+              "rationale": "Scoring/shooting variance or turnover/game-script sensitivity remains a meaningful loss path; no robust2-point claim."
+            },
+            "numberProtection": {
+              "points": 1,
+              "max": 2,
+              "rationale": "Dated threshold supplies only partial protection; no current alternative/cutoff validated."
+            },
+            "countercaseResolution": {
+              "points": 0,
+              "max": 2,
+              "rationale": "Material matchup, sample, price or projection contradiction remains unresolved."
+            }
+          },
+          "score": null,
+          "knownSubtotal": 3,
+          "assessedMaximum": 8,
+          "state": "PROVISIONAL"
+        }
+      }
+    },
+    {
+      "id": "nhl-car-ml",
+      "event": "CAR@VAN",
+      "sport": "NHL",
+      "startTime": "2026-10-20T22:00:00-04:00",
+      "reviewedAt": "2026-10-21T01:18:49.391Z",
+      "market": "Carolina ML",
+      "referenceQuote": "DFOdated-294;Doc's-278oldreference",
+      "executionVerified": false,
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "points": 28,
+          "max": 35,
+          "rationale": "Carolina possession/shot andspecialteams case vsstrugglingVAN; injuries andfavoritemargin risk."
+        },
+        "price": {
+          "points": 7,
+          "max": 20,
+          "rationale": "Heavyprice: small nominaledge needs strongreliability; no verifiedoffer."
+        },
+        "personnel": {
+          "points": null,
+          "max": 15,
+          "rationale": "KochetkovCONFIRMED,MerilainenLIKELY; coreopposinggoalieimpactunknown."
+        },
+        "situation": {
+          "points": 5,
+          "max": 10,
+          "rationale": "Roadtrip andabsences offset matchupstrength."
+        },
+        "vsin": {
+          "points": 0,
+          "max": 10,
+          "rationale": "No actual exactmarket confirmingVSiNselection verified."
+        },
+        "docs": {
+          "points": 0,
+          "max": 10,
+          "rationale": "TonySinkVAN+225opposes;Bussipremise stale."
+        },
+        "market": {
+          "points": 2,
+          "max": 10,
+          "rationale": "Referenceonly; movement/splitsunverified."
+        }
+      },
+      "handicapScore": null,
+      "knownSubtotal": {
+        "points": 42,
+        "assessedMaximum": 95,
+        "normalizedTo110": false
+      },
+      "scoreStatus": "UNGRADED",
+      "failure": {
+        "score": null,
+        "dimensions": {
+          "lossPathResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Goaltendingupset andloweventloss remain."
+          },
+          "personnelResilience": {
+            "points": null,
+            "max": 2,
+            "rationale": "Opposinggoalie unconfirmed."
+          },
+          "scriptVariance": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Hockeyvariance atheavyjuice."
+          },
+          "numberProtection": {
+            "points": 0,
+            "max": 2,
+            "rationale": "Largefavoriteprice fragile."
+          },
+          "countercaseResolution": {
+            "points": 0,
+            "max": 2,
+            "rationale": "Opponentcase notresolved."
+          }
+        }
+      },
+      "sources": [
+        "https://www.dailyfaceoff.com/starting-goalies/10-20-2026",
+        "https://www.docsports.com/free-picks/nhl-hockey/2026/carolina-hurricanes-vs-vancouver-canucks-prediction-10-20-2026-nhl-picks-best-bets-odds.html"
+      ],
+      "units": 0,
+      "officialBet": false,
+      "betPlaced": false,
+      "disposition": "NO BET",
+      "bestNumber": "not established—no bet until regraded",
+      "noBetCutoff": "not established—no bet until regraded",
+      "NBA Guide Check": {
+        "state": "NOT APPLICABLE",
+        "reason": "NHL candidate only"
+      },
+      "releaseBlockers": [
+        "Executable DK price not verified",
+        "Failure7/10 not cleared",
+        "Mandatory final sport/role confirmations incomplete"
+      ],
+      "fadeAndInflation": {
+        "state": "UNKNOWN",
+        "reason": "5/10/20 comparable closing-expectation windows unavailable; no SU-streak-only trigger."
+      },
+      "crowdStatus": {
+        "bets": null,
+        "money": null,
+        "contestBetCount": null,
+        "volumeScreenedFlag": null
+      },
+      "timing": "45-minute cohort review began21:17:03, after21:15; not exact45"
+    },
+    {
+      "id": "nhl-car-pl",
+      "event": "CAR@VAN",
+      "sport": "NHL",
+      "startTime": "2026-10-20T22:00:00-04:00",
+      "reviewedAt": "2026-10-21T01:18:49.391Z",
+      "market": "Carolina -1.5",
+      "referenceQuote": "Action08:54ETFanDuel-122pick /-130table: distinctprices",
+      "executionVerified": false,
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "points": 26,
+          "max": 35,
+          "rationale": "Shotquality/territorycouldproduce separation; depletedcreation andempty-net dependencecounter."
+        },
+        "price": {
+          "points": 10,
+          "max": 20,
+          "rationale": "BetterpayoutthanMLbutmustwinby2; articleprice mismatch unresolved."
+        },
+        "personnel": {
+          "points": null,
+          "max": 15,
+          "rationale": "MerilainenonlyLIKELY;coreunassessed."
+        },
+        "situation": {
+          "points": 5,
+          "max": 10,
+          "rationale": "Roadfavorite earlyseason marginrisk."
+        },
+        "vsin": {
+          "points": 0,
+          "max": 10,
+          "rationale": "No actualVSiNexactpick."
+        },
+        "docs": {
+          "points": 0,
+          "max": 10,
+          "rationale": "SinkVANMLopposesdirection;notpucklineanalysis."
+        },
+        "market": {
+          "points": 2,
+          "max": 10,
+          "rationale": "Actionheadtable andpickprice differ; notverifiedmovement."
+        }
+      },
+      "handicapScore": null,
+      "knownSubtotal": {
+        "points": 43,
+        "assessedMaximum": 95,
+        "normalizedTo110": false
+      },
+      "scoreStatus": "UNGRADED",
+      "failure": {
+        "score": null,
+        "dimensions": {
+          "lossPathResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Onegoalvictory loses."
+          },
+          "personnelResilience": {
+            "points": null,
+            "max": 2,
+            "rationale": "Finalgoalie unknown."
+          },
+          "scriptVariance": {
+            "points": 0,
+            "max": 2,
+            "rationale": "Empty-net/finishing sensitivity."
+          },
+          "numberProtection": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Marginpricepartialonly."
+          },
+          "countercaseResolution": {
+            "points": 0,
+            "max": 2,
+            "rationale": "Actionprose saysfade roadfavoriteswhilepickbacksroadfavorite; quarantined."
+          }
+        }
+      },
+      "sources": [
+        "https://www.dailyfaceoff.com/starting-goalies/10-20-2026",
+        "https://www.docsports.com/free-picks/nhl-hockey/2026/carolina-hurricanes-vs-vancouver-canucks-prediction-10-20-2026-nhl-picks-best-bets-odds.html",
+        "https://www.actionnetwork.com/content/carolina-hurricanes-vs-vancouver-canucks-prediction-picks-nhl-odds-tuesday-october-20/embed"
+      ],
+      "units": 0,
+      "officialBet": false,
+      "betPlaced": false,
+      "disposition": "NO BET",
+      "bestNumber": "not established—no bet until regraded",
+      "noBetCutoff": "not established—no bet until regraded",
+      "NBA Guide Check": {
+        "state": "NOT APPLICABLE",
+        "reason": "NHL candidate only"
+      },
+      "releaseBlockers": [
+        "Executable DK price not verified",
+        "Failure7/10 not cleared",
+        "Mandatory final sport/role confirmations incomplete"
+      ],
+      "fadeAndInflation": {
+        "state": "UNKNOWN",
+        "reason": "5/10/20 comparable closing-expectation windows unavailable; no SU-streak-only trigger."
+      },
+      "crowdStatus": {
+        "bets": null,
+        "money": null,
+        "contestBetCount": null,
+        "volumeScreenedFlag": null
+      },
+      "timing": "45-minute cohort review began21:17:03, after21:15; not exact45"
+    },
+    {
+      "id": "nhl-tbl-ml",
+      "event": "TBL@VGK",
+      "sport": "NHL",
+      "startTime": "2026-10-20T22:30:00-04:00",
+      "reviewedAt": "2026-10-21T01:18:49.391Z",
+      "market": "Tampa Bay ML",
+      "referenceQuote": "SchonwaldOct19-105;DFOdated-108",
+      "executionVerified": false,
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "factors": {
+        "matchup": {
+          "points": 24,
+          "max": 35,
+          "rationale": "Tampa shotgenerationvsVegas shot suppression/PP forms mixednearcoinflip."
+        },
+        "price": {
+          "points": 12,
+          "max": 20,
+          "rationale": "Datednear-pickemoffer permits modestpricejudgment; no currentDK."
+        },
+        "personnel": {
+          "points": null,
+          "max": 15,
+          "rationale": "HartCONFIRMED,VasilevskiyLIKELY; finalstartinggoaliecoreunknown."
+        },
+        "situation": {
+          "points": 5,
+          "max": 10,
+          "rationale": "Roadvenue,currentskaterdeploymentnotfinal."
+        },
+        "vsin": {
+          "points": 0,
+          "max": 10,
+          "rationale": "No matchingVSiNselectionverified."
+        },
+        "docs": {
+          "points": 6,
+          "max": 10,
+          "rationale": "SchonwaldexplicitTBL-105; relevantdatedsideopinion, not independentforecast."
+        },
+        "market": {
+          "points": 2,
+          "max": 10,
+          "rationale": "Datedreferenceonly; no authenticmovement."
+        }
+      },
+      "handicapScore": null,
+      "knownSubtotal": {
+        "points": 49,
+        "assessedMaximum": 95,
+        "normalizedTo110": false
+      },
+      "scoreStatus": "UNGRADED",
+      "failure": {
+        "score": null,
+        "dimensions": {
+          "lossPathResilience": {
+            "points": 1,
+            "max": 2,
+            "rationale": "VegasPPandscoring canoutpaceTampa."
+          },
+          "personnelResilience": {
+            "points": null,
+            "max": 2,
+            "rationale": "Tampagoalieunconfirmed."
+          },
+          "scriptVariance": {
+            "points": 1,
+            "max": 2,
+            "rationale": "OT/finishingvariance."
+          },
+          "numberProtection": {
+            "points": 1,
+            "max": 2,
+            "rationale": "Nearpickemonlypartial."
+          },
+          "countercaseResolution": {
+            "points": 1,
+            "max": 2,
+            "rationale": "ShotversusPPcontradiction partlyaddressed."
+          }
+        }
+      },
+      "sources": [
+        "https://www.dailyfaceoff.com/starting-goalies/10-20-2026",
+        "https://www.docsports.com/free-picks/nhl-hockey/2026/tampa-bay-lightning-vs-vegas-golden-knights-prediction-10-20-2026-nhl-picks-best-bets-odds.html"
+      ],
+      "units": 0,
+      "officialBet": false,
+      "betPlaced": false,
+      "disposition": "NO BET",
+      "bestNumber": "not established—no bet until regraded",
+      "noBetCutoff": "not established—no bet until regraded",
+      "NBA Guide Check": {
+        "state": "NOT APPLICABLE",
+        "reason": "NHL candidate only"
+      },
+      "releaseBlockers": [
+        "Executable DK price not verified",
+        "Failure7/10 not cleared",
+        "Mandatory final sport/role confirmations incomplete"
+      ],
+      "fadeAndInflation": {
+        "state": "UNKNOWN",
+        "reason": "5/10/20 comparable closing-expectation windows unavailable; no SU-streak-only trigger."
+      },
+      "crowdStatus": {
+        "bets": null,
+        "money": null,
+        "contestBetCount": null,
+        "volumeScreenedFlag": null
+      },
+      "timing": "EARLY REVIEW;22:30start,21:45exact45 not performed"
+    }
+  ],
+  "distribution": {
+    "source": "https://www.statmuse.com/nhl/player/brandon-hagel-8010/game-log?seasonYear=2027",
+    "fullPageVerified": true,
+    "season": "2026-27 regular season",
+    "through": "2026-10-17",
+    "order": "newestfirst",
+    "shots": [
+      5,
+      6,
+      1,
+      6,
+      3,
+      8,
+      6,
+      3
+    ],
+    "iceTime": [
+      "20:10",
+      "23:24",
+      "20:57",
+      "21:32",
+      "22:55",
+      "20:11",
+      "22:07",
+      "23:40"
+    ],
+    "games": 8,
+    "threePlusHits": 7,
+    "totalShots": 38,
+    "meanShots": 4.75,
+    "meanIceTimeMinutes": 21.866666666666667,
+    "notForecast": true
+  },
+  "eventDecisions": [
+    {
+      "event": "CAR@VAN",
+      "decision": "NO BET"
+    },
+    {
+      "event": "TBL@VGK",
+      "decision": "NO BET"
+    }
+  ],
+  "officialReleases": [],
+  "officialExposureUnits": 0,
+  "actualWagersUnknown": true,
+  "activePublication": false,
+  "maxSameTeamSideTicketsAllCardTypes": 2,
+  "newTickets": 0,
+  "earlierSnapshotsPreserved": true,
+  "remainingScheduledOccurrencesUnmodified": true
+}
