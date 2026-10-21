@@ -1,0 +1,49 @@
+{
+  "snapshotAt": "2026-10-21T00:22:13.129Z",
+  "coverage": "PARTIAL",
+  "guide": {
+    "originalPages": [
+      13,
+      34,
+      40
+    ],
+    "access": "local pdftotext of original PDF",
+    "state": "OVERRIDDEN",
+    "Harris": "out; guardlineupcurrent",
+    "finalPrimaryHealth": "UNVERIFIED"
+  },
+  "criticalSources": [
+    {
+      "url": "https://www.actionnetwork.com/nba/thunder-vs-spurs-prediction-pick-nba-odds-for-tuesday-october-20",
+      "asOf": "2026-10-20 19:20ET",
+      "finding": "OKC-1.5-106/ML-116, Harperstarter;FD24.5PRA-115opinion"
+    },
+    {
+      "url": "https://vsin.com/nba/nba-best-bets-today-picks-and-predictions-for-tuesday-october-20/",
+      "finding": "CohenactualOKCML-118update"
+    },
+    {
+      "url": "https://www.dailyfaceoff.com/starting-goalies/10-20-2026",
+      "finding": "LeviCONFIRMED;WallstedtLIKELY;Tarasov/GrubauerCONFIRMED; internalWallstedtrecordinconsistency excluded"
+    },
+    {
+      "url": "https://www.statmuse.com/nba/ask/dylan-harper-game-log-western-conference-finals",
+      "season": "2025-26",
+      "access": "fullpage",
+      "finding": "Sevenoldroleplayoffgames; notfreshforecast"
+    }
+  ],
+  "failed": [
+    "NBA20:00officialinjuryPDF",
+    "DKexecutableoffer",
+    "currentCircaDropboxsheet",
+    "TeamRankingscurrentrefresh",
+    "StatMuseexplicit2026-27MIN/SEAteamlogs",
+    "currentfullpageNHLsplits"
+  ],
+  "preserved": {
+    "priorSnapshots": true,
+    "remainingOccurrences": true,
+    "activeWebsiteUnchanged": true
+  }
+}
