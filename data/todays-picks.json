@@ -476,7 +476,7 @@
       "type": "7-Point Teaser",
       "market": "Parlay",
       "lineNumber": "Under 234.5 / MIL +19.5 / BKN +18.5 / WAS +8.5 / NOP +18.5 / Under 236.5",
-      "odds": "Parlay odds not shown in screenshot",
+      "odds": "",
       "sportsbook": "BetRivers Delaware",
       "grade": "User-selected / ungraded",
       "units": 2,
@@ -488,7 +488,13 @@
       "sourceVerification": "User-uploaded BetRivers My Bets screenshot and archived Oct. 24 NBA research/splits; checked October 24, 2026.",
       "wagerAccepted": "Confirmed — shown in BetRivers My Bets screenshot and user confirmed 2-unit bet",
       "showFullAnalysis": true,
-      "expandableAnalysis": true
+      "expandableAnalysis": true,
+      "bestNumber": "",
+      "best": "",
+      "playableTo": "",
+      "playable": "",
+      "noBetCutoff": "",
+      "cutoff": ""
     },
     {
       "id": "planned-vegas-nba-7pt-10leg-evening-2026-10-23",
