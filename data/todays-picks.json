@@ -487,7 +487,8 @@
       "failureScore": "Not scored as a combined ticket",
       "sourceVerification": "User-uploaded BetRivers My Bets screenshot and archived Oct. 24 NBA research/splits; checked October 24, 2026.",
       "wagerAccepted": "Confirmed — shown in BetRivers My Bets screenshot and user confirmed 2-unit bet",
-      "showFullAnalysis": true
+      "showFullAnalysis": true,
+      "expandableAnalysis": true
     },
     {
       "id": "planned-vegas-nba-7pt-10leg-evening-2026-10-23",
