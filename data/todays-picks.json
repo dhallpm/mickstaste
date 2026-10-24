@@ -250,7 +250,7 @@
       "odds": "+128",
       "sportsbook": "BetRivers Delaware",
       "units": 2,
-      "status": "Pending",
+      "status": "Graded",
       "officialBet": "Yes",
       "betPlaced": false,
       "publicationBasis": "User-directed selection and 2-unit stake; not a framework-qualified release.",
@@ -264,15 +264,23 @@
       "bestNumber": "Over 3.5 assists at +128",
       "playableTo": "User-selected posting: Over 3.5 assists +128",
       "noBetCutoff": "Different line or price requires a fresh review; pregame posting only.",
-      "writeup": "USER-DIRECTED PLAY — 2 units at +128. Desmond Bane needs four assists to cash. Orlando's official starting lineup confirms Bane alongside Jalen Suggs, Franz Wagner, Paolo Banchero and Wendell Carter Jr. The guide identifies Bane as a core perimeter scorer in an offense expected to emphasize pace, screening and spacing. In 24 regular-season games with Wagner and Banchero in 2025–26, Bane averaged 30.8 minutes and 4.1 assists. VSiN's published Opta projection was 4.41 assists. The countercase is shared playmaking and teammate shooting: Bane recorded only one, three and one assists in his three preseason appearances. Micks assessment remains a lean; this 2-unit publication is the owner's selection. Wager execution has not been confirmed.",
-      "fullAnalysis": "The workload estimate is approximately 30–34 minutes in a competitive game, based on comparable lineup history and his confirmed starting role, not a coach guarantee. Orlando's guide preview (PDF page 35; extracted text reviewed) describes Suggs as the floor general, Wagner and Banchero as the offensive leaders, and Bane as perimeter firepower. That supports rotation security but does not establish primary passing responsibility. The 2025–26 lineup-context baseline and VSiN's published 4.41-assist projection support researching four assists at the selected +128. Shared creation, Atlanta's perimeter pressure, limited current-season role evidence and teammate finishing remain the main failure paths. The prior framework assessment is not upgraded by this publication. User explicitly selected 2 units and authorized website publication at +128; no bookmaker wager receipt was supplied.",
+      "writeup": "LOSS — Desmond Bane recorded 2 assists in 33:07 against Atlanta on October 21, 2026, finishing below the 3.5-assist line. The pick was published at the user's direction for 2 units at +128. Wager acceptance was not confirmed, so no realized profit/loss is recorded.",
+      "fullAnalysis": "LOSS — Desmond Bane recorded 2 assists in 33:07 against Atlanta on October 21, 2026, finishing below the 3.5-assist line. The pick was published at the user's direction for 2 units at +128. Wager acceptance was not confirmed, so no realized profit/loss is recorded.\n\nSettlement: NBA.com box score. Result: 2 assists; Over 3.5 lost. Stake direction was 2 units, but no bookmaker receipt was supplied.",
       "sourceVerification": "User BetRivers Delaware screenshot at 6:27 p.m. ET Oct.21: Over3.5 assists+128; official @OrlandoMagic starting lineup screenshot at6:34 p.m.; VSiN Oct.21 player props; StatMuse explicit2025–26 lineup-context table; NBA.com preseason game log.",
       "sourceUrls": [
         "https://vsin.com/nba/nba-player-props-today-top-picks-for-wednesday-october-21/",
         "https://www.statmuse.com/nba/ask/desmond-bane-with-and-without-franz-wagner-and-paolo-banchero-this-season",
         "https://www.nba.com/player/1630217/desmond-bane"
       ],
-      "notes": "Published at the user's explicit direction. 2 units selected; execution unconfirmed. Framework assessment remains Lean."
+      "notes": "Published at the user's explicit direction. 2 units selected; execution unconfirmed. Framework assessment remains Lean.",
+      "result": "Loss",
+      "Result": "Loss",
+      "Outcome": "Loss",
+      "finalStat": "2 assists",
+      "finalMinutes": "33:07",
+      "profitLoss": "Not recorded — wager acceptance not confirmed",
+      "settlementSource": "NBA.com official box score, 2026-10-21",
+      "settlementNotes": "Desmond Bane recorded 2 assists; Over 3.5 assists lost. User-directed 2-unit site selection; wager execution not confirmed."
     }
   ],
   "watchlist": [
