@@ -674,3 +674,11 @@ Before a full Micks Picks run can be labeled COMPLETE:
 ## Completion Standard
 
 A scan is NOT complete merely because several websites were searched. Completion means every applicable source category in this registry was addressed for the active slate and market types under consideration.
+
+## NBA back-to-back and ATS streak sources — October24,2026
+
+Load [nba-rest-and-ats-streaks.md](nba-rest-and-ats-streaks.md) for NBA Micks/Vegas runs. Required lanes: TeamRankings overall ATS trends plus chronological closing-spread results; official NBA schedule/previous box scores; dated VSiN NBA games; Covers chronological/trend cross-check; original guide pages29/34 when applicable. Check Steve Makinen's October20,2026 league and team scheduling articles:
+- https://vsin.com/nba/nba-top-scheduling-betting-opportunities-for-2026-2027/
+- https://vsin.com/nba/nba-team-by-team-scheduling-betting-opportunities-for-the-2026-2027-season/
+
+Display each team's B2B leg/workload and consecutive5+ ATS cover/miss flags with exact scope; keep unknown carryover unknown and filtered trends separate from overall streaks. No automatic fade/bonus or redistribution of110-point weights.
