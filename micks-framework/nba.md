@@ -45,3 +45,7 @@ Every NBA candidate, including every NBA parlay leg, must use [the 2026-27 VSiN 
 - Safe version: the least fragile way to express the edge, usually moneyline, spread, team total, or a reduced-volatility prop line.
 - Value version: higher payout or more price-sensitive expression that requires strict cutoff discipline.
 - Publish the safe version unless the value version has both better edge and acceptable variance.
+
+## Mandatory schedule and ATS streak module — October 24, 2026
+
+Load [current/nba-rest-and-ats-streaks.md](current/nba-rest-and-ats-streaks.md) for every NBA Micks Picks and Vegas Picks scan. Flag back-to-back teams individually, reconcile guide/current workload context, and display verified consecutive5+ ATS covers or misses with last-five outcomes and exact scope. Carry schedule/streak flags onto straight bets, totals, props, parlays and seven-point teaser legs. Unknown carryover data stays UNKNOWN; no automatic fade or scoring bonus.
