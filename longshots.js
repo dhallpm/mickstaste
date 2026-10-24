@@ -26,7 +26,7 @@ function lsFormatDate(value){ const parsed = Date.parse(value || ''); if(!Number
 function lsSort(a,b){ return lsDateRank(b) - lsDateRank(a); }
 function lsIsCurrentActive(row){ const status=lsClean(`${row.status} ${row.releaseStatus}`); return lsDateKey(row.date || row.timestamp)===lsTodayKey() || /\b(active|posted|released|open|pregame|manual posted|pending live market validation)\b/.test(status); }
 function lsRowsFor(type){ const rows = LONGSHOTS_STATE.filter(lsIsReleased).filter(lsIsCurrentActive).filter(row => !lsHasSettlement(row)).sort(lsSort); if(type === 'parlay') return rows.filter(lsIsParlay); if(type === 'lotto') return rows.filter(row => !lsIsParlay(row)); return rows; }
-function lsHistoryRows(){ return LONGSHOTS_HISTORY_STATE.filter(lsHasSettlement).sort(lsSort); }
+function lsHistoryRows(){ return Array.from(new Map([...LONGSHOTS_STATE.filter(lsHasSettlement),...LONGSHOTS_HISTORY_STATE.filter(lsHasSettlement)].map(row=>[row.id || JSON.stringify([row.date,row.game,row.pick]),row])).values()).sort(lsSort); }
 function lsResultText(row){ return row.result || (lsClean(`${row.status} ${row.releaseStatus}`).includes('win') ? 'Win' : lsClean(`${row.status} ${row.releaseStatus}`).includes('loss') ? 'Loss' : lsClean(`${row.status} ${row.releaseStatus}`).includes('rejected') ? 'Rejected' : 'Pending'); }
 function lsResultClass(row){ const result = lsClean(lsResultText(row)); if(result.includes('win') || result.includes('cash')) return 'longshot-result-win'; if(result.includes('loss') || result.includes('lose')) return 'longshot-result-loss'; if(result.includes('push') || result.includes('void')) return 'longshot-result-push'; if(result.includes('reject') || result.includes('stale')) return 'longshot-result-rejected'; return 'longshot-result-pending'; }
 function lsHasSettlement(row){ return Boolean(row.result || row.profitLoss || row.settlementNotes || row.settledAt || /graded|settled|win|loss|push|void|rejected/.test(lsClean(`${row.status} ${row.releaseStatus}`))); }
@@ -71,7 +71,7 @@ function lsRenderGrid(id, rows){ const el=document.getElementById(id); if(!el) r
 function lsRenderResults(){
   const el=document.getElementById('longshotsResultsBody');
   if(!el) return;
-  const rows = lsHistoryRows().concat(lsRowsFor('all').filter(lsHasSettlement)).sort(lsSort);
+  const rows = lsHistoryRows();
   el.innerHTML = rows.length ? rows.map(row => `<tr>
     <td>${lsEscape(lsFormatDate(row.date))}</td>
     <td>${lsEscape(row.type || row.category || 'LongShot')}</td>
