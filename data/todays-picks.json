@@ -2,7 +2,7 @@
   "success": true,
   "source": "published-active-card-static",
   "sourceOfTruth": "Micks Picks publish data",
-  "date": "2026-10-23",
+  "date": "2026-10-24",
   "totalExposure": 2,
   "free": [
     {
@@ -464,6 +464,29 @@
     }
   ],
   "lottoParlays": [
+    {
+      "date": "2026-10-24",
+      "section": "Lotto Parlays",
+      "access": "free",
+      "sport": "NBA",
+      "league": "NBA",
+      "game": "NBA — October 24, 2026 | 6-Leg Sweetheart 7-Point Teaser",
+      "pick": "Houston–Atlanta Under 234.5 / Milwaukee Bucks +19.5 / Brooklyn Nets +18.5 / Washington Wizards +8.5 / New Orleans Pelicans +18.5 / Miami–Charlotte Under 236.5",
+      "cardTitle": "NBA 6-Leg 7-Point Teaser — October 24",
+      "type": "7-Point Teaser",
+      "market": "Parlay",
+      "lineNumber": "Under 234.5 / MIL +19.5 / BKN +18.5 / WAS +8.5 / NOP +18.5 / Under 236.5",
+      "odds": "Parlay odds not shown in screenshot",
+      "sportsbook": "BetRivers Delaware",
+      "grade": "User-selected / ungraded",
+      "units": null,
+      "status": "Pending",
+      "officialBet": "User screenshot shows ticket in My Bets; stake and acceptance details not visible",
+      "writeup": "Six-leg NBA Sweetheart 7-point teaser shown in BetRivers My Bets on October 24. The displayed selections are Houston–Atlanta Under 234.5; Milwaukee +19.5; Brooklyn +18.5; Washington +8.5; New Orleans +18.5; and Miami–Charlotte Under 236.5. Each total includes overtime. Individual leg notes and key risks follow.",
+      "fullAnalysis": "1) Houston Rockets at Atlanta Hawks — Under 234.5 (8:30 PM ET). The screenshot shows the teased Under at 234.5, with the reference game total at 227.5. The pregame research found the market unusually Over-heavy (90% of tickets, 89% of handle on the Over) and the Action/VSiN trend material favored the Under historically. Countercase: the split is opposing the ticket’s direction only through the crowd concentration, which is not itself proof of value; high pace, efficient transition offense, late fouling and overtime can still beat the number. Houston workload and personnel absences also add variance. This is a user-selected leg, not a separately certified Micks grade.\n\n2) Milwaukee Bucks at Philadelphia 76ers — Milwaukee +19.5 (7:30 PM ET). The seven-point cushion gives Milwaukee room to lose by 19. The earlier base spread was Philadelphia -12.5; the pregame model and guide evidence were mixed on the matchup, with Milwaukee’s recorded spread share low but no qualifying handle divergence. Philadelphia’s LeBron absence and Milwaukee’s back-to-back workload are relevant personnel/situation factors, but neither guarantees a close margin. Main failure path: Philadelphia controls the game and extends the lead against a tired Milwaukee rotation. User-selected teaser leg; no independent certified Micks grade.\n\n3) Brooklyn Nets at Cleveland Cavaliers — Brooklyn +18.5 (7:30 PM ET). The teased line allows a Brooklyn loss by 18. The earlier base spread was Cleveland -11.5. Action’s reference assessment favored Brooklyn relative to the market, while the matchup still carries a substantial blowout risk because Cleveland is the stronger side and Brooklyn’s scoring can stall. This is a cushion-based teaser selection, not a claim that Brooklyn is the better team. User-selected leg; no separate Micks grade.\n\n4) Washington Wizards at Chicago Bulls — Washington +8.5 (8:00 PM ET). The screenshot uses Washington +8.5, based on a +1.5 game spread before the seven-point adjustment. The recorded split was relatively balanced toward Washington, not a qualifying contrarian-money signal. The pregame material cited Chicago moneyline support and travel/rest concerns as counterevidence. Washington needs to avoid a Chicago run and remain within eight; poor defense and turnover-driven transition scoring are the main failure paths. User-selected leg; no separate Micks grade.\n\n5) New Orleans Pelicans at Denver Nuggets — New Orleans +18.5 (9:00 PM ET). The teaser starts from a +11.5 base and adds seven points. The market was strongly Denver-sided on the moneyline, while the spread split showed some support for New Orleans but no qualifying contrarian divergence. Denver’s home offense and New Orleans’ personnel uncertainty create a meaningful blowout risk; the cushion is the primary rationale. User-selected leg; no independent Micks grade.\n\n6) Miami Heat at Charlotte Hornets — Under 236.5 (6:00 PM ET). The screenshot shows the teased total at 236.5, with a base Under 229.5 in the earlier sportsbook screen; the Action snapshot showed Over 228 heavily backed (71% tickets, 70% handle). The ticket therefore takes the less popular Under direction, but public opposition alone is not an edge. Charlotte absences may affect pace and shot creation, while transition scoring, free throws, hot shooting and overtime remain threats. User-selected leg; no independent Micks grade.\n\nTicket note: Screenshot shows a 6-leg parlay in My Bets. Exact ticket payout/odds, stake, and confirmation receipt are not visible in this image. Do not treat displayed individual-leg prices as the combined ticket price. Teaser legs are correlated to game outcomes; no joint probability or positive-EV claim is established.",
+      "failureScore": "Not scored as a combined ticket",
+      "sourceVerification": "User-uploaded BetRivers My Bets screenshot and archived Oct. 24 NBA research/splits; checked October 24, 2026."
+    },
     {
       "id": "planned-vegas-nba-7pt-10leg-evening-2026-10-23",
       "date": "2026-10-23",
