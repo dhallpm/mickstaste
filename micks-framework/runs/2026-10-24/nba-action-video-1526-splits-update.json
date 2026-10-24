@@ -1,0 +1,1031 @@
+{
+  "date": "2026-10-24",
+  "as_of": "2026-10-24 15:26-15:27 America/New_York",
+  "source": "User-uploaded ActionNetwork screen recording; directly visually read all24 market panels",
+  "source_filename": "ScreenRecording_10-24-2026 15-26-34_1.mp4",
+  "provenance": "Onlytranscribedbettingdata archived; no accountimagesorvideobytes published",
+  "schema": {
+    "spread": "side,line,tickets_pct,handle_pct,odds",
+    "total": "Over/Under,threshold,tickets_pct,handle_pct,odds",
+    "ml": "side,tickets_pct,handle_pct,odds",
+    "bets_k": "Rounded game-header displayedbetcounts, not exact marketcounts or dollars",
+    "model": "ActionPROspread andActiongrade; notMicksgrade or probability"
+  },
+  "games": [
+    {
+      "game": "MIA@CHA",
+      "tip": "18:00",
+      "bets_k": 7.4,
+      "spread": [
+        {
+          "side": "MIA",
+          "line": -3.5,
+          "tickets_pct": 88,
+          "handle_pct": 90,
+          "odds": -108,
+          "asterisk": true,
+          "extreme": true,
+          "handle_minus_tickets": 2,
+          "contrarian_divergence": false
+        },
+        {
+          "side": "CHA",
+          "line": 3.5,
+          "tickets_pct": 12,
+          "handle_pct": 10,
+          "odds": -112,
+          "asterisk": false,
+          "extreme": false,
+          "handle_minus_tickets": -2,
+          "contrarian_divergence": false
+        }
+      ],
+      "total": [
+        {
+          "side": "Over",
+          "line": 228,
+          "tickets_pct": 71,
+          "handle_pct": 70,
+          "odds": -110,
+          "asterisk": true,
+          "extreme": false,
+          "handle_minus_tickets": -1,
+          "contrarian_divergence": false
+        },
+        {
+          "side": "Under",
+          "line": 228,
+          "tickets_pct": 29,
+          "handle_pct": 30,
+          "odds": -108,
+          "asterisk": false,
+          "extreme": false,
+          "handle_minus_tickets": 1,
+          "contrarian_divergence": false
+        }
+      ],
+      "ml": [
+        {
+          "side": "MIA",
+          "line": null,
+          "tickets_pct": 89,
+          "handle_pct": 85,
+          "odds": -148,
+          "asterisk": true,
+          "extreme": true,
+          "handle_minus_tickets": -4,
+          "contrarian_divergence": false
+        },
+        {
+          "side": "CHA",
+          "line": null,
+          "tickets_pct": 11,
+          "handle_pct": 15,
+          "odds": 125,
+          "asterisk": false,
+          "extreme": false,
+          "handle_minus_tickets": 4,
+          "contrarian_divergence": false
+        }
+      ],
+      "model": {
+        "team": "CHA",
+        "spread": 2.3,
+        "grade": "C"
+      }
+    },
+    {
+      "game": "MIL@PHI",
+      "tip": "19:30",
+      "bets_k": 9.2,
+      "spread": [
+        {
+          "side": "MIL",
+          "line": 12.5,
+          "tickets_pct": 23,
+          "handle_pct": 26,
+          "odds": -114,
+          "asterisk": false,
+          "extreme": false,
+          "handle_minus_tickets": 3,
+          "contrarian_divergence": false
+        },
+        {
+          "side": "PHI",
+          "line": -12.5,
+          "tickets_pct": 77,
+          "handle_pct": 74,
+          "odds": -106,
+          "asterisk": true,
+          "extreme": false,
+          "handle_minus_tickets": -3,
+          "contrarian_divergence": false
+        }
+      ],
+      "total": [
+        {
+          "side": "Over",
+          "line": 235,
+          "tickets_pct": 64,
+          "handle_pct": 65,
+          "odds": -111,
+          "asterisk": false,
+          "extreme": false,
+          "handle_minus_tickets": 1,
+          "contrarian_divergence": false
+        },
+        {
+          "side": "Under",
+          "line": 235,
+          "tickets_pct": 36,
+          "handle_pct": 35,
+          "odds": -109,
+          "asterisk": false,
+          "extreme": false,
+          "handle_minus_tickets": -1,
+          "contrarian_divergence": false
+        }
+      ],
+      "ml": [
+        {
+          "side": "MIL",
+          "line": null,
+          "tickets_pct": 7,
+          "handle_pct": 11,
+          "odds": 450,
+          "asterisk": false,
+          "extreme": false,
+          "handle_minus_tickets": 4,
+          "contrarian_divergence": false
+        },
+        {
+          "side": "PHI",
+          "line": null,
+          "tickets_pct": 93,
+          "handle_pct": 89,
+          "odds": -600,
+          "asterisk": true,
+          "extreme": true,
+          "handle_minus_tickets": -4,
+          "contrarian_divergence": false
+        }
+      ],
+      "model": {
+        "team": "MIL",
+        "spread": 7.7,
+        "grade": "A+"
+      }
+    },
+    {
+      "game": "BKN@CLE",
+      "tip": "19:30",
+      "bets_k": 6.1,
+      "spread": [
+        {
+          "side": "BKN",
+          "line": 11.5,
+          "tickets_pct": 23,
+          "handle_pct": 15,
+          "odds": -114,
+          "asterisk": false,
+          "extreme": false,
+          "handle_minus_tickets": -8,
+          "contrarian_divergence": false
+        },
+        {
+          "side": "CLE",
+          "line": -11.5,
+          "tickets_pct": 77,
+          "handle_pct": 85,
+          "odds": -106,
+          "asterisk": true,
+          "extreme": true,
+          "handle_minus_tickets": 8,
+          "contrarian_divergence": false
+        }
+      ],
+      "total": [
+        {
+          "side": "Over",
+          "line": 228.5,
+          "tickets_pct": 67,
+          "handle_pct": 63,
+          "odds": -110,
+          "asterisk": false,
+          "extreme": false,
+          "handle_minus_tickets": -4,
+          "contrarian_divergence": false
+        },
+        {
+          "side": "Under",
+          "line": 228.5,
+          "tickets_pct": 33,
+          "handle_pct": 37,
+          "odds": -110,
+          "asterisk": false,
+          "extreme": false,
+          "handle_minus_tickets": 4,
+          "contrarian_divergence": false
+        }
+      ],
+      "ml": [
+        {
+          "side": "BKN",
+          "line": null,
+          "tickets_pct": 6,
+          "handle_pct": 4,
+          "odds": 380,
+          "asterisk": false,
+          "extreme": false,
+          "handle_minus_tickets": -2,
+          "contrarian_divergence": false
+        },
+        {
+          "side": "CLE",
+          "line": null,
+          "tickets_pct": 94,
+          "handle_pct": 96,
+          "odds": -500,
+          "asterisk": true,
+          "extreme": true,
+          "handle_minus_tickets": 2,
+          "contrarian_divergence": false
+        }
+      ],
+      "model": {
+        "team": "BKN",
+        "spread": 6.6,
+        "grade": "A+"
+      }
+    },
+    {
+      "game": "WAS@CHI",
+      "tip": "20:00",
+      "bets_k": 5.7,
+      "spread": [
+        {
+          "side": "WAS",
+          "line": 1.5,
+          "tickets_pct": 69,
+          "handle_pct": 68,
+          "odds": -106,
+          "asterisk": false,
+          "extreme": false,
+          "handle_minus_tickets": -1,
+          "contrarian_divergence": false
+        },
+        {
+          "side": "CHI",
+          "line": -1.5,
+          "tickets_pct": 31,
+          "handle_pct": 32,
+          "odds": -113,
+          "asterisk": false,
+          "extreme": false,
+          "handle_minus_tickets": 1,
+          "contrarian_divergence": false
+        }
+      ],
+      "total": [
+        {
+          "side": "Over",
+          "line": 244,
+          "tickets_pct": 51,
+          "handle_pct": 52,
+          "odds": -111,
+          "asterisk": false,
+          "extreme": false,
+          "handle_minus_tickets": 1,
+          "contrarian_divergence": false
+        },
+        {
+          "side": "Under",
+          "line": 244,
+          "tickets_pct": 49,
+          "handle_pct": 48,
+          "odds": -110,
+          "asterisk": false,
+          "extreme": false,
+          "handle_minus_tickets": -1,
+          "contrarian_divergence": false
+        }
+      ],
+      "ml": [
+        {
+          "side": "WAS",
+          "line": null,
+          "tickets_pct": 63,
+          "handle_pct": 73,
+          "odds": 105,
+          "asterisk": true,
+          "extreme": false,
+          "handle_minus_tickets": 10,
+          "contrarian_divergence": false
+        },
+        {
+          "side": "CHI",
+          "line": null,
+          "tickets_pct": 37,
+          "handle_pct": 27,
+          "odds": -125,
+          "asterisk": false,
+          "extreme": false,
+          "handle_minus_tickets": -10,
+          "contrarian_divergence": false
+        }
+      ],
+      "model": {
+        "team": "WAS",
+        "spread": 0.1,
+        "grade": "C"
+      }
+    },
+    {
+      "game": "SAS@DAL",
+      "tip": "20:00",
+      "bets_k": 5.7,
+      "spread": [
+        {
+          "side": "SAS",
+          "line": -14.5,
+          "tickets_pct": 47,
+          "handle_pct": 52,
+          "odds": -110,
+          "asterisk": false,
+          "extreme": false,
+          "handle_minus_tickets": 5,
+          "contrarian_divergence": false
+        },
+        {
+          "side": "DAL",
+          "line": 14.5,
+          "tickets_pct": 53,
+          "handle_pct": 48,
+          "odds": -110,
+          "asterisk": false,
+          "extreme": false,
+          "handle_minus_tickets": -5,
+          "contrarian_divergence": false
+        }
+      ],
+      "total": [
+        {
+          "side": "Over",
+          "line": 230,
+          "tickets_pct": 64,
+          "handle_pct": 71,
+          "odds": -107,
+          "asterisk": true,
+          "extreme": false,
+          "handle_minus_tickets": 7,
+          "contrarian_divergence": false
+        },
+        {
+          "side": "Under",
+          "line": 230,
+          "tickets_pct": 36,
+          "handle_pct": 29,
+          "odds": -112,
+          "asterisk": false,
+          "extreme": false,
+          "handle_minus_tickets": -7,
+          "contrarian_divergence": false
+        }
+      ],
+      "ml": [
+        {
+          "side": "SAS",
+          "line": null,
+          "tickets_pct": 88,
+          "handle_pct": 83,
+          "odds": -900,
+          "asterisk": true,
+          "extreme": true,
+          "handle_minus_tickets": -5,
+          "contrarian_divergence": false
+        },
+        {
+          "side": "DAL",
+          "line": null,
+          "tickets_pct": 12,
+          "handle_pct": 17,
+          "odds": 600,
+          "asterisk": false,
+          "extreme": false,
+          "handle_minus_tickets": 5,
+          "contrarian_divergence": false
+        }
+      ],
+      "model": {
+        "team": "DAL",
+        "spread": 6,
+        "grade": "A+"
+      }
+    },
+    {
+      "game": "HOU@ATL",
+      "tip": "20:30",
+      "bets_k": 5.4,
+      "spread": [
+        {
+          "side": "HOU",
+          "line": 1.5,
+          "tickets_pct": 67,
+          "handle_pct": 57,
+          "odds": -117,
+          "asterisk": false,
+          "extreme": false,
+          "handle_minus_tickets": -10,
+          "contrarian_divergence": false
+        },
+        {
+          "side": "ATL",
+          "line": -1.5,
+          "tickets_pct": 33,
+          "handle_pct": 43,
+          "odds": -102,
+          "asterisk": false,
+          "extreme": false,
+          "handle_minus_tickets": 10,
+          "contrarian_divergence": false
+        }
+      ],
+      "total": [
+        {
+          "side": "Over",
+          "line": 227.5,
+          "tickets_pct": 90,
+          "handle_pct": 89,
+          "odds": -106,
+          "asterisk": true,
+          "extreme": true,
+          "handle_minus_tickets": -1,
+          "contrarian_divergence": false
+        },
+        {
+          "side": "Under",
+          "line": 227.5,
+          "tickets_pct": 10,
+          "handle_pct": 11,
+          "odds": -112,
+          "asterisk": false,
+          "extreme": false,
+          "handle_minus_tickets": 1,
+          "contrarian_divergence": false
+        }
+      ],
+      "ml": [
+        {
+          "side": "HOU",
+          "line": null,
+          "tickets_pct": 62,
+          "handle_pct": 73,
+          "odds": -106,
+          "asterisk": true,
+          "extreme": false,
+          "handle_minus_tickets": 11,
+          "contrarian_divergence": false
+        },
+        {
+          "side": "ATL",
+          "line": null,
+          "tickets_pct": 38,
+          "handle_pct": 27,
+          "odds": -109,
+          "asterisk": false,
+          "extreme": false,
+          "handle_minus_tickets": -11,
+          "contrarian_divergence": false
+        }
+      ],
+      "model": {
+        "team": "HOU",
+        "spread": 0.6,
+        "grade": "D+"
+      }
+    },
+    {
+      "game": "NOP@DEN",
+      "tip": "21:00",
+      "bets_k": 5.3,
+      "spread": [
+        {
+          "side": "NOP",
+          "line": 11.5,
+          "tickets_pct": 36,
+          "handle_pct": 45,
+          "odds": -114,
+          "asterisk": false,
+          "extreme": false,
+          "handle_minus_tickets": 9,
+          "contrarian_divergence": false
+        },
+        {
+          "side": "DEN",
+          "line": -11.5,
+          "tickets_pct": 64,
+          "handle_pct": 55,
+          "odds": -107,
+          "asterisk": false,
+          "extreme": false,
+          "handle_minus_tickets": -9,
+          "contrarian_divergence": false
+        }
+      ],
+      "total": [
+        {
+          "side": "Over",
+          "line": 239.5,
+          "tickets_pct": 58,
+          "handle_pct": 57,
+          "odds": -110,
+          "asterisk": false,
+          "extreme": false,
+          "handle_minus_tickets": -1,
+          "contrarian_divergence": false
+        },
+        {
+          "side": "Under",
+          "line": 239.5,
+          "tickets_pct": 42,
+          "handle_pct": 43,
+          "odds": -108,
+          "asterisk": false,
+          "extreme": false,
+          "handle_minus_tickets": 1,
+          "contrarian_divergence": false
+        }
+      ],
+      "ml": [
+        {
+          "side": "NOP",
+          "line": null,
+          "tickets_pct": 6,
+          "handle_pct": 5,
+          "odds": 375,
+          "asterisk": false,
+          "extreme": false,
+          "handle_minus_tickets": -1,
+          "contrarian_divergence": false
+        },
+        {
+          "side": "DEN",
+          "line": null,
+          "tickets_pct": 94,
+          "handle_pct": 95,
+          "odds": -500,
+          "asterisk": true,
+          "extreme": true,
+          "handle_minus_tickets": 1,
+          "contrarian_divergence": false
+        }
+      ],
+      "model": {
+        "team": "NOP",
+        "spread": 7.2,
+        "grade": "A"
+      }
+    },
+    {
+      "game": "GSW@PHX",
+      "tip": "22:00",
+      "bets_k": 4,
+      "spread": [
+        {
+          "side": "GSW",
+          "line": 9.5,
+          "tickets_pct": 67,
+          "handle_pct": 61,
+          "odds": -113,
+          "asterisk": false,
+          "extreme": false,
+          "handle_minus_tickets": -6,
+          "contrarian_divergence": false
+        },
+        {
+          "side": "PHX",
+          "line": -9.5,
+          "tickets_pct": 33,
+          "handle_pct": 39,
+          "odds": -106,
+          "asterisk": false,
+          "extreme": false,
+          "handle_minus_tickets": 6,
+          "contrarian_divergence": false
+        }
+      ],
+      "total": [
+        {
+          "side": "Over",
+          "line": 222.5,
+          "tickets_pct": 73,
+          "handle_pct": 77,
+          "odds": -105,
+          "asterisk": true,
+          "extreme": false,
+          "handle_minus_tickets": 4,
+          "contrarian_divergence": false
+        },
+        {
+          "side": "Under",
+          "line": 222.5,
+          "tickets_pct": 27,
+          "handle_pct": 23,
+          "odds": -115,
+          "asterisk": false,
+          "extreme": false,
+          "handle_minus_tickets": -4,
+          "contrarian_divergence": false
+        }
+      ],
+      "ml": [
+        {
+          "side": "GSW",
+          "line": null,
+          "tickets_pct": 32,
+          "handle_pct": 47,
+          "odds": 300,
+          "asterisk": false,
+          "extreme": false,
+          "handle_minus_tickets": 15,
+          "contrarian_divergence": false
+        },
+        {
+          "side": "PHX",
+          "line": null,
+          "tickets_pct": 68,
+          "handle_pct": 53,
+          "odds": -375,
+          "asterisk": false,
+          "extreme": false,
+          "handle_minus_tickets": -15,
+          "contrarian_divergence": false
+        }
+      ],
+      "model": {
+        "team": "GSW",
+        "spread": 4.6,
+        "grade": "A+"
+      }
+    }
+  ],
+  "observed_betcount_ranking": [
+    {
+      "game": "MIL@PHI",
+      "approx_bets": 9200
+    },
+    {
+      "game": "MIA@CHA",
+      "approx_bets": 7400
+    },
+    {
+      "game": "BKN@CLE",
+      "approx_bets": 6100
+    },
+    {
+      "game": "WAS@CHI",
+      "approx_bets": 5700
+    },
+    {
+      "game": "SAS@DAL",
+      "approx_bets": 5700
+    },
+    {
+      "game": "HOU@ATL",
+      "approx_bets": 5400
+    },
+    {
+      "game": "NOP@DEN",
+      "approx_bets": 5300
+    },
+    {
+      "game": "GSW@PHX",
+      "approx_bets": 4000
+    }
+  ],
+  "dollar_handle_rank": "UNKNOWN; videoonlypercentage distributions, no dollar totals",
+  "all_flagged": [
+    {
+      "game": "MIA@CHA",
+      "market": "spread",
+      "side": "MIA",
+      "line": -3.5,
+      "tickets_pct": 88,
+      "handle_pct": 90,
+      "odds": -108,
+      "asterisk": true,
+      "extreme": true,
+      "handle_minus_tickets": 2,
+      "contrarian_divergence": false
+    },
+    {
+      "game": "MIA@CHA",
+      "market": "total",
+      "side": "Over",
+      "line": 228,
+      "tickets_pct": 71,
+      "handle_pct": 70,
+      "odds": -110,
+      "asterisk": true,
+      "extreme": false,
+      "handle_minus_tickets": -1,
+      "contrarian_divergence": false
+    },
+    {
+      "game": "MIA@CHA",
+      "market": "ml",
+      "side": "MIA",
+      "line": null,
+      "tickets_pct": 89,
+      "handle_pct": 85,
+      "odds": -148,
+      "asterisk": true,
+      "extreme": true,
+      "handle_minus_tickets": -4,
+      "contrarian_divergence": false
+    },
+    {
+      "game": "MIL@PHI",
+      "market": "spread",
+      "side": "PHI",
+      "line": -12.5,
+      "tickets_pct": 77,
+      "handle_pct": 74,
+      "odds": -106,
+      "asterisk": true,
+      "extreme": false,
+      "handle_minus_tickets": -3,
+      "contrarian_divergence": false
+    },
+    {
+      "game": "MIL@PHI",
+      "market": "ml",
+      "side": "PHI",
+      "line": null,
+      "tickets_pct": 93,
+      "handle_pct": 89,
+      "odds": -600,
+      "asterisk": true,
+      "extreme": true,
+      "handle_minus_tickets": -4,
+      "contrarian_divergence": false
+    },
+    {
+      "game": "BKN@CLE",
+      "market": "spread",
+      "side": "CLE",
+      "line": -11.5,
+      "tickets_pct": 77,
+      "handle_pct": 85,
+      "odds": -106,
+      "asterisk": true,
+      "extreme": true,
+      "handle_minus_tickets": 8,
+      "contrarian_divergence": false
+    },
+    {
+      "game": "BKN@CLE",
+      "market": "ml",
+      "side": "CLE",
+      "line": null,
+      "tickets_pct": 94,
+      "handle_pct": 96,
+      "odds": -500,
+      "asterisk": true,
+      "extreme": true,
+      "handle_minus_tickets": 2,
+      "contrarian_divergence": false
+    },
+    {
+      "game": "WAS@CHI",
+      "market": "ml",
+      "side": "WAS",
+      "line": null,
+      "tickets_pct": 63,
+      "handle_pct": 73,
+      "odds": 105,
+      "asterisk": true,
+      "extreme": false,
+      "handle_minus_tickets": 10,
+      "contrarian_divergence": false
+    },
+    {
+      "game": "SAS@DAL",
+      "market": "total",
+      "side": "Over",
+      "line": 230,
+      "tickets_pct": 64,
+      "handle_pct": 71,
+      "odds": -107,
+      "asterisk": true,
+      "extreme": false,
+      "handle_minus_tickets": 7,
+      "contrarian_divergence": false
+    },
+    {
+      "game": "SAS@DAL",
+      "market": "ml",
+      "side": "SAS",
+      "line": null,
+      "tickets_pct": 88,
+      "handle_pct": 83,
+      "odds": -900,
+      "asterisk": true,
+      "extreme": true,
+      "handle_minus_tickets": -5,
+      "contrarian_divergence": false
+    },
+    {
+      "game": "HOU@ATL",
+      "market": "total",
+      "side": "Over",
+      "line": 227.5,
+      "tickets_pct": 90,
+      "handle_pct": 89,
+      "odds": -106,
+      "asterisk": true,
+      "extreme": true,
+      "handle_minus_tickets": -1,
+      "contrarian_divergence": false
+    },
+    {
+      "game": "HOU@ATL",
+      "market": "ml",
+      "side": "HOU",
+      "line": null,
+      "tickets_pct": 62,
+      "handle_pct": 73,
+      "odds": -106,
+      "asterisk": true,
+      "extreme": false,
+      "handle_minus_tickets": 11,
+      "contrarian_divergence": false
+    },
+    {
+      "game": "NOP@DEN",
+      "market": "ml",
+      "side": "DEN",
+      "line": null,
+      "tickets_pct": 94,
+      "handle_pct": 95,
+      "odds": -500,
+      "asterisk": true,
+      "extreme": true,
+      "handle_minus_tickets": 1,
+      "contrarian_divergence": false
+    },
+    {
+      "game": "GSW@PHX",
+      "market": "total",
+      "side": "Over",
+      "line": 222.5,
+      "tickets_pct": 73,
+      "handle_pct": 77,
+      "odds": -105,
+      "asterisk": true,
+      "extreme": false,
+      "handle_minus_tickets": 4,
+      "contrarian_divergence": false
+    }
+  ],
+  "contrarian_money_flags": "Noneofshownmarketssatisfy <=40%tickets, >=55%handle and >=15pointgap. GSWML32/47gap15 fails55handle. ATLspread33/43gap10fails; NOPspread36/45gap9fails. HOUUnder10/11 isagainstcrowd, notmoneydivergence.",
+  "micks_update": {
+    "leading_candidate": "AtlantaML",
+    "recorded_quote": -109,
+    "prior_quote": -115,
+    "score": 73,
+    "failure": 7,
+    "status": "PROVISIONAL; not officialuserbookoffer",
+    "cutoff": -120,
+    "official_units": 0,
+    "score_note": "Unchanged73: suppliedsplitsresolveuncertainty, notautomaticpointsbonus",
+    "new_exclusions": [
+      "WASML63%tickets73%money",
+      "HOUML62%tickets73%money",
+      "SASML88/83",
+      "CLEML94/96",
+      "PHIML93/89",
+      "DENML94/95",
+      "MIAML89/85",
+      "MIAOver71/70",
+      "SASOver64/71",
+      "GSWOver73/77"
+    ],
+    "WAS_spread": "69/68notflagged; MLasterisknottransferredtospread",
+    "MIL_under": "Recorded235not235.5: sevenpointUnder242, not242.5",
+    "BKN_side": "ActionA+supportsresearch, notautomaticMicksupgrade; pureMLexcludedCLEnotBKN"
+  },
+  "vegas": {
+    "VP6": {
+      "status": "RESEARCH DRAFT/HOLD; NOT QUALIFIED OR RELEASED",
+      "legs": [
+        {
+          "rank": 1,
+          "game": "HOU@ATL",
+          "pick": "Under",
+          "base": 227.5,
+          "adjustment": 7,
+          "teased": 234.5,
+          "tip": "20:30",
+          "tickets": 10,
+          "money": 11,
+          "reason": "Opposes publicOver; travel, minutes and VanVleet/Adamsout support deliberateoffense",
+          "failure": "Bothteams can scoreefficiently; no inventedsharp-moneyproof"
+        },
+        {
+          "rank": 2,
+          "game": "MIL@PHI",
+          "pick": "Milwaukee",
+          "base": 12.5,
+          "adjustment": 7,
+          "teased": 19.5,
+          "tip": "19:30",
+          "tickets": 23,
+          "money": 26,
+          "reason": "Actionfairspread7.7 and VSiNeffectivestrength support researching largecushion; LeBronout",
+          "failure": "MILweakdefense,B2B andPHItalent; ActiongradeisexternalnotMicks"
+        },
+        {
+          "rank": 3,
+          "game": "BKN@CLE",
+          "pick": "Brooklyn",
+          "base": 11.5,
+          "adjustment": 7,
+          "teased": 18.5,
+          "tip": "19:30",
+          "tickets": 23,
+          "money": 15,
+          "reason": "Actionfairspread6.6 supportsbigcushion againstpublicCLE",
+          "failure": "HandleleansCLEmorethantickets; potentialrunaway; notcontrarianmoneydivergence"
+        },
+        {
+          "rank": 4,
+          "game": "WAS@CHI",
+          "pick": "Washington",
+          "base": 1.5,
+          "adjustment": 7,
+          "teased": 8.5,
+          "tip": "20:00",
+          "tickets": 69,
+          "money": 68,
+          "reason": "Smallspread protectsclosegame; exactspread notflagged",
+          "failure": "Onepointbelowcrowdthreshold; travel and opposingCohenChicagoML"
+        },
+        {
+          "rank": 5,
+          "game": "NOP@DEN",
+          "pick": "NewOrleans",
+          "base": 11.5,
+          "adjustment": 7,
+          "teased": 18.5,
+          "tip": "21:00",
+          "tickets": 36,
+          "money": 45,
+          "reason": "Actionfairspread7.2 but Missiout requirescurrentrosterscenario",
+          "failure": "Missiout,NOPsecondroadnight,Denveraltitude andJokicblowouttail"
+        },
+        {
+          "rank": 6,
+          "game": "MIA@CHA",
+          "pick": "Under",
+          "base": 228,
+          "adjustment": 7,
+          "teased": 235,
+          "tip": "18:00",
+          "tickets": 29,
+          "money": 30,
+          "reason": "Charlottemissingcreators; separatefromheavilybackedMiami sideandOver",
+          "failure": "Weakestleg:Miami pace/defense andGiannisefficiency canraise scoring; notautomaticfade"
+        }
+      ],
+      "all_displayed_market_asterisk": false,
+      "score_status": "AllteasedmarketsUNGRADEDforprice: actualsixlegoffer,payoutandsettlementtermsnotshown",
+      "official_units": 0,
+      "weakest_leg": "MIA-CHAUnder235; no fillerlegdeclaredqualified",
+      "blocks": [
+        "Actualsevenpointproductofferandpayout",
+        "MainmarketquotesareActionconsensus, notuserbookexecution",
+        "Freshgame-dayhealth/rotationverification",
+        "Individualteasedmarketandjointticketfailureapproval"
+      ]
+    },
+    "VP10": {
+      "status": "NO QUALIFIED BUILD",
+      "reason": "8games;10legsrequiresverifiedsamegameeligibilityandcorrelation; missingproductoffer/terms; do notforcesharedlegs"
+    },
+    "over_scan": {
+      "NOPDEN": "Over239.5->232.5,58%tickets57%money; researchedalternative, notselected",
+      "MILPHI": "Over235->228,64/65; bothdefenses/tempo support butLeBronoutcounter",
+      "BKN_CLE": "Over228.5->221.5,67/63; read asalternative, noforcedselection",
+      "WAS_CHI": "Over244->237,51/52; read asalternative,travel/guidecounter",
+      "excluded_overs": [
+        "MIA",
+        "HOU",
+        "SAS",
+        "GSW"
+      ]
+    },
+    "overlap": "No placedtickets; hypotheticalHOUUnder correlatedwithATLMLstraight and bothdependHoustonoffensiveefficiency"
+  },
+  "publication": "No activewebsitecardswritten; no wagerplacement"
+}
