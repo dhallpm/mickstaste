@@ -264,8 +264,8 @@
       "bestNumber": "Over 3.5 assists at +128",
       "playableTo": "User-selected posting: Over 3.5 assists +128",
       "noBetCutoff": "Different line or price requires a fresh review; pregame posting only.",
-      "writeup": "LOSS — Desmond Bane recorded 2 assists in 33:07 against Atlanta on October 21, 2026, finishing below the 3.5-assist line. The pick was published at the user's direction for 2 units at +128. Wager acceptance was not confirmed, so no realized profit/loss is recorded.",
-      "fullAnalysis": "LOSS — Desmond Bane recorded 2 assists in 33:07 against Atlanta on October 21, 2026, finishing below the 3.5-assist line. The pick was published at the user's direction for 2 units at +128. Wager acceptance was not confirmed, so no realized profit/loss is recorded.\n\nSettlement: NBA.com box score. Result: 2 assists; Over 3.5 lost. Stake direction was 2 units, but no bookmaker receipt was supplied.",
+      "writeup": "LOSS — Confirmed 2-unit wager at +128. Desmond Bane recorded 2 assists in 33:07 against Atlanta on October 21, 2026, finishing below the 3.5-assist line. Settled result: -2.00 units.",
+      "fullAnalysis": "LOSS — Confirmed 2-unit wager at +128. Desmond Bane recorded 2 assists in 33:07 against Atlanta on October 21, 2026, finishing below the 3.5-assist line. Settled result: -2.00 units.\n\nSettlement: NBA.com box score. Wager acceptance confirmed by user.",
       "sourceVerification": "User BetRivers Delaware screenshot at 6:27 p.m. ET Oct.21: Over3.5 assists+128; official @OrlandoMagic starting lineup screenshot at6:34 p.m.; VSiN Oct.21 player props; StatMuse explicit2025–26 lineup-context table; NBA.com preseason game log.",
       "sourceUrls": [
         "https://vsin.com/nba/nba-player-props-today-top-picks-for-wednesday-october-21/",
@@ -278,9 +278,11 @@
       "Outcome": "Loss",
       "finalStat": "2 assists",
       "finalMinutes": "33:07",
-      "profitLoss": "Not recorded — wager acceptance not confirmed",
+      "profitLoss": "-2.00u",
       "settlementSource": "NBA.com official box score, 2026-10-21",
-      "settlementNotes": "Desmond Bane recorded 2 assists; Over 3.5 assists lost. User-directed 2-unit site selection; wager execution not confirmed."
+      "settlementNotes": "Confirmed wager. Desmond Bane recorded 2 assists; Over 3.5 assists lost. Settled result: -2.00 units.",
+      "wagerAccepted": "Confirmed by user",
+      "P/L": "-2.00u"
     }
   ],
   "watchlist": [
