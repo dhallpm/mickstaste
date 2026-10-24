@@ -1,0 +1,684 @@
+{
+  "run_date": "2026-10-24",
+  "timezone": "America/New_York",
+  "snapshot": "Afternoon rerun: NBAofficial15:00ET, BetRivers-labeled aggregator15:00ET; Actionreadabletoday without exactsnapshotstamp; CircaPDFfooter06:51timezoneunstated",
+  "scoring_version": "micks-110-v2-2026-09-29",
+  "factor_order": [
+    "matchup",
+    "price",
+    "personnel",
+    "situation",
+    "VSiN",
+    "Docs",
+    "market"
+  ],
+  "factor_max": [
+    35,
+    20,
+    15,
+    10,
+    10,
+    10,
+    10
+  ],
+  "failure_order": [
+    "severity",
+    "personnel",
+    "variance",
+    "price",
+    "contradiction"
+  ],
+  "consideration_floor": 71,
+  "failure_floor": 7,
+  "official_releases": 0,
+  "official_units": 0,
+  "candidates": [
+    {
+      "game": "HOU@ATL",
+      "tip": "20:30",
+      "pick": "Atlanta ML",
+      "line": null,
+      "odds": -115,
+      "score": [
+        25,
+        15,
+        12,
+        8,
+        8,
+        0,
+        5
+      ],
+      "failure": [
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      "status": "PROVISIONAL PLAY CANDIDATE; not released",
+      "best": "-111",
+      "cutoff": "-120; reassess worse",
+      "guide": [
+        13,
+        14,
+        24
+      ],
+      "why": [
+        "Atlanta perimeter defense attacks Houston's reduced setup options without Fred VanVleet.",
+        "Steven Adams out removes offensive-rebounding depth; Sheppard Q tested as in/out scenario, no assumed scratch.",
+        "Houston leaders played36-37 minutes versus Atlanta's lower starter load; bothB2B but unequal.",
+        "Guide Houston improvement explicitly depends on VanVleet/Adams; that premise is overridden tonight.",
+        "Cohen exact ML-111 supports; Doc Atlanta-1.5 only related side, zero exact ML points.",
+        "BetMGM51.9% model is contrary price evidence; DRatings56.3% supports; both outside forecasts, not Micks probability. Houston remains dangerous with Durant/Sengun."
+      ],
+      "blockers": [
+        "Direct current Delaware execution price unverified",
+        "ML ticket/handle unknown; spread splits cannot certify ML concentration"
+      ],
+      "units": 0,
+      "conditional_units": 0.5,
+      "score_total": 73,
+      "known_subtotal": 73,
+      "assessed_max": 110,
+      "failure_total": 7
+    },
+    {
+      "game": "MIL@PHI",
+      "tip": "19:30",
+      "pick": "Under235.5",
+      "odds": -114,
+      "score": [
+        24,
+        14,
+        11,
+        5,
+        7,
+        0,
+        5
+      ],
+      "failure": [
+        1,
+        2,
+        1,
+        1,
+        1
+      ],
+      "status": "LEAN; below71",
+      "guide": [
+        13,
+        30,
+        36
+      ],
+      "why": [
+        "LeBron out reduces one creator; two Makinen total estimates232.8/232.7 support, DRatings228.9 supporting.",
+        "Milwaukee second night; Philadelphia rested entering first night ofB2B.",
+        "Bucks early weak defense/transition and historicOver systems oppose; Doc Milwaukee side is not total confirmation."
+      ],
+      "blockers": [
+        "Score below71",
+        "Failure6 below7",
+        "Total splits unknown",
+        "Live offer not verified"
+      ],
+      "units": 0,
+      "score_total": 66,
+      "known_subtotal": 66,
+      "assessed_max": 110,
+      "failure_total": 6
+    },
+    {
+      "game": "WAS@CHI",
+      "tip": "20:00",
+      "pick": "Washington+2.5",
+      "odds": -108,
+      "score": [
+        23,
+        14,
+        9,
+        3,
+        3,
+        6,
+        5
+      ],
+      "failure": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "status": "LEAN; below71",
+      "guide": [
+        13,
+        18,
+        43
+      ],
+      "why": [
+        "Prefer points to early ML; Action price comparator+2.5 while BetRivers-labeled snapshot+1.5.",
+        "Washington creation/frontcourt versus Claxton-out Chicago; Dybantsa remainsout.",
+        "Doc Washington-1.5 supports direction at a better current spread, but stats omit Friday.",
+        "Cohen BullsML and actual rest/travel counter; article BetLabs ML favorite-price filter cannot be transferred to current underdogML.",
+        "DRatings Washington51.3% supports modestly, not a decisive edge."
+      ],
+      "blockers": [
+        "Score63; Failure5",
+        "69% spreadtickets near70 threshold; moneyunknown",
+        "Exact+2.5 book/jurisdiction offer not verified"
+      ],
+      "units": 0,
+      "score_total": 63,
+      "known_subtotal": 63,
+      "assessed_max": 110,
+      "failure_total": 5
+    },
+    {
+      "game": "MIA@CHA",
+      "tip": "18:00",
+      "pick": "PASS Charlotte+3.5",
+      "odds": -117,
+      "score": [
+        17,
+        12,
+        3,
+        4,
+        6,
+        0,
+        5
+      ],
+      "failure": [
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "status": "PASS",
+      "guide": [
+        13,
+        17,
+        29
+      ],
+      "why": [
+        "Opposing heavily backed Miami is research only; White/Knueppel out weaken Charlotte creation.",
+        "Miami guide13-4B2B ATS is old-roster prior; current bothB2B.",
+        "DRatings Miami3.3 margin does not establish an underdogedge; no automatic contrarian pick."
+      ],
+      "units": 0,
+      "score_total": 47,
+      "known_subtotal": 47,
+      "assessed_max": 110,
+      "failure_total": 2
+    },
+    {
+      "game": "BKN@CLE",
+      "tip": "19:30",
+      "pick": "PASS Under228.5",
+      "odds": -110,
+      "score": [
+        18,
+        7,
+        8,
+        4,
+        3,
+        0,
+        5
+      ],
+      "failure": [
+        1,
+        2,
+        1,
+        0,
+        0
+      ],
+      "status": "PASS AT CURRENT NUMBER",
+      "guide": [
+        13,
+        16,
+        19
+      ],
+      "why": [
+        "Earlier231.5 no longer current; current DRatings228.5 offers no model cushion.",
+        "VSiN headtoheadUnder clashes with conference double-digit favoriteOver system.",
+        "Cleveland77%spreadtickets excludes Clevelandspread selection, not total automatically."
+      ],
+      "units": 0,
+      "score_total": 45,
+      "known_subtotal": 45,
+      "assessed_max": 110,
+      "failure_total": 4
+    },
+    {
+      "game": "NOP@DEN",
+      "tip": "21:00",
+      "pick": "PASS Over239.5",
+      "odds": -110,
+      "score": [
+        20,
+        9,
+        8,
+        5,
+        4,
+        0,
+        5
+      ],
+      "failure": [
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "status": "PASS STRAIGHT; teasedOver research only",
+      "guide": [
+        13,
+        21,
+        32
+      ],
+      "why": [
+        "Missi out helps Denver interior offense, but mayhurt NOPrebounding/possession and Denver wings absent.",
+        "DRatings238.9 vs239.5 no clear Overedge; Makinen bettors242.1 supports only modestly.",
+        "Jokic rebound prop researched separately; not an automatic NOP/DENside pick."
+      ],
+      "units": 0,
+      "score_total": 51,
+      "known_subtotal": 51,
+      "assessed_max": 110,
+      "failure_total": 3
+    },
+    {
+      "game": "SAS@DAL",
+      "tip": "20:00",
+      "pick": "HOLD Under230.5",
+      "odds": -108,
+      "score": [
+        19,
+        7,
+        null,
+        3,
+        5,
+        0,
+        5
+      ],
+      "failure": [
+        1,
+        null,
+        1,
+        0,
+        0
+      ],
+      "status": "UNGRADED",
+      "guide": [
+        13,
+        20,
+        40
+      ],
+      "why": [
+        "Flagg/Lively out; Irving,Christie,Risacher Q materially change creation and blowout risk.",
+        "Guide Dallascreation premise partiallyoverridden; old Doc Dallas+9.5 before injury notusable directconfirmation.",
+        "DRatings233.7 opposes Under; teaser Under237.5 would be different market and needs separateprice."
+      ],
+      "units": 0,
+      "score_total": null,
+      "known_subtotal": 39,
+      "assessed_max": 95,
+      "failure_total": null
+    },
+    {
+      "game": "GSW@PHX",
+      "tip": "22:00",
+      "pick": "HOLD Under222.5",
+      "odds": -106,
+      "score": [
+        20,
+        12,
+        null,
+        6,
+        2,
+        0,
+        5
+      ],
+      "failure": [
+        1,
+        null,
+        1,
+        1,
+        0
+      ],
+      "status": "UNGRADED",
+      "guide": [
+        13,
+        23,
+        37
+      ],
+      "why": [
+        "GSW officialreport still unsubmitted at3PM; Phoenix Williamsout,Ighodarodoubtful,KennardQ.",
+        "DRatings219.9 supportsUnder, VSiN scheduling/bettorsOver conflict.",
+        "Do not assume Curry/Green/Horford availability or limits from Friday."
+      ],
+      "units": 0,
+      "score_total": null,
+      "known_subtotal": 45,
+      "assessed_max": 95,
+      "failure_total": null
+    }
+  ],
+  "vegas": {
+    "point_adjustment": 7,
+    "VP6": "NO QUALIFIED BUILD; first3researchtargets+borderline remainder notenough independent qualifiedlegs; exactoffer/payout/publicchecks incomplete",
+    "VP10": "NO QUALIFIED BUILD;8games,10requiresconfirmedmultiplelegs/eventandproducteligibility; genericDErules2-8events conflict with previous10-legproductscreen, do notassertneverpossible",
+    "research_screen": [
+      {
+        "rank": 1,
+        "game": "HOU@ATL",
+        "market": "Under",
+        "base": 227.5,
+        "adjustment": 7,
+        "threshold": 234.5,
+        "tip": "20:30",
+        "state": "RESEARCH TARGET; material in/out Sheppard scenario; total splits current unknown"
+      },
+      {
+        "rank": 2,
+        "game": "MIL@PHI",
+        "market": "Under",
+        "base": 235.5,
+        "adjustment": 7,
+        "threshold": 242.5,
+        "tip": "19:30",
+        "state": "RESEARCH TARGET; LeBron out; not same market as public-heavyPHIspread"
+      },
+      {
+        "rank": 3,
+        "game": "WAS@CHI",
+        "market": "Washington",
+        "base": 1.5,
+        "adjustment": 7,
+        "threshold": 8.5,
+        "tip": "20:00",
+        "state": "RESEARCH TARGET;69%spreadtickets,handleunknown; do not use+9.5 from differentbasewithoutoffer"
+      },
+      {
+        "rank": 4,
+        "game": "BKN@CLE",
+        "market": "Under",
+        "base": 228.5,
+        "adjustment": 7,
+        "threshold": 235.5,
+        "tip": "19:30",
+        "state": "BORDERLINE; no straightedgeafter3pointdrop; current totalsplitsunknown"
+      },
+      {
+        "rank": 5,
+        "game": "MIA@CHA",
+        "market": "Charlotte",
+        "base": 3.5,
+        "adjustment": 7,
+        "threshold": 10.5,
+        "tip": "18:00",
+        "state": "SCREENED OUT; missingcreators and failurepath; Miami crowd doesnotcreateCHAedge"
+      },
+      {
+        "rank": 6,
+        "game": "NOP@DEN",
+        "market": "Over",
+        "base": 239.5,
+        "adjustment": 7,
+        "threshold": 232.5,
+        "tip": "21:00",
+        "state": "BORDERLINE; Missiout vsDENwingabsences, not forcedtofillticket"
+      }
+    ],
+    "teaser_scores": "UNGRADED; actualticketpayout/offerprice null; straight scores not transferred",
+    "alternative_HOUATL": "Atlanta-1.5 Circa reference ->+5.5 with7; BRlabeled+0.5 ->+7.5; verifyactualbase. Alternative to Under, not additionallegwithoutcorrelation/eligibility",
+    "overlap": "No finaltickets; HOUATLside andtotal correlated. No duplicate insertion toreach10",
+    "stake": "No bet; earlier2udefault not released"
+  },
+  "splits": {
+    "scope": "ActionNetworkspreadsample,notmarketwide; no transfer toML/totals",
+    "rows": [
+      [
+        "MIA",
+        88,
+        90,
+        7280,
+        "EXTREME*"
+      ],
+      [
+        "CHA",
+        12,
+        10,
+        7280,
+        "opposingcrowdonly"
+      ],
+      [
+        "PHI",
+        77,
+        null,
+        null,
+        "PUBLIC*"
+      ],
+      [
+        "CLE",
+        77,
+        null,
+        null,
+        "PUBLIC*"
+      ],
+      [
+        "GSW",
+        67,
+        61,
+        3948,
+        "below70observed"
+      ],
+      [
+        "PHX",
+        33,
+        39,
+        3948,
+        "below70observed"
+      ],
+      [
+        "WAS",
+        69,
+        null,
+        null,
+        "near70"
+      ],
+      [
+        "CHI",
+        31,
+        null,
+        null,
+        "moneyunknown"
+      ],
+      [
+        "SAS",
+        47,
+        null,
+        null,
+        "moneyunknown"
+      ],
+      [
+        "DAL",
+        53,
+        null,
+        null,
+        "moneyunknown"
+      ],
+      [
+        "HOU",
+        67,
+        null,
+        null,
+        "moneyunknown"
+      ],
+      [
+        "ATL",
+        33,
+        null,
+        null,
+        "ticketcontrarianonly"
+      ],
+      [
+        "NOP",
+        36,
+        null,
+        null,
+        "moneyunknown"
+      ],
+      [
+        "DEN",
+        64,
+        null,
+        null,
+        "moneyunknown"
+      ]
+    ],
+    "observed_count_ranking": [
+      "MIA-CHA7280",
+      "GSW-PHX3948"
+    ],
+    "dollar_handle_ranking": "UNAVAILABLE; percentages/counts not dollars; cannotcertify>$50k",
+    "total_reported_article": "ActionBetLabs article13:40ETstaff reports roughly90% tickets/money HOUATLOver, Under227.5-105; attributedhistoricalsnapshot notlatestreadabletotalstable",
+    "contrarian": "ATLticketcontrarian; Cohenreports reverse move from+1.5to-1.5, not direct verifiedsamebookseries; moneygapflagcannotbecertified",
+    "excluded": [
+      "Miami spread*",
+      "Cleveland spread*",
+      "Philadelphia spread*",
+      "HOUATLOver*:article-reported90%"
+    ],
+    "unknown": "Moneylineconcentration, mosttotalsandhandlecounts unavailable; no flag-freecertification"
+  },
+  "schedule": {
+    "second_night": [
+      "MIA",
+      "CHA",
+      "MIL",
+      "WAS",
+      "CHI",
+      "SAS",
+      "DAL",
+      "HOU",
+      "ATL",
+      "NOP",
+      "GSW"
+    ],
+    "first_night": [
+      "BKN",
+      "PHI"
+    ],
+    "rested_nonb2b": [
+      "CLE",
+      "DEN",
+      "PHX"
+    ],
+    "HOUATL": "Houston A-A Austin->Atlanta, core36-37MIN; Atlanta A-H Charlotte->Atlanta, starmax29MIN; bothfatiguedunequally"
+  },
+  "ATS": {
+    "scope": "2026-27currentseason",
+    "five_plus": "NONE; insufficient1-2games",
+    "cover2": [
+      "PHI",
+      "ATL",
+      "HOU"
+    ],
+    "miss2": [
+      "MIA",
+      "MIL",
+      "SAS",
+      "GSW"
+    ],
+    "mixed1and1": [
+      "CHA",
+      "WAS",
+      "CHI",
+      "DAL",
+      "NOP"
+    ],
+    "miss1": [
+      "BKN",
+      "CLE",
+      "DEN",
+      "PHX"
+    ],
+    "carryover": "UNKNOWN; no unsupported5+claim"
+  },
+  "props": [
+    {
+      "pick": "Jokic Over12.5REB",
+      "article_odds": -120,
+      "author": "JoeDelleraActionOct24",
+      "tip": "21:00",
+      "status": "WATCH/UNGRADED; missing independent datedthresholddistribution/currentoffer",
+      "why": "Missiout and NOPB2B supportopportunity; opening7rebounds and blowoutcounter; no inferredhitrate"
+    },
+    {
+      "pick": "Maxey Over5.5AST",
+      "article_odds": -135,
+      "author": "JoeDelleraActionOct24",
+      "tip": "19:30",
+      "status": "WATCH/UNGRADED",
+      "why": "LeBronout supportsballhandling; recipientfinishing and earlyblowout risk; historicaldouble-digitspreadaverage not distribution"
+    },
+    {
+      "pick": "Harper Over4.5REB",
+      "article_odds": -114,
+      "author": "ActionStaffOct24",
+      "tip": "20:00",
+      "status": "WATCH/UNGRADED",
+      "why": "Actionprojection6.34, ownnotadopted; verifiedfirst2samples7and3 notstablehitrate; DallasrotationQ andB2B"
+    }
+  ],
+  "additional_cappers": {
+    "Cohen": [
+      "ATLML-111",
+      "CHIML-115",
+      "KeonEllisOver1.5threes+170",
+      "JamalMurrayOver35.5PRA-105; wrongeventsubheading, no execution",
+      "HeatAlt+8.5/SunsMLparlay-156"
+    ],
+    "Docs": [
+      "ParlaysPunditATL-1.5",
+      "JoshSchonwaldMIL(sidepriceunstated)",
+      "TonySinkWAS-1.5",
+      "JoshSchonwaldNOP+11.5",
+      "TonySinkMiami(side)",
+      "GuyBruhnCLE-10.5",
+      "GuyBruhnDAL+9.5",
+      "TonySinkPHX(side)"
+    ],
+    "Docs_status": "Oct23opinionsforOct24, moststats pre-Friday; staleinjuryassumptions limitweight; all4requiredrouteschecked;AI-v3/video no currentselectionread",
+    "Action_staff": [
+      "NazReidOver20.5PA-125",
+      "MaxeyOver5.5AST-135",
+      "WASML-116",
+      "JokicOver12.5REB-120",
+      "HOUATLUnder227.5-105"
+    ]
+  },
+  "source_gaps": {
+    "Circa": "PDFvisuallyread SatOct24 updated06:51; notlive",
+    "VSiN": "CurrentNBAarticlesread; rawDK/Circasplitsnotexposed; no paidOptaallplayersclaim",
+    "SportsReference": "403",
+    "StatMuse": "last10Maxey cachedApril/May not current",
+    "Firecrawl": "Previouslyexhaustedcreditroute inthisconversation;webfallback",
+    "guide": "Originalteam/ratingspagesused; ATL14HOU24 refreshed, PHI36DEN21MIL30NOP32CHA17 refreshed; previouslyreadothersretained; no newprobabilityprerequisite",
+    "SilverBulletin": "Longhorizonpriorloaded, notdailyspread",
+    "FantasyLife": "FootballN/A",
+    "otherfeed_inventory": "No activeauthenticatedOpticOdds/SharpAPIfeed established; notclaimedread"
+  },
+  "publication": "Researcharchive only; no activewebsitecardsor wagers placed",
+  "sources": [
+    "https://official.nba.com/nba-injury-report-2026-27-season/",
+    "https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-10-24_03_00PM.pdf",
+    "https://agentbets.ai/odds/betrivers/nba",
+    "https://www.actionnetwork.com/nba/public-betting",
+    "https://vsin.com/nba/nba-predictions-today-best-bets-and-player-props-for-saturday-october-24/",
+    "https://vsin.com/nba/steve-makinens-nba-betting-trends-and-best-bets-for-saturday-october-24/",
+    "https://www.docsports.com/free-picks/nba/",
+    "https://www.dratings.com/predictor/nba-basketball-predictions/",
+    "https://sports.betmgm.com/en/blog/nba/rockets-hawks-prediction-odds-lines-picks-nba-oct-24-jaa/",
+    "https://www.delottery.com/Sports-Lottery/Full-Scale-Sports-Wagering"
+  ]
+}
