@@ -1,0 +1,497 @@
+{
+  "run_date": "2026-10-24",
+  "as_of": "2026-10-24T04:25:00-04:00",
+  "timezone": "America/New_York",
+  "mode": "EARLY NBA MICKS; Vegas deferred by user; no publication",
+  "scoring_version": "micks-110-v2-2026-09-29",
+  "threshold_considered": 71,
+  "official_units": 0,
+  "candidates": [
+    {
+      "game": "MIA@CHA",
+      "time": "18:00",
+      "b2b": {
+        "MIA": "SECOND H-A",
+        "CHA": "SECOND H-H"
+      },
+      "ats": {
+        "MIA": "0-2-0",
+        "CHA": "1-1-0"
+      },
+      "selection": "PASS Miami -162",
+      "f": [
+        15,
+        6,
+        null,
+        3,
+        0,
+        4,
+        4
+      ],
+      "failure": [
+        0,
+        null,
+        0,
+        0,
+        0
+      ],
+      "risk": "Both B2B; unresolved current availability; new-roster guide premise and first-two-game performance conflict; short-priced road favorite lacks enough support.",
+      "factor_order": [
+        "matchup",
+        "price",
+        "personnel",
+        "situation",
+        "vsin",
+        "docs",
+        "market"
+      ],
+      "factor_maxima": [
+        35,
+        20,
+        15,
+        10,
+        10,
+        10,
+        10
+      ],
+      "score": null,
+      "score_status": "UNGRADED",
+      "known_subtotal": 32,
+      "assessed_maximum": 95,
+      "failure_score": null,
+      "current_season_five_plus_flag": "NONE; fewer than5 games",
+      "carryover_streak": "UNKNOWN unless last2 mixed; not asserted clear",
+      "units": 0
+    },
+    {
+      "game": "BKN@CLE",
+      "time": "19:30",
+      "b2b": {
+        "BKN": "FIRST (IND@BKN Oct25)",
+        "CLE": "NO"
+      },
+      "ats": {
+        "BKN": "0-1-0",
+        "CLE": "0-1-0"
+      },
+      "selection": "WATCH Under 231.5 -113",
+      "f": [
+        20,
+        12,
+        8,
+        4,
+        0,
+        0,
+        4
+      ],
+      "failure": [
+        1,
+        2,
+        1,
+        1,
+        0
+      ],
+      "risk": "Rested entering today; core starters not flagged on official report. DRatings226 supporting only with stale records; Cavaliers creation, shooting and late scoring remain countercase. No qualifying71+ score.",
+      "factor_order": [
+        "matchup",
+        "price",
+        "personnel",
+        "situation",
+        "vsin",
+        "docs",
+        "market"
+      ],
+      "factor_maxima": [
+        35,
+        20,
+        15,
+        10,
+        10,
+        10,
+        10
+      ],
+      "score": 48,
+      "score_status": "PROVISIONAL",
+      "known_subtotal": 48,
+      "assessed_maximum": 110,
+      "failure_score": 5,
+      "current_season_five_plus_flag": "NONE; fewer than5 games",
+      "carryover_streak": "UNKNOWN unless last2 mixed; not asserted clear",
+      "units": 0
+    },
+    {
+      "game": "MIL@PHI",
+      "time": "19:30",
+      "b2b": {
+        "MIL": "SECOND H-A",
+        "PHI": "FIRST (DET@PHI Oct25)"
+      },
+      "ats": {
+        "MIL": "0-2-0",
+        "PHI": "2-0-0"
+      },
+      "selection": "WATCH Bucks +12.5 at -110 or better (comparison quote)",
+      "f": [
+        19,
+        12,
+        null,
+        2,
+        0,
+        5,
+        4
+      ],
+      "failure": [
+        1,
+        null,
+        1,
+        1,
+        0
+      ],
+      "risk": "MIL personnel report pending, LeBron questionable; Milwaukee fatigue vs rested hosts. Doc Josh Schonwald Milwaukee agrees but does not supply a verified executable book price.",
+      "factor_order": [
+        "matchup",
+        "price",
+        "personnel",
+        "situation",
+        "vsin",
+        "docs",
+        "market"
+      ],
+      "factor_maxima": [
+        35,
+        20,
+        15,
+        10,
+        10,
+        10,
+        10
+      ],
+      "score": null,
+      "score_status": "UNGRADED",
+      "known_subtotal": 42,
+      "assessed_maximum": 95,
+      "failure_score": null,
+      "current_season_five_plus_flag": "NONE; fewer than5 games",
+      "carryover_streak": "UNKNOWN unless last2 mixed; not asserted clear",
+      "units": 0
+    },
+    {
+      "game": "WAS@CHI",
+      "time": "20:00",
+      "b2b": {
+        "WAS": "SECOND H-A",
+        "CHI": "SECOND A-H"
+      },
+      "ats": {
+        "WAS": "1-1-0",
+        "CHI": "1-1-0"
+      },
+      "selection": "WATCH Wizards ML -117",
+      "f": [
+        23,
+        12,
+        null,
+        4,
+        0,
+        5,
+        4
+      ],
+      "failure": [
+        1,
+        null,
+        1,
+        1,
+        1
+      ],
+      "risk": "TR strength edge and Doc Tony Sink Washington opinion; Doc -1.5 is related side support rather than exact ML agreement. DRatings Chicago51% contradicts Dimers Washington56.7%; current material availability unknown.",
+      "factor_order": [
+        "matchup",
+        "price",
+        "personnel",
+        "situation",
+        "vsin",
+        "docs",
+        "market"
+      ],
+      "factor_maxima": [
+        35,
+        20,
+        15,
+        10,
+        10,
+        10,
+        10
+      ],
+      "score": null,
+      "score_status": "UNGRADED",
+      "known_subtotal": 48,
+      "assessed_maximum": 95,
+      "failure_score": null,
+      "current_season_five_plus_flag": "NONE; fewer than5 games",
+      "carryover_streak": "UNKNOWN unless last2 mixed; not asserted clear",
+      "units": 0
+    },
+    {
+      "game": "SAS@DAL",
+      "time": "20:00",
+      "b2b": {
+        "SAS": "SECOND H-A",
+        "DAL": "SECOND A-H"
+      },
+      "ats": {
+        "SAS": "0-2-0",
+        "DAL": "1-1-0"
+      },
+      "selection": "HOLD Dallas +11.5 -108",
+      "f": [
+        18,
+        13,
+        null,
+        3,
+        0,
+        3,
+        4
+      ],
+      "failure": [
+        1,
+        null,
+        1,
+        1,
+        0
+      ],
+      "risk": "Flagg shoulder injury unresolved. Doc Guy Bruhn Dallas+9.5 rationale predates injury. Do not chase SAS -12.5 just because Dallas weakened.",
+      "factor_order": [
+        "matchup",
+        "price",
+        "personnel",
+        "situation",
+        "vsin",
+        "docs",
+        "market"
+      ],
+      "factor_maxima": [
+        35,
+        20,
+        15,
+        10,
+        10,
+        10,
+        10
+      ],
+      "score": null,
+      "score_status": "UNGRADED",
+      "known_subtotal": 41,
+      "assessed_maximum": 95,
+      "failure_score": null,
+      "current_season_five_plus_flag": "NONE; fewer than5 games",
+      "carryover_streak": "UNKNOWN unless last2 mixed; not asserted clear",
+      "units": 0
+    },
+    {
+      "game": "HOU@ATL",
+      "time": "20:30",
+      "b2b": {
+        "HOU": "SECOND A-A",
+        "ATL": "SECOND A-H"
+      },
+      "ats": {
+        "HOU": "2-0-0",
+        "ATL": "2-0-0"
+      },
+      "selection": "WATCH Under 230.5 -108",
+      "f": [
+        24,
+        13,
+        null,
+        5,
+        7,
+        0,
+        4
+      ],
+      "failure": [
+        1,
+        null,
+        1,
+        1,
+        1
+      ],
+      "risk": "VSiN48-27 historical Under exact schedule bucket; Houston organized halfcourt and Atlanta perimeter defense guide paths. Both have scored strongly early; transition, threes, free throws/OT countercase. No automatic fatigue Under.",
+      "factor_order": [
+        "matchup",
+        "price",
+        "personnel",
+        "situation",
+        "vsin",
+        "docs",
+        "market"
+      ],
+      "factor_maxima": [
+        35,
+        20,
+        15,
+        10,
+        10,
+        10,
+        10
+      ],
+      "score": null,
+      "score_status": "UNGRADED",
+      "known_subtotal": 53,
+      "assessed_maximum": 95,
+      "failure_score": null,
+      "current_season_five_plus_flag": "NONE; fewer than5 games",
+      "carryover_streak": "UNKNOWN unless last2 mixed; not asserted clear",
+      "units": 0
+    },
+    {
+      "game": "NOP@DEN",
+      "time": "21:00",
+      "b2b": {
+        "NOP": "SECOND A-A",
+        "DEN": "NO"
+      },
+      "ats": {
+        "NOP": "1-1-0",
+        "DEN": "0-1-0"
+      },
+      "selection": "HOLD Pelicans +11.5 (price not verified)",
+      "f": [
+        18,
+        null,
+        null,
+        2,
+        0,
+        3,
+        4
+      ],
+      "failure": [
+        1,
+        null,
+        1,
+        null,
+        0
+      ],
+      "risk": "Yves Missi knee injury and Denver wing absences materially affect direction; Doc Josh Schonwald NOP+11.5 predates Missi injury. DRatings241 vs market237.5 not enough for Over release.",
+      "factor_order": [
+        "matchup",
+        "price",
+        "personnel",
+        "situation",
+        "vsin",
+        "docs",
+        "market"
+      ],
+      "factor_maxima": [
+        35,
+        20,
+        15,
+        10,
+        10,
+        10,
+        10
+      ],
+      "score": null,
+      "score_status": "UNGRADED",
+      "known_subtotal": 27,
+      "assessed_maximum": 75,
+      "failure_score": null,
+      "current_season_five_plus_flag": "NONE; fewer than5 games",
+      "carryover_streak": "UNKNOWN unless last2 mixed; not asserted clear",
+      "units": 0
+    },
+    {
+      "game": "GSW@PHX",
+      "time": "22:00",
+      "b2b": {
+        "GSW": "SECOND H-A",
+        "PHX": "NO"
+      },
+      "ats": {
+        "GSW": "0-2-0",
+        "PHX": "0-1-0"
+      },
+      "selection": "PASS Phoenix -8.5 -143",
+      "f": [
+        17,
+        4,
+        null,
+        5,
+        0,
+        4,
+        4
+      ],
+      "failure": [
+        0,
+        null,
+        1,
+        0,
+        0
+      ],
+      "risk": "Golden State B2B/rest decisions unresolved; Phoenix Mark Williams out, Kennard questionable. Excessive displayed spread juice; Doc Tony Sink Phoenix direction alone insufficient.",
+      "factor_order": [
+        "matchup",
+        "price",
+        "personnel",
+        "situation",
+        "vsin",
+        "docs",
+        "market"
+      ],
+      "factor_maxima": [
+        35,
+        20,
+        15,
+        10,
+        10,
+        10,
+        10
+      ],
+      "score": null,
+      "score_status": "UNGRADED",
+      "known_subtotal": 34,
+      "assessed_maximum": 95,
+      "failure_score": null,
+      "current_season_five_plus_flag": "NONE; fewer than5 games",
+      "carryover_streak": "UNKNOWN unless last2 mixed; not asserted clear",
+      "units": 0
+    }
+  ],
+  "ranking": [
+    "HOU@ATL Under",
+    "WAS@CHI WashingtonML",
+    "BKN@CLE Under",
+    "MIL@PHI Milwaukee+12.5"
+  ],
+  "quote_note": "BetRivers-labeled secondary aggregation timestamp02:00ET; not direct Delaware execution evidence. VSiN line differences are cross-source comparisons, not verified same-book movement.",
+  "sources": {
+    "official_injury": "NBA03:45AM report",
+    "guides": "Original VSiN pages13 and16,17,18,19,20,21,23,24,29,30,32,34,36,37,40,43 read; guide priors reconciled against roster/injury updates",
+    "VSiN": "Dated Oct24 games current; October20 scheduling article names HOUATLUnder; daily power projections staleOct23 or paid hidden; Opta individual props unavailable",
+    "Docs": "All4 required routes checked;8 free preview selections read; video current NBA not retrieved; AI-v3 selection hidden; preview statistics largely pre-Friday",
+    "Circa": "No Oct24 Dropbox sheet found; Oct23 not substituted",
+    "Action": "Odds403; splits deferred by user; prop pages prior-night/wrong-game excluded",
+    "TeamRankings": "Current predictive ratings and ATS aggregate checked; carryover game-by-game closing lines unverified",
+    "DRatings": "Date-correct projections but stale records, supporting only",
+    "Dimers": "Oct24bestbets; exchange prices not treated as BetRivers odds; article QC issue on Nets entry",
+    "StatMuse": "Returned2025-26 logs; not current prop confirmation",
+    "SportsReference": "403",
+    "Firecrawl": "Previously exhaustedcredits, fallbackweb",
+    "SilverBulletin": "Longhorizon prior supporting only",
+    "FantasyLife": "Football guide N/A NBA"
+  },
+  "props": {
+    "status": "UNGRADED; no date/opponent-correct usable current prop quotes",
+    "watch": [
+      "Wembanyama rebounds:13 in each first2 verified Spurs games; two-game sample; B2B minutes needed",
+      "Jokic assists: validate recipient availability with Denver wing injuries",
+      "Derik Queen rebounds/PRA: only reassess if Missi absence and Queen role confirmed"
+    ]
+  },
+  "other_lanes": {
+    "pick_of_day": "NONE",
+    "parlays": "NO RELEASE; no qualifying legs",
+    "longshots": "PASS",
+    "futures": "No fresh fully priced assessment; no release",
+    "replica": "UNGRADED; core personnel/execution evidence unresolved"
+  }
+}
