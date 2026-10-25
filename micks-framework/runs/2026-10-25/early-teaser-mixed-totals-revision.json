@@ -1,0 +1,3082 @@
+{
+  "date": "2026-10-25",
+  "researchAsOf": "2026-10-25T10:25:00-04:00",
+  "scope": "Seven Sunday1pm NFL games only",
+  "status": "INCOMPLETE_RESEARCH_DRAFT_NO_OFFICIAL_BET",
+  "requestedTickets": 4,
+  "interpretation": "Four10-selection Big Teaser drafts; totals as needed on all4. Seven1pm games and max2same-team-side appearances require at least26total slots across40selections. Earlier four-leg constructions superseded.",
+  "sourceCard": "https://delotterywebcontent.blob.core.windows.net/delottery-site-assets/assets/sports/d0372543-bf9a-4872-9efd-8fda74286453_Delaware%20-%20Big%20Teaser%2010.22.2026.pdf",
+  "plannedUnits": 8,
+  "officialUnits": 0,
+  "candidates": [
+    {
+      "number": 113,
+      "game": "Indianapolis Colts at Minnesota Vikings",
+      "time": "2026-10-25T13:00:00-04:00",
+      "gameKey": "MIN",
+      "selection": "Minnesota Vikings",
+      "line": 1.5,
+      "type": "side",
+      "rationale": "Minnesota's defense and healthy starting lineup against Indianapolis without Warren and Gardner; risk is Minnesota's inconsistent scoring and Colts backdoor.",
+      "cross": "VSiN Cohen Vikings ML parlay and Makinen MIN -6.5 support direction; Tuley and Doc's Guy Bruhn Colts +6.5 oppose. FL Oct22 MIN24-IND16 is an outside dated forecast.",
+      "status": "HOLD",
+      "scoreStatus": "UNGRADED",
+      "score": null,
+      "grade": null,
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "factorMaximums": [
+        35,
+        20,
+        15,
+        10,
+        10,
+        10,
+        10
+      ],
+      "factors": {
+        "matchup": null,
+        "price": null,
+        "personnel": null,
+        "situation": null,
+        "vsin": null,
+        "docs": null,
+        "market": null
+      },
+      "failureDimensions": {
+        "failurePathSeverity": null,
+        "personnelResilience": null,
+        "scriptVariance": null,
+        "priceProtection": null,
+        "contradictionResolution": null
+      },
+      "failureScore": null,
+      "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+      "releaseBlockers": [
+        "Final health/role and current usage reconciliation incomplete",
+        "Current retail acceptance not verified",
+        "Market-specific crowd exclusions not verified"
+      ],
+      "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+    },
+    {
+      "number": 118,
+      "game": "Cleveland Browns at Tennessee Titans",
+      "time": "2026-10-25T13:00:00-04:00",
+      "gameKey": "CLE",
+      "selection": "Tennessee Titans",
+      "line": 9.5,
+      "type": "side",
+      "rationale": "Home underdog gets more than one score in a matchup between limited offenses; risk is Tennessee turnovers or protection collapse.",
+      "cross": "VSiN Tuley TEN+9 teaser, Doc's Parlays Pundit TEN+1.5, Action Stuckey TEN+1.5; Cohen CLE ML opposes direction. FL Oct22 TEN19-CLE18.",
+      "status": "HOLD",
+      "scoreStatus": "UNGRADED",
+      "score": null,
+      "grade": null,
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "factorMaximums": [
+        35,
+        20,
+        15,
+        10,
+        10,
+        10,
+        10
+      ],
+      "factors": {
+        "matchup": null,
+        "price": null,
+        "personnel": null,
+        "situation": null,
+        "vsin": null,
+        "docs": null,
+        "market": null
+      },
+      "failureDimensions": {
+        "failurePathSeverity": null,
+        "personnelResilience": null,
+        "scriptVariance": null,
+        "priceProtection": null,
+        "contradictionResolution": null
+      },
+      "failureScore": null,
+      "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+      "releaseBlockers": [
+        "Final health/role and current usage reconciliation incomplete",
+        "Current retail acceptance not verified",
+        "Market-specific crowd exclusions not verified"
+      ],
+      "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+    },
+    {
+      "number": 122,
+      "game": "Miami Dolphins at New York Jets",
+      "time": "2026-10-25T13:00:00-04:00",
+      "gameKey": "MIA",
+      "selection": "Miami Dolphins",
+      "line": 12.5,
+      "type": "side",
+      "rationale": "Miami off bye against a Jets offense that has not topped20 in its last three games; 12.5 protects beyond10. Risk is Willis turnovers, Miami coverage failures.",
+      "cross": "Makinen MIA+4.5, Action MIA+4.5; Doc's Schonwald NYJ-5 opposes. FL Oct22 NYJ22-MIA18.",
+      "status": "HOLD",
+      "scoreStatus": "UNGRADED",
+      "score": null,
+      "grade": null,
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "factorMaximums": [
+        35,
+        20,
+        15,
+        10,
+        10,
+        10,
+        10
+      ],
+      "factors": {
+        "matchup": null,
+        "price": null,
+        "personnel": null,
+        "situation": null,
+        "vsin": null,
+        "docs": null,
+        "market": null
+      },
+      "failureDimensions": {
+        "failurePathSeverity": null,
+        "personnelResilience": null,
+        "scriptVariance": null,
+        "priceProtection": null,
+        "contradictionResolution": null
+      },
+      "failureScore": null,
+      "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+      "releaseBlockers": [
+        "Final health/role and current usage reconciliation incomplete",
+        "Current retail acceptance not verified",
+        "Market-specific crowd exclusions not verified"
+      ],
+      "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+    },
+    {
+      "number": 125,
+      "game": "Tampa Bay Buccaneers at Carolina Panthers",
+      "time": "2026-10-25T13:00:00-04:00",
+      "gameKey": "CAR",
+      "selection": "Carolina Panthers",
+      "line": 4.5,
+      "type": "side",
+      "rationale": "Young/Hubbard/McMillan versus a Tampa defense missing Winfield; current CAR efficiency exceeds TB. Risk Mayfield return plus Carolina's weak run defense.",
+      "cross": "Makinen CAR-3 supports; Tuley TB+9 teaser and Doc's Tony Sink TB+3.5 oppose. FL Oct22 CAR24-TB19.",
+      "status": "HOLD",
+      "scoreStatus": "UNGRADED",
+      "score": null,
+      "grade": null,
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "factorMaximums": [
+        35,
+        20,
+        15,
+        10,
+        10,
+        10,
+        10
+      ],
+      "factors": {
+        "matchup": null,
+        "price": null,
+        "personnel": null,
+        "situation": null,
+        "vsin": null,
+        "docs": null,
+        "market": null
+      },
+      "failureDimensions": {
+        "failurePathSeverity": null,
+        "personnelResilience": null,
+        "scriptVariance": null,
+        "priceProtection": null,
+        "contradictionResolution": null
+      },
+      "failureScore": null,
+      "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+      "releaseBlockers": [
+        "Final health/role and current usage reconciliation incomplete",
+        "Current retail acceptance not verified",
+        "Market-specific crowd exclusions not verified"
+      ],
+      "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+    },
+    {
+      "number": 130,
+      "game": "San Francisco 49ers at Atlanta Falcons",
+      "time": "2026-10-25T13:00:00-04:00",
+      "gameKey": "ATL",
+      "selection": "Atlanta Falcons",
+      "line": 11.5,
+      "type": "side",
+      "rationale": "Double-digit home cushion against SF on short-week cross-country travel with Evans/Deebo/Bosa out; risk SF still has superior efficiency and CMC/Kittle.",
+      "cross": "Action Doug Kezirian ATL+3 supports; Makinen SF-2.5 and Doc's Schonwald SF-3 oppose; Tuley passes. FL Oct22 SF26-ATL24.",
+      "status": "HOLD",
+      "scoreStatus": "UNGRADED",
+      "score": null,
+      "grade": null,
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "factorMaximums": [
+        35,
+        20,
+        15,
+        10,
+        10,
+        10,
+        10
+      ],
+      "factors": {
+        "matchup": null,
+        "price": null,
+        "personnel": null,
+        "situation": null,
+        "vsin": null,
+        "docs": null,
+        "market": null
+      },
+      "failureDimensions": {
+        "failurePathSeverity": null,
+        "personnelResilience": null,
+        "scriptVariance": null,
+        "priceProtection": null,
+        "contradictionResolution": null
+      },
+      "failureScore": null,
+      "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+      "releaseBlockers": [
+        "Final health/role and current usage reconciliation incomplete",
+        "Current retail acceptance not verified",
+        "Market-specific crowd exclusions not verified"
+      ],
+      "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+    },
+    {
+      "number": 134,
+      "game": "Cincinnati Bengals at Baltimore Ravens",
+      "time": "2026-10-25T13:00:00-04:00",
+      "gameKey": "BAL",
+      "selection": "Cincinnati Bengals",
+      "line": 10.5,
+      "type": "side",
+      "rationale": "Rested Burrow/Chase/Higgins versus Huntley in place of Jackson; risk Baltimore's Henry-led run game, protection failures and turnovers.",
+      "cross": "Makinen CIN-1.5; Doc's earlier BAL opinion requires fresh QB reconciliation; FL BAL25-CIN24 forecast assumes possible Jackson return and is stale for current QB.",
+      "status": "HOLD",
+      "scoreStatus": "UNGRADED",
+      "score": null,
+      "grade": null,
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "factorMaximums": [
+        35,
+        20,
+        15,
+        10,
+        10,
+        10,
+        10
+      ],
+      "factors": {
+        "matchup": null,
+        "price": null,
+        "personnel": null,
+        "situation": null,
+        "vsin": null,
+        "docs": null,
+        "market": null
+      },
+      "failureDimensions": {
+        "failurePathSeverity": null,
+        "personnelResilience": null,
+        "scriptVariance": null,
+        "priceProtection": null,
+        "contradictionResolution": null
+      },
+      "failureScore": null,
+      "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+      "releaseBlockers": [
+        "Final health/role and current usage reconciliation incomplete",
+        "Current retail acceptance not verified",
+        "Market-specific crowd exclusions not verified"
+      ],
+      "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+    },
+    {
+      "number": 138,
+      "game": "New York Giants at Houston Texans",
+      "time": "2026-10-25T13:00:00-04:00",
+      "gameKey": "HOU",
+      "selection": "New York Giants",
+      "line": 17.5,
+      "type": "side",
+      "rationale": "Large cushion plus Houston returning from London without bye and missing safeties; risk McCarthy facing Houston pressure with weak rushing support.",
+      "cross": "Tuley NYG+10.5 and Doc's Schonwald NYG+10 support direction; Cohen HOU-9.5 and Action Stuckey HOU-10.5 oppose. FL Oct22 HOU27-NYG17.",
+      "status": "HOLD",
+      "scoreStatus": "UNGRADED",
+      "score": null,
+      "grade": null,
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "factorMaximums": [
+        35,
+        20,
+        15,
+        10,
+        10,
+        10,
+        10
+      ],
+      "factors": {
+        "matchup": null,
+        "price": null,
+        "personnel": null,
+        "situation": null,
+        "vsin": null,
+        "docs": null,
+        "market": null
+      },
+      "failureDimensions": {
+        "failurePathSeverity": null,
+        "personnelResilience": null,
+        "scriptVariance": null,
+        "priceProtection": null,
+        "contradictionResolution": null
+      },
+      "failureScore": null,
+      "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+      "releaseBlockers": [
+        "Final health/role and current usage reconciliation incomplete",
+        "Current retail acceptance not verified",
+        "Market-specific crowd exclusions not verified"
+      ],
+      "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+    },
+    {
+      "number": 120,
+      "game": "Cleveland Browns at Tennessee Titans",
+      "time": "2026-10-25T13:00:00-04:00",
+      "gameKey": "CLE",
+      "selection": "CLE/TEN Under",
+      "line": 45.5,
+      "type": "under",
+      "rationale": "Both offenses at4.5 yards/play in TeamRankings; combined scoring baseline low and printed ceiling well above market37-37.5. Risk short fields, defensive/special-teams TDs or OT.",
+      "cross": "FL Oct22 forecast37 combined; LaMarca low-scoring context. Side opinions do not count as total confirmation.",
+      "status": "HOLD",
+      "scoreStatus": "UNGRADED",
+      "score": null,
+      "grade": null,
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "factorMaximums": [
+        35,
+        20,
+        15,
+        10,
+        10,
+        10,
+        10
+      ],
+      "factors": {
+        "matchup": null,
+        "price": null,
+        "personnel": null,
+        "situation": null,
+        "vsin": null,
+        "docs": null,
+        "market": null
+      },
+      "failureDimensions": {
+        "failurePathSeverity": null,
+        "personnelResilience": null,
+        "scriptVariance": null,
+        "priceProtection": null,
+        "contradictionResolution": null
+      },
+      "failureScore": null,
+      "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+      "releaseBlockers": [
+        "Final health/role and current usage reconciliation incomplete",
+        "Current retail acceptance not verified",
+        "Market-specific crowd exclusions not verified"
+      ],
+      "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+    },
+    {
+      "number": 115,
+      "game": "Indianapolis Colts at Minnesota Vikings",
+      "time": "2026-10-25T13:00:00-04:00",
+      "gameKey": "MIN",
+      "selection": "MIN/IND Over",
+      "line": 34.5,
+      "type": "over",
+      "rationale": "Compare exact Big Teaser threshold34.5 with recording41.5 and dated FL40point forecast. Minnesota can supply much of the required scoring against Indianapolis' depleted coverage; main failure is Flores suppressing Indy while Minnesota also plays slowly. No assumption that earlier healthy-roster forecast is final.",
+      "cross": "Reassessed exact low printed Over against video market, current matchup and dated weekly forecast. No numeric probability, grade or confirmation invented.",
+      "status": "HOLD",
+      "scoreStatus": "UNGRADED",
+      "score": null,
+      "grade": null,
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "factorMaximums": [
+        35,
+        20,
+        15,
+        10,
+        10,
+        10,
+        10
+      ],
+      "factors": {
+        "matchup": null,
+        "price": null,
+        "personnel": null,
+        "situation": null,
+        "vsin": null,
+        "docs": null,
+        "market": null
+      },
+      "failureDimensions": {
+        "failurePathSeverity": null,
+        "personnelResilience": null,
+        "scriptVariance": null,
+        "priceProtection": null,
+        "contradictionResolution": null
+      },
+      "failureScore": null,
+      "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+      "releaseBlockers": [
+        "Final health/role and current usage reconciliation incomplete",
+        "Current retail acceptance not verified",
+        "Market-specific crowd exclusions not verified"
+      ],
+      "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+    },
+    {
+      "number": 136,
+      "game": "Cincinnati Bengals at Baltimore Ravens",
+      "time": "2026-10-25T13:00:00-04:00",
+      "gameKey": "BAL",
+      "selection": "BAL/CIN Under",
+      "line": 58.5,
+      "type": "under",
+      "rationale": "Huntley replaces Jackson; printed total substantially above current references. Risk Burrow explosives, Baltimore defensive absences and OT.",
+      "cross": "Action Stuckey U48.5(-105); FL pre-Jackson-ruling forecast49 combined is stale and cannot be treated as updated Huntley model.",
+      "status": "HOLD",
+      "scoreStatus": "UNGRADED",
+      "score": null,
+      "grade": null,
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "factorMaximums": [
+        35,
+        20,
+        15,
+        10,
+        10,
+        10,
+        10
+      ],
+      "factors": {
+        "matchup": null,
+        "price": null,
+        "personnel": null,
+        "situation": null,
+        "vsin": null,
+        "docs": null,
+        "market": null
+      },
+      "failureDimensions": {
+        "failurePathSeverity": null,
+        "personnelResilience": null,
+        "scriptVariance": null,
+        "priceProtection": null,
+        "contradictionResolution": null
+      },
+      "failureScore": null,
+      "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+      "releaseBlockers": [
+        "Final health/role and current usage reconciliation incomplete",
+        "Current retail acceptance not verified",
+        "Market-specific crowd exclusions not verified"
+      ],
+      "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+    },
+    {
+      "number": 124,
+      "game": "Miami Dolphins at New York Jets",
+      "time": "2026-10-25T13:00:00-04:00",
+      "gameKey": "MIA",
+      "selection": "NYJ/MIA Under",
+      "line": 46.5,
+      "type": "under",
+      "rationale": "Printed ceiling7points above video39.5; guide low-volume/low-scoring priors and current Jets offensive struggles support direction. Willis rushing explosives, Miami coverage problems and short fields oppose.",
+      "cross": "New candidate in corrected10-pick construction; full exact-market score/Failure and final release checks incomplete.",
+      "status": "HOLD",
+      "scoreStatus": "UNGRADED",
+      "score": null,
+      "grade": null,
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "factorMaximums": [
+        35,
+        20,
+        15,
+        10,
+        10,
+        10,
+        10
+      ],
+      "factors": {
+        "matchup": null,
+        "price": null,
+        "personnel": null,
+        "situation": null,
+        "vsin": null,
+        "docs": null,
+        "market": null
+      },
+      "failureDimensions": {
+        "failurePathSeverity": null,
+        "personnelResilience": null,
+        "scriptVariance": null,
+        "priceProtection": null,
+        "contradictionResolution": null
+      },
+      "failureScore": null,
+      "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+      "releaseBlockers": [
+        "Final health/role and current usage reconciliation incomplete",
+        "Current retail acceptance not verified",
+        "Market-specific crowd exclusions not verified"
+      ],
+      "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+    },
+    {
+      "number": 127,
+      "game": "Tampa Bay Buccaneers at Carolina Panthers",
+      "time": "2026-10-25T13:00:00-04:00",
+      "gameKey": "CAR",
+      "selection": "CAR/TB Over",
+      "line": 37.5,
+      "type": "over",
+      "rationale": "Compare exact37.5 with video44.5 and dated FL43point forecast. Carolina's current offensive efficiency and both run-game paths support scoring; Tampa QB availability, Egbuka absence and OL losses remain unresolved material counters. Reject FL article's stale Egbuka-start recommendation.",
+      "cross": "Reassessed exact low printed Over against video market, current matchup and dated weekly forecast. No numeric probability, grade or confirmation invented.",
+      "status": "HOLD",
+      "scoreStatus": "UNGRADED",
+      "score": null,
+      "grade": null,
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "factorMaximums": [
+        35,
+        20,
+        15,
+        10,
+        10,
+        10,
+        10
+      ],
+      "factors": {
+        "matchup": null,
+        "price": null,
+        "personnel": null,
+        "situation": null,
+        "vsin": null,
+        "docs": null,
+        "market": null
+      },
+      "failureDimensions": {
+        "failurePathSeverity": null,
+        "personnelResilience": null,
+        "scriptVariance": null,
+        "priceProtection": null,
+        "contradictionResolution": null
+      },
+      "failureScore": null,
+      "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+      "releaseBlockers": [
+        "Final health/role and current usage reconciliation incomplete",
+        "Current retail acceptance not verified",
+        "Market-specific crowd exclusions not verified"
+      ],
+      "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+    },
+    {
+      "number": 132,
+      "game": "San Francisco 49ers at Atlanta Falcons",
+      "time": "2026-10-25T13:00:00-04:00",
+      "gameKey": "ATL",
+      "selection": "SF/ATL Under",
+      "line": 57.5,
+      "type": "under",
+      "rationale": "Video total50.5; 79%money on Over at68.7k displayed bets makes Over43.5 excluded by user crowd rule. Under is a research candidate with7point cushion, not an automatic crowd fade; defensive injuries can create a shootout.",
+      "cross": "New candidate in corrected10-pick construction; full exact-market score/Failure and final release checks incomplete.",
+      "status": "HOLD",
+      "scoreStatus": "UNGRADED",
+      "score": null,
+      "grade": null,
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "factorMaximums": [
+        35,
+        20,
+        15,
+        10,
+        10,
+        10,
+        10
+      ],
+      "factors": {
+        "matchup": null,
+        "price": null,
+        "personnel": null,
+        "situation": null,
+        "vsin": null,
+        "docs": null,
+        "market": null
+      },
+      "failureDimensions": {
+        "failurePathSeverity": null,
+        "personnelResilience": null,
+        "scriptVariance": null,
+        "priceProtection": null,
+        "contradictionResolution": null
+      },
+      "failureScore": null,
+      "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+      "releaseBlockers": [
+        "Final health/role and current usage reconciliation incomplete",
+        "Current retail acceptance not verified",
+        "Market-specific crowd exclusions not verified"
+      ],
+      "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+    },
+    {
+      "number": 139,
+      "game": "New York Giants at Houston Texans",
+      "time": "2026-10-25T13:00:00-04:00",
+      "gameKey": "HOU",
+      "selection": "HOU/NYG Over",
+      "line": 36.5,
+      "type": "over",
+      "rationale": "Compare exact36.5 with video42.5 and dated FL44point forecast. Houston passing efficiency versus Giants secondary and offensive volume support scoring; Giants QB/protection risk can leave too much scoring burden on Houston. Current secondary absences considered; final regrade pending.",
+      "cross": "Reassessed exact low printed Over against video market, current matchup and dated weekly forecast. No numeric probability, grade or confirmation invented.",
+      "status": "HOLD",
+      "scoreStatus": "UNGRADED",
+      "score": null,
+      "grade": null,
+      "scoringVersion": "micks-110-v2-2026-09-29",
+      "factorMaximums": [
+        35,
+        20,
+        15,
+        10,
+        10,
+        10,
+        10
+      ],
+      "factors": {
+        "matchup": null,
+        "price": null,
+        "personnel": null,
+        "situation": null,
+        "vsin": null,
+        "docs": null,
+        "market": null
+      },
+      "failureDimensions": {
+        "failurePathSeverity": null,
+        "personnelResilience": null,
+        "scriptVariance": null,
+        "priceProtection": null,
+        "contradictionResolution": null
+      },
+      "failureScore": null,
+      "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+      "releaseBlockers": [
+        "Final health/role and current usage reconciliation incomplete",
+        "Current retail acceptance not verified",
+        "Market-specific crowd exclusions not verified"
+      ],
+      "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+    }
+  ],
+  "tickets": [
+    {
+      "id": "EB1",
+      "cardType": "Delaware Big Teaser",
+      "legCount": 10,
+      "plannedUnits": 2,
+      "officialUnits": 0,
+      "status": "Draft/HOLD",
+      "officialBet": false,
+      "payoutProfitToStake": "13:2 printed (6.5:1)",
+      "profitIfWinUnits": 13,
+      "returnIfWinUnits": 15,
+      "legs": [
+        {
+          "number": 113,
+          "game": "Indianapolis Colts at Minnesota Vikings",
+          "time": "2026-10-25T13:00:00-04:00",
+          "gameKey": "MIN",
+          "selection": "Minnesota Vikings",
+          "line": 1.5,
+          "type": "side",
+          "rationale": "Minnesota's defense and healthy starting lineup against Indianapolis without Warren and Gardner; risk is Minnesota's inconsistent scoring and Colts backdoor.",
+          "cross": "VSiN Cohen Vikings ML parlay and Makinen MIN -6.5 support direction; Tuley and Doc's Guy Bruhn Colts +6.5 oppose. FL Oct22 MIN24-IND16 is an outside dated forecast.",
+          "status": "HOLD",
+          "scoreStatus": "UNGRADED",
+          "score": null,
+          "grade": null,
+          "scoringVersion": "micks-110-v2-2026-09-29",
+          "factorMaximums": [
+            35,
+            20,
+            15,
+            10,
+            10,
+            10,
+            10
+          ],
+          "factors": {
+            "matchup": null,
+            "price": null,
+            "personnel": null,
+            "situation": null,
+            "vsin": null,
+            "docs": null,
+            "market": null
+          },
+          "failureDimensions": {
+            "failurePathSeverity": null,
+            "personnelResilience": null,
+            "scriptVariance": null,
+            "priceProtection": null,
+            "contradictionResolution": null
+          },
+          "failureScore": null,
+          "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+          "releaseBlockers": [
+            "Final health/role and current usage reconciliation incomplete",
+            "Current retail acceptance not verified",
+            "Market-specific crowd exclusions not verified"
+          ],
+          "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+        },
+        {
+          "number": 118,
+          "game": "Cleveland Browns at Tennessee Titans",
+          "time": "2026-10-25T13:00:00-04:00",
+          "gameKey": "CLE",
+          "selection": "Tennessee Titans",
+          "line": 9.5,
+          "type": "side",
+          "rationale": "Home underdog gets more than one score in a matchup between limited offenses; risk is Tennessee turnovers or protection collapse.",
+          "cross": "VSiN Tuley TEN+9 teaser, Doc's Parlays Pundit TEN+1.5, Action Stuckey TEN+1.5; Cohen CLE ML opposes direction. FL Oct22 TEN19-CLE18.",
+          "status": "HOLD",
+          "scoreStatus": "UNGRADED",
+          "score": null,
+          "grade": null,
+          "scoringVersion": "micks-110-v2-2026-09-29",
+          "factorMaximums": [
+            35,
+            20,
+            15,
+            10,
+            10,
+            10,
+            10
+          ],
+          "factors": {
+            "matchup": null,
+            "price": null,
+            "personnel": null,
+            "situation": null,
+            "vsin": null,
+            "docs": null,
+            "market": null
+          },
+          "failureDimensions": {
+            "failurePathSeverity": null,
+            "personnelResilience": null,
+            "scriptVariance": null,
+            "priceProtection": null,
+            "contradictionResolution": null
+          },
+          "failureScore": null,
+          "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+          "releaseBlockers": [
+            "Final health/role and current usage reconciliation incomplete",
+            "Current retail acceptance not verified",
+            "Market-specific crowd exclusions not verified"
+          ],
+          "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+        },
+        {
+          "number": 130,
+          "game": "San Francisco 49ers at Atlanta Falcons",
+          "time": "2026-10-25T13:00:00-04:00",
+          "gameKey": "ATL",
+          "selection": "Atlanta Falcons",
+          "line": 11.5,
+          "type": "side",
+          "rationale": "Double-digit home cushion against SF on short-week cross-country travel with Evans/Deebo/Bosa out; risk SF still has superior efficiency and CMC/Kittle.",
+          "cross": "Action Doug Kezirian ATL+3 supports; Makinen SF-2.5 and Doc's Schonwald SF-3 oppose; Tuley passes. FL Oct22 SF26-ATL24.",
+          "status": "HOLD",
+          "scoreStatus": "UNGRADED",
+          "score": null,
+          "grade": null,
+          "scoringVersion": "micks-110-v2-2026-09-29",
+          "factorMaximums": [
+            35,
+            20,
+            15,
+            10,
+            10,
+            10,
+            10
+          ],
+          "factors": {
+            "matchup": null,
+            "price": null,
+            "personnel": null,
+            "situation": null,
+            "vsin": null,
+            "docs": null,
+            "market": null
+          },
+          "failureDimensions": {
+            "failurePathSeverity": null,
+            "personnelResilience": null,
+            "scriptVariance": null,
+            "priceProtection": null,
+            "contradictionResolution": null
+          },
+          "failureScore": null,
+          "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+          "releaseBlockers": [
+            "Final health/role and current usage reconciliation incomplete",
+            "Current retail acceptance not verified",
+            "Market-specific crowd exclusions not verified"
+          ],
+          "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+        },
+        {
+          "number": 138,
+          "game": "New York Giants at Houston Texans",
+          "time": "2026-10-25T13:00:00-04:00",
+          "gameKey": "HOU",
+          "selection": "New York Giants",
+          "line": 17.5,
+          "type": "side",
+          "rationale": "Large cushion plus Houston returning from London without bye and missing safeties; risk McCarthy facing Houston pressure with weak rushing support.",
+          "cross": "Tuley NYG+10.5 and Doc's Schonwald NYG+10 support direction; Cohen HOU-9.5 and Action Stuckey HOU-10.5 oppose. FL Oct22 HOU27-NYG17.",
+          "status": "HOLD",
+          "scoreStatus": "UNGRADED",
+          "score": null,
+          "grade": null,
+          "scoringVersion": "micks-110-v2-2026-09-29",
+          "factorMaximums": [
+            35,
+            20,
+            15,
+            10,
+            10,
+            10,
+            10
+          ],
+          "factors": {
+            "matchup": null,
+            "price": null,
+            "personnel": null,
+            "situation": null,
+            "vsin": null,
+            "docs": null,
+            "market": null
+          },
+          "failureDimensions": {
+            "failurePathSeverity": null,
+            "personnelResilience": null,
+            "scriptVariance": null,
+            "priceProtection": null,
+            "contradictionResolution": null
+          },
+          "failureScore": null,
+          "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+          "releaseBlockers": [
+            "Final health/role and current usage reconciliation incomplete",
+            "Current retail acceptance not verified",
+            "Market-specific crowd exclusions not verified"
+          ],
+          "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+        },
+        {
+          "number": 115,
+          "game": "Indianapolis Colts at Minnesota Vikings",
+          "time": "2026-10-25T13:00:00-04:00",
+          "gameKey": "MIN",
+          "selection": "MIN/IND Over",
+          "line": 34.5,
+          "type": "over",
+          "rationale": "Compare exact Big Teaser threshold34.5 with recording41.5 and dated FL40point forecast. Minnesota can supply much of the required scoring against Indianapolis' depleted coverage; main failure is Flores suppressing Indy while Minnesota also plays slowly. No assumption that earlier healthy-roster forecast is final.",
+          "cross": "FL Oct22 forecast40 combined; market reference41.5. No verified exact-total VSiN/Doc selection.",
+          "status": "HOLD",
+          "scoreStatus": "UNGRADED",
+          "score": null,
+          "grade": null,
+          "scoringVersion": "micks-110-v2-2026-09-29",
+          "factorMaximums": [
+            35,
+            20,
+            15,
+            10,
+            10,
+            10,
+            10
+          ],
+          "factors": {
+            "matchup": null,
+            "price": null,
+            "personnel": null,
+            "situation": null,
+            "vsin": null,
+            "docs": null,
+            "market": null
+          },
+          "failureDimensions": {
+            "failurePathSeverity": null,
+            "personnelResilience": null,
+            "scriptVariance": null,
+            "priceProtection": null,
+            "contradictionResolution": null
+          },
+          "failureScore": null,
+          "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+          "releaseBlockers": [
+            "Final health/role and current usage reconciliation incomplete",
+            "Current retail acceptance not verified",
+            "Market-specific crowd exclusions not verified"
+          ],
+          "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+        },
+        {
+          "number": 120,
+          "game": "Cleveland Browns at Tennessee Titans",
+          "time": "2026-10-25T13:00:00-04:00",
+          "gameKey": "CLE",
+          "selection": "CLE/TEN Under",
+          "line": 45.5,
+          "type": "under",
+          "rationale": "Both offenses at4.5 yards/play in TeamRankings; combined scoring baseline low and printed ceiling well above market37-37.5. Risk short fields, defensive/special-teams TDs or OT.",
+          "cross": "FL Oct22 forecast37 combined; LaMarca low-scoring context. Side opinions do not count as total confirmation.",
+          "status": "HOLD",
+          "scoreStatus": "UNGRADED",
+          "score": null,
+          "grade": null,
+          "scoringVersion": "micks-110-v2-2026-09-29",
+          "factorMaximums": [
+            35,
+            20,
+            15,
+            10,
+            10,
+            10,
+            10
+          ],
+          "factors": {
+            "matchup": null,
+            "price": null,
+            "personnel": null,
+            "situation": null,
+            "vsin": null,
+            "docs": null,
+            "market": null
+          },
+          "failureDimensions": {
+            "failurePathSeverity": null,
+            "personnelResilience": null,
+            "scriptVariance": null,
+            "priceProtection": null,
+            "contradictionResolution": null
+          },
+          "failureScore": null,
+          "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+          "releaseBlockers": [
+            "Final health/role and current usage reconciliation incomplete",
+            "Current retail acceptance not verified",
+            "Market-specific crowd exclusions not verified"
+          ],
+          "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+        },
+        {
+          "number": 124,
+          "game": "Miami Dolphins at New York Jets",
+          "time": "2026-10-25T13:00:00-04:00",
+          "gameKey": "MIA",
+          "selection": "NYJ/MIA Under",
+          "line": 46.5,
+          "type": "under",
+          "rationale": "Printed ceiling7points above video39.5; guide low-volume/low-scoring priors and current Jets offensive struggles support direction. Willis rushing explosives, Miami coverage problems and short fields oppose.",
+          "cross": "New candidate in corrected10-pick construction; full exact-market score/Failure and final release checks incomplete.",
+          "status": "HOLD",
+          "scoreStatus": "UNGRADED",
+          "score": null,
+          "grade": null,
+          "scoringVersion": "micks-110-v2-2026-09-29",
+          "factorMaximums": [
+            35,
+            20,
+            15,
+            10,
+            10,
+            10,
+            10
+          ],
+          "factors": {
+            "matchup": null,
+            "price": null,
+            "personnel": null,
+            "situation": null,
+            "vsin": null,
+            "docs": null,
+            "market": null
+          },
+          "failureDimensions": {
+            "failurePathSeverity": null,
+            "personnelResilience": null,
+            "scriptVariance": null,
+            "priceProtection": null,
+            "contradictionResolution": null
+          },
+          "failureScore": null,
+          "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+          "releaseBlockers": [
+            "Final health/role and current usage reconciliation incomplete",
+            "Current retail acceptance not verified",
+            "Market-specific crowd exclusions not verified"
+          ],
+          "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+        },
+        {
+          "number": 127,
+          "game": "Tampa Bay Buccaneers at Carolina Panthers",
+          "time": "2026-10-25T13:00:00-04:00",
+          "gameKey": "CAR",
+          "selection": "CAR/TB Over",
+          "line": 37.5,
+          "type": "over",
+          "rationale": "Compare exact37.5 with video44.5 and dated FL43point forecast. Carolina's current offensive efficiency and both run-game paths support scoring; Tampa QB availability, Egbuka absence and OL losses remain unresolved material counters. Reject FL article's stale Egbuka-start recommendation.",
+          "cross": "New candidate in corrected10-pick construction; full exact-market score/Failure and final release checks incomplete.",
+          "status": "HOLD",
+          "scoreStatus": "UNGRADED",
+          "score": null,
+          "grade": null,
+          "scoringVersion": "micks-110-v2-2026-09-29",
+          "factorMaximums": [
+            35,
+            20,
+            15,
+            10,
+            10,
+            10,
+            10
+          ],
+          "factors": {
+            "matchup": null,
+            "price": null,
+            "personnel": null,
+            "situation": null,
+            "vsin": null,
+            "docs": null,
+            "market": null
+          },
+          "failureDimensions": {
+            "failurePathSeverity": null,
+            "personnelResilience": null,
+            "scriptVariance": null,
+            "priceProtection": null,
+            "contradictionResolution": null
+          },
+          "failureScore": null,
+          "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+          "releaseBlockers": [
+            "Final health/role and current usage reconciliation incomplete",
+            "Current retail acceptance not verified",
+            "Market-specific crowd exclusions not verified"
+          ],
+          "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+        },
+        {
+          "number": 136,
+          "game": "Cincinnati Bengals at Baltimore Ravens",
+          "time": "2026-10-25T13:00:00-04:00",
+          "gameKey": "BAL",
+          "selection": "BAL/CIN Under",
+          "line": 58.5,
+          "type": "under",
+          "rationale": "Huntley replaces Jackson; printed total substantially above current references. Risk Burrow explosives, Baltimore defensive absences and OT.",
+          "cross": "Action Stuckey U48.5(-105); FL pre-Jackson-ruling forecast49 combined is stale and cannot be treated as updated Huntley model.",
+          "status": "HOLD",
+          "scoreStatus": "UNGRADED",
+          "score": null,
+          "grade": null,
+          "scoringVersion": "micks-110-v2-2026-09-29",
+          "factorMaximums": [
+            35,
+            20,
+            15,
+            10,
+            10,
+            10,
+            10
+          ],
+          "factors": {
+            "matchup": null,
+            "price": null,
+            "personnel": null,
+            "situation": null,
+            "vsin": null,
+            "docs": null,
+            "market": null
+          },
+          "failureDimensions": {
+            "failurePathSeverity": null,
+            "personnelResilience": null,
+            "scriptVariance": null,
+            "priceProtection": null,
+            "contradictionResolution": null
+          },
+          "failureScore": null,
+          "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+          "releaseBlockers": [
+            "Final health/role and current usage reconciliation incomplete",
+            "Current retail acceptance not verified",
+            "Market-specific crowd exclusions not verified"
+          ],
+          "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+        },
+        {
+          "number": 139,
+          "game": "New York Giants at Houston Texans",
+          "time": "2026-10-25T13:00:00-04:00",
+          "gameKey": "HOU",
+          "selection": "HOU/NYG Over",
+          "line": 36.5,
+          "type": "over",
+          "rationale": "Compare exact36.5 with video42.5 and dated FL44point forecast. Houston passing efficiency versus Giants secondary and offensive volume support scoring; Giants QB/protection risk can leave too much scoring burden on Houston. Current secondary absences considered; final regrade pending.",
+          "cross": "New candidate in corrected10-pick construction; full exact-market score/Failure and final release checks incomplete.",
+          "status": "HOLD",
+          "scoreStatus": "UNGRADED",
+          "score": null,
+          "grade": null,
+          "scoringVersion": "micks-110-v2-2026-09-29",
+          "factorMaximums": [
+            35,
+            20,
+            15,
+            10,
+            10,
+            10,
+            10
+          ],
+          "factors": {
+            "matchup": null,
+            "price": null,
+            "personnel": null,
+            "situation": null,
+            "vsin": null,
+            "docs": null,
+            "market": null
+          },
+          "failureDimensions": {
+            "failurePathSeverity": null,
+            "personnelResilience": null,
+            "scriptVariance": null,
+            "priceProtection": null,
+            "contradictionResolution": null
+          },
+          "failureScore": null,
+          "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+          "releaseBlockers": [
+            "Final health/role and current usage reconciliation incomplete",
+            "Current retail acceptance not verified",
+            "Market-specific crowd exclusions not verified"
+          ],
+          "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+        }
+      ],
+      "totalsCount": 6,
+      "overs": 3,
+      "unders": 3
+    },
+    {
+      "id": "EB2",
+      "cardType": "Delaware Big Teaser",
+      "legCount": 10,
+      "plannedUnits": 2,
+      "officialUnits": 0,
+      "status": "Draft/HOLD",
+      "officialBet": false,
+      "payoutProfitToStake": "13:2 printed (6.5:1)",
+      "profitIfWinUnits": 13,
+      "returnIfWinUnits": 15,
+      "legs": [
+        {
+          "number": 134,
+          "game": "Cincinnati Bengals at Baltimore Ravens",
+          "time": "2026-10-25T13:00:00-04:00",
+          "gameKey": "BAL",
+          "selection": "Cincinnati Bengals",
+          "line": 10.5,
+          "type": "side",
+          "rationale": "Rested Burrow/Chase/Higgins versus Huntley in place of Jackson; risk Baltimore's Henry-led run game, protection failures and turnovers.",
+          "cross": "Makinen CIN-1.5; Doc's earlier BAL opinion requires fresh QB reconciliation; FL BAL25-CIN24 forecast assumes possible Jackson return and is stale for current QB.",
+          "status": "HOLD",
+          "scoreStatus": "UNGRADED",
+          "score": null,
+          "grade": null,
+          "scoringVersion": "micks-110-v2-2026-09-29",
+          "factorMaximums": [
+            35,
+            20,
+            15,
+            10,
+            10,
+            10,
+            10
+          ],
+          "factors": {
+            "matchup": null,
+            "price": null,
+            "personnel": null,
+            "situation": null,
+            "vsin": null,
+            "docs": null,
+            "market": null
+          },
+          "failureDimensions": {
+            "failurePathSeverity": null,
+            "personnelResilience": null,
+            "scriptVariance": null,
+            "priceProtection": null,
+            "contradictionResolution": null
+          },
+          "failureScore": null,
+          "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+          "releaseBlockers": [
+            "Final health/role and current usage reconciliation incomplete",
+            "Current retail acceptance not verified",
+            "Market-specific crowd exclusions not verified"
+          ],
+          "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+        },
+        {
+          "number": 122,
+          "game": "Miami Dolphins at New York Jets",
+          "time": "2026-10-25T13:00:00-04:00",
+          "gameKey": "MIA",
+          "selection": "Miami Dolphins",
+          "line": 12.5,
+          "type": "side",
+          "rationale": "Miami off bye against a Jets offense that has not topped20 in its last three games; 12.5 protects beyond10. Risk is Willis turnovers, Miami coverage failures.",
+          "cross": "Makinen MIA+4.5, Action MIA+4.5; Doc's Schonwald NYJ-5 opposes. FL Oct22 NYJ22-MIA18.",
+          "status": "HOLD",
+          "scoreStatus": "UNGRADED",
+          "score": null,
+          "grade": null,
+          "scoringVersion": "micks-110-v2-2026-09-29",
+          "factorMaximums": [
+            35,
+            20,
+            15,
+            10,
+            10,
+            10,
+            10
+          ],
+          "factors": {
+            "matchup": null,
+            "price": null,
+            "personnel": null,
+            "situation": null,
+            "vsin": null,
+            "docs": null,
+            "market": null
+          },
+          "failureDimensions": {
+            "failurePathSeverity": null,
+            "personnelResilience": null,
+            "scriptVariance": null,
+            "priceProtection": null,
+            "contradictionResolution": null
+          },
+          "failureScore": null,
+          "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+          "releaseBlockers": [
+            "Final health/role and current usage reconciliation incomplete",
+            "Current retail acceptance not verified",
+            "Market-specific crowd exclusions not verified"
+          ],
+          "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+        },
+        {
+          "number": 125,
+          "game": "Tampa Bay Buccaneers at Carolina Panthers",
+          "time": "2026-10-25T13:00:00-04:00",
+          "gameKey": "CAR",
+          "selection": "Carolina Panthers",
+          "line": 4.5,
+          "type": "side",
+          "rationale": "Young/Hubbard/McMillan versus a Tampa defense missing Winfield; current CAR efficiency exceeds TB. Risk Mayfield return plus Carolina's weak run defense.",
+          "cross": "Makinen CAR-3 supports; Tuley TB+9 teaser and Doc's Tony Sink TB+3.5 oppose. FL Oct22 CAR24-TB19.",
+          "status": "HOLD",
+          "scoreStatus": "UNGRADED",
+          "score": null,
+          "grade": null,
+          "scoringVersion": "micks-110-v2-2026-09-29",
+          "factorMaximums": [
+            35,
+            20,
+            15,
+            10,
+            10,
+            10,
+            10
+          ],
+          "factors": {
+            "matchup": null,
+            "price": null,
+            "personnel": null,
+            "situation": null,
+            "vsin": null,
+            "docs": null,
+            "market": null
+          },
+          "failureDimensions": {
+            "failurePathSeverity": null,
+            "personnelResilience": null,
+            "scriptVariance": null,
+            "priceProtection": null,
+            "contradictionResolution": null
+          },
+          "failureScore": null,
+          "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+          "releaseBlockers": [
+            "Final health/role and current usage reconciliation incomplete",
+            "Current retail acceptance not verified",
+            "Market-specific crowd exclusions not verified"
+          ],
+          "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+        },
+        {
+          "number": 138,
+          "game": "New York Giants at Houston Texans",
+          "time": "2026-10-25T13:00:00-04:00",
+          "gameKey": "HOU",
+          "selection": "New York Giants",
+          "line": 17.5,
+          "type": "side",
+          "rationale": "Large cushion plus Houston returning from London without bye and missing safeties; risk McCarthy facing Houston pressure with weak rushing support.",
+          "cross": "Tuley NYG+10.5 and Doc's Schonwald NYG+10 support direction; Cohen HOU-9.5 and Action Stuckey HOU-10.5 oppose. FL Oct22 HOU27-NYG17.",
+          "status": "HOLD",
+          "scoreStatus": "UNGRADED",
+          "score": null,
+          "grade": null,
+          "scoringVersion": "micks-110-v2-2026-09-29",
+          "factorMaximums": [
+            35,
+            20,
+            15,
+            10,
+            10,
+            10,
+            10
+          ],
+          "factors": {
+            "matchup": null,
+            "price": null,
+            "personnel": null,
+            "situation": null,
+            "vsin": null,
+            "docs": null,
+            "market": null
+          },
+          "failureDimensions": {
+            "failurePathSeverity": null,
+            "personnelResilience": null,
+            "scriptVariance": null,
+            "priceProtection": null,
+            "contradictionResolution": null
+          },
+          "failureScore": null,
+          "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+          "releaseBlockers": [
+            "Final health/role and current usage reconciliation incomplete",
+            "Current retail acceptance not verified",
+            "Market-specific crowd exclusions not verified"
+          ],
+          "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+        },
+        {
+          "number": 115,
+          "game": "Indianapolis Colts at Minnesota Vikings",
+          "time": "2026-10-25T13:00:00-04:00",
+          "gameKey": "MIN",
+          "selection": "MIN/IND Over",
+          "line": 34.5,
+          "type": "over",
+          "rationale": "Compare exact Big Teaser threshold34.5 with recording41.5 and dated FL40point forecast. Minnesota can supply much of the required scoring against Indianapolis' depleted coverage; main failure is Flores suppressing Indy while Minnesota also plays slowly. No assumption that earlier healthy-roster forecast is final.",
+          "cross": "FL Oct22 forecast40 combined; market reference41.5. No verified exact-total VSiN/Doc selection.",
+          "status": "HOLD",
+          "scoreStatus": "UNGRADED",
+          "score": null,
+          "grade": null,
+          "scoringVersion": "micks-110-v2-2026-09-29",
+          "factorMaximums": [
+            35,
+            20,
+            15,
+            10,
+            10,
+            10,
+            10
+          ],
+          "factors": {
+            "matchup": null,
+            "price": null,
+            "personnel": null,
+            "situation": null,
+            "vsin": null,
+            "docs": null,
+            "market": null
+          },
+          "failureDimensions": {
+            "failurePathSeverity": null,
+            "personnelResilience": null,
+            "scriptVariance": null,
+            "priceProtection": null,
+            "contradictionResolution": null
+          },
+          "failureScore": null,
+          "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+          "releaseBlockers": [
+            "Final health/role and current usage reconciliation incomplete",
+            "Current retail acceptance not verified",
+            "Market-specific crowd exclusions not verified"
+          ],
+          "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+        },
+        {
+          "number": 120,
+          "game": "Cleveland Browns at Tennessee Titans",
+          "time": "2026-10-25T13:00:00-04:00",
+          "gameKey": "CLE",
+          "selection": "CLE/TEN Under",
+          "line": 45.5,
+          "type": "under",
+          "rationale": "Both offenses at4.5 yards/play in TeamRankings; combined scoring baseline low and printed ceiling well above market37-37.5. Risk short fields, defensive/special-teams TDs or OT.",
+          "cross": "FL Oct22 forecast37 combined; LaMarca low-scoring context. Side opinions do not count as total confirmation.",
+          "status": "HOLD",
+          "scoreStatus": "UNGRADED",
+          "score": null,
+          "grade": null,
+          "scoringVersion": "micks-110-v2-2026-09-29",
+          "factorMaximums": [
+            35,
+            20,
+            15,
+            10,
+            10,
+            10,
+            10
+          ],
+          "factors": {
+            "matchup": null,
+            "price": null,
+            "personnel": null,
+            "situation": null,
+            "vsin": null,
+            "docs": null,
+            "market": null
+          },
+          "failureDimensions": {
+            "failurePathSeverity": null,
+            "personnelResilience": null,
+            "scriptVariance": null,
+            "priceProtection": null,
+            "contradictionResolution": null
+          },
+          "failureScore": null,
+          "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+          "releaseBlockers": [
+            "Final health/role and current usage reconciliation incomplete",
+            "Current retail acceptance not verified",
+            "Market-specific crowd exclusions not verified"
+          ],
+          "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+        },
+        {
+          "number": 124,
+          "game": "Miami Dolphins at New York Jets",
+          "time": "2026-10-25T13:00:00-04:00",
+          "gameKey": "MIA",
+          "selection": "NYJ/MIA Under",
+          "line": 46.5,
+          "type": "under",
+          "rationale": "Printed ceiling7points above video39.5; guide low-volume/low-scoring priors and current Jets offensive struggles support direction. Willis rushing explosives, Miami coverage problems and short fields oppose.",
+          "cross": "New candidate in corrected10-pick construction; full exact-market score/Failure and final release checks incomplete.",
+          "status": "HOLD",
+          "scoreStatus": "UNGRADED",
+          "score": null,
+          "grade": null,
+          "scoringVersion": "micks-110-v2-2026-09-29",
+          "factorMaximums": [
+            35,
+            20,
+            15,
+            10,
+            10,
+            10,
+            10
+          ],
+          "factors": {
+            "matchup": null,
+            "price": null,
+            "personnel": null,
+            "situation": null,
+            "vsin": null,
+            "docs": null,
+            "market": null
+          },
+          "failureDimensions": {
+            "failurePathSeverity": null,
+            "personnelResilience": null,
+            "scriptVariance": null,
+            "priceProtection": null,
+            "contradictionResolution": null
+          },
+          "failureScore": null,
+          "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+          "releaseBlockers": [
+            "Final health/role and current usage reconciliation incomplete",
+            "Current retail acceptance not verified",
+            "Market-specific crowd exclusions not verified"
+          ],
+          "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+        },
+        {
+          "number": 127,
+          "game": "Tampa Bay Buccaneers at Carolina Panthers",
+          "time": "2026-10-25T13:00:00-04:00",
+          "gameKey": "CAR",
+          "selection": "CAR/TB Over",
+          "line": 37.5,
+          "type": "over",
+          "rationale": "Compare exact37.5 with video44.5 and dated FL43point forecast. Carolina's current offensive efficiency and both run-game paths support scoring; Tampa QB availability, Egbuka absence and OL losses remain unresolved material counters. Reject FL article's stale Egbuka-start recommendation.",
+          "cross": "New candidate in corrected10-pick construction; full exact-market score/Failure and final release checks incomplete.",
+          "status": "HOLD",
+          "scoreStatus": "UNGRADED",
+          "score": null,
+          "grade": null,
+          "scoringVersion": "micks-110-v2-2026-09-29",
+          "factorMaximums": [
+            35,
+            20,
+            15,
+            10,
+            10,
+            10,
+            10
+          ],
+          "factors": {
+            "matchup": null,
+            "price": null,
+            "personnel": null,
+            "situation": null,
+            "vsin": null,
+            "docs": null,
+            "market": null
+          },
+          "failureDimensions": {
+            "failurePathSeverity": null,
+            "personnelResilience": null,
+            "scriptVariance": null,
+            "priceProtection": null,
+            "contradictionResolution": null
+          },
+          "failureScore": null,
+          "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+          "releaseBlockers": [
+            "Final health/role and current usage reconciliation incomplete",
+            "Current retail acceptance not verified",
+            "Market-specific crowd exclusions not verified"
+          ],
+          "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+        },
+        {
+          "number": 132,
+          "game": "San Francisco 49ers at Atlanta Falcons",
+          "time": "2026-10-25T13:00:00-04:00",
+          "gameKey": "ATL",
+          "selection": "SF/ATL Under",
+          "line": 57.5,
+          "type": "under",
+          "rationale": "Video total50.5; 79%money on Over at68.7k displayed bets makes Over43.5 excluded by user crowd rule. Under is a research candidate with7point cushion, not an automatic crowd fade; defensive injuries can create a shootout.",
+          "cross": "New candidate in corrected10-pick construction; full exact-market score/Failure and final release checks incomplete.",
+          "status": "HOLD",
+          "scoreStatus": "UNGRADED",
+          "score": null,
+          "grade": null,
+          "scoringVersion": "micks-110-v2-2026-09-29",
+          "factorMaximums": [
+            35,
+            20,
+            15,
+            10,
+            10,
+            10,
+            10
+          ],
+          "factors": {
+            "matchup": null,
+            "price": null,
+            "personnel": null,
+            "situation": null,
+            "vsin": null,
+            "docs": null,
+            "market": null
+          },
+          "failureDimensions": {
+            "failurePathSeverity": null,
+            "personnelResilience": null,
+            "scriptVariance": null,
+            "priceProtection": null,
+            "contradictionResolution": null
+          },
+          "failureScore": null,
+          "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+          "releaseBlockers": [
+            "Final health/role and current usage reconciliation incomplete",
+            "Current retail acceptance not verified",
+            "Market-specific crowd exclusions not verified"
+          ],
+          "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+        },
+        {
+          "number": 136,
+          "game": "Cincinnati Bengals at Baltimore Ravens",
+          "time": "2026-10-25T13:00:00-04:00",
+          "gameKey": "BAL",
+          "selection": "BAL/CIN Under",
+          "line": 58.5,
+          "type": "under",
+          "rationale": "Huntley replaces Jackson; printed total substantially above current references. Risk Burrow explosives, Baltimore defensive absences and OT.",
+          "cross": "Action Stuckey U48.5(-105); FL pre-Jackson-ruling forecast49 combined is stale and cannot be treated as updated Huntley model.",
+          "status": "HOLD",
+          "scoreStatus": "UNGRADED",
+          "score": null,
+          "grade": null,
+          "scoringVersion": "micks-110-v2-2026-09-29",
+          "factorMaximums": [
+            35,
+            20,
+            15,
+            10,
+            10,
+            10,
+            10
+          ],
+          "factors": {
+            "matchup": null,
+            "price": null,
+            "personnel": null,
+            "situation": null,
+            "vsin": null,
+            "docs": null,
+            "market": null
+          },
+          "failureDimensions": {
+            "failurePathSeverity": null,
+            "personnelResilience": null,
+            "scriptVariance": null,
+            "priceProtection": null,
+            "contradictionResolution": null
+          },
+          "failureScore": null,
+          "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+          "releaseBlockers": [
+            "Final health/role and current usage reconciliation incomplete",
+            "Current retail acceptance not verified",
+            "Market-specific crowd exclusions not verified"
+          ],
+          "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+        }
+      ],
+      "totalsCount": 6,
+      "overs": 2,
+      "unders": 4
+    },
+    {
+      "id": "EB3",
+      "cardType": "Delaware Big Teaser",
+      "legCount": 10,
+      "plannedUnits": 2,
+      "officialUnits": 0,
+      "status": "Draft/HOLD",
+      "officialBet": false,
+      "payoutProfitToStake": "13:2 printed (6.5:1)",
+      "profitIfWinUnits": 13,
+      "returnIfWinUnits": 15,
+      "legs": [
+        {
+          "number": 113,
+          "game": "Indianapolis Colts at Minnesota Vikings",
+          "time": "2026-10-25T13:00:00-04:00",
+          "gameKey": "MIN",
+          "selection": "Minnesota Vikings",
+          "line": 1.5,
+          "type": "side",
+          "rationale": "Minnesota's defense and healthy starting lineup against Indianapolis without Warren and Gardner; risk is Minnesota's inconsistent scoring and Colts backdoor.",
+          "cross": "VSiN Cohen Vikings ML parlay and Makinen MIN -6.5 support direction; Tuley and Doc's Guy Bruhn Colts +6.5 oppose. FL Oct22 MIN24-IND16 is an outside dated forecast.",
+          "status": "HOLD",
+          "scoreStatus": "UNGRADED",
+          "score": null,
+          "grade": null,
+          "scoringVersion": "micks-110-v2-2026-09-29",
+          "factorMaximums": [
+            35,
+            20,
+            15,
+            10,
+            10,
+            10,
+            10
+          ],
+          "factors": {
+            "matchup": null,
+            "price": null,
+            "personnel": null,
+            "situation": null,
+            "vsin": null,
+            "docs": null,
+            "market": null
+          },
+          "failureDimensions": {
+            "failurePathSeverity": null,
+            "personnelResilience": null,
+            "scriptVariance": null,
+            "priceProtection": null,
+            "contradictionResolution": null
+          },
+          "failureScore": null,
+          "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+          "releaseBlockers": [
+            "Final health/role and current usage reconciliation incomplete",
+            "Current retail acceptance not verified",
+            "Market-specific crowd exclusions not verified"
+          ],
+          "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+        },
+        {
+          "number": 122,
+          "game": "Miami Dolphins at New York Jets",
+          "time": "2026-10-25T13:00:00-04:00",
+          "gameKey": "MIA",
+          "selection": "Miami Dolphins",
+          "line": 12.5,
+          "type": "side",
+          "rationale": "Miami off bye against a Jets offense that has not topped20 in its last three games; 12.5 protects beyond10. Risk is Willis turnovers, Miami coverage failures.",
+          "cross": "Makinen MIA+4.5, Action MIA+4.5; Doc's Schonwald NYJ-5 opposes. FL Oct22 NYJ22-MIA18.",
+          "status": "HOLD",
+          "scoreStatus": "UNGRADED",
+          "score": null,
+          "grade": null,
+          "scoringVersion": "micks-110-v2-2026-09-29",
+          "factorMaximums": [
+            35,
+            20,
+            15,
+            10,
+            10,
+            10,
+            10
+          ],
+          "factors": {
+            "matchup": null,
+            "price": null,
+            "personnel": null,
+            "situation": null,
+            "vsin": null,
+            "docs": null,
+            "market": null
+          },
+          "failureDimensions": {
+            "failurePathSeverity": null,
+            "personnelResilience": null,
+            "scriptVariance": null,
+            "priceProtection": null,
+            "contradictionResolution": null
+          },
+          "failureScore": null,
+          "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+          "releaseBlockers": [
+            "Final health/role and current usage reconciliation incomplete",
+            "Current retail acceptance not verified",
+            "Market-specific crowd exclusions not verified"
+          ],
+          "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+        },
+        {
+          "number": 130,
+          "game": "San Francisco 49ers at Atlanta Falcons",
+          "time": "2026-10-25T13:00:00-04:00",
+          "gameKey": "ATL",
+          "selection": "Atlanta Falcons",
+          "line": 11.5,
+          "type": "side",
+          "rationale": "Double-digit home cushion against SF on short-week cross-country travel with Evans/Deebo/Bosa out; risk SF still has superior efficiency and CMC/Kittle.",
+          "cross": "Action Doug Kezirian ATL+3 supports; Makinen SF-2.5 and Doc's Schonwald SF-3 oppose; Tuley passes. FL Oct22 SF26-ATL24.",
+          "status": "HOLD",
+          "scoreStatus": "UNGRADED",
+          "score": null,
+          "grade": null,
+          "scoringVersion": "micks-110-v2-2026-09-29",
+          "factorMaximums": [
+            35,
+            20,
+            15,
+            10,
+            10,
+            10,
+            10
+          ],
+          "factors": {
+            "matchup": null,
+            "price": null,
+            "personnel": null,
+            "situation": null,
+            "vsin": null,
+            "docs": null,
+            "market": null
+          },
+          "failureDimensions": {
+            "failurePathSeverity": null,
+            "personnelResilience": null,
+            "scriptVariance": null,
+            "priceProtection": null,
+            "contradictionResolution": null
+          },
+          "failureScore": null,
+          "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+          "releaseBlockers": [
+            "Final health/role and current usage reconciliation incomplete",
+            "Current retail acceptance not verified",
+            "Market-specific crowd exclusions not verified"
+          ],
+          "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+        },
+        {
+          "number": 115,
+          "game": "Indianapolis Colts at Minnesota Vikings",
+          "time": "2026-10-25T13:00:00-04:00",
+          "gameKey": "MIN",
+          "selection": "MIN/IND Over",
+          "line": 34.5,
+          "type": "over",
+          "rationale": "Compare exact Big Teaser threshold34.5 with recording41.5 and dated FL40point forecast. Minnesota can supply much of the required scoring against Indianapolis' depleted coverage; main failure is Flores suppressing Indy while Minnesota also plays slowly. No assumption that earlier healthy-roster forecast is final.",
+          "cross": "FL Oct22 forecast40 combined; market reference41.5. No verified exact-total VSiN/Doc selection.",
+          "status": "HOLD",
+          "scoreStatus": "UNGRADED",
+          "score": null,
+          "grade": null,
+          "scoringVersion": "micks-110-v2-2026-09-29",
+          "factorMaximums": [
+            35,
+            20,
+            15,
+            10,
+            10,
+            10,
+            10
+          ],
+          "factors": {
+            "matchup": null,
+            "price": null,
+            "personnel": null,
+            "situation": null,
+            "vsin": null,
+            "docs": null,
+            "market": null
+          },
+          "failureDimensions": {
+            "failurePathSeverity": null,
+            "personnelResilience": null,
+            "scriptVariance": null,
+            "priceProtection": null,
+            "contradictionResolution": null
+          },
+          "failureScore": null,
+          "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+          "releaseBlockers": [
+            "Final health/role and current usage reconciliation incomplete",
+            "Current retail acceptance not verified",
+            "Market-specific crowd exclusions not verified"
+          ],
+          "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+        },
+        {
+          "number": 120,
+          "game": "Cleveland Browns at Tennessee Titans",
+          "time": "2026-10-25T13:00:00-04:00",
+          "gameKey": "CLE",
+          "selection": "CLE/TEN Under",
+          "line": 45.5,
+          "type": "under",
+          "rationale": "Both offenses at4.5 yards/play in TeamRankings; combined scoring baseline low and printed ceiling well above market37-37.5. Risk short fields, defensive/special-teams TDs or OT.",
+          "cross": "FL Oct22 forecast37 combined; LaMarca low-scoring context. Side opinions do not count as total confirmation.",
+          "status": "HOLD",
+          "scoreStatus": "UNGRADED",
+          "score": null,
+          "grade": null,
+          "scoringVersion": "micks-110-v2-2026-09-29",
+          "factorMaximums": [
+            35,
+            20,
+            15,
+            10,
+            10,
+            10,
+            10
+          ],
+          "factors": {
+            "matchup": null,
+            "price": null,
+            "personnel": null,
+            "situation": null,
+            "vsin": null,
+            "docs": null,
+            "market": null
+          },
+          "failureDimensions": {
+            "failurePathSeverity": null,
+            "personnelResilience": null,
+            "scriptVariance": null,
+            "priceProtection": null,
+            "contradictionResolution": null
+          },
+          "failureScore": null,
+          "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+          "releaseBlockers": [
+            "Final health/role and current usage reconciliation incomplete",
+            "Current retail acceptance not verified",
+            "Market-specific crowd exclusions not verified"
+          ],
+          "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+        },
+        {
+          "number": 124,
+          "game": "Miami Dolphins at New York Jets",
+          "time": "2026-10-25T13:00:00-04:00",
+          "gameKey": "MIA",
+          "selection": "NYJ/MIA Under",
+          "line": 46.5,
+          "type": "under",
+          "rationale": "Printed ceiling7points above video39.5; guide low-volume/low-scoring priors and current Jets offensive struggles support direction. Willis rushing explosives, Miami coverage problems and short fields oppose.",
+          "cross": "New candidate in corrected10-pick construction; full exact-market score/Failure and final release checks incomplete.",
+          "status": "HOLD",
+          "scoreStatus": "UNGRADED",
+          "score": null,
+          "grade": null,
+          "scoringVersion": "micks-110-v2-2026-09-29",
+          "factorMaximums": [
+            35,
+            20,
+            15,
+            10,
+            10,
+            10,
+            10
+          ],
+          "factors": {
+            "matchup": null,
+            "price": null,
+            "personnel": null,
+            "situation": null,
+            "vsin": null,
+            "docs": null,
+            "market": null
+          },
+          "failureDimensions": {
+            "failurePathSeverity": null,
+            "personnelResilience": null,
+            "scriptVariance": null,
+            "priceProtection": null,
+            "contradictionResolution": null
+          },
+          "failureScore": null,
+          "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+          "releaseBlockers": [
+            "Final health/role and current usage reconciliation incomplete",
+            "Current retail acceptance not verified",
+            "Market-specific crowd exclusions not verified"
+          ],
+          "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+        },
+        {
+          "number": 127,
+          "game": "Tampa Bay Buccaneers at Carolina Panthers",
+          "time": "2026-10-25T13:00:00-04:00",
+          "gameKey": "CAR",
+          "selection": "CAR/TB Over",
+          "line": 37.5,
+          "type": "over",
+          "rationale": "Compare exact37.5 with video44.5 and dated FL43point forecast. Carolina's current offensive efficiency and both run-game paths support scoring; Tampa QB availability, Egbuka absence and OL losses remain unresolved material counters. Reject FL article's stale Egbuka-start recommendation.",
+          "cross": "New candidate in corrected10-pick construction; full exact-market score/Failure and final release checks incomplete.",
+          "status": "HOLD",
+          "scoreStatus": "UNGRADED",
+          "score": null,
+          "grade": null,
+          "scoringVersion": "micks-110-v2-2026-09-29",
+          "factorMaximums": [
+            35,
+            20,
+            15,
+            10,
+            10,
+            10,
+            10
+          ],
+          "factors": {
+            "matchup": null,
+            "price": null,
+            "personnel": null,
+            "situation": null,
+            "vsin": null,
+            "docs": null,
+            "market": null
+          },
+          "failureDimensions": {
+            "failurePathSeverity": null,
+            "personnelResilience": null,
+            "scriptVariance": null,
+            "priceProtection": null,
+            "contradictionResolution": null
+          },
+          "failureScore": null,
+          "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+          "releaseBlockers": [
+            "Final health/role and current usage reconciliation incomplete",
+            "Current retail acceptance not verified",
+            "Market-specific crowd exclusions not verified"
+          ],
+          "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+        },
+        {
+          "number": 132,
+          "game": "San Francisco 49ers at Atlanta Falcons",
+          "time": "2026-10-25T13:00:00-04:00",
+          "gameKey": "ATL",
+          "selection": "SF/ATL Under",
+          "line": 57.5,
+          "type": "under",
+          "rationale": "Video total50.5; 79%money on Over at68.7k displayed bets makes Over43.5 excluded by user crowd rule. Under is a research candidate with7point cushion, not an automatic crowd fade; defensive injuries can create a shootout.",
+          "cross": "New candidate in corrected10-pick construction; full exact-market score/Failure and final release checks incomplete.",
+          "status": "HOLD",
+          "scoreStatus": "UNGRADED",
+          "score": null,
+          "grade": null,
+          "scoringVersion": "micks-110-v2-2026-09-29",
+          "factorMaximums": [
+            35,
+            20,
+            15,
+            10,
+            10,
+            10,
+            10
+          ],
+          "factors": {
+            "matchup": null,
+            "price": null,
+            "personnel": null,
+            "situation": null,
+            "vsin": null,
+            "docs": null,
+            "market": null
+          },
+          "failureDimensions": {
+            "failurePathSeverity": null,
+            "personnelResilience": null,
+            "scriptVariance": null,
+            "priceProtection": null,
+            "contradictionResolution": null
+          },
+          "failureScore": null,
+          "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+          "releaseBlockers": [
+            "Final health/role and current usage reconciliation incomplete",
+            "Current retail acceptance not verified",
+            "Market-specific crowd exclusions not verified"
+          ],
+          "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+        },
+        {
+          "number": 136,
+          "game": "Cincinnati Bengals at Baltimore Ravens",
+          "time": "2026-10-25T13:00:00-04:00",
+          "gameKey": "BAL",
+          "selection": "BAL/CIN Under",
+          "line": 58.5,
+          "type": "under",
+          "rationale": "Huntley replaces Jackson; printed total substantially above current references. Risk Burrow explosives, Baltimore defensive absences and OT.",
+          "cross": "Action Stuckey U48.5(-105); FL pre-Jackson-ruling forecast49 combined is stale and cannot be treated as updated Huntley model.",
+          "status": "HOLD",
+          "scoreStatus": "UNGRADED",
+          "score": null,
+          "grade": null,
+          "scoringVersion": "micks-110-v2-2026-09-29",
+          "factorMaximums": [
+            35,
+            20,
+            15,
+            10,
+            10,
+            10,
+            10
+          ],
+          "factors": {
+            "matchup": null,
+            "price": null,
+            "personnel": null,
+            "situation": null,
+            "vsin": null,
+            "docs": null,
+            "market": null
+          },
+          "failureDimensions": {
+            "failurePathSeverity": null,
+            "personnelResilience": null,
+            "scriptVariance": null,
+            "priceProtection": null,
+            "contradictionResolution": null
+          },
+          "failureScore": null,
+          "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+          "releaseBlockers": [
+            "Final health/role and current usage reconciliation incomplete",
+            "Current retail acceptance not verified",
+            "Market-specific crowd exclusions not verified"
+          ],
+          "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+        },
+        {
+          "number": 139,
+          "game": "New York Giants at Houston Texans",
+          "time": "2026-10-25T13:00:00-04:00",
+          "gameKey": "HOU",
+          "selection": "HOU/NYG Over",
+          "line": 36.5,
+          "type": "over",
+          "rationale": "Compare exact36.5 with video42.5 and dated FL44point forecast. Houston passing efficiency versus Giants secondary and offensive volume support scoring; Giants QB/protection risk can leave too much scoring burden on Houston. Current secondary absences considered; final regrade pending.",
+          "cross": "New candidate in corrected10-pick construction; full exact-market score/Failure and final release checks incomplete.",
+          "status": "HOLD",
+          "scoreStatus": "UNGRADED",
+          "score": null,
+          "grade": null,
+          "scoringVersion": "micks-110-v2-2026-09-29",
+          "factorMaximums": [
+            35,
+            20,
+            15,
+            10,
+            10,
+            10,
+            10
+          ],
+          "factors": {
+            "matchup": null,
+            "price": null,
+            "personnel": null,
+            "situation": null,
+            "vsin": null,
+            "docs": null,
+            "market": null
+          },
+          "failureDimensions": {
+            "failurePathSeverity": null,
+            "personnelResilience": null,
+            "scriptVariance": null,
+            "priceProtection": null,
+            "contradictionResolution": null
+          },
+          "failureScore": null,
+          "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+          "releaseBlockers": [
+            "Final health/role and current usage reconciliation incomplete",
+            "Current retail acceptance not verified",
+            "Market-specific crowd exclusions not verified"
+          ],
+          "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+        }
+      ],
+      "totalsCount": 7,
+      "overs": 3,
+      "unders": 4
+    },
+    {
+      "id": "EB4",
+      "cardType": "Delaware Big Teaser",
+      "legCount": 10,
+      "plannedUnits": 2,
+      "officialUnits": 0,
+      "status": "Draft/HOLD",
+      "officialBet": false,
+      "payoutProfitToStake": "13:2 printed (6.5:1)",
+      "profitIfWinUnits": 13,
+      "returnIfWinUnits": 15,
+      "legs": [
+        {
+          "number": 118,
+          "game": "Cleveland Browns at Tennessee Titans",
+          "time": "2026-10-25T13:00:00-04:00",
+          "gameKey": "CLE",
+          "selection": "Tennessee Titans",
+          "line": 9.5,
+          "type": "side",
+          "rationale": "Home underdog gets more than one score in a matchup between limited offenses; risk is Tennessee turnovers or protection collapse.",
+          "cross": "VSiN Tuley TEN+9 teaser, Doc's Parlays Pundit TEN+1.5, Action Stuckey TEN+1.5; Cohen CLE ML opposes direction. FL Oct22 TEN19-CLE18.",
+          "status": "HOLD",
+          "scoreStatus": "UNGRADED",
+          "score": null,
+          "grade": null,
+          "scoringVersion": "micks-110-v2-2026-09-29",
+          "factorMaximums": [
+            35,
+            20,
+            15,
+            10,
+            10,
+            10,
+            10
+          ],
+          "factors": {
+            "matchup": null,
+            "price": null,
+            "personnel": null,
+            "situation": null,
+            "vsin": null,
+            "docs": null,
+            "market": null
+          },
+          "failureDimensions": {
+            "failurePathSeverity": null,
+            "personnelResilience": null,
+            "scriptVariance": null,
+            "priceProtection": null,
+            "contradictionResolution": null
+          },
+          "failureScore": null,
+          "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+          "releaseBlockers": [
+            "Final health/role and current usage reconciliation incomplete",
+            "Current retail acceptance not verified",
+            "Market-specific crowd exclusions not verified"
+          ],
+          "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+        },
+        {
+          "number": 134,
+          "game": "Cincinnati Bengals at Baltimore Ravens",
+          "time": "2026-10-25T13:00:00-04:00",
+          "gameKey": "BAL",
+          "selection": "Cincinnati Bengals",
+          "line": 10.5,
+          "type": "side",
+          "rationale": "Rested Burrow/Chase/Higgins versus Huntley in place of Jackson; risk Baltimore's Henry-led run game, protection failures and turnovers.",
+          "cross": "Makinen CIN-1.5; Doc's earlier BAL opinion requires fresh QB reconciliation; FL BAL25-CIN24 forecast assumes possible Jackson return and is stale for current QB.",
+          "status": "HOLD",
+          "scoreStatus": "UNGRADED",
+          "score": null,
+          "grade": null,
+          "scoringVersion": "micks-110-v2-2026-09-29",
+          "factorMaximums": [
+            35,
+            20,
+            15,
+            10,
+            10,
+            10,
+            10
+          ],
+          "factors": {
+            "matchup": null,
+            "price": null,
+            "personnel": null,
+            "situation": null,
+            "vsin": null,
+            "docs": null,
+            "market": null
+          },
+          "failureDimensions": {
+            "failurePathSeverity": null,
+            "personnelResilience": null,
+            "scriptVariance": null,
+            "priceProtection": null,
+            "contradictionResolution": null
+          },
+          "failureScore": null,
+          "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+          "releaseBlockers": [
+            "Final health/role and current usage reconciliation incomplete",
+            "Current retail acceptance not verified",
+            "Market-specific crowd exclusions not verified"
+          ],
+          "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+        },
+        {
+          "number": 125,
+          "game": "Tampa Bay Buccaneers at Carolina Panthers",
+          "time": "2026-10-25T13:00:00-04:00",
+          "gameKey": "CAR",
+          "selection": "Carolina Panthers",
+          "line": 4.5,
+          "type": "side",
+          "rationale": "Young/Hubbard/McMillan versus a Tampa defense missing Winfield; current CAR efficiency exceeds TB. Risk Mayfield return plus Carolina's weak run defense.",
+          "cross": "Makinen CAR-3 supports; Tuley TB+9 teaser and Doc's Tony Sink TB+3.5 oppose. FL Oct22 CAR24-TB19.",
+          "status": "HOLD",
+          "scoreStatus": "UNGRADED",
+          "score": null,
+          "grade": null,
+          "scoringVersion": "micks-110-v2-2026-09-29",
+          "factorMaximums": [
+            35,
+            20,
+            15,
+            10,
+            10,
+            10,
+            10
+          ],
+          "factors": {
+            "matchup": null,
+            "price": null,
+            "personnel": null,
+            "situation": null,
+            "vsin": null,
+            "docs": null,
+            "market": null
+          },
+          "failureDimensions": {
+            "failurePathSeverity": null,
+            "personnelResilience": null,
+            "scriptVariance": null,
+            "priceProtection": null,
+            "contradictionResolution": null
+          },
+          "failureScore": null,
+          "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+          "releaseBlockers": [
+            "Final health/role and current usage reconciliation incomplete",
+            "Current retail acceptance not verified",
+            "Market-specific crowd exclusions not verified"
+          ],
+          "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+        },
+        {
+          "number": 115,
+          "game": "Indianapolis Colts at Minnesota Vikings",
+          "time": "2026-10-25T13:00:00-04:00",
+          "gameKey": "MIN",
+          "selection": "MIN/IND Over",
+          "line": 34.5,
+          "type": "over",
+          "rationale": "Compare exact Big Teaser threshold34.5 with recording41.5 and dated FL40point forecast. Minnesota can supply much of the required scoring against Indianapolis' depleted coverage; main failure is Flores suppressing Indy while Minnesota also plays slowly. No assumption that earlier healthy-roster forecast is final.",
+          "cross": "FL Oct22 forecast40 combined; market reference41.5. No verified exact-total VSiN/Doc selection.",
+          "status": "HOLD",
+          "scoreStatus": "UNGRADED",
+          "score": null,
+          "grade": null,
+          "scoringVersion": "micks-110-v2-2026-09-29",
+          "factorMaximums": [
+            35,
+            20,
+            15,
+            10,
+            10,
+            10,
+            10
+          ],
+          "factors": {
+            "matchup": null,
+            "price": null,
+            "personnel": null,
+            "situation": null,
+            "vsin": null,
+            "docs": null,
+            "market": null
+          },
+          "failureDimensions": {
+            "failurePathSeverity": null,
+            "personnelResilience": null,
+            "scriptVariance": null,
+            "priceProtection": null,
+            "contradictionResolution": null
+          },
+          "failureScore": null,
+          "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+          "releaseBlockers": [
+            "Final health/role and current usage reconciliation incomplete",
+            "Current retail acceptance not verified",
+            "Market-specific crowd exclusions not verified"
+          ],
+          "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+        },
+        {
+          "number": 120,
+          "game": "Cleveland Browns at Tennessee Titans",
+          "time": "2026-10-25T13:00:00-04:00",
+          "gameKey": "CLE",
+          "selection": "CLE/TEN Under",
+          "line": 45.5,
+          "type": "under",
+          "rationale": "Both offenses at4.5 yards/play in TeamRankings; combined scoring baseline low and printed ceiling well above market37-37.5. Risk short fields, defensive/special-teams TDs or OT.",
+          "cross": "FL Oct22 forecast37 combined; LaMarca low-scoring context. Side opinions do not count as total confirmation.",
+          "status": "HOLD",
+          "scoreStatus": "UNGRADED",
+          "score": null,
+          "grade": null,
+          "scoringVersion": "micks-110-v2-2026-09-29",
+          "factorMaximums": [
+            35,
+            20,
+            15,
+            10,
+            10,
+            10,
+            10
+          ],
+          "factors": {
+            "matchup": null,
+            "price": null,
+            "personnel": null,
+            "situation": null,
+            "vsin": null,
+            "docs": null,
+            "market": null
+          },
+          "failureDimensions": {
+            "failurePathSeverity": null,
+            "personnelResilience": null,
+            "scriptVariance": null,
+            "priceProtection": null,
+            "contradictionResolution": null
+          },
+          "failureScore": null,
+          "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+          "releaseBlockers": [
+            "Final health/role and current usage reconciliation incomplete",
+            "Current retail acceptance not verified",
+            "Market-specific crowd exclusions not verified"
+          ],
+          "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+        },
+        {
+          "number": 124,
+          "game": "Miami Dolphins at New York Jets",
+          "time": "2026-10-25T13:00:00-04:00",
+          "gameKey": "MIA",
+          "selection": "NYJ/MIA Under",
+          "line": 46.5,
+          "type": "under",
+          "rationale": "Printed ceiling7points above video39.5; guide low-volume/low-scoring priors and current Jets offensive struggles support direction. Willis rushing explosives, Miami coverage problems and short fields oppose.",
+          "cross": "New candidate in corrected10-pick construction; full exact-market score/Failure and final release checks incomplete.",
+          "status": "HOLD",
+          "scoreStatus": "UNGRADED",
+          "score": null,
+          "grade": null,
+          "scoringVersion": "micks-110-v2-2026-09-29",
+          "factorMaximums": [
+            35,
+            20,
+            15,
+            10,
+            10,
+            10,
+            10
+          ],
+          "factors": {
+            "matchup": null,
+            "price": null,
+            "personnel": null,
+            "situation": null,
+            "vsin": null,
+            "docs": null,
+            "market": null
+          },
+          "failureDimensions": {
+            "failurePathSeverity": null,
+            "personnelResilience": null,
+            "scriptVariance": null,
+            "priceProtection": null,
+            "contradictionResolution": null
+          },
+          "failureScore": null,
+          "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+          "releaseBlockers": [
+            "Final health/role and current usage reconciliation incomplete",
+            "Current retail acceptance not verified",
+            "Market-specific crowd exclusions not verified"
+          ],
+          "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+        },
+        {
+          "number": 127,
+          "game": "Tampa Bay Buccaneers at Carolina Panthers",
+          "time": "2026-10-25T13:00:00-04:00",
+          "gameKey": "CAR",
+          "selection": "CAR/TB Over",
+          "line": 37.5,
+          "type": "over",
+          "rationale": "Compare exact37.5 with video44.5 and dated FL43point forecast. Carolina's current offensive efficiency and both run-game paths support scoring; Tampa QB availability, Egbuka absence and OL losses remain unresolved material counters. Reject FL article's stale Egbuka-start recommendation.",
+          "cross": "New candidate in corrected10-pick construction; full exact-market score/Failure and final release checks incomplete.",
+          "status": "HOLD",
+          "scoreStatus": "UNGRADED",
+          "score": null,
+          "grade": null,
+          "scoringVersion": "micks-110-v2-2026-09-29",
+          "factorMaximums": [
+            35,
+            20,
+            15,
+            10,
+            10,
+            10,
+            10
+          ],
+          "factors": {
+            "matchup": null,
+            "price": null,
+            "personnel": null,
+            "situation": null,
+            "vsin": null,
+            "docs": null,
+            "market": null
+          },
+          "failureDimensions": {
+            "failurePathSeverity": null,
+            "personnelResilience": null,
+            "scriptVariance": null,
+            "priceProtection": null,
+            "contradictionResolution": null
+          },
+          "failureScore": null,
+          "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+          "releaseBlockers": [
+            "Final health/role and current usage reconciliation incomplete",
+            "Current retail acceptance not verified",
+            "Market-specific crowd exclusions not verified"
+          ],
+          "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+        },
+        {
+          "number": 132,
+          "game": "San Francisco 49ers at Atlanta Falcons",
+          "time": "2026-10-25T13:00:00-04:00",
+          "gameKey": "ATL",
+          "selection": "SF/ATL Under",
+          "line": 57.5,
+          "type": "under",
+          "rationale": "Video total50.5; 79%money on Over at68.7k displayed bets makes Over43.5 excluded by user crowd rule. Under is a research candidate with7point cushion, not an automatic crowd fade; defensive injuries can create a shootout.",
+          "cross": "New candidate in corrected10-pick construction; full exact-market score/Failure and final release checks incomplete.",
+          "status": "HOLD",
+          "scoreStatus": "UNGRADED",
+          "score": null,
+          "grade": null,
+          "scoringVersion": "micks-110-v2-2026-09-29",
+          "factorMaximums": [
+            35,
+            20,
+            15,
+            10,
+            10,
+            10,
+            10
+          ],
+          "factors": {
+            "matchup": null,
+            "price": null,
+            "personnel": null,
+            "situation": null,
+            "vsin": null,
+            "docs": null,
+            "market": null
+          },
+          "failureDimensions": {
+            "failurePathSeverity": null,
+            "personnelResilience": null,
+            "scriptVariance": null,
+            "priceProtection": null,
+            "contradictionResolution": null
+          },
+          "failureScore": null,
+          "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+          "releaseBlockers": [
+            "Final health/role and current usage reconciliation incomplete",
+            "Current retail acceptance not verified",
+            "Market-specific crowd exclusions not verified"
+          ],
+          "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+        },
+        {
+          "number": 136,
+          "game": "Cincinnati Bengals at Baltimore Ravens",
+          "time": "2026-10-25T13:00:00-04:00",
+          "gameKey": "BAL",
+          "selection": "BAL/CIN Under",
+          "line": 58.5,
+          "type": "under",
+          "rationale": "Huntley replaces Jackson; printed total substantially above current references. Risk Burrow explosives, Baltimore defensive absences and OT.",
+          "cross": "Action Stuckey U48.5(-105); FL pre-Jackson-ruling forecast49 combined is stale and cannot be treated as updated Huntley model.",
+          "status": "HOLD",
+          "scoreStatus": "UNGRADED",
+          "score": null,
+          "grade": null,
+          "scoringVersion": "micks-110-v2-2026-09-29",
+          "factorMaximums": [
+            35,
+            20,
+            15,
+            10,
+            10,
+            10,
+            10
+          ],
+          "factors": {
+            "matchup": null,
+            "price": null,
+            "personnel": null,
+            "situation": null,
+            "vsin": null,
+            "docs": null,
+            "market": null
+          },
+          "failureDimensions": {
+            "failurePathSeverity": null,
+            "personnelResilience": null,
+            "scriptVariance": null,
+            "priceProtection": null,
+            "contradictionResolution": null
+          },
+          "failureScore": null,
+          "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+          "releaseBlockers": [
+            "Final health/role and current usage reconciliation incomplete",
+            "Current retail acceptance not verified",
+            "Market-specific crowd exclusions not verified"
+          ],
+          "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+        },
+        {
+          "number": 139,
+          "game": "New York Giants at Houston Texans",
+          "time": "2026-10-25T13:00:00-04:00",
+          "gameKey": "HOU",
+          "selection": "HOU/NYG Over",
+          "line": 36.5,
+          "type": "over",
+          "rationale": "Compare exact36.5 with video42.5 and dated FL44point forecast. Houston passing efficiency versus Giants secondary and offensive volume support scoring; Giants QB/protection risk can leave too much scoring burden on Houston. Current secondary absences considered; final regrade pending.",
+          "cross": "New candidate in corrected10-pick construction; full exact-market score/Failure and final release checks incomplete.",
+          "status": "HOLD",
+          "scoreStatus": "UNGRADED",
+          "score": null,
+          "grade": null,
+          "scoringVersion": "micks-110-v2-2026-09-29",
+          "factorMaximums": [
+            35,
+            20,
+            15,
+            10,
+            10,
+            10,
+            10
+          ],
+          "factors": {
+            "matchup": null,
+            "price": null,
+            "personnel": null,
+            "situation": null,
+            "vsin": null,
+            "docs": null,
+            "market": null
+          },
+          "failureDimensions": {
+            "failurePathSeverity": null,
+            "personnelResilience": null,
+            "scriptVariance": null,
+            "priceProtection": null,
+            "contradictionResolution": null
+          },
+          "failureScore": null,
+          "noBetCutoff": "Not established: no bet until regraded; printed cell must match and remain accepted.",
+          "releaseBlockers": [
+            "Final health/role and current usage reconciliation incomplete",
+            "Current retail acceptance not verified",
+            "Market-specific crowd exclusions not verified"
+          ],
+          "sourceGap": "Current Circa sheet, complete current distributions/closing-expectation fade windows, exact numeric weekly projection deltas and wind/roof details remain incomplete."
+        }
+      ],
+      "totalsCount": 7,
+      "overs": 3,
+      "unders": 4
+    }
+  ],
+  "exactLegRecurrence": {
+    "113": 2,
+    "115": 4,
+    "118": 2,
+    "120": 4,
+    "122": 2,
+    "124": 4,
+    "125": 2,
+    "127": 4,
+    "130": 2,
+    "132": 3,
+    "134": 2,
+    "136": 4,
+    "138": 2,
+    "139": 3
+  },
+  "gameTicketOverlap": {
+    "MIN": [
+      "EB1",
+      "EB2",
+      "EB3",
+      "EB4"
+    ],
+    "CLE": [
+      "EB1",
+      "EB2",
+      "EB3",
+      "EB4"
+    ],
+    "ATL": [
+      "EB1",
+      "EB2",
+      "EB3",
+      "EB4"
+    ],
+    "HOU": [
+      "EB1",
+      "EB2",
+      "EB3",
+      "EB4"
+    ],
+    "MIA": [
+      "EB1",
+      "EB2",
+      "EB3",
+      "EB4"
+    ],
+    "CAR": [
+      "EB1",
+      "EB2",
+      "EB3",
+      "EB4"
+    ],
+    "BAL": [
+      "EB1",
+      "EB2",
+      "EB3",
+      "EB4"
+    ]
+  },
+  "sourceAudit": [
+    [
+      "Printed Delaware Big Teaser Oct22",
+      "CURRENT printed reference; visually checked; current retail acceptance unknown"
+    ],
+    [
+      "Official NFL injury/schedule report",
+      "CURRENT checked; initial Jackson-questionable text overridden by Ravens Oct24 ruled-out update; final inactives pending at research time"
+    ],
+    [
+      "Original VSiN NFL guide",
+      "READ team preview pages41,45,48,50,52,57,59,63,77,90,93,95,99,106; historical structural priors"
+    ],
+    [
+      "Original Fantasy Life magazine",
+      "READ team pages113,114,116,118,119,124,125,131,132,135,136,139,141,142"
+    ],
+    [
+      "Fantasy Life current",
+      "READ all7 Week7 game breakdowns plus Oct24 injury/role article and LaMarca market article; some entries predate health changes; numeric weekly-versus-annual deltas incomplete"
+    ],
+    [
+      "VSiN current",
+      "READ Cohen,Tuley,Makinen Week7 named selections; systems treated as one family; no generic full-game opinion counted as exact teaser confirmation"
+    ],
+    [
+      "Circa",
+      "VSiN link resolves public Dropbox folder but no dated sheet content retrieved; comparison unavailable"
+    ],
+    [
+      "VSiN/DraftKings splits",
+      "Page says no splits data available Oct25 and subscriber rows unavailable; market tickets/handle UNKNOWN; qualitative heavy CIN backing is a concern, not a fabricated numerical asterisk"
+    ],
+    [
+      "Doc's main/free NFL pages",
+      "READ seven matchup pages; author selections recorded where retrievable; inconsistent ancillary start times rejected"
+    ],
+    [
+      "Doc's statistics",
+      "Checked; no usable current matchup table"
+    ],
+    [
+      "Doc's video",
+      "Checked; no relevant early NFL selection verified from actual video"
+    ],
+    [
+      "Doc's AI-v3",
+      "Checked; no verifiable current early-game market selection"
+    ],
+    [
+      "Action",
+      "READ current game analyses; Giants/Houston and Cleveland/Tennessee contradictions preserved"
+    ],
+    [
+      "TeamRankings",
+      "READ all7 matchup stat tables; dated reference lines only, not executable quotes"
+    ],
+    [
+      "StatMuse",
+      "READ CLE/TEN full matchup page and last5; stale injury labels rejected; full7-game distribution scan incomplete"
+    ],
+    [
+      "Pro Football Reference",
+      "2026 standings/advanced/snap paths located; full page retrieval failed; snippet-only numbers not used"
+    ],
+    [
+      "Covers",
+      "Current TB/CAR preview read; CIN/BAL matchup/picks/odds paths checked; comprehensive7-game scan incomplete"
+    ],
+    [
+      "Weather",
+      "Four outdoor-city current hourly forecasts checked; temperature/precip only; kickoff wind/gust and stadium roofs not fully verified"
+    ],
+    [
+      "Progressive Fade/Favorite Inflation",
+      "Qualitative record/efficiency countercases assessed; complete5/10/20 ATS-vs-closing margins unavailable, triggers UNKNOWN"
+    ],
+    [
+      "Active source card",
+      "Fetched main data/todays-picks.json datedOct24; no Oct25 rows found; no private/executed wager inventory inferred"
+    ],
+    [
+      "User recording",
+      "Reviewed84.745second recording via time-indexed frames; confirms SF/ATL Over crowd exclusion and selected-market snapshots; other missing market-specific splits remainUNKNOWN"
+    ]
+  ],
+  "validation": "10unique printed selections per ticket; all1pm; team sides max2; #131SF/ATLOver excluded; 115/127/139 replace116/128/140 globally. Mix3O/3U,2O/4U,3O/4U,3O/4U;11Over and15Under slots total. Eachgamehas one totaldirection acrosscards. Side/totaljointwinning regions remain possible. Heavyoverlap unchanged; no claim of independence. Draft/HOLD, allscoresnull; no wager/publication.",
+  "revision": "Mixed-total correction after user rejected excessive Unders",
+  "supersedes": [
+    "early-teaser-10-pick-correction-1021-et.json",
+    "early-teaser-10-pick-correction-1021-et.md"
+  ],
+  "recordingAudit": {
+    "file": "ScreenRecording_10-25-2026 10-06-25_1.mp4",
+    "asOf": "2026-10-25 approx10:06–10:07 ET",
+    "durationSeconds": 84.745,
+    "observed": [
+      {
+        "seconds": 4,
+        "game": "MIA@NYJ",
+        "displayedBets": 34300,
+        "market": "Total39.5",
+        "overTickets": 55,
+        "overMoney": 60,
+        "underTickets": 45,
+        "underMoney": 40
+      },
+      {
+        "seconds": 12,
+        "game": "NYG@HOU",
+        "displayedBets": 51900,
+        "market": "SpreadNYG+10.5/HOU-10.5",
+        "nygTickets": 51,
+        "nygMoney": 42,
+        "houTickets": 49,
+        "houMoney": 58
+      },
+      {
+        "seconds": 20,
+        "game": "SF@ATL",
+        "displayedBets": 68700,
+        "market": "Total50.5",
+        "overTickets": 55,
+        "overMoney": 79,
+        "underTickets": 45,
+        "underMoney": 21,
+        "excludedDirection": "OVER",
+        "printedExcludedNumber": 131
+      },
+      {
+        "seconds": 24,
+        "game": "TB@CAR",
+        "displayedBets": 47800,
+        "market": "No actual split table visible",
+        "tickets": null,
+        "money": null
+      },
+      {
+        "seconds": 32,
+        "game": "CLE@TEN",
+        "displayedBets": 42500,
+        "market": "SpreadCLE-2/TEN+2",
+        "cleTickets": 67,
+        "cleMoney": 64,
+        "tenTickets": 33,
+        "tenMoney": 36
+      },
+      {
+        "seconds": 40,
+        "game": "CIN@BAL",
+        "displayedBets": 46000,
+        "market": "Total46.5",
+        "overTickets": 49,
+        "overMoney": 44,
+        "underTickets": 51,
+        "underMoney": 56,
+        "spreadSplits": null
+      },
+      {
+        "seconds": 44,
+        "game": "IND@MIN",
+        "displayedBets": 44700,
+        "market": "SpreadIND+6.5/MIN-6.5",
+        "indTickets": 51,
+        "indMoney": 51,
+        "minTickets": 49,
+        "minMoney": 49
+      }
+    ],
+    "notes": "Displayed counts are contest bets, not dollars/handle or market-specific sample sizes. Figures are historical video snapshots, not live quotes. Late games in recording excluded. No ML percentages transferred to spread or totals."
+  },
+  "pairwiseOverlap": [
+    {
+      "tickets": [
+        "EB1",
+        "EB2"
+      ],
+      "sharedCount": 6,
+      "selections": [
+        138,
+        115,
+        120,
+        124,
+        127,
+        136
+      ]
+    },
+    {
+      "tickets": [
+        "EB1",
+        "EB3"
+      ],
+      "sharedCount": 8,
+      "selections": [
+        113,
+        130,
+        115,
+        120,
+        124,
+        127,
+        136,
+        139
+      ]
+    },
+    {
+      "tickets": [
+        "EB1",
+        "EB4"
+      ],
+      "sharedCount": 7,
+      "selections": [
+        118,
+        115,
+        120,
+        124,
+        127,
+        136,
+        139
+      ]
+    },
+    {
+      "tickets": [
+        "EB2",
+        "EB3"
+      ],
+      "sharedCount": 7,
+      "selections": [
+        122,
+        115,
+        120,
+        124,
+        127,
+        132,
+        136
+      ]
+    },
+    {
+      "tickets": [
+        "EB2",
+        "EB4"
+      ],
+      "sharedCount": 8,
+      "selections": [
+        134,
+        125,
+        115,
+        120,
+        124,
+        127,
+        132,
+        136
+      ]
+    },
+    {
+      "tickets": [
+        "EB3",
+        "EB4"
+      ],
+      "sharedCount": 7,
+      "selections": [
+        115,
+        120,
+        124,
+        127,
+        132,
+        136,
+        139
+      ]
+    }
+  ],
+  "totalDirectionChanges": [
+    {
+      "old": 116,
+      "number": 115,
+      "line": 34.5,
+      "selection": "MIN/IND Over",
+      "reason": "Compare exact Big Teaser threshold34.5 with recording41.5 and dated FL40point forecast. Minnesota can supply much of the required scoring against Indianapolis' depleted coverage; main failure is Flores suppressing Indy while Minnesota also plays slowly. No assumption that earlier healthy-roster forecast is final."
+    },
+    {
+      "old": 128,
+      "number": 127,
+      "line": 37.5,
+      "selection": "CAR/TB Over",
+      "reason": "Compare exact37.5 with video44.5 and dated FL43point forecast. Carolina's current offensive efficiency and both run-game paths support scoring; Tampa QB availability, Egbuka absence and OL losses remain unresolved material counters. Reject FL article's stale Egbuka-start recommendation."
+    },
+    {
+      "old": 140,
+      "number": 139,
+      "line": 36.5,
+      "selection": "HOU/NYG Over",
+      "reason": "Compare exact36.5 with video42.5 and dated FL44point forecast. Houston passing efficiency versus Giants secondary and offensive volume support scoring; Giants QB/protection risk can leave too much scoring burden on Houston. Current secondary absences considered; final regrade pending."
+    }
+  ]
+}
