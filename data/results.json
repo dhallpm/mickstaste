@@ -1,35 +1,35 @@
 {
   "success": true,
   "source": "published-results-static",
-  "sourceOfTruth": "Archived Micks Picks results plus verified reconstructed and current graded results",
-  "date": "2026-09-22",
-  "syncedAt": "2026-10-24T07:51:26.341Z",
+  "sourceOfTruth": "Archived Micks Picks results plus verified reconstructed and current graded results; synced 2026-10-25",
+  "date": "2026-10-25",
+  "syncedAt": "2026-10-25T15:41:15.756Z",
   "summary": {
     "overall": {
       "wins": 52,
-      "losses": 52,
+      "losses": 53,
       "pushes": 1,
-      "record": "52-52-1",
-      "units": "+14.59u",
-      "profitLoss": "+14.59u",
-      "netUnits": 14.59,
-      "unitsRisked": 72.15,
+      "record": "52-53-1",
+      "units": "+13.84u",
+      "profitLoss": "+13.84u",
+      "netUnits": 13.84,
+      "unitsRisked": 72.9,
       "winRate": "49.5%",
       "incompleteUnitRows": 0,
-      "roi": 20.2
+      "roi": 19
     },
     "officialStraight": {
       "wins": 23,
-      "losses": 23,
+      "losses": 24,
       "pushes": 1,
-      "record": "23-23-1",
-      "units": "-1.60u",
-      "profitLoss": "-1.60u",
-      "netUnits": -1.6,
-      "unitsRisked": 29.65,
-      "winRate": "50.0%",
+      "record": "23-24-1",
+      "units": "-2.35u",
+      "profitLoss": "-2.35u",
+      "netUnits": -2.35,
+      "unitsRisked": 30.4,
+      "winRate": "48.9%",
       "incompleteUnitRows": 0,
-      "roi": -5.4
+      "roi": -7.7
     },
     "vip": {
       "wins": 5,
@@ -85,6 +85,67 @@
     }
   },
   "results": [
+    {
+      "id": "free-atl-hou-ml-2026-10-24",
+      "date": "2026-10-24",
+      "Date": "2026-10-24",
+      "postedDate": "2026-10-24",
+      "eventDate": "2026-10-24",
+      "settledAt": "2026-10-25T15:41:15.756Z",
+      "settlementCheckedAt": "2026-10-25T15:41:15.756Z",
+      "section": "Free",
+      "Section": "Free",
+      "access": "free",
+      "Access": "Free",
+      "sport": "NBA",
+      "Sport": "NBA",
+      "league": "NBA",
+      "League": "NBA",
+      "game": "Houston Rockets at Atlanta Hawks",
+      "Matchup": "Houston Rockets at Atlanta Hawks",
+      "pick": "Atlanta Hawks moneyline",
+      "Pick": "Atlanta Hawks moneyline",
+      "cardTitle": "Atlanta Hawks Moneyline",
+      "type": "Moneyline",
+      "market": "Moneyline",
+      "odds": "-115",
+      "Odds": "-115",
+      "sportsbook": "BetRivers Delaware",
+      "grade": "B",
+      "Grade": "B",
+      "units": 0.75,
+      "Units": 0.75,
+      "status": "Graded",
+      "Status": "Graded",
+      "result": "Loss",
+      "Result": "Loss",
+      "outcome": "Loss",
+      "Outcome": "Loss",
+      "officialBet": "Yes",
+      "Official Bet": "Yes",
+      "excludeFromRecord": false,
+      "profitLoss": "-0.75u",
+      "Profit/Loss": "-0.75u",
+      "P/L": "-0.75u",
+      "profitLossValue": -0.75,
+      "settlementNotes": "LOSS. Houston Rockets beat Atlanta Hawks 121–114 on October 24, 2026. Atlanta moneyline -115 lost.",
+      "finalScore": "Houston Rockets 121, Atlanta Hawks 114",
+      "recordScope": "Official straight pick — counted in Micks Picks overall and Master Picks record.",
+      "sourceLinks": [
+        {
+          "title": "NBA.com official game page",
+          "url": "https://www.nba.com/game/hou-vs-atl-0022600107"
+        },
+        {
+          "title": "Associated Press game report",
+          "url": "https://www.cbssports.com/nba/gametracker/recap/NBA_20261024_HOU%40ATL/"
+        }
+      ],
+      "settlementSources": [
+        "https://www.nba.com/game/hou-vs-atl-0022600107",
+        "https://www.cbssports.com/nba/gametracker/recap/NBA_20261024_HOU%40ATL/"
+      ]
+    },
     {
       "id": "planned-vegas-nba-7pt-10leg-evening-2026-10-23",
       "date": "2026-10-23",
