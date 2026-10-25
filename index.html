@@ -298,7 +298,7 @@ async function boot(){
   const source='/data/todays-picks.json',totalCards=activeRows.length;
   console.log('picksSource',source);
   console.log('pickCount',totalCards);
-  const freeDisplayRows=freeActive.length?freeActive:longshotActive.filter(r=>val(r,'__section')==='lottoParlays'&&/NBA.*6-Leg/i.test(val(r,'game'))).map(r=>({...r,cardTitle:'Today’s Card — '+val(r,'cardTitle')}));
+  const freeDisplayRows=freeActive.filter(r=>!['vip','vipVault','longshots','lottoParlays','watchlist'].includes(val(r,'__section'))&&!isLongshotMarket(r)&&!isVipAccess(r));
   renderCards('freeCards',freeDisplayRows,'No individual picks are posted today.',true);
   renderCards('watchlistCards',watchActive,'No price-trigger candidates today.',true);
   renderCards('vipCards',vipActive,'VIP card locked. Enter the protected VIP portal for member picks.',true);
@@ -308,7 +308,7 @@ async function boot(){
   const activeUnits=releasedRows.reduce((sum,row)=>sum+parseUnits(val(row,'units')),0);
   setText('homeUnits',`${activeUnits.toFixed(2)}u`);
   setText('homeActive',`${releasedRows.length} pick${releasedRows.length===1?'':'s'} / ${watchActive.length} watch`);
-  const featuredCandidates=dedupe([...freeActive,...activeProps,...longshotActive,...vipActive,...releasedRows]).filter(r=>r.betPlaced!==true);
+  const featuredCandidates=dedupe(freeDisplayRows).filter(r=>r.betPlaced!==true&&/yes|featured/i.test(val(r,'featured'))||r.betPlaced!==true&&!!val(r,'pick'));
   const featured=featuredCandidates.find(r=>/yes|featured/i.test(val(r,'featured')))||featuredCandidates[0],featuredCard=document.getElementById('featuredCard');
   if(featuredCard){
     if(featured){
