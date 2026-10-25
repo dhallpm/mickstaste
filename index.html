@@ -319,8 +319,6 @@ async function boot(){
     }
   }
   if(window.lucide&&typeof window.lucide.createIcons==='function')window.lucide.createIcons();
-  const odds=await oddsPromise;
-  renderOdds(odds.filter(hasPick),publicActiveRows);
   const resultsPayload=await resultsPromise;
   renderCanonicalResults(resultsPayload);
   const resultRows=dedupe(canonicalRowsFromPayload(resultsPayload));
@@ -337,6 +335,9 @@ async function boot(){
   writeStats('vip',vipStats);
   writeStats('props',propsStats);
   writeStats('longshots',longshotStats);
+  // Results render independently so a slow odds feed cannot leave the archive stuck loading.
+  const odds=await oddsPromise;
+  renderOdds(odds.filter(hasPick),publicActiveRows);
   // Hero and Results use the same canonical summary; do not recompute from active-row stats.
 }
 function americanProfit(stake,odds){return odds>0?stake*odds/100:stake*100/Math.abs(odds)}function calcEV(){const prob=document.getElementById('evProb'),odds=document.getElementById('evOdds'),stake=document.getElementById('evStake'),result=document.getElementById('evResult');if(!prob||!odds||!stake||!result)return;const p=Number(prob.value)/100,o=Number(odds.value),s=Number(stake.value);if(!p||!o||!s){result.textContent='--';return}const profit=americanProfit(s,o),ev=p*profit-(1-p)*s;result.textContent=(ev>=0?'+':'')+ev.toFixed(2)+'u'}['evProb','evOdds','evStake'].forEach(id=>document.getElementById(id)?.addEventListener('input',calcEV));calcEV();if(location.hash){const id=location.hash.replace('#','');if(document.getElementById(id))setTab(id)}boot().catch(err=>console.error('Homepage boot failed:',err));
