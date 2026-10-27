@@ -2,7 +2,7 @@
   "success": true,
   "source": "published-active-card-static",
   "sourceOfTruth": "Micks Picks publish data",
-  "date": "2026-10-25",
+  "date": "2026-10-27",
   "totalExposure": 0,
   "free": [
     {
@@ -497,6 +497,72 @@
     }
   ],
   "lottoParlays": [
+    {
+      "date": "2026-10-27",
+      "postedDate": "2026-10-27",
+      "eventDate": "2026-10-27",
+      "section": "Lotto Parlays",
+      "access": "free",
+      "sport": "NBA",
+      "league": "NBA",
+      "game": "NBA — October 27, 2026 | 3-Leg Sweetheart 7-Point Teaser",
+      "pick": "New York Knicks +2.5 / San Antonio Spurs -11.5 / Los Angeles Lakers +5.5",
+      "cardTitle": "NBA 3-Leg 7-Point Teaser — Confirmed Wager",
+      "type": "7-Point Teaser",
+      "market": "Parlay",
+      "lineNumber": "NYK +2.5 / SAS -11.5 / LAL +5.5",
+      "odds": "+170",
+      "sportsbook": "BetRivers Delaware",
+      "grade": "User-selected / ungraded",
+      "units": 6,
+      "status": "Pending",
+      "officialBet": "Yes",
+      "stakeAmount": 600,
+      "potentialPayout": 1621,
+      "cashOutOffer": 570,
+      "currency": "USD",
+      "writeup": "Confirmed three-leg BetRivers seven-point teaser, shown in My Bets. The ticket is user-selected and remains ungraded as a Micks Picks recommendation. See each leg’s writeup and the main risks below. Screenshot shows $600 wager, +170, potential payout $1,621, and $570 cash-out offer; these are recorded as displayed, not independently re-priced.",
+      "fullAnalysis": "CONFIRMED WAGER — user-provided BetRivers My Bets screenshot, October 27, 2026. Three-leg 7-point teaser at +170. Stake $600; potential payout $1,621; cash-out offer shown $570. These are screenshot values, not a Micks-issued odds quote. No wager was placed by Micks Picks.\n\n1) Detroit Pistons at New York Knicks — Knicks +2.5 (8:00 PM ET; teaser leg shown -230).\nThis leg gives New York a small cushion while asking the Knicks to win or stay within the teased spread. The market model shown earlier was essentially aligned with the unteased Knicks number, so the case is primarily the protection from the teaser and the home setting. The countercase is meaningful: New York opened 0-3 and had struggled to score, while Detroit entered 3-0. Detroit center Jalen Duren is officially out with a hamstring strain, which changes the interior matchup. Ausar Thompson and Isaiah Joe were questionable on the 4:30 PM NBA report; their final status should be checked before tip. This is not an independent Micks-certified edge. Do not infer spread splits from moneyline splits.\n\n2) Sacramento Kings at San Antonio Spurs — Spurs -11.5 (8:00 PM ET; teaser leg shown -295).\nThis is the highest-variance leg: San Antonio must win by at least 12. The Spurs entered as a heavy favorite against a winless Kings team, and Sacramento’s early defense had allowed 124 points per game. But Action’s recording showed Sacramento +18.5 and a model projection of Sacramento +14.5, substantially closer than the market implied; DraftKings also showed Sacramento receiving 72% of spread handle. Those are real counter-signals, not reasons to call Spurs -11.5 a consensus play. Doc’s Josh Schonwald selected Sacramento +18.5, and VSiN’s daily trends included both an Over angle and Spurs spread trend context. The teaser reduces the original favorite spread by seven, but San Antonio still needs a double-digit win. Kings injuries (including Keegan Murray and Ben Simmons out) weaken Sacramento, but do not erase backdoor-cover risk. This leg is user-selected and not a certified Micks pick.\n\n3) Portland Trail Blazers at Los Angeles Lakers — Lakers +5.5 (11:00 PM ET; teaser leg shown -250).\nThe teased cushion allows Los Angeles to win or lose by up to five. The earlier Action model showed Lakers -3.1 versus a -2 consensus line, modest support for the Lakers side before teasing. VSiN analyst Zachary Cohen recommended Lakers moneyline, and Doc’s Parlay’s Pundit picked Los Angeles with the Under; those are directional evidence, not an exact endorsement of +5.5. Portland’s Scoot Henderson was questionable and Shaedon Sharpe out; Lakers center Walker Kessler was listed available. The main failure path is Portland’s guard creation and offense overcoming the cushion, particularly if Henderson plays. This remains a user-selected teaser leg, not a separate Micks-certified pick.\n\nTicket integrity note: the screenshot contains exactly these three legs in this order. Brooklyn picks are excluded. Combined ticket payout and settlement rules are recorded only as displayed; no independent probability or positive-EV claim is made. Result remains pending until all legs settle.",
+      "failureScore": "Not scored as a combined ticket",
+      "sourceVerification": "User-uploaded BetRivers My Bets screenshot; NBA injury report snapshot at 4:30 PM ET; accompanying October 27 slate research.",
+      "wagerAccepted": "Confirmed — shown in BetRivers My Bets screenshot",
+      "showFullAnalysis": true,
+      "expandableAnalysis": true,
+      "bestNumber": "",
+      "best": "",
+      "playableTo": "",
+      "playable": "",
+      "noBetCutoff": "",
+      "cutoff": "",
+      "teaserPoints": 7,
+      "legCount": 3,
+      "legDetails": [
+        {
+          "rank": 1,
+          "pick": "New York Knicks +2.5",
+          "game": "Detroit Pistons at New York Knicks",
+          "time": "8:00 PM ET",
+          "price": "-230",
+          "writeup": "Home-side teaser cushion; Detroit's Duren is out, but New York's 0-3 offensive start and questionable Detroit players are material risks. User-selected; not an independently certified Micks edge."
+        },
+        {
+          "rank": 2,
+          "pick": "San Antonio Spurs -11.5",
+          "game": "Sacramento Kings at San Antonio Spurs",
+          "time": "8:00 PM ET",
+          "price": "-295",
+          "writeup": "Requires a 12-point win. Sacramento's poor early defense and absences support the favorite, but Action's closer projection, 72% DraftKings spread handle on Sacramento, and Doc's Kings pick create a substantial blowout-margin countercase."
+        },
+        {
+          "rank": 3,
+          "pick": "Los Angeles Lakers +5.5",
+          "game": "Portland Trail Blazers at Los Angeles Lakers",
+          "time": "11:00 PM ET",
+          "price": "-250",
+          "writeup": "Cushion supports Lakers side; Action modestly favored LA and VSiN's Cohen backed Lakers ML. Henderson is questionable; Portland's guard creation is the key threat."
+        }
+      ]
+    },
     {
       "date": "2026-10-24",
       "section": "Lotto Parlays",
@@ -4570,5 +4636,5 @@
   ],
   "longshots": [],
   "gradedAt": "2026-10-26T02:38:26.427Z",
-  "updatedAt": "2026-10-26T02:44:44.497Z"
+  "updatedAt": "2026-10-27T21:25:30.473Z"
 }
