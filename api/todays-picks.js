@@ -34,7 +34,7 @@ function active(row = {}, cardDate = '') {
   const placedPersonalTicket = section(row) === 'Lotto Parlays' && row.betPlaced === true
   const nonOfficialSection = (['Watchlist / Live Only','Passes'].includes(section(row)) || ((section(row) === 'Lotto Parlays' || section(row) === 'VIP') && /^watch/i.test(status)))
   const plannedLotto = section(row) === 'Lotto Parlays' && /^planned/i.test(status)
-  return dateKey(row.Date || row.date) === cardDate && !SETTLED.has(status) && !SETTLED.has(result) && (placedPersonalTicket || nonOfficialSection || plannedLotto || !/^(no|false|0)$/.test(official))
+  return dateKey(row.Date || row.date) === cardDate && !SETTLED.has(status) && !SETTLED.has(result) && (row.publishedSelection === true || placedPersonalTicket || nonOfficialSection || plannedLotto || !/^(no|false|0)$/.test(official))
 }
 
 function section(row = {}) {
