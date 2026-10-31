@@ -104,7 +104,9 @@
 
   function isTruePlayerProp(row) {
     const source = `${row?.__source || ''} ${row?.__table || ''}`;
-    const market = marketText(row);
+    const market = row.publishedSelection === true
+      ? [getValue(row, 'type'), getValue(row, 'category'), getValue(row, 'pick'), row.market, row.section].join(' ')
+      : marketText(row);
     const spacedPlusCombo = /\s\+\s/.test(market) && !/hits?\s*\+\s*runs?\s*\+\s*rbi?s?/i.test(market);
     if (/Props Lab|Props Results/i.test(source)) return !NON_PROP_RE.test(market);
     if (NON_PROP_RE.test(market) || spacedPlusCombo) return false;
