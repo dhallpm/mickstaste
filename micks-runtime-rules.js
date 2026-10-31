@@ -99,7 +99,7 @@
     const section = getValue(row, 'section') || row?.__section;
     const plannedLotto = /^planned\b/i.test(getValue(row, 'status')) &&
       /^(?:lotto\s*parlays?)$/i.test(text(section));
-    return !status || OPEN_RE.test(status) || plannedLotto;
+    return !status || OPEN_RE.test(status) || plannedLotto || (row.publishedSelection === true && /^planned\b/i.test(getValue(row, 'status')));
   }
 
   function isTruePlayerProp(row) {
