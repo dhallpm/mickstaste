@@ -2,7 +2,7 @@
   "success": true,
   "source": "published-active-card-static",
   "sourceOfTruth": "Micks Picks publish data",
-  "date": "2026-10-31",
+  "date": "2026-11-02",
   "totalExposure": 0,
   "free": [
     {
@@ -698,6 +698,139 @@
     }
   ],
   "lottoParlays": [
+    {
+      "id": "nba-20261102-eight-leg-super-parlay",
+      "date": "2026-11-02",
+      "eventDate": "2026-11-02",
+      "access": "free",
+      "sport": "NBA",
+      "league": "NBA",
+      "sportsbook": "BetRivers Delaware",
+      "section": "Lotto Parlays",
+      "type": "Super Parlay",
+      "market": "Super Parlay",
+      "cardTitle": "NBA Eight-Leg Super Parlay",
+      "game": "Utah at San Antonio + Oklahoma City at Cleveland + New Orleans at Memphis",
+      "pick": "Utah Jazz +23.5 / De'Aaron Fox 14+ points / Julian Champagnie 2+ threes / Dylan Harper 5+ rebounds / Victor Wembanyama 25+ points / Victor Wembanyama 2+ threes / Cleveland Cavaliers +3.5 / New Orleans Pelicans +12.5",
+      "lineNumber": "8 legs · 6-leg Spurs–Jazz SGP + 2 alternate spreads",
+      "odds": "+1525",
+      "status": "Planned",
+      "releaseStatus": "User Selected / Manual Posted",
+      "officialBet": "No",
+      "publishedSelection": true,
+      "betPlaced": false,
+      "excludeFromRecord": true,
+      "hideWagerAmounts": true,
+      "units": 0,
+      "startTime": "7:00 PM ET",
+      "commenceTime": "2026-11-03T00:00:00Z",
+      "showFullAnalysis": true,
+      "expandableAnalysis": true,
+      "featured": true,
+      "writeup": "Eight exact selections from your ticket: Utah+23.5, Fox14+points, Champagnie2+threes, Harper5+rebounds, Wembanyama25+points and2+threes, Cleveland+3.5 and New Orleans+12.5. Starts7:00PM ET; Spurs–Jazz8:30PM ET. Open for complete leg-by-leg analysis and shared-risk notes.",
+      "fullAnalysis": "Why This Ticket: User-selected eight-leg Super Parlay: one six-leg Utah–San Antonio same-game parlay plus Cleveland and New Orleans alternate spreads. This is not a uniform seven-point teaser.\n\nLeg-by-Leg Analysis:\n1) Utah Jazz +23.5 — Utah Jazz at San Antonio Spurs, 8:30 PM ET\nUtah can lose by up to23. The previous meeting was a six-point overtime loss, but Markkanen's return and Utah's missing Jackson/Nurkic make this a different matchup. Earlier standard-spread money concentration was a warning, not proof this alternate is value.\n\n2) De'Aaron Fox 14+ points — Utah Jazz at San Antonio Spurs, 8:30 PM ET\nFox reached14 in five of six logged games:14,19,19,11,14,22. Exactly14 wins this selection, unlike Over14.5. He scored14 in the previous Utah meeting. Blowout minutes and shared creation are the countercase.\n\n3) Julian Champagnie 2+ threes — Utah Jazz at San Antonio Spurs, 8:30 PM ET\nChampagnie made2,2,3,8,2,3 threes in six games, reaching this threshold in all six. The eight-make game is an outlier; three-plus hit only three of six. Shooting variance remains substantial.\n\n4) Dylan Harper 5+ rebounds — Utah Jazz at San Antonio Spurs, 8:30 PM ET\nHarper collected7,3,5,6,5,7 rebounds: five of six at5+. He had5 against Utah previously. Normal Castle minutes and a lopsided score can affect his opportunity.\n\n5) Victor Wembanyama 25+ points — Utah Jazz at San Antonio Spurs, 8:30 PM ET\nWembanyama reached25 in four of six, with29,36,43 most recently. Utah's missing defensive bigs support the scoring matchup. His prior36 included overtime;34 attempts last game are not a stable projection.\n\n6) Victor Wembanyama 2+ threes — Utah Jazz at San Antonio Spurs, 8:30 PM ET\nWembanyama made0,2,2,0,4,3 threes: four of six at2+. He made4 in the previous Utah meeting. This introduces another shooting-variance condition and is correlated with his points leg.\n\n7) Cleveland Cavaliers +3.5 — Oklahoma City Thunder at Cleveland Cavaliers, 7:00 PM ET\nCleveland can win or lose by up to3. Oklahoma City's verified absences support Cleveland, but SGA remains the principal countercase and Cleveland has wing injuries. Printed individual reference odds−280.\n\n8) New Orleans Pelicans +12.5 — New Orleans Pelicans at Memphis Grizzlies, 8:00 PM ET\nNew Orleans can lose by up to12. The cushion matches the researched alternate, but Memphis has covered six straight and entered with a+15.2 average margin. A Memphis blowout is the strongest failure path. Printed individual reference odds−340.\n\nShared Risk: Six legs depend on the same Spurs–Jazz game. Blowout minutes, foul trouble and shooting variance can defeat several legs together. All five prop thresholds cleared in the prior Utah matchup, which included overtime and lacked Markkanen; this is one game, not a validated probability. Both teams had one off-day afterOctober31, neither B2B. Spreadsheet sample: six games only.\n\nFinal Take: Published at the user's direction with exact pictured thresholds. Framework qualification remains separate; no invented score or unit stake. Displayed monetary amounts are not independently verified and are hidden from public card/record accounting.",
+      "legs": [
+        {
+          "rank": 1,
+          "pick": "Utah Jazz +23.5",
+          "game": "Utah Jazz at San Antonio Spurs",
+          "startTime": "8:30 PM ET",
+          "commenceTime": "2026-11-03T01:30:00Z",
+          "market": "Spread",
+          "line": 23.5,
+          "writeup": "Utah can lose by up to23. The previous meeting was a six-point overtime loss, but Markkanen's return and Utah's missing Jackson/Nurkic make this a different matchup. Earlier standard-spread money concentration was a warning, not proof this alternate is value.",
+          "fullAnalysis": "Utah can lose by up to23. The previous meeting was a six-point overtime loss, but Markkanen's return and Utah's missing Jackson/Nurkic make this a different matchup. Earlier standard-spread money concentration was a warning, not proof this alternate is value.",
+          "status": "Pending"
+        },
+        {
+          "rank": 2,
+          "pick": "De'Aaron Fox 14+ points",
+          "game": "Utah Jazz at San Antonio Spurs",
+          "startTime": "8:30 PM ET",
+          "commenceTime": "2026-11-03T01:30:00Z",
+          "market": "Player Points",
+          "line": 14,
+          "writeup": "Fox reached14 in five of six logged games:14,19,19,11,14,22. Exactly14 wins this selection, unlike Over14.5. He scored14 in the previous Utah meeting. Blowout minutes and shared creation are the countercase.",
+          "fullAnalysis": "Fox reached14 in five of six logged games:14,19,19,11,14,22. Exactly14 wins this selection, unlike Over14.5. He scored14 in the previous Utah meeting. Blowout minutes and shared creation are the countercase.",
+          "status": "Pending"
+        },
+        {
+          "rank": 3,
+          "pick": "Julian Champagnie 2+ threes",
+          "game": "Utah Jazz at San Antonio Spurs",
+          "startTime": "8:30 PM ET",
+          "commenceTime": "2026-11-03T01:30:00Z",
+          "market": "Player Threes",
+          "line": 2,
+          "writeup": "Champagnie made2,2,3,8,2,3 threes in six games, reaching this threshold in all six. The eight-make game is an outlier; three-plus hit only three of six. Shooting variance remains substantial.",
+          "fullAnalysis": "Champagnie made2,2,3,8,2,3 threes in six games, reaching this threshold in all six. The eight-make game is an outlier; three-plus hit only three of six. Shooting variance remains substantial.",
+          "status": "Pending"
+        },
+        {
+          "rank": 4,
+          "pick": "Dylan Harper 5+ rebounds",
+          "game": "Utah Jazz at San Antonio Spurs",
+          "startTime": "8:30 PM ET",
+          "commenceTime": "2026-11-03T01:30:00Z",
+          "market": "Player Rebounds",
+          "line": 5,
+          "writeup": "Harper collected7,3,5,6,5,7 rebounds: five of six at5+. He had5 against Utah previously. Normal Castle minutes and a lopsided score can affect his opportunity.",
+          "fullAnalysis": "Harper collected7,3,5,6,5,7 rebounds: five of six at5+. He had5 against Utah previously. Normal Castle minutes and a lopsided score can affect his opportunity.",
+          "status": "Pending"
+        },
+        {
+          "rank": 5,
+          "pick": "Victor Wembanyama 25+ points",
+          "game": "Utah Jazz at San Antonio Spurs",
+          "startTime": "8:30 PM ET",
+          "commenceTime": "2026-11-03T01:30:00Z",
+          "market": "Player Points",
+          "line": 25,
+          "writeup": "Wembanyama reached25 in four of six, with29,36,43 most recently. Utah's missing defensive bigs support the scoring matchup. His prior36 included overtime;34 attempts last game are not a stable projection.",
+          "fullAnalysis": "Wembanyama reached25 in four of six, with29,36,43 most recently. Utah's missing defensive bigs support the scoring matchup. His prior36 included overtime;34 attempts last game are not a stable projection.",
+          "status": "Pending"
+        },
+        {
+          "rank": 6,
+          "pick": "Victor Wembanyama 2+ threes",
+          "game": "Utah Jazz at San Antonio Spurs",
+          "startTime": "8:30 PM ET",
+          "commenceTime": "2026-11-03T01:30:00Z",
+          "market": "Player Threes",
+          "line": 2,
+          "writeup": "Wembanyama made0,2,2,0,4,3 threes: four of six at2+. He made4 in the previous Utah meeting. This introduces another shooting-variance condition and is correlated with his points leg.",
+          "fullAnalysis": "Wembanyama made0,2,2,0,4,3 threes: four of six at2+. He made4 in the previous Utah meeting. This introduces another shooting-variance condition and is correlated with his points leg.",
+          "status": "Pending"
+        },
+        {
+          "rank": 7,
+          "pick": "Cleveland Cavaliers +3.5",
+          "game": "Oklahoma City Thunder at Cleveland Cavaliers",
+          "startTime": "7:00 PM ET",
+          "commenceTime": "2026-11-03T00:00:00Z",
+          "market": "Spread",
+          "line": 3.5,
+          "writeup": "Cleveland can win or lose by up to3. Oklahoma City's verified absences support Cleveland, but SGA remains the principal countercase and Cleveland has wing injuries. Printed individual reference odds−280.",
+          "fullAnalysis": "Cleveland can win or lose by up to3. Oklahoma City's verified absences support Cleveland, but SGA remains the principal countercase and Cleveland has wing injuries. Printed individual reference odds−280.",
+          "status": "Pending"
+        },
+        {
+          "rank": 8,
+          "pick": "New Orleans Pelicans +12.5",
+          "game": "New Orleans Pelicans at Memphis Grizzlies",
+          "startTime": "8:00 PM ET",
+          "commenceTime": "2026-11-03T01:00:00Z",
+          "market": "Spread",
+          "line": 12.5,
+          "writeup": "New Orleans can lose by up to12. The cushion matches the researched alternate, but Memphis has covered six straight and entered with a+15.2 average margin. A Memphis blowout is the strongest failure path. Printed individual reference odds−340.",
+          "fullAnalysis": "New Orleans can lose by up to12. The cushion matches the researched alternate, but Memphis has covered six straight and entered with a+15.2 average margin. A Memphis blowout is the strongest failure path. Printed individual reference odds−340.",
+          "status": "Pending"
+        }
+      ],
+      "sourceVerification": "User-supplied IMG_1990.jpeg for exact selections and printed odds; November2 Vegas Picks scan; Spurs workbook version14, six games throughOctober31.",
+      "updatedAt": "2026-11-02T19:14:21.277Z",
+      "homePreview": "Eight exact selections from your ticket: Utah+23.5, Fox14+points, Champagnie2+threes, Harper5+rebounds, Wembanyama25+points and2+threes, Cleveland+3.5 and New Orleans+12.5. Starts7:00PM ET; Spurs–Jazz8:30PM ET. Open for complete leg-by-leg analysis and shared-risk notes."
+    },
     {
       "date": "2026-10-31",
       "eventDate": "2026-10-31",
@@ -4953,5 +5086,5 @@
   ],
   "longshots": [],
   "gradedAt": "2026-10-26T02:38:26.427Z",
-  "updatedAt": "2026-10-31T19:01:19.382Z"
+  "updatedAt": "2026-11-02T19:14:21.277Z"
 }
