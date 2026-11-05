@@ -49,3 +49,8 @@ Every NBA candidate, including every NBA parlay leg, must use [the 2026-27 VSiN 
 ## Mandatory schedule and ATS streak module — October 24, 2026
 
 Load [current/nba-rest-and-ats-streaks.md](current/nba-rest-and-ats-streaks.md) for every NBA Micks Picks and Vegas Picks scan. Flag back-to-back teams individually, reconcile guide/current workload context, and display verified consecutive5+ ATS covers or misses with last-five outcomes and exact scope. Carry schedule/streak flags onto straight bets, totals, props, parlays and seven-point teaser legs. Unknown carryover data stays UNKNOWN; no automatic fade or scoring bonus.
+
+
+## Mandatory NBA prop matchup correction — November 5, 2026
+
+For every NBA player prop, including each parlay leg and Spurs spreadsheet recommendation, load [opponent-adjusted prop analysis](current/nba-opponent-adjusted-props.md). This applies to both “Run Vegas Picks” and “Run Micks Picks”. Research opponent defense against the player's position/actual role and statistic, likely defenders, current injuries and rotation, projected minutes/opportunities and independent current statistical projections before choosing a prop. Then compare the exact line/odds and validate with spreadsheet distributions. Averages, hit rates and minutes-only arithmetic do not establish opponent-specific edge. Record source windows, projection assumptions, disagreements and missing core inputs; incomplete matchup/projection work remains WATCH/UNGRADED. Preserve current 110-point weights, consideration overrides, source-family rules and release modes. No retrospective upgrades or fabricated forecasts.
