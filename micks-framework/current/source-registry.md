@@ -682,3 +682,17 @@ Load [nba-rest-and-ats-streaks.md](nba-rest-and-ats-streaks.md) for NBA Micks/Ve
 - https://vsin.com/nba/nba-team-by-team-scheduling-betting-opportunities-for-the-2026-2027-season/
 
 Display each team's B2B leg/workload and consecutive5+ ATS cover/miss flags with exact scope; keep unknown carryover unknown and filtered trends separate from overall streaks. No automatic fade/bonus or redistribution of110-point weights.
+
+
+## NBA player-prop opponent and fantasy sources — November 5, 2026
+
+Controlling application: [nba-opponent-adjusted-props.md](nba-opponent-adjusted-props.md).
+
+- FantasyPros NBA defense-vs-position: https://www.fantasypros.com/daily-fantasy/nba/defense-vs-position.php — verify selected season, position, sample, stat, scoring format and rank direction.
+- RotoWire NBA defense-vs-position: https://www.rotowire.com/daily/nba/defense-vspos.php — actual accessible rows only; subscriber content unavailable unless authorized access supplies it.
+- NBA.com official tracking, individual matchups, defensive play types, injuries and rotations.
+- TeamRankings team opponent metrics supplement position/defender tables; do not label team-wide numbers center-specific.
+- The Rundown NBA player/team research: https://www.therundown.gg/research/nba/ — exact season/window and current opponent context.
+- Registered VSiN/Opta, RotoWire, FantasyPros, Statz and verifiable current NBA DFS statistical projections. Record provider model family, player stat/minutes, date and injury assumptions. Seek two independent providers and disclose any gaps.
+
+Every serious prop must carry an opponent-adjusted projection review before release. A generic preview, projected-minutes table, DFS fantasy-point total or dated guide does not substitute for player-stat matchup work.
