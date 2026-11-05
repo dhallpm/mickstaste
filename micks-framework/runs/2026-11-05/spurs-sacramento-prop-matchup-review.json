@@ -1,0 +1,120 @@
+{
+  "date": "2026-11-05",
+  "eventDate": "2026-11-06",
+  "game": "San Antonio Spurs at Sacramento Kings",
+  "startTimeET": "10:00 PM",
+  "purpose": "Opponent-adjusted prop review following user correction",
+  "status": "WATCH / UNGRADED",
+  "frameworkModule": "micks-framework/current/nba-opponent-adjusted-props.md",
+  "workbook": {
+    "libraryFileId": "libfile_3429d175d7608191873cbea35b7e95d6",
+    "lastVerifiedVersion": 19,
+    "gamesLogged": 8,
+    "editStatus": "NOT UPDATED: spreadsheet execution environment unavailable during this correction"
+  },
+  "evidence": [
+    {
+      "source": "TeamRankings",
+      "url": "https://www.teamrankings.com/nba/team/sacramento-kings/stats",
+      "retrievalDate": "2026-11-05",
+      "scope": "Displayed team-wide reference snapshot matches seven-game Nov 2 figures; not verified through Nov 4",
+      "status": "SUPPORTING ONLY",
+      "metrics": {
+        "opponentPaintPointsPerGame": 56.6,
+        "opponentPaintRank": 30,
+        "opponentTwoPointPct": 60.7,
+        "opponentTwoPointRank": 30,
+        "opponentEffectiveFieldGoalPct": 58.3,
+        "opponentEFGRank": 30,
+        "opponentAssistsPerGame": 28.4,
+        "opponentAssistRank": 26
+      },
+      "interpretation": "Supports researching interior scoring and passing; not center-specific or proof of rebound opportunity."
+    },
+    {
+      "source": "FantasyPros",
+      "url": "https://www.fantasypros.com/daily-fantasy/nba/defense-vs-position.php?year=2026",
+      "status": "POSITION FILTER UNRESOLVED",
+      "interpretation": "Page contains duplicate unlabeled extracted rows. No specific Sacramento center/guard allowance assigned."
+    },
+    {
+      "source": "RotoWire",
+      "url": "https://www.rotowire.com/daily/nba/defense-vspos.php?site=FanDuel",
+      "status": "INACCESSIBLE SUBSCRIBER TABLE",
+      "interpretation": "Subscription heading is not an observed matchup figure."
+    },
+    {
+      "source": "ALLPLAYDFS",
+      "url": "https://allplaydfs.com/preview/nba/2026-11-06",
+      "status": "DISCOVERY ONLY",
+      "observedSearchExcerpt": "Wembanyama 59.7 fantasy points",
+      "interpretation": "Not used as PTS/PRA or as a verified player-stat matchup projection."
+    },
+    {
+      "source": "NBAFantasyEdge",
+      "url": "https://nbafantasyedge.com/players/victor-wembanyama/",
+      "status": "NOT GAME SPECIFIC",
+      "observedSearchExcerpt": "2026-27 season 25.7 points, 11.4 rebounds, 3.4 assists",
+      "interpretation": "Season forecast not substituted for Sacramento game projection."
+    }
+  ],
+  "candidates": [
+    {
+      "player": "Victor Wembanyama",
+      "market": "Points",
+      "direction": "Investigate Over",
+      "opponentCase": "Paint and two-point defense are a plausible path; verify current defenders, injuries and shot-zone matchup.",
+      "minutesProjection": null,
+      "externalGameStatProjections": [],
+      "micksProjection": null,
+      "line": null,
+      "odds": null,
+      "status": "WATCH / UNGRADED"
+    },
+    {
+      "player": "Victor Wembanyama",
+      "market": "Rebounds",
+      "direction": "No confirmed edge",
+      "opponentCase": "Poor paint defense does not prove extra rebound chances. Verify Sacramento misses, rebounding personnel and projected minutes.",
+      "micksProjection": null,
+      "status": "WATCH / UNGRADED"
+    },
+    {
+      "player": "Dylan Harper",
+      "market": "Rebounds / Assists",
+      "direction": "Reassess independently",
+      "opponentCase": "Existing 4+ thresholds came primarily from historical hit rates. Reconcile guard/wing role, position allowance, chance creation and defender matchup.",
+      "micksProjection": null,
+      "status": "WATCH / UNGRADED"
+    },
+    {
+      "player": "De’Aaron Fox",
+      "market": "Assists",
+      "direction": "Investigate",
+      "opponentCase": "Opponent team assists allowed support a research path, not a player-specific assist forecast.",
+      "micksProjection": null,
+      "status": "WATCH / UNGRADED"
+    },
+    {
+      "player": "Julian Champagnie",
+      "market": "Three-Pointers Made",
+      "direction": "No confirmed edge",
+      "opponentCase": "Prior eight-three Sacramento game is an outlier. Need position/shot-location three-point attempts allowed and role/minutes.",
+      "micksProjection": null,
+      "status": "WATCH / UNGRADED"
+    }
+  ],
+  "releaseBlockers": [
+    "Verified current Sacramento defensive lineup and likely assignments",
+    "Correct position/role-specific allowance and sample",
+    "Current player-stat game projections and injury assumptions",
+    "Defensible minutes/opportunity and opponent adjustment",
+    "Exact offered lines and odds"
+  ],
+  "priorDallasAudit": {
+    "issue": "Previous analysis over-weighted season averages and hit rates; lacked completed opponent-adjusted projection comparison.",
+    "guardrail": "Do not use the 52-point outcome to infer a pregame expectation or call every defender weak. Minutes changes require separate evidence."
+  },
+  "officialPicks": [],
+  "units": 0
+}
