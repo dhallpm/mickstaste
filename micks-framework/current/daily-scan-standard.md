@@ -78,3 +78,8 @@ Publishing to a website follows existing session authorization and the live endp
 ## Progressive knowledge after each run
 
 Use `progressive-knowledge.md/.json`. Freeze release odds, units, grade and reasoning. Append verified results/CLV and classify process errors separately from ordinary variance. Review 20/50/100 official plays by sport, market, grade and timing; report actual sample counts and missing data. Prefer prospective shadow evaluation before changing model weights. Never rewrite earlier grades, count an unplayed selection, increase stakes to recover losses, or make a permanent tactical rule from one result.
+
+
+## Mandatory NBA prop matchup correction — November 5, 2026
+
+For every NBA player prop, including each parlay leg and Spurs spreadsheet recommendation, load [opponent-adjusted prop analysis](nba-opponent-adjusted-props.md). This applies to both “Run Vegas Picks” and “Run Micks Picks”. Research opponent defense against the player's position/actual role and statistic, likely defenders, current injuries and rotation, projected minutes/opportunities and independent current statistical projections before choosing a prop. Then compare the exact line/odds and validate with spreadsheet distributions. Averages, hit rates and minutes-only arithmetic do not establish opponent-specific edge. Record source windows, projection assumptions, disagreements and missing core inputs; incomplete matchup/projection work remains WATCH/UNGRADED. Preserve current 110-point weights, consideration overrides, source-family rules and release modes. No retrospective upgrades or fabricated forecasts.
