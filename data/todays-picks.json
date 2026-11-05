@@ -2,7 +2,7 @@
   "success": true,
   "source": "published-active-card-static",
   "sourceOfTruth": "Micks Picks publish data",
-  "date": "2026-11-02",
+  "date": "2026-11-04",
   "totalExposure": 0,
   "free": [
     {
@@ -698,6 +698,137 @@
     }
   ],
   "lottoParlays": [
+    {
+      "id": "nba-20261104-five-leg-spurs-props-suns",
+      "date": "2026-11-04",
+      "eventDate": "2026-11-04",
+      "section": "Lotto Parlays",
+      "access": "free",
+      "sport": "NBA",
+      "league": "NBA",
+      "sportsbook": "BetRivers Delaware",
+      "cardTitle": "NBA Five-Leg Parlay — Spurs Props + Suns",
+      "game": "Dallas Mavericks at San Antonio Spurs / Portland Trail Blazers at Phoenix Suns",
+      "pick": "De’Aaron Fox 5+ assists / Dylan Harper 4+ rebounds / Julian Champagnie 2+ three-pointers / Dylan Harper 4+ assists / Phoenix Suns +2.5",
+      "lineNumber": "4 Spurs props + Phoenix +2.5",
+      "odds": "+527",
+      "oddsSource": "Approximate full-ticket odds implied by the displayed payout-to-stake ratio; combined American odds are not explicitly visible in the screenshot.",
+      "type": "Parlay",
+      "market": "Five-Leg Parlay",
+      "status": "Open",
+      "releaseStatus": "User Selected / Posted Ticket",
+      "publishedSelection": true,
+      "userConfirmedTicket": false,
+      "betPlaced": true,
+      "officialBet": "No",
+      "excludeFromRecord": true,
+      "hideWagerAmounts": true,
+      "units": 0,
+      "showFullAnalysis": true,
+      "expandableAnalysis": true,
+      "featured": true,
+      "startTime": "9:00 PM ET",
+      "commenceTime": "2026-11-05T02:00:00Z",
+      "writeup": "Five-leg ticket: Fox 5+ assists, Harper 4+ rebounds, Champagnie 2+ threes and Harper 4+ assists in Dallas–San Antonio, plus Phoenix +2.5 against Portland. The four Spurs props form a same-game group priced +230; Phoenix is -112. Starts 9:00 PM ET; Spurs game 9:30 PM ET.",
+      "homePreview": "Five-leg ticket: Fox 5+ assists, Harper 4+ rebounds, Champagnie 2+ threes and Harper 4+ assists in Dallas–San Antonio, plus Phoenix +2.5 against Portland. The four Spurs props form a same-game group priced +230; Phoenix is -112. Starts 9:00 PM ET; Spurs game 9:30 PM ET.",
+      "legs": [
+        {
+          "rank": 1,
+          "pick": "De’Aaron Fox 5+ assists",
+          "game": "Dallas Mavericks at San Antonio Spurs",
+          "market": "Assists",
+          "line": 5,
+          "startTime": "9:30 PM ET",
+          "commenceTime": "2026-11-05T02:30:00Z",
+          "status": "Pending",
+          "writeup": "Why This Play: Fox’s passing role is the reason for this leg. He averaged 6.43 assists in 30.57 minutes across the seven logged games, reaching five in five of seven. His nine assists in the first Dallas meeting support the threshold, but that game was played against a different Dallas rotation.\n\nMatchup Edge: Dallas at San Antonio. The sheet supports the player’s role and attainable threshold; it does not prove a Dallas-specific statistical advantage. Dallas’s healthier creation group makes the earlier meeting an imperfect comparison.\n\nProjection Edge: The retrieved minutes estimate was 30, close to his logged workload. This is role support, not an independent forecast of five assists.\n\nKey Metrics: Exact screenshot selection: De’Aaron Fox 5+ assists, including overtime. Spurs game starts November 4 at 9:30 PM ET. The displayed +230 applies to the four-prop same-game group, not this individual leg.\n\nRisk: Foul trouble, fewer made shots by teammates and a comfortable Spurs lead can reduce his opportunities.\n\nFinal Take: User-selected ticket leg at the pictured threshold. Historical rates are descriptive, not calibrated probabilities; no individual-leg odds or framework grade are invented.",
+          "fullAnalysis": "Why This Play: Fox’s passing role is the reason for this leg. He averaged 6.43 assists in 30.57 minutes across the seven logged games, reaching five in five of seven. His nine assists in the first Dallas meeting support the threshold, but that game was played against a different Dallas rotation.\n\nMatchup Edge: Dallas at San Antonio. The sheet supports the player’s role and attainable threshold; it does not prove a Dallas-specific statistical advantage. Dallas’s healthier creation group makes the earlier meeting an imperfect comparison.\n\nProjection Edge: The retrieved minutes estimate was 30, close to his logged workload. This is role support, not an independent forecast of five assists.\n\nKey Metrics: Exact screenshot selection: De’Aaron Fox 5+ assists, including overtime. Spurs game starts November 4 at 9:30 PM ET. The displayed +230 applies to the four-prop same-game group, not this individual leg.\n\nRisk: Foul trouble, fewer made shots by teammates and a comfortable Spurs lead can reduce his opportunities.\n\nFinal Take: User-selected ticket leg at the pictured threshold. Historical rates are descriptive, not calibrated probabilities; no individual-leg odds or framework grade are invented.",
+          "sgpGroup": "spurs-four-prop",
+          "overtimeIncluded": true
+        },
+        {
+          "rank": 2,
+          "pick": "Dylan Harper 4+ rebounds",
+          "game": "Dallas Mavericks at San Antonio Spurs",
+          "market": "Rebounds",
+          "line": 4,
+          "startTime": "9:30 PM ET",
+          "commenceTime": "2026-11-05T02:30:00Z",
+          "status": "Pending",
+          "writeup": "Why This Play: Harper averaged 5.71 rebounds in 32.43 minutes and cleared four in six of seven logged games. The lower threshold fits his established workload without requiring an exceptional rebounding night.\n\nMatchup Edge: Dallas at San Antonio. The sheet supports the player’s role and attainable threshold; it does not prove a Dallas-specific statistical advantage. Dallas’s healthier creation group makes the earlier meeting an imperfect comparison.\n\nProjection Edge: The retrieved projection was 32 minutes, close to his logged average. At unchanged per-minute production this supports roughly 5.6 rebounds; that calculation is a workload baseline, not a separate fantasy model.\n\nKey Metrics: Exact screenshot selection: Dylan Harper 4+ rebounds, including overtime. Spurs game starts November 4 at 9:30 PM ET. The displayed +230 applies to the four-prop same-game group, not this individual leg.\n\nRisk: Rebound sharing with Wembanyama, matchup assignments and shooting variance can leave Harper short. His season includes a three-rebound game.\n\nFinal Take: User-selected ticket leg at the pictured threshold. Historical rates are descriptive, not calibrated probabilities; no individual-leg odds or framework grade are invented.",
+          "fullAnalysis": "Why This Play: Harper averaged 5.71 rebounds in 32.43 minutes and cleared four in six of seven logged games. The lower threshold fits his established workload without requiring an exceptional rebounding night.\n\nMatchup Edge: Dallas at San Antonio. The sheet supports the player’s role and attainable threshold; it does not prove a Dallas-specific statistical advantage. Dallas’s healthier creation group makes the earlier meeting an imperfect comparison.\n\nProjection Edge: The retrieved projection was 32 minutes, close to his logged average. At unchanged per-minute production this supports roughly 5.6 rebounds; that calculation is a workload baseline, not a separate fantasy model.\n\nKey Metrics: Exact screenshot selection: Dylan Harper 4+ rebounds, including overtime. Spurs game starts November 4 at 9:30 PM ET. The displayed +230 applies to the four-prop same-game group, not this individual leg.\n\nRisk: Rebound sharing with Wembanyama, matchup assignments and shooting variance can leave Harper short. His season includes a three-rebound game.\n\nFinal Take: User-selected ticket leg at the pictured threshold. Historical rates are descriptive, not calibrated probabilities; no individual-leg odds or framework grade are invented.",
+          "sgpGroup": "spurs-four-prop",
+          "overtimeIncluded": true
+        },
+        {
+          "rank": 3,
+          "pick": "Julian Champagnie 2+ three-pointers",
+          "game": "Dallas Mavericks at San Antonio Spurs",
+          "market": "Three-Pointers Made",
+          "line": 2,
+          "startTime": "9:30 PM ET",
+          "commenceTime": "2026-11-05T02:30:00Z",
+          "status": "Pending",
+          "writeup": "Why This Play: Champagnie made at least two threes in all seven logged games: 2, 2, 3, 8, 2, 3 and 2 in chronological order. Two is the relevant threshold; his 3.14 average is inflated by an eight-three performance.\n\nMatchup Edge: Dallas at San Antonio. The sheet supports the player’s role and attainable threshold; it does not prove a Dallas-specific statistical advantage. Dallas’s healthier creation group makes the earlier meeting an imperfect comparison.\n\nProjection Edge: The retrieved minutes estimate was 26 versus 27.50 logged. That is slightly lower workload, not a projected minutes boost. Seven-game success does not establish a 100% future hit probability.\n\nKey Metrics: Exact screenshot selection: Julian Champagnie 2+ three-pointers, including overtime. Spurs game starts November 4 at 9:30 PM ET. The displayed +230 applies to the four-prop same-game group, not this individual leg.\n\nRisk: Three-point accuracy can regress, and a bench role creates minutes uncertainty. The ticket requires two makes even if his shot volume falls.\n\nFinal Take: User-selected ticket leg at the pictured threshold. Historical rates are descriptive, not calibrated probabilities; no individual-leg odds or framework grade are invented.",
+          "fullAnalysis": "Why This Play: Champagnie made at least two threes in all seven logged games: 2, 2, 3, 8, 2, 3 and 2 in chronological order. Two is the relevant threshold; his 3.14 average is inflated by an eight-three performance.\n\nMatchup Edge: Dallas at San Antonio. The sheet supports the player’s role and attainable threshold; it does not prove a Dallas-specific statistical advantage. Dallas’s healthier creation group makes the earlier meeting an imperfect comparison.\n\nProjection Edge: The retrieved minutes estimate was 26 versus 27.50 logged. That is slightly lower workload, not a projected minutes boost. Seven-game success does not establish a 100% future hit probability.\n\nKey Metrics: Exact screenshot selection: Julian Champagnie 2+ three-pointers, including overtime. Spurs game starts November 4 at 9:30 PM ET. The displayed +230 applies to the four-prop same-game group, not this individual leg.\n\nRisk: Three-point accuracy can regress, and a bench role creates minutes uncertainty. The ticket requires two makes even if his shot volume falls.\n\nFinal Take: User-selected ticket leg at the pictured threshold. Historical rates are descriptive, not calibrated probabilities; no individual-leg odds or framework grade are invented.",
+          "sgpGroup": "spurs-four-prop",
+          "overtimeIncluded": true
+        },
+        {
+          "rank": 4,
+          "pick": "Dylan Harper 4+ assists",
+          "game": "Dallas Mavericks at San Antonio Spurs",
+          "market": "Assists",
+          "line": 4,
+          "startTime": "9:30 PM ET",
+          "commenceTime": "2026-11-05T02:30:00Z",
+          "status": "Pending",
+          "writeup": "Why This Play: Harper averaged 5.29 assists, clearing four in five of seven games. His last four chronologically were 6, 8, 6 and 8. The two-assist result against Dallas in the first meeting is an important matchup counterexample.\n\nMatchup Edge: Dallas at San Antonio. The sheet supports the player’s role and attainable threshold; it does not prove a Dallas-specific statistical advantage. Dallas’s healthier creation group makes the earlier meeting an imperfect comparison.\n\nProjection Edge: The retrieved 32-minute estimate supports continued creation time, but Fox and Castle share handling duties. No independent Dallas-specific assist forecast was verified.\n\nKey Metrics: Exact screenshot selection: Dylan Harper 4+ assists, including overtime. Spurs game starts November 4 at 9:30 PM ET. The displayed +230 applies to the four-prop same-game group, not this individual leg.\n\nRisk: Teammate shooting and changes in ball-handling share matter. Harper and Fox assist legs share the same team offense and should not be treated as independent.\n\nFinal Take: User-selected ticket leg at the pictured threshold. Historical rates are descriptive, not calibrated probabilities; no individual-leg odds or framework grade are invented.",
+          "fullAnalysis": "Why This Play: Harper averaged 5.29 assists, clearing four in five of seven games. His last four chronologically were 6, 8, 6 and 8. The two-assist result against Dallas in the first meeting is an important matchup counterexample.\n\nMatchup Edge: Dallas at San Antonio. The sheet supports the player’s role and attainable threshold; it does not prove a Dallas-specific statistical advantage. Dallas’s healthier creation group makes the earlier meeting an imperfect comparison.\n\nProjection Edge: The retrieved 32-minute estimate supports continued creation time, but Fox and Castle share handling duties. No independent Dallas-specific assist forecast was verified.\n\nKey Metrics: Exact screenshot selection: Dylan Harper 4+ assists, including overtime. Spurs game starts November 4 at 9:30 PM ET. The displayed +230 applies to the four-prop same-game group, not this individual leg.\n\nRisk: Teammate shooting and changes in ball-handling share matter. Harper and Fox assist legs share the same team offense and should not be treated as independent.\n\nFinal Take: User-selected ticket leg at the pictured threshold. Historical rates are descriptive, not calibrated probabilities; no individual-leg odds or framework grade are invented.",
+          "sgpGroup": "spurs-four-prop",
+          "overtimeIncluded": true
+        },
+        {
+          "rank": 5,
+          "pick": "Phoenix Suns +2.5",
+          "game": "Portland Trail Blazers at Phoenix Suns",
+          "market": "Spread",
+          "line": 2.5,
+          "odds": "-112",
+          "startTime": "9:00 PM ET",
+          "commenceTime": "2026-11-05T02:00:00Z",
+          "status": "Pending",
+          "writeup": "Why This Play: Phoenix +2.5 is the user-selected straight spread on the ticket. Phoenix can win outright or lose by one or two; a three-point loss defeats this leg. No seven-point adjustment is applied.\n\nMatchup Edge: This is the opposing position to Portland, with home court and a small cushion. The earlier scan found conflicting guide and situational signals, so it did not establish Phoenix as a qualified framework release.\n\nProjection Edge: No verified independent cover probability or complete current fantasy projection supported Phoenix +2.5. Portland’s missing Ja Morant and Shaedon Sharpe were relevant personnel context, while Phoenix also had absences. These do not establish a numerical injury adjustment.\n\nKey Metrics: Screenshot price -112; November 4, 9:00 PM ET. Phoenix entered 0–5 ATS, which is five consecutive failures to cover. That is a risk flag, not evidence that a rebound is due.\n\nRisk: Portland can exploit Phoenix’s poor early defensive results. Current market-specific handle and final rotations were not verified; contrarian status is unconfirmed.\n\nFinal Take: Publish the exact user-selected Phoenix +2.5 at -112. This ticket entry documents the selection without retroactively changing the earlier pass into a model endorsement.",
+          "fullAnalysis": "Why This Play: Phoenix +2.5 is the user-selected straight spread on the ticket. Phoenix can win outright or lose by one or two; a three-point loss defeats this leg. No seven-point adjustment is applied.\n\nMatchup Edge: This is the opposing position to Portland, with home court and a small cushion. The earlier scan found conflicting guide and situational signals, so it did not establish Phoenix as a qualified framework release.\n\nProjection Edge: No verified independent cover probability or complete current fantasy projection supported Phoenix +2.5. Portland’s missing Ja Morant and Shaedon Sharpe were relevant personnel context, while Phoenix also had absences. These do not establish a numerical injury adjustment.\n\nKey Metrics: Screenshot price -112; November 4, 9:00 PM ET. Phoenix entered 0–5 ATS, which is five consecutive failures to cover. That is a risk flag, not evidence that a rebound is due.\n\nRisk: Portland can exploit Phoenix’s poor early defensive results. Current market-specific handle and final rotations were not verified; contrarian status is unconfirmed.\n\nFinal Take: Publish the exact user-selected Phoenix +2.5 at -112. This ticket entry documents the selection without retroactively changing the earlier pass into a model endorsement."
+        }
+      ],
+      "sgpGroups": [
+        {
+          "id": "spurs-four-prop",
+          "game": "Dallas Mavericks at San Antonio Spurs",
+          "odds": "+230",
+          "legRanks": [
+            1,
+            2,
+            3,
+            4
+          ]
+        }
+      ],
+      "fullAnalysis": "Why This Ticket: Five-leg ticket: Fox 5+ assists, Harper 4+ rebounds, Champagnie 2+ threes and Harper 4+ assists in Dallas–San Antonio, plus Phoenix +2.5 against Portland. The four Spurs props form a same-game group priced +230; Phoenix is -112. Starts 9:00 PM ET; Spurs game 9:30 PM ET.\n\nTicket Price: The displayed payout-to-stake ratio implies approximately +527 for the complete ticket. The +230 label belongs only to the four-prop Spurs same-game group. No individual prop prices are visible.\n\n1. De’Aaron Fox 5+ assists\n\nWhy This Play: Fox’s passing role is the reason for this leg. He averaged 6.43 assists in 30.57 minutes across the seven logged games, reaching five in five of seven. His nine assists in the first Dallas meeting support the threshold, but that game was played against a different Dallas rotation.\n\nMatchup Edge: Dallas at San Antonio. The sheet supports the player’s role and attainable threshold; it does not prove a Dallas-specific statistical advantage. Dallas’s healthier creation group makes the earlier meeting an imperfect comparison.\n\nProjection Edge: The retrieved minutes estimate was 30, close to his logged workload. This is role support, not an independent forecast of five assists.\n\nKey Metrics: Exact screenshot selection: De’Aaron Fox 5+ assists, including overtime. Spurs game starts November 4 at 9:30 PM ET. The displayed +230 applies to the four-prop same-game group, not this individual leg.\n\nRisk: Foul trouble, fewer made shots by teammates and a comfortable Spurs lead can reduce his opportunities.\n\nFinal Take: User-selected ticket leg at the pictured threshold. Historical rates are descriptive, not calibrated probabilities; no individual-leg odds or framework grade are invented.\n\n2. Dylan Harper 4+ rebounds\n\nWhy This Play: Harper averaged 5.71 rebounds in 32.43 minutes and cleared four in six of seven logged games. The lower threshold fits his established workload without requiring an exceptional rebounding night.\n\nMatchup Edge: Dallas at San Antonio. The sheet supports the player’s role and attainable threshold; it does not prove a Dallas-specific statistical advantage. Dallas’s healthier creation group makes the earlier meeting an imperfect comparison.\n\nProjection Edge: The retrieved projection was 32 minutes, close to his logged average. At unchanged per-minute production this supports roughly 5.6 rebounds; that calculation is a workload baseline, not a separate fantasy model.\n\nKey Metrics: Exact screenshot selection: Dylan Harper 4+ rebounds, including overtime. Spurs game starts November 4 at 9:30 PM ET. The displayed +230 applies to the four-prop same-game group, not this individual leg.\n\nRisk: Rebound sharing with Wembanyama, matchup assignments and shooting variance can leave Harper short. His season includes a three-rebound game.\n\nFinal Take: User-selected ticket leg at the pictured threshold. Historical rates are descriptive, not calibrated probabilities; no individual-leg odds or framework grade are invented.\n\n3. Julian Champagnie 2+ three-pointers\n\nWhy This Play: Champagnie made at least two threes in all seven logged games: 2, 2, 3, 8, 2, 3 and 2 in chronological order. Two is the relevant threshold; his 3.14 average is inflated by an eight-three performance.\n\nMatchup Edge: Dallas at San Antonio. The sheet supports the player’s role and attainable threshold; it does not prove a Dallas-specific statistical advantage. Dallas’s healthier creation group makes the earlier meeting an imperfect comparison.\n\nProjection Edge: The retrieved minutes estimate was 26 versus 27.50 logged. That is slightly lower workload, not a projected minutes boost. Seven-game success does not establish a 100% future hit probability.\n\nKey Metrics: Exact screenshot selection: Julian Champagnie 2+ three-pointers, including overtime. Spurs game starts November 4 at 9:30 PM ET. The displayed +230 applies to the four-prop same-game group, not this individual leg.\n\nRisk: Three-point accuracy can regress, and a bench role creates minutes uncertainty. The ticket requires two makes even if his shot volume falls.\n\nFinal Take: User-selected ticket leg at the pictured threshold. Historical rates are descriptive, not calibrated probabilities; no individual-leg odds or framework grade are invented.\n\n4. Dylan Harper 4+ assists\n\nWhy This Play: Harper averaged 5.29 assists, clearing four in five of seven games. His last four chronologically were 6, 8, 6 and 8. The two-assist result against Dallas in the first meeting is an important matchup counterexample.\n\nMatchup Edge: Dallas at San Antonio. The sheet supports the player’s role and attainable threshold; it does not prove a Dallas-specific statistical advantage. Dallas’s healthier creation group makes the earlier meeting an imperfect comparison.\n\nProjection Edge: The retrieved 32-minute estimate supports continued creation time, but Fox and Castle share handling duties. No independent Dallas-specific assist forecast was verified.\n\nKey Metrics: Exact screenshot selection: Dylan Harper 4+ assists, including overtime. Spurs game starts November 4 at 9:30 PM ET. The displayed +230 applies to the four-prop same-game group, not this individual leg.\n\nRisk: Teammate shooting and changes in ball-handling share matter. Harper and Fox assist legs share the same team offense and should not be treated as independent.\n\nFinal Take: User-selected ticket leg at the pictured threshold. Historical rates are descriptive, not calibrated probabilities; no individual-leg odds or framework grade are invented.\n\n5. Phoenix Suns +2.5\n\nWhy This Play: Phoenix +2.5 is the user-selected straight spread on the ticket. Phoenix can win outright or lose by one or two; a three-point loss defeats this leg. No seven-point adjustment is applied.\n\nMatchup Edge: This is the opposing position to Portland, with home court and a small cushion. The earlier scan found conflicting guide and situational signals, so it did not establish Phoenix as a qualified framework release.\n\nProjection Edge: No verified independent cover probability or complete current fantasy projection supported Phoenix +2.5. Portland’s missing Ja Morant and Shaedon Sharpe were relevant personnel context, while Phoenix also had absences. These do not establish a numerical injury adjustment.\n\nKey Metrics: Screenshot price -112; November 4, 9:00 PM ET. Phoenix entered 0–5 ATS, which is five consecutive failures to cover. That is a risk flag, not evidence that a rebound is due.\n\nRisk: Portland can exploit Phoenix’s poor early defensive results. Current market-specific handle and final rotations were not verified; contrarian status is unconfirmed.\n\nFinal Take: Publish the exact user-selected Phoenix +2.5 at -112. This ticket entry documents the selection without retroactively changing the earlier pass into a model endorsement.\n\nShared Risk: Four selections depend on the same Spurs rotation and game script. A blowout can reduce minutes for multiple players together; Harper contributes two legs, and both Harper and Fox assists depend on made baskets. The group price accounts for correlation and must not be rebuilt by multiplying invented individual prices.\n\nFinal Take: Published at the user’s direction with all five exact thresholds. Dollar amounts are hidden; unit size is unconfirmed and not inferred from the image. Pending settlement. Personal-ticket publication is separate from a fully scored framework release.",
+      "sourceVerification": "User-supplied My Bets screenshot IMG_2016.jpeg; SAS_2026-27_reference.xlsx version 18, seven games through November 2; November 4 role/minutes research; TeamRankings ATS and VSiN market references. No final live splits or complete paid fantasy model verified.",
+      "sourceLinks": [
+        {
+          "title": "Projected minutes",
+          "url": "https://www.nbahouse.net/minutes"
+        },
+        {
+          "title": "NBA market and team records",
+          "url": "https://data.vsin.com/nba/games/?gamedate=2026-11-04"
+        }
+      ],
+      "updatedAt": "2026-11-05T01:48:55.389Z"
+    },
     {
       "id": "nba-20261102-three-leg-teaser-plus",
       "date": "2026-11-02",
@@ -5163,5 +5294,5 @@
   ],
   "longshots": [],
   "gradedAt": "2026-10-26T02:38:26.427Z",
-  "updatedAt": "2026-11-02T23:46:33.739Z"
+  "updatedAt": "2026-11-05T01:48:55.389Z"
 }
