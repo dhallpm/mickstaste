@@ -1,0 +1,99 @@
+{
+  "asOfET": "2026-11-08T15:46:00-05:00",
+  "scoringVersion": "micks110v2",
+  "mode": "NFL standard; consideration71+",
+  "rows": [
+    {
+      "event": "LV@SF",
+      "selection": 150,
+      "line": "LV+17.5",
+      "factors": [
+        26,
+        17,
+        null,
+        7,
+        6,
+        6,
+        3
+      ],
+      "failure": [
+        1,
+        null,
+        1,
+        2,
+        1
+      ],
+      "reason": "Receiving absences support the cushion; SF defensive strength and Raiders defensive weakness remain counters. Conflicting SF inactive/injury summaries and mislabelled Raiders opponent require reconciliation.",
+      "previous": "UNGRADED watch",
+      "score": null,
+      "scoreStatus": "UNGRADED",
+      "failureScore": null,
+      "decision": "NO BET",
+      "units": 0,
+      "cutoff": "No approved executable cutoff; exact printed cell only, no substitute",
+      "knownSubtotal": 65
+    },
+    {
+      "event": "GB@NE",
+      "selection": 141,
+      "line": "NE+5.5",
+      "factors": [
+        26,
+        17,
+        11,
+        6,
+        0,
+        6,
+        3
+      ],
+      "failure": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "reason": "Henry/Hollins/Moses active improves personnel certainty; Brown/Henderson out still matters. Current spread handle favors NE, but that does not independently establish value.",
+      "previous": "UNGRADED watch",
+      "score": 69,
+      "scoreStatus": "PROVISIONAL",
+      "failureScore": 6,
+      "decision": "NO BET",
+      "units": 0,
+      "cutoff": "No approved executable cutoff; exact printed cell only, no substitute",
+      "knownSubtotal": 69
+    },
+    {
+      "event": "ARI@SEA",
+      "selection": 146,
+      "line": "ARI+18.5",
+      "factors": [
+        25,
+        18,
+        11,
+        7,
+        4,
+        6,
+        3
+      ],
+      "failure": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "reason": "Seattle QB/OL/front absences favor Arizona's cushion; Seattle defense and previous success with Lock remain meaningful counters.",
+      "previous": "UNGRADED watch",
+      "score": 74,
+      "scoreStatus": "PROVISIONAL",
+      "failureScore": 6,
+      "decision": "NO BET",
+      "units": 0,
+      "cutoff": "No approved executable cutoff; exact printed cell only, no substitute",
+      "knownSubtotal": 74
+    }
+  ],
+  "actualUnits": 0,
+  "completion": "Incomplete final mandatory-source verification; no releases"
+}
