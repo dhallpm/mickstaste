@@ -1,0 +1,302 @@
+{
+  "asOfET": "2026-11-08T11:54:00-05:00",
+  "card": "User supplied Nov5 Week9 Big Teaser photograph",
+  "candidates": [
+    {
+      "selection": 110,
+      "cardType": "Big Teaser",
+      "pick": "MIA +14.5",
+      "event": "DET@MIA",
+      "date": "2026-11-08",
+      "tipET": "13:00",
+      "factorOrder": [
+        "matchup35",
+        "price20",
+        "personnel15",
+        "situation10",
+        "vsin10",
+        "docs10",
+        "market10"
+      ],
+      "factors": [
+        27,
+        18,
+        11,
+        7,
+        6,
+        0,
+        6
+      ],
+      "score": 75,
+      "denominator": 110,
+      "failureDimensions": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "failureScore": 6,
+      "status": "Preferred leg",
+      "reason": "Detroit defensive absences and Miami's recent competitive margins support the cushion. Detroit's efficient passing against Miami's weak secondary remains the failure path.",
+      "actualUnits": 0,
+      "ticketStake": null,
+      "release": "Research assessment; no assembled ticket or executable sportsbook wager released"
+    },
+    {
+      "selection": 113,
+      "cardType": "Big Teaser",
+      "pick": "NO +6.5",
+      "event": "CLE@NO",
+      "date": "2026-11-08",
+      "tipET": "13:00",
+      "factorOrder": [
+        "matchup35",
+        "price20",
+        "personnel15",
+        "situation10",
+        "vsin10",
+        "docs10",
+        "market10"
+      ],
+      "factors": [
+        26,
+        18,
+        11,
+        8,
+        5,
+        6,
+        5
+      ],
+      "score": 79,
+      "denominator": 110,
+      "failureDimensions": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "failureScore": 6,
+      "status": "Preferred leg",
+      "reason": "Rest and the protected number help New Orleans; Cleveland's run game against the Saints' defense is the main counter. Sanders is the confirmed Browns starter.",
+      "actualUnits": 0,
+      "ticketStake": null,
+      "release": "Research assessment; no assembled ticket or executable sportsbook wager released"
+    },
+    {
+      "selection": 117,
+      "cardType": "Big Teaser",
+      "pick": "NYG +4.5",
+      "event": "NYG@PHI",
+      "date": "2026-11-08",
+      "tipET": "13:00",
+      "factorOrder": [
+        "matchup35",
+        "price20",
+        "personnel15",
+        "situation10",
+        "vsin10",
+        "docs10",
+        "market10"
+      ],
+      "factors": [
+        27,
+        18,
+        12,
+        6,
+        1,
+        6,
+        4
+      ],
+      "score": 74,
+      "denominator": 110,
+      "failureDimensions": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "failureScore": 6,
+      "status": "Preferred leg",
+      "reason": "Philadelphia's quarterback change and receiving absences favor the Giants. Giants backfield injuries and Milton's rushing create uncertainty. No Giants bye credit.",
+      "actualUnits": 0,
+      "ticketStake": null,
+      "release": "Research assessment; no assembled ticket or executable sportsbook wager released"
+    },
+    {
+      "selection": 121,
+      "cardType": "Big Teaser",
+      "pick": "DAL +2.5",
+      "event": "DAL@IND",
+      "date": "2026-11-08",
+      "tipET": "13:00",
+      "factorOrder": [
+        "matchup35",
+        "price20",
+        "personnel15",
+        "situation10",
+        "vsin10",
+        "docs10",
+        "market10"
+      ],
+      "factors": [
+        27,
+        18,
+        11,
+        7,
+        0,
+        6,
+        4
+      ],
+      "score": 73,
+      "denominator": 110,
+      "failureDimensions": [
+        1,
+        0,
+        1,
+        2,
+        1
+      ],
+      "failureScore": 5,
+      "status": "Watch",
+      "reason": "Dallas offensive advantage is offset by its own weak defense and unresolved Pickens/Ferguson availability. Colts spread money exceeds ticket share.",
+      "actualUnits": 0,
+      "ticketStake": null,
+      "release": "Research assessment; no assembled ticket or executable sportsbook wager released"
+    },
+    {
+      "selection": 126,
+      "cardType": "Big Teaser",
+      "pick": "CAR +10.5",
+      "event": "DEN@CAR",
+      "date": "2026-11-08",
+      "tipET": "13:00",
+      "factorOrder": [
+        "matchup35",
+        "price20",
+        "personnel15",
+        "situation10",
+        "vsin10",
+        "docs10",
+        "market10"
+      ],
+      "factors": [
+        25,
+        18,
+        9,
+        8,
+        6,
+        0,
+        5
+      ],
+      "score": 71,
+      "denominator": 110,
+      "failureDimensions": [
+        1,
+        0,
+        1,
+        2,
+        1
+      ],
+      "failureScore": 5,
+      "status": "Watch",
+      "reason": "Carolina's rest and Denver's low play volume favor staying close. Carolina's offensive-line absences are a material concern.",
+      "actualUnits": 0,
+      "ticketStake": null,
+      "release": "Research assessment; no assembled ticket or executable sportsbook wager released"
+    },
+    {
+      "selection": 130,
+      "cardType": "Big Teaser",
+      "pick": "NYJ +17.5",
+      "event": "NYJ@KC",
+      "date": "2026-11-08",
+      "tipET": "13:00",
+      "factorOrder": [
+        "matchup35",
+        "price20",
+        "personnel15",
+        "situation10",
+        "vsin10",
+        "docs10",
+        "market10"
+      ],
+      "factors": [
+        25,
+        18,
+        10,
+        7,
+        4,
+        0,
+        5
+      ],
+      "score": 69,
+      "denominator": 110,
+      "failureDimensions": [
+        0,
+        1,
+        1,
+        2,
+        0
+      ],
+      "failureScore": 4,
+      "status": "Below consideration threshold",
+      "reason": "Large cushion, but Garrett Wilson is out and the Jets' recent defense can allow a runaway Chiefs result. Opposing the crowd alone is insufficient.",
+      "actualUnits": 0,
+      "ticketStake": null,
+      "release": "Research assessment; no assembled ticket or executable sportsbook wager released"
+    },
+    {
+      "selection": 134,
+      "cardType": "Big Teaser",
+      "pick": "WAS +13.5",
+      "event": "LAR@WAS",
+      "date": "2026-11-08",
+      "tipET": "13:00",
+      "factorOrder": [
+        "matchup35",
+        "price20",
+        "personnel15",
+        "situation10",
+        "vsin10",
+        "docs10",
+        "market10"
+      ],
+      "factors": [
+        27,
+        18,
+        11,
+        7,
+        6,
+        6,
+        5
+      ],
+      "score": 80,
+      "denominator": 110,
+      "failureDimensions": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "failureScore": 6,
+      "status": "Preferred leg",
+      "reason": "Daniels' return and the Rams' recent shorter passing profile support Washington. Garrett's return and Rams offensive efficiency are meaningful counters.",
+      "actualUnits": 0,
+      "ticketStake": null,
+      "release": "Research assessment; no assembled ticket or executable sportsbook wager released"
+    }
+  ],
+  "officialBets": [],
+  "actualUnits": 0,
+  "unverified": [
+    "Complete final early inactive lists",
+    "Current executable sportsbook prop prices",
+    "Accepted lottery terminal lines/closures",
+    "Complete favorite-inflation closing bands"
+  ],
+  "report": "review-1154-et.md"
+}
