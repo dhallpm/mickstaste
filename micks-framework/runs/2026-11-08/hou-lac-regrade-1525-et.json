@@ -1,0 +1,106 @@
+{
+  "asOfET": "2026-11-08T15:25:00-05:00",
+  "event": "HOU@LAC",
+  "scheduledStartET": "16:05",
+  "pregame": true,
+  "scoring_version": "micks-110-v2-2026-09-29",
+  "mode": "NFL standard; 71+ considered",
+  "candidate": {
+    "cardType": "Big Teaser",
+    "selection": 138,
+    "line": "LAC +12.5",
+    "previousStatus": "UNGRADED watch (11:54)",
+    "scoreStatus": "PROVISIONAL",
+    "factors": {
+      "matchup": 23,
+      "price": 16,
+      "personnel": 8,
+      "situation": 6,
+      "vsin": 6,
+      "docs": 6,
+      "market": 5
+    },
+    "score": 70,
+    "denominator": 110,
+    "failure": {
+      "severity": {
+        "score": 0,
+        "reason": "Turnovers and low scoring create multi-score defeat risk"
+      },
+      "personnel": {
+        "score": 1,
+        "reason": "Houston line absences help, but Chargers OL and receiver absences hurt"
+      },
+      "script": {
+        "score": 0,
+        "reason": "Poor offense cannot reliably recover from a large deficit"
+      },
+      "numberProtection": {
+        "score": 2,
+        "reason": "12.5 cushion versus current5.5 standard spread"
+      },
+      "contradiction": {
+        "score": 1,
+        "reason": "Capper support and Houston inefficiency only partly offset Chargers current weakness"
+      }
+    },
+    "failureScore": 4,
+    "decision": "NO BET",
+    "units": 0,
+    "cutoff": "No approved execution cutoff; exact #138 +12.5 only for research, no inferior replacement"
+  },
+  "otherCardCells": {
+    "137": "HOU +3.5",
+    "139": "Over33.5",
+    "140": "Under47.5"
+  },
+  "currentReference": {
+    "source": "DraftKings Network full page, retrieved ~15:24ET",
+    "spread": "HOU-5.5 -108 / LAC+5.5 -112",
+    "moneyline": "HOU-230 / LAC+190",
+    "total": "40.5 -110 both",
+    "executableUserBookVerified": false
+  },
+  "splits": {
+    "source": "DK Network full page; all jurisdictions, not Action",
+    "spread": {
+      "HOU": {
+        "bets": 63,
+        "handle": 46
+      },
+      "LAC": {
+        "bets": 37,
+        "handle": 54
+      }
+    },
+    "moneyline": {
+      "HOU": {
+        "bets": 81,
+        "handle": 51
+      },
+      "LAC": {
+        "bets": 19,
+        "handle": 49
+      }
+    },
+    "total": {
+      "over": {
+        "bets": 63,
+        "handle": 50
+      },
+      "under": {
+        "bets": 37,
+        "handle": 50
+      }
+    },
+    "contestCount": null
+  },
+  "blockers": [
+    "Original guide pages and newest complete weekly reconciliation not re-opened; earlier research carried forward",
+    "No accepted lottery terminal availability or complete ticket verified",
+    "No live Circa quote or sufficiently verified timestamped movement",
+    "Exact user-jurisdiction executable price not verified"
+  ],
+  "actualBets": [],
+  "websitePublished": false
+}
