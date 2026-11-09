@@ -1,0 +1,86 @@
+{
+  "asOfET": "2026-11-08T19:41:00-05:00",
+  "event": "TB@CHI",
+  "startET": "20:20",
+  "pregameAtCheck": true,
+  "cardCells": {
+    "153": "CHI+1.5",
+    "154": "TB+14.5",
+    "155": "Over39.5",
+    "156": "Under53.5"
+  },
+  "candidate": {
+    "selection": 154,
+    "line": "TB+14.5",
+    "previousStatus": "UNGRADED watch",
+    "scoreStatus": "PROVISIONAL",
+    "score": 71,
+    "factors": [
+      26,
+      17,
+      11,
+      7,
+      6,
+      0,
+      4
+    ],
+    "failureDimensions": [
+      1,
+      1,
+      1,
+      2,
+      1
+    ],
+    "failureScore": 6,
+    "decision": "NO BET / WATCH",
+    "recommendedUnits": 0,
+    "cutoff": "No approved wager cutoff; exact recorded card cell only"
+  },
+  "reference": {
+    "source": "DK Network full board at retrieval",
+    "spread": "TB+6-108 / CHI-6-112",
+    "moneyline": "TB+220 / CHI-270",
+    "total": "47.5 O-108/U-112",
+    "executionVerified": false
+  },
+  "splits": {
+    "source": "DK Network separate page; different snapshot prices",
+    "spread": {
+      "CHI": {
+        "bets": 78,
+        "handle": 83
+      },
+      "TB": {
+        "bets": 22,
+        "handle": 17
+      }
+    },
+    "moneyline": {
+      "CHI": {
+        "bets": 88,
+        "handle": 81
+      },
+      "TB": {
+        "bets": 12,
+        "handle": 19
+      }
+    },
+    "total": {
+      "over": {
+        "bets": 56,
+        "handle": 39
+      },
+      "under": {
+        "bets": 44,
+        "handle": 61
+      }
+    },
+    "contestCount": null
+  },
+  "blockers": [
+    "Complete original guide/newest weekly reconciliation not freshly finished",
+    "Fresh explicit2026 distributions and material workload validation incomplete",
+    "Accepted terminal availability unverified; current Circa and timestamped movement not confirmed"
+  ],
+  "actualUnits": 0
+}
