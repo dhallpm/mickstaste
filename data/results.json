@@ -3,7 +3,7 @@
   "source": "published-results-static",
   "sourceOfTruth": "Archived Micks Picks results plus verified reconstructed and current graded results; synced 2026-10-25",
   "date": "2026-11-04",
-  "syncedAt": "2026-11-12T01:25:24.307Z",
+  "syncedAt": "2026-11-12T01:25:56.741Z",
   "summary": {
     "overall": {
       "wins": 52,
@@ -19,17 +19,17 @@
       "roi": 2.2
     },
     "officialStraight": {
-      "wins": 28,
-      "losses": 31,
+      "wins": 23,
+      "losses": 24,
       "pushes": 1,
-      "record": "28-31-1",
-      "units": "-5.76u",
-      "profitLoss": "-5.76u",
-      "netUnits": -5.76,
-      "unitsRisked": 42.15,
-      "winRate": "47.5%",
+      "record": "23-24-1",
+      "units": "-2.35u",
+      "profitLoss": "-2.35u",
+      "netUnits": -2.35,
+      "unitsRisked": 30.4,
+      "winRate": "48.9%",
       "incompleteUnitRows": 0,
-      "roi": -13.7
+      "roi": -7.7
     },
     "vip": {
       "wins": 5,
@@ -4084,6 +4084,92 @@
       "profitLoss": "-2u",
       "netUnits": -2,
       "unitsRisked": 2
+    },
+    {
+      "sport": "NFL",
+      "league": "NFL",
+      "type": "Delaware 4-Leg Teaser",
+      "market": "Fixed-card teaser",
+      "sportsbook": "Delaware Lottery",
+      "odds": "5-to-2 fixed",
+      "status": "Graded",
+      "officialBet": "No",
+      "units": "TBD",
+      "grade": "WATCH",
+      "eventDate": "2026-09-27",
+      "bestNumber": "Printed Sept 24 Teaser Card selections #117, #125, #129, #156",
+      "playableTo": "Only the exact four printed selections if all remain offered; recheck inactives",
+      "noBetCutoff": "No release before final injury, weather and ticket availability regrade",
+      "sourceVerification": "Delaware Lottery September 24 Teaser PDF; NFL Week 3 official injury report; Seattle team Week 3 update; Fantasy Life and VSiN Week 3 scan, September 26 ET.",
+      "risk": "All four legs must clear; payout requires 28.57% joint win probability; unverified.",
+      "date": "2026-09-27",
+      "section": "Lotto Parlays",
+      "access": "free",
+      "game": "Bills–Chargers / Lions–Jets / Seahawks–Commanders / Rams–Broncos",
+      "pick": "VIP 4-Leg Teaser Watch",
+      "cardTitle": "NFL 4-Leg Teaser — VIP Watch",
+      "lineNumber": "Four printed legs; details in VIP",
+      "writeup": "CLOSED/REMOVED: The Sunday kickoff window has passed. This unplaced teaser is retained for recordkeeping and is no longer an active card.",
+      "fullAnalysis": "The full four-leg watch card and failure paths are in VIP. This public notice does not authorize a wager.",
+      "homePreview": "Four-game VIP teaser watch; no official release.",
+      "notes": "Exact Delaware Teaser card, Sept 24. No wager amount shown.",
+      "id": "nfl-20260927-week3-teaser-watch",
+      "Grade": "WATCH",
+      "Status": "Graded",
+      "result": "Loss",
+      "Result": "Loss",
+      "outcome": "Loss",
+      "Outcome": "Loss",
+      "legGrades": [
+        {
+          "pick": "Buffalo Bills -1.5",
+          "result": "Win",
+          "final": "Buffalo 24, LA Chargers 16",
+          "gradingMargin": 6.5,
+          "sourceUrl": "https://www.nfl.com/schedules/2026/by-week/week-3"
+        },
+        {
+          "pick": "Detroit Lions -1.5",
+          "result": "Win",
+          "final": "Detroit 31, New York Jets 24",
+          "gradingMargin": 5.5,
+          "sourceUrl": "https://www.nfl.com/schedules/2026/by-week/week-3"
+        },
+        {
+          "pick": "Seattle Seahawks -1.5",
+          "result": "Loss",
+          "final": "Washington 33, Seattle 31",
+          "gradingMargin": -3.5,
+          "sourceUrl": "https://www.nfl.com/schedules/2026/by-week/week-3"
+        },
+        {
+          "pick": "Rams–Broncos Under 50.5",
+          "result": "Loss",
+          "final": "Denver 30, LA Rams 26 — 56 total",
+          "gradingMargin": -5.5,
+          "sourceUrl": "https://www.nfl.com/schedules/2026/by-week/week-3"
+        }
+      ],
+      "legRecord": "2-2",
+      "finalScore": "Buffalo Bills -1.5 — Win: Buffalo 24, LA Chargers 16\nDetroit Lions -1.5 — Win: Detroit 31, New York Jets 24\nSeattle Seahawks -1.5 — Loss: Washington 33, Seattle 31\nRams–Broncos Under 50.5 — Loss: Denver 30, LA Rams 26 — 56 total",
+      "settlementStatus": "Settled",
+      "settlementCheckedAt": "2026-11-12T01:25:56.741Z",
+      "settledAt": "2026-11-12T01:25:56.741Z",
+      "updatedAt": "2026-11-12T01:25:56.741Z",
+      "settlementSource": "NFL official Week 3 schedule/results",
+      "settlementSources": [
+        "https://www.nfl.com/schedules/2026/by-week/week-3"
+      ],
+      "settlementNotes": "LOSS. Leg record 2-2. Buffalo -1.5 and Detroit -1.5 won; Seattle -1.5 and Rams–Broncos Under 50.5 lost. WATCH/unplaced ticket; no unit P/L is charged.",
+      "excludeFromRecord": true,
+      "unitProfitLossKnown": false,
+      "profitLoss": "No wager",
+      "Profit/Loss": "No wager",
+      "P/L": "No wager",
+      "PL": "No wager",
+      "recordScope": "WATCH/unplaced ticket graded for historical card performance; excluded from official betting record.",
+      "Section": "Lotto Parlays",
+      "Access": "Free"
     },
     {
       "id": "placed-teaser-2026-09-20-min-phi-jax-nyg",
