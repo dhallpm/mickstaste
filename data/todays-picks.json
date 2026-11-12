@@ -12,7 +12,7 @@
       "sport": "NBA",
       "league": "NBA",
       "sportsbook": "BetRivers Delaware",
-      "status": "Planned",
+      "status": "Graded",
       "releaseStatus": "Manual Posted",
       "officialBet": "No",
       "publishedSelection": true,
@@ -22,7 +22,7 @@
       "units": 0,
       "showFullAnalysis": true,
       "expandableAnalysis": true,
-      "updatedAt": "2026-10-31T19:01:19.382Z",
+      "updatedAt": "2026-11-12T01:25:24.307Z",
       "id": "nba-20261031-kings-spread",
       "section": "Free",
       "cardTitle": "Sacramento Kings +8.5",
@@ -48,7 +48,28 @@
           "title": "VSiN Oct. 31 guide",
           "url": "https://vsin.com/nba/steve-makinens-nba-betting-trends-and-best-bets-for-saturday-october-31/"
         }
-      ]
+      ],
+      "Status": "Graded",
+      "result": "Loss",
+      "Result": "Loss",
+      "outcome": "Loss",
+      "Outcome": "Loss",
+      "finalScore": "Memphis Grizzlies 136, Sacramento Kings 105",
+      "settlementStatus": "Settled",
+      "settlementCheckedAt": "2026-11-12T01:25:24.307Z",
+      "settledAt": "2026-11-12T01:25:24.307Z",
+      "settlementSource": "Verified league/official score and box-score sources",
+      "settlementSources": [
+        "https://www.courtvisionpicks.com/fixtures?from=2026-10-27"
+      ],
+      "settlementNotes": "LOSS. Sacramento +8.5 lost by 31 points.",
+      "unitProfitLossKnown": true,
+      "profitLoss": "No wager",
+      "Profit/Loss": "No wager",
+      "P/L": "No wager",
+      "PL": "No wager",
+      "Units": 0,
+      "recordScope": "Graded for published-card performance; excluded from official betting record because no wager was recorded."
     },
     {
       "date": "2026-10-31",
@@ -57,7 +78,7 @@
       "sport": "NBA",
       "league": "NBA",
       "sportsbook": "BetRivers Delaware",
-      "status": "Planned",
+      "status": "Graded",
       "releaseStatus": "Manual Posted",
       "officialBet": "No",
       "publishedSelection": true,
@@ -67,7 +88,7 @@
       "units": 0,
       "showFullAnalysis": true,
       "expandableAnalysis": true,
-      "updatedAt": "2026-10-31T19:01:19.382Z",
+      "updatedAt": "2026-11-12T01:25:24.307Z",
       "id": "nba-20261031-spurs-spread",
       "section": "Free",
       "cardTitle": "San Antonio Spurs -12.5",
@@ -93,7 +114,28 @@
           "title": "VSiN Oct. 31 guide",
           "url": "https://vsin.com/nba/steve-makinens-nba-betting-trends-and-best-bets-for-saturday-october-31/"
         }
-      ]
+      ],
+      "Status": "Graded",
+      "result": "Loss",
+      "Result": "Loss",
+      "outcome": "Loss",
+      "Outcome": "Loss",
+      "finalScore": "San Antonio Spurs 121, Minnesota Timberwolves 111",
+      "settlementStatus": "Settled",
+      "settlementCheckedAt": "2026-11-12T01:25:24.307Z",
+      "settledAt": "2026-11-12T01:25:24.307Z",
+      "settlementSource": "Verified league/official score and box-score sources",
+      "settlementSources": [
+        "https://www.nba.com/game/sas-vs-min-0022600152"
+      ],
+      "settlementNotes": "LOSS. San Antonio won by 10, short of the 13-point margin required by -12.5.",
+      "unitProfitLossKnown": true,
+      "profitLoss": "No wager",
+      "Profit/Loss": "No wager",
+      "P/L": "No wager",
+      "PL": "No wager",
+      "Units": 0,
+      "recordScope": "Graded for published-card performance; excluded from official betting record because no wager was recorded."
     },
     {
       "date": "2026-10-24",
@@ -359,7 +401,7 @@
       "sport": "NBA",
       "league": "NBA",
       "sportsbook": "BetRivers Delaware",
-      "status": "Planned",
+      "status": "Graded",
       "releaseStatus": "Manual Posted",
       "officialBet": "No",
       "publishedSelection": true,
@@ -369,7 +411,7 @@
       "units": 0,
       "showFullAnalysis": true,
       "expandableAnalysis": true,
-      "updatedAt": "2026-10-31T19:01:19.382Z",
+      "updatedAt": "2026-11-12T01:25:24.307Z",
       "id": "nba-20261031-wemby-points",
       "section": "Props Lab",
       "cardTitle": "Wembanyama Over 24.5 Points",
@@ -387,7 +429,28 @@
       "player": "Victor Wembanyama",
       "prop": "Points",
       "line": 24.5,
-      "sourceVerification": "User BetRivers screenshot IMG_1970 at 2:19 PM; SAS reference workbook, five logged games through Oct. 28."
+      "sourceVerification": "User BetRivers screenshot IMG_1970 at 2:19 PM; SAS reference workbook, five logged games through Oct. 28.",
+      "Status": "Graded",
+      "result": "Win",
+      "Result": "Win",
+      "outcome": "Win",
+      "Outcome": "Win",
+      "finalScore": "Victor Wembanyama: 43 points",
+      "settlementStatus": "Settled",
+      "settlementCheckedAt": "2026-11-12T01:25:24.307Z",
+      "settledAt": "2026-11-12T01:25:24.307Z",
+      "settlementSource": "Verified league/official score and box-score sources",
+      "settlementSources": [
+        "https://www.nba.com/game/sas-vs-min-0022600152"
+      ],
+      "settlementNotes": "WIN. Wembanyama scored 43, clearing Over 24.5.",
+      "unitProfitLossKnown": true,
+      "profitLoss": "No wager",
+      "Profit/Loss": "No wager",
+      "P/L": "No wager",
+      "PL": "No wager",
+      "Units": 0,
+      "recordScope": "Graded for published-card performance; excluded from official betting record because no wager was recorded."
     },
     {
       "date": "2026-10-31",
@@ -396,7 +459,7 @@
       "sport": "NBA",
       "league": "NBA",
       "sportsbook": "BetRivers Delaware",
-      "status": "Planned",
+      "status": "Graded",
       "releaseStatus": "Manual Posted",
       "officialBet": "No",
       "publishedSelection": true,
@@ -406,7 +469,7 @@
       "units": 0,
       "showFullAnalysis": true,
       "expandableAnalysis": true,
-      "updatedAt": "2026-10-31T19:01:19.382Z",
+      "updatedAt": "2026-11-12T01:25:24.307Z",
       "id": "nba-20261031-wemby-rebounds",
       "section": "Props Lab",
       "cardTitle": "Wembanyama Over 11.5 Rebounds",
@@ -424,7 +487,28 @@
       "player": "Victor Wembanyama",
       "prop": "Rebounds",
       "line": 11.5,
-      "sourceVerification": "User BetRivers screenshot IMG_1971 at 2:19 PM; SAS reference workbook through Oct. 28."
+      "sourceVerification": "User BetRivers screenshot IMG_1971 at 2:19 PM; SAS reference workbook through Oct. 28.",
+      "Status": "Graded",
+      "result": "Loss",
+      "Result": "Loss",
+      "outcome": "Loss",
+      "Outcome": "Loss",
+      "finalScore": "Victor Wembanyama: 7 rebounds",
+      "settlementStatus": "Settled",
+      "settlementCheckedAt": "2026-11-12T01:25:24.307Z",
+      "settledAt": "2026-11-12T01:25:24.307Z",
+      "settlementSource": "Verified league/official score and box-score sources",
+      "settlementSources": [
+        "https://www.nba.com/game/sas-vs-min-0022600152"
+      ],
+      "settlementNotes": "LOSS. Wembanyama finished with 7 rebounds, below 11.5.",
+      "unitProfitLossKnown": true,
+      "profitLoss": "No wager",
+      "Profit/Loss": "No wager",
+      "P/L": "No wager",
+      "PL": "No wager",
+      "Units": 0,
+      "recordScope": "Graded for published-card performance; excluded from official betting record because no wager was recorded."
     },
     {
       "date": "2026-10-31",
@@ -433,7 +517,7 @@
       "sport": "NBA",
       "league": "NBA",
       "sportsbook": "BetRivers Delaware",
-      "status": "Planned",
+      "status": "Graded",
       "releaseStatus": "Manual Posted",
       "officialBet": "No",
       "publishedSelection": true,
@@ -443,7 +527,7 @@
       "units": 0,
       "showFullAnalysis": true,
       "expandableAnalysis": true,
-      "updatedAt": "2026-10-31T19:01:19.382Z",
+      "updatedAt": "2026-11-12T01:25:24.307Z",
       "id": "nba-20261031-harper-assists",
       "section": "Props Lab",
       "cardTitle": "Dylan Harper 5+ Assists",
@@ -461,7 +545,28 @@
       "player": "Dylan Harper",
       "prop": "Assists",
       "line": 5,
-      "sourceVerification": "User BetRivers screenshot IMG_1972 at 2:19 PM; SAS reference workbook through Oct. 28."
+      "sourceVerification": "User BetRivers screenshot IMG_1972 at 2:19 PM; SAS reference workbook through Oct. 28.",
+      "Status": "Graded",
+      "result": "Win",
+      "Result": "Win",
+      "outcome": "Win",
+      "Outcome": "Win",
+      "finalScore": "Dylan Harper: 6 assists",
+      "settlementStatus": "Settled",
+      "settlementCheckedAt": "2026-11-12T01:25:24.307Z",
+      "settledAt": "2026-11-12T01:25:24.307Z",
+      "settlementSource": "Verified league/official score and box-score sources",
+      "settlementSources": [
+        "https://www.nba.com/game/sas-vs-min-0022600152"
+      ],
+      "settlementNotes": "WIN. Harper recorded 6 assists, clearing 5+.",
+      "unitProfitLossKnown": true,
+      "profitLoss": "No wager",
+      "Profit/Loss": "No wager",
+      "P/L": "No wager",
+      "PL": "No wager",
+      "Units": 0,
+      "recordScope": "Graded for published-card performance; excluded from official betting record because no wager was recorded."
     },
     {
       "id": "user-bane-assists-over-3-5-2026-10-21",
@@ -535,12 +640,29 @@
       "sportsbook": "Shop all books",
       "grade": "B-",
       "units": 0,
-      "status": "Watchlist",
+      "status": "Graded",
       "officialBet": "No",
       "bestNumber": "Over 38.5 receiving yards",
       "playableTo": "Over 38.5 at -125 or better — rescore",
       "noBetCutoff": "Over 39.5+ or worse than -125 — pass",
-      "writeup": "Kincaid's route and target role can support an Over, but the scanned Over 49.5 at -115 demanded too much volume. Only reopen the prop if the yardage falls to 38.5 without juice worse than -125. This is a rescore trigger, not an automatic bet."
+      "writeup": "Kincaid's route and target role can support an Over, but the scanned Over 49.5 at -115 demanded too much volume. Only reopen the prop if the yardage falls to 38.5 without juice worse than -125. This is a rescore trigger, not an automatic bet.",
+      "Status": "Graded",
+      "result": "Void",
+      "Result": "Void",
+      "outcome": "Void",
+      "Outcome": "Void",
+      "settlementStatus": "Settled",
+      "settlementCheckedAt": "2026-11-12T01:25:24.307Z",
+      "settledAt": "2026-11-12T01:25:24.307Z",
+      "updatedAt": "2026-11-12T01:25:24.307Z",
+      "settlementNotes": "VOID / NO ACTION. Conditional watchlist entry never documented an accepted qualifying price or official wager, so no W/L grade or unit P/L is assigned.",
+      "excludeFromRecord": true,
+      "unitProfitLossKnown": false,
+      "profitLoss": "No wager",
+      "Profit/Loss": "No wager",
+      "P/L": "No wager",
+      "PL": "No wager",
+      "recordScope": "Conditional watchlist only; no accepted number or wager documented."
     },
     {
       "date": "2026-09-17",
@@ -557,12 +679,29 @@
       "sportsbook": "Shop all books",
       "grade": "C+",
       "units": 0,
-      "status": "Watchlist",
+      "status": "Graded",
       "officialBet": "No",
       "bestNumber": "Over 10.5 receiving yards",
       "playableTo": "Over 10.5 at -115 or better — rescore",
       "noBetCutoff": "Over 12.5 at -114 or worse — pass",
-      "writeup": "The low threshold is attractive, but Knox drew only one target in Week 1 and remains a volatile secondary option. A drop to 10.5 at ordinary juice is required before another review; 12.5 at -114 stays off the card."
+      "writeup": "The low threshold is attractive, but Knox drew only one target in Week 1 and remains a volatile secondary option. A drop to 10.5 at ordinary juice is required before another review; 12.5 at -114 stays off the card.",
+      "Status": "Graded",
+      "result": "Void",
+      "Result": "Void",
+      "outcome": "Void",
+      "Outcome": "Void",
+      "settlementStatus": "Settled",
+      "settlementCheckedAt": "2026-11-12T01:25:24.307Z",
+      "settledAt": "2026-11-12T01:25:24.307Z",
+      "updatedAt": "2026-11-12T01:25:24.307Z",
+      "settlementNotes": "VOID / NO ACTION. Conditional watchlist entry never documented an accepted qualifying price or official wager, so no W/L grade or unit P/L is assigned.",
+      "excludeFromRecord": true,
+      "unitProfitLossKnown": false,
+      "profitLoss": "No wager",
+      "Profit/Loss": "No wager",
+      "P/L": "No wager",
+      "PL": "No wager",
+      "recordScope": "Conditional watchlist only; no accepted number or wager documented."
     },
     {
       "date": "2026-09-17",
@@ -579,12 +718,29 @@
       "sportsbook": "Shop all books",
       "grade": "B",
       "units": 0,
-      "status": "Watchlist",
+      "status": "Graded",
       "officialBet": "No",
       "bestNumber": "Lions +6.5",
       "playableTo": "+6.5 at -115 or better — rescore",
       "noBetCutoff": "+5.5 or worse — pass",
-      "writeup": "Detroit +5.5 did not provide enough protection against the current injury and market conflicts. Reopen only at +6.5 or better, where the extra point materially improves the one-score loss window."
+      "writeup": "Detroit +5.5 did not provide enough protection against the current injury and market conflicts. Reopen only at +6.5 or better, where the extra point materially improves the one-score loss window.",
+      "Status": "Graded",
+      "result": "Void",
+      "Result": "Void",
+      "outcome": "Void",
+      "Outcome": "Void",
+      "settlementStatus": "Settled",
+      "settlementCheckedAt": "2026-11-12T01:25:24.307Z",
+      "settledAt": "2026-11-12T01:25:24.307Z",
+      "updatedAt": "2026-11-12T01:25:24.307Z",
+      "settlementNotes": "VOID / NO ACTION. Conditional watchlist entry never documented an accepted qualifying price or official wager, so no W/L grade or unit P/L is assigned.",
+      "excludeFromRecord": true,
+      "unitProfitLossKnown": false,
+      "profitLoss": "No wager",
+      "Profit/Loss": "No wager",
+      "P/L": "No wager",
+      "PL": "No wager",
+      "recordScope": "Conditional watchlist only; no accepted number or wager documented."
     },
     {
       "date": "2026-09-17",
@@ -601,12 +757,29 @@
       "sportsbook": "Shop all books",
       "grade": "B-",
       "units": 0,
-      "status": "Watchlist",
+      "status": "Graded",
       "officialBet": "No",
       "bestNumber": "Over 53.5",
       "playableTo": "Over 53.5 at -110 or better — rescore",
       "noBetCutoff": "Over 54.5 at -113 or worse — pass",
-      "writeup": "The offensive ceiling supports an Over script, but the market model and fantasy projection disagreed on the fair total. A full-point discount to 53.5 at standard juice is required just to rescore the matchup; 54.5 at -113 remains a pass."
+      "writeup": "The offensive ceiling supports an Over script, but the market model and fantasy projection disagreed on the fair total. A full-point discount to 53.5 at standard juice is required just to rescore the matchup; 54.5 at -113 remains a pass.",
+      "Status": "Graded",
+      "result": "Void",
+      "Result": "Void",
+      "outcome": "Void",
+      "Outcome": "Void",
+      "settlementStatus": "Settled",
+      "settlementCheckedAt": "2026-11-12T01:25:24.307Z",
+      "settledAt": "2026-11-12T01:25:24.307Z",
+      "updatedAt": "2026-11-12T01:25:24.307Z",
+      "settlementNotes": "VOID / NO ACTION. Conditional watchlist entry never documented an accepted qualifying price or official wager, so no W/L grade or unit P/L is assigned.",
+      "excludeFromRecord": true,
+      "unitProfitLossKnown": false,
+      "profitLoss": "No wager",
+      "Profit/Loss": "No wager",
+      "P/L": "No wager",
+      "PL": "No wager",
+      "recordScope": "Conditional watchlist only; no accepted number or wager documented."
     },
     {
       "date": "2026-09-17",
@@ -623,12 +796,29 @@
       "sportsbook": "Shop all books",
       "grade": "B",
       "units": 0,
-      "status": "Watchlist",
+      "status": "Graded",
       "officialBet": "No",
       "bestNumber": "Under 53",
       "playableTo": "Under 53 at -115 or better with weather intact — rescore",
       "noBetCutoff": "Under 51.5 or lower — pass",
-      "writeup": "The Under thesis needs the weather and lower-tempo script, but the market already compressed to 51.5. Do not chase the move. A return to 53 at -115 or better is the minimum rescore point."
+      "writeup": "The Under thesis needs the weather and lower-tempo script, but the market already compressed to 51.5. Do not chase the move. A return to 53 at -115 or better is the minimum rescore point.",
+      "Status": "Graded",
+      "result": "Void",
+      "Result": "Void",
+      "outcome": "Void",
+      "Outcome": "Void",
+      "settlementStatus": "Settled",
+      "settlementCheckedAt": "2026-11-12T01:25:24.307Z",
+      "settledAt": "2026-11-12T01:25:24.307Z",
+      "updatedAt": "2026-11-12T01:25:24.307Z",
+      "settlementNotes": "VOID / NO ACTION. Conditional watchlist entry never documented an accepted qualifying price or official wager, so no W/L grade or unit P/L is assigned.",
+      "excludeFromRecord": true,
+      "unitProfitLossKnown": false,
+      "profitLoss": "No wager",
+      "Profit/Loss": "No wager",
+      "P/L": "No wager",
+      "PL": "No wager",
+      "recordScope": "Conditional watchlist only; no accepted number or wager documented."
     },
     {
       "date": "2026-09-17",
@@ -645,12 +835,29 @@
       "sportsbook": "Shop all books",
       "grade": "B",
       "units": 0,
-      "status": "Watchlist",
+      "status": "Graded",
       "officialBet": "No",
       "bestNumber": "Astros -135 or better",
       "playableTo": "-135 after lineup, starter and roof confirmation — rescore",
       "noBetCutoff": "-145 or worse, or missing confirmations — pass",
-      "writeup": "Houston's matchup was viable, but -145 did not clear the price gate while lineup, starter and roof variables remained unresolved. The market must improve to -135 or better and all three confirmations must hold before release consideration."
+      "writeup": "Houston's matchup was viable, but -145 did not clear the price gate while lineup, starter and roof variables remained unresolved. The market must improve to -135 or better and all three confirmations must hold before release consideration.",
+      "Status": "Graded",
+      "result": "Void",
+      "Result": "Void",
+      "outcome": "Void",
+      "Outcome": "Void",
+      "settlementStatus": "Settled",
+      "settlementCheckedAt": "2026-11-12T01:25:24.307Z",
+      "settledAt": "2026-11-12T01:25:24.307Z",
+      "updatedAt": "2026-11-12T01:25:24.307Z",
+      "settlementNotes": "VOID / NO ACTION. Conditional watchlist entry never documented an accepted qualifying price or official wager, so no W/L grade or unit P/L is assigned.",
+      "excludeFromRecord": true,
+      "unitProfitLossKnown": false,
+      "profitLoss": "No wager",
+      "Profit/Loss": "No wager",
+      "P/L": "No wager",
+      "PL": "No wager",
+      "recordScope": "Conditional watchlist only; no accepted number or wager documented."
     },
     {
       "date": "2026-09-17",
@@ -667,12 +874,29 @@
       "sportsbook": "Shop all books",
       "grade": "B",
       "units": 0,
-      "status": "Watchlist",
+      "status": "Graded",
       "officialBet": "No",
       "bestNumber": "Red Sox -110 or better",
       "playableTo": "-110 or plus money after lineup confirmation — rescore",
       "noBetCutoff": "Worse than -110 or continued adverse movement — pass",
-      "writeup": "Boston's move from roughly -135/-140 toward -117 was adverse rather than validating. Wait for -110 or plus money, a confirmed lineup and evidence that the move has stabilized before considering a release."
+      "writeup": "Boston's move from roughly -135/-140 toward -117 was adverse rather than validating. Wait for -110 or plus money, a confirmed lineup and evidence that the move has stabilized before considering a release.",
+      "Status": "Graded",
+      "result": "Void",
+      "Result": "Void",
+      "outcome": "Void",
+      "Outcome": "Void",
+      "settlementStatus": "Settled",
+      "settlementCheckedAt": "2026-11-12T01:25:24.307Z",
+      "settledAt": "2026-11-12T01:25:24.307Z",
+      "updatedAt": "2026-11-12T01:25:24.307Z",
+      "settlementNotes": "VOID / NO ACTION. Conditional watchlist entry never documented an accepted qualifying price or official wager, so no W/L grade or unit P/L is assigned.",
+      "excludeFromRecord": true,
+      "unitProfitLossKnown": false,
+      "profitLoss": "No wager",
+      "Profit/Loss": "No wager",
+      "P/L": "No wager",
+      "PL": "No wager",
+      "recordScope": "Conditional watchlist only; no accepted number or wager documented."
     },
     {
       "date": "2026-09-17",
@@ -689,12 +913,29 @@
       "sportsbook": "Shop all books",
       "grade": "B",
       "units": 0,
-      "status": "Watchlist",
+      "status": "Graded",
       "officialBet": "No",
       "bestNumber": "Storm +12.5",
       "playableTo": "+12.5 at -115 or better with core availability confirmed — rescore",
       "noBetCutoff": "+10.5 or unresolved injuries — pass",
-      "writeup": "Seattle +10.5 did not compensate for the injury uncertainty. The spread must reach +12.5 at -115 or better and the core rotation must be confirmed before the matchup can return to the release board."
+      "writeup": "Seattle +10.5 did not compensate for the injury uncertainty. The spread must reach +12.5 at -115 or better and the core rotation must be confirmed before the matchup can return to the release board.",
+      "Status": "Graded",
+      "result": "Void",
+      "Result": "Void",
+      "outcome": "Void",
+      "Outcome": "Void",
+      "settlementStatus": "Settled",
+      "settlementCheckedAt": "2026-11-12T01:25:24.307Z",
+      "settledAt": "2026-11-12T01:25:24.307Z",
+      "updatedAt": "2026-11-12T01:25:24.307Z",
+      "settlementNotes": "VOID / NO ACTION. Conditional watchlist entry never documented an accepted qualifying price or official wager, so no W/L grade or unit P/L is assigned.",
+      "excludeFromRecord": true,
+      "unitProfitLossKnown": false,
+      "profitLoss": "No wager",
+      "Profit/Loss": "No wager",
+      "P/L": "No wager",
+      "PL": "No wager",
+      "recordScope": "Conditional watchlist only; no accepted number or wager documented."
     }
   ],
   "lottoParlays": [
@@ -715,13 +956,13 @@
       "oddsSource": "Approximate full-ticket odds implied by the displayed payout-to-stake ratio; combined American odds are not explicitly visible in the screenshot.",
       "type": "Parlay",
       "market": "Five-Leg Parlay",
-      "status": "Open",
+      "status": "Graded",
       "releaseStatus": "User Selected / Posted Ticket",
       "publishedSelection": true,
       "userConfirmedTicket": false,
       "betPlaced": true,
       "officialBet": "No",
-      "excludeFromRecord": true,
+      "excludeFromRecord": false,
       "hideWagerAmounts": true,
       "units": 0,
       "showFullAnalysis": true,
@@ -827,7 +1068,67 @@
           "url": "https://data.vsin.com/nba/games/?gamedate=2026-11-04"
         }
       ],
-      "updatedAt": "2026-11-05T01:48:55.389Z"
+      "updatedAt": "2026-11-12T01:25:24.307Z",
+      "Status": "Graded",
+      "result": "Loss",
+      "Result": "Loss",
+      "outcome": "Loss",
+      "Outcome": "Loss",
+      "finalScore": "De'Aaron Fox 5+ assists — Loss: De'Aaron Fox: 4 assists\nDylan Harper 4+ rebounds — Win: Dylan Harper: 5 rebounds\nJulian Champagnie 2+ three-pointers — Loss: Julian Champagnie: 0 three-pointers\nDylan Harper 4+ assists — Loss: Dylan Harper: 0 assists\nPhoenix Suns +2.5 — Loss: Portland 132, Phoenix 119 — Suns lost by 13",
+      "legGrades": [
+        {
+          "pick": "De'Aaron Fox 5+ assists",
+          "result": "Loss",
+          "final": "De'Aaron Fox: 4 assists",
+          "gradingMargin": -1,
+          "sourceUrl": "https://www.nba.com/game/dal-vs-sas-0022600184/box-score"
+        },
+        {
+          "pick": "Dylan Harper 4+ rebounds",
+          "result": "Win",
+          "final": "Dylan Harper: 5 rebounds",
+          "gradingMargin": 1,
+          "sourceUrl": "https://www.nba.com/game/dal-vs-sas-0022600184/box-score"
+        },
+        {
+          "pick": "Julian Champagnie 2+ three-pointers",
+          "result": "Loss",
+          "final": "Julian Champagnie: 0 three-pointers",
+          "gradingMargin": -2,
+          "sourceUrl": "https://www.nba.com/game/dal-vs-sas-0022600184/box-score"
+        },
+        {
+          "pick": "Dylan Harper 4+ assists",
+          "result": "Loss",
+          "final": "Dylan Harper: 0 assists",
+          "gradingMargin": -4,
+          "sourceUrl": "https://www.nba.com/game/dal-vs-sas-0022600184/box-score"
+        },
+        {
+          "pick": "Phoenix Suns +2.5",
+          "result": "Loss",
+          "final": "Portland 132, Phoenix 119 — Suns lost by 13",
+          "gradingMargin": -10.5,
+          "sourceUrl": "https://www.nba.com/game/por-vs-phx-0022600183"
+        }
+      ],
+      "legRecord": "1-4",
+      "settlementStatus": "Settled",
+      "settlementCheckedAt": "2026-11-12T01:25:24.307Z",
+      "settledAt": "2026-11-12T01:25:24.307Z",
+      "settlementSource": "Verified league/official score and box-score sources",
+      "settlementSources": [
+        "https://www.nba.com/game/dal-vs-sas-0022600184/box-score",
+        "https://www.nba.com/game/por-vs-phx-0022600183"
+      ],
+      "settlementNotes": "LOSS. Leg record 1-4. Source row records betPlaced=true, but stake units were not recorded; unit P/L remains unknown.",
+      "unitProfitLossKnown": false,
+      "profitLoss": "Unknown",
+      "Profit/Loss": "Unknown",
+      "P/L": "Unknown",
+      "PL": "Unknown",
+      "Units": 0,
+      "recordScope": "Included in ticket win/loss record; unit P/L unavailable because stake was not recorded."
     },
     {
       "id": "nba-20261102-three-leg-teaser-plus",
@@ -845,13 +1146,13 @@
       "odds": "+289",
       "type": "Teaser+",
       "market": "Three-Leg Parlay",
-      "status": "Open",
+      "status": "Graded",
       "releaseStatus": "User Selected / Posted Ticket",
       "publishedSelection": true,
       "userConfirmedTicket": false,
       "betPlaced": true,
       "officialBet": "No",
-      "excludeFromRecord": true,
+      "excludeFromRecord": false,
       "hideWagerAmounts": true,
       "units": 0,
       "showFullAnalysis": true,
@@ -903,8 +1204,53 @@
       ],
       "fullAnalysis": "Why This Ticket: Three-leg Teaser+ shown open in My Bets. Preserve the exact accepted thresholds; the screenshot does not establish a uniform teaser adjustment.\n\nWhy This Play: Houston needs to win outright; -0.5 has no point-spread push. The exact ticket threshold is used without adding more teaser points.\n\nMatchup Edge: Boston is on the second night of a back-to-back and Paul George is out for rest on the 6:15 PM official report. Houston's home setting and reduced margin requirement support the selection.\n\nProjection Edge: The earlier VSiN effective-rating layer favored Houston at a substantially larger market spread. Doc's Tony Sink selected Boston, so there is opposing guide opinion; no independent cover probability is claimed.\n\nKey Metrics: Screenshot shows Houston -0.5 at -190, start 8:30 PM ET. The evening reference board had Houston laying around5.5; this accepted threshold requires only a win.\n\nRisk: Houston is without Steven Adams and Clint Capela; Reed Sheppard was questionable. Boston's remaining creators can win outright despite the workload disadvantage.\n\nFinal Take: User-selected Houston -0.5, pending outcome. This writeup documents the pictured wager rather than upgrading it to a framework-rated release.\n\nWhy This Play: The wager needs234or235 or any lower combined total to win;236or more loses. Overtime is included as printed on the ticket.\n\nMatchup Edge: Portland is missing Ja Morant and Shaedon Sharpe, reducing two important scoring and creation options. Under235.5 supplies room above the evening231.5 reference total.\n\nProjection Edge: The earlier public VSiN effective-rating output leaned Over at a lower230.5 threshold, a relevant countercase. A market reference is not an independent projected final score, and no fair probability is invented.\n\nKey Metrics: Exact pictured selection Under235.5 at -152,9:00 PM ET. Earlier evening DK Under231.5 had27%tickets/62%handle, a divergence signal only; those splits are not specific to this alternate.\n\nRisk: Portland's remaining creators, Denver's efficient half-court offense, late fouls and overtime can lift the total. Both teams had rest rather than playing a second consecutive night.\n\nFinal Take: User-selected alternate Under235.5 including overtime. No additional seven-point adjustment is applied.\n\nWhy This Play: Cleveland must win outright. The -0.5 threshold is more forgiving than the evening main spread near-4.5 but differs from the earlier +3.5 ticket.\n\nMatchup Edge: Oklahoma City lists Chet Holmgren,Jalen Williams,Alex Caruso,Cason Wallace,Nikola Topic and Thomas Sorber out on the 6:15 PM official report. Cleveland's early scoring profile and home court support its direction.\n\nProjection Edge: Doc's Tony Sink selected Cleveland. The earlier VSiN effective-rating view supported Oklahoma City, so this is not unanimous expert agreement. No injury-point conversion or independent win probability is asserted.\n\nKey Metrics: Screenshot shows Cleveland -0.5 at -190,7:00 PM ET. Cleveland's4–2 straight-up record is separate from its2–4 closing-spread ATS record.\n\nRisk: Shai Gilgeous-Alexander remains the major Oklahoma City countercase. Cleveland has Jaylon Tyson and Nae'Qwan Tomlin out, with Peyton Watson questionable at the reviewed report.\n\nFinal Take: User-selected Cleveland -0.5, pending outcome; an outright loss defeats the leg.\n\nShared Risk: Both spread legs require outright favorite wins; the total remains exposed to overtime. Cleveland also appears at a different threshold on the earlier eight-leg ticket, creating overlapping game exposure. Do not treat the two tickets as diversified.\n\nFinal Take: Published at the user's direction. Displayed dollar amounts are hidden, and unit risk is not inferred from the screenshot. Framework approval and official-unit accounting are separate from publication. Pending settlement; no result is assumed.",
       "sourceVerification": "User-supplied IMG_1991(1).jpeg; November2 evening Vegas scan; official NBA6:15 PM injury report; dated Circa sheet and VSiN/Doc's references reviewed earlier today.",
-      "updatedAt": "2026-11-02T23:46:33.739Z",
-      "homePreview": "Three exact legs from your open BetRivers ticket: Houston -0.5, Portland–Denver Under235.5 including overtime, and Cleveland -0.5. Posted odds+289. Cleveland starts7:00 PM ET,Houston8:30 PM ET,and Portland–Denver9:00 PM ET. Open the analysis for each leg's rationale,guide disagreement and failure path."
+      "updatedAt": "2026-11-12T01:25:24.307Z",
+      "homePreview": "Three exact legs from your open BetRivers ticket: Houston -0.5, Portland–Denver Under235.5 including overtime, and Cleveland -0.5. Posted odds+289. Cleveland starts7:00 PM ET,Houston8:30 PM ET,and Portland–Denver9:00 PM ET. Open the analysis for each leg's rationale,guide disagreement and failure path.",
+      "Status": "Graded",
+      "result": "Loss",
+      "Result": "Loss",
+      "outcome": "Loss",
+      "Outcome": "Loss",
+      "finalScore": "Houston Rockets -0.5 — Win: Houston 109, Boston 93 — Rockets won by 16\nPortland–Denver Under 235.5 — Win: Portland 118, Denver 110 — 228 total\nCleveland Cavaliers -0.5 — Loss: Oklahoma City 117, Cleveland 112 — Cavaliers lost by 5",
+      "legGrades": [
+        {
+          "pick": "Houston Rockets -0.5",
+          "result": "Win",
+          "final": "Houston 109, Boston 93 — Rockets won by 16",
+          "gradingMargin": 15.5,
+          "sourceUrl": "https://www.courtvisionpicks.com/fixtures?from=2026-11-02"
+        },
+        {
+          "pick": "Portland–Denver Under 235.5",
+          "result": "Win",
+          "final": "Portland 118, Denver 110 — 228 total",
+          "gradingMargin": 7.5,
+          "sourceUrl": "https://www.courtvisionpicks.com/fixtures?from=2026-11-02"
+        },
+        {
+          "pick": "Cleveland Cavaliers -0.5",
+          "result": "Loss",
+          "final": "Oklahoma City 117, Cleveland 112 — Cavaliers lost by 5",
+          "gradingMargin": -5.5,
+          "sourceUrl": "https://www.courtvisionpicks.com/fixtures?from=2026-11-02"
+        }
+      ],
+      "legRecord": "2-1",
+      "settlementStatus": "Settled",
+      "settlementCheckedAt": "2026-11-12T01:25:24.307Z",
+      "settledAt": "2026-11-12T01:25:24.307Z",
+      "settlementSource": "Verified league/official score and box-score sources",
+      "settlementSources": [
+        "https://www.courtvisionpicks.com/fixtures?from=2026-11-02"
+      ],
+      "settlementNotes": "LOSS. Leg record 2-1. Source row records betPlaced=true, but stake units were not recorded; unit P/L remains unknown.",
+      "unitProfitLossKnown": false,
+      "profitLoss": "Unknown",
+      "Profit/Loss": "Unknown",
+      "P/L": "Unknown",
+      "PL": "Unknown",
+      "Units": 0,
+      "recordScope": "Included in ticket win/loss record; unit P/L unavailable because stake was not recorded."
     },
     {
       "id": "nba-20261102-eight-leg-super-parlay",
@@ -922,7 +1268,7 @@
       "pick": "Utah Jazz +23.5 / De'Aaron Fox 14+ points / Julian Champagnie 2+ threes / Dylan Harper 5+ rebounds / Victor Wembanyama 25+ points / Victor Wembanyama 2+ threes / Cleveland Cavaliers +3.5 / New Orleans Pelicans +12.5",
       "lineNumber": "8 legs · 6-leg Spurs–Jazz SGP + 2 alternate spreads",
       "odds": "+1525",
-      "status": "Planned",
+      "status": "Graded",
       "releaseStatus": "User Selected / Manual Posted",
       "officialBet": "No",
       "publishedSelection": true,
@@ -1036,8 +1382,89 @@
         }
       ],
       "sourceVerification": "User-supplied IMG_1990.jpeg for exact selections and printed odds; November2 Vegas Picks scan; Spurs workbook version14, six games throughOctober31.",
-      "updatedAt": "2026-11-02T19:14:21.277Z",
-      "homePreview": "Eight exact selections from your ticket: Utah+23.5, Fox14+points, Champagnie2+threes, Harper5+rebounds, Wembanyama25+points and2+threes, Cleveland+3.5 and New Orleans+12.5. Starts7:00PM ET; Spurs–Jazz8:30PM ET. Open for complete leg-by-leg analysis and shared-risk notes."
+      "updatedAt": "2026-11-12T01:25:24.307Z",
+      "homePreview": "Eight exact selections from your ticket: Utah+23.5, Fox14+points, Champagnie2+threes, Harper5+rebounds, Wembanyama25+points and2+threes, Cleveland+3.5 and New Orleans+12.5. Starts7:00PM ET; Spurs–Jazz8:30PM ET. Open for complete leg-by-leg analysis and shared-risk notes.",
+      "Status": "Graded",
+      "result": "Loss",
+      "Result": "Loss",
+      "outcome": "Loss",
+      "Outcome": "Loss",
+      "finalScore": "Utah Jazz +23.5 — Win: San Antonio 119, Utah 97 — Jazz lost by 22\nDe'Aaron Fox 14+ points — Loss: De'Aaron Fox: 12 points\nJulian Champagnie 2+ threes — Win: Julian Champagnie: 2 three-pointers\nDylan Harper 5+ rebounds — Win: Dylan Harper: 7 rebounds\nVictor Wembanyama 25+ points — Loss: Victor Wembanyama: 12 points\nVictor Wembanyama 2+ threes — Loss: Victor Wembanyama: 0 three-pointers\nCleveland Cavaliers +3.5 — Loss: Oklahoma City 117, Cleveland 112 — Cavaliers lost by 5\nNew Orleans Pelicans +12.5 — Win: New Orleans 135, Memphis 134 — Pelicans won outright",
+      "legGrades": [
+        {
+          "pick": "Utah Jazz +23.5",
+          "result": "Win",
+          "final": "San Antonio 119, Utah 97 — Jazz lost by 22",
+          "gradingMargin": 1.5,
+          "sourceUrl": "https://www.courtvisionpicks.com/fixtures?from=2026-11-02"
+        },
+        {
+          "pick": "De'Aaron Fox 14+ points",
+          "result": "Loss",
+          "final": "De'Aaron Fox: 12 points",
+          "gradingMargin": -2,
+          "sourceUrl": "https://www.nba.com/game/uta-vs-sas-0022600168/box-score"
+        },
+        {
+          "pick": "Julian Champagnie 2+ threes",
+          "result": "Win",
+          "final": "Julian Champagnie: 2 three-pointers",
+          "gradingMargin": 0,
+          "sourceUrl": "https://www.nba.com/game/uta-vs-sas-0022600168/box-score"
+        },
+        {
+          "pick": "Dylan Harper 5+ rebounds",
+          "result": "Win",
+          "final": "Dylan Harper: 7 rebounds",
+          "gradingMargin": 2,
+          "sourceUrl": "https://www.nba.com/game/uta-vs-sas-0022600168/box-score"
+        },
+        {
+          "pick": "Victor Wembanyama 25+ points",
+          "result": "Loss",
+          "final": "Victor Wembanyama: 12 points",
+          "gradingMargin": -13,
+          "sourceUrl": "https://www.nba.com/game/uta-vs-sas-0022600168/box-score"
+        },
+        {
+          "pick": "Victor Wembanyama 2+ threes",
+          "result": "Loss",
+          "final": "Victor Wembanyama: 0 three-pointers",
+          "gradingMargin": -2,
+          "sourceUrl": "https://www.nba.com/game/uta-vs-sas-0022600168/box-score"
+        },
+        {
+          "pick": "Cleveland Cavaliers +3.5",
+          "result": "Loss",
+          "final": "Oklahoma City 117, Cleveland 112 — Cavaliers lost by 5",
+          "gradingMargin": -1.5,
+          "sourceUrl": "https://www.courtvisionpicks.com/fixtures?from=2026-11-02"
+        },
+        {
+          "pick": "New Orleans Pelicans +12.5",
+          "result": "Win",
+          "final": "New Orleans 135, Memphis 134 — Pelicans won outright",
+          "gradingMargin": 13.5,
+          "sourceUrl": "https://www.courtvisionpicks.com/fixtures?from=2026-11-02"
+        }
+      ],
+      "legRecord": "4-4",
+      "settlementStatus": "Settled",
+      "settlementCheckedAt": "2026-11-12T01:25:24.307Z",
+      "settledAt": "2026-11-12T01:25:24.307Z",
+      "settlementSource": "Verified league/official score and box-score sources",
+      "settlementSources": [
+        "https://www.courtvisionpicks.com/fixtures?from=2026-11-02",
+        "https://www.nba.com/game/uta-vs-sas-0022600168/box-score"
+      ],
+      "settlementNotes": "LOSS. Leg record 4-4. Planned/unplaced ticket; no unit P/L is charged.",
+      "unitProfitLossKnown": true,
+      "profitLoss": "No wager",
+      "Profit/Loss": "No wager",
+      "P/L": "No wager",
+      "PL": "No wager",
+      "Units": 0,
+      "recordScope": "Graded for published-card performance; excluded from official betting record because no wager was recorded."
     },
     {
       "date": "2026-10-31",
@@ -1046,7 +1473,7 @@
       "sport": "NBA",
       "league": "NBA",
       "sportsbook": "BetRivers Delaware",
-      "status": "Planned",
+      "status": "Graded",
       "releaseStatus": "Manual Posted",
       "officialBet": "No",
       "publishedSelection": true,
@@ -1056,7 +1483,7 @@
       "units": 0,
       "showFullAnalysis": true,
       "expandableAnalysis": true,
-      "updatedAt": "2026-10-31T19:01:19.382Z",
+      "updatedAt": "2026-11-12T01:25:24.307Z",
       "id": "nba-20261031-six-leg-seven-point-teaser",
       "section": "Lotto Parlays",
       "cardTitle": "NBA Six-Leg 7-Point Teaser — Planned",
@@ -1153,7 +1580,74 @@
           "title": "Minnesota–San Antonio market",
           "url": "https://betsharp.com/nba/game/2026-10-31-minnesota-timberwolves-at-san-antonio-spurs"
         }
-      ]
+      ],
+      "Status": "Graded",
+      "result": "Loss",
+      "Result": "Loss",
+      "outcome": "Loss",
+      "Outcome": "Loss",
+      "finalScore": "76ers–Hornets Under 221.5 — Win: Philadelphia 109, Charlotte 104 — 213 total\nKings–Grizzlies Under 238.5 — Loss: Memphis 136, Sacramento 105 — 241 total\nMilwaukee Bucks +17.5 — Loss: Cleveland 136, Milwaukee 111 — Bucks lost by 25\nThunder–Rockets Over 211.5 — Win: Houston 119, Oklahoma City 98 — 217 total\nSacramento Kings +15.5 — Loss: Memphis 136, Sacramento 105 — Kings lost by 31\nSan Antonio Spurs -5.5 — Win: San Antonio 121, Minnesota 111 — Spurs won by 10",
+      "legGrades": [
+        {
+          "pick": "76ers–Hornets Under 221.5",
+          "result": "Win",
+          "final": "Philadelphia 109, Charlotte 104 — 213 total",
+          "gradingMargin": 8.5,
+          "sourceUrl": "https://www.courtvisionpicks.com/fixtures?from=2026-10-27"
+        },
+        {
+          "pick": "Kings–Grizzlies Under 238.5",
+          "result": "Loss",
+          "final": "Memphis 136, Sacramento 105 — 241 total",
+          "gradingMargin": -2.5,
+          "sourceUrl": "https://www.courtvisionpicks.com/fixtures?from=2026-10-27"
+        },
+        {
+          "pick": "Milwaukee Bucks +17.5",
+          "result": "Loss",
+          "final": "Cleveland 136, Milwaukee 111 — Bucks lost by 25",
+          "gradingMargin": -7.5,
+          "sourceUrl": "https://www.courtvisionpicks.com/fixtures?from=2026-10-27"
+        },
+        {
+          "pick": "Thunder–Rockets Over 211.5",
+          "result": "Win",
+          "final": "Houston 119, Oklahoma City 98 — 217 total",
+          "gradingMargin": 5.5,
+          "sourceUrl": "https://www.courtvisionpicks.com/fixtures?from=2026-10-27"
+        },
+        {
+          "pick": "Sacramento Kings +15.5",
+          "result": "Loss",
+          "final": "Memphis 136, Sacramento 105 — Kings lost by 31",
+          "gradingMargin": -15.5,
+          "sourceUrl": "https://www.courtvisionpicks.com/fixtures?from=2026-10-27"
+        },
+        {
+          "pick": "San Antonio Spurs -5.5",
+          "result": "Win",
+          "final": "San Antonio 121, Minnesota 111 — Spurs won by 10",
+          "gradingMargin": 4.5,
+          "sourceUrl": "https://www.nba.com/game/sas-vs-min-0022600152"
+        }
+      ],
+      "legRecord": "3-3",
+      "settlementStatus": "Settled",
+      "settlementCheckedAt": "2026-11-12T01:25:24.307Z",
+      "settledAt": "2026-11-12T01:25:24.307Z",
+      "settlementSource": "Verified league/official score and box-score sources",
+      "settlementSources": [
+        "https://www.courtvisionpicks.com/fixtures?from=2026-10-27",
+        "https://www.nba.com/game/sas-vs-min-0022600152"
+      ],
+      "settlementNotes": "LOSS. Leg record 3-3. This was a planned/unplaced ticket, so no unit P/L is charged.",
+      "unitProfitLossKnown": true,
+      "profitLoss": "No wager",
+      "Profit/Loss": "No wager",
+      "P/L": "No wager",
+      "PL": "No wager",
+      "Units": 0,
+      "recordScope": "Graded for published-card performance; excluded from official betting record because no wager was recorded."
     },
     {
       "date": "2026-10-27",
@@ -1171,9 +1665,9 @@
       "lineNumber": "NYK +2.5 / SAS -11.5 / LAL +5.5",
       "odds": "+170",
       "sportsbook": "BetRivers Delaware",
-      "grade": "User-selected / ungraded",
+      "grade": "User-selected",
       "units": 6,
-      "status": "Pending",
+      "status": "Graded",
       "officialBet": "Yes",
       "stakeAmount": 600,
       "potentialPayout": 1621,
@@ -1219,7 +1713,55 @@
           "price": "-250",
           "writeup": "Cushion supports Lakers side; Action modestly favored LA and VSiN's Cohen backed Lakers ML. Henderson is questionable; Portland's guard creation is the key threat."
         }
-      ]
+      ],
+      "id": "nba-20261027-three-leg-seven-point-teaser",
+      "Status": "Graded",
+      "result": "Loss",
+      "Result": "Loss",
+      "outcome": "Loss",
+      "Outcome": "Loss",
+      "finalScore": "New York Knicks +2.5 — Win: New York 111, Detroit 97 — Knicks won outright\nSan Antonio Spurs -11.5 — Win: San Antonio 130, Sacramento 103 — Spurs won by 27\nLos Angeles Lakers +5.5 — Loss: Portland 136, Los Angeles Lakers 129 — Lakers lost by 7",
+      "legGrades": [
+        {
+          "pick": "New York Knicks +2.5",
+          "result": "Win",
+          "final": "New York 111, Detroit 97 — Knicks won outright",
+          "gradingMargin": 16.5,
+          "sourceUrl": "https://courtvisionpicks.com/fixtures?from=2026-10-27"
+        },
+        {
+          "pick": "San Antonio Spurs -11.5",
+          "result": "Win",
+          "final": "San Antonio 130, Sacramento 103 — Spurs won by 27",
+          "gradingMargin": 15.5,
+          "sourceUrl": "https://courtvisionpicks.com/fixtures?from=2026-10-27"
+        },
+        {
+          "pick": "Los Angeles Lakers +5.5",
+          "result": "Loss",
+          "final": "Portland 136, Los Angeles Lakers 129 — Lakers lost by 7",
+          "gradingMargin": -1.5,
+          "sourceUrl": "https://courtvisionpicks.com/fixtures?from=2026-10-27"
+        }
+      ],
+      "legRecord": "2-1",
+      "settlementStatus": "Settled",
+      "settlementCheckedAt": "2026-11-12T01:25:24.307Z",
+      "settledAt": "2026-11-12T01:25:24.307Z",
+      "updatedAt": "2026-11-12T01:25:24.307Z",
+      "settlementSource": "Verified league/official score and box-score sources",
+      "settlementSources": [
+        "https://courtvisionpicks.com/fixtures?from=2026-10-27"
+      ],
+      "settlementNotes": "LOSS. Leg record 2-1. Confirmed 6-unit ticket; realized loss -6.00u.",
+      "excludeFromRecord": false,
+      "unitProfitLossKnown": true,
+      "profitLoss": "-6.00u",
+      "Profit/Loss": "-6.00u",
+      "P/L": "-6.00u",
+      "PL": "-6.00u",
+      "Units": 6,
+      "recordScope": "Included in Lotto/official betting record."
     },
     {
       "date": "2026-10-24",
@@ -1235,9 +1777,9 @@
       "lineNumber": "Under 234.5 / MIL +19.5 / BKN +18.5 / WAS +8.5 / NOP +18.5 / Under 236.5",
       "odds": "",
       "sportsbook": "BetRivers Delaware",
-      "grade": "User-selected / ungraded",
+      "grade": "User-selected",
       "units": 2,
-      "status": "Pending",
+      "status": "Graded",
       "officialBet": "Yes",
       "writeup": "Six-leg NBA Sweetheart 7-point teaser. The numbered pregame analysis below covers each selection, the teased threshold, the case for the leg, and its main risk. User-confirmed 2-unit wager.",
       "fullAnalysis": "PREGAME ANALYSIS\n\n1) Houston Rockets at Atlanta Hawks — Under 234.5 (8:30 PM ET). The screenshot shows the teased Under at 234.5, with the reference game total at 227.5. The pregame research found the market unusually Over-heavy (90% of tickets, 89% of handle on the Over) and the Action/VSiN trend material favored the Under historically. Countercase: the split is opposing the ticket’s direction only through the crowd concentration, which is not itself proof of value; high pace, efficient transition offense, late fouling and overtime can still beat the number. Houston workload and personnel absences also add variance. This is a user-selected leg, not a separately certified Micks grade.\n\n2) Milwaukee Bucks at Philadelphia 76ers — Milwaukee +19.5 (7:30 PM ET). The seven-point cushion gives Milwaukee room to lose by 19. The earlier base spread was Philadelphia -12.5; the pregame model and guide evidence were mixed on the matchup, with Milwaukee’s recorded spread share low but no qualifying handle divergence. Philadelphia’s LeBron absence and Milwaukee’s back-to-back workload are relevant personnel/situation factors, but neither guarantees a close margin. Main failure path: Philadelphia controls the game and extends the lead against a tired Milwaukee rotation. User-selected teaser leg; no independent certified Micks grade.\n\n3) Brooklyn Nets at Cleveland Cavaliers — Brooklyn +18.5 (7:30 PM ET). The teased line allows a Brooklyn loss by 18. The earlier base spread was Cleveland -11.5. Action’s reference assessment favored Brooklyn relative to the market, while the matchup still carries a substantial blowout risk because Cleveland is the stronger side and Brooklyn’s scoring can stall. This is a cushion-based teaser selection, not a claim that Brooklyn is the better team. User-selected leg; no separate Micks grade.\n\n4) Washington Wizards at Chicago Bulls — Washington +8.5 (8:00 PM ET). The screenshot uses Washington +8.5, based on a +1.5 game spread before the seven-point adjustment. The recorded split was relatively balanced toward Washington, not a qualifying contrarian-money signal. The pregame material cited Chicago moneyline support and travel/rest concerns as counterevidence. Washington needs to avoid a Chicago run and remain within eight; poor defense and turnover-driven transition scoring are the main failure paths. User-selected leg; no separate Micks grade.\n\n5) New Orleans Pelicans at Denver Nuggets — New Orleans +18.5 (9:00 PM ET). The teaser starts from a +11.5 base and adds seven points. The market was strongly Denver-sided on the moneyline, while the spread split showed some support for New Orleans but no qualifying contrarian divergence. Denver’s home offense and New Orleans’ personnel uncertainty create a meaningful blowout risk; the cushion is the primary rationale. User-selected leg; no independent Micks grade.\n\n6) Miami Heat at Charlotte Hornets — Under 236.5 (6:00 PM ET). The screenshot shows the teased total at 236.5, with a base Under 229.5 in the earlier sportsbook screen; the Action snapshot showed Over 228 heavily backed (71% tickets, 70% handle). The ticket therefore takes the less popular Under direction, but public opposition alone is not an edge. Charlotte absences may affect pace and shot creation, while transition scoring, free throws, hot shooting and overtime remain threats. User-selected leg; no independent Micks grade.\n\nTicket note: Screenshot shows a 6-leg parlay in My Bets. User confirmed this was a 2-unit bet; screenshot shows it in My Bets. Exact combined payout/odds are not visible. Do not treat displayed individual-leg prices as the combined ticket price. Teaser legs are correlated to game outcomes; no joint probability or positive-EV claim is established.",
@@ -1251,7 +1793,76 @@
       "playableTo": "",
       "playable": "",
       "noBetCutoff": "",
-      "cutoff": ""
+      "cutoff": "",
+      "id": "nba-20261024-six-leg-seven-point-teaser",
+      "Status": "Graded",
+      "result": "Loss",
+      "Result": "Loss",
+      "outcome": "Loss",
+      "Outcome": "Loss",
+      "finalScore": "Houston–Atlanta Under 234.5 — Loss: Houston 121, Atlanta 114 — 235 total\nMilwaukee Bucks +19.5 — Win: Philadelphia 127, Milwaukee 116 — Bucks lost by 11\nBrooklyn Nets +18.5 — Win: Cleveland 125, Brooklyn 121 — Nets lost by 4\nWashington Wizards +8.5 — Win: Washington 124, Chicago 120 — Wizards won outright\nNew Orleans Pelicans +18.5 — Win: Denver 141, New Orleans 135 — Pelicans lost by 6\nMiami–Charlotte Under 236.5 — Win: Charlotte 115, Miami 110 — 225 total",
+      "legGrades": [
+        {
+          "pick": "Houston–Atlanta Under 234.5",
+          "result": "Loss",
+          "final": "Houston 121, Atlanta 114 — 235 total",
+          "gradingMargin": -0.5,
+          "sourceUrl": "https://courtvisionpicks.com/fixtures?from=2026-10-24"
+        },
+        {
+          "pick": "Milwaukee Bucks +19.5",
+          "result": "Win",
+          "final": "Philadelphia 127, Milwaukee 116 — Bucks lost by 11",
+          "gradingMargin": 8.5,
+          "sourceUrl": "https://courtvisionpicks.com/fixtures?from=2026-10-24"
+        },
+        {
+          "pick": "Brooklyn Nets +18.5",
+          "result": "Win",
+          "final": "Cleveland 125, Brooklyn 121 — Nets lost by 4",
+          "gradingMargin": 14.5,
+          "sourceUrl": "https://courtvisionpicks.com/fixtures?from=2026-10-24"
+        },
+        {
+          "pick": "Washington Wizards +8.5",
+          "result": "Win",
+          "final": "Washington 124, Chicago 120 — Wizards won outright",
+          "gradingMargin": 12.5,
+          "sourceUrl": "https://courtvisionpicks.com/fixtures?from=2026-10-24"
+        },
+        {
+          "pick": "New Orleans Pelicans +18.5",
+          "result": "Win",
+          "final": "Denver 141, New Orleans 135 — Pelicans lost by 6",
+          "gradingMargin": 12.5,
+          "sourceUrl": "https://courtvisionpicks.com/fixtures?from=2026-10-24"
+        },
+        {
+          "pick": "Miami–Charlotte Under 236.5",
+          "result": "Win",
+          "final": "Charlotte 115, Miami 110 — 225 total",
+          "gradingMargin": 11.5,
+          "sourceUrl": "https://courtvisionpicks.com/fixtures?from=2026-10-24"
+        }
+      ],
+      "legRecord": "5-1",
+      "settlementStatus": "Settled",
+      "settlementCheckedAt": "2026-11-12T01:25:24.307Z",
+      "settledAt": "2026-11-12T01:25:24.307Z",
+      "updatedAt": "2026-11-12T01:25:24.307Z",
+      "settlementSource": "Verified league/official score and box-score sources",
+      "settlementSources": [
+        "https://courtvisionpicks.com/fixtures?from=2026-10-24"
+      ],
+      "settlementNotes": "LOSS. Leg record 5-1. Official posted 2-unit ticket; realized loss -2.00u.",
+      "excludeFromRecord": false,
+      "unitProfitLossKnown": true,
+      "profitLoss": "-2.00u",
+      "Profit/Loss": "-2.00u",
+      "P/L": "-2.00u",
+      "PL": "-2.00u",
+      "Units": 2,
+      "recordScope": "Included in Lotto/official betting record."
     },
     {
       "id": "planned-vegas-nba-7pt-10leg-evening-2026-10-23",
@@ -4121,8 +4732,8 @@
       "units": 2,
       "Units": 2,
       "unitStatus": "2u planned per selected ticket / 0 official units",
-      "status": "Planned",
-      "Status": "Planned",
+      "status": "Graded",
+      "Status": "Graded",
       "officialBet": "No",
       "Official Bet": "No",
       "betPlaced": false,
@@ -4134,7 +4745,52 @@
       "fullAnalysis": "Early Half-Point A is the shorter construction, using Carolina +0.5, Cleveland +6.5 and the Jets +7.5 at the Half-Point card's printed spreads. Carolina receives the strongest source score on this ticket, with Moton's return improving protection and Philadelphia missing Barkley. Cleveland's Judkins, Graham and Hall absences reduce rushing depth and interior defensive resilience, making Baltimore's Henry a central failure path. New England's healthier protection and coverage weaken the Jets' base-spread case. All three games begin at 1 p.m. ET.",
       "notes": "Daybreak 11:41am ET revision, Oct 18, 2026. Supersedes earlier reconciled and 11:17 constructions.",
       "ticketCode": "EP1",
-      "ticketName": "Half-Point-Early A"
+      "ticketName": "Half-Point-Early A",
+      "result": "Win",
+      "Result": "Win",
+      "outcome": "Win",
+      "Outcome": "Win",
+      "finalScore": "Panthers +0.5 — Win: Carolina 25, Philadelphia 14\nBrowns +6.5 — Win: Cleveland 13, Baltimore 10\nJets +7.5 — Win: New England 26, New York Jets 19",
+      "legGrades": [
+        {
+          "pick": "Panthers +0.5",
+          "result": "Win",
+          "final": "Carolina 25, Philadelphia 14",
+          "gradingMargin": 11.5,
+          "sourceUrl": "https://www.nfl.com/schedules/2026/by-week/week-6"
+        },
+        {
+          "pick": "Browns +6.5",
+          "result": "Win",
+          "final": "Cleveland 13, Baltimore 10",
+          "gradingMargin": 9.5,
+          "sourceUrl": "https://www.nfl.com/schedules/2026/by-week/week-6"
+        },
+        {
+          "pick": "Jets +7.5",
+          "result": "Win",
+          "final": "New England 26, New York Jets 19",
+          "gradingMargin": 0.5,
+          "sourceUrl": "https://www.nfl.com/schedules/2026/by-week/week-6"
+        }
+      ],
+      "legRecord": "3-0",
+      "settlementStatus": "Settled",
+      "settlementCheckedAt": "2026-11-12T01:25:24.307Z",
+      "settledAt": "2026-11-12T01:25:24.307Z",
+      "updatedAt": "2026-11-12T01:25:24.307Z",
+      "settlementSource": "Verified league/official score and box-score sources",
+      "settlementSources": [
+        "https://www.nfl.com/schedules/2026/by-week/week-6"
+      ],
+      "settlementNotes": "WIN. Leg record 3-0. Planned/unplaced ticket; no unit P/L is charged.",
+      "excludeFromRecord": true,
+      "unitProfitLossKnown": true,
+      "profitLoss": "No wager",
+      "Profit/Loss": "No wager",
+      "P/L": "No wager",
+      "PL": "No wager",
+      "recordScope": "Graded for published-card performance; excluded from official betting record because no wager was recorded."
     },
     {
       "id": "planned-ep2-2026-10-18",
@@ -4170,8 +4826,8 @@
       "units": 2,
       "Units": 2,
       "unitStatus": "2u planned per selected ticket / 0 official units",
-      "status": "Planned",
-      "Status": "Planned",
+      "status": "Graded",
+      "Status": "Graded",
       "officialBet": "No",
       "Official Bet": "No",
       "betPlaced": false,
@@ -4183,7 +4839,52 @@
       "fullAnalysis": "Early Half-Point B combines Atlanta +2.5 and Tampa Bay +2.5 with Baltimore/Cleveland Under 42.5. Atlanta's returning quarterback supports offensive stability, while the Falcons' coverage losses create the clearest opposing case to their side. Tampa Bay's final list has Mayfield inactive, making the Buccaneers' smaller spread more demanding than their protected teaser lines. The Baltimore/Cleveland Under has a lower ceiling than Big Teaser Under 48.5; Cleveland's interior defensive losses are a direct countercase.",
       "notes": "Daybreak 11:41am ET revision, Oct 18, 2026. Supersedes earlier reconciled and 11:17 constructions.",
       "ticketCode": "EP2",
-      "ticketName": "Half-Point-Early B"
+      "ticketName": "Half-Point-Early B",
+      "result": "Loss",
+      "Result": "Loss",
+      "outcome": "Loss",
+      "Outcome": "Loss",
+      "finalScore": "Falcons +2.5 — Loss: Chicago 31, Atlanta 23\nBuccaneers +2.5 — Loss: Pittsburgh 26, Tampa Bay 19\nRavens–Browns Under 42.5 — Win: Cleveland 13, Baltimore 10 — 23 total",
+      "legGrades": [
+        {
+          "pick": "Falcons +2.5",
+          "result": "Loss",
+          "final": "Chicago 31, Atlanta 23",
+          "gradingMargin": -5.5,
+          "sourceUrl": "https://www.nfl.com/schedules/2026/by-week/week-6"
+        },
+        {
+          "pick": "Buccaneers +2.5",
+          "result": "Loss",
+          "final": "Pittsburgh 26, Tampa Bay 19",
+          "gradingMargin": -4.5,
+          "sourceUrl": "https://www.nfl.com/schedules/2026/by-week/week-6"
+        },
+        {
+          "pick": "Ravens–Browns Under 42.5",
+          "result": "Win",
+          "final": "Cleveland 13, Baltimore 10 — 23 total",
+          "gradingMargin": 19.5,
+          "sourceUrl": "https://www.nfl.com/schedules/2026/by-week/week-6"
+        }
+      ],
+      "legRecord": "1-2",
+      "settlementStatus": "Settled",
+      "settlementCheckedAt": "2026-11-12T01:25:24.307Z",
+      "settledAt": "2026-11-12T01:25:24.307Z",
+      "updatedAt": "2026-11-12T01:25:24.307Z",
+      "settlementSource": "Verified league/official score and box-score sources",
+      "settlementSources": [
+        "https://www.nfl.com/schedules/2026/by-week/week-6"
+      ],
+      "settlementNotes": "LOSS. Leg record 1-2. Planned/unplaced ticket; no unit P/L is charged.",
+      "excludeFromRecord": true,
+      "unitProfitLossKnown": true,
+      "profitLoss": "No wager",
+      "Profit/Loss": "No wager",
+      "P/L": "No wager",
+      "PL": "No wager",
+      "recordScope": "Graded for published-card performance; excluded from official betting record because no wager was recorded."
     },
     {
       "id": "planned-dp1-2026-10-18",
@@ -4219,8 +4920,8 @@
       "units": 2,
       "Units": 2,
       "unitStatus": "2u planned per selected ticket / 0 official units",
-      "status": "Planned",
-      "Status": "Planned",
+      "status": "Graded",
+      "Status": "Graded",
       "officialBet": "No",
       "Official Bet": "No",
       "betPlaced": false,
@@ -4232,7 +4933,52 @@
       "fullAnalysis": "All Day Half-Point A links Carolina +0.5 with Chargers +7.5 and Raiders +4.5 at the Half-Point card's actual printed spreads, not the much larger Big Teaser margins. Carolina's protection benefits from Moton's return, while Barkley's absence helps the opposing-offense assessment. In the source revision, Carolina scores 84/110, the Chargers 76/110 and the Raiders 74/110; these are framework scores, not estimated cashing probabilities. Both late legs start at 4:25 p.m. ET.",
       "notes": "Daybreak 11:41am ET revision, Oct 18, 2026. Supersedes earlier reconciled and 11:17 constructions.",
       "ticketCode": "DP1",
-      "ticketName": "Half-Point-All Day A"
+      "ticketName": "Half-Point-All Day A",
+      "result": "Loss",
+      "Result": "Loss",
+      "outcome": "Loss",
+      "Outcome": "Loss",
+      "finalScore": "Panthers +0.5 — Win: Carolina 25, Philadelphia 14\nChargers +7.5 — Loss: Kansas City 22, LA Chargers 6\nRaiders +4.5 — Win: Buffalo 33, Las Vegas 30",
+      "legGrades": [
+        {
+          "pick": "Panthers +0.5",
+          "result": "Win",
+          "final": "Carolina 25, Philadelphia 14",
+          "gradingMargin": 11.5,
+          "sourceUrl": "https://www.nfl.com/schedules/2026/by-week/week-6"
+        },
+        {
+          "pick": "Chargers +7.5",
+          "result": "Loss",
+          "final": "Kansas City 22, LA Chargers 6",
+          "gradingMargin": -8.5,
+          "sourceUrl": "https://www.nfl.com/schedules/2026/by-week/week-6"
+        },
+        {
+          "pick": "Raiders +4.5",
+          "result": "Win",
+          "final": "Buffalo 33, Las Vegas 30",
+          "gradingMargin": 1.5,
+          "sourceUrl": "https://www.nfl.com/schedules/2026/by-week/week-6"
+        }
+      ],
+      "legRecord": "2-1",
+      "settlementStatus": "Settled",
+      "settlementCheckedAt": "2026-11-12T01:25:24.307Z",
+      "settledAt": "2026-11-12T01:25:24.307Z",
+      "updatedAt": "2026-11-12T01:25:24.307Z",
+      "settlementSource": "Verified league/official score and box-score sources",
+      "settlementSources": [
+        "https://www.nfl.com/schedules/2026/by-week/week-6"
+      ],
+      "settlementNotes": "LOSS. Leg record 2-1. Planned/unplaced ticket; no unit P/L is charged.",
+      "excludeFromRecord": true,
+      "unitProfitLossKnown": true,
+      "profitLoss": "No wager",
+      "Profit/Loss": "No wager",
+      "P/L": "No wager",
+      "PL": "No wager",
+      "recordScope": "Graded for published-card performance; excluded from official betting record because no wager was recorded."
     },
     {
       "id": "planned-dp2-2026-10-18",
@@ -5293,6 +6039,6 @@
     }
   ],
   "longshots": [],
-  "gradedAt": "2026-10-26T02:38:26.427Z",
-  "updatedAt": "2026-11-05T01:48:55.389Z"
+  "gradedAt": "2026-11-12T01:25:24.307Z",
+  "updatedAt": "2026-11-12T01:25:24.307Z"
 }
