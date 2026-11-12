@@ -338,10 +338,10 @@
       "market": "Fixed-card teaser",
       "sportsbook": "Delaware Lottery",
       "odds": "5-to-2 fixed",
-      "status": "Closed",
+      "status": "Graded",
       "officialBet": "No",
       "units": "TBD",
-      "grade": "Pending",
+      "grade": "WATCH",
       "eventDate": "2026-09-27",
       "bestNumber": "Printed Sept 24 Teaser Card selections #117, #125, #129, #156",
       "playableTo": "Only the exact four printed selections if all remain offered; recheck inactives",
@@ -359,7 +359,62 @@
       "writeup": "CLOSED/REMOVED: The Sunday kickoff window has passed. This unplaced teaser is retained for recordkeeping and is no longer an active card.",
       "fullAnalysis": "The fixed Delaware teaser pairs Bills -1.5 against the Chargers (#117), Lions -1.5 against the Jets (#125), Seahawks -1.5 at Washington (#129), and Rams–Broncos Under 50.5 (#156). At 5-to-2 all four must win. Buffalo's Josh Allen and James Cook face a depleted Chargers line, but Bills receivers Keon Coleman and DJ Moore plus Ed Oliver carried questionable tags. Detroit's Jahmyr Gibbs has an expanded seasonal role after David Montgomery's departure; the Lions must win early downs and keep the Jets in passing situations. Seattle's Sam Darnold practiced fully and is expected to start. His connection with high-volume Jaxon Smith-Njigba and Mike Macdonald's defense must beat Marcus Mariota's Washington offense; Jayden Daniels and guard Samuel Cosmi are out, but Mariota's mobility and missing Seattle safeties add a one-score failure path. The total leg leans on controlled drives in Denver while Rams receiver Puka Nacua is doubtful and Denver's Marvin Mims is questionable. Davante Adams can still generate explosives, and turnovers or short fields can spoil the Under. VSiN's Buffalo signals conflict and its Rams–Denver systems point both ways; Fantasy Life's early Drew Lock premise for Seattle became stale after Darnold returned. This is a VIP watch ticket with units TBD. It is not an official wager recommendation until Sunday's active lists, kickoff weather, ticket numbers, and a defensible joint-ticket estimate clear the Micks review. Printed odds and lines do not change.",
       "homePreview": "Four-leg Delaware teaser at fixed 5-to-2. Watch only until Sunday final checks.",
-      "notes": "VIP-only four-leg construction. Units TBD; no wager amount."
+      "notes": "VIP-only four-leg construction. Units TBD; no wager amount.",
+      "id": "nfl-20260927-week3-teaser-watch",
+      "Grade": "WATCH",
+      "Status": "Graded",
+      "result": "Loss",
+      "Result": "Loss",
+      "outcome": "Loss",
+      "Outcome": "Loss",
+      "legGrades": [
+        {
+          "pick": "Buffalo Bills -1.5",
+          "result": "Win",
+          "final": "Buffalo 24, LA Chargers 16",
+          "gradingMargin": 6.5,
+          "sourceUrl": "https://www.nfl.com/schedules/2026/by-week/week-3"
+        },
+        {
+          "pick": "Detroit Lions -1.5",
+          "result": "Win",
+          "final": "Detroit 31, New York Jets 24",
+          "gradingMargin": 5.5,
+          "sourceUrl": "https://www.nfl.com/schedules/2026/by-week/week-3"
+        },
+        {
+          "pick": "Seattle Seahawks -1.5",
+          "result": "Loss",
+          "final": "Washington 33, Seattle 31",
+          "gradingMargin": -3.5,
+          "sourceUrl": "https://www.nfl.com/schedules/2026/by-week/week-3"
+        },
+        {
+          "pick": "Rams–Broncos Under 50.5",
+          "result": "Loss",
+          "final": "Denver 30, LA Rams 26 — 56 total",
+          "gradingMargin": -5.5,
+          "sourceUrl": "https://www.nfl.com/schedules/2026/by-week/week-3"
+        }
+      ],
+      "legRecord": "2-2",
+      "finalScore": "Buffalo Bills -1.5 — Win: Buffalo 24, LA Chargers 16\nDetroit Lions -1.5 — Win: Detroit 31, New York Jets 24\nSeattle Seahawks -1.5 — Loss: Washington 33, Seattle 31\nRams–Broncos Under 50.5 — Loss: Denver 30, LA Rams 26 — 56 total",
+      "settlementStatus": "Settled",
+      "settlementCheckedAt": "2026-11-12T01:25:56.741Z",
+      "settledAt": "2026-11-12T01:25:56.741Z",
+      "updatedAt": "2026-11-12T01:25:56.741Z",
+      "settlementSource": "NFL official Week 3 schedule/results",
+      "settlementSources": [
+        "https://www.nfl.com/schedules/2026/by-week/week-3"
+      ],
+      "settlementNotes": "LOSS. Leg record 2-2. Buffalo -1.5 and Detroit -1.5 won; Seattle -1.5 and Rams–Broncos Under 50.5 lost. WATCH/unplaced ticket; no unit P/L is charged.",
+      "excludeFromRecord": true,
+      "unitProfitLossKnown": false,
+      "profitLoss": "No wager",
+      "Profit/Loss": "No wager",
+      "P/L": "No wager",
+      "PL": "No wager",
+      "recordScope": "WATCH/unplaced ticket graded for historical card performance; excluded from official betting record."
     },
     {
       "sport": "NFL",
@@ -368,10 +423,10 @@
       "market": "Fixed-card teaser",
       "sportsbook": "Delaware Lottery",
       "odds": "5-to-2 fixed",
-      "status": "Closed",
+      "status": "Graded",
       "officialBet": "No",
       "units": "TBD",
-      "grade": "Pending",
+      "grade": "WATCH",
       "eventDate": "2026-09-27",
       "bestNumber": "Printed Sept 24 Teaser Card selections #117, #125, #129, #156",
       "playableTo": "Only the exact four printed selections if all remain offered; recheck inactives",
@@ -389,7 +444,62 @@
       "writeup": "CLOSED/REMOVED: The Sunday kickoff window has passed. This unplaced teaser is retained for recordkeeping and is no longer an active card.",
       "fullAnalysis": "The fixed Delaware teaser pairs Bills -1.5 against the Chargers (#117), Lions -1.5 against the Jets (#125), Seahawks -1.5 at Washington (#129), and Rams–Broncos Under 50.5 (#156). At 5-to-2 all four must win. Buffalo's Josh Allen and James Cook face a depleted Chargers line, but Bills receivers Keon Coleman and DJ Moore plus Ed Oliver carried questionable tags. Detroit's Jahmyr Gibbs has an expanded seasonal role after David Montgomery's departure; the Lions must win early downs and keep the Jets in passing situations. Seattle's Sam Darnold practiced fully and is expected to start. His connection with high-volume Jaxon Smith-Njigba and Mike Macdonald's defense must beat Marcus Mariota's Washington offense; Jayden Daniels and guard Samuel Cosmi are out, but Mariota's mobility and missing Seattle safeties add a one-score failure path. The total leg leans on controlled drives in Denver while Rams receiver Puka Nacua is doubtful and Denver's Marvin Mims is questionable. Davante Adams can still generate explosives, and turnovers or short fields can spoil the Under. VSiN's Buffalo signals conflict and its Rams–Denver systems point both ways; Fantasy Life's early Drew Lock premise for Seattle became stale after Darnold returned. This is a VIP watch ticket with units TBD. It is not an official wager recommendation until Sunday's active lists, kickoff weather, ticket numbers, and a defensible joint-ticket estimate clear the Micks review. Printed odds and lines do not change.",
       "homePreview": "Four-leg Delaware teaser at fixed 5-to-2. Watch only until Sunday final checks.",
-      "notes": "VIP-only four-leg construction. Units TBD; no wager amount."
+      "notes": "VIP-only four-leg construction. Units TBD; no wager amount.",
+      "id": "nfl-20260927-week3-teaser-watch",
+      "Grade": "WATCH",
+      "Status": "Graded",
+      "result": "Loss",
+      "Result": "Loss",
+      "outcome": "Loss",
+      "Outcome": "Loss",
+      "legGrades": [
+        {
+          "pick": "Buffalo Bills -1.5",
+          "result": "Win",
+          "final": "Buffalo 24, LA Chargers 16",
+          "gradingMargin": 6.5,
+          "sourceUrl": "https://www.nfl.com/schedules/2026/by-week/week-3"
+        },
+        {
+          "pick": "Detroit Lions -1.5",
+          "result": "Win",
+          "final": "Detroit 31, New York Jets 24",
+          "gradingMargin": 5.5,
+          "sourceUrl": "https://www.nfl.com/schedules/2026/by-week/week-3"
+        },
+        {
+          "pick": "Seattle Seahawks -1.5",
+          "result": "Loss",
+          "final": "Washington 33, Seattle 31",
+          "gradingMargin": -3.5,
+          "sourceUrl": "https://www.nfl.com/schedules/2026/by-week/week-3"
+        },
+        {
+          "pick": "Rams–Broncos Under 50.5",
+          "result": "Loss",
+          "final": "Denver 30, LA Rams 26 — 56 total",
+          "gradingMargin": -5.5,
+          "sourceUrl": "https://www.nfl.com/schedules/2026/by-week/week-3"
+        }
+      ],
+      "legRecord": "2-2",
+      "finalScore": "Buffalo Bills -1.5 — Win: Buffalo 24, LA Chargers 16\nDetroit Lions -1.5 — Win: Detroit 31, New York Jets 24\nSeattle Seahawks -1.5 — Loss: Washington 33, Seattle 31\nRams–Broncos Under 50.5 — Loss: Denver 30, LA Rams 26 — 56 total",
+      "settlementStatus": "Settled",
+      "settlementCheckedAt": "2026-11-12T01:25:56.741Z",
+      "settledAt": "2026-11-12T01:25:56.741Z",
+      "updatedAt": "2026-11-12T01:25:56.741Z",
+      "settlementSource": "NFL official Week 3 schedule/results",
+      "settlementSources": [
+        "https://www.nfl.com/schedules/2026/by-week/week-3"
+      ],
+      "settlementNotes": "LOSS. Leg record 2-2. Buffalo -1.5 and Detroit -1.5 won; Seattle -1.5 and Rams–Broncos Under 50.5 lost. WATCH/unplaced ticket; no unit P/L is charged.",
+      "excludeFromRecord": true,
+      "unitProfitLossKnown": false,
+      "profitLoss": "No wager",
+      "Profit/Loss": "No wager",
+      "P/L": "No wager",
+      "PL": "No wager",
+      "recordScope": "WATCH/unplaced ticket graded for historical card performance; excluded from official betting record."
     }
   ],
   "vipVault": [],
@@ -4411,10 +4521,10 @@
       "market": "Fixed-card teaser",
       "sportsbook": "Delaware Lottery",
       "odds": "5-to-2 fixed",
-      "status": "Closed",
+      "status": "Graded",
       "officialBet": "No",
       "units": "TBD",
-      "grade": "Pending",
+      "grade": "WATCH",
       "eventDate": "2026-09-27",
       "bestNumber": "Printed Sept 24 Teaser Card selections #117, #125, #129, #156",
       "playableTo": "Only the exact four printed selections if all remain offered; recheck inactives",
@@ -4431,7 +4541,62 @@
       "writeup": "CLOSED/REMOVED: The Sunday kickoff window has passed. This unplaced teaser is retained for recordkeeping and is no longer an active card.",
       "fullAnalysis": "The full four-leg watch card and failure paths are in VIP. This public notice does not authorize a wager.",
       "homePreview": "Four-game VIP teaser watch; no official release.",
-      "notes": "Exact Delaware Teaser card, Sept 24. No wager amount shown."
+      "notes": "Exact Delaware Teaser card, Sept 24. No wager amount shown.",
+      "id": "nfl-20260927-week3-teaser-watch",
+      "Grade": "WATCH",
+      "Status": "Graded",
+      "result": "Loss",
+      "Result": "Loss",
+      "outcome": "Loss",
+      "Outcome": "Loss",
+      "legGrades": [
+        {
+          "pick": "Buffalo Bills -1.5",
+          "result": "Win",
+          "final": "Buffalo 24, LA Chargers 16",
+          "gradingMargin": 6.5,
+          "sourceUrl": "https://www.nfl.com/schedules/2026/by-week/week-3"
+        },
+        {
+          "pick": "Detroit Lions -1.5",
+          "result": "Win",
+          "final": "Detroit 31, New York Jets 24",
+          "gradingMargin": 5.5,
+          "sourceUrl": "https://www.nfl.com/schedules/2026/by-week/week-3"
+        },
+        {
+          "pick": "Seattle Seahawks -1.5",
+          "result": "Loss",
+          "final": "Washington 33, Seattle 31",
+          "gradingMargin": -3.5,
+          "sourceUrl": "https://www.nfl.com/schedules/2026/by-week/week-3"
+        },
+        {
+          "pick": "Rams–Broncos Under 50.5",
+          "result": "Loss",
+          "final": "Denver 30, LA Rams 26 — 56 total",
+          "gradingMargin": -5.5,
+          "sourceUrl": "https://www.nfl.com/schedules/2026/by-week/week-3"
+        }
+      ],
+      "legRecord": "2-2",
+      "finalScore": "Buffalo Bills -1.5 — Win: Buffalo 24, LA Chargers 16\nDetroit Lions -1.5 — Win: Detroit 31, New York Jets 24\nSeattle Seahawks -1.5 — Loss: Washington 33, Seattle 31\nRams–Broncos Under 50.5 — Loss: Denver 30, LA Rams 26 — 56 total",
+      "settlementStatus": "Settled",
+      "settlementCheckedAt": "2026-11-12T01:25:56.741Z",
+      "settledAt": "2026-11-12T01:25:56.741Z",
+      "updatedAt": "2026-11-12T01:25:56.741Z",
+      "settlementSource": "NFL official Week 3 schedule/results",
+      "settlementSources": [
+        "https://www.nfl.com/schedules/2026/by-week/week-3"
+      ],
+      "settlementNotes": "LOSS. Leg record 2-2. Buffalo -1.5 and Detroit -1.5 won; Seattle -1.5 and Rams–Broncos Under 50.5 lost. WATCH/unplaced ticket; no unit P/L is charged.",
+      "excludeFromRecord": true,
+      "unitProfitLossKnown": false,
+      "profitLoss": "No wager",
+      "Profit/Loss": "No wager",
+      "P/L": "No wager",
+      "PL": "No wager",
+      "recordScope": "WATCH/unplaced ticket graded for historical card performance; excluded from official betting record."
     },
     {
       "sport": "NFL",
@@ -4440,10 +4605,10 @@
       "market": "Fixed-card teaser",
       "sportsbook": "Delaware Lottery",
       "odds": "5-to-2 fixed",
-      "status": "Closed",
+      "status": "Graded",
       "officialBet": "No",
       "units": "TBD",
-      "grade": "Pending",
+      "grade": "WATCH",
       "eventDate": "2026-09-27",
       "bestNumber": "Printed Sept 24 Teaser Card selections #117, #125, #129, #156",
       "playableTo": "Only the exact four printed selections if all remain offered; recheck inactives",
@@ -4460,7 +4625,62 @@
       "writeup": "CLOSED/REMOVED: The Sunday kickoff window has passed. This unplaced teaser is retained for recordkeeping and is no longer an active card.",
       "fullAnalysis": "The full four-leg watch card and failure paths are in VIP. This public notice does not authorize a wager.",
       "homePreview": "Four-game VIP teaser watch; no official release.",
-      "notes": "Exact Delaware Teaser card, Sept 24. No wager amount shown."
+      "notes": "Exact Delaware Teaser card, Sept 24. No wager amount shown.",
+      "id": "nfl-20260927-week3-teaser-watch",
+      "Grade": "WATCH",
+      "Status": "Graded",
+      "result": "Loss",
+      "Result": "Loss",
+      "outcome": "Loss",
+      "Outcome": "Loss",
+      "legGrades": [
+        {
+          "pick": "Buffalo Bills -1.5",
+          "result": "Win",
+          "final": "Buffalo 24, LA Chargers 16",
+          "gradingMargin": 6.5,
+          "sourceUrl": "https://www.nfl.com/schedules/2026/by-week/week-3"
+        },
+        {
+          "pick": "Detroit Lions -1.5",
+          "result": "Win",
+          "final": "Detroit 31, New York Jets 24",
+          "gradingMargin": 5.5,
+          "sourceUrl": "https://www.nfl.com/schedules/2026/by-week/week-3"
+        },
+        {
+          "pick": "Seattle Seahawks -1.5",
+          "result": "Loss",
+          "final": "Washington 33, Seattle 31",
+          "gradingMargin": -3.5,
+          "sourceUrl": "https://www.nfl.com/schedules/2026/by-week/week-3"
+        },
+        {
+          "pick": "Rams–Broncos Under 50.5",
+          "result": "Loss",
+          "final": "Denver 30, LA Rams 26 — 56 total",
+          "gradingMargin": -5.5,
+          "sourceUrl": "https://www.nfl.com/schedules/2026/by-week/week-3"
+        }
+      ],
+      "legRecord": "2-2",
+      "finalScore": "Buffalo Bills -1.5 — Win: Buffalo 24, LA Chargers 16\nDetroit Lions -1.5 — Win: Detroit 31, New York Jets 24\nSeattle Seahawks -1.5 — Loss: Washington 33, Seattle 31\nRams–Broncos Under 50.5 — Loss: Denver 30, LA Rams 26 — 56 total",
+      "settlementStatus": "Settled",
+      "settlementCheckedAt": "2026-11-12T01:25:56.741Z",
+      "settledAt": "2026-11-12T01:25:56.741Z",
+      "updatedAt": "2026-11-12T01:25:56.741Z",
+      "settlementSource": "NFL official Week 3 schedule/results",
+      "settlementSources": [
+        "https://www.nfl.com/schedules/2026/by-week/week-3"
+      ],
+      "settlementNotes": "LOSS. Leg record 2-2. Buffalo -1.5 and Detroit -1.5 won; Seattle -1.5 and Rams–Broncos Under 50.5 lost. WATCH/unplaced ticket; no unit P/L is charged.",
+      "excludeFromRecord": true,
+      "unitProfitLossKnown": false,
+      "profitLoss": "No wager",
+      "Profit/Loss": "No wager",
+      "P/L": "No wager",
+      "PL": "No wager",
+      "recordScope": "WATCH/unplaced ticket graded for historical card performance; excluded from official betting record."
     },
     {
       "id": "planned-eb1-2026-10-18",
@@ -6039,6 +6259,6 @@
     }
   ],
   "longshots": [],
-  "gradedAt": "2026-11-12T01:25:24.307Z",
-  "updatedAt": "2026-11-12T01:25:24.307Z"
+  "gradedAt": "2026-11-12T01:25:56.741Z",
+  "updatedAt": "2026-11-12T01:25:56.741Z"
 }
