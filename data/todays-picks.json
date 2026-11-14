@@ -2,7 +2,7 @@
   "success": true,
   "source": "published-active-card-static",
   "sourceOfTruth": "Micks Picks publish data",
-  "date": "2026-11-04",
+  "date": "2026-11-13",
   "totalExposure": 0,
   "free": [
     {
@@ -1049,6 +1049,132 @@
     }
   ],
   "lottoParlays": [
+    {
+      "id": "nba-20261113-warriors-spurs-3-leg-sgp",
+      "date": "2026-11-13",
+      "eventDate": "2026-11-13",
+      "postedDate": "2026-11-13",
+      "placedAt": "2026-11-13T19:51:00-05:00",
+      "section": "Lotto Parlays",
+      "access": "free",
+      "sport": "NBA",
+      "league": "NBA",
+      "sportsbook": "BetRivers Delaware",
+      "cardTitle": "Warriors–Spurs 3-Leg Same Game Parlay",
+      "game": "Golden State Warriors at San Antonio Spurs",
+      "matchup": "GS Warriors @ SA Spurs",
+      "pick": "Over 210.5 total points / San Antonio Spurs -7.5 / Julian Champagnie 3+ made threes",
+      "lineNumber": "3-leg Same Game Parlay",
+      "odds": "+275",
+      "oddsSource": "Combined price shown on the user-provided BetRivers ticket screenshot.",
+      "type": "Same Game Parlay",
+      "market": "Three-Leg SGP",
+      "status": "Pending",
+      "Status": "Pending",
+      "releaseStatus": "User Selected / Posted Ticket",
+      "publishedSelection": true,
+      "betPlaced": true,
+      "userConfirmedTicket": true,
+      "officialBet": "No",
+      "officialBetConfirmed": false,
+      "excludeFromRecord": true,
+      "hideWagerAmounts": true,
+      "units": 0,
+      "Units": 0,
+      "showFullAnalysis": false,
+      "expandableAnalysis": false,
+      "featured": false,
+      "startTime": "9:30 PM ET",
+      "commenceTime": "2026-11-14T02:30:00Z",
+      "writeup": "User-placed BetRivers Delaware ticket transcribed from the supplied screenshot. Legs: Over 210.5 total points (including overtime), San Antonio Spurs -7.5, and Julian Champagnie 3+ made three-point field goals (including overtime). Combined ticket price: +275. This personal ticket is documented separately from Mick’s official pick record.",
+      "homePreview": "User-placed 3-leg same-game parlay at +275: Over 210.5 total points, Spurs -7.5, and Julian Champagnie 3+ made threes.",
+      "sourceVerification": "BetRivers Delaware ticket screenshot supplied by user. Ticket ID and wager/cash-out amounts are not republished.",
+      "receiptEvidence": "User-provided BetRivers ticket screenshot; not publicly embedded.",
+      "legs": [
+        {
+          "rank": 1,
+          "pick": "Over 210.5 total points",
+          "selection": "Over 210.5 total points — including overtime",
+          "game": "Golden State Warriors at San Antonio Spurs",
+          "market": "Game Total",
+          "line": 210.5,
+          "status": "Pending",
+          "period": "full-game",
+          "overtimeIncluded": true,
+          "sgpGroup": "warriors-spurs-three-leg-sgp"
+        },
+        {
+          "rank": 2,
+          "pick": "San Antonio Spurs -7.5",
+          "selection": "San Antonio Spurs -7.5 point spread",
+          "game": "Golden State Warriors at San Antonio Spurs",
+          "market": "Point Spread",
+          "line": -7.5,
+          "status": "Pending",
+          "period": "full-game",
+          "sgpGroup": "warriors-spurs-three-leg-sgp"
+        },
+        {
+          "rank": 3,
+          "pick": "Julian Champagnie 3+ made threes",
+          "selection": "Julian Champagnie 3+ three-point field goals made — including overtime",
+          "game": "Golden State Warriors at San Antonio Spurs",
+          "market": "Player Made Threes",
+          "player": "Julian Champagnie",
+          "line": 3,
+          "status": "Pending",
+          "period": "full-game",
+          "overtimeIncluded": true,
+          "sgpGroup": "warriors-spurs-three-leg-sgp"
+        }
+      ],
+      "legSelections": [
+        {
+          "rank": 1,
+          "selection": "Over 210.5 total points — including overtime",
+          "game": "Golden State Warriors at San Antonio Spurs",
+          "market": "Game Total",
+          "line": 210.5,
+          "period": "full-game",
+          "overtimeIncluded": true
+        },
+        {
+          "rank": 2,
+          "selection": "San Antonio Spurs -7.5 point spread",
+          "game": "Golden State Warriors at San Antonio Spurs",
+          "market": "Point Spread",
+          "line": -7.5,
+          "period": "full-game"
+        },
+        {
+          "rank": 3,
+          "selection": "Julian Champagnie 3+ three-point field goals made — including overtime",
+          "game": "Golden State Warriors at San Antonio Spurs",
+          "market": "Player Made Threes",
+          "player": "Julian Champagnie",
+          "line": 3,
+          "period": "full-game",
+          "overtimeIncluded": true
+        }
+      ],
+      "legCount": 3,
+      "requestedLegCount": 3,
+      "openSlots": 0,
+      "sgpGroups": [
+        {
+          "id": "warriors-spurs-three-leg-sgp",
+          "game": "Golden State Warriors at San Antonio Spurs",
+          "odds": "+275",
+          "legRanks": [
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "recordScope": "User-placed ticket documentation only; excluded from official Mick’s Picks record.",
+      "updatedAt": "2026-11-14T00:56:59.483Z"
+    },
     {
       "id": "nba-20261104-five-leg-spurs-props-suns",
       "date": "2026-11-04",
@@ -6260,5 +6386,5 @@
   ],
   "longshots": [],
   "gradedAt": "2026-11-12T01:25:56.741Z",
-  "updatedAt": "2026-11-12T01:25:56.741Z"
+  "updatedAt": "2026-11-14T00:56:59.483Z"
 }
