@@ -1,0 +1,214 @@
+{
+  "date": "2026-11-15",
+  "snapshot_et": "11:30 approximate",
+  "status": "PARTIAL_SCAN_NO_RELEASE",
+  "scoring_version": "micks-110-v2-2026-09-29",
+  "factor_maxima": [
+    35,
+    20,
+    15,
+    10,
+    10,
+    10,
+    10
+  ],
+  "consideration_threshold": 71,
+  "full_framework_complete": false,
+  "official_releases": [],
+  "total_units": 0,
+  "publication": false,
+  "automations_created": false,
+  "excluded_started": [
+    "NE@DET"
+  ],
+  "candidates": [
+    {
+      "event": "BUF@NYJ",
+      "market": "NYJ +8.5",
+      "odds": -118,
+      "quote_status": "DraftKings public reference",
+      "score_status": "UNGRADED",
+      "score": null,
+      "factor_points": [
+        22,
+        13,
+        null,
+        6,
+        7,
+        0,
+        4
+      ],
+      "failure_dimensions": [
+        1,
+        null,
+        1,
+        1,
+        0
+      ],
+      "failure_total": null,
+      "release": "NO BET",
+      "units": 0,
+      "cutoff": null,
+      "release_blockers": [
+        "Wilson clearance/final inactives",
+        "weekly reconciliation",
+        "executable offer and cutoff"
+      ]
+    },
+    {
+      "event": "SEA@LV",
+      "market": "Bowers over 57.5 receiving yards",
+      "odds": -115,
+      "quote_status": "Cohen article historical",
+      "score_status": "UNGRADED",
+      "score": null,
+      "factor_points": [
+        null,
+        12,
+        null,
+        6,
+        7,
+        0,
+        2
+      ],
+      "failure_dimensions": [
+        0,
+        null,
+        1,
+        1,
+        0
+      ],
+      "failure_total": null,
+      "release": "NO BET",
+      "units": 0,
+      "cutoff": null,
+      "release_blockers": [
+        "Mendoza opportunity distribution",
+        "final personnel",
+        "current prop offer"
+      ]
+    },
+    {
+      "event": "HOU@CLE",
+      "market": "Stroud over 20.5 completions",
+      "odds": -110,
+      "quote_status": "Devine article historical",
+      "score_status": "UNGRADED",
+      "score": null,
+      "factor_points": null,
+      "failure_dimensions": null,
+      "failure_total": null,
+      "release": "NO BET",
+      "units": 0,
+      "cutoff": null,
+      "release_blockers": [
+        "independent distribution",
+        "matchup/weather/roles",
+        "execution price"
+      ]
+    },
+    {
+      "event": "PIT@CIN",
+      "market": "Bernard over 4.5 receptions",
+      "odds": -125,
+      "quote_status": "Prince article historical",
+      "score_status": "UNGRADED",
+      "score": null,
+      "factor_points": null,
+      "failure_dimensions": null,
+      "failure_total": null,
+      "release": "NO BET",
+      "units": 0,
+      "cutoff": null,
+      "release_blockers": [
+        "independent log",
+        "coverage and roles",
+        "execution price"
+      ]
+    },
+    {
+      "event": "SF@DAL",
+      "market": "DAL +4.5",
+      "odds": null,
+      "quote_status": "Youmans article historical",
+      "score_status": "UNGRADED",
+      "score": null,
+      "factor_points": null,
+      "failure_dimensions": null,
+      "failure_total": null,
+      "release": "NO BET",
+      "units": 0,
+      "cutoff": null,
+      "release_blockers": [
+        "full matchup/personnel",
+        "current spread and juice"
+      ]
+    },
+    {
+      "event": "SAS@UTA",
+      "market": "SAS -16.5",
+      "odds": null,
+      "quote_status": "TeamRankings reference",
+      "score_status": "UNGRADED",
+      "score": null,
+      "factor_points": null,
+      "failure_dimensions": null,
+      "failure_total": null,
+      "release": "NO BET",
+      "units": 0,
+      "cutoff": null,
+      "release_blockers": [
+        "minutes and matchup projection",
+        "exact offer",
+        "non-NFL Failure"
+      ]
+    },
+    {
+      "event": "Syracuse@St Johns",
+      "market": "Syracuse +12.5",
+      "odds": null,
+      "quote_status": "Burke article historical",
+      "score_status": "UNGRADED",
+      "score": null,
+      "factor_points": null,
+      "failure_dimensions": null,
+      "failure_total": null,
+      "release": "NO BET",
+      "units": 0,
+      "cutoff": null,
+      "release_blockers": [
+        "independent matchup",
+        "health",
+        "current offer",
+        "non-NFL Failure"
+      ]
+    }
+  ],
+  "bowers_verified_2026": {
+    "receiving_yards": [
+      116,
+      86,
+      110,
+      70,
+      73,
+      92,
+      111
+    ],
+    "n": 7,
+    "mean": 94,
+    "median": 92,
+    "warning": "Prior-quarterback history; not today's probability."
+  },
+  "missing": [
+    "Full current Circa sheet",
+    "Complete NFL weekly projection delta boards",
+    "Final inactive lists",
+    "User-book executable offers",
+    "All NBA guide pages and opponent-adjusted projections",
+    "Confirmed NHL goalies and current metrics",
+    "Complete other-sports inventory",
+    "Closing-line fade/inflation datasets",
+    "Futures and shadow assessments"
+  ],
+  "audit_report": "scan-1130-et.md"
+}
