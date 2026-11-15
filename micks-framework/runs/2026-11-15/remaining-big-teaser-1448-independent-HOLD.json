@@ -1,0 +1,118 @@
+{
+  "asOf": "2026-11-15T14:48:04-05:00",
+  "card": "Big Teaser 11.12.2026 T3 WHI",
+  "status": "DRAFT HOLD UNGRADED",
+  "recommendedUnits": 0,
+  "scope": "User explicitly waived prior-ticket overlap for this run. Independent ticket; earlier tickets untouched.",
+  "legs": [
+    {
+      "number": 142,
+      "selection": "Raiders",
+      "line": "+14.5",
+      "start": "2026-11-15 16:05 ET",
+      "score": null,
+      "failure": null,
+      "status": "UNGRADED"
+    },
+    {
+      "number": 144,
+      "selection": "SEA/LV",
+      "line": "Under 47.5",
+      "start": "2026-11-15 16:05 ET",
+      "score": null,
+      "failure": null,
+      "status": "UNGRADED"
+    },
+    {
+      "number": 145,
+      "selection": "Rams",
+      "line": "-1.5",
+      "start": "2026-11-15 16:05 ET",
+      "score": null,
+      "failure": null,
+      "status": "UNGRADED"
+    },
+    {
+      "number": 148,
+      "selection": "LAR/ARI",
+      "line": "Under 46.5",
+      "start": "2026-11-15 16:05 ET",
+      "score": null,
+      "failure": null,
+      "status": "UNGRADED"
+    },
+    {
+      "number": 150,
+      "selection": "Cowboys",
+      "line": "+12.5",
+      "start": "2026-11-15 16:25 ET",
+      "score": null,
+      "failure": null,
+      "status": "UNGRADED"
+    },
+    {
+      "number": 151,
+      "selection": "SF/DAL",
+      "line": "Over 48.5",
+      "start": "2026-11-15 16:25 ET",
+      "score": null,
+      "failure": null,
+      "status": "UNGRADED"
+    },
+    {
+      "number": 154,
+      "selection": "Steelers",
+      "line": "+11.5",
+      "start": "2026-11-15 20:20 ET",
+      "score": null,
+      "failure": null,
+      "status": "UNGRADED"
+    },
+    {
+      "number": 155,
+      "selection": "CIN/PIT",
+      "line": "Over 42.5",
+      "start": "2026-11-15 20:20 ET",
+      "score": null,
+      "failure": null,
+      "status": "UNGRADED"
+    },
+    {
+      "number": 157,
+      "selection": "Ravens",
+      "line": "+2.5",
+      "start": "2026-11-16 20:15 ET",
+      "score": null,
+      "failure": null,
+      "status": "UNGRADED"
+    },
+    {
+      "number": 160,
+      "selection": "BAL/LAC",
+      "line": "Under 45.5",
+      "start": "2026-11-16 20:15 ET",
+      "score": null,
+      "failure": null,
+      "status": "UNGRADED"
+    }
+  ],
+  "marketReference": "User Action recording 14:44–14:45 ET; snapshots not executable prices. SEA -6.5/40.5; LAR -9.5/38.5; SF -4.5/55.5; CIN -3.5/49.5; BAL -4.5/38.5.",
+  "marketSplits": "Observed sampled frames: SF/DAL over74% bets80%money; PIT/CIN over70%bets77%money; BAL/LAC under29%bets32%money. Do not infer sharp confirmation from differences.",
+  "rationale": "Candidate construction, not qualified framework release. Rams -1.5 has dated Doc's Guy Bruhn -9 support. Ravens +2.5 has dated Doc's Guy Bruhn -5.5 support. Earlier VSiN leads support Raiders, Dallas, Pittsburgh directions, not automatic exact-card qualification. Two overs reflect higher-total games; three unders reflect lower market totals. Teaser room alone is not edge.",
+  "missing": [
+    "Full updated original guide reconciliation for all five games",
+    "Complete current official inactives and role confirmation, including later Sunday and Monday games",
+    "Explicit 2026 distribution checks for each selected threshold",
+    "Dated Circa comparison and complete independent five-dimension Failure evidence",
+    "All seven factor scores and final eligibility checks"
+  ],
+  "sources": [
+    "https://www.docsports.com/free-picks/nfl/2026/los-angeles-rams-vs-arizona-cardinals-prediction-11-15-2026-nfl-picks-best-bets-odds-week-10.html",
+    "https://www.docsports.com/free-picks/nfl/2026/los-angeles-chargers-vs-baltimore-ravens-prediction-11-16-2026-nfl-picks-best-bets-odds-week-10.html"
+  ],
+  "notes": [
+    "All 1PM events excluded; 10 selections across five scheduled remaining games including Monday.",
+    "One side plus one total per game; correlated outcomes, not ten independent games.",
+    "No wagers or active website publication."
+  ]
+}
