@@ -1,0 +1,278 @@
+{
+  "date": "2026-11-15",
+  "status": "DRAFT_HOLD",
+  "tickets": [
+    {
+      "id": "BT1",
+      "type": "Big Teaser",
+      "status": "DRAFT_HOLD_NOT_FRAMEWORK_RELEASE",
+      "recommended_units": 0,
+      "planned_stake_units": null,
+      "legs": [
+        {
+          "selection": 113,
+          "printed_selection": "Texans +3.5",
+          "score": null,
+          "status": "UNGRADED_PENDING_RECONCILIATION"
+        },
+        {
+          "selection": 117,
+          "printed_selection": "Colts +5.5",
+          "score": null,
+          "status": "UNGRADED_PENDING_RECONCILIATION"
+        },
+        {
+          "selection": 126,
+          "printed_selection": "Jets +15.5",
+          "score": null,
+          "status": "UNGRADED_PENDING_RECONCILIATION"
+        },
+        {
+          "selection": 137,
+          "printed_selection": "Saints +6.5",
+          "score": null,
+          "status": "UNGRADED_PENDING_RECONCILIATION"
+        },
+        {
+          "selection": 116,
+          "printed_selection": "HOU/CLE Under 46.5",
+          "score": null,
+          "status": "UNGRADED_PENDING_RECONCILIATION"
+        },
+        {
+          "selection": 120,
+          "printed_selection": "IND/MIA Under 47.5",
+          "score": null,
+          "status": "UNGRADED_PENDING_RECONCILIATION"
+        },
+        {
+          "selection": 124,
+          "printed_selection": "JAX/TEN Under 53.5",
+          "score": null,
+          "status": "UNGRADED_PENDING_RECONCILIATION"
+        },
+        {
+          "selection": 128,
+          "printed_selection": "BUF/NYJ Under 57.5",
+          "score": null,
+          "status": "UNGRADED_PENDING_RECONCILIATION"
+        },
+        {
+          "selection": 131,
+          "printed_selection": "KC/ATL Over 38.5",
+          "score": null,
+          "status": "UNGRADED_PENDING_RECONCILIATION"
+        },
+        {
+          "selection": 136,
+          "printed_selection": "GB/MIN Under 48.5",
+          "score": null,
+          "status": "UNGRADED_PENDING_RECONCILIATION"
+        }
+      ]
+    },
+    {
+      "id": "BT2",
+      "type": "Big Teaser",
+      "status": "DRAFT_HOLD_NOT_FRAMEWORK_RELEASE",
+      "recommended_units": 0,
+      "planned_stake_units": null,
+      "legs": [
+        {
+          "selection": 113,
+          "printed_selection": "Texans +3.5",
+          "score": null,
+          "status": "UNGRADED_PENDING_RECONCILIATION"
+        },
+        {
+          "selection": 122,
+          "printed_selection": "Titans +18.5",
+          "score": null,
+          "status": "UNGRADED_PENDING_RECONCILIATION"
+        },
+        {
+          "selection": 130,
+          "printed_selection": "Falcons +11.5",
+          "score": null,
+          "status": "UNGRADED_PENDING_RECONCILIATION"
+        },
+        {
+          "selection": 134,
+          "printed_selection": "Vikings +11.5",
+          "score": null,
+          "status": "UNGRADED_PENDING_RECONCILIATION"
+        },
+        {
+          "selection": 116,
+          "printed_selection": "HOU/CLE Under 46.5",
+          "score": null,
+          "status": "UNGRADED_PENDING_RECONCILIATION"
+        },
+        {
+          "selection": 120,
+          "printed_selection": "IND/MIA Under 47.5",
+          "score": null,
+          "status": "UNGRADED_PENDING_RECONCILIATION"
+        },
+        {
+          "selection": 124,
+          "printed_selection": "JAX/TEN Under 53.5",
+          "score": null,
+          "status": "UNGRADED_PENDING_RECONCILIATION"
+        },
+        {
+          "selection": 131,
+          "printed_selection": "KC/ATL Over 38.5",
+          "score": null,
+          "status": "UNGRADED_PENDING_RECONCILIATION"
+        },
+        {
+          "selection": 136,
+          "printed_selection": "GB/MIN Under 48.5",
+          "score": null,
+          "status": "UNGRADED_PENDING_RECONCILIATION"
+        },
+        {
+          "selection": 139,
+          "printed_selection": "NO/CAR Over 41.5",
+          "score": null,
+          "status": "UNGRADED_PENDING_RECONCILIATION"
+        }
+      ]
+    },
+    {
+      "id": "BT3",
+      "type": "Big Teaser",
+      "status": "DRAFT_HOLD_NOT_FRAMEWORK_RELEASE",
+      "recommended_units": 0,
+      "planned_stake_units": null,
+      "legs": [
+        {
+          "selection": 117,
+          "printed_selection": "Colts +5.5",
+          "score": null,
+          "status": "UNGRADED_PENDING_RECONCILIATION"
+        },
+        {
+          "selection": 126,
+          "printed_selection": "Jets +15.5",
+          "score": null,
+          "status": "UNGRADED_PENDING_RECONCILIATION"
+        },
+        {
+          "selection": 130,
+          "printed_selection": "Falcons +11.5",
+          "score": null,
+          "status": "UNGRADED_PENDING_RECONCILIATION"
+        },
+        {
+          "selection": 137,
+          "printed_selection": "Saints +6.5",
+          "score": null,
+          "status": "UNGRADED_PENDING_RECONCILIATION"
+        },
+        {
+          "selection": 120,
+          "printed_selection": "IND/MIA Under 47.5",
+          "score": null,
+          "status": "UNGRADED_PENDING_RECONCILIATION"
+        },
+        {
+          "selection": 124,
+          "printed_selection": "JAX/TEN Under 53.5",
+          "score": null,
+          "status": "UNGRADED_PENDING_RECONCILIATION"
+        },
+        {
+          "selection": 128,
+          "printed_selection": "BUF/NYJ Under 57.5",
+          "score": null,
+          "status": "UNGRADED_PENDING_RECONCILIATION"
+        },
+        {
+          "selection": 131,
+          "printed_selection": "KC/ATL Over 38.5",
+          "score": null,
+          "status": "UNGRADED_PENDING_RECONCILIATION"
+        },
+        {
+          "selection": 136,
+          "printed_selection": "GB/MIN Under 48.5",
+          "score": null,
+          "status": "UNGRADED_PENDING_RECONCILIATION"
+        },
+        {
+          "selection": 139,
+          "printed_selection": "NO/CAR Over 41.5",
+          "score": null,
+          "status": "UNGRADED_PENDING_RECONCILIATION"
+        }
+      ]
+    },
+    {
+      "id": "HP1",
+      "type": "Half-Point",
+      "status": "DRAFT_HOLD_NOT_FRAMEWORK_RELEASE",
+      "recommended_units": 0,
+      "planned_stake_units": null,
+      "legs": [
+        {
+          "selection": 122,
+          "printed_selection": "Titans +10.5",
+          "score": null,
+          "status": "UNGRADED_PENDING_RECONCILIATION"
+        },
+        {
+          "selection": 134,
+          "printed_selection": "Vikings +3.5",
+          "score": null,
+          "status": "UNGRADED_PENDING_RECONCILIATION"
+        },
+        {
+          "selection": 116,
+          "printed_selection": "HOU/CLE Under 40.5",
+          "score": null,
+          "status": "UNGRADED_PENDING_RECONCILIATION"
+        }
+      ]
+    },
+    {
+      "id": "HP2",
+      "type": "Half-Point",
+      "status": "DRAFT_HOLD_NOT_FRAMEWORK_RELEASE",
+      "recommended_units": 0,
+      "planned_stake_units": null,
+      "legs": [
+        {
+          "selection": 120,
+          "printed_selection": "IND/MIA Under 38.5",
+          "score": null,
+          "status": "UNGRADED_PENDING_RECONCILIATION"
+        },
+        {
+          "selection": 131,
+          "printed_selection": "KC/ATL Over 45.5",
+          "score": null,
+          "status": "UNGRADED_PENDING_RECONCILIATION"
+        },
+        {
+          "selection": 136,
+          "printed_selection": "GB/MIN Under 42.5",
+          "score": null,
+          "status": "UNGRADED_PENDING_RECONCILIATION"
+        }
+      ]
+    }
+  ],
+  "sidecounts": {
+    "Texans": 2,
+    "Colts": 2,
+    "Jets": 2,
+    "Saints": 2,
+    "Titans": 2,
+    "Falcons": 2,
+    "Vikings": 2
+  },
+  "release_qualified": false,
+  "total_recommended_units": 0
+}
